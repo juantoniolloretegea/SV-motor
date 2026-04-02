@@ -1,0 +1,17 @@
+ENTRADA: lote de casos canónicos del motor
+
+PARA CADA caso DEL lote:
+    SI caso.tipo = "nlp_agent":
+        construir observables
+        ejecutar cadena I_NLP -> C_frame -> Γbar_H -> gate -> κ3
+        verificar clase esperada
+        guardar salida serializada
+    SI caso.tipo = "extract_direct":
+        validar y normalizar valores contra el dominio declarado
+        marcar como indeterminación defensiva todo valor fuera de dominio
+        guardar salida serializada
+
+AL FINAL:
+    contar clases APTO / INDETERMINADO / NO_APTO
+    emitir análisis breve
+    emitir dictamen local de custodia de la etapa

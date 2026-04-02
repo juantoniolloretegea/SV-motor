@@ -1,0 +1,76 @@
+[
+  {
+    "id": "M1-CASE-01",
+    "descripcion": "Caso apto por cierre limpio del frame conversacional",
+    "tipo": "nlp_agent",
+    "observables": {
+      "theta": "coherente",
+      "pi": "resuelta",
+      "kappa": "coherente",
+      "eta": "completa",
+      "gamma": "alineada",
+      "alpha": "apropiada",
+      "mu": "cerrada",
+      "chi": "sin-solicitud",
+      "psi": "cerrado"
+    },
+    "clase_esperada": "APTO",
+    "politica_esperada": "CERRAR_FRAME"
+  },
+  {
+    "id": "M1-CASE-02",
+    "descripcion": "Caso indeterminado por preservación de U honesta",
+    "tipo": "nlp_agent",
+    "observables": {
+      "theta": "coherente",
+      "pi": "indeterminada",
+      "kappa": "coherente",
+      "eta": "completa",
+      "gamma": "alineada",
+      "alpha": "apropiada",
+      "mu": "indeterminada",
+      "chi": "sin-solicitud",
+      "psi": "en-curso"
+    },
+    "clase_esperada": "INDETERMINADO",
+    "politica_esperada": "CONTINUAR_EN_W(T,k)"
+  },
+  {
+    "id": "M1-CASE-03",
+    "descripcion": "Caso no apto por contradicción material",
+    "tipo": "nlp_agent",
+    "observables": {
+      "theta": "desvio",
+      "pi": "bloqueada",
+      "kappa": "contradictoria",
+      "eta": "completa",
+      "gamma": "bloqueada",
+      "alpha": "inapropiada",
+      "mu": "incompatible",
+      "chi": "denegada",
+      "psi": "bloqueado"
+    },
+    "clase_esperada": "NO_APTO",
+    "politica_esperada": "PROPONER_FORK"
+  },
+  {
+    "id": "M1-CASE-04",
+    "descripcion": "Extracción directa con valores fuera de dominio: debe normalizar a indeterminación",
+    "tipo": "extract_direct",
+    "observables": {
+      "theta": "coherente",
+      "pi": "valor-no-valido",
+      "kappa": "coherente",
+      "eta": "completa",
+      "gamma": "alineada",
+      "alpha": "apropiada",
+      "mu": "sin-ambigüedad",
+      "chi": "sin-solicitud",
+      "psi": "valor-fuera-de-dominio"
+    },
+    "campos_indeterminados_esperados": [
+      "pi",
+      "psi"
+    ]
+  }
+]

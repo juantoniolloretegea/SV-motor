@@ -21,4 +21,7 @@ jobs:
           pip install -e . pytest
       - name: Run tests
         run: |
-          PYTHONPATH=src pytest -q tests/test_algebra.py
+          PYTHONPATH=src pytest -q
+      - name: Run laboratory
+        run: |
+          python laboratorio/etapa_1_nucleo_local/ejecutar_laboratorio_motor_etapa_1.py

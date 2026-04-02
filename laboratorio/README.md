@@ -1,12 +1,10 @@
-# Laboratorio
+# Laboratorio del frente motor
 
-La carpeta de laboratorio debe crecer por etapas. Su función es probar materialmente el frente motor, no adornarlo.
+Esta carpeta reúne los bloques reproducibles del repositorio `SV-motor`.
 
-## Regla mínima
+## Etapas actuales
 
-Toda etapa de laboratorio debe devolver:
+- `etapa_0_preparacion/` — documentación preparatoria del frente.
+- `etapa_1_nucleo_local/` — laboratorio mínimo reproducible del núcleo local soberano.
 
-- casos de entrada;
-- salida trazable;
-- interpretación breve;
-- y, cuando proceda, casos adversariales.
+La existencia de esta carpeta no equivale a laboratorio completo del motor. Su función actual es acreditar una base mínima real y revisable por terceros.
