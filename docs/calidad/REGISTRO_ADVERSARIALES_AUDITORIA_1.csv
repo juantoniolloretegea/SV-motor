@@ -1,5 +1,6 @@
 Fecha,Unidad,Frente,Hipotesis_a_romper,Metodo,Resultado,Evidencia,Decision
-,,,El paquete no instala,,PENDIENTE,, 
-,,,El laboratorio no es reproducible,,PENDIENTE,, 
-,,,La documentacion sobreactua el estado del motor,,PENDIENTE,, 
-,,,Existe deriva respecto de seguridad o NLP,,PENDIENTE,,
+2026-04-02,UCIAC1-núcleo,Paquete,"El paquete no instala","instalacion editable + pytest",ROTURA_NO_CONFIRMADA,"Instalacion correcta y 35 pruebas superadas",CERRAR_HIPOTESIS
+2026-04-02,UCIAC1-núcleo,Laboratorio,"El laboratorio no es reproducible","run_local_checks.sh + inspeccion del lote",ROTURA_NO_CONFIRMADA,"Laboratorio ejecutado con dictamen APTO",CERRAR_HIPOTESIS
+2026-04-02,UCIAC1-núcleo,Documentacion,"La documentacion sobreactua el estado del motor","lectura README + docs gobierno",ROTURA_NO_CONFIRMADA,"La documentacion niega expresamente motor completo y backend soberano",CERRAR_HIPOTESIS
+2026-04-02,UCIAC1-núcleo,Coherencia superior,"Existe deriva respecto de seguridad o NLP","lectura cruzada con piezas superiores",ROTURA_NO_CONFIRMADA,"No se detecta deriva material en el estado actual",MANTENER_VIGILANCIA
+2026-04-02,UCIAC1-núcleo,Fase siguiente,"La siguiente fase puede abrir backend o integracion fuerte sin riesgo","adversarial de alcance",ROTURA_CONFIRMADA,"La fase siguiente debe ser solo demostracion end-to-end local y subordinada",PARAR_SI_SE_SUPERA_ESE_UMBRAL

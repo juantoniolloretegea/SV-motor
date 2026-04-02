@@ -1,4 +1,6 @@
 Fecha,Unidad,Elemento,Tipo,Descripcion,Canal_de_observacion,Recuperable,Accion_requerida,Estado
-,,,,U,,,, 
-,,,,LIMITE,,,, 
-,,,,U,,,,
+2026-04-02,UCIAC1-núcleo,Commit exacto auditado,U,"El ZIP fresco no contiene `.git` y no fija por si solo el snapshot exacto","inspeccion del ZIP",SI,"Completar con History o GitHub web",ABIERTO
+2026-04-02,UCIAC1-núcleo,GitHub Actions remoto,U,"La ejecucion remota del workflow no queda cerrada por la auditoria local","lote local auditado",SI,"Revisar Actions del repositorio",ABIERTO
+2026-04-02,UCIAC1-núcleo,Backend soberano,LIMITE,"No existe backend soberano y no procede declararlo","alcance declarado del repositorio",NO,"No forzar esta capa en la fase siguiente",ABIERTO
+2026-04-02,UCIAC1-núcleo,Integracion fuerte con lenguaje,LIMITE,"No existe integracion fuerte con gramática, IR o runner","docs arquitectura y gobierno",NO,"Parar si la siguiente fase lo exige",ABIERTO
+2026-04-02,UCIAC1-núcleo,Demostracion end-to-end local,U,"Aun no existe una demostracion completa de entrada tipada + evaluacion local + salida K3","inspeccion del repo",SI,"Preparar lote especifico de la fase siguiente",ABIERTO

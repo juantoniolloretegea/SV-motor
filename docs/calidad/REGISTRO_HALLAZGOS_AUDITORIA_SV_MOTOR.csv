@@ -1,5 +1,7 @@
 Fecha,Unidad,ID_hallazgo,Tipo,Severidad,Descripcion,Evidencia,Estado,Accion_requerida
-,,"H001",HECHO,ALTA,,,, 
-,,"H002",U,MEDIA,,,, 
-,,"H003",DEUDA_VIVA,ALTA,,,, 
-,,"H004",CAMBIO_IMPROCEDENTE,CRITICA,,,,
+2026-04-02,UCIAC1-núcleo,H001,HECHO,ALTA,"El paquete instala y la suite actual devuelve 35 pruebas superadas","instalacion editable + pytest",ABIERTO,CONSIGNAR_EN_ACTA_Y_DICTAMEN
+2026-04-02,UCIAC1-núcleo,H002,HECHO,ALTA,"El laboratorio minimo de la Etapa 1 ejecuta y devuelve dictamen APTO","scripts/run_local_checks.sh + dictamen JSON",ABIERTO,CONSIGNAR_EN_ACTA_Y_DICTAMEN
+2026-04-02,UCIAC1-núcleo,H003,U,MEDIA,"El snapshot exacto del commit auditado no queda fijado desde el ZIP fresco","ZIP descargado sin .git",ABIERTO,COMPLETAR_DESDE_HISTORY_O_GITHUB_WEB
+2026-04-02,UCIAC1-núcleo,H004,DEUDA_VIVA,ALTA,"Falta demostracion end-to-end estrictamente local y subordinada","no existe aun lote especifico de demostracion completa",ABIERTO,PREPARAR_SIGUIENTE_LOTE
+2026-04-02,UCIAC1-núcleo,H005,DEUDA_VIVA,MEDIA,"Falta sincronizacion material explicita con lenguaje y NLP vigente","matrices aun no cerradas frente a fase siguiente",ABIERTO,EJECUTAR_SINCRONIZACION_ANTES_DE_AVANZAR
+2026-04-02,UCIAC1-núcleo,H006,CAMBIO_IMPROCEDENTE,BAJA,"No se detectan cambios improcedentes en el lote auditado","inspeccion del repo y lectura cruzada",CERRADO,NINGUNA
