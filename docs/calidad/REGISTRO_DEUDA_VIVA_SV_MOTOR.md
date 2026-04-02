@@ -8,7 +8,7 @@ La versión tabular operativa se encuentra en `REGISTRO_DEUDA_VIVA_SV_MOTOR.csv`
 
 - **DV-SVM-001** — Integración con el Lenguaje SV: no procede abrir backend soberano ni integración fuerte con el entorno de ejecución.
 - **DV-SVM-002** — Sincronización con el estado vigente del Documento 3 del frente NLP.
-- **DV-SVM-003** — Validación adicional de los modos opcionales de extracción subordinada.
+- **DV-SVM-003** — Validación adicional de los modos opcionales de extracción subordinada. La compuerta equivalente a FT-SV-IA/001 ya existe en código para el carril local, pero los modos opcionales siguen sin validación de entorno ni activación real.
 
 ## Correcciones ya resueltas en la versión 0.1.2
 

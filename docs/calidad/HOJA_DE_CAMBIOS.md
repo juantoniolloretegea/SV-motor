@@ -19,3 +19,12 @@
 - se cierra registralmente DV-SVM-004 a DV-SVM-008 tras contraste con la auditoría externa de la versión 0.1.2;
 - se corrige la trazabilidad del registro de deuda viva, evitando mantener abiertas correcciones ya materialmente resueltas;
 - se depuran varias expresiones internas o coloquiales en documentos expuestos a terceros.
+
+
+## 2026-04-03 — Demostración local y protocolo ejecutable
+
+- cierre material de la demostración end-to-end local de Fase 0 mediante `sv-nlp` en modo `direct`;
+- incorporación de un módulo ejecutable equivalente a FT-SV-IA/001 para el carril local;
+- almacenamiento de salidas trazables y verificables de la demostración;
+- incorporación de pruebas específicas para la interfaz de línea de órdenes y para la compuerta de protocolo;
+- actualización de versión a 0.1.3.

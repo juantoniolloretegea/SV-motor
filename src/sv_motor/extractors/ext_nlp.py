@@ -77,22 +77,39 @@ Formato de respuesta (SOLO esto, sin ningún otro texto):
 }"""
 
 
-def _validate_and_normalize(raw: Dict[str, str]) -> Dict[str, str]:
+def _validate_and_collect(raw: Dict[str, str]) -> tuple[Dict[str, str], list[dict[str, str]]]:
     """
     Valida el dict extraído contra el dominio declarado.
-    Valores fuera del dominio → U_d(B) marcado como "indeterminado".
+    Valores fuera del dominio → U_d(B) marcado como indeterminación.
     """
-    out = {}
+    out: Dict[str, str] = {}
+    u_d_items: list[dict[str, str]] = []
     for field, domain in _DOMAIN.items():
-        raw_val = _NORMALIZE.get(raw.get(field, ""), raw.get(field, ""))
+        raw_original = raw.get(field, "")
+        raw_val = _NORMALIZE.get(raw_original, raw_original)
         if raw_val not in domain:
-            # Fuera del dominio → indeterminación defensiva U_d(B)
-            # Elegir la variante "indeterminada" del campo
             fallback = "indeterminado" if field == "psi" else "indeterminada"
             out[field] = fallback
+            u_d_items.append({
+                "codigo": "U_d(B)",
+                "campo": field,
+                "valor_recibido": str(raw_original),
+                "valor_emitido": fallback,
+                "causa": "valor fuera del dominio declarado",
+            })
         else:
             out[field] = raw_val
-    return out
+    return out, u_d_items
+
+
+def validate_observables_dict(raw: Dict[str, str]) -> Dict[str, str]:
+    """Valida y normaliza un paquete Ω_NLP sin devolver metadatos de protocolo."""
+    return _validate_and_collect(raw)[0]
+
+
+def validate_observables_with_ud(raw: Dict[str, str]) -> tuple[Dict[str, str], list[dict[str, str]]]:
+    """Valida y normaliza un paquete Ω_NLP, devolviendo además las U_d(B) activas."""
+    return _validate_and_collect(raw)
 
 
 # ─────────────────────────────────────────────────────────────
@@ -103,7 +120,7 @@ def extract_direct(observables_dict: Dict[str, str]) -> Dict[str, str]:
     Modo A: el humano provee los observables directamente.
     Solo normaliza y valida contra el dominio.
     """
-    return _validate_and_normalize(observables_dict)
+    return validate_observables_dict(observables_dict)
 
 
 # ─────────────────────────────────────────────────────────────
@@ -143,7 +160,7 @@ def extract_ollama(
     except json.JSONDecodeError:
         # Fallback: todo indeterminado
         raw = {}
-    return _validate_and_normalize(raw)
+    return validate_observables_dict(raw)
 
 
 # ─────────────────────────────────────────────────────────────
@@ -183,7 +200,7 @@ def extract_hf_api(
         raw   = json.loads(content[start:end])
     except (ValueError, json.JSONDecodeError):
         raw = {}
-    return _validate_and_normalize(raw)
+    return validate_observables_dict(raw)
 
 
 # ─────────────────────────────────────────────────────────────
@@ -219,7 +236,7 @@ def extract_anthropic(
         raw   = json.loads(content[start:end])
     except (ValueError, json.JSONDecodeError):
         raw = {}
-    return _validate_and_normalize(raw)
+    return validate_observables_dict(raw)
 
 
 # ─────────────────────────────────────────────────────────────

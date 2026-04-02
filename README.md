@@ -54,11 +54,29 @@ PYTHONPATH=src pytest -q
 python laboratorio/etapa_1_nucleo_local/ejecutar_laboratorio_motor_etapa_1.py
 ```
 
+
+## Demostración end-to-end local de Fase 0
+
+Esta versión añade una demostración local, repetible y trazable del frente motor en modo `direct`, junto con una implementación ejecutable mínima del protocolo equivalente a FT-SV-IA/001 para el carril local.
+
+### Comando canónico de demostración
+
+```bash
+sv-nlp --modo direct   --obs-file laboratorio/etapa_0_demostracion_local/entrada_observables_demo.json   --session-file laboratorio/etapa_0_demostracion_local/sesion_demo_ft_sv_ia.json   --out laboratorio/etapa_0_demostracion_local/salida_demo_end_to_end_local.json
+```
+
+### Qué demuestra
+
+- que la cadena local completa puede ejecutarse desde terminal;
+- que la clasificación K₃ y la política de salida se obtienen sin red y sin ML decisional;
+- y que el bloque de estado equivalente a FT-SV-IA/001 aparece solo cuando existe algo que declarar.
+
 ## Estructura relevante
 
 - `docs/gobierno/` — estatuto, alcance, dependencia y fases.
 - `docs/arquitectura/` — arquitectura mínima local y relación con lenguaje, NLP y banco.
 - `docs/calidad/` — procedimiento, registros, deuda viva, tablero de bloques y checklist.
+- `laboratorio/etapa_0_demostracion_local/` — demostración end-to-end local de Fase 0.
 - `laboratorio/etapa_1_nucleo_local/` — laboratorio mínimo reproducible y salidas.
 - `src/sv_motor/` — paquete Python del núcleo local.
 - `tests/` — pruebas algebraicas, de extractores y de validación geométrica.

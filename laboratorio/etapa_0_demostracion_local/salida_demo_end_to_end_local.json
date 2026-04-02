@@ -1,0 +1,104 @@
+{
+  "protocolo": {
+    "declaracion_de_sesion": {
+      "sesion_activa": true,
+      "cabecera": "SESIÓN FT-SV-IA/001 ACTIVA",
+      "M_s": [
+        "laboratorio/etapa_0_demostracion_local/entrada_observables_demo.json",
+        "laboratorio/etapa_0_demostracion_local/sesion_demo_ft_sv_ia.json",
+        "src/sv_motor/algebra/core.py",
+        "src/sv_motor/algebra/nlp.py",
+        "src/sv_motor/extractors/ext_nlp.py",
+        "src/sv_motor/protocols/ft_sv_ia.py"
+      ],
+      "D": [
+        "Pliego de condiciones del Sistema Vectorial SV",
+        "FT-SV-IA/001",
+        "Célula especializada de seguridad estructural",
+        "Agente Especializado en Lenguaje Natural para el Sistema Vectorial SV"
+      ],
+      "Lagunas declarables": [
+        "La demostración opera en modo directo y no activa extractores opcionales de entorno local o en línea."
+      ],
+      "Gap irreducible": "presente por naturaleza del modelo (§5.4)",
+      "Estado operativo": "LISTO"
+    }
+  },
+  "cuerpo": {
+    "modo": "direct",
+    "observables_entrada": {
+      "theta": "coherente",
+      "pi": "resuelta",
+      "kappa": "coherente",
+      "eta": "completa",
+      "gamma": "alineada",
+      "alpha": "apropiada",
+      "mu": "cerrada",
+      "chi": "sin-solicitud",
+      "psi": "cerrado"
+    },
+    "observables_normalizados": {
+      "theta": "coherente",
+      "pi": "resuelta",
+      "kappa": "coherente",
+      "eta": "completa",
+      "gamma": "alineada",
+      "alpha": "apropiada",
+      "mu": "cerrada",
+      "chi": "sin-solicitud",
+      "psi": "cerrado"
+    },
+    "resultado_motor": {
+      "observables": {
+        "theta": "coherente",
+        "pi": "resuelta",
+        "kappa": "coherente",
+        "eta": "completa",
+        "gamma": "alineada",
+        "alpha": "apropiada",
+        "mu": "cerrada",
+        "chi": "sin-solicitud",
+        "psi": "cerrado"
+      },
+      "C_frame9": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "gamma_h_labels": {},
+      "C_gob9": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "A_NLP": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "U_irr": [],
+      "gobernable": true,
+      "k3": "APTO",
+      "politica": "CERRAR_FRAME"
+    }
+  },
+  "ESTADO_DE_SALIDA": null
+}

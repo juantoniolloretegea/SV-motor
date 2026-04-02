@@ -9,6 +9,8 @@ from sv_motor import (
     gate_vector,
     run_agent,
     Observables,
+    ACTIVATION_PHRASE,
+    run_direct_ft_session,
 )
 
 
@@ -34,3 +36,24 @@ def test_public_api_exports_minimos():
     )
     out = run_agent(obs)
     assert out["k3"] == K3_APTO
+
+
+def test_public_api_exports_protocol_minimos():
+    assert ACTIVATION_PHRASE == "Opera bajo FT-SV-IA/001."
+    out = run_direct_ft_session(
+        {
+            "theta": "coherente",
+            "pi": "resuelta",
+            "kappa": "coherente",
+            "eta": "completa",
+            "gamma": "alineada",
+            "alpha": "apropiada",
+            "mu": "cerrada",
+            "chi": "sin-solicitud",
+            "psi": "cerrado",
+        },
+        activation_phrase=ACTIVATION_PHRASE,
+        material_session=["entrada-demo"],
+        doctrine_sv=["Pliego", "FT-SV-IA/001"],
+    )
+    assert out["cuerpo"]["resultado_motor"]["k3"] == K3_APTO
