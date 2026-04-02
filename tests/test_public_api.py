@@ -11,6 +11,8 @@ from sv_motor import (
     Observables,
     ACTIVATION_PHRASE,
     run_direct_ft_session,
+    DevObservables,
+    run_dev_agent,
 )
 
 
@@ -57,3 +59,20 @@ def test_public_api_exports_protocol_minimos():
         doctrine_sv=["Pliego", "FT-SV-IA/001"],
     )
     assert out["cuerpo"]["resultado_motor"]["k3"] == K3_APTO
+
+
+
+def test_public_api_exports_dev_minimos():
+    obs = DevObservables(
+        conformidad_doctrinal="conforme",
+        suficiencia_material="verificable",
+        trazabilidad="trazable",
+        frontera_ml_algebra="preservada",
+        preservacion_u="preservada",
+        paridad_doc_artefacto="alineada",
+        soberania_humana="preservada",
+        protocolo_entrada="alineado",
+        reversibilidad="append-only",
+    )
+    out = run_dev_agent(obs)
+    assert out["k3"] == K3_APTO

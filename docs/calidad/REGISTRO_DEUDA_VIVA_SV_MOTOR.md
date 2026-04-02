@@ -21,3 +21,8 @@ La versión tabular operativa se encuentra en `REGISTRO_DEUDA_VIVA_SV_MOTOR.csv`
 ## Criterio de lectura
 
 Una corrección no permanece declarada como deuda viva abierta en el mismo estado material que la cierra. Cuando detección y corrección ocurren en un mismo ciclo de trabajo, el registro final debe reflejar el cierre material ya producido.
+
+
+## DV-SVM-009 — Apertura de la capa generativa del dominio DEV
+
+La capa generativa del dominio DEV no debe abrirse todavía. La presente versión solo declara y verifica la capa evaluadora y su laboratorio mínimo.

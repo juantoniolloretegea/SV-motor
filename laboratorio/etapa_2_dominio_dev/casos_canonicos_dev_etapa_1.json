@@ -1,0 +1,95 @@
+[
+  {
+    "id": "DEV-CASE-01",
+    "descripcion": "Artefacto conforme, verificable y trazable.",
+    "tipo": "dev_agent",
+    "observables": {
+      "conformidad_doctrinal": "conforme",
+      "suficiencia_material": "verificable",
+      "trazabilidad": "trazable",
+      "frontera_ml_algebra": "preservada",
+      "preservacion_u": "preservada",
+      "paridad_doc_artefacto": "alineada",
+      "soberania_humana": "preservada",
+      "protocolo_entrada": "alineado",
+      "reversibilidad": "append-only"
+    },
+    "clase_esperada": "APTO",
+    "politica_esperada": "CIERRE_TECNICO_PENDIENTE_DE_HS"
+  },
+  {
+    "id": "DEV-CASE-02",
+    "descripcion": "Falta trazabilidad material del artefacto.",
+    "tipo": "dev_agent",
+    "observables": {
+      "conformidad_doctrinal": "conforme",
+      "suficiencia_material": "verificable",
+      "trazabilidad": "indeterminada",
+      "frontera_ml_algebra": "preservada",
+      "preservacion_u": "preservada",
+      "paridad_doc_artefacto": "alineada",
+      "soberania_humana": "preservada",
+      "protocolo_entrada": "alineado",
+      "reversibilidad": "append-only"
+    },
+    "clase_esperada": "INDETERMINADO",
+    "politica_esperada": "CORREGIR_BAJO_OBLIGACIONES"
+  },
+  {
+    "id": "DEV-CASE-03",
+    "descripcion": "La evaluación algebraica fue delegada a ML.",
+    "tipo": "dev_agent",
+    "observables": {
+      "conformidad_doctrinal": "conforme",
+      "suficiencia_material": "verificable",
+      "trazabilidad": "trazable",
+      "frontera_ml_algebra": "delegada",
+      "preservacion_u": "preservada",
+      "paridad_doc_artefacto": "alineada",
+      "soberania_humana": "preservada",
+      "protocolo_entrada": "alineado",
+      "reversibilidad": "append-only"
+    },
+    "clase_esperada": "NO_APTO",
+    "politica_esperada": "PROPONER_FORK"
+  },
+  {
+    "id": "DEV-CASE-04",
+    "descripcion": "Dos indeterminaciones abiertas impiden clausura falsa.",
+    "tipo": "dev_agent",
+    "observables": {
+      "conformidad_doctrinal": "indeterminada",
+      "suficiencia_material": "verificable",
+      "trazabilidad": "trazable",
+      "frontera_ml_algebra": "preservada",
+      "preservacion_u": "indeterminada",
+      "paridad_doc_artefacto": "alineada",
+      "soberania_humana": "preservada",
+      "protocolo_entrada": "alineado",
+      "reversibilidad": "append-only"
+    },
+    "clase_esperada": "INDETERMINADO",
+    "politica_esperada": "CORREGIR_BAJO_OBLIGACIONES"
+  },
+  {
+    "id": "DEV-CASE-05",
+    "descripcion": "Protocolo de entrada irreducible fuerza no aptitud.",
+    "tipo": "dev_agent",
+    "observables": {
+      "conformidad_doctrinal": "conforme",
+      "suficiencia_material": "verificable",
+      "trazabilidad": "trazable",
+      "frontera_ml_algebra": "preservada",
+      "preservacion_u": "preservada",
+      "paridad_doc_artefacto": "alineada",
+      "soberania_humana": "preservada",
+      "protocolo_entrada": "indeterminada",
+      "reversibilidad": "append-only"
+    },
+    "override_support": {
+      "8": []
+    },
+    "clase_esperada": "NO_APTO",
+    "politica_esperada": "PROPONER_FORK"
+  }
+]

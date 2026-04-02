@@ -23,3 +23,7 @@ Sólo cuando lenguaje, seguridad y pruebas lo permitan, estudiar integración m�
 
 ## Fase M2 bis — protocolo ejecutable de frontera
 Implementar en código la compuerta equivalente a FT-SV-IA/001 antes de cualquier activación real de extractores opcionales de entorno local o en línea.
+
+
+## Fase M2 ter — dominio DEV
+Declarar el dominio especializado de desarrollo y construir primero su evaluador algebraico y su laboratorio mínimo. La capa generativa del dominio solo puede estudiarse después de esta fase.

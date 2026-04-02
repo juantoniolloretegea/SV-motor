@@ -19,6 +19,15 @@ from sv_motor.algebra.core import (
 )
 from sv_motor.algebra.nlp import Observables, i_nlp, observables_from_dict, run_agent
 from sv_motor.extractors.ext_nlp import validate_observables_dict, validate_observables_with_ud
+
+from sv_motor.algebra.dev import (
+    DevObservables,
+    DEV_SUPPORT_BASE,
+    i_dev,
+    dev_observables_from_dict,
+    resolve_dev_policy,
+    run_dev_agent,
+)
 from sv_motor.protocols.ft_sv_ia import (
     ACTIVATION_PHRASE,
     INACTIVE_MESSAGE,
@@ -50,6 +59,12 @@ __all__ = [
     "run_agent",
     "validate_observables_dict",
     "validate_observables_with_ud",
+    "DevObservables",
+    "DEV_SUPPORT_BASE",
+    "i_dev",
+    "dev_observables_from_dict",
+    "resolve_dev_policy",
+    "run_dev_agent",
     "ACTIVATION_PHRASE",
     "INACTIVE_MESSAGE",
     "build_session_declaration",

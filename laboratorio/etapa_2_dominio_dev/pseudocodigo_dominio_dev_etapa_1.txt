@@ -1,0 +1,13 @@
+funcion I_DEV(observables):
+    proyectar cada parámetro del dominio DEV sobre Σ = {0,1,U}
+    devolver C_dev^9
+
+funcion run_dev_agent(observables, soporte):
+    C_dev = I_DEV(observables)
+    etiquetas = gamma_h_labels(C_dev, soporte)
+    C_gob = gamma_bar_h(C_dev, soporte)
+    A_DEV = gate_vector(C_gob, C_dev)
+    K3 = kappa3(C_gob, A_DEV)
+    politica = resolve_dev_policy(K3)
+    obligaciones = build_dev_obligations(C_dev, etiquetas)
+    devolver estructura trazable completa

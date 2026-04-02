@@ -1,0 +1,328 @@
+{
+  "summary": {
+    "etapa": "etapa_2_dominio_dev",
+    "casos_totales": 5,
+    "casos_dev_agent": 5,
+    "distribucion_k3": {
+      "APTO": 1,
+      "INDETERMINADO": 2,
+      "NO_APTO": 2
+    },
+    "dictamen": "APTO"
+  },
+  "results": [
+    {
+      "observables": {
+        "conformidad_doctrinal": "conforme",
+        "suficiencia_material": "verificable",
+        "trazabilidad": "trazable",
+        "frontera_ml_algebra": "preservada",
+        "preservacion_u": "preservada",
+        "paridad_doc_artefacto": "alineada",
+        "soberania_humana": "preservada",
+        "protocolo_entrada": "alineado",
+        "reversibilidad": "append-only"
+      },
+      "C_dev9": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "gamma_h_labels": {},
+      "C_gob9": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "A_DEV": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "U_irr": [],
+      "evaluable": true,
+      "k3": "APTO",
+      "politica": "CIERRE_TECNICO_PENDIENTE_DE_HS",
+      "obligaciones": [],
+      "id": "DEV-CASE-01",
+      "descripcion": "Artefacto conforme, verificable y trazable."
+    },
+    {
+      "observables": {
+        "conformidad_doctrinal": "conforme",
+        "suficiencia_material": "verificable",
+        "trazabilidad": "indeterminada",
+        "frontera_ml_algebra": "preservada",
+        "preservacion_u": "preservada",
+        "paridad_doc_artefacto": "alineada",
+        "soberania_humana": "preservada",
+        "protocolo_entrada": "alineado",
+        "reversibilidad": "append-only"
+      },
+      "C_dev9": [
+        0,
+        0,
+        "U",
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "gamma_h_labels": {
+        "3": "fronteriza"
+      },
+      "C_gob9": [
+        0,
+        0,
+        "U",
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "A_DEV": [
+        0,
+        0,
+        "U",
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "U_irr": [],
+      "evaluable": true,
+      "k3": "INDETERMINADO",
+      "politica": "CORREGIR_BAJO_OBLIGACIONES",
+      "obligaciones": [
+        {
+          "posicion": "P3",
+          "parametro": "P3 trazabilidad",
+          "obligacion": "Añadir manifiesto, origen y huella verificable del artefacto.",
+          "tipo": "U_FRONTERIZA"
+        }
+      ],
+      "id": "DEV-CASE-02",
+      "descripcion": "Falta trazabilidad material del artefacto."
+    },
+    {
+      "observables": {
+        "conformidad_doctrinal": "conforme",
+        "suficiencia_material": "verificable",
+        "trazabilidad": "trazable",
+        "frontera_ml_algebra": "delegada",
+        "preservacion_u": "preservada",
+        "paridad_doc_artefacto": "alineada",
+        "soberania_humana": "preservada",
+        "protocolo_entrada": "alineado",
+        "reversibilidad": "append-only"
+      },
+      "C_dev9": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "gamma_h_labels": {},
+      "C_gob9": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "A_DEV": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "U_irr": [],
+      "evaluable": true,
+      "k3": "NO_APTO",
+      "politica": "PROPONER_FORK",
+      "obligaciones": [
+        {
+          "posicion": "P4",
+          "parametro": "P4 frontera ML/álgebra",
+          "obligacion": "Restituir la separación entre extracción ML y evaluación algebraica.",
+          "tipo": "VIOLACION"
+        }
+      ],
+      "id": "DEV-CASE-03",
+      "descripcion": "La evaluación algebraica fue delegada a ML."
+    },
+    {
+      "observables": {
+        "conformidad_doctrinal": "indeterminada",
+        "suficiencia_material": "verificable",
+        "trazabilidad": "trazable",
+        "frontera_ml_algebra": "preservada",
+        "preservacion_u": "indeterminada",
+        "paridad_doc_artefacto": "alineada",
+        "soberania_humana": "preservada",
+        "protocolo_entrada": "alineado",
+        "reversibilidad": "append-only"
+      },
+      "C_dev9": [
+        "U",
+        0,
+        0,
+        0,
+        "U",
+        0,
+        0,
+        0,
+        0
+      ],
+      "gamma_h_labels": {
+        "1": "fronteriza",
+        "5": "fronteriza"
+      },
+      "C_gob9": [
+        "U",
+        0,
+        0,
+        0,
+        "U",
+        0,
+        0,
+        0,
+        0
+      ],
+      "A_DEV": [
+        "U",
+        0,
+        0,
+        0,
+        "U",
+        0,
+        0,
+        0,
+        0
+      ],
+      "U_irr": [],
+      "evaluable": true,
+      "k3": "INDETERMINADO",
+      "politica": "CORREGIR_BAJO_OBLIGACIONES",
+      "obligaciones": [
+        {
+          "posicion": "P1",
+          "parametro": "P1 conformidad doctrinal",
+          "obligacion": "Aportar contraste doctrinal suficiente del artefacto con el SV.",
+          "tipo": "U_FRONTERIZA"
+        },
+        {
+          "posicion": "P5",
+          "parametro": "P5 preservación de U",
+          "obligacion": "Eliminar cualquier clausura falsa de la indeterminación honesta.",
+          "tipo": "U_FRONTERIZA"
+        }
+      ],
+      "id": "DEV-CASE-04",
+      "descripcion": "Dos indeterminaciones abiertas impiden clausura falsa."
+    },
+    {
+      "observables": {
+        "conformidad_doctrinal": "conforme",
+        "suficiencia_material": "verificable",
+        "trazabilidad": "trazable",
+        "frontera_ml_algebra": "preservada",
+        "preservacion_u": "preservada",
+        "paridad_doc_artefacto": "alineada",
+        "soberania_humana": "preservada",
+        "protocolo_entrada": "indeterminada",
+        "reversibilidad": "append-only"
+      },
+      "C_dev9": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        "U",
+        0
+      ],
+      "gamma_h_labels": {
+        "8": "irreducible"
+      },
+      "C_gob9": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "A_DEV": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "U_irr": [
+        8
+      ],
+      "evaluable": false,
+      "k3": "NO_APTO",
+      "politica": "PROPONER_FORK",
+      "obligaciones": [
+        {
+          "posicion": "P8",
+          "parametro": "P8 protocolo de entrada",
+          "obligacion": "Hacer pasar la entrada por la compuerta ejecutable del protocolo.",
+          "tipo": "U_IRREDUCIBLE"
+        }
+      ],
+      "id": "DEV-CASE-05",
+      "descripcion": "Protocolo de entrada irreducible fuerza no aptitud."
+    }
+  ]
+}

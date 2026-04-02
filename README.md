@@ -80,3 +80,8 @@ sv-nlp --modo direct   --obs-file laboratorio/etapa_0_demostracion_local/entrada
 - `laboratorio/etapa_1_nucleo_local/` — laboratorio mínimo reproducible y salidas.
 - `src/sv_motor/` — paquete Python del núcleo local.
 - `tests/` — pruebas algebraicas, de extractores y de validación geométrica.
+
+
+## Declaración inicial del dominio DEV
+
+Esta versión declara el dominio `𝔇_DEV` como dominio evaluable del frente motor. Su capa generativa permanece deliberadamente no abierta. El paso material incorporado en este lote es el evaluador algebraico del dominio y su laboratorio mínimo.

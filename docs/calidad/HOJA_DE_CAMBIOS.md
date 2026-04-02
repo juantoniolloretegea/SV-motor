@@ -28,3 +28,12 @@
 - almacenamiento de salidas trazables y verificables de la demostración;
 - incorporación de pruebas específicas para la interfaz de línea de órdenes y para la compuerta de protocolo;
 - actualización de versión a 0.1.3.
+
+
+## 2026-04-03 — Declaración inicial del dominio DEV
+
+- declaración formal inicial del dominio `𝔇_DEV`;
+- incorporación de `src/sv_motor/algebra/dev.py` como evaluador algebraico inicial del dominio de desarrollo;
+- incorporación de laboratorio mínimo del dominio DEV;
+- actualización de API pública, documentación y plan de fases del motor;
+- actualización de versión a 0.1.4.
