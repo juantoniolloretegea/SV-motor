@@ -22,7 +22,7 @@ La auditoría se subordina a:
 7. ¿Qué avance material puede hacerse sin forzar matemática, lenguaje o backend?
 
 ## Orden de trabajo
-1. Lectura material del repositorio fresco.
+1. Lectura material del versión material auditada del repositorio.
 2. Revisión de instalación local y suite de pruebas.
 3. Revisión del laboratorio mínimo.
 4. Revisión de calidad y trazabilidad.

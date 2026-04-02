@@ -7,7 +7,7 @@ El trabajo debe detenerse cuando:
 1. exija matemática nueva no legitimada por la sede doctrinal;
 2. exija gramática, IR o backend nuevos para sostenerse;
 3. dependa de que el proveedor online cierre el dictamen;
-4. no exista reproducibilidad mínima sobre repositorio fresco;
+4. no exista reproducibilidad mínima sobre versión material auditada del repositorio;
 5. diverjan repositorio, documento, laboratorio y publicación.
 
 ## Sincronización obligatoria

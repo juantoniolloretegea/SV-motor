@@ -54,6 +54,24 @@
     "politica_esperada": "PROPONER_FORK"
   },
   {
+    "id": "M1-CASE-03B",
+    "descripcion": "Caso indeterminado con tres posiciones U en gamma, chi y psi, sin clausura falsa",
+    "tipo": "nlp_agent",
+    "observables": {
+      "theta": "coherente",
+      "pi": "sin-pregunta",
+      "kappa": "coherente",
+      "eta": "completa",
+      "gamma": "indeterminada",
+      "alpha": "apropiada",
+      "mu": "sin-ambiguedad",
+      "chi": "indeterminada",
+      "psi": "indeterminado"
+    },
+    "clase_esperada": "INDETERMINADO",
+    "politica_esperada": "CONTINUAR_EN_W(T,k)"
+  },
+  {
     "id": "M1-CASE-04",
     "descripcion": "Extracción directa con valores fuera de dominio: debe normalizar a indeterminación",
     "tipo": "extract_direct",

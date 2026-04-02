@@ -209,3 +209,38 @@ class TestGammaH:
         v = [0, 0, 0, U, 0, 0, 0, 0, 0]
         cgob = gamma_bar_h(v, sup)
         assert cgob[3] == U   # resoluble → U (preserva honestidad)
+
+
+class TestAdditionalCoverage:
+    def test_gate_chain_empty_raises(self):
+        with pytest.raises(ValueError):
+            gate_chain([])
+
+    def test_observables_from_dict_and_batch_run(self):
+        from sv_motor.algebra.nlp import observables_from_dict, batch_run
+        payload = {
+            "theta": "desvío",
+            "pi": "sin-pregunta",
+            "kappa": "coherente",
+            "eta": "completa",
+            "gamma": "alineada",
+            "alpha": "apropiada",
+            "mu": "sin-ambigüedad",
+            "chi": "sin-solicitud",
+            "psi": "cerrado",
+        }
+        obs = observables_from_dict(payload)
+        assert obs.theta == "desvio"
+        assert obs.mu == "sin-ambiguedad"
+
+        cases = [
+            {
+                "id": "BATCH-01",
+                "observables": payload,
+                "clase_esperada": K3_NO_APTO,
+                "politica_esperada": "PROPONER_FORK",
+            }
+        ]
+        result = batch_run(cases)
+        assert result[0]["id"] == "BATCH-01"
+        assert result[0]["k3"] == K3_NO_APTO

@@ -6,7 +6,7 @@ Este repositorio constituye la sede pública del frente motor del Sistema Vector
 
 1. hacer visible un núcleo local mínimo y determinista;
 2. documentar su arquitectura y sus límites;
-3. permitir prueba por terceros sobre repositorio fresco;
+3. permitir prueba por terceros sobre versión material auditada del repositorio;
 4. registrar decisiones, sincronizaciones y adversariales.
 
 ## Delimitación negativa

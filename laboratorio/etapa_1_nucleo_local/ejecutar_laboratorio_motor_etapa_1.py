@@ -18,9 +18,11 @@ def main() -> None:
     cases = _load_cases()
     results: list[dict] = []
     counter = Counter()
+    type_counter = Counter()
 
     for case in cases:
         if case["tipo"] == "nlp_agent":
+            type_counter["nlp_agent"] += 1
             obs = Observables(**case["observables"])
             out = run_agent(obs)
             assert out["k3"] == case["clase_esperada"]
@@ -36,6 +38,7 @@ def main() -> None:
                 "gobernable": out["gobernable"],
             })
         elif case["tipo"] == "extract_direct":
+            type_counter["extract_direct"] += 1
             out = extract_direct(case["observables"])
             for field in case["campos_indeterminados_esperados"]:
                 expected = "indeterminado" if field == "psi" else "indeterminada"
@@ -56,8 +59,8 @@ def main() -> None:
     summary = {
         "etapa": "etapa_1_nucleo_local",
         "casos_totales": len(cases),
-        "casos_nlp_agent": 3,
-        "casos_extract_direct": 1,
+        "casos_nlp_agent": type_counter.get("nlp_agent", 0),
+        "casos_extract_direct": type_counter.get("extract_direct", 0),
         "distribucion_k3": {
             "APTO": counter.get("APTO", 0),
             "INDETERMINADO": counter.get("INDETERMINADO", 0),
@@ -72,7 +75,7 @@ def main() -> None:
 
     analysis = f"""# Análisis de resultados — Etapa 1 del núcleo local
 
-Se ejecutaron {len(cases)} casos del lote canónico mínimo.
+Se ejecutaron {len(cases)} casos del lote canónico mínimo, con recuento derivado de los tipos efectivamente procesados.
 
 ## Resultado global
 

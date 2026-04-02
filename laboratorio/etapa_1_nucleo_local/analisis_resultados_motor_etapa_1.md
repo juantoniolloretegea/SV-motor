@@ -1,11 +1,11 @@
 # Análisis de resultados — Etapa 1 del núcleo local
 
-Se ejecutaron 4 casos del lote canónico mínimo.
+Se ejecutaron 5 casos del lote canónico mínimo, con recuento derivado de los tipos efectivamente procesados.
 
 ## Resultado global
 
 - APTO: 1
-- INDETERMINADO: 1
+- INDETERMINADO: 2
 - NO_APTO: 1
 
 ## Lectura

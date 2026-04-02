@@ -11,7 +11,7 @@ Este repositorio no funda doctrina, no sustituye al pliego, no redefine el lengu
 - Existe un núcleo algebraico local sin dependencias externas de ML para clasificación, compuertas, gobierno NLP mínimo y validación geométrica básica.
 - El repositorio contiene un paquete Python instalable, una suite de pruebas local y un laboratorio mínimo reproducible de la Etapa 1 del frente motor.
 - La extracción desde lenguaje natural o imagen, cuando comparece, queda subordinada al núcleo local y no decide por sí misma el dictamen del SV.
-- La publicación de cualquier avance de este repositorio debe quedar respaldada por repositorio fresco, laboratorio reproducible y documentación legible por terceros.
+- La publicación de cualquier avance de este repositorio debe quedar respaldada por una versión material auditada del repositorio, un laboratorio reproducible y documentación legible por terceros.
 
 ## Qué no puede afirmarse hoy
 
@@ -49,7 +49,7 @@ Este lote deja acreditados los siguientes mínimos:
 ## Ejecución local mínima
 
 ```bash
-python -m pip install -e . pytest
+python -m pip install -e ".[dev]"
 PYTHONPATH=src pytest -q
 python laboratorio/etapa_1_nucleo_local/ejecutar_laboratorio_motor_etapa_1.py
 ```

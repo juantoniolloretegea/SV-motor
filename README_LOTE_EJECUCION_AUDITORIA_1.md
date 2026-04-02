@@ -8,7 +8,7 @@ Cerrar documentalmente la auditoría inicial con:
 - dictamen;
 - matriz de evaluación;
 - hallazgos;
-- contrastes repo–documentación–laboratorio;
+- contrastes repositorio–documentación–laboratorio;
 - U y límites;
 - sincronización con repos superiores;
 - y registro adversarial.

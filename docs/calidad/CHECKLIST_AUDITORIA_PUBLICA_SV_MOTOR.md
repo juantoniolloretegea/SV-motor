@@ -1,7 +1,7 @@
 # Checklist de auditoría pública — SV-motor
 
 ## Repositorio y árbol material
-- [ ] El repositorio fresco es legible y completo.
+- [ ] La versión material auditada del repositorio es legible y completa.
 - [ ] No hay residuos locales impropios.
 - [ ] La estructura pública coincide con el estatuto declarado.
 

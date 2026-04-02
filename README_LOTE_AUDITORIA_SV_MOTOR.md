@@ -12,7 +12,7 @@ Este lote no declara resuelto el motor. No redefine doctrina, no modifica el len
 1. Acta de auditoría de custodia del frente motor.
 2. Matriz verificable de evaluación por posiciones o criterios.
 3. Registro de hallazgos, con separación entre hecho, U, deuda viva y cambio improcedente.
-4. Contraste repo–manuscrito–publicación–laboratorio.
+4. Contraste repositorio–documentación–publicación–laboratorio.
 5. Dictamen final de auditoría.
 6. Criterio explícito de avance, parada o sincronización.
 
