@@ -39,6 +39,6 @@ Marcar una sola clase:
 - Sincronizar antes de abrir la fase siguiente con: Pliego, FT-SV-IA/001, seguridad estructural, repositorio del lenguaje y Documento 3 NLP vigente.
 
 ## Firma técnica
-- Unidad: UCIAC1-núcleo
+- Unidad: Unidad auditora interna
 - Fecha: 2026-04-02
-- Base material auditada: ZIP fresco del repositorio `SV-motor`, instalación local, `pytest`, `scripts/run_local_checks.sh` y laboratorio de `etapa_1_nucleo_local`
+- Base material auditada: snapshot descargado del repositorio `SV-motor`, instalación local, `pytest`, `scripts/run_local_checks.sh` y laboratorio de `etapa_1_nucleo_local`

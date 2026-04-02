@@ -12,3 +12,10 @@
 - incorporación de un caso canónico adicional del frente NLP al lote JSON del laboratorio;
 - declaración formal de dependencias de desarrollo y umbral mínimo de cobertura en integración continua;
 - saneamiento terminológico en documentos orientados a terceros.
+
+
+## 2026-04-02 — Corrección exacta 2
+
+- se cierra registralmente DV-SVM-004 a DV-SVM-008 tras contraste con la auditoría externa de la versión 0.1.2;
+- se corrige la trazabilidad del registro de deuda viva, evitando mantener abiertas correcciones ya materialmente resueltas;
+- se depuran varias expresiones internas o coloquiales en documentos expuestos a terceros.

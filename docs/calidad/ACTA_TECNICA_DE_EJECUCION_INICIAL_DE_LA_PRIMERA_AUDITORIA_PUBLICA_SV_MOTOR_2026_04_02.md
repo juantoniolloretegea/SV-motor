@@ -4,7 +4,7 @@
 Dejar constancia de la ejecución inicial de la primera auditoría pública fuerte del repositorio `SV-motor`.
 
 ## Base material usada
-- ZIP fresco del repositorio `SV-motor`.
+- snapshot descargado del repositorio `SV-motor`.
 - Instalación editable local del paquete.
 - Ejecución de `pytest`.
 - Ejecución de `scripts/run_local_checks.sh`.

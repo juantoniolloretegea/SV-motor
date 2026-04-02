@@ -1,9 +1,9 @@
 ID,Frente,Deuda,Tipo,Dependencia,Estado,Observacion
-DV-SVM-001,Integración con Lenguaje SV,No procede abrir backend soberano ni integración fuerte con runner,Dependencia superior,SV-lenguaje-de-computacion,Abierta,Queda condicionada a evolución superior verificada.
-DV-SVM-002,Sincronización NLP,La sincronización material con el estado vigente del Documento 3 no está completa,Sincronización,SV-banco-de-idiomas + Documento 3,Abierta,El motor no debe usar el banco como si reflejara por sí solo el estado actual.
-DV-SVM-003,Extractores subordinados,Los modos online/local opcionales exigen validación adicional de entorno y política de uso,Implementación subordinada,FT-SV-IA/001,Abierta,No bloquea el núcleo local mínimo.
-DV-SVM-004,2026-04-02,API pública mínima no exportada en el paquete,MEDIA,ABIERTA,Exportar símbolos mínimos en src/sv_motor/__init__.py,Próximo lote de corrección
-DV-SVM-005,2026-04-02,Resumen del laboratorio con recuentos fijos,BAJA,ABIERTA,Derivar los conteos desde los casos ejecutados,Próximo lote de corrección
-DV-SVM-006,2026-04-02,Checklist de publicación mínima desalineado con el estado acreditado,BAJA,ABIERTA,Actualizar casillas conforme al estado material,Próximo lote de corrección
-DV-SVM-007,2026-04-02,Dependencias de desarrollo no declaradas formalmente,MEDIA,ABIERTA,Añadir extra dev con pytest y pytest-cov,Próximo lote de corrección
-DV-SVM-008,2026-04-02,Caso canónico adicional del frente NLP ausente del laboratorio mínimo,BAJA,ABIERTA,Incorporar el caso indeterminado gamma-chi-psi al lote JSON,Próximo lote de corrección
+DV-SVM-001,Integración con el Lenguaje SV,No procede abrir backend soberano ni integración fuerte con el entorno de ejecución,Dependencia superior,SV-lenguaje-de-computacion,ABIERTA,Condicionada a evolución superior verificada.
+DV-SVM-002,Sincronización NLP,La sincronización material con el estado vigente del Documento 3 no está completa,Sincronización,SV-banco-de-idiomas y Documento 3,ABIERTA,El motor no debe usar el banco como si reflejara por sí solo el estado actual.
+DV-SVM-003,Extractores subordinados,Los modos opcionales local y en línea exigen validación adicional de entorno y política de uso,Implementación subordinada,FT-SV-IA/001,ABIERTA,No bloquea el núcleo local mínimo.
+DV-SVM-004,Paquete Python,La API pública mínima del paquete no estaba exportada,Corrección puntual,src/sv_motor/__init__.py,CERRADA,Corregida en la versión 0.1.2.
+DV-SVM-005,Laboratorio de etapa 1,El resumen del laboratorio contenía recuentos fijos,Corrección puntual,laboratorio/etapa_1_nucleo_local/ejecutar_laboratorio_motor_etapa_1.py,CERRADA,Corregido en la versión 0.1.2 mediante recuento derivado de los casos ejecutados.
+DV-SVM-006,Calidad documental,La lista mínima de publicación no reflejaba el estado material acreditado,Corrección puntual,docs/calidad/CHECKLIST_PUBLICACION_MINIMA.md,CERRADA,Corregida en la versión 0.1.2.
+DV-SVM-007,Empaquetado de desarrollo,Las dependencias de desarrollo no estaban declaradas formalmente,Corrección puntual,pyproject.toml,CERRADA,Corregida en la versión 0.1.2 mediante el extra opcional dev.
+DV-SVM-008,Laboratorio de etapa 1,Faltaba un caso canónico adicional del frente NLP en el lote JSON,Corrección puntual,laboratorio/etapa_1_nucleo_local/casos_canonicos_motor_etapa_1.json,CERRADA,Corregida en la versión 0.1.2.

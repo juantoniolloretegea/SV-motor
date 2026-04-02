@@ -4,7 +4,7 @@
 - Repositorio: `SV-motor`
 - Tipo de auditoría: primera auditoría pública fuerte
 - Fecha: 2026-04-02
-- Auditor / unidad: UCIAC1-núcleo
+- Auditor / unidad: Unidad auditora interna
 - Commit / tag / snapshot auditado: completar con el commit visible en `History` del clon o de GitHub web
 
 ## Material auditado
