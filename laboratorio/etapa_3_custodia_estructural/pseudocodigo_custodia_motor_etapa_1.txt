@@ -1,0 +1,19 @@
+CUSTODIA_MOTOR(observables):
+  C_custodia^9 = I_CUSTODIA(observables)
+  C_gob^9      = Γbar_H(C_custodia^9, H_CUSTODIA)
+  A_CUSTODIA   = gate(C_gob^9, C_custodia^9)
+  K3           = κ3(C_gob^9, A_CUSTODIA)
+
+  si K3 = APTO:
+      política = PERMITIR_AVANCE_CONTROLADO
+  si K3 = INDETERMINADO:
+      política = DETENER_Y_REVISAR
+  si K3 = NO_APTO:
+      política = BLOQUEAR_AVANCE
+
+  devolver trazabilidad, obligaciones y política.
+
+Restricción dura:
+- P2 presión sobre lenguaje, DSL o IR es irreducible si queda en U.
+- P8 protocolo activo de paso es irreducible si queda en U.
+- Ninguna de las dos posiciones puede producir cierre favorable por ausencia de prueba.

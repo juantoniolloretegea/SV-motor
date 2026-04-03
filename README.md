@@ -85,3 +85,10 @@ sv-nlp --modo direct   --obs-file laboratorio/etapa_0_demostracion_local/entrada
 ## Declaración inicial del dominio DEV
 
 Esta versión declara el dominio `𝔇_DEV` como dominio evaluable del frente motor. Su capa generativa permanece deliberadamente no abierta. El paso material incorporado en este lote es el evaluador algebraico del dominio y su laboratorio mínimo.
+
+
+## Compuerta ejecutable de custodia estructural
+
+Esta versión incorpora una compuerta ejecutable mínima de custodia estructural. Su función es bloquear o detener, antes de producir efectos, cualquier avance del motor que presione ilegítimamente al SV, al Lenguaje SV o a la preservación de U.
+
+La compuerta no introduce gramática nueva, no altera la IR canónica y no sustituye a la célula doctrinal completa. Actúa como condición técnica de paso del carril local.

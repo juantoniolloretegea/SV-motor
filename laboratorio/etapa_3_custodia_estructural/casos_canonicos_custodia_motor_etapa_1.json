@@ -1,0 +1,89 @@
+{
+  "casos": [
+    {
+      "id": "CUST-01",
+      "descripcion": "Movimiento alineado con doctrina, protocolo activo y sin presión sobre el lenguaje.",
+      "tipo": "custodia_motora",
+      "observables": {
+        "anclaje_doctrinal": "anclado",
+        "presion_sobre_lenguaje": "respetada",
+        "frontera_ml_algebra": "preservada",
+        "paridad_documento_laboratorio": "alineada",
+        "preservacion_u": "preservada",
+        "limites_de_fase": "respetados",
+        "trazabilidad": "trazable",
+        "protocolo_activo": "activo",
+        "dependencia_superior_respetada": "respetada"
+      },
+      "esperado_k3": "APTO"
+    },
+    {
+      "id": "CUST-02",
+      "descripcion": "Existe duda relevante sobre presión al lenguaje; al ser irreducible, la compuerta bloquea.",
+      "tipo": "custodia_motora",
+      "observables": {
+        "anclaje_doctrinal": "anclado",
+        "presion_sobre_lenguaje": "indeterminada",
+        "frontera_ml_algebra": "preservada",
+        "paridad_documento_laboratorio": "alineada",
+        "preservacion_u": "preservada",
+        "limites_de_fase": "respetados",
+        "trazabilidad": "trazable",
+        "protocolo_activo": "activo",
+        "dependencia_superior_respetada": "respetada"
+      },
+      "esperado_k3": "NO_APTO"
+    },
+    {
+      "id": "CUST-03",
+      "descripcion": "La paridad entre documento, artefacto y laboratorio queda abierta pero no irreducible.",
+      "tipo": "custodia_motora",
+      "observables": {
+        "anclaje_doctrinal": "anclado",
+        "presion_sobre_lenguaje": "respetada",
+        "frontera_ml_algebra": "preservada",
+        "paridad_documento_laboratorio": "indeterminada",
+        "preservacion_u": "preservada",
+        "limites_de_fase": "respetados",
+        "trazabilidad": "trazable",
+        "protocolo_activo": "activo",
+        "dependencia_superior_respetada": "respetada"
+      },
+      "esperado_k3": "INDETERMINADO"
+    },
+    {
+      "id": "CUST-04",
+      "descripcion": "Se detecta delegación del dictamen algebraico a ML.",
+      "tipo": "custodia_motora",
+      "observables": {
+        "anclaje_doctrinal": "anclado",
+        "presion_sobre_lenguaje": "respetada",
+        "frontera_ml_algebra": "delegada",
+        "paridad_documento_laboratorio": "alineada",
+        "preservacion_u": "preservada",
+        "limites_de_fase": "respetados",
+        "trazabilidad": "trazable",
+        "protocolo_activo": "activo",
+        "dependencia_superior_respetada": "respetada"
+      },
+      "esperado_k3": "NO_APTO"
+    },
+    {
+      "id": "CUST-05",
+      "descripcion": "Se intenta avanzar con protocolo de paso indeterminado; la compuerta bloquea.",
+      "tipo": "custodia_motora",
+      "observables": {
+        "anclaje_doctrinal": "anclado",
+        "presion_sobre_lenguaje": "respetada",
+        "frontera_ml_algebra": "preservada",
+        "paridad_documento_laboratorio": "alineada",
+        "preservacion_u": "preservada",
+        "limites_de_fase": "respetados",
+        "trazabilidad": "trazable",
+        "protocolo_activo": "indeterminada",
+        "dependencia_superior_respetada": "respetada"
+      },
+      "esperado_k3": "NO_APTO"
+    }
+  ]
+}

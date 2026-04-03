@@ -26,3 +26,7 @@ Una corrección no permanece declarada como deuda viva abierta en el mismo estad
 ## DV-SVM-009 — Apertura de la capa generativa del dominio DEV
 
 La capa generativa del dominio DEV no debe abrirse todavía. La presente versión solo declara y verifica la capa evaluadora y su laboratorio mínimo.
+
+
+## DV-SVM-010 — Compue​​rta ejecutable de custodia estructural
+La compuerta mínima ya existe y se ejecuta en el carril local de comprobación. Queda abierta su ampliación progresiva a todos los pasos sensibles del frente motor.

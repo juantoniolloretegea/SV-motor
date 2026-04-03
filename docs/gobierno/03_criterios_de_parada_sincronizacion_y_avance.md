@@ -26,5 +26,6 @@ Puede avanzarse cuando:
 - el paquete local instala;
 - los tests básicos están en verde;
 - existe laboratorio reproducible;
+- la compuerta de custodia estructural deja el paso en APTO;
 - la custodia no detecta atajo opaco;
 - y el nuevo paso no exige nada no legitimado por el SV.

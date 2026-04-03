@@ -28,6 +28,17 @@ from sv_motor.algebra.dev import (
     resolve_dev_policy,
     run_dev_agent,
 )
+
+from sv_motor.security.custodia_estructural import (
+    CustodiaMotorObservables,
+    CUSTODIA_SUPPORT_BASE,
+    i_custodia_motor,
+    custodia_observables_from_dict,
+    resolve_custodia_policy,
+    run_custodia_motor,
+    sensitive_step_is_allowed,
+)
+
 from sv_motor.protocols.ft_sv_ia import (
     ACTIVATION_PHRASE,
     INACTIVE_MESSAGE,
@@ -65,6 +76,13 @@ __all__ = [
     "dev_observables_from_dict",
     "resolve_dev_policy",
     "run_dev_agent",
+    "CustodiaMotorObservables",
+    "CUSTODIA_SUPPORT_BASE",
+    "i_custodia_motor",
+    "custodia_observables_from_dict",
+    "resolve_custodia_policy",
+    "run_custodia_motor",
+    "sensitive_step_is_allowed",
     "ACTIVATION_PHRASE",
     "INACTIVE_MESSAGE",
     "build_session_declaration",

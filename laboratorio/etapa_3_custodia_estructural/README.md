@@ -1,0 +1,20 @@
+# Laboratorio mínimo — Etapa 3 de custodia estructural
+
+Este bloque introduce una compuerta ejecutable mínima de custodia estructural para el frente motor.
+
+## Objeto
+Verificar que los movimientos sensibles del motor no presionan ilegítimamente al SV, al Lenguaje SV, al DSL, a la IR ni a la preservación de U.
+
+## Qué demuestra
+- que existe una célula ejecutable de custodia del motor en K₃;
+- que ciertas indeterminaciones se tratan como irreducibles y bloquean el avance;
+- que la frontera ML/álgebra, la paridad documental y los límites de fase pueden evaluarse localmente;
+- y que la compuerta puede integrarse en el flujo principal de comprobación sin vigilancia continua ni lógica opaca.
+
+## Entregables
+- `casos_canonicos_custodia_motor_etapa_1.json`
+- `pseudocodigo_custodia_motor_etapa_1.txt`
+- `ejecutar_laboratorio_custodia_motor_etapa_1.py`
+- `salida_casos_canonicos_custodia_motor_etapa_1.json`
+- `analisis_resultados_custodia_motor_etapa_1.md`
+- `dictamen_custodia_motor_etapa_1.json`

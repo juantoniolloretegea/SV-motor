@@ -1,3 +1,8 @@
+## 0.1.5
+- se incorpora compuerta ejecutable mínima de custodia estructural del frente motor;
+- se añade laboratorio de custodia estructural y su integración en el flujo local de comprobación;
+- se actualizan pruebas, deuda viva y documentación de fase.
+
 # Hoja de cambios
 
 ## 2026-04-02

@@ -27,3 +27,6 @@ Implementar en código la compuerta equivalente a FT-SV-IA/001 antes de cualquie
 
 ## Fase M2 ter — dominio DEV
 Declarar el dominio especializado de desarrollo y construir primero su evaluador algebraico y su laboratorio mínimo. La capa generativa del dominio solo puede estudiarse después de esta fase.
+
+## Fase M2 quater — compuerta ejecutable de custodia estructural
+Integrar una compuerta mínima y visible de custodia en el flujo principal del motor antes de cualquier paso sensible que roce lenguaje, protocolo, extractores opcionales o capa generativa.
