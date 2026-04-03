@@ -1,5 +1,12 @@
 # Hoja de cambios
 
+## v0.1.7
+
+- Se fija el cierre del Hito 3 con orientación aplicada del motor hacia agentes especializados, interacción experto–Inteligencia Lógica, proyección poligonal compartida, capa visual especializada subordinada y programación trazable en lenguaje SV con cotejo paralelo en Python.
+- Se incorpora la capa `verification/` como vara paralela de cotejo reproducible sobre JSON canónico, sin desplazar la forma canónica `.svp` ni el carril ejecutable principal.
+- Se consolida la reorganización científica del repositorio y se retira de la primera línea el material transitorio de lotes.
+- Se normaliza la serie documental de gobierno y se cierra la colisión entre protocolo original y revisión vigente.
+
 ## v0.1.6
 
 - se incorpora la capa de verificación Python (`src/sv_motor/verification/`):
