@@ -2,18 +2,18 @@
 
 ## Identificación
 - Repositorio: `SV-motor`
-- Tipo de auditoría: primera revisión pública fuerte
+- Tipo de revisión: primera revisión pública fuerte
 - Fecha: 2026-04-02
-- Auditor / unidad: revisión técnica interna
-- Commit / tag / snapshot auditado: completar con el commit visible en `History` del clon o de GitHub web
+- Responsable de revisión: revisión técnica interna
+- Commit / tag / snapshot revisado: completar con el commit visible en `History` del clon o de GitHub web
 
-## Material auditado
+## Material revisado
 - Árbol del repositorio: raíz `SV-motor-main` con `.github/`, `docs/`, `laboratorio/`, `scripts/`, `src/` y `tests/`.
 - README y documentos de gobierno: presentes y coherentes con una sede pública subordinada del frente motor.
 - Paquete Python y pruebas: `pyproject.toml` presente; instalación editable ejecutada; `35` pruebas superadas.
 - Laboratorio: presente `laboratorio/etapa_1_nucleo_local/` con pseudocódigo, script, salidas JSON, análisis y dictamen.
-- Registros de calidad: presentes en `docs/calidad/`, con registros mínimos, matrices, deuda viva y procedimiento de auditoría.
-- Artefactos relevantes adicionales: `scripts/run_local_checks.sh`, `README_LOTE_AUDITORIA_SV_MOTOR.md`, `LOTE_DE_ENTREGA_Y_VERIFICACION.md`.
+- Registros de calidad: presentes en `docs/calidad/`, con registros mínimos, matrices, deuda viva y procedimiento de revisión.
+- Artefactos relevantes adicionales: `scripts/run_local_checks.sh`, `ninguno.
 
 ## Dependencias contrastadas
 - Pliego: contraste favorable. El repositorio no se presenta como doctrina soberana ni como motor completo.
@@ -21,7 +21,7 @@
 - Células especializadas: contraste favorable. El frente motor se trata como carril subordinado y no como familia madura cerrada.
 - Célula de seguridad estructural: contraste favorable con deuda viva. No se detecta backend clandestino ni semántica implícita, pero falta demostración end-to-end auditada.
 - Documento 3 NLP: contraste favorable. El repositorio no sobreactúa el estado piloto del frente NLP.
-- HitoUCIAC1: contraste favorable. Se respeta la cadena de prevalencia y la prohibición de declarar resuelto el motor.
+- Hito 1 del proyecto motor: contraste favorable. Se respeta la cadena de prevalencia y la prohibición de declarar resuelto el motor.
 
 ## Hallazgos principales
 ### Hechos constatados
@@ -34,21 +34,21 @@
 ### Indeterminaciones honestas (U)
 - El snapshot exacto del commit auditado no puede fijarse desde el ZIP descargado y debe completarse con la vista `History` o la web de GitHub.
 - El estado de ejecución remota de GitHub Actions no queda verificado por este lote local.
-- No queda acreditada aún una demostración end-to-end local del frente motor.
+- No queda acreditada aún una demostración end-to-end local completa del frente motor.
 
 ### Deuda viva
 - Falta una demostración end-to-end estrictamente local y subordinada.
 - Falta un primer contraste auditado de sincronización material con el repositorio del lenguaje y el estado vigente del frente NLP.
-- Falta una primera lectura de terceros sobre el laboratorio del motor más allá de la autorevisión técnica.
+- Falta una primera lectura de terceros sobre el laboratorio del motor más allá de la revisión técnica interna.
 
 ### Cambios improcedentes detectados
 - Ninguno detectado en el lote auditado.
 
-## Dictamen preliminar
+## Dictamen
 - Estado: APTO CON DEUDA VIVA Y SINCRONIZACIÓN OBLIGATORIA
 - Justificación breve: el repositorio ya acredita núcleo local mínimo, pruebas, laboratorio y trazabilidad pública básica, pero no autoriza todavía proclamación de motor completo ni integración fuerte.
 
-## Adversarial
+## Revisión adversarial
 ### Riesgos de sobreactuación detectados
 - Presentar el frente como motor ya resuelto.
 - Presentar la fase actual como si ya implicara backend soberano.

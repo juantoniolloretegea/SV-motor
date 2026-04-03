@@ -6,7 +6,7 @@ Este procedimiento es operativo y subordinado. No modifica doctrina, no redefine
 
 ## 2. Objeto
 
-Regular cómo se auditan los hitos técnicos del repositorio `SV-motor`, preservando la congruencia entre documentación, implementación, laboratorio y estado público declarado.
+Regular cómo se revisan los hitos técnicos del repositorio `SV-motor`, preservando la congruencia entre documentación, implementación, laboratorio y estado público declarado.
 
 ## 3. Alcance
 
@@ -29,9 +29,9 @@ Se aplica a cambios que afecten a:
 6. adversarial obligatoria;
 7. publicación sobria y no sobreactuada.
 
-## 5. Disparadores de auditoría
+## 5. Disparadores de revisión
 
-Debe abrirse auditoría cuando exista:
+Debe abrirse revisión cuando exista:
 
 - apertura o cierre de una fase del motor;
 - cambio en extractores, compuertas, validación o laboratorio;
