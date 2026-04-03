@@ -48,6 +48,17 @@ from sv_motor.protocols.ft_sv_ia import (
     run_direct_ft_session,
 )
 
+
+from sv_motor.verification import (
+    SVProgramResult,
+    run_nlp as verification_run_nlp,
+    run_dev as verification_run_dev,
+    run_custodia as verification_run_custodia,
+    run_custom as verification_run_custom,
+    ComparisonResult,
+    compare as verification_compare,
+    verify_reproducible,
+)
 __all__ = [
     "U",
     "K3_APTO",
@@ -89,4 +100,12 @@ __all__ = [
     "build_state_block",
     "render_protocol_output",
     "run_direct_ft_session",
+    "SVProgramResult",
+    "verification_run_nlp",
+    "verification_run_dev",
+    "verification_run_custodia",
+    "verification_run_custom",
+    "ComparisonResult",
+    "verification_compare",
+    "verify_reproducible",
 ]

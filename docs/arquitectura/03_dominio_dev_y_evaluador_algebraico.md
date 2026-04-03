@@ -18,7 +18,7 @@ El orden correcto del frente DEV es:
 1. declaración del dominio;
 2. evaluador algebraico del dominio;
 3. casos canónicos y laboratorio mínimo;
-4. auditoría de conformidad del dominio;
+4. revisión de conformidad del dominio;
 5. solo después, estudio de extractor o capa generativa.
 
 ## Dictamen de la fase

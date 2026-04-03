@@ -1,26 +1,13 @@
-# Matriz de sincronización con repos superiores — SV-motor
+# Matriz de sincronización con repositorios y fuentes superiores
 
-## Regla
-El frente motor no puede avanzar como si fuera autónomo. Debe sincronizarse con las piezas superiores que condicionan su legitimidad.
+## Principio
 
-## Repos y piezas a contrastar
-1. Repositorio doctrinal y Pliego.
-2. FT-SV-IA/001.
-3. Repositorio del lenguaje.
-4. Célula especializada de seguridad estructural.
-5. Frente NLP vigente: PDF + lote canónico + estado material disponible.
+El frente motor no corrige silenciosamente al pliego, al repositorio doctrinal, al repositorio del lenguaje ni a la Colección I ya publicada.
 
-## Preguntas mínimas de sincronización
-- ¿El motor contradice una pieza superior?
-- ¿El motor está usando una pieza superior más madura de lo que realmente es?
-- ¿El motor promete una integración que el lenguaje todavía no autoriza?
-- ¿El motor usa NLP como frente piloto o como excusa de cierre impropio?
-- ¿La documentación del motor sigue siendo veraz tras cada avance?
+## Estado de sincronización
 
-## Resultado esperado
-Cada sincronización debe dejar:
-- fecha;
-- unidad auditora;
-- piezas contrastadas;
-- hallazgos;
-- y decisión: avanzar, parar o resincronizar.
+- **Pliego**: sin conflicto detectado en el estado actual.
+- **FT-SV-IA/001**: sin conflicto detectado; la frontera externa permanece subordinada.
+- **Lenguaje SV**: no se detectan cambios de gramática, IR, validator ni backend; la futura capa `.svp` debe subordinarse explícitamente a este frente.
+- **Seguridad estructural**: sin conflicto detectado; la compuerta mínima queda integrada como condición técnica de paso.
+- **Colección I / Documento 3**: el repositorio no sobreactúa el estado piloto del frente NLP y lo toma como anclaje aplicado real.

@@ -1,0 +1,295 @@
+{
+  "dictamen_global": {
+    "total": 21,
+    "canonicos": {
+      "total": 15,
+      "aciertos": 15,
+      "fallos": 0
+    },
+    "doble_vara": {
+      "total": 6,
+      "aciertos": 6,
+      "fallos": 0,
+      "detalle": []
+    },
+    "total_aciertos": 21,
+    "total_fallos": 0,
+    "dictamen": "APTO",
+    "nota": "Capa de verificación Python verificada: JSON canónico producido, U preservada como 'U', doble vara funcional, comparador detecta discrepancias."
+  },
+  "casos": [
+    {
+      "id": "VC-NLP-1",
+      "descripcion": "NLP APTO canónico",
+      "passed": true,
+      "checks": {
+        "k3": true,
+        "politica": true,
+        "gobernable": true,
+        "u_irr": true,
+        "json_schema": true
+      },
+      "k3": "APTO",
+      "politica": "CERRAR_FRAME",
+      "gobernable": true,
+      "u_irr": [],
+      "engine": "python",
+      "sv_version": "0.1.5"
+    },
+    {
+      "id": "VC-NLP-2",
+      "descripcion": "NLP INDETERMINADO (theta indeterminado)",
+      "passed": true,
+      "checks": {
+        "k3": true,
+        "politica": true,
+        "gobernable": true,
+        "u_irr": true,
+        "json_schema": true
+      },
+      "k3": "INDETERMINADO",
+      "politica": "CONTINUAR_EN_W(T,k)",
+      "gobernable": true,
+      "u_irr": [],
+      "engine": "python",
+      "sv_version": "0.1.5"
+    },
+    {
+      "id": "VC-NLP-3",
+      "descripcion": "NLP NO_APTO — contradicción estructural",
+      "passed": true,
+      "checks": {
+        "k3": true,
+        "politica": true,
+        "gobernable": true,
+        "u_irr": true,
+        "json_schema": true
+      },
+      "k3": "NO_APTO",
+      "politica": "PROPONER_FORK",
+      "gobernable": true,
+      "u_irr": [],
+      "engine": "python",
+      "sv_version": "0.1.5"
+    },
+    {
+      "id": "VC-NLP-4",
+      "descripcion": "NLP con soporte vacío en P1 → irreducible → no gobernable",
+      "passed": true,
+      "checks": {
+        "k3": true,
+        "politica": true,
+        "gobernable": true,
+        "u_irr": true,
+        "json_schema": true
+      },
+      "k3": "NO_APTO",
+      "politica": "PROPONER_FORK",
+      "gobernable": false,
+      "u_irr": [
+        1
+      ],
+      "engine": "python",
+      "sv_version": "0.1.5"
+    },
+    {
+      "id": "VC-DEV-1",
+      "descripcion": "DEV APTO canónico",
+      "passed": true,
+      "checks": {
+        "k3": true,
+        "politica": true,
+        "gobernable": true,
+        "u_irr": true,
+        "json_schema": true
+      },
+      "k3": "APTO",
+      "politica": "CIERRE_TECNICO_PENDIENTE_DE_HS",
+      "gobernable": true,
+      "u_irr": [],
+      "engine": "python",
+      "sv_version": "0.1.5"
+    },
+    {
+      "id": "VC-DEV-2",
+      "descripcion": "DEV NO_APTO — frontera ML delegada",
+      "passed": true,
+      "checks": {
+        "k3": true,
+        "politica": true,
+        "gobernable": true,
+        "u_irr": true,
+        "json_schema": true
+      },
+      "k3": "NO_APTO",
+      "politica": "PROPONER_FORK",
+      "gobernable": true,
+      "u_irr": [],
+      "engine": "python",
+      "sv_version": "0.1.5"
+    },
+    {
+      "id": "VC-DEV-3",
+      "descripcion": "DEV INDETERMINADO — trazabilidad indeterminada",
+      "passed": true,
+      "checks": {
+        "k3": true,
+        "politica": true,
+        "gobernable": true,
+        "u_irr": true,
+        "json_schema": true
+      },
+      "k3": "INDETERMINADO",
+      "politica": "CORREGIR_BAJO_OBLIGACIONES",
+      "gobernable": true,
+      "u_irr": [],
+      "engine": "python",
+      "sv_version": "0.1.5"
+    },
+    {
+      "id": "VC-CST-1",
+      "descripcion": "CUSTODIA APTO canónico",
+      "passed": true,
+      "checks": {
+        "k3": true,
+        "gobernable": true,
+        "u_irr": true,
+        "json_schema": true
+      },
+      "k3": "APTO",
+      "politica": "PERMITIR_AVANCE_CONTROLADO",
+      "gobernable": true,
+      "u_irr": [],
+      "engine": "python",
+      "sv_version": "0.1.5"
+    },
+    {
+      "id": "VC-CST-2",
+      "descripcion": "CUSTODIA NO_APTO — deriva doctrinal",
+      "passed": true,
+      "checks": {
+        "k3": true,
+        "gobernable": true,
+        "u_irr": true,
+        "json_schema": true
+      },
+      "k3": "NO_APTO",
+      "politica": "BLOQUEAR_AVANCE",
+      "gobernable": true,
+      "u_irr": [],
+      "engine": "python",
+      "sv_version": "0.1.5"
+    },
+    {
+      "id": "VC-CUS-1",
+      "descripcion": "CUSTOM vector todo-0 → APTO",
+      "passed": true,
+      "checks": {
+        "k3": true,
+        "gobernable": true,
+        "json_schema": true
+      },
+      "k3": "APTO",
+      "politica": "CERRAR_FRAME",
+      "gobernable": true,
+      "u_irr": [],
+      "engine": "python",
+      "sv_version": "0.1.5"
+    },
+    {
+      "id": "VC-CUS-2",
+      "descripcion": "CUSTOM vector todo-1 → NO_APTO",
+      "passed": true,
+      "checks": {
+        "k3": true,
+        "gobernable": true,
+        "json_schema": true
+      },
+      "k3": "NO_APTO",
+      "politica": "PROPONER_FORK",
+      "gobernable": true,
+      "u_irr": [],
+      "engine": "python",
+      "sv_version": "0.1.5"
+    },
+    {
+      "id": "VC-CUS-3",
+      "descripcion": "CUSTOM con fronteriza → INDETERMINADO",
+      "passed": true,
+      "checks": {
+        "k3": true,
+        "gobernable": true,
+        "json_schema": true,
+        "u_preserved": true
+      },
+      "k3": "INDETERMINADO",
+      "politica": "CONTINUAR_EN_W(T,k)",
+      "gobernable": true,
+      "u_irr": [],
+      "engine": "python",
+      "sv_version": "0.1.5"
+    },
+    {
+      "id": "VC-CUS-4",
+      "descripcion": "CUSTOM con resoluble → gobernable, clasifica correctamente",
+      "passed": true,
+      "checks": {
+        "k3": true,
+        "gobernable": true,
+        "u_irr": true,
+        "json_schema": true,
+        "u_preserved": true
+      },
+      "k3": "INDETERMINADO",
+      "politica": "CONTINUAR_EN_W(T,k)",
+      "gobernable": true,
+      "u_irr": [],
+      "engine": "python",
+      "sv_version": "0.1.5"
+    },
+    {
+      "id": "VC-CUS-5",
+      "descripcion": "CUSTOM todos irreducibles → no gobernable → NO_APTO",
+      "passed": true,
+      "checks": {
+        "k3": true,
+        "gobernable": true,
+        "u_irr": true,
+        "json_schema": true,
+        "u_preserved": true
+      },
+      "k3": "NO_APTO",
+      "politica": "PROPONER_FORK",
+      "gobernable": false,
+      "u_irr": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "engine": "python",
+      "sv_version": "0.1.5"
+    },
+    {
+      "id": "VC-CUS-6",
+      "descripcion": "CUSTOM n=1 — caso límite threshold T(1)=0",
+      "passed": true,
+      "checks": {
+        "k3": true,
+        "gobernable": true,
+        "json_schema": true
+      },
+      "k3": "NO_APTO",
+      "politica": "PROPONER_FORK",
+      "gobernable": true,
+      "u_irr": [],
+      "engine": "python",
+      "sv_version": "0.1.5"
+    }
+  ]
+}

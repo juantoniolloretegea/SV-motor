@@ -21,4 +21,4 @@ def test_evaluate_svg_defectuosa_fixture():
 
 def test_c2_enriched_preserves_local_gate_logic():
     result = c2_enriched(FIXTURES / "figure_apta.svg")
-    assert result["A_auditoria_enriquecida"] == "APTO"
+    assert result["A_revision_enriquecida"] == "APTO"

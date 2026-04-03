@@ -1,6 +1,5 @@
-Fecha,Unidad,Elemento,Tipo,Descripcion,Canal_de_observacion,Recuperable,Accion_requerida,Estado
-2026-04-02,Unidad auditora interna,Commit exacto auditado,U,"El snapshot descargado no contiene `.git` y no fija por si solo el snapshot exacto","inspeccion del ZIP",SI,"Completar con History o GitHub web",ABIERTO
-2026-04-02,Unidad auditora interna,GitHub Actions remoto,U,"La ejecucion remota del workflow no queda cerrada por la auditoria local","lote local auditado",SI,"Revisar Actions del repositorio",ABIERTO
-2026-04-02,Unidad auditora interna,Backend soberano,LIMITE,"No existe backend soberano y no procede declararlo","alcance declarado del repositorio",NO,"No forzar esta capa en la fase siguiente",ABIERTO
-2026-04-02,Unidad auditora interna,Integracion fuerte con lenguaje,LIMITE,"No existe integracion fuerte con gramática, IR o runner","docs arquitectura y gobierno",NO,"Parar si la siguiente fase lo exige",ABIERTO
-2026-04-02,Unidad auditora interna,Demostracion end-to-end local,U,"Aún no existe una demostracion completa de entrada tipada + evaluacion local + salida K3","inspección del repositorio",SI,"Preparar lote especifico de la fase siguiente",ABIERTO
+fecha,origen,objeto,tipo,descripcion,soporte,requiere_accion,accion,estado
+2026-04-03,tras revision,Integracion fuerte con lenguaje,LIMITE,No existe integracion fuerte con gramática, IR o runner,docs arquitectura y gobierno,NO,Parar si una fase futura la exige,ABIERTO
+2026-04-03,tras revision,Backend soberano,LIMITE,No existe backend soberano y no procede declararlo,alcance declarado del repositorio,NO,No forzar esta capa,ABIERTO
+2026-04-03,tras revision,Agente especializado en IA,U,La posibilidad está abierta por el corpus pero no está cerrada materialmente,docs fundamentos,SI,No declararlo existente antes del camino 4→9,ABIERTO
+2026-04-03,tras revision,Programacion `.svp`,U,La necesidad está fijada pero su especificacion ejecutable no existe todavia,docs arquitectura e interfaces,SI,Preparar pieza subordinada al repositorio del lenguaje,ABIERTO

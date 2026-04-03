@@ -274,6 +274,6 @@ def c2_enriched(
         "C_traza":                  c_traza,
         "S_base":                   s_base,
         "S_fiel":                   s_fiel,
-        "A_auditoria_enriquecida":  a_audit,
+        "A_revision_enriquecida":  a_audit,
         "svg_detail":               svg_result,
     }
