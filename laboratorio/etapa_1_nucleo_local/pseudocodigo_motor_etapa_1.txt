@@ -1,9 +1,17 @@
+# Autor: Juan Antonio Lloret Egea | ORCID: 0000-0002-6634-3351
+# Fecha y Versión: V.1 del conjunto
+# Fecha: 4 de abril de 2026
+# Licencia: CC BY-NC-ND 4.0
+# Titularidad y autoría: © Juan Antonio Lloret Egea, 2026.
+
 ENTRADA: lote de casos canónicos del motor
 
 PARA CADA caso DEL lote:
     SI caso.tipo = "nlp_agent":
         construir observables
-        ejecutar cadena I_NLP -> C_frame -> Γbar_H -> gate -> κ3
+        ejecutar cadena I_NLP -> C_frame^9 -> Γbar_H(C_frame^9, H) -> C_gob^9
+                                           -> gate_vector(C_gob^9, C_frame^9) -> A_NLP^9
+                                           -> κ3(C_gob^9, A_NLP^9)
         verificar clase esperada
         guardar salida serializada
     SI caso.tipo = "extract_direct":

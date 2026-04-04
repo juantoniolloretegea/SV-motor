@@ -1,5 +1,20 @@
 # Hoja de cambios
 
+## v0.1.8
+
+- se endurece el núcleo algebraico con validación de `n = b², b ≥ 3`;
+- se introduce `SVTernaryError` y normalización explícita del alfabeto ternario, con interoperabilidad para `"0"`, `"1"` y `"U"`;
+- `sv_version` pasa a derivarse dinámicamente del paquete instalado;
+- la cobertura y el umbral de CI pasan a medir `sv_motor` completo;
+- el CI incorpora `etapa_2_dominio_dev` y `etapa_5_verificacion_python`;
+- FT-SV-IA/001 admite bloqueo por custodia estructural declarada en el expediente directo;
+- se actualizan checklist, tablero, adversariales y deuda viva;
+- se materializa puente verificable con el banco de idiomas y se registra el adaptador pendiente con la IR v0.2 del lenguaje;
+- se corrigen los pseudocódigos de laboratorio para distinguir `gate_vector` de `gate_value`;
+- se completa el registro global de deuda del Hito 5;
+- se consolida el Hito 5 en régimen exclusivo de laboratorio, nunca de producción;
+- se incorporan `docs/arquitectura/09_hito5_arquitectura_multiestrato.md`, `docs/gobierno/12_regimen_exclusivo_de_laboratorio_y_perfiles_hito_5.md`, `docs/gobierno/13_cierre_tecnico_hito_5.md` y los protocolos mínimos de reemplazo de extractores.
+
 ## v0.1.7
 
 - Se fija el cierre del Hito 3 con orientación aplicada del motor hacia agentes especializados, interacción experto–Inteligencia Lógica, proyección poligonal compartida, capa visual especializada subordinada y programación trazable en lenguaje SV con cotejo paralelo en Python.
@@ -12,7 +27,7 @@
 - se incorpora la capa de verificación Python (`src/sv_motor/verification/`):
   - `py_runner.py`: runner ejecutable en Python puro para los dominios NLP, DEV, CUSTODIA y CUSTOM;
   - `comparator.py`: comparador de salidas JSON canónicas entre Python y backend Rust/.svp (doble vara);
-  - JSON canónico compartido con el backend Rust — mismos campos algebraicos, motores intercambiables;
+  - se fija un JSON canónico local del runner Python como artefacto de cotejo; la convergencia plena con la IR v0.2 del Lenguaje SV queda diferida a un adaptador explícito;
   - U preservada como cadena "U" en todo el JSON — nunca colapsada;
   - sin dependencias externas, sin estado global, `to_dict()` con copia profunda;
 - se añade laboratorio etapa_5_verificacion_python: 15 casos canónicos + 6 adversariales de doble vara, 21/21 APTO;

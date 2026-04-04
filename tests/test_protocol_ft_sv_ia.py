@@ -54,3 +54,35 @@ def test_run_direct_ft_session_declares_ud_b_when_input_is_out_of_domain():
     assert state is not None
     assert state["cabecera"] == "ESTADO DE SALIDA"
     assert state["U_d activas"][0]["codigo"] == "U_d(B)"
+
+
+def test_run_direct_ft_session_blocks_when_custodia_is_not_apta():
+    out = run_direct_ft_session(
+        {
+            "theta": "coherente",
+            "pi": "resuelta",
+            "kappa": "coherente",
+            "eta": "completa",
+            "gamma": "alineada",
+            "alpha": "apropiada",
+            "mu": "cerrada",
+            "chi": "sin-solicitud",
+            "psi": "cerrado",
+        },
+        activation_phrase=ACTIVATION_PHRASE,
+        material_session=["entrada"],
+        doctrine_sv=["Pliego", "FT-SV-IA/001"],
+        custodia_observables={
+            "anclaje_doctrinal": "anclado",
+            "presion_sobre_lenguaje": "indeterminada",
+            "frontera_ml_algebra": "preservada",
+            "paridad_documento_laboratorio": "alineada",
+            "preservacion_u": "preservada",
+            "limites_de_fase": "respetados",
+            "trazabilidad": "trazable",
+            "protocolo_activo": "activo",
+            "dependencia_superior_respetada": "respetada",
+        },
+    )
+    assert out["cuerpo"]["resultado_motor"] is None
+    assert out["ESTADO_DE_SALIDA"]["Bloqueos"][-1]["dictamen"] == "NO_APTO"

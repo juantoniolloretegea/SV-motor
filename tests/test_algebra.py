@@ -187,15 +187,15 @@ class TestRunAgent:
 
 class TestGammaH:
     def test_fronteriza(self):
-        labels = gamma_h_labels([U], {1: {0, 1}})
+        labels = gamma_h_labels([U] + [0]*8, {1: {0, 1}})
         assert labels[1] == "fronteriza"
 
     def test_resoluble(self):
-        labels = gamma_h_labels([U], {1: {0}})
+        labels = gamma_h_labels([U] + [0]*8, {1: {0}})
         assert labels[1] == "resoluble"
 
     def test_irreducible(self):
-        labels = gamma_h_labels([U], {1: set()})
+        labels = gamma_h_labels([U] + [0]*8, {1: set()})
         assert labels[1] == "irreducible"
 
     def test_gamma_bar_h_irreducible_produce_1(self):
@@ -244,3 +244,24 @@ class TestAdditionalCoverage:
         result = batch_run(cases)
         assert result[0]["id"] == "BATCH-01"
         assert result[0]["k3"] == K3_NO_APTO
+
+
+def test_batch_run_policy_mismatch_raises_value_error():
+    from sv_motor.algebra.nlp import batch_run
+    with pytest.raises(ValueError):
+        batch_run([{
+            "id": "BAD-POLICY",
+            "observables": {
+                "theta": "coherente",
+                "pi": "resuelta",
+                "kappa": "coherente",
+                "eta": "completa",
+                "gamma": "alineada",
+                "alpha": "apropiada",
+                "mu": "cerrada",
+                "chi": "sin-solicitud",
+                "psi": "cerrado",
+            },
+            "clase_esperada": "APTO",
+            "politica_esperada": "PROPONER_FORK",
+        }])

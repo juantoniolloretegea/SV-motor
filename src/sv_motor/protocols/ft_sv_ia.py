@@ -11,6 +11,11 @@ import json
 from typing import Any, Dict, Iterable, Optional
 
 from sv_motor.algebra.nlp import observables_from_dict, run_agent
+from sv_motor.security.custodia_estructural import (
+    custodia_observables_from_dict,
+    run_custodia_motor,
+    sensitive_step_is_allowed,
+)
 from sv_motor.extractors.ext_nlp import validate_observables_with_ud
 
 ACTIVATION_PHRASE = "Opera bajo FT-SV-IA/001."
@@ -74,6 +79,7 @@ def run_direct_ft_session(
     lagunas_declarables: Optional[Iterable[str]] = None,
     required_material: Optional[str] = None,
     support_override: Optional[Dict[int, set[int]]] = None,
+    custodia_observables: Optional[Dict[str, str]] = None,
 ) -> Dict[str, Any]:
     session = build_session_declaration(
         activation_phrase=activation_phrase,
@@ -86,19 +92,45 @@ def run_direct_ft_session(
         return {"protocolo": session, "cuerpo": None, "ESTADO_DE_SALIDA": None}
 
     normalized, u_d_activas = validate_observables_with_ud(observables_payload)
-    obs = observables_from_dict(normalized)
-    result = run_agent(obs, support_override=support_override)
+    blockages = [] if not required_material else [{"causa": "material específico ausente", "pieza": required_material}]
+    custodia_result = None
+    if custodia_observables is not None:
+        custodia_result = run_custodia_motor(
+            custodia_observables_from_dict(custodia_observables)
+        )
+        if not sensitive_step_is_allowed(custodia_result):
+            blockages.append({
+                "causa": "custodia estructural no apta para paso sensible",
+                "dictamen": custodia_result.get("k3"),
+            })
+
     state_block = build_state_block(
-        blockages=[] if not required_material else [{"causa": "material específico ausente", "pieza": required_material}],
+        blockages=blockages,
         u_d_activas=u_d_activas,
         action_required=(f"Aportar la pieza específica: {required_material}" if required_material else None),
     )
+    if blockages:
+        return {
+            "protocolo": {"declaracion_de_sesion": session},
+            "cuerpo": {
+                "modo": "direct",
+                "observables_entrada": observables_payload,
+                "observables_normalizados": normalized,
+                "resultado_custodia": custodia_result,
+                "resultado_motor": None,
+            },
+            "ESTADO_DE_SALIDA": state_block,
+        }
+
+    obs = observables_from_dict(normalized)
+    result = run_agent(obs, support_override=support_override)
     return {
         "protocolo": {"declaracion_de_sesion": session},
         "cuerpo": {
             "modo": "direct",
             "observables_entrada": observables_payload,
             "observables_normalizados": normalized,
+            "resultado_custodia": custodia_result,
             "resultado_motor": result,
         },
         "ESTADO_DE_SALIDA": state_block,

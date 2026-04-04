@@ -1,3 +1,7 @@
+> **ALCANCE HISTÓRICO**
+> Este documento describe una revisión temprana del repositorio y no debe leerse como fotografía exhaustiva del estado actual.
+> El estado consolidado posterior queda recogido en `ACTA_TECNICA_DE_SINCRONIZACION_INTERREPOSITORIAL_2026_04_03.md` y en la deuda viva vigente.
+
 # Acta de revisión de custodia estructural — SV-motor
 
 ## Identificación

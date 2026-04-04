@@ -1,7 +1,13 @@
+# Autor: Juan Antonio Lloret Egea | ORCID: 0000-0002-6634-3351
+# Fecha y Versión: V.1 del conjunto
+# Fecha: 4 de abril de 2026
+# Licencia: CC BY-NC-ND 4.0
+# Titularidad y autoría: © Juan Antonio Lloret Egea, 2026.
+
 CUSTODIA_MOTOR(observables):
   C_custodia^9 = I_CUSTODIA(observables)
   C_gob^9      = Γbar_H(C_custodia^9, H_CUSTODIA)
-  A_CUSTODIA   = gate(C_gob^9, C_custodia^9)
+  A_CUSTODIA   = gate_vector(C_gob^9, C_custodia^9)   # ∈ Σ⁹
   K3           = κ3(C_gob^9, A_CUSTODIA)
 
   si K3 = APTO:

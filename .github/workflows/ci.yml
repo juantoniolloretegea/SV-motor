@@ -21,15 +21,23 @@ jobs:
           pip install -e ".[dev]"
       - name: Run tests with coverage
         run: |
-          PYTHONPATH=src pytest -q --cov=sv_motor.algebra --cov-report=term-missing --cov-fail-under=90
-      - name: Run laboratory
-        run: |
-          python laboratorio/etapa_1_nucleo_local/ejecutar_laboratorio_motor_etapa_1.py
-
+          PYTHONPATH=src pytest -q --cov=sv_motor --cov-report=term-missing --cov-fail-under=90
       - name: Run end-to-end demo
         run: |
           python laboratorio/etapa_0_demostracion_local/ejecutar_demo_end_to_end_local.py
 
+      - name: Run local core laboratory
+        run: |
+          python laboratorio/etapa_1_nucleo_local/ejecutar_laboratorio_motor_etapa_1.py
+
+      - name: Run DEV domain laboratory
+        run: |
+          python laboratorio/etapa_2_dominio_dev/ejecutar_laboratorio_dev_etapa_1.py
+
       - name: Run custody gate laboratory
         run: |
           python laboratorio/etapa_3_custodia_estructural/ejecutar_laboratorio_custodia_motor_etapa_1.py
+
+      - name: Run Python verification laboratory
+        run: |
+          python laboratorio/etapa_5_verificacion_python/ejecutar_laboratorio_verificacion.py

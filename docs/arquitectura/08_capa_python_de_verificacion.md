@@ -6,17 +6,15 @@ Declarar el rol, la arquitectura y los límites de la capa Python de verificaci�
 
 ## Posición en el motor
 
-El motor de ejecución canónico del SV es el backend Rust compilado desde código `.svp`. La capa Python no lo reemplaza. Su función es producir, en Python puro, una salida JSON canónica idéntica en estructura a la que el backend Rust producirá. Eso la hace útil como herramienta de verificación, no como herramienta de ejecución primaria.
+El motor de ejecución canónico del SV sigue siendo el backend Rust compilado desde código `.svp`. La capa Python no lo reemplaza. Su función es producir, en Python puro, un JSON canónico local del runner que sirva como vara de cotejo reproducible mientras no exista todavía el adaptador formal con la IR v0.2 del Lenguaje SV.
 
 ## Tres usos legítimos
 
-**1. Verificación cruzada.** Un programador no experto en SV puede ejecutar el runner Python, obtener JSON, y compararlo con la salida Rust del `.svp` usando el comparador. Si coinciden, la implementación Rust es algebraicamente correcta.
+**1. Verificación cruzada.** Un programador puede ejecutar el runner Python, obtener JSON y contrastarlo con una salida futura del backend Rust mediante un adaptador explícito.
 
-**2. Doble vara.** Dos implementaciones del mismo álgebra — Python y Rust — produciendo JSON idéntico es la prueba más sólida de corrección. Si difieren, el comparador señala el campo exacto y el valor en cada motor.
+**2. Doble vara local.** Dos implementaciones del mismo álgebra pueden compararse campo a campo cuando comparten expediente y contrato de salida.
 
-**3. Universalidad.** Python + JSON hace el SV accesible a cualquier ecosistema — R, Julia, JavaScript, sistemas embebidos — sin modificar la especificación algebraica ni comprometer la ejecución Rust.
-
-**4. Cotejo de desconfianza razonable.** Un desarrollador que aún no conozca el Lenguaje SV puede inspeccionar el artefacto Python derivado, ejecutar el laboratorio y verificar que la salida coincide con el JSON canónico asociado al `.svp`. Esto convierte a Python en instrumento de verificación y difusión, no en sede soberana del programa.
+**3. Universalidad.** Python + JSON hace el SV accesible a otros ecosistemas sin modificar la especificación algebraica ni comprometer la ejecución Rust.
 
 ## Separación entre Python y `.svp`/Rust
 
@@ -24,35 +22,34 @@ El motor de ejecución canónico del SV es el backend Rust compilado desde códi
 |---|---|---|
 | Rol | Verificar corrección | Ejecutar en producción |
 | Compilación | Ninguna | Backend Rust soberano |
-| Memoria | Gestión Python | Punteros Rust, sin GC |
 | Runtime | Python ≥ 3.10 | Sin runtime externo |
-| JSON output | Canónico | Canónico (idéntico en campos algebraicos) |
+| JSON output | Canónico local del runner | A definir por puente formal |
 | Velocidad | Secundaria | Primaria |
 
-## Esquema JSON canónico
+## Esquema JSON canónico local
 
-El esquema es compartido entre Python y Rust. Los campos algebraicos deben ser idénticos en ambas salidas para una misma entrada:
+El runner Python produce un esquema estable y trazable para el frente motor. No debe declararse todavía identidad de esquema con la IR v0.2 del Lenguaje SV mientras el adaptador formal siga abierto.
 
 ```json
 {
-  "sv_version":   "0.1.5",
-  "engine":       "python",
-  "domain":       "NLP|DEV|CUSTODIA|CUSTOM",
+  "sv_version": "<autodetectada>",
+  "engine": "python",
+  "domain": "NLP|DEV|CUSTODIA|CUSTOM",
   "programa": {
     "observables": {},
-    "horizonte":   {"1": [0, 1], "2": [0]}
+    "horizonte": {"1": [0, 1], "2": [0]}
   },
   "traza": {
-    "C_frame":          [0, "U", 1, 0, 0, 0, 0, 0, 0],
-    "gamma_h_labels":   {"2": "fronteriza"},
-    "C_gob":            [0, "U", 0, 0, 0, 0, 0, 0, 0],
-    "A_agente":         [0, "U", 0, 0, 0, 0, 0, 0, 0],
-    "U_irr":            [],
-    "gobernable":       true
+    "C_frame": [0, "U", 1, 0, 0, 0, 0, 0, 0],
+    "gamma_h_labels": {"2": "fronteriza"},
+    "C_gob": [0, "U", 0, 0, 0, 0, 0, 0, 0],
+    "A_agente": [0, "U", 0, 0, 0, 0, 0, 0, 0],
+    "U_irr": [],
+    "gobernable": true
   },
   "dictamen": {
-    "k3":         "INDETERMINADO",
-    "politica":   "CONTINUAR_EN_W(T,k)"
+    "k3": "INDETERMINADO",
+    "politica": "CONTINUAR_EN_W(T,k)"
   }
 }
 ```
@@ -61,30 +58,8 @@ La U se preserva como cadena `"U"` en el JSON. Nunca se colapsa a 0 o 1.
 
 ## Invariantes de diseño
 
-- Sin dependencias externas. Solo stdlib + `sv_motor.algebra`.
-- Sin estado global. Cada llamada a `run_nlp`, `run_dev`, `run_custodia` o `run_custom` es pura.
-- `to_dict()` devuelve copia profunda — segura para mutación en tests y comparadores.
-- El comparador excluye los campos `engine`, `sv_version` y metadatos de implementación.
-- Los campos algebraicos comparados son: `traza.C_frame`, `traza.gamma_h_labels`, `traza.C_gob`, `traza.A_agente`, `traza.U_irr`, `traza.gobernable`, `dictamen.k3`, `dictamen.politica`.
-
-## Uso mínimo
-
-```python
-from sv_motor.verification import run_nlp, compare
-
-result = run_nlp({
-    "theta": "coherente", "pi": "sin-pregunta", "kappa": "coherente",
-    "eta": "completa",    "gamma": "alineada",  "alpha": "apropiada",
-    "mu":  "sin-ambiguedad", "chi": "sin-solicitud", "psi": "en-curso",
-})
-print(result.json_canonical())
-
-# Doble vara con la salida del backend Rust:
-# verification = compare(result.json_canonical(), rust_json_string)
-# assert verification.verificado, verification.discrepancias
-```
-
-## Deuda viva de esta capa
-
-- La comparación con el backend Rust real quedará pendiente hasta que DV-SVM-002 esté implementado.
-- El runner CUSTOM acepta cualquier vector {0,1,U}^n — no valida que el vector provenga de un transductor de dominio declarado. Esa validación es responsabilidad del programador.
+- Sin dependencias externas en el runner.
+- Sin estado global.
+- `to_dict()` devuelve copia profunda.
+- El comparador excluye `engine`, `sv_version` y metadatos de implementación.
+- El puente formal con la IR v0.2 del Lenguaje SV sigue abierto y queda registrado como deuda viva.

@@ -8,16 +8,18 @@ POSICIÓN DOCTRINAL
 El motor de ejecución canónico del SV es el backend Rust compilado desde
 código `.svp`. Este módulo no lo reemplaza.
 
-Su función es producir, en Python puro, una salida JSON canónica idéntica
-en estructura a la que el backend Rust producirá cuando el `.svp` esté
-implementado. Eso permite tres usos legítimos:
+Su función es producir, en Python puro, una salida JSON canónica local,
+trazable y estable del frente motor. Esa salida servirá como vara de cotejo
+mientras no exista todavía el adaptador formal con el backend Rust/.svp.
+Eso permite tres usos legítimos:
 
   1. VERIFICACIÓN CRUZADA: un programador no experto en SV puede ejecutar
      el runner Python, obtener JSON, y compararlo con la salida Rust del
      `.svp` usando el comparador (comparator.py).
 
   2. DOBLE VARA: dos implementaciones del mismo álgebra — Python y Rust —
-     produciendo JSON idéntico es la prueba más sólida de corrección.
+     podrán compararse campo a campo cuando compartan un contrato de salida
+     explícitamente alineado.
 
   3. UNIVERSALIDAD: Python + JSON hace el SV accesible a cualquier
      ecosistema sin modificar la especificación algebraica.
@@ -33,7 +35,7 @@ INVARIANTES DE DISEÑO
 ESQUEMA JSON CANÓNICO (compartido con el backend Rust/.svp)
 -----------------------------------------------------------
 {
-  "sv_version":   "0.1.5",
+  "sv_version":   "<auto>",
   "engine":       "python",          # "rust" cuando venga del .svp
   "domain":       "NLP|DEV|CUSTODIA|CUSTOM",
   "programa": {
@@ -68,6 +70,8 @@ from sv_motor.algebra.core import (
     gate_vector,
     kappa3,
     resolve_policy,
+    normalize_vector,
+    validate_cell_size,
 )
 from sv_motor.algebra.nlp import (
     Observables as NLPObservables,
@@ -90,7 +94,25 @@ from sv_motor.security.custodia_estructural import (
     run_custodia_motor as _run_custodia,
 )
 
-SV_VERSION = "0.1.5"
+def _detect_version() -> str:
+    try:
+        from importlib.metadata import version
+        return version("sv-motor")
+    except Exception:
+        try:
+            from pathlib import Path
+            import re
+            pyproject = Path(__file__).resolve().parents[3] / "pyproject.toml"
+            text = pyproject.read_text(encoding="utf-8")
+            match = re.search(r'^version\s*=\s*"([^"]+)"', text, re.MULTILINE)
+            if match:
+                return match.group(1)
+        except Exception:
+            pass
+        return "0.0.0-dev"
+
+
+SV_VERSION = _detect_version()
 _ENGINE_PYTHON = "python"
 
 
@@ -115,7 +137,7 @@ def _ser_support(support: Dict[int, Set[int]]) -> Dict[str, List[int]]:
 
 
 # ─────────────────────────────────────────────────────────────────────────────
-# Resultado canónico — estructura idéntica a la que producirá el backend Rust
+# Resultado canónico — estructura local trazable del runner Python
 # ─────────────────────────────────────────────────────────────────────────────
 
 @dataclass
@@ -172,10 +194,12 @@ def run_nlp(
     obs = observables_from_dict(observables)
     support = dict(support_override or H_NLP_SUPPORT_BASE)
 
-    c_frame  = i_nlp(obs)
-    labels   = gamma_h_labels(c_frame, support)
-    c_gob    = gamma_bar_h(c_frame, support)
-    a_agente = gate_vector(c_gob, c_frame)
+    c_frame = i_nlp(obs)
+    normalized_frame = normalize_vector(c_frame)
+    validate_cell_size(len(normalized_frame))
+    labels   = gamma_h_labels(normalized_frame, support)
+    c_gob    = gamma_bar_h(normalized_frame, support)
+    a_agente = gate_vector(c_gob, normalized_frame)
     k3       = kappa3(c_gob, a_agente)
     politica = resolve_policy(k3)
     u_irr    = [idx for idx, cls in labels.items() if cls == "irreducible"]
@@ -189,7 +213,7 @@ def run_nlp(
             "horizonte":   _ser_support(support),
         },
         traza = {
-            "C_frame":        _ser_vector(c_frame),
+            "C_frame":        _ser_vector(normalized_frame),
             "gamma_h_labels": _ser_labels(labels),
             "C_gob":          _ser_vector(c_gob),
             "A_agente":       _ser_vector(a_agente),
@@ -343,9 +367,11 @@ def run_custom(
     Returns:
         SVProgramResult con JSON canónico.
     """
-    labels   = gamma_h_labels(list(c_frame), support_map)
-    c_gob    = gamma_bar_h(list(c_frame), support_map)
-    a_agente = gate_vector(c_gob, list(c_frame))
+    normalized_frame = normalize_vector(list(c_frame))
+    validate_cell_size(len(normalized_frame))
+    labels   = gamma_h_labels(normalized_frame, support_map)
+    c_gob    = gamma_bar_h(normalized_frame, support_map)
+    a_agente = gate_vector(c_gob, normalized_frame)
     k3       = kappa3(c_gob, a_agente)
     politica = resolve_policy(k3)
     u_irr    = [idx for idx, cls in labels.items() if cls == "irreducible"]
@@ -357,7 +383,7 @@ def run_custom(
         programa   = {
             "observables": observables_raw or {},
             "horizonte":   _ser_support(support_map),
-            "C_frame_input": _ser_vector(c_frame),
+            "C_frame_input": _ser_vector(normalized_frame),
         },
         traza = {
             "C_frame":        _ser_vector(c_frame),

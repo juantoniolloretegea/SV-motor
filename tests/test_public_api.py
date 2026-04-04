@@ -1,9 +1,13 @@
+import pytest
+
 from sv_motor import (
     U,
     K3_APTO,
     K3_INDETERMINADO,
     K3_NO_APTO,
+    SVTernaryError,
     threshold,
+    validate_cell_size,
     classify_cell,
     gate,
     gate_vector,
@@ -22,9 +26,10 @@ def test_public_api_exports_minimos():
     assert K3_INDETERMINADO == "INDETERMINADO"
     assert K3_NO_APTO == "NO_APTO"
     assert threshold(9) == 7
+    assert validate_cell_size(9) == 3
     assert classify_cell([0] * 9) == K3_APTO
     assert gate(K3_APTO, K3_INDETERMINADO) == K3_INDETERMINADO
-    assert gate_vector([0, U], [0, 1]) == [0, 1]
+    assert gate_vector([0]*9, [0,1,0,0,0,0,0,0,0]) == [0,1,0,0,0,0,0,0,0]
     obs = Observables(
         theta="coherente",
         pi="resuelta",
@@ -76,3 +81,8 @@ def test_public_api_exports_dev_minimos():
     )
     out = run_dev_agent(obs)
     assert out["k3"] == K3_APTO
+
+
+def test_public_api_rejects_out_of_domain_value():
+    with pytest.raises(SVTernaryError):
+        classify_cell([0]*8 + ["u"])

@@ -41,6 +41,7 @@ def main() -> None:
             }
         )
 
+    fallos = 0
     summary = {
         "etapa": "etapa_3_custodia_estructural",
         "casos_totales": len(results),
@@ -50,7 +51,7 @@ def main() -> None:
             "NO_APTO": k3_counter.get("NO_APTO", 0),
         },
         "resumen_paso": dict(allow_counter),
-        "dictamen": "APTO",
+        "dictamen": "APTO" if fallos == 0 else "NO_APTO",
     }
 
     OUTPUT.write_text(

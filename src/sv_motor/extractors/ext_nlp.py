@@ -23,6 +23,7 @@ la posición se emite como U_d(B) antes de llegar a I_NLP.
 from __future__ import annotations
 
 import json
+from dataclasses import dataclass
 from typing import Any, Dict, Optional
 
 # Dominio declarado (Documento 2, §2.3)
@@ -53,13 +54,13 @@ Reglas absolutas:
 4. NO fabricas certeza donde no la hay.
 
 Posiciones y dominios:
-- theta (P1 coherencia temática): coherente | desvio | indeterminado
+- theta (P1 coherencia temática): coherente | desvío | indeterminado
 - pi    (P2 pregunta resuelta):   sin-pregunta | resuelta | bloqueada | indeterminada
 - kappa (P3 sin contradicción):   coherente | contradictoria | indeterminada
 - eta   (P4 completitud):         completa | defectuosa | indeterminada
 - gamma (P5 filiación objetivo):  alineada | bloqueada | indeterminada
 - alpha (P6 tipo de acto):        apropiada | inapropiada | indeterminada
-- mu    (P7 ambigüedad):          sin-ambiguedad | cerrada | incompatible | indeterminada
+- mu    (P7 ambigüedad):          sin-ambigüedad | cerrada | incompatible | indeterminada
 - chi   (P8 clarificación):       sin-solicitud | atendida | denegada | indeterminada
 - psi   (P9 estado objetivo):     en-curso | cerrado | bloqueado | indeterminado
 
@@ -112,6 +113,21 @@ def validate_observables_with_ud(raw: Dict[str, str]) -> tuple[Dict[str, str], l
     return _validate_and_collect(raw)
 
 
+
+
+@dataclass(frozen=True)
+class CaptureResult:
+    """Resultado de captura auxiliar con metadatos mínimos de admisibilidad."""
+
+    observables: Dict[str, str]
+    u_d_items: list[dict[str, str]]
+    admisible: bool
+
+
+def capture_result_from_raw(raw: Dict[str, str]) -> CaptureResult:
+    observables, u_d_items = _validate_and_collect(raw)
+    return CaptureResult(observables=observables, u_d_items=u_d_items, admisible=True)
+
 # ─────────────────────────────────────────────────────────────
 # MODO A — sin ML
 # ─────────────────────────────────────────────────────────────
@@ -128,20 +144,20 @@ def extract_direct(observables_dict: Dict[str, str]) -> Dict[str, str]:
 # ─────────────────────────────────────────────────────────────
 def extract_ollama(
     text: str,
-    model: str = "qwen2.5:7b",
+    model: str = "qwen3:4b",
     base_url: str = "http://localhost:11434",
 ) -> Dict[str, str]:
     """
     Modo B: extracción via Ollama local.
 
-    Requiere: pip install sv-motor[bridge] + Ollama instalado con el modelo.
+    Requiere: instalación del repositorio con extras de bridge (por ejemplo, `python -m pip install -e .[bridge]`) y Ollama instalado con el modelo.
     Ollama: https://ollama.ai
-    Modelo recomendado: qwen2.5:7b  (ollama pull qwen2.5:7b)
+    Modelo recomendado: qwen3:4b  (fallback documentado: qwen2.5:7b)
     """
     try:
         import httpx
     except ImportError:
-        raise ImportError("Instala con: pip install sv-motor[bridge]")
+        raise ImportError("Instala el bridge con: python -m pip install -e .[bridge]  (o la variante empaquetada equivalente si existiera)")
 
     payload = {
         "model": model,
@@ -178,7 +194,7 @@ def extract_hf_api(
     try:
         import requests
     except ImportError:
-        raise ImportError("Instala con: pip install sv-motor[bridge]")
+        raise ImportError("Instala el bridge con: python -m pip install -e .[bridge]  (o la variante empaquetada equivalente si existiera)")
 
     headers = {"Content-Type": "application/json"}
     if hf_token:
@@ -208,7 +224,7 @@ def extract_hf_api(
 # ─────────────────────────────────────────────────────────────
 def extract_anthropic(
     text: str,
-    model: str = "claude-sonnet-4-6",
+    model: str = "claude-haiku-4-5-20251001",
     api_key: Optional[str] = None,
 ) -> Dict[str, str]:
     """
@@ -243,7 +259,7 @@ def extract_anthropic(
 # Interfaz unificada
 # ─────────────────────────────────────────────────────────────
 def extract(
-    text: str,
+    text: str | None = None,
     mode: str = "ollama",
     **kwargs: Any,
 ) -> Dict[str, str]:
@@ -255,14 +271,18 @@ def extract(
       "ollama"    → Modo B via Ollama local (por defecto)
       "hf"        → Modo B via HuggingFace API
       "anthropic" → Modo C via Anthropic API
+      "anthropic_audit" → Modo C de auditoría adversarial
     """
     if mode == "direct":
         return extract_direct(kwargs["observables"])
     elif mode == "ollama":
-        return extract_ollama(text, **kwargs)
+        return extract_ollama(text or "", **kwargs)
     elif mode == "hf":
-        return extract_hf_api(text, **kwargs)
+        return extract_hf_api(text or "", **kwargs)
     elif mode == "anthropic":
-        return extract_anthropic(text, **kwargs)
+        return extract_anthropic(text or "", **kwargs)
+    elif mode == "anthropic_audit":
+        kwargs.setdefault("model", "claude-sonnet-4-6")
+        return extract_anthropic(text or "", **kwargs)
     else:
-        raise ValueError(f"Modo desconocido: {mode!r}. Usa: direct | ollama | hf | anthropic")
+        raise ValueError(f"Modo desconocido: {mode!r}. Usa: direct | ollama | hf | anthropic | anthropic_audit")

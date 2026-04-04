@@ -30,3 +30,7 @@ Declarar el dominio especializado de desarrollo y construir primero su evaluador
 
 ## Fase M2 quater — compuerta ejecutable de custodia estructural
 Integrar una compuerta mínima y visible de custodia en el flujo principal del motor antes de cualquier paso sensible que roce lenguaje, protocolo, extractores opcionales o capa generativa.
+
+
+## Fase M6 — arquitectura multi-estrato en régimen exclusivo de laboratorio
+Declarar, bajo custodia estructural, la arquitectura multi-estrato del motor para dominios biomédicos y permitir únicamente ejecución y prueba completas de laboratorio. No procede producción mientras el bloque documental de nueve piezas no cierre suficientemente el álgebra y la semántica necesarias.

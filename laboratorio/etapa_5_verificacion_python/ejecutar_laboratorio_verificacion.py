@@ -248,11 +248,11 @@ CASOS = [
     },
     {
         "id": "VC-CUS-6",
-        "descripcion": "CUSTOM n=1 — caso límite threshold T(1)=0",
+        "descripcion": "CUSTOM n=16 todo-0 → APTO",
         "runner": "custom",
-        "c_frame": [1],
+        "c_frame": [0]*16,
         "support_map": {},
-        "esperado_k3": "NO_APTO",
+        "esperado_k3": "APTO",
         "esperado_gobernable": True,
     },
 ]

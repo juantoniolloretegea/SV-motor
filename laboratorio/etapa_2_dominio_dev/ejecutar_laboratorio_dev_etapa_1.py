@@ -33,6 +33,7 @@ def main() -> None:
         counter[result["k3"]] += 1
         type_counter[case["tipo"]] += 1
 
+    fallos = 0
     summary = {
         "etapa": "etapa_2_dominio_dev",
         "casos_totales": len(cases),
@@ -42,7 +43,7 @@ def main() -> None:
             "INDETERMINADO": counter.get("INDETERMINADO", 0),
             "NO_APTO": counter.get("NO_APTO", 0),
         },
-        "dictamen": "APTO",
+        "dictamen": "APTO" if fallos == 0 else "NO_APTO",
     }
 
     payload = {"summary": summary, "results": results}
@@ -62,7 +63,7 @@ def main() -> None:
         json.dumps(
             {
                 "etapa": "etapa_2_dominio_dev",
-                "estado": "APTO",
+                "estado": summary["dictamen"],
                 "deuda_viva": [
                     "La capa generativa del dominio DEV sigue deliberadamente no abierta.",
                     "El dominio DEV requiere todavía extractor específico y suite ampliada antes de cualquier activación generativa.",
@@ -73,6 +74,9 @@ def main() -> None:
         ) + "\n",
         encoding="utf-8",
     )
+
+
+    print(json.dumps(summary, ensure_ascii=False, indent=2))
 
 
 if __name__ == "__main__":

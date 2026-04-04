@@ -1,8 +1,15 @@
-id,objeto,descripcion,soporte,estado,nota
-DV-SVM-001,Sincronizacion con Documento 3 y frente NLP,La sincronizacion material completa sigue abierta,docs/estado y docs/fundamentos,ABIERTA,No cerrar el motor usando NLP como atajo.
-DV-SVM-002,Especificacion de transduccion a `.svp`,La necesidad está fijada pero la pieza ejecutable no existe todavia,docs/arquitectura y docs/interfaces,ABIERTA,Debe quedar subordinada al repositorio del Lenguaje SV.
-DV-SVM-003,Agente especializado en IA,La posibilidad está habilitada pero no cerrada por el camino documental 4→9,docs/fundamentos,ABIERTA,No declararlo existente antes del cierre suficiente del camino critico.
-DV-SVM-004,Capa visual especializada,La capa es necesaria pero su estatuto y su baseline arquitectural no están todavía fijados completamente,docs/arquitectura,ABIERTA,No hacerla soberana ni reducirla a mero editor gráfico.
-DV-SVM-005,Capa generativa DEV,La capa generativa del dominio DEV no procede todavía,docs/gobierno y docs/arquitectura,ABIERTA,Su estudio queda subordinado al cierre algebraico previo.
-DV-SVM-006,Comparacion real Python vs Rust/.svp,La doble vara con salida Rust real queda pendiente hasta que DV-SVM-002 esté implementado,src/sv_motor/verification,ABIERTA,Implementar cuando el backend Rust produzca JSON canonico
-DV-SVM-007,Artefacto Python derivado de `.svp`,La derivacion paralela Python desde el mismo expediente del programa `.svp` no esta todavia implementada,docs/interfaces y docs/arquitectura,ABIERTA,Debe existir solo como cotejo reproducible y no como segunda semantica.
+ID,Repositorio,Descripcion,Estado,Fecha_registro,Fecha_cierre,Referencia
+DV-SVM-013,SVcustos-dataset-main,Actualizar yamls resnet34 → convnext_tiny + historical_baseline,CERRADA,2026-04-04,2026-04-04,config/*.yaml — ecosistema hito4/hito5
+DV-SVM-014,SV-motor-main,Modelo Anthropic por defecto: haiku; sonnet solo en anthropic_audit,CERRADA,2026-04-04,2026-04-04,extractors/ext_nlp.py v0.1.8
+DV-SVM-015,SVcustos-dataset-main,Crear train_convnext.py con soporte nativo ConvNeXt-Tiny,CERRADA,2026-04-04,2026-04-04,train_convnext.py — ecosistema hito4/hito5
+DV-SVM-016,SV-motor-main,Lectura del nodo deployment_profile en py_runner (IR canónica),Pendiente,2026-04-04,,FRONTERA_NORMATIVA B.6 — pendiente de gramática SVP
+DV-SVM-017,SV-motor-main,Clase CaptureResult con campo admisibilidad conforme a B.6,Pendiente,2026-04-04,,12_pack_garante_sv_ia_y_garantias_globales.md Parte III
+DV-HITO5-003,SVperitus-dataset-main,Célula bioquímica σ=1 con Ternarizer declarado y corpus validado (Hito 5),Abierta,2026-04-04,,09_hito5_arquitectura_multiestrato.md
+DV-HITO5-004,SVperitus-dataset-main,Célula molecular σ=0 con cabeza posicional de Uso B (imagen médica real),Abierta,2026-04-04,,09_hito5_arquitectura_multiestrato.md
+DV-BANCO-001,SV-banco-de-idiomas-main,observables_proxy_spec.yaml: particiones B0/B1/BU para dominio NLP,CERRADA,2026-04-04,2026-04-04,esquema/observables_proxy_spec.yaml — ecosistema hito4/hito5
+DV-PERITUS-001,SVperitus-dataset-main,Apéndice A (lección Watson) en Documento7_IMMUNO-1.md,CERRADA,2026-04-04,2026-04-04,documentos/serie/Documento7_IMMUNO-1.md Apéndice A
+DV-PERITUS-002,SVperitus-dataset-main,Ternarizer formal declarado para IMMUNO-1 con bibliografía clínica,Pendiente,2026-04-04,,12_pack_garante_sv_ia_y_garantias_globales.md Parte III
+DV-PERITUS-003,SVperitus-dataset-main,"Ternarizer formal IMMUNO-2 capas 2–5 (en revisión especializada, motor v0.1)",Pendiente,2026-04-04,,normative_engine.py IMMUNO-2 header
+DV-LENGUAJE-001,SV-lenguaje-de-computacion-main,Construcción ternarizer como primer nivel del lenguaje SVP (gramática superficial),Pendiente,2026-04-04,,FRONTERA_NORMATIVA B.6 nota de aplicación
+DV-LENGUAJE-002,SV-lenguaje-de-computacion-main,Nodo deployment_profile en IR canónica (obligatorio con actor estadístico declarado),Pendiente,2026-04-04,,12_pack_garante_sv_ia_y_garantias_globales.md Parte IV
+DV-MATEMATICA-001,SV-matematica-semantica-main,Sección explícita sobre actores estadísticos como sirvientes con Ternarizer obligatorio en PLIEGO,Pendiente,2026-04-04,,FRONTERA_NORMATIVA D.10

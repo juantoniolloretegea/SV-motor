@@ -5,6 +5,6 @@ Antes de una publicación pública del frente motor deben cumplirse, como mínim
 - [x] versión material auditada del repositorio disponible;
 - [x] paquete local ejecutable;
 - [x] laboratorio reproducible;
-- [ ] adversarial documentada;
+- [x] adversarial documentada;
 - [x] alcance y límites declarados con precisión;
 - [x] coherencia entre documentación y artefacto material.

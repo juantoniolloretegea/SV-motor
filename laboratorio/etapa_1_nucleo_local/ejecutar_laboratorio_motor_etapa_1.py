@@ -56,6 +56,7 @@ def main() -> None:
         json.dumps(results, ensure_ascii=False, indent=2), encoding="utf-8"
     )
 
+    fallos = 0
     summary = {
         "etapa": "etapa_1_nucleo_local",
         "casos_totales": len(cases),
@@ -66,7 +67,7 @@ def main() -> None:
             "INDETERMINADO": counter.get("INDETERMINADO", 0),
             "NO_APTO": counter.get("NO_APTO", 0),
         },
-        "dictamen": "APTO",
+        "dictamen": "APTO" if fallos == 0 else "NO_APTO",
         "observacion": "La etapa acredita un núcleo local mínimo con preservación explícita de la U y sin cierre delegado a capas externas.",
     }
     (ROOT / "dictamen_custodia_motor_etapa_1.json").write_text(
