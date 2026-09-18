@@ -57,8 +57,8 @@ jobs:
           [[ "$(git rev-parse HEAD)" == "$SOLICITADO" ]]
           jq -e '.adquisicion_habilitada == true' pruebas/estado-acceso.json >/dev/null
           case "$FASE" in
-            preparacion) [[ "$GITHUB_RUN_NUMBER" == 1 ]]; bash pruebas/vigilar.sh preparacion 1800 bash pruebas/preparar.sh ;;
-            ensayo) bash pruebas/ensayar.sh ;;
+            preparacion) [[ "$GITHUB_RUN_NUMBER" == 2 ]]; bash pruebas/vigilar.sh preparacion 1800 bash pruebas/preparar.sh ;;
+            ensayo) [[ "$GITHUB_RUN_NUMBER" == 3 ]]; bash pruebas/ensayar.sh ;;
             *) exit 64 ;;
           esac
       - name: Resumen limitado
