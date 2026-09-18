@@ -23,15 +23,15 @@ jobs:
       SOLICITADO: ${{ inputs.commit }}
       FASE: ${{ inputs.fase }}
       CARGO_BUILD_JOBS: "2"
-      CARGO_TARGET_DIR: ${{ runner.temp }}/eio/target
-      CARGO_HOME: ${{ runner.temp }}/eio/cargo
-      RUSTUP_HOME: ${{ runner.temp }}/eio/rustup
-      TMPDIR: ${{ runner.temp }}/eio/tmp
     steps:
       - name: Verificar presupuesto e identidad
         shell: bash
         run: |
           set -euo pipefail
+          echo "CARGO_TARGET_DIR=$RUNNER_TEMP/eio/target" >> "$GITHUB_ENV"
+          echo "CARGO_HOME=$RUNNER_TEMP/eio/cargo" >> "$GITHUB_ENV"
+          echo "RUSTUP_HOME=$RUNNER_TEMP/eio/rustup" >> "$GITHUB_ENV"
+          echo "TMPDIR=$RUNNER_TEMP/eio/tmp" >> "$GITHUB_ENV"
           echo "EIO_FIN=$(($(date +%s)+2280))" >> "$GITHUB_ENV"
           [[ "$GITHUB_REPOSITORY" == juantoniolloretegea/SV-motor ]]
           [[ "$SOLICITADO" =~ ^[0-9a-f]{40}$ ]]
