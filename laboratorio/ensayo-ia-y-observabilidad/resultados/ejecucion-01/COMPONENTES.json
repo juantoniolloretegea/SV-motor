@@ -1,0 +1,58 @@
+{
+  "estado": "manifiesto parcial; no apto para ejecutar",
+  "rust": {
+    "version": "1.98.0",
+    "destino_previsto": "x86_64-unknown-linux-gnu",
+    "distribucion_verificada": false,
+    "sha256": null,
+    "tamano": null,
+    "licencia": "MIT OR Apache-2.0",
+    "notas": "https://github.com/rust-lang/rust/blob/1.98.0/RELEASES.md"
+  },
+  "candle": {
+    "revision": "ddf1b879dc3a1760cbcb3f3c4a7c6467850cec4a",
+    "version_workspace": "0.11.0",
+    "licencia": "MIT OR Apache-2.0",
+    "features_previstas": [],
+    "fuente": "https://github.com/huggingface/candle",
+    "bytes_descargados": false
+  },
+  "modelo": {
+    "fuente": "https://huggingface.co/unsloth/Qwen3-0.6B-GGUF",
+    "archivo": "Qwen3-0.6B-Q4_K_M.gguf",
+    "commit_archivo_observado": "f2d6f9ca53a254cc379437c49e4b2eb447f779df",
+    "sha256_publicado": "ac2d97712095a558e31573f62f466a3f9d93990898b0ec79d7c974c1780d524a",
+    "tamano_redondeado_publicado": "397 MB",
+    "tamano_exacto": null,
+    "licencia_declarada": "Apache-2.0",
+    "bytes_verificados": false
+  },
+  "tokenizador": {
+    "fuente": "https://huggingface.co/Qwen/Qwen3-0.6B",
+    "revision_observada": "c1899de289a04d12100db370d81485cdf75e47ca",
+    "licencia_declarada": "Apache-2.0",
+    "archivos_previstos": [
+      "tokenizer.json",
+      "tokenizer_config.json",
+      "config.json",
+      "generation_config.json"
+    ],
+    "sha256": null,
+    "bytes_verificados": false
+  },
+  "telemetria": {
+    "api_consultada": "OpenTelemetry Rust v0.31.0",
+    "fuente": "https://github.com/open-telemetry/opentelemetry-rust/blob/v0.31.0/opentelemetry-sdk/src/trace/export.rs",
+    "compatibilidad_verificada": false,
+    "licencia_verificada": false
+  },
+  "accion_prevista": {
+    "nombre": "actions/checkout",
+    "version": "v4.2.2",
+    "commit": "11bd71901bbe5b1630ceea73d27597364c9af683",
+    "usada": false
+  },
+  "dependencias_transitivas": "no resueltas",
+  "cargo_lock": "no generado",
+  "avisos": "no se ha redistribuido código ni pesos de terceros"
+}
