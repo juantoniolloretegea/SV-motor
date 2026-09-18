@@ -1,6 +1,6 @@
 # Ensayo de inteligencia artificial y observabilidad
 
-**Versión documental:** 0.1  
+**Versión documental:** 0.2  
 **Fecha:** 18 de septiembre de 2026  
 **Estado:** preparación experimental; implementación y mediciones pendientes.
 
@@ -9,6 +9,8 @@
 Este espacio reúne el diseño de un ensayo reproducible de inferencia y observabilidad dentro del dominio de trabajo del Sistema Vectorial SV. Se adscribe al bloque (p1+P3)-Bis del Lenguaje SV y aporta evidencia técnica para sus decisiones de diseño. Su apertura no constituye el motor de inteligencia artificial definitivo ni acredita los resultados de pilotos anteriores.
 
 La pregunta experimental es si una implementación Rust puede ejecutar un modelo auxiliar acotado y registrar sus operaciones instrumentadas con un coste medible, preservando la separación entre propuesta probabilística, autorización y efecto. La calidad de la inferencia y la corrección de la frontera se evaluarán por separado.
+
+El [contrato experimental](contrato/README.md) vincula este ensayo con el [acta de rutas de conocimiento del 14 de septiembre](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/3d362a01c05644362a8bf77f456b4ecfedd8fd57/docs/calidad/tuberias-ia/frame-significado-humano-trazabilidad-y-fidelidad/ACTA_EVALUACION_Y_RECEPCION_DOCUMENTAL_RUTAS_CONOCIMIENTO_SV_2026_09_14.md) y con el [Acta 001 de continuidad](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/3d362a01c05644362a8bf77f456b4ecfedd8fd57/docs/calidad/tuberias-ia/continuacion-15-09-2026/ACTA_001_CONTINUIDAD_Y_RUMBO_2026_09_15.md). La primera aporta obligaciones y reservas; la segunda conserva la secuencia y las sedes de autoridad. Este laboratorio produce evidencia para su recepción posterior: no establece un estado canónico paralelo.
 
 ## Selección experimental
 
@@ -26,6 +28,7 @@ La selección de OpenTelemetry Rust es una decisión experimental efectiva. No c
 
 | Directorio | Contenido |
 |---|---|
+| [contrato/](contrato/README.md) | Perímetro, fuentes rectoras y correspondencia entre obligaciones y pruebas. |
 | [inferencia/](inferencia/README.md) | Identidad del modelo, adaptación del motor y límites de generación. |
 | [observabilidad/](observabilidad/README.md) | Integración de OpenTelemetry Rust, señales, cobertura y límites. |
 | [pruebas/](pruebas/README.md) | Protocolo experimental, controles negativos y criterios de aceptación. |
