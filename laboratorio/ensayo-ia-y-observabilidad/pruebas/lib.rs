@@ -76,3 +76,17 @@ pub fn parada(token: u32, eos: u32, generados: usize, retenidos: usize,
 #[cfg(all(target_arch="wasm32",feature="navegador"))]
 #[path="navegador.rs"]
 mod navegador;
+
+#[derive(Clone,serde::Serialize)]
+pub struct FuenteConsultada {pub referencia:Referencia,pub texto:String}
+#[derive(serde::Serialize)]
+pub struct HuellaFrontera {pub bytes_fuentes:usize,pub permiso_antes:bool,pub permiso_despues:bool}
+/// Las fuentes se entregan a la frontera como datos; nunca se convierten en Condiciones.
+pub fn ejecutar_con_fuentes(c:&Condiciones,raw:&str,fuentes:&[FuenteConsultada],
+ eventos:&[Referencia],objeto:&mut bool)->(Result<(), &'static str>,HuellaFrontera){
+ let bytes=fuentes.iter().map(|f|f.texto.len()).sum::<usize>();
+ let huella=HuellaFrontera{bytes_fuentes:bytes,permiso_antes:c.permiso,permiso_despues:c.permiso};
+ if bytes>8192{return (Err("LIMITE_ENTRADA"),huella);}
+ let refs=fuentes.iter().map(|f|f.referencia.clone()).collect::<Vec<_>>();
+ (ejecutar(c,raw,&refs,eventos,objeto),huella)
+}

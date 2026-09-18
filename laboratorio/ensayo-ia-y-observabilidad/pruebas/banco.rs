@@ -20,16 +20,20 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
    r.nombre.strip_prefix("consulta.").map(|id|Referencia{id:id.into(),version:1})).collect();
   let mut c=caso.condiciones.clone();c.exportacion_correcta &= export_ok;
   let mut objeto=false;
-  let observado=ejecutar(&c,&caso.propuesta,&consultas,&observadas,&mut objeto).err().unwrap_or("OK");
+  let fuentes=consultas.iter().enumerate().map(|(i,r)|eio_candidato::FuenteConsultada{
+   referencia:r.clone(),texto:if i==0{caso.instruccion_fuente.clone()}else{"fuente sintética".into()}
+  }).collect::<Vec<_>>();
+  let (resultado,frontera)=eio_candidato::ejecutar_con_fuentes(&c,&caso.propuesta,&fuentes,&observadas,&mut objeto);
+  let observado=resultado.err().unwrap_or("OK");
   let correlacion=estado.registros.iter().filter(|r|r.nombre.starts_with("consulta.")).all(|r|
    estado.registros.iter().any(|p|p.nombre=="peticion" && p.trace==r.trace && p.span==r.padre));
   let perdida_exacta=!caso.omitir_evento_b || (estado.descartados==1 && observadas.len()+1==consultas.len());
-  let conforme=observado==caso.esperado && objeto==caso.efecto_esperado && correlacion && perdida_exacta;
+  let conforme=observado==caso.esperado && objeto==caso.efecto_esperado && correlacion && perdida_exacta && frontera.permiso_antes==frontera.permiso_despues;
   if !conforme {fallos+=1;}
   // Contenido inerte: nunca se interpreta como permiso, código o llamada de herramienta.
-  let _contenido_sin_autoridad=&caso.instruccion_fuente;
+  let _fuentes_tratadas=&fuentes;
   println!("{}",serde_json::json!({"tipo":"adaptador_directo","caso":caso.id,
-   "esperado":caso.esperado,"observado":observado,"efecto":objeto,"conforme":conforme,"telemetria":&*estado}));
+   "esperado":caso.esperado,"observado":observado,"efecto":objeto,"conforme":conforme,"frontera":frontera,"fuentes_recibidas":fuentes,"telemetria":&*estado}));
  }
  for (id,token,eos,n,ctx,cancel,esperado) in [
   ("eos_correcto",151645,151645,1,101,false,Some("EOS")),

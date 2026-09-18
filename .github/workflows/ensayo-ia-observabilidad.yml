@@ -1,4 +1,4 @@
-name: EIO manual (candidato no validado)
+name: EIO manual v3 (preparación aislada)
 on:
   workflow_dispatch:
     inputs:
@@ -32,6 +32,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+          echo "EIO_FIN=$(($(date +%s)+2280))" >> "$GITHUB_ENV"
           [[ "$GITHUB_REPOSITORY" == juantoniolloretegea/SV-motor ]]
           [[ "$SOLICITADO" =~ ^[0-9a-f]{40}$ ]]
           [[ "$GITHUB_SHA" == "$SOLICITADO" ]]
@@ -56,7 +57,7 @@ jobs:
           [[ "$(git rev-parse HEAD)" == "$SOLICITADO" ]]
           jq -e '.adquisicion_habilitada == true' pruebas/estado-acceso.json >/dev/null
           case "$FASE" in
-            preparacion) bash pruebas/vigilar.sh preparacion 1800 bash pruebas/preparar.sh ;;
+            preparacion) [[ "$GITHUB_RUN_NUMBER" == 1 ]]; bash pruebas/vigilar.sh preparacion 1800 bash pruebas/preparar.sh ;;
             ensayo) bash pruebas/ensayar.sh ;;
             *) exit 64 ;;
           esac

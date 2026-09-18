@@ -2,6 +2,12 @@
 # Candidato no ejecutado. Monitor de grupo de procesos propio, muestreo de 1 s.
 set -euo pipefail
 fase=$1; limite=$2; shift 2
+ahora=$(date +%s)
+test -n "${EIO_FIN:-}"
+if (( ahora + limite + 5 > EIO_FIN )); then
+ echo "PENDIENTE_PLAZO_GLOBAL fase=$fase restante=$((EIO_FIN-ahora)) requerido=$((limite+5))"
+ exit 93
+fi
 root="$RUNNER_TEMP/eio"
 mkdir -p "$root/evidencia"
 salida="$root/evidencia/$fase"
@@ -22,7 +28,7 @@ while kill -0 "$pid" 2>/dev/null; do
  libres=$(df -B1 --output=avail "$root" | tail -1 | tr -d ' ')
  evidencia=$(du -s -B1 "$root/evidencia" | cut -f1)
  printf '%s\t%s\t%s\t%s\t%s\n' "$SECONDS" "$rss" "$bytes" "$libres" "$evidencia" >>"$salida.medidas.tsv"
- if (( SECONDS-inicio >= limite )); then causa=tiempo; break; fi
+ if (( SECONDS-inicio >= limite || $(date +%s) >= EIO_FIN )); then causa=tiempo; break; fi
  if (( bytes > 10737418240 || libres < 2147483648 || evidencia > 20971520 )); then causa=disco; break; fi
  if [[ "$fase" == inferencia* || "$fase" == navegador* ]] && (( rss > 4194304 )); then causa=memoria; break; fi
  sleep 1
