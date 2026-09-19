@@ -1,0 +1,13 @@
+# Precompromiso EIO-TR-01
+
+20/09/2026 Europe/Madrid. Holmes / UE-LOCAL-CODEX-WINDOWS. Autorización expresa de la dirección: una única ejecución diagnóstica adicional, número4 intento1, máximo2min, sin seguir redirecciones ni descargar el modelo. Hora observada de coordinación:19/09/2026 23:20:15UTC, clock.curr_time (20/09 01:20:15Madrid), precisión1s; no sello del mensaje ni de las lecturas preliminares anteriores.
+
+Base pública eb56ae6a6b90e7b25812d4275f95aa1a76f50f51. Se conserva la corrección de transporte, su lista cerrada y las28 comprobaciones sintéticas receptoras (no repetidas ni confundidas con red real). La única sustitución activa es .github/workflows/ensayo-ia-observabilidad.yml por los bytes textuales de resultados/revision-transporte/workflow-diagnostico.yml, blob ef274b46b998a3c5653c529cb4de7db48d8d52db. No cambios de guiones, entradas, Cargo.lock o guardas. adquisicion_habilitada=false y ensayo_habilitado=false.
+
+Metadatos previos:35342612464 número1 intento1 startup_failure;35355495301 número2 intento1 success;35474691239 número3 intento1 failure. Todos completed, workflow_id361319025. Mismo workflow/numeración; ampliación extraordinaria exclusivamente diagnóstica, no quinta ejecución. Revalidar contador antes del dispatch.
+
+Procedimiento: publicar/releer este corte; dispatch con SHA completo efectivo, comprobado con GITHUB_SHA/HEAD, run_number4 y attempt1. Ubuntu24.04 estándar público, contents:read, checkout fijado11bd71901bbe5b1630ceea73d27597364c9af683, credenciales no persistidas, sin cache/upload-artifact. Una petición GET a URL GGUF fijada en ENTRADAS_ENSAYO.json de huggingface.co; curl sin configuración implícita, expansión, retry o seguimiento. Conexión10s, solicitud30s, cuerpo64KiB, archivo128KiB; no equivale al tráfico TLS total. Sin Rust/pesos/tokenizador/compilación/inferencia ni intervención local salvo coordinación por conector/navegador.
+
+Esperados: HTTP30x con Location única, host saneado y seguimiento0. Si fuera de lista, retorno65 constituye diagnóstico de rechazo. Si admitido, se registra sin seguir. HTTP sin redirección, Location inválida o error se conservan con retorno; no se cambia política para obtener éxito. La petición nueva no reconstruye el host histórico del run3.
+
+Custodia: salida/retorno saneados y metadatos run/job permanentes en este directorio, entrega privada sucesora bajo respuestas-ejecucion/EIO-GITHUB-01/entrega-04/diagnostico-transporte/. Nunca Location completa, consultas firmadas, cabeceras crudas ni cuerpos. No visitas al host observado. Sin reintento, ampliación de lista, adquisición posterior, aceptación científica ni cambio S32/BIS-03. Parada para revisión receptora.
