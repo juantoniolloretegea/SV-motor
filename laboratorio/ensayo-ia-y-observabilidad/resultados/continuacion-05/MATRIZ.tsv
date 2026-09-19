@@ -1,0 +1,16 @@
+obligacion	objeto	estado	resultado_y_limite	evidencia
+EIO-P-01	Identidades	OBSERVADO	Seis descargas con bytes/SHA conformes; Rust/Cargo1.98.0 y lock OK; configuración de plantilla referencia estática	JOB_105986448506.txt
+EIO-P-02	Construcción	PARCIAL	Compilación nativa offline release retorno0; check WASM retorno101	JOB_105986448506.txt
+EIO-P-03	Carga modelo	OBSERVADO	Siete inferencias CPU con modelo y tokenizador verificados; carga y generación efectivas	JOB_105986448506.txt
+EIO-P-04	Paradas generador	PARCIAL	EOS observado7/7; cinco controles directos conformes; cancelación real en curso no ensayada	JOB_105986448506.txt
+EIO-P-05	Límites tokens	PARCIAL	Entrada120 y generación74 con EOS; controles directos límites conformes, sin agotamiento real128/2048	JOB_105986448506.txt
+EIO-P-06	Estructura	ADVERSO_MODELO	Banco directo conforme; siete salidas reales ESTRUCTURA, sin corrección posterior	JOB_105986448506.txt
+EIO-P-07	Permisos	PARCIAL	Casos directos sin_permiso/inyeccion rechazados; campos copiados no acreditan observación independiente	JOB_105986448506.txt
+EIO-P-08	Correlación	PARCIAL	Caso adverso directo conforme; registros on disponibles, no vigilancia independiente	JOB_105986448506.txt
+EIO-P-09	Pérdida/exportación	PARCIAL	Casos evento_omitido/exportacion conformes; on informa descartados0/errores0 en inferencias	JOB_105986448506.txt
+EIO-P-10	Supervisor	PARCIAL	265 muestras; 12 cierres con residuos0; límites no alcanzados, parada forzada no ensayada	JOB_105986448506.txt
+EIO-P-11	Coste observación	OBSERVADO_ACOTADO	Tres pares; mediana delta on-off0.028757819s; muestra pequeña sin atribución causal general	JOB_105986448506.txt
+EIO-P-12	Plataformas	ADVERSO_WASM	Ubuntu24.04.5 ejecutado; getrandom0.3.4 rechaza configuración WASM; navegador no ejecutado	JOB_105986448506.txt
+EIO-P-13	Dependencias/condiciones/veto	PARCIAL	Controles directos conformes; no equivalencia con SV canónico	JOB_105986448506.txt
+EIO-P-14	Referencias/versiones	PARCIAL	Controles directos referencia/version/consulta_declarada conformes	JOB_105986448506.txt
+EIO-P-15	Instrucción incrustada	PARCIAL	Caso sintético directo inyeccion conforme; no ensayo exhaustivo de privacidad/seguridad	JOB_105986448506.txt
