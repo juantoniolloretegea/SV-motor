@@ -1,0 +1,466 @@
+﻿2026-09-19T22:55:50.5161986Z Current runner version: '2.337.0'
+2026-09-19T22:55:50.5187987Z ##[group]Runner Image Provisioner
+2026-09-19T22:55:50.5189034Z Hosted Compute Agent
+2026-09-19T22:55:50.5189745Z Version: 20260828.587
+2026-09-19T22:55:50.5190524Z Commit: abac92662cab4cc7352de4f9f9d2e2419aad9c29
+2026-09-19T22:55:50.5191406Z Build Date: 2026-08-28T16:44:25Z
+2026-09-19T22:55:50.5192163Z Worker ID: {62567a98-3e9f-4372-9d88-8743530f8da3}
+2026-09-19T22:55:50.5192875Z Azure Region: westus
+2026-09-19T22:55:50.5193523Z ##[endgroup]
+2026-09-19T22:55:50.5195163Z ##[group]Operating System
+2026-09-19T22:55:50.5195838Z Ubuntu
+2026-09-19T22:55:50.5196509Z 24.04.5
+2026-09-19T22:55:50.5197035Z LTS
+2026-09-19T22:55:50.5197940Z ##[endgroup]
+2026-09-19T22:55:50.5198768Z ##[group]Runner Image
+2026-09-19T22:55:50.5199405Z Image: ubuntu-24.04
+2026-09-19T22:55:50.5200030Z Version: 20260907.300.1
+2026-09-19T22:55:50.5201333Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260907.300/images/ubuntu/Ubuntu2404-Readme.md
+2026-09-19T22:55:50.5202974Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260907.300
+2026-09-19T22:55:50.5203968Z ##[endgroup]
+2026-09-19T22:55:50.5205110Z ##[group]GITHUB_TOKEN Permissions
+2026-09-19T22:55:50.5207299Z Contents: read
+2026-09-19T22:55:50.5208243Z Metadata: read
+2026-09-19T22:55:50.5208825Z ##[endgroup]
+2026-09-19T22:55:50.5210932Z Secret source: Actions
+2026-09-19T22:55:50.5212059Z Cache mode: write
+2026-09-19T22:55:50.5213389Z Prepare workflow directory
+2026-09-19T22:55:50.5752024Z Prepare all required actions
+2026-09-19T22:55:50.5799111Z Getting action download info
+2026-09-19T22:55:50.9361586Z Download action repository 'actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683' (SHA:11bd71901bbe5b1630ceea73d27597364c9af683)
+2026-09-19T22:55:51.1606874Z Complete job name: eio
+2026-09-19T22:55:51.2305681Z ##[group]Run set -euo pipefail
+2026-09-19T22:55:51.2306369Z [36;1mset -euo pipefail[0m
+2026-09-19T22:55:51.2307101Z [36;1mecho "CARGO_TARGET_DIR=$RUNNER_TEMP/eio/target" >> "$GITHUB_ENV"[0m
+2026-09-19T22:55:51.2308215Z [36;1mecho "CARGO_HOME=$RUNNER_TEMP/eio/cargo" >> "$GITHUB_ENV"[0m
+2026-09-19T22:55:51.2309057Z [36;1mecho "RUSTUP_HOME=$RUNNER_TEMP/eio/rustup" >> "$GITHUB_ENV"[0m
+2026-09-19T22:55:51.2309869Z [36;1mecho "TMPDIR=$RUNNER_TEMP/eio/tmp" >> "$GITHUB_ENV"[0m
+2026-09-19T22:55:51.2310621Z [36;1mecho "EIO_FIN=$(($(date +%s)+2280))" >> "$GITHUB_ENV"[0m
+2026-09-19T22:55:51.2311407Z [36;1m[[ "$GITHUB_REPOSITORY" == juantoniolloretegea/SV-motor ]][0m
+2026-09-19T22:55:51.2312121Z [36;1m[[ "$SOLICITADO" =~ ^[0-9a-f]{40}$ ]][0m
+2026-09-19T22:55:51.2312746Z [36;1m[[ "$GITHUB_SHA" == "$SOLICITADO" ]][0m
+2026-09-19T22:55:51.2313427Z [36;1m(( GITHUB_RUN_NUMBER <= 3 && GITHUB_RUN_ATTEMPT == 1 ))[0m
+2026-09-19T22:55:51.2314135Z [36;1m[[ "$RUNNER_ARCH" == X64 ]][0m
+2026-09-19T22:55:51.2314825Z [36;1mlibres=$(df -B1 --output=avail "$RUNNER_TEMP" | tail -1)[0m
+2026-09-19T22:55:51.2315647Z [36;1mmemoria=$(awk '/MemAvailable/{print $2}' /proc/meminfo)[0m
+2026-09-19T22:55:51.2316528Z [36;1mecho "disco_libre_bytes=$libres memoria_disponible_kib=$memoria"[0m
+2026-09-19T22:55:51.2317344Z [36;1m(( libres >= 12884901888 && memoria >= 6291456 ))[0m
+2026-09-19T22:55:51.2318398Z [36;1mmkdir -p "$RUNNER_TEMP/eio/tmp"[0m
+2026-09-19T22:55:51.2359795Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-09-19T22:55:51.2360753Z env:
+2026-09-19T22:55:51.2361284Z   SOLICITADO: 48a2bb568d24e3cc3c6bf2834e78d5b740578c46
+2026-09-19T22:55:51.2361918Z   FASE: ensayo
+2026-09-19T22:55:51.2362358Z   CARGO_BUILD_JOBS: 2
+2026-09-19T22:55:51.2362815Z ##[endgroup]
+2026-09-19T22:55:51.2558541Z disco_libre_bytes=92418494464 memoria_disponible_kib=15147376
+2026-09-19T22:55:51.2767064Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-09-19T22:55:51.2775116Z ##[group]Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+2026-09-19T22:55:51.2775865Z with:
+2026-09-19T22:55:51.2776335Z   ref: 48a2bb568d24e3cc3c6bf2834e78d5b740578c46
+2026-09-19T22:55:51.2776951Z   persist-credentials: false
+2026-09-19T22:55:51.2777447Z   fetch-depth: 1
+2026-09-19T22:55:51.2778338Z   sparse-checkout: laboratorio/ensayo-ia-y-observabilidad
+2026-09-19T22:55:51.2779041Z   repository: juantoniolloretegea/SV-motor
+2026-09-19T22:55:51.2783207Z   token: ***
+2026-09-19T22:55:51.2783656Z   ssh-strict: true
+2026-09-19T22:55:51.2784103Z   ssh-user: git
+2026-09-19T22:55:51.2784532Z   clean: true
+2026-09-19T22:55:51.2785027Z   sparse-checkout-cone-mode: true
+2026-09-19T22:55:51.2785570Z   fetch-tags: false
+2026-09-19T22:55:51.2786023Z   show-progress: true
+2026-09-19T22:55:51.2786486Z   lfs: false
+2026-09-19T22:55:51.2786901Z   submodules: false
+2026-09-19T22:55:51.2787357Z   set-safe-directory: true
+2026-09-19T22:55:51.2788122Z env:
+2026-09-19T22:55:51.2788639Z   SOLICITADO: 48a2bb568d24e3cc3c6bf2834e78d5b740578c46
+2026-09-19T22:55:51.2789257Z   FASE: ensayo
+2026-09-19T22:55:51.2789687Z   CARGO_BUILD_JOBS: 2
+2026-09-19T22:55:51.2790215Z   CARGO_TARGET_DIR: /home/runner/work/_temp/eio/target
+2026-09-19T22:55:51.2790886Z   CARGO_HOME: /home/runner/work/_temp/eio/cargo
+2026-09-19T22:55:51.2791534Z   RUSTUP_HOME: /home/runner/work/_temp/eio/rustup
+2026-09-19T22:55:51.2792157Z   TMPDIR: /home/runner/work/_temp/eio/tmp
+2026-09-19T22:55:51.2792701Z   EIO_FIN: 1789860831
+2026-09-19T22:55:51.2793140Z ##[endgroup]
+2026-09-19T22:55:51.3781008Z Syncing repository: juantoniolloretegea/SV-motor
+2026-09-19T22:55:51.3782918Z ##[group]Getting Git version info
+2026-09-19T22:55:51.3783673Z Working directory is '/home/runner/work/SV-motor/SV-motor'
+2026-09-19T22:55:51.3784684Z [command]/usr/bin/git version
+2026-09-19T22:55:51.3872601Z git version 2.55.0
+2026-09-19T22:55:51.3904961Z ##[endgroup]
+2026-09-19T22:55:51.3921070Z Temporarily overriding HOME='/home/runner/work/_temp/781d993d-041f-4a7d-969e-b8d919d6a23b' before making global git config changes
+2026-09-19T22:55:51.3935026Z Adding repository directory to the temporary git global config as a safe directory
+2026-09-19T22:55:51.3936943Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/SV-motor/SV-motor
+2026-09-19T22:55:51.3984673Z Deleting the contents of '/home/runner/work/SV-motor/SV-motor'
+2026-09-19T22:55:51.3988990Z ##[group]Initializing the repository
+2026-09-19T22:55:51.3994329Z [command]/usr/bin/git init /home/runner/work/SV-motor/SV-motor
+2026-09-19T22:55:51.4118706Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-09-19T22:55:51.4120072Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-09-19T22:55:51.4121073Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-09-19T22:55:51.4121867Z hint: call:
+2026-09-19T22:55:51.4122300Z hint:
+2026-09-19T22:55:51.4122855Z hint: 	git config --global init.defaultBranch <name>
+2026-09-19T22:55:51.4123531Z hint:
+2026-09-19T22:55:51.4124153Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-09-19T22:55:51.4125171Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-09-19T22:55:51.4125981Z hint:
+2026-09-19T22:55:51.4126426Z hint: 	git branch -m <name>
+2026-09-19T22:55:51.4126933Z hint:
+2026-09-19T22:55:51.4127999Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-09-19T22:55:51.4133232Z Initialized empty Git repository in /home/runner/work/SV-motor/SV-motor/.git/
+2026-09-19T22:55:51.4145859Z [command]/usr/bin/git remote add origin https://github.com/juantoniolloretegea/SV-motor
+2026-09-19T22:55:51.4196571Z ##[endgroup]
+2026-09-19T22:55:51.4197823Z ##[group]Disabling automatic garbage collection
+2026-09-19T22:55:51.4200111Z [command]/usr/bin/git config --local gc.auto 0
+2026-09-19T22:55:51.4233095Z ##[endgroup]
+2026-09-19T22:55:51.4234040Z ##[group]Setting up auth
+2026-09-19T22:55:51.4241371Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-09-19T22:55:51.4275713Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-09-19T22:55:51.4666336Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-09-19T22:55:51.4706684Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-09-19T22:55:51.4955798Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-09-19T22:55:51.4999015Z ##[endgroup]
+2026-09-19T22:55:51.5000483Z ##[group]Fetching the repository
+2026-09-19T22:55:51.5011035Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --filter=blob:none --depth=1 origin 48a2bb568d24e3cc3c6bf2834e78d5b740578c46
+2026-09-19T22:55:51.9047928Z From https://github.com/juantoniolloretegea/SV-motor
+2026-09-19T22:55:51.9049597Z  * branch            48a2bb568d24e3cc3c6bf2834e78d5b740578c46 -> FETCH_HEAD
+2026-09-19T22:55:51.9052478Z ##[endgroup]
+2026-09-19T22:55:51.9053810Z ##[group]Determining the checkout info
+2026-09-19T22:55:51.9055347Z ##[endgroup]
+2026-09-19T22:55:51.9056713Z ##[group]Setting up sparse checkout
+2026-09-19T22:55:51.9060659Z [command]/usr/bin/git sparse-checkout set laboratorio/ensayo-ia-y-observabilidad
+2026-09-19T22:55:51.9117198Z ##[endgroup]
+2026-09-19T22:55:51.9118612Z ##[group]Checking out the ref
+2026-09-19T22:55:51.9125224Z [command]/usr/bin/git checkout --progress --force 48a2bb568d24e3cc3c6bf2834e78d5b740578c46
+2026-09-19T22:55:52.3401711Z Note: switching to '48a2bb568d24e3cc3c6bf2834e78d5b740578c46'.
+2026-09-19T22:55:52.3403167Z 
+2026-09-19T22:55:52.3403802Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-09-19T22:55:52.3405348Z changes and commit them, and you can discard any commits you make in this
+2026-09-19T22:55:52.3406772Z state without impacting any branches by switching back to a branch.
+2026-09-19T22:55:52.3407939Z 
+2026-09-19T22:55:52.3408943Z If you want to create a new branch to retain commits you create, you may
+2026-09-19T22:55:52.3411292Z do so (now or later) by using -c with the switch command. Example:
+2026-09-19T22:55:52.3412688Z 
+2026-09-19T22:55:52.3413311Z   git switch -c <new-branch-name>
+2026-09-19T22:55:52.3414331Z 
+2026-09-19T22:55:52.3414932Z Or undo this operation with:
+2026-09-19T22:55:52.3415593Z 
+2026-09-19T22:55:52.3415976Z   git switch -
+2026-09-19T22:55:52.3416449Z 
+2026-09-19T22:55:52.3417171Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-09-19T22:55:52.3418636Z 
+2026-09-19T22:55:52.3420487Z HEAD is now at 48a2bb5 Fijar precompromiso y habilitar único ensayo EIO restante [skip ci]
+2026-09-19T22:55:52.3424142Z ##[endgroup]
+2026-09-19T22:55:52.3469877Z [command]/usr/bin/git log -1 --format=%H
+2026-09-19T22:55:52.3500726Z 48a2bb568d24e3cc3c6bf2834e78d5b740578c46
+2026-09-19T22:55:52.3512294Z ##[group]Removing auth
+2026-09-19T22:55:52.3518648Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-09-19T22:55:52.3564989Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-09-19T22:55:52.3796501Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-09-19T22:55:52.3827998Z http.https://github.com/.extraheader
+2026-09-19T22:55:52.3849288Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-09-19T22:55:52.3877370Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-09-19T22:55:52.4103386Z ##[endgroup]
+2026-09-19T22:55:52.4282036Z ##[group]Run set -euo pipefail
+2026-09-19T22:55:52.4283393Z [36;1mset -euo pipefail[0m
+2026-09-19T22:55:52.4284759Z [36;1m[[ "$(git rev-parse HEAD)" == "$SOLICITADO" ]][0m
+2026-09-19T22:55:52.4286924Z [36;1mjq -e '.adquisicion_habilitada == true' pruebas/estado-acceso.json >/dev/null[0m
+2026-09-19T22:55:52.4289263Z [36;1mcase "$FASE" in[0m
+2026-09-19T22:55:52.4291562Z [36;1m  preparacion) [[ "$GITHUB_RUN_NUMBER" == 2 ]]; bash pruebas/vigilar.sh preparacion 1800 bash pruebas/preparar.sh ;;[0m
+2026-09-19T22:55:52.4294493Z [36;1m  ensayo) [[ "$GITHUB_RUN_NUMBER" == 3 ]]; bash pruebas/ensayar.sh ;;[0m
+2026-09-19T22:55:52.4296290Z [36;1m  *) exit 64 ;;[0m
+2026-09-19T22:55:52.4297426Z [36;1mesac[0m
+2026-09-19T22:55:52.4336672Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-09-19T22:55:52.4338560Z env:
+2026-09-19T22:55:52.4339750Z   SOLICITADO: 48a2bb568d24e3cc3c6bf2834e78d5b740578c46
+2026-09-19T22:55:52.4341272Z   FASE: ensayo
+2026-09-19T22:55:52.4342348Z   CARGO_BUILD_JOBS: 2
+2026-09-19T22:55:52.4343669Z   CARGO_TARGET_DIR: /home/runner/work/_temp/eio/target
+2026-09-19T22:55:52.4345305Z   CARGO_HOME: /home/runner/work/_temp/eio/cargo
+2026-09-19T22:55:52.4346900Z   RUSTUP_HOME: /home/runner/work/_temp/eio/rustup
+2026-09-19T22:55:52.4348686Z   TMPDIR: /home/runner/work/_temp/eio/tmp
+2026-09-19T22:55:52.4350037Z   EIO_FIN: 1789860831
+2026-09-19T22:55:52.4351106Z ##[endgroup]
+2026-09-19T22:55:52.4578078Z orden: bash pruebas/aprovisionar-ensayo.sh
+2026-09-19T22:56:10.1054394Z residuales_tras_limpieza=0
+2026-09-19T22:56:10.1055390Z fase=aprovisionamiento retorno=65 causa=normal pico_rss_kib=142436 residuales_al_wait=0
+2026-09-19T22:56:10.1181670Z 
+2026-09-19T22:56:10.1182079Z --- stdout ---
+2026-09-19T22:56:10.1193703Z GET host=static.rust-lang.org salto=0 destino=rustc-1.98.0-x86_64-unknown-linux-gnu.tar.xz
+2026-09-19T22:56:10.1194712Z HTTP=200
+2026-09-19T22:56:10.1195520Z /home/runner/work/_temp/eio/dist/rustc-1.98.0-x86_64-unknown-linux-gnu.tar.xz.part: OK
+2026-09-19T22:56:10.1197021Z IDENTIDAD bytes=79745456 sha256=0e37cb339f447fc44d6d781073bacacebfdc5612f2600e4c7e84c266f5f3aced archivo=rustc-1.98.0-x86_64-unknown-linux-gnu.tar.xz
+2026-09-19T22:56:10.1198537Z 1b1ab708c8de4dbfa345cf1ca8fe3a7796c5e8bd91afd14e55489b75c1260535  /home/runner/work/_temp/eio/dist/rustc-1.98.0-x86_64-unknown-linux-gnu/install.sh
+2026-09-19T22:56:10.1199567Z install: creating uninstall script at /home/runner/work/_temp/eio/toolchain-1.98.0/lib/rustlib/uninstall.sh
+2026-09-19T22:56:10.1200175Z install: installing component 'rustc'
+2026-09-19T22:56:10.1200394Z 
+2026-09-19T22:56:10.1201385Z     rustc installed.
+2026-09-19T22:56:10.1201801Z 
+2026-09-19T22:56:10.1202376Z GET host=static.rust-lang.org salto=0 destino=cargo-1.98.0-x86_64-unknown-linux-gnu.tar.xz
+2026-09-19T22:56:10.1203306Z HTTP=200
+2026-09-19T22:56:10.1204187Z /home/runner/work/_temp/eio/dist/cargo-1.98.0-x86_64-unknown-linux-gnu.tar.xz.part: OK
+2026-09-19T22:56:10.1206074Z IDENTIDAD bytes=11669560 sha256=2f512d170d3dd23e16ababcda32ee2e6d5172d861a7af1f504e0b1e270cafab9 archivo=cargo-1.98.0-x86_64-unknown-linux-gnu.tar.xz
+2026-09-19T22:56:10.1208616Z 6a9caa4cf6b65286aae8c796481f11784f6f805752664592c6fb994c3a5f1f32  /home/runner/work/_temp/eio/dist/cargo-1.98.0-x86_64-unknown-linux-gnu/install.sh
+2026-09-19T22:56:10.1210528Z install: creating uninstall script at /home/runner/work/_temp/eio/toolchain-1.98.0/lib/rustlib/uninstall.sh
+2026-09-19T22:56:10.1211695Z install: installing component 'cargo'
+2026-09-19T22:56:10.1212058Z 
+2026-09-19T22:56:10.1212200Z     cargo installed.
+2026-09-19T22:56:10.1212384Z 
+2026-09-19T22:56:10.1212837Z GET host=static.rust-lang.org salto=0 destino=rust-std-1.98.0-x86_64-unknown-linux-gnu.tar.xz
+2026-09-19T22:56:10.1213342Z HTTP=200
+2026-09-19T22:56:10.1213771Z /home/runner/work/_temp/eio/dist/rust-std-1.98.0-x86_64-unknown-linux-gnu.tar.xz.part: OK
+2026-09-19T22:56:10.1216164Z IDENTIDAD bytes=30715556 sha256=f5022e6c95a5ad23cca2513dc8281200f585fa188de6370aa37b128a43f876a3 archivo=rust-std-1.98.0-x86_64-unknown-linux-gnu.tar.xz
+2026-09-19T22:56:10.1218646Z 19c56df4d4a3251396a6a97be14daff33465572e4ecc7e37d776dba77b60a9a8  /home/runner/work/_temp/eio/dist/rust-std-1.98.0-x86_64-unknown-linux-gnu/install.sh
+2026-09-19T22:56:10.1219683Z install: creating uninstall script at /home/runner/work/_temp/eio/toolchain-1.98.0/lib/rustlib/uninstall.sh
+2026-09-19T22:56:10.1220352Z install: installing component 'rust-std-x86_64-unknown-linux-gnu'
+2026-09-19T22:56:10.1220674Z 
+2026-09-19T22:56:10.1220792Z     rust std installed.
+2026-09-19T22:56:10.1220966Z 
+2026-09-19T22:56:10.1221283Z GET host=static.rust-lang.org salto=0 destino=rust-std-1.98.0-wasm32-unknown-unknown.tar.xz
+2026-09-19T22:56:10.1221797Z HTTP=200
+2026-09-19T22:56:10.1222220Z /home/runner/work/_temp/eio/dist/rust-std-1.98.0-wasm32-unknown-unknown.tar.xz.part: OK
+2026-09-19T22:56:10.1223163Z IDENTIDAD bytes=22441312 sha256=3bb537c09555b96020a38a3a8810c38908b194eff3c2cb6184a45dda5c6828de archivo=rust-std-1.98.0-wasm32-unknown-unknown.tar.xz
+2026-09-19T22:56:10.1224332Z 19c56df4d4a3251396a6a97be14daff33465572e4ecc7e37d776dba77b60a9a8  /home/runner/work/_temp/eio/dist/rust-std-1.98.0-wasm32-unknown-unknown/install.sh
+2026-09-19T22:56:10.1225276Z install: creating uninstall script at /home/runner/work/_temp/eio/toolchain-1.98.0/lib/rustlib/uninstall.sh
+2026-09-19T22:56:10.1225921Z install: installing component 'rust-std-wasm32-unknown-unknown'
+2026-09-19T22:56:10.1226500Z 
+2026-09-19T22:56:10.1226698Z     rust std installed.
+2026-09-19T22:56:10.1226984Z 
+2026-09-19T22:56:10.1227190Z rustc 1.98.0 (88d9e12ae 2026-08-18)
+2026-09-19T22:56:10.1227930Z binary: rustc
+2026-09-19T22:56:10.1228484Z commit-hash: 88d9e12ae178fab0fb5cc050a94da85685d449ea
+2026-09-19T22:56:10.1229130Z commit-date: 2026-08-18
+2026-09-19T22:56:10.1229804Z host: x86_64-unknown-linux-gnu
+2026-09-19T22:56:10.1230381Z release: 1.98.0
+2026-09-19T22:56:10.1230779Z LLVM version: 22.1.8
+2026-09-19T22:56:10.1231071Z cargo 1.98.0 (797e8a9bc 2026-08-05)
+2026-09-19T22:56:10.1231379Z release: 1.98.0
+2026-09-19T22:56:10.1231702Z commit-hash: 797e8a9bca276c1c9f9f738d2a20f484fa4eea9d
+2026-09-19T22:56:10.1232074Z commit-date: 2026-08-05
+2026-09-19T22:56:10.1232369Z host: x86_64-unknown-linux-gnu
+2026-09-19T22:56:10.1232678Z libgit2: 1.9.4 (sys:0.21.0 vendored)
+2026-09-19T22:56:10.1233087Z libcurl: 8.21.0-DEV (sys:0.4.90+curl-8.21.0 vendored ssl:OpenSSL/3.6.3)
+2026-09-19T22:56:10.1233508Z ssl: OpenSSL 3.6.3 9 Jun 2026
+2026-09-19T22:56:10.1233812Z os: Ubuntu 24.4.0 (noble) [64-bit]
+2026-09-19T22:56:10.1234107Z Cargo.lock: OK
+2026-09-19T22:56:10.1234449Z GET host=huggingface.co salto=0 destino=Qwen3-0.6B-Q4_K_M.gguf
+2026-09-19T22:56:10.1234837Z HTTP=302
+2026-09-19T22:56:10.1235078Z DESTINO_NO_ADMITIDO
+2026-09-19T22:56:10.1235346Z 
+2026-09-19T22:56:10.1235464Z --- stderr ---
+2026-09-19T22:56:10.1235867Z     Updating git repository `https://github.com/huggingface/candle`
+2026-09-19T22:56:10.1236320Z     Updating crates.io index
+2026-09-19T22:56:10.1236617Z  Downloading crates ...
+2026-09-19T22:56:10.1236921Z   Downloaded winapi-util v0.1.11
+2026-09-19T22:56:10.1237241Z   Downloaded monostate v0.1.18
+2026-09-19T22:56:10.1237848Z   Downloaded redox_syscall v0.5.18
+2026-09-19T22:56:10.1238213Z   Downloaded fancy-regex v0.19.2
+2026-09-19T22:56:10.1238529Z   Downloaded thiserror-impl v1.0.69
+2026-09-19T22:56:10.1238856Z   Downloaded num_cpus v1.17.0
+2026-09-19T22:56:10.1239178Z   Downloaded raw-cpuid v11.6.0
+2026-09-19T22:56:10.1239561Z   Downloaded wasm-bindgen-shared v0.2.104
+2026-09-19T22:56:10.1305552Z   Downloaded wasm-bindgen-macro v0.2.104
+2026-09-19T22:56:10.1306209Z   Downloaded autocfg v1.5.1
+2026-09-19T22:56:10.1306852Z   Downloaded crc32fast v1.5.2
+2026-09-19T22:56:10.1307472Z   Downloaded serde_plain v1.0.2
+2026-09-19T22:56:10.1308249Z   Downloaded rand_distr v0.5.1
+2026-09-19T22:56:10.1308588Z   Downloaded pulp-wasm-simd-flag v0.1.1
+2026-09-19T22:56:10.1308952Z   Downloaded gemm-c64 v0.19.0
+2026-09-19T22:56:10.1309516Z   Downloaded rustversion v1.0.23
+2026-09-19T22:56:10.1309865Z   Downloaded thiserror-impl v2.0.20
+2026-09-19T22:56:10.1310374Z   Downloaded rayon-cond v0.4.0
+2026-09-19T22:56:10.1310687Z   Downloaded rand_core v0.9.5
+2026-09-19T22:56:10.1311001Z   Downloaded futures-macro v0.3.34
+2026-09-19T22:56:10.1311320Z   Downloaded libm v0.2.16
+2026-09-19T22:56:10.1311653Z   Downloaded gemm-common v0.19.0
+2026-09-19T22:56:10.1311991Z   Downloaded crossbeam-utils v0.8.23
+2026-09-19T22:56:10.1312331Z   Downloaded dary_heap v0.3.9
+2026-09-19T22:56:10.1312640Z   Downloaded gemm v0.19.0
+2026-09-19T22:56:10.1312968Z   Downloaded wasm-bindgen-backend v0.2.104
+2026-09-19T22:56:10.1313329Z   Downloaded version_check v0.9.5
+2026-09-19T22:56:10.1313658Z   Downloaded wasm-bindgen v0.2.104
+2026-09-19T22:56:10.1313990Z   Downloaded proc-macro2 v1.0.107
+2026-09-19T22:56:10.1314305Z   Downloaded ryu v1.0.23
+2026-09-19T22:56:10.1314599Z   Downloaded js-sys v0.3.81
+2026-09-19T22:56:10.1314915Z   Downloaded equivalent v1.0.2
+2026-09-19T22:56:10.1315296Z   Downloaded unicode-normalization-alignments v0.1.12
+2026-09-19T22:56:10.1315696Z   Downloaded serde v1.0.228
+2026-09-19T22:56:10.1315996Z   Downloaded rustix v1.1.5
+2026-09-19T22:56:10.1316307Z   Downloaded typed-path v0.12.3
+2026-09-19T22:56:10.1316628Z   Downloaded byteorder v1.5.0
+2026-09-19T22:56:10.1316937Z   Downloaded memchr v2.8.3
+2026-09-19T22:56:10.1317244Z   Downloaded opentelemetry v0.31.0
+2026-09-19T22:56:10.1317845Z   Downloaded futures-util v0.3.34
+2026-09-19T22:56:10.1318222Z   Downloaded tokenizers v0.23.1
+2026-09-19T22:56:10.1318530Z   Downloaded cfg-if v1.0.5
+2026-09-19T22:56:10.1318964Z   Downloaded libc v0.2.189
+2026-09-19T22:56:10.1319484Z   Downloaded regex v1.13.1
+2026-09-19T22:56:10.1319993Z   Downloaded smallvec v1.16.1
+2026-09-19T22:56:10.1320434Z   Downloaded log v0.4.34
+2026-09-19T22:56:10.1320763Z   Downloaded scopeguard v1.2.0
+2026-09-19T22:56:10.1321080Z   Downloaded gemm-f16 v0.19.0
+2026-09-19T22:56:10.1321432Z   Downloaded heck v0.5.0
+2026-09-19T22:56:10.1321733Z   Downloaded rand_chacha v0.9.0
+2026-09-19T22:56:10.1322053Z   Downloaded windows-link v0.2.1
+2026-09-19T22:56:10.1322380Z   Downloaded once_cell v1.21.4
+2026-09-19T22:56:10.1322684Z   Downloaded errno v0.3.14
+2026-09-19T22:56:10.1322989Z   Downloaded fastrand v2.5.0
+2026-09-19T22:56:10.1323317Z   Downloaded bytemuck_derive v1.12.1
+2026-09-19T22:56:10.1323679Z   Downloaded zerofrom-derive v0.1.8
+2026-09-19T22:56:10.1324018Z   Downloaded synstructure v0.14.0
+2026-09-19T22:56:10.1324347Z   Downloaded stable_deref_trait v1.2.1
+2026-09-19T22:56:10.1324687Z   Downloaded aho-corasick v1.1.5
+2026-09-19T22:56:10.1325005Z   Downloaded hermit-abi v0.5.3
+2026-09-19T22:56:10.1325315Z   Downloaded gemm-f64 v0.19.0
+2026-09-19T22:56:10.1325614Z   Downloaded gemm-c32 v0.19.0
+2026-09-19T22:56:10.1325915Z   Downloaded float8 v0.7.0
+2026-09-19T22:56:10.1326208Z   Downloaded r-efi v5.3.0
+2026-09-19T22:56:10.1326505Z   Downloaded foldhash v0.2.0
+2026-09-19T22:56:10.1326818Z   Downloaded dyn-stack v0.13.2
+2026-09-19T22:56:10.1327129Z   Downloaded crunchy v0.2.4
+2026-09-19T22:56:10.1327431Z   Downloaded lock_api v0.4.14
+2026-09-19T22:56:10.1328061Z   Downloaded same-file v1.0.6
+2026-09-19T22:56:10.1328379Z   Downloaded half v2.7.1
+2026-09-19T22:56:10.1328679Z   Downloaded bytemuck v1.25.2
+2026-09-19T22:56:10.1328994Z   Downloaded parking_lot v0.12.5
+2026-09-19T22:56:10.1329322Z   Downloaded unicode-ident v1.0.26
+2026-09-19T22:56:10.1329649Z   Downloaded tempfile v3.27.0
+2026-09-19T22:56:10.1329953Z   Downloaded bitflags v2.13.2
+2026-09-19T22:56:10.1330269Z   Downloaded allocator-api2 v0.2.21
+2026-09-19T22:56:10.1330597Z   Downloaded zerofrom v0.1.8
+2026-09-19T22:56:10.1330898Z   Downloaded sysctl v0.6.0
+2026-09-19T22:56:10.1331202Z   Downloaded crossbeam-deque v0.8.8
+2026-09-19T22:56:10.1331532Z   Downloaded safetensors v0.8.0
+2026-09-19T22:56:10.1331844Z   Downloaded thiserror v2.0.20
+2026-09-19T22:56:10.1332147Z   Downloaded walkdir v2.5.0
+2026-09-19T22:56:10.1332474Z   Downloaded dyn-stack-macros v0.1.3
+2026-09-19T22:56:10.1333016Z   Downloaded macro_rules_attribute v0.2.3
+2026-09-19T22:56:10.1333476Z   Downloaded thiserror v1.0.69
+2026-09-19T22:56:10.1333804Z   Downloaded minimal-lexical v0.2.1
+2026-09-19T22:56:10.1334125Z   Downloaded reborrow v0.5.5
+2026-09-19T22:56:10.1334430Z   Downloaded getrandom v0.4.3
+2026-09-19T22:56:10.1334732Z   Downloaded indexmap v2.14.2
+2026-09-19T22:56:10.1335028Z   Downloaded yoke v0.8.3
+2026-09-19T22:56:10.1335321Z   Downloaded memmap2 v0.9.11
+2026-09-19T22:56:10.1335623Z   Downloaded pulp v0.22.3
+2026-09-19T22:56:10.1335914Z   Downloaded zip v8.6.0
+2026-09-19T22:56:10.1336195Z   Downloaded itoa v1.0.18
+2026-09-19T22:56:10.1336497Z   Downloaded hashbrown v0.17.1
+2026-09-19T22:56:10.1336795Z   Downloaded base64 v0.13.1
+2026-09-19T22:56:10.1337094Z   Downloaded slab v0.4.12
+2026-09-19T22:56:10.1337382Z   Downloaded seq-macro v0.3.6
+2026-09-19T22:56:10.1338126Z   Downloaded wasm-bindgen-macro-support v0.2.104
+2026-09-19T22:56:10.1338512Z   Downloaded serde_derive v1.0.228
+2026-09-19T22:56:10.1338860Z   Downloaded serde_core v1.0.228
+2026-09-19T22:56:10.1339170Z   Downloaded rand v0.9.5
+2026-09-19T22:56:10.1339470Z   Downloaded r-efi v6.0.0
+2026-09-19T22:56:10.1339782Z   Downloaded zerocopy-derive v0.8.57
+2026-09-19T22:56:10.1340112Z   Downloaded strsim v0.11.1
+2026-09-19T22:56:10.1340416Z   Downloaded fnv v1.0.7
+2026-09-19T22:56:10.1340716Z   Downloaded hashbrown v0.16.1
+2026-09-19T22:56:10.1341034Z   Downloaded getrandom v0.3.4
+2026-09-19T22:56:10.1341360Z   Downloaded static_assertions v1.1.0
+2026-09-19T22:56:10.1341710Z   Downloaded parking_lot_core v0.9.12
+2026-09-19T22:56:10.1342052Z   Downloaded num-complex v0.4.6
+2026-09-19T22:56:10.1342376Z   Downloaded enum-as-inner v0.6.1
+2026-09-19T22:56:10.1342694Z   Downloaded gemm-f32 v0.19.0
+2026-09-19T22:56:10.1343020Z   Downloaded derive_builder_macro v0.20.2
+2026-09-19T22:56:10.1343367Z   Downloaded yoke-derive v0.8.3
+2026-09-19T22:56:10.1343682Z   Downloaded bit-vec v0.8.0
+2026-09-19T22:56:10.1344009Z   Downloaded darling_macro v0.20.11
+2026-09-19T22:56:10.1344325Z   Downloaded nom v7.1.3
+2026-09-19T22:56:10.1344612Z   Downloaded ahash v0.8.12
+2026-09-19T22:56:10.1344935Z   Downloaded pin-project-lite v0.2.17
+2026-09-19T22:56:10.1345281Z   Downloaded crossbeam-epoch v0.9.21
+2026-09-19T22:56:10.1345615Z   Downloaded ident_case v1.0.1
+2026-09-19T22:56:10.1345931Z   Downloaded futures-core v0.3.34
+2026-09-19T22:56:10.1346255Z   Downloaded derive_builder v0.20.2
+2026-09-19T22:56:10.1346578Z   Downloaded paste v1.0.15
+2026-09-19T22:56:10.1346889Z   Downloaded monostate-impl v0.1.18
+2026-09-19T22:56:10.1347220Z   Downloaded regex-automata v0.4.18
+2026-09-19T22:56:10.1347747Z   Downloaded either v1.18.0
+2026-09-19T22:56:10.1348085Z   Downloaded pastey v0.2.3
+2026-09-19T22:56:10.1348398Z   Downloaded futures-executor v0.3.34
+2026-09-19T22:56:10.1348737Z   Downloaded tracing-core v0.1.36
+2026-09-19T22:56:10.1349054Z   Downloaded bit-set v0.8.0
+2026-09-19T22:56:10.1349373Z   Downloaded percent-encoding v2.3.2
+2026-09-19T22:56:10.1349781Z   Downloaded macro_rules_attribute-proc_macro v0.2.3
+2026-09-19T22:56:10.1350199Z   Downloaded num-traits v0.2.19
+2026-09-19T22:56:10.1350530Z   Downloaded spm_precompiled v0.1.4
+2026-09-19T22:56:10.1350871Z   Downloaded ppv-lite86 v0.2.21
+2026-09-19T22:56:10.1351187Z   Downloaded castaway v0.2.4
+2026-09-19T22:56:10.1351497Z   Downloaded futures-task v0.3.34
+2026-09-19T22:56:10.1351829Z   Downloaded futures-channel v0.3.34
+2026-09-19T22:56:10.1352174Z   Downloaded tracing-attributes v0.1.31
+2026-09-19T22:56:10.1352521Z   Downloaded linux-raw-sys v0.12.1
+2026-09-19T22:56:10.1352865Z   Downloaded derive_builder_core v0.20.2
+2026-09-19T22:56:10.1353194Z   Downloaded quote v1.0.47
+2026-09-19T22:56:10.1353490Z   Downloaded darling v0.20.11
+2026-09-19T22:56:10.1353805Z   Downloaded futures-sink v0.3.34
+2026-09-19T22:56:10.1354127Z   Downloaded fancy-regex v0.17.0
+2026-09-19T22:56:10.1354444Z   Downloaded wit-bindgen v0.57.1
+2026-09-19T22:56:10.1354754Z   Downloaded daachorse v1.0.1
+2026-09-19T22:56:10.1355264Z   Downloaded wasip2 v1.0.4+wasi-0.2.12
+2026-09-19T22:56:10.1355603Z   Downloaded darling_core v0.20.11
+2026-09-19T22:56:10.1356036Z   Downloaded compact_str v0.9.1
+2026-09-19T22:56:10.1356365Z   Downloaded windows-sys v0.61.2
+2026-09-19T22:56:10.1356682Z   Downloaded bumpalo v3.20.3
+2026-09-19T22:56:10.1356990Z   Downloaded rayon-core v1.13.0
+2026-09-19T22:56:10.1357323Z   Downloaded unicode-segmentation v1.13.3
+2026-09-19T22:56:10.1357940Z   Downloaded serde_json v1.0.145
+2026-09-19T22:56:10.1358297Z   Downloaded unicode_categories v0.1.1
+2026-09-19T22:56:10.1358642Z   Downloaded itertools v0.14.0
+2026-09-19T22:56:10.1358952Z   Downloaded rayon v1.12.0
+2026-09-19T22:56:10.1359255Z   Downloaded esaxx-rs v0.1.10
+2026-09-19T22:56:10.1359576Z   Downloaded opentelemetry_sdk v0.31.0
+2026-09-19T22:56:10.1359921Z   Downloaded zerocopy v0.8.57
+2026-09-19T22:56:10.1360223Z   Downloaded syn v3.0.6
+2026-09-19T22:56:10.1360541Z   Downloaded regex-syntax v0.8.11
+2026-09-19T22:56:10.1360860Z   Downloaded syn v2.0.119
+2026-09-19T22:56:10.1361166Z   Downloaded tracing v0.1.44
+2026-09-19T22:56:10.1361417Z 
+2026-09-19T22:56:10.1361549Z --- medidas.tsv ---
+2026-09-19T22:56:10.1361839Z 0	26128	30019584	92387794944	8192
+2026-09-19T22:56:10.1362138Z 1	58468	126681088	92291645440	12288
+2026-09-19T22:56:10.1362442Z 2	142436	212574208	92205764608	12288
+2026-09-19T22:56:10.1362750Z 3	142436	276594688	92141498368	12288
+2026-09-19T22:56:10.1363051Z 4	142436	368029696	92050296832	12288
+2026-09-19T22:56:10.1363350Z 5	142436	435040256	91983175680	12288
+2026-09-19T22:56:10.1363644Z 6	10584	884305920	91534135296	12288
+2026-09-19T22:56:10.1363939Z 7	10556	978309120	91440119808	12288
+2026-09-19T22:56:10.1364231Z 8	44180	1040134144	91378196480	12288
+2026-09-19T22:56:10.1364531Z 9	117908	1115234304	91303059456	12288
+2026-09-19T22:56:10.1364837Z 10	12868	1242169344	91165450240	12288
+2026-09-19T22:56:10.1365145Z 11	23996	1352450048	91065999360	12288
+2026-09-19T22:56:10.1365443Z 12	66716	1409159168	91009142784	12288
+2026-09-19T22:56:10.1365749Z 13	10648	1526738944	90883796992	12288
+2026-09-19T22:56:10.1366062Z 15	28824	1555550208	90862895104	16384
+2026-09-19T22:56:10.1366369Z 16	56028	1581490176	90836566016	16384
+2026-09-19T22:56:10.1366681Z 17	107820	1651216384	90764513280	16384
+2026-09-19T22:56:10.1376202Z ##[error]Process completed with exit code 65.
+2026-09-19T22:56:10.1432950Z ##[group]Run printf 'Fase: %s\nCommit solicitado: %s\nRun: %s, intento: %s\n' "$FASE" "$SOLICITADO" "$GITHUB_RUN_ID" "$GITHUB_RUN_ATTEMPT" >> "$GITHUB_STEP_SUMMARY"
+2026-09-19T22:56:10.1434065Z [36;1mprintf 'Fase: %s\nCommit solicitado: %s\nRun: %s, intento: %s\n' "$FASE" "$SOLICITADO" "$GITHUB_RUN_ID" "$GITHUB_RUN_ATTEMPT" >> "$GITHUB_STEP_SUMMARY"[0m
+2026-09-19T22:56:10.1435005Z [36;1mecho 'Sin upload-artifact ni cachés. Custodiar logs antes de recepción.' >> "$GITHUB_STEP_SUMMARY"[0m
+2026-09-19T22:56:10.1473422Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-09-19T22:56:10.1473825Z env:
+2026-09-19T22:56:10.1474131Z   SOLICITADO: 48a2bb568d24e3cc3c6bf2834e78d5b740578c46
+2026-09-19T22:56:10.1474508Z   FASE: ensayo
+2026-09-19T22:56:10.1474755Z   CARGO_BUILD_JOBS: 2
+2026-09-19T22:56:10.1475082Z   CARGO_TARGET_DIR: /home/runner/work/_temp/eio/target
+2026-09-19T22:56:10.1475487Z   CARGO_HOME: /home/runner/work/_temp/eio/cargo
+2026-09-19T22:56:10.1475909Z   RUSTUP_HOME: /home/runner/work/_temp/eio/rustup
+2026-09-19T22:56:10.1476274Z   TMPDIR: /home/runner/work/_temp/eio/tmp
+2026-09-19T22:56:10.1476601Z   EIO_FIN: 1789860831
+2026-09-19T22:56:10.1476858Z ##[endgroup]
+2026-09-19T22:56:10.1670512Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-09-19T22:56:10.1672074Z Post job cleanup.
+2026-09-19T22:56:10.2562878Z [command]/usr/bin/git version
+2026-09-19T22:56:10.2608181Z git version 2.55.0
+2026-09-19T22:56:10.2650185Z Temporarily overriding HOME='/home/runner/work/_temp/c7e547de-ef4d-4576-9310-c0060bdadc9c' before making global git config changes
+2026-09-19T22:56:10.2651676Z Adding repository directory to the temporary git global config as a safe directory
+2026-09-19T22:56:10.2657844Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/SV-motor/SV-motor
+2026-09-19T22:56:10.2700190Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-09-19T22:56:10.2749440Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-09-19T22:56:10.3019390Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-09-19T22:56:10.3058042Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-09-19T22:56:10.3532400Z Cleaning up orphan processes
+2026-09-19T22:56:10.3858267Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
