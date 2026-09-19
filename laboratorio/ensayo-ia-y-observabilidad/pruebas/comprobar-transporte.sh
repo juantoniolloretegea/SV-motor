@@ -79,6 +79,10 @@ probar tamano https://huggingface.co/a hf '' 66 1 ''
 probar huella https://huggingface.co/a hf '' 66 1 ''
 probar transporte https://huggingface.co/a hf '' 7 1 ERROR_TRANSPORTE
 probar http403 https://huggingface.co/a hf '' 22 1 ERROR_TRANSPORTE
+probar cdn_us https://us.aws.cdn.hf.co/a hf '' 0 1 IDENTIDAD
+probar redireccion_cdn_us https://huggingface.co/a hf 'https://us.aws.cdn.hf.co/a?Signature=SECRETO' 0 2 IDENTIDAD
+probar cdn_us_sufijo https://us.aws.cdn.hf.co.destino.invalid/a hf '' 65 0 HOST_FUERA_DE_LISTA
+probar cdn_us_politica_rust https://us.aws.cdn.hf.co/a rust '' 65 0 HOST_FUERA_DE_LISTA
 probar_diagnostico() (
  local nombre=$1 location=$2 autorizado=$3 esperado=$4 llamadas=$5 rc n
  export EIO_PRUEBA_LOCATION="$location" EIO_DIAGNOSTICO_AUTORIZADO="$autorizado" GITHUB_ACTIONS=true
@@ -115,3 +119,4 @@ for prueba in admitido rechazado cerrado; do
 done
 printf 'TOTAL=%s FALLOS=%s RED_REAL=0\n' "$total" "$fallos"
 (( fallos == 0 ))
+

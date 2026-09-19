@@ -1,9 +1,13 @@
-name: EIO diagnóstico de transporte EIO-TR-01
+name: EIO continuación acotada 05
 on:
   workflow_dispatch:
     inputs:
+      fase:
+        type: choice
+        options: [ensayo]
+        required: true
       commit:
-        description: SHA completo del precompromiso autorizado
+        description: SHA completo del precompromiso
         required: true
         type: string
 permissions:
@@ -12,39 +16,53 @@ concurrency:
   group: eio-github-01
   cancel-in-progress: false
 jobs:
-  diagnostico:
+  eio:
     runs-on: ubuntu-24.04
-    timeout-minutes: 2
+    timeout-minutes: 40
     env:
       SOLICITADO: ${{ inputs.commit }}
+      FASE: ${{ inputs.fase }}
+      CARGO_BUILD_JOBS: "2"
     steps:
-      - name: Verificar identidad y presupuesto extraordinario
+      - name: Verificar presupuesto e identidad
         shell: bash
         run: |
           set -euo pipefail
+          echo "CARGO_TARGET_DIR=$RUNNER_TEMP/eio/target" >> "$GITHUB_ENV"
+          echo "CARGO_HOME=$RUNNER_TEMP/eio/cargo" >> "$GITHUB_ENV"
+          echo "RUSTUP_HOME=$RUNNER_TEMP/eio/rustup" >> "$GITHUB_ENV"
+          echo "TMPDIR=$RUNNER_TEMP/eio/tmp" >> "$GITHUB_ENV"
+          echo "EIO_FIN=$(($(date +%s)+2280))" >> "$GITHUB_ENV"
           [[ "$GITHUB_REPOSITORY" == juantoniolloretegea/SV-motor ]]
           [[ "$SOLICITADO" =~ ^[0-9a-f]{40}$ ]]
           [[ "$GITHUB_SHA" == "$SOLICITADO" ]]
-          (( GITHUB_RUN_NUMBER == 4 && GITHUB_RUN_ATTEMPT == 1 ))
-      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+          (( GITHUB_RUN_NUMBER == 5 && GITHUB_RUN_ATTEMPT == 1 ))
+          [[ "$RUNNER_ARCH" == X64 ]]
+          libres=$(df -B1 --output=avail "$RUNNER_TEMP" | tail -1)
+          memoria=$(awk '/MemAvailable/{print $2}' /proc/meminfo)
+          echo "disco_libre_bytes=$libres memoria_disponible_kib=$memoria"
+          (( libres >= 12884901888 && memoria >= 6291456 ))
+          mkdir -p "$RUNNER_TEMP/eio/tmp"
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
         with:
           ref: ${{ inputs.commit }}
           persist-credentials: false
           fetch-depth: 1
           sparse-checkout: laboratorio/ensayo-ia-y-observabilidad
-      - name: Diagnóstico acotado de la primera redirección
+      - name: Fase explícita y guardas de acceso
         working-directory: laboratorio/ensayo-ia-y-observabilidad
         shell: bash
-        env:
-          EIO_DIAGNOSTICO_AUTORIZADO: EIO-TR-01
         run: |
           set -euo pipefail
           [[ "$(git rev-parse HEAD)" == "$SOLICITADO" ]]
-          jq -e '.adquisicion_habilitada == false and .ensayo_habilitado == false' pruebas/estado-acceso.json >/dev/null
-          bash pruebas/diagnosticar-transporte.sh
-      - name: Referencia de custodia
+          jq -e '.adquisicion_habilitada == true' pruebas/estado-acceso.json >/dev/null
+          case "$FASE" in
+            ensayo) [[ "$GITHUB_RUN_NUMBER" == 5 ]]; bash pruebas/ensayar.sh ;;
+            *) exit 64 ;;
+          esac
+      - name: Resumen limitado
         if: always()
         shell: bash
         run: |
-          printf 'EIO-TR-01; run=%s; intento=%s; commit=%s\n' "$GITHUB_RUN_ID" "$GITHUB_RUN_ATTEMPT" "$SOLICITADO" >> "$GITHUB_STEP_SUMMARY"
-
+          printf 'Fase: %s\nCommit solicitado: %s\nRun: %s, intento: %s\n' "$FASE" "$SOLICITADO" "$GITHUB_RUN_ID" "$GITHUB_RUN_ATTEMPT" >> "$GITHUB_STEP_SUMMARY"
+          echo 'Sin upload-artifact ni cachés. Custodiar logs antes de recepción.' >> "$GITHUB_STEP_SUMMARY"

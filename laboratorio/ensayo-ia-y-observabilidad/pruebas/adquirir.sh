@@ -2,7 +2,7 @@
 # Transporte HTTPS acotado. Archivo de funciones; no se adquiere nada al leerlo.
 set -euo pipefail
 # Sólo se registran hosts canónicos; nunca autoridades con usuario, puerto o
-# caracteres de control. La lista es deliberadamente la misma que en el ensayo.
+# caracteres de control. EIO-TR-01 justifica el nodo concreto us.aws.cdn.hf.co.
 validar_destino_eio() {
  local url=$1 politica=$2 salto=$3 autoridad
  EIO_HOST=no_disponible
@@ -18,7 +18,7 @@ validar_destino_eio() {
  fi
  EIO_HOST=$autoridad
  case "$politica:$EIO_HOST" in
-  rust:static.rust-lang.org|hf:huggingface.co|hf:cdn-lfs.huggingface.co|hf:cdn-lfs.hf.co|hf:cas-bridge.xethub.hf.co) return 0 ;;
+  rust:static.rust-lang.org|hf:huggingface.co|hf:cdn-lfs.huggingface.co|hf:cdn-lfs.hf.co|hf:cas-bridge.xethub.hf.co|hf:us.aws.cdn.hf.co) return 0 ;;
  esac
  printf 'DESTINO_NO_ADMITIDO salto=%s motivo=HOST_FUERA_DE_LISTA host=%s politica=%s\n' "$salto" "$EIO_HOST" "$politica"
  return 65
@@ -80,4 +80,5 @@ adquirir() {
  done
  echo 'LIMITE_REDIRECCIONES'; return 68
 }
+
 
