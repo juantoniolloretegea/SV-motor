@@ -1,0 +1,22 @@
+--- a/laboratorio/ensayo-ia-y-observabilidad/inferencia/main.rs
++++ b/laboratorio/ensayo-ia-y-observabilidad/inferencia/main.rs
+@@ -8,7 +8,9 @@
+  let intervalo=std::time::Instant::now();
+  let t=if a[4]=="on"{Some(Telemetria::nueva("modelo-sintetico-01",false,false))}else{None};
+  let pesos=fs::read(&a[1])?;let tokenizer=fs::read(&a[2])?;let peticion=fs::read_to_string(&a[3])?;
+- if peticion!=include_str!("../pruebas/peticion.txt"){return Err("PETICION_NO_FIJADA".into());}
++ let variante=if peticion==include_str!("../pruebas/peticion.txt"){"EIO-05"}
++ else if peticion==include_str!("../resultados/revision-05/continuacion-06/peticion-estructurada.txt"){"EIO-06"}
++ else{return Err("PETICION_NO_FIJADA".into());};
+  if let Some(t)=&t{t.evento("consulta.A");t.evento("consulta.B");t.evento("generacion.inicio");}
+  let s=generar(&pesos,&tokenizer,&peticion,&AtomicBool::new(false))?;
+  if let Some(t)=&t{t.evento("generacion.fin");if !t.cerrar(){return Err("EXPORTACION".into());}}
+@@ -17,7 +19,7 @@
+  let c=eio_candidato::Condiciones{id:"sintetica-01".into(),permiso:false,activa:false,veto:false,tokens_entrada:s.entrada,exportacion_correcta:true};
+  let obs=if let Some(t)=&t {t.estado.lock().unwrap().registros.iter().filter_map(|r|r.nombre.strip_prefix("consulta.").map(|id|eio_candidato::Referencia{id:id.into(),version:1})).collect::<Vec<_>>()}else{refs.clone()};
+  let contrato=eio_candidato::comprobar(&c,&s.texto,&refs,&obs).err().unwrap_or("OK");
+- println!("{}",serde_json::json!({"tipo":"modelo_real","segundos_intervalo_completo":segundos_observacion,"telemetria":a[4],"salida":s,"contrato":contrato,"alcance_off":"coste; sin cobertura OpenTelemetry"}));
++ println!("{}",serde_json::json!({"tipo":"modelo_real","variante_peticion":variante,"segundos_intervalo_completo":segundos_observacion,"telemetria":a[4],"salida":s,"contrato":contrato,"alcance_off":"coste; sin cobertura OpenTelemetry"}));
+  if let Some(t)=&t{eprintln!("{}",serde_json::to_string(&*t.estado.lock().unwrap())?);}
+  Ok(())
+ }
