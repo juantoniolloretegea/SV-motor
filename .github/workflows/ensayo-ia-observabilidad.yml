@@ -1,4 +1,4 @@
-name: EIO continuación acotada 05
+name: EIO continuación acotada 06
 on:
   workflow_dispatch:
     inputs:
@@ -36,7 +36,7 @@ jobs:
           [[ "$GITHUB_REPOSITORY" == juantoniolloretegea/SV-motor ]]
           [[ "$SOLICITADO" =~ ^[0-9a-f]{40}$ ]]
           [[ "$GITHUB_SHA" == "$SOLICITADO" ]]
-          (( GITHUB_RUN_NUMBER == 5 && GITHUB_RUN_ATTEMPT == 1 ))
+          (( GITHUB_RUN_NUMBER == 6 && GITHUB_RUN_ATTEMPT == 1 ))
           [[ "$RUNNER_ARCH" == X64 ]]
           libres=$(df -B1 --output=avail "$RUNNER_TEMP" | tail -1)
           memoria=$(awk '/MemAvailable/{print $2}' /proc/meminfo)
@@ -57,7 +57,7 @@ jobs:
           [[ "$(git rev-parse HEAD)" == "$SOLICITADO" ]]
           jq -e '.adquisicion_habilitada == true' pruebas/estado-acceso.json >/dev/null
           case "$FASE" in
-            ensayo) [[ "$GITHUB_RUN_NUMBER" == 5 ]]; bash pruebas/ensayar.sh ;;
+            ensayo) [[ "$GITHUB_RUN_NUMBER" == 6 ]]; bash resultados/revision-05/continuacion-06/ensayar-06.sh ;;
             *) exit 64 ;;
           esac
       - name: Resumen limitado
