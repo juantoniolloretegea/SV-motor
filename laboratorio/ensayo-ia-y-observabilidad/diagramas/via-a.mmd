@@ -1,0 +1,49 @@
+sequenceDiagram
+    autonumber
+    participant H as Operador humano
+    participant G as Supervisor exterior
+    participant C as Control y custodia
+    participant P as Página JavaScript
+    participant W as Worker Rust/WASM
+    Note over H,W: Vía A: arquitectura de la campaña NAV-02 en el ejecutor remoto
+    H->>G: Autoriza la campaña y sus límites
+    Note over G,C: Preparación previa: código, herramientas y recursos identificados
+    G->>C: Inicia el controlador de la campaña
+    C->>P: Abre Chrome y sirve la página y los recursos
+    Note over C: Controlador Node y recuperación exterior de evidencias
+    P->>W: Ejecuta controles sintéticos NAV01 y NAV02
+    W-->>P: Devuelve resultados y señales OpenTelemetry
+    P->>C: Transmite los registros para custodia
+    P->>W: Ejecuta la sonda no cooperativa NAV03
+    P->>W: Ordena terminar el Worker
+    Note over P,W: Cierra el canal y rechaza el identificador cancelado
+    P->>W: Crea otro Worker y comprueba una tarea nueva
+    W-->>P: Devuelve el resultado del control
+    P->>W: Ejecuta NAV04 con un evento omitido
+    W-->>P: Informa de la omisión
+    P->>C: Solicita comprobación previa a la inferencia
+    C->>G: Consulta evidencia de supervisión activa
+    G-->>C: Estado y medidas disponibles
+    C-->>P: Confirma custodia y habilitación instrumental, o rechaza
+    alt Se cumplen los controles previos
+        P->>W: Solicita NAV05 con identidad de tarea
+        W->>C: Solicita WASM, pesos, tokenizador y petición
+        C-->>W: Sirve los recursos del ensayo
+        Note over W: Coteja recursos y valida la entrada
+        Note over W: Rust y Candle cargan Qwen y realizan la inferencia
+        W-->>P: Emite marcas de las operaciones instrumentadas
+        P->>C: Remite las marcas para persistencia
+        alt La inferencia finaliza
+            Note over W: Verifica el contrato y la cobertura de telemetría
+            W-->>P: Devuelve salida original, juicio y telemetría
+            P->>C: Remite el resultado para custodia
+        else Se detecta exceso en el ensayo
+            G->>C: Ordena terminar la familia de procesos
+            Note over P,W: NAV05 quedó interrumpido, no hubo primer token ni salida contractual
+        end
+    else No se cumplen los controles previos
+        Note over P,W: No se inicia la inferencia
+    end
+    Note over G,C: Comprueba terminación observada y recupera la evidencia disponible
+    C-->>H: Entrega registros, identidades y lagunas para revisión
+

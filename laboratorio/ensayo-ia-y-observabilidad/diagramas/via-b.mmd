@@ -1,0 +1,58 @@
+sequenceDiagram
+    autonumber
+    participant U as Interfaz del usuario
+    participant A as API Rust
+    participant S as Supervisor y custodio
+    participant I as Inferencia Rust
+    participant G as Guarda exterior
+    Note over U,G: Vía B: diseño preparado, pendiente de compilación y ejecución
+    Note over U: El humano autoriza y decide, la página utiliza HTML y JavaScript
+    Note over A,G: Preparación previa: entradas identificadas y entorno habilitado
+    G->>G: Comprueba la hoja cgroup y sus controles
+    G->>S: Inicia, confirma membresía y permite el arranque
+    S->>A: Inicia el servicio Axum, Hyper y Tokio
+    U->>A: Solicita la página
+    A-->>U: Entrega HTML y JavaScript
+    U->>A: Envía petición JSON mediante HTTP
+    A->>A: Comprueba origen, tipo, tamaño, estructura y cupo
+    A->>S: Transmite la orden por socket local
+    S->>S: Valida petición y disponibilidad de la sesión
+    alt Petición admitida para ejecución
+        S->>S: Encola la entrada y su registro
+        S->>I: Inicia el proceso de inferencia
+        Note over I: Comprueba pesos y tokenizador, Candle ejecuta Qwen
+        Note over I: OpenTelemetry registra los puntos instrumentados
+        I-->>S: Emite marcas, señales y diagnóstico por canales acotados
+        S->>S: Comprueba secuencia y envía registros al hilo custodio
+        opt Cancelación solicitada por el humano
+            U->>A: Solicita cancelar la tarea identificada
+            A->>S: Transmite la solicitud
+            S->>I: Revoca y activa la escalada TERM/KILL
+            Note over S,I: La solicitud no equivale a parada confirmada
+        end
+        alt Terminación y cierre comprobables
+            Note over I: Si completa el cálculo, verifica el contrato y emite salida original y juicio
+            I-->>S: Final de los canales y estado de terminación observados
+            S->>S: Drena registros, evalúa condiciones y solicita sellado
+            Note over S: Hilo custodio: barrera, persistencia, huellas y copia inmutable
+            U->>A: Consulta estado y resultado
+            A->>S: Consulta el cierre
+            S-->>A: Resultado admitido o no admisión con causa
+            A-->>U: Devuelve el estado para presentación
+            U->>A: Solicita evidencia mediante sello y fragmentos
+            A->>S: Transmite la solicitud de recuperación
+            S-->>A: Devuelve fragmentos sellados o error
+            A-->>U: Permite recuperar la evidencia disponible
+        else Falla el cierre o la custodia
+            Note over S: No admite el resultado, conserva el diagnóstico que sea recuperable
+        end
+    else Petición rechazada
+        S-->>A: Devuelve el motivo
+        A-->>U: Presenta el rechazo sin iniciar el modelo
+    end
+    Note over S,G: Durante la sesión: latidos, observación y límites exteriores
+    opt Pérdida de supervisión, exceso de recursos o cierre
+        G->>G: Ordena cgroup.kill y comprueba que la hoja quede vacía
+        Note over A,I: La terminación puede dejar la API inaccesible, no se presume recuperación por ella
+    end
+
