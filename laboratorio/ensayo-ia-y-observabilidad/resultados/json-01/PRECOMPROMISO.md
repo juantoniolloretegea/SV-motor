@@ -1,0 +1,15 @@
+# EIO-JSON-01 · precompromiso
+
+20/09/2026. Holmes. Autorización humana expresa del encargo privado057fee28af67a20a8b54ec8367350d192bae459e, encargos-ejecucion/EIO-GITHUB-01/json-01/ENCARGO.md. Paquete público fijo a97214deaacf5e95b667bfd9f2a7b5f74e6b3e2c. Se incorpora íntegramente su README, CASOS.json, banco.rs, dos controladores, workflow y huellas. Ocho archivos del paquete y once fuentes cotejados con SHA256 en memoria; PAQUETE.sha256 identificado por blob y huella propia, sin autohuella circular. Diff desde b7fc5649f00fea910df395f52d29111b4992a762 añade únicamente esos ocho archivos.
+
+Únicas escrituras activas: copia exacta de workflow-json-01.yml al workflow existente361319025 y apertura de ambas guardas para este alcance. Sin cambios al paquete, Cargo.toml/lock, receptor, observabilidad, banco original o inferencias históricas. Banco nuevo copiado sólo a tests/eio_json_01.rs del runner por controlador.
+
+Seis runs previos completed/intento1:35342612464,35355495301,35474691239,35475928967,35476464030,35489025503. Revalidar antes del único dispatch7/intento1 fase=json con SHA íntegro publicado/releído.20min externos/1140s internos; fases600+360+30+30=1020s. No8 ni reintento.10GiB contabilizados/reserva2GiB/20MiB evidencia; dos trabajos. RSS muestreado, sin atribuir corte4GiB a estas fases ni garantizar picos entre muestras.
+
+Tres distribuciones nativas Rust/Cargo1.98.0 con identidad fijada. cargo fetch --locked puede adquirir fuentes opcionales del lock171paquetes; pruebas offline sin inferencia. No pesos/tokenizador/WASM, nueva dependencia, host, caché de proyecto o upload-artifact.
+
+Esperados exactos publicados: regresión24/24; complemento35/35 con retorno0, sensibilidad6/6 incluida. Serialización conserva texto UTF8/tokens ordenados, no identidad de bytes entre JSON compacto/legible. A/B admiten permutación por contrato y no son vector posicional SV. Históricos Markdown deben seguir ESTRUCTURA sin reparación. Sin aceptación de modelo, semántica o seguridad integral.
+
+Custodiar log completo y segmentos stdout/stderr/medidas de cuatro fases. El controlador publicado no emite hashes ni base64 de los ficheros de cada fase: las huellas de los segmentos recuperados identificarán la representación textual recuperada, no acreditarán igualdad binaria independiente con archivos efímeros. No modificar controlador para añadir evidencia. Cualquier ausencia/ambigüedad se declarará.
+
+Conector GitHub y navegador para coordinación, cálculos documentales en memoria. Consulta preliminar del árbol de rutas privado produjo salida demasiado amplia; no se leyeron contenidos ajenos al encargo. Una consulta de directorio público no produjo resultado procesable; lectura directa del README sí disponible. No denegación de ejecución observada. Sin cambios de software/archivos del PC, instalaciones, compilación/inferencia locales, WSL, VSCode, capturas del usuario, cámara/micrófono, credenciales o X:/Z:. No comunicaciones a terceros ni otros encargos. Cerrar guardas, publicar entrega/asientos privados y detenerse para revisión.

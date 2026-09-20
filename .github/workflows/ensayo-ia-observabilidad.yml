@@ -1,10 +1,10 @@
-name: EIO continuación acotada 06
+name: EIO complemento JSON 01
 on:
   workflow_dispatch:
     inputs:
       fase:
         type: choice
-        options: [ensayo]
+        options: [json]
         required: true
       commit:
         description: SHA completo del precompromiso
@@ -18,7 +18,7 @@ concurrency:
 jobs:
   eio:
     runs-on: ubuntu-24.04
-    timeout-minutes: 40
+    timeout-minutes: 20
     env:
       SOLICITADO: ${{ inputs.commit }}
       FASE: ${{ inputs.fase }}
@@ -32,11 +32,11 @@ jobs:
           echo "CARGO_HOME=$RUNNER_TEMP/eio/cargo" >> "$GITHUB_ENV"
           echo "RUSTUP_HOME=$RUNNER_TEMP/eio/rustup" >> "$GITHUB_ENV"
           echo "TMPDIR=$RUNNER_TEMP/eio/tmp" >> "$GITHUB_ENV"
-          echo "EIO_FIN=$(($(date +%s)+2280))" >> "$GITHUB_ENV"
+          echo "EIO_FIN=$(($(date +%s)+1140))" >> "$GITHUB_ENV"
           [[ "$GITHUB_REPOSITORY" == juantoniolloretegea/SV-motor ]]
           [[ "$SOLICITADO" =~ ^[0-9a-f]{40}$ ]]
           [[ "$GITHUB_SHA" == "$SOLICITADO" ]]
-          (( GITHUB_RUN_NUMBER == 6 && GITHUB_RUN_ATTEMPT == 1 ))
+          (( GITHUB_RUN_NUMBER == 7 && GITHUB_RUN_ATTEMPT == 1 ))
           [[ "$RUNNER_ARCH" == X64 ]]
           libres=$(df -B1 --output=avail "$RUNNER_TEMP" | tail -1)
           memoria=$(awk '/MemAvailable/{print $2}' /proc/meminfo)
@@ -55,9 +55,9 @@ jobs:
         run: |
           set -euo pipefail
           [[ "$(git rev-parse HEAD)" == "$SOLICITADO" ]]
-          jq -e '.adquisicion_habilitada == true' pruebas/estado-acceso.json >/dev/null
+          jq -e '.adquisicion_habilitada == true and .ensayo_habilitado == true' pruebas/estado-acceso.json >/dev/null
           case "$FASE" in
-            ensayo) [[ "$GITHUB_RUN_NUMBER" == 6 ]]; bash resultados/revision-05/continuacion-06/ensayar-06.sh ;;
+            json) [[ "$GITHUB_RUN_NUMBER" == 7 ]]; bash resultados/revision-06/json-01/ensayar-json.sh ;;
             *) exit 64 ;;
           esac
       - name: Resumen limitado
