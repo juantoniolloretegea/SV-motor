@@ -1,0 +1,54 @@
+[workspace]
+[package]
+name = "eio-candidato"
+version = "0.2.0"
+edition = "2021"
+rust-version = "1.98"
+publish = false
+[lib]
+path = "pruebas/lib.rs"
+[[bin]]
+name = "servidor"
+path = "nativa/servidor.rs"
+[[bin]]
+name = "supervisor"
+path = "nativa/supervisor.rs"
+[[bin]]
+name = "inferidor"
+path = "nativa/inferidor.rs"
+required-features = ["inferencia"]
+[[bin]]
+name = "testigo"
+path = "nativa/testigo.rs"
+[[bin]]
+name = "banco"
+path = "pruebas/banco.rs"
+[[test]]
+name = "json_complementario"
+path = "pruebas/json_complementario.rs"
+[[test]]
+name = "frontera"
+path = "pruebas/frontera.rs"
+[features]
+default = []
+inferencia = ["dep:candle-core", "dep:candle-transformers", "dep:tokenizers"]
+navegador = []
+[dependencies]
+serde = { version = "=1.0.228", features = ["derive"] }
+serde_json = "=1.0.145"
+opentelemetry = { version = "=0.31.0", default-features = false, features = ["trace"] }
+opentelemetry_sdk = { version = "=0.31.0", default-features = false, features = ["trace"] }
+candle-core = { git = "https://github.com/huggingface/candle", rev = "ddf1b879dc3a1760cbcb3f3c4a7c6467850cec4a", default-features = false, optional = true }
+candle-transformers = { git = "https://github.com/huggingface/candle", rev = "ddf1b879dc3a1760cbcb3f3c4a7c6467850cec4a", default-features = false, optional = true }
+tokenizers = { version = "=0.23.1", default-features = false, features = ["fancy-regex"], optional = true }
+axum = { version = "=0.8.9", default-features = false, features = ["http1", "json", "tokio"] }
+tokio = { version = "=1.53.1", default-features = false, features = ["rt-multi-thread", "macros", "net", "sync", "time", "signal"] }
+nix = { version = "=0.31.3", default-features = false, features = ["signal", "process", "fs", "feature"] }
+sha2 = { version = "=0.10.9", default-features = false, features = ["std"] }
+[profile.release]
+debug = 0
+incremental = false
+
+[[bin]]
+name = "cotejo"
+path = "nativa/cotejo.rs"
