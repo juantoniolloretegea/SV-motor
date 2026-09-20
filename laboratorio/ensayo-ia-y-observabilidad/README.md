@@ -1,9 +1,11 @@
 # Ensayo de inteligencia artificial y observabilidad
 
-**Versión documental:** 2.0  
+**Versión documental:** 2.1  
 **Fecha:** 20 de septiembre de 2026  
 **Estado:** experimento en curso; resultados parciales en navegador y candidata de servicio nativo pendiente de comprobación ejecutable. Ninguna de las dos vías acredita todavía la solución completa.  
 **Corte documental y de código revisado:** `d82bbe2f5f396eb31da5b095ba0849404cb352b0`.
+
+**Revisión 2.1:** precisión documental de las funciones de JavaScript y Rust en ambas vías. No modifica código, criterios de aceptación ni autorizaciones. La [versión 2.0](https://github.com/juantoniolloretegea/SV-motor/blob/29a0dbe74018807fddf5759f30de12ac29c162bb/laboratorio/ensayo-ia-y-observabilidad/README.md) permanece identificada en el historial.
 
 ## 1. Objeto, adscripción y autoridad
 
@@ -45,8 +47,8 @@ Los manifiestos de ambas candidatas fijan Candle en `ddf1b879dc3a1760cbcb3f3c4a7
 | Papel de Candle | Se compila a WebAssembly junto con el código Rust correspondiente y ejecuta el modelo dentro de un Web Worker. | Se compila para la máquina anfitriona y ejecuta el modelo en el proceso de inferencia. |
 | Ubicación del cálculo | Máquina donde se ejecuta el navegador. | Máquina donde se ejecuta el servicio nativo. |
 | Papel de la página | Coordinar el Worker, enviar la petición y recibir resultados y señales. | Enviar solicitudes al servicio y consultar su estado, parada, resultados y evidencias. |
-| Comunicación propia | Enlace JavaScript/WASM y mensajes entre página y Worker. | HTTP hacia el servicio y comunicación interna con el supervisor. |
-| Infraestructura específica | Navegador, motor WASM, enlace JavaScript y Worker; el ensayo actual añade control y custodia exteriores. | Axum, Hyper y Tokio para la capa HTTP y su ejecución asíncrona; procesos y mecanismos de supervisión y custodia preparados en Rust. |
+| Comunicación propia | Enlace JavaScript/WASM y mensajes entre página y Worker. | JavaScript de la página envía solicitudes HTTP al servicio Rust; el servicio se comunica internamente con el supervisor. |
+| Infraestructura específica | Navegador, motor WASM, enlace JavaScript y Worker; el ensayo actual añade control y custodia exteriores. | Interfaz HTML/JavaScript en el navegador; Axum, Hyper y Tokio para la capa HTTP nativa; procesos y mecanismos de supervisión y custodia preparados en Rust. |
 | Recursos aportados por el usuario de una futura URL | Si la página ejecuta WASM localmente, su dispositivo aporta el cálculo y la memoria de inferencia. | Si el servicio está alojado remotamente, su dispositivo ejecuta la interfaz; el anfitrión remoto aporta la inferencia. |
 | Comprobación requerida | Inferencia completa, integridad contractual, observación, parada y custodia dentro del entorno definido. | Las mismas obligaciones funcionales y de seguridad, realizadas y comprobadas con los mecanismos de la vía nativa. |
 
@@ -55,6 +57,24 @@ WASM es un destino de compilación y ejecución; no contiene automáticamente to
 La referencia nativa inicial en GitHub Actions fue una ejecución de pruebas. La candidata nativa posterior incorpora un servicio para interacción desde una página. Ambas pertenecen a la vía nativa, pero sus resultados y obligaciones no son intercambiables. GitHub Actions es el entorno de las campañas realizadas, no un alojamiento permanente de inferencia.
 
 El Chrome utilizado en NAV-01 y NAV-02 se ejecutó en el ejecutor remoto de GitHub. Esas campañas no ejecutaron el modelo en el PC del usuario ni acreditan su comportamiento en dicho equipo.
+
+### 4.1. Distribución de responsabilidades entre Rust y JavaScript
+
+La vía B **no elimina JavaScript del conjunto**. En la candidata revisada lo conserva en la interfaz del navegador, mientras que la inferencia, el servicio HTTP, la supervisión y la custodia se implementan en Rust nativo. HTTP es el protocolo de comunicación; su utilización no determina el lenguaje de la página.
+
+| Función | Vía A: navegador/WASM | Vía B: servicio nativo |
+|---|---|---|
+| Presentación y solicitudes del usuario | HTML y JavaScript en la página. | HTML y JavaScript en la página. |
+| Carga y coordinación de la inferencia | JavaScript carga recursos, inicializa el módulo WASM y coordina el Worker; Candle ejecuta el cálculo en WASM. | El proceso Rust carga los recursos y ejecuta Candle; JavaScript solicita la operación mediante la API. |
+| Solicitud de parada | La página coordina la terminación del Worker; el ensayo conserva además un supervisor exterior. | La página solicita la cancelación; el control nativo debe validarla y actuar, independientemente de la presentación. |
+| Recuperación y presentación de evidencias | En la campaña actual intervienen la página y el controlador exterior. | JavaScript solicita los fragmentos al servicio y permite descargarlos; la custodia y la admisión técnica corresponden al código Rust. |
+| Papel de Node.js | Forma parte del controlador exterior de la campaña NAV-02; no es el motor de inferencia. | No forma parte del servicio nativo preparado. Esta afirmación no excluye herramientas exteriores de prueba o de plataforma, que deben inventariarse por separado. |
+
+La [interfaz JavaScript de la candidata nativa](https://github.com/juantoniolloretegea/SV-motor/blob/d82bbe2f5f396eb31da5b095ba0849404cb352b0/laboratorio/ensayo-ia-y-observabilidad/resultados/preparacion-nativa-02/web/app.js) envía JSON a `/api`, consulta el estado, solicita cancelación, presenta resultados y recupera evidencias. El [servidor Rust](https://github.com/juantoniolloretegea/SV-motor/blob/d82bbe2f5f396eb31da5b095ba0849404cb352b0/laboratorio/ensayo-ia-y-observabilidad/resultados/preparacion-nativa-02/nativa/servidor.rs) publica esa página y atiende la API.
+
+Las comprobaciones de la interfaz no sustituyen a las del servicio. Permisos, límites, identidad de la petición y admisión del resultado deben imponerse en los componentes responsables aunque la página envíe solicitudes alteradas. La presentación también requiere verificación: un resultado correcto en el servicio puede mostrarse incorrectamente al usuario.
+
+Reducir las responsabilidades de JavaScript no demuestra por sí solo una reducción global de fallos. Eliminarlo también de la interfaz supondría otra realización, no incluida en esta candidata. La prioridad entre las dos vías sigue regida por el apartado 2, sin preferencia automática por lenguaje o número de componentes.
 
 ## 5. Seguridad, integridad y observabilidad
 
@@ -117,7 +137,7 @@ Los presupuestos iniciales y sus posteriores autorizaciones se conservan como hi
 
 ## 8. Antecedente documental conservado
 
-La versión 0.2 y sus notas de continuidad se mantienen a continuación sin alterar su texto. Sus estados y expresiones temporales corresponden a los momentos documentados; la síntesis vigente de este README es la versión 2.0 anterior. Las revisiones del contrato y de los expedientes mantienen sus identidades propias.
+La versión 0.2 y sus notas de continuidad se mantienen a continuación sin alterar su texto. Sus estados y expresiones temporales corresponden a los momentos documentados; la síntesis vigente de este README es la versión 2.1 anterior. Las revisiones del contrato y de los expedientes mantienen sus identidades propias.
 
 <details>
 <summary>Consultar íntegramente la versión 0.2 y sus notas de continuidad</summary>
