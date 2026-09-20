@@ -1,0 +1,34 @@
+[workspace]
+[package]
+name = "eio-candidato"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[lib]
+path = "pruebas/lib.rs"
+crate-type = ["rlib", "cdylib"]
+
+[features]
+default = []
+navegador = ["inferencia", "dep:wasm-bindgen", "dep:getrandom-web"]
+inferencia = ["dep:candle-core", "dep:candle-transformers", "dep:tokenizers"]
+
+[dependencies]
+serde = { version = "=1.0.228", features = ["derive"] }
+serde_json = "=1.0.145"
+opentelemetry = { version = "=0.31.0", default-features = false, features = ["trace"] }
+opentelemetry_sdk = { version = "=0.31.0", default-features = false, features = ["trace"] }
+candle-core = { git = "https://github.com/huggingface/candle", rev = "ddf1b879dc3a1760cbcb3f3c4a7c6467850cec4a", default-features = false, optional = true }
+candle-transformers = { git = "https://github.com/huggingface/candle", rev = "ddf1b879dc3a1760cbcb3f3c4a7c6467850cec4a", default-features = false, optional = true }
+tokenizers = { version = "=0.23.1", default-features = false, features = ["fancy-regex"], optional = true }
+
+[target.'cfg(target_arch = "wasm32")'.dependencies]
+wasm-bindgen = { version = "=0.2.104", optional = true }
+
+[profile.release]
+debug = 0
+incremental = false
+
+[target.'cfg(all(target_arch = "wasm32", target_os = "unknown"))'.dependencies]
+getrandom-web = { package = "getrandom", version = "=0.3.4", default-features = false, features = ["wasm_js"], optional = true }

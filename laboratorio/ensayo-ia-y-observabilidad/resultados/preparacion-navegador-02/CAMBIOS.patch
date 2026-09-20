@@ -1,0 +1,1557 @@
+--- a/pruebas/lib.rs
++++ b/pruebas/lib.rs
+@@ -1,95 +1,98 @@
+-//! Candidato no compilado ni ejecutado. Datos y efectos exclusivamente sintéticos.
+-#[path = "../observabilidad/telemetria.rs"]
+-pub mod telemetria;
+-#[cfg(feature = "inferencia")]
+-#[path = "../inferencia/adaptador.rs"]
+-pub mod inferencia;
+-use serde::{Deserialize, Serialize};
+-
+-#[derive(Debug, Clone, Deserialize, Serialize, PartialEq, Eq)]
+-#[serde(deny_unknown_fields)]
+-pub struct Referencia { pub id: String, pub version: u32 }
+-#[derive(Debug, Clone, Deserialize, Serialize)]
+-#[serde(deny_unknown_fields)]
+-pub struct Propuesta {
+-    pub peticion: String,
+-    pub referencias: Vec<Referencia>,
+-    pub accion: String,
+-    pub respuesta: String,
+-}
+-#[derive(Debug, Clone, Deserialize, Serialize)]
+-#[serde(deny_unknown_fields)]
+-pub struct Condiciones {
+-    pub id: String,
+-    pub permiso: bool,
+-    pub activa: bool,
+-    pub veto: bool,
+-    pub tokens_entrada: usize,
+-    pub exportacion_correcta: bool,
+-}
+-/// Oráculo externo al modelo. Las fuentes A/B son conjuntas; C sólo si activa.
+-pub fn comprobar(c: &Condiciones, raw: &str, consultadas: &[Referencia],
+-                 observadas: &[Referencia]) -> Result<(), &'static str> {
+-    if c.tokens_entrada > 1920 { return Err("LIMITE_ENTRADA"); }
+-    if raw.len() > 8192 { return Err("LIMITE_SALIDA"); }
+-    let p: Propuesta = serde_json::from_str(raw).map_err(|_| "ESTRUCTURA")?;
+-    if p.peticion != c.id { return Err("CORRELACION"); }
+-    if p.respuesta.trim().is_empty() { return Err("RESPUESTA_VACIA"); }
+-    if !["ninguna", "marcar"].contains(&p.accion.as_str()) { return Err("ACCION"); }
+-    if p.accion == "marcar" && !c.permiso { return Err("SIN_PERMISO"); }
+-    if c.veto { return Err("VETO"); }
+-    if !c.exportacion_correcta { return Err("EXPORTACION"); }
+-    for r in &p.referencias {
+-        if !["A", "B", "C"].contains(&r.id.as_str()) { return Err("REFERENCIA"); }
+-        if r.version != 1 { return Err("VERSION"); }
+-        if !consultadas.contains(r) { return Err("CONSULTA_NO_REALIZADA"); }
+-    }
+-    let req = if c.activa { vec!["A", "B", "C"] } else { vec!["A", "B"] };
+-    for id in req {
+-        let r = Referencia { id: id.into(), version: 1 };
+-        if !consultadas.contains(&r) || !p.referencias.contains(&r) {
+-            return Err("DEPENDENCIA");
+-        }
+-        if !observadas.contains(&r) { return Err("EVENTO_AUSENTE"); }
+-    }
+-    if p.referencias.len() != if c.activa {3} else {2} {return Err("COBERTURA_EXTRA");}
+-    Ok(())
+-}
+-/// Único efecto ofrecido: mutación de un booleano del banco, después de validar.
+-pub fn ejecutar(c: &Condiciones, raw: &str, consultas: &[Referencia],
+-                eventos: &[Referencia], objeto: &mut bool) -> Result<(), &'static str> {
+-    comprobar(c, raw, consultas, eventos)?;
+-    let p: Propuesta = serde_json::from_str(raw).map_err(|_|"ESTRUCTURA")?;
+-    if p.accion == "marcar" { *objeto = true; }
+-    Ok(())
+-}
+-/// Control compartido por generación real y testigos deterministas.
+-pub fn parada(token: u32, eos: u32, generados: usize, retenidos: usize,
+-              cancelada: bool) -> Option<&'static str> {
+-    if cancelada {Some("CANCELACION")}
+-    else if token == eos {Some("EOS")}
+-    else if generados >= 128 {Some("LIMITE_GENERACION")}
+-    else if retenidos >= 2048 {Some("LIMITE_CONTEXTO")}
+-    else {None}
+-}
+-
+-#[cfg(all(target_arch="wasm32",feature="navegador"))]
+-#[path="navegador.rs"]
+-mod navegador;
+-
+-#[derive(Clone,serde::Serialize)]
+-pub struct FuenteConsultada {pub referencia:Referencia,pub texto:String}
+-#[derive(serde::Serialize)]
+-pub struct HuellaFrontera {pub bytes_fuentes:usize,pub permiso_antes:bool,pub permiso_despues:bool}
+-/// Las fuentes se entregan a la frontera como datos; nunca se convierten en Condiciones.
+-pub fn ejecutar_con_fuentes(c:&Condiciones,raw:&str,fuentes:&[FuenteConsultada],
+- eventos:&[Referencia],objeto:&mut bool)->(Result<(), &'static str>,HuellaFrontera){
+- let bytes=fuentes.iter().map(|f|f.texto.len()).sum::<usize>();
+- let huella=HuellaFrontera{bytes_fuentes:bytes,permiso_antes:c.permiso,permiso_despues:c.permiso};
+- if bytes>8192{return (Err("LIMITE_ENTRADA"),huella);}
+- let refs=fuentes.iter().map(|f|f.referencia.clone()).collect::<Vec<_>>();
+- (ejecutar(c,raw,&refs,eventos,objeto),huella)
+-}
+-
+-#[path="../reloj.rs"]
+-pub mod reloj;
++//! Candidato no compilado ni ejecutado. Datos y efectos exclusivamente sintéticos.
++#[path = "../observabilidad/telemetria.rs"]
++pub mod telemetria;
++#[cfg(feature = "inferencia")]
++#[path = "../inferencia/adaptador.rs"]
++pub mod inferencia;
++use serde::{Deserialize, Serialize};
++
++#[derive(Debug, Clone, Deserialize, Serialize, PartialEq, Eq)]
++#[serde(deny_unknown_fields)]
++pub struct Referencia { pub id: String, pub version: u32 }
++#[derive(Debug, Clone, Deserialize, Serialize)]
++#[serde(deny_unknown_fields)]
++pub struct Propuesta {
++    pub peticion: String,
++    pub referencias: Vec<Referencia>,
++    pub accion: String,
++    pub respuesta: String,
++}
++#[derive(Debug, Clone, Deserialize, Serialize)]
++#[serde(deny_unknown_fields)]
++pub struct Condiciones {
++    pub id: String,
++    pub permiso: bool,
++    pub activa: bool,
++    pub veto: bool,
++    pub tokens_entrada: usize,
++    pub exportacion_correcta: bool,
++}
++/// Oráculo externo al modelo. Las fuentes A/B son conjuntas; C sólo si activa.
++pub fn comprobar(c: &Condiciones, raw: &str, consultadas: &[Referencia],
++                 observadas: &[Referencia]) -> Result<(), &'static str> {
++    if c.tokens_entrada > 1920 { return Err("LIMITE_ENTRADA"); }
++    if raw.len() > 8192 { return Err("LIMITE_SALIDA"); }
++    let p: Propuesta = serde_json::from_str(raw).map_err(|_| "ESTRUCTURA")?;
++    if p.peticion != c.id { return Err("CORRELACION"); }
++    if p.respuesta.trim().is_empty() { return Err("RESPUESTA_VACIA"); }
++    if !["ninguna", "marcar"].contains(&p.accion.as_str()) { return Err("ACCION"); }
++    if p.accion == "marcar" && !c.permiso { return Err("SIN_PERMISO"); }
++    if c.veto { return Err("VETO"); }
++    if !c.exportacion_correcta { return Err("EXPORTACION"); }
++    for r in &p.referencias {
++        if !["A", "B", "C"].contains(&r.id.as_str()) { return Err("REFERENCIA"); }
++        if r.version != 1 { return Err("VERSION"); }
++        if !consultadas.contains(r) { return Err("CONSULTA_NO_REALIZADA"); }
++    }
++    let req = if c.activa { vec!["A", "B", "C"] } else { vec!["A", "B"] };
++    for id in req {
++        let r = Referencia { id: id.into(), version: 1 };
++        if !consultadas.contains(&r) || !p.referencias.contains(&r) {
++            return Err("DEPENDENCIA");
++        }
++        if !observadas.contains(&r) { return Err("EVENTO_AUSENTE"); }
++    }
++    if p.referencias.len() != if c.activa {3} else {2} {return Err("COBERTURA_EXTRA");}
++    Ok(())
++}
++/// Único efecto ofrecido: mutación de un booleano del banco, después de validar.
++pub fn ejecutar(c: &Condiciones, raw: &str, consultas: &[Referencia],
++                eventos: &[Referencia], objeto: &mut bool) -> Result<(), &'static str> {
++    comprobar(c, raw, consultas, eventos)?;
++    let p: Propuesta = serde_json::from_str(raw).map_err(|_|"ESTRUCTURA")?;
++    if p.accion == "marcar" { *objeto = true; }
++    Ok(())
++}
++/// Control compartido por generación real y testigos deterministas.
++pub fn parada(token: u32, eos: u32, generados: usize, retenidos: usize,
++              cancelada: bool) -> Option<&'static str> {
++    if cancelada {Some("CANCELACION")}
++    else if token == eos {Some("EOS")}
++    else if generados >= 128 {Some("LIMITE_GENERACION")}
++    else if retenidos >= 2048 {Some("LIMITE_CONTEXTO")}
++    else {None}
++}
++
++#[cfg(all(target_arch="wasm32",feature="navegador"))]
++#[path="navegador.rs"]
++mod navegador;
++
++#[derive(Clone,serde::Serialize)]
++pub struct FuenteConsultada {pub referencia:Referencia,pub texto:String}
++#[derive(serde::Serialize)]
++pub struct HuellaFrontera {pub bytes_fuentes:usize,pub permiso_antes:bool,pub permiso_despues:bool}
++/// Las fuentes se entregan a la frontera como datos; nunca se convierten en Condiciones.
++pub fn ejecutar_con_fuentes(c:&Condiciones,raw:&str,fuentes:&[FuenteConsultada],
++ eventos:&[Referencia],objeto:&mut bool)->(Result<(), &'static str>,HuellaFrontera){
++ let bytes=fuentes.iter().map(|f|f.texto.len()).sum::<usize>();
++ let huella=HuellaFrontera{bytes_fuentes:bytes,permiso_antes:c.permiso,permiso_despues:c.permiso};
++ if bytes>8192{return (Err("LIMITE_ENTRADA"),huella);}
++ let refs=fuentes.iter().map(|f|f.referencia.clone()).collect::<Vec<_>>();
++ (ejecutar(c,raw,&refs,eventos,objeto),huella)
++}
++
++#[path="../reloj.rs"]
++pub mod reloj;
++
++#[path="../diagnostico.rs"]
++pub mod diagnostico;
+--- a/inferencia/adaptador.rs
++++ b/inferencia/adaptador.rs
+@@ -1,37 +1,43 @@
+-//! Adaptación del ejemplo quantized-qwen3 de Candle en el commit fijado.
+-//! Candidato no compilado; CPU, sin herramientas ni descargas en la generación.
+-use candle_core::{Device,Tensor,quantized::gguf_file};
+-use candle_transformers::{models::quantized_qwen3::ModelWeights,generation::{LogitsProcessor,Sampling}};
+-use tokenizers::Tokenizer;
+-use std::{io::Cursor,sync::atomic::{AtomicBool,Ordering},time::Duration};
+-use crate::reloj::Instant;
+-pub type Fallo=Box<dyn std::error::Error+Send+Sync>;
+-#[derive(serde::Serialize)]
+-pub struct Salida {pub texto:String,pub fin:String,pub entrada:usize,pub generados:usize,pub segundos:f64,pub tokens:Vec<u32>}
+-pub fn generar(pesos:&[u8],tokenizer_bytes:&[u8],peticion:&str,cancel:&AtomicBool)->Result<Salida,Fallo>{
+- let inicio=Instant::now();
+- let tokenizer=Tokenizer::from_bytes(tokenizer_bytes).map_err(|e|e.to_string())?;
+- let eos=tokenizer.token_to_id("<|im_end|>").ok_or("EOS ausente")?;
+- if eos!=151645 {return Err("EOS incompatible".into());}
+- // Especialización de plantilla Qwen: un turno, sin tools, thinking=false.
+- let texto=format!("<|im_start|>user\n{peticion}<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n");
+- let entrada=tokenizer.encode(texto,false).map_err(|e|e.to_string())?;let ids=entrada.get_ids();
+- if ids.len()+128>2048 {return Err("LIMITE_ENTRADA".into());}
+- let dev=Device::Cpu;let mut reader=Cursor::new(pesos);
+- let contenido=gguf_file::Content::read(&mut reader)?;
+- let mut modelo=ModelWeights::from_gguf(contenido,&mut reader,&dev)?;
+- let mut logits=LogitsProcessor::from_sampling(299792458,Sampling::ArgMax);
+- let mut salida=Vec::new();let mut posicion=0;let mut actuales=ids.to_vec();
+- let fin=loop {
+-  if cancel.load(Ordering::Relaxed){break "CANCELACION";}
+-  if inicio.elapsed()>=Duration::from_secs(120){break "TIEMPO";}
+-  let input=Tensor::new(actuales.as_slice(),&dev)?.unsqueeze(0)?;
+-  let l=modelo.forward(&input,posicion)?.squeeze(0)?;let token=logits.sample(&l)?;
+-  posicion+=actuales.len();salida.push(token);
+-  if let Some(fin)=crate::parada(token,eos,salida.len(),ids.len()+salida.len(),cancel.load(Ordering::Relaxed)){break fin;}
+-  actuales=vec![token];
+- };
+- let contenido=if salida.last()==Some(&eos){&salida[..salida.len()-1]}else{&salida[..]};
+- let texto=tokenizer.decode(contenido,false).map_err(|e|e.to_string())?;
+- Ok(Salida{texto,fin:fin.into(),entrada:ids.len(),generados:salida.len(),segundos:inicio.elapsed().as_secs_f64(),tokens:salida})
+-}
++//! Adaptación del ejemplo quantized-qwen3 de Candle en el commit fijado.
++//! Candidato no compilado; CPU, sin herramientas ni descargas en la generación.
++use candle_core::{Device,Tensor,quantized::gguf_file};
++use candle_transformers::{models::quantized_qwen3::ModelWeights,generation::{LogitsProcessor,Sampling}};
++use tokenizers::Tokenizer;
++use std::{io::Cursor,sync::atomic::{AtomicBool,Ordering},time::Duration};
++use crate::reloj::Instant;
++pub type Fallo=Box<dyn std::error::Error+Send+Sync>;
++#[derive(serde::Serialize)]
++pub struct Salida {pub texto:String,pub fin:String,pub entrada:usize,pub generados:usize,pub segundos:f64,pub tokens:Vec<u32>}
++pub fn generar(pesos:&[u8],tokenizer_bytes:&[u8],peticion:&str,cancel:&AtomicBool)->Result<Salida,Fallo>{
++ let inicio=Instant::now();
++ let tokenizer=Tokenizer::from_bytes(tokenizer_bytes).map_err(|e|e.to_string())?;
++ crate::diagnostico::marca("tokenizador-listo");
++ let eos=tokenizer.token_to_id("<|im_end|>").ok_or("EOS ausente")?;
++ if eos!=151645 {return Err("EOS incompatible".into());}
++ // Especialización de plantilla Qwen: un turno, sin tools, thinking=false.
++ let texto=format!("<|im_start|>user\n{peticion}<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n");
++ let entrada=tokenizer.encode(texto,false).map_err(|e|e.to_string())?;let ids=entrada.get_ids();
++ if ids.len()+128>2048 {return Err("LIMITE_ENTRADA".into());}
++ let dev=Device::Cpu;let mut reader=Cursor::new(pesos);
++ let contenido=gguf_file::Content::read(&mut reader)?;
++ crate::diagnostico::marca("antes-ModelWeights");
++ let mut modelo=ModelWeights::from_gguf(contenido,&mut reader,&dev)?;
++ crate::diagnostico::marca("despues-ModelWeights");
++ let mut logits=LogitsProcessor::from_sampling(299792458,Sampling::ArgMax);
++ let mut salida=Vec::new();let mut posicion=0;let mut actuales=ids.to_vec();
++ let fin=loop {
++  if cancel.load(Ordering::Relaxed){break "CANCELACION";}
++  if inicio.elapsed()>=Duration::from_secs(120){break "TIEMPO";}
++  let input=Tensor::new(actuales.as_slice(),&dev)?.unsqueeze(0)?;
++  if salida.is_empty(){crate::diagnostico::marca("primer-forward-inicio");}
++  let l=modelo.forward(&input,posicion)?.squeeze(0)?;let token=logits.sample(&l)?;
++  if salida.is_empty(){crate::diagnostico::marca("primer-token");}
++  posicion+=actuales.len();salida.push(token);
++  if let Some(fin)=crate::parada(token,eos,salida.len(),ids.len()+salida.len(),cancel.load(Ordering::Relaxed)){break fin;}
++  actuales=vec![token];
++ };
++ let contenido=if salida.last()==Some(&eos){&salida[..salida.len()-1]}else{&salida[..]};
++ let texto=tokenizer.decode(contenido,false).map_err(|e|e.to_string())?;
++ crate::diagnostico::marca("generacion-finalizada");
++ Ok(Salida{texto,fin:fin.into(),entrada:ids.len(),generados:salida.len(),segundos:inicio.elapsed().as_secs_f64(),tokens:salida})
++}
+--- a/pruebas/navegador.rs
++++ b/pruebas/navegador.rs
+@@ -1,61 +1,62 @@
+-//! Enlace candidato; no acredita compatibilidad WASM, reloj ni ejecución en navegador.
+-use wasm_bindgen::prelude::*;
+-#[wasm_bindgen]
+-pub fn caso(pesos:Vec<u8>,tokenizer:Vec<u8>,peticion:String)->Result<String,JsValue>{
+- if pesos.len()>500_000_000 || tokenizer.len()>32*1024*1024 ||
+- peticion!=include_str!("peticion.txt"){return Err(JsValue::from_str("ENTRADA_NO_ADMITIDA"));}
+- let t=crate::telemetria::Telemetria::nueva("modelo-sintetico-01",false,false);
+- t.evento("consulta.A");t.evento("consulta.B");t.evento("generacion.inicio");
+- let salida=crate::inferencia::generar(&pesos,&tokenizer,&peticion,&std::sync::atomic::AtomicBool::new(false))
+-  .map_err(|e|JsValue::from_str(&e.to_string()))?;
+- t.evento("generacion.fin");let exportada=t.cerrar();
+- let refs=vec![crate::Referencia{id:"A".into(),version:1},crate::Referencia{id:"B".into(),version:1}];
+- let estado=t.estado.lock().unwrap();
+- let obs=estado.registros.iter().filter_map(|r|r.nombre.strip_prefix("consulta.")
+-  .map(|id|crate::Referencia{id:id.into(),version:1})).collect::<Vec<_>>();
+- let c=crate::Condiciones{id:"sintetica-01".into(),permiso:false,activa:false,veto:false,
+- tokens_entrada:salida.entrada,exportacion_correcta:exportada};
+- let nombres=estado.registros.iter().map(|r|r.nombre.as_str()).collect::<Vec<_>>();
+- let cobertura=nombres==vec!["consulta.A","consulta.B","generacion.inicio","generacion.fin","peticion"] &&
+- estado.descartados==0 && estado.errores==0;
+- let contrato=crate::comprobar(&c,&salida.texto,&refs,&obs).err().unwrap_or("OK");
+- serde_json::to_string(&serde_json::json!({"tipo":"modelo_real","plataforma":"navegador",
+- "salida":salida,"contrato":contrato,"cobertura_eventos":cobertura,"telemetria":&*estado})).map_err(|e|JsValue::from_str(&e.to_string()))
+-}
+-
+-const CONTROL:&str=r#"{"peticion":"nav-control-01","referencias":[{"id":"A","version":1},{"id":"B","version":1}],"accion":"marcar","respuesta":"Control sintético finito A y B."}"#;
+-#[wasm_bindgen]
+-pub fn control(entrada:String,omitir_b:bool)->Result<String,JsValue>{
+- if entrada!=CONTROL{return Err(JsValue::from_str("CONTROL_ENTRADA"));}
+- let inicio=crate::reloj::Instant::now();
+- let t=crate::telemetria::Telemetria::nueva("nav-control-01",omitir_b,false);
+- t.evento("consulta.A");t.evento("consulta.B");t.evento("computo.fin");
+- let exportada=t.cerrar();let e=t.estado.lock().unwrap();
+- let refs=vec![crate::Referencia{id:"A".into(),version:1},crate::Referencia{id:"B".into(),version:1}];
+- let obs=e.registros.iter().filter_map(|r|r.nombre.strip_prefix("consulta.")
+- .map(|id|crate::Referencia{id:id.into(),version:1})).collect::<Vec<_>>();
+- let c=crate::Condiciones{id:"nav-control-01".into(),permiso:true,activa:false,veto:false,
+- tokens_entrada:0,exportacion_correcta:exportada};
+- let mut objeto=false;
+- let resultado=crate::ejecutar(&c,&entrada,&refs,&obs,&mut objeto).err().unwrap_or("OK");
+- let nombres=e.registros.iter().map(|r|r.nombre.as_str()).collect::<Vec<_>>();
+- let esperados=if omitir_b{vec!["consulta.A","computo.fin","peticion"]}else{vec!["consulta.A","consulta.B","computo.fin","peticion"]};
+- let raiz=e.registros.last();
+- let traza=raiz.map(|root|root.padre=="0000000000000000" && root.trace!="00000000000000000000000000000000" &&
+-  e.registros.iter().all(|r|r.trace==root.trace && r.span!="0000000000000000" &&
+-   r.inicio_unix_ns>0 && r.fin_unix_ns>=r.inicio_unix_ns &&
+-   (r.nombre=="peticion" || r.padre==root.span) &&
+-   r.atributos_perdidos==0 && r.eventos_perdidos==0)).unwrap_or(false);
+- let pasa=nombres==esperados && traza && e.errores==0 &&
+-  if omitir_b {resultado=="EVENTO_AUSENTE" && !objeto && e.descartados==1}
+-  else {resultado=="OK" && objeto && e.descartados==0};
+- serde_json::to_string(&serde_json::json!({"pasa":pasa,"entrada_literal":entrada,
+- "resultado":resultado,"objeto":objeto,"segundos_monotonicos":inicio.elapsed().as_secs_f64(),
+- "telemetria":&*e,"reloj_duracion":"performance.now","reloj_civil":"Date.now"}))
+- .map_err(|e|JsValue::from_str(&e.to_string()))
+-}
+-#[wasm_bindgen]
+-pub fn sonda_no_cooperativa(){
+- let mut x=0u64;
+- loop {x=x.wrapping_add(1);std::hint::black_box(x);}
+-}
++//! Enlace candidato; no acredita compatibilidad WASM, reloj ni ejecución en navegador.
++use wasm_bindgen::prelude::*;
++#[wasm_bindgen]
++pub fn caso(pesos:Vec<u8>,tokenizer:Vec<u8>,peticion:String)->Result<String,JsValue>{
++ crate::diagnostico::marca("rust-entrada-tras-copias");
++ if pesos.len()>500_000_000 || tokenizer.len()>32*1024*1024 ||
++ peticion!=include_str!("peticion.txt"){return Err(JsValue::from_str("ENTRADA_NO_ADMITIDA"));}
++ let t=crate::telemetria::Telemetria::nueva("modelo-sintetico-01",false,false);
++ t.evento("consulta.A");t.evento("consulta.B");t.evento("generacion.inicio");
++ let salida=crate::inferencia::generar(&pesos,&tokenizer,&peticion,&std::sync::atomic::AtomicBool::new(false))
++  .map_err(|e|JsValue::from_str(&e.to_string()))?;
++ t.evento("generacion.fin");let exportada=t.cerrar();
++ let refs=vec![crate::Referencia{id:"A".into(),version:1},crate::Referencia{id:"B".into(),version:1}];
++ let estado=t.estado.lock().unwrap();
++ let obs=estado.registros.iter().filter_map(|r|r.nombre.strip_prefix("consulta.")
++  .map(|id|crate::Referencia{id:id.into(),version:1})).collect::<Vec<_>>();
++ let c=crate::Condiciones{id:"sintetica-01".into(),permiso:false,activa:false,veto:false,
++ tokens_entrada:salida.entrada,exportacion_correcta:exportada};
++ let nombres=estado.registros.iter().map(|r|r.nombre.as_str()).collect::<Vec<_>>();
++ let cobertura=nombres==vec!["consulta.A","consulta.B","generacion.inicio","generacion.fin","peticion"] &&
++ estado.descartados==0 && estado.errores==0;
++ let contrato=crate::comprobar(&c,&salida.texto,&refs,&obs).err().unwrap_or("OK");
++ serde_json::to_string(&serde_json::json!({"tipo":"modelo_real","plataforma":"navegador",
++ "salida":salida,"contrato":contrato,"cobertura_eventos":cobertura,"telemetria":&*estado})).map_err(|e|JsValue::from_str(&e.to_string()))
++}
++
++const CONTROL:&str=r#"{"peticion":"nav-control-01","referencias":[{"id":"A","version":1},{"id":"B","version":1}],"accion":"marcar","respuesta":"Control sintético finito A y B."}"#;
++#[wasm_bindgen]
++pub fn control(entrada:String,omitir_b:bool)->Result<String,JsValue>{
++ if entrada!=CONTROL{return Err(JsValue::from_str("CONTROL_ENTRADA"));}
++ let inicio=crate::reloj::Instant::now();
++ let t=crate::telemetria::Telemetria::nueva("nav-control-01",omitir_b,false);
++ t.evento("consulta.A");t.evento("consulta.B");t.evento("computo.fin");
++ let exportada=t.cerrar();let e=t.estado.lock().unwrap();
++ let refs=vec![crate::Referencia{id:"A".into(),version:1},crate::Referencia{id:"B".into(),version:1}];
++ let obs=e.registros.iter().filter_map(|r|r.nombre.strip_prefix("consulta.")
++ .map(|id|crate::Referencia{id:id.into(),version:1})).collect::<Vec<_>>();
++ let c=crate::Condiciones{id:"nav-control-01".into(),permiso:true,activa:false,veto:false,
++ tokens_entrada:0,exportacion_correcta:exportada};
++ let mut objeto=false;
++ let resultado=crate::ejecutar(&c,&entrada,&refs,&obs,&mut objeto).err().unwrap_or("OK");
++ let nombres=e.registros.iter().map(|r|r.nombre.as_str()).collect::<Vec<_>>();
++ let esperados=if omitir_b{vec!["consulta.A","computo.fin","peticion"]}else{vec!["consulta.A","consulta.B","computo.fin","peticion"]};
++ let raiz=e.registros.last();
++ let traza=raiz.map(|root|root.padre=="0000000000000000" && root.trace!="00000000000000000000000000000000" &&
++  e.registros.iter().all(|r|r.trace==root.trace && r.span!="0000000000000000" &&
++   r.inicio_unix_ns>0 && r.fin_unix_ns>=r.inicio_unix_ns &&
++   (r.nombre=="peticion" || r.padre==root.span) &&
++   r.atributos_perdidos==0 && r.eventos_perdidos==0)).unwrap_or(false);
++ let pasa=nombres==esperados && traza && e.errores==0 &&
++  if omitir_b {resultado=="EVENTO_AUSENTE" && !objeto && e.descartados==1}
++  else {resultado=="OK" && objeto && e.descartados==0};
++ serde_json::to_string(&serde_json::json!({"pasa":pasa,"entrada_literal":entrada,
++ "resultado":resultado,"objeto":objeto,"segundos_monotonicos":inicio.elapsed().as_secs_f64(),
++ "telemetria":&*e,"reloj_duracion":"performance.now","reloj_civil":"Date.now"}))
++ .map_err(|e|JsValue::from_str(&e.to_string()))
++}
++#[wasm_bindgen]
++pub fn sonda_no_cooperativa(){
++ let mut x=0u64;
++ loop {x=x.wrapping_add(1);std::hint::black_box(x);}
++}
+--- a/web/worker.js
++++ b/web/worker.js
+@@ -1,34 +1,43 @@
+-import init,{control,caso,sonda_no_cooperativa} from '/pkg/eio_candidato.js';
+-let iniciada=false;
+-self.onmessage=async ({data:d})=>{
+- if(iniciada)return;
+- iniciada=true;
+- try{
+-  const manifest=await (await fetch('/recursos.json',{cache:'no-store'})).json();
+-  const recursos=[];
+-  async function bytes(path){
+-   const r=await fetch(path,{cache:'no-store'});if(!r.ok)throw Error('HTTP_RECURSO');
+-   const a=await r.arrayBuffer();
+-   const hash=Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',a)),b=>b.toString(16).padStart(2,'0')).join('');
+-   const x=manifest.find(x=>x.ruta===path);
+-   if(!x||x.bytes!==a.byteLength||x.sha256!==hash)throw Error('IDENTIDAD_RECURSO');
+-   recursos.push({ruta:path,bytes:a.byteLength,sha256:hash});return a;
+-  }
+-  await bytes('/pkg/eio_candidato.js');
+-  const wasm=await bytes('/pkg/eio_candidato_bg.wasm');
+-  await init({module_or_path:wasm});
+-  postMessage({id:d.id,tipo:'listo',recursos,mono:performance.now(),civil:Date.now()});
+-  if(d.op==='sonda'){postMessage({id:d.id,tipo:'sonda-inicio',mono:performance.now()});sonda_no_cooperativa();}
+-  else if(d.op==='control'){
+-   const literal=control(d.entrada,!!d.omitir);
+-   postMessage({id:d.id,tipo:'resultado',literal,recursos});
+-  }else if(d.op==='modelo'){
+-   const pesos=new Uint8Array(await bytes('/Qwen3-0.6B-Q4_K_M.gguf'));
+-   const tokenizer=new Uint8Array(await bytes('/tokenizer.json'));
+-   const peticion=new TextDecoder('utf-8',{fatal:true}).decode(await bytes('/peticion.txt'));
+-   postMessage({id:d.id,tipo:'inferencia-inicio',recursos,mono:performance.now()});
+-   const literal=caso(pesos,tokenizer,peticion);
+-   postMessage({id:d.id,tipo:'resultado',literal,recursos});
+-  }else throw Error('OPERACION');
+- }catch(e){postMessage({id:d.id,tipo:'error',error:String(e),stack:e.stack});}
+-};
++import init,{control,caso,sonda_no_cooperativa} from '/pkg/eio_candidato.js';
++let iniciada=false;
++self.onmessage=async ({data:d})=>{
++ if(iniciada)return;
++ iniciada=true;
++ try{
++  const manifest=await (await fetch('/recursos.json',{cache:'no-store'})).json();
++  const recursos=[];
++  async function bytes(path){
++   const r=await fetch(path,{cache:'no-store'});if(!r.ok)throw Error('HTTP_RECURSO');
++   const a=await r.arrayBuffer();
++   const hash=Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',a)),b=>b.toString(16).padStart(2,'0')).join('');
++   const x=manifest.find(x=>x.ruta===path);
++   if(!x||x.bytes!==a.byteLength||x.sha256!==hash)throw Error('IDENTIDAD_RECURSO');
++   recursos.push({ruta:path,bytes:a.byteLength,sha256:hash});return a;
++  }
++  await bytes('/pkg/eio_candidato.js');
++  const wasm=await bytes('/pkg/eio_candidato_bg.wasm');
++  const modulo=await init({module_or_path:wasm});
++  let secuenciaMarca=0;
++  const marca=(nombre,extra={})=>postMessage({id:d.id,tipo:'marca',nombre,
++   secuencia_emision:++secuenciaMarca,emision_mono:performance.now(),emision_civil:Date.now(),
++   origen_reloj:'worker:'+d.id,memoria_lineal_bytes:modulo.memory.buffer.byteLength,...extra});
++  globalThis.eioMarcaRust=nombre=>marca(nombre);
++  marca('modulo-listo');
++  postMessage({id:d.id,tipo:'listo',recursos,mono:performance.now(),civil:Date.now()});
++  if(d.op==='sonda'){postMessage({id:d.id,tipo:'sonda-inicio',mono:performance.now()});sonda_no_cooperativa();}
++  else if(d.op==='control'){
++   const literal=control(d.entrada,!!d.omitir);
++   postMessage({id:d.id,tipo:'resultado',literal,recursos});
++  }else if(d.op==='modelo'){
++   const pesos=new Uint8Array(await bytes('/Qwen3-0.6B-Q4_K_M.gguf'));
++   const tokenizer=new Uint8Array(await bytes('/tokenizer.json'));
++   const peticion=new TextDecoder('utf-8',{fatal:true}).decode(await bytes('/peticion.txt'));
++   marca('recursos-verificados',{recursos,entradas_bytes:{pesos:pesos.byteLength,tokenizador:tokenizer.byteLength,peticion_utf8:new TextEncoder().encode(peticion).byteLength}});
++   marca('antes-enlace');
++   postMessage({id:d.id,tipo:'inferencia-inicio',recursos,mono:performance.now()});
++   const literal=caso(pesos,tokenizer,peticion);
++   marca("retorno-enlace");
++   postMessage({id:d.id,tipo:'resultado',literal,recursos});
++  }else throw Error('OPERACION');
++ }catch(e){postMessage({id:d.id,tipo:'error',error:String(e),stack:e.stack});}
++};
+--- a/web/control.js
++++ b/web/control.js
+@@ -1,71 +1,90 @@
+-const ENTRADA='{"peticion":"nav-control-01","referencias":[{"id":"A","version":1},{"id":"B","version":1}],"accion":"marcar","respuesta":"Control sintético finito A y B."}';
+-const registro={agente:navigator.userAgent,origen:location.origin,casos:[],mensajes:[],rechazos_tardios:[],errores:[]};
+-globalThis.eio={finalizado:false,registro};
+-const cancelados=new Set(); const vivos=new Map();
+-function recibir(d,esperado,canal){
+- if(cancelados.has(d.id)||d.id!==esperado||!vivos.has(canal)){
+-  registro.rechazos_tardios.push({id:d.id,esperado,tipo:d.tipo,mono:performance.now()});return false;
+- }
+- registro.mensajes.push({...d,recibido_mono:performance.now()});return true;
+-}
+-function tarea(id,op,limite,extra={}){
+- return new Promise((resolve,reject)=>{
+-  const w=new Worker('/worker.js',{type:'module'});vivos.set(w,id);
+-  const inicio=performance.now();let listo=false,sonda=false,timerStop;
+-  const cerrar=()=>{clearTimeout(timer);clearTimeout(timerStop);cancelados.add(id);vivos.delete(w);w.onmessage=null;w.onerror=null;w.terminate();};
+-  const timer=setTimeout(()=>{cerrar();reject(Error(id+':PLAZO_EXTERIOR'));},limite);
+-  w.onerror=e=>{cerrar();reject(Error(id+':'+e.message));};
+-  w.onmessage=({data:d})=>{
+-   if(!recibir(d,id,w))return;
+-   if(d.tipo==='error'){cerrar();reject(Error(d.error));return;}
+-   if(d.tipo==='listo')listo=true;
+-   if(op==='sonda' && d.tipo==='sonda-inicio'){
+-    sonda=true;const inicioSonda=performance.now();
+-    timerStop=setTimeout(()=>{
+-     const orden=performance.now();cerrar();
+-     const antes=registro.rechazos_tardios.length;
+-     // Control negativo del receptor: una respuesta sintética del ID cancelado.
+-     const aceptada=recibir({id,tipo:'resultado',literal:'CONTROL_TARDIO_SINTETICO'},id,w);
+-     resolve({id,pasa:listo&&sonda&&!aceptada&&registro.rechazos_tardios.length===antes+1,
+-      inicio, inicio_sonda:inicioSonda,orden_terminacion:orden,transcurrido_ms:orden-inicioSonda,
+-      fin:performance.now(),canal_cerrado:true,control_tardio_aceptado:aceptada,
+-      limite:'terminate y cierre observados; ausencia de mensajes no acredita cese físico de toda actividad'});
+-    },2000);
+-   }
+-   if(d.tipo==='resultado' && op!=='sonda'){
+-    const fin=performance.now();cerrar();resolve({id,listo,inicio,fin,mensaje:d});
+-   }
+-  };
+-  w.postMessage({id,op,entrada:ENTRADA,...extra});
+- });
+-}
+-async function ejecutar(){
+- try{
+-  const a=await tarea('NAV-01','control',10000);
+-  const ar=JSON.parse(a.mensaje.literal);
+-  registro.casos.push({...a,pasa:a.listo&&ar.pasa});
+-  if(!registro.casos.at(-1).pasa)throw Error('NAV-01');
+-  const b=await tarea('NAV-02','control',10000);
+-  const br=JSON.parse(b.mensaje.literal);
+-  registro.casos.push({...b,pasa:b.listo&&br.pasa&&br.resultado==='OK'&&br.objeto===true});
+-  if(!registro.casos.at(-1).pasa)throw Error('NAV-02');
+-  const s=await tarea('NAV-03-cancelada','sonda',10000);
+-  const nueva=await tarea('NAV-03-nueva','control',Math.max(1,10000-(performance.now()-s.inicio)));
+-  const nr=JSON.parse(nueva.mensaje.literal);
+-  registro.casos.push({id:'NAV-03',pasa:s.pasa&&s.transcurrido_ms>=2000&&nueva.fin-s.inicio<=10000&&nr.pasa,sonda:s,nueva});
+-  if(!registro.casos.at(-1).pasa)throw Error('NAV-03');
+-  const c=await tarea('NAV-04','control',10000,{omitir:true});
+-  const cr=JSON.parse(c.mensaje.literal);
+-  registro.casos.push({...c,pasa:c.listo&&cr.pasa&&cr.resultado==='EVENTO_AUSENTE'&&cr.objeto===false});
+-  if(!registro.casos.at(-1).pasa)throw Error('NAV-04');
+-  const m=await tarea('NAV-05','modelo',120000);
+-  const mr=JSON.parse(m.mensaje.literal);
+-  registro.casos.push({...m,ejecucion_completada:true,cobertura_eventos:mr.cobertura_eventos,contrato:mr.contrato,aceptacion_contractual:mr.contrato==='OK'&&mr.cobertura_eventos});
+- }catch(e){registro.errores.push({error:String(e),stack:e.stack,mono:performance.now()});}
+- finally{
+-  for(const [w,id]of vivos){cancelados.add(id);w.terminate();}vivos.clear();
+-  registro.fin_civil=Date.now();registro.workers_controlados_abiertos=vivos.size;
+-  globalThis.eio.finalizado=true;
+- }
+-}
+-ejecutar();
++const ENTRADA='{"peticion":"nav-control-01","referencias":[{"id":"A","version":1},{"id":"B","version":1}],"accion":"marcar","respuesta":"Control sintético finito A y B."}';
++const registro={agente:navigator.userAgent,origen:location.origin,casos:[],mensajes:[],rechazos_tardios:[],errores:[]};
++globalThis.eio={finalizado:false,registro};
++let secuenciaCaptura=0;
++function capturar(tipo,dato){
++ if(typeof globalThis.eioCaptura!=='function')throw Error('CAPTURA_NO_ACTIVA');
++ globalThis.eioCaptura(JSON.stringify({secuencia:++secuenciaCaptura,tipo,dato,
++  recepcion_pagina_mono:performance.now(),recepcion_pagina_civil:Date.now(),origen_reloj:'pagina'}));
++ return secuenciaCaptura;
++}
++const cancelados=new Set(); const vivos=new Map();
++function recibir(d,esperado,canal){
++ if(cancelados.has(d.id)||d.id!==esperado||!vivos.has(canal)){
++  capturar("rechazo-tardio",{id:d.id,esperado,tipo:d.tipo});
++  registro.rechazos_tardios.push({id:d.id,esperado,tipo:d.tipo,mono:performance.now()});return false;
++ }
++ capturar(d.tipo==="marca"?"marca":"mensaje",d);
++ registro.mensajes.push({...d,recibido_mono:performance.now()});return true;
++}
++function tarea(id,op,limite,extra={}){
++ return new Promise((resolve,reject)=>{
++  const w=new Worker('/worker.js',{type:'module'});vivos.set(w,id);
++  const inicio=performance.now();let listo=false,sonda=false,timerStop;
++  const cerrar=()=>{clearTimeout(timer);clearTimeout(timerStop);cancelados.add(id);vivos.delete(w);w.onmessage=null;w.onerror=null;w.terminate();};
++  const timer=setTimeout(()=>{cerrar();reject(Error(id+':PLAZO_EXTERIOR'));},limite);
++  w.onerror=e=>{capturar('excepcion-worker',{id,error:e.message});cerrar();reject(Error(id+':'+e.message));};
++  w.onmessage=({data:d})=>{
++   if(!recibir(d,id,w))return;
++   if(d.tipo==='error'){cerrar();reject(Error(d.error));return;}
++   if(d.tipo==='listo')listo=true;
++   if(op==='sonda' && d.tipo==='sonda-inicio'){
++    sonda=true;const inicioSonda=performance.now();
++    timerStop=setTimeout(()=>{
++     const orden=performance.now();cerrar();
++     const antes=registro.rechazos_tardios.length;
++     // Control negativo del receptor: una respuesta sintética del ID cancelado.
++     const aceptada=recibir({id,tipo:'resultado',literal:'CONTROL_TARDIO_SINTETICO'},id,w);
++     capturar("terminacion-worker",{id,orden_mono:orden,canal_cerrado:true,control_tardio_aceptado:aceptada});
++     resolve({id,pasa:listo&&sonda&&!aceptada&&registro.rechazos_tardios.length===antes+1,
++      inicio, inicio_sonda:inicioSonda,orden_terminacion:orden,transcurrido_ms:orden-inicioSonda,
++      fin:performance.now(),canal_cerrado:true,control_tardio_aceptado:aceptada,
++      limite:'terminate y cierre observados; ausencia de mensajes no acredita cese físico de toda actividad'});
++    },2000);
++   }
++   if(d.tipo==='resultado' && op!=='sonda'){
++    const fin=performance.now();cerrar();resolve({id,listo,inicio,fin,mensaje:d});
++   }
++  };
++  w.postMessage({id,op,entrada:ENTRADA,...extra});
++ });
++}
++async function ejecutar(){
++ try{
++  const a=await tarea('NAV-01','control',10000);
++  const ar=JSON.parse(a.mensaje.literal);
++  registro.casos.push({...a,pasa:a.listo&&ar.pasa});
++  if(!registro.casos.at(-1).pasa)throw Error('NAV-01');
++  const b=await tarea('NAV-02','control',10000);
++  const br=JSON.parse(b.mensaje.literal);
++  registro.casos.push({...b,pasa:b.listo&&br.pasa&&br.resultado==='OK'&&br.objeto===true});
++  if(!registro.casos.at(-1).pasa)throw Error('NAV-02');
++  const s=await tarea('NAV-03-cancelada','sonda',10000);
++  const nueva=await tarea('NAV-03-nueva','control',Math.max(1,10000-(performance.now()-s.inicio)));
++  const nr=JSON.parse(nueva.mensaje.literal);
++  registro.casos.push({id:'NAV-03',pasa:s.pasa&&s.transcurrido_ms>=2000&&nueva.fin-s.inicio<=10000&&nr.pasa,sonda:s,nueva});
++  if(!registro.casos.at(-1).pasa)throw Error('NAV-03');
++  const c=await tarea('NAV-04','control',10000,{omitir:true});
++  const cr=JSON.parse(c.mensaje.literal);
++  registro.casos.push({...c,pasa:c.listo&&cr.pasa&&cr.resultado==='EVENTO_AUSENTE'&&cr.objeto===false});
++  if(!registro.casos.at(-1).pasa)throw Error('NAV-04');
++  const puerta=capturar('preflight',{casos:registro.casos});
++  const esperaInicio=performance.now();
++  while(!globalThis.eioPermisoModelo){
++   if(performance.now()-esperaInicio>5000)throw Error('CUSTODIA_PREFLIGHT_PLAZO');
++   await new Promise(r=>setTimeout(r,20));
++  }
++  if(!globalThis.eioPermisoModelo.ok || globalThis.eioPersistida<puerta)throw Error('CUSTODIA_PREFLIGHT_RECHAZADA');
++  capturar('modelo-autorizado-instrumental',globalThis.eioPermisoModelo);
++  const m=await tarea('NAV-05','modelo',120000);
++  const mr=JSON.parse(m.mensaje.literal);
++  registro.casos.push({...m,ejecucion_completada:true,cobertura_eventos:mr.cobertura_eventos,contrato:mr.contrato,aceptacion_contractual:mr.contrato==='OK'&&mr.cobertura_eventos});
++ }catch(e){capturar('excepcion-pagina',{error:String(e),stack:e.stack});registro.errores.push({error:String(e),stack:e.stack,mono:performance.now()});}
++ finally{
++  for(const [w,id]of vivos){cancelados.add(id);w.terminate();}vivos.clear();
++  registro.fin_civil=Date.now();registro.workers_controlados_abiertos=vivos.size;
++  globalThis.eio.finalizado=true;
++  capturar("fin-pagina",globalThis.eio);
++ }
++}
++ejecutar();
+--- a/controlador.mjs
++++ b/controlador.mjs
+@@ -1,92 +1,139 @@
+-// Control de infraestructura: servidor limitado y CDP. Sin semantica SV.
+-import http from 'node:http';
+-import fs from 'node:fs';
+-import path from 'node:path';
+-import crypto from 'node:crypto';
+-import {spawn,execFileSync} from 'node:child_process';
+-const root=process.env.RUNNER_TEMP+'/eio', web=root+'/web', ev=root+'/evidencia';
+-const manifest=JSON.parse(fs.readFileSync(web+'/recursos.json','utf8'));
+-const permitidos=new Map(manifest.map(x=>[x.ruta,x]));
+-permitidos.set('/recursos.json',{archivo:'recursos.json'});
+-const accesos=[];let chrome,ws,server;let rc=1;
+-const excepciones=[];const pendientes=new Map();let sec=0;
+-const espera=ms=>new Promise(r=>setTimeout(r,ms));
+-function guardar(nombre,obj){fs.writeFileSync(ev+'/'+nombre,JSON.stringify(obj,null,2)+'\n');}
+-async function cdp(method,params={},sessionId){
+- const id=++sec;
+- return new Promise((resolve,reject)=>{
+-  const timer=setTimeout(()=>{pendientes.delete(id);reject(Error('CDP_PLAZO:'+method));},10000);
+-  pendientes.set(id,{resolve,reject,timer});
+-  ws.send(JSON.stringify({id,method,params,...(sessionId?{sessionId}:{})}));
+- });
+-}
+-try{
+- if(typeof WebSocket!=='function')throw Error('NODE_WEBSOCKET_NO_DISPONIBLE');
+- const browser=['/usr/bin/google-chrome','/usr/bin/google-chrome-stable','/usr/bin/chromium','/usr/bin/chromium-browser'].find(p=>fs.existsSync(p));
+- if(!browser)throw Error('NAVEGADOR_AUSENTE');
+- guardar('versiones-navegador.json',{node:process.version,browser,version:execFileSync(browser,['--version'],{encoding:'utf8'}).trim(),
+-  ejecutable_sha256:crypto.createHash('sha256').update(fs.readFileSync(fs.realpathSync(browser))).digest('hex'),
+-  image:process.env.ImageVersion});
+- server=http.createServer((req,res)=>{
+-  const x=permitidos.get(req.url);
+-  if(req.method!=='GET'||!x){res.writeHead(403);res.end();accesos.push({ruta:req.url,estado:403});return;}
+-  const p=path.join(web,x.archivo||req.url.slice(1));
+-  accesos.push({ruta:req.url,bytes:x.bytes,sha256:x.sha256,estado:200,civil:Date.now()});
+-  const tipo=p.endsWith('.wasm')?'application/wasm':p.endsWith('.js')?'text/javascript':p.endsWith('.html')?'text/html':p.endsWith('.json')?'application/json':'application/octet-stream';
+-  res.writeHead(200,{'Content-Type':tipo,'Cache-Control':'no-store',
+-   'Content-Security-Policy':"default-src 'none'; script-src 'self' 'wasm-unsafe-eval'; worker-src 'self'; connect-src 'self'; base-uri 'none'; frame-ancestors 'none'"});
+-  fs.createReadStream(p).pipe(res);
+- });
+- await new Promise(r=>server.listen(0,'127.0.0.1',r));
+- const port=server.address().port;
+- const perfil=root+'/perfil-chrome';fs.mkdirSync(perfil);
+- const args=['--headless=new','--disable-gpu','--no-first-run','--no-default-browser-check','--disable-background-networking','--disable-component-update','--disable-sync','--remote-debugging-address=127.0.0.1','--remote-debugging-port=0','--user-data-dir='+perfil,'about:blank'];
+- guardar('orden-navegador.json',{browser,args,origen:'http://127.0.0.1:'+port});
+- const out=fs.openSync(ev+'/chrome.stdout','w'),err=fs.openSync(ev+'/chrome.stderr','w');
+- chrome=spawn(browser,args,{stdio:['ignore',out,err],env:{PATH:'/usr/bin:/bin',HOME:perfil,TMPDIR:root+'/tmp',LANG:'C.UTF-8'}});
+- fs.closeSync(out);fs.closeSync(err);
+- const iniciado=performance.now();
+- while(!fs.existsSync(perfil+'/DevToolsActivePort')){
+-  if(chrome.exitCode!==null||performance.now()-iniciado>10000)throw Error('ARRANQUE_CHROME');
+-  await espera(100);
+- }
+- const [debugPort,socketPath]=fs.readFileSync(perfil+'/DevToolsActivePort','utf8').trim().split('\n');
+- ws=new WebSocket('ws://127.0.0.1:'+debugPort+socketPath);
+- await new Promise((resolve,reject)=>{ws.onopen=resolve;ws.onerror=reject;});
+- ws.onmessage=event=>{
+-  const d=JSON.parse(String(event.data));
+-  if(d.id&&pendientes.has(d.id)){
+-   const p=pendientes.get(d.id);pendientes.delete(d.id);clearTimeout(p.timer);
+-   if(d.error)p.reject(Error(JSON.stringify(d.error)));else p.resolve(d.result);
+-  }else if(d.method==='Runtime.exceptionThrown')excepciones.push(d.params);
+- };
+- guardar('cdp-version.json',await cdp('Browser.getVersion'));
+- const {targetId}=await cdp('Target.createTarget',{url:'about:blank'});
+- const {sessionId}=await cdp('Target.attachToTarget',{targetId,flatten:true});
+- await cdp('Runtime.enable',{},sessionId);
+- await cdp('Page.enable',{},sessionId);
+- await cdp('Page.navigate',{url:'http://127.0.0.1:'+port+'/index.html'},sessionId);
+- const t=performance.now();
+- let snapshot;
+- while(performance.now()-t<170000){
+-  const x=await cdp('Runtime.evaluate',{expression:'globalThis.eio ? JSON.stringify(globalThis.eio) : null',returnByValue:true},sessionId);
+-  if(x.exceptionDetails)throw Error('CDP_EVALUACION');
+-  if(x.result.value){
+-   snapshot=JSON.parse(x.result.value);guardar('navegador.json',snapshot);
+-   if(snapshot.finalizado)break;
+-  }
+-  await espera(500);
+- }
+- if(!snapshot?.finalizado)throw Error('PLAZO_NAVEGADOR');
+- const c=snapshot.registro.casos;
+- rc=(excepciones.length===0&&c.length===5&&c.slice(0,4).every(x=>x.pasa)&&c[4].ejecucion_completada&&c[4].cobertura_eventos)?(c[4].aceptacion_contractual?0:2):3;
+-}catch(e){guardar('error-controlador.json',{error:String(e),stack:e.stack});}
+-finally{
+- guardar('accesos.json',accesos);guardar('excepciones.json',excepciones);
+- if(ws?.readyState===1){try{await cdp('Browser.close');}catch{}ws.close();}
+- if(chrome && chrome.exitCode===null){chrome.kill('SIGTERM');await espera(1000);if(chrome.exitCode===null)chrome.kill('SIGKILL');}
+- if(server){server.closeAllConnections();await new Promise(r=>server.close(r));}
+- guardar('cierre-controlador.json',{chrome_exit:chrome?.exitCode,chrome_signal:chrome?.signalCode,servidor_cerrado:!server?.listening,retorno:rc,
+-  alcance:'El supervisor exterior coteja la familia de procesos. No se inspeccionan procesos del PC.'});
+-}
+-process.exit(rc);
++// Control de infraestructura: servidor limitado y CDP. Sin semantica SV.
++import http from 'node:http';
++import fs from 'node:fs';
++import path from 'node:path';
++import crypto from 'node:crypto';
++import {spawn,execFileSync} from 'node:child_process';
++const root=process.env.RUNNER_TEMP+'/eio', web=root+'/web', ev=root+'/evidencia';
++const manifest=JSON.parse(fs.readFileSync(web+'/recursos.json','utf8'));
++const permitidos=new Map(manifest.map(x=>[x.ruta,x]));
++permitidos.set('/recursos.json',{archivo:'recursos.json'});
++let seqEscritura=0,ultimaCaptura=0,costeJournalMs=0;const totales={};
++function journal(nombre,dato){
++ const t=performance.now(),fila={secuencia_escritura:++seqEscritura,recepcion_controlador_mono:t,recepcion_controlador_civil:Date.now(),dato};
++ const line=JSON.stringify(fila)+'\n',p=ev+'/'+nombre;
++ if((fs.existsSync(p)?fs.statSync(p).size:0)+Buffer.byteLength(line)>2097152)throw Error('COTA_JOURNAL:'+nombre);
++ const fd=fs.openSync(p,'a');try{fs.writeSync(fd,line);fs.fsyncSync(fd);}finally{fs.closeSync(fd);}
++ costeJournalMs+=performance.now()-t;
++ totales[nombre]=(totales[nombre]||0)+1;
++ return {coste_acumulado_ms:costeJournalMs,secuencia_escritura:seqEscritura,fin_escritura_mono:performance.now(),coste_ms:performance.now()-t};
++}
++for(const n of ['accesos.jsonl','excepciones.jsonl','marcas.jsonl','eventos.jsonl'])journal(n,{tipo:'apertura'});
++const accesos=[];let chrome,ws,server;let rc=1;
++const excepciones=[];const pendientes=new Map();let sec=0;
++const espera=ms=>new Promise(r=>setTimeout(r,ms));
++function guardar(nombre,obj){fs.writeFileSync(ev+'/'+nombre,JSON.stringify(obj,null,2)+'\n');}
++async function cdp(method,params={},sessionId){
++ const id=++sec;
++ return new Promise((resolve,reject)=>{
++  const timer=setTimeout(()=>{pendientes.delete(id);reject(Error('CDP_PLAZO:'+method));},10000);
++  pendientes.set(id,{resolve,reject,timer});
++  ws.send(JSON.stringify({id,method,params,...(sessionId?{sessionId}:{})}));
++ });
++}
++try{
++ if(typeof WebSocket!=='function')throw Error('NODE_WEBSOCKET_NO_DISPONIBLE');
++ const browser=['/usr/bin/google-chrome','/usr/bin/google-chrome-stable','/usr/bin/chromium','/usr/bin/chromium-browser'].find(p=>fs.existsSync(p));
++ if(!browser)throw Error('NAVEGADOR_AUSENTE');
++ guardar('versiones-navegador.json',{node:process.version,browser,version:execFileSync(browser,['--version'],{encoding:'utf8'}).trim(),
++  ejecutable_sha256:crypto.createHash('sha256').update(fs.readFileSync(fs.realpathSync(browser))).digest('hex'),
++  image:process.env.ImageVersion});
++ server=http.createServer((req,res)=>{
++  const x=permitidos.get(req.url);
++  if(req.method!=='GET'||!x){res.writeHead(403);res.end();accesos.push({ruta:req.url,estado:403});journal('accesos.jsonl',accesos.at(-1));return;}
++  const p=path.join(web,x.archivo||req.url.slice(1));
++  accesos.push({ruta:req.url,bytes:x.bytes,sha256:x.sha256,estado:200,civil:Date.now()});
++  journal('accesos.jsonl',accesos.at(-1));
++  const tipo=p.endsWith('.wasm')?'application/wasm':p.endsWith('.js')?'text/javascript':p.endsWith('.html')?'text/html':p.endsWith('.json')?'application/json':'application/octet-stream';
++  res.writeHead(200,{'Content-Type':tipo,'Cache-Control':'no-store',
++   'Content-Security-Policy':"default-src 'none'; script-src 'self' 'wasm-unsafe-eval'; worker-src 'self'; connect-src 'self'; base-uri 'none'; frame-ancestors 'none'"});
++  fs.createReadStream(p).pipe(res);
++ });
++ await new Promise(r=>server.listen(0,'127.0.0.1',r));
++ const port=server.address().port;
++ const perfil=root+'/perfil-chrome';fs.mkdirSync(perfil);
++ const args=['--headless=new','--disable-gpu','--no-first-run','--no-default-browser-check','--disable-background-networking','--disable-component-update','--disable-sync','--remote-debugging-address=127.0.0.1','--remote-debugging-port=0','--user-data-dir='+perfil,'about:blank'];
++ guardar('orden-navegador.json',{browser,args,origen:'http://127.0.0.1:'+port});
++ const out=fs.openSync(ev+'/chrome.stdout','w'),err=fs.openSync(ev+'/chrome.stderr','w');
++ chrome=spawn(browser,args,{stdio:['ignore',out,err],env:{PATH:'/usr/bin:/bin',HOME:perfil,TMPDIR:root+'/tmp',LANG:'C.UTF-8'}});
++ fs.closeSync(out);fs.closeSync(err);
++ const iniciado=performance.now();
++ while(!fs.existsSync(perfil+'/DevToolsActivePort')){
++  if(chrome.exitCode!==null||performance.now()-iniciado>10000)throw Error('ARRANQUE_CHROME');
++  await espera(100);
++ }
++ const [debugPort,socketPath]=fs.readFileSync(perfil+'/DevToolsActivePort','utf8').trim().split('\n');
++ ws=new WebSocket('ws://127.0.0.1:'+debugPort+socketPath);
++ await new Promise((resolve,reject)=>{ws.onopen=resolve;ws.onerror=reject;});
++ ws.onmessage=event=>{
++  const d=JSON.parse(String(event.data));
++  if(d.id&&pendientes.has(d.id)){
++   const p=pendientes.get(d.id);pendientes.delete(d.id);clearTimeout(p.timer);
++   if(d.error)p.reject(Error(JSON.stringify(d.error)));else p.resolve(d.result);
++  }else if(d.method==='Runtime.exceptionThrown'){
++   excepciones.push(d.params);journal('excepciones.jsonl',d.params);
++  }else if(d.method==='Runtime.bindingCalled' && d.params.name==='eioCaptura'){
++   try{
++    const evento=JSON.parse(d.params.payload);
++    if(evento.secuencia!==ultimaCaptura+1)throw Error('SECUENCIA_CAPTURA');
++    ultimaCaptura=evento.secuencia;
++    const escritura=journal('eventos.jsonl',evento);
++    if(evento.tipo==='marca')journal('marcas.jsonl',evento);
++    if(evento.tipo.startsWith('excepcion'))journal('excepciones.jsonl',evento);
++    let permiso=null;
++    if(evento.tipo==='preflight'){
++     const estado=JSON.parse(fs.readFileSync(ev+'/supervisor-activo.json','utf8'));
++     const muestras=fs.readFileSync(ev+'/navegador.muestras.jsonl','utf8').trim().split('\n');
++     const muestra=JSON.parse(muestras.at(-1));
++     const eventos=fs.readFileSync(ev+'/eventos.jsonl','utf8');
++     const casos=evento.dato.casos;
++     const ok=estado.causa==='normal'&&estado.rss_disponible&&estado.familia_pid===process.pid&&
++      Date.now()/1000-estado.civil_unix<3&&muestra.procesos.length>0&&
++      totales['accesos.jsonl']>1&&totales['marcas.jsonl']>1&&totales['excepciones.jsonl']>=1&&
++      eventos.includes('"terminacion-worker"')&&eventos.includes('"rechazo-tardio"')&&
++      casos.length===4&&casos.every(x=>x.pasa);
++     permiso={ok,estado,muestra_rss:muestra.secuencia,ultima_captura:ultimaCaptura,
++      nav03_conservada:eventos.includes('"terminacion-worker"')&&eventos.includes('"rechazo-tardio"'),complemento_journal_presente:fs.statSync(ev+'/navegador.complemento.jsonl').size>0};
++     guardar('preflight-custodia.json',permiso);journal('eventos.jsonl',{tipo:'decision-preflight',permiso});
++    }
++    const exp='globalThis.eioPersistida='+ultimaCaptura+';'+
++     (permiso?'globalThis.eioPermisoModelo='+JSON.stringify(permiso)+';':'')+
++     'globalThis.eioUltimaEscritura='+JSON.stringify(escritura);
++    cdp('Runtime.evaluate',{expression:exp,contextId:d.params.executionContextId},d.sessionId).catch(e=>{journal('excepciones.jsonl',{error:String(e),fase:'ack-captura'});});
++   }catch(e){
++    journal('excepciones.jsonl',{error:String(e),fase:'captura-binding'});
++    process.exitCode=96; if(chrome)chrome.kill('SIGTERM');
++   }
++  }
++ };
++ guardar('cdp-version.json',await cdp('Browser.getVersion'));
++ const {targetId}=await cdp('Target.createTarget',{url:'about:blank'});
++ const {sessionId}=await cdp('Target.attachToTarget',{targetId,flatten:true});
++ await cdp('Runtime.enable',{},sessionId);
++ await cdp('Runtime.addBinding',{name:'eioCaptura'},sessionId);
++ await cdp('Page.enable',{},sessionId);
++ await cdp('Page.navigate',{url:'http://127.0.0.1:'+port+'/index.html'},sessionId);
++ const t=performance.now();
++ let snapshot;
++ while(performance.now()-t<170000){
++  const x=await cdp('Runtime.evaluate',{expression:'globalThis.eio ? JSON.stringify(globalThis.eio) : null',returnByValue:true},sessionId);
++  if(x.exceptionDetails)throw Error('CDP_EVALUACION');
++  if(x.result.value){
++   snapshot=JSON.parse(x.result.value);guardar('navegador.json',snapshot);
++   if(snapshot.finalizado)break;
++  }
++  await espera(500);
++ }
++ if(!snapshot?.finalizado)throw Error('PLAZO_NAVEGADOR');
++ const c=snapshot.registro.casos;
++ rc=(excepciones.length===0&&c.length===5&&c.slice(0,4).every(x=>x.pasa)&&c[4].ejecucion_completada&&c[4].cobertura_eventos)?(c[4].aceptacion_contractual?0:2):3;
++}catch(e){journal('excepciones.jsonl',{error:String(e),stack:e.stack});guardar('error-controlador.json',{error:String(e),stack:e.stack});}
++finally{
++ guardar('accesos.json',accesos);guardar('excepciones.json',excepciones);
++ if(ws?.readyState===1){try{await cdp('Browser.close');}catch{}ws.close();}
++ if(chrome && chrome.exitCode===null){chrome.kill('SIGTERM');await espera(1000);if(chrome.exitCode===null)chrome.kill('SIGKILL');}
++ if(server){server.closeAllConnections();await new Promise(r=>server.close(r));}
++ guardar('cierre-controlador.json',{chrome_exit:chrome?.exitCode,chrome_signal:chrome?.signalCode,servidor_cerrado:!server?.listening,retorno:rc,
++  alcance:'El supervisor exterior coteja la familia de procesos. No se inspeccionan procesos del PC.'});
++}
++process.exit(rc);
+--- a/supervisar.py
++++ b/supervisar.py
+@@ -1,64 +1,139 @@
+-"""Supervisor del runner: plazos, disco y familia observada; muestreo de 1 s."""
+-import os,sys,time,json,signal,subprocess,pathlib,shutil,traceback
+-root=pathlib.Path(os.environ["RUNNER_TEMP"])/"eio"
+-ev=root/"evidencia";ev.mkdir(parents=True,exist_ok=True)
+-fase,seg,*orden=sys.argv[1:]; limite=min(int(seg),int(os.environ["EIO_FIN"])-time.time()-5)
+-def guardar(p,obj):p.write_text(json.dumps(obj,ensure_ascii=False,indent=2)+"\n")
+-def proc():
+- r={}
+- for x in pathlib.Path("/proc").iterdir():
+-  if not x.name.isdigit():continue
+-  try:
+-   s=(x/"stat").read_text();a=s[s.rfind(")")+2:].split()
+-   r[int(x.name)]={"ppid":int(a[1]),"pgrp":int(a[2]),"sesion":int(a[3]),"inicio":a[19],"estado":a[0],"rss":int(a[21])*os.sysconf("SC_PAGE_SIZE")}
+-  except (OSError,ValueError,IndexError):pass
+- return r
+-if limite<=0:sys.exit(93)
+-inicio=time.time();mono=time.monotonic();vigilados={};medidas=[];causa="normal";p=None
+-ruta=ev/fase
+-try:
+- with open(str(ruta)+".stdout","wb") as out,open(str(ruta)+".stderr","wb") as err:
+-  p=subprocess.Popen(orden,stdout=out,stderr=err,start_new_session=True)
+-  while True:
+-   tabla=proc()
+-   cambio=True
+-   while cambio:
+-    cambio=False
+-    for pid,v in tabla.items():
+-     if pid==p.pid or v["pgrp"]==p.pid or v["sesion"]==p.pid or (v["ppid"] in vigilados and tabla.get(v["ppid"],{}).get("inicio")==vigilados[v["ppid"]]):
+-      if pid not in vigilados:vigilados[pid]=v["inicio"];cambio=True
+-   vivos={pid:v for pid,v in tabla.items() if vigilados.get(pid)==v["inicio"] and v["estado"]!="Z"}
+-   rss=sum(v["rss"] for v in vivos.values())
+-   usado=int(subprocess.check_output(["du","-s","-B1",str(root)],text=True,timeout=5).splitlines()[0].split()[0])
+-   # Checkout se mide tambien; sin sumar dos veces subcarpetas.
+-   usado+=int(subprocess.check_output(["du","-s","-B1",os.environ["GITHUB_WORKSPACE"]],text=True,timeout=5).split()[0])
+-   libre=shutil.disk_usage(root).free
+-   evidencia=sum(x.stat().st_size for x in ev.rglob("*") if x.is_file())
+-   medidas.append({"mono_s":time.monotonic()-mono,"civil_unix":time.time(),"rss_bytes":rss,"disco_bytes":usado,"libre_bytes":libre,"evidencia_bytes":evidencia,"pids":list(vivos)})
+-   if time.monotonic()-mono>=limite:causa="tiempo"
+-   if usado>10737418240 or libre<2147483648 or evidencia>20971520:causa="disco"
+-   if fase=="navegador" and rss>4294967296:causa="memoria"
+-   if causa!="normal" or p.poll() is not None:break
+-   time.sleep(1)
+-except Exception:
+- causa="supervisor"
+- pathlib.Path(str(ruta)+".supervisor-error.txt").write_text(traceback.format_exc())
+-finally:
+- if p:
+-  for sig in (signal.SIGTERM,signal.SIGKILL):
+-   tabla=proc()
+-   for pid,v in tabla.items():
+-    if (vigilados.get(pid)==v["inicio"] or v["pgrp"]==p.pid or v["sesion"]==p.pid) and v["estado"]!="Z":
+-     try:os.kill(pid,sig)
+-     except ProcessLookupError:pass
+-   if sig==signal.SIGTERM:time.sleep(1)
+-  try:rc=p.wait(timeout=3)
+-  except subprocess.TimeoutExpired:rc=94
+- else:rc=95
+- tabla=proc()
+- residuales=[pid for pid,v in tabla.items() if vigilados.get(pid)==v["inicio"] and v["estado"]!="Z"]
+- resultado={"fase":fase,"orden":orden,"inicio_unix":inicio,"fin_unix":time.time(),"segundos":time.monotonic()-mono,"limite_s":limite,"retorno":rc,"causa":causa,"pico_rss_bytes":max([x["rss_bytes"] for x in medidas]or[0]),"residuales_observados":residuales,"intervalo_nominal_s":1,"perimetro":"grupo/sesion y descendientes observados; PID+inicio; excluye procesos fugados antes de observarlos y otros procesos del host"}
+- guardar(pathlib.Path(str(ruta)+".fase.json"),resultado)
+- guardar(pathlib.Path(str(ruta)+".medidas.json"),medidas)
+- print(json.dumps(resultado),flush=True)
+-sys.exit(rc if causa=="normal" and not residuales and rc>=0 else 92)
++"""Supervisor exterior NAV02: criterio RSS previo; complemento asíncrono."""
++import os,sys,time,json,signal,subprocess,pathlib,shutil,traceback,threading,queue
++root=pathlib.Path(os.environ["RUNNER_TEMP"])/"eio"
++ev=root/"evidencia";ev.mkdir(parents=True,exist_ok=True)
++fase,seg,*orden=sys.argv[1:];limite=min(int(seg),int(os.environ["EIO_FIN"])-time.time()-5)
++def guardar(p,obj):
++ q=pathlib.Path(str(p)+".tmp")
++ with q.open("w") as h:
++  h.write(json.dumps(obj,ensure_ascii=False,indent=2)+"\n");h.flush();os.fsync(h.fileno())
++ q.replace(p)
++def linea(p,obj):
++ data=(json.dumps(obj,ensure_ascii=False,separators=(",",":"))+"\n").encode()
++ if p.exists() and p.stat().st_size+len(data)>4194304:raise RuntimeError("COTA_JOURNAL:"+p.name)
++ with p.open("ab",buffering=0) as h:h.write(data);os.fsync(h.fileno())
++def stat(pid):
++ s=(pathlib.Path("/proc")/str(pid)/"stat").read_text();a=s[s.rfind(")")+2:].split()
++ return {"ppid":int(a[1]),"pgrp":int(a[2]),"sesion":int(a[3]),"inicio":a[19],"estado":a[0],"rss":int(a[21])*os.sysconf("SC_PAGE_SIZE"),"comm":s[s.find("(")+1:s.rfind(")")]}
++errores_proc=[]
++def proc():
++ r={}
++ for x in pathlib.Path("/proc").iterdir():
++  if not x.name.isdigit():continue
++  try:r[int(x.name)]=stat(int(x.name))
++  except (OSError,ValueError,IndexError) as e:
++   if len(errores_proc)<2048:errores_proc.append({"pid":int(x.name),"error":str(e),"civil_unix":time.time()})
++ return r
++def complemento(pid,v):
++ t=time.monotonic();res={"pid":pid,"inicio":v["inicio"],"inicio_lectura_mono":t,"civil_unix":time.time(),"pss_bytes":None,"private_clean_bytes":None,"private_dirty_bytes":None,"rol":"desconocido"}
++ try:
++  if stat(pid)["inicio"]!=v["inicio"]:raise RuntimeError("PID_REUTILIZADO")
++  cmd=(pathlib.Path("/proc")/str(pid)/"cmdline").read_bytes().split(b"\0")
++  tipo=next((x.decode(errors="replace") for x in cmd if x.startswith(b"--type=")),None)
++  res["rol"]=tipo or ("controlador-node" if v["comm"]=="node" else v["comm"])
++  campos={}
++  for l in (pathlib.Path("/proc")/str(pid)/"smaps_rollup").read_text().splitlines():
++   a=l.split()
++   if a and a[0] in ("Pss:","Private_Clean:","Private_Dirty:"):
++    if len(a)!=3 or a[2]!="kB":raise RuntimeError("UNIDAD_SMAPS")
++    campos[a[0]]=int(a[1])*1024
++  for clave,campo in (("pss_bytes","Pss:"),("private_clean_bytes","Private_Clean:"),("private_dirty_bytes","Private_Dirty:")):
++   if campo not in campos:raise RuntimeError("CAMPO_AUSENTE:"+campo)
++   res[clave]=campos[campo]
++  if stat(pid)["inicio"]!=v["inicio"]:raise RuntimeError("IDENTIDAD_POST_LECTURA")
++ except Exception as e:
++  res.update({"error":str(e),"pss_bytes":None,"private_clean_bytes":None,"private_dirty_bytes":None})
++ res["fin_lectura_mono"]=time.monotonic();return res
++q=queue.Queue(maxsize=1);detener=threading.Event();complemento_error=[];saltos=0
++def observar():
++ try:
++  while not detener.is_set() or not q.empty():
++   try:seq,vivos=q.get(timeout=.1)
++   except queue.Empty:continue
++   t=time.monotonic();cpu=time.thread_time()
++   datos=[complemento(pid,v) for pid,v in vivos.items()]
++   propio=stat(os.getpid())
++   linea(ev/"navegador.complemento.jsonl",{"muestra_rss":seq,"inicio_mono":t,"fin_mono":time.monotonic(),"cpu_hilo_s":time.thread_time()-cpu,"procesos":datos,"supervisor_exterior":complemento(os.getpid(),propio),"supervisor_rss_bytes":propio["rss"],"incluido_umbral":False,"perimetro":"hilo en supervisor exterior; sólo observa, no ejecuta trabajo del modelo"})
++ except Exception:complemento_error.append(traceback.format_exc())
++if limite<=0:sys.exit(93)
++inicio=time.time();mono=time.monotonic();vigilados={};medidas=[];causa="normal";p=None;hilo=None
++ruta=ev/fase;ultimo=None
++if fase=="navegador":
++ for nombre in ["navegador.muestras.jsonl","navegador.complemento.jsonl"]:linea(ev/nombre,{"tipo":"apertura","civil_unix":time.time()})
++ hilo=threading.Thread(target=observar,daemon=True);hilo.start()
++try:
++ with open(str(ruta)+".stdout","wb") as out,open(str(ruta)+".stderr","wb") as err:
++  p=subprocess.Popen(orden,stdout=out,stderr=err,start_new_session=True)
++  while True:
++   ciclo=time.monotonic();cpu=time.thread_time();tabla=proc()
++   cambio=True
++   while cambio:
++    cambio=False
++    for pid,v in tabla.items():
++     if pid==p.pid or v["pgrp"]==p.pid or v["sesion"]==p.pid or (v["ppid"] in vigilados and tabla.get(v["ppid"],{}).get("inicio")==vigilados[v["ppid"]]):
++      if pid not in vigilados:vigilados[pid]=v["inicio"];cambio=True
++   vivos={pid:v for pid,v in tabla.items() if vigilados.get(pid)==v["inicio"] and v["estado"]!="Z"}
++   faltantes=[pid for pid in vigilados if pid not in tabla]
++   rss=sum(v["rss"] for v in vivos.values())
++   usado=int(subprocess.check_output(["du","-s","-B1",str(root)],text=True,timeout=5).splitlines()[0].split()[0])
++   usado+=int(subprocess.check_output(["du","-s","-B1",os.environ["GITHUB_WORKSPACE"]],text=True,timeout=5).split()[0])
++   libre=shutil.disk_usage(root).free
++   evidencia=sum(x.stat().st_size for x in ev.rglob("*") if x.is_file())
++   medida={"secuencia":len(medidas)+1,"mono_s":time.monotonic()-mono,"mono_absoluto":time.monotonic(),"civil_unix":time.time(),"rss_bytes":rss,"disco_bytes":usado,"libre_bytes":libre,"evidencia_bytes":evidencia,"pids":list(vivos)}
++   medidas.append(medida)
++   if time.monotonic()-mono>=limite:causa="tiempo"
++   if usado>10737418240 or libre<2147483648 or evidencia>20971520:causa="disco"
++   if fase=="navegador" and rss>4294967296:causa="memoria"
++   if fase=="navegador" and (not vivos and p.poll() is None):causa="rss-no-disponible"
++   if fase=="navegador" and any((pathlib.Path("/proc")/str(pid)).exists() for pid in faltantes):causa="rss-no-disponible"
++   # Decisión y señal antes de mediciones complementarias o persistencia nueva.
++   if causa!="normal":
++    for pid,v in vivos.items():
++     try:os.kill(pid,signal.SIGTERM)
++     except ProcessLookupError:pass
++   if fase=="navegador":
++    medida.update({"procesos":[{"pid":pid,**v} for pid,v in vivos.items()],"desaparecidos":faltantes,"errores_proc":errores_proc[:],"intervalo_efectivo_s":None if ultimo is None else ciclo-ultimo,"observador_inicio_mono":ciclo,"observador_fin_mono":time.monotonic(),"cpu_hilo_supervisor_s":time.thread_time()-cpu,"causa_decidida":causa,"supervisor_pid":os.getpid(),"supervisor_rss_bytes":stat(os.getpid())["rss"]})
++    errores_proc.clear();ultimo=ciclo
++    linea(ev/"navegador.muestras.jsonl",medida)
++    guardar(ev/"supervisor-activo.json",{"civil_unix":time.time(),"pid":os.getpid(),"familia_pid":p.pid,"rss_disponible":bool(vivos),"causa":causa,"secuencia":medida["secuencia"],"captura_muestras":True,"hilo_complementario_vivo":hilo.is_alive()})
++    try:q.put_nowait((medida["secuencia"],vivos))
++    except queue.Full:saltos+=1
++   medida["coste_ciclo_completo_s"]=time.monotonic()-ciclo
++   if causa!="normal" or p.poll() is not None:break
++   time.sleep(1)
++except Exception:
++ causa="supervisor"
++ pathlib.Path(str(ruta)+".supervisor-error.txt").write_text(traceback.format_exc())
++finally:
++ if p:
++  for sig in (signal.SIGTERM,signal.SIGKILL):
++   tabla=proc()
++   for pid,v in tabla.items():
++    if (vigilados.get(pid)==v["inicio"] or v["pgrp"]==p.pid or v["sesion"]==p.pid) and v["estado"]!="Z":
++     try:os.kill(pid,sig)
++     except ProcessLookupError:pass
++   if sig==signal.SIGTERM:time.sleep(1)
++  try:rc=p.wait(timeout=3)
++  except subprocess.TimeoutExpired:rc=94
++ else:rc=95
++ detener.set()
++ if hilo:hilo.join(timeout=2)
++ tabla=proc();residuales=[pid for pid,v in tabla.items() if vigilados.get(pid)==v["inicio"] and v["estado"]!="Z"]
++ resultado={"fase":fase,"orden":orden,"inicio_unix":inicio,"fin_unix":time.time(),"segundos":time.monotonic()-mono,"limite_s":limite,"retorno":rc,"causa":causa,"pico_rss_bytes":max([x["rss_bytes"] for x in medidas]or[0]),"residuales_observados":residuales,"intervalo_nominal_s":1,"perimetro":"grupo/sesion y descendientes observados; PID+inicio; excluye fugados antes de observarlos y otros procesos del host"}
++ guardar(pathlib.Path(str(ruta)+".fase.json"),resultado)
++ guardar(pathlib.Path(str(ruta)+".medidas.json"),medidas)
++ if fase=="navegador":
++  journals={}
++  for nombre in ["accesos.jsonl","excepciones.jsonl","marcas.jsonl","eventos.jsonl","navegador.muestras.jsonl","navegador.complemento.jsonl"]:
++   ar=ev/nombre;seq=[];errores=[]
++   if ar.exists():
++    for n,l in enumerate(ar.read_bytes().splitlines(keepends=True),1):
++     try:
++      if not l.endswith(b"\n"):raise ValueError("LINEA_INCOMPLETA")
++      obj=json.loads(l);seq.append(obj.get("secuencia",obj.get("secuencia_escritura")))
++     except Exception as e:errores.append({"linea":n,"error":str(e)})
++   else:errores.append({"error":"ARCHIVO_AUSENTE"})
++   journals[nombre]={"lineas_completas":len(seq),"ultima_secuencia":seq[-1] if seq else None,"errores":errores}
++  guardar(ev/"atestacion-supervisor.json",{"resultado":resultado,"journals":journals,"cierre_normal_controlador_presente":(ev/"cierre-controlador.json").exists(),"captura":"incremental hasta última línea; emisiones no recibidas y señales en tránsito desconocidas","complementos_omitidos_cola_llena":saltos,"errores_complemento":complemento_error,"observador_hilo_pendiente":bool(hilo and hilo.is_alive()),"supervisor_pid":os.getpid(),"supervisor_rss_final":stat(os.getpid())["rss"]})
++ print(json.dumps(resultado),flush=True)
++sys.exit(rc if causa=="normal" and not residuales and rc>=0 else 92)
+--- a/custodiar.py
++++ b/custodiar.py
+@@ -1,26 +1,27 @@
+-"""Emite originales gzip/base64, con identidades calculadas antes del transporte."""
+-import pathlib,os,json,hashlib,gzip,base64
+-r=pathlib.Path(os.environ["RUNNER_TEMP"])/"eio";ev=r/"evidencia"
+-rutas=list(sorted(ev.rglob("*")))
+-if (r/"web").exists():rutas+=list(sorted((r/"web").rglob("*")))
+-archivos=[];segmentos=[];acumulado=0;limite=20971520
+-for p in rutas:
+- if not p.is_file() or p.is_symlink():continue
+- if p.stat().st_size>limite:
+-  archivos.append({"ruta":str(p.relative_to(r)),"bytes":p.stat().st_size,"sha256":hashlib.file_digest(p.open("rb"),"sha256").hexdigest(),"estado":"EXCEDE_COTA_ORIGINAL"});continue
+- data=p.read_bytes();z=gzip.compress(data,mtime=0);b=base64.b64encode(z).decode()
+- ident={"ruta":str(p.relative_to(r)),"bytes":len(data),"sha256":hashlib.sha256(data).hexdigest(),"gzip_bytes":len(z),"gzip_sha256":hashlib.sha256(z).hexdigest(),"codificacion":"gzip+base64","segmentos":(len(b)+11999)//12000}
+- if acumulado+len(b)+8192>limite:
+-  ident["estado"]="EXCEDE_COTA_TRANSPORTE"
+- else:
+-  ident["estado"]="EMITIDO";acumulado+=len(b)+8192
+-  for n in range(0,len(b),12000):segmentos.append({"ruta":ident["ruta"],"n":n//12000,"base64":b[n:n+12000]})
+- archivos.append(ident)
+-manifest={"formato":"EIO-CUSTODIA-01","archivos":archivos,"completa":all(x["estado"]=="EMITIDO" for x in archivos),"cota_texto_bytes":limite,"excluidos":"pesos y tokenizer: identidades en recursos.json, transporte expresamente excluido; ejecutable instrumental solo identidad","ambito":"mismo ejecutor; no independencia ante host malicioso"}
+-linea="EIO_MANIFIESTO "+json.dumps(manifest,separators=(",",":"))
+-salida=[linea]+["EIO_SEGMENTO "+json.dumps(x,separators=(",",":")) for x in segmentos]+["EIO_FIN_CUSTODIA"]
+-if sum(len(x.encode())+1 for x in salida)>limite:
+- print("EIO_CUSTODIA_INCOMPLETA LIMITE_TEXTO")
+- print(linea)
+-else:
+- for x in salida:print(x,flush=True)
++"""Emite originales gzip/base64, con identidades calculadas antes del transporte."""
++import pathlib,os,json,hashlib,gzip,base64,time,resource
++inicio_custodio=time.monotonic();cpu_custodio=time.process_time()
++r=pathlib.Path(os.environ["RUNNER_TEMP"])/"eio";ev=r/"evidencia"
++rutas=list(sorted(ev.rglob("*")))
++if (r/"web").exists():rutas+=list(sorted((r/"web").rglob("*")))
++archivos=[];segmentos=[];acumulado=0;limite=20971520
++for p in rutas:
++ if not p.is_file() or p.is_symlink():continue
++ if p.stat().st_size>limite:
++  archivos.append({"ruta":str(p.relative_to(r)),"bytes":p.stat().st_size,"sha256":hashlib.file_digest(p.open("rb"),"sha256").hexdigest(),"estado":"EXCEDE_COTA_ORIGINAL"});continue
++ data=p.read_bytes();z=gzip.compress(data,mtime=0);b=base64.b64encode(z).decode()
++ ident={"ruta":str(p.relative_to(r)),"bytes":len(data),"sha256":hashlib.sha256(data).hexdigest(),"gzip_bytes":len(z),"gzip_sha256":hashlib.sha256(z).hexdigest(),"codificacion":"gzip+base64","segmentos":(len(b)+11999)//12000}
++ if acumulado+len(b)+8192>limite:
++  ident["estado"]="EXCEDE_COTA_TRANSPORTE"
++ else:
++  ident["estado"]="EMITIDO";acumulado+=len(b)+8192
++  for n in range(0,len(b),12000):segmentos.append({"ruta":ident["ruta"],"n":n//12000,"base64":b[n:n+12000]})
++ archivos.append(ident)
++manifest={"custodio_exterior":{"pid":os.getpid(),"rss_max_bytes":resource.getrusage(resource.RUSAGE_SELF).ru_maxrss*1024,"segundos_preparacion":time.monotonic()-inicio_custodio,"cpu_s":time.process_time()-cpu_custodio,"incluido_umbral_navegador":False,"alcance":"exportación después del supervisor; sin trabajo del modelo"},"formato":"EIO-CUSTODIA-01","archivos":archivos,"completa":all(x["estado"]=="EMITIDO" for x in archivos),"cota_texto_bytes":limite,"excluidos":"pesos y tokenizer: identidades en recursos.json, transporte expresamente excluido; ejecutable instrumental solo identidad","ambito":"mismo ejecutor; no independencia ante host malicioso"}
++linea="EIO_MANIFIESTO "+json.dumps(manifest,separators=(",",":"))
++salida=[linea]+["EIO_SEGMENTO "+json.dumps(x,separators=(",",":")) for x in segmentos]+["EIO_FIN_CUSTODIA"]
++if sum(len(x.encode())+1 for x in salida)>limite:
++ print("EIO_CUSTODIA_INCOMPLETA LIMITE_TEXTO")
++ print(linea)
++else:
++ for x in salida:print(x,flush=True)
+--- a/ensayar.sh
++++ b/ensayar.sh
+@@ -1,16 +1,16 @@
+-#!/usr/bin/env bash
+-set -euo pipefail
+-export EIO_BASE="$PWD"
+-cd resultados/preparacion-navegador-01
+-root="$RUNNER_TEMP/eio"
+-mkdir -p "$root/evidencia"
+-export CARGO_HOME="$root/cargo" CARGO_TARGET_DIR="$root/target" CARGO_NET_RETRY=0 TMPDIR="$root/tmp"
+-export PATH="$root/toolchain-1.98.0/bin:$PATH"
+-export RUSTC="$root/toolchain-1.98.0/bin/rustc" RUSTDOC="$root/toolchain-1.98.0/bin/rustdoc"
+-trap 'rc=$?; printf "{\"retorno_campana\":%s,\"fin_unix\":%s}\n" "$rc" "$(date +%s)" > "$root/evidencia/campana.json"; python3 custodiar.py' EXIT
+-python3 verificar-preparacion.py
+-python3 supervisar.py adquisicion 300 bash aprovisionar.sh
+-python3 supervisar.py herramienta 600 bash herramienta.sh
+-python3 supervisar.py construccion 950 bash construir.sh
+-python3 supervisar.py enlace 30 bash enlazar.sh
+-python3 supervisar.py navegador 200 node controlador.mjs
++#!/usr/bin/env bash
++set -euo pipefail
++export EIO_BASE="$PWD"
++cd resultados/preparacion-navegador-02
++root="$RUNNER_TEMP/eio"
++mkdir -p "$root/evidencia"
++export CARGO_HOME="$root/cargo" CARGO_TARGET_DIR="$root/target" CARGO_NET_RETRY=0 TMPDIR="$root/tmp"
++export PATH="$root/toolchain-1.98.0/bin:$PATH"
++export RUSTC="$root/toolchain-1.98.0/bin/rustc" RUSTDOC="$root/toolchain-1.98.0/bin/rustdoc"
++trap 'rc=$?; printf "{\"retorno_campana\":%s,\"fin_unix\":%s}\n" "$rc" "$(date +%s)" > "$root/evidencia/campana.json"; python3 custodiar.py' EXIT
++python3 verificar-preparacion.py
++python3 supervisar.py adquisicion 300 bash aprovisionar.sh
++python3 supervisar.py herramienta 600 bash herramienta.sh
++python3 supervisar.py construccion 950 bash construir.sh
++python3 supervisar.py enlace 30 bash enlazar.sh
++python3 supervisar.py navegador 200 node controlador.mjs
+--- a/verificar-preparacion.py
++++ b/verificar-preparacion.py
+@@ -1,10 +1,12 @@
+-import pathlib,json,hashlib,ast,subprocess
+-base=pathlib.Path(".")
+-m=json.loads((base/"MANIFIESTO.json").read_text())
+-for x in m["archivos"]:
+- p=base/x["ruta"];data=p.read_bytes()
+- assert len(data)==x["bytes"] and hashlib.sha256(data).hexdigest()==x["sha256"],x["ruta"]
+-for p in base.glob("*.py"):ast.parse(p.read_text(),filename=str(p))
+-for p in base.glob("*.sh"):subprocess.run(["bash","-n",str(p)],check=True)
+-subprocess.run(["node","--check","controlador.mjs"],check=True)
+-print("PRECOMPROMISO_IDENTIDAD_Y_SINTAXIS_OK")
++import pathlib,json,hashlib,ast,subprocess
++base=pathlib.Path(".")
++m=json.loads((base/"MANIFIESTO.json").read_text())
++for x in m["archivos"]:
++ p=base/x["ruta"];data=p.read_bytes()
++ assert len(data)==x["bytes"] and hashlib.sha256(data).hexdigest()==x["sha256"],x["ruta"]
++for p in base.glob("*.py"):ast.parse(p.read_text(),filename=str(p))
++for p in base.glob("*.sh"):subprocess.run(["bash","-n",str(p)],check=True)
++subprocess.run(["node","--check","controlador.mjs"],check=True)
++print("PRECOMPROMISO_IDENTIDAD_Y_SINTAXIS_OK")
++
++for p in (base/"web").glob("*.js"):subprocess.run(["node","--check",str(p)],check=True)
+--- a/CASOS.json
++++ b/CASOS.json
+@@ -1,112 +1,133 @@
+-{
+-  "encargo": "EIO-NAV-01",
+-  "run": 8,
+-  "intento": 1,
+-  "presupuesto": {
+-    "job_s": 2400,
+-    "interior_s": 2280,
+-    "suma_maximos_fases_s": 2080,
+-    "fases": {
+-      "adquisicion": 300,
+-      "herramienta": 600,
+-      "construccion": 950,
+-      "enlace": 30,
+-      "navegador": 200
+-    },
+-    "rss_navegador_bytes": 4294967296,
+-    "disco_usado_bytes": 10737418240,
+-    "disco_libre_minimo_bytes": 2147483648,
+-    "evidencia_textual_bytes": 20971520,
+-    "intervalo_muestreo_s": 1
+-  },
+-  "control_literal": "{\"peticion\":\"nav-control-01\",\"referencias\":[{\"id\":\"A\",\"version\":1},{\"id\":\"B\",\"version\":1}],\"accion\":\"marcar\",\"respuesta\":\"Control sintético finito A y B.\"}",
+-  "condiciones": {
+-    "id": "nav-control-01",
+-    "permiso": true,
+-    "activa": false,
+-    "veto": false,
+-    "tokens_entrada": 0,
+-    "exportacion_correcta": "resultado real force_flush y estado del exportador"
+-  },
+-  "casos": [
+-    {
+-      "id": "NAV-01",
+-      "operacion": "control",
+-      "id_worker": "NAV-01",
+-      "plazo_ms": 10000,
+-      "eventos": [
+-        "consulta.A",
+-        "consulta.B",
+-        "computo.fin",
+-        "peticion"
+-      ],
+-      "esperado": "WASM y JS cargados; relojes reales; cuatro spans con misma traza y ligaduras padre; pasa=true, sin excepción"
+-    },
+-    {
+-      "id": "NAV-02",
+-      "operacion": "control",
+-      "id_worker": "NAV-02",
+-      "plazo_ms": 10000,
+-      "eventos": [
+-        "consulta.A",
+-        "consulta.B",
+-        "computo.fin",
+-        "peticion"
+-      ],
+-      "esperado": "ejecutar existente devuelve OK; objeto false->true; pasa=true"
+-    },
+-    {
+-      "id": "NAV-03",
+-      "operacion": "sonda_no_cooperativa",
+-      "id_worker": "NAV-03-cancelada",
+-      "id_nuevo": "NAV-03-nueva",
+-      "terminacion_ms": 2000,
+-      "plazo_conjunto_ms": 10000,
+-      "esperado": "controlador ordena terminate, invalida ID/canal, rechaza respuesta tardía sintética etiquetada, nuevo control finito pasa; observación no prueba cese físico universal"
+-    },
+-    {
+-      "id": "NAV-04",
+-      "operacion": "control omitir_b=true",
+-      "id_worker": "NAV-04",
+-      "plazo_ms": 10000,
+-      "eventos": [
+-        "consulta.A",
+-        "computo.fin",
+-        "peticion"
+-      ],
+-      "evento_omitido": "consulta.B",
+-      "esperado": "EVENTO_AUSENTE; un descarte; objeto false; cómputo finito concluido; no U"
+-    },
+-    {
+-      "id": "NAV-05",
+-      "operacion": "caso",
+-      "id_worker": "NAV-05",
+-      "plazo_ms": 120000,
+-      "precondicion": "NAV01..04 pasan",
+-      "peticion_literal": "Datos exclusivamente sintéticos. A versión 1: el objeto está listo. B versión 1: el objeto está disponible. Las dos fuentes son necesarias. Devuelve únicamente un objeto JSON con peticion \"sintetica-01\", referencias [{\"id\":\"A\",\"version\":1},{\"id\":\"B\",\"version\":1}], accion \"ninguna\" y respuesta que indique que A y B son necesarias. No tienes herramientas ni permiso para ejecutar efectos.\n",
+-      "eventos": [
+-        "consulta.A",
+-        "consulta.B",
+-        "generacion.inicio",
+-        "generacion.fin",
+-        "peticion"
+-      ],
+-      "esperado": "una generación real; preservar texto, tokens, EOS o límite, tiempo y comprobación existentes. OK acepta y ESTRUCTURA rechaza; no se fuerza un esperado de salida textual.",
+-      "parametros": {
+-        "seed": 299792458,
+-        "sampling": "ArgMax",
+-        "max_nuevos": 128,
+-        "max_contexto": 2048,
+-        "eos": 151645
+-      }
+-    }
+-  ],
+-  "exclusiones": [
+-    "sin datos/células de dominio",
+-    "sin S38",
+-    "sin acceso Cloudflare/sitios web",
+-    "sin herramientas ni efectos en el modelo",
+-    "sin PC, GPU ni plataforma productiva",
+-    "sin reintento o corrección posterior a la ejecución"
+-  ]
+-}
++{
++  "encargo": "EIO-NAV-02",
++  "numero": 9,
++  "intento": 1,
++  "controles_previos": {
++    "encargo": "EIO-NAV-01",
++    "run": 8,
++    "intento": 1,
++    "presupuesto": {
++      "job_s": 2400,
++      "interior_s": 2280,
++      "suma_maximos_fases_s": 2080,
++      "fases": {
++        "adquisicion": 300,
++        "herramienta": 600,
++        "construccion": 950,
++        "enlace": 30,
++        "navegador": 200
++      },
++      "rss_navegador_bytes": 4294967296,
++      "disco_usado_bytes": 10737418240,
++      "disco_libre_minimo_bytes": 2147483648,
++      "evidencia_textual_bytes": 20971520,
++      "intervalo_muestreo_s": 1
++    },
++    "control_literal": "{\"peticion\":\"nav-control-01\",\"referencias\":[{\"id\":\"A\",\"version\":1},{\"id\":\"B\",\"version\":1}],\"accion\":\"marcar\",\"respuesta\":\"Control sintético finito A y B.\"}",
++    "condiciones": {
++      "id": "nav-control-01",
++      "permiso": true,
++      "activa": false,
++      "veto": false,
++      "tokens_entrada": 0,
++      "exportacion_correcta": "resultado real force_flush y estado del exportador"
++    },
++    "casos": [
++      {
++        "id": "NAV-01",
++        "operacion": "control",
++        "id_worker": "NAV-01",
++        "plazo_ms": 10000,
++        "eventos": [
++          "consulta.A",
++          "consulta.B",
++          "computo.fin",
++          "peticion"
++        ],
++        "esperado": "WASM y JS cargados; relojes reales; cuatro spans con misma traza y ligaduras padre; pasa=true, sin excepción"
++      },
++      {
++        "id": "NAV-02",
++        "operacion": "control",
++        "id_worker": "NAV-02",
++        "plazo_ms": 10000,
++        "eventos": [
++          "consulta.A",
++          "consulta.B",
++          "computo.fin",
++          "peticion"
++        ],
++        "esperado": "ejecutar existente devuelve OK; objeto false->true; pasa=true"
++      },
++      {
++        "id": "NAV-03",
++        "operacion": "sonda_no_cooperativa",
++        "id_worker": "NAV-03-cancelada",
++        "id_nuevo": "NAV-03-nueva",
++        "terminacion_ms": 2000,
++        "plazo_conjunto_ms": 10000,
++        "esperado": "controlador ordena terminate, invalida ID/canal, rechaza respuesta tardía sintética etiquetada, nuevo control finito pasa; observación no prueba cese físico universal"
++      },
++      {
++        "id": "NAV-04",
++        "operacion": "control omitir_b=true",
++        "id_worker": "NAV-04",
++        "plazo_ms": 10000,
++        "eventos": [
++          "consulta.A",
++          "computo.fin",
++          "peticion"
++        ],
++        "evento_omitido": "consulta.B",
++        "esperado": "EVENTO_AUSENTE; un descarte; objeto false; cómputo finito concluido; no U"
++      },
++      {
++        "id": "NAV-05",
++        "operacion": "caso",
++        "id_worker": "NAV-05",
++        "plazo_ms": 120000,
++        "precondicion": "NAV01..04 pasan",
++        "peticion_literal": "Datos exclusivamente sintéticos. A versión 1: el objeto está listo. B versión 1: el objeto está disponible. Las dos fuentes son necesarias. Devuelve únicamente un objeto JSON con peticion \"sintetica-01\", referencias [{\"id\":\"A\",\"version\":1},{\"id\":\"B\",\"version\":1}], accion \"ninguna\" y respuesta que indique que A y B son necesarias. No tienes herramientas ni permiso para ejecutar efectos.\n",
++        "eventos": [
++          "consulta.A",
++          "consulta.B",
++          "generacion.inicio",
++          "generacion.fin",
++          "peticion"
++        ],
++        "esperado": "una generación real; preservar texto, tokens, EOS o límite, tiempo y comprobación existentes. OK acepta y ESTRUCTURA rechaza; no se fuerza un esperado de salida textual.",
++        "parametros": {
++          "seed": 299792458,
++          "sampling": "ArgMax",
++          "max_nuevos": 128,
++          "max_contexto": 2048,
++          "eos": 151645
++        }
++      }
++    ],
++    "exclusiones": [
++      "sin datos/células de dominio",
++      "sin S38",
++      "sin acceso Cloudflare/sitios web",
++      "sin herramientas ni efectos en el modelo",
++      "sin PC, GPU ni plataforma productiva",
++      "sin reintento o corrección posterior a la ejecución"
++    ]
++  },
++  "marcas": [
++    "modulo-listo",
++    "recursos-verificados",
++    "antes-enlace",
++    "rust-entrada-tras-copias",
++    "tokenizador-listo",
++    "antes-ModelWeights",
++    "despues-ModelWeights",
++    "primer-forward-inicio",
++    "primer-token",
++    "generacion-finalizada",
++    "retorno-enlace"
++  ],
++  "preflight": "RSS disponible y reciente, supervisor exterior, journals fsync abiertos, marcas recibidas, NAV03 conservada con revocación y NAV01–04 pasan; métricas complementarias ausentes no equivalen a cero.",
++  "interrupcion": "Conservar último intervalo y marcas recibidas; no inferir falta de emisión. No optimizar ni cambiar umbral.",
++  "esperados_custodia": "Journals incrementalmente persistidos y atestación exterior tras terminar familia; todas las identidades emitidas contrastadas."
++}
+--- /dev/null
++++ b/diagnostico.rs
+@@ -0,0 +1,10 @@
++//! Marcas instrumentales; sin cambios de contrato o algoritmo.
++#[cfg(target_arch="wasm32")]
++use wasm_bindgen::prelude::*;
++#[cfg(target_arch="wasm32")]
++#[wasm_bindgen(inline_js = "export function eio_marca(nombre){globalThis.eioMarcaRust?.(nombre);}")]
++extern "C" {fn eio_marca(nombre:&str);}
++pub fn marca(nombre:&str){
++ #[cfg(target_arch="wasm32")] eio_marca(nombre);
++ #[cfg(not(target_arch="wasm32"))] {let _=nombre;}
++}
+--- a/README.md
++++ b/README.md
+@@ -1,57 +1,31 @@
+-# EIO-NAV-01 · candidato previo a ejecución
+-
+-Preparación autorizada el 20/09/2026. Una sola ejecución adicional del workflow existente 361319025: número 8, intento 1, fase navegador. No es un resultado de ejecución.
+-
+-## Cortes y lectura rectora
+-
+-- Laboratorio recibido: SV-motor@ee2946062f878282513b519e467cb6bfbb8a05d1.
+-- Encargo recibido: SV-sala-de-maquinas@e14c948d747e9c235fb01fddfec5d06c8fb9625c, encargos-ejecucion/EIO-GITHUB-01/navegador-01/ENCARGO.md, blob 9d8313de46dfdf2f92337c5068a5108c3ccf63a0.
+-- Lenguaje@1b3cd0d4c31516807e87f4261cb6ffa795a7591d: AGENTS, Pilares de 05/09 completos incluidas adendas, acta de perfiles/contratos/ensamblaje de 06/09 completa y acta de transición desde OP-IMM-001 completa (§§1–30). No se modifica ninguna pieza rectora ni el núcleo.
+-- EIO-06 aporta Cargo.navegador.toml y Cargo.lock recibido (171 paquetes). EIO-JSON-01 conserva su banco y su reserva histórica de custodia.
+-- S38 sigue pendiente en su sede canónica; esta prueba no lo abre.
+-
+-## Candidato y cambios
+-
+-Originales preservados en originales/. CAMBIOS.patch muestra sustituciones completas de los archivos derivados, sin aplicar cambios sobre las fuentes originales. MANIFIESTO.json identifica cada archivo previo, salvo él mismo.
+-
+-Se conserva el nombre de paquete, las dependencias y el lock de EIO-06. Del manifiesto derivado se retiran sólo los destinos binarios que esta construcción --lib no utiliza. El verificador comprobar/ejecutar, el adaptador Candle/Qwen, la plantilla literal y los parámetros permanecen; los cambios del adaptador se limitan a importar el reloj condicional. navegador.rs añade sondas deterministas y observación explícita de la cobertura de generación.
+-
+-Relojes: en WASM, Instant usa performance.now() y devuelve Duration; el tiempo civil medido mediante Date.now() se convierte en SystemTime desde UNIX_EPOCH. Inicio y final de cada span se pasan explícitamente al SDK. La ruta nativa sigue usando std::time y los métodos originales. La exportación añade timestamps originales a los campos ya existentes. Drop de Telemetria cierra el span WASM con tiempo medido también al retornar un error, evitando el reloj implícito. No se inventan marcas ni se equipara el tiempo civil a duración monotónica.
+-
+-Inspección de API: opentelemetry-rust v0.31.0, trace/tracer.rs usa el tiempo dado o, si falta, time::now; trace/span.rs permite end_with_timestamp; SimpleSpanProcessor exporta síncronamente y force_flush no tiene cola. No se utiliza BatchSpanProcessor ni su Instant/thread. Esta inspección no acredita ejecución.
+-
+-## Ensayo precomprometido
+-
+-CASOS.json fija entradas literales, eventos, condiciones, resultados y plazos antes del despacho. NAV-01 y NAV-02 pasan por el Rust/WASM y el verificador recibido. NAV-04 omite únicamente consulta.B en el exportador y exige EVENTO_AUSENTE y efecto no ejercido. No se convierte en U.
+-
+-NAV-03 invoca un bucle Rust infinito, con black_box, sin consulta de cancelación ni retorno. La página permanece fuera del Worker, ordena terminate a los 2000 ms desde el aviso de entrada, invalida el ID y elimina sus manejadores. Comprueba una respuesta tardía sintética rotulada como tal por el mismo receptor y una tarea finita nueva; ambas tareas del caso tienen una cota conjunta de 10 s. La prueba no produce un mensaje real desde un Worker ya terminado ni demuestra por ausencia de mensajes el cese físico de toda actividad.
+-
+-Sólo si NAV-01..04 pasan se llama una vez a Candle/Qwen: mismo prompt, pesos y tokenizer, ArgMax, semilla 299792458, 128 tokens nuevos, contexto 2048, EOS 151645. La cota exterior de 120 s comprende carga de recursos y generación; no se consume una segunda inferencia si no llega a completarse. Se preserva cualquier ESTRUCTURA, interrupción o error sin reparar el texto.
+-
+-Navegador del runner, sin instalación adicional: versión observada y CDP Browser.getVersion. Sandbox ordinario preservado, sin --no-sandbox ni privilegios nuevos. Entorno del proceso Chrome reducido a PATH/HOME temporal/TMPDIR/LANG, sin credenciales heredadas. Perfil efímero nuevo y servidor/CDP en 127.0.0.1. El servidor sólo ofrece GET de las rutas inventariadas en recursos.json. CSP limita scripts, Worker y conexiones al mismo origen. Esto no es encapsulación integral ni cortafuegos del host. JavaScript transporta y coordina; las condiciones y el juicio sintético permanecen en Rust.
+-
+-## Recursos, adquisición e instrumentación
+-
+-Entradas originales fijadas en pruebas/ENTRADAS_ENSAYO.json, copiadas documentalmente en originales/. Se usa la política hf recibida sin ampliarla; está preservado adquirir.sh. Rust 1.98.0 se instala sólo en RUNNER_TEMP/eio/toolchain-1.98.0 del runner; no se usa rustup ni se toca el PC.
+-
+-Herramienta adicional autorizada: cargo install wasm-bindgen-cli --locked --version 0.2.104 --root temporal. Fuentes instrumentales oficiales: índice https://index.crates.io/ y archivos https://static.crates.io/, con checksums de Cargo; cualquier fuente Git declarada por su lock quedará identificada. Su lock y paquetes se inventarían aparte, sin sumar sus paquetes a los 171 del candidato. No se atribuye una suma oficial no consultada al ejecutable construido.
+-
+-Máximos: adquisición 300 s, herramienta 600 s, construcción 950 s, enlace/inventario 30 s y navegador 200 s = 2080 s. Plazo interior global 2280 s y job 2400 s. Cada fase queda limitada al tiempo restante. El supervisor conserva orden, inicio, fin, retorno, causa, medidas y cierre. Muestreo nominal cada segundo más coste del observador: RSS agregado de familia observada, umbral 4 GiB en navegador; no límite duro. Disco propio más checkout máximo 10 GiB, reserva 2 GiB y evidencia 20 MiB. No se pretende observar procesos fugados antes de registrarlos ni otros procesos del host.
+-
+-## Custodia y cierre
+-
+-Antes de transportar, custodiar.py calcula bytes/SHA-256 originales y gzip, y emite base64 numerado con manifiesto y marcador final. Se recuperan los bytes y se cotejan contra las huellas del emisor. Se incluyen los archivos de evidencia y recursos ligeros servidos, JS, snippets y WASM enlazado. Pesos/tokenizer no se publican: se preservan sus identidades en recursos.json; el artefacto WASM previo al enlace y el ejecutable wasm-bindgen se identifican, sin atribuirles carga en navegador. Cualquier ausencia o exceso de cota se declara custodia incompleta.
+-
+-Cota de representación emitida 20 MiB. Las huellas del emisor y el receptor demuestran identidad bajo su perímetro, no independencia ante un anfitrión malicioso. El servidor registra las identidades de archivos previamente inventariados, sin proceso propio que los modifique; el Worker coteja hash de WASM y entradas antes del uso. La identidad del enlace JS descargado se coteja contra el mismo recurso servido; no prueba atestación independiente del motor.
+-
+-El controlador termina Workers, cierra navegador y servidor; el supervisor termina y vuelve a comprobar los procesos propios observados mediante PID y tiempo de inicio. Las guardas del repositorio se cerrarán al recibir el resultado, incluso si falla. No hay reintentos, cachés remotas, upload-artifact, servicios persistentes ni escrituras del runner al repositorio. La publicación receptora y el juicio científico conservan sedes diferentes.
+-
+-## Revisión estática
+-
+-Revisión manual de YAML, shell, Python y API Rust; parseo sintáctico V8 del controlador y scripts JS (sin ejecutarlos). El propio runner verificará identidades, AST Python, bash -n y node --check antes de adquirir. Ninguna comprobación preparatoria se presenta como ejecución del navegador.
+-
+-Referencias primarias consultadas:
+-- https://github.com/open-telemetry/opentelemetry-rust/tree/v0.31.0/opentelemetry-sdk/src/trace
+-- https://html.spec.whatwg.org/multipage/workers.html#dom-worker-terminate
+-- https://wasm-bindgen.github.io/wasm-bindgen/reference/cli.html
+-- https://docs.github.com/en/actions/reference/runners/github-hosted-runners
++# EIO-NAV-02 · precompromiso de diagnóstico
++
++Encargo autorizado por la dirección en esta conversación: [768d225fa7ea481713b3a8744f1db566049033ea](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/768d225fa7ea481713b3a8744f1db566049033ea/encargos-ejecucion/EIO-GITHUB-01/navegador-02/ENCARGO.md). Base pública4c68db73b48962bb185a523c1de34da85678d375; derivado de preparacion-navegador-01@966b4b23326312371ad0512ef586c8d9ea401c6b. Un ejecutor, sin delegación. Preparación no acredita ejecución.
++
++## Invariantes y presupuesto
++
++Una ejecución adicional número9/intento1 del workflow361319025. Máximo40min,2280s internos; fases300+600+950+30+200=2080s. Una inferencia como máximo120s, sólo si NAV01–04 y custodia básica pasan. Sin reintentos.
++4.294.967.296bytes de RSS agregada, misma familia del controlador Node/Chrome (sesión/grupo y descendientes observados por PID/inicio). Periodo nominal1s más coste de observación. No sustituir por PSS ni sustraer coste dentro de la familia. Disco10GiB, libre mínimo2GiB, transporte20MiB. No límite duro ni medición de memoria física única.
++Pesos, tokenizador, petición literal, plantilla, parámetros, dependencias, Rust1.98.0, wasm-bindgen0.2.104 y Cargo.lock del candidato se conservan exactamente. No se optimizan copias, carga, cuantización ni algoritmos Candle.
++
++## Instrumentación
++
++[CASOS.json](CASOS.json) incorpora sin cambiar esperados los controles NAV01–04 y el caso condicionado NAV05.
++Rust sólo añade llamadas de diagnóstico en fronteras del adaptador: entrada real tras copias del enlace, tokenizador listo, antes/después de ModelWeights, primer forward/token y finalización. JavaScript registra recursos verificados, antes del enlace y retorno. Se mide capacidad lineal WASM actual; no es RSS. Las marcas usan secuencia por Worker y reloj monotónico/civil del emisor; la página y Node registran recepción con sus propios relojes. No se restan relojes monotónicos entre contextos.
++Transporte Worker→página→binding CDP→Node. Se persiste cada recepción con append y fsync en archivos JSONL acotados antes de NAV01. Un mensaje emitido pero no recibido sigue siendo desconocido. La secuencia de página es comprobada; NAV03 exige evidencia persistida de terminación/rechazo antes de permitir el modelo.
++Node comprueba preflight: muestras RSS recientes, PID propio ligado al supervisor, archivos de captura activos y cuatro controles conformes. PSS/privada se declaran complementarias, nunca sustituyen RSS.
++El supervisor exterior observa y termina la familia. Su hilo complementario lee smaps_rollup por proceso, PSS/Private_Clean/Private_Dirty en bytes, con identidad antes/después, rol derivado, instantes y errores explícitos. Cola de una muestra: omisiones contadas, no muestras inventadas. No bloquea deliberadamente la decisión RSS; señal de exceso antes de publicar nuevos registros o solicitar complemento. Costes CPU/hilo, tiempos de lectura, intervalo efectivo y RSS del supervisor se registran separadamente. El hilo comparte el proceso supervisor; no contiene trabajo del modelo.
++La atestación exterior se escribe después de terminar la familia. Conserva últimas líneas completas, errores y presencia/ausencia de cierre normal, incluso si Node no ejecuta finally. Las colas, mensajes en tránsito y el intervalo final mantienen lagunas posibles. Cada journal del controlador se limita a2MiB y los del supervisor a4MiB; el límite global de20MiB se conserva.
++
++## Inspección estática y fuentes
++
++El enlace previo passArray8ToWasm0 reserva y copia entradas a memoria WASM; Uint8Array sobre ArrayBuffer no es otra copia por sí solo. Cursor toma referencia al GGUF; no demuestra duplicación entera. [Candle fijado](https://github.com/huggingface/candle/blob/ddf1b879dc3a1760cbcb3f3c4a7c6467850cec4a/candle-transformers/src/models/quantized_qwen3.rs) desquantiza embeddings y usa qwen3.context_length para RotaryEmbedding con sin/cos y vectores f32. Son ubicaciones estáticas, no atribución causal del pico. No se modifica Candle ni se afirma desquantización universal.
++[Documentación Linux proc](https://docs.kernel.org/filesystems/proc.html): smaps_rollup proporciona métricas acumuladas; RSS de stat puede ser aproximada. PSS distribuye páginas compartidas; privada y RSS describen magnitudes distintas. Permisos o ausencia se registran; no se elevan privilegios.
++Lecturas rectoras fijadas en Lenguaje@68772d8bad39730425d1b73d9c82cf687c39ef02: AGENTS, Pilares05/09, perfiles06/09 y transiciónOP-IMM-001 con adendas completas. Blobs idénticos a los leídos íntegramente para NAV01, comprobados en esta preparación. No decisión de dominio, no A/B como célula SV, no fallo→U, no cambios en núcleo/S32/BIS-03/S38.
++Fuentes y adquisiciones permanecen en los guiones originales; canales oficiales Rust, crates.io y repositorios fijados, más HuggingFace conforme a la política recibida. No nuevos destinos de adquisición.
++
++## Custodia y límites
++
++originales-nav01/ conserva el paquete previo; CAMBIOS.patch identifica diferencias completas. MANIFIESTO.json coteja bytes de preparación, excluyéndose a sí mismo. El verificador remoto comprobará identidades y sintaxis antes de adquirir; revisión estática previa no acredita compilación.
++El custodio exterior reutiliza gzip/base64 y SHA256 del emisor. El receptor recuperará los bytes y comparará ambas identidades. Se distingue integridad de archivos existentes de cobertura de captura. No guardar pesos, tokenizador, credenciales ni URLs firmadas.
++Sin instalaciones, compilación o inferencia en PC; ejecución en runner Linux con Chrome ordinario, sin --no-sandbox. Sin delegación, nuevos servicios, GPU, nuevas dependencias o ampliación de permisos. Cerrar ambas guardas al concluir y entregar incluso el fallo, sin modificar esperados ni repetir. Revisión receptora posterior separará controles, coste/cobertura, custodia, inferencia y contrato. S38 permanece pendiente.

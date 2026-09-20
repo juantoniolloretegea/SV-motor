@@ -106,3 +106,8 @@ La versión preparatoria anterior se conserva como antecedente. Existen ya resul
 ## EIO-NAV-01 · ejecución consumida · 20/09/2026
 
 [Resultado y custodia](resultados/navegador-01/README.md): run35503596075, número8/intento1, failure92. Construcción y controles NAV01–04 conformes; NAV05 interrumpido por umbral RSS, sin salida contractual. Recuperación de39/39 archivos emitidos conforme, con laguna explícita de captura al cierre. Guardas cerradas y sin reintento. Pendiente revisión receptora.
+
+
+## EIO-NAV-02 · preparación · 20/09/2026
+
+[Diagnóstico acotado y precompromiso](resultados/preparacion-navegador-02/README.md): campaña9/intento1, umbral RSS conservado, métricas complementarias y captura incremental. No optimización del modelo ni reintento de NAV01. Preparación pendiente de observación.
