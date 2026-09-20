@@ -101,3 +101,8 @@ La versión preparatoria anterior se conserva como antecedente. Existen ya resul
 ## EIO-NAV-01 · preparación autorizada · 20/09/2026
 
 [Paquete derivado y precompromiso](resultados/preparacion-navegador-01/README.md): una ejecución remota adicional número 8, intento 1, sin reintentos. Incluye matriz NAV-01…05, custodia original y cierre; aún no acredita ejecución en navegador. Los antecedentes y sus reservas se conservan. S38 sigue pendiente en su sede propia.
+
+
+## EIO-NAV-01 · ejecución consumida · 20/09/2026
+
+[Resultado y custodia](resultados/navegador-01/README.md): run35503596075, número8/intento1, failure92. Construcción y controles NAV01–04 conformes; NAV05 interrumpido por umbral RSS, sin salida contractual. Recuperación de39/39 archivos emitidos conforme, con laguna explícita de captura al cierre. Guardas cerradas y sin reintento. Pendiente revisión receptora.
