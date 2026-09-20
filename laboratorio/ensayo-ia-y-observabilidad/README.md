@@ -1,5 +1,129 @@
 # Ensayo de inteligencia artificial y observabilidad
 
+**Versión documental:** 2.0  
+**Fecha:** 20 de septiembre de 2026  
+**Estado:** experimento en curso; resultados parciales en navegador y candidata de servicio nativo pendiente de comprobación ejecutable. Ninguna de las dos vías acredita todavía la solución completa.  
+**Corte documental y de código revisado:** `d82bbe2f5f396eb31da5b095ba0849404cb352b0`.
+
+## 1. Objeto, adscripción y autoridad
+
+Este laboratorio evalúa si una implementación Rust puede ejecutar un modelo auxiliar acotado, observar sus operaciones instrumentadas y verificar sus resultados técnicos con un coste medible. Se adscribe a (p1+P3)-Bis del Lenguaje SV. Conserva la separación entre propuesta probabilística, autorización humana y efecto.
+
+El [contrato experimental](contrato/README.md) identifica las fuentes rectoras, las obligaciones recibidas y las reservas. Vincula el ensayo con el acta de rutas de conocimiento de 14 de septiembre y con el Acta 001 de continuidad de 15 de septiembre. Esta revisión explica la arquitectura y el criterio de avance; no sustituye esas fuentes ni constituye un estado canónico paralelo.
+
+Las pruebas emplean objetos sintéticos. No constituyen células SV, operaciones clínicas ni una integración productiva. La inferencia completada, la conformidad contractual y la suficiencia para una operación del SV son juicios distintos. El contenido generado carece de autoridad para conceder permisos, modificar el conocimiento activo o decidir efectos.
+
+## 2. Regla de avance entre las dos vías
+
+Se desarrollará primero la vía que permita alcanzar antes un funcionamiento verificable y materialmente factible, conservando todos los ámbitos de seguridad y las exigencias del SV aplicables a la operación y al perímetro declarado. Después se abordará la otra vía, con sus comprobaciones propias. El trabajo será secuencial.
+
+La rapidez y la factibilidad se evaluarán entre alternativas que satisfagan esas exigencias; no compensan un incumplimiento de seguridad, integridad, autoridad, custodia o límites de recursos. Una obligación pendiente o no comprobable no se contabiliza como satisfecha. Las exigencias que excedan el alcance experimental conservan su sede y su reserva: no pueden declararse cumplidas ni suprimirse para favorecer una vía.
+
+El criterio comprende el tiempo necesario para obtener una realización comprobada —preparación, construcción, integración, ejecución y recuperación de evidencias— y su comportamiento medido. No se reduce a la velocidad de generación de tokens. La factibilidad comprende recursos disponibles, mecanismos de control realmente utilizables, mantenimiento y coste dentro del presupuesto autorizado.
+
+La selección del primer itinerario debe apoyarse en resultados identificados y en pendientes explícitos. No se presume que WASM sea globalmente superior por su aislamiento, ni que la ejecución nativa resuelva el consumo o la custodia por disponer de procesos separados. Si ninguna vía satisface las condiciones, se conserva el diagnóstico sin rebajar los criterios de aceptación. Una interrupción justifica revisión; no demuestra por sí sola la inviabilidad definitiva de una arquitectura.
+
+Este README no habilita ejecuciones, reintentos, servicios, modificaciones de guardas ni gastos. Los encargos y las autorizaciones de cada campaña conservan su alcance.
+
+## 3. Componentes comunes y función de cada uno
+
+| Componente | Función en el ensayo | Alcance de la afirmación |
+|---|---|---|
+| Rust 1.98.0 | Implementación, adaptación y verificación determinista. | La identidad de la herramienta y la construcción deben comprobarse en cada entorno. |
+| Candle | Ejecutar las operaciones numéricas de inferencia. | Biblioteca integrada en el programa; no proporciona por sí sola alojamiento, interfaz, autorización o custodia. |
+| Qwen3-0.6B, Q4_K_M | Modelo y pesos seleccionados para la referencia experimental de pequeña escala. | La misma identidad de pesos no acredita igual resultado, rendimiento o suficiencia en entornos diferentes. |
+| OpenTelemetry Rust | Instrumentar y exportar las señales previstas. | No impone permisos, no observa toda la actividad del sistema y no acredita por sí solo exhaustividad o independencia. |
+| Código de integración y verificación | Vincular petición, ejecución, resultado y evidencia; aplicar los controles del contrato. | Debe comprobarse específicamente en cada vía y frente a casos negativos. |
+
+Los manifiestos de ambas candidatas fijan Candle en `ddf1b879dc3a1760cbcb3f3c4a7c6467850cec4a` y OpenTelemetry Rust en 0.31.0. El inventario efectivo de dependencias y los artefactos construidos conservan su identificación propia por campaña. La adopción definitiva de los componentes permanece sin resolver.
+
+## 4. Dos vías de ejecución para un objetivo común
+
+| Aspecto | Vía A: inferencia en navegador mediante WASM | Vía B: inferencia nativa con interfaz web |
+|---|---|---|
+| Finalidad | Evaluar la ejecución del modelo dentro del entorno aislado del navegador y los controles que puedan mantenerse en él. | Evaluar la ejecución del modelo en un proceso nativo, con control y custodia separados, accesible mediante una interfaz web. |
+| Papel de Candle | Se compila a WebAssembly junto con el código Rust correspondiente y ejecuta el modelo dentro de un Web Worker. | Se compila para la máquina anfitriona y ejecuta el modelo en el proceso de inferencia. |
+| Ubicación del cálculo | Máquina donde se ejecuta el navegador. | Máquina donde se ejecuta el servicio nativo. |
+| Papel de la página | Coordinar el Worker, enviar la petición y recibir resultados y señales. | Enviar solicitudes al servicio y consultar su estado, parada, resultados y evidencias. |
+| Comunicación propia | Enlace JavaScript/WASM y mensajes entre página y Worker. | HTTP hacia el servicio y comunicación interna con el supervisor. |
+| Infraestructura específica | Navegador, motor WASM, enlace JavaScript y Worker; el ensayo actual añade control y custodia exteriores. | Axum, Hyper y Tokio para la capa HTTP y su ejecución asíncrona; procesos y mecanismos de supervisión y custodia preparados en Rust. |
+| Recursos aportados por el usuario de una futura URL | Si la página ejecuta WASM localmente, su dispositivo aporta el cálculo y la memoria de inferencia. | Si el servicio está alojado remotamente, su dispositivo ejecuta la interfaz; el anfitrión remoto aporta la inferencia. |
+| Comprobación requerida | Inferencia completa, integridad contractual, observación, parada y custodia dentro del entorno definido. | Las mismas obligaciones funcionales y de seguridad, realizadas y comprobadas con los mecanismos de la vía nativa. |
+
+WASM es un destino de compilación y ejecución; no contiene automáticamente todos los componentes del servicio nativo. Un Web Worker del navegador no es un Cloudflare Worker.
+
+La referencia nativa inicial en GitHub Actions fue una ejecución de pruebas. La candidata nativa posterior incorpora un servicio para interacción desde una página. Ambas pertenecen a la vía nativa, pero sus resultados y obligaciones no son intercambiables. GitHub Actions es el entorno de las campañas realizadas, no un alojamiento permanente de inferencia.
+
+El Chrome utilizado en NAV-01 y NAV-02 se ejecutó en el ejecutor remoto de GitHub. Esas campañas no ejecutaron el modelo en el PC del usuario ni acreditan su comportamiento en dicho equipo.
+
+## 5. Seguridad, integridad y observabilidad
+
+| Ámbito | Exigencia común | Distinción que debe conservarse |
+|---|---|---|
+| Seguridad pasiva | Delimitar capacidades, memoria, interfaces, autoridad y exposición al entorno. | La sandbox WASM aporta aislamiento del módulo; la separación de procesos y la guarda nativas no acreditan por sí solas una protección equivalente. |
+| Seguridad activa | Detectar incumplimientos, rechazar operaciones no admitidas, revocar tareas y comprobar la parada. | El control de una sonda sintética no acredita automáticamente la parada y custodia durante una inferencia real. |
+| Integridad contractual | Preservar identidades, valores, asociaciones y orden cuando formen parte del contrato; detectar omisiones, alteraciones y permutaciones relevantes. | Ni el aislamiento ni la serialización JSON demuestran por sí solos la fidelidad de una representación del SV. |
+| Observabilidad | Declarar puntos instrumentados, cobertura, relojes, pérdidas y costes. | OpenTelemetry registra señales previstas; la ausencia de eventos no demuestra ausencia de actividad exterior. |
+| Custodia | Conservar originales, identificar artefactos y declarar evidencia incompleta o no recuperable. | La concordancia de huellas acredita las identidades cotejadas; no prueba independencia frente a la alteración conjunta del productor y sus registros. |
+| Recursos y coste | Respetar las cotas autorizadas y medir dentro de un perímetro explícito. | La memoria lineal WASM, la RSS agregada y las métricas de otros procesos no son magnitudes intercambiables. No se habilita gasto adicional. |
+
+La protección del anfitrión frente al módulo y la protección de los datos del SV frente a un anfitrión comprometido son problemas distintos. La declaración de una sandbox no cierra ambos.
+
+En la implementación del ensayo de navegador, la página depende de la captura exterior y del permiso instrumental emitidos por el controlador. La supervisión de procesos también es exterior. Publicar únicamente los archivos web no traslada esos controles a un navegador de usuario.
+
+El Worker importa el enlace JavaScript antes de cotejar mediante otra descarga su huella; el manifiesto se obtiene del mismo origen. Ese cotejo no se presenta como autenticación independiente previa de todo el código ejecutado. En la candidata nativa, la guarda requiere una delegación efectiva de cgroup v2 cuya disponibilidad no está acreditada por la documentación.
+
+## 6. Estado de la evidencia en el corte revisado
+
+| Objeto | Evidencia disponible | Pendiente o límite |
+|---|---|---|
+| Referencia nativa anterior | Campañas EIO-05 y EIO-06, con construcción y controles directos; resultados contractuales adversos conservados. | No acreditan el servicio nativo posterior ni suficiencia general del modelo. |
+| Complemento JSON | EIO-JSON-01: 24 controles de regresión y 35 complementarios, según su recepción. | Alcance del banco y reserva de identidad de archivos efímeros; no nueva inferencia. |
+| Navegador, NAV-02 | NAV01–NAV04 conformes en el Chrome identificado. NAV05 recibió las marcas posteriores a la carga del modelo y anteriores al primer `forward`. | Interrupción por RSS agregada: 4,35 GiB observados frente a 4 GiB autorizados; sin primer token ni salida contractual. No demuestra un límite intrínseco de WASM ni atribución exclusiva a Candle. |
+| Custodia de NAV-02 | Informe de recuperación y cotejo de 49 archivos emitidos. | PSS incompleta del pico, coste de escritura de Node no exportado y ausencia de cierre normal documentados. |
+| Candidata nativa EIO-NAT-PREP-02 | Fuentes, contrato, pruebas y diseño de supervisión y custodia publicados. | Sin compilación ni ejecución de esta candidata; lock efectivo, controles y viabilidad de la guarda pendientes. No hereda conformidad de campañas anteriores. |
+| Aplicación accesible por URL para uso interactivo | Arquitecturas identificadas y componentes preparados o ensayados parcialmente. | No se acredita todavía una aplicación completa con inferencia, controles y custodia aceptados de extremo a extremo. |
+
+Fuentes del estado, fijadas por el corte revisado:
+
+- [Recepción del complemento JSON](https://github.com/juantoniolloretegea/SV-motor/blob/d82bbe2f5f396eb31da5b095ba0849404cb352b0/laboratorio/ensayo-ia-y-observabilidad/resultados/json-01/RECEPCION.md).
+- [Resultado, método y reservas de NAV-02](https://github.com/juantoniolloretegea/SV-motor/blob/d82bbe2f5f396eb31da5b095ba0849404cb352b0/laboratorio/ensayo-ia-y-observabilidad/resultados/navegador-02/README.md).
+- [Código de control de la página](https://github.com/juantoniolloretegea/SV-motor/blob/d82bbe2f5f396eb31da5b095ba0849404cb352b0/laboratorio/ensayo-ia-y-observabilidad/resultados/preparacion-navegador-02/web/control.js) y [controlador exterior](https://github.com/juantoniolloretegea/SV-motor/blob/d82bbe2f5f396eb31da5b095ba0849404cb352b0/laboratorio/ensayo-ia-y-observabilidad/resultados/preparacion-navegador-02/controlador.mjs).
+- [Worker e identificación de recursos](https://github.com/juantoniolloretegea/SV-motor/blob/d82bbe2f5f396eb31da5b095ba0849404cb352b0/laboratorio/ensayo-ia-y-observabilidad/resultados/preparacion-navegador-02/web/worker.js).
+- [Candidata nativa EIO-NAT-PREP-02](https://github.com/juantoniolloretegea/SV-motor/blob/d82bbe2f5f396eb31da5b095ba0849404cb352b0/laboratorio/ensayo-ia-y-observabilidad/resultados/preparacion-nativa-02/README.md) y [diseño y límites](https://github.com/juantoniolloretegea/SV-motor/blob/d82bbe2f5f396eb31da5b095ba0849404cb352b0/laboratorio/ensayo-ia-y-observabilidad/resultados/preparacion-nativa-02/DISENO.md).
+- [Dependencias de la vía WASM](https://github.com/juantoniolloretegea/SV-motor/blob/d82bbe2f5f396eb31da5b095ba0849404cb352b0/laboratorio/ensayo-ia-y-observabilidad/resultados/preparacion-navegador-02/Cargo.toml) y [dependencias de la candidata nativa](https://github.com/juantoniolloretegea/SV-motor/blob/d82bbe2f5f396eb31da5b095ba0849404cb352b0/laboratorio/ensayo-ia-y-observabilidad/resultados/preparacion-nativa-02/Cargo.toml).
+
+Esta síntesis describe el corte indicado; no acredita modificaciones o ejecuciones posteriores. Los resultados medidos proceden de sus expedientes, no de una estimación arquitectónica.
+
+## 7. Secuencia y organización del trabajo
+
+1. Identificar, por vía, requisitos, controles, resultados y pendientes, conservando el contrato común.
+2. Determinar con evidencia cuál permite alcanzar antes una realización factible y conforme. La existencia de código o de una compilación no basta para declararlo.
+3. Completar y recibir el itinerario prioritario dentro de las autorizaciones vigentes; mantener sus fallos y limitaciones en el expediente.
+4. Abordar después el segundo itinerario y comprobar sus obligaciones de forma independiente.
+5. Comparar únicamente magnitudes con perímetros y métodos compatibles, sin transferir aceptación entre entornos.
+
+Cada expediente conservará las identidades de código, entradas y entorno, los resultados esperados y observados, los recursos, la actuación de los controles y la custodia. Las guardas de una vía no habilitan la otra.
+
+| Directorio | Contenido |
+|---|---|
+| [contrato/](contrato/README.md) | Perímetro, fuentes rectoras y obligaciones. |
+| [inferencia/](inferencia/README.md) | Modelo, adaptación y límites de generación. |
+| [observabilidad/](observabilidad/README.md) | Instrumentación, exportación y cobertura. |
+| [pruebas/](pruebas/README.md) | Casos y criterios de aceptación. |
+| [resultados/](resultados/README.md) | Candidatas, campañas, evidencias y reservas, diferenciadas por expediente. |
+
+Los presupuestos iniciales y sus posteriores autorizaciones se conservan como historia. El límite aplicable a una campaña se toma de su encargo vigente; esta revisión no renueva contadores ni aumenta recursos. No se modifica el estado de S32/BIS-03 ni de los estudios pendientes S37/S38.
+
+## 8. Antecedente documental conservado
+
+La versión 0.2 y sus notas de continuidad se mantienen a continuación sin alterar su texto. Sus estados y expresiones temporales corresponden a los momentos documentados; la síntesis vigente de este README es la versión 2.0 anterior. Las revisiones del contrato y de los expedientes mantienen sus identidades propias.
+
+<details>
+<summary>Consultar íntegramente la versión 0.2 y sus notas de continuidad</summary>
+
+# Ensayo de inteligencia artificial y observabilidad
+
 **Versión documental:** 0.2  
 **Fecha:** 18 de septiembre de 2026  
 **Estado:** preparación experimental; implementación y mediciones pendientes.
@@ -116,3 +240,5 @@ La versión preparatoria anterior se conserva como antecedente. Existen ya resul
 ## EIO-NAV-02 · diagnóstico entregado · 20/09/2026
 
 [Resultado observado y custodia](resultados/navegador-02/README.md): run35507386447, número9/intento1, failure92 por umbral RSS conservado. NAV01–04 conformes; ModelWeights completado y marca previa al primer forward recibida, sin primer token ni salida contractual. Captura incremental conservada,49/49 identidades cotejadas; reservas de PSS final y coste de escritura explícitas. Guardas cerradas, sin reintento. Pendiente revisión receptora.
+
+</details>
