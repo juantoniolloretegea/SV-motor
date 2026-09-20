@@ -1,0 +1,11 @@
+warning: unused import: `ejecutar`
+ --> pruebas/banco.rs:1:46
+  |
+1 | use eio_candidato::{Condiciones, Referencia, ejecutar, parada, telemetria::Telemetria};
+  |                                              ^^^^^^^^
+  |
+  = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+warning: `eio-candidato` (bin "banco") generated 1 warning (run `cargo fix --bin "banco" -p eio-candidato` to apply 1 suggestion)
+    Finished `release` profile [optimized] target(s) in 0.06s
+     Running tests/eio_json_01.rs (/home/runner/work/_temp/eio/target/release/deps/eio_json_01-0d102a39c61112b2)

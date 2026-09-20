@@ -1,0 +1,90 @@
+{
+  "alcance": "segmentos de log decodificado; identidad de ficheros efímeros no cotejable por falta de huellas emitidas",
+  "extraccion": "Se eliminan únicamente prefijos de timestamp de Actions y separadores stdout/stderr/medidas emitidos por vigilar.sh; se retira la línea vacía separadora previa al siguiente encabezado y se conserva texto restante con LF. Fuente literal completa en JOB. CONTROLES.jsonl retira también prefijo test complemento_json ... ante J01 y reserializa JSON; no transforma salidas del modelo.",
+  "fases": [
+    {
+      "fase": "aprovisionamiento-json",
+      "retorno": 0,
+      "causa": "normal",
+      "pico_rss_kib": 142564,
+      "residuales_al_wait": 0,
+      "sourceLines": {
+        "stdout": [
+          205,
+          253
+        ],
+        "stderr": [
+          255,
+          425
+        ],
+        "medidas": [
+          427,
+          441
+        ]
+      }
+    },
+    {
+      "fase": "compilacion-json",
+      "retorno": 0,
+      "causa": "normal",
+      "pico_rss_kib": 692636,
+      "residuales_al_wait": 0,
+      "sourceLines": {
+        "stdout": [
+          447,
+          447
+        ],
+        "stderr": [
+          449,
+          506
+        ],
+        "medidas": [
+          508,
+          522
+        ]
+      }
+    },
+    {
+      "fase": "regresion-json",
+      "retorno": 0,
+      "causa": "normal",
+      "pico_rss_kib": 0,
+      "residuales_al_wait": 0,
+      "sourceLines": {
+        "stdout": [
+          528,
+          552
+        ],
+        "stderr": [
+          554,
+          554
+        ],
+        "medidas": [
+          556,
+          555
+        ]
+      }
+    },
+    {
+      "fase": "banco-json",
+      "retorno": 0,
+      "causa": "normal",
+      "pico_rss_kib": 0,
+      "residuales_al_wait": 0,
+      "sourceLines": {
+        "stdout": [
+          561,
+          603
+        ],
+        "stderr": [
+          605,
+          616
+        ],
+        "medidas": [
+          618,
+          617
+        ]
+      }
+    }
+  ]
+}
