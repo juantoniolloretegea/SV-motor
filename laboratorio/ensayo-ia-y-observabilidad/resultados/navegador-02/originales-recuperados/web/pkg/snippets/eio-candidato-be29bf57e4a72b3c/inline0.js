@@ -1,0 +1,1 @@
+export function eio_marca(nombre){globalThis.eioMarcaRust?.(nombre);}

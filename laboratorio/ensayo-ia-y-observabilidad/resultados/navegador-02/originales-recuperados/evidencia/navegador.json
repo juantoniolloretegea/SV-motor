@@ -1,0 +1,509 @@
+{
+  "finalizado": false,
+  "registro": {
+    "agente": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.0.0 Safari/537.36",
+    "origen": "http://127.0.0.1:41931",
+    "casos": [
+      {
+        "id": "NAV-01",
+        "listo": true,
+        "inicio": 258.5,
+        "fin": 431.70000000001164,
+        "mensaje": {
+          "id": "NAV-01",
+          "tipo": "resultado",
+          "literal": "{\"entrada_literal\":\"{\\\"peticion\\\":\\\"nav-control-01\\\",\\\"referencias\\\":[{\\\"id\\\":\\\"A\\\",\\\"version\\\":1},{\\\"id\\\":\\\"B\\\",\\\"version\\\":1}],\\\"accion\\\":\\\"marcar\\\",\\\"respuesta\\\":\\\"Control sintético finito A y B.\\\"}\",\"objeto\":true,\"pasa\":true,\"reloj_civil\":\"Date.now\",\"reloj_duracion\":\"performance.now\",\"resultado\":\"OK\",\"segundos_monotonicos\":0.0024,\"telemetria\":{\"descartados\":0,\"errores\":0,\"registros\":[{\"atributos_perdidos\":0,\"eventos_perdidos\":0,\"fin_unix_ns\":1789903260173000097,\"inicio_unix_ns\":1789903260173000097,\"nombre\":\"consulta.A\",\"padre\":\"d2676c96c3e4cf82\",\"span\":\"5892b53ad1075a07\",\"trace\":\"64a73293204dd9c03540c5811ee92866\"},{\"atributos_perdidos\":0,\"eventos_perdidos\":0,\"fin_unix_ns\":1789903260174000025,\"inicio_unix_ns\":1789903260174000025,\"nombre\":\"consulta.B\",\"padre\":\"d2676c96c3e4cf82\",\"span\":\"5a40f05784b72a5e\",\"trace\":\"64a73293204dd9c03540c5811ee92866\"},{\"atributos_perdidos\":0,\"eventos_perdidos\":0,\"fin_unix_ns\":1789903260174000025,\"inicio_unix_ns\":1789903260174000025,\"nombre\":\"computo.fin\",\"padre\":\"d2676c96c3e4cf82\",\"span\":\"5f9078d5e6ef7e59\",\"trace\":\"64a73293204dd9c03540c5811ee92866\"},{\"atributos_perdidos\":0,\"eventos_perdidos\":0,\"fin_unix_ns\":1789903260174000025,\"inicio_unix_ns\":1789903260173000097,\"nombre\":\"peticion\",\"padre\":\"0000000000000000\",\"span\":\"d2676c96c3e4cf82\",\"trace\":\"64a73293204dd9c03540c5811ee92866\"}]}}",
+          "recursos": [
+            {
+              "ruta": "/pkg/eio_candidato.js",
+              "bytes": 9691,
+              "sha256": "edd5f83e963d9fdc8d4d9dc3e8dfdf42e7369177574cb1772ad258fc467aa3a0"
+            },
+            {
+              "ruta": "/pkg/eio_candidato_bg.wasm",
+              "bytes": 5606792,
+              "sha256": "6b579fdb7f28ab627da4667a774f547253b540e49b5de307a1845dd10d220c8e"
+            }
+          ]
+        },
+        "pasa": true
+      },
+      {
+        "id": "NAV-02",
+        "listo": true,
+        "inicio": 432.0999999999767,
+        "fin": 496.79999999998836,
+        "mensaje": {
+          "id": "NAV-02",
+          "tipo": "resultado",
+          "literal": "{\"entrada_literal\":\"{\\\"peticion\\\":\\\"nav-control-01\\\",\\\"referencias\\\":[{\\\"id\\\":\\\"A\\\",\\\"version\\\":1},{\\\"id\\\":\\\"B\\\",\\\"version\\\":1}],\\\"accion\\\":\\\"marcar\\\",\\\"respuesta\\\":\\\"Control sintético finito A y B.\\\"}\",\"objeto\":true,\"pasa\":true,\"reloj_civil\":\"Date.now\",\"reloj_duracion\":\"performance.now\",\"resultado\":\"OK\",\"segundos_monotonicos\":0.0023,\"telemetria\":{\"descartados\":0,\"errores\":0,\"registros\":[{\"atributos_perdidos\":0,\"eventos_perdidos\":0,\"fin_unix_ns\":1789903260237999916,\"inicio_unix_ns\":1789903260237999916,\"nombre\":\"consulta.A\",\"padre\":\"22165788d59afd6e\",\"span\":\"2cc7035c1bbda4a2\",\"trace\":\"5bdc13d692c944b522cba1263b52db13\"},{\"atributos_perdidos\":0,\"eventos_perdidos\":0,\"fin_unix_ns\":1789903260239000082,\"inicio_unix_ns\":1789903260239000082,\"nombre\":\"consulta.B\",\"padre\":\"22165788d59afd6e\",\"span\":\"c7399b1043e2515c\",\"trace\":\"5bdc13d692c944b522cba1263b52db13\"},{\"atributos_perdidos\":0,\"eventos_perdidos\":0,\"fin_unix_ns\":1789903260239000082,\"inicio_unix_ns\":1789903260239000082,\"nombre\":\"computo.fin\",\"padre\":\"22165788d59afd6e\",\"span\":\"feebefb24ff5969b\",\"trace\":\"5bdc13d692c944b522cba1263b52db13\"},{\"atributos_perdidos\":0,\"eventos_perdidos\":0,\"fin_unix_ns\":1789903260239000082,\"inicio_unix_ns\":1789903260237999916,\"nombre\":\"peticion\",\"padre\":\"0000000000000000\",\"span\":\"22165788d59afd6e\",\"trace\":\"5bdc13d692c944b522cba1263b52db13\"}]}}",
+          "recursos": [
+            {
+              "ruta": "/pkg/eio_candidato.js",
+              "bytes": 9691,
+              "sha256": "edd5f83e963d9fdc8d4d9dc3e8dfdf42e7369177574cb1772ad258fc467aa3a0"
+            },
+            {
+              "ruta": "/pkg/eio_candidato_bg.wasm",
+              "bytes": 5606792,
+              "sha256": "6b579fdb7f28ab627da4667a774f547253b540e49b5de307a1845dd10d220c8e"
+            }
+          ]
+        },
+        "pasa": true
+      },
+      {
+        "id": "NAV-03",
+        "pasa": true,
+        "sonda": {
+          "id": "NAV-03-cancelada",
+          "pasa": true,
+          "inicio": 497,
+          "inicio_sonda": 880.5999999999767,
+          "orden_terminacion": 2880.7999999999884,
+          "transcurrido_ms": 2000.2000000000116,
+          "fin": 2881,
+          "canal_cerrado": true,
+          "control_tardio_aceptado": false,
+          "limite": "terminate y cierre observados; ausencia de mensajes no acredita cese físico de toda actividad"
+        },
+        "nueva": {
+          "id": "NAV-03-nueva",
+          "listo": true,
+          "inicio": 2881.0999999999767,
+          "fin": 2939.5,
+          "mensaje": {
+            "id": "NAV-03-nueva",
+            "tipo": "resultado",
+            "literal": "{\"entrada_literal\":\"{\\\"peticion\\\":\\\"nav-control-01\\\",\\\"referencias\\\":[{\\\"id\\\":\\\"A\\\",\\\"version\\\":1},{\\\"id\\\":\\\"B\\\",\\\"version\\\":1}],\\\"accion\\\":\\\"marcar\\\",\\\"respuesta\\\":\\\"Control sintético finito A y B.\\\"}\",\"objeto\":true,\"pasa\":true,\"reloj_civil\":\"Date.now\",\"reloj_duracion\":\"performance.now\",\"resultado\":\"OK\",\"segundos_monotonicos\":0.0032,\"telemetria\":{\"descartados\":0,\"errores\":0,\"registros\":[{\"atributos_perdidos\":0,\"eventos_perdidos\":0,\"fin_unix_ns\":1789903262680000067,\"inicio_unix_ns\":1789903262680000067,\"nombre\":\"consulta.A\",\"padre\":\"639a8212635b6625\",\"span\":\"ccdc201968d45625\",\"trace\":\"d494b03d2c8b94d0f2e79cb190afc5da\"},{\"atributos_perdidos\":0,\"eventos_perdidos\":0,\"fin_unix_ns\":1789903262680999994,\"inicio_unix_ns\":1789903262680999994,\"nombre\":\"consulta.B\",\"padre\":\"639a8212635b6625\",\"span\":\"c7b0ff8adc11d041\",\"trace\":\"d494b03d2c8b94d0f2e79cb190afc5da\"},{\"atributos_perdidos\":0,\"eventos_perdidos\":0,\"fin_unix_ns\":1789903262680999994,\"inicio_unix_ns\":1789903262680999994,\"nombre\":\"computo.fin\",\"padre\":\"639a8212635b6625\",\"span\":\"0b5711317b6bfcff\",\"trace\":\"d494b03d2c8b94d0f2e79cb190afc5da\"},{\"atributos_perdidos\":0,\"eventos_perdidos\":0,\"fin_unix_ns\":1789903262680999994,\"inicio_unix_ns\":1789903262678999901,\"nombre\":\"peticion\",\"padre\":\"0000000000000000\",\"span\":\"639a8212635b6625\",\"trace\":\"d494b03d2c8b94d0f2e79cb190afc5da\"}]}}",
+            "recursos": [
+              {
+                "ruta": "/pkg/eio_candidato.js",
+                "bytes": 9691,
+                "sha256": "edd5f83e963d9fdc8d4d9dc3e8dfdf42e7369177574cb1772ad258fc467aa3a0"
+              },
+              {
+                "ruta": "/pkg/eio_candidato_bg.wasm",
+                "bytes": 5606792,
+                "sha256": "6b579fdb7f28ab627da4667a774f547253b540e49b5de307a1845dd10d220c8e"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "NAV-04",
+        "listo": true,
+        "inicio": 2939.5999999999767,
+        "fin": 2994.7999999999884,
+        "mensaje": {
+          "id": "NAV-04",
+          "tipo": "resultado",
+          "literal": "{\"entrada_literal\":\"{\\\"peticion\\\":\\\"nav-control-01\\\",\\\"referencias\\\":[{\\\"id\\\":\\\"A\\\",\\\"version\\\":1},{\\\"id\\\":\\\"B\\\",\\\"version\\\":1}],\\\"accion\\\":\\\"marcar\\\",\\\"respuesta\\\":\\\"Control sintético finito A y B.\\\"}\",\"objeto\":false,\"pasa\":true,\"reloj_civil\":\"Date.now\",\"reloj_duracion\":\"performance.now\",\"resultado\":\"EVENTO_AUSENTE\",\"segundos_monotonicos\":0.0001,\"telemetria\":{\"descartados\":1,\"errores\":0,\"registros\":[{\"atributos_perdidos\":0,\"eventos_perdidos\":0,\"fin_unix_ns\":1789903262737999916,\"inicio_unix_ns\":1789903262737999916,\"nombre\":\"consulta.A\",\"padre\":\"02af4b874f0b01b6\",\"span\":\"83f9fab4f0752c3c\",\"trace\":\"89e730515bee214230b9dd9c5845b68c\"},{\"atributos_perdidos\":0,\"eventos_perdidos\":0,\"fin_unix_ns\":1789903262737999916,\"inicio_unix_ns\":1789903262737999916,\"nombre\":\"computo.fin\",\"padre\":\"02af4b874f0b01b6\",\"span\":\"2af094edc87d99d2\",\"trace\":\"89e730515bee214230b9dd9c5845b68c\"},{\"atributos_perdidos\":0,\"eventos_perdidos\":0,\"fin_unix_ns\":1789903262737999916,\"inicio_unix_ns\":1789903262737999916,\"nombre\":\"peticion\",\"padre\":\"0000000000000000\",\"span\":\"02af4b874f0b01b6\",\"trace\":\"89e730515bee214230b9dd9c5845b68c\"}]}}",
+          "recursos": [
+            {
+              "ruta": "/pkg/eio_candidato.js",
+              "bytes": 9691,
+              "sha256": "edd5f83e963d9fdc8d4d9dc3e8dfdf42e7369177574cb1772ad258fc467aa3a0"
+            },
+            {
+              "ruta": "/pkg/eio_candidato_bg.wasm",
+              "bytes": 5606792,
+              "sha256": "6b579fdb7f28ab627da4667a774f547253b540e49b5de307a1845dd10d220c8e"
+            }
+          ]
+        },
+        "pasa": true
+      }
+    ],
+    "mensajes": [
+      {
+        "id": "NAV-01",
+        "tipo": "marca",
+        "nombre": "modulo-listo",
+        "secuencia_emision": 1,
+        "emision_mono": 124.69999999995343,
+        "emision_civil": 1789903260156,
+        "origen_reloj": "worker:NAV-01",
+        "memoria_lineal_bytes": 1769472,
+        "recibido_mono": 413
+      },
+      {
+        "id": "NAV-01",
+        "tipo": "listo",
+        "recursos": [
+          {
+            "ruta": "/pkg/eio_candidato.js",
+            "bytes": 9691,
+            "sha256": "edd5f83e963d9fdc8d4d9dc3e8dfdf42e7369177574cb1772ad258fc467aa3a0"
+          },
+          {
+            "ruta": "/pkg/eio_candidato_bg.wasm",
+            "bytes": 5606792,
+            "sha256": "6b579fdb7f28ab627da4667a774f547253b540e49b5de307a1845dd10d220c8e"
+          }
+        ],
+        "mono": 124.69999999995343,
+        "civil": 1789903260156,
+        "recibido_mono": 413.0999999999767
+      },
+      {
+        "id": "NAV-01",
+        "tipo": "resultado",
+        "literal": "{\"entrada_literal\":\"{\\\"peticion\\\":\\\"nav-control-01\\\",\\\"referencias\\\":[{\\\"id\\\":\\\"A\\\",\\\"version\\\":1},{\\\"id\\\":\\\"B\\\",\\\"version\\\":1}],\\\"accion\\\":\\\"marcar\\\",\\\"respuesta\\\":\\\"Control sintético finito A y B.\\\"}\",\"objeto\":true,\"pasa\":true,\"reloj_civil\":\"Date.now\",\"reloj_duracion\":\"performance.now\",\"resultado\":\"OK\",\"segundos_monotonicos\":0.0024,\"telemetria\":{\"descartados\":0,\"errores\":0,\"registros\":[{\"atributos_perdidos\":0,\"eventos_perdidos\":0,\"fin_unix_ns\":1789903260173000097,\"inicio_unix_ns\":1789903260173000097,\"nombre\":\"consulta.A\",\"padre\":\"d2676c96c3e4cf82\",\"span\":\"5892b53ad1075a07\",\"trace\":\"64a73293204dd9c03540c5811ee92866\"},{\"atributos_perdidos\":0,\"eventos_perdidos\":0,\"fin_unix_ns\":1789903260174000025,\"inicio_unix_ns\":1789903260174000025,\"nombre\":\"consulta.B\",\"padre\":\"d2676c96c3e4cf82\",\"span\":\"5a40f05784b72a5e\",\"trace\":\"64a73293204dd9c03540c5811ee92866\"},{\"atributos_perdidos\":0,\"eventos_perdidos\":0,\"fin_unix_ns\":1789903260174000025,\"inicio_unix_ns\":1789903260174000025,\"nombre\":\"computo.fin\",\"padre\":\"d2676c96c3e4cf82\",\"span\":\"5f9078d5e6ef7e59\",\"trace\":\"64a73293204dd9c03540c5811ee92866\"},{\"atributos_perdidos\":0,\"eventos_perdidos\":0,\"fin_unix_ns\":1789903260174000025,\"inicio_unix_ns\":1789903260173000097,\"nombre\":\"peticion\",\"padre\":\"0000000000000000\",\"span\":\"d2676c96c3e4cf82\",\"trace\":\"64a73293204dd9c03540c5811ee92866\"}]}}",
+        "recursos": [
+          {
+            "ruta": "/pkg/eio_candidato.js",
+            "bytes": 9691,
+            "sha256": "edd5f83e963d9fdc8d4d9dc3e8dfdf42e7369177574cb1772ad258fc467aa3a0"
+          },
+          {
+            "ruta": "/pkg/eio_candidato_bg.wasm",
+            "bytes": 5606792,
+            "sha256": "6b579fdb7f28ab627da4667a774f547253b540e49b5de307a1845dd10d220c8e"
+          }
+        ],
+        "recibido_mono": 431.70000000001164
+      },
+      {
+        "id": "NAV-02",
+        "tipo": "marca",
+        "nombre": "modulo-listo",
+        "secuencia_emision": 1,
+        "emision_mono": 56.5,
+        "emision_civil": 1789903260237,
+        "origen_reloj": "worker:NAV-02",
+        "memoria_lineal_bytes": 1769472,
+        "recibido_mono": 493.20000000001164
+      },
+      {
+        "id": "NAV-02",
+        "tipo": "listo",
+        "recursos": [
+          {
+            "ruta": "/pkg/eio_candidato.js",
+            "bytes": 9691,
+            "sha256": "edd5f83e963d9fdc8d4d9dc3e8dfdf42e7369177574cb1772ad258fc467aa3a0"
+          },
+          {
+            "ruta": "/pkg/eio_candidato_bg.wasm",
+            "bytes": 5606792,
+            "sha256": "6b579fdb7f28ab627da4667a774f547253b540e49b5de307a1845dd10d220c8e"
+          }
+        ],
+        "mono": 56.5,
+        "civil": 1789903260237,
+        "recibido_mono": 493.4000000000233
+      },
+      {
+        "id": "NAV-02",
+        "tipo": "resultado",
+        "literal": "{\"entrada_literal\":\"{\\\"peticion\\\":\\\"nav-control-01\\\",\\\"referencias\\\":[{\\\"id\\\":\\\"A\\\",\\\"version\\\":1},{\\\"id\\\":\\\"B\\\",\\\"version\\\":1}],\\\"accion\\\":\\\"marcar\\\",\\\"respuesta\\\":\\\"Control sintético finito A y B.\\\"}\",\"objeto\":true,\"pasa\":true,\"reloj_civil\":\"Date.now\",\"reloj_duracion\":\"performance.now\",\"resultado\":\"OK\",\"segundos_monotonicos\":0.0023,\"telemetria\":{\"descartados\":0,\"errores\":0,\"registros\":[{\"atributos_perdidos\":0,\"eventos_perdidos\":0,\"fin_unix_ns\":1789903260237999916,\"inicio_unix_ns\":1789903260237999916,\"nombre\":\"consulta.A\",\"padre\":\"22165788d59afd6e\",\"span\":\"2cc7035c1bbda4a2\",\"trace\":\"5bdc13d692c944b522cba1263b52db13\"},{\"atributos_perdidos\":0,\"eventos_perdidos\":0,\"fin_unix_ns\":1789903260239000082,\"inicio_unix_ns\":1789903260239000082,\"nombre\":\"consulta.B\",\"padre\":\"22165788d59afd6e\",\"span\":\"c7399b1043e2515c\",\"trace\":\"5bdc13d692c944b522cba1263b52db13\"},{\"atributos_perdidos\":0,\"eventos_perdidos\":0,\"fin_unix_ns\":1789903260239000082,\"inicio_unix_ns\":1789903260239000082,\"nombre\":\"computo.fin\",\"padre\":\"22165788d59afd6e\",\"span\":\"feebefb24ff5969b\",\"trace\":\"5bdc13d692c944b522cba1263b52db13\"},{\"atributos_perdidos\":0,\"eventos_perdidos\":0,\"fin_unix_ns\":1789903260239000082,\"inicio_unix_ns\":1789903260237999916,\"nombre\":\"peticion\",\"padre\":\"0000000000000000\",\"span\":\"22165788d59afd6e\",\"trace\":\"5bdc13d692c944b522cba1263b52db13\"}]}}",
+        "recursos": [
+          {
+            "ruta": "/pkg/eio_candidato.js",
+            "bytes": 9691,
+            "sha256": "edd5f83e963d9fdc8d4d9dc3e8dfdf42e7369177574cb1772ad258fc467aa3a0"
+          },
+          {
+            "ruta": "/pkg/eio_candidato_bg.wasm",
+            "bytes": 5606792,
+            "sha256": "6b579fdb7f28ab627da4667a774f547253b540e49b5de307a1845dd10d220c8e"
+          }
+        ],
+        "recibido_mono": 496.79999999998836
+      },
+      {
+        "id": "NAV-03-cancelada",
+        "tipo": "marca",
+        "nombre": "modulo-listo",
+        "secuencia_emision": 1,
+        "emision_mono": 268.20000000001164,
+        "emision_civil": 1789903260624,
+        "origen_reloj": "worker:NAV-03-cancelada",
+        "memoria_lineal_bytes": 1769472,
+        "recibido_mono": 880.4000000000233
+      },
+      {
+        "id": "NAV-03-cancelada",
+        "tipo": "listo",
+        "recursos": [
+          {
+            "ruta": "/pkg/eio_candidato.js",
+            "bytes": 9691,
+            "sha256": "edd5f83e963d9fdc8d4d9dc3e8dfdf42e7369177574cb1772ad258fc467aa3a0"
+          },
+          {
+            "ruta": "/pkg/eio_candidato_bg.wasm",
+            "bytes": 5606792,
+            "sha256": "6b579fdb7f28ab627da4667a774f547253b540e49b5de307a1845dd10d220c8e"
+          }
+        ],
+        "mono": 268.20000000001164,
+        "civil": 1789903260624,
+        "recibido_mono": 880.5999999999767
+      },
+      {
+        "id": "NAV-03-cancelada",
+        "tipo": "sonda-inicio",
+        "mono": 268.30000000004657,
+        "recibido_mono": 880.5999999999767
+      },
+      {
+        "id": "NAV-03-nueva",
+        "tipo": "marca",
+        "nombre": "modulo-listo",
+        "secuencia_emision": 1,
+        "emision_mono": 49.09999999997672,
+        "emision_civil": 1789903262678,
+        "origen_reloj": "worker:NAV-03-nueva",
+        "memoria_lineal_bytes": 1769472,
+        "recibido_mono": 2934.4000000000233
+      },
+      {
+        "id": "NAV-03-nueva",
+        "tipo": "listo",
+        "recursos": [
+          {
+            "ruta": "/pkg/eio_candidato.js",
+            "bytes": 9691,
+            "sha256": "edd5f83e963d9fdc8d4d9dc3e8dfdf42e7369177574cb1772ad258fc467aa3a0"
+          },
+          {
+            "ruta": "/pkg/eio_candidato_bg.wasm",
+            "bytes": 5606792,
+            "sha256": "6b579fdb7f28ab627da4667a774f547253b540e49b5de307a1845dd10d220c8e"
+          }
+        ],
+        "mono": 49.20000000001164,
+        "civil": 1789903262678,
+        "recibido_mono": 2934.5999999999767
+      },
+      {
+        "id": "NAV-03-nueva",
+        "tipo": "resultado",
+        "literal": "{\"entrada_literal\":\"{\\\"peticion\\\":\\\"nav-control-01\\\",\\\"referencias\\\":[{\\\"id\\\":\\\"A\\\",\\\"version\\\":1},{\\\"id\\\":\\\"B\\\",\\\"version\\\":1}],\\\"accion\\\":\\\"marcar\\\",\\\"respuesta\\\":\\\"Control sintético finito A y B.\\\"}\",\"objeto\":true,\"pasa\":true,\"reloj_civil\":\"Date.now\",\"reloj_duracion\":\"performance.now\",\"resultado\":\"OK\",\"segundos_monotonicos\":0.0032,\"telemetria\":{\"descartados\":0,\"errores\":0,\"registros\":[{\"atributos_perdidos\":0,\"eventos_perdidos\":0,\"fin_unix_ns\":1789903262680000067,\"inicio_unix_ns\":1789903262680000067,\"nombre\":\"consulta.A\",\"padre\":\"639a8212635b6625\",\"span\":\"ccdc201968d45625\",\"trace\":\"d494b03d2c8b94d0f2e79cb190afc5da\"},{\"atributos_perdidos\":0,\"eventos_perdidos\":0,\"fin_unix_ns\":1789903262680999994,\"inicio_unix_ns\":1789903262680999994,\"nombre\":\"consulta.B\",\"padre\":\"639a8212635b6625\",\"span\":\"c7b0ff8adc11d041\",\"trace\":\"d494b03d2c8b94d0f2e79cb190afc5da\"},{\"atributos_perdidos\":0,\"eventos_perdidos\":0,\"fin_unix_ns\":1789903262680999994,\"inicio_unix_ns\":1789903262680999994,\"nombre\":\"computo.fin\",\"padre\":\"639a8212635b6625\",\"span\":\"0b5711317b6bfcff\",\"trace\":\"d494b03d2c8b94d0f2e79cb190afc5da\"},{\"atributos_perdidos\":0,\"eventos_perdidos\":0,\"fin_unix_ns\":1789903262680999994,\"inicio_unix_ns\":1789903262678999901,\"nombre\":\"peticion\",\"padre\":\"0000000000000000\",\"span\":\"639a8212635b6625\",\"trace\":\"d494b03d2c8b94d0f2e79cb190afc5da\"}]}}",
+        "recursos": [
+          {
+            "ruta": "/pkg/eio_candidato.js",
+            "bytes": 9691,
+            "sha256": "edd5f83e963d9fdc8d4d9dc3e8dfdf42e7369177574cb1772ad258fc467aa3a0"
+          },
+          {
+            "ruta": "/pkg/eio_candidato_bg.wasm",
+            "bytes": 5606792,
+            "sha256": "6b579fdb7f28ab627da4667a774f547253b540e49b5de307a1845dd10d220c8e"
+          }
+        ],
+        "recibido_mono": 2939.4000000000233
+      },
+      {
+        "id": "NAV-04",
+        "tipo": "marca",
+        "nombre": "modulo-listo",
+        "secuencia_emision": 1,
+        "emision_mono": 49.29999999998836,
+        "emision_civil": 1789903262738,
+        "origen_reloj": "worker:NAV-04",
+        "memoria_lineal_bytes": 1769472,
+        "recibido_mono": 2994.2999999999884
+      },
+      {
+        "id": "NAV-04",
+        "tipo": "listo",
+        "recursos": [
+          {
+            "ruta": "/pkg/eio_candidato.js",
+            "bytes": 9691,
+            "sha256": "edd5f83e963d9fdc8d4d9dc3e8dfdf42e7369177574cb1772ad258fc467aa3a0"
+          },
+          {
+            "ruta": "/pkg/eio_candidato_bg.wasm",
+            "bytes": 5606792,
+            "sha256": "6b579fdb7f28ab627da4667a774f547253b540e49b5de307a1845dd10d220c8e"
+          }
+        ],
+        "mono": 49.29999999998836,
+        "civil": 1789903262738,
+        "recibido_mono": 2994.4000000000233
+      },
+      {
+        "id": "NAV-04",
+        "tipo": "resultado",
+        "literal": "{\"entrada_literal\":\"{\\\"peticion\\\":\\\"nav-control-01\\\",\\\"referencias\\\":[{\\\"id\\\":\\\"A\\\",\\\"version\\\":1},{\\\"id\\\":\\\"B\\\",\\\"version\\\":1}],\\\"accion\\\":\\\"marcar\\\",\\\"respuesta\\\":\\\"Control sintético finito A y B.\\\"}\",\"objeto\":false,\"pasa\":true,\"reloj_civil\":\"Date.now\",\"reloj_duracion\":\"performance.now\",\"resultado\":\"EVENTO_AUSENTE\",\"segundos_monotonicos\":0.0001,\"telemetria\":{\"descartados\":1,\"errores\":0,\"registros\":[{\"atributos_perdidos\":0,\"eventos_perdidos\":0,\"fin_unix_ns\":1789903262737999916,\"inicio_unix_ns\":1789903262737999916,\"nombre\":\"consulta.A\",\"padre\":\"02af4b874f0b01b6\",\"span\":\"83f9fab4f0752c3c\",\"trace\":\"89e730515bee214230b9dd9c5845b68c\"},{\"atributos_perdidos\":0,\"eventos_perdidos\":0,\"fin_unix_ns\":1789903262737999916,\"inicio_unix_ns\":1789903262737999916,\"nombre\":\"computo.fin\",\"padre\":\"02af4b874f0b01b6\",\"span\":\"2af094edc87d99d2\",\"trace\":\"89e730515bee214230b9dd9c5845b68c\"},{\"atributos_perdidos\":0,\"eventos_perdidos\":0,\"fin_unix_ns\":1789903262737999916,\"inicio_unix_ns\":1789903262737999916,\"nombre\":\"peticion\",\"padre\":\"0000000000000000\",\"span\":\"02af4b874f0b01b6\",\"trace\":\"89e730515bee214230b9dd9c5845b68c\"}]}}",
+        "recursos": [
+          {
+            "ruta": "/pkg/eio_candidato.js",
+            "bytes": 9691,
+            "sha256": "edd5f83e963d9fdc8d4d9dc3e8dfdf42e7369177574cb1772ad258fc467aa3a0"
+          },
+          {
+            "ruta": "/pkg/eio_candidato_bg.wasm",
+            "bytes": 5606792,
+            "sha256": "6b579fdb7f28ab627da4667a774f547253b540e49b5de307a1845dd10d220c8e"
+          }
+        ],
+        "recibido_mono": 2994.7999999999884
+      },
+      {
+        "id": "NAV-05",
+        "tipo": "marca",
+        "nombre": "modulo-listo",
+        "secuencia_emision": 1,
+        "emision_mono": 50.100000000034925,
+        "emision_civil": 1789903262815,
+        "origen_reloj": "worker:NAV-05",
+        "memoria_lineal_bytes": 1769472,
+        "recibido_mono": 3071.0999999999767
+      },
+      {
+        "id": "NAV-05",
+        "tipo": "listo",
+        "recursos": [
+          {
+            "ruta": "/pkg/eio_candidato.js",
+            "bytes": 9691,
+            "sha256": "edd5f83e963d9fdc8d4d9dc3e8dfdf42e7369177574cb1772ad258fc467aa3a0"
+          },
+          {
+            "ruta": "/pkg/eio_candidato_bg.wasm",
+            "bytes": 5606792,
+            "sha256": "6b579fdb7f28ab627da4667a774f547253b540e49b5de307a1845dd10d220c8e"
+          }
+        ],
+        "mono": 50.100000000034925,
+        "civil": 1789903262815,
+        "recibido_mono": 3071.2000000000116
+      },
+      {
+        "id": "NAV-05",
+        "tipo": "marca",
+        "nombre": "recursos-verificados",
+        "secuencia_emision": 2,
+        "emision_mono": 1034.9000000000233,
+        "emision_civil": 1789903263799,
+        "origen_reloj": "worker:NAV-05",
+        "memoria_lineal_bytes": 1769472,
+        "recursos": [
+          {
+            "ruta": "/pkg/eio_candidato.js",
+            "bytes": 9691,
+            "sha256": "edd5f83e963d9fdc8d4d9dc3e8dfdf42e7369177574cb1772ad258fc467aa3a0"
+          },
+          {
+            "ruta": "/pkg/eio_candidato_bg.wasm",
+            "bytes": 5606792,
+            "sha256": "6b579fdb7f28ab627da4667a774f547253b540e49b5de307a1845dd10d220c8e"
+          },
+          {
+            "ruta": "/Qwen3-0.6B-Q4_K_M.gguf",
+            "bytes": 396705472,
+            "sha256": "ac2d97712095a558e31573f62f466a3f9d93990898b0ec79d7c974c1780d524a"
+          },
+          {
+            "ruta": "/tokenizer.json",
+            "bytes": 11422654,
+            "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+          },
+          {
+            "ruta": "/peticion.txt",
+            "bytes": 395,
+            "sha256": "2ec34e21c96200a2106aed7f8a696e31ddbbe02e92238803a2c1727d40e1101f"
+          }
+        ],
+        "entradas_bytes": {
+          "pesos": 396705472,
+          "tokenizador": 11422654,
+          "peticion_utf8": 395
+        },
+        "recibido_mono": 4055.9000000000233
+      },
+      {
+        "id": "NAV-05",
+        "tipo": "marca",
+        "nombre": "antes-enlace",
+        "secuencia_emision": 3,
+        "emision_mono": 1035,
+        "emision_civil": 1789903263799,
+        "origen_reloj": "worker:NAV-05",
+        "memoria_lineal_bytes": 1769472,
+        "recibido_mono": 4056
+      },
+      {
+        "id": "NAV-05",
+        "tipo": "inferencia-inicio",
+        "recursos": [
+          {
+            "ruta": "/pkg/eio_candidato.js",
+            "bytes": 9691,
+            "sha256": "edd5f83e963d9fdc8d4d9dc3e8dfdf42e7369177574cb1772ad258fc467aa3a0"
+          },
+          {
+            "ruta": "/pkg/eio_candidato_bg.wasm",
+            "bytes": 5606792,
+            "sha256": "6b579fdb7f28ab627da4667a774f547253b540e49b5de307a1845dd10d220c8e"
+          },
+          {
+            "ruta": "/Qwen3-0.6B-Q4_K_M.gguf",
+            "bytes": 396705472,
+            "sha256": "ac2d97712095a558e31573f62f466a3f9d93990898b0ec79d7c974c1780d524a"
+          },
+          {
+            "ruta": "/tokenizer.json",
+            "bytes": 11422654,
+            "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+          },
+          {
+            "ruta": "/peticion.txt",
+            "bytes": 395,
+            "sha256": "2ec34e21c96200a2106aed7f8a696e31ddbbe02e92238803a2c1727d40e1101f"
+          }
+        ],
+        "mono": 1035,
+        "recibido_mono": 4056
+      },
+      {
+        "id": "NAV-05",
+        "tipo": "marca",
+        "nombre": "rust-entrada-tras-copias",
+        "secuencia_emision": 4,
+        "emision_mono": 1089.4000000000233,
+        "emision_civil": 1789903263854,
+        "origen_reloj": "worker:NAV-05",
+        "memoria_lineal_bytes": 409993216,
+        "recibido_mono": 4110.400000000023
+      },
+      {
+        "id": "NAV-05",
+        "tipo": "marca",
+        "nombre": "tokenizador-listo",
+        "secuencia_emision": 5,
+        "emision_mono": 1411,
+        "emision_civil": 1789903264175,
+        "origen_reloj": "worker:NAV-05",
+        "memoria_lineal_bytes": 485687296,
+        "recibido_mono": 4432.299999999988
+      },
+      {
+        "id": "NAV-05",
+        "tipo": "marca",
+        "nombre": "antes-ModelWeights",
+        "secuencia_emision": 6,
+        "emision_mono": 1448,
+        "emision_civil": 1789903264212,
+        "origen_reloj": "worker:NAV-05",
+        "memoria_lineal_bytes": 485687296,
+        "recibido_mono": 4469.400000000023
+      }
+    ],
+    "rechazos_tardios": [
+      {
+        "id": "NAV-03-cancelada",
+        "esperado": "NAV-03-cancelada",
+        "tipo": "resultado",
+        "mono": 2880.9000000000233
+      }
+    ],
+    "errores": []
+  }
+}

@@ -1,0 +1,87 @@
+[
+  {
+    "fase": "adquisicion",
+    "orden": [
+      "bash",
+      "aprovisionar.sh"
+    ],
+    "inicio_unix": 1789903020.4612813,
+    "fin_unix": 1789903042.0139258,
+    "segundos": 21.552644595999993,
+    "limite_s": 300,
+    "retorno": 0,
+    "causa": "normal",
+    "pico_rss_bytes": 146087936,
+    "residuales_observados": [],
+    "intervalo_nominal_s": 1,
+    "perimetro": "grupo/sesion y descendientes observados; PID+inicio; excluye fugados antes de observarlos y otros procesos del host"
+  },
+  {
+    "fase": "herramienta",
+    "orden": [
+      "bash",
+      "herramienta.sh"
+    ],
+    "inicio_unix": 1789903042.243977,
+    "fin_unix": 1789903133.351073,
+    "segundos": 91.107096196,
+    "limite_s": 600,
+    "retorno": 0,
+    "causa": "normal",
+    "pico_rss_bytes": 910462976,
+    "residuales_observados": [],
+    "intervalo_nominal_s": 1,
+    "perimetro": "grupo/sesion y descendientes observados; PID+inicio; excluye fugados antes de observarlos y otros procesos del host"
+  },
+  {
+    "fase": "construccion",
+    "orden": [
+      "bash",
+      "construir.sh"
+    ],
+    "inicio_unix": 1789903133.3857958,
+    "fin_unix": 1789903249.3669798,
+    "segundos": 115.98118395099999,
+    "limite_s": 950,
+    "retorno": 0,
+    "causa": "normal",
+    "pico_rss_bytes": 1455828992,
+    "residuales_observados": [],
+    "intervalo_nominal_s": 1,
+    "perimetro": "grupo/sesion y descendientes observados; PID+inicio; excluye fugados antes de observarlos y otros procesos del host"
+  },
+  {
+    "fase": "enlace",
+    "orden": [
+      "bash",
+      "enlazar.sh"
+    ],
+    "inicio_unix": 1789903249.4169118,
+    "fin_unix": 1789903251.6368773,
+    "segundos": 2.219965473000002,
+    "limite_s": 30,
+    "retorno": 0,
+    "causa": "normal",
+    "pico_rss_bytes": 3682304,
+    "residuales_observados": [],
+    "intervalo_nominal_s": 1,
+    "perimetro": "grupo/sesion y descendientes observados; PID+inicio; excluye fugados antes de observarlos y otros procesos del host"
+  },
+  {
+    "fase": "navegador",
+    "orden": [
+      "node",
+      "controlador.mjs"
+    ],
+    "inicio_unix": 1789903251.6709032,
+    "fin_unix": 1789903266.1438286,
+    "segundos": 14.472925738000015,
+    "limite_s": 200,
+    "retorno": -15,
+    "causa": "memoria",
+    "pico_rss_bytes": 4667400192,
+    "residuales_observados": [],
+    "intervalo_nominal_s": 1,
+    "perimetro": "grupo/sesion y descendientes observados; PID+inicio; excluye fugados antes de observarlos y otros procesos del host"
+  }
+]

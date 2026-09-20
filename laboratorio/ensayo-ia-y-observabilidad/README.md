@@ -111,3 +111,8 @@ La versión preparatoria anterior se conserva como antecedente. Existen ya resul
 ## EIO-NAV-02 · preparación · 20/09/2026
 
 [Diagnóstico acotado y precompromiso](resultados/preparacion-navegador-02/README.md): campaña9/intento1, umbral RSS conservado, métricas complementarias y captura incremental. No optimización del modelo ni reintento de NAV01. Preparación pendiente de observación.
+
+
+## EIO-NAV-02 · diagnóstico entregado · 20/09/2026
+
+[Resultado observado y custodia](resultados/navegador-02/README.md): run35507386447, número9/intento1, failure92 por umbral RSS conservado. NAV01–04 conformes; ModelWeights completado y marca previa al primer forward recibida, sin primer token ni salida contractual. Captura incremental conservada,49/49 identidades cotejadas; reservas de PSS final y coste de escritura explícitas. Guardas cerradas, sin reintento. Pendiente revisión receptora.

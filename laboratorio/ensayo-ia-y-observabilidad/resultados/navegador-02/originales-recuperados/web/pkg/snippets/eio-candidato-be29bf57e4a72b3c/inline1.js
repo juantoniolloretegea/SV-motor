@@ -1,0 +1,1 @@
+export function eio_mono(){return performance.now();} export function eio_civil(){return Date.now();}

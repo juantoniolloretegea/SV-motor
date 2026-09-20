@@ -1,0 +1,69 @@
+GET host=static.rust-lang.org salto=0 destino=rustc-1.98.0-x86_64-unknown-linux-gnu.tar.xz
+HTTP=200
+/home/runner/work/_temp/eio/dist/rustc-1.98.0-x86_64-unknown-linux-gnu.tar.xz.part: OK
+IDENTIDAD bytes=79745456 sha256=0e37cb339f447fc44d6d781073bacacebfdc5612f2600e4c7e84c266f5f3aced archivo=rustc-1.98.0-x86_64-unknown-linux-gnu.tar.xz
+1b1ab708c8de4dbfa345cf1ca8fe3a7796c5e8bd91afd14e55489b75c1260535  /home/runner/work/_temp/eio/dist/rustc-1.98.0-x86_64-unknown-linux-gnu/install.sh
+install: creating uninstall script at /home/runner/work/_temp/eio/toolchain-1.98.0/lib/rustlib/uninstall.sh
+install: installing component 'rustc'
+
+    rustc installed.
+
+GET host=static.rust-lang.org salto=0 destino=cargo-1.98.0-x86_64-unknown-linux-gnu.tar.xz
+HTTP=200
+/home/runner/work/_temp/eio/dist/cargo-1.98.0-x86_64-unknown-linux-gnu.tar.xz.part: OK
+IDENTIDAD bytes=11669560 sha256=2f512d170d3dd23e16ababcda32ee2e6d5172d861a7af1f504e0b1e270cafab9 archivo=cargo-1.98.0-x86_64-unknown-linux-gnu.tar.xz
+6a9caa4cf6b65286aae8c796481f11784f6f805752664592c6fb994c3a5f1f32  /home/runner/work/_temp/eio/dist/cargo-1.98.0-x86_64-unknown-linux-gnu/install.sh
+install: creating uninstall script at /home/runner/work/_temp/eio/toolchain-1.98.0/lib/rustlib/uninstall.sh
+install: installing component 'cargo'
+
+    cargo installed.
+
+GET host=static.rust-lang.org salto=0 destino=rust-std-1.98.0-x86_64-unknown-linux-gnu.tar.xz
+HTTP=200
+/home/runner/work/_temp/eio/dist/rust-std-1.98.0-x86_64-unknown-linux-gnu.tar.xz.part: OK
+IDENTIDAD bytes=30715556 sha256=f5022e6c95a5ad23cca2513dc8281200f585fa188de6370aa37b128a43f876a3 archivo=rust-std-1.98.0-x86_64-unknown-linux-gnu.tar.xz
+19c56df4d4a3251396a6a97be14daff33465572e4ecc7e37d776dba77b60a9a8  /home/runner/work/_temp/eio/dist/rust-std-1.98.0-x86_64-unknown-linux-gnu/install.sh
+install: creating uninstall script at /home/runner/work/_temp/eio/toolchain-1.98.0/lib/rustlib/uninstall.sh
+install: installing component 'rust-std-x86_64-unknown-linux-gnu'
+
+    rust std installed.
+
+GET host=static.rust-lang.org salto=0 destino=rust-std-1.98.0-wasm32-unknown-unknown.tar.xz
+HTTP=200
+/home/runner/work/_temp/eio/dist/rust-std-1.98.0-wasm32-unknown-unknown.tar.xz.part: OK
+IDENTIDAD bytes=22441312 sha256=3bb537c09555b96020a38a3a8810c38908b194eff3c2cb6184a45dda5c6828de archivo=rust-std-1.98.0-wasm32-unknown-unknown.tar.xz
+19c56df4d4a3251396a6a97be14daff33465572e4ecc7e37d776dba77b60a9a8  /home/runner/work/_temp/eio/dist/rust-std-1.98.0-wasm32-unknown-unknown/install.sh
+install: creating uninstall script at /home/runner/work/_temp/eio/toolchain-1.98.0/lib/rustlib/uninstall.sh
+install: installing component 'rust-std-wasm32-unknown-unknown'
+
+    rust std installed.
+
+rustc 1.98.0 (88d9e12ae 2026-08-18)
+binary: rustc
+commit-hash: 88d9e12ae178fab0fb5cc050a94da85685d449ea
+commit-date: 2026-08-18
+host: x86_64-unknown-linux-gnu
+release: 1.98.0
+LLVM version: 22.1.8
+cargo 1.98.0 (797e8a9bc 2026-08-05)
+release: 1.98.0
+commit-hash: 797e8a9bca276c1c9f9f738d2a20f484fa4eea9d
+commit-date: 2026-08-05
+host: x86_64-unknown-linux-gnu
+libgit2: 1.9.4 (sys:0.21.0 vendored)
+libcurl: 8.21.0-DEV (sys:0.4.90+curl-8.21.0 vendored ssl:OpenSSL/3.6.3)
+ssl: OpenSSL 3.6.3 9 Jun 2026
+os: Ubuntu 24.4.0 (noble) [64-bit]
+Cargo.lock: OK
+GET host=huggingface.co salto=0 destino=Qwen3-0.6B-Q4_K_M.gguf
+HTTP=302
+GET host=us.aws.cdn.hf.co salto=1 destino=Qwen3-0.6B-Q4_K_M.gguf
+HTTP=200
+/home/runner/work/_temp/eio/entradas/Qwen3-0.6B-Q4_K_M.gguf.part: OK
+IDENTIDAD bytes=396705472 sha256=ac2d97712095a558e31573f62f466a3f9d93990898b0ec79d7c974c1780d524a archivo=Qwen3-0.6B-Q4_K_M.gguf
+GET host=huggingface.co salto=0 destino=tokenizer.json
+HTTP=302
+GET host=us.aws.cdn.hf.co salto=1 destino=tokenizer.json
+HTTP=200
+/home/runner/work/_temp/eio/entradas/tokenizer.json.part: OK
+IDENTIDAD bytes=11422654 sha256=aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4 archivo=tokenizer.json
