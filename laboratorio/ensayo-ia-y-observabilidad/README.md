@@ -1,9 +1,11 @@
 # Ensayo de inteligencia artificial y observabilidad
 
-**Versión documental:** 2.1  
+**Versión documental:** 2.2  
 **Fecha:** 20 de septiembre de 2026  
 **Estado:** experimento en curso; resultados parciales en navegador y candidata de servicio nativo pendiente de comprobación ejecutable. Ninguna de las dos vías acredita todavía la solución completa.  
 **Corte documental y de código revisado:** `d82bbe2f5f396eb31da5b095ba0849404cb352b0`.
+
+**Revisión 2.2:** incorporación de diagramas separados de las vías A y B, con ubicación de componentes, flujo funcional, control, custodia y límites de lo demostrado. La [versión 2.1](https://github.com/juantoniolloretegea/SV-motor/blob/88ea2e6b1e28b5c1ff22d29da7003c854bb8461d/laboratorio/ensayo-ia-y-observabilidad/README.md) permanece en el historial.
 
 **Revisión 2.1:** precisión documental de las funciones de JavaScript y Rust en ambas vías. No modifica código, criterios de aceptación ni autorizaciones. La [versión 2.0](https://github.com/juantoniolloretegea/SV-motor/blob/29a0dbe74018807fddf5759f30de12ac29c162bb/laboratorio/ensayo-ia-y-observabilidad/README.md) permanece identificada en el historial.
 
@@ -76,6 +78,143 @@ Las comprobaciones de la interfaz no sustituyen a las del servicio. Permisos, l�
 
 Reducir las responsabilidades de JavaScript no demuestra por sí solo una reducción global de fallos. Eliminarlo también de la interfaz supondría otra realización, no incluida en esta candidata. La prioridad entre las dos vías sigue regida por el apartado 2, sin preferencia automática por lenguaje o número de componentes.
 
+### 4.2. Diagrama de la vía A: navegador y WASM
+
+El diagrama representa el flujo completo previsto de la campaña NAV-02, incluida su rama de interrupción. **La rama de inferencia finalizada no se completó en esa campaña.** NAV01–NAV04 fueron controles sintéticos; no sustituyen la validación de una inferencia completa.
+
+Los cinco participantes se sitúan en el entorno de la campaña, salvo el operador humano. El navegador se ejecutó en GitHub. El bloque «Control y custodia» agrupa el controlador Node y las tareas exteriores de recuperación; no atribuye toda la custodia a Node ni al módulo WASM.
+
+```mermaid
+sequenceDiagram
+    autonumber
+    participant H as Operador humano
+    participant G as Supervisor exterior
+    participant C as Control y custodia
+    participant P as Página JavaScript
+    participant W as Worker Rust/WASM
+    Note over H,W: Vía A: arquitectura de la campaña NAV-02 en el ejecutor remoto
+    H->>G: Autoriza la campaña y sus límites
+    Note over G,C: Preparación previa: código, herramientas y recursos identificados
+    G->>C: Inicia el controlador de la campaña
+    C->>P: Abre Chrome y sirve la página y los recursos
+    Note over C: Controlador Node y recuperación exterior de evidencias
+    P->>W: Ejecuta controles sintéticos NAV01 y NAV02
+    W-->>P: Devuelve resultados y señales OpenTelemetry
+    P->>C: Transmite los registros para custodia
+    P->>W: Ejecuta la sonda no cooperativa NAV03
+    P->>W: Ordena terminar el Worker
+    Note over P,W: Cierra el canal y rechaza el identificador cancelado
+    P->>W: Crea otro Worker y comprueba una tarea nueva
+    W-->>P: Devuelve el resultado del control
+    P->>W: Ejecuta NAV04 con un evento omitido
+    W-->>P: Informa de la omisión
+    P->>C: Solicita comprobación previa a la inferencia
+    C->>G: Consulta evidencia de supervisión activa
+    G-->>C: Estado y medidas disponibles
+    C-->>P: Confirma custodia y habilitación instrumental, o rechaza
+    alt Se cumplen los controles previos
+        P->>W: Solicita NAV05 con identidad de tarea
+        W->>C: Solicita WASM, pesos, tokenizador y petición
+        C-->>W: Sirve los recursos del ensayo
+        Note over W: Coteja recursos y valida la entrada
+        Note over W: Rust y Candle cargan Qwen y realizan la inferencia
+        W-->>P: Emite marcas de las operaciones instrumentadas
+        P->>C: Remite las marcas para persistencia
+        alt La inferencia finaliza
+            Note over W: Verifica el contrato y la cobertura de telemetría
+            W-->>P: Devuelve salida original, juicio y telemetría
+            P->>C: Remite el resultado para custodia
+        else Se detecta exceso en el ensayo
+            G->>C: Ordena terminar la familia de procesos
+            Note over P,W: NAV05 quedó interrumpido; no hubo primer token ni salida contractual
+        end
+    else No se cumplen los controles previos
+        Note over P,W: No se inicia la inferencia
+    end
+    Note over G,C: Comprueba terminación observada y recupera la evidencia disponible
+    C-->>H: Entrega registros, identidades y lagunas para revisión
+```
+
+**Lectura de las fronteras.** El cálculo de Qwen ocurre en el Worker, mediante Candle compilado a WASM. La página coordina y transmite mensajes. La supervisión de la familia de procesos y la recuperación exterior pertenecen al entorno de ensayo. Estas funciones no se trasladan automáticamente a un navegador de usuario al publicar una URL.
+
+La verificación de recursos se describe con la reserva del apartado 5: no constituye autenticación independiente previa de todo el JavaScript ejecutado. Los canales instrumentados tampoco acreditan la ausencia universal de otras actividades.
+
+Fuentes del diagrama: [página de control](resultados/preparacion-navegador-02/web/control.js), [Worker](resultados/preparacion-navegador-02/web/worker.js), [enlace y verificación Rust](resultados/preparacion-navegador-02/pruebas/navegador.rs), [controlador exterior](resultados/preparacion-navegador-02/controlador.mjs) y [resultado NAV-02](resultados/navegador-02/README.md), en el corte de código indicado al inicio.
+
+### 4.3. Diagrama de la vía B: servicio nativo e interfaz web
+
+El diagrama representa la candidata EIO-NAT-PREP-02. **Describe una implementación propuesta; no acredita que el flujo haya sido ejecutado ni que sus controles hayan superado las pruebas.** Los fallos de validación en la API se rechazan antes de llegar al supervisor. En el diagrama se desarrolla la petición que alcanza dicha frontera.
+
+La interfaz corresponde al navegador del usuario. API, supervisor, custodio y proceso de inferencia se sitúan en la máquina anfitriona del servicio. La guarda reside en esa máquina, fuera de la hoja cgroup que supervisa. «Supervisor y custodio» agrupa el hilo de control y el hilo de custodia del mismo proceso; no implica que la escritura bloquee deliberadamente el control de parada.
+
+```mermaid
+sequenceDiagram
+    autonumber
+    participant U as Interfaz del usuario
+    participant A as API Rust
+    participant S as Supervisor y custodio
+    participant I as Inferencia Rust
+    participant G as Guarda exterior
+    Note over U,G: Vía B: diseño preparado, pendiente de compilación y ejecución
+    Note over U: El humano autoriza y decide; la página utiliza HTML y JavaScript
+    Note over A,G: Preparación previa: entradas identificadas y entorno habilitado
+    G->>G: Comprueba la hoja cgroup y sus controles
+    G->>S: Inicia, confirma membresía y permite el arranque
+    S->>A: Inicia el servicio Axum, Hyper y Tokio
+    U->>A: Solicita la página
+    A-->>U: Entrega HTML y JavaScript
+    U->>A: Envía petición JSON mediante HTTP
+    A->>A: Comprueba origen, tipo, tamaño, estructura y cupo
+    A->>S: Transmite la orden por socket local
+    S->>S: Valida petición y disponibilidad de la sesión
+    alt Petición admitida para ejecución
+        S->>S: Encola la entrada y su registro
+        S->>I: Inicia el proceso de inferencia
+        Note over I: Comprueba pesos y tokenizador; Candle ejecuta Qwen
+        Note over I: OpenTelemetry registra los puntos instrumentados
+        I-->>S: Emite marcas, señales y diagnóstico por canales acotados
+        S->>S: Comprueba secuencia y envía registros al hilo custodio
+        opt Cancelación solicitada por el humano
+            U->>A: Solicita cancelar la tarea identificada
+            A->>S: Transmite la solicitud
+            S->>I: Revoca y activa la escalada TERM/KILL
+            Note over S,I: La solicitud no equivale a parada confirmada
+        end
+        alt Terminación y cierre comprobables
+            Note over I: Si completa el cálculo, verifica el contrato y emite salida original y juicio
+            I-->>S: Final de los canales y estado de terminación observados
+            S->>S: Drena registros, evalúa condiciones y solicita sellado
+            Note over S: Hilo custodio: barrera, persistencia, huellas y copia inmutable
+            U->>A: Consulta estado y resultado
+            A->>S: Consulta el cierre
+            S-->>A: Resultado admitido o no admisión con causa
+            A-->>U: Devuelve el estado para presentación
+            U->>A: Solicita evidencia mediante sello y fragmentos
+            A->>S: Transmite la solicitud de recuperación
+            S-->>A: Devuelve fragmentos sellados o error
+            A-->>U: Permite recuperar la evidencia disponible
+        else Falla el cierre o la custodia
+            Note over S: No admite el resultado; conserva el diagnóstico que sea recuperable
+        end
+    else Petición rechazada
+        S-->>A: Devuelve el motivo
+        A-->>U: Presenta el rechazo sin iniciar el modelo
+    end
+    Note over S,G: Durante la sesión: latidos, observación y límites exteriores
+    opt Pérdida de supervisión, exceso de recursos o cierre
+        G->>G: Ordena cgroup.kill y comprueba que la hoja quede vacía
+        Note over A,I: La terminación puede dejar la API inaccesible; no se presume recuperación por ella
+    end
+```
+
+**Lectura de las fronteras.** JavaScript presenta y solicita; la API Rust valida y comunica; el supervisor dirige el proceso; Candle calcula; el verificador determina el juicio contractual; el custodio fija la evidencia. La guarda exterior observa y puede terminar el conjunto sujeto a sus permisos y límites. La viabilidad efectiva de esa guarda sigue pendiente.
+
+Un juicio contractual adverso puede acompañar a una ejecución técnicamente completa. La admisión técnica no convierte la respuesta del modelo en una decisión autorizada. La evidencia parcial sólo puede recuperarse por la API cuando exista un conjunto sellado disponible y la API continúe accesible; no se garantiza recuperación tras toda terminación o fallo.
+
+Fuentes del diagrama: [interfaz JavaScript](resultados/preparacion-nativa-02/web/app.js), [API Rust](resultados/preparacion-nativa-02/nativa/servidor.rs), [supervisor](resultados/preparacion-nativa-02/nativa/supervisor.rs), [proceso de inferencia](resultados/preparacion-nativa-02/nativa/inferidor.rs), [custodia](resultados/preparacion-nativa-02/nativa/custodia.rs), [guarda exterior](resultados/preparacion-nativa-02/nativa/guarda.rs) y [diseño y reservas](resultados/preparacion-nativa-02/DISENO.md), en el corte de código indicado al inicio.
+
+Los diagramas separan petición, cálculo, verificación, observación, control y custodia. Su orden representa relaciones funcionales; no constituye una medida temporal ni una prueba de independencia entre componentes. La regla de prioridad del apartado 2 se aplica al cumplimiento del conjunto.
+
 ## 5. Seguridad, integridad y observabilidad
 
 | Ámbito | Exigencia común | Distinción que debe conservarse |
@@ -137,7 +276,7 @@ Los presupuestos iniciales y sus posteriores autorizaciones se conservan como hi
 
 ## 8. Antecedente documental conservado
 
-La versión 0.2 y sus notas de continuidad se mantienen a continuación sin alterar su texto. Sus estados y expresiones temporales corresponden a los momentos documentados; la síntesis vigente de este README es la versión 2.1 anterior. Las revisiones del contrato y de los expedientes mantienen sus identidades propias.
+La versión 0.2 y sus notas de continuidad se mantienen a continuación sin alterar su texto. Sus estados y expresiones temporales corresponden a los momentos documentados; la síntesis vigente de este README es la versión 2.2 anterior. Las revisiones del contrato y de los expedientes mantienen sus identidades propias.
 
 <details>
 <summary>Consultar íntegramente la versión 0.2 y sus notas de continuidad</summary>
