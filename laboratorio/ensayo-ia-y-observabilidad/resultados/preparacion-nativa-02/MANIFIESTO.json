@@ -1,0 +1,317 @@
+{
+  "version": "EIO-NAT-PREP-02/1",
+  "fecha_documental": "2026-09-20",
+  "estado": "fuentes_corregidas_no_compiladas_no_ejecutadas",
+  "base_commit": "fed3892c31aaec6c8d7721fcb06c72245b13bca2",
+  "base_carpeta": "laboratorio/ensayo-ia-y-observabilidad/resultados/preparacion-nativa-01/",
+  "contrato_experimental": "EIO-NAT/2",
+  "paquete": "eio-candidato 0.2.1",
+  "dependencias_nuevas": [],
+  "dependencias_features_iguales_a_base": true,
+  "cargo_lock_nuevo": null,
+  "binarios": null,
+  "pruebas_ejecutadas": 0,
+  "guarda_exterior": {
+    "fuente": "nativa/guarda.rs",
+    "configuracion": "configuracion/guarda-INACTIVA.json",
+    "disponibilidad_comprobada": false
+  },
+  "reparos": {
+    "R1": "corregido_en_fuente_pendiente_recepcion",
+    "R2": "corregido_en_fuente_pendiente_recepcion",
+    "R3": "mecanismo_preparado_viabilidad_y_pruebas_pendientes"
+  },
+  "comprobaciones_estaticas": {
+    "includes": 7,
+    "fronteraTests": 7,
+    "dependenciesUnchanged": true,
+    "controlNoWriteSync": true,
+    "stopNoWriteSync": true,
+    "cases": false,
+    "files": 40,
+    "bytes": 200203
+  },
+  "archivos": [
+    {
+      "path": "pruebas/lib.rs",
+      "status": "copia_literal",
+      "bytes": 4223,
+      "sha256": "200886f5860dcdc3bbe349682b22b431aa2e99b2a4b5529da27a90f6e1ee8759",
+      "base_sha256": "200886f5860dcdc3bbe349682b22b431aa2e99b2a4b5529da27a90f6e1ee8759"
+    },
+    {
+      "path": "pruebas/banco.rs",
+      "status": "copia_literal",
+      "bytes": 3184,
+      "sha256": "d05403ac664cfb1bba9223e502ab44a226a3885ab951960aee93c89a428aba84",
+      "base_sha256": "d05403ac664cfb1bba9223e502ab44a226a3885ab951960aee93c89a428aba84"
+    },
+    {
+      "path": "pruebas/casos.json",
+      "status": "copia_literal",
+      "bytes": 12008,
+      "sha256": "7acbdef1679587b62b0fcdd56ddbc6494aa504e897006eff577b8b4d4713bae2",
+      "base_sha256": "7acbdef1679587b62b0fcdd56ddbc6494aa504e897006eff577b8b4d4713bae2"
+    },
+    {
+      "path": "pruebas/peticion.txt",
+      "status": "copia_literal",
+      "bytes": 395,
+      "sha256": "2ec34e21c96200a2106aed7f8a696e31ddbbe02e92238803a2c1727d40e1101f",
+      "base_sha256": "2ec34e21c96200a2106aed7f8a696e31ddbbe02e92238803a2c1727d40e1101f"
+    },
+    {
+      "path": "pruebas/ENTRADAS_ENSAYO.json",
+      "status": "copia_literal",
+      "bytes": 3852,
+      "sha256": "5e05a88e4b8e102022ef740f0cdbcd93db4cd71b89dc01a93a1b797e622ad225",
+      "base_sha256": "5e05a88e4b8e102022ef740f0cdbcd93db4cd71b89dc01a93a1b797e622ad225"
+    },
+    {
+      "path": "inferencia/adaptador.rs",
+      "status": "copia_literal",
+      "bytes": 2651,
+      "sha256": "f362ce3dcad3af3fb94b340b9501c611930dc591ced392071bb6f723320c00b2",
+      "base_sha256": "f362ce3dcad3af3fb94b340b9501c611930dc591ced392071bb6f723320c00b2"
+    },
+    {
+      "path": "observabilidad/telemetria.rs",
+      "status": "copia_literal",
+      "bytes": 3522,
+      "sha256": "ef1f8aa27443b6a581803d9bd47321f8757ad8b212707a7842d2bea7ba930b9d",
+      "base_sha256": "ef1f8aa27443b6a581803d9bd47321f8757ad8b212707a7842d2bea7ba930b9d"
+    },
+    {
+      "path": "resultados/revision-05/continuacion-06/peticion-estructurada.txt",
+      "status": "copia_literal",
+      "bytes": 759,
+      "sha256": "5668879057dedb9ef77500d94f9eef7e3d451c42bf4e4b697e3e32341aaababa",
+      "base_sha256": "5668879057dedb9ef77500d94f9eef7e3d451c42bf4e4b697e3e32341aaababa"
+    },
+    {
+      "path": "resultados/revision-06/json-01/CASOS.json",
+      "status": "copia_literal",
+      "bytes": 5416,
+      "sha256": "66dbe05c9f3adb3131635b03f6ebbb0cd6865b52b7811ce412ee651aaec3adf7",
+      "base_sha256": "66dbe05c9f3adb3131635b03f6ebbb0cd6865b52b7811ce412ee651aaec3adf7"
+    },
+    {
+      "path": "resultados/continuacion-06/INFERENCIAS.jsonl",
+      "status": "copia_literal",
+      "bytes": 1621,
+      "sha256": "29e15297f3d3d07e041413ca06b73873c17332c0bdaebf4c4fea4172973f2a22",
+      "base_sha256": "29e15297f3d3d07e041413ca06b73873c17332c0bdaebf4c4fea4172973f2a22"
+    },
+    {
+      "path": "antecedentes/Cargo.lock",
+      "status": "copia_literal",
+      "bytes": 41482,
+      "sha256": "fcbe8edec58cc8eded54d40b6852b12061962d521fb60308b106506a4a693f63",
+      "base_sha256": "fcbe8edec58cc8eded54d40b6852b12061962d521fb60308b106506a4a693f63"
+    },
+    {
+      "path": "pruebas/json_complementario.rs",
+      "status": "copia_literal",
+      "bytes": 6207,
+      "sha256": "aab034b1fde5e560ba91005f7b1be8142c866dbb2777fce62cf2e2ed358439e2",
+      "base_sha256": "aab034b1fde5e560ba91005f7b1be8142c866dbb2777fce62cf2e2ed358439e2"
+    },
+    {
+      "path": "Cargo.toml",
+      "status": "derivado",
+      "bytes": 2085,
+      "sha256": "3af141ea97977a57c427741493523677ad471a78f8a455d9cab8377267b9ba64",
+      "base_sha256": "eeb638fb84cecb704639e05f12d67d3fb86a49ab7653ad4f338ff08ae1b9f026"
+    },
+    {
+      "path": "configuracion/INACTIVA.json",
+      "status": "derivado",
+      "bytes": 324,
+      "sha256": "462f7e5a963697196cfffbfc34ee5e0dfdee137d0cdb5af4b0603ff22eadcf03",
+      "base_sha256": "52b4223074f316cfecac04cf0a111734393033c04751acc96b42c9a547035af1"
+    },
+    {
+      "path": "nativa/mod.rs",
+      "status": "derivado",
+      "bytes": 6762,
+      "sha256": "d50b062f9fc0eb840bcad465ae70cb7c4e0efb96d486e6b171ccb3ca439dd02f",
+      "base_sha256": "a8ed18a812c49e5a9e0d7bdf9b837834f20deecc5dc17594ce3b2076b39c5892"
+    },
+    {
+      "path": "nativa/inferidor.rs",
+      "status": "copia_literal",
+      "bytes": 1939,
+      "sha256": "dfc7a223fc6f1566ce1e1d27eaf88c6476519d56dd346839e3e3de37207fda3e",
+      "base_sha256": "dfc7a223fc6f1566ce1e1d27eaf88c6476519d56dd346839e3e3de37207fda3e"
+    },
+    {
+      "path": "nativa/servidor.rs",
+      "status": "copia_literal",
+      "bytes": 3388,
+      "sha256": "39ff01a8df29b652bf3c52845c186ff761f13d0dae424bdd5c7fe68dd185904f",
+      "base_sha256": "39ff01a8df29b652bf3c52845c186ff761f13d0dae424bdd5c7fe68dd185904f"
+    },
+    {
+      "path": "nativa/supervisor.rs",
+      "status": "derivado",
+      "bytes": 14779,
+      "sha256": "43abaed85a7ef77d5b73bf647d694f61bfa4b4e1e6a4cc8dc6ab99d3eb9e2a0e",
+      "base_sha256": "9daef1c791c588710ed569a0a778a6f57b9cfa7f14a0348ced314b6b605b9f92"
+    },
+    {
+      "path": "nativa/testigo.rs",
+      "status": "derivado",
+      "bytes": 2987,
+      "sha256": "c48a4bb870e9367f86d2a943945b3b62fbb55679692281446a8dd7d07c9ed617",
+      "base_sha256": "1fee2918dc6615602e22f6d3eae5f295665e9c23e241c74d6517802ca2ac6048"
+    },
+    {
+      "path": "pruebas/frontera.rs",
+      "status": "derivado",
+      "bytes": 3928,
+      "sha256": "9e3bb55f4c4e4309791ec71d7246e00793dc23000149aeb12485ff379b79860b",
+      "base_sha256": "794f8e1bb512b5a76718562f9f831821908412c4b9b77e976d006feb2e25fbb3"
+    },
+    {
+      "path": "web/index.html",
+      "status": "derivado",
+      "bytes": 955,
+      "sha256": "936c295fabc0265fae68be601571b69622f4aebfadf60cee54fe1768f8d6d0c4",
+      "base_sha256": "92cab313b7e9285e75236ab70f5a502b26c73e39937dcc13d6f661c18a3e2283"
+    },
+    {
+      "path": "web/app.js",
+      "status": "derivado",
+      "bytes": 3998,
+      "sha256": "b77e2178fccaf9bbf898fce49b98bbfe0d4d2ca7249dbc029175b617acbf3ea4",
+      "base_sha256": "e0492ebd86dee022f6fc4718bc13d0f211a8a7dc9c48fa5ac979835a11ca2320"
+    },
+    {
+      "path": "nativa/cotejo.rs",
+      "status": "derivado",
+      "bytes": 2002,
+      "sha256": "d2915ca9083834f30dc2e9de9866bd9773a33905fd471efcf9df88e233930c9c",
+      "base_sha256": "3153504f36182b5d6b838f32e917b0bb0a63b59de766faba826742fbb5df7a79"
+    },
+    {
+      "path": "configuracion/codespaces-propuesta.json",
+      "status": "copia_literal",
+      "bytes": 633,
+      "sha256": "e666becf4010ceacbeb06454acd270c3c85987b43a34ff751858f43c48208aab",
+      "base_sha256": "e666becf4010ceacbeb06454acd270c3c85987b43a34ff751858f43c48208aab"
+    },
+    {
+      "path": "pruebas/registro-futuro.sh",
+      "status": "copia_literal",
+      "bytes": 683,
+      "sha256": "3d7e3d834e5b16d2a13a3964ee076341964b6d24a5c2b21063e7a3a5f5eee68d",
+      "base_sha256": "3d7e3d834e5b16d2a13a3964ee076341964b6d24a5c2b21063e7a3a5f5eee68d"
+    },
+    {
+      "path": "pruebas/ORACULOS.md",
+      "status": "derivado",
+      "bytes": 8657,
+      "sha256": "499963fc1795d19f1d96868c108b1c30930a1ffa23e1c6efcd854ebee8d279cd",
+      "base_sha256": "13a49eb452c9c06a95958e84223ae3967b9f4db6dc65aef28c260687d4665881"
+    },
+    {
+      "path": "README.md",
+      "status": "derivado",
+      "bytes": 1552,
+      "sha256": "9af7275d1ed09193bb1a50ec0a958ee16788ba12cc93907399f1c7393d8dbe3e",
+      "base_sha256": "003e51b7ef255bbf7ece7813e41a111ec861ebf20fa94fd9bd40d243334f5558"
+    },
+    {
+      "path": "DISENO.md",
+      "status": "derivado",
+      "bytes": 9139,
+      "sha256": "7dad446adb30efadf36b51abada7c0eddd504f16a5f0424cb153475e9e70ce99",
+      "base_sha256": "974f5685c077c55ad454ce1c8b640f137f5c7a491861f6ef007f8bbd295b55ce"
+    },
+    {
+      "path": "CONTRATO.md",
+      "status": "derivado",
+      "bytes": 4069,
+      "sha256": "31e03e4232262fbb9dd85678f85a0d2e8688b28ee1dc3df6d3e9990a176bffe0",
+      "base_sha256": "76ff1cb068e38bef2db75c4104aacd2694c83f21f137738e92deb10abead67d3"
+    },
+    {
+      "path": "HABILITACION.md",
+      "status": "derivado",
+      "bytes": 8835,
+      "sha256": "7a176146189b7cbee568f90261dbb2c00ec11e929c2f1a81e6d5d3a126a3fa11",
+      "base_sha256": "57aab0940c91d25d789359e130ffc14d2dadaa1781327f18326c5a42f9b8de26"
+    },
+    {
+      "path": "MATRIZ.md",
+      "status": "derivado",
+      "bytes": 3968,
+      "sha256": "92dcc62381933c6287ab2b3a60ffabd73628d96e392a79b77edd881985031c36",
+      "base_sha256": "3d96f245f83c011e30250062226281127bcb1f7613fcc2b0e170217cb5cdf38d"
+    },
+    {
+      "path": "nativa/parada.rs",
+      "status": "nuevo",
+      "bytes": 1631,
+      "sha256": "d1fa9e1063f646354965865cd39db3c45e827aa48be05145602410c5260de2d3",
+      "base_sha256": null
+    },
+    {
+      "path": "nativa/custodia.rs",
+      "status": "nuevo",
+      "bytes": 8429,
+      "sha256": "414dd7b7247f684ad594f522c0434760b03a7818ea0edc7cf8bf23c14d924b07",
+      "base_sha256": null
+    },
+    {
+      "path": "nativa/guarda.rs",
+      "status": "nuevo",
+      "bytes": 5435,
+      "sha256": "70314b8b1d2000a7656da6c21a3513068a8648a3bb506fbd60f35e2b75bf8dd8",
+      "base_sha256": null
+    },
+    {
+      "path": "configuracion/guarda-INACTIVA.json",
+      "status": "nuevo",
+      "bytes": 554,
+      "sha256": "f41638a0f6e81f9edf08976f0c1e6e94d99941d5bcd986eab0c61537391b0230",
+      "base_sha256": null
+    },
+    {
+      "path": "pruebas/api_real.rs",
+      "status": "nuevo",
+      "bytes": 5437,
+      "sha256": "c81a146d6acea2e4021759b561946a7cda90f6ebe92d2e927251051642f4352e",
+      "base_sha256": null
+    },
+    {
+      "path": "pruebas/observador.rs",
+      "status": "nuevo",
+      "bytes": 1729,
+      "sha256": "6b6b46a47652a80d7428c8a8e5aa4d62f1222469ddd01ace07d6f045b1e3bb3a",
+      "base_sha256": null
+    },
+    {
+      "path": "pruebas/INTERFAZ.js",
+      "status": "nuevo",
+      "bytes": 1030,
+      "sha256": "f04f655b08a53ab901fc35c2dc039442ba48c6ad3081569302d7b316c574ce30",
+      "base_sha256": null
+    },
+    {
+      "path": "antecedentes/ORACULOS-NAT01.md",
+      "status": "nuevo",
+      "bytes": 7619,
+      "sha256": "13a49eb452c9c06a95958e84223ae3967b9f4db6dc65aef28c260687d4665881",
+      "base_sha256": null
+    },
+    {
+      "path": "DIFERENCIAS.md",
+      "status": "nuevo",
+      "bytes": 2336,
+      "sha256": "5b04304976552079111cf1995b7ac82235b4e47aca08d6be19b8e1f3a70256bc",
+      "base_sha256": null
+    }
+  ],
+  "exclusion_autohuella": "MANIFIESTO.json no se incluye a sí mismo; su identidad consta en cotejo de publicación."
+}

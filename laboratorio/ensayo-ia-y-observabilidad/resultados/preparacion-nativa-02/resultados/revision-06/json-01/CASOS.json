@@ -1,0 +1,110 @@
+[
+  {
+    "id": "J01",
+    "propuesta": "{\"peticion\":\"sintetica-01\",\"referencias\":[{\"id\":\"A\",\"version\":1},{\"id\":\"B\",\"version\":1}],\"accion\":\"ninguna\",\"respuesta\":\"A y B.\"}",
+    "esperado": "OK",
+    "descripcion": "Control válido"
+  },
+  {
+    "id": "J02",
+    "propuesta": "{\"peticion\":\"sintetica-01\",\"peticion\":\"sintetica-01\",\"referencias\":[{\"id\":\"A\",\"version\":1},{\"id\":\"B\",\"version\":1}],\"accion\":\"ninguna\",\"respuesta\":\"A y B.\"}",
+    "esperado": "ESTRUCTURA",
+    "descripcion": "Clave raíz duplicada con valores iguales"
+  },
+  {
+    "id": "J03",
+    "propuesta": "{\"peticion\":\"ajena\",\"peticion\":\"sintetica-01\",\"referencias\":[{\"id\":\"A\",\"version\":1},{\"id\":\"B\",\"version\":1}],\"accion\":\"ninguna\",\"respuesta\":\"A y B.\"}",
+    "esperado": "ESTRUCTURA",
+    "descripcion": "Clave raíz duplicada con valores distintos"
+  },
+  {
+    "id": "J04",
+    "propuesta": "{\"peticion\":\"sintetica-01\",\"referencias\":[{\"id\":\"A\",\"id\":\"A\",\"version\":1},{\"id\":\"B\",\"version\":1}],\"accion\":\"ninguna\",\"respuesta\":\"A y B.\"}",
+    "esperado": "ESTRUCTURA",
+    "descripcion": "Clave duplicada dentro de referencia"
+  },
+  {
+    "id": "J05",
+    "propuesta": "{\"peticion\":\"sintetica-01\",\"referencias\":[{\"id\":\"A\",\"version\":2,\"version\":1},{\"id\":\"B\",\"version\":1}],\"accion\":\"ninguna\",\"respuesta\":\"A y B.\"}",
+    "esperado": "ESTRUCTURA",
+    "descripcion": "Versión duplicada dentro de referencia"
+  },
+  {
+    "id": "J06",
+    "propuesta": "{\"peticion\":\"sintetica-01\",\"petici\\u006fn\":\"sintetica-01\",\"referencias\":[{\"id\":\"A\",\"version\":1},{\"id\":\"B\",\"version\":1}],\"accion\":\"ninguna\",\"respuesta\":\"A y B.\"}",
+    "esperado": "ESTRUCTURA",
+    "descripcion": "Homónimo con escape Unicode en clave"
+  },
+  {
+    "id": "J07",
+    "propuesta": "{\"peticion\":\"sintetica-01\",\"referencias\":[{\"id\":\"A\",\"version\":1},{\"id\":\"B\",\"version\":1}],\"accion\":\"ninguna\",\"respuesta\":\"A y B.\"}\n{}",
+    "esperado": "ESTRUCTURA",
+    "descripcion": "Segundo objeto tras propuesta"
+  },
+  {
+    "id": "J08",
+    "propuesta": "{\"peticion\":\"sintetica-01\",\"referencias\":[{\"id\":\"A\",\"version\":1},{\"id\":\"B\",\"version\":1}],\"accion\":\"ninguna\",\"respuesta\":\"A y B.\"}\ntexto",
+    "esperado": "ESTRUCTURA",
+    "descripcion": "Prosa posterior"
+  },
+  {
+    "id": "J09",
+    "propuesta": "```json\n{\"peticion\":\"sintetica-01\",\"referencias\":[{\"id\":\"A\",\"version\":1},{\"id\":\"B\",\"version\":1}],\"accion\":\"ninguna\",\"respuesta\":\"A y B.\"}\n```",
+    "esperado": "ESTRUCTURA",
+    "descripcion": "Cercado Markdown, sin extracción"
+  },
+  {
+    "id": "J10",
+    "propuesta": " \r\n\t{\"peticion\":\"sintetica-01\",\"referencias\":[{\"id\":\"A\",\"version\":1},{\"id\":\"B\",\"version\":1}],\"accion\":\"ninguna\",\"respuesta\":\"A y B.\"}\t\n",
+    "esperado": "OK",
+    "descripcion": "Espacio JSON permitido fuera del objeto"
+  },
+  {
+    "id": "J11",
+    "propuesta": "{\"peticion\":\"sintetica-01\",\"referencias\":[{\"id\":\"B\",\"version\":1},{\"id\":\"A\",\"version\":1}],\"accion\":\"ninguna\",\"respuesta\":\"A y B.\"}",
+    "esperado": "OK",
+    "descripcion": "Referencias conjuntas permutadas; no vector SV"
+  },
+  {
+    "id": "J12",
+    "propuesta": "{\"peticion\":\"sintetica-01\",\"referencias\":[{\"id\":\"A\",\"version\":1},{\"id\":\"A\",\"version\":1}],\"accion\":\"ninguna\",\"respuesta\":\"A y B.\"}",
+    "esperado": "DEPENDENCIA",
+    "descripcion": "Duplicación de A omite la dependencia B"
+  },
+  {
+    "id": "J13",
+    "propuesta": "{\"peticion\":\"sintetica-01\",\"referencias\":[{\"id\":\"A\",\"version\":4294967296},{\"id\":\"B\",\"version\":1}],\"accion\":\"ninguna\",\"respuesta\":\"A y B.\"}",
+    "esperado": "ESTRUCTURA",
+    "descripcion": "Entero fuera del tipo u32"
+  },
+  {
+    "id": "J14",
+    "propuesta": "{\"peticion\":\"sintetica-01\",\"referencias\":[{\"id\":\"A\",\"version\":1.5},{\"id\":\"B\",\"version\":1}],\"accion\":\"ninguna\",\"respuesta\":\"A y B.\"}",
+    "esperado": "ESTRUCTURA",
+    "descripcion": "Fracción no admisible como versión"
+  },
+  {
+    "id": "J15",
+    "propuesta": "{\"peticion\":\"sintetica-01\",\"referencias\":[{\"id\":\"A\",\"version\":4294967295},{\"id\":\"B\",\"version\":1}],\"accion\":\"ninguna\",\"respuesta\":\"A y B.\"}",
+    "esperado": "VERSION",
+    "descripcion": "u32 máximo representable, versión no admitida"
+  },
+  {
+    "id": "J16",
+    "propuesta": "{\"peticion\":\"sintética-01\",\"referencias\":[{\"id\":\"A\",\"version\":1},{\"id\":\"B\",\"version\":1}],\"accion\":\"ninguna\",\"respuesta\":\"A y B.\"}",
+    "esperado": "CORRELACION",
+    "descripcion": "Identificador distinto no normalizado"
+  },
+  {
+    "id": "J17",
+    "propuesta": "{\"peticion\":\"sintetica-01\",\"referencias\":[{\"id\":\"A\",\"version\":1},{\"id\":\"B\",\"version\":1}],\"accion\":\"ninguna\",\"respuesta\":\"Línea 1\\r\\nLínea 2\\t\\\"cita\\\"\\\\ruta; ñ; é; é; 😀; \\u0000 fin.\"}",
+    "esperado": "OK",
+    "descripcion": "Contenido con Unicode y caracteres escapables"
+  },
+  {
+    "id": "J18",
+    "propuesta": "{\"peticion\":\"sintetica-01\",\"referencias\":[{\"id\":\"A\",\"version\":1},{\"id\":\"B\",\"version\":1}],\"accion\":null,\"respuesta\":\"A y B.\"}",
+    "esperado": "ESTRUCTURA",
+    "descripcion": "Nulo no sustituye campo de cadena"
+  }
+]
