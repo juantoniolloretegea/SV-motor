@@ -1,0 +1,112 @@
+{
+  "encargo": "EIO-NAV-01",
+  "run": 8,
+  "intento": 1,
+  "presupuesto": {
+    "job_s": 2400,
+    "interior_s": 2280,
+    "suma_maximos_fases_s": 2080,
+    "fases": {
+      "adquisicion": 300,
+      "herramienta": 600,
+      "construccion": 950,
+      "enlace": 30,
+      "navegador": 200
+    },
+    "rss_navegador_bytes": 4294967296,
+    "disco_usado_bytes": 10737418240,
+    "disco_libre_minimo_bytes": 2147483648,
+    "evidencia_textual_bytes": 20971520,
+    "intervalo_muestreo_s": 1
+  },
+  "control_literal": "{\"peticion\":\"nav-control-01\",\"referencias\":[{\"id\":\"A\",\"version\":1},{\"id\":\"B\",\"version\":1}],\"accion\":\"marcar\",\"respuesta\":\"Control sintético finito A y B.\"}",
+  "condiciones": {
+    "id": "nav-control-01",
+    "permiso": true,
+    "activa": false,
+    "veto": false,
+    "tokens_entrada": 0,
+    "exportacion_correcta": "resultado real force_flush y estado del exportador"
+  },
+  "casos": [
+    {
+      "id": "NAV-01",
+      "operacion": "control",
+      "id_worker": "NAV-01",
+      "plazo_ms": 10000,
+      "eventos": [
+        "consulta.A",
+        "consulta.B",
+        "computo.fin",
+        "peticion"
+      ],
+      "esperado": "WASM y JS cargados; relojes reales; cuatro spans con misma traza y ligaduras padre; pasa=true, sin excepción"
+    },
+    {
+      "id": "NAV-02",
+      "operacion": "control",
+      "id_worker": "NAV-02",
+      "plazo_ms": 10000,
+      "eventos": [
+        "consulta.A",
+        "consulta.B",
+        "computo.fin",
+        "peticion"
+      ],
+      "esperado": "ejecutar existente devuelve OK; objeto false->true; pasa=true"
+    },
+    {
+      "id": "NAV-03",
+      "operacion": "sonda_no_cooperativa",
+      "id_worker": "NAV-03-cancelada",
+      "id_nuevo": "NAV-03-nueva",
+      "terminacion_ms": 2000,
+      "plazo_conjunto_ms": 10000,
+      "esperado": "controlador ordena terminate, invalida ID/canal, rechaza respuesta tardía sintética etiquetada, nuevo control finito pasa; observación no prueba cese físico universal"
+    },
+    {
+      "id": "NAV-04",
+      "operacion": "control omitir_b=true",
+      "id_worker": "NAV-04",
+      "plazo_ms": 10000,
+      "eventos": [
+        "consulta.A",
+        "computo.fin",
+        "peticion"
+      ],
+      "evento_omitido": "consulta.B",
+      "esperado": "EVENTO_AUSENTE; un descarte; objeto false; cómputo finito concluido; no U"
+    },
+    {
+      "id": "NAV-05",
+      "operacion": "caso",
+      "id_worker": "NAV-05",
+      "plazo_ms": 120000,
+      "precondicion": "NAV01..04 pasan",
+      "peticion_literal": "Datos exclusivamente sintéticos. A versión 1: el objeto está listo. B versión 1: el objeto está disponible. Las dos fuentes son necesarias. Devuelve únicamente un objeto JSON con peticion \"sintetica-01\", referencias [{\"id\":\"A\",\"version\":1},{\"id\":\"B\",\"version\":1}], accion \"ninguna\" y respuesta que indique que A y B son necesarias. No tienes herramientas ni permiso para ejecutar efectos.\n",
+      "eventos": [
+        "consulta.A",
+        "consulta.B",
+        "generacion.inicio",
+        "generacion.fin",
+        "peticion"
+      ],
+      "esperado": "una generación real; preservar texto, tokens, EOS o límite, tiempo y comprobación existentes. OK acepta y ESTRUCTURA rechaza; no se fuerza un esperado de salida textual.",
+      "parametros": {
+        "seed": 299792458,
+        "sampling": "ArgMax",
+        "max_nuevos": 128,
+        "max_contexto": 2048,
+        "eos": 151645
+      }
+    }
+  ],
+  "exclusiones": [
+    "sin datos/células de dominio",
+    "sin S38",
+    "sin acceso Cloudflare/sitios web",
+    "sin herramientas ni efectos en el modelo",
+    "sin PC, GPU ni plataforma productiva",
+    "sin reintento o corrección posterior a la ejecución"
+  ]
+}

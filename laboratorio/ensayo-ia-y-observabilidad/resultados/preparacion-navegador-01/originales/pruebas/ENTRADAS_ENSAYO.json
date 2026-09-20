@@ -1,0 +1,71 @@
+{
+  "estado": "identidades documentales completadas; la adquisición del ejecutor y el precompromiso experimental conservan sus comprobaciones",
+  "rust": [
+    {
+      "archivo": "rustc-1.98.0-x86_64-unknown-linux-gnu.tar.xz",
+      "bytes": 79745456,
+      "sha256": "0e37cb339f447fc44d6d781073bacacebfdc5612f2600e4c7e84c266f5f3aced",
+      "url": "https://static.rust-lang.org/dist/rustc-1.98.0-x86_64-unknown-linux-gnu.tar.xz",
+      "funcion": "toolchain nativa aislada"
+    },
+    {
+      "archivo": "cargo-1.98.0-x86_64-unknown-linux-gnu.tar.xz",
+      "bytes": 11669560,
+      "sha256": "2f512d170d3dd23e16ababcda32ee2e6d5172d861a7af1f504e0b1e270cafab9",
+      "url": "https://static.rust-lang.org/dist/cargo-1.98.0-x86_64-unknown-linux-gnu.tar.xz",
+      "funcion": "toolchain nativa aislada"
+    },
+    {
+      "archivo": "rust-std-1.98.0-x86_64-unknown-linux-gnu.tar.xz",
+      "bytes": 30715556,
+      "sha256": "f5022e6c95a5ad23cca2513dc8281200f585fa188de6370aa37b128a43f876a3",
+      "url": "https://static.rust-lang.org/dist/rust-std-1.98.0-x86_64-unknown-linux-gnu.tar.xz",
+      "funcion": "toolchain nativa aislada"
+    },
+    {
+      "archivo": "rust-std-1.98.0-wasm32-unknown-unknown.tar.xz",
+      "bytes": 22441312,
+      "sha256": "3bb537c09555b96020a38a3a8810c38908b194eff3c2cb6184a45dda5c6828de",
+      "url": "https://static.rust-lang.org/dist/rust-std-1.98.0-wasm32-unknown-unknown.tar.xz",
+      "funcion": "biblioteca estándar WASM",
+      "procedencia": "Paquete y fichero de suma aportados por la dirección; tamaño medido y SHA-256 recalculado, coincidente con la suma aportada. Véase resultados/ejecucion-04/identidades-recibidas/COTEJO.md."
+    }
+  ],
+  "entradas": [
+    {
+      "archivo": "Qwen3-0.6B-Q4_K_M.gguf",
+      "repositorio": "unsloth/Qwen3-0.6B-GGUF",
+      "revision": "f2d6f9ca53a254cc379437c49e4b2eb447f779df",
+      "ruta": "Qwen3-0.6B-Q4_K_M.gguf",
+      "bytes": 396705472,
+      "sha256": "ac2d97712095a558e31573f62f466a3f9d93990898b0ec79d7c974c1780d524a",
+      "url": "https://huggingface.co/unsloth/Qwen3-0.6B-GGUF/resolve/f2d6f9ca53a254cc379437c49e4b2eb447f779df/Qwen3-0.6B-Q4_K_M.gguf",
+      "funcion": "consumida por Candle",
+      "procedencia": "metadatos receptores en main, asociados por último cambio; bytes fijados pendientes de cotejo"
+    },
+    {
+      "archivo": "tokenizer.json",
+      "repositorio": "Qwen/Qwen3-0.6B",
+      "revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+      "ruta": "tokenizer.json",
+      "bytes": 11422654,
+      "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+      "url": "https://huggingface.co/Qwen/Qwen3-0.6B/resolve/c1899de289a04d12100db370d81485cdf75e47ca/tokenizer.json",
+      "funcion": "consumida por tokenizers",
+      "procedencia": "puntero inmutable leído por recepción; bytes pendientes de cotejo"
+    }
+  ],
+  "referencia": {
+    "archivo": "tokenizer_config.json",
+    "revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+    "url": "https://huggingface.co/Qwen/Qwen3-0.6B/raw/c1899de289a04d12100db370d81485cdf75e47ca/tokenizer_config.json",
+    "bytes": 9732,
+    "sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+    "plantilla_cotejada": true,
+    "funcion": "documentación y plantilla de referencia; no consumida por el adaptador",
+    "pendiente": null,
+    "archivo_custodiado": "resultados/ejecucion-04/identidades-recibidas/tokenizer_config.json",
+    "metodo_cotejo": "Cotejo estático de las ramas de chat_template y del literal Rust: un mensaje user, contenido string, sin tools ni system, add_generation_prompt=true, enable_thinking=false.",
+    "procedencia": "Archivo original aportado por la dirección tras solicitar la URL fijada; bytes medidos y huella calculada sobre el adjunto. No descarga receptora independiente desde Hugging Face."
+  }
+}

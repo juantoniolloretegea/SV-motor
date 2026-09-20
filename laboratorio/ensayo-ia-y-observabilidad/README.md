@@ -96,3 +96,8 @@ Las referencias móviles sirven para identificar las fuentes. Antes del ensayo d
 ## Actualización de continuidad · 20 de septiembre de 2026
 
 La versión preparatoria anterior se conserva como antecedente. Existen ya resultados de EIO-05, EIO-06 y EIO-JSON-01. La [revisión receptora de JSON-01](resultados/json-01/RECEPCION.md) contrasta 24 controles de regresión y 35 complementarios, con una reserva explícita sobre la identidad de los archivos efímeros de evidencia. El rechazo estructural de las salidas del modelo permanece como resultado adverso. La comparación con/sin telemetría ya tiene tres pares en EIO-05; la comprobación WASM de EIO-06 no acredita ejecución en navegador. El siguiente trabajo es preparar esa ejecución, dentro del perímetro original, sin nuevas inferencias o ejecuciones autorizadas por esta nota. No se constituye una solución definitiva ni se cierra la aceptación científica.
+
+
+## EIO-NAV-01 · preparación autorizada · 20/09/2026
+
+[Paquete derivado y precompromiso](resultados/preparacion-navegador-01/README.md): una ejecución remota adicional número 8, intento 1, sin reintentos. Incluye matriz NAV-01…05, custodia original y cierre; aún no acredita ejecución en navegador. Los antecedentes y sus reservas se conservan. S38 sigue pendiente en su sede propia.
