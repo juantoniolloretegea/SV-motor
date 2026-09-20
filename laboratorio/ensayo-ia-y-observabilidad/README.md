@@ -91,3 +91,8 @@ Esta versión contiene exclusivamente documentación preparatoria. No incluye pe
 - [Recursos de los ejecutores de GitHub Actions](https://docs.github.com/en/actions/reference/runners/github-hosted-runners).
 
 Las referencias móviles sirven para identificar las fuentes. Antes del ensayo deberán sustituirse en el manifiesto de ejecución por revisiones concretas y huellas verificadas de los artefactos.
+
+
+## Actualización de continuidad · 20 de septiembre de 2026
+
+La versión preparatoria anterior se conserva como antecedente. Existen ya resultados de EIO-05, EIO-06 y EIO-JSON-01. La [revisión receptora de JSON-01](resultados/json-01/RECEPCION.md) contrasta 24 controles de regresión y 35 complementarios, con una reserva explícita sobre la identidad de los archivos efímeros de evidencia. El rechazo estructural de las salidas del modelo permanece como resultado adverso. La comparación con/sin telemetría ya tiene tres pares en EIO-05; la comprobación WASM de EIO-06 no acredita ejecución en navegador. El siguiente trabajo es preparar esa ejecución, dentro del perímetro original, sin nuevas inferencias o ejecuciones autorizadas por esta nota. No se constituye una solución definitiva ni se cierra la aceptación científica.
