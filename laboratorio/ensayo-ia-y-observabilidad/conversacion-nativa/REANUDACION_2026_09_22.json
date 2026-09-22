@@ -1,0 +1,40 @@
+{
+  "esquema": "EIO-SUCESO-REANUDACION-1",
+  "fecha_comprobacion_utc": "2026-09-22T08:23:12.191Z",
+  "antecedente": "SUCESO_DESATENDIDO_2026_09_22.json",
+  "revision_previa": "081f9ebee401349228f748c4bd06113043ad6894",
+  "actuacion": "Reanudación solicitada del Codespace y arranque del servicio conservado.",
+  "observaciones": [
+    "Tras reanudar el Codespace no se encontró el proceso eio-conversacion; el servicio requirió un arranque expreso.",
+    "El ejecutable conservado coincide con la huella acreditada en la incidencia de conexión.",
+    "Antes de abrir el registro se conservó una copia local y se cotejó su huella.",
+    "La comprobación del registro, mediante el ejecutable Rust, indicó integridad conforme.",
+    "El servidor emitió EIO_CONVERSACION_LISTA. La vista de puertos de Codespaces identifica el proceso 2805 y el puerto 3000 con visibilidad Private."
+  ],
+  "identidad": {
+    "ejecutable_sha256": "b9ee13e43e55a2518fa62afc219a5d61a825bd9dfaa40dac1634a474bf2a7e8a",
+    "registro_previo_y_copia_sha256": "153b3801b642f5b9664677b38869220ea9ec37bc74a98c8258023b5971e3dedb"
+  },
+  "recuperacion": {
+    "integridad": "conforme",
+    "expedientes": 1,
+    "conversaciones": 4,
+    "sucesos": 39,
+    "bytes": 34121
+  },
+  "servicio": {
+    "pid_observado": 2805,
+    "puerto": 3000,
+    "visibilidad": "Private",
+    "nueva_inferencia": "No realizada; el servicio se deja preparado para comprobación interactiva."
+  },
+  "limitacion": "La navegación completa no quedó verificada desde el navegador de comprobación: rechazó la URL con net::ERR_BLOCKED_BY_CLIENT. La evidencia de proceso y puerto activos no se equipara a una comprobación completa desde el navegador del usuario.",
+  "marcadores_de_necesidad_futura": [
+    "Distinguir en la interfaz el estado de conexión, la disponibilidad de los componentes necesarios y la vigencia de la autorización del usuario; acompañar cualquier indicador luminoso con texto.",
+    "Definir la recuperación tras ausencia y la reautenticación cuando proceda; la reconexión de transporte no acredita la identidad de la persona que ocupa el puesto.",
+    "Identificar cada instancia de servicio y correlacionar en JSON sus arranques, interrupciones, recuperaciones y peticiones; conservar como desconocida cualquier causa no acreditada.",
+    "Comprobar qué componentes se recuperan automáticamente y cuáles requieren activación expresa, sin repetir una petición cuyo resultado anterior sea incierto.",
+    "Mantener separables la conversación asistida, la presentación del frame y la representación algebraica. Estos marcadores no constituyen implementación ni alteración del núcleo o de la IR."
+  ],
+  "estado_marcadores": "Propuestos para evaluación posterior; sin asignación a R2, R3 o R4 hasta cotejar su planificación documental."
+}
