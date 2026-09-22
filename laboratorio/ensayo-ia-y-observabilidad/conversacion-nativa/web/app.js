@@ -37,6 +37,7 @@ function renderState(){const previousChat=chatId;const cases=Object.values(state
  $('caseName').textContent=state.cases[caseId]?.title||'Conversación con Qwen';$('workspace').hidden=!caseId;$('empty').hidden=!!caseId;$('export').disabled=!caseId;
  showConnection(state.active?'Servicio conectado · Qwen está trabajando · '+state.active.seconds+' s':'Servicio conectado · '+state.identity.model+' · CPU',state.active?'working':'available');
  $('serviceInfo').textContent='Proceso iniciado: '+new Date(Number(state.service.started_ms)).toLocaleString('es-ES')+'. La identidad personal depende del acceso de GitHub; el ensayo no dispone aún de sesiones profesionales individuales.';
+ const o=state.observability;const measured=o?.telemetry?.ok&&o?.observer?.fresh;$('observability').textContent=(measured?'Observación activa':'Observación incompleta')+' · OpenTelemetry: '+(o?.telemetry?.records??0)+' registros · muestras Linux: '+(o?.observer?.samples??0)+'. Cobertura limitada al servicio y sus procesos; no equivale a aislamiento.';
  $('storage').textContent='Registro conservado: '+(state.storage_bytes/1048576).toFixed(2)+' MiB de '+state.storage_limit/1048576+' MiB. Ningún expediente se elimina automáticamente.';
  try{localStorage.setItem('eio.case',caseId);localStorage.setItem('eio.chat',chatId);}catch{}if(previousChat!==chatId)restoreDraft();controls();
 }

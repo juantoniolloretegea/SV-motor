@@ -9,7 +9,7 @@ fn fixture()->(App,PathBuf){
  let c=Context{prompt:"Pregunta de prueba".into(),token_ids:vec![1],sha256:"huella-prueba".into(),messages:vec![],input_tokens:1,reserved_output:32,limit:CONTEXT,system:SYSTEM.into()};
  db.append("exp-prueba","peticion_admitida",json!({"chat_id":"chat-prueba","request_id":"peticion-prueba-001","user":"Dato conservado","context":c,"profile":Profile::default()})).unwrap();
  let tokenizer=tokenizers::Tokenizer::new(tokenizers::models::bpe::BPE::default());
- (App{db:Arc::new(Mutex::new(db)),active:Arc::new(Mutex::new(None)),tokenizer:Arc::new(tokenizer),models:PathBuf::new(),session_key:"clave-de-prueba".into(),identity:json!({"test":true}),lifecycle,stopping:Arc::new(AtomicBool::new(false))},root)
+ (App{db:Arc::new(Mutex::new(db)),active:Arc::new(Mutex::new(None)),tokenizer:Arc::new(tokenizer),models:PathBuf::new(),session_key:"clave-de-prueba".into(),identity:json!({"test":true}),lifecycle,telemetry:None,observer:None,stopping:Arc::new(AtomicBool::new(false))},root)
 }
 #[test] fn reenvio_confirmado_no_duplica_y_rechaza_colision(){
  let (app,p)=fixture();

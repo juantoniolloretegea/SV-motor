@@ -10,7 +10,7 @@ pub fn execute()->Result<()>{
  let root=output.join("datos");let lifecycle=lifecycle::Lifecycle::open(&root)?;
  let identity=json!({"model":"Qwen3-0.6B · Q4_K_M","model_sha256":MODEL_HASH,"tokenizer_sha256":TOKENIZER_HASH,
   "binary_sha256":store::file_hash(&std::env::current_exe()?)?,"candle_revision":"ddf1b879dc3a1760cbcb3f3c4a7c6467850cec4a","device":"CPU","experiment":"comparacion-01"});
- let app=App{db:Arc::new(Mutex::new(Database::open(root)?)),active:Arc::new(Mutex::new(None)),tokenizer:Arc::new(tokenizer),models,session_key:"sin-servidor-http".into(),identity:identity.clone(),lifecycle,stopping:Arc::new(AtomicBool::new(false))};
+ let app=App{db:Arc::new(Mutex::new(Database::open(root)?)),active:Arc::new(Mutex::new(None)),tokenizer:Arc::new(tokenizer),models,session_key:"sin-servidor-http".into(),identity:identity.clone(),lifecycle,telemetry:None,observer:None,stopping:Arc::new(AtomicBool::new(false))};
  // La campaña comparte los pesos y la implementación, pero no inicia HTTP ni abre los expedientes reales.
  let questions=[
   ("lexico","¿La palabra «tonto» pertenece al español? Explique brevemente su significado.","Reconoce la palabra española y explica su significado; no deriva la pregunta a asistencia sanitaria."),
