@@ -1,6 +1,6 @@
 # Ensayo de inteligencia artificial y observabilidad
 
-**Edición documental:** 2.4 · 22 de septiembre de 2026.  
+**Edición documental:** 2.5 · 22 de septiembre de 2026.  
 **Producto experimental:** EIO conversación 0.1.3 · Beta.  
 **Estado:** inferencia nativa y observación verificadas en ámbitos delimitados; conformidad completa de la vía B pendiente.
 
@@ -17,6 +17,8 @@ La [entrega EIO conversación 0.1.3-beta.1](https://github.com/juantoniolloreteg
 El programa permite crear expedientes y conversaciones, formular preguntas libres, conservar el contexto exacto, consultar sucesos, cancelar una generación y exportar un expediente. La interfaz distingue disponibilidad del servicio y estado de la observación. La conservación local no proporciona disponibilidad permanente ni autenticación profesional individual.
 
 La entrega documenta una configuración experimental. No acredita aptitud clínica, respuesta verdadera por defecto, reproducción determinista ni integración completa de conocimiento autorizado.
+
+La edición documental 2.5 actualiza el alcance y el estado del ensayo. Conserva la entrega Beta 1 y sus huellas; no designa un ejecutable nuevo. La [edición 2.4](https://github.com/juantoniolloretegea/SV-motor/blob/a14ea31b3903d49a98f08b912206b1c8c9eeaf74/laboratorio/ensayo-ia-y-observabilidad/README.md) permanece recuperable en su corte publicado.
 
 ## Composición y función
 
@@ -50,13 +52,35 @@ La vía B sitúa la inferencia en el anfitrión nativo. La vía A la sitúa en e
 
 Los [diseños NAT02](resultados/preparacion-nativa-02/DISENO.md) y [NAT03](resultados/preparacion-nativa-03/README.md) conservan sus obligaciones. La conversación actual es una realización parcial de la vía B. Una capacidad pendiente no se contabiliza como satisfecha por disponer de una biblioteca o de un diagrama.
 
+## Resultado alcanzado y condición de continuación
+
+| Alcance | Estado al 22 de septiembre de 2026 |
+|---|---|
+| Entrega de Qwen en conversación nativa | Beta 1 publicada; composición y comprobaciones identificadas en la entrega. |
+| Consulta documental DOC-01 | Campaña finalizada: cuatro peticiones completadas y cero aceptaciones del contrato estricto. [Informe](resultados/consulta-documental-01/INFORME.md). |
+| Comprobación inicial del entorno para la guarda | Finalizada con evidencia insuficiente para habilitarla. [CAPACIDAD-CGROUP-01](resultados/capacidad-cgroup-01/README.md). |
+| Conformidad integral de la vía B | Pendiente: guarda exterior, separación de custodia y control, y verificación completa del recorrido. |
+| gpt-oss-20b en la vía A | Candidato sin instalación; compatibilidad y recursos pendientes de acreditar. |
+
+La comprobación del entorno examinó la vista raíz de cgroup v2 del contenedor. El montaje no figuraba como de solo lectura; la apertura de `cgroup.kill` devolvió permiso denegado. No se identificó una hoja exclusiva delegada para el ensayo. Este resultado no demuestra que toda delegación posible sea inviable, pero tampoco satisface el requisito de NAT03. No se ejecutaron inferencias, escrituras en controles ni pruebas de bloqueo.
+
+La continuación de B queda condicionada a acreditar esa capacidad exterior y delimitar la integración pendiente. Cada comprobación adicional deberá resolver una carencia concreta de la tabla anterior, con resultado esperado, límite de recursos y condición de parada. Un resultado adverso cierra su prueba; repetirla requiere una corrección o una condición distinta expresamente justificada. Las campañas finalizadas no se repiten para aumentar el volumen de registros. Si el entorno no ofrece la capacidad necesaria dentro de los recursos autorizados, se consigna la limitación y se eleva una decisión de alcance; no se declara conformidad.
+
+## Vía A y selección de modelo
+
+El [diagrama de la vía A](diagramas/via-a.mmd) sitúa la inferencia en un trabajador del navegador con Rust y WebAssembly. La supervisión y la custodia exteriores conservan sus funciones. Una interfaz que consulta un modelo nativo remoto corresponde a otra distribución de ejecución; la presencia de WebAssembly en el control no demuestra aislamiento de aquella inferencia.
+
+El [catálogo Modelos de IA](modelos-de-ia/README.md) separa la identidad del modelo de la vía utilizada. Conserva Qwen y Candle en sus ubicaciones actuales y registra gpt-oss-20b como candidato. La selección de este último no acredita su compatibilidad con el navegador ni evita la necesidad de un motor numérico compatible.
+
+WebAssembly modifica el entorno de ejecución y sus fronteras; no añade conocimiento al modelo. Tampoco garantiza respuestas idénticas entre plataformas: deben considerarse configuración, cuantización, selección de tokens y diferencias de cálculo. Comparar Qwen en B con gpt-oss en A permitiría describir dos configuraciones completas, pero no atribuir sus diferencias exclusivamente a WebAssembly. Un contraste causal entre vías requeriría conservar el modelo y controlar las demás condiciones pertinentes.
+
 ## Consulta documental inicial
 
 El universo OP-IMM-001 permite preparar pruebas sobre material identificado antes de disponer de todos los textos de respaldo. DOC-01 utiliza un pasaje efectivamente suministrado y distingue sus referencias bibliográficas del contenido de esas obras. La consulta queda limitada por un contrato comprobable exterior al modelo.
 
 La instrucción de utilizar únicamente determinadas fuentes no elimina el cálculo probabilístico ni garantiza obediencia. La evidencia debe mostrar qué se suministró, qué se pidió, qué produjo el modelo y qué admitió o rechazó el verificador. La comprobación de citas literales tiene un alcance menor que la validación de una explicación libre.
 
-El trabajo siguiente debe recuperar la correspondencia funcional pendiente con la vía B sin exigir, para toda prueba instrumental, que el universo clínico esté terminado. La preparación de un corpus parcial no modifica el conocimiento canónico ni habilita decisiones clínicas. La devolución al encargo original requiere identificar resultados, carencias y necesidades concretas del Lenguaje; no se cierra por la publicación de esta Beta.
+El trabajo pendiente de la vía B se rige por la condición de continuación anterior; no exige que el universo clínico esté terminado para toda prueba instrumental. La preparación de un corpus parcial no modifica el conocimiento canónico ni habilita decisiones clínicas. La devolución al encargo original requiere identificar resultados, carencias y necesidades concretas del Lenguaje; no se cierra por la publicación de esta Beta.
 
 ## Evidencia y continuidad
 

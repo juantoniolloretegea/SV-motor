@@ -1,0 +1,28 @@
+{
+  "schema": "EIO-CAPACIDAD-CGROUP-01/1",
+  "unix_seconds": 1790103843,
+  "cgroup2_mounts": 1,
+  "root_mount_read_only": false,
+  "checks": [
+    {
+      "path": "/sys/fs/cgroup/cgroup.procs",
+      "open_write_without_writing": true,
+      "error": ""
+    },
+    {
+      "path": "/sys/fs/cgroup/cgroup.kill",
+      "open_write_without_writing": false,
+      "error": "Permission denied (os error 13)"
+    },
+    {
+      "path": "/sys/fs/cgroup/cgroup.subtree_control",
+      "open_write_without_writing": true,
+      "error": ""
+    }
+  ],
+  "writes_to_control_files": 0,
+  "cgroups_created": 0,
+  "inferences": 0,
+  "decision": "DELEGACION_Y_CONTROL_SUPERIOR_NO_ACREDITADOS",
+  "scope": "Inspeccion de la vista cgroup del contenedor; no acredita capacidades de un anfitrion exterior"
+}
