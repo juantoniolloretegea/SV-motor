@@ -44,3 +44,20 @@ La interfaz comprueba el estado HTTP, el tipo de contenido y la presencia de un 
 Las acciones efectivas del usuario producen una indicación de actividad en la terminal, sin incluir preguntas, respuestas ni nombres de expedientes. Las consultas periódicas de estado permanecen silenciosas. No se modifica el periodo de inactividad de GitHub ni se introduce actividad ficticia para impedir la parada. Véase [la explicación de GitHub sobre actividad e inactividad](https://docs.github.com/en/codespaces/setting-your-user-preferences/setting-your-timeout-period-for-github-codespaces).
 
 La incidencia y el alcance de la comprobación de su corrección se conservan en [INCIDENCIA_CONEXION_2026_09_22.json](INCIDENCIA_CONEXION_2026_09_22.json).
+
+
+## Titularidad y licencias
+
+Sistema Vectorial SV — © Juan Antonio Lloret Egea, 2026. ITVIA — IA eñ™, ISSN 2695-6411. Se reproduce la licencia **CC BY-NC-ND 4.0** declarada en el [aviso canónico del repositorio](https://github.com/juantoniolloretegea/SV-motor/blob/30683c5ec11d33ecabd6e3defb8110f530290df9/README.md). El aviso visible y las exportaciones incorporan [AVISO_LICENCIAS.json](AVISO_LICENCIAS.json). Qwen3-0.6B conserva Apache 2.0 y Candle conserva MIT o Apache 2.0; este aviso no sustituye sus licencias ni constituye un inventario exhaustivo de dependencias. Tampoco asigna al SV la titularidad de las intervenciones del usuario ni determina los derechos de cada salida generada.
+
+## Interpretación de la sesión recibida el 22 de septiembre
+
+El cotejo de las dos exportaciones recibidas identifica un mismo expediente y una conversación con nueve turnos finalizados. Los primeros cincuenta sucesos se conservan en la exportación posterior de 460 sucesos. La numeración «Conversación 1» corresponde al expediente recién creado; estas exportaciones no aportan evidencia de traslado a otro expediente. Los contextos registrados incorporan progresivamente las intervenciones anteriores.
+
+La muestra revela sustitución del significado de la pregunta, afirmaciones no justificadas, alteración de cantidades aportadas y aceptación de premisas sin comprobación. La configuración observada no acredita aptitud para consejo profesional. El diagnóstico causal permanece abierto: la muestra no separa por sí sola los efectos de la capacidad del modelo, la cuantización y la implementación de inferencia. No se ha comparado esta sesión con un segundo motor ni se ha cambiado el modelo para obtener un resultado favorable.
+
+Las nueve generaciones declaran fin normal y retorno cero. Las entradas aumentan de 126 a 1.772 tokens, con reserva constante de 2.048; ninguna respuesta alcanza esa reserva ni los 600 segundos configurados. La primera salida del proceso pasa de 19,86 a 403,12 segundos. Estos tiempos incluyen carga y procesamiento del contexto, y pueden corresponder al texto de razonamiento antes de la respuesta final. La memoria residente muestreada se sitúa entre 1,21 y 1,96 GiB. La muestra evidencia una limitación operativa; no determina un máximo de contexto utilizable.
+
+La versión 0.1.0 escribía `external_operations: 0` como constante. **Ese campo no acreditaba medición de red ni ausencia de conexiones externas.** La versión 0.1.1 utiliza `null` y declara que no existe instrumentación de red. El número de llamadas a herramientas queda circunscrito a que el servicio no ofrece herramientas al modelo. La interfaz explicita que el contenido no se ha validado. Los sucesos anteriores permanecen intactos y la exportación añade una nota sobre su interpretación.
+
+El [registro de revisión](REVISION_SESION_2026_09_22.json) contiene las identidades de los archivos recibidos, los resultados y sus límites; no reproduce las conversaciones aportadas. Las capturas del titular documentan la recuperación del acceso tras autenticación en una ventana privada. Esta observación apoya una incidencia dependiente de la sesión del navegador, sin demostrar qué cookie o mecanismo originó el HTTP 404.

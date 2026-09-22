@@ -1,0 +1,136 @@
+{
+  "schema": "EIO-REVISION-SESION-1",
+  "fecha": "2026-09-22",
+  "fuentes": [
+    {
+      "archivo": "f39a2a05-22bc-40e5-9215-89d9b222d5f0.json",
+      "bytes": 106011,
+      "sha256": "2b66b209eb28be281d1ebca259290e5a66bcad0d40bd165564713ec23359ac2c",
+      "sucesos": 50
+    },
+    {
+      "archivo": "37723c50-baf0-4d8a-88c4-5cb2a751773b.json",
+      "bytes": 1101478,
+      "sha256": "6e58798c068dd24e4300f034856d259c549f071fbe79e5a4453140dd8cb93d5d",
+      "sucesos": 460
+    }
+  ],
+  "cotejo": {
+    "prefijo_de_50_sucesos_identico": true,
+    "expedientes": 1,
+    "conversaciones": 1,
+    "peticiones_admitidas": 9,
+    "respuestas_finalizadas": 9,
+    "respuestas_parciales": 440,
+    "limite": "Cotejo estructural de las exportaciones recibidas. No equivale a certificación de procedencia ni a validación independiente de todas las huellas del registro."
+  },
+  "resultado_operativo": {
+    "fin_normal": 9,
+    "retorno_cero": 9,
+    "tokens_entrada": [
+      126,
+      307,
+      398,
+      537,
+      689,
+      903,
+      1271,
+      1626,
+      1772
+    ],
+    "tokens_salida": [
+      486,
+      192,
+      304,
+      368,
+      406,
+      574,
+      368,
+      394,
+      281
+    ],
+    "reserva_salida": 2048,
+    "limite_segundos": 600,
+    "primera_salida_segundos": [
+      19.864965382,
+      44.42579952,
+      75.961878523,
+      91.42733357,
+      121.300433903,
+      167.014068314,
+      257.886836953,
+      357.386899915,
+      403.117891225
+    ],
+    "duracion_segundos": [
+      119.651631875,
+      84.521967876,
+      149.851306168,
+      184.669210706,
+      231.554950986,
+      335.807992131,
+      374.857469175,
+      494.440370664,
+      503.582949439
+    ],
+    "rss_muestreada_min_bytes": 1299038208,
+    "rss_muestreada_max_bytes": 2106970112,
+    "limite_medicion": "Primera salida del proceso, no necesariamente primera respuesta final visible; RSS muestreada del hijo, no máximo exacto ni memoria agregada."
+  },
+  "hallazgos": [
+    {
+      "codigo": "SEM-01",
+      "turno": 1,
+      "descripcion": "El texto de razonamiento generado sustituye la entidad clínica de la petición por otra distinta. La pregunta registrada conserva el término original."
+    },
+    {
+      "codigo": "SEM-02",
+      "turnos": [
+        2,
+        3
+      ],
+      "descripcion": "Respuestas no justificadas que confunden finalidad preventiva y tratamiento de la enfermedad de base.",
+      "contraste": "https://www.cdc.gov/shingles/hcp/vaccine-considerations/immunocompromised-adults.html"
+    },
+    {
+      "codigo": "SEM-03",
+      "turnos": [
+        5,
+        6,
+        8
+      ],
+      "descripcion": "Producción de ingredientes incoherentes, alteración de ingredientes y cantidades aportados y declaración de corrección sin justificarla."
+    },
+    {
+      "codigo": "SEM-04",
+      "turno": 7,
+      "descripcion": "Aceptación de una premisa temporal sin verificación, sustitución de la fecha en el texto generado y explicación histórica sin fuente. No se evalúa aquí la fecha real de elecciones."
+    },
+    {
+      "codigo": "OBS-01",
+      "descripcion": "external_operations: 0 era constante en la versión 0.1.0. No acredita vigilancia de red."
+    },
+    {
+      "codigo": "UI-01",
+      "descripcion": "El fin normal es una terminación del proceso, no una aprobación del contenido."
+    },
+    {
+      "codigo": "LIC-01",
+      "descripcion": "Ausencia de aviso visible de titularidad y licencia SV y de su incorporación en la exportación recibida."
+    }
+  ],
+  "dictamen": "La configuración ensayada no acredita aptitud para el consejo profesional mostrado. No se atribuye intención de engaño ni se generaliza el resultado a toda la familia Qwen.",
+  "causa": "No aislada entre capacidad del modelo, cuantización e implementación. El error inicial aparece con contexto de 126 tokens y sin agotamiento de los límites registrados.",
+  "acceso": {
+    "resultado": "El titular documenta autenticación en ventana privada y acceso funcional posterior.",
+    "limite": "No demuestra específicamente caducidad de cookies."
+  },
+  "correccion": {
+    "version": "0.1.1",
+    "aviso_licencias": "AVISO_LICENCIAS.json",
+    "observabilidad": "Operaciones externas no medidas; contenido sin validación; alcance de primera salida explícito.",
+    "sucesos_anteriores": "No modificados",
+    "estado": "Preparada; compilación y despliegue pendientes de comprobación."
+  },
+  "privacidad": "Los archivos originales y sus conversaciones no se publican en este registro."
+}
