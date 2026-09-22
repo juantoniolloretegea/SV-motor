@@ -1,0 +1,33 @@
+{
+  "esquema": "EIO-INCIDENCIA-CONEXION-1",
+  "fecha_utc": "2026-09-22T07:29:31.989011+00:00",
+  "revision_codigo": "2114b646040c30dc8bef7f37000e96e6ec6969bd",
+  "observaciones": [
+    "La interfaz mostró Unexpected end of JSON input al consultar el servicio.",
+    "La interfaz de Codespaces indicó Codespace is stopped.",
+    "El cliente analizaba directamente toda respuesta mediante Response.json(), sin comprobar estado, tipo de contenido ni cuerpo vacío."
+  ],
+  "causa_de_la_parada": "No determinada mediante un registro de parada. La inactividad es una posibilidad documentada por GitHub, no una atribución acreditada para este episodio.",
+  "correccion": [
+    "Comprobación HTTP previa al análisis JSON y mensajes diferenciados de indisponibilidad.",
+    "Controles de recuperación y conservación del borrador en la sesión de la pestaña, sujeta a disponibilidad del almacenamiento del navegador.",
+    "Desactivación de operaciones cuando la conexión no está acreditada.",
+    "Indicaciones de actividad real en la terminal sin contenido de las consultas; las lecturas periódicas no generan actividad artificial."
+  ],
+  "verificacion": {
+    "compilacion": "conforme con Rust/Cargo 1.98.0 y Cargo.lock conservado",
+    "duracion_compilacion_segundos": 78,
+    "comprobacion_sintactica_cliente": "conforme",
+    "arranque_servidor": "EIO_CONVERSACION_LISTA observado",
+    "pid_observado": 4020,
+    "puerto": 3000,
+    "visibilidad": "Private",
+    "ejecutable_sha256": "b9ee13e43e55a2518fa62afc219a5d61a825bd9dfaa40dac1634a474bf2a7e8a",
+    "navegacion_posterior": "No completada: el navegador de comprobación rechazó la URL con net::ERR_BLOCKED_BY_CLIENT.",
+    "ensayo_visual_de_interrupcion_y_recuperacion": "pendiente",
+    "nueva_inferencia_tras_esta_correccion": "no ejecutada"
+  },
+  "alcance": "Corrección compilada y servicio reanudado. La comprobación funcional completa posterior a esta corrección permanece pendiente; no se sustituye por los resultados de la versión anterior.",
+  "datos": "No se incorpora contenido de consultas personales ni se modifica el registro de conversaciones.",
+  "referencia_plataforma": "https://docs.github.com/en/codespaces/setting-your-user-preferences/setting-your-timeout-period-for-github-codespaces"
+}

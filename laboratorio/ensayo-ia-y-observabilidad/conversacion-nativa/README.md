@@ -33,3 +33,14 @@ Compilar el paquete con Rust/Cargo 1.98.0 y las dependencias fijadas. Variables 
 El programa reconoce `--check DIRECTORIO` para comprobar y reconstruir registros; esta apertura añade el cierre por reinicio si encuentra una generación pendiente. `--worker` es el modo interno del proceso de inferencia.
 
 Referencia del fabricante: [Qwen3-0.6B](https://huggingface.co/Qwen/Qwen3-0.6B/blob/c1899de289a04d12100db370d81485cdf75e47ca/README.md). Los resultados de la comprobación funcional realizada en Codespaces se recogen en [COMPROBACION_2026_09_22.json](COMPROBACION_2026_09_22.json): conversación libre y continuidad, respuesta con razonamiento, cancelación, rechazo por exceso de contexto y recuperación de cuatro conversaciones tras reiniciar el servicio. Las exportaciones anterior y posterior al reinicio resultaron idénticas. Estas observaciones no acreditan la capacidad práctica con historias largas ni la suficiencia del modelo para un dominio profesional.
+
+
+## Disponibilidad e interrupciones de conexión
+
+El servicio depende de que el Codespace esté iniciado. La plataforma puede detenerlo por inactividad; la conservación de los expedientes en disco no equivale a la disponibilidad permanente del proceso HTTP. Después de reanudar el entorno, se inicia el ejecutable conservado mediante la orden nativa `/workspaces/eio-instalacion-nativa-20260922/target/release/eio-conversacion`. El puerto 3000 debe conservar su visibilidad privada.
+
+La interfaz comprueba el estado HTTP, el tipo de contenido y la presencia de un cuerpo antes de analizarlo como JSON. Una interrupción se presenta como indisponibilidad del servicio. No se reenvían automáticamente peticiones de generación sin confirmación. El texto pendiente se conserva en el almacenamiento de sesión de la pestaña, cuando el navegador lo permite; este borrador no sustituye al registro del expediente. Tras reiniciar el proceso, debe recargarse la página para renovar su identificación de sesión.
+
+Las acciones efectivas del usuario producen una indicación de actividad en la terminal, sin incluir preguntas, respuestas ni nombres de expedientes. Las consultas periódicas de estado permanecen silenciosas. No se modifica el periodo de inactividad de GitHub ni se introduce actividad ficticia para impedir la parada. Véase [la explicación de GitHub sobre actividad e inactividad](https://docs.github.com/en/codespaces/setting-your-user-preferences/setting-your-timeout-period-for-github-codespaces).
+
+La incidencia y el alcance de la comprobación de su corrección se conservan en [INCIDENCIA_CONEXION_2026_09_22.json](INCIDENCIA_CONEXION_2026_09_22.json).
