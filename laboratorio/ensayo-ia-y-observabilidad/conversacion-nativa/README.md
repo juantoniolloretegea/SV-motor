@@ -1,8 +1,8 @@
-# Conversación nativa con Qwen y conservación por expediente
+# EIO conversación 0.1.3 · Beta
 
-**Revisión 0.1.3 activa con OpenTelemetry Rust y observación de procesos Linux.** Once pruebas nativas y una inferencia sintética correlacionada; expedientes conservados. [Informe y mediciones](verificacion-0.1.3/INFORME.md) · [Criterios y cobertura](OBSERVABILIDAD_0_1_3.md) · [Acceso y recuperación](RECUPERACION.md). La [comparación de doce casos de 0.1.2](verificacion-0.1.2/INFORME.md) conserva su ámbito y sus resultados; no se ha repetido en esta intervención.
+Aplicación experimental de inferencia nativa con conservación por expediente. La [entrega versionada](https://github.com/juantoniolloretegea/SV-motor/releases/tag/eio-conversacion-v0.1.3-beta.1) incluye identificación, ficha técnica, composición, licencias y evidencias.
 
-Aplicación experimental del ensayo de inteligencia artificial y observabilidad, en SV-motor. Permite entradas libres, conversaciones de varios turnos, conservación por expediente y consulta de los sucesos asociados. Su existencia no constituye un dominio clínico ni modifica la semántica o la IR del Lenguaje SV.
+La versión del programa no determina su disponibilidad instantánea. El servicio depende de la actividad del anfitrión y de sus procesos. Su funcionamiento no acredita aptitud clínica ni conformidad completa de la vía B.
 
 ## Realización
 
@@ -12,7 +12,7 @@ Cada petición se ejecuta en un proceso hijo propio. Se admite una generación s
 
 ## Contexto y generación
 
-La ventana operativa inicial es de 16.384 unidades de texto, entre entrada y reserva de generación. Se declara como configuración de este despliegue, no como medición de rendimiento ni como máximo intrínseco del modelo. Qwen anuncia 32.768; no se ofrece ese máximo sin contrastar su consumo en la máquina de 8 GB. La lectura inicial se procesa por fragmentos de 64 unidades, sin omitir antecedentes.
+La ventana operativa inicial es de 16.384 unidades de texto, entre entrada y reserva de generación. Se declara como configuración de este despliegue, no como medición de rendimiento ni como máximo intrínseco del modelo. Qwen anuncia 32.768; su consumo y rendimiento no se han acreditado en esta instalación. La lectura inicial se procesa por fragmentos de 64 unidades, sin omitir antecedentes.
 
 El modo con razonamiento utiliza temperatura 0,6, Top-P 0,95 y Top-K 20; el modo de respuesta directa, 0,7/0,8/20. Semilla 299792458. La plantilla separa papeles de sistema, usuario y asistente. El historial reenviado conserva las respuestas finales y marca expresamente las interrupciones; el razonamiento anterior permanece en el expediente pero no se reinserta como antecedente conversacional, conforme a la recomendación de Qwen.
 
@@ -30,7 +30,7 @@ Los tiempos son intervalos monotónicos observados desde la admisión. La primer
 
 ## Ejecución
 
-Compilar el paquete con Rust/Cargo 1.98.0 y las dependencias fijadas. Variables admitidas: `EIO_MODELS` para pesos y tokenizador; `EIO_DATA` para conservación; `EIO_ORIGIN` para la URL HTTPS. En Codespaces se obtiene el origen de `CODESPACE_NAME`. El servicio escucha en el puerto 3000, que debe permanecer privado y protegido por la autenticación de GitHub.
+Compilar el paquete con Rust/Cargo 1.98.0 y las dependencias fijadas. Variables admitidas: `EIO_MODELS` para pesos y tokenizador; `EIO_DATA` para conservación; `EIO_ORIGIN` para la dirección de acceso. En Codespaces se obtiene el origen de `CODESPACE_NAME`. El servicio escucha en el puerto 3000, que debe permanecer privado y protegido por la autenticación de GitHub.
 
 El programa reconoce `--check DIRECTORIO` para comprobar y reconstruir registros; esta apertura añade el cierre por reinicio si encuentra una generación pendiente. `--worker` es el modo interno del proceso de inferencia.
 
@@ -52,14 +52,11 @@ La incidencia y el alcance de la comprobación de su corrección se conservan en
 
 Sistema Vectorial SV — © Juan Antonio Lloret Egea, 2026. ITVIA — IA eñ™, ISSN 2695-6411. Se reproduce la licencia **CC BY-NC-ND 4.0** declarada en el [aviso canónico del repositorio](https://github.com/juantoniolloretegea/SV-motor/blob/30683c5ec11d33ecabd6e3defb8110f530290df9/README.md). El aviso visible y las exportaciones incorporan [AVISO_LICENCIAS.json](AVISO_LICENCIAS.json). Qwen3-0.6B conserva Apache 2.0 y Candle conserva MIT o Apache 2.0; este aviso no sustituye sus licencias ni constituye un inventario exhaustivo de dependencias. Tampoco asigna al SV la titularidad de las intervenciones del usuario ni determina los derechos de cada salida generada.
 
-## Interpretación de la sesión recibida el 22 de septiembre
 
-El cotejo de las dos exportaciones recibidas identifica un mismo expediente y una conversación con nueve turnos finalizados. Los primeros cincuenta sucesos se conservan en la exportación posterior de 460 sucesos. La numeración «Conversación 1» corresponde al expediente recién creado; estas exportaciones no aportan evidencia de traslado a otro expediente. Los contextos registrados incorporan progresivamente las intervenciones anteriores.
+## Consulta documental y desarrollo pendiente
 
-La muestra revela sustitución del significado de la pregunta, afirmaciones no justificadas, alteración de cantidades aportadas y aceptación de premisas sin comprobación. La configuración observada no acredita aptitud para consejo profesional. El diagnóstico causal permanece abierto: la muestra no separa por sí sola los efectos de la capacidad del modelo, la cuantización y la implementación de inferencia. No se ha comparado esta sesión con un segundo motor ni se ha cambiado el modelo para obtener un resultado favorable.
+El [ensayo DOC-01](../resultados/consulta-documental-01/PROTOCOLO.md) utiliza un banco independiente y pasajes identificados de OP-IMM-001. No modifica automáticamente las condiciones de las conversaciones libres. Permanecen pendientes la guarda exterior, la separación de custodia y control y la integración contractual completa de fuentes, versiones y permisos.
 
-Las nueve generaciones declaran fin normal y retorno cero. Las entradas aumentan de 126 a 1.772 tokens, con reserva constante de 2.048; ninguna respuesta alcanza esa reserva ni los 600 segundos configurados. La primera salida del proceso pasa de 19,86 a 403,12 segundos. Estos tiempos incluyen carga y procesamiento del contexto, y pueden corresponder al texto de razonamiento antes de la respuesta final. La memoria residente muestreada se sitúa entre 1,21 y 1,96 GiB. La muestra evidencia una limitación operativa; no determina un máximo de contexto utilizable.
+## Evidencia de versión
 
-La versión 0.1.0 escribía `external_operations: 0` como constante. **Ese campo no acreditaba medición de red ni ausencia de conexiones externas.** La versión 0.1.1 utiliza `null` y declara que no existe instrumentación de red. El número de llamadas a herramientas queda circunscrito a que el servicio no ofrece herramientas al modelo. La interfaz explicita que el contenido no se ha validado. Los sucesos anteriores permanecen intactos y la exportación añade una nota sobre su interpretación.
-
-El [registro de revisión](REVISION_SESION_2026_09_22.json) contiene las identidades de los archivos recibidos, los resultados y sus límites; no reproduce las conversaciones aportadas. Las capturas del titular documentan la recuperación del acceso tras autenticación en una ventana privada. Esta observación apoya una incidencia dependiente de la sesión del navegador, sin demostrar qué cookie o mecanismo originó el HTTP 404.
+El [informe de 0.1.3](verificacion-0.1.3/INFORME.md) distingue la inferencia sintética inicial de la compilación posterior instalada. La [comparación 0.1.2](verificacion-0.1.2/INFORME.md) conserva su alcance histórico. Los resultados técnicos, de contenido y de disponibilidad se evalúan por separado.

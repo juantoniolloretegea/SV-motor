@@ -1,0 +1,214 @@
+{
+  "events": [
+    {
+      "kind": "phase",
+      "text": "Cargando Qwen mediante Candle"
+    },
+    {
+      "kind": "timings",
+      "timings": {
+        "complete": false,
+        "first_token_worker_seconds": null,
+        "generation_seconds": null,
+        "model_load_seconds": 3.747607411,
+        "prefill_seconds": null,
+        "scope": "Intervalos monotónicos del proceso hijo. No incluyen cola, red ni preparación del contexto en el servidor. Las fases interrumpidas no se extrapolan.",
+        "tokenizer_seconds": 0.37545649
+      }
+    },
+    {
+      "kind": "phase",
+      "text": "Procesando los antecedentes"
+    },
+    {
+      "kind": "timings",
+      "timings": {
+        "complete": false,
+        "first_token_worker_seconds": null,
+        "generation_seconds": null,
+        "model_load_seconds": 3.747607411,
+        "prefill_seconds": 62.545161316,
+        "scope": "Intervalos monotónicos del proceso hijo. No incluyen cola, red ni preparación del contexto en el servidor. Las fases interrumpidas no se extrapolan.",
+        "tokenizer_seconds": 0.37545649
+      }
+    },
+    {
+      "kind": "phase",
+      "text": "Generando respuesta"
+    },
+    {
+      "kind": "timings",
+      "timings": {
+        "complete": false,
+        "first_token_worker_seconds": 66.669790472,
+        "generation_seconds": null,
+        "model_load_seconds": 3.747607411,
+        "prefill_seconds": 62.545161316,
+        "scope": "Intervalos monotónicos del proceso hijo. No incluyen cola, red ni preparación del contexto en el servidor. Las fases interrumpidas no se extrapolan.",
+        "tokenizer_seconds": 0.37545649
+      }
+    },
+    {
+      "kind": "progress",
+      "raw": "```",
+      "tokens": 1
+    },
+    {
+      "kind": "progress",
+      "raw": "```json\n",
+      "tokens": 3
+    },
+    {
+      "kind": "progress",
+      "raw": "```json\n{\n ",
+      "tokens": 5
+    },
+    {
+      "kind": "progress",
+      "raw": "```json\n{\n  \"estado",
+      "tokens": 7
+    },
+    {
+      "kind": "progress",
+      "raw": "```json\n{\n  \"estado\":",
+      "tokens": 8
+    },
+    {
+      "kind": "progress",
+      "raw": "```json\n{\n  \"estado\": \"",
+      "tokens": 9
+    },
+    {
+      "kind": "progress",
+      "raw": "```json\n{\n  \"estado\": \"sin_res",
+      "tokens": 11
+    },
+    {
+      "kind": "progress",
+      "raw": "```json\n{\n  \"estado\": \"sin_respaldo",
+      "tokens": 13
+    },
+    {
+      "kind": "progress",
+      "raw": "```json\n{\n  \"estado\": \"sin_respaldo\",\n ",
+      "tokens": 15
+    },
+    {
+      "kind": "progress",
+      "raw": "```json\n{\n  \"estado\": \"sin_respaldo\",\n  \"",
+      "tokens": 16
+    },
+    {
+      "kind": "progress",
+      "raw": "```json\n{\n  \"estado\": \"sin_respaldo\",\n  \"fu",
+      "tokens": 17
+    },
+    {
+      "kind": "progress",
+      "raw": "```json\n{\n  \"estado\": \"sin_respaldo\",\n  \"fuente",
+      "tokens": 18
+    },
+    {
+      "kind": "progress",
+      "raw": "```json\n{\n  \"estado\": \"sin_respaldo\",\n  \"fuente\":",
+      "tokens": 19
+    },
+    {
+      "kind": "progress",
+      "raw": "```json\n{\n  \"estado\": \"sin_respaldo\",\n  \"fuente\": \"\",\n",
+      "tokens": 20
+    },
+    {
+      "kind": "progress",
+      "raw": "```json\n{\n  \"estado\": \"sin_respaldo\",\n  \"fuente\": \"\",\n ",
+      "tokens": 21
+    },
+    {
+      "kind": "progress",
+      "raw": "```json\n{\n  \"estado\": \"sin_respaldo\",\n  \"fuente\": \"\",\n  \"",
+      "tokens": 22
+    },
+    {
+      "kind": "progress",
+      "raw": "```json\n{\n  \"estado\": \"sin_respaldo\",\n  \"fuente\": \"\",\n  \"c",
+      "tokens": 23
+    },
+    {
+      "kind": "progress",
+      "raw": "```json\n{\n  \"estado\": \"sin_respaldo\",\n  \"fuente\": \"\",\n  \"cita\":",
+      "tokens": 25
+    },
+    {
+      "kind": "progress",
+      "raw": "```json\n{\n  \"estado\": \"sin_respaldo\",\n  \"fuente\": \"\",\n  \"cita\": \"\"\n}\n",
+      "tokens": 27
+    },
+    {
+      "kind": "progress",
+      "raw": "```json\n{\n  \"estado\": \"sin_respaldo\",\n  \"fuente\": \"\",\n  \"cita\": \"\"\n}\n```",
+      "tokens": 28
+    },
+    {
+      "finish": "fin_normal",
+      "kind": "done",
+      "raw": "```json\n{\n  \"estado\": \"sin_respaldo\",\n  \"fuente\": \"\",\n  \"cita\": \"\"\n}\n```",
+      "timings": {
+        "complete": true,
+        "first_token_worker_seconds": 66.669790472,
+        "generation_seconds": 5.732988753,
+        "model_load_seconds": 3.747607411,
+        "prefill_seconds": 62.545161316,
+        "scope": "Intervalos monotónicos del proceso hijo. No incluyen cola, red ni preparación del contexto en el servidor. Las fases interrumpidas no se extrapolan.",
+        "tokenizer_seconds": 0.37545649
+      },
+      "tokens": 28
+    }
+  ],
+  "summary": {
+    "case": "DOC01",
+    "eof": true,
+    "exit_code": 0,
+    "input_tokens": 434,
+    "normal": true,
+    "observability": {
+      "export": {
+        "bytes": 1066,
+        "dropped": 0,
+        "enabled": true,
+        "errors": 0,
+        "export": "archivo_local_sin_red",
+        "file": "trazas.jsonl",
+        "last_export_utc_ms": 1790098550411,
+        "limit_bytes": 10485760,
+        "ok": true,
+        "records": 2,
+        "sdk": "OpenTelemetry Rust 0.31.0"
+      },
+      "scope": "Puntos del supervisor instrumentados; no observación exhaustiva ni validación de contenido.",
+      "trace_id": "6e3e906b980f696aacb6ef7c793b59c3"
+    },
+    "peak_rss_bytes": 1409294336,
+    "result": {
+      "finish": "fin_normal",
+      "kind": "done",
+      "raw": "```json\n{\n  \"estado\": \"sin_respaldo\",\n  \"fuente\": \"\",\n  \"cita\": \"\"\n}\n```",
+      "timings": {
+        "complete": true,
+        "first_token_worker_seconds": 66.669790472,
+        "generation_seconds": 5.732988753,
+        "model_load_seconds": 3.747607411,
+        "prefill_seconds": 62.545161316,
+        "scope": "Intervalos monotónicos del proceso hijo. No incluyen cola, red ni preparación del contexto en el servidor. Las fases interrumpidas no se extrapolan.",
+        "tokenizer_seconds": 0.37545649
+      },
+      "tokens": 28
+    },
+    "seconds": 72.632289214,
+    "stop_cause": null,
+    "verification": {
+      "accepted": false,
+      "detail": "expected value at line 1 column 1",
+      "reason": "formato_no_conforme"
+    }
+  }
+}
