@@ -1,0 +1,179 @@
+{
+  "schema": "EIO-VERIFICACION-012-1",
+  "fecha_revision_utc": "2026-09-22T12:51:49.908Z",
+  "version": "0.1.2",
+  "fuente_aplicacion": "feefbe68a4131c43c46673b841a0dd72b590e4f7",
+  "candidato_historico": "../CANDIDATO.json",
+  "identidad": {
+    "binary_sha256": "06de1b792deb1356cbdcc3fe34c68313387c10684b2b67e438a6cb86e166caa8",
+    "candle_revision": "ddf1b879dc3a1760cbcb3f3c4a7c6467850cec4a",
+    "device": "CPU",
+    "experiment": "comparacion-01",
+    "model": "Qwen3-0.6B · Q4_K_M",
+    "model_sha256": "ac2d97712095a558e31573f62f466a3f9d93990898b0ec79d7c974c1780d524a",
+    "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+  },
+  "toolchain": {
+    "rustc": "1.98.0 (88d9e12ae 2026-08-18)",
+    "cargo": "1.98.0 (797e8a9bc 2026-08-05)",
+    "llvm": "22.1.8",
+    "host": "x86_64-unknown-linux-gnu",
+    "dependencias": "Versiones fijadas, compilación --release --locked --offline."
+  },
+  "ejecucion": {
+    "autorizacion_confianza_recibida": true,
+    "confirmacion_confianza_aceptada": true,
+    "unitarias": {
+      "superadas": 6,
+      "fallidas": 0
+    },
+    "proceso_http": {
+      "primer_intento": {
+        "resultado": "no_conforme_por_plazo_de_arranque",
+        "plazo_segundos": 15,
+        "retorno": 101
+      },
+      "observacion_intermedia": {
+        "sin_puerto_observado_a_segundos": 11,
+        "disponible_observado_a_segundos": 32,
+        "espera_de_disco_observada": true,
+        "causa_exclusiva_acreditada": false,
+        "parada_sigterm_retorno": 0
+      },
+      "segundo_intento": {
+        "plazo_segundos": 60,
+        "resultado": "conforme",
+        "duracion_prueba_segundos": 2.62,
+        "retorno": 0,
+        "detalle": {
+          "ambito": "Proceso HTTP local con expediente sintético; no valida el acceso externo del navegador ni la autenticación profesional.",
+          "clave_obsoleta": 403,
+          "clave_rotada": true,
+          "dos_paradas_sigterm_confirmadas": true,
+          "expediente_sintetico_identico_tras_reinicio": true,
+          "http_inicial": 200,
+          "identidad_instancia_renovada": true,
+          "inferencias": 0,
+          "json_malformado": 400,
+          "resultado": "conforme",
+          "schema": "EIO-PRUEBA-PROCESO-1",
+          "segunda_instancia_rechazada": true
+        }
+      }
+    },
+    "campana": {
+      "casos": 12,
+      "terminaciones": {
+        "fin_normal": 9,
+        "limite_tiempo": 3
+      },
+      "inicio_utc": "2026-09-22T12:23:25.854Z",
+      "fin_utc": "2026-09-22T12:43:56.649Z",
+      "tiempo_total_peticiones_segundos": 1230.11101652,
+      "sin_otra_inferencia_o_compilacion_de_la_campana": true,
+      "monitorizacion_continua_global_cpu": false,
+      "rangos_observados": {
+        "sin_historial": {
+          "tokens": [
+            123,
+            140
+          ],
+          "prefill_seconds": [
+            15.790358695,
+            28.916138858
+          ]
+        },
+        "con_historial": {
+          "tokens": [
+            829,
+            846
+          ],
+          "prefill_seconds": [
+            132.173547348,
+            152.473267331
+          ]
+        }
+      }
+    }
+  },
+  "despliegue": {
+    "binario": "/workspaces/eio-instalacion-nativa-20260922/target/release/eio-conversacion",
+    "sha256": "06de1b792deb1356cbdcc3fe34c68313387c10684b2b67e438a6cb86e166caa8",
+    "anterior_conservado": "/workspaces/eio-verificacion-012-20260922/eio-conversacion-0.1.1",
+    "sha256_anterior": "809e45a4470dd96d3780d44548344765e3c1f815af1627a4e5def8edc07c15a5",
+    "pid_observado": 30984,
+    "comprobacion_proceso_y_puerto_utc": "2026-09-22T12:47:12Z",
+    "puerto_local": 3000,
+    "visibilidad_requerida": "Private",
+    "comprobacion_http": {
+      "schema": "EIO-INSTALACION-LOCAL-1",
+      "resultado": "conforme",
+      "pagina_http": 200,
+      "javascript_http": 200,
+      "css_http": 200,
+      "aviso_sv_presente": true,
+      "indicador_y_ultima_comprobacion_presentes": true,
+      "recuperacion_de_peticion_presente": true,
+      "inferencias": 0,
+      "acceso_externo_comprobado": false,
+      "limite": "Comprueba el servicio HTTP local y el contenido servido; no ejecuta JavaScript ni acredita autenticación o acceso desde el navegador externo."
+    },
+    "acceso_externo_comprobado": false,
+    "limite_acceso_externo": "El control del navegador de esta sesión bloqueó el acceso a la URL privada. Se verificó el servidor local por separado, sin eludir el bloqueo ni atribuirle la autenticación externa."
+  },
+  "expedientes": {
+    "cotejo": "Huellas idénticas antes de las pruebas, después de la campaña y tras iniciar el servicio real.",
+    "archivos": [
+      {
+        "archivo": "exp-1790057882056-0.jsonl",
+        "sha256": "855e4a49269f7a3c3256c561fb5168048361b31b89c18fda91433e14715597bd"
+      },
+      {
+        "archivo": "exp-1790067796225-1.jsonl",
+        "sha256": "56e391599320be68db393782f31f19fff1bb8a6a5dd99e334489ecce13706c68"
+      }
+    ]
+  },
+  "recursos_observados": {
+    "procesadores_logicos": 2,
+    "memoria_sistema_mib": 7941,
+    "swap_mib": 0,
+    "espacio_libre_inicial_aproximado_gib": 13,
+    "limite_cgroup_memoria": "max",
+    "limite_cgroup_cpu": "max 100000",
+    "alcance": "Lecturas puntuales. No constituyen una cuota de memoria de 8 GB ni un registro continuo de contención."
+  },
+  "alcance": "Ensayo lateral EIO; sin modificación de núcleo, IR, dominio sanitario ni autenticación profesional.",
+  "evidencias": [
+    {
+      "archivo": "RESUMEN.json",
+      "bytes": 35521,
+      "sha256": "ed101eb670c526b24da7f86c8751c0c152eb056c85be1df8265dc0200c74c451"
+    },
+    {
+      "archivo": "VERIFICACIONES.json",
+      "bytes": 6244,
+      "sha256": "b65b010404380f65399bb7d343b964af9320f25d60e5265d057d733dc3603a58"
+    },
+    {
+      "archivo": "DESPLIEGUE.json",
+      "bytes": 3238,
+      "sha256": "5bf036a92d84882428925783645c5a55430b6cc8ea351b93b22027b064c5fff9"
+    },
+    {
+      "archivo": "comprobar_instalacion.rs",
+      "bytes": 1675,
+      "sha256": "ceed48652e1754d68acad382ef1a5903aeaaadfc9c8ae67921287a0edae8896b"
+    },
+    {
+      "archivo": "VALORACION.json",
+      "bytes": 6674,
+      "sha256": "1788ca4f2a6c089ffa06bd0efbd762a52e8ee5913e0902bdc002f3ff5462dd8d"
+    },
+    {
+      "archivo": "../tests/service.rs",
+      "bytes": 5068,
+      "sha256": "785a11fc8a69ac6d93222a3c3f07fd42b044288c5ca223bf95fc94a21efef9f2"
+    }
+  ]
+}

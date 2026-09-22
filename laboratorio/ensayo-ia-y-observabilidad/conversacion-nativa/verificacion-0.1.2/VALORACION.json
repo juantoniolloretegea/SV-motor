@@ -1,0 +1,126 @@
+{
+  "schema": "EIO-VALORACION-COMPARACION-1",
+  "fecha_utc": "2026-09-22T12:51:49.907Z",
+  "fuente": {
+    "archivo": "RESUMEN.json",
+    "sha256": "ed101eb670c526b24da7f86c8751c0c152eb056c85be1df8265dc0200c74c451"
+  },
+  "metodo": "Revisión explícita de las respuestas finales frente a los criterios fijados antes de la campaña. El retorno del proceso no constituye validación semántica.",
+  "referencia_lexica": {
+    "entidad": "RAE y ASALE",
+    "obra": "Diccionario de la lengua española",
+    "entrada": "tonto, ta",
+    "url": "https://dle.rae.es/tonto",
+    "consulta_utc": "2026-09-22",
+    "contraste": "La acepción personal principal alude a falta o escasez de entendimiento o razón; la entrada indica origen expresivo. No respalda las atribuciones de genialidad, pobreza o procedencia inglesa observadas."
+  },
+  "terminaciones": {
+    "fin_normal": 9,
+    "limite_tiempo": 3
+  },
+  "valoraciones": [
+    {
+      "case": "lexico-historia-false-razonamiento-false",
+      "request_id": "comparacion-1790079805854-3",
+      "finish": "fin_normal",
+      "verdict": "no_conforme_significado",
+      "reason": "Reconoce la pertenencia al español, pero ofrece una definición tautológica e imprecisa y restringe su uso sin fundamento.",
+      "answer": "Sí, la palabra **«tonto»** pertenece al español. Su significado es **\"tonto\"**, que se usa para referirse a alguien que no es genial o no tiene talento. Aunque no es un término común en el sentido más amplio, se emplea en contextos específicos, como en comentarios sobre la educación o en referencias a personas no muy motivadas."
+    },
+    {
+      "case": "lexico-historia-false-razonamiento-true",
+      "request_id": "comparacion-1790079840011-6",
+      "finish": "fin_normal",
+      "verdict": "no_conforme_significado",
+      "reason": "Atribuye un significado de cinismo o pobreza y origen inglés; presenta además discordancia gramatical.",
+      "answer": "Sí, la palabra **\"tonto\"** pertenece al español. Su significado es **\"un persona cínica o pobre\"**. Aunque es una expresión inglesa, se usa en español para referirse a personas que son maliciosas o desordenadas."
+    },
+    {
+      "case": "lexico-historia-true-razonamiento-false",
+      "request_id": "comparacion-1790079896000-10",
+      "finish": "fin_normal",
+      "verdict": "no_conforme_significado",
+      "reason": "Atribuye significados de genialidad, ingenio y filiación ajenos a la definición solicitada.",
+      "answer": "Sí, la palabra «tonto» pertenece al español. Se usa para referirse a alguien que es genial, ingenioso o creativo. Su significado se explica así: «tonto» significa «hijo genial» o «hijo ingenioso»."
+    },
+    {
+      "case": "lexico-historia-true-razonamiento-true",
+      "request_id": "comparacion-1790080044127-14",
+      "finish": "limite_tiempo",
+      "verdict": "interrumpida_por_tiempo",
+      "reason": "No se dispone de una respuesta final completa; se conserva el texto parcial y no se cuenta como respuesta completa incorrecta.",
+      "answer": "La palabra **\"tonto\"** pertenece al español y significa \"tonto\" o \"impoliente\". Se usa para describir a alguien que no se conforma, se comport"
+    },
+    {
+      "case": "entidad-historia-false-razonamiento-false",
+      "request_id": "comparacion-1790080224317-17",
+      "finish": "fin_normal",
+      "verdict": "termino_conservado_formato_no_conforme",
+      "reason": "Conserva tricoleucemia, pero añade una oración pese a la instrucción de repetir exclusivamente el nombre. No se evalúa conocimiento clínico.",
+      "answer": "La enfermedad indicada es **tricoleucemia**."
+    },
+    {
+      "case": "entidad-historia-false-razonamiento-true",
+      "request_id": "comparacion-1790080246759-20",
+      "finish": "fin_normal",
+      "verdict": "termino_conservado_formato_no_conforme",
+      "reason": "Conserva tricoleucemia, pero añade una oración pese a la instrucción de repetir exclusivamente el nombre. No se evalúa conocimiento clínico.",
+      "answer": "La enfermedad indicada es **tricoleucemia**."
+    },
+    {
+      "case": "entidad-historia-true-razonamiento-false",
+      "request_id": "comparacion-1790080283828-24",
+      "finish": "fin_normal",
+      "verdict": "termino_conservado_formato_no_conforme",
+      "reason": "Conserva tricoleucemia, pero añade una oración pese a la instrucción de repetir exclusivamente el nombre. No se evalúa conocimiento clínico.",
+      "answer": "La enfermedad indicada es tricoleucemia."
+    },
+    {
+      "case": "entidad-historia-true-razonamiento-true",
+      "request_id": "comparacion-1790080423141-28",
+      "finish": "limite_tiempo",
+      "verdict": "interrumpida_por_tiempo",
+      "reason": "No se dispone de una respuesta final completa; se conserva el texto parcial y no se cuenta como respuesta completa incorrecta.",
+      "answer": ""
+    },
+    {
+      "case": "cantidad-historia-false-razonamiento-false",
+      "request_id": "comparacion-1790080603471-31",
+      "finish": "fin_normal",
+      "verdict": "conforme",
+      "reason": "Responde «Quedan 12 piezas.», de acuerdo con 17 − 5 = 12, sin operaciones añadidas.",
+      "answer": "Quedan 12 piezas."
+    },
+    {
+      "case": "cantidad-historia-false-razonamiento-true",
+      "request_id": "comparacion-1790080638469-34",
+      "finish": "fin_normal",
+      "verdict": "conforme",
+      "reason": "Responde «Quedan 12 piezas.», de acuerdo con 17 − 5 = 12, sin operaciones añadidas.",
+      "answer": "Quedan 12 piezas."
+    },
+    {
+      "case": "cantidad-historia-true-razonamiento-false",
+      "request_id": "comparacion-1790080699380-38",
+      "finish": "fin_normal",
+      "verdict": "conforme",
+      "reason": "Responde «Quedan 12 piezas.», de acuerdo con 17 − 5 = 12, sin operaciones añadidas.",
+      "answer": "Quedan 12 piezas."
+    },
+    {
+      "case": "cantidad-historia-true-razonamiento-true",
+      "request_id": "comparacion-1790080856437-42",
+      "finish": "limite_tiempo",
+      "verdict": "interrumpida_por_tiempo",
+      "reason": "No se dispone de una respuesta final completa; se conserva el texto parcial y no se cuenta como respuesta completa incorrecta.",
+      "answer": ""
+    }
+  ],
+  "limites": [
+    "Una observación por condición; sin estimación estadística de fiabilidad.",
+    "Los modos cambian también temperatura y Top-P.",
+    "Los antecedentes son sintéticos y neutros; no reproducen la conversación sanitaria.",
+    "No se ha contrastado paridad numérica con otro motor ni el efecto aislado de la cuantización.",
+    "Una coincidencia textual no valida capacidad clínica."
+  ]
+}

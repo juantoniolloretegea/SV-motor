@@ -1,0 +1,67 @@
+{
+  "comprobacion_http": {
+    "schema": "EIO-INSTALACION-LOCAL-1",
+    "resultado": "conforme",
+    "pagina_http": 200,
+    "javascript_http": 200,
+    "css_http": 200,
+    "aviso_sv_presente": true,
+    "indicador_y_ultima_comprobacion_presentes": true,
+    "recuperacion_de_peticion_presente": true,
+    "inferencias": 0,
+    "acceso_externo_comprobado": false,
+    "limite": "Comprueba el servicio HTTP local y el contenido servido; no ejecuta JavaScript ni acredita autenticación o acceso desde el navegador externo."
+  },
+  "ultimo_ciclo": {
+    "data": {
+      "host_stop_cause": null,
+      "identity": {
+        "application": "EIO conversación 0.1.2",
+        "binary_sha256": "06de1b792deb1356cbdcc3fe34c68313387c10684b2b67e438a6cb86e166caa8",
+        "candle_revision": "ddf1b879dc3a1760cbcb3f3c4a7c6467850cec4a",
+        "context_limit": 16384,
+        "context_status": "Límite operativo configurado; la capacidad y el rendimiento con historias largas requieren medición específica",
+        "device": "CPU",
+        "licensing": {
+          "components": [
+            {
+              "license": "Apache-2.0",
+              "name": "Qwen3-0.6B",
+              "source": "https://huggingface.co/Qwen/Qwen3-0.6B/blob/c1899de289a04d12100db370d81485cdf75e47ca/README.md"
+            },
+            {
+              "license": "MIT OR Apache-2.0",
+              "name": "Candle",
+              "source": "https://github.com/huggingface/candle/blob/ddf1b879dc3a1760cbcb3f3c4a7c6467850cec4a/Cargo.toml"
+            }
+          ],
+          "schema": "EIO-AVISO-LICENCIAS-1",
+          "scope": "Aviso de titularidad y licenciamiento del SV, según su fuente canónica, y de los componentes principales. Los componentes de terceros conservan sus licencias respectivas. Este aviso no atribuye al SV la titularidad de los datos aportados ni determina los derechos sobre cada respuesta generada. No constituye un inventario exhaustivo de dependencias.",
+          "sv": {
+            "canonical_notice": "https://github.com/juantoniolloretegea/SV-motor/blob/30683c5ec11d33ecabd6e3defb8110f530290df9/README.md",
+            "copyright": "© Juan Antonio Lloret Egea, 2026",
+            "institution": "ITVIA — IA eñ™",
+            "issn": "2695-6411",
+            "license": "CC-BY-NC-ND-4.0",
+            "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/deed.es",
+            "name": "Sistema Vectorial SV"
+          }
+        },
+        "memory_stop_bytes": 6442450944,
+        "model": "Qwen3-0.6B · Q4_K_M",
+        "model_sha256": "ac2d97712095a558e31573f62f466a3f9d93990898b0ec79d7c974c1780d524a",
+        "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+      },
+      "previous_observation": null,
+      "previous_shutdown_confirmed": false,
+      "recovered_requests": 0,
+      "scope": "Se registra el proceso; la causa de parada de la plataforma requiere evidencia de GitHub"
+    },
+    "instance_id": "servicio-1790081152623-0",
+    "kind": "servicio_disponible",
+    "pid": 30984,
+    "schema": "EIO-SERVICIO-1",
+    "utc_ms": 1790081152633
+  },
+  "inicio": "EIO_CONVERSACION_LISTA https://glowing-computing-machine-4j79xqgjrw4245w-3000.app.github.dev\n"
+}

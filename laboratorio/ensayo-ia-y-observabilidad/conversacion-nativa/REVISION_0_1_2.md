@@ -1,5 +1,7 @@
 # Candidato 0.1.2: recuperación, correlación y medición
 
+> **Registro histórico de preparación.** Las expresiones de ejecución pendiente que siguen describen ese corte. Tras la autorización del titular se aceptó la confianza de la carpeta, se compiló y verificó la revisión y se inició el servicio. El estado posterior y los resultados se encuentran en el [informe de verificación](verificacion-0.1.2/INFORME.md).
+
 **Fecha:** 22 de septiembre de 2026. **Corte de origen:** `eec0d87fd9e41a3341b799540bb4545c6dd686d9`, SV-motor. **Estado:** preparado, sin compilación ni despliegue acreditados.
 
 El titular autorizó corregir la continuidad del ensayo y comparar el comportamiento del modelo. La revisión conserva Qwen3-0.6B Q4_K_M, el tokenizador, la revisión de Candle y las versiones de dependencias. No modifica el núcleo, la IR ni la constitución de los dominios.
