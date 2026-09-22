@@ -1,0 +1,50 @@
+{
+  "esquema": "EIO-SUCESO-DISPONIBILIDAD-1",
+  "fecha_observacion_utc": "2026-09-22T08:10:15.295Z",
+  "revision_documental_previa": "ca77add437900592c772767e588f8e89c9581fba",
+  "objeto": "Observación de la disponibilidad del servicio de conversación tras un intervalo sin atención directa.",
+  "observaciones": [
+    {
+      "fuente": "Captura aportada de la navegación al puerto 3000",
+      "resultado": "HTTP ERROR 404",
+      "fecha_exacta_utc": null
+    },
+    {
+      "fuente": "Interfaz autenticada de GitHub Codespaces",
+      "resultado": "Codespace is stopped; Restart codespace",
+      "fecha_utc": "2026-09-22T08:10:15.295Z"
+    },
+    {
+      "fuente": "Listado de GitHub Codespaces",
+      "fecha_utc": "2026-09-22T08:03:41.976Z",
+      "resultado": "Last used 5 minutes ago",
+      "limite": "Indicación relativa de uso; no acredita la hora de parada ni el inicio del intervalo de inactividad."
+    },
+    {
+      "fuente": "Configuración de usuario de GitHub Codespaces",
+      "campo": "codespace_default_idle_timeout",
+      "valor": "",
+      "valor_indicativo": "30",
+      "limite": "No se muestra una sustitución explícita del valor predeterminado de la cuenta. Esta lectura no acredita el tiempo configurado específicamente para la instancia."
+    }
+  ],
+  "interpretacion": {
+    "estado_acreditado": "El entorno completo está detenido; el servicio de conversación alojado en él no está disponible.",
+    "causa_de_parada": "No determinada mediante un suceso de la plataforma que identifique su causa.",
+    "hipotesis": "La detención por inactividad es compatible con lo observado y con el comportamiento documentado por GitHub; no queda demostrada para este episodio.",
+    "instante_de_parada_utc": null,
+    "fallo_del_modelo": "No acreditado por estas observaciones.",
+    "intervencion_de_la_guarda": "No acreditada por estas observaciones."
+  },
+  "alcance_de_la_observabilidad": [
+    "Una navegación nueva puede recibir un 404 de la plataforma antes de cargar el documento de la aplicación. En ese caso, el tratamiento de errores de la interfaz todavía no puede ejecutarse.",
+    "El registro interno de la aplicación y la observación externa del estado del entorno son fuentes diferentes; la detención del entorno no debe atribuirse al modelo sin evidencia.",
+    "GitHub documenta que la parada termina los procesos y conserva los datos guardados. La integridad de los expedientes tras esta parada concreta permanece sin comprobar."
+  ],
+  "actuaciones": "Inspección de lectura y registro del episodio. Sin reanudación del entorno, modificación de tiempos de inactividad, cambios de permisos ni nueva inferencia.",
+  "pendiente": "En la recuperación posterior, comprobar la continuidad del registro y la disponibilidad del servicio antes de una nueva petición al modelo.",
+  "referencias": [
+    "https://docs.github.com/en/codespaces/setting-your-user-preferences/setting-your-timeout-period-for-github-codespaces",
+    "https://docs.github.com/en/codespaces/about-codespaces/understanding-the-codespace-lifecycle"
+  ]
+}
