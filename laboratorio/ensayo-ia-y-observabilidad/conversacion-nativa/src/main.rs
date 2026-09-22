@@ -55,7 +55,11 @@ async fn api(State(app):State<App>,h:HeaderMap,body:axum::body::Bytes)->Response
   Ok(Ok(v))=>Json(v).into_response(),Ok(Err(e))=>(StatusCode::BAD_REQUEST,Json(json!({"error":e.to_string()}))).into_response(),Err(_)=>(StatusCode::INTERNAL_SERVER_ERROR,Json(json!({"error":"No se pudo completar la operación"}))).into_response()
  }
 }
-fn handle(app:&App,op:Op)->Result<Value>{match op{
+fn handle(app:&App,op:Op)->Result<Value>{
+ // Actividad real del usuario, sin preguntas ni contenido del expediente; las consultas periódicas permanecen silenciosas.
+ let event=match &op{Op::CreateCase{..}=>Some("crear_expediente"),Op::CreateChat{..}=>Some("crear_conversacion"),Op::Preview{..}=>Some("revisar_contexto"),Op::Send{..}=>Some("enviar_peticion"),Op::Cancel{..}=>Some("cancelar"),Op::Export{..}=>Some("exportar"),_=>None};
+ if let Some(event)=event{println!("EIO_ACTIVIDAD {event}");}
+ match op{
  Op::State=>{let active=app.active.lock().map_err(|_|"Estado bloqueado")?.clone();let db=app.db.lock().map_err(|_|"Registro bloqueado")?;
   Ok(json!({"cases":db.cases,"chats":db.chats.values().map(|c|json!({"id":c.id,"case_id":c.case_id,"title":c.title,"turns":c.turns.len()})).collect::<Vec<_>>(),"active":active.map(|a|json!({"id":a.id,"chat":a.chat,"seconds":a.started.elapsed().as_secs(),"phase":a.phase})),"identity":app.identity,"context_limit":CONTEXT,"model_context":32768,"default_profile":Profile::default(),"storage_bytes":db.bytes,"storage_limit":store::MAX_STORAGE}))},
  Op::CreateCase{title}=>{let title=clean(&title,180)?;let id=store::id("exp");let mut db=app.db.lock().map_err(|_|"Registro bloqueado")?;db.append(&id,"expediente_creado",json!({"title":title}))?;Ok(json!({"id":id}))},
