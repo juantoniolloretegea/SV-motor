@@ -1,0 +1,21 @@
+{
+  "esquema": "EIO-INCIDENCIA-ACCESO-WEB-1",
+  "fecha_comprobacion_utc": "2026-09-22T08:40:44.480Z",
+  "antecedente": "REANUDACION_2026_09_22.json",
+  "observacion_exterior": "La navegación comunicada devuelve HTTP 404 aun con el Codespace iniciado.",
+  "comprobacion_directa": {
+    "destino": "http://127.0.0.1:3000/",
+    "metodo": "HEAD",
+    "estado_http": 200,
+    "fecha_cabecera_utc": "2026-09-22T08:36:41Z",
+    "tipo_contenido": "text/html; charset=utf-8",
+    "longitud_contenido": 4600,
+    "pid_observado": 2805
+  },
+  "interpretacion": "Se acredita una respuesta HTTP correcta dentro del entorno. No se acredita todavía el acceso completo desde el navegador exterior ni se determina la causa del 404.",
+  "actuacion": "Se retiró el reenvío existente de localhost:3000 y se repuso hacia 127.0.0.1:3000. Se conservan el puerto 3000 y la visibilidad privada. El protocolo interno observado es HTTP; la dirección exterior publicada utiliza HTTPS.",
+  "resultado": "El panel de Codespaces identifica el proceso y el puerto privado reenviado. La apertura desde ese panel no pudo verificarse: el navegador de comprobación impidió inspeccionar el destino mediante su política de acceso.",
+  "limite": "La renovación del reenvío no se declara solución acreditada mientras no se compruebe la navegación exterior. No se modificaron el programa, el modelo, las dependencias ni el registro de conversaciones.",
+  "siguiente_comprobacion": "Abrir el puerto 3000 desde el panel Puertos en la sesión autenticada del titular y comprobar la carga de la interfaz.",
+  "referencia": "https://docs.github.com/en/codespaces/developing-in-a-codespace/forwarding-ports-in-your-codespace"
+}
