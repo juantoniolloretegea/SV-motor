@@ -1,0 +1,128 @@
+{
+  "identity": {
+    "application": "EIO conversación 0.1.3",
+    "binary_sha256": "ae021c7ac49295464a557fadebe6580c0ca1304a771971514d1b23506e0f07cb",
+    "candle_revision": "ddf1b879dc3a1760cbcb3f3c4a7c6467850cec4a",
+    "context_limit": 16384,
+    "context_status": "Límite operativo configurado; la capacidad y el rendimiento con historias largas requieren medición específica",
+    "device": "CPU",
+    "licensing": {
+      "components": [
+        {
+          "license": "Apache-2.0",
+          "name": "Qwen3-0.6B",
+          "source": "https://huggingface.co/Qwen/Qwen3-0.6B/blob/c1899de289a04d12100db370d81485cdf75e47ca/README.md"
+        },
+        {
+          "license": "MIT OR Apache-2.0",
+          "name": "Candle",
+          "source": "https://github.com/huggingface/candle/blob/ddf1b879dc3a1760cbcb3f3c4a7c6467850cec4a/Cargo.toml"
+        }
+      ],
+      "schema": "EIO-AVISO-LICENCIAS-1",
+      "scope": "Aviso de titularidad y licenciamiento del SV, según su fuente canónica, y de los componentes principales. Los componentes de terceros conservan sus licencias respectivas. Este aviso no atribuye al SV la titularidad de los datos aportados ni determina los derechos sobre cada respuesta generada. No constituye un inventario exhaustivo de dependencias.",
+      "sv": {
+        "canonical_notice": "https://github.com/juantoniolloretegea/SV-motor/blob/30683c5ec11d33ecabd6e3defb8110f530290df9/README.md",
+        "copyright": "© Juan Antonio Lloret Egea, 2026",
+        "institution": "ITVIA — IA eñ™",
+        "issn": "2695-6411",
+        "license": "CC-BY-NC-ND-4.0",
+        "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/deed.es",
+        "name": "Sistema Vectorial SV"
+      }
+    },
+    "memory_stop_bytes": 6442450944,
+    "model": "Qwen3-0.6B · Q4_K_M",
+    "model_sha256": "ac2d97712095a558e31573f62f466a3f9d93990898b0ec79d7c974c1780d524a",
+    "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+  },
+  "inference_result": {
+    "answer": "HOLA.",
+    "chat_id": "chat-1790088124258-2",
+    "content_validation": "no_realizada",
+    "error": null,
+    "exit_code": 0,
+    "external_operations": null,
+    "external_operations_scope": "No medido: el observador muestrea descriptores de socket, pero no captura tráfico ni acredita ausencia de operaciones exteriores",
+    "finish": "fin_normal",
+    "first_output_scope": "Primera salida de texto comunicada por el proceso hijo; incluye carga y preparación, y puede pertenecer al texto de razonamiento",
+    "first_output_seconds": 18.098139737,
+    "input_tokens": 117,
+    "observability": {
+      "export": {
+        "bytes": 6471,
+        "dropped": 0,
+        "enabled": true,
+        "errors": 0,
+        "export": "archivo_local_sin_red",
+        "file": "trazas.jsonl",
+        "last_export_utc_ms": 1790088143011,
+        "limit_bytes": 10485760,
+        "ok": true,
+        "records": 10,
+        "sdk": "OpenTelemetry Rust 0.31.0"
+      },
+      "scope": "Puntos del supervisor instrumentados; no observación exhaustiva ni validación de contenido.",
+      "trace_id": "55e03dab27985aed1e3c1d30473515fa"
+    },
+    "peak_rss_bytes": 1298771968,
+    "phase_timings": {
+      "complete": true,
+      "first_token_worker_seconds": 18.095671243,
+      "generation_seconds": 0.54969233,
+      "model_load_seconds": 2.603154361,
+      "prefill_seconds": 15.124144765,
+      "scope": "Intervalos monotónicos del proceso hijo. No incluyen cola, red ni preparación del contexto en el servidor. Las fases interrumpidas no se extrapolan.",
+      "tokenizer_seconds": 0.365938403
+    },
+    "raw": "HOLA.",
+    "request_id": "observabilidad-sintetica-001",
+    "rss_scope": "Proceso de inferencia, muestreado; no máximo exacto ni memoria de toda la máquina",
+    "seconds": 18.745995901,
+    "service_instance": "servicio-1790088124183-0",
+    "thinking": "",
+    "tokens": 3,
+    "tool_calls": 0,
+    "tool_calls_scope": "No se han habilitado herramientas para el modelo en este servicio; no equivale a aislamiento de red",
+    "worker_identity": {
+      "pid": 11726,
+      "start_ticks": 199224
+    }
+  },
+  "maximum_tree_read_seconds": 0.010058496,
+  "observer_after_shutdown": {
+    "export": {
+      "bytes": 10617,
+      "dropped": 0,
+      "enabled": true,
+      "errors": 0,
+      "export": "archivo_local_sin_red",
+      "file": "trazas.jsonl",
+      "last_export_utc_ms": 1790088144277,
+      "limit_bytes": 10485760,
+      "ok": true,
+      "records": 5,
+      "sdk": "OpenTelemetry Rust 0.31.0"
+    },
+    "maximum_seconds": 86400,
+    "period_seconds": 5,
+    "pid": 11720,
+    "reason": "proceso_ausente_o_identidad_distinta",
+    "running": false,
+    "samples": 4,
+    "schema": "EIO-OBSERVADOR-1",
+    "scope": "Muestreo de este servicio y descendientes visibles. No censo del anfitrión, tráfico completo ni auditoría de llamadas al sistema.",
+    "target_pid": 11709,
+    "target_start_ticks": 199021,
+    "utc_ms": 1790088144277
+  },
+  "observer_trace_bytes": 10617,
+  "resultado": "conforme",
+  "samples_before_shutdown": 4,
+  "schema": "EIO-OBSERVABILIDAD-VERIFICACION-1",
+  "scope": "Una inferencia sintética; no comparación semántica, determinista ni de rendimiento con/sin instrumentación.",
+  "supervisor_trace_bytes": 7622,
+  "trace_correlated": true,
+  "utc_ms": 1790088144463,
+  "worker_observed_with_same_identity": true
+}
