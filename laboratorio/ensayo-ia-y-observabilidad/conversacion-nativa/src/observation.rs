@@ -56,8 +56,9 @@ pub fn execute()->Result<()>{let args:Vec<_>=std::env::args().collect();if args.
 fn observe(pid:u32,start:u64,dir:&Path,period:u64,seconds:u64)->Result<()>{
  let started=Instant::now();let t=Telemetry::new(dir,&store::id("observador"),crate::telemetry::LIMIT)?;let mut samples=0u64;
  loop{
-  let alive=stat(pid).map(|s|s[19].parse::<u64>().ok()==Some(start)&&s[0]!="Z").unwrap_or(false);
-  let expired=started.elapsed().as_secs()>=seconds;let reason=if !alive{"proceso_ausente_o_identidad_distinta"}else if expired{"limite_temporal"}else if !t.healthy(){"exportacion_no_integra"}else{"observando"};
+  let mut unreadable=false;
+  let alive=match stat(pid){Ok(s)=>s[19].parse::<u64>().ok()==Some(start)&&s[0]!="Z",Err(_)=>{unreadable=!matches!(fs::metadata(format!("/proc/{pid}")),Err(e) if e.kind()==std::io::ErrorKind::NotFound);false}};
+  let expired=started.elapsed().as_secs()>=seconds;let reason=if unreadable{"lectura_identidad_no_disponible"}else if !alive{"proceso_ausente_o_identidad_distinta"}else if expired{"limite_temporal"}else if !t.healthy(){"exportacion_no_integra"}else{"observando"};
   let running=alive&&!expired&&t.healthy();
   if running{let data=tree(pid,start,std::process::id());let disk=nix::sys::statvfs::statvfs(dir).ok().map(|s|s.blocks_available().saturating_mul(s.fragment_size()));t.event(None,"observacion_linux",json!({"target_pid":pid,"target_start_ticks":start,"sample":samples,"tree":data,"observer":snapshot(std::process::id(),identity(std::process::id())?).ok(),"filesystem_available_bytes":disk,"clock_ticks_per_second":nix::unistd::sysconf(nix::unistd::SysconfVar::CLK_TCK).ok().flatten()}));samples+=1;
   }else{t.event(None,"observador_finalizado",json!({"target_pid":pid,"target_start_ticks":start,"reason":reason}));}
