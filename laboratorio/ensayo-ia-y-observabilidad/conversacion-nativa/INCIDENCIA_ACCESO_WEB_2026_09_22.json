@@ -17,5 +17,34 @@
   "resultado": "El panel de Codespaces identifica el proceso y el puerto privado reenviado. La apertura desde ese panel no pudo verificarse: el navegador de comprobación impidió inspeccionar el destino mediante su política de acceso.",
   "limite": "La renovación del reenvío no se declara solución acreditada mientras no se compruebe la navegación exterior. No se modificaron el programa, el modelo, las dependencias ni el registro de conversaciones.",
   "siguiente_comprobacion": "Abrir el puerto 3000 desde el panel Puertos en la sesión autenticada del titular y comprobar la carga de la interfaz.",
-  "referencia": "https://docs.github.com/en/codespaces/developing-in-a-codespace/forwarding-ports-in-your-codespace"
+  "referencia": "https://docs.github.com/en/codespaces/developing-in-a-codespace/forwarding-ports-in-your-codespace",
+  "seguimiento": [
+    {
+      "fecha_registro_utc": "2026-09-22T08:56:25.813Z",
+      "observacion_del_titular": "Persiste HTTP 404 después de renovar el reenvío. El indicador aparece verde sin seleccionar y negro al seleccionar la fila; también se comunica HTTP 404 cuando el indicador permanece verde.",
+      "comprobacion_administrativa": {
+        "orden": "gh codespace ports -c glowing-computing-machine-4j79xqgjrw4245w --json browseUrl,sourcePort,visibility",
+        "resultado": [
+          {
+            "browseUrl": "https://glowing-computing-machine-4j79xqgjrw4245w-3000.app.github.dev",
+            "sourcePort": 3000,
+            "visibility": "private"
+          }
+        ]
+      },
+      "indicador_observado": {
+        "color": "rgb(32, 32, 32)",
+        "clase_fila": "monaco-list-row focused",
+        "descripcion": "El puerto tiene un proceso en ejecución.",
+        "pid": 2805,
+        "interpretacion": "El color negro observado coexiste con la identificación de un proceso activo; por sí solo no acredita una parada ni permite evaluar el acceso exterior."
+      },
+      "conclusion": "La URL y la visibilidad privada coinciden con el registro administrativo de GitHub. La renovación del reenvío no ha resuelto el acceso comunicado. No se determina todavía la causa del HTTP 404.",
+      "hipotesis_pendiente": "Autenticación del acceso al puerto privado. La documentación de GitHub describe cookies de acceso con caducidad de tres horas; no se ha acreditado que su caducidad cause esta incidencia.",
+      "referencia": "https://docs.github.com/en/codespaces/reference/security-in-github-codespaces",
+      "limite_de_verificacion": "La política de acceso del navegador de comprobación impide inspeccionar el destino exterior. No se utilizó una vía alternativa para eludir esta restricción.",
+      "siguiente_comprobacion": "En una nueva sesión privada del navegador del titular, autenticar la cuenta propietaria en GitHub y abrir la URL registrada. Este contraste queda pendiente de ejecución y no se presenta como corrección acreditada.",
+      "alcance": "Comprobaciones de lectura. No se modificaron el servicio, sus permisos, el modelo ni las conversaciones."
+    }
+  ]
 }
