@@ -14,9 +14,9 @@ La ventana operativa inicial es de 16.384 unidades de texto, entre entrada y res
 
 El modo con razonamiento utiliza temperatura 0,6, Top-P 0,95 y Top-K 20; el modo de respuesta directa, 0,7/0,8/20. Semilla 299792458. La plantilla separa papeles de sistema, usuario y asistente. El historial reenviado conserva las respuestas finales y marca expresamente las interrupciones; el razonamiento anterior permanece en el expediente pero no se reinserta como antecedente conversacional, conforme a la recomendación de Qwen.
 
-Reserva predeterminada de generación: 2.048 unidades, ajustable entre 32 y 4.096. Tiempo máximo predeterminado: 600 segundos, ajustable entre 30 y 1.800. El supervisor observa la memoria residente del proceso de inferencia y solicita su terminación si supera 6 GiB; es una observación muestreada, no una cuota de cgroup ni una garantía de máximo agregado. No se modifican permisos administrativos.
+Reserva predeterminada de generación: 2.048 unidades, ajustable entre 32 y 4.096. Tiempo máximo predeterminado: 600 segundos, ajustable entre 30 y 1.800. El supervisor observa la memoria residente del proceso de inferencia y solicita su terminación si supera 6 GiB; es una observación muestreada, no una cuota de grupo de control ni una garantía de máximo agregado. No se modifican permisos administrativos.
 
-Antes de enviar se cuentan los tokens del contexto exacto y se comprueba la reserva de salida. Si no cabe, la petición queda rechazada y registrada. No hay resúmenes automáticos ni eliminación silenciosa del historial. La capacidad práctica con conversaciones largas queda pendiente de medición específica.
+Antes de enviar se cuentan las unidades del tokenizador en el contexto exacto y se comprueba la reserva de salida. Si no cabe, la petición queda rechazada y registrada. No hay resúmenes automáticos ni eliminación silenciosa del historial. La capacidad práctica con conversaciones largas queda pendiente de medición específica.
 
 ## Conservación y auditoría
 
@@ -32,4 +32,4 @@ Compilar el paquete con Rust/Cargo 1.98.0 y las dependencias fijadas. Variables 
 
 El programa reconoce `--check DIRECTORIO` para comprobar y reconstruir registros; esta apertura añade el cierre por reinicio si encuentra una generación pendiente. `--worker` es el modo interno del proceso de inferencia.
 
-Referencia del fabricante: [Qwen3-0.6B](https://huggingface.co/Qwen/Qwen3-0.6B/blob/c1899de289a04d12100db370d81485cdf75e47ca/README.md). Las pruebas y sus resultados se consignarán después de la ejecución, sin atribuirlos a esta descripción.
+Referencia del fabricante: [Qwen3-0.6B](https://huggingface.co/Qwen/Qwen3-0.6B/blob/c1899de289a04d12100db370d81485cdf75e47ca/README.md). Los resultados de la comprobación funcional realizada en Codespaces se recogen en [COMPROBACION_2026_09_22.json](COMPROBACION_2026_09_22.json): conversación libre y continuidad, respuesta con razonamiento, cancelación, rechazo por exceso de contexto y recuperación de cuatro conversaciones tras reiniciar el servicio. Las exportaciones anterior y posterior al reinicio resultaron idénticas. Estas observaciones no acreditan la capacidad práctica con historias largas ni la suficiencia del modelo para un dominio profesional.

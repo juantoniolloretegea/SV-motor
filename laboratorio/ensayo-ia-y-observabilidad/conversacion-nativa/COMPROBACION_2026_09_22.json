@@ -1,0 +1,124 @@
+{
+  "esquema": "EIO-COMPROBACION-CONVERSACION-1",
+  "fecha_utc": "2026-09-22T06:29:46.112320+00:00",
+  "codigo_comprobado": "5330c6c9d2c7d9d6a9cec6079a7118bf0f5567db",
+  "entorno": {
+    "servicio": "GitHub Codespaces",
+    "procesamiento": "CPU",
+    "nucleos": 2,
+    "memoria_asignada_gb": 8,
+    "rust_cargo": "1.98.0",
+    "puerto": 3000,
+    "visibilidad": "privada"
+  },
+  "identidad": {
+    "application": "EIO conversación 0.1.0",
+    "binary_sha256": "61b623fb64b217466185b906a4b96994ae140780b7824b06705c7aa00789a6c5",
+    "candle_revision": "ddf1b879dc3a1760cbcb3f3c4a7c6467850cec4a",
+    "context_limit": 16384,
+    "context_status": "Límite operativo configurado; la capacidad y el rendimiento con historias largas requieren medición específica",
+    "device": "CPU",
+    "memory_stop_bytes": 6442450944,
+    "model": "Qwen3-0.6B · Q4_K_M",
+    "model_sha256": "ac2d97712095a558e31573f62f466a3f9d93990898b0ec79d7c974c1780d524a",
+    "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+  },
+  "resultados": [
+    {
+      "comprobacion": "Compilación y pruebas Rust",
+      "resultado": "conforme",
+      "dependencias": "fijadas mediante Cargo.lock; compilación sin descarga de dependencias",
+      "pruebas": 2,
+      "alcance": "reconstrucción e integridad del registro; separación de razonamiento y respuesta"
+    },
+    {
+      "comprobacion": "Conversación libre de dos intervenciones",
+      "resultado": "conforme",
+      "referencia": "SAUCE-27",
+      "respuesta_segunda_intervencion": "SAUCE-27"
+    },
+    {
+      "comprobacion": "Modo con razonamiento",
+      "resultado": "conforme",
+      "pregunta": "Calcule 17 + 25 y dé una explicación breve.",
+      "respuesta": "El resultado de 17 + 25 es 42. La explicación es: 17 + 25 se puede calcular como 17 + 20 + 5 = 37 + 5 = 42.",
+      "salida_razonamiento": "conservada separadamente"
+    },
+    {
+      "comprobacion": "Cancelación de generación real",
+      "resultado": "conforme",
+      "salida_parcial_conservada": true,
+      "unidades_generadas": 65
+    },
+    {
+      "comprobacion": "Exceso de contexto",
+      "resultado": "rechazo previo a la inferencia",
+      "entrada_unidades": 18101,
+      "reserva_unidades": 1024,
+      "ventana_operativa_unidades": 16384,
+      "antecedentes_eliminados": 0
+    },
+    {
+      "comprobacion": "Recuperación tras reinicio del proceso servidor",
+      "resultado": "conforme",
+      "expedientes": 1,
+      "conversaciones": 4,
+      "sucesos": 39,
+      "registro_bytes": 34121,
+      "exportacion_antes_despues_identica": true,
+      "exportacion_sha256": "7e73962abeffead7175c99a206294bc33161732ea8c0e8ab5c4d85a7c2f71a26",
+      "exportacion_bytes": 74232
+    }
+  ],
+  "mediciones": [
+    {
+      "peticion": "8bd2150e-af85-4654-a07a-91131bde2042",
+      "estado": "fin_normal",
+      "entrada_unidades": 134,
+      "salida_unidades": 20,
+      "duracion_segundos": 22.901709298,
+      "primera_salida_segundos": 19.05319651,
+      "maximo_rss_muestreado_bytes": 1325907968,
+      "retorno": 0
+    },
+    {
+      "peticion": "edd43ea5-0c41-48d4-b001-8ca41ab31d32",
+      "estado": "fin_normal",
+      "entrada_unidades": 191,
+      "salida_unidades": 5,
+      "duracion_segundos": 27.511521711,
+      "primera_salida_segundos": 26.520103833,
+      "maximo_rss_muestreado_bytes": 1332674560,
+      "retorno": 0
+    },
+    {
+      "peticion": "3d2a894f-8203-46b4-bead-15147e0bef5b",
+      "estado": "fin_normal",
+      "entrada_unidades": 117,
+      "salida_unidades": 176,
+      "duracion_segundos": 50.112864898,
+      "primera_salida_segundos": 16.601852961,
+      "maximo_rss_muestreado_bytes": 1328021504,
+      "retorno": 0
+    },
+    {
+      "peticion": "6ffae0b1-e0f7-46bd-8ad2-9b701000dd64",
+      "estado": "cancelada",
+      "entrada_unidades": 128,
+      "salida_unidades": 65,
+      "duracion_segundos": 30.076380313,
+      "primera_salida_segundos": 18.107461955,
+      "maximo_rss_muestreado_bytes": 1417666560,
+      "retorno": null
+    }
+  ],
+  "alcance": [
+    "Comprobación funcional con el modelo y el servicio reales en Codespaces.",
+    "La duración comprende carga, preparación y generación; no es una tasa aislada de inferencia.",
+    "El máximo RSS corresponde a muestras del proceso de inferencia; no expresa la memoria agregada de la máquina.",
+    "La ventana de 16.384 unidades es una configuración: no se ha validado el rendimiento de historias de esa longitud.",
+    "El contenido generado no constituye validación de capacidad clínica, factual ni de suficiencia del modelo.",
+    "Las huellas encadenadas son una comprobación local de integridad, sin firma externa."
+  ],
+  "estado_final": "Servicio disponible para comprobación interactiva; ningún proceso de inferencia activo."
+}
