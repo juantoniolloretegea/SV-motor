@@ -1,6 +1,6 @@
 # Conversación nativa con Qwen y conservación por expediente
 
-**Revisión 0.1.2 compilada y comprobada en Codespaces:** seis pruebas unitarias, prueba del proceso HTTP y doce generaciones de comparación. Servicio local iniciado; acceso externo de navegador pendiente de comprobación. [Informe y resultados](verificacion-0.1.2/INFORME.md) · [Acceso y recuperación](RECUPERACION.md). La [revisión candidata](REVISION_0_1_2.md) y [CANDIDATO.json](CANDIDATO.json) conservan el estado histórico anterior a estas pruebas.
+**Revisión 0.1.3 activa con OpenTelemetry Rust y observación de procesos Linux.** Once pruebas nativas y una inferencia sintética correlacionada; expedientes conservados. [Informe y mediciones](verificacion-0.1.3/INFORME.md) · [Criterios y cobertura](OBSERVABILIDAD_0_1_3.md) · [Acceso y recuperación](RECUPERACION.md). La [comparación de doce casos de 0.1.2](verificacion-0.1.2/INFORME.md) conserva su ámbito y sus resultados; no se ha repetido en esta intervención.
 
 Aplicación experimental del ensayo de inteligencia artificial y observabilidad, en SV-motor. Permite entradas libres, conversaciones de varios turnos, conservación por expediente y consulta de los sucesos asociados. Su existencia no constituye un dominio clínico ni modifica la semántica o la IR del Lenguaje SV.
 
