@@ -4,6 +4,8 @@
 **Producto experimental:** EIO conversación 0.1.3 · Beta.  
 **Estado:** inferencia nativa y observación verificadas en ámbitos delimitados; conformidad completa de la vía B pendiente.
 
+**Nota de continuidad · 23 de septiembre de 2026.** El estado y las tablas de la edición 2.5 corresponden al 22 de septiembre. Posteriormente se realizó un [intento nativo de gpt-oss-20b](modelos-de-ia/openai/gpt-oss-20b/resultados/2026-09-23/RESULTADO.md): instalación completada y carga interrumpida por SIGTERM, sin petición ni respuesta. La [revisión del controlador Rust propio](modelos-de-ia/openai/gpt-oss-20b/resultados/2026-09-23/REVISION_CONTROLADOR_RUST_20260923.md) identifica carencias de parada, registro y reutilización. El emisor de aquella señal sigue sin identificar. El controlador instrumental no implementa el conjunto de supervisión, custodia y guarda exterior de los esquemas; esta revisión no acredita la vía A ni la conformidad integral de B.
+
 ## Objeto
 
 El ensayo estudia la ejecución de un modelo auxiliar mediante Rust y Candle, su observación y la conservación verificable de las peticiones y resultados. Pertenece a la investigación lateral (p1+P3)-Bis del Lenguaje SV. Debe proporcionar evidencia sobre las necesidades de contratos, control, semántica y representación intermedia; la disponibilidad de una conversación no constituye por sí sola esa evidencia ni autoriza efectos en el SV.

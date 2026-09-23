@@ -6,6 +6,8 @@ El [resultado y las evidencias del intento del 23 de septiembre](resultados/2026
 
 No se generaron respuestas ni se evaluó calidad. Este intento nativo no acredita la vía A ni demuestra imposibilidad general del modelo. Las rutas cruzadas entre modelos y soportes siguen abiertas a trabajo posterior cuando exista motivo concreto.
 
+La [revisión del controlador propio y su contraste con los esquemas A/B](resultados/2026-09-23/REVISION_CONTROLADOR_RUST_20260923.md) reproduce localmente la pérdida del registro de memoria y el cierre al reutilizar una ventana caducada. Identifica además carencias de trazabilidad de señales y de limpieza ante errores. El controlador necesita corrección antes de reutilizarse; no se ha reanudado la carga ni se ha identificado el emisor del SIGTERM original.
+
 ## Antecedente documental del 22 de septiembre de 2026
 
 El contenido siguiente conserva el estado previo a este intento; sus referencias a falta de instalación y de selección de motor corresponden a aquel corte histórico.
