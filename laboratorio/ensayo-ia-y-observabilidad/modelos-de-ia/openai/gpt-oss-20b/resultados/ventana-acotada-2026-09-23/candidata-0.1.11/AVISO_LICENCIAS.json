@@ -1,0 +1,36 @@
+{
+  "schema": "EIO-AVISO-LICENCIAS-1",
+  "sv": {
+    "name": "Sistema Vectorial SV",
+    "copyright": "© Juan Antonio Lloret Egea, 2026",
+    "institution": "ITVIA — IA eñ™",
+    "issn": "2695-6411",
+    "license": "CC-BY-NC-ND-4.0",
+    "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/deed.es",
+    "canonical_notice": "https://github.com/juantoniolloretegea/SV-motor/blob/41c99e2a6b68382e7ba867ff55aa3a1fcc07676c/README.md"
+  },
+  "components": [
+    {
+      "name": "gpt-oss-20b",
+      "revision": "6cee5e81ee83917806bbde320786a8fb61efebee",
+      "license": "Apache-2.0",
+      "license_url": "https://huggingface.co/openai/gpt-oss-20b/blob/6cee5e81ee83917806bbde320786a8fb61efebee/LICENSE",
+      "usage_policy_url": "https://huggingface.co/openai/gpt-oss-20b/blob/6cee5e81ee83917806bbde320786a8fb61efebee/USAGE_POLICY"
+    },
+    {
+      "name": "mistral.rs",
+      "version": "0.9.3",
+      "revision": "24dbf5c256f232176ee5949485ba264049407fbe",
+      "license": "MIT",
+      "license_url": "https://github.com/EricLBuehler/mistral.rs/blob/24dbf5c256f232176ee5949485ba264049407fbe/LICENSE"
+    },
+    {
+      "name": "openai-harmony",
+      "version": "0.0.8",
+      "license": "Apache-2.0",
+      "license_url": "https://github.com/openai/harmony/blob/main/LICENSE",
+      "relation": "Dependencia del motor; no dependencia directa del controlador."
+    }
+  ],
+  "scope": "El aviso del SV se aplica a sus materiales propios. Los modelos, motores y bibliotecas de terceros conservan sus licencias y atribuciones. DEPENDENCIAS.json identifica las dependencias fijadas del controlador; no constituye un inventario completo del motor externo. Este paquete distribuye fuentes del controlador, no pesos ni ejecutables del motor."
+}
