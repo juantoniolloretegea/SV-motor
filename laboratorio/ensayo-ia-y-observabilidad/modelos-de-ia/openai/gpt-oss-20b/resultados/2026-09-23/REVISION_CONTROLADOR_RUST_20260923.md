@@ -1,10 +1,10 @@
 # Revisión del controlador Rust propio — gpt-oss-20b
 
-23 de septiembre de 2026. Watson, Lenguaje Prog. Astra XXI. Dirección: Juan Antonio Lloret Egea.
+23 de septiembre de 2026.
 
 **Dictamen: revisión local realizada; controlador original no apto para reutilizarse sin corregir las carencias indicadas. El emisor del SIGTERM del intento real sigue sin identificar.**
 
-La revisión responde a la instrucción de examinar primero el código propio. No se ha iniciado Codespaces ni ejecutado el motor o el modelo. Tampoco se ha modificado la instalación ni publicado una corrección del controlador. Las ejecuciones locales emplearon exclusivamente procesos auxiliares escritos y compilados con Rust 1.98.0. No acreditan el funcionamiento del modelo. La revisión documental se incorpora a `main`, conforme a la instrucción del Director, sin crear ramas.
+La revisión examinó el controlador archivado mediante procesos auxiliares escritos y compilados con Rust 1.98.0. No ejecutó el motor ni el modelo. La [corrección posterior y su verificación local](../../controlador-nativo/README.md) se documentan por separado.
 
 ## Fuente examinada y procedencia
 
@@ -17,11 +17,11 @@ Se han leído las tres versiones archivadas, sus diferencias y el registro crono
 
 El paquete conservó las fuentes y los registros, pero no el ejecutable del controlador remoto con su huella y una cadena completa de compilación. Esta revisión acredita el comportamiento de la fuente recompilada localmente; no constituye por sí sola una identidad binaria del ejecutable remoto.
 
-## Hallazgos propios
+## Hallazgos
 
 | Hallazgo | Evidencia y alcance | Corrección necesaria antes de reutilizar |
 | --- | --- | --- |
-| Dos invocaciones iniciales incorrectas | Watson añadió `--seed 42`, rechazado por esa ejecución en CPU, y `--max-model-len 1024`, rechazado por ese cargador. Ambos errores ya se retiraron en la tercera versión. | Conservar la invocación corregida y sus límites reales; no atribuir estos dos rechazos a una incapacidad del modelo. |
+| Dos invocaciones iniciales incorrectas | La invocación contenía `--seed 42`, rechazado por esa ejecución en CPU, y `--max-model-len 1024`, rechazado por ese cargador. Ambos errores ya se retiraron en la tercera versión. | Conservar la invocación corregida y sus límites reales; no atribuir estos dos rechazos a una incapacidad del modelo. |
 | Señales sin trazabilidad suficiente | `stop()` envía SIGTERM al grupo, espera un segundo y puede enviar SIGKILL. No registra el motivo, PID/PGID, instante ni retorno de `kill()`. También descarta errores de espera. | Registrar antes del envío la decisión y el destinatario, y después su resultado; conservar los errores. Esto documentará los envíos propios, sin identificar automáticamente a emisores ajenos. |
 | Pérdida de la medida de memoria | Al detectar que el hijo terminó durante la carga, la función retorna antes de volcar `peak`. Reproducido localmente tanto con salida 1 como con SIGTERM. | Volcar la última muestra y su máximo en todas las salidas; declarar que son muestreos del proceso y no memoria total de la máquina. |
 | Caducidad fijada en el código | `FIN=1790145191` equivale a 23/09/2026 06:33:11 UTC. Una ejecución posterior crea el hijo y ordena detenerlo inmediatamente. Reproducido con la fuente original intacta. | Validar la ventana antes de crear el hijo y usar plazos por ejecución; medir duraciones con reloj monótono. La hora fija era coherente con la ventana inicial: no explica por sí sola la terminación anterior de las 06:21:45. |
@@ -51,16 +51,16 @@ El registro original muestra inicio a las 06:20:56 UTC y terminación a las 06:2
 
 Por tanto, la hipótesis de una expiración normal de esos plazos no concuerda con la fuente y el registro conservados. **No queda identificado el emisor del SIGTERM y no procede exonerar globalmente el controlador ni atribuir la causa a Linux, al motor, a Harmony o al modelo.** Tampoco se ha reproducido una terminación espontánea a los 49 segundos: se han comprobado rutas concretas con estímulos conocidos y plazos abreviados.
 
-El siguiente trabajo debe corregir estas carencias del controlador y acreditar su correspondencia con el ejecutable usado antes de repetir la carga. Este informe no incorpora un controlador nuevo ni constituye autorización adicional para consumir recursos.
+La corrección requiere resolver estas carencias y conservar la correspondencia entre fuentes y ejecutable antes de repetir la carga. Los resultados de esta revisión se refieren exclusivamente al controlador archivado.
 
 ## Contraste con la arquitectura documentada
 
-Se han leído completos el [README 2.3 indicado por el Director](https://github.com/juantoniolloretegea/SV-motor/blob/a14ea31b3903d49a98f08b912206b1c8c9eeaf74/laboratorio/ensayo-ia-y-observabilidad/README_2_3_2026_09_20.md), el [README 2.5](https://github.com/juantoniolloretegea/SV-motor/blob/05a4a4360c9cfa07b4bbd82bbea9788659f0575e/laboratorio/ensayo-ia-y-observabilidad/README.md), las fuentes textuales de ambos diagramas, el contrato experimental y la presentación de NAT03 en el mismo corte `05a4a4360c9cfa07b4bbd82bbea9788659f0575e`. El árbol de SV-motor consultado no contiene AGENTS.md. No se han modificado las fuentes rectoras, los diagramas históricos ni el mapa de continuidad.
+El contraste utiliza el [README 2.3](https://github.com/juantoniolloretegea/SV-motor/blob/a14ea31b3903d49a98f08b912206b1c8c9eeaf74/laboratorio/ensayo-ia-y-observabilidad/README_2_3_2026_09_20.md), el [README 2.5](https://github.com/juantoniolloretegea/SV-motor/blob/05a4a4360c9cfa07b4bbd82bbea9788659f0575e/laboratorio/ensayo-ia-y-observabilidad/README.md), las fuentes textuales de ambos diagramas, el contrato experimental y la presentación de NAT03 en el mismo corte `05a4a4360c9cfa07b4bbd82bbea9788659f0575e`.
 
 | Arquitectura documentada | Relación con el intento de gpt-oss-20b |
 | --- | --- |
 | Vía A: cálculo Rust/Candle dentro de un Worker del navegador con WASM; supervisión y recuperación exteriores al Worker. | El intento de gpt-oss-20b fue nativo. No ejecutó esta arquitectura ni hereda sus controles. |
-| Vía B: API Rust, supervisor, custodia y proceso de inferencia, con funciones diferenciadas; guarda exterior fuera de la hoja de procesos supervisada. | El programa breve de Watson lanzó y vigiló un hijo. No implementó la API propia del ensayo, el custodio separado ni la guarda exterior de ese diseño. |
+| Vía B: API Rust, supervisor, custodia y proceso de inferencia, con funciones diferenciadas; guarda exterior fuera de la hoja de procesos supervisada. | El controlador instrumental lanzó y vigiló un hijo. No implementó la API propia del ensayo, el custodio separado ni la guarda exterior de ese diseño. |
 | Cancelación y parada: escalada TERM/KILL del supervisor; control exterior por la guarda con el mecanismo previsto en su perímetro. | La presencia de SIGTERM es compatible con una orden de parada, pero el resultado del hijo no identifica qué componente la emitió. Las llamadas propias carecían de registro suficiente. |
 | Custodia que no anule el control de parada; cierre verificable. | `event()` escribe de forma síncrona en el mismo hilo del control y usa `unwrap()`. Un bloqueo de esa escritura impediría avanzar al control; un error puede provocar pánico. Este riesgo está identificado estáticamente, no reproducido en la carga real. |
 | Límites y criterios por campaña, sin aceptación heredada de otra vía. | La hora fija pertenecía a la ventana concreta del 23/09. Los presupuestos históricos de Qwen no se trasladan como límites de gpt-oss-20b ni se renuevan por esta revisión. |
@@ -174,3 +174,7 @@ fn main() {
     assert!(s.status.success()); fs::write(root.join("SHA256SUMS.txt"), s.stdout).unwrap();
 }
 ```
+
+---
+
+Sistema Vectorial SV · [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/deed.es) · [Aviso del SV y licencias de terceros](https://github.com/juantoniolloretegea/SV-motor/blob/main/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/openai/gpt-oss-20b/controlador-nativo/AVISO_LICENCIAS.json).

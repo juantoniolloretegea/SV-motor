@@ -1,0 +1,31 @@
+   Compiling eio-controlador-oss v0.1.0 (<directorio-del-controlador>)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.50s
+     Running unittests src/lib.rs (target/debug/deps/eio_controlador_oss-7b77f140ee00d34d)
+
+running 11 tests
+test tests::auxiliar ... ok
+test tests::error_real_de_envio_se_conserva ... ok
+test tests::fallo_y_bloqueo_de_custodia_no_impiden_parada ... ok
+test tests::json_invalido_se_conserva_y_cierra_sin_peticion ... ok
+test tests::limpieza_raii_durante_panico ... ok
+test tests::peticion_unica_y_parada_trazada ... ok
+test tests::plazo_monotono_y_escalada_term_kill ... ok
+test tests::puerto_ajeno_se_rechaza_antes_del_arranque ... ok
+test tests::sigterm_anticipado_conserva_memoria_sin_atribuir_emisor ... ok
+test tests::sigterm_controlador_cierra_hijo ... ok
+test tests::ventana_nueva_exclusion_y_presupuesto_invalido ... ok
+
+test result: ok. 11 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 13.20s
+
+     Running unittests src/main.rs (target/debug/deps/eio_controlador_oss-6b2e40ab3201b244)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests eio_controlador_oss
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

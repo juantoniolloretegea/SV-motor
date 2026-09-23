@@ -1,0 +1,34 @@
+use eio_controlador_oss::{Config, Signals, execute, LICENSE_FOOTER, LICENSE_NOTICE};
+use std::{path::PathBuf, time::Duration};
+const ENGINE_SHA256: &str = "0bd54bd0d17eb79be22b21cccaac0a3f32add5918f93ea162a888feccd7a2158";
+fn main() {
+    let result = (|| -> Result<(), String> {
+        let _signals = Signals::install()?;
+        let args: Vec<_> = std::env::args().skip(1).collect();
+        if args.len()==1 && args[0]=="--licencias" { println!("{LICENSE_NOTICE}"); return Ok(()); }
+        if args.len()==1 && args[0]=="--help" {
+            println!("eio-controlador-oss --instalacion DIRECTORIO --evidencias DIRECTORIO_NUEVO [--ventana-segundos 1000] [--carga-segundos 600] [--peticion-segundos 300]\nCPU; un intento, sin descargas; puerto local 8089; máximo 1500 segundos más cierre acotado. El controlador no detiene Codespaces."); return Ok(());
+        }
+        if args.len()%2!=0 { return Err("argumentos_incompletos; consulte --help".into()); }
+        let mut installation=None; let mut evidence=None; let mut seen=std::collections::HashSet::new();
+        let mut limits=Vec::new();
+        for pair in args.chunks_exact(2) {
+            if !seen.insert(pair[0].clone()) {return Err("argumento_duplicado".into());}
+            match pair[0].as_str() {
+                "--instalacion"=>installation=Some(PathBuf::from(&pair[1])),
+                "--evidencias"=>evidence=Some(PathBuf::from(&pair[1])),
+                "--ventana-segundos"|"--carga-segundos"|"--peticion-segundos"=>limits.push((pair[0].as_str(),pair[1].parse::<u64>().map_err(|_|"duracion_invalida")?)),
+                _=>return Err(format!("argumento_desconocido: {}",pair[0])),
+            }
+        }
+        let mut config=Config::new(installation.ok_or("falta_instalacion")?,evidence.ok_or("faltan_evidencias")?,ENGINE_SHA256.into());
+        for (key,value) in limits { let duration=Duration::from_secs(value); match key {"--ventana-segundos"=>config.window=duration,"--carga-segundos"=>config.load=duration,_=>config.request=duration} }
+        let value=execute(config)?;
+        println!("{value}");
+        if !value["error"].is_null() {return Err("intento_finalizado_con_incidencia; consulte resultado_final".into());} Ok(())
+    })();
+    let failed = result.is_err();
+    if let Err(error)=result { eprintln!("{error}"); }
+    eprintln!("{LICENSE_FOOTER}");
+    if failed { std::process::exit(1); }
+}

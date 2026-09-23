@@ -4,7 +4,7 @@
 **Producto experimental:** EIO conversación 0.1.3 · Beta.  
 **Estado:** inferencia nativa y observación verificadas en ámbitos delimitados; conformidad completa de la vía B pendiente.
 
-**Nota de continuidad · 23 de septiembre de 2026.** El estado y las tablas de la edición 2.5 corresponden al 22 de septiembre. Posteriormente se realizó un [intento nativo de gpt-oss-20b](modelos-de-ia/openai/gpt-oss-20b/resultados/2026-09-23/RESULTADO.md): instalación completada y carga interrumpida por SIGTERM, sin petición ni respuesta. La [revisión del controlador Rust propio](modelos-de-ia/openai/gpt-oss-20b/resultados/2026-09-23/REVISION_CONTROLADOR_RUST_20260923.md) identifica carencias de parada, registro y reutilización. El emisor de aquella señal sigue sin identificar. El controlador instrumental no implementa el conjunto de supervisión, custodia y guarda exterior de los esquemas; esta revisión no acredita la vía A ni la conformidad integral de B.
+**Nota de continuidad · 23 de septiembre de 2026.** El estado y las tablas de la edición 2.5 corresponden al 22 de septiembre. Posteriormente se realizó un [intento nativo de gpt-oss-20b](modelos-de-ia/openai/gpt-oss-20b/resultados/2026-09-23/RESULTADO.md): instalación completada y carga interrumpida por SIGTERM, sin petición ni respuesta. La [revisión del controlador Rust propio](modelos-de-ia/openai/gpt-oss-20b/resultados/2026-09-23/REVISION_CONTROLADOR_RUST_20260923.md) identifica carencias de parada, registro y reutilización. La [corrección instrumental 0.1.0](modelos-de-ia/openai/gpt-oss-20b/controlador-nativo/README.md) supera diez comprobaciones funcionales locales con auxiliares Rust; queda pendiente su ejecución con el modelo. El emisor de aquella señal sigue sin identificar. El controlador instrumental no implementa el conjunto de supervisión, custodia y guarda exterior de los esquemas; esta revisión no acredita la vía A ni la conformidad integral de B.
 
 ## Objeto
 
@@ -95,4 +95,4 @@ El trabajo pendiente de la vía B se rige por la condición de continuación ant
 
 ## Licencias
 
-Los avisos del SV y de terceros se identifican en [AVISO_LICENCIAS.json](conversacion-nativa/AVISO_LICENCIAS.json) y en la composición de la entrega. Cada componente conserva sus condiciones; la identificación de una versión no amplía derechos de uso o distribución.
+Los avisos del SV y de terceros se identifican en [AVISO_LICENCIAS.json de Qwen](conversacion-nativa/AVISO_LICENCIAS.json), en el [aviso de gpt-oss-20b y su controlador](modelos-de-ia/openai/gpt-oss-20b/controlador-nativo/AVISO_LICENCIAS.json) y en la composición de cada entrega. Cada componente conserva sus condiciones; la identificación de una versión no amplía derechos de uso o distribución.

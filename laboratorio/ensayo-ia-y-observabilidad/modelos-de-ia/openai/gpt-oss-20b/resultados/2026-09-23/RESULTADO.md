@@ -2,14 +2,14 @@
 
 **Resultado: adquisición e instalación completadas; ejecución no conseguida.** La carga de pesos terminó por `SIGTERM` antes de habilitar el servicio. No se emitió ninguna petición de inferencia ni se generó una respuesta. La causa de la señal no está identificada.
 
-Watson realizó este intento por autorización directa de Juan Antonio Lloret Egea en el chat Lenguaje Prog. Astra XXI. No fue una ejecución encargada a Holmes. Se respetó una ventana máxima de treinta minutos y el presupuesto de gasto adicional cero, con bloqueo de gasto de Codespaces activado. La comprobación de parada exterior se efectuó a los 18 minutos y 25 segundos de la solicitud de creación.
+La ventana de ejecución fue de treinta minutos. La comprobación de parada exterior se efectuó a los 18 minutos y 25 segundos de la solicitud de creación.
 
 ## Entorno y componentes efectivamente instalados
 
 | Elemento | Valor observado |
 |---|---|
-| Instancia independiente | Nombre visible `openai-gpt-oss-20b`; identificador permanente `didactic-chainsaw-p49vp5w7qg62r7j7` |
-| Máquina | 4 núcleos; 16 GB de RAM; 32 GB de almacenamiento; Europe West |
+| Instancia independiente | `openai-gpt-oss-20b` |
+| Máquina | 4 núcleos; 16 GB de RAM; 32 GB de almacenamiento |
 | Repositorio de partida | SV-motor, `main`, `2389ac77887dbe7a19ea7867bc834f018f666622` |
 | Rust / Cargo | 1.98.0 / 1.98.0, comprobados mediante sus salidas de versión |
 | Motor | Ejecutable oficial para CPU de mistral.rs 0.9.3; no compilación local completa del motor |
@@ -39,17 +39,15 @@ La instalación empleó un ejecutable Rust distribuido por el proyecto del motor
 | 06:26:07 | Solicitud exterior de parada de la instancia en GitHub. |
 | 06:26:35 | GitHub dejó de mostrar la instancia como activa; el menú dejó de ofrecer «Stop codespace». |
 
-Los dos primeros arranques corrigieron errores de la invocación preparada por Watson. Se conservaron sus salidas originales y no se repitió la descarga. La frase «primera carga efectiva» que aparece en el registro previo al segundo arranque expresa la intención de esa orden: el error de argumento acredita que tampoco llegó entonces a cargar pesos. La carga efectiva comenzó en el tercero.
+Los dos primeros arranques corrigieron errores de invocación. Se conservaron sus salidas originales y no se repitió la descarga. La frase «primera carga efectiva» que aparece en el registro previo al segundo arranque expresa la intención de esa orden: el error de argumento acredita que tampoco llegó entonces a cargar pesos. La carga efectiva comenzó en el tercero.
 
 El motor informó un inventario de 13.123 MiB para la asignación. Esa cifra es una estimación del cargador, no una medición del máximo de memoria. El programa de control no volcó el máximo muestreado al terminar anticipadamente; por tanto, no se declara un pico de RSS. El contador `memory.events` consultado después presentaba valores `oom=0` y `oom_kill=0`; no demuestra ausencia de presión de memoria en toda la máquina. La lectura de `dmesg` fue denegada. No se atribuye el `SIGTERM` al agotamiento de memoria, al modelo ni a un mecanismo concreto sin evidencia adicional.
 
 ## Cierre y alcance
 
-La instancia quedó detenida y conserva la instalación. No se efectuaron nuevas cargas tras el `SIGTERM`. La ausencia de procesos `mistralrs` se comprobó antes de la parada exterior. Qwen no se inició, detuvo ni modificó durante este intento. No se crearon ramas ni se modificó el mapa de continuidad.
+La instancia quedó detenida y conserva la instalación. No se efectuaron nuevas cargas tras el `SIGTERM`. La ausencia de procesos `mistralrs` se comprobó antes de la parada exterior.
 
 Este resultado cierra el tanteo práctico de esta configuración como **no operativo y sin inferencia evaluada**. No acredita la imposibilidad general de gpt-oss-20b en 16 GB ni permite juzgar la calidad de sus respuestas. Tampoco verifica la vía A: se intentó ejecución nativa, correspondiente a la familia de la vía B. La interfaz de Qwen, OpenTelemetry, DuckDB y NCBI no se integraron en este intento.
-
-No se alteró el presupuesto de gasto cero. Detener una instancia finaliza su cómputo, pero los archivos conservados siguen ocupando la cuota de almacenamiento. Se mantiene el bloqueo económico existente.
 
 ## Evidencias
 
@@ -67,4 +65,8 @@ El [paquete original descargado de la instancia](EVIDENCIAS_GPT_OSS_20260923.tar
 - [Cargo.lock de la etiqueta usada](https://github.com/EricLBuehler/mistral.rs/blob/24dbf5c256f232176ee5949485ba264049407fbe/Cargo.lock).
 - [Revisión oficial de los pesos](https://huggingface.co/openai/gpt-oss-20b/tree/6cee5e81ee83917806bbde320786a8fb61efebee).
 
-Documento técnico del ensayo del Sistema Vectorial SV. Dirección: Juan Antonio Lloret Egea. Los componentes de terceros conservan sus licencias y autorías; su instalación no modifica el licenciamiento del SV.
+La [revisión del controlador](REVISION_CONTROLADOR_RUST_20260923.md) identifica defectos instrumentales. Su [corrección y verificación local](../../controlador-nativo/README.md) quedan documentadas por separado; no constituyen una nueva ejecución del modelo.
+
+---
+
+Sistema Vectorial SV · [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/deed.es) · [Aviso del SV y licencias de terceros](https://github.com/juantoniolloretegea/SV-motor/blob/main/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/openai/gpt-oss-20b/controlador-nativo/AVISO_LICENCIAS.json).

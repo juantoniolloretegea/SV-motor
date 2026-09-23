@@ -1,0 +1,17 @@
+[workspace]
+[package]
+name = "eio-controlador-oss"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.98"
+publish = false
+license = "CC-BY-NC-ND-4.0"
+
+[dependencies]
+libc = "=0.2.189"
+serde_json = "=1.0.151"
+sha2 = "=0.10.9"
+
+[profile.release]
+panic = "unwind"
+strip = false
