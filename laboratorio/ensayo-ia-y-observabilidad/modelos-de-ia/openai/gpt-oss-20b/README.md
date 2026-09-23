@@ -1,4 +1,14 @@
-# OpenAI · candidato gpt-oss-20b
+# OpenAI · gpt-oss-20b
+
+**Estado al 23 de septiembre de 2026:** instalado en una instancia separada; no operativo. La carga nativa terminó por `SIGTERM` antes de atender una petición. Causa de la terminación no identificada.
+
+El [resultado y las evidencias del intento del 23 de septiembre](resultados/2026-09-23/RESULTADO.md) documentan la adquisición de los pesos oficiales MXFP4, Rust/Cargo 1.98.0, mistral.rs 0.9.3 para CPU y Harmony 0.0.8. Se utilizó una máquina de 4 núcleos y 16 GB, con BF16. La instancia quedó detenida; Qwen permanece intacto. El presupuesto de gasto adicional cero y su bloqueo no se modificaron.
+
+No se generaron respuestas ni se evaluó calidad. Este intento nativo no acredita la vía A ni demuestra imposibilidad general del modelo. Las rutas cruzadas entre modelos y soportes siguen abiertas a trabajo posterior cuando exista motivo concreto.
+
+## Antecedente documental del 22 de septiembre de 2026
+
+El contenido siguiente conserva el estado previo a este intento; sus referencias a falta de instalación y de selección de motor corresponden a aquel corte histórico.
 
 **Estado:** evaluación documental; sin instalación ni ejecución en este ensayo.  
 **Destino propuesto:** vía A, condicionado a viabilidad real.  

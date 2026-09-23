@@ -1,0 +1,65 @@
+1790143987 INICIO instalación real; un intento; CPU, BF16, MXFP4; sin agentes ni herramientas del modelo
+1790143987 ORDEN rust-version /home/codespace/.cargo/bin/rustc ["--version", "--verbose"]
+1790143988 SALIDA rust-version exit status: 0
+1790143988 ORDEN cargo-version /home/codespace/.cargo/bin/cargo ["--version", "--verbose"]
+1790143988 SALIDA cargo-version exit status: 0
+1790143988 ORDEN memoria-inicial free ["-b"]
+1790143988 SALIDA memoria-inicial exit status: 0
+1790143988 ORDEN disco-inicial df ["-B1", "/workspaces"]
+1790143988 SALIDA disco-inicial exit status: 0
+1790143988 ORDEN cpu lscpu []
+1790143989 SALIDA cpu exit status: 0
+1790143989 ORDEN git-inicial git ["-C", "/workspaces/SV-motor", "status", "--short"]
+1790143989 SALIDA git-inicial exit status: 0
+1790143989 ORDEN motor-descarga curl ["--fail", "--location", "--silent", "--show-error", "--retry", "0", "--connect-timeout", "20", "--max-time", "600", "--output", "motor/mistralrs-cpu.tar.gz", "https://github.com/EricLBuehler/mistral.rs/releases/download/v0.9.3/mistralrs-cpu-x86_64-unknown-linux-gnu.tar.gz"]
+1790143990 SALIDA motor-descarga exit status: 0
+1790143990 SHA256 8d192e2efb0714a6e3cd10374700b3c79142bacba8f23f2d5d5ea465771aac46  motor/mistralrs-cpu.tar.gz
+1790143990 ORDEN motor-extraer tar ["--no-same-owner", "-xzf", "motor/mistralrs-cpu.tar.gz", "-C", "motor"]
+1790143991 SALIDA motor-extraer exit status: 0
+1790143991 ORDEN motor-version ./motor/mistralrs ["--version"]
+1790143991 SALIDA motor-version exit status: 0
+1790143991 ORDEN harmony-vocabulario curl ["--fail", "--location", "--silent", "--show-error", "--retry", "0", "--connect-timeout", "20", "--max-time", "600", "--output", "harmony/o200k_base.tiktoken", "https://openaipublic.blob.core.windows.net/encodings/o200k_base.tiktoken"]
+1790143993 SALIDA harmony-vocabulario exit status: 0
+1790143993 SHA256 446a9538cb6c348e3516120d7c08b09f57c36495e2acfffe59a5bf8b0cfb1a2d  harmony/o200k_base.tiktoken
+1790143993 ORDEN model-00000-of-00002.safetensors curl ["--fail", "--location", "--silent", "--show-error", "--retry", "0", "--connect-timeout", "20", "--max-time", "600", "--output", "modelo/model-00000-of-00002.safetensors", "https://huggingface.co/openai/gpt-oss-20b/resolve/6cee5e81ee83917806bbde320786a8fb61efebee/model-00000-of-00002.safetensors"]
+1790144058 SALIDA model-00000-of-00002.safetensors exit status: 0
+1790144100 SHA256 16d0f997dcfc4462089d536bffe51b4bcea2f872f5c430be09ef8ed392312427  modelo/model-00000-of-00002.safetensors
+1790144100 ORDEN model-00001-of-00002.safetensors curl ["--fail", "--location", "--silent", "--show-error", "--retry", "0", "--connect-timeout", "20", "--max-time", "600", "--output", "modelo/model-00001-of-00002.safetensors", "https://huggingface.co/openai/gpt-oss-20b/resolve/6cee5e81ee83917806bbde320786a8fb61efebee/model-00001-of-00002.safetensors"]
+1790144178 SALIDA model-00001-of-00002.safetensors exit status: 0
+1790144220 SHA256 4fbe328ab445455d6f58dc73852b85873bd626986310abd91cd4d2ce3245eaea  modelo/model-00001-of-00002.safetensors
+1790144220 ORDEN model-00002-of-00002.safetensors curl ["--fail", "--location", "--silent", "--show-error", "--retry", "0", "--connect-timeout", "20", "--max-time", "600", "--output", "modelo/model-00002-of-00002.safetensors", "https://huggingface.co/openai/gpt-oss-20b/resolve/6cee5e81ee83917806bbde320786a8fb61efebee/model-00002-of-00002.safetensors"]
+1790144300 SALIDA model-00002-of-00002.safetensors exit status: 0
+1790144328 SHA256 a18106b209e9ab35c3406db4f6f12a927364a058b21e9d1373d682e20674b303  modelo/model-00002-of-00002.safetensors
+1790144328 ORDEN config.json curl ["--fail", "--location", "--silent", "--show-error", "--retry", "0", "--connect-timeout", "20", "--max-time", "600", "--output", "modelo/config.json", "https://huggingface.co/openai/gpt-oss-20b/resolve/6cee5e81ee83917806bbde320786a8fb61efebee/config.json"]
+1790144328 SALIDA config.json exit status: 0
+1790144328 ORDEN generation_config.json curl ["--fail", "--location", "--silent", "--show-error", "--retry", "0", "--connect-timeout", "20", "--max-time", "600", "--output", "modelo/generation_config.json", "https://huggingface.co/openai/gpt-oss-20b/resolve/6cee5e81ee83917806bbde320786a8fb61efebee/generation_config.json"]
+1790144328 SALIDA generation_config.json exit status: 0
+1790144328 ORDEN model.safetensors.index.json curl ["--fail", "--location", "--silent", "--show-error", "--retry", "0", "--connect-timeout", "20", "--max-time", "600", "--output", "modelo/model.safetensors.index.json", "https://huggingface.co/openai/gpt-oss-20b/resolve/6cee5e81ee83917806bbde320786a8fb61efebee/model.safetensors.index.json"]
+1790144328 SALIDA model.safetensors.index.json exit status: 0
+1790144328 ORDEN tokenizer.json curl ["--fail", "--location", "--silent", "--show-error", "--retry", "0", "--connect-timeout", "20", "--max-time", "600", "--output", "modelo/tokenizer.json", "https://huggingface.co/openai/gpt-oss-20b/resolve/6cee5e81ee83917806bbde320786a8fb61efebee/tokenizer.json"]
+1790144329 SALIDA tokenizer.json exit status: 0
+1790144329 SHA256 0614fe83cadab421296e664e1f48f4261fa8fef6e03e63bb75c20f38e37d07d3  modelo/tokenizer.json
+1790144329 ORDEN tokenizer_config.json curl ["--fail", "--location", "--silent", "--show-error", "--retry", "0", "--connect-timeout", "20", "--max-time", "600", "--output", "modelo/tokenizer_config.json", "https://huggingface.co/openai/gpt-oss-20b/resolve/6cee5e81ee83917806bbde320786a8fb61efebee/tokenizer_config.json"]
+1790144329 SALIDA tokenizer_config.json exit status: 0
+1790144329 ORDEN special_tokens_map.json curl ["--fail", "--location", "--silent", "--show-error", "--retry", "0", "--connect-timeout", "20", "--max-time", "600", "--output", "modelo/special_tokens_map.json", "https://huggingface.co/openai/gpt-oss-20b/resolve/6cee5e81ee83917806bbde320786a8fb61efebee/special_tokens_map.json"]
+1790144330 SALIDA special_tokens_map.json exit status: 0
+1790144330 ORDEN chat_template.jinja curl ["--fail", "--location", "--silent", "--show-error", "--retry", "0", "--connect-timeout", "20", "--max-time", "600", "--output", "modelo/chat_template.jinja", "https://huggingface.co/openai/gpt-oss-20b/resolve/6cee5e81ee83917806bbde320786a8fb61efebee/chat_template.jinja"]
+1790144330 SALIDA chat_template.jinja exit status: 0
+1790144330 ORDEN README.md curl ["--fail", "--location", "--silent", "--show-error", "--retry", "0", "--connect-timeout", "20", "--max-time", "600", "--output", "modelo/README.md", "https://huggingface.co/openai/gpt-oss-20b/resolve/6cee5e81ee83917806bbde320786a8fb61efebee/README.md"]
+1790144330 SALIDA README.md exit status: 0
+1790144330 ORDEN LICENSE curl ["--fail", "--location", "--silent", "--show-error", "--retry", "0", "--connect-timeout", "20", "--max-time", "600", "--output", "modelo/LICENSE", "https://huggingface.co/openai/gpt-oss-20b/resolve/6cee5e81ee83917806bbde320786a8fb61efebee/LICENSE"]
+1790144330 SALIDA LICENSE exit status: 0
+1790144330 ORDEN USAGE_POLICY curl ["--fail", "--location", "--silent", "--show-error", "--retry", "0", "--connect-timeout", "20", "--max-time", "600", "--output", "modelo/USAGE_POLICY", "https://huggingface.co/openai/gpt-oss-20b/resolve/6cee5e81ee83917806bbde320786a8fb61efebee/USAGE_POLICY"]
+1790144331 SALIDA USAGE_POLICY exit status: 0
+1790144331 ADQUISICIÓN completa; comienzo de carga real
+1790144331 MOTOR ./motor/mistralrs ["--token-source", "none", "--seed", "42", "serve", "-m", "modelo", "--cpu", "--dtype", "bf16", "--max-model-len", "1024", "--max-seq-len", "1024", "--max-seqs", "1", "--prefix-cache-n", "0", "--paged-attn", "off", "--host", "127.0.0.1", "--port", "8089", "--no-ui"]
+1790144331 MOTOR terminó durante carga: exit status: 1
+1790144331 FIN con incidencia: carga del modelo fallida
+1790144399 Corrección de argumento: retirada semilla no admitida por CPU; primera carga efectiva; pesos ya cotejados
+1790144399 MOTOR ./motor/mistralrs ["--token-source", "none", "serve", "-m", "modelo", "--cpu", "--dtype", "bf16", "--max-model-len", "1024", "--max-seq-len", "1024", "--max-seqs", "1", "--prefix-cache-n", "0", "--paged-attn", "off", "--host", "127.0.0.1", "--port", "8089", "--no-ui"]
+1790144400 MOTOR terminó durante carga: exit status: 1
+1790144400 FIN con incidencia: carga del modelo fallida
+1790144456 Corrección de argumento: max-model-len no admitido por este cargador; se conserva max-seq-len=1024 para asignación y petición de 96 tokens
+1790144456 MOTOR ./motor/mistralrs ["--token-source", "none", "serve", "-m", "modelo", "--cpu", "--dtype", "bf16", "--max-seq-len", "1024", "--max-seqs", "1", "--prefix-cache-n", "0", "--paged-attn", "off", "--host", "127.0.0.1", "--port", "8089", "--no-ui"]
+1790144505 MOTOR terminó durante carga: signal: 15 (SIGTERM)
+1790144505 FIN con incidencia: carga del modelo fallida
