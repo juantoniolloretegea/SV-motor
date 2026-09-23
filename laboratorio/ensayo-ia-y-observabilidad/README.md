@@ -1,10 +1,10 @@
 # Ensayo de inteligencia artificial y observabilidad
 
-**Edición documental 2.9 · 23 de septiembre de 2026.**
+**Edición documental 2.10 · 23 de septiembre de 2026.**
 
 Estudio experimental de la ejecución de modelos auxiliares de inteligencia artificial, su supervisión y la conservación verificable de entradas y resultados. Se desarrolla mediante componentes Rust y pertenece a la investigación lateral (p1+P3)-Bis del Lenguaje SV.
 
-**Estado:** campaña Qwen/B **concluida como realización parcial con limitaciones identificadas**. gpt-oss-20b instalado para ejecución nativa, todavía sin respuesta de inferencia. Ninguno de estos resultados acredita la conformidad integral de la vía B.
+**Estado:** campaña Qwen/B **concluida como realización parcial con limitaciones identificadas**. gpt-oss-20b cargado en CPU y con generación comprobada; respuesta útil todavía pendiente. Ninguno de estos resultados acredita la conformidad integral de la vía B.
 
 ## Objeto y criterio experimental
 
@@ -59,9 +59,11 @@ La [candidata conversación 0.1.4](conversacion-nativa/verificacion-0.1.4/INFORM
 
 La [ficha del modelo](modelos-de-ia/openai/gpt-oss-20b/README.md) identifica los pesos, el motor mistral.rs 0.9.3 y Harmony 0.0.8. Esta instalación utiliza un motor compatible con gpt-oss; no hereda automáticamente la composición de Qwen.
 
-La [continuación inicial](modelos-de-ia/openai/gpt-oss-20b/resultados/continuacion-2026-09-23/INFORME.md) y la [rectificación del controlador](modelos-de-ia/openai/gpt-oss-20b/resultados/continuacion-2026-09-23/RECTIFICACION_CONTROLADOR.md) conservan los resultados y las correcciones instrumentales. La [continuación con expertos MXFP4](modelos-de-ia/openai/gpt-oss-20b/resultados/mxfp4-2026-09-23/RESULTADO.md) documenta dos intentos adicionales: uno terminó por el plazo de carga y otro por SIGKILL observado antes de la limpieza del controlador, con origen y causa no determinados. No se completó la carga ni se emitió una petición de inferencia. La instancia quedó detenida.
+La [continuación GGUF](modelos-de-ia/openai/gpt-oss-20b/resultados/gguf-2026-09-23/RESULTADO.md) consigue cargar las 24 capas en CPU y atender peticiones reales mediante mistral.rs. Se conserva el formato MXFP4 de la conversión identificada de ggml-org. La asignación explícita de capas resuelve el rechazo previo del estimador automático; una corrección del controlador admite el alias del único modelo cargado.
 
-El objetivo de obtener una respuesta real permanece abierto, con esta continuación suspendida para evaluación. Los resultados no demuestran agotamiento de memoria ni fundamentan atribuir el fallo a Harmony. El [controlador instrumental](modelos-de-ia/openai/gpt-oss-20b/controlador-nativo/README.md) y cada candidata conservan su identidad y evidencias. Este recorrido no acredita ejecución en navegador ni integración completa con el SV.
+Las peticiones con límites de 96 y 256 tokens finalizan con HTTP 200, pero sin texto final visible. Una muestra de ocho tokens acredita emisión de texto que tampoco alcanza el campo de respuesta final. La carga y la generación están demostradas; una respuesta útil y la integración completa permanecen pendientes. El informe conserva el diagnóstico de precisión, las medidas de memoria, los originales y el alcance de cada resultado. No se atribuyen retrospectivamente las señales de intentos anteriores a una causa no demostrada.
+
+El [controlador instrumental](modelos-de-ia/openai/gpt-oss-20b/controlador-nativo/README.md) y cada candidata conservan su identidad y evidencias. Este recorrido corresponde a la vía B y no acredita ejecución en navegador.
 
 ## Composición de la conversación Qwen
 
@@ -82,7 +84,7 @@ El objetivo de obtener una respuesta real permanece abierto, con esta continuaci
 - [DOC-01: protocolo](resultados/consulta-documental-01/PROTOCOLO.md) e [informe](resultados/consulta-documental-01/INFORME.md). Utiliza material efectivamente suministrado del universo OP-IMM-001; sus referencias bibliográficas no equivalen al contenido de las obras citadas.
 - [Observabilidad 0.1.3](conversacion-nativa/verificacion-0.1.3/INFORME.md) y [comparación de doce casos 0.1.2](conversacion-nativa/verificacion-0.1.2/INFORME.md), con la atribución de cada evidencia a su versión.
 - [Seguimiento S39](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/sucesos/SUCESOS_SV.md#s39) y [tiques técnicos](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TIQUES_TECNICOS.csv).
-- Ediciones anteriores: [2.3](README_2_3_2026_09_20.md), [2.5](README_2_5_CORTE_2026_09_23.md) y [2.6, corte publicado](https://github.com/juantoniolloretegea/SV-motor/blob/8cddcc83359bf6733a360d5bba2cd72426f8b631/laboratorio/ensayo-ia-y-observabilidad/README.md).
+- Ediciones anteriores: [2.3](README_2_3_2026_09_20.md), [2.5](README_2_5_CORTE_2026_09_23.md), [2.6, corte publicado](https://github.com/juantoniolloretegea/SV-motor/blob/8cddcc83359bf6733a360d5bba2cd72426f8b631/laboratorio/ensayo-ia-y-observabilidad/README.md) y [2.9, corte publicado](https://github.com/juantoniolloretegea/SV-motor/blob/29ac0684234ce75e06d4de554fec9258de5ec01e/laboratorio/ensayo-ia-y-observabilidad/README.md).
 
 ## Licencias
 

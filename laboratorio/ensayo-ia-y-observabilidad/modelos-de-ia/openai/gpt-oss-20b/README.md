@@ -1,14 +1,14 @@
 # OpenAI · gpt-oss-20b
 
-**Estado al 23 de septiembre de 2026:** instalado en una instancia separada; no operativo. Los últimos intentos, 13 y 14, no completaron la carga ni habilitaron el servicio. Instancia detenida; continuación suspendida para evaluación.
+**Estado al 23 de septiembre de 2026:** carga completa en CPU y peticiones reales con generación; respuesta útil todavía pendiente.
 
-El [primer intento](resultados/2026-09-23/RESULTADO.md) documenta los pesos oficiales MXFP4, Rust/Cargo 1.98.0, mistral.rs 0.9.3 para CPU y Harmony 0.0.8. La [continuación inicial](resultados/continuacion-2026-09-23/INFORME.md) conserva variantes y trazas; la [rectificación instrumental](resultados/continuacion-2026-09-23/RECTIFICACION_CONTROLADOR.md) distingue memoria anónima y respaldada por archivos, corrige la confirmación de escritura y documenta la derivación de solicitudes Q2K/Q3K a Q4_0.
+La [continuación GGUF](resultados/gguf-2026-09-23/RESULTADO.md) documenta la conversión MXFP4 de ggml-org, su revisión y huella, conservando mistral.rs 0.9.3 y Harmony 0.0.8. La asignación CPU explícita permite cargar las 24 capas. Se corrige además el rechazo del alias `default` por el controlador. Las peticiones de 96 y 256 tokens devuelven HTTP 200 y alcanzan su límite sin contenido final visible. La muestra posterior de ocho tokens acredita emisión de texto; el diagnóstico de entrega y fidelidad permanece abierto.
 
-La [continuación con expertos MXFP4](resultados/mxfp4-2026-09-23/RESULTADO.md) ensayó la candidata 0.1.11, conservando expertos MXFP4 mediante topología y solicitando Q8_0 para el resto. El intento 13 finalizó por el plazo de carga; el 14, por SIGKILL observado antes del SIGTERM de limpieza del controlador. No se identificó el emisor ni se demostró su causa. Los registros no permiten concluir agotamiento de memoria ni viabilidad del modelo completo en este entorno.
-
-No hubo petición de inferencia ni evaluación de contenido. La terminación durante la carga no aporta fundamento para atribuir el fallo a Harmony. El objetivo de obtener una respuesta real sigue pendiente; no se prolonga automáticamente esta serie de ejecuciones. Este recorrido nativo no acredita la vía A ni imposibilidad general del modelo.
+Los [intentos anteriores](resultados/mxfp4-2026-09-23/RESULTADO.md), sin servicio ni inferencia, conservan su resultado histórico. La [continuación inicial](resultados/continuacion-2026-09-23/INFORME.md), la [rectificación instrumental](resultados/continuacion-2026-09-23/RECTIFICACION_CONTROLADOR.md) y el [primer intento](resultados/2026-09-23/RESULTADO.md) mantienen sus fuentes y registros. La nueva carga no determina retrospectivamente la causa de sus señales.
 
 ## Controlador y capacidad
+
+Las candidatas GGUF 0.1.12–0.1.18 se identifican en el [informe de recepción](resultados/gguf-2026-09-23/RESULTADO.md). La corrección del selector supera nueve pruebas declaradas con Rust 1.98.0 en el entorno remoto. BF16 alcanza generación, sin entrega final útil. Las comparaciones F32, con caché automática y con caché F32 explícita, cierran la conexión de inferencia sin respuesta HTTP y no se adoptan como solución. El pico RSS muestreado máximo de esta serie es 14 674 833 408 B; persisten límites de cobertura y lecturas no disponibles declaradas.
 
 El [controlador de referencia 0.1.10](controlador-nativo/README.md) conserva las correcciones instrumentales anteriores. La [candidata 0.1.11](resultados/ventana-acotada-2026-09-23/RESULTADO.md) añade la configuración de cuantización y fue ejecutada en los intentos 13 y 14. Su banco local secuencial supera 17 registros, incluidos dos auxiliares; esa comprobación no equivale a inferencia conseguida ni sustituye por sí sola a la referencia.
 

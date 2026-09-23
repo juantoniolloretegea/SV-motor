@@ -1,0 +1,539 @@
+{
+  "schema": "EIO-GGUF-RECEPCION-1",
+  "scope": "Resumen derivado de registros finales y respuestas; no sustituye los originales.",
+  "archive": {
+    "file": "EVIDENCIAS_GGUF_RECEPCION_20260923.tar.gz",
+    "bytes": 228833,
+    "sha256": "0c24a3ff967b95871a1885c793fa1187c3aa7872bab9d6ef144d24fd12bcf86d"
+  },
+  "attempts": [
+    {
+      "intento": 15,
+      "fuente": "intento-15/SUCESOS.jsonl",
+      "inicio": {
+        "controller_pid": 9463,
+        "data": {
+          "address": "127.0.0.1:8089",
+          "controller_binary_sha256": "fb87de622e8bbf44ea0580fe2465cc883b07782934454f5fd707f7533104ec6b",
+          "engine_sha256": "0bd54bd0d17eb79be22b21cccaac0a3f32add5918f93ea162a888feccd7a2158",
+          "load_ms": 540000,
+          "lock_sha256": "8ec2720c010a3c95a3e30afc23a89f496beaf6b2c3a1c664ac343008cf5dac31",
+          "request_ms": 240000,
+          "source_lib_sha256": "558ad1f0403d195893666bb8d072313b4c6029a071b18598c4e3024816249d79",
+          "source_main_sha256": "34df188c8596278e08ce48d4611f9c1170181926f8a373bcdfb406f0851bd96e",
+          "source_resources_sha256": "0cf553e883c724a268ad081c5a5a7decf1dea9b3d36da86f6d183f1cb1ded8c1",
+          "window_ms": 840000
+        },
+        "elapsed_ms": 6959,
+        "kind": "inicio",
+        "schema": "EIO-CONTROLADOR-OSS-1",
+        "utc_ms": 1790195149066
+      },
+      "resultado": {
+        "child_exit_code": 1,
+        "child_exit_signal": null,
+        "child_stop_confirmed": true,
+        "content_validation": "no_realizada",
+        "controller_signal": 0,
+        "elapsed_ms": 39381,
+        "error": "terminacion_anticipada: exit status: 1",
+        "external_signal_sender": "no_atribuido",
+        "http_request_attempted": false,
+        "peak_rss_bytes": 518246400,
+        "phase": "carga",
+        "pid": 9784,
+        "response_received": false,
+        "rss_samples": 63,
+        "rss_scope": "Solo hijo de inferencia; muestreado, no máximo exacto ni cuota agregada",
+        "rss_unavailable": 2,
+        "start_ticks": 411727,
+        "stop_errors": []
+      },
+      "fin_utc": "2026-09-23T20:26:21.487Z",
+      "respuesta": null
+    },
+    {
+      "intento": 16,
+      "fuente": "intento-16/SUCESOS.jsonl",
+      "inicio": {
+        "controller_pid": 6625,
+        "data": {
+          "address": "127.0.0.1:8089",
+          "controller_binary_sha256": "53aa4616c71110d2d941c982d283156771cb717aec8ccb11b58ed9d71a22a414",
+          "engine_sha256": "0bd54bd0d17eb79be22b21cccaac0a3f32add5918f93ea162a888feccd7a2158",
+          "load_ms": 100000,
+          "lock_sha256": "bec205e9637c780bb7600b3e54b752136a565135d6449c989198f4701b90982d",
+          "request_ms": 60000,
+          "source_lib_sha256": "1795c5a3c4a34587f2329461a90e4fa2471e0822321133c6e6d6ef9350c0a7a7",
+          "source_main_sha256": "34df188c8596278e08ce48d4611f9c1170181926f8a373bcdfb406f0851bd96e",
+          "source_resources_sha256": "0cf553e883c724a268ad081c5a5a7decf1dea9b3d36da86f6d183f1cb1ded8c1",
+          "window_ms": 180000
+        },
+        "elapsed_ms": 7783,
+        "kind": "inicio",
+        "schema": "EIO-CONTROLADOR-OSS-1",
+        "utc_ms": 1790196017735
+      },
+      "resultado": {
+        "child_exit_code": null,
+        "child_exit_signal": 15,
+        "child_stop_confirmed": true,
+        "content_validation": "no_realizada",
+        "controller_signal": 0,
+        "elapsed_ms": 84560,
+        "error": "lista_modelos_no_univoca",
+        "external_signal_sender": "no_atribuido",
+        "http_request_attempted": false,
+        "peak_rss_bytes": 14593359872,
+        "phase": "carga",
+        "pid": 6962,
+        "response_received": false,
+        "rss_samples": 853,
+        "rss_scope": "Solo hijo de inferencia; muestreado, no máximo exacto ni cuota agregada",
+        "rss_unavailable": 0,
+        "start_ticks": 110844,
+        "stop_errors": []
+      },
+      "fin_utc": "2026-09-23T20:41:34.512Z",
+      "respuesta": null
+    },
+    {
+      "intento": 17,
+      "fuente": "intento-17/SUCESOS.jsonl",
+      "inicio": {
+        "controller_pid": 9984,
+        "data": {
+          "address": "127.0.0.1:8089",
+          "controller_binary_sha256": "5ca872c096889a3e7eb59cc8b0a94700a40d72db77ba15c35285d33b09762c69",
+          "engine_sha256": "0bd54bd0d17eb79be22b21cccaac0a3f32add5918f93ea162a888feccd7a2158",
+          "load_ms": 180000,
+          "lock_sha256": "51306766c8f7b67f8ebce608ff0bb2f64381fffb58376d74ee47831b18011b79",
+          "request_ms": 300000,
+          "source_lib_sha256": "7ab8cc6ea1752a526a41b8dad8445586de28e04f837c66d190201ac31e84e04d",
+          "source_main_sha256": "34df188c8596278e08ce48d4611f9c1170181926f8a373bcdfb406f0851bd96e",
+          "source_resources_sha256": "0cf553e883c724a268ad081c5a5a7decf1dea9b3d36da86f6d183f1cb1ded8c1",
+          "window_ms": 600000
+        },
+        "elapsed_ms": 190,
+        "kind": "inicio",
+        "schema": "EIO-CONTROLADOR-OSS-1",
+        "utc_ms": 1790196377101
+      },
+      "resultado": {
+        "child_exit_code": null,
+        "child_exit_signal": 15,
+        "child_stop_confirmed": true,
+        "content_validation": "no_realizada",
+        "controller_signal": 0,
+        "elapsed_ms": 234389,
+        "error": null,
+        "external_signal_sender": "no_atribuido",
+        "http_request_attempted": true,
+        "peak_rss_bytes": 14598774784,
+        "phase": "peticion",
+        "pid": 10208,
+        "response_received": true,
+        "rss_samples": 3974,
+        "rss_scope": "Solo hijo de inferencia; muestreado, no máximo exacto ni cuota agregada",
+        "rss_unavailable": 0,
+        "start_ticks": 146602,
+        "stop_errors": []
+      },
+      "fin_utc": "2026-09-23T20:50:11.300Z",
+      "respuesta": {
+        "choices": [
+          {
+            "finish_reason": "length",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+              "content": null,
+              "role": "assistant",
+              "tool_calls": null
+            }
+          }
+        ],
+        "created": 1790196446,
+        "id": "1",
+        "model": "gguf",
+        "object": "chat.completion",
+        "system_fingerprint": "local",
+        "usage": {
+          "avg_compl_tok_per_sec": 0.78453165,
+          "avg_prompt_tok_per_sec": 2.8114185,
+          "avg_tok_per_sec": 1.298923,
+          "completion_tokens": 96,
+          "prompt_tokens": 117,
+          "total_completion_time_sec": 122.366,
+          "total_prompt_time_sec": 41.616,
+          "total_time_sec": 163.982,
+          "total_tokens": 213
+        }
+      }
+    },
+    {
+      "intento": 18,
+      "fuente": "intento-18/SUCESOS.jsonl",
+      "inicio": {
+        "controller_pid": 13323,
+        "data": {
+          "address": "127.0.0.1:8089",
+          "controller_binary_sha256": "96c041c75e91e69676ff3cb957066d2912f4227bde6a0e9a7760ef27f9c13f91",
+          "engine_sha256": "0bd54bd0d17eb79be22b21cccaac0a3f32add5918f93ea162a888feccd7a2158",
+          "load_ms": 180000,
+          "lock_sha256": "8d636a20529c8d213d6f08c83e24e701c02897855a5588fa98d1de3de7629928",
+          "request_ms": 600000,
+          "source_lib_sha256": "709adbf860fbb79133744d3dd1c8e3e953938f45c812acc963bb015def16e2ac",
+          "source_main_sha256": "34df188c8596278e08ce48d4611f9c1170181926f8a373bcdfb406f0851bd96e",
+          "source_resources_sha256": "0cf553e883c724a268ad081c5a5a7decf1dea9b3d36da86f6d183f1cb1ded8c1",
+          "window_ms": 900000
+        },
+        "elapsed_ms": 208,
+        "kind": "inicio",
+        "schema": "EIO-CONTROLADOR-OSS-1",
+        "utc_ms": 1790196755904
+      },
+      "resultado": {
+        "child_exit_code": null,
+        "child_exit_signal": 15,
+        "child_stop_confirmed": true,
+        "content_validation": "no_realizada",
+        "controller_signal": 0,
+        "elapsed_ms": 443837,
+        "error": null,
+        "external_signal_sender": "no_atribuido",
+        "http_request_attempted": true,
+        "peak_rss_bytes": 14590693376,
+        "phase": "peticion",
+        "pid": 13546,
+        "response_received": true,
+        "rss_samples": 8047,
+        "rss_scope": "Solo hijo de inferencia; muestreado, no máximo exacto ni cuota agregada",
+        "rss_unavailable": 0,
+        "start_ticks": 184546,
+        "stop_errors": []
+      },
+      "fin_utc": "2026-09-23T20:59:59.533Z",
+      "respuesta": {
+        "choices": [
+          {
+            "finish_reason": "length",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+              "content": null,
+              "role": "assistant",
+              "tool_calls": null
+            }
+          }
+        ],
+        "created": 1790196825,
+        "id": "1",
+        "model": "gguf",
+        "object": "chat.completion",
+        "system_fingerprint": "local",
+        "usage": {
+          "avg_compl_tok_per_sec": 0.7723383,
+          "avg_prompt_tok_per_sec": 2.8021939,
+          "avg_tok_per_sec": 0.9994266,
+          "completion_tokens": 256,
+          "prompt_tokens": 117,
+          "total_completion_time_sec": 331.461,
+          "total_prompt_time_sec": 41.753,
+          "total_time_sec": 373.214,
+          "total_tokens": 373
+        }
+      }
+    },
+    {
+      "intento": 19,
+      "fuente": "intento-19/SUCESOS.jsonl",
+      "inicio": {
+        "controller_pid": 19905,
+        "data": {
+          "address": "127.0.0.1:8089",
+          "controller_binary_sha256": "c48775206ae3bfffd138693adc54301ee6f15daaed32687454a34cc66e4c8b53",
+          "engine_sha256": "0bd54bd0d17eb79be22b21cccaac0a3f32add5918f93ea162a888feccd7a2158",
+          "load_ms": 180000,
+          "lock_sha256": "e7c02cf04d235349127aa4bb5fabc6b076ce772ead16f8630eaf71af8976a8c7",
+          "request_ms": 180000,
+          "source_lib_sha256": "6890c659a76f8544727a249dd9b98ecb7629e5d3254efef774a6f457b6477d4e",
+          "source_main_sha256": "34df188c8596278e08ce48d4611f9c1170181926f8a373bcdfb406f0851bd96e",
+          "source_resources_sha256": "0cf553e883c724a268ad081c5a5a7decf1dea9b3d36da86f6d183f1cb1ded8c1",
+          "window_ms": 360000
+        },
+        "elapsed_ms": 186,
+        "kind": "inicio",
+        "schema": "EIO-CONTROLADOR-OSS-1",
+        "utc_ms": 1790197578358
+      },
+      "resultado": {
+        "child_exit_code": null,
+        "child_exit_signal": 15,
+        "child_stop_confirmed": true,
+        "content_validation": "no_realizada",
+        "controller_signal": 0,
+        "elapsed_ms": 123008,
+        "error": null,
+        "external_signal_sender": "no_atribuido",
+        "http_request_attempted": true,
+        "peak_rss_bytes": 14643302400,
+        "phase": "peticion",
+        "pid": 20179,
+        "response_received": true,
+        "rss_samples": 1781,
+        "rss_scope": "Solo hijo de inferencia; muestreado, no máximo exacto ni cuota agregada",
+        "rss_unavailable": 0,
+        "start_ticks": 266833,
+        "stop_errors": []
+      },
+      "fin_utc": "2026-09-23T21:08:21.179Z",
+      "respuesta": {
+        "choices": [
+          {
+            "finish_reason": "length",
+            "index": 0,
+            "logprobs": {
+              "content": [
+                {
+                  "bytes": [
+                    58
+                  ],
+                  "logprob": -0.4386488,
+                  "token": ":",
+                  "top_logprobs": [
+                    {
+                      "bytes": ":",
+                      "logprob": -0.4386488,
+                      "token": 25
+                    }
+                  ]
+                },
+                {
+                  "bytes": [
+                    32,
+                    78,
+                    111
+                  ],
+                  "logprob": -2.7220898,
+                  "token": " No",
+                  "top_logprobs": [
+                    {
+                      "bytes": " No",
+                      "logprob": -2.7220898,
+                      "token": 3004
+                    }
+                  ]
+                },
+                {
+                  "bytes": [
+                    32,
+                    101,
+                    115
+                  ],
+                  "logprob": -0.8317901,
+                  "token": " es",
+                  "top_logprobs": [
+                    {
+                      "bytes": " es",
+                      "logprob": -0.8317901,
+                      "token": 878
+                    }
+                  ]
+                },
+                {
+                  "bytes": [
+                    32,
+                    117,
+                    110
+                  ],
+                  "logprob": -2.6884725,
+                  "token": " un",
+                  "top_logprobs": [
+                    {
+                      "bytes": " un",
+                      "logprob": -2.6884725,
+                      "token": 537
+                    }
+                  ]
+                },
+                {
+                  "bytes": [
+                    32,
+                    111,
+                    114
+                  ],
+                  "logprob": -1.7258794,
+                  "token": " or",
+                  "top_logprobs": [
+                    {
+                      "bytes": " or",
+                      "logprob": -1.7258794,
+                      "token": 503
+                    }
+                  ]
+                },
+                {
+                  "bytes": [
+                    102
+                  ],
+                  "logprob": -2.1992536,
+                  "token": "f",
+                  "top_logprobs": [
+                    {
+                      "bytes": "f",
+                      "logprob": -2.1992536,
+                      "token": 69
+                    }
+                  ]
+                },
+                {
+                  "bytes": [
+                    97,
+                    111
+                  ],
+                  "logprob": -3.3245728,
+                  "token": "ao",
+                  "top_logprobs": [
+                    {
+                      "bytes": "ao",
+                      "logprob": -3.3245728,
+                      "token": 3458
+                    }
+                  ]
+                },
+                {
+                  "bytes": [
+                    226,
+                    128,
+                    145
+                  ],
+                  "logprob": -2.5238628,
+                  "token": "‑",
+                  "top_logprobs": [
+                    {
+                      "bytes": "‑",
+                      "logprob": -2.5238628,
+                      "token": 50005
+                    }
+                  ]
+                }
+              ]
+            },
+            "message": {
+              "content": null,
+              "role": "assistant",
+              "tool_calls": null
+            }
+          }
+        ],
+        "created": 1790197647,
+        "id": "1",
+        "model": "gguf",
+        "object": "chat.completion",
+        "system_fingerprint": "local",
+        "usage": {
+          "avg_compl_tok_per_sec": 0.8071025,
+          "avg_prompt_tok_per_sec": 2.693432,
+          "avg_tok_per_sec": 2.342974,
+          "completion_tokens": 8,
+          "prompt_tokens": 117,
+          "total_completion_time_sec": 9.912,
+          "total_prompt_time_sec": 43.439,
+          "total_time_sec": 53.351,
+          "total_tokens": 125
+        }
+      }
+    },
+    {
+      "intento": 20,
+      "fuente": "intento-20/SUCESOS.jsonl",
+      "inicio": {
+        "controller_pid": 24127,
+        "data": {
+          "address": "127.0.0.1:8089",
+          "controller_binary_sha256": "8f9d815090d89cdde9191abfb792e24a8615c81834420c158be928a965181841",
+          "engine_sha256": "0bd54bd0d17eb79be22b21cccaac0a3f32add5918f93ea162a888feccd7a2158",
+          "load_ms": 180000,
+          "lock_sha256": "eb74eecd4e5f96321edc7f91dfafa2615d3eb937fa584e462235d3d34f452da2",
+          "request_ms": 180000,
+          "source_lib_sha256": "9b445c3d5dbcf7aad34970a943a8e4b9c0a19b23be3767ded59b3b8a026d96d8",
+          "source_main_sha256": "34df188c8596278e08ce48d4611f9c1170181926f8a373bcdfb406f0851bd96e",
+          "source_resources_sha256": "0cf553e883c724a268ad081c5a5a7decf1dea9b3d36da86f6d183f1cb1ded8c1",
+          "window_ms": 360000
+        },
+        "elapsed_ms": 229,
+        "kind": "inicio",
+        "schema": "EIO-CONTROLADOR-OSS-1",
+        "utc_ms": 1790198029486
+      },
+      "resultado": {
+        "child_exit_code": null,
+        "child_exit_signal": 15,
+        "child_stop_confirmed": true,
+        "content_validation": "no_realizada",
+        "controller_signal": 0,
+        "elapsed_ms": 96102,
+        "error": "http_incompleto",
+        "external_signal_sender": "no_atribuido",
+        "http_request_attempted": true,
+        "peak_rss_bytes": 14674833408,
+        "phase": "peticion",
+        "pid": 24383,
+        "response_received": false,
+        "rss_samples": 1270,
+        "rss_scope": "Solo hijo de inferencia; muestreado, no máximo exacto ni cuota agregada",
+        "rss_unavailable": 13,
+        "start_ticks": 311883,
+        "stop_errors": []
+      },
+      "fin_utc": "2026-09-23T21:15:25.360Z",
+      "respuesta": null
+    },
+    {
+      "intento": 21,
+      "fuente": "intento-21/SUCESOS.jsonl",
+      "inicio": {
+        "controller_pid": 26455,
+        "data": {
+          "address": "127.0.0.1:8089",
+          "controller_binary_sha256": "3e7fff7896a89fc57f2b71cd04807bc152bb4722f32d92c36492f6d8a09ac388",
+          "engine_sha256": "0bd54bd0d17eb79be22b21cccaac0a3f32add5918f93ea162a888feccd7a2158",
+          "load_ms": 180000,
+          "lock_sha256": "075458b572a5a1a69cf33b455187af431382747810ac9337a5a702e78a0e2428",
+          "request_ms": 180000,
+          "source_lib_sha256": "7f66471d76ffee4e3a34048b2717ca0af10e488bcdc857ac5263145420ad80a3",
+          "source_main_sha256": "34df188c8596278e08ce48d4611f9c1170181926f8a373bcdfb406f0851bd96e",
+          "source_resources_sha256": "0cf553e883c724a268ad081c5a5a7decf1dea9b3d36da86f6d183f1cb1ded8c1",
+          "window_ms": 360000
+        },
+        "elapsed_ms": 239,
+        "kind": "inicio",
+        "schema": "EIO-CONTROLADOR-OSS-1",
+        "utc_ms": 1790198275655
+      },
+      "resultado": {
+        "child_exit_code": null,
+        "child_exit_signal": 15,
+        "child_stop_confirmed": true,
+        "content_validation": "no_realizada",
+        "controller_signal": 0,
+        "elapsed_ms": 104907,
+        "error": "http_incompleto",
+        "external_signal_sender": "no_atribuido",
+        "http_request_attempted": true,
+        "peak_rss_bytes": 14669312000,
+        "phase": "peticion",
+        "pid": 26729,
+        "response_received": false,
+        "rss_samples": 1433,
+        "rss_scope": "Solo hijo de inferencia; muestreado, no máximo exacto ni cuota agregada",
+        "rss_unavailable": 13,
+        "start_ticks": 336528,
+        "stop_errors": []
+      },
+      "fin_utc": "2026-09-23T21:19:40.323Z",
+      "respuesta": null
+    }
+  ]
+}
