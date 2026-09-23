@@ -1,6 +1,19 @@
 use super::*;
 use std::sync::Mutex;
 
+// Regresión observada en almacenamiento remoto: una escritura correcta que
+// supera 250 ms no es, por sí sola, un fallo de persistencia.
+#[test] fn escritura_demorada_pero_correcta_se_confirma() {
+    struct Slow(Vec<u8>);
+    impl Write for Slow {
+        fn write(&mut self,b:&[u8])->io::Result<usize>{self.0.extend_from_slice(b);Ok(b.len())}
+        fn flush(&mut self)->io::Result<()>{thread::sleep(Duration::from_millis(400));Ok(())}
+    }
+    let journal=Journal::with_writer(Slow(Vec::new()));
+    assert!(journal.event("escritura_demorada",json!({})).is_ok());
+    assert!(journal.healthy.load(Ordering::SeqCst));
+}
+
 struct Area { root:PathBuf, config:Option<Config> }
 impl Area {
     fn new(mode:&str)->Self {

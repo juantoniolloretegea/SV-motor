@@ -1,6 +1,12 @@
 # Controlador nativo de gpt-oss-20b
 
-**Versión de referencia 0.1.3 · 23 de septiembre de 2026 · Linux, Rust 1.98.0.**
+**Versión de referencia 0.1.10 · 23 de septiembre de 2026 · Linux, Rust 1.98.0.**
+
+La versión 0.1.10 corrige dos defectos instrumentales: distingue `RssAnon`, `RssFile` y `RssShmem`, y admite hasta dos segundos para confirmar una escritura. Conserva la disponibilidad global como control vinculante y la parada ante pérdida de custodia. La RSS total sigue registrándose; el umbral por proceso se aplica a `RssAnon + RssShmem`, sin afirmar que toda página de archivo sea recuperable. La disponibilidad se consulta en cada vuelta, con espera nominal de 50 ms entre vueltas; las muestras se persisten aproximadamente cada segundo y antes de una parada por recursos.
+
+**Verificación de 0.1.10:** 17 registros de prueba superados (15 pruebas funcionales y dos auxiliares) y compilación de producción. La regresión añadida confirma una escritura correcta demorada 400 ms. Tras un fallo de custodia declarado, los siguientes intentos de registro fallan inmediatamente para no demorar repetidamente la limpieza. [Pruebas y alcance](verificacion-0.1.10/INFORME.md).
+
+Esta referencia conserva la invocación numérica original de 0.1.3. Las variantes 0.1.7–0.1.9 de la [rectificación experimental](../resultados/continuacion-2026-09-23/RECTIFICACION_CONTROLADOR.md) permanecen como evidencia; no se adoptan como instalación operativa. 0.1.10 no ha ejecutado una nueva campaña con el modelo real. Las verificaciones y descripciones de versiones anteriores que siguen son históricas; los dos cambios anteriores prevalecen en la referencia actual.
 
 Corrección del controlador instrumental utilizado en el [intento nativo del 23/09/2026](../resultados/2026-09-23/RESULTADO.md). Conserva la invocación corregida de mistral.rs 0.9.3 y adapta mecanismos de supervisión ya empleados en la conversación nativa de Qwen.
 
@@ -70,8 +76,8 @@ El servicio escucha únicamente en `127.0.0.1:8089`. Se conservan `SUCESOS.jsonl
 
 ## Perímetro técnico
 
-- Los plazos máximos configurables llegan a 1.500 segundos de operación, más el cierre. Las esperas posteriores a TERM y KILL son de 500 ms cada una; cada acuse del registro admite 250 ms. Son límites instrumentales de las esperas programadas, no una garantía de tiempo real frente a bloqueos del núcleo o del sistema de archivos.
-- El máximo RSS es muestreado y corresponde al hijo de inferencia. Sus umbrales provocan una solicitud de parada; no representan una cuota agregada. RLIMIT_AS limita direcciones virtuales por proceso.
+- Los plazos máximos configurables llegan a 1.500 segundos de operación, más el cierre. Las esperas posteriores a TERM y KILL son de 500 ms cada una; en 0.1.10 cada acuse del registro admite dos segundos. Son límites instrumentales de las esperas programadas, no una garantía de tiempo real frente a bloqueos del núcleo o del sistema de archivos.
+- El máximo RSS es muestreado y corresponde al hijo de inferencia. En 0.1.10 el umbral instrumental por proceso se aplica a `RssAnon + RssShmem`, junto con la reserva de disponibilidad global. No representa una cuota agregada. RLIMIT_AS limita direcciones virtuales por proceso.
 - La parada confirmada corresponde al hijo directo. Las señales se dirigen a su grupo cuando puede comprobarse; no se acredita la ausencia de descendientes que abandonen ese grupo o sobrevivan al líder.
 - El escritor reside en otro hilo del mismo proceso. No equivale a un custodio independiente ni a la guarda exterior; la muerte del controlador solicita por el núcleo la terminación del hijo directo; puede quedar incompleta la evidencia final. Una pérdida del sistema queda fuera de ese mecanismo.
 - El controlador no detiene la instancia anfitriona. La verificación local no cierra la vía B completa ni acredita ejecución en navegador/WebAssembly.

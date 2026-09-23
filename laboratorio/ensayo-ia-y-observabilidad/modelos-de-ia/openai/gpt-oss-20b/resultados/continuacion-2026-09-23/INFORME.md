@@ -2,6 +2,8 @@
 
 **23 de septiembre de 2026 · Estado: ejecución de inferencia pendiente.**
 
+**Rectificación posterior:** la [revisión del controlador y de la cuantización](RECTIFICACION_CONTROLADOR.md) incorpora los intentos 09–12. Las menciones Q2K/Q3K identifican opciones solicitadas; no acreditan una representación residente con esos tipos. Para los expertos de este modelo, el código del motor selecciona Q4_0 por incompatibilidad dimensional con los bloques K. El corte inicial 01–08 se conserva a continuación y no sustituye esa rectificación.
+
 Se ejecutó el motor instalado con supervisión Rust y medidas conservadas durante la carga. **Ninguno de los ocho intentos alcanzó el servicio HTTP ni envió la petición de inferencia.** Se confirmó la terminación de cada hijo. La instancia de Codespaces quedó detenida, comprobado a las 11:22 UTC.
 
 El diagnóstico distingue una señal externa observada en dos intentos y las paradas instrumentales por tiempo o RSS. No identifica el servicio exterior emisor, no demuestra que todas las interrupciones tengan la misma causa y no acredita inviabilidad general del modelo.

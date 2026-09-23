@@ -6,7 +6,7 @@ use sha2::{Digest, Sha256};
 use std::{fs::{self, File, OpenOptions}, io::{self, Read, Write}, net::{SocketAddr, TcpListener, TcpStream}, os::unix::{fs::OpenOptionsExt, process::{CommandExt, ExitStatusExt}}, path::{Path, PathBuf}, process::{Child, Command, ExitStatus, Stdio}, sync::{Arc, atomic::{AtomicBool, AtomicI32, Ordering}, mpsc::{self, SyncSender}}, thread, time::{Duration, Instant, SystemTime, UNIX_EPOCH}};
 type Result<T> = std::result::Result<T, String>;
 const TICK: Duration = Duration::from_millis(50);
-const ACK: Duration = Duration::from_millis(250);
+const ACK: Duration = Duration::from_secs(2);
 const MAX_HTTP: usize = 256 * 1024;
 pub const LICENSE_NOTICE: &str = include_str!("../AVISO_LICENCIAS.json");
 pub const LICENSE_FOOTER: &str = "Sistema Vectorial SV · CC BY-NC-ND 4.0 · https://creativecommons.org/licenses/by-nc-nd/4.0/deed.es\nComponentes de terceros: licencias propias; consulte AVISO_LICENCIAS.json y DEPENDENCIAS.json.";
@@ -66,6 +66,7 @@ impl Journal {
         Self { tx, healthy, origin: Instant::now() }
     }
     fn event(&self, kind: &str, data: Value) -> Result<()> {
+        if !self.healthy.load(Ordering::SeqCst) {return Err("custodia_previamente_fallida".into());}
         let value = json!({"schema":"EIO-CONTROLADOR-OSS-1", "kind":kind, "utc_ms":utc_ms(), "elapsed_ms":self.origin.elapsed().as_millis(), "controller_pid":std::process::id(), "data":data});
         let (tx, rx) = mpsc::channel();
         let result = self.tx.try_send((value, tx)).map_err(|e|e.to_string()).and_then(|_| rx.recv_timeout(ACK).map_err(|e| e.to_string())?);
@@ -141,10 +142,12 @@ impl Config {
     }
 }
 #[derive(Default)]
-struct Metrics { peak: Option<u64>, samples: u64, missing: u64, last:Option<u64>, persisted:Option<Instant>, rss_ceiling:u64, reserve:u64 }
+struct Metrics { peak: Option<u64>, samples: u64, missing: u64, last:Option<u64>, persisted:Option<Instant>, rss_ceiling:u64, reserve:u64, anon:Option<u64>, file:Option<u64>, shmem:Option<u64>, capacity:Value }
 impl Metrics {
     fn sample(&mut self, pid: u32) {
-        let value = bounded(format!("/proc/{pid}/status"), 32768).ok().and_then(|s| s.lines().find_map(|l|l.strip_prefix("VmRSS:")?.split_whitespace().next()?.parse::<u64>().ok()).and_then(|n|n.checked_mul(1024)));
+        let status=bounded(format!("/proc/{pid}/status"),32768).unwrap_or_default();
+        let get=|key:&str|status.lines().find_map(|l|l.strip_prefix(key)?.split_whitespace().next()?.parse::<u64>().ok()).and_then(|n|n.checked_mul(1024));
+        let value=get("VmRSS:"); self.anon=get("RssAnon:"); self.file=get("RssFile:"); self.shmem=get("RssShmem:");
         self.last=value;
         if let Some(n) = value { self.peak = Some(self.peak.unwrap_or(0).max(n)); self.samples += 1; } else { self.missing += 1; }
     }
@@ -152,13 +155,18 @@ impl Metrics {
 fn check(child: &mut OwnedChild, journal: &Journal, metrics: &mut Metrics, end: Instant) -> Result<()> {
     metrics.sample(child.child.id());
     if let Some(s) = child.poll()? { return Err(format!("terminacion_anticipada: {s}")); }
-    if metrics.last.is_some_and(|v|v>metrics.rss_ceiling){return Err("limite_rss_muestreada".into());}
-    if metrics.persisted.is_none_or(|t|t.elapsed()>=Duration::from_secs(1)) {
-        let capacity=resources::snapshot()?;
-        journal.event("muestra_recursos",json!({"pid":child.child.id(),"rss_bytes":metrics.last,"peak_rss_bytes":metrics.peak,"samples":metrics.samples,"unavailable":metrics.missing,"capacity":capacity}))?;
+    // La RSS incorpora páginas respaldadas por archivos. No se declara que toda
+    // RssFile sea recuperable: la disponibilidad global sigue siendo vinculante.
+    let non_file=metrics.anon.zip(metrics.shmem).and_then(|(a,s)|a.checked_add(s));
+    let capacity=resources::snapshot()?; metrics.capacity=capacity.clone();
+    let exhausted=capacity["effective_available_bytes"].as_u64().is_none_or(|v|v<metrics.reserve);
+    let exceeded=non_file.is_some_and(|v|v>metrics.rss_ceiling);
+    if exhausted || exceeded || metrics.persisted.is_none_or(|t|t.elapsed()>=Duration::from_secs(1)) {
+        journal.event("muestra_recursos",json!({"pid":child.child.id(),"rss_bytes":metrics.last,"rss_anon_bytes":metrics.anon,"rss_file_bytes":metrics.file,"rss_shmem_bytes":metrics.shmem,"non_file_rss_bytes":non_file,"peak_rss_bytes":metrics.peak,"samples":metrics.samples,"unavailable":metrics.missing,"capacity":capacity}))?;
         metrics.persisted=Some(Instant::now());
-        if capacity["effective_available_bytes"].as_u64().is_none_or(|v|v<metrics.reserve){return Err("reserva_del_entorno_agotada".into());}
     }
+    if exhausted{return Err("reserva_del_entorno_agotada".into());}
+    if exceeded{return Err("limite_rss_anonima_y_compartida".into());}
     let signal = STOP.load(Ordering::SeqCst); if signal != 0 { return Err(format!("senal_recibida_controlador: {signal}")); }
     if !journal.healthy.load(Ordering::SeqCst) { return Err("custodia_no_integra".into()); }
     if Instant::now() >= end { return Err("limite_temporal".into()); } Ok(())
@@ -211,7 +219,7 @@ fn run(config: Config, root: PathBuf, evidence: PathBuf, journal: Journal) -> Re
         journal.event("capacidad_previa",capacity.clone())?;
         metrics.rss_ceiling=resources::admit(&capacity,config.minimum_memory,config.reserve_memory)?;
         metrics.reserve=config.reserve_memory;
-        journal.event("limites_declarados",json!({"virtual_hard_bytes":config.virtual_limit,"rss_sampled_stop_bytes":metrics.rss_ceiling,"environment_reserve_bytes":config.reserve_memory,"minimum_load_estimate_bytes":config.minimum_memory,"kernel_parent_death_signal":9,"scope":"Direcciones virtuales por proceso y RSS observada; no cuota RSS agregada ni guarda exterior"}))?;
+        journal.event("limites_declarados",json!({"virtual_hard_bytes":config.virtual_limit,"non_file_rss_sampled_stop_bytes":metrics.rss_ceiling,"environment_reserve_bytes":config.reserve_memory,"minimum_load_estimate_bytes":config.minimum_memory,"kernel_parent_death_signal":9,"resource_sample_period_ms":50,"scope":"Direcciones virtuales por proceso, RssAnon + RssShmem y disponibilidad global. RSS total descriptiva; no cuota agregada ni guarda exterior."}))?;
         let engine = root.join("motor/mistralrs"); let engine_hash = hash_file(&engine)?;
         if engine_hash != config.expected_engine_sha256 { return Err("identidad_motor_no_conforme".into()); }
         let available = TcpListener::bind(config.address).map_err(|e|format!("puerto_ocupado: {e}"))?;
