@@ -1,14 +1,14 @@
 # Modelos de IA
 
-**Edición:** 3 · 23 de septiembre de 2026.  
+**Edición:** 4 · 23 de septiembre de 2026.  
 **Ámbito:** catálogo experimental del ensayo de inteligencia artificial y observabilidad.
 
 El modelo, el motor numérico y la vía de ejecución son elementos distintos. Este catálogo identifica su relación y remite a las fuentes y evidencias existentes. Las instalaciones y los resultados conservan su ubicación; no se duplican pesos, dependencias ni expedientes.
 
 | Ficha | Modelo | Vía B · nativa | Vía A · navegador/WebAssembly |
 |---|---|---|---|
-| [Qwen3-0.6B](qwen/qwen3-0.6b/README.md) | Qwen3-0.6B, Q4_K_M | Conversación 0.1.3, Beta 1; realización parcial verificada. | Antecedentes NAV-02; inferencia real completa no acreditada. |
-| [gpt-oss-20b](openai/gpt-oss-20b/README.md) | gpt-oss-20b | Instalado; carga interrumpida por SIGTERM, sin inferencia evaluada. Controlador corregido y verificado localmente. | Candidato sujeto a viabilidad; no se ha ejecutado. |
+| [Qwen3-0.6B](qwen/qwen3-0.6b/README.md) | Qwen3-0.6B, Q4_K_M | Campaña cerrada como realización parcial con limitaciones; Beta 1 conservada. | Antecedentes NAV-02; inferencia real completa no acreditada. |
+| [gpt-oss-20b](openai/gpt-oss-20b/README.md) | gpt-oss-20b | Instalado; continuación nativa sin respuesta. Señales externas y límites de carga documentados; seguimiento abierto. | Candidato sujeto a viabilidad; no se ha ejecutado. |
 
 Las fichas identifican versiones concretas, estado, requisitos y límites. Un nombre de proveedor no acredita equivalencia entre modelos. La [composición distribuida](../README.md#versión-distribuida), el [contrato experimental](../contrato/README.md) y la evidencia de cada ejecución mantienen su función propia.
 

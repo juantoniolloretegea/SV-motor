@@ -1,5 +1,7 @@
 # gpt-oss-20b — intento nativo del 23 de septiembre de 2026
 
+**Corte histórico del primer intento.** La [continuación posterior](../continuacion-2026-09-23/INFORME.md) conserva nuevas cargas, medidas de memoria y trazas. Las conclusiones siguientes corresponden exclusivamente a este primer corte.
+
 **Resultado: adquisición e instalación completadas; ejecución no conseguida.** La carga de pesos terminó por `SIGTERM` antes de habilitar el servicio. No se emitió ninguna petición de inferencia ni se generó una respuesta. La causa de la señal no está identificada.
 
 La ventana de ejecución fue de treinta minutos. La comprobación de parada exterior se efectuó a los 18 minutos y 25 segundos de la solicitud de creación.

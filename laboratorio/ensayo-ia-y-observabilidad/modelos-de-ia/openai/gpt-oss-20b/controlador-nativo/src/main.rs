@@ -8,7 +8,7 @@ fn main() {
         if args.len()==1 && args[0]=="--capacidad" {println!("{}",eio_controlador_oss::resources::snapshot()?);return Ok(());}
         if args.len()==1 && args[0]=="--licencias" { println!("{LICENSE_NOTICE}"); return Ok(()); }
         if args.len()==1 && args[0]=="--help" {
-            println!("eio-controlador-oss --instalacion DIRECTORIO --evidencias DIRECTORIO_NUEVO --limite-as-mib COTA_EXPLICITA [--ventana-segundos 1000] [--carga-segundos 600] [--peticion-segundos 300]\n--capacidad: lectura de recursos sin iniciar el motor. RLIMIT_AS limita direcciones virtuales por proceso, no RSS agregada. CPU; un intento, sin descargas; puerto local 8089; máximo 1500 segundos más cierre acotado. El controlador no detiene Codespaces."); return Ok(());
+            println!("eio-controlador-oss --instalacion DIRECTORIO --evidencias DIRECTORIO_NUEVO --limite-as-mib COTA_EXPLICITA [--ventana-segundos 1000] [--carga-segundos 600] [--peticion-segundos 300] [--reserva-entorno-mib 1024]\n--capacidad: lectura de recursos sin iniciar el motor. RLIMIT_AS limita direcciones virtuales por proceso, no RSS agregada. CPU; un intento, sin descargas; puerto local 8089; máximo 1500 segundos más cierre acotado. El controlador no detiene Codespaces."); return Ok(());
         }
         if args.len()%2!=0 { return Err("argumentos_incompletos; consulte --help".into()); }
         let mut installation=None; let mut evidence=None; let mut seen=std::collections::HashSet::new();
@@ -18,12 +18,12 @@ fn main() {
             match pair[0].as_str() {
                 "--instalacion"=>installation=Some(PathBuf::from(&pair[1])),
                 "--evidencias"=>evidence=Some(PathBuf::from(&pair[1])),
-                "--ventana-segundos"|"--carga-segundos"|"--peticion-segundos"|"--limite-as-mib"=>limits.push((pair[0].as_str(),pair[1].parse::<u64>().map_err(|_|"valor_invalido")?)),
+                "--ventana-segundos"|"--carga-segundos"|"--peticion-segundos"|"--limite-as-mib"|"--reserva-entorno-mib"=>limits.push((pair[0].as_str(),pair[1].parse::<u64>().map_err(|_|"valor_invalido")?)),
                 _=>return Err(format!("argumento_desconocido: {}",pair[0])),
             }
         }
         let mut config=Config::new(installation.ok_or("falta_instalacion")?,evidence.ok_or("faltan_evidencias")?,ENGINE_SHA256.into());
-        for (key,value) in limits { let duration=Duration::from_secs(value); match key {"--ventana-segundos"=>config.window=duration,"--carga-segundos"=>config.load=duration,"--limite-as-mib"=>config.virtual_limit=Some(value.checked_mul(1024*1024).ok_or("cota_excedida")?),_=>config.request=duration} }
+        for (key,value) in limits { let duration=Duration::from_secs(value); match key {"--ventana-segundos"=>config.window=duration,"--carga-segundos"=>config.load=duration,"--limite-as-mib"=>config.virtual_limit=Some(value.checked_mul(1024*1024).ok_or("cota_excedida")?),"--reserva-entorno-mib"=>{if !(512..=4096).contains(&value){return Err("reserva_admitida_512_a_4096_MiB".into());}config.reserve_memory=value*1024*1024;},_=>config.request=duration} }
         let value=execute(config)?;
         println!("{value}");
         if !value["error"].is_null() {return Err("intento_finalizado_con_incidencia; consulte resultado_final".into());} Ok(())

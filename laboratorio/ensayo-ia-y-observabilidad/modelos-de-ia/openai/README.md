@@ -4,9 +4,9 @@
 
 | Modelo | Ficha y alcance |
 |---|---|
-| gpt-oss-20b | [Estado, requisitos y fuentes](gpt-oss-20b/README.md). Instalado; carga interrumpida por SIGTERM, sin inferencia evaluada. Controlador corregido y verificado localmente. |
+| gpt-oss-20b | [Estado, requisitos y fuentes](gpt-oss-20b/README.md). Instalado; continuación real sin respuesta, con señales externas y límites de carga documentados. Seguimiento abierto. |
 
-Cada modelo dispone de una carpeta propia. La ficha de gpt-oss-20b distingue el antecedente documental del 22/09/2026, la instalación del 23/09/2026 y la corrección instrumental posterior.
+Cada modelo dispone de una carpeta propia. La ficha de gpt-oss-20b distingue el antecedente documental del 22/09/2026, la instalación del 23/09/2026 la corrección instrumental posterior y la continuación con medidas reales de carga.
 
 ## Fuentes
 

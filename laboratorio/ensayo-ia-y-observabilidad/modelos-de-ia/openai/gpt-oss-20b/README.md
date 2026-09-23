@@ -1,18 +1,18 @@
 # OpenAI · gpt-oss-20b
 
-**Estado al 23 de septiembre de 2026:** instalado en una instancia separada; no operativo. La carga nativa terminó por `SIGTERM` antes de atender una petición. Causa de la terminación no identificada.
+**Estado al 23 de septiembre de 2026:** instalado en una instancia separada; no operativo. La continuación nativa conserva ocho intentos sin servicio HTTP ni respuesta de inferencia. Se observaron señales externas y paradas instrumentales por tiempo o RSS, diferenciadas en la evidencia. Instancia detenida.
 
-El [resultado y las evidencias del intento del 23 de septiembre](resultados/2026-09-23/RESULTADO.md) documentan la adquisición de los pesos oficiales MXFP4, Rust/Cargo 1.98.0, mistral.rs 0.9.3 para CPU y Harmony 0.0.8. Se utilizó una máquina de 4 núcleos y 16 GB, con BF16. La instancia quedó detenida.
+El [primer intento](resultados/2026-09-23/RESULTADO.md) documenta la adquisición de los pesos oficiales MXFP4, Rust/Cargo 1.98.0, mistral.rs 0.9.3 para CPU y Harmony 0.0.8. La [continuación y su diagnóstico](resultados/continuacion-2026-09-23/INFORME.md) conservan medidas durante la carga, variantes de precisión y trazas de señales. Se utilizó la misma instalación de 4 núcleos y 16 GB, con BF16; las variantes no modificaron los pesos originales en disco.
 
 No se generaron respuestas ni se evaluó calidad. Este intento nativo no acredita la vía A ni demuestra imposibilidad general del modelo. Las rutas cruzadas entre modelos y soportes siguen abiertas a trabajo posterior cuando exista motivo concreto.
 
-La [revisión del controlador propio y su contraste con los esquemas A/B](resultados/2026-09-23/REVISION_CONTROLADOR_RUST_20260923.md) reproduce localmente la pérdida del registro de memoria y el cierre al reutilizar una ventana caducada. Identifica además carencias de trazabilidad de señales y de limpieza ante errores. La [corrección del controlador nativo 0.1.0](controlador-nativo/README.md) supera diez comprobaciones funcionales locales con auxiliares Rust. Queda pendiente su ejecución con el motor y los pesos instalados; el emisor del SIGTERM original sigue sin identificar.
+La [revisión del controlador propio](resultados/2026-09-23/REVISION_CONTROLADOR_RUST_20260923.md) conserva los defectos instrumentales originales. El [controlador de referencia 0.1.3](controlador-nativo/README.md) conserva sus correcciones posteriores y ha sido ejecutado con el motor instalado; supera 16 registros de prueba locales (14 funcionales y dos auxiliares). Ninguna de estas comprobaciones equivale a una inferencia conseguida.
 
 ## Corrección posterior y capacidad
 
-El [controlador 0.1.1](controlador-nativo/verificacion-0.1.1/INFORME.md) añade muestras persistidas durante la carga, lectura de disponibilidad efectiva observada, límite explícito de direcciones virtuales por proceso y terminación del hijo por Linux cuando desaparece el hilo padre que lo creó. Son propiedades instrumentales comprobadas localmente; no acreditan la carga del modelo ni una contención agregada.
+Desde [0.1.1](controlador-nativo/verificacion-0.1.1/INFORME.md) se conservan muestras durante la carga, disponibilidad observada, límite explícito de direcciones virtuales y terminación del hijo por Linux cuando desaparece el hilo padre que lo creó. 0.1.3 añade reserva explícita y diagnóstico de observación. Son controles instrumentales, sin contención agregada acreditada.
 
-Los 13 123 MiB anunciados por el cargador representan un inventario, no un máximo RSS. La lectura de disponibilidad anterior fue de 13 437 063 168 bytes, inferior a ese inventario y anterior al arranque de carga. El motor conserva expertos MXFP4 empaquetados y su alternativa CPU crea copias temporales; el margen real sigue sin medirse con el modelo. No se atribuye el SIGTERM a falta de memoria.
+Los 13 123 MiB anunciados por el cargador representan un inventario, no un máximo RSS. La continuación ya conserva medidas reales del proceso. Dos trazas muestran SIGTERM externo antes de la parada propia; no identifican el servicio emisor ni su motivo. Las variantes Q3K, incluida la cuantización con un trabajador, alcanzaron el límite observado de RSS. El siguiente trabajo debe resolver el consumo de carga mediante una modificación fundamentada del cargador o de la representación, conservando Harmony y la identidad de la configuración. No se atribuye retrospectivamente el SIGTERM original a falta de memoria.
 
 ## Antecedente documental del 22 de septiembre de 2026
 
@@ -48,4 +48,3 @@ Comparar esta configuración con Qwen/B permitiría valorar alternativas complet
 ---
 
 Sistema Vectorial SV · [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/deed.es) · [Aviso del SV y licencias de terceros](https://github.com/juantoniolloretegea/SV-motor/blob/main/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/openai/gpt-oss-20b/controlador-nativo/AVISO_LICENCIAS.json).
-

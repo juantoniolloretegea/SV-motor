@@ -19,7 +19,7 @@ El [contrato experimental](contrato/README.md) identifica las obligaciones y fue
 | **A · navegador** | Trabajador del navegador, mediante Rust compilado a WebAssembly. | Interfaz y alojamiento del trabajador. | Compatibilidad y recursos determinados para cada modelo, motor y navegador. |
 | **B · nativa** | Proceso nativo en el anfitrión, separado de la interfaz. | Presentación y transporte de solicitudes. | Fronteras del servicio, supervisión, custodia y terminación sujetas a comprobación. |
 
-Una página que consulta un modelo nativo corresponde a la vía B, aunque incorpore WebAssembly en otro componente. HTML y CSS resuelven la presentación; JavaScript se limita al transporte y la interacción necesarios. La inferencia y los controles propios del ensayo se implementan en Rust.
+Una página que consulta un modelo nativo corresponde a la vía B, aunque incorpore WebAssembly en otro componente. HTML y CSS resuelven la presentación; JavaScript se limita al transporte y la interacción necesarios. En la aplicación nativa, Rust ejecuta la inferencia y los controles propios del ensayo.
 
 La elección de una vía responde a la factibilidad y al resultado buscado. No exige ensayar todas las combinaciones de modelos y soportes. Una vía no realizada puede retomarse si surge una pregunta concreta. Comparar modelos distintos en vías distintas permite valorar ambas configuraciones, pero no atribuir sus diferencias exclusivamente a WebAssembly.
 
@@ -37,7 +37,9 @@ Los controles sintéticos iniciales se completaron. La prueba con el modelo se i
 
 **Alcance de la figura:** diseño EIO-NAT-PREP-02 del corte del 20 de septiembre de 2026. Sus indicaciones de preparación y pruebas pendientes pertenecen a ese diseño y a esa fecha. La figura no certifica que todos sus componentes estén integrados en la aplicación de conversación. [Ampliar](diagramas/via-b.svg) · [Fuente Mermaid](diagramas/via-b.mmd) · [Diseño NAT02](resultados/preparacion-nativa-02/DISENO.md) · [Desarrollo NAT03](resultados/preparacion-nativa-03/README.md).
 
-## Qwen/B: campaña cerrada
+## Versión distribuida
+
+**Qwen/B: campaña cerrada.**
 
 La campaña conserva la instalación experimental Qwen3-0.6B, GGUF Q4_K_M, con inferencia CPU mediante Candle. La [entrega EIO conversación 0.1.3-beta.1](https://github.com/juantoniolloretegea/SV-motor/releases/tag/eio-conversacion-v0.1.3-beta.1) identifica el ejecutable, la composición, las licencias y las comprobaciones de esa versión. Permite expedientes, conversaciones, consulta del contexto, cancelación y exportación.
 
@@ -57,9 +59,9 @@ La [candidata conversación 0.1.4](conversacion-nativa/verificacion-0.1.4/INFORM
 
 La [ficha del modelo](modelos-de-ia/openai/gpt-oss-20b/README.md) identifica los pesos, el motor mistral.rs 0.9.3 y Harmony 0.0.8. Esta instalación utiliza un motor compatible con gpt-oss; no hereda automáticamente la composición de Qwen.
 
-En el [primer intento nativo](modelos-de-ia/openai/gpt-oss-20b/resultados/2026-09-23/RESULTADO.md), la carga terminó por SIGTERM antes de habilitar el servicio. No se obtuvo una respuesta y no se identificó el emisor de la señal. El [controlador 0.1.1](modelos-de-ia/openai/gpt-oss-20b/controlador-nativo/README.md) dispone de correcciones y comprobaciones locales; su ejecución con el modelo sigue pendiente. La estimación del inventario de pesos no es una medida del máximo de memoria durante la carga.
+La [continuación del 23 de septiembre](modelos-de-ia/openai/gpt-oss-20b/resultados/continuacion-2026-09-23/INFORME.md) ejecutó el motor instalado y conservó medidas de memoria durante la carga. Dos trazas identifican una señal externa anterior a la parada del controlador, sin determinar su servicio emisor ni su motivo. Los intentos de recuantización Q3K alcanzaron el límite de RSS observado. No se habilitó el servicio ni se obtuvo una respuesta; la instancia quedó detenida.
 
-El objetivo inmediato es obtener y documentar una respuesta real en la instalación nativa, con recursos observados, conservación de evidencia y cierre comprobado. Este recorrido no acredita ejecución en navegador ni integración completa con el SV.
+El objetivo sigue abierto: obtener y documentar una respuesta real en la instalación nativa. La continuación requiere resolver el consumo de carga con una modificación fundamentada del cargador o de la representación empleada; repetir las configuraciones documentadas no resuelve ese obstáculo. El [controlador instrumental](modelos-de-ia/openai/gpt-oss-20b/controlador-nativo/README.md) y las variantes ensayadas conservan fuentes y evidencias identificadas. Este recorrido no acredita ejecución en navegador ni integración completa con el SV.
 
 ## Composición de la conversación Qwen
 

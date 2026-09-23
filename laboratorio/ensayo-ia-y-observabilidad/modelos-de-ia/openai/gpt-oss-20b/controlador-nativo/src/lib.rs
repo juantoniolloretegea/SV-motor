@@ -38,7 +38,8 @@ pub fn hash_file(path: &Path) -> Result<String> {
     Ok(format!("{:x}", hash.finalize()))
 }
 fn bounded(path: impl AsRef<Path>, limit: usize) -> Result<String> {
-    let mut text = String::new(); File::open(path).map_err(|e| e.to_string())?.take(limit as u64 + 1).read_to_string(&mut text).map_err(|e| e.to_string())?;
+    let path=path.as_ref();
+    let mut text = String::new(); File::open(path).map_err(|e| format!("abrir {}: {e}",path.display()))?.take(limit as u64 + 1).read_to_string(&mut text).map_err(|e| format!("leer {}: {e}",path.display()))?;
     if text.len() > limit { return Err("lectura_excedida".into()); } Ok(text)
 }
 // Procede del observador Qwen: PID junto con start_ticks evita confundir identidades.
@@ -167,7 +168,7 @@ fn check(child: &mut OwnedChild, journal: &Journal, metrics: &mut Metrics, end: 
 fn owns_listener(pid: u32, start: u64, port: u16) -> Result<bool> {
     if identity(pid)? != start { return Err("identidad_proceso_distinta".into()); }
     let mut inodes = std::collections::HashSet::new();
-    for entry in fs::read_dir(format!("/proc/{pid}/fd")).map_err(|e|e.to_string())?.take(512) {
+    for entry in fs::read_dir(format!("/proc/{pid}/fd")).map_err(|e|format!("enumerar /proc/{pid}/fd: {e}"))?.take(512) {
         if let Ok(link) = entry.and_then(|e|fs::read_link(e.path())) { if let Some(inode) = link.to_string_lossy().strip_prefix("socket:[").and_then(|v|v.strip_suffix(']')).and_then(|v|v.parse::<u64>().ok()) { inodes.insert(inode); } }
     }
     let table = bounded(format!("/proc/{pid}/net/tcp"), 262144)?;
@@ -230,8 +231,21 @@ fn run(config: Config, root: PathBuf, evidence: PathBuf, journal: Journal) -> Re
         start_ticks = Some(identity(pid)?);
         journal.event("proceso_creado",json!({"pid":pid,"pgid":pid,"start_ticks":start_ticks}))?;
         phase = "carga"; let load_end = (Instant::now()+config.load).min(end);
+        let mut observation_error_since=None;
         loop { check(worker,&journal,&mut metrics,load_end)?;
-            if owns_listener(pid,start_ticks.ok_or("identidad_ausente")?,config.address.port())? { break; }
+            match owns_listener(pid,start_ticks.ok_or("identidad_ausente")?,config.address.port()) {
+                Ok(true)=>break,
+                Ok(false)=>observation_error_since=None,
+                Err(error)=>{
+                    if observation_error_since.is_none(){
+                        journal.event("observacion_puerto_fallida",json!({"error":error,"pid":pid,"status":bounded(format!("/proc/{pid}/status"),32768).ok(),"stat":bounded(format!("/proc/{pid}/stat"),8192).ok(),"capacity":resources::snapshot().ok(),"recheck_limit_ms":250}))?;
+                        observation_error_since=Some(Instant::now());
+                    }
+                    // Reconsulta acotada: una salida concurrente no se atribuye a permisos.
+                    // No se admite ninguna petición mientras falte la atribución del puerto.
+                    if observation_error_since.is_some_and(|t|t.elapsed()>=Duration::from_millis(250)){return Err(error);}
+                }
+            }
             thread::sleep(TICK);
         }
         let models = http(worker,&journal,&mut metrics,load_end,config.address,"GET","/v1/models","")?;

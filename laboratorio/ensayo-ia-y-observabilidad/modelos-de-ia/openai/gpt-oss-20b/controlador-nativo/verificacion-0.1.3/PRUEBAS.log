@@ -1,0 +1,42 @@
+   Compiling eio-controlador-oss v0.1.3 (/workspace/scratch/4f5c53519fa8/correccion-controlador-oss)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.27s
+     Running unittests src/lib.rs (correccion-controlador-oss/target/debug/deps/eio_controlador_oss-4048075d0de9cd81)
+
+running 16 tests
+test resources::tests::auxiliar_kernel ... ok
+test resources::tests::capacidad_insuficiente_y_ausente_se_rechazan ... ok
+test resources::tests::limite_virtual_aplicado_por_linux ... 
+running 1 test
+test resources::tests::auxiliar_kernel ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 15 filtered out; finished in 0.00s
+
+ok
+test resources::tests::muerte_abrupta_del_padre_termina_al_hijo ... ok
+test tests::auxiliar ... ok
+test tests::error_real_de_envio_se_conserva ... ok
+test tests::fallo_y_bloqueo_de_custodia_no_impiden_parada ... ok
+test tests::json_invalido_se_conserva_y_cierra_sin_peticion ... ok
+test tests::limpieza_raii_durante_panico ... ok
+test tests::muestras_persistidas_mientras_el_hijo_sigue_activo ... ok
+test tests::peticion_unica_y_parada_trazada ... ok
+test tests::plazo_monotono_y_escalada_term_kill ... ok
+test tests::puerto_ajeno_se_rechaza_antes_del_arranque ... ok
+test tests::sigterm_anticipado_conserva_memoria_sin_atribuir_emisor ... ok
+test tests::sigterm_controlador_cierra_hijo ... ok
+test tests::ventana_nueva_exclusion_y_presupuesto_invalido ... ok
+
+test result: ok. 16 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 15.91s
+
+     Running unittests src/main.rs (correccion-controlador-oss/target/debug/deps/eio_controlador_oss-ff5ac98945f4e29a)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests eio_controlador_oss
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
