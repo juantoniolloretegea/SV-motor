@@ -1,0 +1,197 @@
+{
+  "configuration": {
+    "controller_pid": 4186,
+    "data": {
+      "experts": "MXFP4 original conservado mediante selección explícita; sin recuantización de expertos",
+      "isq": "q8_0",
+      "remaining_layers": "Q8_0 solicitado; identidad efectiva sujeta al registro del motor",
+      "single_isq_worker": true,
+      "topology": "# Conserva los expertos nativos MXFP4; el resto usa ISQ Q8_0.\n/^model\\.layers\\.[0-9]+\\.mlp\\.experts\\.(gate_up_proj|down_proj)(\\.weight)?$/:\n  isq: mxfp4\n",
+      "topology_sha256": "0aa8dfb119e8ecfa07c136e3a26d304f0a3a7a6ed862cd03834d229a7c88389a"
+    },
+    "elapsed_ms": 8351,
+    "kind": "configuracion_carga",
+    "schema": "EIO-CONTROLADOR-OSS-1",
+    "utc_ms": 1790185636556
+  },
+  "events": 668,
+  "identity": {
+    "controller_pid": 4186,
+    "data": {
+      "address": "127.0.0.1:8089",
+      "controller_binary_sha256": "57d226cca53ed9b30ebd47bf1bfdc28d14b2f875b100da217b322a7f84fba6a5",
+      "engine_sha256": "0bd54bd0d17eb79be22b21cccaac0a3f32add5918f93ea162a888feccd7a2158",
+      "load_ms": 700000,
+      "lock_sha256": "40d1f1f1c4ae6f0db9ec05491b5dc7d45c44404f7a0ea5d3dae9f47efa728b2e",
+      "request_ms": 240000,
+      "source_lib_sha256": "43bc52964a5cf3b3061202f02e6fbfb56dcb3f08dd338ec67d002cb2ad27540a",
+      "source_main_sha256": "104729a054cd0f1297c879b7bb60fa11c2bd7ea6d8e7ecf28e45eaf127b5ed57",
+      "source_resources_sha256": "cdda0711d443c9637877dbad342d13ad4e9d9df43be1435a023146f470a93d9e",
+      "window_ms": 1000000
+    },
+    "elapsed_ms": 8342,
+    "kind": "inicio",
+    "schema": "EIO-CONTROLADOR-OSS-1",
+    "utc_ms": 1790185636546
+  },
+  "initial_capacity": {
+    "controller_pid": 4186,
+    "data": {
+      "cgroup_events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\n",
+      "cgroup_visible_current_bytes": 2266124288,
+      "cgroup_visible_max_bytes": null,
+      "effective_available_bytes": 14679425024,
+      "mem_available_bytes": 14679425024,
+      "scope": "Disponibilidad instantánea y grupo visible; no reserva exclusiva ni inventario de todos los ancestros.",
+      "swap_free_bytes": 0
+    },
+    "elapsed_ms": 1,
+    "kind": "capacidad_previa",
+    "schema": "EIO-CONTROLADOR-OSS-1",
+    "utc_ms": 1790185628205
+  },
+  "journal_sha256": "d5d0f4e463e3150fb3f64a1b081b988c51643856c4572bf69bd33e8efebd8258",
+  "last_sample": {
+    "controller_pid": 4186,
+    "data": {
+      "capacity": {
+        "cgroup_events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\n",
+        "cgroup_visible_current_bytes": 14395047936,
+        "cgroup_visible_max_bytes": null,
+        "effective_available_bytes": 5981696000,
+        "mem_available_bytes": 5981696000,
+        "scope": "Disponibilidad instantánea y grupo visible; no reserva exclusiva ni inventario de todos los ancestros.",
+        "swap_free_bytes": 0
+      },
+      "non_file_rss_bytes": 8608251904,
+      "peak_rss_bytes": 13125398528,
+      "pid": 4297,
+      "rss_anon_bytes": 8608251904,
+      "rss_bytes": 12145442816,
+      "rss_file_bytes": 3537190912,
+      "rss_shmem_bytes": 0,
+      "samples": 11319,
+      "unavailable": 0
+    },
+    "elapsed_ms": 707556,
+    "kind": "muestra_recursos",
+    "schema": "EIO-CONTROLADOR-OSS-1",
+    "utc_ms": 1790186335761
+  },
+  "limits": {
+    "controller_pid": 4186,
+    "data": {
+      "environment_reserve_bytes": 536870912,
+      "kernel_parent_death_signal": 9,
+      "minimum_load_estimate_bytes": 13760462848,
+      "non_file_rss_sampled_stop_bytes": 14142554112,
+      "resource_sample_period_ms": 50,
+      "scope": "Direcciones virtuales por proceso, RssAnon + RssShmem y disponibilidad global. RSS total descriptiva; no cuota agregada ni guarda exterior.",
+      "virtual_hard_bytes": 34359738368
+    },
+    "elapsed_ms": 9,
+    "kind": "limites_declarados",
+    "schema": "EIO-CONTROLADOR-OSS-1",
+    "utc_ms": 1790185628214
+  },
+  "min_available_persisted": 5981696000,
+  "peak_anon_persisted": 8608251904,
+  "request": null,
+  "resource_samples_persisted": 660,
+  "response": null,
+  "result": {
+    "controller_pid": 4186,
+    "data": {
+      "child_exit_code": null,
+      "child_exit_signal": 15,
+      "child_stop_confirmed": true,
+      "content_validation": "no_realizada",
+      "controller_signal": 0,
+      "elapsed_ms": 708994,
+      "error": "limite_temporal",
+      "external_signal_sender": "no_atribuido",
+      "http_request_attempted": false,
+      "licensing": {
+        "components": [
+          {
+            "license": "Apache-2.0",
+            "license_url": "https://huggingface.co/openai/gpt-oss-20b/blob/6cee5e81ee83917806bbde320786a8fb61efebee/LICENSE",
+            "name": "gpt-oss-20b",
+            "revision": "6cee5e81ee83917806bbde320786a8fb61efebee",
+            "usage_policy_url": "https://huggingface.co/openai/gpt-oss-20b/blob/6cee5e81ee83917806bbde320786a8fb61efebee/USAGE_POLICY"
+          },
+          {
+            "license": "MIT",
+            "license_url": "https://github.com/EricLBuehler/mistral.rs/blob/24dbf5c256f232176ee5949485ba264049407fbe/LICENSE",
+            "name": "mistral.rs",
+            "revision": "24dbf5c256f232176ee5949485ba264049407fbe",
+            "version": "0.9.3"
+          },
+          {
+            "license": "Apache-2.0",
+            "license_url": "https://github.com/openai/harmony/blob/main/LICENSE",
+            "name": "openai-harmony",
+            "relation": "Dependencia del motor; no dependencia directa del controlador.",
+            "version": "0.0.8"
+          }
+        ],
+        "schema": "EIO-AVISO-LICENCIAS-1",
+        "scope": "El aviso del SV se aplica a sus materiales propios. Los modelos, motores y bibliotecas de terceros conservan sus licencias y atribuciones. DEPENDENCIAS.json identifica las dependencias fijadas del controlador; no constituye un inventario completo del motor externo. Este paquete distribuye fuentes del controlador, no pesos ni ejecutables del motor.",
+        "sv": {
+          "canonical_notice": "https://github.com/juantoniolloretegea/SV-motor/blob/41c99e2a6b68382e7ba867ff55aa3a1fcc07676c/README.md",
+          "copyright": "© Juan Antonio Lloret Egea, 2026",
+          "institution": "ITVIA — IA eñ™",
+          "issn": "2695-6411",
+          "license": "CC-BY-NC-ND-4.0",
+          "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/deed.es",
+          "name": "Sistema Vectorial SV"
+        }
+      },
+      "peak_rss_bytes": 13125398528,
+      "phase": "carga",
+      "pid": 4297,
+      "response_received": false,
+      "rss_samples": 11334,
+      "rss_scope": "Solo hijo de inferencia; muestreado, no máximo exacto ni cuota agregada",
+      "rss_unavailable": 0,
+      "start_ticks": 51949,
+      "stop_errors": []
+    },
+    "elapsed_ms": 708994,
+    "kind": "resultado_final",
+    "schema": "EIO-CONTROLADOR-OSS-1",
+    "utc_ms": 1790186337199
+  },
+  "service": null,
+  "signals": [
+    {
+      "controller_pid": 4186,
+      "data": {
+        "label": "inferencia",
+        "reason": "limite_temporal",
+        "signal": 15,
+        "target_pgid": 4297,
+        "target_pid": 4297
+      },
+      "elapsed_ms": 708453,
+      "kind": "senal_solicitada",
+      "schema": "EIO-CONTROLADOR-OSS-1",
+      "utc_ms": 1790186336657
+    },
+    {
+      "controller_pid": 4186,
+      "data": {
+        "actual_target": -4297,
+        "error": null,
+        "return": 0,
+        "scope": "grupo_creado",
+        "signal": 15,
+        "target_pid": 4297
+      },
+      "elapsed_ms": 708584,
+      "kind": "senal_resultado",
+      "schema": "EIO-CONTROLADOR-OSS-1",
+      "utc_ms": 1790186336788
+    }
+  ]
+}

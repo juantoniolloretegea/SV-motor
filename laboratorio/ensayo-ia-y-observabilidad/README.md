@@ -1,6 +1,6 @@
 # Ensayo de inteligencia artificial y observabilidad
 
-**Edición documental 2.8 · 23 de septiembre de 2026.**
+**Edición documental 2.9 · 23 de septiembre de 2026.**
 
 Estudio experimental de la ejecución de modelos auxiliares de inteligencia artificial, su supervisión y la conservación verificable de entradas y resultados. Se desarrolla mediante componentes Rust y pertenece a la investigación lateral (p1+P3)-Bis del Lenguaje SV.
 
@@ -59,9 +59,9 @@ La [candidata conversación 0.1.4](conversacion-nativa/verificacion-0.1.4/INFORM
 
 La [ficha del modelo](modelos-de-ia/openai/gpt-oss-20b/README.md) identifica los pesos, el motor mistral.rs 0.9.3 y Harmony 0.0.8. Esta instalación utiliza un motor compatible con gpt-oss; no hereda automáticamente la composición de Qwen.
 
-La [continuación del 23 de septiembre](modelos-de-ia/openai/gpt-oss-20b/resultados/continuacion-2026-09-23/INFORME.md) conserva medidas de memoria y trazas de terminación. La [rectificación posterior](modelos-de-ia/openai/gpt-oss-20b/resultados/continuacion-2026-09-23/RECTIFICACION_CONTROLADOR.md) corrige la contabilización instrumental de memoria y el plazo de confirmación de escritura. También distingue la cuantización solicitada de la que selecciona el motor: para estos expertos, las solicitudes Q2K y Q3K derivan a Q4_0 por las dimensiones de sus tensores. No se habilitó el servicio ni se obtuvo una respuesta; la instancia quedó detenida.
+La [continuación inicial](modelos-de-ia/openai/gpt-oss-20b/resultados/continuacion-2026-09-23/INFORME.md) y la [rectificación del controlador](modelos-de-ia/openai/gpt-oss-20b/resultados/continuacion-2026-09-23/RECTIFICACION_CONTROLADOR.md) conservan los resultados y las correcciones instrumentales. La [continuación con expertos MXFP4](modelos-de-ia/openai/gpt-oss-20b/resultados/mxfp4-2026-09-23/RESULTADO.md) documenta dos intentos adicionales: uno terminó por el plazo de carga y otro por SIGKILL observado antes de la limpieza del controlador, con origen y causa no determinados. No se completó la carga ni se emitió una petición de inferencia. La instancia quedó detenida.
 
-El objetivo sigue abierto: obtener y documentar una respuesta real en la instalación nativa. La continuación requiere resolver el consumo de carga con una modificación fundamentada del cargador o de la representación empleada; repetir las configuraciones documentadas no resuelve ese obstáculo. El [controlador instrumental](modelos-de-ia/openai/gpt-oss-20b/controlador-nativo/README.md) y las variantes ensayadas conservan fuentes y evidencias identificadas. Este recorrido no acredita ejecución en navegador ni integración completa con el SV.
+El objetivo de obtener una respuesta real permanece abierto, con esta continuación suspendida para evaluación. Los resultados no demuestran agotamiento de memoria ni fundamentan atribuir el fallo a Harmony. El [controlador instrumental](modelos-de-ia/openai/gpt-oss-20b/controlador-nativo/README.md) y cada candidata conservan su identidad y evidencias. Este recorrido no acredita ejecución en navegador ni integración completa con el SV.
 
 ## Composición de la conversación Qwen
 

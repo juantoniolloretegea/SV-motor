@@ -1,0 +1,197 @@
+{
+  "configuration": {
+    "controller_pid": 10864,
+    "data": {
+      "experts": "MXFP4 original conservado mediante selección explícita; sin recuantización de expertos",
+      "isq": "q8_0",
+      "remaining_layers": "Q8_0 solicitado; identidad efectiva sujeta al registro del motor",
+      "single_isq_worker": true,
+      "topology": "# Conserva los expertos nativos MXFP4; el resto usa ISQ Q8_0.\n/^model\\.layers\\.[0-9]+\\.mlp\\.experts\\.(gate_up_proj|down_proj)(\\.weight)?$/:\n  isq: mxfp4\n",
+      "topology_sha256": "0aa8dfb119e8ecfa07c136e3a26d304f0a3a7a6ed862cd03834d229a7c88389a"
+    },
+    "elapsed_ms": 450,
+    "kind": "configuracion_carga",
+    "schema": "EIO-CONTROLADOR-OSS-1",
+    "utc_ms": 1790186391994
+  },
+  "events": 343,
+  "identity": {
+    "controller_pid": 10864,
+    "data": {
+      "address": "127.0.0.1:8089",
+      "controller_binary_sha256": "57d226cca53ed9b30ebd47bf1bfdc28d14b2f875b100da217b322a7f84fba6a5",
+      "engine_sha256": "0bd54bd0d17eb79be22b21cccaac0a3f32add5918f93ea162a888feccd7a2158",
+      "load_ms": 1100000,
+      "lock_sha256": "40d1f1f1c4ae6f0db9ec05491b5dc7d45c44404f7a0ea5d3dae9f47efa728b2e",
+      "request_ms": 180000,
+      "source_lib_sha256": "43bc52964a5cf3b3061202f02e6fbfb56dcb3f08dd338ec67d002cb2ad27540a",
+      "source_main_sha256": "104729a054cd0f1297c879b7bb60fa11c2bd7ea6d8e7ecf28e45eaf127b5ed57",
+      "source_resources_sha256": "cdda0711d443c9637877dbad342d13ad4e9d9df43be1435a023146f470a93d9e",
+      "window_ms": 1300000
+    },
+    "elapsed_ms": 440,
+    "kind": "inicio",
+    "schema": "EIO-CONTROLADOR-OSS-1",
+    "utc_ms": 1790186391984
+  },
+  "initial_capacity": {
+    "controller_pid": 10864,
+    "data": {
+      "cgroup_events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\n",
+      "cgroup_visible_current_bytes": 5749563392,
+      "cgroup_visible_max_bytes": null,
+      "effective_available_bytes": 14636974080,
+      "mem_available_bytes": 14636974080,
+      "scope": "Disponibilidad instantánea y grupo visible; no reserva exclusiva ni inventario de todos los ancestros.",
+      "swap_free_bytes": 0
+    },
+    "elapsed_ms": 1,
+    "kind": "capacidad_previa",
+    "schema": "EIO-CONTROLADOR-OSS-1",
+    "utc_ms": 1790186391545
+  },
+  "journal_sha256": "a55666a8a1c114e47786770d55929641ea7c7745ecbd9482d4c1163e956b6151",
+  "last_sample": {
+    "controller_pid": 10864,
+    "data": {
+      "capacity": {
+        "cgroup_events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\n",
+        "cgroup_visible_current_bytes": 15134515200,
+        "cgroup_visible_max_bytes": null,
+        "effective_available_bytes": 1204113408,
+        "mem_available_bytes": 1204113408,
+        "scope": "Disponibilidad instantánea y grupo visible; no reserva exclusiva ni inventario de todos los ancestros.",
+        "swap_free_bytes": 0
+      },
+      "non_file_rss_bytes": 13451169792,
+      "peak_rss_bytes": 13940629504,
+      "pid": 10867,
+      "rss_anon_bytes": 13451169792,
+      "rss_bytes": 13457117184,
+      "rss_file_bytes": 5947392,
+      "rss_shmem_bytes": 0,
+      "samples": 5690,
+      "unavailable": 0
+    },
+    "elapsed_ms": 354018,
+    "kind": "muestra_recursos",
+    "schema": "EIO-CONTROLADOR-OSS-1",
+    "utc_ms": 1790186745562
+  },
+  "limits": {
+    "controller_pid": 10864,
+    "data": {
+      "environment_reserve_bytes": 536870912,
+      "kernel_parent_death_signal": 9,
+      "minimum_load_estimate_bytes": 13760462848,
+      "non_file_rss_sampled_stop_bytes": 14100103168,
+      "resource_sample_period_ms": 50,
+      "scope": "Direcciones virtuales por proceso, RssAnon + RssShmem y disponibilidad global. RSS total descriptiva; no cuota agregada ni guarda exterior.",
+      "virtual_hard_bytes": 34359738368
+    },
+    "elapsed_ms": 8,
+    "kind": "limites_declarados",
+    "schema": "EIO-CONTROLADOR-OSS-1",
+    "utc_ms": 1790186391552
+  },
+  "min_available_persisted": 1204113408,
+  "peak_anon_persisted": 13451169792,
+  "request": null,
+  "resource_samples_persisted": 334,
+  "response": null,
+  "result": {
+    "controller_pid": 10864,
+    "data": {
+      "child_exit_code": null,
+      "child_exit_signal": 9,
+      "child_stop_confirmed": true,
+      "content_validation": "no_realizada",
+      "controller_signal": 0,
+      "elapsed_ms": 355359,
+      "error": "enumerar /proc/10867/fd: Permission denied (os error 13)",
+      "external_signal_sender": "no_atribuido",
+      "http_request_attempted": false,
+      "licensing": {
+        "components": [
+          {
+            "license": "Apache-2.0",
+            "license_url": "https://huggingface.co/openai/gpt-oss-20b/blob/6cee5e81ee83917806bbde320786a8fb61efebee/LICENSE",
+            "name": "gpt-oss-20b",
+            "revision": "6cee5e81ee83917806bbde320786a8fb61efebee",
+            "usage_policy_url": "https://huggingface.co/openai/gpt-oss-20b/blob/6cee5e81ee83917806bbde320786a8fb61efebee/USAGE_POLICY"
+          },
+          {
+            "license": "MIT",
+            "license_url": "https://github.com/EricLBuehler/mistral.rs/blob/24dbf5c256f232176ee5949485ba264049407fbe/LICENSE",
+            "name": "mistral.rs",
+            "revision": "24dbf5c256f232176ee5949485ba264049407fbe",
+            "version": "0.9.3"
+          },
+          {
+            "license": "Apache-2.0",
+            "license_url": "https://github.com/openai/harmony/blob/main/LICENSE",
+            "name": "openai-harmony",
+            "relation": "Dependencia del motor; no dependencia directa del controlador.",
+            "version": "0.0.8"
+          }
+        ],
+        "schema": "EIO-AVISO-LICENCIAS-1",
+        "scope": "El aviso del SV se aplica a sus materiales propios. Los modelos, motores y bibliotecas de terceros conservan sus licencias y atribuciones. DEPENDENCIAS.json identifica las dependencias fijadas del controlador; no constituye un inventario completo del motor externo. Este paquete distribuye fuentes del controlador, no pesos ni ejecutables del motor.",
+        "sv": {
+          "canonical_notice": "https://github.com/juantoniolloretegea/SV-motor/blob/41c99e2a6b68382e7ba867ff55aa3a1fcc07676c/README.md",
+          "copyright": "© Juan Antonio Lloret Egea, 2026",
+          "institution": "ITVIA — IA eñ™",
+          "issn": "2695-6411",
+          "license": "CC-BY-NC-ND-4.0",
+          "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/deed.es",
+          "name": "Sistema Vectorial SV"
+        }
+      },
+      "peak_rss_bytes": 13940629504,
+      "phase": "carga",
+      "pid": 10867,
+      "response_received": false,
+      "rss_samples": 5694,
+      "rss_scope": "Solo hijo de inferencia; muestreado, no máximo exacto ni cuota agregada",
+      "rss_unavailable": 7,
+      "start_ticks": 127493,
+      "stop_errors": []
+    },
+    "elapsed_ms": 355359,
+    "kind": "resultado_final",
+    "schema": "EIO-CONTROLADOR-OSS-1",
+    "utc_ms": 1790186746903
+  },
+  "service": null,
+  "signals": [
+    {
+      "controller_pid": 10864,
+      "data": {
+        "label": "inferencia",
+        "reason": "enumerar /proc/10867/fd: Permission denied (os error 13)",
+        "signal": 15,
+        "target_pgid": 10867,
+        "target_pid": 10867
+      },
+      "elapsed_ms": 355048,
+      "kind": "senal_solicitada",
+      "schema": "EIO-CONTROLADOR-OSS-1",
+      "utc_ms": 1790186746592
+    },
+    {
+      "controller_pid": 10864,
+      "data": {
+        "actual_target": -10867,
+        "error": null,
+        "return": 0,
+        "scope": "grupo_creado",
+        "signal": 15,
+        "target_pid": 10867
+      },
+      "elapsed_ms": 355057,
+      "kind": "senal_resultado",
+      "schema": "EIO-CONTROLADOR-OSS-1",
+      "utc_ms": 1790186746601
+    }
+  ]
+}

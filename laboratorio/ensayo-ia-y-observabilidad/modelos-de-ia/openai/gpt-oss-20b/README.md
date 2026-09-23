@@ -1,18 +1,18 @@
 # OpenAI · gpt-oss-20b
 
-**Estado al 23 de septiembre de 2026:** instalado en una instancia separada; no operativo. La continuación nativa conserva ocho intentos sin servicio HTTP ni respuesta de inferencia. Se observaron señales externas y paradas instrumentales por tiempo o RSS, diferenciadas en la evidencia. Instancia detenida.
+**Estado al 23 de septiembre de 2026:** instalado en una instancia separada; no operativo. Los últimos intentos, 13 y 14, no completaron la carga ni habilitaron el servicio. Instancia detenida; continuación suspendida para evaluación.
 
-El [primer intento](resultados/2026-09-23/RESULTADO.md) documenta la adquisición de los pesos oficiales MXFP4, Rust/Cargo 1.98.0, mistral.rs 0.9.3 para CPU y Harmony 0.0.8. La [continuación y su diagnóstico](resultados/continuacion-2026-09-23/INFORME.md) conservan medidas durante la carga, variantes de precisión y trazas de señales. Se utilizó la misma instalación de 4 núcleos y 16 GB, con BF16; las variantes no modificaron los pesos originales en disco.
+El [primer intento](resultados/2026-09-23/RESULTADO.md) documenta los pesos oficiales MXFP4, Rust/Cargo 1.98.0, mistral.rs 0.9.3 para CPU y Harmony 0.0.8. La [continuación inicial](resultados/continuacion-2026-09-23/INFORME.md) conserva variantes y trazas; la [rectificación instrumental](resultados/continuacion-2026-09-23/RECTIFICACION_CONTROLADOR.md) distingue memoria anónima y respaldada por archivos, corrige la confirmación de escritura y documenta la derivación de solicitudes Q2K/Q3K a Q4_0.
 
-No se generaron respuestas ni se evaluó calidad. Este intento nativo no acredita la vía A ni demuestra imposibilidad general del modelo. Las rutas cruzadas entre modelos y soportes siguen abiertas a trabajo posterior cuando exista motivo concreto.
+La [continuación con expertos MXFP4](resultados/mxfp4-2026-09-23/RESULTADO.md) ensayó la candidata 0.1.11, conservando expertos MXFP4 mediante topología y solicitando Q8_0 para el resto. El intento 13 finalizó por el plazo de carga; el 14, por SIGKILL observado antes del SIGTERM de limpieza del controlador. No se identificó el emisor ni se demostró su causa. Los registros no permiten concluir agotamiento de memoria ni viabilidad del modelo completo en este entorno.
 
-La [revisión del controlador propio](resultados/2026-09-23/REVISION_CONTROLADOR_RUST_20260923.md) conserva los defectos instrumentales originales. El [controlador de referencia 0.1.3](controlador-nativo/README.md) conserva sus correcciones posteriores y ha sido ejecutado con el motor instalado; supera 16 registros de prueba locales (14 funcionales y dos auxiliares). Ninguna de estas comprobaciones equivale a una inferencia conseguida.
+No hubo petición de inferencia ni evaluación de contenido. La terminación durante la carga no aporta fundamento para atribuir el fallo a Harmony. El objetivo de obtener una respuesta real sigue pendiente; no se prolonga automáticamente esta serie de ejecuciones. Este recorrido nativo no acredita la vía A ni imposibilidad general del modelo.
 
-## Corrección posterior y capacidad
+## Controlador y capacidad
 
-Desde [0.1.1](controlador-nativo/verificacion-0.1.1/INFORME.md) se conservan muestras durante la carga, disponibilidad observada, límite explícito de direcciones virtuales y terminación del hijo por Linux cuando desaparece el hilo padre que lo creó. 0.1.3 añade reserva explícita y diagnóstico de observación. Son controles instrumentales, sin contención agregada acreditada.
+El [controlador de referencia 0.1.10](controlador-nativo/README.md) conserva las correcciones instrumentales anteriores. La [candidata 0.1.11](resultados/ventana-acotada-2026-09-23/RESULTADO.md) añade la configuración de cuantización y fue ejecutada en los intentos 13 y 14. Su banco local secuencial supera 17 registros, incluidos dos auxiliares; esa comprobación no equivale a inferencia conseguida ni sustituye por sí sola a la referencia.
 
-Los 13 123 MiB anunciados por el cargador representan un inventario, no un máximo RSS. La continuación ya conserva medidas reales del proceso. Dos trazas muestran SIGTERM externo antes de la parada propia; no identifican el servicio emisor ni su motivo. Las variantes Q3K, incluida la cuantización con un trabajador, alcanzaron el límite observado de RSS. El siguiente trabajo debe resolver el consumo de carga mediante una modificación fundamentada del cargador o de la representación, conservando Harmony y la identidad de la configuración. No se atribuye retrospectivamente el SIGTERM original a falta de memoria.
+Los 13 123 MiB anunciados previamente por el cargador son un inventario, no un máximo RSS. Los nuevos resultados conservan memoria anónima, memoria respaldada por archivos, disponibilidad y señales. Las guardas observan el proceso hijo y el ámbito visible; no acreditan una cuota agregada ni todos los límites del anfitrión. El informe declara las medidas y las incertidumbres, sin atribuir retrospectivamente el SIGTERM original a falta de memoria.
 
 ## Antecedente documental del 22 de septiembre de 2026
 

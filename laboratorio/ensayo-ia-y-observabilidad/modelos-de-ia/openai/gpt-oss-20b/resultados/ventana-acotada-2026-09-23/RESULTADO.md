@@ -2,6 +2,8 @@
 
 **Resultado: preparación local completada; nueva ejecución del modelo no iniciada.** No existe un resultado de inferencia de esta ventana y no se acredita una mejora de memoria.
 
+**Seguimiento posterior:** la ventana aquí descrita se conserva como antecedente. A las 17:40 UTC se comprobó que la instancia estaba detenida, sin determinar la hora de su parada anterior. La [continuación posterior con los intentos 13 y 14](../mxfp4-2026-09-23/RESULTADO.md) documenta la transferencia finalmente comprobada, la ejecución de esta candidata y el nuevo cierre confirmado. Las declaraciones de «no ejecutada» de este documento pertenecen al corte previo.
+
 ## Configuración preparada
 
 Candidata del controlador 0.1.11, derivada de la referencia 0.1.10. Conserva expertos MXFP4 mediante una regla de topología explícita y solicita Q8_0 para las restantes capas, con un trabajador de cuantización. El motor se mantiene en mistral.rs 0.9.3, revisión `24dbf5c256f232176ee5949485ba264049407fbe`; no se ha recompilado ni modificado. Los archivos originales del modelo se conservan.
