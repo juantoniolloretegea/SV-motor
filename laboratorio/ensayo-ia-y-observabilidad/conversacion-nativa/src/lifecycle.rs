@@ -51,7 +51,7 @@ impl Lifecycle {
     }
     pub fn status(&self) -> Value { json!({"instance_id":self.inner.id,
         "started_ms":self.inner.started_ms,"uptime_seconds":self.inner.started.elapsed().as_secs(),
-        "http_service":"available","model_files":"identity_verified","host_stop_cause":null,
+        "http_service":"available","model_files":"identity_verified_at_start","worker_model_check":"opened_descriptor_before_load","host_stop_cause":null,
         "personal_authentication":"not_implemented","journal":"ciclo.jsonl"}) }
 }
 

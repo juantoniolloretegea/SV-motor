@@ -1,6 +1,6 @@
-# EIO conversación 0.1.3 · Beta
+# EIO conversación · fuentes candidatas 0.1.4
 
-Aplicación experimental de inferencia nativa con conservación por expediente. La [entrega versionada](https://github.com/juantoniolloretegea/SV-motor/releases/tag/eio-conversacion-v0.1.3-beta.1) incluye identificación, ficha técnica, composición, licencias y evidencias.
+Aplicación experimental de inferencia nativa con conservación por expediente. Las fuentes actuales corresponden a 0.1.4, compilada y verificada localmente; no desplegada ni probada con una nueva inferencia. La instalación y distribución conservadas corresponden a 0.1.3 · Beta. La [entrega versionada](https://github.com/juantoniolloretegea/SV-motor/releases/tag/eio-conversacion-v0.1.3-beta.1) incluye identificación, ficha técnica, composición, licencias y evidencias.
 
 La versión del programa no determina su disponibilidad instantánea. El servicio depende de la actividad del anfitrión y de sus procesos. Su funcionamiento no acredita aptitud clínica ni conformidad completa de la vía B.
 
@@ -24,13 +24,15 @@ Antes de enviar se cuentan las unidades del tokenizador en el contexto exacto y 
 
 Los expedientes se conservan fuera del repositorio, en `/workspaces/eio-conversaciones/datos`, mediante registros JSONL con sucesos identificados, fecha UTC en milisegundos y huellas encadenadas. Las escrituras se sincronizan antes de actualizar el estado visible. Al iniciar se comprueba la cadena y se reconstruyen los expedientes. Un archivo incompleto o alterado impide su apertura normal y se conserva sin reparación silenciosa. Las generaciones sin cierre registrado pasan a interrupción por reinicio, conservando la última salida registrada.
 
-Las huellas locales detectan alteraciones cuando permanece una referencia íntegra; no sustituyen una firma o un anclaje externo. El límite total de conservación es de 512 MiB. No se borran expedientes automáticamente. Cada exportación JSON incluye conversaciones, contextos exactos, configuración, identidad del modelo y sucesos. La copia exportada debe conservarse para recuperar el trabajo si se elimina el Codespace; detenerlo y eliminarlo son operaciones distintas.
+Las huellas locales detectan alteraciones cuando permanece una referencia íntegra; no sustituyen una firma o un anclaje externo. En 0.1.4, el presupuesto lógico de conservación es de 512 MiB: se descuenta el volumen auxiliar encontrado al iniciar y se reservan 37 MiB adicionales para registros instrumentales; se protege además una reserva de cierre de 4 MiB. No es una cuota física del sistema de archivos ni garantiza espacio libre frente a otras aplicaciones. No se borran expedientes automáticamente. Cada exportación JSON incluye conversaciones, contextos exactos, configuración, identidad del modelo y sucesos. La copia exportada debe conservarse para recuperar el trabajo si se elimina el Codespace; detenerlo y eliminarlo son operaciones distintas.
 
 Los tiempos son intervalos monotónicos observados desde la admisión. La primera salida incluye carga y preparación. La memoria registrada corresponde al proceso de inferencia y a las muestras obtenidas. No se atribuyen consultas de fuentes ni operaciones externas a una narración del modelo.
 
 ## Ejecución
 
-Compilar el paquete con Rust/Cargo 1.98.0 y las dependencias fijadas. Variables admitidas: `EIO_MODELS` para pesos y tokenizador; `EIO_DATA` para conservación; `EIO_ORIGIN` para la dirección de acceso. En Codespaces se obtiene el origen de `CODESPACE_NAME`. El servicio escucha en el puerto 3000, que debe permanecer privado y protegido por la autenticación de GitHub.
+Compilar el paquete con Rust/Cargo 1.98.0 y las dependencias fijadas. Variables admitidas: `EIO_MODELS` para pesos y tokenizador; `EIO_DATA` para conservación; `EIO_ORIGIN` para la dirección de acceso. En Codespaces se obtiene el origen de `CODESPACE_NAME`. El servicio candidato escucha por defecto en `127.0.0.1:3000`; `EIO_BIND` permite indicar otra dirección de enlace. La clave de sesión no autentica a una persona. Para acceso por Codespaces, el puerto 3000 que debe permanecer privado y protegido por la autenticación de GitHub.
+
+`--recover EXPEDIENTE_JSONL DIRECTORIO_NUEVO` conserva el archivo completo y un manifiesto, valida el prefijo completo en una copia nueva y añade allí los cierres pendientes; no modifica el original ni reconstruye sucesos eliminados. Debe utilizarse sobre registros detenidos.
 
 El programa reconoce `--check DIRECTORIO` para comprobar y reconstruir registros; esta apertura añade el cierre por reinicio si encuentra una generación pendiente. `--worker` es el modo interno del proceso de inferencia.
 
@@ -58,5 +60,7 @@ Sistema Vectorial SV — © Juan Antonio Lloret Egea, 2026. ITVIA — IA eñ™,
 El [ensayo DOC-01](../resultados/consulta-documental-01/PROTOCOLO.md) utiliza un banco independiente y pasajes identificados de OP-IMM-001. No modifica automáticamente las condiciones de las conversaciones libres. Permanecen pendientes la guarda exterior, la separación de custodia y control y la integración contractual completa de fuentes, versiones y permisos.
 
 ## Evidencia de versión
+
+La [verificación de 0.1.4](verificacion-0.1.4/INFORME.md) documenta 16 pruebas registradas superadas (15 funcionales y un auxiliar), compilación de producción y dos pruebas HTTP con modelo no ejecutadas. El control del hijo usa un hilo independiente del registro y OpenTelemetry. El resultado conserva señal de terminación y ausencia de muestras como `null`. La [campaña Qwen/B](../resultados/cierre-qwen-b-20260923/INFORME.md) queda concluida con alcance parcial.
 
 El [informe de 0.1.3](verificacion-0.1.3/INFORME.md) distingue la inferencia sintética inicial de la compilación posterior instalada. La [comparación 0.1.2](verificacion-0.1.2/INFORME.md) conserva su alcance histórico. Los resultados técnicos, de contenido y de disponibilidad se evalúan por separado.

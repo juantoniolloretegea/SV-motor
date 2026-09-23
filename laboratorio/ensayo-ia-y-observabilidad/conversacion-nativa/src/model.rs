@@ -1,5 +1,5 @@
 use super::{Result,Work};
-use std::{fs::File,io::{Read,Write},time::Instant};
+use std::{fs::File,io::{Read,Write,Seek,SeekFrom},time::Instant};
 use candle_core::{Device,Tensor,quantized::gguf_file};
 use candle_transformers::{models::quantized_qwen3::ModelWeights,generation::{Sampling,LogitsProcessor}};
 use serde_json::json;
@@ -16,11 +16,16 @@ pub fn worker()->Result<()>{
   let mut b=Vec::new();std::io::stdin().take(2*1024*1024).read_to_end(&mut b)?;let w:Work=serde_json::from_slice(&b)?;
   if nix::unistd::getppid().as_raw() as u32!=w.parent{return Err("El proceso supervisor ha terminado".into())}
   let clock=Instant::now();
-  let tokenizer=tokenizers::Tokenizer::from_file(w.models.join("tokenizer.json")).map_err(|e|e.to_string())?;
+  let token_bytes=std::fs::read(w.models.join("tokenizer.json"))?;
+  if super::store::hash(&token_bytes)!=super::TOKENIZER_HASH{return Err("Identidad del tokenizador no conforme al cargar".into())}
+  let tokenizer=tokenizers::Tokenizer::from_bytes(&token_bytes).map_err(|e|e.to_string())?;
   let tokenizer_seconds=clock.elapsed().as_secs_f64();
   emit(json!({"kind":"phase","text":"Cargando Qwen mediante Candle"}))?;
   let loading=Instant::now();
-  let mut file=File::open(w.models.join("Qwen3-0.6B-Q4_K_M.gguf"))?;let gguf=gguf_file::Content::read(&mut file)?;let device=Device::Cpu;let mut model=ModelWeights::from_gguf(gguf,&mut file,&device)?;
+  let mut file=File::open(w.models.join("Qwen3-0.6B-Q4_K_M.gguf"))?;
+  {use sha2::{Digest,Sha256};let mut hash=Sha256::new();let mut b=[0u8;65536];loop{let n=file.read(&mut b)?;if n==0{break}hash.update(&b[..n]);}if format!("{:x}",hash.finalize())!=super::MODEL_HASH{return Err("Identidad de pesos no conforme al cargar".into())}}
+  file.seek(SeekFrom::Start(0))?;
+  let gguf=gguf_file::Content::read(&mut file)?;let device=Device::Cpu;let mut model=ModelWeights::from_gguf(gguf,&mut file,&device)?;
   let mut timings=json!({"tokenizer_seconds":tokenizer_seconds,"model_load_seconds":loading.elapsed().as_secs_f64(),
    "prefill_seconds":null,"generation_seconds":null,"first_token_worker_seconds":null,"complete":false,
    "scope":"Intervalos monotónicos del proceso hijo. No incluyen cola, red ni preparación del contexto en el servidor. Las fases interrumpidas no se extrapolan."});

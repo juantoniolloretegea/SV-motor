@@ -1,4 +1,5 @@
 mod model;
+mod supervision;
 mod store;
 mod lifecycle;
 mod telemetry;
@@ -12,10 +13,6 @@ use std::{fs,io::{BufRead,BufReader,Write},path::PathBuf,process::{Command,Stdio
 use store::{Database,Event};
 type Error=Box<dyn std::error::Error+Send+Sync>;
 type Result<T>=std::result::Result<T,Error>;
-struct OwnedChild(std::process::Child);
-impl std::ops::Deref for OwnedChild{type Target=std::process::Child;fn deref(&self)->&Self::Target{&self.0}}
-impl std::ops::DerefMut for OwnedChild{fn deref_mut(&mut self)->&mut Self::Target{&mut self.0}}
-impl Drop for OwnedChild{fn drop(&mut self){let _=self.0.kill();let _=self.0.wait();}}
 const CONTEXT:usize=16384;
 const MODEL_HASH:&str="ac2d97712095a558e31573f62f466a3f9d93990898b0ec79d7c974c1780d524a";
 const TOKENIZER_HASH:&str="aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4";
@@ -62,12 +59,14 @@ async fn api(State(app):State<App>,h:HeaderMap,body:axum::body::Bytes)->Response
 }
 fn handle(app:&App,op:Op)->Result<Value>{
  if app.stopping.load(Ordering::SeqCst){return Err("El servicio está cerrándose; conserve la petición y compruebe su estado después de reconectar".into())}
+ // La cancelación se comunica al control antes de cualquier operación de registro.
+ if let Op::Cancel{request_id}=&op{let active=app.active.lock().map_err(|_|"Estado bloqueado")?;let a=active.as_ref().filter(|a|&a.id==request_id).ok_or("La petición no está activa")?;a.cancel.store(true,Ordering::SeqCst);return Ok(json!({"cancel_requested":true}));}
  // Actividad real del usuario, sin preguntas ni contenido del expediente; las consultas periódicas permanecen silenciosas.
  let event=match &op{Op::CreateCase{..}=>Some("crear_expediente"),Op::CreateChat{..}=>Some("crear_conversacion"),Op::Preview{..}=>Some("revisar_contexto"),Op::Send{..}=>Some("enviar_peticion"),Op::Cancel{..}=>Some("cancelar"),Op::Export{..}=>Some("exportar"),_=>None};
  if let Some(event)=event{println!("EIO_ACTIVIDAD {event}");if let Some(t)=&app.telemetry{t.event(None,"operacion_solicitada",json!({"operation":event}));}}
  match op{
  Op::State=>{let active=app.active.lock().map_err(|_|"Estado bloqueado")?.clone();let db=app.db.lock().map_err(|_|"Registro bloqueado")?;
-  Ok(json!({"cases":db.cases,"chats":db.chats.values().map(|c|json!({"id":c.id,"case_id":c.case_id,"title":c.title,"turns":c.turns.len()})).collect::<Vec<_>>(),"active":active.map(|a|json!({"id":a.id,"chat":a.chat,"seconds":a.started.elapsed().as_secs(),"phase":a.phase})),"identity":app.identity,"service":app.lifecycle.status(),"observability":{"telemetry":app.telemetry.as_ref().map(|t|t.status()),"observer":app.observer.as_ref().map(|p|observation::status(p))},"context_limit":CONTEXT,"model_context":32768,"default_profile":Profile::default(),"storage_bytes":db.bytes,"storage_limit":store::MAX_STORAGE}))},
+  Ok(json!({"cases":db.cases,"chats":db.chats.values().map(|c|json!({"id":c.id,"case_id":c.case_id,"title":c.title,"turns":c.turns.len()})).collect::<Vec<_>>(),"active":active.map(|a|json!({"id":a.id,"chat":a.chat,"seconds":a.started.elapsed().as_secs(),"phase":a.phase})),"identity":app.identity,"service":app.lifecycle.status(),"observability":{"telemetry":app.telemetry.as_ref().map(|t|t.status()),"observer":app.observer.as_ref().map(|p|observation::status(p))},"context_limit":CONTEXT,"model_context":32768,"default_profile":Profile::default(),"storage_bytes":db.bytes,"storage_limit":db.limit}))},
  Op::RequestStatus{request_id}=>{let db=app.db.lock().map_err(|_|"Registro bloqueado")?;Ok(request_status(&db,&request_id))},
  Op::CreateCase{title}=>{let title=clean(&title,180)?;let id=store::id("exp");let mut db=app.db.lock().map_err(|_|"Registro bloqueado")?;db.append(&id,"expediente_creado",json!({"title":title}))?;Ok(json!({"id":id}))},
  Op::CreateChat{case_id,title}=>{let title=clean(&title,180)?;let id=store::id("chat");let mut db=app.db.lock().map_err(|_|"Registro bloqueado")?;if !db.cases.contains_key(&case_id){return Err("Expediente inexistente".into())}db.append(&case_id,"conversacion_creada",json!({"id":id,"title":title}))?;Ok(json!({"id":id}))},
@@ -84,7 +83,7 @@ fn handle(app:&App,op:Op)->Result<Value>{
   if c.sha256!=context_sha256{return Err("El contexto ha cambiado. Revise de nuevo antes de enviar".into())}
   let mut db=app.db.lock().map_err(|_|"Registro bloqueado")?;let case_id=db.chats.get(&chat_id).ok_or("Conversación inexistente")?.case_id.clone();
   if c.input_tokens+c.reserved_output>CONTEXT{db.append(&case_id,"contexto_excedido",json!({"chat_id":chat_id,"request_id":request_id,"input_tokens":c.input_tokens,"reserved_output":c.reserved_output,"limit":CONTEXT,"context_sha256":c.sha256}))?;return Err("La petición excede el contexto operativo. No se ha eliminado ningún antecedente ni ejecutado el modelo".into())}
-  if db.bytes>store::MAX_STORAGE-8*1024*1024{return Err("El registro no dispone de espacio reservado suficiente para una respuesta".into())}
+  if db.bytes>db.limit.saturating_sub(8*1024*1024){return Err("El registro no dispone de espacio reservado suficiente para una respuesta".into())}
   let cancel=Arc::new(AtomicBool::new(false));
   db.append(&case_id,"peticion_admitida",json!({"chat_id":chat_id,"request_id":request_id,"user":text.trim(),"context":c,"profile":profile,"identity":app.identity}))?;
   *active=Some(Active{id:request_id.clone(),chat:chat_id.clone(),cancel:cancel.clone(),started:Instant::now(),text:String::new(),tokens:0,phase:"Preparando el modelo".into()});
@@ -95,46 +94,79 @@ fn handle(app:&App,op:Op)->Result<Value>{
  Op::Export{case_id}=>{let db=app.db.lock().map_err(|_|"Registro bloqueado")?;let case=db.cases.get(&case_id).ok_or("Expediente inexistente")?;Ok(json!({"schema":"EIO-CONVERSACION-1","case":case,"chats":db.chats.values().filter(|c|c.case_id==case_id).collect::<Vec<_>>(),"events":db.events.get(&case_id),"identity":app.identity,"licensing":app.identity["licensing"],"observation_scope":"En los sucesos de la versión 0.1.0, external_operations: 0 era una constante, no una medición. La terminación normal no implica validación del contenido. Las respuestas y sucesos anteriores se conservan sin modificación.","integrity_scope":"Cadena de huellas local. No equivale a firma externa ni acredita la veracidad del contenido del modelo."}))}
 }}
 fn run(app:App,case_id:String,chat:String,id:String,mut work:Work,cancel:Arc<AtomicBool>){
- let started=Instant::now();let operation=app.telemetry.as_ref().map(|t|t.begin("peticion_inferencia",json!({"request_id":id,"service_instance":app.lifecycle.status()["instance_id"],"input_tokens":work.context.input_tokens,"profile":work.profile})));let mut worker_identity=Value::Null;work.models=app.models.clone();let mut raw=String::new();let mut tokens=0usize;let mut first=None;let mut peak=0u64;let mut finish="fallo".to_string();let mut error=None;let mut exit_code=None;let mut worker_finish=false;let mut timings=Value::Null;
+ let started=Instant::now();
+ let operation=app.telemetry.as_ref().map(|t|t.begin("peticion_inferencia",json!({"request_id":id,"service_instance":app.lifecycle.status()["instance_id"],"input_tokens":work.context.input_tokens,"profile":work.profile})));
+ work.models=app.models.clone();
+ let mut raw=String::new();let mut tokens=0usize;let mut first=None;
+ let mut finish="fallo".to_string();let mut error=None;let mut worker_finish=false;let mut timings=Value::Null;
+ let mut worker_identity=Value::Null;let mut control:Option<supervision::Control>=None;let mut diagnostic=None;
  let outcome=(||->Result<()>{
-  let mut child=OwnedChild(Command::new(std::env::current_exe()?).arg("--worker").stdin(Stdio::piped()).stdout(Stdio::piped()).stderr(Stdio::piped()).env("RAYON_NUM_THREADS","2").spawn()?);
-  worker_identity=json!({"pid":child.id(),"start_ticks":observation::identity(child.id()).ok()});
+  let mut child=Command::new(std::env::current_exe()?).arg("--worker").stdin(Stdio::piped()).stdout(Stdio::piped()).stderr(Stdio::piped()).env("RAYON_NUM_THREADS","2").spawn()?;
+  let pid=child.id();let stdin=child.stdin.take();let stdout=child.stdout.take();let stderr=child.stderr.take();
+  control=Some(supervision::Control::start(child,supervision::Limits{time:Duration::from_secs(work.profile.seconds),rss:6*1024*1024*1024,output:256000},cancel));
+  let c=control.as_ref().ok_or("Control ausente")?;
+  worker_identity=json!({"pid":pid,"start_ticks":observation::identity(pid).ok()});
   if let Some(t)=&app.telemetry{t.event(operation.as_ref(),"proceso_inferencia_creado",json!({"worker":worker_identity}));}
-  let input=serde_json::to_vec(&work)?;let write_result=child.stdin.take().ok_or("Entrada del proceso ausente").and_then(|mut s|s.write_all(&input).map_err(|_|"No se pudo enviar la petición"));
-  if let Err(e)=write_result{let _=child.kill();let _=child.wait();return Err(e.into())}
-  let stdout=child.stdout.take().ok_or("Salida del proceso ausente")?;let stderr=child.stderr.take().ok_or("Diagnóstico del proceso ausente")?;
-  let err_reader=std::thread::spawn(move||{use std::io::Read;let mut s=String::new();let _=stderr.take(65536).read_to_string(&mut s);s});
+  stdin.ok_or("Entrada del proceso ausente")?.write_all(&serde_json::to_vec(&work)?)?;
+  let stdout=stdout.ok_or("Salida del proceso ausente")?;let stderr=stderr.ok_or("Diagnóstico del proceso ausente")?;
+  let(etx,erx)=std::sync::mpsc::channel();diagnostic=Some(erx);
+  std::thread::spawn(move||{use std::io::Read;let mut s=String::new();let result=stderr.take(65536).read_to_string(&mut s);let _=etx.send((s,result.is_ok()));});
   let(tx,rx)=std::sync::mpsc::sync_channel::<std::result::Result<String,String>>(8);
-  let reader=std::thread::spawn(move||{for line in BufReader::new(stdout).lines(){if tx.send(line.map_err(|e|e.to_string())).is_err(){break}}});
-  let mut persist=Instant::now();let mut status=None;
-  loop{
-   if let Ok(s)=fs::read_to_string(format!("/proc/{}/status",child.id())){if let Some(k)=s.lines().find_map(|l|l.strip_prefix("VmRSS:").and_then(|v|v.split_whitespace().next()?.parse::<u64>().ok())){peak=peak.max(k*1024)}}
-   let cause=if cancel.load(Ordering::SeqCst){Some("cancelada")}else if started.elapsed().as_secs()>=work.profile.seconds{Some("limite_tiempo")}else if peak>6*1024*1024*1024{Some("limite_memoria")}else{None};
-   if let Some(cause)=cause{finish=cause.into();let _=child.kill();status=Some(child.wait()?);break}
+  std::thread::spawn(move||{
+   use std::io::Read;let mut reader=BufReader::new(stdout);
+   loop {let mut bytes=Vec::new();let r=(&mut reader).take(2*1024*1024+1).read_until(b'\n',&mut bytes);
+    let line=match r {Ok(0)=>break,Ok(_) if bytes.len()>2*1024*1024=>Err("Línea del inferidor excedida".into()),Ok(_)=>String::from_utf8(bytes).map_err(|e|e.to_string()),Err(e)=>Err(e.to_string())};
+    let stop=line.is_err();if tx.send(line).is_err()||stop{break}
+   }
+  });
+  let mut persist=Instant::now();
+  loop {
    match rx.recv_timeout(Duration::from_millis(100)){
-    Ok(Ok(line))=>{let v:Value=serde_json::from_str(&line)?;match v["kind"].as_str().unwrap_or(""){
-     "progress"=>{raw=v["raw"].as_str().unwrap_or("").into();tokens=v["tokens"].as_u64().unwrap_or(0) as usize;if first.is_none()&&tokens>0{first=Some(started.elapsed().as_secs_f64())}},
-     "timings"=>{timings=v["timings"].clone()},
-     "done"=>{raw=v["raw"].as_str().unwrap_or("").into();tokens=v["tokens"].as_u64().unwrap_or(0) as usize;finish=v["finish"].as_str().unwrap_or("fallo").into();timings=v["timings"].clone();worker_finish=true},
-     "error"=>{error=Some(v["error"].as_str().unwrap_or("Fallo de inferencia").to_string())},
-     "phase"=>{if let Some(t)=&app.telemetry{t.event(operation.as_ref(),"fase_declarada_por_inferidor",json!({"phase":v["text"]}));}if let Ok(mut a)=app.active.lock(){if let Some(a)=a.as_mut(){a.phase=v["text"].as_str().unwrap_or("").into()}}},_=>{}}
-     if raw.len()>256000{finish="limite_salida".into();let _=child.kill();status=Some(child.wait()?);break}
+    Ok(Ok(line))=>{
+     let v:Value=serde_json::from_str(&line)?;
+     match v["kind"].as_str().unwrap_or(""){
+      "progress"=>{raw=v["raw"].as_str().unwrap_or("").into();tokens=v["tokens"].as_u64().unwrap_or(0) as usize;if first.is_none()&&tokens>0{first=Some(started.elapsed().as_secs_f64())}},
+      "timings"=>timings=v["timings"].clone(),
+      "done"=>{raw=v["raw"].as_str().unwrap_or("").into();tokens=v["tokens"].as_u64().unwrap_or(0) as usize;finish=v["finish"].as_str().unwrap_or("fallo").into();timings=v["timings"].clone();worker_finish=true},
+      "error"=>error=Some(v["error"].as_str().unwrap_or("Fallo de inferencia").to_string()),
+      "phase"=>{if let Some(t)=&app.telemetry{t.event(operation.as_ref(),"fase_declarada_por_inferidor",json!({"phase":v["text"]}));}if let Ok(mut a)=app.active.lock(){if let Some(a)=a.as_mut(){a.phase=v["text"].as_str().unwrap_or("").into()}}},
+      _=>{}
+     }
+     c.output.store(raw.len(),Ordering::SeqCst);
+     if raw.len()>256000{finish="limite_salida".into();break}
      if let Ok(mut a)=app.active.lock(){if let Some(a)=a.as_mut(){a.text=raw.clone();a.tokens=tokens;}}
      if persist.elapsed()>Duration::from_secs(2)&&!raw.is_empty(){app.db.lock().map_err(|_|"Registro bloqueado")?.append(&case_id,"respuesta_parcial",json!({"chat_id":chat,"request_id":id,"raw":raw,"tokens":tokens}))?;persist=Instant::now()}
-    },Ok(Err(e))=>return Err(e.into()),Err(std::sync::mpsc::RecvTimeoutError::Disconnected)=>{status=Some(child.wait()?);break},Err(std::sync::mpsc::RecvTimeoutError::Timeout)=>{}
+    },
+    Ok(Err(e))=>return Err(e.into()),
+    Err(std::sync::mpsc::RecvTimeoutError::Disconnected)=>break,
+    Err(std::sync::mpsc::RecvTimeoutError::Timeout)=>{if c.completed(){break}}
    }
   }
-  drop(rx);let _=reader.join();let stderr=err_reader.join().unwrap_or_default();if !stderr.trim().is_empty(){error=Some(stderr)}
-  if let Some(s)=status{exit_code=s.code();if !s.success()&&worker_finish{finish="fallo".into()}}
   Ok(())
  })();
- if let Err(e)=outcome{error=Some(e.to_string());finish="fallo".into()}
+ if let Err(e)=outcome{error=Some(e.to_string());finish="fallo".into();if let Some(c)=&control{c.fault.store(true,Ordering::SeqCst);}}
+ let report=control.as_ref().map(|c|c.finish());
+ let mut termination=Value::Null;let mut exit_code=None;let mut exit_signal=None;
+ let mut peak=None;let mut samples=0;let mut missing=0;
+ match report{
+  Some(Ok(r))=>{
+   exit_code=r.exit_code;exit_signal=r.exit_signal;peak=r.peak_rss_bytes;samples=r.rss_samples;missing=r.rss_unavailable;
+   if let Some(cause)=&r.cause{finish=cause.clone();}
+   else if r.exit_code!=Some(0)||!worker_finish{finish="fallo".into();}
+   if let Some(e)=&r.error{error=Some(e.clone());}
+   termination=serde_json::to_value(&r).unwrap_or(Value::Null);
+  },
+  Some(Err(e))=>{finish="cierre_no_confirmado".into();error=Some(e);},
+  None=>{}
+ }
+ if let Some(rx)=diagnostic{if let Ok((s,valid))=rx.recv_timeout(Duration::from_millis(100)){if !s.trim().is_empty(){error=Some(s)}if !valid{error=Some("Diagnóstico incompleto".into())}}}
  let (thinking,answer)=model::split(&raw,work.profile.thinking);
- let observation=app.telemetry.as_ref().zip(operation).map(|(t,o)|t.end(o,json!({"finish":finish,"exit_code":exit_code,"tokens":tokens,"worker":worker_identity,"phase_timings_declared_by_worker":timings})));
- let final_event=json!({"chat_id":chat,"request_id":id,"service_instance":app.lifecycle.status()["instance_id"],"observability":observation,"worker_identity":worker_identity,"raw":raw,"answer":answer,"thinking":thinking,"finish":finish,"tokens":tokens,"input_tokens":work.context.input_tokens,"seconds":started.elapsed().as_secs_f64(),"first_output_seconds":first,"phase_timings":timings,"peak_rss_bytes":peak,"rss_scope":"Proceso de inferencia, muestreado; no máximo exacto ni memoria de toda la máquina","exit_code":exit_code,"error":error,"content_validation":"no_realizada","external_operations":null,"external_operations_scope":"No medido: el observador muestrea descriptores de socket, pero no captura tráfico ni acredita ausencia de operaciones exteriores","tool_calls":0,"tool_calls_scope":"No se han habilitado herramientas para el modelo en este servicio; no equivale a aislamiento de red","first_output_scope":"Primera salida de texto comunicada por el proceso hijo; incluye carga y preparación, y puede pertenecer al texto de razonamiento"});
+ let observation=app.telemetry.as_ref().zip(operation).map(|(t,o)|t.end(o,json!({"finish":finish,"exit_code":exit_code,"exit_signal":exit_signal,"tokens":tokens,"worker":worker_identity,"phase_timings_declared_by_worker":timings})));
+ let final_event=json!({"chat_id":chat,"request_id":id,"service_instance":app.lifecycle.status()["instance_id"],"observability":observation,"worker_identity":worker_identity,"raw":raw,"answer":answer,"thinking":thinking,"finish":finish,"tokens":tokens,"input_tokens":work.context.input_tokens,"seconds":started.elapsed().as_secs_f64(),"first_output_seconds":first,"phase_timings":timings,"peak_rss_bytes":peak,"rss_samples":samples,"rss_unavailable":missing,"rss_scope":"Proceso de inferencia, muestreado; no máximo exacto ni memoria de toda la máquina","exit_code":exit_code,"exit_signal":exit_signal,"termination":termination,"error":error,"content_validation":"no_realizada","external_operations":null,"external_operations_scope":"No medido: el observador muestrea descriptores de socket, pero no captura tráfico ni acredita ausencia de operaciones exteriores","tool_calls":0,"tool_calls_scope":"No se han habilitado herramientas para el modelo en este servicio; no equivale a aislamiento de red","first_output_scope":"Primera salida de texto comunicada por el proceso hijo; incluye carga y preparación, y puede pertenecer al texto de razonamiento"});
  let saved=app.db.lock().map_err(|_|"Registro bloqueado").and_then(|mut db|db.append(&case_id,"respuesta_finalizada",final_event).map_err(|_|"No se pudo conservar el resultado"));
  if let Some(t)=&app.telemetry{t.event(None,"custodia_resultado",json!({"request_id":id,"saved":saved.is_ok()}));}
  if let Err(e)=saved{eprintln!("{e}");if let Ok(mut a)=app.active.lock(){if let Some(a)=a.as_mut(){a.phase="Fallo de conservación; intervención necesaria".into()}}return}
+ if termination["stop_confirmed"]==false||finish=="cierre_no_confirmado"{app.stopping.store(true,Ordering::SeqCst);return}
  if let Ok(mut a)=app.active.lock(){*a=None}
 }
 async fn page(State(app):State<App>)->Html<String>{Html(include_str!("../web/index.html").replace("<head>",&format!("<head><meta name=\"eio-session\" content=\"{}\">",app.session_key)))}
@@ -157,6 +189,7 @@ async fn shutdown_signal(app:App){
 #[tokio::main(flavor="multi_thread",worker_threads=2)]async fn main()->Result<()>{
  if std::env::args().nth(1).as_deref()==Some("--observe"){return observation::execute()}
  if std::env::args().nth(1).as_deref()==Some("--worker"){return model::worker()}
+ if std::env::args().nth(1).as_deref()==Some("--recover"){return store::recover_cli()}
  if std::env::args().nth(1).as_deref()==Some("--check"){return store::check_cli()}
  if std::env::args().nth(1).as_deref()==Some("--compare"){return comparison::execute()}
  let models=PathBuf::from(std::env::var("EIO_MODELS").unwrap_or("/workspaces/eio-instalacion-nativa-20260922".into()));
@@ -165,11 +198,11 @@ async fn shutdown_signal(app:App){
  let tokenizer=tokenizers::Tokenizer::from_file(models.join("tokenizer.json")).map_err(|e|e.to_string())?;
  let origin=match std::env::var("EIO_ORIGIN"){Ok(v)=>v,Err(_)=>format!("https://{}-3000.app.github.dev",std::env::var("CODESPACE_NAME").map_err(|_|"Falta CODESPACE_NAME; defina EIO_ORIGIN para otro entorno")?)};
  let licensing:Value=serde_json::from_str(include_str!("../AVISO_LICENCIAS.json"))?;
- let identity=json!({"model":"Qwen3-0.6B · Q4_K_M","model_sha256":MODEL_HASH,"tokenizer_sha256":TOKENIZER_HASH,"candle_revision":"ddf1b879dc3a1760cbcb3f3c4a7c6467850cec4a","binary_sha256":store::file_hash(&std::env::current_exe()?)?,"application":"EIO conversación 0.1.3","licensing":licensing,"device":"CPU","context_limit":CONTEXT,"context_status":"Límite operativo configurado; la capacidad y el rendimiento con historias largas requieren medición específica","memory_stop_bytes":6u64*1024*1024*1024});
+ let identity=json!({"model":"Qwen3-0.6B · Q4_K_M","model_sha256":MODEL_HASH,"tokenizer_sha256":TOKENIZER_HASH,"candle_revision":"ddf1b879dc3a1760cbcb3f3c4a7c6467850cec4a","binary_sha256":store::file_hash(&std::env::current_exe()?)?,"application":"EIO conversación 0.1.4","licensing":licensing,"device":"CPU","context_limit":CONTEXT,"context_status":"Límite operativo configurado; la capacidad y el rendimiento con historias largas requieren medición específica","memory_stop_bytes":6u64*1024*1024*1024});
  let mut secret=[0u8;32];{use std::io::Read;std::fs::File::open("/dev/urandom")?.read_exact(&mut secret)?;}let session_key=store::hash(&secret);
  let lifecycle=lifecycle::Lifecycle::open(&data)?;
  // Reservar el puerto antes de reconstruir evita que una segunda instancia altere generaciones vivas.
- let listener=tokio::net::TcpListener::bind(std::env::var("EIO_BIND").unwrap_or("0.0.0.0:3000".into())).await?;
+ let listener=tokio::net::TcpListener::bind(std::env::var("EIO_BIND").unwrap_or("127.0.0.1:3000".into())).await?;
  let instance=lifecycle.status()["instance_id"].as_str().ok_or("Sin instancia")?.to_string();
  let observation_dir=data.join("servicio/otel").join(&instance);
  let telemetry=Some(telemetry::Telemetry::new(&observation_dir,&instance,telemetry::LIMIT)?);

@@ -10,6 +10,7 @@ impl Area {
         let listener=TcpListener::bind("127.0.0.1:0").unwrap(); let address=listener.local_addr().unwrap(); drop(listener);
         let mut c=Config::new(root.clone(),root.join("evidencias"),hash_file(&program).unwrap());
         c.address=address; c.window=Duration::from_secs(5); c.load=Duration::from_secs(2); c.request=Duration::from_secs(2);
+        c.virtual_limit=Some(128*1024*1024);c.minimum_memory=32*1024*1024;c.reserve_memory=64*1024*1024;
         c.args=Some(vec!["--exact".into(),"tests::auxiliar".into(),"--nocapture".into()]);
         c.env=vec![("EIO_TEST_MODE".into(),mode.into()),("EIO_TEST_PORT".into(),address.port().to_string())];
         Self {root,config:Some(c)}
@@ -55,6 +56,21 @@ impl Drop for Area {fn drop(&mut self){let _=fs::remove_dir_all(&self.root);}}
     assert_eq!(v["child_exit_signal"],15);assert!(v["peak_rss_bytes"].as_u64().unwrap()>0);assert_eq!(v["http_request_attempted"],false);
     assert!(!a.rows().iter().any(|v|v["kind"]=="senal_solicitada"));assert_eq!(v["external_signal_sender"],"no_atribuido");a.assert_gone();
 }
+#[test] fn muestras_persistidas_mientras_el_hijo_sigue_activo(){
+ let _s=Signals::install().unwrap();let mut a=Area::new("esperar");a.config.as_mut().unwrap().load=Duration::from_millis(1500);
+ let path=a.root.join("evidencias/SUCESOS.jsonl");
+ let reader=thread::spawn(move||{
+  let end=Instant::now()+Duration::from_secs(4);
+  loop{let text=fs::read_to_string(&path).unwrap_or_default();
+   let rows:Vec<Value>=text.lines().filter_map(|l|serde_json::from_str(l).ok()).collect();
+   let samples:Vec<_>=rows.iter().filter(|r|r["kind"]=="muestra_recursos").collect();
+   if samples.len()>=2 {let sample=samples.last().unwrap();let pid=sample["data"]["pid"].as_u64().unwrap();
+    assert!(Path::new(&format!("/proc/{pid}")).exists());assert!(sample["data"]["rss_bytes"].as_u64().unwrap()>0);return}
+   assert!(Instant::now()<end,"No hay dos muestras persistidas durante la carga");thread::sleep(TICK);
+  }
+ });
+ let v=execute(a.take()).unwrap();reader.join().unwrap();assert_eq!(v["error"],"limite_temporal");a.assert_gone();
+}
 #[test] fn plazo_monotono_y_escalada_term_kill() {
     let _s=Signals::install().unwrap();let mut a=Area::new("ignorar_term");a.config.as_mut().unwrap().load=Duration::from_millis(400);
     let begin=Instant::now();let v=execute(a.take()).unwrap();assert!(begin.elapsed()<Duration::from_secs(4));assert_eq!(v["error"],"limite_temporal");assert_eq!(v["child_exit_signal"],9);
@@ -80,18 +96,22 @@ impl Drop for Area {fn drop(&mut self){let _=fs::remove_dir_all(&self.root);}}
     let mut b=Area::new("http");let lock=OpenOptions::new().create(true).truncate(false).read(true).write(true).open(b.root.join("controlador.lock")).unwrap();lock.try_lock().unwrap();
     assert!(execute(b.take()).unwrap_err().starts_with("instancia_ya_activa"));assert!(!b.root.join("auxiliar.pid").exists());
 }
-struct Faulty { bytes:Arc<Mutex<Vec<u8>>>, flushes:usize, block:bool }
+struct Faulty { bytes:Arc<Mutex<Vec<u8>>>, armed:bool, block:bool }
 impl Write for Faulty {
-    fn write(&mut self,b:&[u8])->io::Result<usize>{self.bytes.lock().unwrap().extend_from_slice(b);Ok(b.len())}
-    fn flush(&mut self)->io::Result<()>{self.flushes+=1;if self.flushes>=2 {if self.block {thread::sleep(Duration::from_secs(1));}return Err(io::Error::other("fallo_del_escritor_sintetico"));}Ok(())}
+    fn write(&mut self,b:&[u8])->io::Result<usize>{let mut bytes=self.bytes.lock().unwrap();bytes.extend_from_slice(b);self.armed=String::from_utf8_lossy(&bytes).contains("muestra_recursos");Ok(b.len())}
+    fn flush(&mut self)->io::Result<()>{if self.armed {if self.block {thread::sleep(Duration::from_secs(1));}return Err(io::Error::other("fallo_del_escritor_sintetico"));}Ok(())}
 }
 #[test] fn fallo_y_bloqueo_de_custodia_no_impiden_parada() {
     let _s=Signals::install().unwrap();
     for block in [false,true] {
         let mut a=Area::new("esperar");let c=a.take();fs::create_dir(&c.evidence).unwrap();
-        let bytes=Arc::new(Mutex::new(Vec::new()));let journal=Journal::with_writer(Faulty{bytes:bytes.clone(),flushes:0,block});
+        let bytes=Arc::new(Mutex::new(Vec::new()));let journal=Journal::with_writer(Faulty{bytes:bytes.clone(),armed:false,block});
         let begin=Instant::now();let e=run(c,a.root.clone(),a.root.join("evidencias"),journal).unwrap_err();
-        assert!(e.starts_with("cierre_o_custodia_no_conforme"));assert!(begin.elapsed()<Duration::from_secs(4),"la custodia bloqueó el cierre");a.assert_gone();
+        assert!(e.starts_with("cierre_o_custodia_no_conforme"));assert!(begin.elapsed()<Duration::from_secs(4),"la custodia bloqueó el cierre");
+        let snapshot=bytes.lock().unwrap().clone();
+        let rows:Vec<Value>=snapshot.split_inclusive(|b|*b==b'\n').filter(|l|l.ends_with(b"\n")).map(|l|serde_json::from_slice(l).unwrap()).collect();
+        let pid=rows.iter().find(|r|r["kind"]=="proceso_creado").expect("El fallo debe producirse después del arranque")["data"]["pid"].as_u64().unwrap();
+        assert!(!Path::new(&format!("/proc/{pid}")).exists());
     }
 }
 

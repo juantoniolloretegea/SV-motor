@@ -1,0 +1,55 @@
+   Compiling eio-conversacion v0.1.4 (<directorio-de-compilacion>)
+warning: value assigned to `raw` is never read
+  --> src/model.rs:42:119
+   |
+42 |   let mut logits=logits.ok_or("Contexto vacío")?;let mut generated=Vec::new();let mut last=Instant::now();let mut raw=String::new();le...
+   |                                                                                                                       ^^^^^^^^^^^^^ this value is reassigned later and never used
+...
+51 |     raw=tokenizer.decode(&generated,false).map_err(|e|e.to_string())?;
+   |     --- `raw` is overwritten here before the previous value is read
+   |
+   = note: `#[warn(unused_assignments)]` (part of `#[warn(unused)]`) on by default
+
+warning: method `trace_id` is never used
+  --> src/telemetry.rs:40:25
+   |
+40 | impl Operation { pub fn trace_id(&self)->&str{&self.trace_id} }
+   | --------------          ^^^^^^^^
+   | |
+   | method in this implementation
+   |
+   = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: `eio-conversacion` (bin "eio-conversacion" test) generated 1 warning (1 duplicate)
+warning: `eio-conversacion` (bin "eio-conversacion") generated 2 warnings
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 1.97s
+     Running unittests src/main.rs (target/debug/deps/eio_conversacion-6b161d84eba9cd59)
+
+running 16 tests
+test checks::cierre_con_reserva_y_registro_bloqueado_no_impiden_parada ... ok
+test checks::clave_obsoleta_y_cierre_impiden_operar ... ok
+test checks::reenvio_confirmado_no_duplica_y_rechaza_colision ... ok
+test checks::reinicio_conserva_prefijo_y_cierra_una_sola_vez ... ok
+test lifecycle::tests::instancia_exclusiva_y_registro_incompleto ... ok
+test model::tests::texto_y_razonamiento ... ok
+test observation::tests::identidad_y_archivo_borrado_abierto ... ok
+test observation::tests::observador_detecta_fin_sin_declaracion_del_hijo ... ok
+test observation::tests::socket_escucha_atribuido_al_proceso ... ok
+test store::recovery_tests::prefijo_derivado_y_original_intacto ... ok
+test store::recovery_tests::reserva_cierre_y_cuota_agregada ... ok
+test store::tests::recuperacion_y_alteracion ... ok
+test supervision::tests::auxiliar ... ok
+test supervision::tests::causas_reales_y_control_independiente ... ok
+test telemetry::tests::fallo_real_de_destino_no_se_oculta ... ok
+test telemetry::tests::parentesco_duracion_y_limite_explicito ... ok
+
+test result: ok. 16 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 3.31s
+
+     Running tests/service.rs (target/debug/deps/service-a40bd3a24b21611c)
+
+running 2 tests
+test observabilidad_inferencia_y_custodia ... ignored, Inferencia sintética única; puerto local 3001 y pesos verificados
+test proceso_http_reinicio_y_exclusion ... ignored, Ejecutar expresamente con el puerto 3001 libre y los pesos disponibles
+
+test result: ok. 0 passed; 0 failed; 2 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

@@ -1,14 +1,10 @@
 # Ensayo de inteligencia artificial y observabilidad
 
-**Edición documental:** 2.6 · 23 de septiembre de 2026.  
-**Producto distribuido:** EIO conversación 0.1.3 · Beta. Fuentes candidatas: conversación 0.1.4 y controlador gpt-oss 0.1.1.  
-**Estado:** campaña Qwen/B concluida como realización parcial con limitaciones; gpt-oss instalado, todavía sin respuesta de inferencia. La conformidad integral de B no está acreditada.
+**Edición documental:** 2.5 · 22 de septiembre de 2026.  
+**Producto experimental:** EIO conversación 0.1.3 · Beta.  
+**Estado:** inferencia nativa y observación verificadas en ámbitos delimitados; conformidad completa de la vía B pendiente.
 
-**Actualización · 23 de septiembre de 2026.** El [cierre de Qwen/B](resultados/cierre-qwen-b-20260923/INFORME.md) conserva las pruebas completadas, los resultados adversos de contenido y las limitaciones de control y acceso. Finaliza esta campaña; no declara resueltos los controles ausentes ni obliga a proseguir pruebas administrativas. Una continuación requerirá una necesidad concreta y un alcance nuevo.
-
-La recepción de la revisión externa se ha contrastado con las fuentes y con la corrección posterior del controlador. La [conversación 0.1.4](conversacion-nativa/verificacion-0.1.4/INFORME.md) y el [controlador 0.1.1](modelos-de-ia/openai/gpt-oss-20b/controlador-nativo/verificacion-0.1.1/INFORME.md) incorporan correcciones comprobadas localmente en Rust 1.98.0. No se han sustituido las instalaciones existentes ni realizado nuevas inferencias. En el [intento gpt-oss](modelos-de-ia/openai/gpt-oss-20b/resultados/2026-09-23/RESULTADO.md), el emisor del SIGTERM continúa sin identificar. La estimación de carga no acredita margen suficiente para un nuevo intento.
-
-La [edición 2.5 al corte anterior](README_2_5_CORTE_2026_09_23.md) se conserva para consulta. Las evidencias de cada versión mantienen su atribución.
+**Nota de continuidad · 23 de septiembre de 2026.** El estado y las tablas de la edición 2.5 corresponden al 22 de septiembre. Posteriormente se realizó un [intento nativo de gpt-oss-20b](modelos-de-ia/openai/gpt-oss-20b/resultados/2026-09-23/RESULTADO.md): instalación completada y carga interrumpida por SIGTERM, sin petición ni respuesta. La [revisión del controlador Rust propio](modelos-de-ia/openai/gpt-oss-20b/resultados/2026-09-23/REVISION_CONTROLADOR_RUST_20260923.md) identifica carencias de parada, registro y reutilización. La [corrección instrumental 0.1.0](modelos-de-ia/openai/gpt-oss-20b/controlador-nativo/README.md) supera diez comprobaciones funcionales locales con auxiliares Rust; queda pendiente su ejecución con el modelo. El emisor de aquella señal sigue sin identificar. El controlador instrumental no implementa el conjunto de supervisión, custodia y guarda exterior de los esquemas; esta revisión no acredita la vía A ni la conformidad integral de B.
 
 ## Objeto
 
@@ -70,13 +66,13 @@ Los [diseños NAT02](resultados/preparacion-nativa-02/DISENO.md) y [NAT03](resul
 
 La comprobación del entorno examinó la vista raíz de cgroup v2 del contenedor. El montaje no figuraba como de solo lectura; la apertura de `cgroup.kill` devolvió permiso denegado. No se identificó una hoja exclusiva delegada para el ensayo. Este resultado no demuestra que toda delegación posible sea inviable, pero tampoco satisface el requisito de NAT03. No se ejecutaron inferencias, escrituras en controles ni pruebas de bloqueo.
 
-La campaña Qwen/B se da por concluida con esa limitación, conforme al informe de cierre. Una futura pretensión de conformidad integral seguirá requiriendo acreditar la capacidad exterior e integrar los elementos pendientes. Cada comprobación adicional deberá resolver una carencia concreta de la tabla anterior, con resultado esperado, límite de recursos y condición de parada. Un resultado adverso cierra su prueba; repetirla requiere una corrección o una condición distinta expresamente justificada. Las campañas finalizadas no se repiten para aumentar el volumen de registros. Si el entorno no ofrece la capacidad necesaria dentro de los recursos autorizados, se consigna la limitación y se eleva una decisión de alcance; no se declara conformidad.
+La continuación de B queda condicionada a acreditar esa capacidad exterior y delimitar la integración pendiente. Cada comprobación adicional deberá resolver una carencia concreta de la tabla anterior, con resultado esperado, límite de recursos y condición de parada. Un resultado adverso cierra su prueba; repetirla requiere una corrección o una condición distinta expresamente justificada. Las campañas finalizadas no se repiten para aumentar el volumen de registros. Si el entorno no ofrece la capacidad necesaria dentro de los recursos autorizados, se consigna la limitación y se eleva una decisión de alcance; no se declara conformidad.
 
 ## Vía A y selección de modelo
 
 El [diagrama de la vía A](diagramas/via-a.mmd) sitúa la inferencia en un trabajador del navegador con Rust y WebAssembly. La supervisión y la custodia exteriores conservan sus funciones. Una interfaz que consulta un modelo nativo remoto corresponde a otra distribución de ejecución; la presencia de WebAssembly en el control no demuestra aislamiento de aquella inferencia.
 
-El [catálogo Modelos de IA](modelos-de-ia/README.md) separa la identidad del modelo de la vía utilizada. Conserva Qwen y Candle en sus ubicaciones actuales y registra gpt-oss-20b como instalado, con carga nativa interrumpida y sin inferencia obtenida. La selección de este último no acredita su compatibilidad con el navegador ni evita la necesidad de un motor numérico compatible.
+El [catálogo Modelos de IA](modelos-de-ia/README.md) separa la identidad del modelo de la vía utilizada. Conserva Qwen y Candle en sus ubicaciones actuales y registra gpt-oss-20b como candidato. La selección de este último no acredita su compatibilidad con el navegador ni evita la necesidad de un motor numérico compatible.
 
 WebAssembly modifica el entorno de ejecución y sus fronteras; no añade conocimiento al modelo. Tampoco garantiza respuestas idénticas entre plataformas: deben considerarse configuración, cuantización, selección de tokens y diferencias de cálculo. Comparar Qwen en B con gpt-oss en A permitiría describir dos configuraciones completas, pero no atribuir sus diferencias exclusivamente a WebAssembly. Un contraste causal entre vías requeriría conservar el modelo y controlar las demás condiciones pertinentes.
 
@@ -86,7 +82,7 @@ El universo OP-IMM-001 permite preparar pruebas sobre material identificado ante
 
 La instrucción de utilizar únicamente determinadas fuentes no elimina el cálculo probabilístico ni garantiza obediencia. La evidencia debe mostrar qué se suministró, qué se pidió, qué produjo el modelo y qué admitió o rechazó el verificador. La comprobación de citas literales tiene un alcance menor que la validación de una explicación libre.
 
-Las carencias conservadas de la vía B se rigen por el cierre y la condición de una eventual continuación anterior; no exige que el universo clínico esté terminado para toda prueba instrumental. La preparación de un corpus parcial no modifica el conocimiento canónico ni habilita decisiones clínicas. La devolución al encargo original requiere identificar resultados, carencias y necesidades concretas del Lenguaje; no se cierra por la publicación de esta Beta.
+El trabajo pendiente de la vía B se rige por la condición de continuación anterior; no exige que el universo clínico esté terminado para toda prueba instrumental. La preparación de un corpus parcial no modifica el conocimiento canónico ni habilita decisiones clínicas. La devolución al encargo original requiere identificar resultados, carencias y necesidades concretas del Lenguaje; no se cierra por la publicación de esta Beta.
 
 ## Evidencia y continuidad
 

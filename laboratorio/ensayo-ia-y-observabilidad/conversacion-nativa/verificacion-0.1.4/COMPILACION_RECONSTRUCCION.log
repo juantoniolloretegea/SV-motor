@@ -1,0 +1,39 @@
+   Compiling nix v0.31.3
+   Compiling hyper-util v0.1.20
+   Compiling candle-nn v0.11.0 (https://github.com/huggingface/candle?rev=ddf1b879dc3a1760cbcb3f3c4a7c6467850cec4a#ddf1b879)
+   Compiling tower v0.5.3
+   Compiling futures-executor v0.3.34
+   Compiling opentelemetry v0.31.0
+   Compiling fancy-regex v0.19.2
+   Compiling serde_plain v1.0.2
+   Compiling serde_path_to_error v0.1.20
+   Compiling cpufeatures v0.2.17
+   Compiling matchit v0.8.4
+   Compiling axum v0.8.9
+   Compiling sha2 v0.10.9
+   Compiling candle-transformers v0.11.0 (https://github.com/huggingface/candle?rev=ddf1b879dc3a1760cbcb3f3c4a7c6467850cec4a#ddf1b879)
+   Compiling opentelemetry_sdk v0.31.0
+   Compiling eio-conversacion v0.1.4 (<directorio-de-compilacion>)
+warning: value assigned to `raw` is never read
+  --> src/model.rs:42:119
+   |
+42 |   let mut logits=logits.ok_or("Contexto vacío")?;let mut generated=Vec::new();let mut last=Instant::now();let mut raw=String::new();le...
+   |                                                                                                                       ^^^^^^^^^^^^^ this value is reassigned later and never used
+...
+51 |     raw=tokenizer.decode(&generated,false).map_err(|e|e.to_string())?;
+   |     --- `raw` is overwritten here before the previous value is read
+   |
+   = note: `#[warn(unused_assignments)]` (part of `#[warn(unused)]`) on by default
+
+warning: method `trace_id` is never used
+  --> src/telemetry.rs:40:25
+   |
+40 | impl Operation { pub fn trace_id(&self)->&str{&self.trace_id} }
+   | --------------          ^^^^^^^^
+   | |
+   | method in this implementation
+   |
+   = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: `eio-conversacion` (bin "eio-conversacion") generated 2 warnings
+    Finished `release` profile [optimized] target(s) in 2m 20s

@@ -21,7 +21,7 @@ fn stop(s:&mut Service){nix::sys::signal::kill(nix::unistd::Pid::from_raw(s.0.id
 fn proceso_http_reinicio_y_exclusion(){
  let port=TcpListener::bind("127.0.0.1:3001").expect("La prueba exige el puerto 3001 libre");drop(port);
  let root=PathBuf::from(std::env::var("EIO_SERVICE_CHECK_DIR").expect("Defina un directorio nuevo para la prueba"));fs::create_dir(&root).unwrap();
- let(mut first,key1)=start(&root);let(code,state1)=api(&key1,json!({"op":"state"}));assert_eq!(code,200);assert_eq!(state1["identity"]["application"],"EIO conversación 0.1.3");
+ let(mut first,key1)=start(&root);let(code,state1)=api(&key1,json!({"op":"state"}));assert_eq!(code,200);assert_eq!(state1["identity"]["application"],"EIO conversación 0.1.4");
  assert_eq!(api("clave-obsoleta",json!({"op":"state"})).0,403);assert_eq!(request("POST","/api",&key1,"{").0,400);
  let(code,case)=api(&key1,json!({"op":"create_case","title":"Comprobación sintética del proceso"}));assert_eq!(code,200);
  let file=root.join(format!("{}.jsonl",case["id"].as_str().unwrap()));let original=fs::read(&file).unwrap();
@@ -40,7 +40,7 @@ fn observabilidad_inferencia_y_custodia(){
  let root=PathBuf::from(std::env::var("EIO_SERVICE_CHECK_DIR").expect("Directorio nuevo"));fs::create_dir(&root).unwrap();
  let(mut service,key)=start(&root);let deadline=Instant::now()+Duration::from_secs(20);
  loop{let s=api(&key,json!({"op":"state"})).1;if s["observability"]["observer"]["fresh"]==true{break}assert!(Instant::now()<deadline,"Observador sin confirmar");thread::sleep(Duration::from_millis(200));}
- let(code,case)=api(&key,json!({"op":"create_case","title":"Observación sintética 0.1.3"}));assert_eq!(code,200);
+ let(code,case)=api(&key,json!({"op":"create_case","title":"Observación sintética 0.1.4"}));assert_eq!(code,200);
  let(code,chat)=api(&key,json!({"op":"create_chat","case_id":case["id"],"title":"Correlación técnica"}));assert_eq!(code,200);
  let profile=json!({"thinking":false,"max_output":32,"seconds":120,"seed":299792458});let question="Responda únicamente con la palabra HOLA.";
  let(code,preview)=api(&key,json!({"op":"preview","chat_id":chat["id"],"text":question,"profile":profile}));assert_eq!(code,200);

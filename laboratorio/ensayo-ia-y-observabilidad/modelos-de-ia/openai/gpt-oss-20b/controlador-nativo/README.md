@@ -1,12 +1,22 @@
 # Controlador nativo de gpt-oss-20b
 
-**Versión 0.1.0 · 23 de septiembre de 2026 · Linux, Rust 1.98.0.**
+**Versión 0.1.1 · 23 de septiembre de 2026 · Linux, Rust 1.98.0.**
 
 Corrección del controlador instrumental utilizado en el [intento nativo del 23/09/2026](../resultados/2026-09-23/RESULTADO.md). Conserva la invocación corregida de mistral.rs 0.9.3 y adapta mecanismos de supervisión ya empleados en la conversación nativa de Qwen.
 
-**Verificación:** diez comprobaciones funcionales locales superadas y compilación de producción completada. Las pruebas utilizan auxiliares Rust y un servicio HTTP sintético. Queda pendiente ejecutar este controlador con el motor y los pesos instalados; no se ha realizado otra inferencia ni identificado el emisor del SIGTERM original.
+**Verificación:** 16 pruebas registradas superadas (14 funcionales y dos auxiliares), con compilación de producción completada. Las pruebas utilizan auxiliares Rust y un servicio HTTP sintético. Queda pendiente ejecutar este controlador con el motor y los pesos instalados; no se ha realizado otra inferencia ni identificado el emisor del SIGTERM original.
 
-## Correcciones
+## Recursos y parada en 0.1.1
+
+Se observa la disponibilidad del sistema y el margen del grupo cgroup visible, tomando el menor valor cuando ambas lecturas están disponibles. No equivale a reservar esa memoria ni a inventariar todos los ancestros. La admisión exige una estimación de carga de 13 123 MiB y una reserva adicional de 1 GiB para el entorno. El primer valor procede del inventario del cargador anterior; no es una medición del consumo máximo.
+
+La invocación exige `--limite-as-mib`: cota explícita de direcciones virtuales mediante `RLIMIT_AS`, distinta de la RAM residente y de una cuota agregada. No se fija a la RAM nominal: deben caber los mapeos y las asignaciones del motor. También se detiene ante exceso de RSS muestreada o agotamiento observado de la reserva. Las muestras se persisten durante la carga, con cadencia nominal de un segundo; si la conservación falla, se solicita el cierre.
+
+Linux recibe `PR_SET_PDEATHSIG=SIGKILL` antes de ejecutar el motor y se comprueba la identidad del padre. La condición se refiere al hilo que creó el hijo. La prueba funcional mata realmente al padre y recoge la terminación del hijo por señal 9. No cubre descendientes separados, un motor que retire esa configuración ni un bloqueo global del anfitrión.
+
+`--capacidad` consulta los recursos sin iniciar el motor. Estas lecturas y límites se aplican sin modificar grupos de control ni permisos administrativos.
+
+## Correcciones conservadas de 0.1.0
 
 | Carencia del controlador anterior | Comportamiento de esta versión |
 | --- | --- |
@@ -41,7 +51,7 @@ Desde esta carpeta, con Rust, Cargo y rustdoc 1.98.0 disponibles:
 cargo test --locked -- --test-threads=1
 cargo build --release --locked
 ./target/release/eio-controlador-oss --licencias
-./target/release/eio-controlador-oss --instalacion /ruta/instalacion-local --evidencias /ruta/evidencias-nuevas --ventana-segundos 1000 --carga-segundos 600 --peticion-segundos 300
+./target/release/eio-controlador-oss --instalacion /ruta/instalacion-local --evidencias /ruta/evidencias-nuevas --limite-as-mib COTA_VIRTUAL_MIB --ventana-segundos 1000 --carga-segundos 600 --peticion-segundos 300
 ```
 
 `--offline` puede añadirse si las dependencias ya están disponibles. La verificación publicada se realizó con `--offline --locked`. Las pruebas deben ser secuenciales porque ejercitan señales del proceso.
@@ -53,14 +63,14 @@ El servicio escucha únicamente en `127.0.0.1:8089`. Se conservan `SUCESOS.jsonl
 ## Perímetro técnico
 
 - Los plazos máximos configurables llegan a 1.500 segundos de operación, más el cierre. Las esperas posteriores a TERM y KILL son de 500 ms cada una; cada acuse del registro admite 250 ms. Son límites instrumentales de las esperas programadas, no una garantía de tiempo real frente a bloqueos del núcleo o del sistema de archivos.
-- El máximo RSS es muestreado y corresponde al hijo de inferencia. No representa memoria agregada ni impone una cuota de memoria.
+- El máximo RSS es muestreado y corresponde al hijo de inferencia. Sus umbrales provocan una solicitud de parada; no representan una cuota agregada. RLIMIT_AS limita direcciones virtuales por proceso.
 - La parada confirmada corresponde al hijo directo. Las señales se dirigen a su grupo cuando puede comprobarse; no se acredita la ausencia de descendientes que abandonen ese grupo o sobrevivan al líder.
-- El escritor reside en otro hilo del mismo proceso. No equivale a un custodio independiente ni a la guarda exterior; SIGKILL del controlador o pérdida del sistema pueden impedir la limpieza.
+- El escritor reside en otro hilo del mismo proceso. No equivale a un custodio independiente ni a la guarda exterior; la muerte del controlador solicita por el núcleo la terminación del hijo directo; puede quedar incompleta la evidencia final. Una pérdida del sistema queda fuera de ese mecanismo.
 - El controlador no detiene la instancia anfitriona. La verificación local no cierra la vía B completa ni acredita ejecución en navegador/WebAssembly.
 
 ## Evidencias y licencias
 
-[Informe de verificación](verificacion/INFORME.md), [pruebas](verificacion/PRUEBAS.log), [compilación](verificacion/COMPILACION.log) y [huellas](verificacion/SHA256SUMS.txt).
+[Verificación 0.1.1](verificacion-0.1.1/INFORME.md), [pruebas](verificacion-0.1.1/PRUEBAS.log), [compilación](verificacion-0.1.1/COMPILACION.log) y [huellas](verificacion-0.1.1/SHA256SUMS.txt). Se conserva la [verificación histórica 0.1.0](verificacion/INFORME.md).
 
 [AVISO_LICENCIAS.json](AVISO_LICENCIAS.json) identifica el SV, el modelo, el motor y Harmony. [DEPENDENCIAS.json](DEPENDENCIAS.json) recoge las 21 dependencias resueltas del controlador y sus licencias; no es un inventario del motor externo. Este paquete contiene fuentes, archivo de dependencias y evidencia de verificación; no incluye pesos ni ejecutables.
 

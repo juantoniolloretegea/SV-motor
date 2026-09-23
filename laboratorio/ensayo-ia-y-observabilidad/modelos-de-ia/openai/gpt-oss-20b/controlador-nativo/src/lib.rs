@@ -1,5 +1,6 @@
 //! Control instrumental Linux. Adaptación de OwnedChild, Instant y cierre final de Qwen 0.1.3.
 //! No constituye la guarda exterior ni una cuota de memoria del conjunto.
+pub mod resources;
 use serde_json::{Value, json};
 use sha2::{Digest, Sha256};
 use std::{fs::{self, File, OpenOptions}, io::{self, Read, Write}, net::{SocketAddr, TcpListener, TcpStream}, os::unix::{fs::OpenOptionsExt, process::{CommandExt, ExitStatusExt}}, path::{Path, PathBuf}, process::{Child, Command, ExitStatus, Stdio}, sync::{Arc, atomic::{AtomicBool, AtomicI32, Ordering}, mpsc::{self, SyncSender}}, thread, time::{Duration, Instant, SystemTime, UNIX_EPOCH}};
@@ -123,30 +124,40 @@ pub struct Config {
     pub installation: PathBuf, pub evidence: PathBuf, pub window: Duration,
     pub load: Duration, pub request: Duration, pub address: SocketAddr,
     pub expected_engine_sha256: String,
+    pub virtual_limit: Option<u64>, pub minimum_memory: u64, pub reserve_memory: u64,
     #[cfg(test)] args: Option<Vec<String>>,
     #[cfg(test)] env: Vec<(String, String)>,
 }
 impl Config {
     pub fn new(installation: PathBuf, evidence: PathBuf, engine_hash: String) -> Self {
-        Self { installation, evidence, window: Duration::from_secs(1000), load: Duration::from_secs(600), request: Duration::from_secs(300), address: SocketAddr::from(([127,0,0,1],8089)), expected_engine_sha256: engine_hash,
+        Self { installation, evidence, window: Duration::from_secs(1000), load: Duration::from_secs(600), request: Duration::from_secs(300), address: SocketAddr::from(([127,0,0,1],8089)), expected_engine_sha256: engine_hash, virtual_limit:None, minimum_memory:13_760_462_848, reserve_memory:1024*1024*1024,
         #[cfg(test)] args:None, #[cfg(test)] env:Vec::new() }
     }
     fn validate(&self) -> Result<()> {
+        if !self.virtual_limit.is_some_and(|v|v>=self.minimum_memory&&v<=64*1024*1024*1024){return Err("limite_virtual_explicito_requerido_hasta_64_GiB".into());}
         if self.window.is_zero() || self.window > Duration::from_secs(1500) || self.load.is_zero() || self.request.is_zero() || self.load > self.window || self.request > self.window { return Err("presupuesto_temporal_invalido".into()); }
         if self.address.ip() != std::net::IpAddr::V4(std::net::Ipv4Addr::LOCALHOST) || self.address.port() == 0 { return Err("direccion_no_admitida".into()); } Ok(())
     }
 }
 #[derive(Default)]
-struct Metrics { peak: Option<u64>, samples: u64, missing: u64 }
+struct Metrics { peak: Option<u64>, samples: u64, missing: u64, last:Option<u64>, persisted:Option<Instant>, rss_ceiling:u64, reserve:u64 }
 impl Metrics {
     fn sample(&mut self, pid: u32) {
         let value = bounded(format!("/proc/{pid}/status"), 32768).ok().and_then(|s| s.lines().find_map(|l|l.strip_prefix("VmRSS:")?.split_whitespace().next()?.parse::<u64>().ok()).and_then(|n|n.checked_mul(1024)));
+        self.last=value;
         if let Some(n) = value { self.peak = Some(self.peak.unwrap_or(0).max(n)); self.samples += 1; } else { self.missing += 1; }
     }
 }
 fn check(child: &mut OwnedChild, journal: &Journal, metrics: &mut Metrics, end: Instant) -> Result<()> {
     metrics.sample(child.child.id());
     if let Some(s) = child.poll()? { return Err(format!("terminacion_anticipada: {s}")); }
+    if metrics.last.is_some_and(|v|v>metrics.rss_ceiling){return Err("limite_rss_muestreada".into());}
+    if metrics.persisted.is_none_or(|t|t.elapsed()>=Duration::from_secs(1)) {
+        let capacity=resources::snapshot()?;
+        journal.event("muestra_recursos",json!({"pid":child.child.id(),"rss_bytes":metrics.last,"peak_rss_bytes":metrics.peak,"samples":metrics.samples,"unavailable":metrics.missing,"capacity":capacity}))?;
+        metrics.persisted=Some(Instant::now());
+        if capacity["effective_available_bytes"].as_u64().is_none_or(|v|v<metrics.reserve){return Err("reserva_del_entorno_agotada".into());}
+    }
     let signal = STOP.load(Ordering::SeqCst); if signal != 0 { return Err(format!("senal_recibida_controlador: {signal}")); }
     if !journal.healthy.load(Ordering::SeqCst) { return Err("custodia_no_integra".into()); }
     if Instant::now() >= end { return Err("limite_temporal".into()); } Ok(())
@@ -195,10 +206,15 @@ fn run(config: Config, root: PathBuf, evidence: PathBuf, journal: Journal) -> Re
     let mut child: Option<OwnedChild> = None; let mut metrics = Metrics::default(); let mut response = None;
     let mut phase = "preparacion"; let mut request_sent = false; let mut start_ticks = None;
     let outcome = std::panic::catch_unwind(std::panic::AssertUnwindSafe(|| -> Result<()> {
+        let capacity=resources::snapshot()?;
+        journal.event("capacidad_previa",capacity.clone())?;
+        metrics.rss_ceiling=resources::admit(&capacity,config.minimum_memory,config.reserve_memory)?;
+        metrics.reserve=config.reserve_memory;
+        journal.event("limites_declarados",json!({"virtual_hard_bytes":config.virtual_limit,"rss_sampled_stop_bytes":metrics.rss_ceiling,"environment_reserve_bytes":config.reserve_memory,"minimum_load_estimate_bytes":config.minimum_memory,"kernel_parent_death_signal":9,"scope":"Direcciones virtuales por proceso y RSS observada; no cuota RSS agregada ni guarda exterior"}))?;
         let engine = root.join("motor/mistralrs"); let engine_hash = hash_file(&engine)?;
         if engine_hash != config.expected_engine_sha256 { return Err("identidad_motor_no_conforme".into()); }
         let available = TcpListener::bind(config.address).map_err(|e|format!("puerto_ocupado: {e}"))?;
-        journal.event("inicio", json!({"controller_binary_sha256":hash_file(&std::env::current_exe().map_err(|e|e.to_string())?)?,"source_lib_sha256":format!("{:x}",Sha256::digest(include_bytes!("lib.rs"))),"source_main_sha256":format!("{:x}",Sha256::digest(include_bytes!("main.rs"))),"lock_sha256":format!("{:x}",Sha256::digest(include_bytes!("../Cargo.lock"))),"engine_sha256":engine_hash,"window_ms":config.window.as_millis(),"load_ms":config.load.as_millis(),"request_ms":config.request.as_millis(),"address":config.address.to_string()}))?;
+        journal.event("inicio", json!({"controller_binary_sha256":hash_file(&std::env::current_exe().map_err(|e|e.to_string())?)?,"source_resources_sha256":format!("{:x}",Sha256::digest(include_bytes!("resources.rs"))),"source_lib_sha256":format!("{:x}",Sha256::digest(include_bytes!("lib.rs"))),"source_main_sha256":format!("{:x}",Sha256::digest(include_bytes!("main.rs"))),"lock_sha256":format!("{:x}",Sha256::digest(include_bytes!("../Cargo.lock"))),"engine_sha256":engine_hash,"window_ms":config.window.as_millis(),"load_ms":config.load.as_millis(),"request_ms":config.request.as_millis(),"address":config.address.to_string()}))?;
         if STOP.load(Ordering::SeqCst)!=0 || Instant::now()>=end {return Err("cancelacion_o_plazo_antes_del_arranque".into());}
         let log = OpenOptions::new().write(true).create_new(true).mode(0o600).open(evidence.join("motor.log")).map_err(|e|e.to_string())?;
         let port = config.address.port().to_string();
@@ -207,6 +223,7 @@ fn run(config: Config, root: PathBuf, evidence: PathBuf, journal: Journal) -> Re
         #[cfg(test)] if let Some(args) = &config.args { command = Command::new(&engine); command.args(args); }
         #[cfg(test)] command.envs(config.env.iter().cloned());
         command.current_dir(&root).env("TIKTOKEN_ENCODINGS_BASE",root.join("harmony")).env("HF_HUB_OFFLINE","1").env_remove("MCP_CONFIG_PATH").stdin(Stdio::null()).stdout(log.try_clone().map_err(|e|e.to_string())?).stderr(log).process_group(0);
+        resources::harden(&mut command,config.virtual_limit.ok_or("limite_virtual_ausente")?);
         drop(available);
         child = Some(OwnedChild { child:command.spawn().map_err(|e|e.to_string())?, status:None, journal:journal.clone(), label:"inferencia", errors:Vec::new() });
         let worker = child.as_mut().ok_or("hijo_ausente")?; let pid = worker.child.id();

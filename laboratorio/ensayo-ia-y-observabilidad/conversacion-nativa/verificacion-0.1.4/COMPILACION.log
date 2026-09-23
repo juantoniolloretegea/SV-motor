@@ -1,0 +1,24 @@
+   Compiling eio-conversacion v0.1.4 (<directorio-de-compilacion>)
+warning: value assigned to `raw` is never read
+  --> src/model.rs:42:119
+   |
+42 |   let mut logits=logits.ok_or("Contexto vacío")?;let mut generated=Vec::new();let mut last=Instant::now();let mut raw=String::new();le...
+   |                                                                                                                       ^^^^^^^^^^^^^ this value is reassigned later and never used
+...
+51 |     raw=tokenizer.decode(&generated,false).map_err(|e|e.to_string())?;
+   |     --- `raw` is overwritten here before the previous value is read
+   |
+   = note: `#[warn(unused_assignments)]` (part of `#[warn(unused)]`) on by default
+
+warning: method `trace_id` is never used
+  --> src/telemetry.rs:40:25
+   |
+40 | impl Operation { pub fn trace_id(&self)->&str{&self.trace_id} }
+   | --------------          ^^^^^^^^
+   | |
+   | method in this implementation
+   |
+   = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: `eio-conversacion` (bin "eio-conversacion") generated 2 warnings
+    Finished `release` profile [optimized] target(s) in 25.83s

@@ -2,8 +2,8 @@
 
 **Modelo:** Qwen3-0.6B · GGUF Q4_K_M · CPU.  
 **Aplicación:** EIO conversación 0.1.3 · Beta 1.  
-**Vía actual:** B, realización parcial.  
-**Corte documental:** 22 de septiembre de 2026.
+**Vía actual:** B, campaña concluida con realización parcial y limitaciones documentadas.  
+**Corte documental:** 23 de septiembre de 2026. Fuentes candidatas 0.1.4 verificadas localmente; la aplicación distribuida y la instalación no se sustituyen.
 
 | Elemento | Identificación y alcance |
 |---|---|
@@ -17,3 +17,6 @@
 La configuración utiliza el modelo de 0,6 mil millones de parámetros. Sus resultados no se atribuyen a Qwen-Max ni a otras variantes de la familia.
 
 La capacidad para generar texto, su fidelidad a una fuente y su admisibilidad contractual se evalúan por separado. No se acredita aptitud clínica ni reproducción determinista. La instalación actual se conserva para las necesidades delimitadas de B; la ficha no incorpora una nueva instalación.
+
+[Cierre de campaña y carencias conservadas](../../../resultados/cierre-qwen-b-20260923/INFORME.md). Las vías futuras permanecen abiertas a una necesidad justificada; no se prescribe repetir las combinaciones de modelo y soporte.
+

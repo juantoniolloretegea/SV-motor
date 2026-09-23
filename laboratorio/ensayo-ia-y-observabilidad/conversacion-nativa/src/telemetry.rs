@@ -51,14 +51,14 @@ impl Telemetry {
         Ok(Self{provider,sink,path})
     }
     pub fn begin(&self,name:&'static str,metadata:Value)->Operation{
-        let mut span=self.provider.tracer("eio-conversacion-0.1.3").start(name);
+        let mut span=self.provider.tracer("eio-conversacion-0.1.4").start(name);
         span.set_attribute(KeyValue::new("metadata_json",metadata.to_string()));
         let trace_id=span.span_context().trace_id().to_string();
         Operation{context:Context::current_with_span(span),trace_id,started:Instant::now()}
     }
     pub fn event(&self,parent:Option<&Operation>,name:&'static str,metadata:Value){
         let empty=Context::new();let ctx=parent.map(|p|&p.context).unwrap_or(&empty);
-        let mut span=self.provider.tracer("eio-conversacion-0.1.3").start_with_context(name,ctx);
+        let mut span=self.provider.tracer("eio-conversacion-0.1.4").start_with_context(name,ctx);
         span.set_attribute(KeyValue::new("metadata_json",metadata.to_string()));span.end();
     }
     pub fn end(&self,operation:Operation,metadata:Value)->Value{

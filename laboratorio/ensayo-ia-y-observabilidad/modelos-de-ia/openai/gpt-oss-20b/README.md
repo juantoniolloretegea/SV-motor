@@ -8,6 +8,12 @@ No se generaron respuestas ni se evaluó calidad. Este intento nativo no acredit
 
 La [revisión del controlador propio y su contraste con los esquemas A/B](resultados/2026-09-23/REVISION_CONTROLADOR_RUST_20260923.md) reproduce localmente la pérdida del registro de memoria y el cierre al reutilizar una ventana caducada. Identifica además carencias de trazabilidad de señales y de limpieza ante errores. La [corrección del controlador nativo 0.1.0](controlador-nativo/README.md) supera diez comprobaciones funcionales locales con auxiliares Rust. Queda pendiente su ejecución con el motor y los pesos instalados; el emisor del SIGTERM original sigue sin identificar.
 
+## Corrección posterior y capacidad
+
+El [controlador 0.1.1](controlador-nativo/verificacion-0.1.1/INFORME.md) añade muestras persistidas durante la carga, lectura de disponibilidad efectiva observada, límite explícito de direcciones virtuales por proceso y terminación del hijo por Linux cuando desaparece el hilo padre que lo creó. Son propiedades instrumentales comprobadas localmente; no acreditan la carga del modelo ni una contención agregada.
+
+Los 13 123 MiB anunciados por el cargador representan un inventario, no un máximo RSS. La lectura de disponibilidad anterior fue de 13 437 063 168 bytes, inferior a ese inventario y anterior al arranque de carga. El motor conserva expertos MXFP4 empaquetados y su alternativa CPU crea copias temporales; el margen real sigue sin medirse con el modelo. No se atribuye el SIGTERM a falta de memoria.
+
 ## Antecedente documental del 22 de septiembre de 2026
 
 El contenido siguiente conserva el estado previo a este intento; sus referencias a falta de instalación y de selección de motor corresponden a aquel corte histórico.
@@ -42,3 +48,4 @@ Comparar esta configuración con Qwen/B permitiría valorar alternativas complet
 ---
 
 Sistema Vectorial SV · [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/deed.es) · [Aviso del SV y licencias de terceros](https://github.com/juantoniolloretegea/SV-motor/blob/main/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/openai/gpt-oss-20b/controlador-nativo/AVISO_LICENCIAS.json).
+
