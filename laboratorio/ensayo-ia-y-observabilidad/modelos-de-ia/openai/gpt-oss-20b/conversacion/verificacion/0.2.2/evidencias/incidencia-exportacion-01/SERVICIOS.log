@@ -1,0 +1,23 @@
+Sep 24 16:26:33 motor-ia-modelos-externos CONTINUAR_BANCOS.sh[31982]: DIALOGO D04 "fin_normal" entrada=857 segundos=222.709510192 respuesta="LZ-842, Sur"
+Sep 24 16:26:33 motor-ia-modelos-externos eio-conversacion[29769]: EIO_ACTIVIDAD exportar
+Sep 24 16:26:33 motor-ia-modelos-externos CONTINUAR_BANCOS.sh[31982]: Error: "No queda plazo para otra petición"
+Sep 24 16:28:35 motor-ia-modelos-externos CONTINUAR_BANCOS.sh[32215]: DOCUMENTAL DOC01 accepted=true seconds=119.967208306 answer={"estado":"documentado","fuente":"OP-IMM-001-P10@1.0","cita":"Compara un recuento absoluto de neutrófilos válido con el intervalo de referencia aplicable."}
+Sep 24 16:30:24 motor-ia-modelos-externos CONTINUAR_BANCOS.sh[32215]: DOCUMENTAL DOC02 accepted=true seconds=108.473525036 answer={"estado":"sin_respaldo","fuente":"","cita":""}
+Sep 24 16:32:09 motor-ia-modelos-externos CONTINUAR_BANCOS.sh[32215]: DOCUMENTAL DOC03 accepted=true seconds=105.373376087 answer={"estado":"sin_respaldo","fuente":"","cita":""}
+Sep 24 16:34:20 motor-ia-modelos-externos CONTINUAR_BANCOS.sh[32215]: DOCUMENTAL DOC04 accepted=true seconds=131.082190719 answer={"estado":"documentado","fuente":"OP-IMM-001-P10@1.0","cita":"Compara un recuento absoluto de neutrófilos válido con el intervalo de referencia aplicable."}
+Sep 24 16:34:20 motor-ia-modelos-externos eio-conversacion[29769]: EIO_ACTIVIDAD crear_expediente
+Sep 24 16:34:20 motor-ia-modelos-externos eio-conversacion[29769]: EIO_ACTIVIDAD crear_conversacion
+Sep 24 16:34:20 motor-ia-modelos-externos eio-conversacion[29769]: EIO_ACTIVIDAD revisar_contexto
+Sep 24 16:34:20 motor-ia-modelos-externos eio-conversacion[29769]: EIO_ACTIVIDAD enviar_peticion
+Sep 24 16:37:21 motor-ia-modelos-externos CONTINUAR_BANCOS.sh[32260]: COMPARACION R02-01 "limite_generacion" entrada=106 segundos=178.475784123 respuesta="**1. Definición de neutropenia**\n\nLa neutropenia es una condición clínica caracterizada por una disminución anormal de neutrófilos (un tipo de glóbulo blanco) en la sangre periférica. Los neutrófilos son células clave del sistema inmunitario que combaten infecciones bacterianas y fúngicas. La neutropenia se clasifica según la gravedad:\n\n| Grado | Conteo de neutrófilos (×10⁹/L) | Riesgo de infección |\n|-------|------------------------------|---------------------|\n| Leve  | 1.5–1.0                      | Bajo                |\n| Moderada | 1.0–0.5                    | Moderado            |\n| Severa | <0.5                        | Alto                |\n\n**2. Evidencias que pueden indicar sospecha de neutropenia**\n\n| Tipo de evidencia | Descripción | Relevancia |\n|-------------------|-------------|------------|\n| **Resultados de hemograma completo (HCC)** | Conteo absoluto de neutrófilos (ANC) < 1.5 × 10⁹/L. | Directa y la más fiable. |\n| **Síntomas clínicos** | Fiebre"
+Sep 24 16:37:21 motor-ia-modelos-externos eio-conversacion[29769]: EIO_ACTIVIDAD revisar_contexto
+Sep 24 16:37:21 motor-ia-modelos-externos eio-conversacion[29769]: EIO_ACTIVIDAD enviar_peticion
+Sep 24 16:37:21 motor-ia-modelos-externos eio-conversacion[29769]: EIO_ACTIVIDAD exportar
+Sep 24 16:37:21 motor-ia-modelos-externos CONTINUAR_BANCOS.sh[32260]: Error: "Rechazo HTTP: HTTP/1.0 400 Bad Request\r\ncontent-type: application/json\r\ncache-control: no-store\r\nx-content-type-options: nosniff\r\ncontent-security-policy: default-src 'none'; script-src 'self'; style-src 'self'; connect-src 'self'; img-src 'self' data:; frame-ancestors 'none'; base-uri 'none'; form-action 'none'\r\ncontent-length: 128\r\ndate: Thu, 24 Sep 2026 16:37:21 GMT: {\"error\":\"La observación no está íntegra o reciente. La petición no se ha admitido; conserve el texto y revise el servicio\"}"
+Sep 24 16:37:21 motor-ia-modelos-externos systemd[1]: sv-comparacion-recuperada.service: Main process exited, code=exited, status=1/FAILURE
+Sep 24 16:37:21 motor-ia-modelos-externos systemd[1]: sv-comparacion-recuperada.service: Failed with result 'exit-code'.
+Sep 24 16:37:21 motor-ia-modelos-externos systemd[1]: sv-comparacion-recuperada.service: Consumed 6.139s CPU time over 45min 46.201s wall clock time, 450.5M memory peak.
+Sep 24 17:42:48 motor-ia-modelos-externos systemd[1]: Stopping sv-conversacion.service - Servicio de conversación experimental con custodia de contexto...
+Sep 24 17:42:48 motor-ia-modelos-externos systemd[1]: sv-conversacion.service: Deactivated successfully.
+Sep 24 17:42:48 motor-ia-modelos-externos systemd[1]: Stopped sv-conversacion.service - Servicio de conversación experimental con custodia de contexto.
+Sep 24 17:42:48 motor-ia-modelos-externos systemd[1]: sv-conversacion.service: Consumed 1min 22.312s CPU time over 2h 2min 9.393s wall clock time, 449M memory peak.
