@@ -1,0 +1,34 @@
+//! Conversación acumulativa real mediante la misma API privada del servicio.
+use std::{fs,io::{Read,Write},net::TcpStream,time::{Duration,Instant,SystemTime,UNIX_EPOCH},path::PathBuf};
+use serde_json::{json,Value};
+type Result<T>=std::result::Result<T,Box<dyn std::error::Error+Send+Sync>>;
+fn now()->u64{SystemTime::now().duration_since(UNIX_EPOCH).unwrap().as_secs()}
+fn http(method:&str,body:&str,key:&str)->Result<String>{let mut s=TcpStream::connect("127.0.0.1:3000")?;s.set_read_timeout(Some(Duration::from_secs(20)))?;s.set_write_timeout(Some(Duration::from_secs(3)))?;let path=if method=="GET"{"/"}else{"/api"};write!(s,"{method} {path} HTTP/1.0\r\nHost: localhost\r\nConnection: close\r\nContent-Type: application/json\r\nX-EIO-Session: {key}\r\nContent-Length: {}\r\n\r\n{body}",body.len())?;let mut b=String::new();s.take(8*1024*1024+1).read_to_string(&mut b)?;if b.len()>8*1024*1024{return Err("Respuesta excedida".into())}let(h,b)=b.split_once("\r\n\r\n").ok_or("HTTP incompleto")?;if h.split_whitespace().nth(1)!=Some("200"){return Err(format!("Rechazo HTTP: {h}: {b}").into())}Ok(b.into())}
+fn api(key:&str,v:Value)->Result<Value>{Ok(serde_json::from_str(&http("POST",&v.to_string(),key)?)?)}
+fn main()->Result<()>{
+ let mut args=std::env::args().skip(1);let path=PathBuf::from(args.next().ok_or("Falta directorio nuevo")?);let deadline:u64=args.next().ok_or("Falta plazo final Unix")?.parse()?;fs::create_dir(&path)?;
+ let page=http("GET","","")?;let key=page.split("name=\"eio-session\" content=\"").nth(1).and_then(|s|s.split('"').next()).ok_or("Sin sesión")?;
+ let state=api(key,json!({"op":"state"}))?;if !state["active"].is_null(){return Err("Existe otra inferencia; no se inicia la conversación".into())}
+ fs::write(path.join("IDENTIDAD.json"),serde_json::to_vec_pretty(&state)?)?;
+ let case=api(key,json!({"op":"create_case","title":"Conversación acumulativa sintética de ocho intervenciones"}))?["id"].as_str().ok_or("Sin expediente")?.to_string();let chat=api(key,json!({"op":"create_chat","case_id":case,"title":"Actualización y recuperación de antecedentes"}))?["id"].as_str().ok_or("Sin conversación")?.to_string();
+ let tasks=[
+ ("D01","El identificador del lote es LZ-842; contiene 18 piezas, está en el almacén Norte y su revisión documental es R1. Responda exclusivamente con el identificador y la cantidad, separados por coma.","LZ-842, 18"),
+ ("D02","Corrección expresa: el lote contiene 11 piezas, no 18. El identificador y el almacén no cambian. Responda exclusivamente con la cantidad vigente.","11"),
+ ("D03","Añada esta regla de decisión para el lote: si la cantidad es menor que 10 piezas, la decisión es reponer; si es igual o mayor que 10, la decisión es conservar. Aplique la regla a la cantidad vigente y responda exclusivamente con la decisión.","conservar"),
+ ("D04","El lote se ha trasladado al almacén Sur. El traslado no modifica la cantidad ni el identificador. Responda exclusivamente con el identificador y el almacén vigente, separados por coma.","LZ-842, Sur"),
+ ("D05","El pedido asociado al lote es P-64. La fecha prevista de expedición es 2026-09-30. Conserve ambos datos y responda exclusivamente con el pedido.","P-64"),
+ ("D06","Corrección expresa posterior: la cantidad vigente del lote es 8 piezas. Aplique la regla de decisión incorporada anteriormente. Responda exclusivamente con la cantidad y la decisión, separados por coma.","8, reponer"),
+ ("D07","Se sustituye expresamente la fecha prevista de expedición por 2026-10-02. La fecha anterior deja de estar vigente. Identificador, cantidad, almacén y pedido permanecen iguales. Responda exclusivamente con la fecha vigente.","2026-10-02"),
+ ("D08","Recupere los datos vigentes del lote y aplique la regla conservada. Responda exclusivamente con un objeto JSON con los campos identificador, piezas, almacen, pedido, fecha y decision. No incluya valores sustituidos ni bloques Markdown.","{\"identificador\":\"LZ-842\",\"piezas\":8,\"almacen\":\"Sur\",\"pedido\":\"P-64\",\"fecha\":\"2026-10-02\",\"decision\":\"reponer\"}")];
+ let mut out=fs::OpenOptions::new().create_new(true).write(true).open(path.join("RESULTADOS.jsonl"))?;let started=now();let mut count=0;
+ let outcome=(||->Result<()>{for (i,(label,change,oracle))in tasks.iter().enumerate(){
+  if now().saturating_add(925)>deadline{return Err("No queda plazo para otra petición".into())}
+  let background=format!("Antecedentes auxiliares de la intervención {}: Este caso es un ejercicio de gestión de inventario. Las carpetas de documentación contienen hojas de recepción y notas de revisión. El procedimiento distingue entre la identificación estable del lote y los datos que pueden cambiar mediante correcciones expresas. Las hojas antiguas se conservan para mantener la trazabilidad, pero sus valores sustituidos no deben confundirse con los vigentes. El material de este párrafo no incorpora cantidades, ubicaciones ni fechas nuevas. La respuesta debe apoyarse en los datos expresos de la conversación; si alguno falta, deberá indicarse. No se solicita consultar herramientas ni ejecutar acciones externas.\n\nActualización y pregunta de esta intervención: {change}",i+1);
+  let profile=json!({"thinking":false,"max_output":128,"seconds":900,"seed":299792458});let ctx=api(key,json!({"op":"preview","chat_id":chat,"text":background,"profile":profile}))?;if ctx["fits"]!=true{return Err("El historial completo no cabe; no se recorta".into())}
+  let id=format!("dialogo-{}-{label}",started);api(key,json!({"op":"send","chat_id":chat,"text":background,"profile":profile,"request_id":id,"context_sha256":ctx["context"]["sha256"]}))?;
+  let end=Instant::now()+Duration::from_secs(925);let turn=loop{let v=api(key,json!({"op":"get_chat","chat_id":chat}))?;let t=v["chat"]["turns"].as_array().and_then(|a|a.iter().find(|t|t["id"]==id)).ok_or("Sin petición")?;if t["status"]!="en_curso"{break t.clone()}if Instant::now()>=end{let _=api(key,json!({"op":"cancel","request_id":id}));return Err("Cierre fuera del plazo".into())}std::thread::sleep(Duration::from_secs(2));};
+  let row=json!({"case":label,"oracle":oracle,"turn":turn,"assessed":false});serde_json::to_writer(&mut out,&row)?;out.write_all(b"\n")?;out.sync_all()?;count+=1;println!("DIALOGO {} {} entrada={} segundos={} respuesta={}",label,turn["status"],turn["context"]["input_tokens"],turn["result"]["seconds"],turn["answer"]);if turn["status"]!="fin_normal"{return Err("Interrupción técnica; no se fuerza continuación del historial".into())}
+ }Ok(())})();
+ if let Ok(v)=api(key,json!({"op":"export","case_id":case})){fs::write(path.join("EXPEDIENTE.json"),serde_json::to_vec_pretty(&v)?)?;}
+ fs::write(path.join("RESUMEN.json"),serde_json::to_vec_pretty(&json!({"started_unix":started,"ended_unix":now(),"deadline_unix":deadline,"rows":count,"error":outcome.as_ref().err().map(|e|e.to_string()),"assessment":"Pendiente de revisión explícita"}))?)?;outcome
+}
