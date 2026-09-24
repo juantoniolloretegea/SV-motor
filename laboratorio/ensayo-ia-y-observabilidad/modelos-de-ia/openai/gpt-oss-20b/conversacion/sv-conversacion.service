@@ -1,0 +1,28 @@
+[Unit]
+Description=Servicio de conversación experimental con custodia de contexto
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/sv-lab/conversacion-20260924
+ExecStart=/opt/sv-lab/conversacion-20260924/bin/eio-conversacion
+Environment=EIO_MODELS=/opt/sv-lab/conversacion-20260924/modelos
+Environment=EIO_DATA=/opt/sv-lab/conversacion-20260924/datos
+Environment=EIO_BIND=127.0.0.1:3000
+Environment=EIO_ORIGIN=https://didactic-chainsaw-p49vp5w7qg62r7j7-3000.app.github.dev
+MemoryMax=2G
+MemorySwapMax=0
+TasksMax=128
+RuntimeMaxSec=8h
+TimeoutStopSec=30
+KillMode=control-group
+UMask=0077
+NoNewPrivileges=yes
+ProtectSystem=strict
+ReadWritePaths=/opt/sv-lab/conversacion-20260924/datos
+PrivateTmp=yes
+IPAddressDeny=any
+IPAddressAllow=localhost
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+Restart=no
+

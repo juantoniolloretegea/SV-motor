@@ -1,0 +1,28 @@
+[Unit]
+Description=Motor Rust residente de generación experimental
+BindsTo=sv-conversacion.service
+After=sv-conversacion.service
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/sv-lab/optimizacion-20260924/instalacion
+ExecStart=/opt/sv-lab/optimizacion-20260924/target/release/mistralrs --token-source none serve -f gguf/gpt-oss-20b-MXFP4.gguf --tok-model-id diagnostico-20260924/tokenizador --cpu --device-layers 0 --dtype bf16 --max-seq-len 4096 --max-seqs 1 --prefix-cache-n 0 --paged-attn off --host 127.0.0.1 --port 8089 --no-ui
+Environment=EIO_MXFP4_MODO=paralelo
+Environment=CANDLE_NUM_THREADS=12
+Environment=RAYON_NUM_THREADS=12
+Environment=HF_HUB_OFFLINE=1
+Environment=TIKTOKEN_ENCODINGS_BASE=/opt/sv-lab/onecloud-20260924/harmony
+MemoryMax=32G
+MemorySwapMax=0
+TasksMax=256
+TimeoutStopSec=5
+KillMode=control-group
+UMask=0077
+NoNewPrivileges=yes
+ProtectSystem=strict
+PrivateTmp=yes
+IPAddressDeny=any
+IPAddressAllow=localhost
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+Restart=no
+
