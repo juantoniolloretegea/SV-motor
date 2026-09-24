@@ -29,3 +29,11 @@ Registro 2026-09-24T12:36:09.219Z. Unidad de ejecución experimental; VERIFICACI
 Se compila un único motor con referencia secuencial y variante paralela; se conservan tres pruebas numéricas, nueve guardas, Cargo check, diez peticiones en dos sesiones, auditoría instrumental y cierre. Cinco casos aceptados; mediana 94,002 a 18,168 s. Cumplido el criterio de primera fase, no se activa llama.cpp. No hay inferencia activa ni compra de recursos.
 
 [Informe y límites](../../laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/openai/gpt-oss-20b/resultados/onecloud-2026-09-24/optimizacion/RESULTADO.md). S39 revisión 18; Acta004 §18; RETP-2026-271; PTA-2026-013. Sin certificación general ni modificación doctrinal.
+
+## PTA-SVM-005 · Calidad parcial y suspensión de la integración conversacional
+
+Registro 2026-09-24T15:01:35Z. Unidad de ejecución experimental; VERIFICACION_ACOTADA.
+
+Doce tareas breves con contenido correcto, diez con formato estricto conforme. Adaptación de interfaz, piloto web y exportación comprobados antes de la suspensión. La versión 0.2.1 compila y aprueba 19 pruebas unitarias, pero su guardia de inicio detecta discrepancias del tokenizador. Servicio detenido; conversación larga pendiente. El rechazo automático del acceso al Codespace se registra como impedimento instrumental independiente.
+
+[Informe parcial](../../laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/openai/gpt-oss-20b/conversacion/RESULTADO_PARCIAL.md) y [continuidad](../../laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/openai/gpt-oss-20b/conversacion/CONTINUIDAD.md). S39 revisión 19; Acta004 §19; RETP-2026-272; PTA-2026-014. Sin compras ni ramas adicionales. TT-0012 conserva su cierre acotado.

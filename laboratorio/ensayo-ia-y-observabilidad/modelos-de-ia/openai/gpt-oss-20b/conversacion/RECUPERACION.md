@@ -1,5 +1,7 @@
 # Acceso y recuperación del servicio de conversación
 
+**Estado del corte 2026-09-24T15:01:35.167Z: servicio detenido por discrepancia de identificadores del tokenizador. La URL no está habilitada para uso. Véanse [resultado parcial](RESULTADO_PARCIAL.md) y [continuidad](CONTINUIDAD.md).**
+
 URL privada: https://didactic-chainsaw-p49vp5w7qg62r7j7-3000.app.github.dev/
 
 Requiere la cuenta de GitHub autorizada, el Codespace `didactic-chainsaw-p49vp5w7qg62r7j7` iniciado y el túnel SSH activo. Los expedientes se conservan en la máquina de cálculo, independientemente del navegador. La interfaz no es una publicación anónima.

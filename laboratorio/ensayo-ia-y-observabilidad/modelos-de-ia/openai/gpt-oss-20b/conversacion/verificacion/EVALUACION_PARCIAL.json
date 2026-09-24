@@ -1,0 +1,152 @@
+{
+  "fecha_registro_utc": "2026-09-24T15:01:35.167Z",
+  "base_motor": "032ef13602ae9288cdd8467335c34198dda08871",
+  "origen": "verificacion/previo-0.2.1/banco-01/RESULTADOS.jsonl",
+  "sha256_original": "b83a80bc18f937c0a830d50e2462c42d04afa6817bb775d88ba709b8b037ffd3",
+  "tipo_evaluacion": "Juicio de contenido posterior, separado de los originales; sin repetición de inferencias",
+  "casos": [
+    {
+      "caso": "Q01-suma",
+      "criterio_previo": "42",
+      "respuesta_original": "42",
+      "contenido_correcto": true,
+      "formato_estricto_correcto": true,
+      "observacion": "Conforme al criterio del caso.",
+      "segundos_totales": 24.017010378,
+      "tokens_entrada": 96,
+      "tokens_salida": 2
+    },
+    {
+      "caso": "Q02-resta",
+      "criterio_previo": "22",
+      "respuesta_original": "22",
+      "contenido_correcto": true,
+      "formato_estricto_correcto": true,
+      "observacion": "Conforme al criterio del caso.",
+      "segundos_totales": 25.475760814,
+      "tokens_entrada": 100,
+      "tokens_salida": 2
+    },
+    {
+      "caso": "Q03-multiplicacion",
+      "criterio_previo": "56",
+      "respuesta_original": "56",
+      "contenido_correcto": true,
+      "formato_estricto_correcto": true,
+      "observacion": "Conforme al criterio del caso.",
+      "segundos_totales": 25.112915472,
+      "tokens_entrada": 104,
+      "tokens_salida": 2
+    },
+    {
+      "caso": "Q04-orden",
+      "criterio_previo": "-4, 0, 3, 12",
+      "respuesta_original": "-4, 0, 3, 12",
+      "contenido_correcto": true,
+      "formato_estricto_correcto": true,
+      "observacion": "Conforme al criterio del caso.",
+      "segundos_totales": 33.37599605,
+      "tokens_entrada": 112,
+      "tokens_salida": 12
+    },
+    {
+      "caso": "Q05-extraccion",
+      "criterio_previo": "RQ-47",
+      "respuesta_original": "RQ-47",
+      "contenido_correcto": true,
+      "formato_estricto_correcto": true,
+      "observacion": "Conforme al criterio del caso.",
+      "segundos_totales": 27.798857761,
+      "tokens_entrada": 110,
+      "tokens_salida": 4
+    },
+    {
+      "caso": "Q06-json",
+      "criterio_previo": "JSON válido equivalente a {\"piezas\":12,\"color\":\"azul\"}",
+      "respuesta_original": "{\"piezas\":12,\"color\":\"azul\"}",
+      "contenido_correcto": true,
+      "formato_estricto_correcto": true,
+      "observacion": "Conforme al criterio del caso.",
+      "segundos_totales": 34.671510462,
+      "tokens_entrada": 110,
+      "tokens_salida": 13
+    },
+    {
+      "caso": "Q07-condiciones",
+      "criterio_previo": "ALFA\nBETA",
+      "respuesta_original": "ALFA  \nBETA",
+      "contenido_correcto": true,
+      "formato_estricto_correcto": false,
+      "observacion": "Dos espacios al final de la primera línea; conserva dos líneas y palabras requeridas.",
+      "segundos_totales": 29.606382564,
+      "tokens_entrada": 107,
+      "tokens_salida": 6
+    },
+    {
+      "caso": "Q08-resumen",
+      "criterio_previo": "Una frase, hasta 30 palabras, ocho llegadas, tres salidas y saldo cinco; sin hechos añadidos",
+      "respuesta_original": "El lunes llegaron ocho cajas, el martes salieron tres, sin otros movimientos; llegadas: 8, salidas: 3, saldo final: 5 cajas.",
+      "contenido_correcto": true,
+      "formato_estricto_correcto": true,
+      "observacion": "Conforme al criterio del caso.",
+      "segundos_totales": 47.408693724,
+      "tokens_entrada": 122,
+      "tokens_salida": 36
+    },
+    {
+      "caso": "Q09-contradiccion",
+      "criterio_previo": "CONTRADICCIÓN",
+      "respuesta_original": "CONTRADICCIÓN",
+      "contenido_correcto": true,
+      "formato_estricto_correcto": true,
+      "observacion": "Conforme al criterio del caso.",
+      "segundos_totales": 34.250897771,
+      "tokens_entrada": 128,
+      "tokens_salida": 6
+    },
+    {
+      "caso": "Q10-insuficiencia",
+      "criterio_previo": "INDETERMINADO",
+      "respuesta_original": "INDETERMINADO",
+      "contenido_correcto": true,
+      "formato_estricto_correcto": true,
+      "observacion": "Conforme al criterio del caso.",
+      "segundos_totales": 32.68621631,
+      "tokens_entrada": 115,
+      "tokens_salida": 6
+    },
+    {
+      "caso": "Q11-unidades",
+      "criterio_previo": "280 cm",
+      "respuesta_original": "La cinta original mide 2,5 m.  \nConvertimos a centímetros:  \n\n\\(2,5\\ \\text{m} = 2,5 \\times 100\\ \\text{cm} = 250\\ \\text{cm}\\).\n\nSe añaden 30 cm, por lo que la longitud total es:  \n\n\\(250\\ \\text{cm} + 30\\ \\text{cm} = 280\\ \\text{cm}\\).\n\n**Longitud total: 280 cm**",
+      "contenido_correcto": true,
+      "formato_estricto_correcto": false,
+      "observacion": "Resultado 280 cm correcto; explicación adicional contraria a la exclusividad solicitada.",
+      "segundos_totales": 85.649687882,
+      "tokens_entrada": 110,
+      "tokens_salida": 108
+    },
+    {
+      "caso": "Q12-instruccion-citada",
+      "criterio_previo": "6",
+      "respuesta_original": "6",
+      "contenido_correcto": true,
+      "formato_estricto_correcto": true,
+      "observacion": "Conforme al criterio del caso.",
+      "segundos_totales": 30.222077912,
+      "tokens_entrada": 121,
+      "tokens_salida": 2
+    }
+  ],
+  "conteo": {
+    "finalizados": 12,
+    "contenido_correcto": 12,
+    "formato_estricto_correcto": 10
+  },
+  "latencia_segundos": {
+    "minimo": 24.017010378,
+    "mediana": 31.454147110999997,
+    "maximo": 85.649687882
+  },
+  "limitacion": "Banco sintético pequeño de tareas distintas; una ejecución por tarea, sin estimación estadística de capacidad general. No hay validación de conversaciones largas."
+}
