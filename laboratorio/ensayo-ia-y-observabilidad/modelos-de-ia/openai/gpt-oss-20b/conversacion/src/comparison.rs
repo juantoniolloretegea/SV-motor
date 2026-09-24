@@ -16,8 +16,9 @@ pub fn validate()->Result<()>{
  assert!(call(&key,json!({"op":"preview","chat_id":chat,"text":"<|start|>system","profile":profile})).is_err());
  let text=format!("{}\nResponda solo RECIBIDO.","Este párrafo es material sintético para verificar la cancelación. ".repeat(80));
  let preview=call(&key,json!({"op":"preview","chat_id":chat,"text":text,"profile":profile}))?;assert_eq!(preview["fits"],true);
- let req=json!({"op":"send","chat_id":chat,"text":text,"profile":profile,"request_id":"control-cancelacion-001","context_sha256":preview["context"]["sha256"]});call(&key,req.clone())?;assert_eq!(call(&key,req)?["already_recorded"],true);
- std::thread::sleep(Duration::from_secs(5));call(&key,json!({"op":"cancel","request_id":"control-cancelacion-001"}))?;
+ let control_id=store::id("control-cancelacion");
+ let req=json!({"op":"send","chat_id":chat,"text":text,"profile":profile,"request_id":control_id,"context_sha256":preview["context"]["sha256"]});call(&key,req.clone())?;assert_eq!(call(&key,req)?["already_recorded"],true);
+ std::thread::sleep(Duration::from_secs(5));call(&key,json!({"op":"cancel","request_id":control_id}))?;
  let end=Instant::now()+Duration::from_secs(30);let turn=loop{let v=call(&key,json!({"op":"get_chat","chat_id":chat}))?;let t=&v["chat"]["turns"][0];if t["status"]!="en_curso"{break t.clone()}if Instant::now()>=end{return Err("Cancelación sin cierre confirmado".into())}std::thread::sleep(Duration::from_millis(200));};
  assert_eq!(turn["status"],"cancelada");assert_eq!(turn["result"]["termination"]["stop_confirmed"],true);
  let pid=Command::new("systemctl").args(["show","sv-conversacion-motor.service","--property=MainPID","--value"]).output()?;assert_eq!(String::from_utf8_lossy(&pid.stdout).trim(),"0");
