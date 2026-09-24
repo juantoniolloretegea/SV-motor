@@ -1,5 +1,7 @@
 # Punto de recuperación de la evaluación conversacional
 
+**Última recepción: 24/09/2026, versión 0.2.3.** Los apartados anteriores se conservan como historia; para continuar prevalece el apartado final de esta fecha y `INCIDENCIA_EXPORTACION.md`.
+
 Registro 2026-09-24T15:01:35.167Z. Estado observado al interrumpirse el acceso remoto; no sustituye una inspección posterior.
 
 ## Estado material
@@ -38,3 +40,15 @@ Banco M/L: unidad sv-conversacion-contexto, evidencias/contexto-03, iniciado 15:
 Unidad sv-comparacion-recuperada: ejecuta CONTINUAR_BANCOS.sh. Espera al banco M/L; si termina correctamente ejecuta diálogo-02 dentro del plazo original. Solo tolera la falta de plazo registrada del diálogo como motivo para pasar al banco nuevo; otros fallos suspenden la secuencia. A continuación fija VENTANA_COMPARACION.json con 60 minutos para documental-01 y comparacion-01. Orden documental, R02, R01. Una generación simultánea. RuntimeMaxSec=7200 y MemoryMax=2G para el controlador, sin aumentar recursos contratados. Los plazos pueden dejar condiciones sin ejecutar y deben declararse.
 
 La URL privada volvió a responder y mostró los expedientes conservados. No enviar una prueba manual mientras haya otra generación activa. El servicio no transmite tokens incrementales y rechaza historias que excedan 4096 tokens incluida la reserva. Resultados y cierres de las campañas en curso todavía pendientes de recepción final.
+
+## Recuperación posterior al corte y corrección 0.2.3
+
+M01–M04 y L0256–L3072 completos; resultados evaluados en `RESULTADO_CONTEXTO.md`. D01–D04 completos y correctos; D05–D08 no admitidos por falta de plazo. DOC01–DOC04 completos y conformes. Tres exportaciones Qwen conciliadas: dos rondas distintas y once preguntas; el tercer archivo duplica el primer turno R01 y no añade una ronda.
+
+R02-01 generó una respuesta parcial de 256 tokens. La traza duplicaba 35 959 bytes de datos del motor y excedió la cota individual. R02-02 no fue admitida. El controlador falló y el servicio conservó el resultado; no es fallo semántico del modelo. Originales en `1b58b75`, trazas cerradas en `cbfeb9de8b2bd1837f1f72310ab798e7b2b9277a`. La ventana anterior venció a las 17:26:33 UTC.
+
+La versión 0.2.3 usa resumen numérico y huella en la traza, manteniendo el resultado íntegro en el expediente. 22 pruebas aprobadas; binario `00d5b666c61c8ca22acf899eaefa15208f997b8355f893305490c74ca230ef99`, controlador `f21d2583bb66a38e05cb81ce6bd6e53c9c63e887292325b2edfd60db93aac376`. Fuentes `e668d8e1efa18dd5462e9519eb9c5f73cd4e48a0`; verificación `2a112ac`. Servicio reiniciado con PID 32742 tras parada comprobada, ejecutables anteriores conservados.
+
+Procedimiento de continuación: `CONTINUAR_COMPARACION_02.sh`, unidad prevista `sv-comparacion-continuada`, directorio nuevo `evidencias/comparacion-02`; ventana nueva de 7200 segundos en `evidencias/VENTANA_COMPARACION_02.json`. El controlador recibe `evidencias/comparacion-01/CONSERVACION-0.json`, concilia el historial y retoma R02-02; después R01. Plazo individual 900 segundos, justificado por la latencia medida, reserva 256 tokens sin recortes de historia. Comprobar primero estado y archivos: no lanzar dos veces el controlador ni sobrescribir directorios.
+
+La continuación queda preparada; confirmar en la siguiente inspección el inicio y el plazo efectivo. Si se interrumpe la sesión, los resultados deben recibirse del servidor, sin asumir éxito ni repetir peticiones. El servicio puede seguir observando mientras el Codespace se suspende. El túnel privado puede necesitar recuperación mediante `ACCESO.sh`; no implica reiniciar el motor. Mantener una sola generación y exportar los originales antes de evaluar. Permanecen pendientes la comparación final, actualización de calidad y entrega de URL verificada.

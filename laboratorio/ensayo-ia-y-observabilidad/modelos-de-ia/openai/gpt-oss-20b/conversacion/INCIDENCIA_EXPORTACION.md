@@ -27,3 +27,9 @@ La instrucción de continuar recibida tras el corte permite reanudar el trabajo 
 El controlador concilia el expediente exportado con la conversación viva mediante igualdad estructural completa de sus turnos. Retoma R02-02 sin repetir R02-01 y conserva la respuesta truncada como antecedente. Después ejecuta R01 con historial propio. Antes de cada admisión registra identidad, contexto y perfil; conserva cada resultado y exporta el expediente. No recorta historias ni reemplaza respuestas por soluciones ideales. Un fallo técnico o de observación suspende el banco y exige diagnóstico. El vencimiento puede dejar condiciones pendientes y no se presenta como fallo semántico.
 
 No se adquieren recursos ni se crean ramas adicionales. Quedan pendientes el resultado de la regresión, despliegue, continuación de preguntas, cotejo científico, recepción registral y comprobación de la URL privada.
+
+## Recepción de verificación y despliegue
+
+Rust 1.98.0: 22 pruebas aprobadas, cero fallos; ejecución 2,12 segundos. Compilación de producción terminada en 13,55 segundos. Fuentes `e668d8e1efa18dd5462e9519eb9c5f73cd4e48a0`; registro y Cargo.lock en `2a112ac`. Se mantienen tres avisos de compilación, sin tratarlos como errores ni ocultarlos.
+
+Ejecutable del servicio: SHA-256 `00d5b666c61c8ca22acf899eaefa15208f997b8355f893305490c74ca230ef99`. Controlador: `f21d2583bb66a38e05cb81ce6bd6e53c9c63e887292325b2edfd60db93aac376`. Ambas huellas coinciden tras la transferencia al servidor. Servicio y motor anteriores comprobados inactivos con MainPID=0. Se conservan los ejecutables anteriores y se inicia el servicio corregido con PID 32742. El resultado de una inferencia posterior todavía debe recibirse.
