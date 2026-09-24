@@ -1,3 +1,4 @@
+mod tokenization;
 mod model;
 mod supervision;
 mod store;
@@ -203,11 +204,11 @@ async fn shutdown_signal(app:App){
  let data=PathBuf::from(std::env::var("EIO_DATA").unwrap_or("/opt/sv-lab/conversacion-20260924/datos".into()));
  for (file,expected) in [("gpt-oss-20b-MXFP4.gguf",MODEL_HASH),("tokenizer.json",TOKENIZER_HASH)]{if store::file_hash(&models.join(file))?!=expected{return Err(format!("Identidad no conforme: {file}").into())}}
  if store::file_hash(&PathBuf::from(model::ENGINE))?!=model::ENGINE_HASH{return Err("Identidad del motor no conforme".into())}
- let tokenizer=tokenizers::Tokenizer::from_file(models.join("tokenizer.json")).map_err(|e|e.to_string())?;
+ let (tokenizer,tokenizer_derivation)=tokenization::load(&fs::read(models.join("tokenizer.json"))?)?;
  special_ids(&tokenizer)?;
  let origin=match std::env::var("EIO_ORIGIN"){Ok(v)=>v,Err(_)=>format!("https://{}-3000.app.github.dev",std::env::var("CODESPACE_NAME").map_err(|_|"Falta CODESPACE_NAME; defina EIO_ORIGIN para otro entorno")?)};
  let licensing:Value=serde_json::from_str(include_str!("../AVISO_LICENCIAS.json"))?;
- let identity=json!({"model":"GPT-OSS-20B · MXFP4","model_sha256":MODEL_HASH,"tokenizer_sha256":TOKENIZER_HASH,"candle_revision":"35d7ae7ca5c93e17c77359c3617376b8a72e96a4","binary_sha256":store::file_hash(&std::env::current_exe()?)?,"application":"Conversación GPT-OSS 0.2.1","licensing":licensing,"device":"CPU","context_limit":CONTEXT,"context_status":"Límite operativo configurado; la capacidad y el rendimiento con historias largas requieren medición específica","memory_stop_bytes":32u64*1024*1024*1024,"engine_sha256":model::ENGINE_HASH});
+ let identity=json!({"model":"GPT-OSS-20B · MXFP4","model_sha256":MODEL_HASH,"tokenizer_sha256":TOKENIZER_HASH,"tokenizer_derivation":tokenizer_derivation,"candle_revision":"35d7ae7ca5c93e17c77359c3617376b8a72e96a4","binary_sha256":store::file_hash(&std::env::current_exe()?)?,"application":"Conversación GPT-OSS 0.2.2","licensing":licensing,"device":"CPU","context_limit":CONTEXT,"context_status":"Límite operativo configurado; la capacidad y el rendimiento con historias largas requieren medición específica","memory_stop_bytes":32u64*1024*1024*1024,"engine_sha256":model::ENGINE_HASH});
  let mut secret=[0u8;32];{use std::io::Read;std::fs::File::open("/dev/urandom")?.read_exact(&mut secret)?;}let session_key=store::hash(&secret);
  let lifecycle=lifecycle::Lifecycle::open(&data)?;
  // Reservar el puerto antes de reconstruir evita que una segunda instancia altere generaciones vivas.
