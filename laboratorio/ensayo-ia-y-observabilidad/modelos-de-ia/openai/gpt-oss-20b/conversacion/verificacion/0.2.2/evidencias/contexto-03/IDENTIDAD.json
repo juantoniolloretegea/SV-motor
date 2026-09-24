@@ -1,0 +1,333 @@
+{
+  "active": null,
+  "cases": {
+    "exp-1790260423493-1": {
+      "created_ms": 1790260423493,
+      "id": "exp-1790260423493-1",
+      "title": "Verificación técnica sintética de admisión y cancelación"
+    },
+    "exp-1790260513036-3": {
+      "created_ms": 1790260513036,
+      "id": "exp-1790260513036-3",
+      "title": "Comprobación de acceso web"
+    },
+    "exp-1790260731036-5": {
+      "created_ms": 1790260731036,
+      "id": "exp-1790260731036-5",
+      "title": "Evaluación sintética de calidad y contexto · 24-09-2026"
+    },
+    "exp-1790264513015-1": {
+      "created_ms": 1790264513015,
+      "id": "exp-1790264513015-1",
+      "title": "Verificación técnica sintética de admisión y cancelación"
+    },
+    "exp-1790264683823-3": {
+      "created_ms": 1790264683823,
+      "id": "exp-1790264683823-3",
+      "title": "Verificación técnica sintética de admisión y cancelación"
+    }
+  },
+  "chats": [
+    {
+      "case_id": "exp-1790260423493-1",
+      "id": "chat-1790260423511-2",
+      "title": "Control de contexto y cancelación",
+      "turns": 1
+    },
+    {
+      "case_id": "exp-1790260513036-3",
+      "id": "chat-1790260513908-4",
+      "title": "Conversación 1",
+      "turns": 1
+    },
+    {
+      "case_id": "exp-1790260731036-5",
+      "id": "chat-1790260731091-6",
+      "title": "Q01-suma",
+      "turns": 1
+    },
+    {
+      "case_id": "exp-1790260731036-5",
+      "id": "chat-1790260755175-7",
+      "title": "Q02-resta",
+      "turns": 1
+    },
+    {
+      "case_id": "exp-1790260731036-5",
+      "id": "chat-1790260781278-8",
+      "title": "Q03-multiplicacion",
+      "turns": 1
+    },
+    {
+      "case_id": "exp-1790260731036-5",
+      "id": "chat-1790260807352-9",
+      "title": "Q04-orden",
+      "turns": 1
+    },
+    {
+      "case_id": "exp-1790260731036-5",
+      "id": "chat-1790260841447-10",
+      "title": "Q05-extraccion",
+      "turns": 1
+    },
+    {
+      "case_id": "exp-1790260731036-5",
+      "id": "chat-1790260869585-11",
+      "title": "Q06-json",
+      "turns": 1
+    },
+    {
+      "case_id": "exp-1790260731036-5",
+      "id": "chat-1790260905924-12",
+      "title": "Q07-condiciones",
+      "turns": 1
+    },
+    {
+      "case_id": "exp-1790260731036-5",
+      "id": "chat-1790260936359-13",
+      "title": "Q08-resumen",
+      "turns": 1
+    },
+    {
+      "case_id": "exp-1790260731036-5",
+      "id": "chat-1790260984648-14",
+      "title": "Q09-contradiccion",
+      "turns": 1
+    },
+    {
+      "case_id": "exp-1790260731036-5",
+      "id": "chat-1790261020731-15",
+      "title": "Q10-insuficiencia",
+      "turns": 1
+    },
+    {
+      "case_id": "exp-1790260731036-5",
+      "id": "chat-1790261054815-16",
+      "title": "Q11-unidades",
+      "turns": 1
+    },
+    {
+      "case_id": "exp-1790260731036-5",
+      "id": "chat-1790261141198-17",
+      "title": "Q12-instruccion-citada",
+      "turns": 1
+    },
+    {
+      "case_id": "exp-1790260731036-5",
+      "id": "chat-1790261173613-18",
+      "title": "Conversación con correcciones sucesivas",
+      "turns": 3
+    },
+    {
+      "case_id": "exp-1790264513015-1",
+      "id": "chat-1790264513054-2",
+      "title": "Control de contexto y cancelación",
+      "turns": 0
+    },
+    {
+      "case_id": "exp-1790264683823-3",
+      "id": "chat-1790264684035-4",
+      "title": "Control de contexto y cancelación",
+      "turns": 1
+    }
+  ],
+  "context_limit": 4096,
+  "default_profile": {
+    "max_output": 256,
+    "seconds": 600,
+    "seed": 299792458,
+    "thinking": false
+  },
+  "identity": {
+    "application": "Conversación GPT-OSS 0.2.2",
+    "binary_sha256": "86c6c9abe4247930297d70cc2982cf96914bb6347a0ebf567e1c6fcaff7a0044",
+    "candle_revision": "35d7ae7ca5c93e17c77359c3617376b8a72e96a4",
+    "context_limit": 4096,
+    "context_status": "Límite operativo configurado; la capacidad y el rendimiento con historias largas requieren medición específica",
+    "device": "CPU",
+    "engine_sha256": "f6ec0bb908e18ced633d66d6a762a915349281bdbb1397991b268fe487bcc418",
+    "licensing": {
+      "components": [
+        {
+          "license": "Apache-2.0",
+          "name": "gpt-oss-20b",
+          "source": "https://huggingface.co/openai/gpt-oss-20b"
+        },
+        {
+          "license": "MIT OR Apache-2.0",
+          "name": "Candle",
+          "source": "https://github.com/huggingface/candle/blob/35d7ae7ca5c93e17c77359c3617376b8a72e96a4/Cargo.toml"
+        },
+        {
+          "license": "MIT",
+          "name": "mistral.rs",
+          "source": "https://github.com/EricLBuehler/mistral.rs/tree/24dbf5c256f232176ee5949485ba264049407fbe"
+        }
+      ],
+      "schema": "EIO-AVISO-LICENCIAS-1",
+      "scope": "Aviso de titularidad y licenciamiento del SV, según su fuente canónica, y de los componentes principales. Los componentes de terceros conservan sus licencias respectivas. Este aviso no atribuye al SV la titularidad de los datos aportados ni determina los derechos sobre cada respuesta generada. No constituye un inventario exhaustivo de dependencias.",
+      "sv": {
+        "canonical_notice": "https://github.com/juantoniolloretegea/SV-motor/blob/30683c5ec11d33ecabd6e3defb8110f530290df9/README.md",
+        "copyright": "© Juan Antonio Lloret Egea, 2026",
+        "institution": "ITVIA — IA eñ™",
+        "issn": "2695-6411",
+        "license": "CC-BY-NC-ND-4.0",
+        "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/deed.es",
+        "name": "Sistema Vectorial SV"
+      }
+    },
+    "memory_stop_bytes": 34359738368,
+    "model": "GPT-OSS-20B · MXFP4",
+    "model_sha256": "27cd6c432c7672cb812a92f611cf3ba7bbc35928262bb1e1253ff4ee6ae35901",
+    "tokenizer_derivation": {
+      "all_declared_ids_verified": true,
+      "derived_sha256": "f4c5175f73433730f3d06b5b3ff357353a63c900aee9f507e979902aa53b67a4",
+      "inserted": [
+        {
+          "id": 199998,
+          "token": "<|startoftext|>"
+        },
+        {
+          "id": 199999,
+          "token": "<|endoftext|>"
+        },
+        {
+          "id": 200000,
+          "token": "<|reserved_200000|>"
+        },
+        {
+          "id": 200001,
+          "token": "<|reserved_200001|>"
+        },
+        {
+          "id": 200002,
+          "token": "<|return|>"
+        },
+        {
+          "id": 200003,
+          "token": "<|constrain|>"
+        },
+        {
+          "id": 200004,
+          "token": "<|reserved_200004|>"
+        },
+        {
+          "id": 200005,
+          "token": "<|channel|>"
+        },
+        {
+          "id": 200006,
+          "token": "<|start|>"
+        },
+        {
+          "id": 200007,
+          "token": "<|end|>"
+        },
+        {
+          "id": 200008,
+          "token": "<|message|>"
+        },
+        {
+          "id": 200009,
+          "token": "<|reserved_200009|>"
+        },
+        {
+          "id": 200010,
+          "token": "<|reserved_200010|>"
+        },
+        {
+          "id": 200011,
+          "token": "<|reserved_200011|>"
+        },
+        {
+          "id": 200012,
+          "token": "<|call|>"
+        },
+        {
+          "id": 200013,
+          "token": "<|reserved_200013|>"
+        },
+        {
+          "id": 200014,
+          "token": "<|reserved_200014|>"
+        },
+        {
+          "id": 200015,
+          "token": "<|reserved_200015|>"
+        },
+        {
+          "id": 200016,
+          "token": "<|reserved_200016|>"
+        },
+        {
+          "id": 200017,
+          "token": "<|reserved_200017|>"
+        },
+        {
+          "id": 200018,
+          "token": "<|endofprompt|>"
+        }
+      ],
+      "method": "Completar únicamente IDs ausentes con las declaraciones added_tokens; vocabulario original preservado",
+      "source_sha256": "7c704477f22686ec2a8d7490ed55c799d875d2033eb833070cdd07c949037fcc"
+    },
+    "tokenizer_sha256": "7c704477f22686ec2a8d7490ed55c799d875d2033eb833070cdd07c949037fcc"
+  },
+  "model_context": 131072,
+  "observability": {
+    "observer": {
+      "age_ms": 3430,
+      "export": {
+        "bytes": 170611,
+        "dropped": 0,
+        "enabled": true,
+        "errors": 0,
+        "export": "archivo_local_sin_red",
+        "file": "trazas.jsonl",
+        "last_export_utc_ms": 1790264776694,
+        "limit_bytes": 10485760,
+        "ok": true,
+        "records": 65,
+        "sdk": "OpenTelemetry Rust 0.31.0"
+      },
+      "fresh": true,
+      "maximum_seconds": 86400,
+      "period_seconds": 5,
+      "pid": 29775,
+      "reason": "observando",
+      "running": true,
+      "samples": 65,
+      "schema": "EIO-OBSERVADOR-1",
+      "scope": "Muestreo del servicio y descendientes; el motor residente se observa separadamente mediante su cgroup. No censo del anfitrión, tráfico completo ni auditoría de llamadas al sistema.",
+      "target_pid": 29769,
+      "target_start_ticks": 1850568,
+      "utc_ms": 1790264776694
+    },
+    "telemetry": {
+      "bytes": 11917,
+      "dropped": 0,
+      "enabled": true,
+      "errors": 0,
+      "export": "archivo_local_sin_red",
+      "file": "trazas.jsonl",
+      "last_export_utc_ms": 1790264689915,
+      "limit_bytes": 10485760,
+      "ok": true,
+      "records": 21,
+      "sdk": "OpenTelemetry Rust 0.31.0"
+    }
+  },
+  "service": {
+    "host_stop_cause": null,
+    "http_service": "available",
+    "instance_id": "servicio-1790264450510-0",
+    "journal": "ciclo.jsonl",
+    "model_files": "identity_verified_at_start",
+    "personal_authentication": "not_implemented",
+    "started_ms": 1790264450510,
+    "uptime_seconds": 329,
+    "worker_model_check": "motor_residente_local; identidades verificadas al iniciar el servicio"
+  },
+  "storage_bytes": 203273,
+  "storage_limit": 497394823
+}
