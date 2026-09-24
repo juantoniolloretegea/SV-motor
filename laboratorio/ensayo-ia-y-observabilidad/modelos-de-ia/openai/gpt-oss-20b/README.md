@@ -1,6 +1,6 @@
 # OpenAI · gpt-oss-20b
 
-**Estado vigente · 24/09/2026:** [Recuperación y evidencia](resultados/recuperacion-onecloud-2026-09-24/INFORME.md). Candidata MXFP4 conservada y trasladada a OneCloud; una prueba de regresión aprobada y arranque básico comprobado. Inferencia con el parche pendiente; pesos y controlador operativo por restituir y verificar. Los apartados siguientes conservan sus cortes históricos.
+**Estado vigente · 24/09/2026:** [OC-01 y OC-02: resultados y originales](resultados/onecloud-2026-09-24/RESULTADO.md). La candidata corregida responde correctamente al caso 3 + 2; el ejecutable anterior produce texto inconexo en el mismo anfitrión. Dos ejecuciones cerradas, guardas comprobadas y evidencia conservada. Objetivo material TT-0012 conseguido con alcance limitado; calidad general, rendimiento e integración conversacional pendientes. Los apartados siguientes conservan sus cortes históricos.
 
 **Estado al 23 de septiembre de 2026:** carga completa en CPU y peticiones reales con generación; respuesta útil todavía pendiente.
 

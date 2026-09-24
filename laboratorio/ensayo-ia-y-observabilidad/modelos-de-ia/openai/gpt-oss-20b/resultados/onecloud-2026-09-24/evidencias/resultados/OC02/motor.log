@@ -1,0 +1,22 @@
+[2m2026-09-24T11:34:20.494041Z[0m [32m INFO[0m [2mmistralrs_quant::utils::log[0m[2m:[0m DType selected is BF16.
+[2m2026-09-24T11:34:21.422466Z[0m [32m INFO[0m [2mmistralrs_quant::utils::log[0m[2m:[0m Model has 24 repeating layers.
+[2m2026-09-24T11:34:21.422504Z[0m [32m INFO[0m [2mmistralrs_quant::utils::log[0m[2m:[0m Loading model according to the following repeating layer mappings:
+[2m2026-09-24T11:34:21.422627Z[0m [32m INFO[0m [2mmistralrs_quant::utils::log[0m[2m:[0m Layers 0-23: cpu (63 GB)
+[2m2026-09-24T11:34:21.423729Z[0m [32m INFO[0m [2mmistralrs_core::pipeline::normal[0m[2m:[0m Loading model weights.
+[2m2026-09-24T11:34:43.861208Z[0m [32m INFO[0m [2mmistralrs_server_core::mistralrs_for_server_builder[0m[2m:[0m Model loaded.
+[2m2026-09-24T11:34:43.861273Z[0m [32m INFO[0m [2mmistralrs_core[0m[2m:[0m mistral.rs version: 0.9.3
+[2m2026-09-24T11:34:43.861277Z[0m [32m INFO[0m [2mmistralrs_core[0m[2m:[0m git revision: 24dbf5c256f232176ee5949485ba264049407fbe
+[2m2026-09-24T11:34:43.861408Z[0m [32m INFO[0m [2mmistralrs_core[0m[2m:[0m Pipeline input modalities are [📝 Text]
+[2m2026-09-24T11:34:43.861420Z[0m [32m INFO[0m [2mmistralrs_core[0m[2m:[0m Pipeline output modalities are [📝 Text]
+[2m2026-09-24T11:34:45.566794Z[0m [32m INFO[0m [2mmistralrs::commands::serve[0m[2m:[0m Server listening on http://127.0.0.1:8089
+[2m2026-09-24T11:34:45.566845Z[0m [32m INFO[0m [2mmistralrs::commands::serve[0m[2m:[0m OpenAI-compatible API: http://127.0.0.1:8089/v1
+[2m2026-09-24T11:34:45.566848Z[0m [32m INFO[0m [2mmistralrs::commands::serve[0m[2m:[0m Anthropic-compatible API: http://127.0.0.1:8089
+[2m2026-09-24T11:34:45.566851Z[0m [32m INFO[0m [2mmistralrs::commands::serve[0m[2m:[0m Swagger UI docs: http://127.0.0.1:8089/docs
+[2m2026-09-24T11:34:45.622925Z[0m [32m INFO[0m [2mmistralrs_server_core::metrics[0m[2m:[0m request started: request_id=req_efb3ad6e1bf242c99917c8c1d3debb41 method=GET route=/v1/models path=/v1/models model=none content_length=0
+[2m2026-09-24T11:34:45.623086Z[0m [32m INFO[0m [2mmistralrs_server_core::metrics[0m[2m:[0m request completed: request_id=req_efb3ad6e1bf242c99917c8c1d3debb41 method=GET route=/v1/models model=none status=200 duration_ms=0.174
+[2m2026-09-24T11:34:45.640839Z[0m [32m INFO[0m [2mmistralrs_server_core::metrics[0m[2m:[0m request started: request_id=req_76266a536ea8464ca140f3000983d0e5 method=POST route=/v1/completions path=/v1/completions model=gguf content_length=414
+[2m2026-09-24T11:35:28.863027Z[0m [32m INFO[0m [2mmistralrs_core::engine::logger[0m[2m:[0m Throughput (T/s) 12.60 (prefill 12.20, decode 0.40), Prefix cache hitrate 0.00%, 1 running, 0 waiting
+[2m2026-09-24T11:35:33.863232Z[0m [32m INFO[0m [2mmistralrs_core::engine::logger[0m[2m:[0m Throughput (T/s) 0.60 (prefill 0.00, decode 0.60), Prefix cache hitrate 0.00%, 1 running, 0 waiting
+[2m2026-09-24T11:35:38.864743Z[0m [32m INFO[0m [2mmistralrs_core::engine::logger[0m[2m:[0m Throughput (T/s) 0.80 (prefill 0.00, decode 0.80), Prefix cache hitrate 0.00%, 1 running, 0 waiting
+[2m2026-09-24T11:35:43.864883Z[0m [32m INFO[0m [2mmistralrs_core::engine::logger[0m[2m:[0m Throughput (T/s) 0.60 (prefill 0.00, decode 0.60), Prefix cache hitrate 0.00%, 1 running, 0 waiting
+[2m2026-09-24T11:35:46.809925Z[0m [32m INFO[0m [2mmistralrs_server_core::metrics[0m[2m:[0m request completed: request_id=req_76266a536ea8464ca140f3000983d0e5 method=POST route=/v1/completions model=gguf status=200 duration_ms=61168.981

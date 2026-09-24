@@ -1,0 +1,14 @@
+ActiveState=active
+SubState=running
+TimeoutStopUSec=15s
+RuntimeMaxUSec=9min 30s
+MainPID=2198
+ControlGroup=/system.slice/sv-oc01.service
+MemoryMax=34359738368
+MemorySwapMax=0
+TasksMax=256
+ReadWritePaths=/opt/sv-lab/onecloud-20260924/resultados /opt/sv-lab/onecloud-20260924/controlador.lock
+PrivateTmp=yes
+PrivateNetwork=yes
+ProtectSystem=strict
+NoNewPrivileges=yes

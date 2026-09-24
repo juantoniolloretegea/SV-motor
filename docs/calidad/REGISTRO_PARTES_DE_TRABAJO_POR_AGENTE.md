@@ -13,3 +13,11 @@ La versión tabular operativa está en `REGISTRO_PARTES_DE_TRABAJO_POR_AGENTE.cs
 - **Dictamen:** inferencia completa de la candidata pendiente; no hay certificación integral ni nueva inferencia en esta intervención documental.
 - **Evidencia y siguiente acción:** [informe de recuperación](../../laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/openai/gpt-oss-20b/resultados/recuperacion-onecloud-2026-09-24/INFORME.md); restituir pesos y controlador, comprobar guardas y fijar el protocolo antes de ejecutar.
 - **Trazabilidad:** S39 revisión 16; TT-0012; recepción correlativa en Lenguaje mediante RETP-2026-269 y PTA-2026-011. Los partes anteriores conservan su autoría y alcance.
+
+## PTA-SVM-003 · Inferencia y contraste OneCloud
+
+- **Registro:** 2026-09-24T11:44:10Z; Agente Watson / W-S39-02, VERIFICACION_ACOTADA.
+- **Actuación:** restitución y cotejo de pesos y auxiliares; guardas Rust 1.98.0 (nueve pruebas, incluida auxiliar); protocolos publicados antes de ejecutar; OC-01 correcto y OC-02 semánticamente adverso; cierres y originales íntegros conservados.
+- **Dictamen:** objetivo material de TT-0012 conseguido; continuación S39 con limitaciones de calidad general, rendimiento e integración. Diferencia entre ejecutables demostrada para un caso; no causalidad exclusiva del parche.
+- **Evidencia:** [informe y manifiesto](../../laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/openai/gpt-oss-20b/resultados/onecloud-2026-09-24/RESULTADO.md).
+- **Trazabilidad:** recepción canónica prevista S39 rev17, Acta004 §17, RETP-2026-270 y PTA-2026-012. Sin otras inferencias ni modificación doctrinal.
