@@ -37,3 +37,13 @@ Registro 2026-09-24T15:01:35Z. Unidad de ejecución experimental; VERIFICACION_A
 Doce tareas breves con contenido correcto, diez con formato estricto conforme. Adaptación de interfaz, piloto web y exportación comprobados antes de la suspensión. La versión 0.2.1 compila y aprueba 19 pruebas unitarias, pero su guardia de inicio detecta discrepancias del tokenizador. Servicio detenido; conversación larga pendiente. El rechazo automático del acceso al Codespace se registra como impedimento instrumental independiente.
 
 [Informe parcial](../../laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/openai/gpt-oss-20b/conversacion/RESULTADO_PARCIAL.md) y [continuidad](../../laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/openai/gpt-oss-20b/conversacion/CONTINUIDAD.md). S39 revisión 19; Acta004 §19; RETP-2026-272; PTA-2026-014. Sin compras ni ramas adicionales. TT-0012 conserva su cierre acotado.
+
+## PTA-SVM-006 · Recepción y continuación comparativa
+
+Registro 2026-09-24T17:57:00Z. Unidad de ejecución experimental; VERIFICACION_ACOTADA.
+
+M01–M04 y cuatro condiciones L completas; D01–D04 correctas y cuatro condiciones pendientes por plazo. DOC01–DOC04 conformes frente a cero conformes estrictas en la referencia Qwen, con diferencias de configuración expresamente conservadas. R02-01 produjo respuesta parcial y una pérdida del tramo de cierre de telemetría; R02-02 fue bloqueada antes de admisión. Originales y trazas conservados.
+
+Corrección 0.2.3: resumen numérico y huella en traza; resultado íntegro en expediente. Rust 1.98.0, 22 pruebas aprobadas y huellas cotejadas en despliegue. La corrección de una ruta del controlador no modifica el límite 19:52:28 UTC. Continuación activa desde 17:55:35, con conciliación del antecedente. URL privada conectada. [Incidencia y continuidad](../../laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/openai/gpt-oss-20b/conversacion/INCIDENCIA_EXPORTACION.md).
+
+Recepción correlativa prevista: S39 revisión 21, Acta004 §21, RETP-2026-274 y PTA-2026-016. S39 sigue abierto; TT-0012 conserva su cierre material acotado. Pendientes resultados comparativos, evaluación final y comprobación de disponibilidad libre.
