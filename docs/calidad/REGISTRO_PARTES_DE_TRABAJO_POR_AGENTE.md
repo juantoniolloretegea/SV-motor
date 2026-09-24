@@ -21,3 +21,11 @@ La versión tabular operativa está en `REGISTRO_PARTES_DE_TRABAJO_POR_AGENTE.cs
 - **Dictamen:** objetivo material de TT-0012 conseguido; continuación S39 con limitaciones de calidad general, rendimiento e integración. Diferencia entre ejecutables demostrada para un caso; no causalidad exclusiva del parche.
 - **Evidencia:** [informe y manifiesto](../../laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/openai/gpt-oss-20b/resultados/onecloud-2026-09-24/RESULTADO.md).
 - **Trazabilidad:** recepción canónica prevista S39 rev17, Acta004 §17, RETP-2026-270 y PTA-2026-012. Sin otras inferencias ni modificación doctrinal.
+
+## PTA-SVM-004 · Optimización y ejecución residente
+
+Registro 2026-09-24T12:36:09.219Z. Unidad de ejecución experimental; VERIFICACION_ACOTADA.
+
+Se compila un único motor con referencia secuencial y variante paralela; se conservan tres pruebas numéricas, nueve guardas, Cargo check, diez peticiones en dos sesiones, auditoría instrumental y cierre. Cinco casos aceptados; mediana 94,002 a 18,168 s. Cumplido el criterio de primera fase, no se activa llama.cpp. No hay inferencia activa ni compra de recursos.
+
+[Informe y límites](../../laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/openai/gpt-oss-20b/resultados/onecloud-2026-09-24/optimizacion/RESULTADO.md). S39 revisión 18; Acta004 §18; RETP-2026-271; PTA-2026-013. Sin certificación general ni modificación doctrinal.

@@ -1,12 +1,15 @@
 # Ensayo de inteligencia artificial y observabilidad
 
-**Edición documental 2.12 · 24 de septiembre de 2026.**
+**Recepción vigente · optimización CPU y residencia · 24/09/2026:** [Informe, fuentes y originales](modelos-de-ia/openai/gpt-oss-20b/resultados/onecloud-2026-09-24/optimizacion/RESULTADO.md). Cinco casos correctos y mediana de 94,002 a 18,168 segundos en el mismo ejecutable. Criterio acotado cumplido dentro de la primera ventana; llama.cpp no activado. Servicios del ensayo detenidos. S39 revisión 18; Acta004 §18; RETP-2026-271; PTA-2026-013; PTA-SVM-004. Los cortes anteriores conservan su carácter histórico; calidad general y conversación integrada siguen pendientes.
+
+
+**Edición documental 2.13 · 24 de septiembre de 2026.**
 
 Estudio experimental de la ejecución de modelos auxiliares de inteligencia artificial, su supervisión y la conservación verificable de entradas y resultados. Se desarrolla mediante componentes Rust y pertenece a la investigación lateral (p1+P3)-Bis del Lenguaje SV.
 
 **Estado:** campaña Qwen/B **concluida como realización parcial con limitaciones identificadas**. gpt-oss-20b con primera respuesta aritmética correcta de la candidata CPU en OneCloud y contraste adverso del ejecutable anterior. Ninguno de estos resultados acredita la conformidad integral de la vía B.
 
-**Recepción vigente · 24/09/2026:** [OC-01 y OC-02, originales y límites](modelos-de-ia/openai/gpt-oss-20b/resultados/onecloud-2026-09-24/RESULTADO.md). «Hay cinco elementos en total.»; parada comprobada. Objetivo material de TT-0012 conseguido con alcance limitado. S39 revisión 17; rendimiento, tareas amplias e integración pendientes. Los apartados posteriores conservan los cortes históricos que identifican; sus pendientes quedan subordinados a esta recepción vigente.
+**Recepción histórica OC01/OC02 · 24/09/2026:** [OC-01 y OC-02, originales y límites](modelos-de-ia/openai/gpt-oss-20b/resultados/onecloud-2026-09-24/RESULTADO.md). «Hay cinco elementos en total.»; parada comprobada. Objetivo material de TT-0012 conseguido con alcance limitado. S39 revisión 17; rendimiento, tareas amplias e integración pendientes. Los apartados posteriores conservan los cortes históricos que identifican; sus pendientes quedan subordinados a esta recepción vigente.
 
 ## Objeto y criterio experimental
 

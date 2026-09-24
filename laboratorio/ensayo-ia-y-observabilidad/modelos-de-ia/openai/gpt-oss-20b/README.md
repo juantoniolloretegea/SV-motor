@@ -1,6 +1,9 @@
 # OpenAI · gpt-oss-20b
 
-**Estado vigente · 24/09/2026:** [OC-01 y OC-02: resultados y originales](resultados/onecloud-2026-09-24/RESULTADO.md). La candidata corregida responde correctamente al caso 3 + 2; el ejecutable anterior produce texto inconexo en el mismo anfitrión. Dos ejecuciones cerradas, guardas comprobadas y evidencia conservada. Objetivo material TT-0012 conseguido con alcance limitado; calidad general, rendimiento e integración conversacional pendientes. Los apartados siguientes conservan sus cortes históricos.
+**Recepción vigente · optimización CPU y residencia · 24/09/2026:** [Informe, fuentes y originales](resultados/onecloud-2026-09-24/optimizacion/RESULTADO.md). Cinco casos correctos y mediana de 94,002 a 18,168 segundos en el mismo ejecutable. Criterio acotado cumplido dentro de la primera ventana; llama.cpp no activado. Servicios del ensayo detenidos. S39 revisión 18; Acta004 §18; RETP-2026-271; PTA-2026-013; PTA-SVM-004. Los cortes anteriores conservan su carácter histórico; calidad general y conversación integrada siguen pendientes.
+
+
+**Estado histórico OC01/OC02 · 24/09/2026:** [OC-01 y OC-02: resultados y originales](resultados/onecloud-2026-09-24/RESULTADO.md). La candidata corregida responde correctamente al caso 3 + 2; el ejecutable anterior produce texto inconexo en el mismo anfitrión. Dos ejecuciones cerradas, guardas comprobadas y evidencia conservada. Objetivo material TT-0012 conseguido con alcance limitado; calidad general, rendimiento e integración conversacional pendientes. Los apartados siguientes conservan sus cortes históricos.
 
 **Estado al 23 de septiembre de 2026:** carga completa en CPU y peticiones reales con generación; respuesta útil todavía pendiente.
 
