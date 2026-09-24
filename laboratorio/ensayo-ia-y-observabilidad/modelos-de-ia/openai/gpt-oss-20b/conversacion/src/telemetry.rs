@@ -4,9 +4,28 @@ use crate::{store, Result};
 use opentelemetry::{Context, KeyValue, trace::{Span, TraceContextExt, Tracer, TracerProvider}};
 use opentelemetry_sdk::{error::{OTelSdkError, OTelSdkResult}, trace::{Sampler, SdkTracerProvider, SpanData, SpanExporter}};
 use serde_json::{json, Value};
+use sha2::{Digest, Sha256};
 use std::{fs::{self, File, OpenOptions}, io::Write, os::unix::fs::OpenOptionsExt, path::{Path, PathBuf}, sync::{Arc, Mutex}, time::{Instant, UNIX_EPOCH}};
 
 pub const LIMIT: u64 = 10 * 1024 * 1024;
+/// Referencia acotada al valor íntegro conservado en respuesta_finalizada.phase_timings.
+/// No incorpora texto, probabilidades por token ni otros campos de tamaño variable.
+pub fn timing_summary(timings:&Value)->Value {
+    let encoded=serde_json::to_vec(timings).expect("Value JSON serializable");
+    let mut scalar=serde_json::Map::new();
+    for key in ["readiness_seconds","request_seconds","first_token_seconds"] {
+        if timings[key].is_number(){scalar.insert(key.into(),timings[key].clone());}
+    }
+    let usage=&timings["engine_response"]["usage"];
+    let mut counts=serde_json::Map::new();
+    for key in ["prompt_tokens","completion_tokens","total_tokens","total_prompt_time_sec","total_completion_time_sec","total_time_sec","avg_prompt_tok_per_sec","avg_compl_tok_per_sec","avg_tok_per_sec"] {
+        if usage[key].is_number(){counts.insert(key.into(),usage[key].clone());}
+    }
+    json!({"schema":"EIO-RESUMEN-TIEMPOS-1","original_field":"respuesta_finalizada.phase_timings",
+        "serialization":"serde_json::to_vec(Value), UTF-8","sha256":format!("{:x}",Sha256::digest(&encoded)),
+        "serialized_bytes":encoded.len(),"client_seconds":scalar,"engine_usage":counts,
+        "scope":"Tiempos declarados por cliente y motor; no medición independiente del primer token."})
+}
 #[derive(Debug, Default)]
 struct Counters { bytes:u64, records:u64, errors:u64, dropped:u64, last_ms:Option<u128> }
 #[derive(Debug)]
@@ -78,6 +97,30 @@ impl Telemetry {
 
 #[cfg(test)] mod tests {
     use super::*;
+    #[test] fn respuesta_extensa_conservada_sin_desbordar_traza(){
+        let p=std::env::temp_dir().join(store::id("otel-resumen"));
+        let original=json!({"request_seconds":178.0,"readiness_seconds":0.1,"first_token_seconds":null,
+            "engine_response":{"choices":[{"text":"x".repeat(40000),"logprobs":vec![json!({"token":"x","logprob":-0.1});256]}],
+            "usage":{"prompt_tokens":106,"completion_tokens":256,"total_prompt_time_sec":27.8,"unbounded":"y".repeat(40000)}}});
+        let before=serde_json::to_vec(&original).unwrap();assert!(before.len()>32768);
+        let old=Telemetry::new(&p.join("reproduccion"),"sintetico",LIMIT).unwrap();
+        let op=old.begin("peticion",json!({}));old.end(op,json!({"phase_timings_declared_by_worker":original}));
+        assert!(!old.healthy());assert_eq!(old.status()["dropped"],1);
+        let summary=timing_summary(&original);
+        assert_eq!(summary["sha256"],format!("{:x}",Sha256::digest(&before)));
+        assert_eq!(summary["serialized_bytes"],before.len());
+        assert_eq!(summary["engine_usage"]["completion_tokens"],256);
+        assert!(summary["engine_usage"].get("unbounded").is_none());
+        assert_eq!(serde_json::to_vec(&original).unwrap(),before);
+        let fixed=Telemetry::new(&p.join("correccion"),"sintetico",LIMIT).unwrap();
+        let op=fixed.begin("peticion",json!({}));fixed.end(op,json!({"phase_timings_summary":summary}));
+        fixed.event(None,"custodia_resultado",json!({"saved":true}));
+        assert!(fixed.healthy());assert_eq!(fixed.status()["dropped"],0);assert_eq!(fixed.status()["records"],2);
+        assert!(fixed.shutdown());
+        let rows=fs::read_to_string(p.join("correccion/trazas.jsonl")).unwrap();
+        assert!(rows.lines().all(|l|l.len()+1<=32768));
+        drop(old);drop(fixed);fs::remove_dir_all(p).unwrap();
+    }
     #[test] fn parentesco_duracion_y_limite_explicito(){
         let p=std::env::temp_dir().join(store::id("otel-test"));let t=Telemetry::new(&p,"sintetico",8192).unwrap();
         let op=t.begin("peticion",json!({"fixture":true}));let id=op.trace_id().to_owned();
@@ -97,4 +140,3 @@ impl Telemetry {
         drop(t);fs::remove_dir_all(p).unwrap();
     }
 }
-
