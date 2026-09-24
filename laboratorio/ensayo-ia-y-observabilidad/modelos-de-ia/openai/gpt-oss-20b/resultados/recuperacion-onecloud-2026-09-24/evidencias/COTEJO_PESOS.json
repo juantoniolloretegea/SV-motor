@@ -1,0 +1,248 @@
+{
+  "results": [
+    {
+      "skipped": "quantized",
+      "tensor": "blk.0.attn_q.weight",
+      "type": 8
+    },
+    {
+      "skipped": "quantized",
+      "tensor": "blk.0.attn_k.weight",
+      "type": 8
+    },
+    {
+      "skipped": "quantized",
+      "tensor": "blk.0.attn_v.weight",
+      "type": 8
+    },
+    {
+      "skipped": "quantized",
+      "tensor": "blk.0.attn_output.weight",
+      "type": 8
+    },
+    {
+      "absolute_error_sums": {
+        "direct": 0.0,
+        "even_odd_to_halves": 14.546875,
+        "halves_to_even_odd": 13.140625
+      },
+      "gguf": "blk.0.attn_norm.weight",
+      "gguf_dtype": "F32",
+      "original": "model.layers.0.input_layernorm.weight",
+      "samples": 22,
+      "shape": [
+        2880
+      ]
+    },
+    {
+      "absolute_error_sums": {
+        "direct": 0.0,
+        "even_odd_to_halves": 23.57421875,
+        "halves_to_even_odd": 20.728515625
+      },
+      "gguf": "blk.0.post_attention_norm.weight",
+      "gguf_dtype": "F32",
+      "original": "model.layers.0.post_attention_layernorm.weight",
+      "samples": 22,
+      "shape": [
+        2880
+      ]
+    },
+    {
+      "skipped": "quantized",
+      "tensor": "blk.11.attn_q.weight",
+      "type": 8
+    },
+    {
+      "skipped": "quantized",
+      "tensor": "blk.11.attn_k.weight",
+      "type": 8
+    },
+    {
+      "skipped": "quantized",
+      "tensor": "blk.11.attn_v.weight",
+      "type": 8
+    },
+    {
+      "skipped": "quantized",
+      "tensor": "blk.11.attn_output.weight",
+      "type": 8
+    },
+    {
+      "absolute_error_sums": {
+        "direct": 0.0,
+        "even_odd_to_halves": 3.59375,
+        "halves_to_even_odd": 3.734375
+      },
+      "gguf": "blk.11.attn_norm.weight",
+      "gguf_dtype": "F32",
+      "original": "model.layers.11.input_layernorm.weight",
+      "samples": 22,
+      "shape": [
+        2880
+      ]
+    },
+    {
+      "absolute_error_sums": {
+        "direct": 0.0,
+        "even_odd_to_halves": 7.21875,
+        "halves_to_even_odd": 7.8359375
+      },
+      "gguf": "blk.11.post_attention_norm.weight",
+      "gguf_dtype": "F32",
+      "original": "model.layers.11.post_attention_layernorm.weight",
+      "samples": 22,
+      "shape": [
+        2880
+      ]
+    },
+    {
+      "skipped": "quantized",
+      "tensor": "blk.23.attn_q.weight",
+      "type": 8
+    },
+    {
+      "skipped": "quantized",
+      "tensor": "blk.23.attn_k.weight",
+      "type": 8
+    },
+    {
+      "skipped": "quantized",
+      "tensor": "blk.23.attn_v.weight",
+      "type": 8
+    },
+    {
+      "skipped": "quantized",
+      "tensor": "blk.23.attn_output.weight",
+      "type": 8
+    },
+    {
+      "absolute_error_sums": {
+        "direct": 0.0,
+        "even_odd_to_halves": 4.8125,
+        "halves_to_even_odd": 4.4375
+      },
+      "gguf": "blk.23.attn_norm.weight",
+      "gguf_dtype": "F32",
+      "original": "model.layers.23.input_layernorm.weight",
+      "samples": 22,
+      "shape": [
+        2880
+      ]
+    },
+    {
+      "absolute_error_sums": {
+        "direct": 0.0,
+        "even_odd_to_halves": 4.96875,
+        "halves_to_even_odd": 6.265625
+      },
+      "gguf": "blk.23.post_attention_norm.weight",
+      "gguf_dtype": "F32",
+      "original": "model.layers.23.post_attention_layernorm.weight",
+      "samples": 22,
+      "shape": [
+        2880
+      ]
+    },
+    {
+      "first_mismatch": null,
+      "gguf": "blk.0.ffn_gate_exps.weight",
+      "mismatched_blocks": 0,
+      "sampled_blocks": 24,
+      "shape": [
+        32,
+        2880,
+        2880
+      ]
+    },
+    {
+      "first_mismatch": null,
+      "gguf": "blk.0.ffn_up_exps.weight",
+      "mismatched_blocks": 0,
+      "sampled_blocks": 24,
+      "shape": [
+        32,
+        2880,
+        2880
+      ]
+    },
+    {
+      "first_mismatch": null,
+      "gguf": "blk.0.ffn_down_exps.weight",
+      "mismatched_blocks": 0,
+      "sampled_blocks": 24,
+      "shape": [
+        32,
+        2880,
+        2880
+      ]
+    },
+    {
+      "first_mismatch": null,
+      "gguf": "blk.11.ffn_gate_exps.weight",
+      "mismatched_blocks": 0,
+      "sampled_blocks": 24,
+      "shape": [
+        32,
+        2880,
+        2880
+      ]
+    },
+    {
+      "first_mismatch": null,
+      "gguf": "blk.11.ffn_up_exps.weight",
+      "mismatched_blocks": 0,
+      "sampled_blocks": 24,
+      "shape": [
+        32,
+        2880,
+        2880
+      ]
+    },
+    {
+      "first_mismatch": null,
+      "gguf": "blk.11.ffn_down_exps.weight",
+      "mismatched_blocks": 0,
+      "sampled_blocks": 24,
+      "shape": [
+        32,
+        2880,
+        2880
+      ]
+    },
+    {
+      "first_mismatch": null,
+      "gguf": "blk.23.ffn_gate_exps.weight",
+      "mismatched_blocks": 0,
+      "sampled_blocks": 24,
+      "shape": [
+        32,
+        2880,
+        2880
+      ]
+    },
+    {
+      "first_mismatch": null,
+      "gguf": "blk.23.ffn_up_exps.weight",
+      "mismatched_blocks": 0,
+      "sampled_blocks": 24,
+      "shape": [
+        32,
+        2880,
+        2880
+      ]
+    },
+    {
+      "first_mismatch": null,
+      "gguf": "blk.23.ffn_down_exps.weight",
+      "mismatched_blocks": 0,
+      "sampled_blocks": 24,
+      "shape": [
+        32,
+        2880,
+        2880
+      ]
+    }
+  ],
+  "scope": "Muestras de capas 0, 11 y 23; no cotejo completo"
+}

@@ -1,0 +1,47 @@
+diff --git a/mistralrs-quant/src/mxfp4/mod.rs b/mistralrs-quant/src/mxfp4/mod.rs
+index 2499ac7..a60b031 100644
+--- a/mistralrs-quant/src/mxfp4/mod.rs
++++ b/mistralrs-quant/src/mxfp4/mod.rs
+@@ -793,10 +793,16 @@ impl MXFP4Layer {
+         let x_dims = x.dims();
+         let indices_dims = indices.dims();
+ 
++        if indices_dims.len() != 2 || !matches!(x_dims.len(), 2 | 3)
++            || x_dims[0] != indices_dims[0]
++            || (x_dims.len() == 3 && x_dims[1] != 1 && x_dims[1] != indices_dims[1])
++        {
++            candle_core::bail!("MXFP4 CPU: incompatible input and routing shapes");
++        }
+         let (num_tokens, topk, k, x_has_topk) = if x_dims.len() == 2 {
+             (x_dims[0], indices_dims[1], x_dims[1], false)
+         } else {
+-            (x_dims[0], x_dims[1], x_dims[2], true)
++            (x_dims[0], indices_dims[1], x_dims[2], x_dims[1] != 1)
+         };
+ 
+         let blocks_dims = self.blocks.dims();
+@@ -1149,3 +1155,24 @@ mod tests {
+         Ok(())
+     }
+ }
++
++#[cfg(test)]
++mod sv_mxfp4_regression {
++ use super::*;
++ #[test]
++ fn sv_cpu_shared_input_routes_to_each_selected_expert()->Result<()> {
++  let dev=Device::Cpu;
++  let mut packed=vec![0x22u8;32];packed.extend(vec![0x44u8;32]);
++  let layer=MXFP4Layer::from_parts(Tensor::from_vec(packed,(2,2,16),&dev)?,Tensor::from_vec(vec![127u8;4],(2,2,1),&dev)?,None);
++  let mut values=vec![1f32;32];values.extend(vec![2f32;32]);
++  let shared=Tensor::from_vec(values,(2,1,32),&dev)?;
++  let ids=Tensor::from_vec(vec![0u32,1,1,0],(2,2),&dev)?;
++  let expected=vec![32f32,32.,64.,64.,128.,128.,64.,64.];
++  for input in [shared.clone(),shared.squeeze(1)?,shared.broadcast_as((2,2,32))?.contiguous()?] {
++   let actual=layer.gather_forward(&input,&ids)?;
++   assert_eq!(actual.dims(),&[2,2,2]);
++   assert_eq!(actual.flatten_all()?.to_vec1::<f32>()?,expected);
++  }
++  Ok(())
++ }
++}

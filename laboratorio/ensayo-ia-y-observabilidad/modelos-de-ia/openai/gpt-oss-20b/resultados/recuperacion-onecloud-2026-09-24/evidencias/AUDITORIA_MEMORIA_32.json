@@ -1,0 +1,40 @@
+{
+  "criterio": "Margen experimental de ingeniería de 384 MiB sobre el máximo persistido redondeado al MiB; no cota demostrada de todas las asignaciones.",
+  "entrada_tokens_observada_intento_24": 60,
+  "incremento_directo_gate_up_f32_y_bf16_bytes": 6220800,
+  "limites": "Máximos muestreados; motor previo al parche; no prueban pico exacto ni suficiencia de la candidata. Se conservan reserva global, vigilancia de RSS no file, límite virtual y tiempos.",
+  "margen_sobre_maximo_bytes": 403562496,
+  "max_no_file_bytes": 12896575488,
+  "minimo_anterior_bytes": 13421772800,
+  "minimo_revisado_bytes": 13300137984,
+  "muestras": [
+    {
+      "intento": 22,
+      "max_no_file_bytes": 12876144640,
+      "min_disponible_bytes": 1800679424,
+      "muestras_persistidas": 96
+    },
+    {
+      "intento": 23,
+      "max_no_file_bytes": 12851986432,
+      "min_disponible_bytes": 1829584896,
+      "muestras_persistidas": 45
+    },
+    {
+      "intento": 24,
+      "max_no_file_bytes": 12889784320,
+      "min_disponible_bytes": 1760890880,
+      "muestras_persistidas": 85
+    },
+    {
+      "intento": 25,
+      "max_no_file_bytes": 12896575488,
+      "min_disponible_bytes": 1688645632,
+      "muestras_persistidas": 63
+    }
+  ],
+  "reserva_entorno_bytes": 536870912,
+  "salida_maxima_tokens": 16,
+  "schema": "SV-AUDITORIA-MEMORIA-32",
+  "umbral_total_bytes": 13837008896
+}

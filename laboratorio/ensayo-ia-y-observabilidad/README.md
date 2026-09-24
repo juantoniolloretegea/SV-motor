@@ -1,10 +1,12 @@
 # Ensayo de inteligencia artificial y observabilidad
 
-**Edición documental 2.10 · 23 de septiembre de 2026.**
+**Edición documental 2.11 · 24 de septiembre de 2026.**
 
 Estudio experimental de la ejecución de modelos auxiliares de inteligencia artificial, su supervisión y la conservación verificable de entradas y resultados. Se desarrolla mediante componentes Rust y pertenece a la investigación lateral (p1+P3)-Bis del Lenguaje SV.
 
 **Estado:** campaña Qwen/B **concluida como realización parcial con limitaciones identificadas**. gpt-oss-20b cargado en CPU y con generación comprobada; respuesta útil todavía pendiente. Ninguno de estos resultados acredita la conformidad integral de la vía B.
+
+**Recepción vigente · 24/09/2026:** [Recuperación OneCloud y conciliación de calidad](modelos-de-ia/openai/gpt-oss-20b/resultados/recuperacion-onecloud-2026-09-24/INFORME.md). Regresión CPU MXFP4 demostrada y parche aprobado en una prueba específica; candidata recuperada, hash comprobado y arranque básico en OneCloud. Inferencia completa con el parche pendiente. Las generaciones descritas arriba pertenecen al motor anterior. S39 revisión 16 / TT-0012 abierto.
 
 ## Objeto y criterio experimental
 

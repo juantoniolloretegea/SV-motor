@@ -1,5 +1,7 @@
 # OpenAI · gpt-oss-20b
 
+**Estado vigente · 24/09/2026:** [Recuperación y evidencia](resultados/recuperacion-onecloud-2026-09-24/INFORME.md). Candidata MXFP4 conservada y trasladada a OneCloud; una prueba de regresión aprobada y arranque básico comprobado. Inferencia con el parche pendiente; pesos y controlador operativo por restituir y verificar. Los apartados siguientes conservan sus cortes históricos.
+
 **Estado al 23 de septiembre de 2026:** carga completa en CPU y peticiones reales con generación; respuesta útil todavía pendiente.
 
 La [continuación GGUF](resultados/gguf-2026-09-23/RESULTADO.md) documenta la conversión MXFP4 de ggml-org, su revisión y huella, conservando mistral.rs 0.9.3 y Harmony 0.0.8. La asignación CPU explícita permite cargar las 24 capas. Se corrige además el rechazo del alias `default` por el controlador. Las peticiones de 96 y 256 tokens devuelven HTTP 200 y alcanzan su límite sin contenido final visible. La muestra posterior de ocho tokens acredita emisión de texto; el diagnóstico de entrega y fidelidad permanece abierto.
