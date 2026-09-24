@@ -1,0 +1,18 @@
+Sep 24 14:38:50 motor-ia-modelos-externos systemd[1]: Started sv-conversacion-banco.service - [systemd-run] /opt/sv-lab/conversacion-20260924/bin/eio-conversacion --compare /opt/sv-lab/conversacion-20260924/evidencias/banco-01.
+Sep 24 14:39:15 motor-ia-modelos-externos eio-conversacion[28576]: PRUEBA Q01-suma "fin_normal" entrada=96 salida=2 segundos=24.017010378 respuesta="42"
+Sep 24 14:39:41 motor-ia-modelos-externos eio-conversacion[28576]: PRUEBA Q02-resta "fin_normal" entrada=100 salida=2 segundos=25.475760814 respuesta="22"
+Sep 24 14:40:07 motor-ia-modelos-externos eio-conversacion[28576]: PRUEBA Q03-multiplicacion "fin_normal" entrada=104 salida=2 segundos=25.112915472 respuesta="56"
+Sep 24 14:40:41 motor-ia-modelos-externos eio-conversacion[28576]: PRUEBA Q04-orden "fin_normal" entrada=112 salida=12 segundos=33.37599605 respuesta="-4, 0, 3, 12"
+Sep 24 14:41:09 motor-ia-modelos-externos eio-conversacion[28576]: PRUEBA Q05-extraccion "fin_normal" entrada=110 salida=4 segundos=27.798857761 respuesta="RQ-47"
+Sep 24 14:41:45 motor-ia-modelos-externos eio-conversacion[28576]: PRUEBA Q06-json "fin_normal" entrada=110 salida=13 segundos=34.671510462 respuesta="{\"piezas\":12,\"color\":\"azul\"}"
+Sep 24 14:42:16 motor-ia-modelos-externos eio-conversacion[28576]: PRUEBA Q07-condiciones "fin_normal" entrada=107 salida=6 segundos=29.606382564 respuesta="ALFA  \nBETA"
+Sep 24 14:43:04 motor-ia-modelos-externos eio-conversacion[28576]: PRUEBA Q08-resumen "fin_normal" entrada=122 salida=36 segundos=47.408693724 respuesta="El lunes llegaron ocho cajas, el martes salieron tres, sin otros movimientos; llegadas: 8, salidas: 3, saldo final: 5 cajas."
+Sep 24 14:43:40 motor-ia-modelos-externos eio-conversacion[28576]: PRUEBA Q09-contradiccion "fin_normal" entrada=128 salida=6 segundos=34.250897771 respuesta="CONTRADICCIÓN"
+Sep 24 14:44:14 motor-ia-modelos-externos eio-conversacion[28576]: PRUEBA Q10-insuficiencia "fin_normal" entrada=115 salida=6 segundos=32.68621631 respuesta="INDETERMINADO"
+Sep 24 14:45:41 motor-ia-modelos-externos eio-conversacion[28576]: PRUEBA Q11-unidades "fin_normal" entrada=110 salida=108 segundos=85.649687882 respuesta="La cinta original mide 2,5 m.  \nConvertimos a centímetros:  \n\n\\(2,5\\ \\text{m} = 2,5 \\times 100\\ \\text{cm} = 250\\ \\text{cm}\\).\n\nSe añaden 30 cm, por lo que la longitud total es:  \n\n\\(250\\ \\text{cm} + 30\\ \\text{cm} = 280\\ \\text{cm}\\).\n\n**Longitud total: 280 cm**"
+Sep 24 14:46:13 motor-ia-modelos-externos eio-conversacion[28576]: PRUEBA Q12-instruccion-citada "fin_normal" entrada=121 salida=2 segundos=30.222077912 respuesta="6"
+Sep 24 14:46:45 motor-ia-modelos-externos eio-conversacion[28576]: PRUEBA M01 "fin_normal" entrada=116 salida=5 segundos=30.544426407 respuesta="RECIBIDO."
+Sep 24 14:47:30 motor-ia-modelos-externos eio-conversacion[28576]: PRUEBA M02 "fin_normal" entrada=165 salida=6 segundos=42.721206179 respuesta="ACTUALIZADO."
+Sep 24 14:47:56 motor-ia-modelos-externos systemd[1]: Stopping sv-conversacion-banco.service - [systemd-run] /opt/sv-lab/conversacion-20260924/bin/eio-conversacion --compare /opt/sv-lab/conversacion-20260924/evidencias/banco-01...
+Sep 24 14:47:56 motor-ia-modelos-externos systemd[1]: sv-conversacion-banco.service: Deactivated successfully.
+Sep 24 14:47:56 motor-ia-modelos-externos systemd[1]: Stopped sv-conversacion-banco.service - [systemd-run] /opt/sv-lab/conversacion-20260924/bin/eio-conversacion --compare /opt/sv-lab/conversacion-20260924/evidencias/banco-01.

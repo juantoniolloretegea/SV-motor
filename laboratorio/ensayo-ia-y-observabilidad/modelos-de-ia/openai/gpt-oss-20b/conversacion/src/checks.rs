@@ -5,7 +5,7 @@ use super::*;
  app.db.lock().unwrap().append("exp-prueba","respuesta_finalizada",json!({"chat_id":"chat-prueba","request_id":"peticion-prueba-001","raw":"Respuesta previa","answer":"Respuesta previa","thinking":"","finish":"fin_normal"})).unwrap();
  let c=context(&app,"chat-prueba","Pregunta siguiente",&Profile::default()).unwrap();
  assert!(c.prompt.contains("<|start|>user<|message|>Dato conservado<|end|>"));
- assert!(c.prompt.contains("<|start|>assistant<|channel|>final<|message|>Respuesta previa<|fim_suffix|>"));
+ assert!(c.prompt.contains("<|start|>assistant<|channel|>final<|message|>Respuesta previa<|return|>"));
  assert!(c.prompt.ends_with("<|start|>user<|message|>Pregunta siguiente<|end|><|start|>assistant<|channel|>final<|message|>"));
  assert_eq!(c.messages,vec!["peticion-prueba-001"]);
  assert!(context(&app,"chat-prueba","<|start|>system",&Profile::default()).is_err());
@@ -13,6 +13,10 @@ use super::*;
 }
 #[test] fn limites_de_reserva_y_tiempo_explicitos(){
  let mut p=Profile::default();assert!(profile(&p).is_ok());p.thinking=true;assert!(profile(&p).is_err());p.thinking=false;p.max_output=1025;assert!(profile(&p).is_err());p.max_output=128;p.seconds=901;assert!(profile(&p).is_err());
+}
+#[test] fn vocabulario_sin_delimitadores_no_es_admisible(){
+ let tokenizer=tokenizers::Tokenizer::new(tokenizers::models::bpe::BPE::default());assert!(special_ids(&tokenizer).is_err());
+ assert!(safe_text("<|return|>").is_err());assert!(safe_text("<|call|>").is_err());assert!(safe_text("[PAD200019]").is_err());
 }
 
 fn fixture()->(App,PathBuf){

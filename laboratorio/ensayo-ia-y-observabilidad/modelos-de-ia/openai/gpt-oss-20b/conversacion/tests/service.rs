@@ -21,7 +21,7 @@ fn stop(s:&mut Service){nix::sys::signal::kill(nix::unistd::Pid::from_raw(s.0.id
 fn proceso_http_reinicio_y_exclusion(){
  let port=TcpListener::bind("127.0.0.1:3001").expect("La prueba exige el puerto 3001 libre");drop(port);
  let root=PathBuf::from(std::env::var("EIO_SERVICE_CHECK_DIR").expect("Defina un directorio nuevo para la prueba"));fs::create_dir(&root).unwrap();
- let(mut first,key1)=start(&root);let(code,state1)=api(&key1,json!({"op":"state"}));assert_eq!(code,200);assert_eq!(state1["identity"]["application"],"Conversación GPT-OSS 0.2.0");
+ let(mut first,key1)=start(&root);let(code,state1)=api(&key1,json!({"op":"state"}));assert_eq!(code,200);assert_eq!(state1["identity"]["application"],"Conversación GPT-OSS 0.2.1");
  assert_eq!(api("clave-obsoleta",json!({"op":"state"})).0,403);assert_eq!(request("POST","/api",&key1,"{").0,400);
  let(code,case)=api(&key1,json!({"op":"create_case","title":"Comprobación sintética del proceso"}));assert_eq!(code,200);
  let file=root.join(format!("{}.jsonl",case["id"].as_str().unwrap()));let original=fs::read(&file).unwrap();

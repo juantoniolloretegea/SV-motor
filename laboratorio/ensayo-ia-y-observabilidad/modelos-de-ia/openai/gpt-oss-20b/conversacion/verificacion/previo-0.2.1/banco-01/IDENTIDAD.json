@@ -1,0 +1,136 @@
+{
+  "active": null,
+  "cases": {
+    "exp-1790260423493-1": {
+      "created_ms": 1790260423493,
+      "id": "exp-1790260423493-1",
+      "title": "Verificación técnica sintética de admisión y cancelación"
+    },
+    "exp-1790260513036-3": {
+      "created_ms": 1790260513036,
+      "id": "exp-1790260513036-3",
+      "title": "Comprobación de acceso web"
+    }
+  },
+  "chats": [
+    {
+      "case_id": "exp-1790260423493-1",
+      "id": "chat-1790260423511-2",
+      "title": "Control de contexto y cancelación",
+      "turns": 1
+    },
+    {
+      "case_id": "exp-1790260513036-3",
+      "id": "chat-1790260513908-4",
+      "title": "Conversación 1",
+      "turns": 1
+    }
+  ],
+  "context_limit": 4096,
+  "default_profile": {
+    "max_output": 256,
+    "seconds": 600,
+    "seed": 299792458,
+    "thinking": false
+  },
+  "identity": {
+    "application": "Conversación GPT-OSS 0.2.0",
+    "binary_sha256": "39ecff0055c8bbf33ccff5fc71ca93f8c1058230efa88ed8594bde239a76eadd",
+    "candle_revision": "35d7ae7ca5c93e17c77359c3617376b8a72e96a4",
+    "context_limit": 4096,
+    "context_status": "Límite operativo configurado; la capacidad y el rendimiento con historias largas requieren medición específica",
+    "device": "CPU",
+    "engine_sha256": "f6ec0bb908e18ced633d66d6a762a915349281bdbb1397991b268fe487bcc418",
+    "licensing": {
+      "components": [
+        {
+          "license": "Apache-2.0",
+          "name": "gpt-oss-20b",
+          "source": "https://huggingface.co/openai/gpt-oss-20b"
+        },
+        {
+          "license": "MIT OR Apache-2.0",
+          "name": "Candle",
+          "source": "https://github.com/huggingface/candle/blob/35d7ae7ca5c93e17c77359c3617376b8a72e96a4/Cargo.toml"
+        },
+        {
+          "license": "MIT",
+          "name": "mistral.rs",
+          "source": "https://github.com/EricLBuehler/mistral.rs/tree/24dbf5c256f232176ee5949485ba264049407fbe"
+        }
+      ],
+      "schema": "EIO-AVISO-LICENCIAS-1",
+      "scope": "Aviso de titularidad y licenciamiento del SV, según su fuente canónica, y de los componentes principales. Los componentes de terceros conservan sus licencias respectivas. Este aviso no atribuye al SV la titularidad de los datos aportados ni determina los derechos sobre cada respuesta generada. No constituye un inventario exhaustivo de dependencias.",
+      "sv": {
+        "canonical_notice": "https://github.com/juantoniolloretegea/SV-motor/blob/30683c5ec11d33ecabd6e3defb8110f530290df9/README.md",
+        "copyright": "© Juan Antonio Lloret Egea, 2026",
+        "institution": "ITVIA — IA eñ™",
+        "issn": "2695-6411",
+        "license": "CC-BY-NC-ND-4.0",
+        "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/deed.es",
+        "name": "Sistema Vectorial SV"
+      }
+    },
+    "memory_stop_bytes": 34359738368,
+    "model": "GPT-OSS-20B · MXFP4",
+    "model_sha256": "27cd6c432c7672cb812a92f611cf3ba7bbc35928262bb1e1253ff4ee6ae35901",
+    "tokenizer_sha256": "7c704477f22686ec2a8d7490ed55c799d875d2033eb833070cdd07c949037fcc"
+  },
+  "model_context": 131072,
+  "observability": {
+    "observer": {
+      "age_ms": 2275,
+      "export": {
+        "bytes": 183754,
+        "dropped": 0,
+        "enabled": true,
+        "errors": 0,
+        "export": "archivo_local_sin_red",
+        "file": "trazas.jsonl",
+        "last_export_utc_ms": 1790260728728,
+        "limit_bytes": 10485760,
+        "ok": true,
+        "records": 73,
+        "sdk": "OpenTelemetry Rust 0.31.0"
+      },
+      "fresh": true,
+      "maximum_seconds": 86400,
+      "period_seconds": 5,
+      "pid": 28213,
+      "reason": "observando",
+      "running": true,
+      "samples": 73,
+      "schema": "EIO-OBSERVADOR-1",
+      "scope": "Muestreo de este servicio y descendientes visibles. No censo del anfitrión, tráfico completo ni auditoría de llamadas al sistema.",
+      "target_pid": 28208,
+      "target_start_ticks": 1437133,
+      "utc_ms": 1790260728728
+    },
+    "telemetry": {
+      "bytes": 13718,
+      "dropped": 0,
+      "enabled": true,
+      "errors": 0,
+      "export": "archivo_local_sin_red",
+      "file": "trazas.jsonl",
+      "last_export_utc_ms": 1790260654846,
+      "limit_bytes": 10485760,
+      "ok": true,
+      "records": 24,
+      "sdk": "OpenTelemetry Rust 0.31.0"
+    }
+  },
+  "service": {
+    "host_stop_cause": null,
+    "http_service": "available",
+    "instance_id": "servicio-1790260315161-0",
+    "journal": "ciclo.jsonl",
+    "model_files": "identity_verified_at_start",
+    "personal_authentication": "not_implemented",
+    "started_ms": 1790260315161,
+    "uptime_seconds": 415,
+    "worker_model_check": "motor_residente_local; identidades verificadas al iniciar el servicio"
+  },
+  "storage_bytes": 32049,
+  "storage_limit": 498073600
+}
