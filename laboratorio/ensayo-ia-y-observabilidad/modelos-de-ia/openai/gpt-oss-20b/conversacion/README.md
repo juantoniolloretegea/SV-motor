@@ -1,6 +1,6 @@
 # Conversación experimental con GPT-OSS-20B
 
-**Estado del corte 2026-09-24T15:01:35.167Z: servicio detenido por discrepancia de identificadores del tokenizador. La URL no está habilitada para uso. Véanse [resultado parcial](RESULTADO_PARCIAL.md) y [continuidad](CONTINUIDAD.md).**
+**Estado actualizado el 24/09/2026: servicio 0.2.2 activo y acceso privado comprobado. Banco automatizado en curso; una sola generación simultánea. La indisponibilidad del corte anterior quedó resuelta. Véase [continuidad](CONTINUIDAD.md).**
 
 Interfaz derivada de `conversacion-nativa` 0.1.4, recibida en SV-motor `d4e62b29713a2044be0d1d4a7fb463155d3999c3`. Se conservan sus expedientes, conversaciones, vista previa del contexto, registro encadenado, exportación y controles de reenvío. La integración del modelo se sustituye por un cliente Rust de un motor residente local. Los resultados de Qwen no se transfieren a GPT-OSS.
 

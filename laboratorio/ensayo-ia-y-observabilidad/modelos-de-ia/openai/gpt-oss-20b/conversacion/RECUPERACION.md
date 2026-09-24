@@ -1,6 +1,6 @@
 # Acceso y recuperación del servicio de conversación
 
-**Estado del corte 2026-09-24T15:01:35.167Z: servicio detenido por discrepancia de identificadores del tokenizador. La URL no está habilitada para uso. Véanse [resultado parcial](RESULTADO_PARCIAL.md) y [continuidad](CONTINUIDAD.md).**
+**Estado actualizado el 24/09/2026: servicio 0.2.2 activo y acceso privado comprobado. Banco automatizado en curso; una sola generación simultánea. La indisponibilidad del corte anterior quedó resuelta. Véase [continuidad](CONTINUIDAD.md).**
 
 URL privada: https://didactic-chainsaw-p49vp5w7qg62r7j7-3000.app.github.dev/
 
