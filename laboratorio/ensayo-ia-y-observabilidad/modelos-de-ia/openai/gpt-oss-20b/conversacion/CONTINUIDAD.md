@@ -1,6 +1,6 @@
 # Punto de recuperación de la evaluación conversacional
 
-**Última recepción: 24/09/2026, versión 0.2.3.** Los apartados anteriores se conservan como historia; para continuar prevalece el apartado final de esta fecha y `INCIDENCIA_EXPORTACION.md`.
+**Última recepción: 25/09/2026, aplicación 0.2.4 y entrega 0.2.4-beta.1.** Prevalecen el [prospecto](../distribucion/0.2.4-beta.1/FICHA_TECNICA.md), los [resultados de cierre](../distribucion/0.2.4-beta.1/RESULTADOS.md) y las [instrucciones](../distribucion/0.2.4-beta.1/LEAME.md). Los apartados posteriores conservan su fecha histórica; no son órdenes vigentes para reanudar campañas terminadas.
 
 Registro 2026-09-24T15:01:35.167Z. Estado observado al interrumpirse el acceso remoto; no sustituye una inspección posterior.
 
@@ -54,3 +54,10 @@ Procedimiento de continuación: `CONTINUAR_COMPARACION_02.sh`, unidad prevista `
 La continuación queda preparada; confirmar en la siguiente inspección el inicio y el plazo efectivo. Si se interrumpe la sesión, los resultados deben recibirse del servidor, sin asumir éxito ni repetir peticiones. El servicio puede seguir observando mientras el Codespace se suspende. El túnel privado puede necesitar recuperación mediante `ACCESO.sh`; no implica reiniciar el motor. Mantener una sola generación y exportar los originales antes de evaluar. Permanecen pendientes la comparación final, actualización de calidad y entrega de URL verificada.
 
 Confirmación posterior: primer guion fallido por ruta sin `src/`, antes de admitir inferencia; corregido y conservado en `evidencias/CONTROLADOR_RUTA_02.log`. Unidad `sv-comparacion-continuada` activa desde 17:55:35 UTC. R02-02 admitida y antecedente conciliado. La ventana mantiene inicio administrativo 17:52:28 y límite 19:52:28 UTC, sin extensión por esta corrección. Servicio 0.2.3 iniciado a las 17:51:04 UTC. URL privada comprobada a las 17:56:21; mostró conexión, observación y generación activa. No confundir la respuesta histórica DISPONIBLE de su expediente con una nueva inferencia de control.
+
+## Cierre del 25/09/2026
+
+Campaña nativa y distribución delimitadas. No quedan inferencias encargadas por este cierre. Se conservan la instalación de OneCloud, los originales y los resultados adversos. La documentación diferencia el banco documental de doce condiciones y la campaña sintética de doce consultas; esta última no acredita aptitud clínica. El cotejo Rust y la restauración documental son conformes dentro de su alcance.
+
+Los servicios mantienen sus límites temporales. La disponibilidad futura necesita una observación nueva; no se promete permanencia indefinida. No se eliminan archivos, no se migra Qwen y no se inicia la vía A/WebAssembly. S39 permanece abierto para las necesidades de integración de la adenda, con esta campaña terminada.
+

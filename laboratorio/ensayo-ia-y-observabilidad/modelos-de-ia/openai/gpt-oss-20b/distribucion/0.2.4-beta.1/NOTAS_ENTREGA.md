@@ -7,3 +7,5 @@ Punto de cierre de la configuración nativa CPU que funciona en OneCloud. Incluy
 El cotejo Rust de la campaña sintética acredita doce conversaciones y 49 sucesos. Se conservan diez terminaciones normales y dos respuestas truncadas. La evaluación asistida inicial encuentra siete respuestas no conformes y cinco que requieren revisión. No se acredita aptitud clínica. El banco documental separado conserva doce condiciones conformes, con cobertura de cinco parámetros.
 
 Se documentan la semilla no transmitida al motor y el rótulo interno 0.2.2 que permanece en el binario 0.2.4. Se conserva la instalación activa; no se repiten inferencias ni se modifica Qwen. Véanse FICHA_TECNICA.md, LEAME.md, RESULTADOS.md y el manifiesto adjunto.
+
+La evidencia documental se conserva además en sv-gpt-oss-documental12-20260924.tar.gz, con huella separada en DOCUMENTAL12.sha256. Incluye las ocho nuevas condiciones, el protocolo y la auditoría de los doce resultados. Los cuatro antecedentes ya publicados se identifican en la auditoría. COTEJO_ENTREGA.json reúne tamaños y huellas de los tres archivos.
