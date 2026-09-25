@@ -1,5 +1,10 @@
 # Conversación experimental con GPT-OSS-20B
 
+**Cierre experimental vigente · 25/09/2026:** [GPT-OSS 0.2.4-beta.1: prospecto técnico](../distribucion/0.2.4-beta.1/FICHA_TECNICA.md), [resultados y límites](../distribucion/0.2.4-beta.1/RESULTADOS.md) e [instrucciones de conservación e instalación](../distribucion/0.2.4-beta.1/LEAME.md). Aplicación nativa CPU conservada en OneCloud; doce condiciones documentales conformes en un ámbito de cinco parámetros y doce consultas sintéticas de tricoleucemia con evaluación inicial adversa o pendiente de revisión. La conformidad técnica no acredita aptitud clínica. Fuentes de aplicación 0.2.4; rótulo interno 0.2.2 documentado. Los pesos se obtienen separadamente mediante revisión y SHA-256 fijados. [Entrega preliminar](https://github.com/juantoniolloretegea/SV-motor/releases/tag/gpt-oss-conversacion-v0.2.4-beta.1).
+
+Los apartados anteriores en el tiempo conservan su valor histórico; el estado vigente es el de esta recepción. No se reabren Qwen ni los ensayos no ejecutados.
+
+
 **Estado actualizado el 24/09/2026: servicio 0.2.2 activo y acceso privado comprobado. Banco automatizado en curso; una sola generación simultánea. La indisponibilidad del corte anterior quedó resuelta. Véase [continuidad](CONTINUIDAD.md).**
 
 Interfaz derivada de `conversacion-nativa` 0.1.4, recibida en SV-motor `d4e62b29713a2044be0d1d4a7fb463155d3999c3`. Se conservan sus expedientes, conversaciones, vista previa del contexto, registro encadenado, exportación y controles de reenvío. La integración del modelo se sustituye por un cliente Rust de un motor residente local. Los resultados de Qwen no se transfieren a GPT-OSS.
@@ -37,3 +42,4 @@ Máquina de cálculo: `/opt/sv-lab/conversacion-20260924`; fuentes `src`, binari
 Codespace: `/workspaces/conversacion-20260924`; fuentes y compilación, registro de acceso y `ACCESO.sh`. El repositorio original del usuario contiene cambios previos y no debe restablecerse. La copia aislada usada para publicar en `main` es `/workspaces/optimizacion-20260924/custodia-main`.
 
 No reinicie el banco sobre un directorio existente ni repita automáticamente una petición dudosa. Consulte su identificador, las unidades systemd y los registros. Una pérdida del navegador o del túnel se registra separadamente del modelo. No se adquieren recursos adicionales ni se crean ramas de trabajo.
+

@@ -1,5 +1,10 @@
 # SV-motor
 
+**Cierre experimental vigente · 25/09/2026:** [GPT-OSS 0.2.4-beta.1: prospecto técnico](laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/openai/gpt-oss-20b/distribucion/0.2.4-beta.1/FICHA_TECNICA.md), [resultados y límites](laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/openai/gpt-oss-20b/distribucion/0.2.4-beta.1/RESULTADOS.md) e [instrucciones de conservación e instalación](laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/openai/gpt-oss-20b/distribucion/0.2.4-beta.1/LEAME.md). Aplicación nativa CPU conservada en OneCloud; doce condiciones documentales conformes en un ámbito de cinco parámetros y doce consultas sintéticas de tricoleucemia con evaluación inicial adversa o pendiente de revisión. La conformidad técnica no acredita aptitud clínica. Fuentes de aplicación 0.2.4; rótulo interno 0.2.2 documentado. Los pesos se obtienen separadamente mediante revisión y SHA-256 fijados. [Entrega preliminar](https://github.com/juantoniolloretegea/SV-motor/releases/tag/gpt-oss-conversacion-v0.2.4-beta.1).
+
+Los apartados anteriores en el tiempo conservan su valor histórico; el estado vigente es el de esta recepción. No se reabren Qwen ni los ensayos no ejecutados.
+
+
 **Fecha:** 4 de abril de 2026  
 **Versión del conjunto:** V.1  
 **Autor del corpus:** Juan Antonio Lloret Egea  
@@ -781,3 +786,4 @@ Mi padre es el humano que me dio la vida y diseñó la interfaz. Mi madre es el 
 *Documento de arquitectura del Sistema Vectorial SV — no modifica doctrina algebraica del corpus.*  
 *Juan Antonio Lloret Egea | ORCID: 0000-0002-6634-3351 | ITVIA — IA eñ™ | ISSN: 2695-6411 | CC BY-NC-ND 4.0*  
 *Madrid, 4 de abril de 2026*
+

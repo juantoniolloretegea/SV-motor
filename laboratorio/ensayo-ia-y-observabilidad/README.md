@@ -1,5 +1,10 @@
 # Ensayo de inteligencia artificial y observabilidad
 
+**Cierre experimental vigente · 25/09/2026:** [GPT-OSS 0.2.4-beta.1: prospecto técnico](modelos-de-ia/openai/gpt-oss-20b/distribucion/0.2.4-beta.1/FICHA_TECNICA.md), [resultados y límites](modelos-de-ia/openai/gpt-oss-20b/distribucion/0.2.4-beta.1/RESULTADOS.md) e [instrucciones de conservación e instalación](modelos-de-ia/openai/gpt-oss-20b/distribucion/0.2.4-beta.1/LEAME.md). Aplicación nativa CPU conservada en OneCloud; doce condiciones documentales conformes en un ámbito de cinco parámetros y doce consultas sintéticas de tricoleucemia con evaluación inicial adversa o pendiente de revisión. La conformidad técnica no acredita aptitud clínica. Fuentes de aplicación 0.2.4; rótulo interno 0.2.2 documentado. Los pesos se obtienen separadamente mediante revisión y SHA-256 fijados. [Entrega preliminar](https://github.com/juantoniolloretegea/SV-motor/releases/tag/gpt-oss-conversacion-v0.2.4-beta.1).
+
+Los apartados anteriores en el tiempo conservan su valor histórico; el estado vigente es el de esta recepción. No se reabren Qwen ni los ensayos no ejecutados.
+
+
 **Recepción vigente · optimización CPU y residencia · 24/09/2026:** [Informe, fuentes y originales](modelos-de-ia/openai/gpt-oss-20b/resultados/onecloud-2026-09-24/optimizacion/RESULTADO.md). Cinco casos correctos y mediana de 94,002 a 18,168 segundos en el mismo ejecutable. Criterio acotado cumplido dentro de la primera ventana; llama.cpp no activado. Servicios del ensayo detenidos. S39 revisión 18; Acta004 §18; RETP-2026-271; PTA-2026-013; PTA-SVM-004. Los cortes anteriores conservan su carácter histórico; calidad general y conversación integrada siguen pendientes.
 
 
@@ -94,3 +99,4 @@ El [controlador instrumental](modelos-de-ia/openai/gpt-oss-20b/controlador-nativ
 ## Licencias
 
 Sistema Vectorial SV · [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/deed.es). Los avisos del SV y las condiciones de terceros se identifican en [AVISO_LICENCIAS.json de Qwen](conversacion-nativa/AVISO_LICENCIAS.json), en el [aviso de gpt-oss-20b y su controlador](modelos-de-ia/openai/gpt-oss-20b/controlador-nativo/AVISO_LICENCIAS.json) y en la composición de cada entrega. Cada componente conserva su licencia; una identificación de versión no amplía derechos de uso o distribución.
+
