@@ -47,3 +47,14 @@ M01–M04 y cuatro condiciones L completas; D01–D04 correctas y cuatro condici
 Corrección 0.2.3: resumen numérico y huella en traza; resultado íntegro en expediente. Rust 1.98.0, 22 pruebas aprobadas y huellas cotejadas en despliegue. La corrección de una ruta del controlador no modifica el límite 19:52:28 UTC. Continuación activa desde 17:55:35, con conciliación del antecedente. URL privada conectada. [Incidencia y continuidad](../../laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/openai/gpt-oss-20b/conversacion/INCIDENCIA_EXPORTACION.md).
 
 Recepción correlativa prevista: S39 revisión 21, Acta004 §21, RETP-2026-274 y PTA-2026-016. S39 sigue abierto; TT-0012 conserva su cierre material acotado. Pendientes resultados comparativos, evaluación final y comprobación de disponibilidad libre.
+
+
+## PTA-SVM-007 · Cierre y distribución GPT-OSS
+
+Registro 2026-09-25T11:17:31.291Z. Unidad de ejecución experimental S39; VERIFICACION_ACOTADA.
+
+Cierre de la campaña nativa y entrega experimental GPT-OSS 0.2.4-beta.1. Doce condiciones documentales conformes en cinco parámetros; doce consultas sintéticas HCL conservadas, con diez terminaciones normales y dos por límite de generación. Evaluación asistida inicial: siete no conformes y cinco en revisión. Sin aptitud clínica acreditada.
+
+VERIFICACION_ACOTADA: cotejo Rust 1.98.0 de doce conversaciones y 49 sucesos; restauración de un expediente con doce conversaciones y cero peticiones pendientes, copia idéntica al original; ejecutables, archivos y recepción cotejados mediante SHA-256. No se ha ensayado instalación completa en una sede limpia ni reconstrucción hermética.
+
+[Entrega](https://github.com/juantoniolloretegea/SV-motor/releases/tag/gpt-oss-conversacion-v0.2.4-beta.1) e [informe](https://github.com/juantoniolloretegea/SV-motor/blob/365900cbe47b085c487ffd7b72391f0b13b679bc/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/openai/gpt-oss-20b/distribucion/0.2.4-beta.1/RESULTADOS.md). Recepción correlativa: S39 revisión 22; TT-0013; Acta004 §22; RETP-2026-275; PTA-2026-017. Sin nuevas inferencias, sin eliminación de archivos y sin cambios de Qwen. Pesos externos fijados por revisión, tamaño y SHA-256. Semilla registrada pero no transmitida al motor; rótulo interno 0.2.2 conservado en aplicación 0.2.4. Conversaciones personales históricas excluidas de la entrega pública. Servicios de OneCloud activos en la observación de 11:09:52 UTC; no se garantiza disponibilidad indefinida.
