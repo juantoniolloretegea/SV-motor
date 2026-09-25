@@ -6,7 +6,7 @@ Fecha de captura: 25 de septiembre de 2026. Preparación: Profesor, por autoriza
 
 Copia de recuperación cifrada y reducida del sistema existente. No es una reproducción integral del disco original de 640 GB. El sistema de archivos supera `e2fsck -fn`; las huellas de los dos ejecutables coinciden con las del servidor inspeccionado. La verificación de descifrado reproduce exactamente la huella del archivo comprimido.
 
-**Arranque de la copia: pendiente de ensayo. Restauración completa e inferencia: no acreditadas. Importación de esta imagen en OneCloud: no acreditada. Esta entrega no justifica eliminar todavía la instancia original.**
+**Arranque y restitución en una instancia nueva de OneCloud: comprobados. Inferencia, cancelación, integridad y persistencia: comprobadas en el ensayo acotado. Véase [ACTA-RESTITUCION.md](ACTA-RESTITUCION.md). La instancia original se conserva.**
 
 ## Entrega
 
@@ -79,6 +79,6 @@ sha256sum gpt-oss-sistema.raw.gz
 gzip -dc gpt-oss-sistema.raw.gz | dd of=gpt-oss-sistema.raw bs=4M conv=sparse status=progress
 ```
 
-La importación requiere que el proveedor admita un disco RAW/convertido o un mecanismo de restauración de disco. **No se ha demostrado que OneCloud permita importar este archivo a una instancia nueva.** Su función de instantáneas internas y esta imagen portable son mecanismos diferentes.
+La importación requiere que el proveedor admita un disco RAW/convertido o un mecanismo de restauración de disco. **Se ha restituido el disco en una instancia nueva de OneCloud mediante un entorno de restauración en RAM y kexec. No se ha acreditado importación directa con el panel de instantáneas.** El procedimiento y sus adaptaciones de identidad se describen en el acta.
 
-No se certifica aptitud clínica, integración del núcleo SV, contención general ni reproducción bit a bit del disco de origen. Conservar una imagen íntegra reduce trabajo de reconstrucción, pero no prueba todavía la portabilidad operativa.
+No se certifica aptitud clínica, integración del núcleo SV, contención general ni reproducción bit a bit del disco de origen. La portabilidad operativa se ha comprobado para la configuración y el procedimiento del acta; no se generaliza a otros entornos.
