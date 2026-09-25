@@ -65,4 +65,10 @@ Los archivos de exportación publicados corresponden sólo al expediente sintét
 
 ## Retirada
 
-La retirada de la instancia temporal se documentará tras verificar la publicación de estas evidencias. La instancia original queda fuera de esa retirada.
+La instancia temporal 864367 fue eliminada después de publicar y cotejar las evidencias. La lectura actualizada del panel mostró una sola instancia: la original 863733, con 64 GB de RAM y 640 GB de disco. También se retiró del panel exclusivamente la clave temporal `sv-restauracion-temporal-20260925`; se conserva `sv-onecloud`.
+
+Se retiraron las copias de trabajo de la imagen y la clave temporal en Codespaces, los auxiliares de consola y el directorio de respaldo creado para esta operación en el servidor original. Se cerraron el túnel local y las pestañas auxiliares. No se conservaron imágenes grandes en el PC del Director. La clave de descifrado permanece bajo custodia local, separada de GitHub.
+
+El Codespace GPT-OSS iniciado para esta prueba se detuvo al terminar. Qwen permaneció apagado. En la original, la última lectura de los servicios fue `sv-conversacion.service: failed, MainPID=0` y `sv-conversacion-motor.service: inactive, MainPID=0`, estados preexistentes que esta prueba no ha corregido ni reiniciado. Conservar la instancia original no equivale a afirmar que su aplicación esté activa.
+
+El panel mostraba 95,22 EUR de cupón y 10,00 EUR de saldo. No se atribuye la diferencia del cupón exclusivamente a esta prueba: la captura no desglosa su coste final. La instancia original permanece contratada.
