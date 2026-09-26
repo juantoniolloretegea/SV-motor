@@ -1,5 +1,10 @@
 # OpenAI · gpt-oss-20b
 
+## Estado de cierre del 26/09/2026
+
+La Dirección ha cerrado esta campaña y excluido la configuración ensayada de la función médica prevista. Se conserva como resultado experimental; no se inicia entrenamiento ni se acredita aptitud clínica. Véanse el [dictamen y archivo de cierre](imagen-onecloud/cierre-20260926/README.md) y el [estado de conservación y retirada](imagen-onecloud/cierre-20260926/RECEPCION.md). La entrega técnica histórica que sigue no constituye una aprobación para uso médico.
+
+
 **Cierre experimental vigente · 25/09/2026:** [GPT-OSS 0.2.4-beta.1: prospecto técnico](distribucion/0.2.4-beta.1/FICHA_TECNICA.md), [resultados y límites](distribucion/0.2.4-beta.1/RESULTADOS.md) e [instrucciones de conservación e instalación](distribucion/0.2.4-beta.1/LEAME.md). Aplicación nativa CPU conservada en OneCloud; doce condiciones documentales conformes en un ámbito de cinco parámetros y doce consultas sintéticas de tricoleucemia con evaluación inicial adversa o pendiente de revisión. La conformidad técnica no acredita aptitud clínica. Fuentes de aplicación 0.2.4; rótulo interno 0.2.2 documentado. Los pesos se obtienen separadamente mediante revisión y SHA-256 fijados. [Entrega preliminar](https://github.com/juantoniolloretegea/SV-motor/releases/tag/gpt-oss-conversacion-v0.2.4-beta.1).
 
 **Trazabilidad del cierre:** [TT-0013](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/b1d826981a329f0d3e1295e8989268ca349acf0f/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0013.md), S39 revisión 22 y Acta 004 §22; RETP-2026-275 y PTA-2026-017.
