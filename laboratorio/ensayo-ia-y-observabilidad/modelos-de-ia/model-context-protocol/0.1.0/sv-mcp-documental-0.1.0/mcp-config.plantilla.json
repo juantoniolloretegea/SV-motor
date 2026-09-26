@@ -1,0 +1,20 @@
+{
+  "servers": [{
+    "id": "sv_documental",
+    "name": "Documentación científica conservada",
+    "source": {
+      "type": "Process",
+      "command": "/RUTA_ABSOLUTA/bin/sv-mcp-documental",
+      "args": ["/RUTA_ABSOLUTA/fuentes/catalogo-pdq.json", "94024658204c0607c5879f8cf263d6238d639494b5d9c266396c20f3e848a45d", "/RUTA_PRIVADA/diario-nuevo.jsonl", "256"],
+      "work_dir": "/RUTA_ABSOLUTA",
+      "env": null
+    },
+    "enabled": true,
+    "tool_prefix": "svdoc",
+    "resources": null,
+    "bearer_token": null
+  }],
+  "auto_register_tools": true,
+  "tool_timeout_secs": 30,
+  "max_concurrent_calls": 1
+}
