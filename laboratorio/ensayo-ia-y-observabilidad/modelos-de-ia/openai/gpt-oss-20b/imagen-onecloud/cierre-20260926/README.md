@@ -47,3 +47,6 @@ Cotejar las huellas del RAW, comprimido, cifrado concatenado y GGUF con MANIFIES
 Ruta final de los pesos dentro del sistema recuperado: /opt/sv-lab/onecloud-20260924/gguf/gpt-oss-20b-MXFP4.gguf. SHA-256 esperado: 27cd6c432c7672cb812a92f611cf3ba7bbc35928262bb1e1253ff4ee6ae35901. Tamaño: 12 109 566 624 bytes.
 
 Se conserva el código y los ejecutables, no una garantía universal de compatibilidad con cualquier proveedor, firmware o hardware. La URL antigua de Codespaces debe revisarse al recuperar el acceso. La reproducción de la infraestructura no acredita exactitud médica del modelo.
+El script de restitución del día 25 estaba fijado a la instancia temporal 864367. No se debe ejecutar sin adaptar explícitamente la identidad del nuevo destino, las huellas y las rutas de esta entrega. Esa adaptación no se ha ensayado para el archivo del día 26.
+
+La imagen conserva los archivos del comparador llama.cpp dentro de la carpeta de auditoría. No sustituye al motor original Rust ni se habilita como servicio de la aplicación.
