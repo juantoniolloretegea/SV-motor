@@ -1,5 +1,13 @@
 # Imagen de recuperación de GPT-OSS en OneCloud
 
+## Cierre del 26/09/2026
+
+La entrega actual de archivo y su estado de retirada se documentan en [cierre-20260926](cierre-20260926/README.md). Incluye auditoría del día 26 y pesos cifrados separados. La nueva imagen no se ha restaurado por instrucción de la Dirección. El texto que sigue conserva como antecedente la entrega del día 25.
+
+---
+
+# Imagen de recuperación de GPT-OSS en OneCloud
+
 Fecha de captura: 25 de septiembre de 2026. Preparación: Profesor, por autorización expresa del Director.
 
 ## Estado de recepción
