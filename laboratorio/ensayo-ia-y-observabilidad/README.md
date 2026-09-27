@@ -1,22 +1,34 @@
 # Ensayo de inteligencia artificial y observabilidad
 
-**Cierre experimental vigente · 25/09/2026:** [GPT-OSS 0.2.4-beta.1: prospecto técnico](modelos-de-ia/openai/gpt-oss-20b/distribucion/0.2.4-beta.1/FICHA_TECNICA.md), [resultados y límites](modelos-de-ia/openai/gpt-oss-20b/distribucion/0.2.4-beta.1/RESULTADOS.md) e [instrucciones de conservación e instalación](modelos-de-ia/openai/gpt-oss-20b/distribucion/0.2.4-beta.1/LEAME.md). Aplicación nativa CPU conservada en OneCloud; doce condiciones documentales conformes en un ámbito de cinco parámetros y doce consultas sintéticas de tricoleucemia con evaluación inicial adversa o pendiente de revisión. La conformidad técnica no acredita aptitud clínica. Fuentes de aplicación 0.2.4; rótulo interno 0.2.2 documentado. Los pesos se obtienen separadamente mediante revisión y SHA-256 fijados. [Entrega preliminar](https://github.com/juantoniolloretegea/SV-motor/releases/tag/gpt-oss-conversacion-v0.2.4-beta.1).
+## Estado vigente · 27/09/2026
+
+La continuación se concentra en **GPT-OSS-120B, vía B nativa en CPU**. Se prepara la comprobación de compatibilidad, recursos y configuración; no hay instalación ni inferencia del nuevo candidato acreditada. [Ficha del candidato](modelos-de-ia/openai/gpt-oss-120b/README.md) · [TT-0015](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0015.md).
+
+La configuración GPT-OSS-20B conserva su [cierre para la función médica prevista](modelos-de-ia/openai/gpt-oss-20b/README.md). La selección mínima Qwen3.8-27B concluyó con **No pasa**: hubo respuesta final en 227 segundos, pero no se cumplieron todos los requisitos documentales. Ese dictamen corresponde a la configuración examinada. [Expediente restringido](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/7a116cddac3f0b98bdc52fb84e1ed1e0f2b23791/respuestas-ejecucion/QWEN38-SELECCION-MINIMA-LOCAL-20260927/entrega-01/INFORME.md). Los resultados anteriores se conservan y no se reabren.
+
+El [servicio documental MCP 0.1.2](modelos-de-ia/model-context-protocol/0.1.2/LEAME.md) permanece como componente experimental. Su recepción en TT-0014 y la selección de un modelo son juicios separados. Inmunología y ciberseguridad mantienen casos, fuentes y criterios propios.
+
+**Condición para la vía A:** primero obtener Apto en la selección experimental nativa y, después, autorizar el estudio específico de navegador/WebAssembly. La carga del modelo no satisface esta condición. Ningún resultado de esta fase habilita integración nuclear o uso clínico.
+
+**Seguimiento:** S39; Acta 004 §23; TT-0015; RETP-2026-276. La documentación histórica siguiente conserva las fechas, medidas y límites de cada campaña.
+
+**Cierre experimental histórico · 25/09/2026:** [GPT-OSS 0.2.4-beta.1: prospecto técnico](modelos-de-ia/openai/gpt-oss-20b/distribucion/0.2.4-beta.1/FICHA_TECNICA.md), [resultados y límites](modelos-de-ia/openai/gpt-oss-20b/distribucion/0.2.4-beta.1/RESULTADOS.md) e [instrucciones de conservación e instalación](modelos-de-ia/openai/gpt-oss-20b/distribucion/0.2.4-beta.1/LEAME.md). Aplicación nativa CPU conservada en OneCloud; doce condiciones documentales conformes en un ámbito de cinco parámetros y doce consultas sintéticas de tricoleucemia con evaluación inicial adversa o pendiente de revisión. La conformidad técnica no acredita aptitud clínica. Fuentes de aplicación 0.2.4; rótulo interno 0.2.2 documentado. Los pesos se obtienen separadamente mediante revisión y SHA-256 fijados. [Entrega preliminar](https://github.com/juantoniolloretegea/SV-motor/releases/tag/gpt-oss-conversacion-v0.2.4-beta.1).
 
 **Trazabilidad del cierre:** [TT-0013](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/b1d826981a329f0d3e1295e8989268ca349acf0f/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0013.md), S39 revisión 22 y Acta 004 §22; RETP-2026-275 y PTA-2026-017.
 
-Los apartados anteriores en el tiempo conservan su valor histórico; el estado vigente es el de esta recepción. No se reabren Qwen ni los ensayos no ejecutados.
+Este apartado conserva la recepción del 25/09/2026. El estado actual se recoge al comienzo de este documento; no se reabren las campañas cerradas.
 
 
-**Recepción vigente · optimización CPU y residencia · 24/09/2026:** [Informe, fuentes y originales](modelos-de-ia/openai/gpt-oss-20b/resultados/onecloud-2026-09-24/optimizacion/RESULTADO.md). Cinco casos correctos y mediana de 94,002 a 18,168 segundos en el mismo ejecutable. Criterio acotado cumplido dentro de la primera ventana; llama.cpp no activado. Servicios del ensayo detenidos. S39 revisión 18; Acta004 §18; RETP-2026-271; PTA-2026-013; PTA-SVM-004. Los cortes anteriores conservan su carácter histórico; calidad general y conversación integrada siguen pendientes.
+**Recepción histórica · optimización CPU y residencia · 24/09/2026:** [Informe, fuentes y originales](modelos-de-ia/openai/gpt-oss-20b/resultados/onecloud-2026-09-24/optimizacion/RESULTADO.md). Cinco casos correctos y mediana de 94,002 a 18,168 segundos en el mismo ejecutable. Criterio acotado cumplido dentro de la primera ventana; llama.cpp no activado. Servicios del ensayo detenidos. S39 revisión 18; Acta004 §18; RETP-2026-271; PTA-2026-013; PTA-SVM-004. Los cortes anteriores conservan su carácter histórico; calidad general y conversación integrada siguen pendientes.
 
 
-**Edición documental 2.13 · 24 de septiembre de 2026.**
+**Edición documental 2.14 · 27 de septiembre de 2026.**
 
 Estudio experimental de la ejecución de modelos auxiliares de inteligencia artificial, su supervisión y la conservación verificable de entradas y resultados. Se desarrolla mediante componentes Rust y pertenece a la investigación lateral (p1+P3)-Bis del Lenguaje SV.
 
-**Estado:** campaña Qwen/B **concluida como realización parcial con limitaciones identificadas**. gpt-oss-20b con primera respuesta aritmética correcta de la candidata CPU en OneCloud y contraste adverso del ejecutable anterior. Ninguno de estos resultados acredita la conformidad integral de la vía B.
+**Estado histórico del corte anterior:** campaña Qwen/B **concluida como realización parcial con limitaciones identificadas**. gpt-oss-20b con primera respuesta aritmética correcta de la candidata CPU en OneCloud y contraste adverso del ejecutable anterior. Ninguno de estos resultados acredita la conformidad integral de la vía B.
 
-**Recepción histórica OC01/OC02 · 24/09/2026:** [OC-01 y OC-02, originales y límites](modelos-de-ia/openai/gpt-oss-20b/resultados/onecloud-2026-09-24/RESULTADO.md). «Hay cinco elementos en total.»; parada comprobada. Objetivo material de TT-0012 conseguido con alcance limitado. S39 revisión 17; rendimiento, tareas amplias e integración pendientes. Los apartados posteriores conservan los cortes históricos que identifican; sus pendientes quedan subordinados a esta recepción vigente.
+**Recepción histórica OC01/OC02 · 24/09/2026:** [OC-01 y OC-02, originales y límites](modelos-de-ia/openai/gpt-oss-20b/resultados/onecloud-2026-09-24/RESULTADO.md). «Hay cinco elementos en total.»; parada comprobada. Objetivo material de TT-0012 conseguido con alcance limitado. S39 revisión 17; rendimiento, tareas amplias e integración pendientes. Los apartados posteriores conservan los cortes históricos que identifican; sus pendientes se interpretan conforme al estado vigente indicado al comienzo.
 
 ## Objeto y criterio experimental
 
@@ -48,6 +60,21 @@ Los controles sintéticos iniciales se completaron. La prueba con el modelo se i
 ![Vía B: interfaz web, servicio Rust, supervisión, custodia, inferencia y guarda exterior](diagramas/via-b.svg)
 
 **Alcance de la figura:** diseño EIO-NAT-PREP-02 del corte del 20 de septiembre de 2026. Sus indicaciones de preparación y pruebas pendientes pertenecen a ese diseño y a esa fecha. La figura no certifica que todos sus componentes estén integrados en la aplicación de conversación. [Ampliar](diagramas/via-b.svg) · [Fuente Mermaid](diagramas/via-b.mmd) · [Diseño NAT02](resultados/preparacion-nativa-02/DISENO.md) · [Desarrollo NAT03](resultados/preparacion-nativa-03/README.md).
+
+### Continuación de la vía B · GPT-OSS-120B
+
+```mermaid
+flowchart TD
+  H["Autorización humana"] --> C["Control Rust y Árbitro SV"]
+  C --> M["mistral.rs y GPT-OSS-120B"]
+  M -->|"Salida o solicitud documental"| C
+  C -->|"Consulta permitida"| D["MCP y catálogo local"]
+  D -->|"Texto identificado"| C
+  C --> E["Originales, métricas y revisión"]
+  E -->|"Dictamen con alcance"| H
+```
+
+**Alcance de esta actualización visual:** esquema funcional previsto para el nuevo candidato, pendiente de comprobar e integrar en su realización concreta. El Árbitro SV comprende controles externos al protocolo MCP; no se atribuye aquí una implementación completa. La inferencia carece de acceso a Internet. La adquisición administrativa de documentos precede al ensayo. Los dos diagramas anteriores se conservan como evidencia de sus respectivos cortes históricos.
 
 ## Versión distribuida
 

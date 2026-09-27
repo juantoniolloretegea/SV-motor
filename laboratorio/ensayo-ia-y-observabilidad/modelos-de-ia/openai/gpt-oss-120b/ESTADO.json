@@ -1,0 +1,61 @@
+{
+  "esquema": "sv.eio.candidato/1",
+  "fecha_corte": "2026-09-27",
+  "modelo": "openai/gpt-oss-120b",
+  "revision_modelo": null,
+  "revision_motor": null,
+  "sha256_ejecutable": null,
+  "suceso": "S39",
+  "tique": "TT-0015",
+  "estado": "preparacion_documental",
+  "via": {
+    "actual": "B_nativa_cpu",
+    "posterior": "A_navegador_webassembly",
+    "condicion_posterior": "Apto en el alcance experimental y autorizacion especifica"
+  },
+  "ejecucion": {
+    "instalacion_acreditada": false,
+    "inferencias_en_esta_campana": 0,
+    "aptitud": "pendiente",
+    "memoria_maxima_observada_bytes": null,
+    "latencia_observada_segundos": null
+  },
+  "autorizacion": {
+    "preparacion_y_comprobacion_preliminar": true,
+    "ampliacion_recursos": false,
+    "descarga_pesos_en_fase_preliminar": false,
+    "inferencia_en_fase_preliminar": false
+  },
+  "memoria": {
+    "checkpoint_publicado_gib": 60.8,
+    "fuente": "https://arxiv.org/html/2508.10925v1",
+    "equivalencia_con_pico_memoria": false,
+    "dimensionamiento_128_gb": "hipotesis_pendiente"
+  },
+  "representacion": {
+    "mxfp4": "referencia_oficial",
+    "conversion_admitida": null,
+    "recuantizacion_autorizada": false
+  },
+  "conversacion": {
+    "formato": "Harmony",
+    "razonamiento": "pendiente_de_fijar",
+    "presupuesto_generacion": null
+  },
+  "componentes": {
+    "mcp": "0.1.2 conservado; recepcion propia pendiente",
+    "arbitro_sv": "sin ampliacion funcional en esta fase"
+  },
+  "restricciones": {
+    "rust": "1.98.0",
+    "python": false,
+    "powershell": false,
+    "batch_windows": false,
+    "internet_inferencia": false,
+    "modelos_auxiliares": false,
+    "entrenamiento": false,
+    "integracion_nucleo": false,
+    "ramas_nuevas": false
+  },
+  "resultado": null
+}

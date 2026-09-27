@@ -1,10 +1,11 @@
 # OpenAI
 
-**Índice de modelos · 23 de septiembre de 2026.**
+**Índice de modelos · 27 de septiembre de 2026.**
 
 | Modelo | Ficha y alcance |
 |---|---|
-| gpt-oss-20b | [Estado, requisitos y fuentes](gpt-oss-20b/README.md). Carga GGUF y generación comprobadas en CPU; respuesta final útil pendiente. |
+| gpt-oss-20b | [Estado, requisitos y fuentes](gpt-oss-20b/README.md). Campaña cerrada; configuración excluida de la función médica prevista. |
+| gpt-oss-120b | [Estado y ficha técnica](gpt-oss-120b/README.md). Candidato en preparación documental para la vía B nativa; aptitud pendiente. |
 
 Cada modelo dispone de una carpeta propia. La ficha de gpt-oss-20b distingue el antecedente documental del 22/09/2026, la instalación del 23/09/2026, las correcciones instrumentales y la continuación GGUF con carga y generación reales.
 
