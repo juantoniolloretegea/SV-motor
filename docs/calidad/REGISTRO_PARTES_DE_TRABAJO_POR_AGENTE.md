@@ -65,3 +65,14 @@ VERIFICACION_ACOTADA: cotejo Rust 1.98.0 de doce conversaciones y 49 sucesos; re
 Registro 2026-09-27T07:40:39Z; Agente W-S39-03; VERIFICACION_ACOTADA. Preparación documental de GPT-OSS-120B en vía B nativa; encargo preliminar de compatibilidad CPU, accesos, memoria y Harmony. Candidato sin instalación, inferencia ni aptitud acreditadas.
 
 [Ficha](../../laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/openai/gpt-oss-120b/README.md). Se conservan inicio.md, figuras SVG y fuentes Mermaid previas. El esquema nuevo del índice se identifica como previsto. No se modifican los directorios Qwen, GPT-OSS-20B ni MCP. S39 revisión 24; TT-0015; Acta004 §23; RETP-2026-276; PTA-2026-018. Verificación acotada; sin intervención remota, compras o instalación. TT-0014 y cierre Qwen conservan recepción y archivo separados. Mapa y figuras históricas preservados; ninguna rama creada.
+
+
+## PTA-SVM-009 · Ordenación pública de versiones del ensayo
+
+Registro 2026-09-27T08:00:46Z; Agente W-S39-03; VERIFICACION_ACOTADA sobre el corte `9d99df038657cd85eb1e50b9223bf5e351031f74`.
+
+Se cotejan cinco publicaciones, sus etiquetas y commits, treinta revisiones anteriores del índice y las versiones declaradas de los componentes. Se ordena la [edición documental 2.15](../../laboratorio/ensayo-ia-y-observabilidad/README.md) y su [registro estructurado](../../laboratorio/ensayo-ia-y-observabilidad/VERSIONES.json), con catálogo de modelos edición 8 e índice MCP revisión 2.
+
+Las publicaciones de aplicaciones, los archivos de conservación, las fuentes candidatas y las ediciones del documento mantienen identidades diferentes. Los rótulos históricos repetidos se desambiguan mediante commit; la discrepancia de identificación 0.2.2/0.2.4 conserva su evidencia original.
+
+No se descargan grandes activos ni se recalculan sus huellas. No se ejecutan modelos, alteran resultados, cierran tiques o modifican fuentes de software, etiquetas, activos ni figuras históricas. S39 y sus dictámenes conservan el estado canónico; esta intervención sólo ordena su presentación pública.

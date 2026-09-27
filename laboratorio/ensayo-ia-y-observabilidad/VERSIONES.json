@@ -1,0 +1,589 @@
+{
+  "esquema": "sv.eio.registro-versiones/1",
+  "edicion_documental": "2.15",
+  "fecha_corte": "2026-09-27",
+  "commit_base_consultado": "9d99df038657cd85eb1e50b9223bf5e351031f74",
+  "criterio": "Identidad separada para modelo, aplicacion, componente MCP, archivo de conservacion y edicion documental",
+  "revision_actual": {
+    "version": "2.15",
+    "naturaleza": "ordenacion_documental",
+    "cambios": [
+      "Estado vigente unico",
+      "Cronologia de cinco publicaciones",
+      "Versiones de aplicaciones y MCP diferenciadas",
+      "Catalogo sin duplicacion de Qwen3.8-27B",
+      "Referencias publicas para lectura externa"
+    ],
+    "commit": "El commit que contiene este archivo; no se introduce una autorreferencia circular"
+  },
+  "componentes": [
+    {
+      "id": "eio-conversacion/qwen3-0.6b",
+      "version": "0.1.3",
+      "distribucion": "0.1.3-beta.1",
+      "estado": "distribuida_campana_cerrada",
+      "release": "eio-conversacion-v0.1.3-beta.1",
+      "fuente": "https://github.com/juantoniolloretegea/SV-motor/blob/a14ea31b3903d49a98f08b912206b1c8c9eeaf74/laboratorio/ensayo-ia-y-observabilidad/entregas/0.1.3-beta.1/FICHA_TECNICA.md"
+    },
+    {
+      "id": "eio-conversacion/qwen3-0.6b",
+      "version": "0.1.4",
+      "distribucion": null,
+      "estado": "fuentes_candidatas_verificacion_local",
+      "cargo": "laboratorio/ensayo-ia-y-observabilidad/conversacion-nativa/Cargo.toml",
+      "cargo_blob": "3c091a0e5da83c9e90cec1c3473aed9211a0fb97",
+      "fuente": "https://github.com/juantoniolloretegea/SV-motor/blob/9d99df038657cd85eb1e50b9223bf5e351031f74/laboratorio/ensayo-ia-y-observabilidad/conversacion-nativa/verificacion-0.1.4/INFORME.md"
+    },
+    {
+      "id": "eio-conversacion/gpt-oss-20b",
+      "version": "0.2.4",
+      "distribucion": "0.2.4-beta.1",
+      "estado": "distribuida_campana_cerrada",
+      "release": "gpt-oss-conversacion-v0.2.4-beta.1",
+      "cargo": "laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/openai/gpt-oss-20b/conversacion/Cargo.toml",
+      "cargo_blob": "c19bf4867d7c755670d011504b07dc7b11e85b65",
+      "rotulo_interno": "0.2.2",
+      "discrepancia": "Rotulo conservado; identificacion mediante fuentes, binario y huella de la entrega",
+      "fuente": "https://github.com/juantoniolloretegea/SV-motor/blob/365900cbe47b085c487ffd7b72391f0b13b679bc/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/openai/gpt-oss-20b/distribucion/0.2.4-beta.1/FICHA_TECNICA.md"
+    },
+    {
+      "id": "sv-mcp-documental",
+      "version": "0.1.0",
+      "distribucion": "directorio_versionado",
+      "estado": "antecedente_preparacion_incompleta",
+      "cargo": "laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/model-context-protocol/0.1.0/sv-mcp-documental-0.1.0/Cargo.toml",
+      "cargo_blob": "afda601f0d8658d82ae8ac3d57ce975b2052c85b",
+      "fuente": "https://github.com/juantoniolloretegea/SV-motor/blob/9d99df038657cd85eb1e50b9223bf5e351031f74/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/model-context-protocol/0.1.0/README.md",
+      "release": null
+    },
+    {
+      "id": "sv-mcp-documental",
+      "version": "0.1.1",
+      "distribucion": "directorio_versionado",
+      "estado": "publicacion_con_recepcion_pendiente",
+      "cargo": "laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/model-context-protocol/0.1.1/Cargo.toml",
+      "cargo_blob": "b159853566ae1aa08fba300d0ede4516173c8546",
+      "fuente": "https://github.com/juantoniolloretegea/SV-motor/blob/9d99df038657cd85eb1e50b9223bf5e351031f74/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/model-context-protocol/0.1.1/LEAME.md",
+      "release": null
+    },
+    {
+      "id": "sv-mcp-documental",
+      "version": "0.1.2",
+      "distribucion": "directorio_versionado",
+      "estado": "publicacion_con_recepcion_pendiente",
+      "cargo": "laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/model-context-protocol/0.1.2/Cargo.toml",
+      "cargo_blob": "b55109e9f7cf5e3af3bac0fc0bb7a35bd9ca731a",
+      "fuente": "https://github.com/juantoniolloretegea/SV-motor/blob/9d99df038657cd85eb1e50b9223bf5e351031f74/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/model-context-protocol/0.1.2/LEAME.md",
+      "release": null
+    }
+  ],
+  "candidatos": [
+    {
+      "modelo": "Qwen/Qwen3-0.6B",
+      "estado": "campana_cerrada_con_limitaciones"
+    },
+    {
+      "modelo": "openai/gpt-oss-20b",
+      "estado": "configuracion_excluida_de_funcion_medica"
+    },
+    {
+      "modelo": "Qwen/Qwen3.8-27B",
+      "estado": "no_pasa_seleccion_actual"
+    },
+    {
+      "modelo": "openai/gpt-oss-120b",
+      "estado": "preparacion_y_comprobacion_preliminar",
+      "seleccion": "pendiente",
+      "release": null
+    }
+  ],
+  "publicaciones": [
+    {
+      "modelo": "Qwen/Qwen3-0.6B",
+      "naturaleza": "distribucion_aplicacion",
+      "etiqueta": "eio-conversacion-v0.1.3-beta.1",
+      "fecha_publicacion_utc": "2026-09-22T17:54:04Z",
+      "preliminar": true,
+      "commit_etiqueta": "a14ea31b3903d49a98f08b912206b1c8c9eeaf74",
+      "url": "https://github.com/juantoniolloretegea/SV-motor/releases/tag/eio-conversacion-v0.1.3-beta.1",
+      "activos_identificacion": [
+        {
+          "nombre": "ARCHIVO.sha256",
+          "bytes": 119,
+          "sha256_publicado": "ae1b48ecabeee9b439885ad0e73263e6753161870cdd36bdc660790c53f986e6",
+          "url": "https://github.com/juantoniolloretegea/SV-motor/releases/download/eio-conversacion-v0.1.3-beta.1/ARCHIVO.sha256"
+        },
+        {
+          "nombre": "MANIFIESTO.json",
+          "bytes": 70427,
+          "sha256_publicado": "d9274dce2a4307a59a28e2e7f809ad6793bc5609423e2be6e1395b559e9e0898",
+          "url": "https://github.com/juantoniolloretegea/SV-motor/releases/download/eio-conversacion-v0.1.3-beta.1/MANIFIESTO.json"
+        },
+        {
+          "nombre": "sv-eio-conversacion-0.1.3-beta.1-linux-x86_64.tar.gz",
+          "bytes": 4294199,
+          "sha256_publicado": "b6c72ddfcd4d0909dfcc489bdbf16e1da9cf38585323acea640058259d197f0f",
+          "url": "https://github.com/juantoniolloretegea/SV-motor/releases/download/eio-conversacion-v0.1.3-beta.1/sv-eio-conversacion-0.1.3-beta.1-linux-x86_64.tar.gz"
+        }
+      ],
+      "alcance_activos": "Seleccion de archivos de distribucion, imagenes, pesos cifrados y manifiestos; no inventario de todos los activos",
+      "integridad_en_esta_revision": "Metadatos publicados consultados; activos binarios no descargados ni huellas recalculadas"
+    },
+    {
+      "modelo": "openai/gpt-oss-20b",
+      "naturaleza": "distribucion_aplicacion",
+      "etiqueta": "gpt-oss-conversacion-v0.2.4-beta.1",
+      "fecha_publicacion_utc": "2026-09-25T11:16:10Z",
+      "preliminar": true,
+      "commit_etiqueta": "365900cbe47b085c487ffd7b72391f0b13b679bc",
+      "url": "https://github.com/juantoniolloretegea/SV-motor/releases/tag/gpt-oss-conversacion-v0.2.4-beta.1",
+      "activos_identificacion": [
+        {
+          "nombre": "ARCHIVOS.sha256",
+          "bytes": 223,
+          "sha256_publicado": "40be3c3bd8a8f767633f9c5ab8eb65b50cdfddbdb7b0be9f23c5bbc72f2e5a3b",
+          "url": "https://github.com/juantoniolloretegea/SV-motor/releases/download/gpt-oss-conversacion-v0.2.4-beta.1/ARCHIVOS.sha256"
+        },
+        {
+          "nombre": "DOCUMENTAL12.sha256",
+          "bytes": 106,
+          "sha256_publicado": "9e77835bd7f00b89e9d1ab9e95db43f8953a30037cf55a78b729be8a4d13339e",
+          "url": "https://github.com/juantoniolloretegea/SV-motor/releases/download/gpt-oss-conversacion-v0.2.4-beta.1/DOCUMENTAL12.sha256"
+        },
+        {
+          "nombre": "MANIFIESTO.json",
+          "bytes": 1009,
+          "sha256_publicado": "a85694e36ac443af67e4d94249f69bfaf247248e61ad32683094dc03495481e5",
+          "url": "https://github.com/juantoniolloretegea/SV-motor/releases/download/gpt-oss-conversacion-v0.2.4-beta.1/MANIFIESTO.json"
+        },
+        {
+          "nombre": "sv-gpt-oss-0.2.4-beta.1-linux-x86_64.tar.gz",
+          "bytes": 78127379,
+          "sha256_publicado": "13cacb3db0cdc91847e180f283726c75069efdde6f215cec398dfb746d17a429",
+          "url": "https://github.com/juantoniolloretegea/SV-motor/releases/download/gpt-oss-conversacion-v0.2.4-beta.1/sv-gpt-oss-0.2.4-beta.1-linux-x86_64.tar.gz"
+        },
+        {
+          "nombre": "sv-gpt-oss-documental12-20260924.tar.gz",
+          "bytes": 40143,
+          "sha256_publicado": "6010f7338bd705948711d3640fedabb04b0f7f2e07b0087eb014d5f25af839c1",
+          "url": "https://github.com/juantoniolloretegea/SV-motor/releases/download/gpt-oss-conversacion-v0.2.4-beta.1/sv-gpt-oss-documental12-20260924.tar.gz"
+        },
+        {
+          "nombre": "sv-gpt-oss-evidencia-sintetica-20260925.tar.gz",
+          "bytes": 5734834,
+          "sha256_publicado": "d7ed6cde5fffa709d12bbb40187bc4185e11fd3abbed0f1df11099073ee03651",
+          "url": "https://github.com/juantoniolloretegea/SV-motor/releases/download/gpt-oss-conversacion-v0.2.4-beta.1/sv-gpt-oss-evidencia-sintetica-20260925.tar.gz"
+        }
+      ],
+      "alcance_activos": "Seleccion de archivos de distribucion, imagenes, pesos cifrados y manifiestos; no inventario de todos los activos",
+      "integridad_en_esta_revision": "Metadatos publicados consultados; activos binarios no descargados ni huellas recalculadas"
+    },
+    {
+      "modelo": "openai/gpt-oss-20b",
+      "naturaleza": "archivo_conservacion",
+      "etiqueta": "gpt-oss-imagen-onecloud-20260925-v1",
+      "fecha_publicacion_utc": "2026-09-25T20:34:24Z",
+      "preliminar": true,
+      "commit_etiqueta": "d5b8c62cbe8ea2162bf5d0247f2f49758e49de53",
+      "url": "https://github.com/juantoniolloretegea/SV-motor/releases/tag/gpt-oss-imagen-onecloud-20260925-v1",
+      "activos_identificacion": [
+        {
+          "nombre": "gpt-oss-sistema.raw.gz.enc",
+          "bytes": 1206832496,
+          "sha256_publicado": "6f63101afc63b4d394620d35160f7f32e3d4a5ebec39f90fc96d6cb464d85280",
+          "url": "https://github.com/juantoniolloretegea/SV-motor/releases/download/gpt-oss-imagen-onecloud-20260925-v1/gpt-oss-sistema.raw.gz.enc"
+        },
+        {
+          "nombre": "MANIFIESTO-VALIDADO.json",
+          "bytes": 1025,
+          "sha256_publicado": "9fd7aa66ce93a34b2fcde0252bd591ff94240d8c6ea45ae4854a5f23d7a6b1c5",
+          "url": "https://github.com/juantoniolloretegea/SV-motor/releases/download/gpt-oss-imagen-onecloud-20260925-v1/MANIFIESTO-VALIDADO.json"
+        },
+        {
+          "nombre": "MANIFIESTO.json",
+          "bytes": 938,
+          "sha256_publicado": "093cb65790c1102991b0a106d47e9716061190ee55cdc03f02e01156bcbda22b",
+          "url": "https://github.com/juantoniolloretegea/SV-motor/releases/download/gpt-oss-imagen-onecloud-20260925-v1/MANIFIESTO.json"
+        }
+      ],
+      "alcance_activos": "Seleccion de archivos de distribucion, imagenes, pesos cifrados y manifiestos; no inventario de todos los activos",
+      "integridad_en_esta_revision": "Metadatos publicados consultados; activos binarios no descargados ni huellas recalculadas"
+    },
+    {
+      "modelo": "openai/gpt-oss-20b",
+      "naturaleza": "archivo_conservacion",
+      "etiqueta": "gpt-oss-archivo-cierre-20260926-v1",
+      "fecha_publicacion_utc": "2026-09-26T06:24:55Z",
+      "preliminar": true,
+      "commit_etiqueta": "7648327145a6f10ab98a9c5cd8d2d95776613ffc",
+      "url": "https://github.com/juantoniolloretegea/SV-motor/releases/tag/gpt-oss-archivo-cierre-20260926-v1",
+      "activos_identificacion": [
+        {
+          "nombre": "ARCHIVOS.sha256",
+          "bytes": 862,
+          "sha256_publicado": "312e89a5bba1ea783c5889d6fc62d0a0dd5fe6a17e6198b761da90aea1a872a6",
+          "url": "https://github.com/juantoniolloretegea/SV-motor/releases/download/gpt-oss-archivo-cierre-20260926-v1/ARCHIVOS.sha256"
+        },
+        {
+          "nombre": "gpt-oss-sistema-20260926.raw.gz.enc",
+          "bytes": 1241715504,
+          "sha256_publicado": "b9170c262183978e9a070b2ace5dc11ffe8645f91fe22be19ca753ba3d495afc",
+          "url": "https://github.com/juantoniolloretegea/SV-motor/releases/download/gpt-oss-archivo-cierre-20260926-v1/gpt-oss-sistema-20260926.raw.gz.enc"
+        },
+        {
+          "nombre": "MANIFIESTO.json",
+          "bytes": 3680,
+          "sha256_publicado": "33cbbab2b9b739a00faac81e8fd765e094fb7ebda7c03f721851d0e2c5055485",
+          "url": "https://github.com/juantoniolloretegea/SV-motor/releases/download/gpt-oss-archivo-cierre-20260926-v1/MANIFIESTO.json"
+        },
+        {
+          "nombre": "pesos-mxfp4.gguf.enc.part-00",
+          "bytes": 1572864000,
+          "sha256_publicado": "c3c6ab9ea1e23126be2c52e2bb3baec5ad03341c02f6472fc71a849cbc9769d5",
+          "url": "https://github.com/juantoniolloretegea/SV-motor/releases/download/gpt-oss-archivo-cierre-20260926-v1/pesos-mxfp4.gguf.enc.part-00"
+        },
+        {
+          "nombre": "pesos-mxfp4.gguf.enc.part-01",
+          "bytes": 1572864000,
+          "sha256_publicado": "867855570f7d35361ff4f271d6c9370edc2fca71ee1166701ea8c33dee786d09",
+          "url": "https://github.com/juantoniolloretegea/SV-motor/releases/download/gpt-oss-archivo-cierre-20260926-v1/pesos-mxfp4.gguf.enc.part-01"
+        },
+        {
+          "nombre": "pesos-mxfp4.gguf.enc.part-02",
+          "bytes": 1572864000,
+          "sha256_publicado": "4e819e44312073a834467bed5cf5e0686c65952e1c74c68b5be52b56384f6335",
+          "url": "https://github.com/juantoniolloretegea/SV-motor/releases/download/gpt-oss-archivo-cierre-20260926-v1/pesos-mxfp4.gguf.enc.part-02"
+        },
+        {
+          "nombre": "pesos-mxfp4.gguf.enc.part-03",
+          "bytes": 1572864000,
+          "sha256_publicado": "517187858059736052f20c11da6ebc79ff46870fc042154a054cdff1c987e83d",
+          "url": "https://github.com/juantoniolloretegea/SV-motor/releases/download/gpt-oss-archivo-cierre-20260926-v1/pesos-mxfp4.gguf.enc.part-03"
+        },
+        {
+          "nombre": "pesos-mxfp4.gguf.enc.part-04",
+          "bytes": 1572864000,
+          "sha256_publicado": "cfb6e4457a4b544d03f457eda9d077a8d5858be5fd95a8a94d290cb35896bc20",
+          "url": "https://github.com/juantoniolloretegea/SV-motor/releases/download/gpt-oss-archivo-cierre-20260926-v1/pesos-mxfp4.gguf.enc.part-04"
+        },
+        {
+          "nombre": "pesos-mxfp4.gguf.enc.part-05",
+          "bytes": 1572864000,
+          "sha256_publicado": "3cb7475a80e7aa39a31c22b7b93818de2996ef54d6bc5929ece97d980ceecca6",
+          "url": "https://github.com/juantoniolloretegea/SV-motor/releases/download/gpt-oss-archivo-cierre-20260926-v1/pesos-mxfp4.gguf.enc.part-05"
+        },
+        {
+          "nombre": "pesos-mxfp4.gguf.enc.part-06",
+          "bytes": 1572864000,
+          "sha256_publicado": "3a45c0c6047a79a2059ce2f17a6e0d7b390f4873c457a984ab2f1cbd0331082f",
+          "url": "https://github.com/juantoniolloretegea/SV-motor/releases/download/gpt-oss-archivo-cierre-20260926-v1/pesos-mxfp4.gguf.enc.part-06"
+        },
+        {
+          "nombre": "pesos-mxfp4.gguf.enc.part-07",
+          "bytes": 1099518656,
+          "sha256_publicado": "699f8f52b91b6a648458ffd665d73ebef46a92dcfe5f9e2085a7d1b3337a68e0",
+          "url": "https://github.com/juantoniolloretegea/SV-motor/releases/download/gpt-oss-archivo-cierre-20260926-v1/pesos-mxfp4.gguf.enc.part-07"
+        }
+      ],
+      "alcance_activos": "Seleccion de archivos de distribucion, imagenes, pesos cifrados y manifiestos; no inventario de todos los activos",
+      "integridad_en_esta_revision": "Metadatos publicados consultados; activos binarios no descargados ni huellas recalculadas"
+    },
+    {
+      "modelo": "Qwen/Qwen3.8-27B",
+      "naturaleza": "archivo_conservacion",
+      "etiqueta": "qwen38-27b-archivo-cierre-20260927-v1",
+      "fecha_publicacion_utc": "2026-09-27T07:44:51Z",
+      "preliminar": true,
+      "commit_etiqueta": "9d99df038657cd85eb1e50b9223bf5e351031f74",
+      "url": "https://github.com/juantoniolloretegea/SV-motor/releases/tag/qwen38-27b-archivo-cierre-20260927-v1",
+      "activos_identificacion": [
+        {
+          "nombre": "ARCHIVOS.sha256",
+          "bytes": 201,
+          "sha256_publicado": "48661f5315c9b05ff7c6d06fc774e0b98fcec9c48791d8e690a2ad72780960c8",
+          "url": "https://github.com/juantoniolloretegea/SV-motor/releases/download/qwen38-27b-archivo-cierre-20260927-v1/ARCHIVOS.sha256"
+        },
+        {
+          "nombre": "MANIFIESTO.json",
+          "bytes": 1790,
+          "sha256_publicado": "e2ab57ff44289e6e49284f3945fbe3ae15f0eb5fd3b69f1c429319661c199fef",
+          "url": "https://github.com/juantoniolloretegea/SV-motor/releases/download/qwen38-27b-archivo-cierre-20260927-v1/MANIFIESTO.json"
+        },
+        {
+          "nombre": "qwen38-cierre-20260927.raw.gz.enc",
+          "bytes": 1423503824,
+          "sha256_publicado": "893ec02b64251dfc4c28aa3901e2730c63f56677fd3c66e0fd3105385de3be0d",
+          "url": "https://github.com/juantoniolloretegea/SV-motor/releases/download/qwen38-27b-archivo-cierre-20260927-v1/qwen38-cierre-20260927.raw.gz.enc"
+        },
+        {
+          "nombre": "qwen38-sistema-20260926.raw.gz.enc",
+          "bytes": 1294785680,
+          "sha256_publicado": "8f13a87fe5c329e7bef2abdc0cb69572e1c6d5f794589e71d96feeb687431b6f",
+          "url": "https://github.com/juantoniolloretegea/SV-motor/releases/download/qwen38-27b-archivo-cierre-20260927-v1/qwen38-sistema-20260926.raw.gz.enc"
+        }
+      ],
+      "alcance_activos": "Seleccion de archivos de distribucion, imagenes, pesos cifrados y manifiestos; no inventario de todos los activos",
+      "integridad_en_esta_revision": "Metadatos publicados consultados; activos binarios no descargados ni huellas recalculadas"
+    }
+  ],
+  "historial_documental_anterior": {
+    "numero_revisiones": 30,
+    "orden": "cronologico_por_fecha_commit",
+    "fuente": "https://api.github.com/repos/juantoniolloretegea/SV-motor/commits?path=laboratorio/ensayo-ia-y-observabilidad/README.md&per_page=40",
+    "reglas": [
+      "Se conservan saltos y repeticiones de la numeracion historica.",
+      "La fecha de cabecera no se sustituye por la del commit.",
+      "La revision exacta se identifica por commit y blob, no solo por la edicion declarada."
+    ],
+    "revisiones": [
+      {
+        "edicion_declarada": "0.1",
+        "linea_declarada": "**Versión documental:** 0.1  ",
+        "fecha_commit_utc": "2026-09-18T10:00:48Z",
+        "commit": "875a3df0f2e07fb3c71f98d7fd6968ccae54af24",
+        "blob_git": "5cc1e1a89972d35dcdb6a28d3f0e32106ed33364",
+        "url": "https://github.com/juantoniolloretegea/SV-motor/blob/875a3df0f2e07fb3c71f98d7fd6968ccae54af24/laboratorio/ensayo-ia-y-observabilidad/README.md"
+      },
+      {
+        "edicion_declarada": "0.2",
+        "linea_declarada": "**Versión documental:** 0.2  ",
+        "fecha_commit_utc": "2026-09-18T10:26:35Z",
+        "commit": "e1caf6df5bef2696f20d2b9fc5a5b5e9cffe509e",
+        "blob_git": "5806579975ad0e7a2e1c4e8dbb13e6d4796bfb76",
+        "url": "https://github.com/juantoniolloretegea/SV-motor/blob/e1caf6df5bef2696f20d2b9fc5a5b5e9cffe509e/laboratorio/ensayo-ia-y-observabilidad/README.md"
+      },
+      {
+        "edicion_declarada": "0.2",
+        "linea_declarada": "**Versión documental:** 0.2  ",
+        "fecha_commit_utc": "2026-09-20T08:26:02Z",
+        "commit": "ee2946062f878282513b519e467cb6bfbb8a05d1",
+        "blob_git": "2aaa170cf6a5bdf2ca331a68ed28ecc6d90363c5",
+        "url": "https://github.com/juantoniolloretegea/SV-motor/blob/ee2946062f878282513b519e467cb6bfbb8a05d1/laboratorio/ensayo-ia-y-observabilidad/README.md"
+      },
+      {
+        "edicion_declarada": "0.2",
+        "linea_declarada": "**Versión documental:** 0.2  ",
+        "fecha_commit_utc": "2026-09-20T09:45:07Z",
+        "commit": "966b4b23326312371ad0512ef586c8d9ea401c6b",
+        "blob_git": "7b5bb9bc9e3c37346efedeb5e849a3285bbfe5c2",
+        "url": "https://github.com/juantoniolloretegea/SV-motor/blob/966b4b23326312371ad0512ef586c8d9ea401c6b/laboratorio/ensayo-ia-y-observabilidad/README.md"
+      },
+      {
+        "edicion_declarada": "0.2",
+        "linea_declarada": "**Versión documental:** 0.2  ",
+        "fecha_commit_utc": "2026-09-20T10:17:47Z",
+        "commit": "4c68db73b48962bb185a523c1de34da85678d375",
+        "blob_git": "ea2cae7011ec02edd95ee12b5d28c6f40db27abc",
+        "url": "https://github.com/juantoniolloretegea/SV-motor/blob/4c68db73b48962bb185a523c1de34da85678d375/laboratorio/ensayo-ia-y-observabilidad/README.md"
+      },
+      {
+        "edicion_declarada": "0.2",
+        "linea_declarada": "**Versión documental:** 0.2  ",
+        "fecha_commit_utc": "2026-09-20T10:51:03Z",
+        "commit": "8744e3daf0c03f3675954ff774603454e44bfc45",
+        "blob_git": "8128cde91c79582e122067a62b8b92d34b312c7b",
+        "url": "https://github.com/juantoniolloretegea/SV-motor/blob/8744e3daf0c03f3675954ff774603454e44bfc45/laboratorio/ensayo-ia-y-observabilidad/README.md"
+      },
+      {
+        "edicion_declarada": "0.2",
+        "linea_declarada": "**Versión documental:** 0.2  ",
+        "fecha_commit_utc": "2026-09-20T11:28:36Z",
+        "commit": "dde1a59fcd1bb23d9f146dff4e99750725ffa76f",
+        "blob_git": "e0839a7420a23dcf92bf76feb552f7c7536aa666",
+        "url": "https://github.com/juantoniolloretegea/SV-motor/blob/dde1a59fcd1bb23d9f146dff4e99750725ffa76f/laboratorio/ensayo-ia-y-observabilidad/README.md"
+      },
+      {
+        "edicion_declarada": "2.0",
+        "linea_declarada": "**Versión documental:** 2.0  ",
+        "fecha_commit_utc": "2026-09-20T17:26:32Z",
+        "commit": "29a0dbe74018807fddf5759f30de12ac29c162bb",
+        "blob_git": "45b5b5ef1d024a5eca4008d7065660b4287d16af",
+        "url": "https://github.com/juantoniolloretegea/SV-motor/blob/29a0dbe74018807fddf5759f30de12ac29c162bb/laboratorio/ensayo-ia-y-observabilidad/README.md"
+      },
+      {
+        "edicion_declarada": "2.1",
+        "linea_declarada": "**Versión documental:** 2.1  ",
+        "fecha_commit_utc": "2026-09-20T17:32:47Z",
+        "commit": "88ea2e6b1e28b5c1ff22d29da7003c854bb8461d",
+        "blob_git": "50bc08f4aa2c9edeb03ee450f5e8450dc4748be1",
+        "url": "https://github.com/juantoniolloretegea/SV-motor/blob/88ea2e6b1e28b5c1ff22d29da7003c854bb8461d/laboratorio/ensayo-ia-y-observabilidad/README.md"
+      },
+      {
+        "edicion_declarada": "2.2",
+        "linea_declarada": "**Versión documental:** 2.2  ",
+        "fecha_commit_utc": "2026-09-20T17:39:05Z",
+        "commit": "1b9190d1e146ef61599783191019c060d0ff899c",
+        "blob_git": "6652d9ee55ce02767b920cced62f2d221b1ccaa3",
+        "url": "https://github.com/juantoniolloretegea/SV-motor/blob/1b9190d1e146ef61599783191019c060d0ff899c/laboratorio/ensayo-ia-y-observabilidad/README.md"
+      },
+      {
+        "edicion_declarada": "2.2.1",
+        "linea_declarada": "**Versión documental:** 2.2.1  ",
+        "fecha_commit_utc": "2026-09-20T17:50:01Z",
+        "commit": "078aa80d7e530eb4e38c582ea5a305202f12160a",
+        "blob_git": "c9a8f450720b3347bca536d20275079d055de52d",
+        "url": "https://github.com/juantoniolloretegea/SV-motor/blob/078aa80d7e530eb4e38c582ea5a305202f12160a/laboratorio/ensayo-ia-y-observabilidad/README.md"
+      },
+      {
+        "edicion_declarada": "2.2.1",
+        "linea_declarada": "**Versión documental:** 2.2.1  ",
+        "fecha_commit_utc": "2026-09-20T18:00:11Z",
+        "commit": "3d185b27c6bb728f1b23509d53dc6ad99c52883d",
+        "blob_git": "478ec2adffbbe5195b87f70010c68dae7213b0bb",
+        "url": "https://github.com/juantoniolloretegea/SV-motor/blob/3d185b27c6bb728f1b23509d53dc6ad99c52883d/laboratorio/ensayo-ia-y-observabilidad/README.md"
+      },
+      {
+        "edicion_declarada": "2.3",
+        "linea_declarada": "**Versión documental:** 2.3  ",
+        "fecha_commit_utc": "2026-09-20T18:10:24Z",
+        "commit": "057dba8a4a1fd2774e35f61e6135fd096679502a",
+        "blob_git": "863c026f36455914f9efcf249fb17a9928b5d9c1",
+        "url": "https://github.com/juantoniolloretegea/SV-motor/blob/057dba8a4a1fd2774e35f61e6135fd096679502a/laboratorio/ensayo-ia-y-observabilidad/README.md"
+      },
+      {
+        "edicion_declarada": "2.4",
+        "linea_declarada": "**Edición documental:** 2.4 · 22 de septiembre de 2026.  ",
+        "fecha_commit_utc": "2026-09-22T17:47:27Z",
+        "commit": "a14ea31b3903d49a98f08b912206b1c8c9eeaf74",
+        "blob_git": "d446e21de27fb900465226d8bb7ab2675a9a1cee",
+        "url": "https://github.com/juantoniolloretegea/SV-motor/blob/a14ea31b3903d49a98f08b912206b1c8c9eeaf74/laboratorio/ensayo-ia-y-observabilidad/README.md"
+      },
+      {
+        "edicion_declarada": "2.5",
+        "linea_declarada": "**Edición documental:** 2.5 · 22 de septiembre de 2026.  ",
+        "fecha_commit_utc": "2026-09-22T19:15:58Z",
+        "commit": "511969f4ba576734f4bf96e39eed3e90d5dd02d5",
+        "blob_git": "8b44e062dbc583cefbf17f68d32eb055b9209bbe",
+        "url": "https://github.com/juantoniolloretegea/SV-motor/blob/511969f4ba576734f4bf96e39eed3e90d5dd02d5/laboratorio/ensayo-ia-y-observabilidad/README.md"
+      },
+      {
+        "edicion_declarada": "2.5",
+        "linea_declarada": "**Edición documental:** 2.5 · 22 de septiembre de 2026.  ",
+        "fecha_commit_utc": "2026-09-23T06:50:57Z",
+        "commit": "41c99e2a6b68382e7ba867ff55aa3a1fcc07676c",
+        "blob_git": "5f6daf4790e64d2ce45f1d2922ea97c7b9d1e8bf",
+        "url": "https://github.com/juantoniolloretegea/SV-motor/blob/41c99e2a6b68382e7ba867ff55aa3a1fcc07676c/laboratorio/ensayo-ia-y-observabilidad/README.md"
+      },
+      {
+        "edicion_declarada": "2.5",
+        "linea_declarada": "**Edición documental:** 2.5 · 22 de septiembre de 2026.  ",
+        "fecha_commit_utc": "2026-09-23T07:21:06Z",
+        "commit": "4fafb8ccf158a028820168ab7f7b822c608ee6ba",
+        "blob_git": "5848be81109d7b524be91a070593003f36e8dec1",
+        "url": "https://github.com/juantoniolloretegea/SV-motor/blob/4fafb8ccf158a028820168ab7f7b822c608ee6ba/laboratorio/ensayo-ia-y-observabilidad/README.md"
+      },
+      {
+        "edicion_declarada": "2.6",
+        "linea_declarada": "**Edición documental:** 2.6 · 23 de septiembre de 2026.  ",
+        "fecha_commit_utc": "2026-09-23T09:52:34Z",
+        "commit": "8cddcc83359bf6733a360d5bba2cd72426f8b631",
+        "blob_git": "0210b81256052affe0ab6e6af14ef218b095a912",
+        "url": "https://github.com/juantoniolloretegea/SV-motor/blob/8cddcc83359bf6733a360d5bba2cd72426f8b631/laboratorio/ensayo-ia-y-observabilidad/README.md"
+      },
+      {
+        "edicion_declarada": "2.7",
+        "linea_declarada": "**Edición documental 2.7 · 23 de septiembre de 2026.**",
+        "fecha_commit_utc": "2026-09-23T10:34:27Z",
+        "commit": "bf488a86dcb1a311ddf4355345e267901adad7c9",
+        "blob_git": "e70aee668bcc39f41c2796151a4fa6ce4e4d5b68",
+        "url": "https://github.com/juantoniolloretegea/SV-motor/blob/bf488a86dcb1a311ddf4355345e267901adad7c9/laboratorio/ensayo-ia-y-observabilidad/README.md"
+      },
+      {
+        "edicion_declarada": "2.7",
+        "linea_declarada": "**Edición documental 2.7 · 23 de septiembre de 2026.**",
+        "fecha_commit_utc": "2026-09-23T11:28:54Z",
+        "commit": "810a476488deb8dfb22585a51c91aee89d75ba0c",
+        "blob_git": "c7a52fc943dbe4f1119c5e0170f353665ac72e17",
+        "url": "https://github.com/juantoniolloretegea/SV-motor/blob/810a476488deb8dfb22585a51c91aee89d75ba0c/laboratorio/ensayo-ia-y-observabilidad/README.md"
+      },
+      {
+        "edicion_declarada": "2.8",
+        "linea_declarada": "**Edición documental 2.8 · 23 de septiembre de 2026.**",
+        "fecha_commit_utc": "2026-09-23T13:33:39Z",
+        "commit": "250c3e27784d36f347e9ac0aefa5b53e6cc46c98",
+        "blob_git": "7b33ff5157acb3af2409c684ac4194d5e08c7ef0",
+        "url": "https://github.com/juantoniolloretegea/SV-motor/blob/250c3e27784d36f347e9ac0aefa5b53e6cc46c98/laboratorio/ensayo-ia-y-observabilidad/README.md"
+      },
+      {
+        "edicion_declarada": "2.9",
+        "linea_declarada": "**Edición documental 2.9 · 23 de septiembre de 2026.**",
+        "fecha_commit_utc": "2026-09-23T18:12:54Z",
+        "commit": "ae9ceaef37e18d9cc12e25ea0369e4ebf58d9fb8",
+        "blob_git": "cd675bf371f9e6b822d59e160b717eab150face8",
+        "url": "https://github.com/juantoniolloretegea/SV-motor/blob/ae9ceaef37e18d9cc12e25ea0369e4ebf58d9fb8/laboratorio/ensayo-ia-y-observabilidad/README.md"
+      },
+      {
+        "edicion_declarada": "2.10",
+        "linea_declarada": "**Edición documental 2.10 · 23 de septiembre de 2026.**",
+        "fecha_commit_utc": "2026-09-23T21:26:08Z",
+        "commit": "f3746b719a3e355d75ea566d3d3abde2b6ea9e0e",
+        "blob_git": "27135ded8d0533d6a7b196d9f68dfa1ec0ee713d",
+        "url": "https://github.com/juantoniolloretegea/SV-motor/blob/f3746b719a3e355d75ea566d3d3abde2b6ea9e0e/laboratorio/ensayo-ia-y-observabilidad/README.md"
+      },
+      {
+        "edicion_declarada": "2.11",
+        "linea_declarada": "**Edición documental 2.11 · 24 de septiembre de 2026.**",
+        "fecha_commit_utc": "2026-09-24T11:08:30Z",
+        "commit": "a74632b0b6dde70629863113134082dc3f31d521",
+        "blob_git": "44045f31903e328dd9f608a1bd2633784cd3cccf",
+        "url": "https://github.com/juantoniolloretegea/SV-motor/blob/a74632b0b6dde70629863113134082dc3f31d521/laboratorio/ensayo-ia-y-observabilidad/README.md"
+      },
+      {
+        "edicion_declarada": "2.12",
+        "linea_declarada": "**Edición documental 2.12 · 24 de septiembre de 2026.**",
+        "fecha_commit_utc": "2026-09-24T11:44:44Z",
+        "commit": "70750a516001cf13314176c529508d0712b7f3c1",
+        "blob_git": "a4faffd95c3c8f0b95b12b9445ba81e84d6efb1b",
+        "url": "https://github.com/juantoniolloretegea/SV-motor/blob/70750a516001cf13314176c529508d0712b7f3c1/laboratorio/ensayo-ia-y-observabilidad/README.md"
+      },
+      {
+        "edicion_declarada": "2.13",
+        "linea_declarada": "**Edición documental 2.13 · 24 de septiembre de 2026.**",
+        "fecha_commit_utc": "2026-09-24T12:39:43Z",
+        "commit": "d4e62b29713a2044be0d1d4a7fb463155d3999c3",
+        "blob_git": "99ee50316d5ee0c277d5e8d58081f8fb57265a4c",
+        "url": "https://github.com/juantoniolloretegea/SV-motor/blob/d4e62b29713a2044be0d1d4a7fb463155d3999c3/laboratorio/ensayo-ia-y-observabilidad/README.md"
+      },
+      {
+        "edicion_declarada": "2.13",
+        "linea_declarada": "**Edición documental 2.13 · 24 de septiembre de 2026.**",
+        "fecha_commit_utc": "2026-09-25T11:04:37Z",
+        "commit": "ab713cdc73d6a55184d52c03b99745c99a1ced64",
+        "blob_git": "d933e4f731a5480448352d901f9480b4f8435543",
+        "url": "https://github.com/juantoniolloretegea/SV-motor/blob/ab713cdc73d6a55184d52c03b99745c99a1ced64/laboratorio/ensayo-ia-y-observabilidad/README.md"
+      },
+      {
+        "edicion_declarada": "2.13",
+        "linea_declarada": "**Edición documental 2.13 · 24 de septiembre de 2026.**",
+        "fecha_commit_utc": "2026-09-25T11:19:38Z",
+        "commit": "c3b279309c3ca54db6e94a693795b4367083cf0c",
+        "blob_git": "b43f392f2fc81811df48ec51ce0e7e16d4d3f8bb",
+        "url": "https://github.com/juantoniolloretegea/SV-motor/blob/c3b279309c3ca54db6e94a693795b4367083cf0c/laboratorio/ensayo-ia-y-observabilidad/README.md"
+      },
+      {
+        "edicion_declarada": "2.14",
+        "linea_declarada": "**Edición documental 2.14 · 27 de septiembre de 2026.**",
+        "fecha_commit_utc": "2026-09-27T07:41:43Z",
+        "commit": "3f24439cccb8c677c18e6ea2b2b4f13adf7a95ae",
+        "blob_git": "33fbad10895aee4ed15cd560ebae9e3965b82e72",
+        "url": "https://github.com/juantoniolloretegea/SV-motor/blob/3f24439cccb8c677c18e6ea2b2b4f13adf7a95ae/laboratorio/ensayo-ia-y-observabilidad/README.md"
+      },
+      {
+        "edicion_declarada": "2.14",
+        "linea_declarada": "**Edición documental 2.14 · 27 de septiembre de 2026.**",
+        "fecha_commit_utc": "2026-09-27T07:42:40Z",
+        "commit": "9d99df038657cd85eb1e50b9223bf5e351031f74",
+        "blob_git": "fe987a60610624b8a35bde5d8118a84c5479b366",
+        "url": "https://github.com/juantoniolloretegea/SV-motor/blob/9d99df038657cd85eb1e50b9223bf5e351031f74/laboratorio/ensayo-ia-y-observabilidad/README.md"
+      }
+    ]
+  },
+  "limites_auditoria": {
+    "cotejo": "Metadatos GitHub, versiones declaradas en Cargo y fichas; sin ejecucion de software",
+    "descarga_binarios": false,
+    "recalculo_sha256_binarios": false,
+    "dictamen_modelos_modificado": false,
+    "aceptacion_mcp": false,
+    "control_remoto_servidor": false
+  }
+}

@@ -1,44 +1,72 @@
 # Ensayo de inteligencia artificial y observabilidad
 
-**Estado vigente · 27/09/2026.** [Qwen3.8-27B](modelos-de-ia/qwen/qwen3.8-27b/README.md): selección actual cerrada con dictamen **NO PASA**, seguimiento y dos imágenes cifradas conservados. [GPT-OSS: archivo de cierre del 26/09](modelos-de-ia/openai/gpt-oss-20b/imagen-onecloud/cierre-20260926): campaña archivada; no se acredita aptitud clínica. Los apartados fechados anteriormente documentan antecedentes y no describen la disponibilidad actual de los servicios.
+**Edición documental 2.15 · 27 de septiembre de 2026.**
 
-## Estado vigente · 27/09/2026
+<a id="objeto-y-criterio-experimental"></a>
 
-La continuación se concentra en **GPT-OSS-120B, vía B nativa en CPU**. Se prepara la comprobación de compatibilidad, recursos y configuración; no hay instalación ni inferencia del nuevo candidato acreditada. [Ficha del candidato](modelos-de-ia/openai/gpt-oss-120b/README.md) · [TT-0015](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0015.md).
+Investigación experimental sobre ejecución nativa de modelos auxiliares, fidelidad documental, control y observación mediante Rust. Pertenece a la investigación lateral (p1+P3)-Bis y mantiene evaluaciones diferenciadas para inmunología y ciberseguridad. Las propuestas del modelo carecen de autoridad para modificar el conocimiento admitido o las decisiones del SV.
 
-La configuración GPT-OSS-20B conserva su [cierre para la función médica prevista](modelos-de-ia/openai/gpt-oss-20b/README.md). La selección mínima Qwen3.8-27B concluyó con **No pasa**: hubo respuesta final en 227 segundos, pero no se cumplieron todos los requisitos documentales. Ese dictamen corresponde a la configuración examinada. [Expediente restringido](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/7a116cddac3f0b98bdc52fb84e1ed1e0f2b23791/respuestas-ejecucion/QWEN38-SELECCION-MINIMA-LOCAL-20260927/entrega-01/INFORME.md). Los resultados anteriores se conservan y no se reabren.
+Esta página reúne el estado de los candidatos, la secuencia de publicaciones, las versiones de los componentes y sus límites. El [registro estructurado de versiones](VERSIONES.json) fija las referencias por commit y distingue fuentes, distribuciones y archivos de conservación.
 
-El [servicio documental MCP 0.1.2](modelos-de-ia/model-context-protocol/0.1.2/LEAME.md) permanece como componente experimental. Su recepción en TT-0014 y la selección de un modelo son juicios separados. Inmunología y ciberseguridad mantienen casos, fuentes y criterios propios.
+**Consulta:** [estado actual](#estado-actual) · [publicaciones](#publicaciones-en-orden-cronológico) · [componentes](#versiones-de-los-componentes) · [vías y diagramas](#vías-de-ejecución-y-diagramas) · [trazabilidad](#trazabilidad-y-criterios-de-lectura).
 
-**Condición para la vía A:** primero obtener Apto en la selección experimental nativa y, después, autorizar el estudio específico de navegador/WebAssembly. La carga del modelo no satisface esta condición. Ningún resultado de esta fase habilita integración nuclear o uso clínico.
+<a id="estado-vigente--27092026"></a>
 
-**Seguimiento:** S39; Acta 004 §23; TT-0015; RETP-2026-276. La documentación histórica siguiente conserva las fechas, medidas y límites de cada campaña.
+## Estado actual
 
-**Cierre experimental histórico · 25/09/2026:** [GPT-OSS 0.2.4-beta.1: prospecto técnico](modelos-de-ia/openai/gpt-oss-20b/distribucion/0.2.4-beta.1/FICHA_TECNICA.md), [resultados y límites](modelos-de-ia/openai/gpt-oss-20b/distribucion/0.2.4-beta.1/RESULTADOS.md) e [instrucciones de conservación e instalación](modelos-de-ia/openai/gpt-oss-20b/distribucion/0.2.4-beta.1/LEAME.md). Aplicación nativa CPU conservada en OneCloud; doce condiciones documentales conformes en un ámbito de cinco parámetros y doce consultas sintéticas de tricoleucemia con evaluación inicial adversa o pendiente de revisión. La conformidad técnica no acredita aptitud clínica. Fuentes de aplicación 0.2.4; rótulo interno 0.2.2 documentado. Los pesos se obtienen separadamente mediante revisión y SHA-256 fijados. [Entrega preliminar](https://github.com/juantoniolloretegea/SV-motor/releases/tag/gpt-oss-conversacion-v0.2.4-beta.1).
+La continuación corresponde a **GPT-OSS-120B en la vía B nativa CPU**. Su compatibilidad, dimensionamiento y selección permanecen pendientes de resultado. No hay inferencia del nuevo candidato acreditada en este corte.
 
-**Trazabilidad del cierre:** [TT-0013](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/b1d826981a329f0d3e1295e8989268ca349acf0f/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0013.md), S39 revisión 22 y Acta 004 §22; RETP-2026-275 y PTA-2026-017.
+| Modelo o configuración | Resultado conservado | Situación |
+|---|---|---|
+| [Qwen3-0.6B · Q4_K_M](modelos-de-ia/qwen/qwen3-0.6b/README.md) | Inferencia nativa y controles parciales; cuatro consultas DOC-01 terminadas, sin conformidad contractual completa. | Campaña cerrada con limitaciones. |
+| [GPT-OSS-20B · MXFP4](modelos-de-ia/openai/gpt-oss-20b/README.md) | Funcionamiento técnico y bancos documentales conservados; la evaluación médica no acreditó la función prevista. | Configuración excluida de esa selección; archivo conservado. |
+| [Qwen3.8-27B](modelos-de-ia/qwen/qwen3.8-27b/README.md) | Respuesta final completa en la selección mínima, con omisión material y deficiencias de citas y localización. | **No pasa**; configuración retirada de la selección actual. |
+| [GPT-OSS-120B](modelos-de-ia/openai/gpt-oss-120b/README.md) | Preparación y comprobación preliminar; sin resultado de selección. | Candidato, pendiente. |
 
-Este apartado conserva la recepción del 25/09/2026. El estado actual se recoge al comienzo de este documento; no se reabren las campañas cerradas.
+Los juicios se refieren a configuraciones y bancos concretos; no califican a una familia completa ni se suman como una tasa general de acierto. El [catálogo de modelos](modelos-de-ia/README.md) conserva también los estudios documentales sin inferencia.
 
+El MCP documental tiene seguimiento propio. Sus controles instrumentales no convierten un modelo en apto ni prueban que sus afirmaciones estén sustentadas por las citas.
 
-**Recepción histórica · optimización CPU y residencia · 24/09/2026:** [Informe, fuentes y originales](modelos-de-ia/openai/gpt-oss-20b/resultados/onecloud-2026-09-24/optimizacion/RESULTADO.md). Cinco casos correctos y mediana de 94,002 a 18,168 segundos en el mismo ejecutable. Criterio acotado cumplido dentro de la primera ventana; llama.cpp no activado. Servicios del ensayo detenidos. S39 revisión 18; Acta004 §18; RETP-2026-271; PTA-2026-013; PTA-SVM-004. Los cortes anteriores conservan su carácter histórico; calidad general y conversación integrada siguen pendientes.
+**Secuencia vigente:** selección nativa B → Apto en el alcance experimental → posible autorización de un ensayo A/WebAssembly. Cargar el modelo no satisface la selección. La aptitud clínica general, el uso productivo y la integración en el núcleo requieren decisiones y evidencia propias.
 
+<a id="versión-distribuida"></a>
 
-**Edición documental 2.14 · 27 de septiembre de 2026.**
+## Publicaciones en orden cronológico
 
-Estudio experimental de la ejecución de modelos auxiliares de inteligencia artificial, su supervisión y la conservación verificable de entradas y resultados. Se desarrolla mediante componentes Rust y pertenece a la investigación lateral (p1+P3)-Bis del Lenguaje SV.
+Se han cotejado **cinco publicaciones preliminares**: dos distribuciones de aplicaciones y tres archivos de conservación. Las revisiones `v1` de los archivos identifican cada paquete fechado; no son versiones sucesoras de la aplicación ni nuevos modelos.
 
-**Estado histórico del corte anterior:** campaña Qwen/B **concluida como realización parcial con limitaciones identificadas**. gpt-oss-20b con primera respuesta aritmética correcta de la candidata CPU en OneCloud y contraste adverso del ejecutable anterior. Ninguno de estos resultados acredita la conformidad integral de la vía B.
+| Fecha | Publicación | Objeto y alcance |
+|---|---|---|
+| 22/09/2026 | [EIO conversación 0.1.3-beta.1](https://github.com/juantoniolloretegea/SV-motor/releases/tag/eio-conversacion-v0.1.3-beta.1) | Aplicación nativa para Qwen3-0.6B: binario, fuentes, ficha, licencias y manifiesto. Pesos externos identificados. |
+| 25/09/2026 | [GPT-OSS conversación 0.2.4-beta.1](https://github.com/juantoniolloretegea/SV-motor/releases/tag/gpt-oss-conversacion-v0.2.4-beta.1) | Aplicación nativa y motor para GPT-OSS-20B, con resultados y límites. No acredita aptitud clínica. |
+| 25/09/2026 | [GPT-OSS: imagen de recuperación, v1](https://github.com/juantoniolloretegea/SV-motor/releases/tag/gpt-oss-imagen-onecloud-20260925-v1) | Archivo cifrado de recuperación. La restitución funcional comprobada corresponde a esta imagen y a su procedimiento. |
+| 26/09/2026 | [GPT-OSS: archivo de cierre, v1](https://github.com/juantoniolloretegea/SV-motor/releases/tag/gpt-oss-archivo-cierre-20260926-v1) | Archivo posterior de la campaña. Esta imagen no hereda la comprobación de arranque de la imagen anterior. |
+| 27/09/2026 | [Qwen3.8-27B: archivo de cierre, v1](https://github.com/juantoniolloretegea/SV-motor/releases/tag/qwen38-27b-archivo-cierre-20260927-v1) | Reúne las imágenes del 26 y 27 de septiembre, sin pesos del modelo. No se ha acreditado su arranque en una instancia restaurada. |
 
-**Recepción histórica OC01/OC02 · 24/09/2026:** [OC-01 y OC-02, originales y límites](modelos-de-ia/openai/gpt-oss-20b/resultados/onecloud-2026-09-24/RESULTADO.md). «Hay cinco elementos en total.»; parada comprobada. Objetivo material de TT-0012 conseguido con alcance limitado. S39 revisión 17; rendimiento, tareas amplias e integración pendientes. Los apartados posteriores conservan los cortes históricos que identifican; sus pendientes se interpretan conforme al estado vigente indicado al comienzo.
+Cada publicación conserva su etiqueta, commit de referencia, activos y manifiestos. El último archivo de una campaña no borra los anteriores ni modifica su dictamen. Los activos cifrados preservan contenido de acceso restringido; su publicación no concede acceso a ese contenido.
 
-## Objeto y criterio experimental
+MCP 0.1.0–0.1.2 se conserva en directorios versionados, sin release específico en el corte consultado. GPT-OSS-120B todavía no tiene distribución o imagen publicada en este ensayo.
 
-El ensayo aporta evidencia para definir contratos, controles, semántica y representación intermedia del Lenguaje SV. Se distinguen cuatro juicios: qué propone el modelo, si la ejecución es técnicamente admisible, si el contenido satisface su contrato y si una operación está autorizada. Una respuesta generada no concede permisos ni modifica el conocimiento canónico.
+<a id="composición-de-la-conversación-qwen"></a>
 
-El [contrato experimental](contrato/README.md) identifica las obligaciones y fuentes rectoras. Las pruebas conservan la configuración, las entradas efectivamente suministradas, el resultado y el alcance de la observación. La instrumentación cubre las operaciones declaradas; no representa una observación exhaustiva del sistema.
+## Versiones de los componentes
 
-## Dos vías de ejecución
+| Componente | Versión o referencia | Estatuto |
+|---|---|---|
+| EIO conversación para Qwen3-0.6B | **0.1.3**, distribuida como **0.1.3-beta.1** | Aplicación de la campaña conservada. |
+| Fuentes candidatas de EIO conversación | [0.1.4](conversacion-nativa/verificacion-0.1.4/INFORME.md) | Verificación local documentada; no sustituyen la distribución 0.1.3-beta.1 ni acreditan una nueva inferencia. |
+| EIO conversación para GPT-OSS-20B | [0.2.4, distribuida como 0.2.4-beta.1](modelos-de-ia/openai/gpt-oss-20b/distribucion/0.2.4-beta.1/FICHA_TECNICA.md) | Fuentes y ejecutable identificados. El rótulo interno 0.2.2 es una discrepancia documentada, no otra entrega. |
+| Servicio documental MCP | [0.1.0](modelos-de-ia/model-context-protocol/0.1.0/README.md) | Antecedente conservado con preparación incompleta. |
+| Servicio documental MCP | [0.1.1](modelos-de-ia/model-context-protocol/0.1.1/LEAME.md) | Correcciones de validación, paginación y conservación; controles dirigidos documentados y recepción pendiente. |
+| Servicio documental y cliente local | [0.1.2](modelos-de-ia/model-context-protocol/0.1.2/LEAME.md) | Añade supervisión del cliente mínimo. Este cliente no ofrece herramientas al modelo; no acredita por sí mismo una integración MCP. |
+
+Las versiones se interpretan dentro de su componente. **Qwen3.8-27B** es una identidad de modelo; **0.1.2** puede identificar el componente MCP; **2.15** es exclusivamente la edición de este documento. Los pesos y motores se fijan mediante revisión y huella, no mediante la edición del índice.
+
+Las realizaciones conservadas utilizan Rust 1.98.0. Qwen3-0.6B utiliza Candle; GPT-OSS-20B y Qwen3.8-27B utilizan revisiones identificadas de mistral.rs. OpenTelemetry Rust registra únicamente los puntos instrumentados. Las fichas de cada modelo precisan la composición y sus límites; no se presume equivalencia entre motores o campañas.
+
+<a id="dos-vías-de-ejecución"></a>
+
+## Vías de ejecución y diagramas
 
 | Vía | Lugar de la inferencia | Función del navegador | Alcance |
 |---|---|---|---|
@@ -76,58 +104,41 @@ flowchart TD
   E -->|"Dictamen con alcance"| H
 ```
 
-**Alcance de esta actualización visual:** esquema funcional previsto para el nuevo candidato, pendiente de comprobar e integrar en su realización concreta. El Árbitro SV comprende controles externos al protocolo MCP; no se atribuye aquí una implementación completa. La inferencia carece de acceso a Internet. La adquisición administrativa de documentos precede al ensayo. Los dos diagramas anteriores se conservan como evidencia de sus respectivos cortes históricos.
+**Alcance de esta actualización visual:** esquema funcional previsto para el nuevo candidato, pendiente de comprobar e integrar en su realización concreta. El Árbitro SV comprende controles externos al protocolo MCP; no se atribuye aquí una implementación completa. La inferencia prevista deberá operar sin acceso a Internet. La adquisición administrativa de documentos precede al ensayo. Los dos diagramas anteriores se conservan como evidencia de sus respectivos cortes históricos.
 
-## Versión distribuida
+<a id="evidencia-y-seguimiento"></a>
 
-**Qwen/B: campaña cerrada.**
+## Trazabilidad y criterios de lectura
 
-La campaña conserva la instalación experimental Qwen3-0.6B, GGUF Q4_K_M, con inferencia CPU mediante Candle. La [entrega EIO conversación 0.1.3-beta.1](https://github.com/juantoniolloretegea/SV-motor/releases/tag/eio-conversacion-v0.1.3-beta.1) identifica el ejecutable, la composición, las licencias y las comprobaciones de esa versión. Permite expedientes, conversaciones, consulta del contexto, cancelación y exportación.
+La secuencia de identificación es **configuración → campaña → resultado → entrega → recepción**. Ninguno de esos objetos sustituye a los restantes.
 
-| Aspecto | Resultado conservado | Límite de la conclusión |
+| Para comprobar | Referencia principal |
+|---|---|
+| Identidad del modelo, motor y condiciones | Ficha de cada modelo, en la tabla de estado actual. |
+| Archivos distribuidos e integridad declarada | Publicación correspondiente, manifiesto y [VERSIONES.json](VERSIONES.json). |
+| Contrato y límites del ensayo | [EIO-CONTRATO-01, revisión 1](contrato/README.md). |
+| Continuidad y dictámenes | [S39](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/sucesos/SUCESOS_SV.md#s39) y [Acta 004](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/continuacion-15-09-2026/ACTA_004_FINALIDAD_ALCANCE_Y_CONTINUIDAD_EIO_2026_09_22.md). |
+| Alcances de los tiques | [TT-0013: cierre GPT-OSS-20B](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0013.md), [TT-0014: MCP](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0014.md) y [TT-0015: nuevo candidato](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0015.md). |
+
+TT-0013 conserva su cierre acotado; TT-0014 requiere recepción propia; TT-0015 permanece pendiente de resultado material. Esta reorganización documental no modifica esos dictámenes.
+
+Los enlaces de las tablas permiten lectura pública de las fichas y los resultados resumidos. Los originales de acceso restringido mantienen su custodia propia. Una huella identifica bytes; no acredita veracidad clínica, restauración funcional o conformidad general. El registro de versiones recoge huellas publicadas: esta revisión documental no ha descargado ni recalculado los grandes activos binarios.
+
+### Historia de la edición documental
+
+| Fechas de las revisiones | Ediciones declaradas | Contenido principal |
 |---|---|---|
-| Conversación nativa | Inferencia, interfaz y conservación comprobadas en la configuración documentada. | Disponibilidad dependiente del servicio y la plataforma; autenticación profesional individual no acreditada. |
-| Calidad del contenido | Resultados adversos y respuestas incorrectas conservados. | Una finalización técnica normal no acredita veracidad ni aptitud clínica. |
-| Consulta documental DOC-01 | Cuatro peticiones completadas; cero aceptaciones del contrato estricto. | El contrato de citas literales no equivale a un verificador general de explicaciones. |
-| Supervisión y observación | Control del hijo, plazos, cancelación, RSS muestreada, trazas y observador Linux. | No acreditan una cuota agregada ni la guarda exterior del diseño. |
-| Custodia y cierre integral | Registros y evidencias de las versiones ensayadas conservados. | Independencia completa de custodia, guarda exterior e integración del recorrido contractual sin acreditar. |
+| 18–20/09/2026 | 0.1 y 0.2 | Apertura del ensayo y delimitación inicial. |
+| 20/09/2026 | 2.0, 2.1, 2.2, 2.2.1 y 2.3 | Organización de las vías y diagramas. |
+| 22–23/09/2026 | 2.4–2.10 | Distribución Qwen y continuación nativa GPT-OSS. |
+| 24–25/09/2026 | 2.11–2.13 | Resultados y cierre experimental GPT-OSS-20B. |
+| 27/09/2026 | 2.14 | Nuevo candidato y documentación del cierre Qwen3.8-27B. |
+| 27/09/2026 | **2.15** | Índice unificado, secuencia de publicaciones y registro estructurado de versiones. |
 
-El [informe de cierre de Qwen/B](resultados/cierre-qwen-b-20260923/INFORME.md) delimita lo demostrado y las limitaciones aceptadas. **La campaña está cerrada; la vía B no se declara plenamente conforme.** Una continuación requiere un objetivo nuevo y concreto, conservando este resultado.
+Se conservan los rótulos históricos, incluido el salto de 0.2 a 2.0. Algunas ediciones abarcan varios commits y mantienen fechas de cabecera anteriores a su última modificación; para recuperar un contenido exacto se utiliza el commit. [VERSIONES.json](VERSIONES.json) enumera las treinta revisiones anteriores localizadas, con su edición declarada y la fecha del commit.
 
-La [candidata conversación 0.1.4](conversacion-nativa/verificacion-0.1.4/INFORME.md) incorpora correcciones verificadas localmente en Rust 1.98.0. No sustituye por sí sola la Beta instalada ni aporta una nueva campaña de inferencia.
-
-## gpt-oss-20b: continuación nativa
-
-La [ficha del modelo](modelos-de-ia/openai/gpt-oss-20b/README.md) identifica los pesos, el motor mistral.rs 0.9.3 y Harmony 0.0.8. Esta instalación utiliza un motor compatible con gpt-oss; no hereda automáticamente la composición de Qwen.
-
-La [continuación GGUF](modelos-de-ia/openai/gpt-oss-20b/resultados/gguf-2026-09-23/RESULTADO.md) consigue cargar las 24 capas en CPU y atender peticiones reales mediante mistral.rs. Se conserva el formato MXFP4 de la conversión identificada de ggml-org. La asignación explícita de capas resuelve el rechazo previo del estimador automático; una corrección del controlador admite el alias del único modelo cargado.
-
-Las peticiones con límites de 96 y 256 tokens finalizan con HTTP 200, pero sin texto final visible. Una muestra de ocho tokens acredita emisión de texto que tampoco alcanza el campo de respuesta final. La carga y la generación están demostradas; una respuesta útil y la integración completa permanecen pendientes. El informe conserva el diagnóstico de precisión, las medidas de memoria, los originales y el alcance de cada resultado. No se atribuyen retrospectivamente las señales de intentos anteriores a una causa no demostrada.
-
-El [controlador instrumental](modelos-de-ia/openai/gpt-oss-20b/controlador-nativo/README.md) y cada candidata conservan su identidad y evidencias. Este recorrido corresponde a la vía B y no acredita ejecución en navegador.
-
-## Composición de la conversación Qwen
-
-| Componente | Identificación | Función |
-|---|---|---|
-| Interfaz | HTML, CSS y JavaScript incluidos en el ejecutable | Presentación, solicitudes y consulta de estado. |
-| Servicio HTTP | Axum 0.8.9, Hyper 1.11.1 y Tokio 1.53.1 | Bibliotecas del proceso servidor. |
-| Modelo | Qwen3-0.6B, GGUF Q4_K_M | Inferencia en CPU; no corresponde a Qwen-Max. |
-| Motor numérico | Candle, revisión `ddf1b879dc3a1760cbcb3f3c4a7c6467850cec4a` | Operaciones de inferencia en el proceso hijo. |
-| Supervisión | Rust 1.98.0 | Admisión de una generación simultánea, plazos, cancelación y RSS muestreada. |
-| Conservación | JSONL y huellas SHA-256 encadenadas | Registro sincronizado y detección de alteraciones, sin sello exterior independiente. |
-| Instrumentación | OpenTelemetry Rust 0.31.0 | Trazas con exportación local; medidas como atributos, sin recolector externo de métricas. |
-| Observador Linux | Proceso Rust separado | Muestreo del servicio y descendientes visibles, con cobertura declarada. |
-
-## Evidencia y seguimiento
-
-- [Catálogo de modelos](modelos-de-ia/README.md) y [aplicación de conversación](conversacion-nativa/README.md).
-- [DOC-01: protocolo](resultados/consulta-documental-01/PROTOCOLO.md) e [informe](resultados/consulta-documental-01/INFORME.md). Utiliza material efectivamente suministrado del universo OP-IMM-001; sus referencias bibliográficas no equivalen al contenido de las obras citadas.
-- [Observabilidad 0.1.3](conversacion-nativa/verificacion-0.1.3/INFORME.md) y [comparación de doce casos 0.1.2](conversacion-nativa/verificacion-0.1.2/INFORME.md), con la atribución de cada evidencia a su versión.
-- [Seguimiento S39](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/sucesos/SUCESOS_SV.md#s39) y [tiques técnicos](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TIQUES_TECNICOS.csv).
-- Ediciones anteriores: [2.3](README_2_3_2026_09_20.md), [2.5](README_2_5_CORTE_2026_09_23.md), [2.6, corte publicado](https://github.com/juantoniolloretegea/SV-motor/blob/8cddcc83359bf6733a360d5bba2cd72426f8b631/laboratorio/ensayo-ia-y-observabilidad/README.md) y [2.9, corte publicado](https://github.com/juantoniolloretegea/SV-motor/blob/29ac0684234ce75e06d4de554fec9258de5ec01e/laboratorio/ensayo-ia-y-observabilidad/README.md).
+La edición 2.15 se limita a organización documental y correspondencia de referencias. No modifica etiquetas, activos, fuentes de software, originales experimentales ni dictámenes. Su identidad exacta es el commit que contiene estos documentos.
 
 ## Licencias
 
-Sistema Vectorial SV · [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/deed.es). Los avisos del SV y las condiciones de terceros se identifican en [AVISO_LICENCIAS.json de Qwen](conversacion-nativa/AVISO_LICENCIAS.json), en el [aviso de gpt-oss-20b y su controlador](modelos-de-ia/openai/gpt-oss-20b/controlador-nativo/AVISO_LICENCIAS.json) y en la composición de cada entrega. Cada componente conserva su licencia; una identificación de versión no amplía derechos de uso o distribución.
-
+Sistema Vectorial SV · [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/deed.es). Se conservan el [aviso de EIO conversación](conversacion-nativa/AVISO_LICENCIAS.json), el [aviso de GPT-OSS y su controlador](modelos-de-ia/openai/gpt-oss-20b/controlador-nativo/AVISO_LICENCIAS.json) y los avisos específicos de cada entrega. Cada componente mantiene su licencia; una publicación no amplía derechos de uso o distribución.
