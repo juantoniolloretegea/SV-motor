@@ -1,6 +1,6 @@
 # Sistema conjunto del Lenguaje SV y la inteligencia artificial gobernada
 
-**Síntesis arquitectónica y de continuidad · Revisión 1 · 27 de septiembre de 2026**
+**Guía de objetivo, arquitectura y continuidad · Revisión 2 · 27 de septiembre de 2026**
 
 **Corte documental:** fuentes públicas consultadas el 27/09/2026; revisiones identificadas en el apartado 10. Esta síntesis relaciona decisiones, realizaciones experimentales y cuestiones pendientes. No introduce reglas de dominio, modifica contratos ni acredita nuevas ejecuciones.
 
@@ -13,6 +13,16 @@ La investigación de inteligencia artificial y observabilidad —EIO, registrada
 La fase **R2**, relativa a persistencia, continuidad y recuperación, conserva su apertura contractual. Su realización material depende del núcleo consolidado y de los contratos necesarios. El contrato **R2-0** permanece como antecedente aplicable; su existencia no demuestra que las garantías de R2 estén ejecutadas. La investigación actual no constituye por sí misma una modificación de la semántica o de la representación intermedia, ni su cierre habilita automáticamente la continuación material. [F01][F01] [F03][F03]
 
 **Criterio arquitectónico:** la IA puede formar parte del sistema gobernado por SV, con funciones explícitas y controles verificables. La inferencia del modelo no adquiere por ello la autoridad del núcleo semántico. La ubicación de un proceso o su pertenencia a una aplicación no sustituye la delimitación de responsabilidades. [F04][F04] [F06][F06]
+
+### 1.1. Objetivo completo y pregunta de decisión
+
+El objetivo es determinar si una realización local de IA puede prestar una función auxiliar útil dentro del SV: consultar conocimiento delimitado, conservar las distinciones relevantes, producir un consejo o una clasificación fundamentados y permitir su examen mediante evidencia observable. La selección del modelo sirve a ese objetivo; el resultado debe volver al Lenguaje cuando revele una necesidad de representación, de contrato o de comprobación. El conocimiento del dominio continúa en constitución y puede evolucionar mediante su procedimiento competente. Esa evolución no autoriza parámetros vacíos, cambios tácitos de significado ni ampliaciones autónomas de autoridad. [F02][F02] [F05][F05] [F09][F09] [F26][F26]
+
+La comparación prospectiva incluye **GPT-OSS-120B y GPT-OSS-Safeguard-120B**, con funciones diferentes. El expediente de ejecución actualmente identificado sólo prepara GPT-OSS-120B; incorporar Safeguard a la comparación conceptual no acredita su instalación, no le transfiere esa recepción ni constituye un ensayo autorizado de dos modelos. La pregunta es qué función puede cumplir cada candidato con suficiente fidelidad, control y viabilidad temporal, y cuál debe descartarse para el alcance elegido. [F20][F20] [F27][F27] [E01][E01] [E02][E02]
+
+La progresión parte de una fuente local conservada, continúa con las obligaciones de OP-IMM-001 y su conocimiento constituido, y requiere un contraste separado en OP-CYB-001. La caché profesional sobre tricoleucemia es un caso de acceso e interpretación documental; no representa todo el Universo 1 de inmunología ni los universos candidatos futuros. El resultado favorable de un tramo no extiende por sí mismo el alcance del siguiente. [F02][F02] [F05][F05] [F18][F18] [F26][F26]
+
+**Resultado que debe producir el estudio:** una decisión de conservación o exclusión por candidato y función; una configuración reproducible; sus capacidades, límites y evidencias; y las necesidades concretas que deban recibir el dominio, el Lenguaje o el entorno operacional. El requisito de evitar errores materiales debe expresarse en controles y causas de descarte. Una campaña finita sin errores observados no demuestra error universal igual a cero. [F15][F15] [F20][F20]
 
 **Recorrido de lectura:** [sedes y versiones](#sedes) → [secuencia histórica](#cronologia) → [células y representación](#celulas) → [arquitectura](#arquitectura) → [tubería de IA](#tuberia) → [estado comprobado](#estado) → [retorno al Lenguaje](#retorno) → [revisión adversarial](#adversarial) → [fuentes](#fuentes).
 
@@ -29,7 +39,9 @@ La fase **R2**, relativa a persistencia, continuidad y recuperación, conserva s
 
 Fuentes del reparto y de sus límites: [F02][F02], [F04][F04], [F05][F05], [F15][F15] y [F21][F21].
 
-Las referencias de esta síntesis fijan confirmaciones Git completas. En SVperitus se consultan las ramas específicas de inmunología y ciberseguridad; en SVcustos, la rama del laboratorio público. Consultar únicamente `main` en todos los repositorios omitiría documentos pertinentes.
+Las referencias del SV fijan confirmaciones Git completas. En SVperitus se consultan las ramas específicas de inmunología y ciberseguridad; en SVcustos, la rama del laboratorio público. Consultar únicamente `main` en todos los repositorios omitiría documentos pertinentes.
+
+Las referencias F01–F27 corresponden a documentos de esos repositorios. E01–E03 añaden documentación oficial de los modelos y de su formato de conversación; su fecha de consulta se identifica separadamente y no se les atribuye una confirmación Git inexistente.
 
 La fecha del título no determina por sí sola la vigencia: varias actas incorporan apartados posteriores. Para describir el estado se consideran esas actualizaciones, el registro de sucesos y las fichas específicas. Un encabezado histórico no prevalece sobre una recepción posterior identificada. Los documentos primarios permanecen en sus sedes; esta síntesis no los sustituye.
 
@@ -48,8 +60,12 @@ La recepción de rutas del 14/09 advierte que las ampliaciones están incorporad
 | BIS-00–BIS-08 | Etapas del estudio de célula matemática, imagen y agentes. |
 | S22, S26, S32, S39 | Identificadores de seguimiento documental; no estados celulares ni sucesos de un caso profesional por mera coincidencia de nombre. |
 | TT-0014, TT-0015 | Seguimientos técnicos del servicio documental y del candidato GPT-OSS-120B. |
+| Frame | Objeto constituido que vincula estado matemático y representación comprensible bajo un contrato; su propuesta conceptual no demuestra un tipo ya incorporado a la IR. |
+| MCP | Protocolo de contexto del modelo: intercambio con servicios documentales o herramientas. Su presencia no demuestra que el modelo pueda invocarlos ni que comprenda sus resultados. |
+| Harmony | Formato de conversación que distingue papeles, canales, cesión a herramientas y terminación en la familia GPT-OSS. |
+| K2 | Tramo de decisiones de frontera posterior al contraste de contratos de inmunología y ciberseguridad; comprende identidades, versiones, procedencia y correspondencias pendientes. |
 
-El plan V2 de Bis precisa expresamente la nomenclatura de gramática, IR y obligaciones semánticas. La continuidad posterior exige identificar el ámbito de códigos que puedan repetirse. [F10][F10] [F12][F12]
+El plan V2 de Bis precisa expresamente la nomenclatura de gramática, IR y obligaciones semánticas. La continuidad posterior exige identificar el ámbito de códigos que puedan repetirse. Las definiciones complementarias proceden del contrato de transición, del estudio celular y de los documentos de integración. [F03][F03] [F09][F09] [F10][F10] [F12][F12] [F19][F19] [E03][E03]
 
 </details>
 
@@ -96,6 +112,8 @@ flowchart TD
 
 Una célula SV(n,b) es un estado ordenado y posicional sobre el alfabeto Σ = {0, 1, U}, con b natural, b ≥ 3 y n = b². Su espacio de estados tiene cardinalidad 3ⁿ. SV(9,3) tiene nueve posiciones y 19.683 configuraciones posibles; no es una matriz de 3 × 3 ni exige almacenar todas sus configuraciones. [F09][F09]
 
+La convención canónica es **0 = Apto, 1 = No_Apto y U = Indeterminado**, bajo el significado de la operación constituida. La coincidencia de esos caracteres con una salida de un clasificador externo no establece identidad semántica. El paso a un estado SV requiere identificar parámetro, regla, evidencia, criticidad, versión y comprobación de admisión; la salida del modelo permanece como propuesta hasta satisfacer ese contrato. [F09][F09] [F24][F24]
+
 La dimensión permanece fija una vez admitida la célula. El dominio competente constituye el significado, orden, fuentes y relaciones de sus posiciones. **No se completan posiciones mediante relleno, duplicación o U**. Un parámetro no crítico conserva identidad y función; no es una posición vacía. La criticidad depende de la operación y no se obtiene de la proximidad gráfica ni del recuento de parámetros. [F07][F07] [F09][F09] [F24][F24]
 
 Las células de conocimiento nuclear del dominio y los parámetros singulares de decisión comparten un molde de representación. Ese uso de «nuclear» no sitúa el conocimiento médico o de ciberseguridad dentro del núcleo universal del Lenguaje. Su constitución sigue perteneciendo al dominio. La composición de células necesita relaciones, papeles y correspondencias explícitas; dos células no se convierten en una de tamaño intermedio por sumar sus posiciones. [F09][F09] [F26][F26]
@@ -123,7 +141,9 @@ La arquitectura separa **núcleo soberano**, **frontera contractual** y **entorn
 ```mermaid
 flowchart TB
     H["Autoridad humana competente"] --> D["Dominio: conocimiento, rutas, criterios y permisos constituidos"]
-    D --> C["Contratos identificados y versionados"]
+    D --> C["Constitución de dominio identificada y versionada"]
+    L["Contratos e invariantes universales del Lenguaje"] --> N
+    L --> F
     subgraph S["Sistema SV · organización funcional prevista"]
         N["Núcleo soberano: invariantes y operaciones admitidas"]
         F["Frontera: admisión, identidad, límites y diagnóstico"]
@@ -138,8 +158,7 @@ flowchart TB
         V --> F
         F --> P
     end
-    C --> N
-    C --> F
+    C -. "Petición de validación; no autoría de reglas universales" .-> F
     C --> V
     K["Fuentes autorizadas e identificadas"] --> O
     P --> H
@@ -233,7 +252,56 @@ El registro de Bis incluye realización parcial C02–C05 y pruebas de represent
 
 La ficha general del MCP describe 0.1.1, mientras que el documento específico y TT-0015 identifican 0.1.2. Ambos cortes se conservan con su alcance: la existencia de la versión sucesora no convierte en aceptada toda la recepción ni modifica retrospectivamente el recorrido de la anterior.
 
-La comparación de modelos especializados en políticas, incluida una eventual variante Safeguard, no constituye aquí una selección ni una evaluación ejecutada. La continuación publicada que respalda esta síntesis corresponde a GPT-OSS-120B. La capacidad de clasificar cumplimiento de una política, si se propone, deberá distinguirse de la corrección del consejo y de la cobertura documental exigida. [F05][F05] [F20][F20]
+### 7.3. Función de GPT-OSS-120B y de GPT-OSS-Safeguard-120B
+
+GPT-OSS-120B es un modelo de razonamiento de pesos abiertos, de entrada y salida textual, con capacidad declarada de llamadas a herramientas. GPT-OSS-Safeguard es una especialización para clasificar texto conforme a políticas explícitas aportadas a la consulta. Su guía exige definir categorías, condiciones y formato de respuesta. Ambos utilizan Harmony. [E01][E01] [E02][E02] [E03][E03]
+
+La interpretación textual tampoco acredita reconocimiento visual del frame. GPT-OSS-120B no declara entrada de imagen; el acceso a un vector o a una descripción de la imagen constituye otra operación. El objetivo de paridad entre estado matemático, imagen efectiva y comprensión profesional conserva sus comprobaciones propias. [E01][E01] [F09][F09]
+
+De estas funciones no se deduce que Safeguard garantice hechos verdaderos, lectura íntegra o ausencia de alucinaciones, ni que sustituya con igual rendimiento al modelo general para el consejo especializado. **Conformidad con una política y corrección sustantiva son propiedades diferentes.** Su relación deberá especificarse y contrastarse en el SV. La seguridad de contenido no equivale a seguridad clínica. [F05][F05] [F20][F20]
+
+| Alternativa de estudio | Pregunta que debe resolver | Límite de la inferencia permitida |
+|---|---|---|
+| GPT-OSS-120B como único candidato activo | ¿Puede consultar y responder con fundamento y cobertura dentro de los controles externos del SV? | Seguir instrucciones no demuestra por sí solo imposición de permisos ni corrección del contenido. |
+| Safeguard-120B para clasificación conforme a una política SV explícita | ¿Reconoce incumplimientos, excepciones y evidencia insuficiente en la función delimitada? | Un dictamen favorable no sustituye una comprobación semántica ni constituye una célula válida. |
+| Safeguard-120B como único interlocutor especializado | ¿Puede además satisfacer las tareas de consulta y consejo previstas? | Es una hipótesis adicional; no queda acreditada por su especialización en políticas. |
+| Generador y clasificador encadenados | ¿La comprobación adicional detecta errores relevantes con una demora aceptable? | El acuerdo entre modelos no acredita independencia ni verdad. No es la arquitectura seleccionada por esta guía. |
+
+La comparación debe poder efectuarse por separado. No se exige mantener dos modelos de 120B residentes ni ejecutar dos inferencias para cada respuesta. Incorporar un segundo modelo requiere justificar una mejora concreta y medir la demora total; una revisión del mismo modelo sobre su propia salida tampoco cuenta como comprobación independiente. Estas son condiciones propuestas de comparación, no resultados observados ni ampliaciones del encargo registrado. [F20][F20] [F27][F27]
+
+<details>
+<summary><strong>Correspondencia entre clasificación y estados SV</strong></summary>
+
+Una etiqueta binaria de ausencia de infracción no prueba por sí sola suficiencia positiva para una operación SV. La adaptación debe preservar tres situaciones distintas: conformidad acreditada, incumplimiento acreditado e indeterminación admitida por el contrato. Además, debe conservar por separado los fallos instrumentales, las entradas inválidas y las ausencias de respuesta.
+
+No se asignará U indiscriminadamente a todos esos fallos ni se transformará en Apto una respuesta por contener una etiqueta válida. Una salida desconocida, incompleta o incompatible con su contrato debe quedar rechazada o pendiente de la revisión establecida. Esta separación desarrolla los límites de admisión ya expuestos; no introduce una nueva tabla de verdad del SV. [F09][F09] [F24][F24]
+
+</details>
+
+### 7.4. Instalación prevista y viabilidad temporal
+
+La realización inmediata documentada es **nativa CPU, en Rust, con mistral.rs como motor candidato, Harmony y catálogo local de fuentes**. La referencia de 128 GB es una hipótesis de dimensionamiento; aún deben fijarse la revisión de pesos, el artefacto ejecutado, el binario efectivo, su compatibilidad y la memoria total necesaria. La vía de navegador con WebAssembly queda diferida. [F20][F20] [F27][F27]
+
+El horizonte de ejecución local comprende equipos de sobremesa o portátiles con 128 GB, considerados como posibles destinos del experimento, no como plataformas ya cualificadas. La memoria principal de una instancia CPU, la memoria compartida de un equipo local y la memoria de una GPU dedicada no son capacidades intercambiables a efectos de rendimiento. Una ejecución satisfactoria en el servidor aportaría evidencia sobre esa configuración; el traslado al equipo local conservaría un contraste específico de compatibilidad y tiempos.
+
+| Aspecto que debe quedar identificado | Evidencia exigible para cerrar la viabilidad |
+|---|---|
+| Plataforma | CPU, acelerador si lo hubiera, memoria utilizable, sistema operativo y bibliotecas efectivas. |
+| Modelo y representación | Identidad y revisión de pesos, tokenizador, cuantización, procedencia y huellas. |
+| Memoria | Pesos residentes, conversiones, carga máxima, caché de atención, temporales, servicios y reserva del sistema. |
+| Conversación | Plantilla Harmony, herramientas realmente disponibles, canales y condiciones de terminación. |
+| Demora | Carga inicial, recuperación documental, procesamiento de entrada, razonamiento, respuesta final y comprobación. |
+| Concurrencia | Número de peticiones y modelos residentes, con su repercusión observada sobre memoria y tiempo. |
+
+Los tokens de razonamiento y la lectura documental cuentan en la demora aunque la respuesta visible sea breve. La velocidad de otro modelo, otro tamaño o una prueba gráfica del fabricante no es una medición del sistema propuesto. El límite temporal aceptable para el uso final **está pendiente de fijación**; no se inventa aquí una cifra ni se sustituye por «tan rápido como sea posible». La carga de pesos demuestra un hecho técnico, no utilidad ni aptitud. [F20][F20] [F27][F27]
+
+### 7.5. Acceso documental que debe demostrar el candidato
+
+El objetivo de acceso es que el modelo pueda solicitar documentos, seleccionar secciones y continuar su lectura dentro de un catálogo autorizado, conservando exactamente lo entregado. Eso permite examinar su conducta documental sin resolver previamente el caso mediante una sinopsis preparada. No exige alojar todo el dominio en una única entrada: el acceso sucesivo es admisible si la continuidad, las omisiones y las obligaciones de cobertura quedan comprobables. [F05][F05] [F18][F18] [F25][F25]
+
+El cliente 0.1.2, por sí solo, no satisface esa función porque no ofrece herramientas al modelo. Un ensayo que le entregue texto por mediación del cliente puede medir interpretación de ese texto, pero no búsqueda autónoma. Antes de atribuir un resultado a esta última función debe quedar identificada su integración real y separada la prueba de recuperación de la de interpretación. [F19][F19] [F20][F20]
+
+El aislamiento de la consulta debe imponerse fuera del modelo. El catálogo y sus documentos se tratan como contenido, sin facultad para cambiar instrucciones, permisos o rutas admitidas. Una orden inserta en una fuente no adquiere autoridad por haber sido recuperada correctamente. [F05][F05] [F23][F23]
 
 <details>
 <summary><strong>Qué permiten concluir las campañas y sus archivos de conservación</strong></summary>
@@ -267,6 +335,54 @@ La entrega de esta investigación debe dejar identificadas las capacidades acred
 
 El retorno material a R2 conserva las condiciones de la transición rectora: núcleo consolidado, salida de K2, identidades y contratos suficientes y autorización aplicable. R2-0 debe reconciliarse con ese corte, sin borrar su apertura anterior. R3 mantiene su objeto de confianza de plataforma y R4 el contraste de la realización integrada. **Superar la selección de un modelo no satisface por sí solo esas condiciones.** [F03][F03]
 
+### 8.1. Secuencia de decisión y puntos de cierre
+
+La tabla convierte el objetivo en una secuencia de lectura y recepción. Los pasos 1–2 resumen condiciones del expediente vigente; los restantes identifican los cierres que deberán constituirse para evaluar la función completa. No autorizan una nueva ejecución ni fijan umbrales todavía no aprobados. [F20][F20] [F27][F27]
+
+| Paso | Pregunta de recepción | Producto y decisión |
+|---|---|---|
+| 1. Identidad y viabilidad | ¿Se conoce qué se ejecutaría y si los recursos permiten hacerlo? | Configuración identificada y dimensionamiento; favorable condicionado, preparación incompleta o impedimento. |
+| 2. Instrumentación y acceso | ¿Termina correctamente la conversación y puede acreditarse el acceso solicitado a las fuentes? | Prueba de protocolo, catálogo y contenido efectivo; el fallo instrumental conserva su diagnóstico. |
+| 3. Especificación del banco | ¿Están fijados función, casos, respuestas esperadas, errores materiales y límites? | Protocolo cerrado antes de observar respuestas; cada criterio con su fundamento. |
+| 4. Selección acotada | ¿Responde o clasifica correctamente dentro de ese alcance y esos límites? | Respuestas y sucesos íntegros; aceptación acotada, descarte por criterio incumplido o resultado no evaluable. |
+| 5. Interpretación del resultado | ¿Qué ha quedado demostrado y qué sigue pendiente? | Decisión por candidato, función y dominio; los casos conocidos no se presentan como independientes. |
+| 6. Devolución e integración | ¿La carencia pertenece al candidato, al dominio, al Lenguaje o al soporte material? | Entrega a la sede correspondiente y recepción propia antes de cualquier integración. |
+| 7. Conservación | ¿Puede reconstruirse la configuración y examinarse su evidencia? | Fuentes, identidades, manifiesto, informe y alcance público comprobable; archivo y aptitud permanecen separados. |
+
+```mermaid
+flowchart TD
+    I["Identificar candidato, función y configuración"] --> V{"¿Viabilidad e instrumentación acreditadas?"}
+    V -->|"No"| B["Preparación incompleta o impedimento documentado"]
+    V -->|"Sí"| P["Fijar casos, fundamento esperado y límites"]
+    P --> E["Ejecutar el banco delimitado y conservar entradas y salidas"]
+    E --> D{"¿Qué demuestra la evidencia?"}
+    D -->|"Fallo de acceso o ejecución"| N["No evaluable en el aspecto afectado"]
+    D -->|"Incumplimiento del criterio de descarte"| X["Excluir la configuración de esa función"]
+    D -->|"Criterios satisfechos"| A["Conservar como candidata en el alcance ensayado"]
+    N --> R["Conservar resultado y devolver carencias a su sede"]
+    X --> R
+    A --> R
+    R -. "Recepción y autorización propias" .-> C["Integración y continuidad del Lenguaje"]
+```
+
+**Límites de esta secuencia:** no se repite una respuesta para sustituir un fallo por un acierto ni se modifica el criterio después de medir. Una repetición diagnóstica autorizada conserva el fallo inicial y se identifica como tal. El presupuesto y las causas de parada se fijan previamente; no se prolonga la selección por ausencia de un resultado favorable. Si un fallo instrumental impide juzgar el contenido, no se atribuye al modelo un error clínico no observado. [F16][F16] [F17][F17] [F20][F20]
+
+<details>
+<summary><strong>Condiciones todavía pendientes para una auditoría material del objetivo completo</strong></summary>
+
+| Condición pendiente | Consecuencia de su ausencia |
+|---|---|
+| Artefacto y plataforma efectivos del 120B | No puede afirmarse instalación reproducible ni suficiencia de 128 GB. |
+| Función y recepción propias de Safeguard | No puede afirmarse que sustituya al modelo general ni que su empleo esté seleccionado. |
+| Política y correspondencia de salidas con SV | No puede atribuirse autoridad celular a una clasificación del modelo. |
+| Integración que permita las solicitudes documentales del candidato | No puede calificarse la búsqueda a partir de una prueba que sólo entregue texto. |
+| Banco, criterios materiales y límites de tiempo y memoria | No puede emitirse una decisión de aceptación completa para el uso previsto. |
+| Evidencia accesible para cada afirmación experimental | La revisión pública se limita a las propiedades sustentadas por los artefactos disponibles. |
+
+Esta guía permite reconstruir el objetivo y localizar sus decisiones abiertas sin recurrir a una conversación previa. **No contiene todavía un expediente de ejecución completo de ambos modelos.** Para cada afirmación de una campaña posterior deberá relacionarse requisito, caso, resultado esperado, observación, artefacto, huella y decisión. Cuando los datos no puedan divulgarse, la versión pública delimitará qué acredita mediante testigos comprobables y qué permanece bajo custodia; una huella sin los datos no permite revisar su contenido. [F20][F20] [F21][F21] [F27][F27]
+
+</details>
+
 <a id="adversarial"></a>
 
 ## 9. Revisión adversarial documental de esta síntesis
@@ -287,14 +403,20 @@ Se contrasta la consistencia de las afirmaciones y diagramas con las fuentes fij
 | Presentar una preferencia de modelo como selección ejecutada. | Se recoge únicamente el estado candidato de GPT-OSS-120B y se delimita cualquier comparación futura. |
 | Reutilizar una página histórica como estado global vigente. | Se emplean referencias inmutables y se cotejan sus actualizaciones con los seguimientos específicos. |
 | Suponer que la consulta de fuentes equivale a repetir sus pruebas. | Se declara el alcance documental y la limitación de las evidencias reservadas. |
+| Confundir una síntesis histórica con una guía completa de selección. | Se incorporan objetivo, funciones alternativas, instalación, criterios de cierre y pendientes concretos. |
+| Identificar seguridad de contenido con verdad clínica. | Se distinguen clasificación de políticas, corrección, cobertura y autoridad SV. |
+| Dar por equivalentes una etiqueta externa y 0, 1 o U. | Se exige una correspondencia constituida y se separan fallos instrumentales. |
+| Introducir conocimiento particular en el núcleo mediante el diagrama. | Se separan constitución de dominio y contratos universales del Lenguaje. |
+| Suponer que hacen falta dos modelos simultáneos o que 128 GB garantizan viabilidad. | Se mantienen alternativas por función, una instalación no cualificada y mediciones pendientes. |
+| Confundir claridad documental con auditabilidad material completa. | Se identifica expresamente la evidencia de ejecución que aún falta. |
 
-**Resultado:** la composición conserva esas distinciones. Permanece como síntesis documental del corte identificado; no resuelve por publicación las garantías ni las recepciones abiertas.
+**Resultado:** la revisión 1 era una síntesis histórica y arquitectónica insuficiente para reconstruir por sí sola la comparación prospectiva completa. La revisión 2 incorpora sus elementos faltantes y delimita las decisiones aún abiertas. Su suficiencia como guía documental no se presenta como conformidad experimental, aptitud clínica ni cierre de las recepciones pendientes.
 
 <a id="fuentes"></a>
 
 ## 10. Fuentes, revisiones y mantenimiento
 
-Se verificó la recuperación de los 26 documentos públicos identificados a continuación. Las referencias fijan repositorio, confirmación y ruta; la edición o el estado se interpreta dentro del documento, no a partir de la fecha global del repositorio. La consulta cubre las secciones pertinentes a esta síntesis y no se presenta como auditoría íntegra de todos los repositorios.
+Se verificó la recuperación de 27 documentos públicos del SV y se consultaron tres referencias oficiales externas. Las referencias F01–F27 fijan repositorio, confirmación y ruta; la edición o el estado se interpreta dentro del documento, no a partir de la fecha global del repositorio. E01–E03 corresponden a documentación oficial consultada el 27/09/2026, de actualización independiente. La consulta cubre las secciones pertinentes a esta guía y no se presenta como auditoría íntegra de todos los repositorios.
 
 | Repositorio y rama consultada | Confirmación fijada |
 |---|---|
@@ -335,6 +457,10 @@ Se verificó la recuperación de los 26 documentos públicos identificados a con
 | [F24][F24] | Pilares y restricciones de diseño, con adendas | Invariantes y competencia de constitución del dominio. |
 | [F25][F25] | TT-0014 | Recepción separada del servicio documental. |
 | [F26][F26] | Recepción de rutas y consejo especializado, 14/09 | IA probabilística auxiliar, cobertura y reserva de incorporación. |
+| [F27][F27] | Ficha técnica GPT-OSS-120B, preparación 1, 27/09 | Instalación candidata, dimensionamiento, Harmony y condiciones de selección. |
+| [E01][E01] | Ficha oficial de GPT-OSS-120B | Modelo general, modalidad textual y capacidades declaradas. |
+| [E02][E02] | Guía oficial de GPT-OSS-Safeguard | Clasificación de políticas y formato de salida; sin inferir aptitud clínica. |
+| [E03][E03] | Formato oficial Harmony | Papeles, canales, herramientas y terminación. |
 
 </details>
 
@@ -345,6 +471,9 @@ Una revisión posterior deberá identificar las fuentes que cambien, incorporar 
 | Revisión | Fecha | Alcance |
 |---|---|---|
 | 1 | 27/09/2026 | Composición inicial de arquitectura, secuencia, estado y condiciones de retorno, con fuentes inmutables y revisión adversarial documental. |
+| 2 | 27/09/2026 | Revisión de suficiencia: objetivo completo, funciones de los dos candidatos, correspondencia con SV, instalación, límites temporales, secuencia de decisión y evidencia pendiente. |
+
+La revisión 1 permanece identificada en la [publicación inicial](https://github.com/juantoniolloretegea/SV-motor/blob/fe957f389c19661ff94fb460c77bfd4174e131b7/laboratorio/sistema-conjunto-lenguaje-computacion-ia-gobernada/README.md). La ficha añadida F27 se fija en el mismo corte de Motor ya consignado; no se presenta su preparación como un resultado nuevo.
 
 [F01]: https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/f8577f869e9e0bed85da9b6ce7b8e7b3b2cefa52/docs/arquitectura/CONTRATO_R2_0_PERSISTENCIA_CONTINUIDAD_Y_RECUPERACION_2026_08_25.md
 [F02]: https://github.com/juantoniolloretegea/SVperitus-dataset/blob/bba2d3ae24cdc20e33b90375f295916928011985/dominios/inmunologia/ACTA_PAUSA_RETORNO_ACOTADO_Y_RELEVO_AL_LENGUAJE_SV_2026-09-04.md
@@ -372,3 +501,7 @@ Una revisión posterior deberá identificar las fuentes que cambien, incorporar 
 [F24]: https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/f8577f869e9e0bed85da9b6ce7b8e7b3b2cefa52/docs/calidad/PILARES_Y_RESTRICCIONES_DE_DISENO_DEL_LENGUAJE_DE_COMPUTACION_SV_2026_09_05.md
 [F25]: https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/f8577f869e9e0bed85da9b6ce7b8e7b3b2cefa52/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0014.md
 [F26]: https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/f8577f869e9e0bed85da9b6ce7b8e7b3b2cefa52/docs/calidad/tuberias-ia/frame-significado-humano-trazabilidad-y-fidelidad/ACTA_EVALUACION_Y_RECEPCION_DOCUMENTAL_RUTAS_CONOCIMIENTO_SV_2026_09_14.md
+[F27]: https://github.com/juantoniolloretegea/SV-motor/blob/9e7e6afb7ee05a44e5005e7b18d9ac60e0ce28fb/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/openai/gpt-oss-120b/FICHA_TECNICA.md
+[E01]: https://developers.openai.com/api/docs/models/gpt-oss-120b
+[E02]: https://developers.openai.com/cookbook/articles/gpt-oss-safeguard-guide
+[E03]: https://developers.openai.com/cookbook/articles/openai-harmony
