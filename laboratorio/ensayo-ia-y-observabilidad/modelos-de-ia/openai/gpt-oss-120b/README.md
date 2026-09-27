@@ -6,6 +6,12 @@
 
 El objeto es determinar si una configuración identificada del modelo satisface los mínimos de fidelidad documental, cumplimiento de instrucciones, trazabilidad y tiempo de respuesta del ensayo. Se mantienen evaluaciones diferenciadas para inmunología y ciberseguridad. Cargar el modelo o recibir una respuesta HTTP no constituye un resultado Apto.
 
+## Formato de conversación y cálculo
+
+GPT-OSS requiere el formato **Harmony**. En la composición candidata, mistral.rs implementa la inferencia y utiliza **Candle** para operaciones numéricas; la biblioteca oficial **openai-harmony** interviene en el tratamiento de mensajes. Son funciones complementarias. La revisión exacta, las dependencias compiladas y su compatibilidad efectiva con el 120B permanecen sujetas a cualificación.
+
+El cotejo debe incluir errores y truncamientos, correspondencia de tokenizador y plantilla, vocabulario local identificado, cálculo MXFP4 y controles de red. La compatibilidad conceptual no acredita seguridad ni aptitud del ensamblaje. [Funciones y límites de la composición](../../../README.md#harmony-candle-y-funciones-del-conjunto) · [Harmony oficial](https://github.com/openai/harmony).
+
 ## Documentación del modelo
 
 - [Ficha técnica y condiciones de selección](FICHA_TECNICA.md).

@@ -1,14 +1,14 @@
 # Ensayo de inteligencia artificial y observabilidad
 
-**Edición documental 2.15 · 27 de septiembre de 2026.**
+**Edición documental 2.16 · 27 de septiembre de 2026.**
 
 <a id="objeto-y-criterio-experimental"></a>
 
-Investigación experimental sobre ejecución nativa de modelos auxiliares, fidelidad documental, control y observación mediante Rust. Pertenece a la investigación lateral (p1+P3)-Bis y mantiene evaluaciones diferenciadas para inmunología y ciberseguridad. Las propuestas del modelo carecen de autoridad para modificar el conocimiento admitido o las decisiones del SV.
+Investigación experimental sobre ejecución de modelos auxiliares, fidelidad documental, control y observación mediante Rust. Pertenece a la investigación lateral (p1+P3)-Bis y mantiene evaluaciones diferenciadas para inmunología y ciberseguridad. Las propuestas del modelo carecen de autoridad para modificar el conocimiento admitido o las decisiones del SV.
 
 Esta página reúne el estado de los candidatos, la secuencia de publicaciones, las versiones de los componentes y sus límites. El [registro estructurado de versiones](VERSIONES.json) fija las referencias por commit y distingue fuentes, distribuciones y archivos de conservación.
 
-**Consulta:** [estado actual](#estado-actual) · [publicaciones](#publicaciones-en-orden-cronológico) · [componentes](#versiones-de-los-componentes) · [vías y diagramas](#vías-de-ejecución-y-diagramas) · [trazabilidad](#trazabilidad-y-criterios-de-lectura).
+**Consulta:** [estado actual](#estado-actual) · [Harmony y Candle](#harmony-candle-y-funciones-del-conjunto) · [componentes](#versiones-de-los-componentes) · [publicaciones](#publicaciones-en-orden-cronológico) · [historia completa](#historia-completa-de-la-edición-documental) · [diagramas](#vías-de-ejecución-y-diagramas).
 
 <a id="estado-vigente--27092026"></a>
 
@@ -29,40 +29,348 @@ El MCP documental tiene seguimiento propio. Sus controles instrumentales no conv
 
 **Secuencia vigente:** selección nativa B → Apto en el alcance experimental → posible autorización de un ensayo A/WebAssembly. Cargar el modelo no satisface la selección. La aptitud clínica general, el uso productivo y la integración en el núcleo requieren decisiones y evidencia propias.
 
-<a id="versión-distribuida"></a>
+## Harmony, Candle y funciones del conjunto
 
-## Publicaciones en orden cronológico
+OpenAI exige utilizar **Harmony** con GPT-OSS. Es el formato de mensajes, canales, llamadas y terminación; la biblioteca oficial `openai-harmony` proporciona su codificación y análisis. **Candle** aporta operaciones numéricas y tensores. En las bases de mistral.rs examinadas se utilizan ambas bibliotecas: sus funciones son complementarias. [Formato oficial](https://github.com/openai/harmony) · [Candle](https://github.com/huggingface/candle).
 
-Se han cotejado **cinco publicaciones preliminares**: dos distribuciones de aplicaciones y tres archivos de conservación. Las revisiones `v1` de los archivos identifican cada paquete fechado; no son versiones sucesoras de la aplicación ni nuevos modelos.
-
-| Fecha | Publicación | Objeto y alcance |
+| Elemento | Función | Condición de interpretación |
 |---|---|---|
-| 22/09/2026 | [EIO conversación 0.1.3-beta.1](https://github.com/juantoniolloretegea/SV-motor/releases/tag/eio-conversacion-v0.1.3-beta.1) | Aplicación nativa para Qwen3-0.6B: binario, fuentes, ficha, licencias y manifiesto. Pesos externos identificados. |
-| 25/09/2026 | [GPT-OSS conversación 0.2.4-beta.1](https://github.com/juantoniolloretegea/SV-motor/releases/tag/gpt-oss-conversacion-v0.2.4-beta.1) | Aplicación nativa y motor para GPT-OSS-20B, con resultados y límites. No acredita aptitud clínica. |
-| 25/09/2026 | [GPT-OSS: imagen de recuperación, v1](https://github.com/juantoniolloretegea/SV-motor/releases/tag/gpt-oss-imagen-onecloud-20260925-v1) | Archivo cifrado de recuperación. La restitución funcional comprobada corresponde a esta imagen y a su procedimiento. |
-| 26/09/2026 | [GPT-OSS: archivo de cierre, v1](https://github.com/juantoniolloretegea/SV-motor/releases/tag/gpt-oss-archivo-cierre-20260926-v1) | Archivo posterior de la campaña. Esta imagen no hereda la comprobación de arranque de la imagen anterior. |
-| 27/09/2026 | [Qwen3.8-27B: archivo de cierre, v1](https://github.com/juantoniolloretegea/SV-motor/releases/tag/qwen38-27b-archivo-cierre-20260927-v1) | Reúne las imágenes del 26 y 27 de septiembre, sin pesos del modelo. No se ha acreditado su arranque en una instancia restaurada. |
+| Modelo, pesos y tokenizador | Parámetros y representación de las entradas y salidas. | La identidad incluye revisión, formato y huellas. |
+| mistral.rs | Carga, implementación del modelo y servicio de inferencia. | Motor Rust; su nombre no identifica un modelo comercial Mistral. |
+| Harmony / openai-harmony | Estructura y análisis de la conversación GPT-OSS. | Es necesario comprobar plantilla, identificadores, canales y fin de turno conjuntamente. |
+| Candle | Operaciones numéricas utilizadas por la implementación de inferencia. | No es un modelo auxiliar ni sustituye el formato Harmony. |
+| MCP documental | Búsqueda textual y lectura del catálogo local. | El protocolo no verifica por sí mismo la verdad de las afirmaciones ni concede permisos. |
+| Control Rust / Árbitro SV | Admisión, permisos, límites y supervisión previstos. | No se atribuye una implementación integral a la suma de MCP y cliente. |
+| OpenTelemetry Rust y observador | Trazas instrumentadas y medidas de procesos o cgroup, respectivamente. | Deben declararse cobertura, pérdidas y ámbito; no constituyen observación exhaustiva. |
+| Axum, Hyper y Reqwest | Servicio y transporte HTTP. | Son componentes de comunicación; no son medidores de recursos. |
 
-Cada publicación conserva su etiqueta, commit de referencia, activos y manifiestos. El último archivo de una campaña no borra los anteriores ni modifica su dictamen. Los activos cifrados preservan contenido de acceso restringido; su publicación no concede acceso a ese contenido.
+La base mistral.rs [0.9.3](https://github.com/EricLBuehler/mistral.rs/blob/24dbf5c256f232176ee5949485ba264049407fbe/Cargo.toml) fija Candle en `35d7ae7…`; la base [0.9.4](https://github.com/EricLBuehler/mistral.rs/blob/2370966bb91e2e3dafa0b1521b87c50fd5c01244/Cargo.toml), en `66a8cf1…`. Ambas declaran Candle 0.11.0 y `openai-harmony` 0.0.8. El número de versión común no hace equivalentes sus fuentes ni acredita el binario utilizado. Las modificaciones CPU del antecedente GPT-OSS-20B requieren cotejo específico antes de aplicarse al 120B.
 
-MCP 0.1.0–0.1.2 se conserva en directorios versionados, sin release específico en el corte consultado. GPT-OSS-120B todavía no tiene distribución o imagen publicada en este ensayo.
+**Alcance de la revisión:** la compatibilidad conceptual entre Candle y Harmony está fundamentada; la cualificación del ensamblaje 120B permanece pendiente. Deben verificarse el tratamiento de errores y truncamientos de Harmony, el vocabulario local identificado, la ruta numérica MXFP4, las dependencias efectivamente compiladas y los controles de red y herramientas. El [adaptador examinado](https://github.com/EricLBuehler/mistral.rs/blob/24dbf5c256f232176ee5949485ba264049407fbe/mistralrs-core/src/reasoning_parsers/harmony.rs) descarta determinados errores de análisis; este hallazgo estático no constituye una explotación reproducida. La [biblioteca Harmony](https://github.com/openai/harmony/blob/ec7606df9e87e3d0a1fec9f50928c1e407f0c438/src/tiktoken_ext/public_encodings.rs) admite un vocabulario local verificado y contempla descarga si no se fija el directorio local y falta una caché válida. El ensayo debe acreditar funcionamiento sin red. Usar Rust o incluir una dependencia no constituye una certificación de seguridad.
 
 <a id="composición-de-la-conversación-qwen"></a>
 
 ## Versiones de los componentes
 
-| Componente | Versión o referencia | Estatuto |
+La **edición documental 2.16**, las **aplicaciones 0.1.x/0.2.x**, el **MCP 0.1.x**, los **modelos** y los **archivos de recuperación v1** tienen identidades independientes. Una numeración no sustituye a las restantes. Las realizaciones conservadas identifican Rust 1.98.0 y sus dependencias en cada expediente.
+
+<details>
+<summary><strong>EIO conversación · Qwen3-0.6B · 0.1.0 → 0.1.4</strong></summary>
+
+La distribución publicada es 0.1.3-beta.1. La fuente candidata 0.1.4 conserva verificación propia y no sustituye esa distribución.
+
+| Versión de fuentes | Fecha de incorporación | Cambio relevante | Acceso completo al corte inicial |
+|---|---|---|---|
+| 0.1.0 | 22/09/2026 | Conversación con Qwen y conservación por expediente. | [Fuentes 0.1.0](https://github.com/juantoniolloretegea/SV-motor/tree/5330c6c9d2c7d9d6a9cec6079a7118bf0f5567db/laboratorio/ensayo-ia-y-observabilidad/conversacion-nativa) |
+| 0.1.1 | 22/09/2026 | Identificación de licencias y precisión de validación y observación. | [Fuentes 0.1.1](https://github.com/juantoniolloretegea/SV-motor/tree/eec0d87fd9e41a3341b799540bb4545c6dd686d9/laboratorio/ensayo-ia-y-observabilidad/conversacion-nativa) |
+| 0.1.2 | 22/09/2026 | Recuperación de peticiones y medición; comparación acotada documentada. | [Fuentes 0.1.2](https://github.com/juantoniolloretegea/SV-motor/tree/feefbe68a4131c43c46673b841a0dd72b590e4f7/laboratorio/ensayo-ia-y-observabilidad/conversacion-nativa) |
+| 0.1.3 | 22/09/2026 | Integración OpenTelemetry y observador Linux; distribuida como 0.1.3-beta.1. | [Fuentes 0.1.3](https://github.com/juantoniolloretegea/SV-motor/tree/7f1dd02f4b4960c7e989da7caca63d4c78c85690/laboratorio/ensayo-ia-y-observabilidad/conversacion-nativa) |
+| 0.1.4 | 23/09/2026 | Correcciones de supervisión y conservación verificadas localmente; sin nueva inferencia. | [Fuentes 0.1.4](https://github.com/juantoniolloretegea/SV-motor/tree/8cddcc83359bf6733a360d5bba2cd72426f8b631/laboratorio/ensayo-ia-y-observabilidad/conversacion-nativa) |
+
+[Comprobación 0.1.2](conversacion-nativa/verificacion-0.1.2/INFORME.md) · [Observación 0.1.3](conversacion-nativa/verificacion-0.1.3/INFORME.md) · [Correcciones 0.1.4](conversacion-nativa/verificacion-0.1.4/INFORME.md).
+
+Las versiones de fuentes pueden abarcar varios commits; el enlace identifica el corte inicial de esa versión. Los informes y las distribuciones fijan sus propios cortes de comprobación.
+
+</details>
+
+<details>
+<summary><strong>EIO conversación · GPT-OSS-20B · 0.2.0 → 0.2.4</strong></summary>
+
+La adaptación parte de la aplicación Qwen 0.1.4, pero utiliza otra integración de inferencia. La distribución es 0.2.4-beta.1; el rótulo interno 0.2.2 se interpreta mediante su ficha y huellas.
+
+| Versión de fuentes | Fecha de incorporación | Cambio relevante | Acceso completo al corte inicial |
+|---|---|---|---|
+| 0.2.0 | 24/09/2026 | Adaptación de la interfaz a motor residente GPT-OSS, contexto y cancelación. | [Fuentes 0.2.0](https://github.com/juantoniolloretegea/SV-motor/tree/d564ec3ed1702f2f185ccb152fe3d5a494bddba8/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/openai/gpt-oss-20b/conversacion) |
+| 0.2.1 | 24/09/2026 | Corrección del reconocimiento del fin de turno. | [Fuentes 0.2.1](https://github.com/juantoniolloretegea/SV-motor/tree/032ef13602ae9288cdd8467335c34198dda08871/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/openai/gpt-oss-20b/conversacion) |
+| 0.2.2 | 24/09/2026 | Corrección de identificadores de tokens y observación del motor residente. | [Fuentes 0.2.2](https://github.com/juantoniolloretegea/SV-motor/tree/dbaf4ed071388710e901b87c36842497893e10fb/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/openai/gpt-oss-20b/conversacion) |
+| 0.2.3 | 24/09/2026 | Acotación de trazas y preparación de la continuación comparativa. | [Fuentes 0.2.3](https://github.com/juantoniolloretegea/SV-motor/tree/e668d8e1efa18dd5462e9519eb9c5f73cd4e48a0/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/openai/gpt-oss-20b/conversacion) |
+| 0.2.4 | 25/09/2026 | Fuentes de la distribución 0.2.4-beta.1 y cierre experimental; conserva el rótulo interno 0.2.2. | [Fuentes 0.2.4](https://github.com/juantoniolloretegea/SV-motor/tree/ab713cdc73d6a55184d52c03b99745c99a1ced64/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/openai/gpt-oss-20b/conversacion) |
+
+[Ficha de la distribución 0.2.4-beta.1](modelos-de-ia/openai/gpt-oss-20b/distribucion/0.2.4-beta.1/FICHA_TECNICA.md) · [Resultados y límites](modelos-de-ia/openai/gpt-oss-20b/distribucion/0.2.4-beta.1/RESULTADOS.md).
+
+Las versiones de fuentes pueden abarcar varios commits; el enlace identifica el corte inicial de esa versión. Los informes y las distribuciones fijan sus propios cortes de comprobación.
+
+</details>
+
+<details>
+<summary><strong>MCP documental · 0.1.0 → 0.1.1 → 0.1.2</strong></summary>
+
+| Versión | Cambio y resultado conservado | Acceso completo |
 |---|---|---|
-| EIO conversación para Qwen3-0.6B | **0.1.3**, distribuida como **0.1.3-beta.1** | Aplicación de la campaña conservada. |
-| Fuentes candidatas de EIO conversación | [0.1.4](conversacion-nativa/verificacion-0.1.4/INFORME.md) | Verificación local documentada; no sustituyen la distribución 0.1.3-beta.1 ni acreditan una nueva inferencia. |
-| EIO conversación para GPT-OSS-20B | [0.2.4, distribuida como 0.2.4-beta.1](modelos-de-ia/openai/gpt-oss-20b/distribucion/0.2.4-beta.1/FICHA_TECNICA.md) | Fuentes y ejecutable identificados. El rótulo interno 0.2.2 es una discrepancia documentada, no otra entrega. |
-| Servicio documental MCP | [0.1.0](modelos-de-ia/model-context-protocol/0.1.0/README.md) | Antecedente conservado con preparación incompleta. |
-| Servicio documental MCP | [0.1.1](modelos-de-ia/model-context-protocol/0.1.1/LEAME.md) | Correcciones de validación, paginación y conservación; controles dirigidos documentados y recepción pendiente. |
-| Servicio documental y cliente local | [0.1.2](modelos-de-ia/model-context-protocol/0.1.2/LEAME.md) | Añade supervisión del cliente mínimo. Este cliente no ofrece herramientas al modelo; no acredita por sí mismo una integración MCP. |
+| 0.1.0 | Prototipo de búsqueda textual y lectura paginada; preparación incompleta y reparos conservados. | [Paquete y documentación](modelos-de-ia/model-context-protocol/0.1.0/README.md) |
+| 0.1.1 | Rechazo de claves JSON duplicadas, paginación sobre la respuesta completa y custodia supervisada. Controles dirigidos documentados; recepción pendiente. | [Fuentes y uso](modelos-de-ia/model-context-protocol/0.1.1/LEAME.md) · [Ficha y alcance](modelos-de-ia/model-context-protocol/0.1.1/FICHA_TECNICA.md) |
+| 0.1.2 | Añade el cliente mínimo con supervisión independiente y observador del conjunto. Ese cliente no ofrece herramientas al modelo. | [Fuentes, uso y límites](modelos-de-ia/model-context-protocol/0.1.2/LEAME.md) |
 
-Las versiones se interpretan dentro de su componente. **Qwen3.8-27B** es una identidad de modelo; **0.1.2** puede identificar el componente MCP; **2.15** es exclusivamente la edición de este documento. Los pesos y motores se fijan mediante revisión y huella, no mediante la edición del índice.
+Son versiones del componente documental, sin publicación Release específica en este corte. TT-0014 conserva su recepción propia; la selección del modelo tiene criterios separados.
 
-Las realizaciones conservadas utilizan Rust 1.98.0. Qwen3-0.6B utiliza Candle; GPT-OSS-20B y Qwen3.8-27B utilizan revisiones identificadas de mistral.rs. OpenTelemetry Rust registra únicamente los puntos instrumentados. Las fichas de cada modelo precisan la composición y sus límites; no se presume equivalencia entre motores o campañas.
+</details>
+
+
+<a id="versión-distribuida"></a>
+
+## Publicaciones en orden cronológico
+
+Se conservan **cinco publicaciones preliminares: dos distribuciones y tres archivos de recuperación o cierre**. Cada desplegable conduce a la publicación completa, sus activos y la documentación de alcance. Las revisiones v1 corresponden a paquetes fechados distintos.
+
+<details>
+<summary><strong>22/09/2026 · EIO conversación 0.1.3-beta.1 · Qwen3-0.6B</strong></summary>
+
+Aplicación nativa con ejecutable, fuentes, licencias y manifiesto. Los pesos y el tokenizador tienen referencias externas identificadas. DOC-01 completó cuatro peticiones sin conformidad contractual completa; la distribución conserva ese resultado.
+
+[Publicación completa y activos](https://github.com/juantoniolloretegea/SV-motor/releases/tag/eio-conversacion-v0.1.3-beta.1) · [Ficha o procedimiento y límites](entregas/0.1.3-beta.1/FICHA_TECNICA.md).
+
+</details>
+
+<details>
+<summary><strong>25/09/2026 · GPT-OSS conversación 0.2.4-beta.1 · GPT-OSS-20B</strong></summary>
+
+Distribución de la aplicación y el motor identificados, con resultados y límites. Las fuentes declaran 0.2.4 y el rótulo interno conserva 0.2.2; la ficha documenta esta discrepancia. El funcionamiento técnico no acredita aptitud médica.
+
+[Publicación completa y activos](https://github.com/juantoniolloretegea/SV-motor/releases/tag/gpt-oss-conversacion-v0.2.4-beta.1) · [Ficha o procedimiento y límites](modelos-de-ia/openai/gpt-oss-20b/distribucion/0.2.4-beta.1/FICHA_TECNICA.md).
+
+</details>
+
+<details>
+<summary><strong>25/09/2026 · GPT-OSS · imagen de recuperación v1</strong></summary>
+
+Archivo cifrado cuya restitución funcional fue comprobada mediante el procedimiento conservado. Ese resultado corresponde a esta imagen concreta y no se transfiere a imágenes posteriores. Los pesos se recuperan separadamente.
+
+[Publicación completa y activos](https://github.com/juantoniolloretegea/SV-motor/releases/tag/gpt-oss-imagen-onecloud-20260925-v1) · [Ficha o procedimiento y límites](modelos-de-ia/openai/gpt-oss-20b/imagen-onecloud/README.md).
+
+</details>
+
+<details>
+<summary><strong>26/09/2026 · GPT-OSS · archivo de cierre v1</strong></summary>
+
+Conserva una imagen posterior de cierre y los pesos cifrados identificados. No se ha acreditado el arranque de esta nueva imagen; el ensayo de restitución del día anterior no prueba estos bytes.
+
+[Publicación completa y activos](https://github.com/juantoniolloretegea/SV-motor/releases/tag/gpt-oss-archivo-cierre-20260926-v1) · [Ficha o procedimiento y límites](modelos-de-ia/openai/gpt-oss-20b/imagen-onecloud/cierre-20260926/README.md).
+
+</details>
+
+<details>
+<summary><strong>27/09/2026 · Qwen3.8-27B · archivo de cierre v1</strong></summary>
+
+Reúne las imágenes del diagnóstico inicial y del cierre, sin pesos Qwen. Se conservan sus comprobaciones de integridad, sin arranque acreditado en una instancia restaurada. La configuración mantiene el dictamen No pasa.
+
+[Publicación completa y activos](https://github.com/juantoniolloretegea/SV-motor/releases/tag/qwen38-27b-archivo-cierre-20260927-v1) · [Ficha o procedimiento y límites](modelos-de-ia/qwen/qwen3.8-27b/imagen-onecloud/README.md).
+
+</details>
+
+El archivo posterior conserva la historia anterior y su dictamen. La publicación de activos cifrados no concede acceso al contenido reservado. GPT-OSS-120B no tiene distribución ni imagen publicada en este corte. Las huellas publicadas se identifican en [VERSIONES.json](VERSIONES.json); esta revisión documental no ha descargado ni recalculado los grandes activos binarios.
+
+<a id="historia-de-la-edición-documental"></a>
+
+## Historia completa de la edición documental
+
+La secuencia comienza en **0.1** y avanza hasta la presente **2.16**. Se han cotejado **31 revisiones anteriores**, correspondientes a **19 ediciones declaradas**. Cada desplegable conserva lo relevante de su corte y ofrece el texto íntegro; sus estados históricos no sustituyen al estado actual.
+
+El salto **0.2 → 2.0** se conserva tal como fue publicado; no se ha localizado una edición 1.x en el historial de este archivo. Cuando una edición reúne varios commits, se muestran todos en orden. Las fechas siguientes son las de esos commits en Europe/Madrid; una cabecera histórica puede conservar una fecha anterior.
+
+<details>
+<summary><strong>0.1 · 18/09/2026 · Apertura del ensayo</strong></summary>
+
+Define Qwen3-0.6B Q4_K_M, Candle y OpenTelemetry Rust como selección inicial. Fija el perímetro experimental y separa calidad del modelo, controles y autoridad. Es documentación preparatoria, sin inferencias acreditadas en ese corte.
+
+[Edición completa](https://github.com/juantoniolloretegea/SV-motor/blob/875a3df0f2e07fb3c71f98d7fd6968ccae54af24/laboratorio/ensayo-ia-y-observabilidad/README.md).
+
+</details>
+
+<details>
+<summary><strong>0.2 · 18/09/2026–20/09/2026 · Contrato y primeras campañas</strong></summary>
+
+Vincula el contrato a las fuentes rectoras y añade la continuidad EIO-05, EIO-06, JSON-01, NAV-01 y NAV-02. Los controles sintéticos no equivalen a inferencia completa en navegador; el diagnóstico NAV-02 termina antes del primer token.
+
+Cortes de esta edición, en orden cronológico:
+
+- [Contrato · 18/09/2026 · e1caf6d](https://github.com/juantoniolloretegea/SV-motor/blob/e1caf6df5bef2696f20d2b9fc5a5b5e9cffe509e/laboratorio/ensayo-ia-y-observabilidad/README.md).
+- [Resultados EIO/JSON · 20/09/2026 · ee29460](https://github.com/juantoniolloretegea/SV-motor/blob/ee2946062f878282513b519e467cb6bfbb8a05d1/laboratorio/ensayo-ia-y-observabilidad/README.md).
+- [Preparación NAV-01 · 20/09/2026 · 966b4b2](https://github.com/juantoniolloretegea/SV-motor/blob/966b4b23326312371ad0512ef586c8d9ea401c6b/laboratorio/ensayo-ia-y-observabilidad/README.md).
+- [Resultado NAV-01 · 20/09/2026 · 4c68db7](https://github.com/juantoniolloretegea/SV-motor/blob/4c68db73b48962bb185a523c1de34da85678d375/laboratorio/ensayo-ia-y-observabilidad/README.md).
+- [Preparación NAV-02 · 20/09/2026 · 8744e3d](https://github.com/juantoniolloretegea/SV-motor/blob/8744e3daf0c03f3675954ff774603454e44bfc45/laboratorio/ensayo-ia-y-observabilidad/README.md).
+- [Diagnóstico NAV-02 · 20/09/2026 · dde1a59](https://github.com/juantoniolloretegea/SV-motor/blob/dde1a59fcd1bb23d9f146dff4e99750725ffa76f/laboratorio/ensayo-ia-y-observabilidad/README.md).
+
+</details>
+
+<details>
+<summary><strong>2.0 · 20/09/2026 · Dos vías y criterio de avance</strong></summary>
+
+Organiza A como navegador/WebAssembly y B como proceso nativo. El avance depende de factibilidad, controles y evidencia; ambas vías conservan comprobaciones propias. El salto desde 0.2 pertenece a la numeración original.
+
+[Edición completa](https://github.com/juantoniolloretegea/SV-motor/blob/29a0dbe74018807fddf5759f30de12ac29c162bb/laboratorio/ensayo-ia-y-observabilidad/README.md).
+
+</details>
+
+<details>
+<summary><strong>2.1 · 20/09/2026 · Responsabilidades de Rust y JavaScript</strong></summary>
+
+Precisa que la interfaz nativa conserva HTML y JavaScript para presentación y transporte. Rust realiza inferencia y controles; utilizar HTTP o WebAssembly en una pieza no determina dónde se ejecuta el modelo.
+
+[Edición completa](https://github.com/juantoniolloretegea/SV-motor/blob/88ea2e6b1e28b5c1ff22d29da7003c854bb8461d/laboratorio/ensayo-ia-y-observabilidad/README.md).
+
+</details>
+
+<details>
+<summary><strong>2.2 · 20/09/2026 · Diagramas de las vías A y B</strong></summary>
+
+Incorpora flujos diferenciados de inferencia, control, custodia y parada. Distingue la arquitectura prevista de las ramas efectivamente ejecutadas.
+
+[Edición completa](https://github.com/juantoniolloretegea/SV-motor/blob/1b9190d1e146ef61599783191019c060d0ff899c/laboratorio/ensayo-ia-y-observabilidad/README.md).
+
+</details>
+
+<details>
+<summary><strong>2.2.1 · 20/09/2026 · Figuras SVG y procedencia</strong></summary>
+
+Publica los diagramas como SVG ampliables con sus fuentes Mermaid. El segundo corte añade la procedencia desde 0.1; ambos textos permanecen accesibles.
+
+Cortes de esta edición, en orden cronológico:
+
+- [SVG · 20/09/2026 · 078aa80](https://github.com/juantoniolloretegea/SV-motor/blob/078aa80d7e530eb4e38c582ea5a305202f12160a/laboratorio/ensayo-ia-y-observabilidad/README.md).
+- [Procedencia · 20/09/2026 · 3d185b2](https://github.com/juantoniolloretegea/SV-motor/blob/3d185b27c6bb728f1b23509d53dc6ad99c52883d/laboratorio/ensayo-ia-y-observabilidad/README.md).
+
+</details>
+
+<details>
+<summary><strong>2.3 · 20/09/2026 · Síntesis de resultados y reservas</strong></summary>
+
+Ordena la lectura externa y separa resultados observados, diagnóstico estático y trabajo pendiente. Conserva las figuras y los límites de custodia y supervisión de las preparaciones nativas.
+
+[Edición completa](https://github.com/juantoniolloretegea/SV-motor/blob/057dba8a4a1fd2774e35f61e6135fd096679502a/laboratorio/ensayo-ia-y-observabilidad/README.md).
+
+</details>
+
+<details>
+<summary><strong>2.4 · 22/09/2026 · Primera distribución de conversación</strong></summary>
+
+Presenta EIO conversación 0.1.3-beta.1 para Qwen3-0.6B. DOC-01 completa cuatro peticiones sin satisfacer el contrato estricto; la disponibilidad técnica no acredita calidad profesional.
+
+[Edición completa](https://github.com/juantoniolloretegea/SV-motor/blob/a14ea31b3903d49a98f08b912206b1c8c9eeaf74/laboratorio/ensayo-ia-y-observabilidad/README.md).
+
+</details>
+
+<details>
+<summary><strong>2.5 · 22/09/2026–23/09/2026 · Límites de Qwen y transición a GPT-OSS</strong></summary>
+
+Delimita los controles pendientes de la vía B y abre el catálogo por modelos. Las notas del día siguiente incorporan el primer intento nativo GPT-OSS y la revisión de su controlador. La propuesta inicial de GPT-OSS en A no acredita una ejecución en navegador.
+
+Cortes de esta edición, en orden cronológico:
+
+- [Delimitación · 22/09/2026 · 511969f](https://github.com/juantoniolloretegea/SV-motor/blob/511969f4ba576734f4bf96e39eed3e90d5dd02d5/laboratorio/ensayo-ia-y-observabilidad/README.md).
+- [Revisión del controlador · 23/09/2026 · 41c99e2](https://github.com/juantoniolloretegea/SV-motor/blob/41c99e2a6b68382e7ba867ff55aa3a1fcc07676c/laboratorio/ensayo-ia-y-observabilidad/README.md).
+- [Corrección instrumental · 23/09/2026 · 4fafb8c](https://github.com/juantoniolloretegea/SV-motor/blob/4fafb8ccf158a028820168ab7f7b822c608ee6ba/laboratorio/ensayo-ia-y-observabilidad/README.md).
+
+</details>
+
+<details>
+<summary><strong>2.6 · 23/09/2026 · Cierre acotado de Qwen nativo</strong></summary>
+
+Conserva la campaña Qwen/B como realización parcial con limitaciones. Identifica las correcciones de conversación 0.1.4 y del controlador GPT-OSS; su comprobación local no constituye otra inferencia.
+
+[Edición completa](https://github.com/juantoniolloretegea/SV-motor/blob/8cddcc83359bf6733a360d5bba2cd72426f8b631/laboratorio/ensayo-ia-y-observabilidad/README.md).
+
+</details>
+
+<details>
+<summary><strong>2.7 · 23/09/2026 · Recuperación visual y continuidad nativa</strong></summary>
+
+Restituye los diagramas A/B en la página de lectura. El segundo corte incorpora la continuación GPT-OSS y sus límites de carga, todavía sin respuesta final.
+
+Cortes de esta edición, en orden cronológico:
+
+- [Diagramas · 23/09/2026 · bf488a8](https://github.com/juantoniolloretegea/SV-motor/blob/bf488a86dcb1a311ddf4355345e267901adad7c9/laboratorio/ensayo-ia-y-observabilidad/README.md).
+- [Continuación GPT-OSS · 23/09/2026 · 810a476](https://github.com/juantoniolloretegea/SV-motor/blob/810a476488deb8dfb22585a51c91aee89d75ba0c/laboratorio/ensayo-ia-y-observabilidad/README.md).
+
+</details>
+
+<details>
+<summary><strong>2.8 · 23/09/2026 · Rectificación instrumental</strong></summary>
+
+Corrige la contabilización de memoria y el plazo de confirmación de escritura. Distingue la cuantización solicitada de la seleccionada por el motor; no presenta los intentos como inferencias completadas.
+
+[Edición completa](https://github.com/juantoniolloretegea/SV-motor/blob/250c3e27784d36f347e9ac0aefa5b53e6cc46c98/laboratorio/ensayo-ia-y-observabilidad/README.md).
+
+</details>
+
+<details>
+<summary><strong>2.9 · 23/09/2026 · Carga MXFP4 sin inferencia</strong></summary>
+
+Conserva dos intentos adicionales que no completaron la carga. Las causas no determinadas permanecen explícitas; no se atribuye el resultado a Harmony ni se declara una respuesta del modelo.
+
+[Edición completa](https://github.com/juantoniolloretegea/SV-motor/blob/ae9ceaef37e18d9cc12e25ea0369e4ebf58d9fb8/laboratorio/ensayo-ia-y-observabilidad/README.md).
+
+</details>
+
+<details>
+<summary><strong>2.10 · 23/09/2026 · Carga GGUF y generación observada</strong></summary>
+
+Acredita carga CPU y emisión de tokens en GPT-OSS-20B. Las respuestas HTTP no proporcionaron todavía una respuesta final útil; carga, generación y finalización del caso se distinguen.
+
+[Edición completa](https://github.com/juantoniolloretegea/SV-motor/blob/f3746b719a3e355d75ea566d3d3abde2b6ea9e0e/laboratorio/ensayo-ia-y-observabilidad/README.md).
+
+</details>
+
+<details>
+<summary><strong>2.11 · 24/09/2026 · Corrección CPU y recuperación</strong></summary>
+
+Documenta una regresión CPU MXFP4, una corrección comprobada en una prueba específica y la identidad de la candidata recuperada. La inferencia completa con esa candidata seguía pendiente en este corte.
+
+[Edición completa](https://github.com/juantoniolloretegea/SV-motor/blob/a74632b0b6dde70629863113134082dc3f31d521/laboratorio/ensayo-ia-y-observabilidad/README.md).
+
+</details>
+
+<details>
+<summary><strong>2.12 · 24/09/2026 · Primera respuesta correcta acotada</strong></summary>
+
+OC-01/OC-02 aportan una respuesta aritmética correcta y un contraste con el ejecutable anterior. El resultado tiene alcance instrumental limitado; no constituye selección médica.
+
+[Edición completa](https://github.com/juantoniolloretegea/SV-motor/blob/70750a516001cf13314176c529508d0712b7f3c1/laboratorio/ensayo-ia-y-observabilidad/README.md).
+
+</details>
+
+<details>
+<summary><strong>2.13 · 24/09/2026–25/09/2026 · Optimización y cierre GPT-OSS-20B</strong></summary>
+
+Reúne la optimización CPU y, en cortes posteriores, la distribución 0.2.4-beta.1 y la vinculación con TT-0013. Los resultados técnicos y documentales conservan su alcance; el cierre no acredita aptitud clínica.
+
+Cortes de esta edición, en orden cronológico:
+
+- [Optimización · 24/09/2026 · d4e62b2](https://github.com/juantoniolloretegea/SV-motor/blob/d4e62b29713a2044be0d1d4a7fb463155d3999c3/laboratorio/ensayo-ia-y-observabilidad/README.md).
+- [Distribución y cierre · 25/09/2026 · ab713cd](https://github.com/juantoniolloretegea/SV-motor/blob/ab713cdc73d6a55184d52c03b99745c99a1ced64/laboratorio/ensayo-ia-y-observabilidad/README.md).
+- [Vinculación TT-0013 · 25/09/2026 · c3b2793](https://github.com/juantoniolloretegea/SV-motor/blob/c3b279309c3ca54db6e94a693795b4367083cf0c/laboratorio/ensayo-ia-y-observabilidad/README.md).
+
+</details>
+
+<details>
+<summary><strong>2.14 · 27/09/2026 · Cierre Qwen3.8-27B y candidato 120B</strong></summary>
+
+Registra No pasa para la configuración Qwen3.8-27B y su archivo de conservación. Introduce GPT-OSS-120B como candidato de la vía B; la evaluación y los recursos quedan pendientes.
+
+Cortes de esta edición, en orden cronológico:
+
+- [Nuevo candidato · 27/09/2026 · 3f24439](https://github.com/juantoniolloretegea/SV-motor/blob/3f24439cccb8c677c18e6ea2b2b4f13adf7a95ae/laboratorio/ensayo-ia-y-observabilidad/README.md).
+- [Archivo Qwen · 27/09/2026 · 9d99df0](https://github.com/juantoniolloretegea/SV-motor/blob/9d99df038657cd85eb1e50b9223bf5e351031f74/laboratorio/ensayo-ia-y-observabilidad/README.md).
+
+</details>
+
+<details>
+<summary><strong>2.15 · 27/09/2026 · Índice de publicaciones y registro JSON</strong></summary>
+
+Distingue cinco publicaciones, las versiones de los componentes y los dictámenes de los candidatos. Introduce VERSIONES.json; la historia seguía resumida por intervalos.
+
+[Edición completa](https://github.com/juantoniolloretegea/SV-motor/blob/63f5bd5e9b8ef147ba6a92d7beba6f94fb5ea3eb/laboratorio/ensayo-ia-y-observabilidad/README.md).
+
+</details>
+
+<details open>
+<summary><strong>2.16 · 27/09/2026 · Continuidad completa y funciones Harmony/Candle</strong></summary>
+
+Incorpora todas las ediciones anteriores y sus cortes, los antecedentes de las aplicaciones y las publicaciones identificadas. Precisa Harmony, mistral.rs y Candle, con sus límites de cualificación. Conserva las figuras históricas A/B y actualiza el esquema previsto del candidato 120B.
+
+[Edición completa](README.md) · [Registro estructurado](VERSIONES.json). La identidad inmutable corresponde al commit de esta edición.
+
+</details>
+
 
 <a id="dos-vías-de-ejecución"></a>
 
@@ -95,16 +403,26 @@ Los controles sintéticos iniciales se completaron. La prueba con el modelo se i
 
 ```mermaid
 flowchart TD
-  H["Autorización humana"] --> C["Control Rust y Árbitro SV"]
-  C --> M["mistral.rs y GPT-OSS-120B"]
-  M -->|"Salida o solicitud documental"| C
-  C -->|"Consulta permitida"| D["MCP y catálogo local"]
-  D -->|"Texto identificado"| C
-  C --> E["Originales, métricas y revisión"]
-  E -->|"Dictamen con alcance"| H
+  H["Autorización humana"] --> C["Control Rust previsto"]
+  C --> D["MCP documental"]
+  D --> L["Catálogo local"]
+  C --> A["Mensajes Harmony"]
+  subgraph M["Motor mistral.rs por cualificar"]
+    A --> I["Inferencia GPT-OSS"]
+    I --> A
+    I --> N["Cálculo Candle"]
+  end
+  W["Pesos identificados"] --> I
+  A --> C
+  C --> E["Registros y observación"]
+  I -.-> E
 ```
 
-**Alcance de esta actualización visual:** esquema funcional previsto para el nuevo candidato, pendiente de comprobar e integrar en su realización concreta. El Árbitro SV comprende controles externos al protocolo MCP; no se atribuye aquí una implementación completa. La inferencia prevista deberá operar sin acceso a Internet. La adquisición administrativa de documentos precede al ensayo. Los dos diagramas anteriores se conservan como evidencia de sus respectivos cortes históricos.
+**Alcance de la figura:** composición funcional prevista, pendiente de cualificación. Harmony representa la preparación y el análisis de mensajes; Candle proporciona cálculo numérico dentro del motor. Los pesos mantienen identidad separada. El control previsto forma parte de las funciones del Árbitro SV; no se declara una implementación integral.
+
+El acceso documental previo por controlador y las llamadas autónomas del modelo son recorridos distintos. El cliente mínimo 0.1.2 no habilita estas últimas. La inferencia prevista deberá operar sin Internet; la adquisición administrativa de documentos y recursos precede al ensayo. Las líneas de observación señalan cobertura que debe acreditarse, no una captura exhaustiva ya conseguida.
+
+Las figuras históricas A/B conservan sus archivos y alcance. El esquema previo del candidato continúa accesible dentro de la [edición 2.15](https://github.com/juantoniolloretegea/SV-motor/blob/63f5bd5e9b8ef147ba6a92d7beba6f94fb5ea3eb/laboratorio/ensayo-ia-y-observabilidad/README.md).
 
 <a id="evidencia-y-seguimiento"></a>
 
@@ -120,24 +438,9 @@ La secuencia de identificación es **configuración → campaña → resultado �
 | Continuidad y dictámenes | [S39](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/sucesos/SUCESOS_SV.md#s39) y [Acta 004](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/continuacion-15-09-2026/ACTA_004_FINALIDAD_ALCANCE_Y_CONTINUIDAD_EIO_2026_09_22.md). |
 | Alcances de los tiques | [TT-0013: cierre GPT-OSS-20B](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0013.md), [TT-0014: MCP](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0014.md) y [TT-0015: nuevo candidato](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0015.md). |
 
-TT-0013 conserva su cierre acotado; TT-0014 requiere recepción propia; TT-0015 permanece pendiente de resultado material. Esta reorganización documental no modifica esos dictámenes.
+TT-0013 conserva su cierre acotado; TT-0014 requiere recepción propia; TT-0015 permanece pendiente de resultado material. Las actualizaciones del índice no modifican esos dictámenes.
 
-Los enlaces de las tablas permiten lectura pública de las fichas y los resultados resumidos. Los originales de acceso restringido mantienen su custodia propia. Una huella identifica bytes; no acredita veracidad clínica, restauración funcional o conformidad general. El registro de versiones recoge huellas publicadas: esta revisión documental no ha descargado ni recalculado los grandes activos binarios.
-
-### Historia de la edición documental
-
-| Fechas de las revisiones | Ediciones declaradas | Contenido principal |
-|---|---|---|
-| 18–20/09/2026 | 0.1 y 0.2 | Apertura del ensayo y delimitación inicial. |
-| 20/09/2026 | 2.0, 2.1, 2.2, 2.2.1 y 2.3 | Organización de las vías y diagramas. |
-| 22–23/09/2026 | 2.4–2.10 | Distribución Qwen y continuación nativa GPT-OSS. |
-| 24–25/09/2026 | 2.11–2.13 | Resultados y cierre experimental GPT-OSS-20B. |
-| 27/09/2026 | 2.14 | Nuevo candidato y documentación del cierre Qwen3.8-27B. |
-| 27/09/2026 | **2.15** | Índice unificado, secuencia de publicaciones y registro estructurado de versiones. |
-
-Se conservan los rótulos históricos, incluido el salto de 0.2 a 2.0. Algunas ediciones abarcan varios commits y mantienen fechas de cabecera anteriores a su última modificación; para recuperar un contenido exacto se utiliza el commit. [VERSIONES.json](VERSIONES.json) enumera las treinta revisiones anteriores localizadas, con su edición declarada y la fecha del commit.
-
-La edición 2.15 se limita a organización documental y correspondencia de referencias. No modifica etiquetas, activos, fuentes de software, originales experimentales ni dictámenes. Su identidad exacta es el commit que contiene estos documentos.
+Los enlaces de las tablas permiten lectura pública de las fichas y los resultados resumidos. Los originales de acceso restringido mantienen su custodia propia. Una huella identifica bytes; no acredita veracidad clínica, restauración funcional o conformidad general. La revisión de continuidad no repite los ensayos ni modifica sus resultados.
 
 ## Licencias
 
