@@ -1,5 +1,7 @@
 # Modelos de IA
 
+**Estado vigente · 27/09/2026.** [Qwen3.8-27B](qwen/qwen3.8-27b/README.md): selección actual cerrada con dictamen **NO PASA**, seguimiento y dos imágenes cifradas conservados. [GPT-OSS: archivo de cierre del 26/09](openai/gpt-oss-20b/imagen-onecloud/cierre-20260926): campaña archivada; no se acredita aptitud clínica. Los apartados fechados anteriormente documentan antecedentes y no describen la disponibilidad actual de los servicios.
+
 **Estado vigente · 27/09/2026:** GPT-OSS-120B se incorpora como candidato documental para la vía B nativa. Su instalación, evaluación y aptitud están pendientes. GPT-OSS-20B y la configuración Qwen3.8-27B conservan sus cierres adversos para la función examinada. MCP 0.1.2 tiene recepción propia y no acredita un modelo. [Seguimiento del ensayo](../README.md).
 
 **Cierre experimental histórico · 25/09/2026:** [GPT-OSS 0.2.4-beta.1: prospecto técnico](openai/gpt-oss-20b/distribucion/0.2.4-beta.1/FICHA_TECNICA.md), [resultados y límites](openai/gpt-oss-20b/distribucion/0.2.4-beta.1/RESULTADOS.md) e [instrucciones de conservación e instalación](openai/gpt-oss-20b/distribucion/0.2.4-beta.1/LEAME.md). Aplicación nativa CPU conservada en OneCloud; doce condiciones documentales conformes en un ámbito de cinco parámetros y doce consultas sintéticas de tricoleucemia con evaluación inicial adversa o pendiente de revisión. La conformidad técnica no acredita aptitud clínica. Fuentes de aplicación 0.2.4; rótulo interno 0.2.2 documentado. Los pesos se obtienen separadamente mediante revisión y SHA-256 fijados. [Entrega preliminar](https://github.com/juantoniolloretegea/SV-motor/releases/tag/gpt-oss-conversacion-v0.2.4-beta.1).
@@ -17,6 +19,7 @@ El modelo, el motor numérico y la vía de ejecución son elementos distintos. E
 | Ficha | Modelo | Vía B · nativa | Vía A · navegador/WebAssembly |
 |---|---|---|---|
 | [Qwen3-0.6B](qwen/qwen3-0.6b/README.md) | Qwen3-0.6B, Q4_K_M | Campaña cerrada como realización parcial con limitaciones; Beta 1 conservada. | Antecedentes NAV-02; inferencia real completa no acreditada. |
+| [Qwen3.8-27B](qwen/qwen3.8-27b/README.md) | Qwen3.8-27B, revisión fijada | Selección actual cerrada: NO PASA. Dos imágenes cifradas, sin pesos. | No ensayado. |
 | [gpt-oss-20b](openai/gpt-oss-20b/README.md) | gpt-oss-20b | Campaña cerrada; configuración excluida de la función médica prevista. | No ejecutada; sin continuación automática. |
 | [gpt-oss-120b](openai/gpt-oss-120b/README.md) | gpt-oss-120b | Preparación documental; compatibilidad CPU, recursos y selección pendientes. | Diferida hasta Apto experimental nativo y autorización específica. |
 | [Qwen3.8-27B: expediente restringido](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/7a116cddac3f0b98bdc52fb84e1ed1e0f2b23791/respuestas-ejecucion/QWEN38-SELECCION-MINIMA-LOCAL-20260927/entrega-01/INFORME.md) | Qwen3.8-27B | No pasa la selección mínima; configuración retirada como candidata. | No iniciada por este cierre. |

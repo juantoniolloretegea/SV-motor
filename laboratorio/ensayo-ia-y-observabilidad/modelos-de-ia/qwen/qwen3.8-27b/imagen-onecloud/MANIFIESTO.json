@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "fecha": "2026-09-27",
+  "modelo": "Qwen/Qwen3.8-27B",
+  "revision_modelo": "1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0",
+  "revision_motor": "2370966bb91e2e3dafa0b1521b87c50fd5c01244",
+  "release": "https://github.com/juantoniolloretegea/SV-motor/releases/tag/qwen38-27b-archivo-cierre-20260927-v1",
+  "pesos_qwen_incluidos": false,
+  "restauracion_realizada": false,
+  "clave_publicada": false,
+  "cifrado": {
+    "algoritmo": "AES-256-CBC",
+    "derivacion": "PBKDF2",
+    "iteraciones": 600000,
+    "verificacion": "SHA-256 del activo antes del descifrado"
+  },
+  "imagenes": [
+    {
+      "archivo": "qwen38-sistema-20260926.raw.gz.enc",
+      "bytes": 1294785680,
+      "sha256": "8f13a87fe5c329e7bef2abdc0cb69572e1c6d5f794589e71d96feeb687431b6f",
+      "disco_logico_bytes": 34359738368,
+      "fecha": "2026-09-26",
+      "alcance": "Diagnostico inicial",
+      "custodia_clave_identificador": "QWEN38-864618-20260926.key",
+      "antecedente": "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/releases/tag/qwen38-27b-imagen-onecloud-20260926-v1"
+    },
+    {
+      "archivo": "qwen38-cierre-20260927.raw.gz.enc",
+      "bytes": 1423503824,
+      "sha256": "893ec02b64251dfc4c28aa3901e2730c63f56677fd3c66e0fd3105385de3be0d",
+      "sha256_gzip": "ca4d3876160406446b4c35005d45b49b0065d59d5496dca614e326dbf9b30155",
+      "sha256_raw": "6f8d30eb17cbd741fdea22ce4947ecf93baa4bea0e5ca857e663492b2a10e1cb",
+      "disco_logico_bytes": 34359738368,
+      "fecha_fin_utc": "2026-09-27T07:30:30Z",
+      "alcance": "Sistema inicial y expedientes posteriores; seleccion final NO PASA",
+      "custodia_clave_identificador": "QWEN38-CIERRE-20260927.key",
+      "cotejo_archivos": true,
+      "e2fsck_correcto": true,
+      "descifrado_cotejado": true
+    }
+  ]
+}

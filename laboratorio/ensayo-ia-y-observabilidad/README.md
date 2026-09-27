@@ -1,5 +1,7 @@
 # Ensayo de inteligencia artificial y observabilidad
 
+**Estado vigente · 27/09/2026.** [Qwen3.8-27B](modelos-de-ia/qwen/qwen3.8-27b/README.md): selección actual cerrada con dictamen **NO PASA**, seguimiento y dos imágenes cifradas conservados. [GPT-OSS: archivo de cierre del 26/09](modelos-de-ia/openai/gpt-oss-20b/imagen-onecloud/cierre-20260926): campaña archivada; no se acredita aptitud clínica. Los apartados fechados anteriormente documentan antecedentes y no describen la disponibilidad actual de los servicios.
+
 ## Estado vigente · 27/09/2026
 
 La continuación se concentra en **GPT-OSS-120B, vía B nativa en CPU**. Se prepara la comprobación de compatibilidad, recursos y configuración; no hay instalación ni inferencia del nuevo candidato acreditada. [Ficha del candidato](modelos-de-ia/openai/gpt-oss-120b/README.md) · [TT-0015](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0015.md).
