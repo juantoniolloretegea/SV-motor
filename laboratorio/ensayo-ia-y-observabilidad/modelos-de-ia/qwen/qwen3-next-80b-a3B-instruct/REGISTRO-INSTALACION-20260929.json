@@ -1,7 +1,7 @@
 {
   "esquema": "registro_instrumental_qwen80_1",
   "fecha": "2026-09-29",
-  "estado": "supervision_corregida_instrumentalmente_pendiente_recepcion",
+  "estado": "presupuesto_memoria_conciliado_instrumentalmente_pendiente_recepcion",
   "inferencia_realizada": false,
   "prueba_humana_modelo_habilitada": false,
   "modelo": "Qwen3-Next-80B-A3B-Instruct",
@@ -11,7 +11,7 @@
   "archivos_cotejados": 11,
   "bytes_pesos_y_residual": 45338887469,
   "maximo_memoria_carga_incompleta_bytes": 7464132608,
-  "limite_memoria_bytes": 57982058496,
+  "limite_memoria_bytes": 55834574848,
   "swap_bytes": 0,
   "memoria_medida": "contabilidad de grupo de control; no RSS; carga incompleta",
   "rust": "1.98.0",
@@ -32,10 +32,10 @@
   ],
   "continuacion_criptografia_autorizada": true,
   "exclusividad_rust_del_ejecutable": false,
-  "entrega_commit": "5bedfca43f1430ab709d3981f604a03322b361c8",
-  "entrega_leame": "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/5bedfca43f1430ab709d3981f604a03322b361c8/respuestas-ejecucion/QWEN80-Q4K-ONECLOUD-20260929/entrega-03/LEAME.md",
-  "entrega_archivos_cotejados": 68,
-  "evidencias_sha256": "55e5802ae0e93c4a5ed6c88ffe65c9bef33b88615f8fe926b4392f39a1c2f17b",
+  "entrega_commit": "5b80a79bc747579fe8dbfc42fcce227706c835dc",
+  "entrega_leame": "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/5b80a79bc747579fe8dbfc42fcce227706c835dc/respuestas-ejecucion/QWEN80-Q4K-ONECLOUD-20260929/entrega-04/LEAME.md",
+  "entrega_archivos_cotejados": 46,
+  "evidencias_sha256": "ba6e0be1aa081ab67db946d3ec76677c69d3ebb8a6dba8254c5ee3e3e307eacc",
   "estado_cientifico_modificado": false,
   "historial_instalacion": [
     {
@@ -44,6 +44,29 @@
       "entrega_commit": "9b6d09ff48194d0ebb62c582ea5fc6d505d44215",
       "entrega_archivos_cotejados": 107,
       "evidencias_sha256": "a0a5624b13ab3ea954fedd066377ef64609d718f15fc32d8ff514eb61cce46d0"
+    },
+    {
+      "registro_modelo_commit": "3811bcd7ea2e6a62a9974e8c6a545736e30e26f6",
+      "estado": "supervision_corregida_instrumentalmente_pendiente_recepcion",
+      "limite_memoria_bytes": 57982058496,
+      "entrega_commit": "5bedfca43f1430ab709d3981f604a03322b361c8",
+      "entrega_archivos_cotejados": 68,
+      "evidencias_sha256": "55e5802ae0e93c4a5ed6c88ffe65c9bef33b88615f8fe926b4392f39a1c2f17b",
+      "supervision_corregida": {
+        "variantes_instrumentales_conformes": 13,
+        "pruebas_unitarias_conformes": 5,
+        "modelo_cargado": false,
+        "inferencia": false,
+        "recepcion_humana_real": false,
+        "ejecutable_sha256": "d30f22089e3a3b0b790c67cde46aa107a98ac4c631ef827a9ee390337ff11291",
+        "servicio": "inactive/dead",
+        "socket": "masked/inactive/dead",
+        "motor_modificado": false,
+        "mcp_modificado": false,
+        "dependencias_modificadas": false,
+        "recepcion_independiente": "pendiente",
+        "causa_exacta_demora_original": "no determinada"
+      }
     }
   ],
   "supervision_corregida": {
@@ -58,8 +81,33 @@
     "motor_modificado": false,
     "mcp_modificado": false,
     "dependencias_modificadas": false,
+    "recepcion_independiente": "favorable dentro del alcance instrumental",
+    "causa_exacta_demora_original": "no determinada",
+    "recepcion_commit": "62d78797889d78c33feca097344fca18cd4703cb"
+  },
+  "conciliacion_memoria": {
+    "encargo_commit": "6cfd5c1c0eca124c2591421f45c3e3251ceaabf2",
+    "presupuesto": {
+      "id": "QWEN80-MEMORIA-04-H52-R8-M1",
+      "objetivo_bytes": 53687091200,
+      "H_bytes": 55834574848,
+      "R_bytes": 8589934592,
+      "M_bytes": 1073741824,
+      "umbral_bytes": 65498251264
+    },
+    "pruebas_unitarias": 15,
+    "variantes_instrumentales": 16,
+    "conformes": true,
+    "ejecutable_sha256": "3ae37ea81c3152c5ec5604e4831772388cb1a0d8fe011b5c6eff2b2ef6436a26",
     "recepcion_independiente": "pendiente",
-    "causa_exacta_demora_original": "no determinada"
+    "modelo_cargado": false,
+    "inferencia": false,
+    "reserva_fisica_garantizada": false,
+    "servicio": "inactive/dead",
+    "socket": "masked/inactive/dead",
+    "memoria_maxima_Qwen": "no determinada",
+    "seguimiento": "S39",
+    "TT_0016": "posterior; no ejecutado"
   }
 }
 

@@ -75,3 +75,20 @@ El servicio quedó inactive/dead y su socket enmascarado; no quedaron procesos p
 
 Permanecen pendientes la recepción independiente de la corrección, la carga íntegra y memoria máxima, la comprobación Qwen/MCP real y la prueba humana. La prueba adicional anunciada no se ha definido ni implementado. Las dependencias criptográficas y sus excepciones mantienen las identidades y límites documentados anteriormente. No se modifica el estado científico del proyecto.
 
+
+## Conciliación instrumental del presupuesto de memoria
+
+Actualización del 29 de septiembre de 2026, posterior a la recepción favorable de la supervisión instrumental. Corresponde al encargo v2, commit `6cfd5c1c0eca124c2591421f45c3e3251ceaabf2`, y al seguimiento S39.
+
+Se corrigieron conjuntamente la igualdad fija de 54 GiB de la inicialización y el umbral fijo de 62 GiB previo a la carga. Tres lecturas actuales y un cálculo conservador en bytes determinaron el presupuesto **QWEN80-MEMORIA-04-H52-R8-M1**: objetivo de 50 GiB, límite duro de 52 GiB, reserva de 8 GiB y margen adicional de 1 GiB. La comprobación previa exige 61 GiB disponibles, sin descontar el consumo ya incluido en el grupo. Esta lectura no garantiza una reserva física frente a variaciones posteriores.
+
+La configuración, la inicialización, la observación y la creación futura del motor utilizan el mismo presupuesto. Se cotejan los límites propios y superiores; se rechazan datos ausentes o inválidos, cotas discordantes, restricciones superiores insuficientes e intercambio. Antes de crear el motor se conserva otra decisión de memoria; una disminución incompatible o una lectura caducada impiden su creación. El contador distingue preparación y carga confirmada.
+
+La revisión final compiló con Rust 1.98.0 y dependencias sin cambios. Resultaron conformes **15 pruebas unitarias y 16 variantes instrumentales**. Estas últimas comprenden las trece pruebas anteriores y tres nuevas con cota propia discordante, límite superior insuficiente y disminución sintética de memoria. Se leyeron límites reales del grupo de control y se verificó la terminación de los procesos instrumentales. No se asignó memoria masiva ni se provocó agotamiento real.
+
+Ejecutable de supervisión: SHA-256 `3ae37ea81c3152c5ec5604e4831772388cb1a0d8fe011b5c6eff2b2ef6436a26`. Se conservaron motor, MCP, pesos, corpus, dependencias y antecedentes. El servicio generativo permanece detenido, su activación implícita enmascarada y la recepción real deshabilitada. Instancia y escritorio continúan conservados.
+
+La [entrega-04 con informe, fuentes, configuración, evidencias y manifiesto](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/5b80a79bc747579fe8dbfc42fcce227706c835dc/respuestas-ejecucion/QWEN80-Q4K-ONECLOUD-20260929/entrega-04/LEAME.md) queda fijada en `5b80a79bc747579fe8dbfc42fcce227706c835dc`, con **46 archivos cotejados**. La copia de seguimiento está en `/opt/sv-qwen80/evidencias/memoria-04` y la preparación en `/opt/sv-qwen80/memoria-04`.
+
+**Esta conciliación no ha cargado Qwen ni efectuado inferencias; no acredita que la carga completa quepa en 52 GiB.** Se detiene para recepción independiente. La carga medida, la comprobación Qwen/MCP y el examen posterior requieren sus propias condiciones y autorizaciones. TT-0016 no se ejecuta ni se cierra mediante esta corrección. El estado científico del proyecto permanece en sus registros canónicos.
+
