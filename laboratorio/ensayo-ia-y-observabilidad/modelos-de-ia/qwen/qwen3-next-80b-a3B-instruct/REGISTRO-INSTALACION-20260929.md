@@ -140,3 +140,18 @@ Se conservaron **108 comprobaciones exteriores TCP/SSH correctas**, que no acred
 A las **17:27:31 UTC** se verificaron procesos propios ausentes, unidad original restituida, carga deshabilitada y recepción humana cerrada. Los observadores terminaron. El escritorio y la instancia se conservaron. [Entrega-07, informe y evidencia consolidada](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/c6b22cfed2b9cd8c7494115240de47933f474c69/respuestas-ejecucion/QWEN80-Q4K-ONECLOUD-20260929/entrega-07/INFORME.md), commit `c6b22cfed2b9cd8c7494115240de47933f474c69`, **24 archivos cotejados**. Archivo de evidencias: 613.633 bytes, SHA-256 `12cacdb506f8ade526ed18c1d972784a90fe612ffbc01e0f26d6b3087e8bbb50`. Copia de seguimiento: `/opt/sv-qwen80/evidencias/funcional-07`.
 
 La mejora de memoria observada no acredita todavía el recorrido documental completo, privacidad integral ni aptitud científica. La recepción independiente sigue pendiente. TT-0016 no se ha ejecutado ni cerrado.
+
+
+## Continuación v6: respuesta documental y estabilidad — 29/09/2026
+
+Se conserva íntegro el registro anterior, referido a sus respectivas actuaciones. La continuación obtuvo una respuesta mediante búsqueda y lectura auténticas del MCP aprobado y una única repetición con conversación nueva y motor reutilizado. Duraciones: consulta 2: 1532.618 segundos; consulta 3: 1535.382 segundos. Se conserva la entrada inicial de 543 tokens, el modelo, la plantilla y el corpus.
+
+La primera oración conserva letras y signos tras unir un salto de línea de la fuente. No existe identidad byte a byte de esa cita. El cotejo y las respuestas originales permiten examinar la diferencia; no se atribuye una literalidad informática que no se obtuvo.
+
+Se corrigieron las copias y descompresiones redundantes de expertos y la interpretación estricta del formato de llamada emitido por la plantilla Qwen. Las 144 comparaciones numéricas obtuvieron diferencia máxima cero; las treinta pruebas finales del supervisor fueron conformes. El límite efectivo del grupo fue 59 GiB, sin intercambio en disco. No se acredita una garantía general de memoria o rendimiento.
+
+Los procesos propios de ensayo quedaron detenidos y la carga y recepción general deshabilitadas. Se conserva la instancia, el escritorio y SSH. Su facturación puede continuar. La recepción independiente, el acceso humano y el examen TT-0016 permanecen pendientes; no se emite dictamen científico. Persisten las excepciones criptográficas `aws-lc-sys` y `ring`.
+
+El cierre presentó una incidencia: el supervisor comunicó `FIN_CONFORME` y terminó con código 0 a las 20:43:42 UTC; a las 20:43:44 UTC, systemd registró `State 'stop-sigterm' timed out. Killing.`. Posteriormente se comprobaron `MainPID=0`, la ausencia del grupo y la desaparición de los procesos propios. Se conserva `Result=timeout`; no se identifica qué proceso o fase de liberación agotó los dos segundos de parada. La terminación quedó comprobada, pero no corresponde describirla como un cierre sin incidencias.
+
+[Informe y evidencias de la entrega 08](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/cc65d2638e938014863db200ee7ae10540d3e7fc/respuestas-ejecucion/QWEN80-Q4K-ONECLOUD-20260929/entrega-08/INFORME.md). Commit de custodia: `cc65d2638e938014863db200ee7ae10540d3e7fc`. El manifiesto de la entrega identifica los archivos y sus huellas.
