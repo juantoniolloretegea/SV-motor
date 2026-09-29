@@ -92,3 +92,20 @@ La [entrega-04 con informe, fuentes, configuración, evidencias y manifiesto](ht
 
 **Esta conciliación no ha cargado Qwen ni efectuado inferencias; no acredita que la carga completa quepa en 52 GiB.** Se detiene para recepción independiente. La carga medida, la comprobación Qwen/MCP y el examen posterior requieren sus propias condiciones y autorizaciones. TT-0016 no se ejecuta ni se cierra mediante esta corrección. El estado científico del proyecto permanece en sus registros canónicos.
 
+## Carga única y medición posterior a la recepción de memoria
+
+Actualización del 29 de septiembre de 2026, conforme al encargo v3, commit `7a35a4165433d7685d83a700452df40b4e0143ce`, después de la recepción favorable `158c4014f27547101c4ba4559a99deebf0145670`. Se conserva el historial anterior y el seguimiento S39.
+
+**Resultado: carga no completada.** Se inició una sola carga de Qwen80 UQFF Q4K. El supervisor terminó con código 76 por `PLAZO_OPERACION_AGOTADO` durante `observacion_modelo`, 396,286 segundos después del registro de creación del motor, según su reloj monotónico. No fue el vencimiento de los 3.600 segundos de carga. La causa interna de la demora no está determinada; el resultado no demuestra agotamiento de memoria.
+
+Las decisiones de inicialización y precarga fueron conformes con H52-R8-M1. El máximo recuperado de `memory.peak` fue **53.689.405.440 bytes, 50,002155 GiB**, coincidente con el valor conservado por systemd. El máximo muestreado de `memory.current` fue 53.687.037.952 bytes. Estas magnitudes corresponden a la contabilidad del grupo, no a RSS. Se observó regulación: el último contador `high` era 9232, con `max`, `oom` y `oom_kill` en cero en esa lectura.
+
+El observador Rust conservó 840 muestras con objetivo de 500 ms y una separación máxima de 30.874 ms. El grupo desapareció durante esa laguna, por lo que **no se acredita un máximo final exacto**: el máximo recuperado se conserva como cota inferior del recorrido completo. Los contadores anteriores no sustituyen una lectura final después de la terminación.
+
+No se obtuvo la respuesta de salud exigida ni se realizó la observación favorable de 60 segundos. No hubo inferencia, tokenización de prueba, consultas MCP, examen ni habilitación de recepción humana. No se cambiaron el motor, el supervisor recibido, MCP, pesos, dependencias ni límites, y no se repitió el intento.
+
+El diario registra una demora en la terminación con SIGKILL. Una comprobación posterior acreditó la ausencia de los procesos propios y del grupo real. Se restituyó la unidad original sin permiso de carga. El servicio conserva el estado de fallo `failed/failed`, con MainPID=0 y socket `masked/inactive/dead`; no se borró ese diagnóstico. Se conservan instancia y escritorio.
+
+La [entrega-05 con informe, registro y evidencias](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/0c14961bccd90fb5119be3b35cbf1e7df2be86bd/respuestas-ejecucion/QWEN80-Q4K-ONECLOUD-20260929/entrega-05/LEAME.md) está fijada en `0c14961bccd90fb5119be3b35cbf1e7df2be86bd`, con **74 archivos cotejados**. SHA-256 del archivo de evidencias: `622b11cd81a7566900c43b066147f0c91a35ae81b230acfc4408b9a24f1552a3`. Copia de seguimiento: `/opt/sv-qwen80/evidencias/carga-05`; este registro se conserva también en `/opt/sv-qwen80/evidencias/registro-modelo-carga-05`.
+
+La actuación queda detenida para recepción independiente. No acredita suficiencia de memoria para generación, funcionamiento Qwen/MCP, privacidad ni aptitud científica. TT-0016 y las etapas posteriores permanecen fuera del alcance.
