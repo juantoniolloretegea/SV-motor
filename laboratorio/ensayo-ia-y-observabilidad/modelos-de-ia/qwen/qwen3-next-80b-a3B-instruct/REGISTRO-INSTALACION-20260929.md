@@ -126,3 +126,17 @@ A las **12:29:27 UTC** se verificaron procesos propios ausentes y configuración
 
 La recepción independiente sigue pendiente. Estos resultados no acreditan funcionamiento documental Qwen/MCP, privacidad integral ni aptitud científica. S39 conserva el seguimiento; TT-0016 no se ha ejecutado ni cerrado.
 
+
+## Selección de expertos acotada y conectividad — continuación v5, 29/09/2026
+
+La corrección Rust conserva el contexto, F32 y las diez rutas por token, pero materializa las matrices seleccionadas por bloques acotados. La biblioteca final superó 96 comparaciones numéricas con diferencia máxima cero; el supervisor superó 22 pruebas. La construcción final retornó cero y su utilización se cotejó mediante la huella del proceso real: `2e82adbf71c8e73d449b7367fe81fd553788387fb48c1fe84d4eb04bd6fa326b`. Pesos, catálogo, MCP y dependencias se conservaron.
+
+Una carga completa alcanzó primera salud en 295,625 segundos. La consulta mantuvo 543 tokens y se ejecutó con límite de 52 GiB, sin intercambio. Se observaron **1.253 selecciones materializadas**, con máximo de **1,25 GiB**, frente a los 21,2109375 GiB calculados para la selección completa anterior. La proyección descomprimida continuó siendo de 2 GiB. La traza alcanzó la capa de índice 21 de la consulta. Los últimos contadores de agotamiento de memoria fueron cero; el máximo recuperado del grupo fue 52 GiB y la RSS agregada máxima muestreada, aproximadamente 52,867 GiB, con magnitudes y limitaciones diferenciadas.
+
+**La respuesta documental no se completó.** Sólo se ejecutó tools/list; no hubo buscar_documentos, leer_documento ni cita que cotejar. El proceso devolvió `request or response body error` y el supervisor cerró con código 71, aproximadamente 896,559 segundos después de la admisión. La coincidencia con el plazo HTTP de 895 segundos es compatible con su vencimiento, pero el mensaje genérico no determina la causa interna. No se repitió la consulta ni se amplió exclusivamente el plazo sin una nueva corrección comprobada; los tiempos por proyección y la extrapolación orientativa se conservan en la entrega.
+
+Se conservaron **108 comprobaciones exteriores TCP/SSH correctas**, que no acreditan continuidad entre muestras. Una conexión anterior de compilación quedó abierta sin sus procesos remotos; su retorno original sigue sin recuperarse. No se acredita cambio de IP ni reinicio. La consola noVNC permanece pendiente, aunque gdm está activo.
+
+A las **17:27:31 UTC** se verificaron procesos propios ausentes, unidad original restituida, carga deshabilitada y recepción humana cerrada. Los observadores terminaron. El escritorio y la instancia se conservaron. [Entrega-07, informe y evidencia consolidada](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/c6b22cfed2b9cd8c7494115240de47933f474c69/respuestas-ejecucion/QWEN80-Q4K-ONECLOUD-20260929/entrega-07/INFORME.md), commit `c6b22cfed2b9cd8c7494115240de47933f474c69`, **24 archivos cotejados**. Archivo de evidencias: 613.633 bytes, SHA-256 `12cacdb506f8ade526ed18c1d972784a90fe612ffbc01e0f26d6b3087e8bbb50`. Copia de seguimiento: `/opt/sv-qwen80/evidencias/funcional-07`.
+
+La mejora de memoria observada no acredita todavía el recorrido documental completo, privacidad integral ni aptitud científica. La recepción independiente sigue pendiente. TT-0016 no se ha ejecutado ni cerrado.
