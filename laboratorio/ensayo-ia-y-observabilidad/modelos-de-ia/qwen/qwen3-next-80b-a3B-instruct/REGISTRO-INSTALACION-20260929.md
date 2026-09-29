@@ -58,3 +58,20 @@ La entrega privada y su cotejo se fijan en el commit `9b6d09ff48194d0ebb62c582ea
 Se cotejaron los 107 archivos de esa entrega con sus identidades Git locales y se comprobó que los contenidos anteriores permanecían inalterados. El archivo de evidencias tiene SHA-256 `a0a5624b13ab3ea954fedd066377ef64609d718f15fc32d8ff514eb61cce46d0`.
 
 Permanecen pendientes el diagnóstico del supervisor, la carga completa, una generación sintética, la consulta documental única, el cotejo literal de respuesta y localizador, y la prueba humana por la misma vía web. La recuperación independiente y el aseguramiento de imagen tampoco se dan por acreditados. El estado científico del proyecto no se modifica mediante este registro instrumental.
+
+## Corrección de supervisión y comprobación instrumental posterior
+
+Actualización del 29 de septiembre de 2026, posterior a los resultados anteriores.
+
+La supervisión corregida se compiló con Rust 1.98.0, sin modificar el motor, el MCP ni las dependencias fijadas. Se separaron las operaciones bloqueantes de conservación y observación del control temporal y de cancelación, con confirmaciones explícitas y un observador en otro proceso. Systemd conserva un segundo control temporal sobre ese observador.
+
+La revisión final superó trece variantes instrumentales correspondientes a las ocho comprobaciones exigidas, incluidas una conservación demorada más de tres segundos, fallos reales de escritura y persistencia, bloqueo de operación, suspensión del supervisor y del observador exterior, cancelación, salida anómala, exclusión y reutilización de custodia. Las cinco pruebas unitarias de telemetría y análisis estricto también resultaron conformes. La primera ejecución adversa, sus errores y las correcciones se conservan diferenciadamente.
+
+Se comprobó una transición de recepción restringida al acceso administrativo y conservada antes de habilitar consultas instrumentales. Se cotejaron el cuerpo HTTP, su huella, la entrada efectiva a Rust y el eco literal. **No se cargó el modelo ni se realizó inferencia; una respuesta instrumental no acredita una respuesta de Qwen.**
+
+Ejecutable propio revisado: SHA-256 `d30f22089e3a3b0b790c67cde46aa107a98ac4c631ef827a9ee390337ff11291`. Las fuentes compiladas y su cotejo se incluyen en la [entrega-03](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/5bedfca43f1430ab709d3981f604a03322b361c8/respuestas-ejecucion/QWEN80-Q4K-ONECLOUD-20260929/entrega-03/LEAME.md), commit `5bedfca43f1430ab709d3981f604a03322b361c8`, con 68 archivos cotejados. Se conservan los antecedentes y las limitaciones del diagnóstico inicial: no se conoce la operación que demoró la señal original ni se puede concluir la viabilidad del modelo a partir de aquella carga incompleta.
+
+El servicio quedó inactive/dead y su socket enmascarado; no quedaron procesos propios del ensayo. La instancia, el escritorio y sus accesos administrativos permanecen conservados. La recepción real y la carga están deshabilitadas. Los resultados observados no acreditan inspección visual del navegador, agotamiento real de memoria ni recuperación independiente.
+
+Permanecen pendientes la recepción independiente de la corrección, la carga íntegra y memoria máxima, la comprobación Qwen/MCP real y la prueba humana. La prueba adicional anunciada no se ha definido ni implementado. Las dependencias criptográficas y sus excepciones mantienen las identidades y límites documentados anteriormente. No se modifica el estado científico del proyecto.
+
