@@ -109,3 +109,20 @@ El diario registra una demora en la terminación con SIGKILL. Una comprobación 
 La [entrega-05 con informe, registro y evidencias](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/0c14961bccd90fb5119be3b35cbf1e7df2be86bd/respuestas-ejecucion/QWEN80-Q4K-ONECLOUD-20260929/entrega-05/LEAME.md) está fijada en `0c14961bccd90fb5119be3b35cbf1e7df2be86bd`, con **74 archivos cotejados**. SHA-256 del archivo de evidencias: `622b11cd81a7566900c43b066147f0c91a35ae81b230acfc4408b9a24f1552a3`. Copia de seguimiento: `/opt/sv-qwen80/evidencias/carga-05`; este registro se conserva también en `/opt/sv-qwen80/evidencias/registro-modelo-carga-05`.
 
 La actuación queda detenida para recepción independiente. No acredita suficiencia de memoria para generación, funcionamiento Qwen/MCP, privacidad ni aptitud científica. TT-0016 y las etapas posteriores permanecen fuera del alcance.
+
+## Continuación funcional y ajustes de memoria — 29/09/2026
+
+La actuación v4 acredita **tres cargas completas**, con respuestas de salud HTTP 200 vinculadas a los procesos nuevos. Los tiempos hasta primera salud fueron 250,551, 240,510 y 240,943 segundos. Una autorización posterior permitió ensayo y error con ajustes justificados: se probaron cotas de **52, 56 y 59 GiB**, preservando los plazos absolutos y los intentos anteriores.
+
+Las tres consultas utilizaron el mismo texto, descubrieron las herramientas MCP y contaron 543 tokens de entrada. Al comenzar la primera generación, el núcleo terminó el grupo por agotamiento de memoria: `CONSTRAINT_MEMCG` y `Result=oom-kill`. No se conservaron emisiones de respuesta; no se ejecutaron `buscar_documentos` ni `leer_documento`. Por tanto, **la comprobación documental no se completó** y no existe reutilización conforme que medir.
+
+En la última terminación se registraron 63.206.232.064 bytes de memoria anónima del grupo. El fallo no se atribuye a un plazo de supervisión ni únicamente a caché de archivos. La cota final de 59 GiB dejaba unos 3,79 GiB físicos fuera del grupo; no se amplió más para conservar margen del sistema. No se determina la memoria mínima suficiente ni se descarta otra configuración futura.
+
+La revisión acotada separa captura, conservación y confirmación; limita la observación periódica a sesenta segundos y mantiene la vigilancia independiente de tres segundos. Las pruebas afectadas fueron conformes; la última compilación superó 22 pruebas unitarias y una comprobación real del perfil sin pesos. Motor, MCP, pesos, catálogo, consulta y dependencias permanecieron intactos. Los máximos del grupo, RSS y memoria anónima se distinguen; las lagunas de observación impiden afirmar continuidad perfecta o un máximo final exacto.
+
+A las **12:29:27 UTC** se verificaron procesos propios ausentes y configuración original restituida, sin permiso de carga ni recepción humana. El servicio conserva el diagnóstico de fallo; el escritorio y la instancia permanecen disponibles. No se eliminó ni reinició la instancia.
+
+[Entrega-06, informe, registro y evidencias](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/0dad86d58198e6babf1c88f41c48077751a894ad/respuestas-ejecucion/QWEN80-Q4K-ONECLOUD-20260929/entrega-06/INFORME.md), commit `0dad86d58198e6babf1c88f41c48077751a894ad`, **16 archivos cotejados**. El archivo único de evidencias tiene SHA-256 `71d60a2c9d925b676952bf3344177cc4296585548fb6102493df754de17c9e49` e índice de 1.396 originales y fuentes. Copia de seguimiento: `/opt/sv-qwen80/evidencias/funcional-06`.
+
+La recepción independiente sigue pendiente. Estos resultados no acreditan funcionamiento documental Qwen/MCP, privacidad integral ni aptitud científica. S39 conserva el seguimiento; TT-0016 no se ha ejecutado ni cerrado.
+
