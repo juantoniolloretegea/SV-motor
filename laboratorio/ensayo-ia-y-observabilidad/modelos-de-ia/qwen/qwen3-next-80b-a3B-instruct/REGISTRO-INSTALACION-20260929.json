@@ -1,5 +1,5 @@
 {
-  "alcance_registros_anteriores": "Los registros hasta continuacion_funcional_07, conciliacion_memoria, mcp_pruebas y supervision_corregida son antecedentes conservados. El resultado de v6 está en continuacion_funcional_08 y su incidencia de cierre en incidencia_cierre_actual. v6 utilizó un límite de grupo de 59 GiB, cuya contabilidad difiere del RSS de los procesos; no constituye una garantía general de consumo. estado_recibido_antes_v6 conserva íntegro el objeto JSON anterior.",
+  "alcance_registros_anteriores": "El estado prevalente de 30/09/2026 se conserva en examen_v7_entrega_09. Los campos de campañas 02–08 son antecedentes históricos; no describen una ejecución activa. Se añade corrección documental para revisión humana, sin recepción científica definitiva.",
   "archivos_cotejados": 11,
   "bytes_pesos_y_residual": 45338887469,
   "candle_revision": "66a8cf184a5a519671454066b1b9efd446ec9f5c",
@@ -241,11 +241,11 @@
   },
   "cuantizacion": "UQFF Q4K",
   "distribucion": "mistralrs-community/Qwen3-Next-80B-A3B-Instruct-UQFF",
-  "entrega_archivos_cotejados": 10,
-  "entrega_commit": "cc65d2638e938014863db200ee7ae10540d3e7fc",
-  "entrega_leame": "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/cc65d2638e938014863db200ee7ae10540d3e7fc/respuestas-ejecucion/QWEN80-Q4K-ONECLOUD-20260929/entrega-08/INFORME.md",
+  "entrega_archivos_cotejados": 77,
+  "entrega_commit": "1b3e1f999acb6dc6493388b1e80424dc00dd51cb",
+  "entrega_leame": "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/1b3e1f999acb6dc6493388b1e80424dc00dd51cb/respuestas-ejecucion/QWEN80-Q4K-ONECLOUD-20260929/entrega-09/INFORME.md",
   "esquema": "registro_instrumental_qwen80_1",
-  "estado": "Respuesta documental y repetición realizadas; correspondencia con unión explícita de líneas, sin identidad de bytes de la cita; recepción independiente pendiente",
+  "estado": "Examen v7 terminado; correccion documental propuesta y recepcion humana pendientes",
   "estado_cientifico_modificado": false,
   "estado_recibido_antes_v6": {
     "alcance_registros_anteriores": "Los registros hasta continuacion_funcional_06 son antecedentes conservados; el resultado actual está en continuacion_funcional_07. El límite máximo probado de 59 GiB pertenece a v4; v5 utilizó 52 GiB.",
@@ -903,7 +903,7 @@
   },
   "evidencias_sha256": "8af7eaa5e72670cf2cd6fe295fbe9a21a49464f46258f9340e68954be773e15c",
   "exclusividad_rust_del_ejecutable": false,
-  "fecha": "2026-09-29",
+  "fecha": "2026-09-30",
   "historial_instalacion": [
     {
       "entrega_archivos_cotejados": 107,
@@ -1351,7 +1351,7 @@
   "mistralrs_revision": "2370966bb91e2e3dafa0b1521b87c50fd5c01244",
   "modelo": "Qwen3-Next-80B-A3B-Instruct",
   "prueba_humana_modelo_habilitada": false,
-  "resultado_servicio_actual": "timeout",
+  "resultado_servicio_actual": "inactive; Result=success; MainPID=0; carga deshabilitada",
   "revision_archivos": "193326907e14842f9f0c06bc9d36243fdcc9582b",
   "rust": "1.98.0",
   "salida_supervisor": 0,
@@ -1372,5 +1372,75 @@
     "socket": "masked/inactive/dead",
     "variantes_instrumentales_conformes": 13
   },
-  "swap_bytes": 0
+  "swap_bytes": 0,
+  "estado_anterior_a_entrega_09": {
+    "estado": "Respuesta documental y repetición realizadas; correspondencia con unión explícita de líneas, sin identidad de bytes de la cita; recepción independiente pendiente",
+    "fecha": "2026-09-29",
+    "resultado_servicio_actual": "timeout",
+    "estado_cientifico_modificado": false,
+    "entrega_commit": "cc65d2638e938014863db200ee7ae10540d3e7fc",
+    "entrega_leame": "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/cc65d2638e938014863db200ee7ae10540d3e7fc/respuestas-ejecucion/QWEN80-Q4K-ONECLOUD-20260929/entrega-08/INFORME.md",
+    "entrega_archivos_cotejados": 10,
+    "salida_supervisor": 0,
+    "senal_terminacion": null,
+    "limite_memoria_bytes": 63350767616
+  },
+  "examen_v7_entrega_09": {
+    "campana": "QWEN80-Q4K-ONECLOUD-20260929 v7",
+    "ronda": "EVAL-PDQ-HCL-25-20260929/r1",
+    "suceso": "S39",
+    "tique": "TT-0016",
+    "ultima_respuesta_utc": "2026-09-30T18:46:05.912Z",
+    "cierre_guarda_utc": "2026-09-30T18:46:07.897Z",
+    "segmentos": 5,
+    "registros_terminales": 25,
+    "respuestas_finales": 19,
+    "impedimentos_tecnicos": [
+      "P09",
+      "P12",
+      "P14",
+      "P15",
+      "P20",
+      "P22"
+    ],
+    "sin_ejecutar": 0,
+    "correccion_documental": {
+      "valores": {
+        "0": 7,
+        "1": 2,
+        "U": 10
+      },
+      "criticas": {
+        "0": 6,
+        "1": 2,
+        "U": 8,
+        "impedimentos": 4
+      },
+      "no_criticas": {
+        "0": 1,
+        "1": 0,
+        "U": 2,
+        "impedimentos": 2
+      },
+      "penalizadas": [
+        "P07",
+        "P19"
+      ],
+      "propuesta": "No apto por errores críticos",
+      "revision_humana": "pendiente",
+      "frame_completo": false,
+      "impedimentos_fuera_de_terna": true
+    },
+    "cierre": {
+      "carga_deshabilitada": true,
+      "procesos_propios_ausentes": true,
+      "socket": "masked/inactive",
+      "ssh": "active",
+      "escritorio": "active",
+      "instancia_conservada": true
+    },
+    "ultima_recuperacion_pruebas_rust": 63,
+    "revision_web_pruebas_rust": 4,
+    "recepcion_cientifica_definitiva": false
+  }
 }

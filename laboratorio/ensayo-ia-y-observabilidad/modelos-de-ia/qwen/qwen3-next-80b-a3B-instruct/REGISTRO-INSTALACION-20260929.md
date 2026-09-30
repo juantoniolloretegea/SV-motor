@@ -1,5 +1,23 @@
 # Registro instrumental de instalación: Qwen3-Next-80B-A3B-Instruct Q4K
 
+## Estado vigente · Cierre del examen v7, 30/09/2026
+
+**Ejecución terminada: 19 respuestas finales, seis impedimentos técnicos y cero preguntas sin ejecutar.** P25 terminó a las 18:46:05.912 UTC y la guarda cerró conforme a las 18:46:07.897 UTC. Carga deshabilitada, ausencia de procesos propios comprobada, servicio y conductor detenidos, socket enmascarado; instancia y accesos administrativos conservados.
+
+La [entrega consolidada 09](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/1b3e1f999acb6dc6493388b1e80424dc00dd51cb/respuestas-ejecucion/QWEN80-Q4K-ONECLOUD-20260929/entrega-09/INFORME.md) conserva los cinco segmentos. Las correcciones instrumentales limitaron el efecto de rechazos conocidos a la pregunta, manteniendo las validaciones y los originales, sin repetir inferencias concluidas. Los impedimentos corresponden a P09, P12, P14, P15, P20 y P22.
+
+| Corrección documental propuesta | 0: acierto | 1: error penalizado | U: indeterminación | Impedimento técnico |
+|---|---:|---:|---:|---:|
+| Total | 7 | 2 | 10 | 6 |
+| Críticas | 6 | 2 | 8 | 4 |
+| No críticas | 1 | 0 | 2 | 2 |
+
+[Preguntas, respuestas y fundamentos](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/1b3e1f999acb6dc6493388b1e80424dc00dd51cb/respuestas-ejecucion/QWEN80-Q4K-ONECLOUD-20260929/entrega-09/RESULTADOS-P01-P25.md). **Propuesta: No apto en el alcance examinado**, por errores críticos P07 y P19; revisión humana pendiente. P19 se señala para valorar la generalización absoluta documentada. Los impedimentos no se convierten en U y no hay un frame completo. Este resultado no acredita aptitud clínica ni del dominio.
+
+La corrección compara clave previa, corpus congelado y trazas MCP efectivas; conserva separados los resultados originales y la valoración. Los [resultados completos en Markdown](tests-y-pruebas-efectuadas/RESULTADOS-PDQ-HCL-25-20260930.md) y su [registro JSON](tests-y-pruebas-efectuadas/RESULTADOS-PDQ-HCL-25-20260930.json) quedan en la carpeta de pruebas del modelo. La presentación web se conserva como antecedente; su servicio se retiró por instrucción posterior. S39 / TT-0016 mantienen la recepción humana pendiente. La ejecución Thinking conserva su propio expediente y no se intervino.
+
+**Lectura de los antecedentes siguientes:** sus fechas y resultados permanecen íntegros. Las expresiones antiguas de carga incompleta, ejecución o ausencia de inferencia corresponden a sus cortes y no sustituyen el estado vigente anterior.
+
 Fecha: 29 de septiembre de 2026. Encargo: QWEN80-Q4K-ONECLOUD-20260929.
 
 **La instalación y las compilaciones se conservan; la carga del modelo quedó incompleta por una incidencia de supervisión. No se ha realizado inferencia ni se ha habilitado la prueba humana del modelo.**
