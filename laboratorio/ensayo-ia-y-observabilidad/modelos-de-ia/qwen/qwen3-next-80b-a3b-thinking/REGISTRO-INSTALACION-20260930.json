@@ -2,7 +2,6 @@
   "expediente": "QWEN80-THINKING-Q4K-ONECLOUD-20260930",
   "revision": "v1",
   "fecha": "2026-09-30",
-  "estado": "preparacion_local_sin_activacion_remota",
   "encargo_commit": "ea99efba6337a9e28f8a523554daf7a0bae4f2d6",
   "seguimiento": [
     "S39",
@@ -10,54 +9,331 @@
   ],
   "dependencia_documental": "TT-0014",
   "examen_eventual": "TT-0016",
+  "estado": "primera_respuesta_final_conservada; ejecucion_cerrada; recepcion_independiente_pendiente",
   "modelo": {
     "nombre": "Qwen3-Next-80B-A3B-Thinking",
-    "distribucion": "mistralrs-community/Qwen3-Next-80B-A3B-Thinking-UQFF",
+    "repositorio": "mistralrs-community/Qwen3-Next-80B-A3B-Thinking-UQFF",
     "revision": "3b8734e41d4a42855a03a8eb14eda91d53ebba86",
     "cuantizacion": "Q4K",
-    "pesos_descargados_por_esta_actuacion": false,
-    "carga_acreditada": false,
-    "inferencia_acreditada": false
+    "pesos_descargados": true,
+    "carga_iniciada": true,
+    "carga_realizada": true,
+    "inferencia_realizada": true
   },
-  "versiones_previstas": {
-    "rust_cargo": "1.98.0",
+  "entorno": {
+    "sistema": "Ubuntu 26.04 LTS x86_64",
+    "cpu_asignadas": 12,
+    "cpu_modelo": 11,
+    "memtotal_kib": 65837388,
+    "swap_bytes": 0
+  },
+  "versiones": {
+    "rust_cargo_remoto": "1.98.0",
     "mistral_rs": "2370966bb91e2e3dafa0b1521b87c50fd5c01244",
     "candle": "66a8cf184a5a519671454066b1b9efd446ec9f5c",
-    "correcciones_recibidas": "Entrega Instruct 08; no sustituyen una validación Thinking"
+    "opentelemetry": "0.31.0",
+    "mcp": "0.1.2",
+    "auxiliares_documentales_windows_rust": "1.98.1",
+    "excepciones_criptograficas": [
+      "aws-lc-sys 0.37.0: C y ensamblador en comunicaciones",
+      "ring 0.17.14: C y ensamblador en comunicaciones"
+    ]
   },
-  "identidades_conservadas": {
-    "cargo_lock_supervisor": "59ed6f9ee56d644cb5c1b22f24de02849f453a220e9df340d46b86a8b0ae7946",
+  "identidades": {
+    "motor": "1d32385f0a8947a9b06bbcc95a80e7a9c4cd5ae265c89aaf969f21c84b221112",
+    "supervisor_R8": "a2e3c9614ab52fd45bc06a39769bfdb612db86e37777ddd0c5b29b641f1e059e",
+    "conductor_R8": "2eae18024dcffec399f45c8ea74c643e283426cd6626aab4ee8ccfbb46861d27",
+    "mcp": "115e2fc8ea91d7b0e76824ebc9b2e17f22518e3da3cf4b9315b190cd4a1ba377",
+    "mcp_original_encargo": "fc1561637120dd5bbb0d2a51d01cc242c05946824a78ea40455d9af156a73eed",
+    "mcp_nueva_identidad_aceptada_expresamente": true,
     "cargo_lock_motor": "6b1b4c0c919bd7c09c6c3e2a2802da96ee0eb02c344b68f0ccf3d083a2cde2cc",
+    "cargo_lock_supervisor": "59ed6f9ee56d644cb5c1b22f24de02849f453a220e9df340d46b86a8b0ae7946",
     "catalogo": "94024658204c0607c5879f8cf263d6238d639494b5d9c266396c20f3e848a45d",
     "html_congelado": "00018ac31108eecc4709f0ce80439d4ca2d56b02262c5c334a184b9c0944e04d"
   },
-  "comprobaciones_locales": {
-    "plataforma": "x86_64-pc-windows-msvc",
-    "rust": "1.98.0",
-    "canales_conformes": 6,
-    "persistencia_conformes": 3,
-    "integracion_completa_acreditada": false,
-    "linux_pendiente": true
+  "instalacion": {
+    "archivos": 10,
+    "bytes": 45350323142,
+    "identidades_cotejadas": true,
+    "compilacion": "conforme",
+    "pesos_publicados": false,
+    "identidades_detalladas": "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/1cf92e92768938bd304ee22a792d16fc7a12bb9e/respuestas-ejecucion/QWEN80-THINKING-Q4K-ONECLOUD-20260930/entrega-01/IDENTIDADES-CANDIDATO.json"
   },
-  "cotas_tecnicas": {
+  "parametros": {
+    "temperatura": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "min_p": 0,
+    "semilla": 42,
+    "representacion": "F32",
+    "prefill_chunk_size": 32,
+    "prefix_cache": 0,
+    "paged_attention": false,
+    "offline": true,
     "memoria_grupo_bytes": 63350767616,
     "swap_bytes": 0,
     "cpu_maximas": 11,
-    "secuencias": 1
+    "secuencias": 1,
+    "techo_contexto_tokens": 32768,
+    "techo_salida_tokens": 16384,
+    "llamadas_mcp_maximas": 4,
+    "generaciones_maximas": 5,
+    "ausencia_progreso_inicial_segundos": 1800
   },
-  "pendientes": [
-    "Identidad y recursos efectivos del servidor",
-    "Integración y pruebas Linux del supervisor",
-    "Compatibilidad UQFF y descarga remota cotejada",
-    "Compilación e aislamiento",
-    "Consulta documental completa y verificación del resultado",
-    "Presentación, cierre, entrega y recepción independiente"
-  ],
-  "limites_epistemicos": {
-    "resultados_instruct_no_atribuidos_a_thinking": true,
-    "razonamiento_emitido_no_equivale_a_observacion_interna_exhaustiva": true,
+  "autorizaciones": {
+    "ejecucion_y_correcciones_instrumentales": true,
+    "limite_administrativo_tiempo": null,
+    "limite_administrativo_coste": null,
+    "consulta_saldo_requerida": false,
+    "pagos_recargas_cambios_recursos": false
+  },
+  "prueba": {
+    "id": "THINK-DOC-01",
+    "intentos_conservados": 4,
+    "primer_resultado_completo": "i04/t04",
+    "respuesta_repetida_para_mejora": false,
+    "activacion_utc_ms": 1790795470504,
+    "carga_confirmada_utc_ms": 1790795471154,
+    "admision_utc_ms": 1790795605716,
+    "primera_emision_final_utc_ms": 1790800888080,
+    "resultado_utc_ms": 1790801122212,
+    "duracion_conductor_ms": 5650994,
+    "duracion_admision_resultado_ms": 5516496,
+    "cargas_i04": 1,
+    "consultas_i04": 1,
+    "generaciones": 3,
+    "llamadas_mcp": 2,
+    "herramientas": [
+      "buscar_documentos",
+      "leer_documento"
+    ],
+    "finish_reason": "stop",
+    "respuesta_sha256": "d3db84503da7a81aefeaaa35be3899bf1299407458eb1cec245b27ff838e7eb0",
+    "generaciones_detalladas": "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/1cf92e92768938bd304ee22a792d16fc7a12bb9e/respuestas-ejecucion/QWEN80-THINKING-Q4K-ONECLOUD-20260930/entrega-01/GENERACIONES.json",
+    "cotejo_documental": "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/1cf92e92768938bd304ee22a792d16fc7a12bb9e/respuestas-ejecucion/QWEN80-THINKING-Q4K-ONECLOUD-20260930/entrega-01/COTEJO-DOCUMENTAL.json"
+  },
+  "resultado_documental": {
+    "titulo_seccion_localizador_exactos": true,
+    "pagina_recibida": 0,
+    "paginas_disponibles": 3,
+    "caracteres_recibidos": [
+      0,
+      2000
+    ],
+    "lectura_documento_completo": false,
+    "reenviados_bytes_exactos": true,
+    "cita_bytes_exactos": false,
+    "cita_correspondencia_solo_LF_CRLF": true,
+    "oraciones_emitidas": 2,
+    "oraciones_solicitadas": 1,
+    "cumplimiento_literal_sin_reservas": false,
     "adjudicacion_clinica": null
   },
-  "entrega_privada_prevista": "respuestas-ejecucion/QWEN80-THINKING-Q4K-ONECLOUD-20260930/entrega-01/",
-  "entrega_final_publicada": false
+  "memoria": {
+    "estimacion_carga_gib": 55.50444870162755,
+    "estimacion_generacion_gib": 50.38588068354875,
+    "pico_grupo_bytes": 63350767616,
+    "limite_grupo_bytes": 63350767616,
+    "ultima_medida_antes_descarga_bytes": 60926648320,
+    "memory_events_max": 5363,
+    "oom": 0,
+    "oom_kill": 0,
+    "swap_bytes": 0,
+    "margen_estatico_demostrado": false
+  },
+  "cierre": {
+    "resultado": "FIN_CONFORME",
+    "utc_ms": 1790801125448,
+    "custodia_final": true,
+    "archivos_sincronizados": 98,
+    "segundos": 0.089731038,
+    "procesos_propios_restantes": 0,
+    "unidades": "inactive/dead",
+    "resultado_unidades": "success",
+    "modelo_cargado": false,
+    "allow_model_loading": false,
+    "auto_start": false,
+    "socket_sin_escucha": true,
+    "terminacion_forzada": false,
+    "watchdog": false,
+    "ssh_conservado": true,
+    "instancia_conservada": true,
+    "observador_finalizado": true,
+    "tunel_ejecucion_finalizado": true
+  },
+  "telemetria": {
+    "opentelemetry_rust": "0.31.0",
+    "records": 1045,
+    "bytes": 469044,
+    "errors": 0,
+    "dropped": 0,
+    "ok": true,
+    "razonamiento_emitido_no_equivale_observacion_interna_exhaustiva": true
+  },
+  "comprobaciones": {
+    "supervisor_R8": 70,
+    "conductor": 4,
+    "dinamicas_R8": 12,
+    "dinamicas_H52": 11,
+    "dinamicas_H59": 1,
+    "compilacion_remota": "offline/locked; conforme",
+    "fuentes_reales": "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/1cf92e92768938bd304ee22a792d16fc7a12bb9e/respuestas-ejecucion/QWEN80-THINKING-Q4K-ONECLOUD-20260930/entrega-01/FUENTES-EFECTIVAS-R8.tar.gz",
+    "indice_fuentes": "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/1cf92e92768938bd304ee22a792d16fc7a12bb9e/respuestas-ejecucion/QWEN80-THINKING-Q4K-ONECLOUD-20260930/entrega-01/INDICE-FUENTES-FINALES.tsv",
+    "conectividad_muestras": 118,
+    "conectividad_conformes": 118,
+    "prueba_humana_interfaz": false
+  },
+  "intentos": [
+    {
+      "id": "i01/t01",
+      "respuesta_final": false,
+      "busqueda": true,
+      "lectura": false,
+      "razonamiento_bytes": [
+        3520,
+        466
+      ],
+      "error": "Sin confirmación temporal de sincronización",
+      "causa_cierre": "CUSTODIA_SIN_CONFIRMACION:emision:22137ms",
+      "watchdog_cierre": true,
+      "archivo": {
+        "archivo": "EVIDENCIAS-I01-20260930-1636.tar.gz",
+        "bytes": 16493572,
+        "sha256": "ac7fb51ea43e7f92fb7ed6ab73ca96ac2f1b92af003bb817946bb96eed395790",
+        "origen_receptor_cotejados": true,
+        "sockets_omitidos": "objetos de comunicación; avisos originales conservados",
+        "url": "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/1cf92e92768938bd304ee22a792d16fc7a12bb9e/respuestas-ejecucion/QWEN80-THINKING-Q4K-ONECLOUD-20260930/entrega-01/EVIDENCIAS-I01-20260930-1636.tar.gz"
+      }
+    },
+    {
+      "id": "i02/t02",
+      "respuesta_final": false,
+      "busqueda": false,
+      "lectura": false,
+      "razonamiento_bytes": [
+        1434
+      ],
+      "error": "Sin confirmación temporal de sincronización",
+      "archivos_sincronizados": 51,
+      "custodia_final": true,
+      "watchdog": false,
+      "archivo": {
+        "archivo": "EVIDENCIAS-I02-20260930-1718.tar.gz",
+        "bytes": 5593985,
+        "sha256": "29f7a9c7ab288d6453b99b8c63c36fcef3b7df438f0ad5e4df5440e81adc4f32",
+        "origen_receptor_cotejados": true,
+        "url": "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/1cf92e92768938bd304ee22a792d16fc7a12bb9e/respuestas-ejecucion/QWEN80-THINKING-Q4K-ONECLOUD-20260930/entrega-01/EVIDENCIAS-I02-20260930-1718.tar.gz"
+      }
+    },
+    {
+      "id": "i03/t03",
+      "respuesta_final": false,
+      "busqueda": true,
+      "lectura": false,
+      "razonamiento_bytes": [
+        3520,
+        941
+      ],
+      "causa_cierre": "CUSTODIA_SIN_CONFIRMACION:emision:48778ms",
+      "archivos_sincronizados": 74,
+      "custodia_final": true,
+      "watchdog": false,
+      "archivo": {
+        "archivo": "EVIDENCIAS-I03-20260930-1843.tar.gz",
+        "bytes": 18303589,
+        "sha256": "ec1398051bb7f7fd42990c9620234d975ad0a303ab2d7456b3b28a190ba43bba",
+        "origen_receptor_cotejados": true,
+        "url": "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/1cf92e92768938bd304ee22a792d16fc7a12bb9e/respuestas-ejecucion/QWEN80-THINKING-Q4K-ONECLOUD-20260930/entrega-01/EVIDENCIAS-I03-20260930-1843.tar.gz"
+      }
+    },
+    {
+      "id": "i04/t04",
+      "respuesta_final": true,
+      "busqueda": true,
+      "lectura": true,
+      "razonamiento_bytes": [
+        3520,
+        4274,
+        2743
+      ],
+      "archivos_sincronizados": 98,
+      "custodia_final": true,
+      "watchdog": false,
+      "archivo": {
+        "archivo": "EVIDENCIAS-I04-20260930-2100.tar.gz",
+        "bytes": 46398922,
+        "sha256": "c02a450366cb69bc509b5116da9d7a3ee39998fc0257ace51c06395bd7564884",
+        "origen_receptor_cotejados": true,
+        "url": "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/1cf92e92768938bd304ee22a792d16fc7a12bb9e/respuestas-ejecucion/QWEN80-THINKING-Q4K-ONECLOUD-20260930/entrega-01/EVIDENCIAS-I04-20260930-2100.tar.gz"
+      }
+    }
+  ],
+  "incidencias_preparacion": [
+    {
+      "fase": "descarga",
+      "causa": "curl HTTP2 CANCEL codigo 92",
+      "correccion": "HTTP1.1 y continuacion del parcial conservado",
+      "resuelto_archivo": "q4k-2.uqff"
+    },
+    {
+      "fase": "copia_parcial",
+      "causa": "OOM en auxiliar limitado a 1 GiB antes de curl",
+      "correccion": "copia de 64 KiB con sincronizacion y aviso de paginas prescindibles, sin modificar limites",
+      "resultado": "copia completada"
+    },
+    {
+      "fase": "control_instrumental_R4",
+      "causa": "ruta de socket supera SUN_LEN",
+      "resultado": "cierre con grupo sin procesos; comprobacion de memoria no alcanzada",
+      "correccion": "ruta breve y comprobacion previa de longitud en R5",
+      "pendiente": false,
+      "resolucion": "Doce controles dinámicos R5 conformes conservados en evidencias/c5b."
+    },
+    {
+      "fase": "descarga_q4k3",
+      "causa": "curl 56 OpenSSL SSL_read unexpected eof",
+      "parcial_conservado_bytes": 9913253016,
+      "correccion": "Transferencias HTTP/1.1 por segmentos de 512 MiB; cotejo completo final conforme."
+    },
+    {
+      "fase": "calculo_presupuesto",
+      "causa": "Primera orden sin RUSTC; segunda sin CARGO_HOME; ejecución posterior sin binario disponible.",
+      "correccion": "Reutilizado el entorno exacto de la compilación conforme; compilación y cálculo final correctos.",
+      "evidencia": "evidencias/compilar-presupuesto-thinking-r3"
+    }
+  ],
+  "limites": [
+    "Primera respuesta final conservada sin repeticion ni seleccion favorable.",
+    "Tres intentos previos interrumpidos por incidencias instrumentales, conservados.",
+    "Pico real H59; ausencia de OOM no acredita margen estatico.",
+    "Causa fisica de las latencias de almacenamiento no determinada.",
+    "No examen P01-P25 ni adjudicacion clinica.",
+    "Pendientes recepcion instrumental independiente, prueba humana de interfaz y decision de examen comparable."
+  ],
+  "antecedentes_publicacion": {
+    "registro_preparacion_commit": "c3b68173410c879d5bcd5cac18840626cd902359",
+    "documento_actual_sustituye_estado_preparacion": true,
+    "registro_previo_url": "https://github.com/juantoniolloretegea/SV-motor/blob/c3b68173410c879d5bcd5cac18840626cd902359/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/qwen/qwen3-next-80b-a3b-thinking/REGISTRO-INSTALACION-20260930.json"
+  },
+  "presentacion": {
+    "archivo": "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/1cf92e92768938bd304ee22a792d16fc7a12bb9e/respuestas-ejecucion/QWEN80-THINKING-Q4K-ONECLOUD-20260930/entrega-01/RESULTADOS.html",
+    "sin_inferencia": true,
+    "sin_red": true,
+    "procedimiento": "Abrir la copia local RESULTADOS.html en un navegador autorizado; estado y respuesta primero, razonamiento desplegable por intento.",
+    "prueba_humana": false
+  },
+  "entrega": {
+    "repositorio": "juantoniolloretegea/SV-sala-de-maquinas",
+    "rama": "main",
+    "commit": "1cf92e92768938bd304ee22a792d16fc7a12bb9e",
+    "archivos": 28,
+    "cotejo_bytes_completo": true,
+    "base_url": "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/1cf92e92768938bd304ee22a792d16fc7a12bb9e/respuestas-ejecucion/QWEN80-THINKING-Q4K-ONECLOUD-20260930/entrega-01/",
+    "informe": "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/1cf92e92768938bd304ee22a792d16fc7a12bb9e/respuestas-ejecucion/QWEN80-THINKING-Q4K-ONECLOUD-20260930/entrega-01/INFORME.md",
+    "manifiesto": "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/1cf92e92768938bd304ee22a792d16fc7a12bb9e/respuestas-ejecucion/QWEN80-THINKING-Q4K-ONECLOUD-20260930/entrega-01/MANIFIESTO.tsv",
+    "respuesta_original": "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/1cf92e92768938bd304ee22a792d16fc7a12bb9e/respuestas-ejecucion/QWEN80-THINKING-Q4K-ONECLOUD-20260930/entrega-01/RESPUESTA-FINAL.txt",
+    "recepcion_independiente": "pendiente"
+  },
+  "entrega_final_publicada": true
 }
+
