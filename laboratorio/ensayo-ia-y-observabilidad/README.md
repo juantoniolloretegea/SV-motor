@@ -1,6 +1,8 @@
 # Ensayo de inteligencia artificial y observabilidad
 
-**Edición documental 2.16 · 27 de septiembre de 2026.**
+**Edición documental 2.17 · 30 de septiembre de 2026.**
+
+**Corte de evidencias:** 30/09/2026, 08:42 UTC. Las comunicaciones posteriores se identifican por separado; esta página no es un monitor de ejecución.
 
 <a id="objeto-y-criterio-experimental"></a>
 
@@ -8,30 +10,53 @@ Investigación experimental sobre ejecución de modelos auxiliares, fidelidad do
 
 Esta página reúne el estado de los candidatos, la secuencia de publicaciones, las versiones de los componentes y sus límites. El [registro estructurado de versiones](VERSIONES.json) fija las referencias por commit y distingue fuentes, distribuciones y archivos de conservación.
 
-**Consulta:** [estado actual](#estado-actual) · [Harmony y Candle](#harmony-candle-y-funciones-del-conjunto) · [componentes](#versiones-de-los-componentes) · [publicaciones](#publicaciones-en-orden-cronológico) · [historia completa](#historia-completa-de-la-edición-documental) · [diagramas](#vías-de-ejecución-y-diagramas).
+**Consulta:** [estado actual](#estado-actual) · [evaluación y resultado](#evaluación-documental-y-resultado) · [componentes](#versiones-de-los-componentes) · [publicaciones](#publicaciones-en-orden-cronológico) · [historia completa](#historia-completa-de-la-edición-documental) · [diagramas](#vías-de-ejecución-y-diagramas) · [seguimiento](#trazabilidad-y-criterios-de-lectura).
 
 <a id="estado-vigente--27092026"></a>
 
 ## Estado actual
 
-La continuación corresponde a **GPT-OSS-120B en la vía B nativa CPU**. Su compatibilidad, dimensionamiento y selección permanecen pendientes de resultado. No hay inferencia del nuevo candidato acreditada en este corte.
+La línea experimental vigente es **Qwen3-Next-80B-A3B-Instruct, cuantizado en UQFF Q4K, en la vía B nativa CPU**. Se han recibido favorablemente dos consultas documentales completas con búsqueda y lectura reales mediante MCP. La ronda posterior de 25 preguntas **no tiene todavía un resultado final recibido**. Funcionamiento documental, respuesta conservada y aptitud son resultados distintos.
 
-| Modelo o configuración | Resultado conservado | Situación |
+| Modelo o configuración | Resultado y alcance | Situación al corte |
 |---|---|---|
-| [Qwen3-0.6B · Q4_K_M](modelos-de-ia/qwen/qwen3-0.6b/README.md) | Inferencia nativa y controles parciales; cuatro consultas DOC-01 terminadas, sin conformidad contractual completa. | Campaña cerrada con limitaciones. |
+| [Qwen3-0.6B · Q4_K_M](modelos-de-ia/qwen/qwen3-0.6b/README.md) | Inferencia nativa y controles parciales; cuatro consultas DOC-01 terminadas sin conformidad contractual completa. | Campaña cerrada con limitaciones. |
 | [GPT-OSS-20B · MXFP4](modelos-de-ia/openai/gpt-oss-20b/README.md) | Funcionamiento técnico y bancos documentales conservados; la evaluación médica no acreditó la función prevista. | Configuración excluida de esa selección; archivo conservado. |
-| [Qwen3.8-27B](modelos-de-ia/qwen/qwen3.8-27b/README.md) | Respuesta final completa en la selección mínima, con omisión material y deficiencias de citas y localización. | **No pasa**; configuración retirada de la selección actual. |
-| [GPT-OSS-120B](modelos-de-ia/openai/gpt-oss-120b/README.md) | Preparación y comprobación preliminar; sin resultado de selección. | Candidato, pendiente. |
+| [Qwen3.8-27B](modelos-de-ia/qwen/qwen3.8-27b/README.md) | Respuesta completa en la selección mínima, con omisión material y deficiencias de citas y localización. | **No pasa** en la selección examinada. |
+| [GPT-OSS-120B](modelos-de-ia/openai/gpt-oss-120b/README.md) | Comprobación preliminar entregada: los archivos de pesos superaban el límite de memoria de la configuración considerada. Sin consumo máximo de inferencia medido. | Alternativa condicionada; [TT-0015](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0015.md). |
+| [Qwen3-Next-80B-A3B-Instruct](modelos-de-ia/qwen/qwen3-next-80b-a3B-instruct/REGISTRO-INSTALACION-20260929.md) | Dos consultas MCP recibidas. En la campaña posterior se comunican ocho respuestas conservadas y una interrupción en P09. | Evaluación parcial y recepción pendientes; [TT-0016](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0016.md). |
+| [Qwen3-Next-80B-A3B-Thinking](modelos-de-ia/qwen/qwen3-next-80b-a3b-thinking) | Prueba documental independiente preparada y transmisión humana comunicada. La carpeta del modelo ha sido incorporada después del corte. | Sin resultado recibido; [TT-0017](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0017.md). |
 
-Los juicios se refieren a configuraciones y bancos concretos; no califican a una familia completa ni se suman como una tasa general de acierto. El [catálogo de modelos](modelos-de-ia/README.md) conserva también los estudios documentales sin inferencia.
+La [recepción instrumental de Instruct](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/816a70bd6ff72c8d55f9bd599823a17e1fd57454/respuestas-ejecucion/QWEN80-Q4K-ONECLOUD-20260929/revision-entrega-08/RECEPCION.md) —original de acceso restringido— coteja dos recorridos completos: solicitud del modelo, búsqueda, lectura del catálogo local, incorporación de su resultado y respuesta final. Las citas coinciden con la fuente tras convertir exclusivamente los saltos LF/CRLF en espacios. Las duraciones fueron **1532,618 y 1535,382 segundos**; el máximo registrado del grupo alcanzó **59 GiB**, sin agotamiento de memoria registrado en esos intentos. Estos datos no acreditan holgura de memoria, rapidez interactiva ni capacidad general de cualquier configuración de 64 GB.
 
-El MCP documental tiene seguimiento propio. Sus controles instrumentales no convierten un modelo en apto ni prueban que sus afirmaciones estén sustentadas por las citas.
+El avance posterior es **una comunicación de ejecución todavía pendiente de recepción independiente**: P01–P08 conservadas, P09 sin respuesta final y P10–P25 sin ejecutar en ese aviso. P09 propuso dos lecturas en un intercambio limitado a una; el rechazo se propagó al cierre de la campaña. La continuación correctiva está preparada para distinguir el fallo de un ítem de un fallo general de seguridad o conservación. Su preparación no demuestra que se haya ejecutado. Ocho respuestas conservadas no equivalen a ocho respuestas correctas.
 
-**Secuencia vigente:** selección nativa B → Apto en el alcance experimental → posible autorización de un ensayo A/WebAssembly. Cargar el modelo no satisface la selección. La aptitud clínica general, el uso productivo y la integración en el núcleo requieren decisiones y evidencia propias.
+Thinking se sigue de forma independiente: su plantilla, razonamiento generado, respuesta final y llamadas a herramientas necesitan tratamiento diferenciado. Los resultados de Instruct no se transfieren a esta variante. El [registro de modelos](modelos-de-ia/README.md) conserva antecedentes; las fichas de seguimiento anteriores identifican el estado actualizado de estas dos líneas.
+
+## Evaluación documental y resultado
+
+La pregunta experimental es si una configuración puede **responder con fundamento verificable dentro de una biblioteca delimitada**. La primera ronda utiliza una captura identificada del [PDQ profesional del NCI sobre leucemia de células pilosas](https://www.cancer.gov/espanol/tipos/leucemia/pro/tratamiento-celulas-pilosas-pdq), consultada desde el catálogo local. La página pública identifica la procedencia; no sustituye los bytes congelados del ensayo.
+
+El [banco de preguntas](https://github.com/juantoniolloretegea/SVperitus-dataset/blob/6f1118a323bcefac9400d01274e4f8d1db3636ff/dominios/inmunologia/tes-examenes-conocimientos/ronda-01-pdq-tricoleucemia-20260929/PREGUNTAS.md) y el [protocolo de evaluación, revisión r1](https://github.com/juantoniolloretegea/SVperitus-dataset/blob/6f1118a323bcefac9400d01274e4f8d1db3636ff/dominios/inmunologia/tes-examenes-conocimientos/ronda-01-pdq-tricoleucemia-20260929/PROTOCOLO.md) fijan **25 posiciones, cinco niveles propuestos de dificultad, 20 preguntas críticas y cinco no críticas**. La clave de corrección queda fuera del alcance del candidato. Los casos son sintéticos y la graduación de dificultad aún no tiene calibración empírica.
+
+| Resultado por posición | Significado |
+|---|---|
+| **0** | Respuesta correcta y sustentada conforme a la clave y a las evidencias. |
+| **1** | Error demostrado conforme al criterio previo. |
+| **U** | Indeterminación auténtica: no se acredita 0 y no hay falsedad relevante demostrada. |
+| **Intento inválido o pendiente** | Fallo técnico, evidencia perdida o pregunta no ejecutada. Se registra fuera de la terna; no se rellena con U. |
+
+La clasificación auxiliar aplica **T(n)=⌊7n/9⌋**, que para 25 posiciones vale 19. El dictamen del instrumento incorpora además la criticidad: cualquier 1 crítico determina **No apto**; si no hay 1 crítico pero existe U crítica, corresponde **U (indeterminación honesta)**; las veinte críticas en 0 y la clasificación auxiliar favorable permiten **Apto**. Con esta distribución, las veinte respuestas críticas correctas ya superan el umbral. Los errores no críticos siguen siendo visibles.
+
+Sólo tras **25 adjudicaciones válidas e independientes** se constituye el vector ordenado y su frame o polígono. Cada posición queda ligada a pregunta, fuente, respuesta, configuración y fundamento de corrección. Las comprobaciones sintéticas del evaluador Rust acreditan su cálculo en esos casos, no la validez médica de las respuestas.
+
+La futura visualización **egui** deberá facilitar la lectura humana y la relación entre frames; no se declara implementada. **Un frame Apto puede formar parte de un conjunto No apto**: la composición y la aptitud de dominio necesitan reglas aún no constituidas por esta ronda. Una U puede motivar nuevas preguntas con identidad propia, conservando los resultados anteriores.
+
+La secuencia es: suficiencia instrumental → evaluación documental → dictamen limitado al banco → decisión sobre una eventual fase posterior. La vía A/WebAssembly conserva su dependencia de una selección favorable y de autorización propia. No se acredita aptitud clínica general, uso productivo ni integración en el núcleo del SV.
 
 ## Harmony, Candle y funciones del conjunto
 
-OpenAI exige utilizar **Harmony** con GPT-OSS. Es el formato de mensajes, canales, llamadas y terminación; la biblioteca oficial `openai-harmony` proporciona su codificación y análisis. **Candle** aporta operaciones numéricas y tensores. En las bases de mistral.rs examinadas se utilizan ambas bibliotecas: sus funciones son complementarias. [Formato oficial](https://github.com/openai/harmony) · [Candle](https://github.com/huggingface/candle).
+En la línea GPT-OSS, **Harmony** es el formato requerido de conversación. Es el formato de mensajes, canales, llamadas y terminación; la biblioteca oficial `openai-harmony` proporciona su codificación y análisis. **Candle** aporta operaciones numéricas y tensores. En las bases de mistral.rs examinadas se utilizan ambas bibliotecas: sus funciones son complementarias. [Formato oficial](https://github.com/openai/harmony) · [Candle](https://github.com/huggingface/candle).
 
 | Elemento | Función | Condición de interpretación |
 |---|---|---|
@@ -46,13 +71,13 @@ OpenAI exige utilizar **Harmony** con GPT-OSS. Es el formato de mensajes, canale
 
 La base mistral.rs [0.9.3](https://github.com/EricLBuehler/mistral.rs/blob/24dbf5c256f232176ee5949485ba264049407fbe/Cargo.toml) fija Candle en `35d7ae7…`; la base [0.9.4](https://github.com/EricLBuehler/mistral.rs/blob/2370966bb91e2e3dafa0b1521b87c50fd5c01244/Cargo.toml), en `66a8cf1…`. Ambas declaran Candle 0.11.0 y `openai-harmony` 0.0.8. El número de versión común no hace equivalentes sus fuentes ni acredita el binario utilizado. Las modificaciones CPU del antecedente GPT-OSS-20B requieren cotejo específico antes de aplicarse al 120B.
 
-**Alcance de la revisión:** la compatibilidad conceptual entre Candle y Harmony está fundamentada; la cualificación del ensamblaje 120B permanece pendiente. Deben verificarse el tratamiento de errores y truncamientos de Harmony, el vocabulario local identificado, la ruta numérica MXFP4, las dependencias efectivamente compiladas y los controles de red y herramientas. El [adaptador examinado](https://github.com/EricLBuehler/mistral.rs/blob/24dbf5c256f232176ee5949485ba264049407fbe/mistralrs-core/src/reasoning_parsers/harmony.rs) descarta determinados errores de análisis; este hallazgo estático no constituye una explotación reproducida. La [biblioteca Harmony](https://github.com/openai/harmony/blob/ec7606df9e87e3d0a1fec9f50928c1e407f0c438/src/tiktoken_ext/public_encodings.rs) admite un vocabulario local verificado y contempla descarga si no se fija el directorio local y falta una caché válida. El ensayo debe acreditar funcionamiento sin red. Usar Rust o incluir una dependencia no constituye una certificación de seguridad.
+**Antecedente GPT-OSS, separado de la campaña Qwen:** la compatibilidad conceptual entre Candle y Harmony está fundamentada; la cualificación del ensamblaje 120B permanece pendiente. Deben verificarse el tratamiento de errores y truncamientos de Harmony, el vocabulario local identificado, la ruta numérica MXFP4, las dependencias efectivamente compiladas y los controles de red y herramientas. El [adaptador examinado](https://github.com/EricLBuehler/mistral.rs/blob/24dbf5c256f232176ee5949485ba264049407fbe/mistralrs-core/src/reasoning_parsers/harmony.rs) descarta determinados errores de análisis; este hallazgo estático no constituye una explotación reproducida. La [biblioteca Harmony](https://github.com/openai/harmony/blob/ec7606df9e87e3d0a1fec9f50928c1e407f0c438/src/tiktoken_ext/public_encodings.rs) admite un vocabulario local verificado y contempla descarga si no se fija el directorio local y falta una caché válida. El ensayo debe acreditar funcionamiento sin red. Usar Rust o incluir una dependencia no constituye una certificación de seguridad.
 
 <a id="composición-de-la-conversación-qwen"></a>
 
 ## Versiones de los componentes
 
-La **edición documental 2.16**, las **aplicaciones 0.1.x/0.2.x**, el **MCP 0.1.x**, los **modelos** y los **archivos de recuperación v1** tienen identidades independientes. Una numeración no sustituye a las restantes. Las realizaciones conservadas identifican Rust 1.98.0 y sus dependencias en cada expediente.
+La **edición documental 2.17**, las **aplicaciones 0.1.x/0.2.x**, el **MCP 0.1.x**, los **modelos** y los **archivos de recuperación v1** tienen identidades independientes. Una numeración no sustituye a las restantes. Las realizaciones conservadas identifican Rust 1.98.0 y sus dependencias en cada expediente.
 
 <details>
 <summary><strong>EIO conversación · Qwen3-0.6B · 0.1.0 → 0.1.4</strong></summary>
@@ -105,6 +130,17 @@ Son versiones del componente documental, sin publicación Release específica en
 
 </details>
 
+
+<details>
+<summary><strong>Qwen3-Next-80B-A3B · Instruct y Thinking</strong></summary>
+
+Instruct utiliza una realización CPU identificada del motor mistral.rs 0.9.4 y Candle, con correcciones de acceso a tensores y descompresión selectiva de expertos. La [identidad de fuentes, binarios, pesos y pruebas](modelos-de-ia/qwen/qwen3-next-80b-a3B-instruct/REGISTRO-INSTALACION-20260929.md) corresponde a ese ensamblaje; no se atribuye a la distribución estándar sin modificaciones. El ciclo instrumental recibido ejecuta las herramientas MCP mediante su controlador Rust; no procede del cliente mínimo 0.1.2.
+
+El desarrollo experimental y sus controles se realizan en Rust. Las excepciones criptográficas nativas declaradas se identifican en el registro; no se presenta el conjunto de dependencias como íntegramente Rust.
+
+La [carpeta de Thinking](modelos-de-ia/qwen/qwen3-next-80b-a3b-thinking) conserva su documentación propia conforme avance la realización. La presencia de esa carpeta no acredita instalación, carga, inferencia ni recepción.
+
+</details>
 
 <a id="versión-distribuida"></a>
 
@@ -163,7 +199,7 @@ El archivo posterior conserva la historia anterior y su dictamen. La publicació
 
 ## Historia completa de la edición documental
 
-La secuencia comienza en **0.1** y avanza hasta la presente **2.16**. Se han cotejado **31 revisiones anteriores**, correspondientes a **19 ediciones declaradas**. Cada desplegable conserva lo relevante de su corte y ofrece el texto íntegro; sus estados históricos no sustituyen al estado actual.
+La secuencia comienza en **0.1** y avanza hasta la presente **2.17**. Se conserva la historia anterior y se incorpora la edición 2.16 mediante su referencia inmutable. Cada desplegable conserva lo relevante de su corte y ofrece el texto íntegro; sus estados históricos no sustituyen al estado actual.
 
 El salto **0.2 → 2.0** se conserva tal como fue publicado; no se ha localizado una edición 1.x en el historial de este archivo. Cuando una edición reúne varios commits, se muestran todos en orden. Las fechas siguientes son las de esos commits en Europe/Madrid; una cabecera histórica puede conservar una fecha anterior.
 
@@ -362,15 +398,24 @@ Distingue cinco publicaciones, las versiones de los componentes y los dictámene
 
 </details>
 
-<details open>
+<details>
 <summary><strong>2.16 · 27/09/2026 · Continuidad completa y funciones Harmony/Candle</strong></summary>
 
 Incorpora todas las ediciones anteriores y sus cortes, los antecedentes de las aplicaciones y las publicaciones identificadas. Precisa Harmony, mistral.rs y Candle, con sus límites de cualificación. Conserva las figuras históricas A/B y actualiza el esquema previsto del candidato 120B.
 
-[Edición completa](README.md) · [Registro estructurado](VERSIONES.json). La identidad inmutable corresponde al commit de esta edición.
+[Edición completa](https://github.com/juantoniolloretegea/SV-motor/blob/e45c5356fbbca6fcc489603dd8e486e54add1828/laboratorio/ensayo-ia-y-observabilidad/README.md) · [Registro estructurado](https://github.com/juantoniolloretegea/SV-motor/blob/e45c5356fbbca6fcc489603dd8e486e54add1828/laboratorio/ensayo-ia-y-observabilidad/VERSIONES.json).
 
 </details>
 
+
+<details open>
+<summary><strong>2.17 · 30/09/2026 · Qwen80, evaluación documental y seguimiento diferenciado</strong></summary>
+
+Actualiza el estado desde las fuentes recibidas: funcionamiento documental de Instruct, campaña posterior parcial, seguimiento independiente de Thinking y situación condicionada de GPT-OSS-120B. Explica el banco, la criticidad, la indeterminación y el vínculo con vector y frame. Conserva las ediciones, publicaciones y diagramas anteriores; añade el recorrido documental vigente y enlaza S39 y TT-0014 a TT-0017.
+
+[Registro estructurado](VERSIONES.json). La revisión exacta queda identificada por el commit que contiene esta edición.
+
+</details>
 
 <a id="dos-vías-de-ejecución"></a>
 
@@ -399,7 +444,11 @@ Los controles sintéticos iniciales se completaron. La prueba con el modelo se i
 
 **Alcance de la figura:** diseño EIO-NAT-PREP-02 del corte del 20 de septiembre de 2026. Sus indicaciones de preparación y pruebas pendientes pertenecen a ese diseño y a esa fecha. La figura no certifica que todos sus componentes estén integrados en la aplicación de conversación. [Ampliar](diagramas/via-b.svg) · [Fuente Mermaid](diagramas/via-b.mmd) · [Diseño NAT02](resultados/preparacion-nativa-02/DISENO.md) · [Desarrollo NAT03](resultados/preparacion-nativa-03/README.md).
 
-### Continuación de la vía B · GPT-OSS-120B
+<a id="continuación-de-la-vía-b--gpt-oss-120b"></a>
+
+### Antecedente de continuación de la vía B · GPT-OSS-120B
+
+Este esquema conserva la propuesta del 27/09/2026. El candidato sigue condicionado y no representa la realización Qwen80 vigente.
 
 ```mermaid
 flowchart TD
@@ -424,6 +473,28 @@ El acceso documental previo por controlador y las llamadas autónomas del modelo
 
 Las figuras históricas A/B conservan sus archivos y alcance. El esquema previo del candidato continúa accesible dentro de la [edición 2.15](https://github.com/juantoniolloretegea/SV-motor/blob/63f5bd5e9b8ef147ba6a92d7beba6f94fb5ea3eb/laboratorio/ensayo-ia-y-observabilidad/README.md).
 
+### Recorrido vigente: consulta, evaluación y retorno
+
+```mermaid
+flowchart TD
+  B["Biblioteca y captura local identificadas"] --> M["MCP: búsqueda y lectura"]
+  Q["Qwen80 Instruct: consulta nativa"] --> M
+  M --> E["Solicitud, contenido recibido y respuesta conservados"]
+  E --> R["Recepción instrumental"]
+  R --> X["Banco fijo: 25 preguntas y criticidad"]
+  X --> P["Respuestas e incidencias por posición"]
+  P --> C["Corrección independiente con clave reservada"]
+  C --> V["25 adjudicaciones válidas: vector y frame"]
+  V --> D["Apto / No apto / U en el alcance del banco"]
+  P -. "Incidencia técnica" .-> I["Diagnóstico y conservación; posición pendiente"]
+  I -. "Continuación autorizada" .-> X
+  T["Thinking: prueba independiente pendiente de recepción"] -.-> R
+  V -. "Desarrollo futuro" .-> G["Visualización egui"]
+  D -. "Reglas de dominio pendientes" .-> F["Relación entre frames y aptitud de conjunto"]
+```
+
+**Alcance de la figura:** la recepción instrumental de Instruct está acreditada; el examen posterior permanece parcial. Los nodos de corrección, vector completo y dictamen representan resultados aún pendientes. Thinking conserva su prueba y su recepción propias. Las líneas discontinuas señalan recorridos condicionados, no avances ya conseguidos. El diagnóstico conserva los intentos anteriores; la continuación no permite sustituirlos por el mejor resultado.
+
 <a id="evidencia-y-seguimiento"></a>
 
 ## Trazabilidad y criterios de lectura
@@ -436,9 +507,9 @@ La secuencia de identificación es **configuración → campaña → resultado �
 | Archivos distribuidos e integridad declarada | Publicación correspondiente, manifiesto y [VERSIONES.json](VERSIONES.json). |
 | Contrato y límites del ensayo | [EIO-CONTRATO-01, revisión 1](contrato/README.md). |
 | Continuidad y dictámenes | [S39](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/sucesos/SUCESOS_SV.md#s39) y [Acta 004](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/continuacion-15-09-2026/ACTA_004_FINALIDAD_ALCANCE_Y_CONTINUIDAD_EIO_2026_09_22.md). |
-| Alcances de los tiques | [TT-0013: cierre GPT-OSS-20B](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0013.md), [TT-0014: MCP](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0014.md) y [TT-0015: nuevo candidato](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0015.md). |
+| Alcances de los tiques | [TT-0013: cierre GPT-OSS-20B](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0013.md), [TT-0014: MCP](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0014.md) y [TT-0015: viabilidad GPT-OSS-120B](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0015.md). |
 
-TT-0013 conserva su cierre acotado; TT-0014 requiere recepción propia; TT-0015 permanece pendiente de resultado material. Las actualizaciones del índice no modifican esos dictámenes.
+El seguimiento vigente se completa con [TT-0016: banco y evaluación de Instruct](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0016.md) y [TT-0017: primera prueba Thinking](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0017.md). TT-0013 conserva su cierre acotado; TT-0014 mantiene su recepción propia pendiente; TT-0015 dispone de un estudio preliminar adverso para la configuración considerada, sin inferencia. Ninguno de los tiques abiertos se cierra mediante esta actualización documental.
 
 Los enlaces de las tablas permiten lectura pública de las fichas y los resultados resumidos. Los originales de acceso restringido mantienen su custodia propia. Una huella identifica bytes; no acredita veracidad clínica, restauración funcional o conformidad general. La revisión de continuidad no repite los ensayos ni modifica sus resultados.
 
