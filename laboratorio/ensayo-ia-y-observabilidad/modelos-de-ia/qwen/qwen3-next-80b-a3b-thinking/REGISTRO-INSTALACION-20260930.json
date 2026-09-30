@@ -1,0 +1,63 @@
+{
+  "expediente": "QWEN80-THINKING-Q4K-ONECLOUD-20260930",
+  "revision": "v1",
+  "fecha": "2026-09-30",
+  "estado": "preparacion_local_sin_activacion_remota",
+  "encargo_commit": "ea99efba6337a9e28f8a523554daf7a0bae4f2d6",
+  "seguimiento": [
+    "S39",
+    "TT-0017"
+  ],
+  "dependencia_documental": "TT-0014",
+  "examen_eventual": "TT-0016",
+  "modelo": {
+    "nombre": "Qwen3-Next-80B-A3B-Thinking",
+    "distribucion": "mistralrs-community/Qwen3-Next-80B-A3B-Thinking-UQFF",
+    "revision": "3b8734e41d4a42855a03a8eb14eda91d53ebba86",
+    "cuantizacion": "Q4K",
+    "pesos_descargados_por_esta_actuacion": false,
+    "carga_acreditada": false,
+    "inferencia_acreditada": false
+  },
+  "versiones_previstas": {
+    "rust_cargo": "1.98.0",
+    "mistral_rs": "2370966bb91e2e3dafa0b1521b87c50fd5c01244",
+    "candle": "66a8cf184a5a519671454066b1b9efd446ec9f5c",
+    "correcciones_recibidas": "Entrega Instruct 08; no sustituyen una validación Thinking"
+  },
+  "identidades_conservadas": {
+    "cargo_lock_supervisor": "59ed6f9ee56d644cb5c1b22f24de02849f453a220e9df340d46b86a8b0ae7946",
+    "cargo_lock_motor": "6b1b4c0c919bd7c09c6c3e2a2802da96ee0eb02c344b68f0ccf3d083a2cde2cc",
+    "catalogo": "94024658204c0607c5879f8cf263d6238d639494b5d9c266396c20f3e848a45d",
+    "html_congelado": "00018ac31108eecc4709f0ce80439d4ca2d56b02262c5c334a184b9c0944e04d"
+  },
+  "comprobaciones_locales": {
+    "plataforma": "x86_64-pc-windows-msvc",
+    "rust": "1.98.0",
+    "canales_conformes": 6,
+    "persistencia_conformes": 3,
+    "integracion_completa_acreditada": false,
+    "linux_pendiente": true
+  },
+  "cotas_tecnicas": {
+    "memoria_grupo_bytes": 63350767616,
+    "swap_bytes": 0,
+    "cpu_maximas": 11,
+    "secuencias": 1
+  },
+  "pendientes": [
+    "Identidad y recursos efectivos del servidor",
+    "Integración y pruebas Linux del supervisor",
+    "Compatibilidad UQFF y descarga remota cotejada",
+    "Compilación e aislamiento",
+    "Consulta documental completa y verificación del resultado",
+    "Presentación, cierre, entrega y recepción independiente"
+  ],
+  "limites_epistemicos": {
+    "resultados_instruct_no_atribuidos_a_thinking": true,
+    "razonamiento_emitido_no_equivale_a_observacion_interna_exhaustiva": true,
+    "adjudicacion_clinica": null
+  },
+  "entrega_privada_prevista": "respuestas-ejecucion/QWEN80-THINKING-Q4K-ONECLOUD-20260930/entrega-01/",
+  "entrega_final_publicada": false
+}
