@@ -3,42 +3,49 @@
   "fecha_corte": "2026-10-01",
   "modelo": "openai/gpt-oss-safeguard-120b",
   "variante": "safeguard",
-  "revision_modelo": null,
-  "revision_motor": null,
-  "sha256_ejecutable": null,
+  "revision_modelo": "3c7391182603991a904031244e7822488c67796d",
+  "revision_motor": "mistral.rs v0.9.4 / 4400935451da5e2dc7379a3f92fbbada66557f6c con correcciones instrumentales documentadas",
+  "sha256_ejecutable": "b1a229a29b872fc6ba432f2dcbc16a378b3ae8767b5344f484006a6a684e9615",
   "seguimiento": {
     "suceso_referencia": "S39",
-    "tique_propio": null,
+    "tique_propio": "TT-0018",
     "tique_antecedente_ordinario": "TT-0015",
-    "alcance": "Separación documental; el antecedente del ordinario no constituye un encargo de Safeguard"
+    "alcance": "Instalación y contraste sintético inicial autorizados mediante GPTOSS-SAFEGUARD-INSTALACION-20261001/v1. S39 revisión 30; recepción independiente pendiente."
   },
-  "estado": "preparacion_documental",
+  "estado": "contraste_sintetico_en_ejecucion",
   "funcion_declarada": "clasificacion_textual_con_politica_explicita",
   "funcion_sv_definitiva": null,
   "prioridad_de_ensayo": null,
   "ejecucion": {
-    "instalacion_acreditada": false,
-    "inferencias_en_este_expediente": 0,
-    "aptitud": "pendiente",
-    "memoria_maxima_observada_bytes": null,
-    "latencia_observada_segundos": null
+    "instalacion_acreditada": true,
+    "inferencias_en_este_expediente": 3,
+    "aptitud": "pendiente; no constituye aptitud clínica",
+    "memoria_maxima_observada_bytes": 93550489600,
+    "latencia_observada_segundos": null,
+    "carga_completa_acreditada": true,
+    "recuento_inferencias": "Tres intentos alcanzaron cálculo: contraste-03 con defecto numérico, contraste-04 con terminación prematura y contraste-05 actualmente en ejecución. Contraste-02 sólo acreditó carga. Las emisiones inválidas quedan fuera de evaluación.",
+    "respuestas_validas_adjudicadas": 0,
+    "alcance_memoria": "Máximo conjunto de los intentos cerrados hasta contraste-04; no es todavía el máximo final del contraste corregido."
   },
   "autorizacion": {
     "organizacion_documental": true,
-    "instalacion_por_esta_actualizacion": false,
-    "inferencia_por_esta_actualizacion": false
+    "instalacion_por_esta_actualizacion": true,
+    "inferencia_por_esta_actualizacion": true,
+    "fuente": "Autorización humana expresa del encargo GPTOSS-SAFEGUARD-INSTALACION-20261001/v1"
   },
   "conversacion": {
     "formato": "Harmony",
-    "plantilla_verificada": false,
-    "politica_versionada": null,
+    "plantilla_verificada": true,
+    "politica_versionada": "SG-SINTETICO-20261001-r1; SHA-256 1adcc501f1b94aed756df0520ce551029e9cc742ed8db7a9f17fbd867b584bf3",
     "correspondencia_terna_sv": null
   },
   "documentacion_ordinario": "../gpt-oss-120b/README.md",
   "resultados_heredados_del_ordinario": false,
   "fuentes": [
     "https://developers.openai.com/cookbook/articles/gpt-oss-safeguard-guide",
-    "https://github.com/juantoniolloretegea/SV-motor/blob/b8ff9198275ee0139dad7565d23733667aadb066/laboratorio/sistema-conjunto-lenguaje-computacion-ia-gobernada/README.md"
+    "https://github.com/juantoniolloretegea/SV-motor/blob/b8ff9198275ee0139dad7565d23733667aadb066/laboratorio/sistema-conjunto-lenguaje-computacion-ia-gobernada/README.md",
+    "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/926542570f74760296898f8e3fa8b432a68b8218/respuestas-ejecucion/GPTOSS-SAFEGUARD-INSTALACION-20261001/entrega-01/AVANCE-INSTALACION-20261001.md",
+    "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/926542570f74760296898f8e3fa8b432a68b8218/respuestas-ejecucion/GPTOSS-SAFEGUARD-INSTALACION-20261001/entrega-01/CORRECCIONES-INSTRUMENTALES.md"
   ],
-  "resultado": null
+  "resultado": "Safeguard instalado y carga completa de 36 capas acreditada en el recurso existente de 128 GB y 32 CPU. Se mantienen 25 pruebas Rust MCP, nueve MXFP4 y una prueba específica de terminaciones Harmony favorables. Se han preservado los intentos instrumentales y corregido el cálculo CPU de cuatro expertos y la terminación prematura de los canales. El contraste sintético de ocho casos continúa con revisión identificada; todavía no hay respuestas válidas adjudicadas ni recepción independiente. Instancia y accesos conservados; sin intervención en Qwen."
 }
