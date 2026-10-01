@@ -1,5 +1,12 @@
 # Pruebas efectuadas · Qwen3-Next-80B-A3B-Instruct
 
+## Cierre administrativo · 01/10/2026
+
+**28/100 — No apto.** Archivo sin pesos cotejado y recurso retirado. [Informe de cierre](ARCHIVO-Y-RETIRADA-20261001.md) · [Registro JSON](ARCHIVO-Y-RETIRADA-20261001.json).
+
+Los apartados siguientes conservan el estado del examen en su fecha.
+
+
 ## Examen documental PDQ de tricoleucemia · 30/09/2026
 
 [Resultados completos en Markdown](RESULTADOS-PDQ-HCL-25-20260930.md) · [Registro estructurado en JSON](RESULTADOS-PDQ-HCL-25-20260930.json).

@@ -1,6 +1,20 @@
 # Registro instrumental de instalación: Qwen3-Next-80B-A3B-Instruct Q4K
 
-## Estado vigente · Diagnóstico P05–P07, 01/10/2026
+## Estado vigente · Archivo y retirada, 01/10/2026
+
+La fase experimental de Qwen3-Next-80B-A3B-Instruct queda cerrada administrativamente el 01/10/2026, con **28/100 — No apto**, sin nuevas inferencias. Se mantienen 7 aciertos, 0 errores no críticos, 2 errores críticos (P07/P19), 10 U y 6 impedimentos técnicos (P09/P12/P14/P15/P20/P22) fuera de la terna. El umbral **T(25)=⌊7×25/9⌋=19** se distingue de la puntuación. No se emite κ de célula completa con seis posiciones sin adjudicación.
+
+El diagnóstico v8 se conserva por separado: para P07-B, la ejecución propuso 0; la revisión documental propuso U por insuficiencia, al omitir la posible necesidad de biopsia exigida por la clave. Se mantienen ambas propuestas y su fundamento. Esta discrepancia no modifica el examen v7 ni abre otra inferencia.
+
+La [release de archivo experimental — acceso restringido](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/releases/tag/qwen80-instruct-archivo-cierre-20261001-v1) conserva las evidencias sin pesos. Sus cinco adjuntos se descargaron desde GitHub a una carpeta independiente; se comprobaron SHA-256, contenidos comprimidos, segmentos reunidos y correspondencia con 26.139 rutas del inventario. Se conservan fuentes exactas, configuración y dependencias fijadas; 72 compilaciones derivadas quedan identificadas mediante sus huellas, sin prometer reproducción binaria idéntica. Véase el [cotejo de custodia — acceso restringido](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/8e8ea3c4ed5fc05daeb8ba82a7cf45c1faf0b328/respuestas-ejecucion/QWEN80-Q4K-ONECLOUD-20260929/entrega-11/COTEJO-RELEASE.json).
+
+La retirada quedó confirmada por el proveedor a las 2026-10-01T09:49:42Z (1/10/2026, 11:49:42 CEST). La revisión posterior no encontró recursos residuales exclusivos en las categorías disponibles. El [acta de retirada — acceso restringido](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/8e8ea3c4ed5fc05daeb8ba82a7cf45c1faf0b328/respuestas-ejecucion/QWEN80-Q4K-ONECLOUD-20260929/entrega-11/RETIRADA.md) conserva la identidad y el registro técnico.
+
+**S39 permanece abierto y TT-0014 pendiente.** TT-0016 cierra exclusivamente la fase administrativa de Instruct. La recepción científica independiente no se sustituye por este cierre, que no acredita validación clínica. Thinking y OpenAI conservan sus expedientes y no fueron intervenidos.
+
+Los apartados siguientes conservan los estados históricos de sus respectivos cortes.
+
+## Antecedente · Diagnóstico P05–P07, 01/10/2026
 
 El diagnóstico contemporáneo completó cuatro celdas y conservó sus primeras respuestas: P07-A U, P07-B 0, P05-A U y P05-B 0, como propuesta pendiente de recepción independiente. A realizó búsquedas vacías sin lectura; B recibió previamente la página fijada mediante una llamada real del conductor. La respuesta documental se transmitió íntegra antes de generar. No hubo quinta celda ni repetición de finales.
 

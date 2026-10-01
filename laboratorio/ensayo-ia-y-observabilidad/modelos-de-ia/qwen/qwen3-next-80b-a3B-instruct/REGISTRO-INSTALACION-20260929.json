@@ -1,6 +1,7 @@
 {
-  "alcance_registros_anteriores": "Los apartados anteriores de instalación y v7 se conservan como antecedentes. El estado actual corresponde únicamente a diagnostico_v8_entrega_10; la copia completa del registro recibido se mantiene en estado_antes_diagnostico_v8.",
-  "archivos_cotejados": 17,
+  "alcance_registros_anteriores": "El estado vigente corresponde a cierre_v9_entrega_11. Los objetos de instalación, examen v7 y diagnóstico v8 conservan sus cortes históricos y no describen disponibilidad actual.",
+  "antecedente_inmediato": "https://github.com/juantoniolloretegea/SV-motor/blob/c65c24f2f7aa64da5bed89ca4316f036c07fe572/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/qwen/qwen3-next-80b-a3B-instruct/REGISTRO-INSTALACION-20260929.json",
+  "archivos_cotejados": 16,
   "bytes_pesos_y_residual": 45338887469,
   "candle_revision": "66a8cf184a5a519671454066b1b9efd446ec9f5c",
   "carga_unica_05": {
@@ -53,6 +54,57 @@
     "ventana_disponibilidad_60s": false
   },
   "causa_demora_senal": "Antecedente de la primera instalación; no determinada. La carga única posterior se describe separadamente.",
+  "cierre_v9_entrega_11": {
+    "S39": "pendiente",
+    "TT_0014": "pendiente",
+    "TT_0016": "finalizado exclusivamente en el alcance administrativo de Instruct",
+    "acta": "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/8e8ea3c4ed5fc05daeb8ba82a7cf45c1faf0b328/respuestas-ejecucion/QWEN80-Q4K-ONECLOUD-20260929/entrega-11/RETIRADA.md",
+    "archivos_documentales": 16,
+    "commit_conservacion": "58ddc0d6828946f34959d93abf81482c2e528ca7",
+    "commit_documental": "8e8ea3c4ed5fc05daeb8ba82a7cf45c1faf0b328",
+    "cortes": "Conservación 58ddc0d6828946f34959d93abf81482c2e528ca7; cotejo de release ee8c9100e60b0e0d95d62f710c3b1fa0dbdc56f5; acta de retirada 8e8ea3c4ed5fc05daeb8ba82a7cf45c1faf0b328. Los candidatos restantes conservan sus cortes independientes.",
+    "cotejo": "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/8e8ea3c4ed5fc05daeb8ba82a7cf45c1faf0b328/respuestas-ejecucion/QWEN80-Q4K-ONECLOUD-20260929/entrega-11/COTEJO-RELEASE.json",
+    "custodia_conforme": true,
+    "diagnostico_v8": {
+      "P07_B_ejecucion": "0",
+      "P07_B_revision_documental": "U por insuficiencia",
+      "examen_v7_modificado": false,
+      "fundamento": "Omite la posible necesidad de biopsia exigida por la clave"
+    },
+    "evidencias": "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/releases/tag/qwen80-instruct-archivo-cierre-20261001-v1 (acceso restringido) ; https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/8e8ea3c4ed5fc05daeb8ba82a7cf45c1faf0b328/respuestas-ejecucion/QWEN80-Q4K-ONECLOUD-20260929/entrega-11/RETIRADA.md (acceso restringido) ; https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/8e8ea3c4ed5fc05daeb8ba82a7cf45c1faf0b328/respuestas-ejecucion/QWEN80-Q4K-ONECLOUD-20260929/entrega-11/COTEJO-RELEASE.json (acceso restringido) ; https://github.com/juantoniolloretegea/SV-motor/blob/main/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/qwen/qwen3-next-80b-a3B-instruct/tests-y-pruebas-efectuadas/ARCHIVO-Y-RETIRADA-20261001.md",
+    "fecha_madrid": "1/10/2026, 11:49:42 CEST",
+    "fecha_utc": "2026-10-01T09:49:42Z",
+    "informe": "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/8e8ea3c4ed5fc05daeb8ba82a7cf45c1faf0b328/respuestas-ejecucion/QWEN80-Q4K-ONECLOUD-20260929/entrega-11/INFORME.md",
+    "nuevas_inferencias": 0,
+    "pesos_incluidos": false,
+    "recepcion_cientifica_independiente": "No sustituida por el cierre administrativo",
+    "release": "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/releases/tag/qwen80-instruct-archivo-cierre-20261001-v1",
+    "resultado": {
+      "U": 10,
+      "aciertos": 7,
+      "criticos": [
+        "P07",
+        "P19"
+      ],
+      "dictamen": "No apto",
+      "errores_no_criticos": 0,
+      "formula": "T(25)=⌊7×25/9⌋=19",
+      "impedimentos": [
+        "P09",
+        "P12",
+        "P14",
+        "P15",
+        "P20",
+        "P22"
+      ],
+      "kappa_celula_completa": null,
+      "maximo": 100,
+      "puntuacion": 28,
+      "umbral_T25": 19
+    },
+    "retirada_confirmada": true,
+    "validacion_clinica": false
+  },
   "componentes_criptograficos_nativos": [
     "aws-lc-sys 0.37.0",
     "ring 0.17.14"
@@ -283,11 +335,11 @@
     ]
   },
   "distribucion": "mistralrs-community/Qwen3-Next-80B-A3B-Instruct-UQFF",
-  "entrega_archivos_cotejados": 17,
-  "entrega_commit": "598039cae73f8f40f820bc5e3f78551a722ab58e",
-  "entrega_leame": "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/598039cae73f8f40f820bc5e3f78551a722ab58e/respuestas-ejecucion/QWEN80-Q4K-ONECLOUD-20260929/entrega-10/INFORME.md",
+  "entrega_archivos_cotejados": 16,
+  "entrega_commit": "8e8ea3c4ed5fc05daeb8ba82a7cf45c1faf0b328",
+  "entrega_leame": "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/8e8ea3c4ed5fc05daeb8ba82a7cf45c1faf0b328/respuestas-ejecucion/QWEN80-Q4K-ONECLOUD-20260929/entrega-11/INFORME.md",
   "esquema": "registro_instrumental_qwen80_1",
-  "estado": "Diagnóstico P05-P07 cerrado: cuatro finales, propuesta U/0/U/0; recepción independiente pendiente. Examen v7 conservado sin cambios.",
+  "estado": "Fase Instruct archivada sin pesos; 28/100 — No apto; instancia retirada con confirmación del proveedor. Sin nuevas inferencias.",
   "estado_anterior_a_entrega_09": {
     "entrega_archivos_cotejados": 10,
     "entrega_commit": "cc65d2638e938014863db200ee7ae10540d3e7fc",
@@ -2461,7 +2513,8 @@
     "ultima_respuesta_utc": "2026-09-30T18:46:05.912Z"
   },
   "exclusividad_rust_del_ejecutable": false,
-  "fecha": "2026-09-30",
+  "fecha": "2026-10-01",
+  "fecha_actualizacion_utc": "2026-10-01T09:49:42Z",
   "historial_instalacion": [
     {
       "entrega_archivos_cotejados": 107,
@@ -2901,7 +2954,7 @@
   "mistralrs_revision": "2370966bb91e2e3dafa0b1521b87c50fd5c01244",
   "modelo": "Qwen3-Next-80B-A3B-Instruct",
   "prueba_humana_modelo_habilitada": false,
-  "resultado_servicio_actual": "success",
+  "resultado_servicio_actual": "Instancia retirada; servicio no disponible",
   "revision_archivos": "193326907e14842f9f0c06bc9d36243fdcc9582b",
   "rust": "1.98.0",
   "salida_supervisor": 0,
