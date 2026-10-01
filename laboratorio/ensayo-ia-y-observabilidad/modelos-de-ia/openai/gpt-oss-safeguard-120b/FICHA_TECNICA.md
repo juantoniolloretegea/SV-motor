@@ -1,21 +1,24 @@
 # Ficha técnica · GPT-OSS-Safeguard-120B
 
-**Fecha:** 01/10/2026. **Estatuto:** instalación acreditada; contraste corregido en ejecución, recepción independiente pendiente.
+**Fecha:** 2026-10-01T14:49:26Z. **Estatuto:** instalación y contraste inicial terminados; recepción independiente pendiente.
 
-## Instalación y contraste autorizado · corte de 01/10/2026
+Instalación y contraste sintético inicial de Safeguard terminados: 87,5/100; No apto para el contraste delimitado; un incumplimiento crítico de lectura íntegra en C08; cobertura 8/8. Las ocho clasificaciones y citas son correctas respecto de los pasajes recibidos, pero C08 omite la página 0 de una sección de dos páginas. Carga completa, aislamiento probado y auditoría íntegra de C01-C07 (r3) y C08 (r4) conformes; 3673 tokens y cálculos finalizados, diez emisiones conservadas. Máximo conjunto: 111.693.459.456 bytes, sin intercambio ni agotamiento de memoria. Inferencia cerrada; servidor, pesos y accesos conservados. Entrega original y archivos cotejados desde GitHub; recepción independiente pendiente. No acredita aptitud clínica ni modifica otros expedientes.
 
-Safeguard instalado y carga completa de 36 capas acreditada en el recurso existente de 128 GB y 32 CPU. Se mantienen 25 pruebas Rust MCP, nueve MXFP4 y una prueba específica de terminaciones Harmony favorables. Se han preservado los intentos instrumentales y corregido el cálculo CPU de cuatro expertos y la terminación prematura de los canales. El contraste sintético de ocho casos continúa con revisión identificada; todavía no hay respuestas válidas adjudicadas ni recepción independiente. Instancia y accesos conservados; sin intervención en Qwen.
-
-| Elemento efectivo | Evidencia y límite |
+| Elemento efectivo | Resultado y límite |
 | --- | --- |
-| Identidad | openai/gpt-oss-safeguard-120b, revisión 3c7391182603991a904031244e7822488c67796d; 27 artefactos cotejados. |
-| Cálculo | MXFP4 original en expertos, restantes F32; CPU/Rust, mistral.rs v0.9.4 con revisión e instrumentación conservadas. |
-| Ejecución corregida | SHA-256 b1a229a29b872fc6ba432f2dcbc16a378b3ae8767b5344f484006a6a684e9615. Cuatro expertos por token y terminaciones Harmony comprobados. |
-| Recursos | Recurso existente de 128 GB y 32 CPU; intercambio cero. Máximo conjunto de intentos cerrados hasta contraste-04: 93.550.489.600 bytes. La medición final del contraste corregido permanece pendiente. |
-| Aislamiento | Lectura de caché autorizada, bloqueo de red y de rutas externas, custodia separada; pruebas bajo las identidades efectivas. |
-| Seguimiento | TT-0018 y S39 revisión 30; TT-0014 mantiene recepción propia pendiente. |
+| Modelo | openai/gpt-oss-safeguard-120b, revisión 3c7391182603991a904031244e7822488c67796d; 27 archivos cotejados. |
+| Cálculo | MXFP4 original en expertos, restantes F32; CPU/Rust; mistral.rs 0.9.4, revisión 4400935451da5e2dc7379a3f92fbbada66557f6c con correcciones conservadas. |
+| Realizaciones | r3 para C01-C07 y r4 para C08. Mismo parche numérico; huellas y alcance en ESTADO.json y entrega original. |
+| Recursos | Recurso existente de 128 GB y 32 CPU. Cota conjunta 114 GiB; máximo 111.693.459.456 bytes; intercambio y OOM cero. |
+| Puntuación y dictamen | 87,5/100; N₀=7, N₁=1, Nᵤ=0; un error crítico; No apto para el contraste delimitado; cobertura 8/8. |
+| Regla SV | κ y T(n) no aplicables: n=8 no es célula exacta n=b², b≥3. La criticidad determina el dictamen del contraste. |
+| Recuperación | C08 omite la página 0 de una sección de dos páginas. Etiqueta y cita correctas, lectura íntegra incumplida. |
+| Auditoría y cierre | Entradas, ambas fronteras MCP, 3673 cálculos/tokens, diez emisiones y telemetría cotejados. Inferencia cerrada; servidor y accesos conservados. |
+| Seguimiento | S39 revisión 31 y TT-0018; recepción independiente pendiente. TT-0014 conserva recepción propia y antecedentes. |
 
-[Avance y originales, acceso restringido](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/926542570f74760296898f8e3fa8b432a68b8218/respuestas-ejecucion/GPTOSS-SAFEGUARD-INSTALACION-20261001/entrega-01/AVANCE-INSTALACION-20261001.md) · [Correcciones y pruebas, acceso restringido](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/926542570f74760296898f8e3fa8b432a68b8218/respuestas-ejecucion/GPTOSS-SAFEGUARD-INSTALACION-20261001/entrega-01/CORRECCIONES-INSTRUMENTALES.md). La tabla de preparación siguiente conserva su fecha como antecedente; sus campos pendientes quedan actualizados por este corte material. No se atribuye aptitud clínica ni recepción favorable.
+[Prueba registrada](tests-y-pruebas-efectuadas/INSTALACION-CONTRASTE-20261001.md) · [Informe original](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/9b23fc5f59d602af8f31ed8666096c0d65471b2d/respuestas-ejecucion/GPTOSS-SAFEGUARD-INSTALACION-20261001/entrega-01/INFORME-FINAL.md) · [Puntuación íntegra](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/9b23fc5f59d602af8f31ed8666096c0d65471b2d/respuestas-ejecucion/GPTOSS-SAFEGUARD-INSTALACION-20261001/entrega-01/PUNTUACION-FINAL.json) · [Custodia cotejada](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/9b23fc5f59d602af8f31ed8666096c0d65471b2d/respuestas-ejecucion/GPTOSS-SAFEGUARD-INSTALACION-20261001/entrega-01/COTEJO-CUSTODIA.json).
+
+La clasificación con pasajes aportados, la autonomía, la viabilidad y la conformidad instrumental se valoran separadamente. El banco sintético no acredita aptitud clínica ni permite comparación directa con bancos distintos. La preparación siguiente conserva su condición histórica y queda actualizada por el corte material anterior.
 
 ## Antecedente de preparación documental
 

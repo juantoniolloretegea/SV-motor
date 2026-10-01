@@ -1,31 +1,35 @@
 {
   "esquema": "sv.eio.candidato/1",
-  "fecha_corte": "2026-10-01",
+  "fecha_corte": "2026-10-01T14:49:26Z",
   "modelo": "openai/gpt-oss-safeguard-120b",
   "variante": "safeguard",
   "revision_modelo": "3c7391182603991a904031244e7822488c67796d",
   "revision_motor": "mistral.rs v0.9.4 / 4400935451da5e2dc7379a3f92fbbada66557f6c con correcciones instrumentales documentadas",
-  "sha256_ejecutable": "b1a229a29b872fc6ba432f2dcbc16a378b3ae8767b5344f484006a6a684e9615",
+  "sha256_ejecutable": "3c37798d4dce40ab7626062a7f0e86d0debfbd8eaef968461c3158d4f6f031e0",
   "seguimiento": {
     "suceso_referencia": "S39",
     "tique_propio": "TT-0018",
     "tique_antecedente_ordinario": "TT-0015",
-    "alcance": "Instalación y contraste sintético inicial autorizados mediante GPTOSS-SAFEGUARD-INSTALACION-20261001/v1. S39 revisión 30; recepción independiente pendiente."
+    "alcance": "Instalación y contraste sintético inicial terminados conforme al encargo; S39 revisión 31 y TT-0018 pendientes de recepción independiente. S39 general permanece en ejecución."
   },
-  "estado": "contraste_sintetico_en_ejecucion",
+  "estado": "instalacion_y_contraste_terminados_recepcion_pendiente",
   "funcion_declarada": "clasificacion_textual_con_politica_explicita",
   "funcion_sv_definitiva": null,
   "prioridad_de_ensayo": null,
   "ejecucion": {
     "instalacion_acreditada": true,
-    "inferencias_en_este_expediente": 3,
-    "aptitud": "pendiente; no constituye aptitud clínica",
-    "memoria_maxima_observada_bytes": 93550489600,
+    "inferencias_en_este_expediente": 4,
+    "aptitud": "No apto para este contraste delimitado; no acredita aptitud clínica",
+    "memoria_maxima_observada_bytes": 111693459456,
     "latencia_observada_segundos": null,
     "carga_completa_acreditada": true,
-    "recuento_inferencias": "Tres intentos alcanzaron cálculo: contraste-03 con defecto numérico, contraste-04 con terminación prematura y contraste-05 actualmente en ejecución. Contraste-02 sólo acreditó carga. Las emisiones inválidas quedan fuera de evaluación.",
-    "respuestas_validas_adjudicadas": 0,
-    "alcance_memoria": "Máximo conjunto de los intentos cerrados hasta contraste-04; no es todavía el máximo final del contraste corregido."
+    "recuento_inferencias": "Cuatro intentos alcanzaron cálculo: contraste-03 y 04 inválidos; contraste-05 aporta C01-C07 válidos y conserva su C08 interrumpido; contraste-06 aporta C08. Ocho respuestas finales adjudicadas; no se repiten resultados concluidos.",
+    "respuestas_validas_adjudicadas": 8,
+    "alcance_memoria": "Máximo conjunto final, con antecedentes. Contraste-06 supera el máximo anterior. Recursos de contraste-05 incluyen su C08 contenido.",
+    "contraste_concluido": true,
+    "inferencia_activa": false,
+    "servidor_y_accesos_conservados": true,
+    "tiempos_por_emision": "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/9b23fc5f59d602af8f31ed8666096c0d65471b2d/respuestas-ejecucion/GPTOSS-SAFEGUARD-INSTALACION-20261001/entrega-01/METRICAS-COMBINADAS.json"
   },
   "autorizacion": {
     "organizacion_documental": true,
@@ -37,7 +41,14 @@
     "formato": "Harmony",
     "plantilla_verificada": true,
     "politica_versionada": "SG-SINTETICO-20261001-r1; SHA-256 1adcc501f1b94aed756df0520ce551029e9cc742ed8db7a9f17fbd867b584bf3",
-    "correspondencia_terna_sv": null
+    "correspondencia_terna_sv": {
+      "N": 8,
+      "N0": 7,
+      "N1": 1,
+      "NU": 0,
+      "kappa": null,
+      "motivo": "n=8 no satisface n=b² con b>=3"
+    }
   },
   "documentacion_ordinario": "../gpt-oss-120b/README.md",
   "resultados_heredados_del_ordinario": false,
@@ -45,7 +56,38 @@
     "https://developers.openai.com/cookbook/articles/gpt-oss-safeguard-guide",
     "https://github.com/juantoniolloretegea/SV-motor/blob/b8ff9198275ee0139dad7565d23733667aadb066/laboratorio/sistema-conjunto-lenguaje-computacion-ia-gobernada/README.md",
     "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/926542570f74760296898f8e3fa8b432a68b8218/respuestas-ejecucion/GPTOSS-SAFEGUARD-INSTALACION-20261001/entrega-01/AVANCE-INSTALACION-20261001.md",
-    "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/926542570f74760296898f8e3fa8b432a68b8218/respuestas-ejecucion/GPTOSS-SAFEGUARD-INSTALACION-20261001/entrega-01/CORRECCIONES-INSTRUMENTALES.md"
+    "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/926542570f74760296898f8e3fa8b432a68b8218/respuestas-ejecucion/GPTOSS-SAFEGUARD-INSTALACION-20261001/entrega-01/CORRECCIONES-INSTRUMENTALES.md",
+    "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/9b23fc5f59d602af8f31ed8666096c0d65471b2d/respuestas-ejecucion/GPTOSS-SAFEGUARD-INSTALACION-20261001/entrega-01/INFORME-FINAL.md",
+    "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/9b23fc5f59d602af8f31ed8666096c0d65471b2d/respuestas-ejecucion/GPTOSS-SAFEGUARD-INSTALACION-20261001/entrega-01/PUNTUACION-FINAL.json",
+    "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/9b23fc5f59d602af8f31ed8666096c0d65471b2d/respuestas-ejecucion/GPTOSS-SAFEGUARD-INSTALACION-20261001/entrega-01/COTEJO-CUSTODIA.json"
   ],
-  "resultado": "Safeguard instalado y carga completa de 36 capas acreditada en el recurso existente de 128 GB y 32 CPU. Se mantienen 25 pruebas Rust MCP, nueve MXFP4 y una prueba específica de terminaciones Harmony favorables. Se han preservado los intentos instrumentales y corregido el cálculo CPU de cuatro expertos y la terminación prematura de los canales. El contraste sintético de ocho casos continúa con revisión identificada; todavía no hay respuestas válidas adjudicadas ni recepción independiente. Instancia y accesos conservados; sin intervención en Qwen."
+  "resultado": "Instalación y contraste sintético inicial de Safeguard terminados: 87,5/100; No apto para el contraste delimitado; un incumplimiento crítico de lectura íntegra en C08; cobertura 8/8. Las ocho clasificaciones y citas son correctas respecto de los pasajes recibidos, pero C08 omite la página 0 de una sección de dos páginas. Carga completa, aislamiento probado y auditoría íntegra de C01-C07 (r3) y C08 (r4) conformes; 3673 tokens y cálculos finalizados, diez emisiones conservadas. Máximo conjunto: 111.693.459.456 bytes, sin intercambio ni agotamiento de memoria. Inferencia cerrada; servidor, pesos y accesos conservados. Entrega original y archivos cotejados desde GitHub; recepción independiente pendiente. No acredita aptitud clínica ni modifica otros expedientes.",
+  "realizaciones": [
+    {
+      "casos": "C01-C07",
+      "recorrido": "contraste-05",
+      "sha256": "b1a229a29b872fc6ba432f2dcbc16a378b3ae8767b5344f484006a6a684e9615"
+    },
+    {
+      "casos": "C08",
+      "recorrido": "contraste-06",
+      "sha256": "3c37798d4dce40ab7626062a7f0e86d0debfbd8eaef968461c3158d4f6f031e0"
+    }
+  ],
+  "puntuacion": {
+    "N": 8,
+    "N0": 7,
+    "N1": 1,
+    "NU": 0,
+    "errores_criticos": 1,
+    "errores_no_criticos": 0,
+    "impedimentos_tecnicos_pendientes": 0,
+    "puntuacion_sobre_100": 87.5,
+    "dictamen": "No apto para el contraste delimitado: error crítico",
+    "cobertura": "8/8",
+    "kappa": null,
+    "motivo_no_kappa": "n=8 no satisface n=b² con b>=3; no se aplica el umbral de célula ni se sustituye por la puntuación",
+    "aptitud_clinica_acreditada": false
+  },
+  "recepcion_independiente": "pendiente"
 }

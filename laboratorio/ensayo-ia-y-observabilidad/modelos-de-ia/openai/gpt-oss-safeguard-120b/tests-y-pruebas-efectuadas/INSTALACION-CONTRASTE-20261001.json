@@ -1,0 +1,105 @@
+{
+  "esquema": "sv.safeguard.instalacion-contraste/1",
+  "encargo": "GPTOSS-SAFEGUARD-INSTALACION-20261001/v1",
+  "entrega": "01",
+  "fecha": "2026-10-01",
+  "estado": "ejecucion_terminada_recepcion_independiente_pendiente",
+  "modelo": {
+    "nombre": "openai/gpt-oss-safeguard-120b",
+    "revision": "3c7391182603991a904031244e7822488c67796d",
+    "representacion": "MXFP4 original de expertos; restantes tensores F32",
+    "archivos_cotejados": 27,
+    "bytes": 65276873724
+  },
+  "motor": {
+    "nombre": "mistral.rs",
+    "version": "0.9.4",
+    "revision": "4400935451da5e2dc7379a3f92fbbada66557f6c",
+    "rust": "1.98.1",
+    "parche_numerico_r3_r4_sha256": "6f0a5fc5cfffffc1ed5f130b70fa2b5f235b9aec04d44a40f2bfe9f39bae0700",
+    "realizaciones": [
+      {
+        "casos": "C01-C07",
+        "recorrido": "contraste-05",
+        "sha256": "b1a229a29b872fc6ba432f2dcbc16a378b3ae8767b5344f484006a6a684e9615"
+      },
+      {
+        "casos": "C08",
+        "recorrido": "contraste-06",
+        "sha256": "3c37798d4dce40ab7626062a7f0e86d0debfbd8eaef968461c3158d4f6f031e0"
+      }
+    ]
+  },
+  "mcp": {
+    "version": "0.1.3",
+    "revision": "9260fa886d7915330216d809eec16184facc8f16",
+    "rust": "1.93.1"
+  },
+  "recurso": {
+    "existente": true,
+    "cpu": 32,
+    "memoria_fisica_bytes": 135018405888,
+    "limite_conjunto_bytes": 122406567936,
+    "maximo_conjunto_bytes": 111693459456,
+    "swap_bytes": 0,
+    "oom": 0,
+    "cpu_reservadas": 2,
+    "instancia_y_accesos_conservados": true,
+    "procesos_propios_de_calculo_al_cierre": 0
+  },
+  "dimensiones": {
+    "carga_completa": true,
+    "aislamiento_probado": true,
+    "auditoria_integra_tramos_adjudicados": true,
+    "intento_contraste05_completo_conforme": false,
+    "clasificaciones_correctas": 8,
+    "cumplimiento_completo": 7,
+    "recuperacion_autonoma_completa": false
+  },
+  "puntuacion": {
+    "N": 8,
+    "N0": 7,
+    "N1": 1,
+    "NU": 0,
+    "errores_criticos": 1,
+    "errores_no_criticos": 0,
+    "impedimentos_tecnicos_pendientes": 0,
+    "puntuacion_sobre_100": 87.5,
+    "dictamen": "No apto para el contraste delimitado: error crítico",
+    "cobertura": "8/8",
+    "kappa": null,
+    "motivo_no_kappa": "n=8 no satisface n=b² con b>=3; no se aplica el umbral de célula ni se sustituye por la puntuación",
+    "aptitud_clinica_acreditada": false
+  },
+  "pruebas": {
+    "mcp": 25,
+    "mxfp4": 9,
+    "conductor": 6,
+    "terminaciones": 1,
+    "cotejador_orden_json": 1,
+    "alcance": "Pruebas dirigidas; no equivale a toda la batería del motor"
+  },
+  "auditoria": {
+    "calculos": 3673,
+    "calculos_finalizados": 3673,
+    "emisiones": 10,
+    "segmentos_canales": 20,
+    "razonamiento_completo_emitido_conservado": true,
+    "fronteras_mcp_cotejadas": 2,
+    "plantilla_y_tokens_exactos": true
+  },
+  "tiempos": {
+    "duracion_casos_adjudicables_s": 4978.462415,
+    "duracion_de_los_dos_intentos_s": 5490.284858999999,
+    "alcance": "Las duraciones por caso corresponden a C01-C07 válidos y C08 reanudado. Los recursos y la duración total de contraste-05 incluyen además el tramo C08 contenido por defecto de transporte. No se oculta ese consumo ni se mezcla su emisión fallida con las respuestas adjudicadas. La suma de intentos no incluye el intervalo administrativo entre ambos."
+  },
+  "referencias": {
+    "informe": "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/9b23fc5f59d602af8f31ed8666096c0d65471b2d/respuestas-ejecucion/GPTOSS-SAFEGUARD-INSTALACION-20261001/entrega-01/INFORME-FINAL.md",
+    "adjudicaciones": "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/9b23fc5f59d602af8f31ed8666096c0d65471b2d/respuestas-ejecucion/GPTOSS-SAFEGUARD-INSTALACION-20261001/entrega-01/ADJUDICACIONES.json",
+    "puntuacion": "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/9b23fc5f59d602af8f31ed8666096c0d65471b2d/respuestas-ejecucion/GPTOSS-SAFEGUARD-INSTALACION-20261001/entrega-01/PUNTUACION-FINAL.json",
+    "metricas": "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/9b23fc5f59d602af8f31ed8666096c0d65471b2d/respuestas-ejecucion/GPTOSS-SAFEGUARD-INSTALACION-20261001/entrega-01/METRICAS-COMBINADAS.json",
+    "evidencias": "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/9b23fc5f59d602af8f31ed8666096c0d65471b2d/respuestas-ejecucion/GPTOSS-SAFEGUARD-INSTALACION-20261001/entrega-01/INDICE-EVIDENCIAS.json"
+  },
+  "recepcion_independiente": "pendiente",
+  "s39_general": "en ejecución"
+}
