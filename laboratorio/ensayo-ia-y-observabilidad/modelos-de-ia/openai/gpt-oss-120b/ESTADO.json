@@ -1,13 +1,13 @@
 {
   "esquema": "sv.eio.candidato/1",
-  "fecha_corte": "2026-09-27",
+  "fecha_corte": "2026-10-01",
   "modelo": "openai/gpt-oss-120b",
   "revision_modelo": null,
   "revision_motor": null,
   "sha256_ejecutable": null,
   "suceso": "S39",
   "tique": "TT-0015",
-  "estado": "preparacion_documental",
+  "estado": "estudio_preliminar_conservado_sin_inferencia",
   "via": {
     "actual": "B_nativa_cpu",
     "posterior": "A_navegador_webassembly",
@@ -22,15 +22,16 @@
   },
   "autorizacion": {
     "preparacion_y_comprobacion_preliminar": true,
-    "ampliacion_recursos": false,
+    "ampliacion_recursos": true,
     "descarga_pesos_en_fase_preliminar": false,
-    "inferencia_en_fase_preliminar": false
+    "inferencia_en_fase_preliminar": false,
+    "alcance_actual": "Recurso de 128 GB y separación documental; no inicia inferencias"
   },
   "memoria": {
     "checkpoint_publicado_gib": 60.8,
     "fuente": "https://arxiv.org/html/2508.10925v1",
     "equivalencia_con_pico_memoria": false,
-    "dimensionamiento_128_gb": "hipotesis_pendiente"
+    "dimensionamiento_128_gb": "recurso_nominal_disponible_sin_medicion_del_modelo"
   },
   "representacion": {
     "mxfp4": "referencia_oficial",
@@ -57,5 +58,8 @@
     "integracion_nucleo": false,
     "ramas_nuevas": false
   },
-  "resultado": null
+  "resultado": null,
+  "variante": "ordinario",
+  "documentacion_variante_relacionada": "../gpt-oss-safeguard-120b/README.md",
+  "prioridad_de_ensayo_sobre_safeguard": null
 }

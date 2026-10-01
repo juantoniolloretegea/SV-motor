@@ -1,10 +1,18 @@
-# OpenAI · gpt-oss-120b
+# OpenAI · GPT-OSS-120B ordinario
 
-**Corte documental:** 27 de septiembre de 2026.  
-**Estado:** candidato en preparación documental; viabilidad material, selección y aptitud pendientes.  
+**Actualización documental:** 1 de octubre de 2026.  
+**Estado:** estudio preliminar conservado; instalación, inferencia y aptitud pendientes de acreditación.  
 **Vía vigente:** B · ejecución nativa en CPU mediante Rust.
 
+Esta carpeta corresponde exclusivamente a **`openai/gpt-oss-120b`**, de propósito general. La variante especializada dispone de su propia [carpeta GPT-OSS-Safeguard-120B](../gpt-oss-safeguard-120b/README.md). Los resultados, configuraciones y recepciones se mantienen separados.
+
 El objeto es determinar si una configuración identificada del modelo satisface los mínimos de fidelidad documental, cumplimiento de instrucciones, trazabilidad y tiempo de respuesta del ensayo. Se mantienen evaluaciones diferenciadas para inmunología y ciberseguridad. Cargar el modelo o recibir una respuesta HTTP no constituye un resultado Apto.
+
+## Estado y antecedentes
+
+El estudio preliminar del 27/09/2026 concluyó que la configuración entonces examinada no ofrecía memoria suficiente; no se instaló ni se ejecutó el modelo. Los 62,79 GiB documentados eran la memoria del anfitrión, no un máximo de consumo observado del candidato. El [TT-0015](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0015.md) conserva el alcance de esa conclusión. La disponibilidad posterior de un recurso nominal de 128 GB no acredita todavía carga, rendimiento ni aptitud.
+
+La [guía del sistema conjunto](https://github.com/juantoniolloretegea/SV-motor/blob/b8ff9198275ee0139dad7565d23733667aadb066/laboratorio/sistema-conjunto-lenguaje-computacion-ia-gobernada/README.md) distingue las dos variantes: el expediente previo prepara el ordinario y Safeguard permanece como hipótesis con función propia. No consta en ese antecedente una prioridad definitiva de ensayo de Safeguard. El orden de una campaña nueva deberá quedar fijado en su encargo; esta separación documental no inicia inferencias.
 
 ## Formato de conversación y cálculo
 

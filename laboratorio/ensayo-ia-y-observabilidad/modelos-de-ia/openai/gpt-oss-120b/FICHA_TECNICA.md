@@ -1,6 +1,6 @@
 # Ficha técnica · GPT-OSS-120B · preparación 1
 
-**Fecha:** 27/09/2026. **Seguimiento:** S39 / TT-0015.  
+**Base documental:** 27/09/2026. **Actualización:** 01/10/2026. **Seguimiento:** S39 / TT-0015.  
 **Estatuto:** especificación documental del candidato; ninguna medición propia de este modelo.
 
 | Elemento | Referencia y límite |
@@ -10,7 +10,7 @@
 | Representación publicada | MXFP4 para los pesos de expertos; archivo de pesos de referencia de 60,8 GiB. No es memoria máxima del proceso. |
 | Conversación | Harmony; plantilla, tokenizador, canales, fin de turno y configuración de razonamiento deben identificarse conjuntamente. |
 | Motor candidato | mistral.rs nativo en Rust. Soporte de familia declarado; ejecutable y ruta CPU efectivos pendientes de comprobación. |
-| Recursos | CPU. Referencia histórica de instancia de 62 GiB y cota experimental de 54 GiB, pendiente de nueva observación. Un equipo nominal de 128 GB es una hipótesis de dimensionamiento, sin ampliación autorizada en esta fase. |
+| Recursos | CPU. El antecedente de 62,79 GiB y cota de 54 GiB pertenece al estudio preliminar. Se dispone posteriormente de un recurso nominal de 128 GB autorizado; su capacidad efectiva y el máximo de consumo del modelo requieren medición propia. |
 | Documentación | Catálogo local de fuentes originales conservadas y versionadas, con citas y localizadores verificables. |
 | Licencias | Publicación oficial Apache-2.0 y política de uso gpt-oss; comprobar avisos de pesos, tokenizador, motor, conversión y dependencias de la distribución elegida. |
 
@@ -35,5 +35,7 @@ La política de razonamiento y el límite de generación se fijarán antes del b
 5. Decisión diferenciada: Apto en el alcance ensayado, No apto o No evaluable por impedimento instrumental. No se suman bancos heterogéneos como tasa global.
 
 No se autoriza por esta ficha entrenar, retirar expertos, cambiar cuantización, habilitar Internet durante la inferencia, incorporar modelos auxiliares ni integrar el candidato en el núcleo. La referencia MCP 0.1.2 sigue su recepción propia en TT-0014.
+
+La identidad y los antecedentes de esta ficha pertenecen al modelo ordinario. Véase por separado la [ficha de GPT-OSS-Safeguard-120B](../gpt-oss-safeguard-120b/FICHA_TECNICA.md); no se transfieren presupuestos, compatibilidad ni resultados entre variantes.
 
 [Estado](ESTADO.json) · [Ficha de seguimiento](README.md).
