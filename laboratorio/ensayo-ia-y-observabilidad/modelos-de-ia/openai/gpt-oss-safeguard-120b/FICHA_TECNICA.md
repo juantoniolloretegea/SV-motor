@@ -48,3 +48,9 @@ La organización documental no instala pesos, no inicia consultas y no sustituye
 ---
 
 Sistema Vectorial SV · [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/deed.es). Los componentes de terceros conservan sus licencias.
+
+## Contraste posterior de recuperación documental íntegra · 2026-10-01T15:55:53Z
+
+Contraste de recuperación documental íntegra Safeguard v2 autorizado expresamente y en ejecución, con banco nuevo SG-LECTURA-INTEGRA-20261001/r1 y exactamente tres casos autónomos. Corpus, afirmaciones, referencias reservadas, criticidad y configuración fijados antes de inferir. Contrato de páginas aclarado en la representación efectiva y observador pasivo incorporado; quince pruebas del conductor y veinticinco del MCP conformes. Tres rutas documentales completas comprobadas sin inferencia, con reserva mínima observada de 3869 tokens. Carga completa acreditada; primera secuencia en curso. El resultado anterior de 87,5/100 y C08 se conservan intactos. La nueva puntuación y el dictamen quedan pendientes del cierre y cotejo íntegros.
+
+[Comprobaciones y admisión](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/b8db5c30c94863bc4fd95f050c9ae0b56f5d25d0/respuestas-ejecucion/GPTOSS-SAFEGUARD-INSTALACION-20261001/entrega-02/ADMISION-PREVIA.json). S39, revisión 32, conserva el seguimiento. La recepción independiente y las dependencias de los demás expedientes permanecen pendientes según sus propios registros. La aclaración de MCP y sus pruebas no constituyen una recepción integral de TT-0014 ni aptitud clínica.

@@ -1,6 +1,6 @@
 {
   "esquema": "sv.eio.candidato/1",
-  "fecha_corte": "2026-10-01T14:49:26Z",
+  "fecha_corte": "2026-10-01T15:55:53Z",
   "modelo": "openai/gpt-oss-safeguard-120b",
   "variante": "safeguard",
   "revision_modelo": "3c7391182603991a904031244e7822488c67796d",
@@ -12,22 +12,22 @@
     "tique_antecedente_ordinario": "TT-0015",
     "alcance": "Instalación y contraste sintético inicial terminados conforme al encargo; S39 revisión 31 y TT-0018 pendientes de recepción independiente. S39 general permanece en ejecución."
   },
-  "estado": "instalacion_y_contraste_terminados_recepcion_pendiente",
+  "estado": "contraste_lectura_integra_v2_en_ejecucion",
   "funcion_declarada": "clasificacion_textual_con_politica_explicita",
   "funcion_sv_definitiva": null,
   "prioridad_de_ensayo": null,
   "ejecucion": {
     "instalacion_acreditada": true,
-    "inferencias_en_este_expediente": 4,
+    "inferencias_en_este_expediente": 5,
     "aptitud": "No apto para este contraste delimitado; no acredita aptitud clínica",
     "memoria_maxima_observada_bytes": 111693459456,
     "latencia_observada_segundos": null,
     "carga_completa_acreditada": true,
-    "recuento_inferencias": "Cuatro intentos alcanzaron cálculo: contraste-03 y 04 inválidos; contraste-05 aporta C01-C07 válidos y conserva su C08 interrumpido; contraste-06 aporta C08. Ocho respuestas finales adjudicadas; no se repiten resultados concluidos.",
+    "recuento_inferencias": "Cuatro intentos alcanzaron cálculo: contraste-03 y 04 inválidos; contraste-05 aporta C01-C07 válidos y conserva su C08 interrumpido; contraste-06 aporta C08. Ocho respuestas finales adjudicadas; no se repiten resultados concluidos. Una quinta secuencia, lectura-01, inicia el contraste v2 sin resultados nuevos adjudicados todavía.",
     "respuestas_validas_adjudicadas": 8,
     "alcance_memoria": "Máximo conjunto final, con antecedentes. Contraste-06 supera el máximo anterior. Recursos de contraste-05 incluyen su C08 contenido.",
     "contraste_concluido": true,
-    "inferencia_activa": false,
+    "inferencia_activa": true,
     "servidor_y_accesos_conservados": true,
     "tiempos_por_emision": "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/9b23fc5f59d602af8f31ed8666096c0d65471b2d/respuestas-ejecucion/GPTOSS-SAFEGUARD-INSTALACION-20261001/entrega-01/METRICAS-COMBINADAS.json"
   },
@@ -59,7 +59,8 @@
     "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/926542570f74760296898f8e3fa8b432a68b8218/respuestas-ejecucion/GPTOSS-SAFEGUARD-INSTALACION-20261001/entrega-01/CORRECCIONES-INSTRUMENTALES.md",
     "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/9b23fc5f59d602af8f31ed8666096c0d65471b2d/respuestas-ejecucion/GPTOSS-SAFEGUARD-INSTALACION-20261001/entrega-01/INFORME-FINAL.md",
     "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/9b23fc5f59d602af8f31ed8666096c0d65471b2d/respuestas-ejecucion/GPTOSS-SAFEGUARD-INSTALACION-20261001/entrega-01/PUNTUACION-FINAL.json",
-    "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/9b23fc5f59d602af8f31ed8666096c0d65471b2d/respuestas-ejecucion/GPTOSS-SAFEGUARD-INSTALACION-20261001/entrega-01/COTEJO-CUSTODIA.json"
+    "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/9b23fc5f59d602af8f31ed8666096c0d65471b2d/respuestas-ejecucion/GPTOSS-SAFEGUARD-INSTALACION-20261001/entrega-01/COTEJO-CUSTODIA.json",
+    "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/b8db5c30c94863bc4fd95f050c9ae0b56f5d25d0/respuestas-ejecucion/GPTOSS-SAFEGUARD-INSTALACION-20261001/entrega-02/ADMISION-PREVIA.json"
   ],
   "resultado": "Instalación y contraste sintético inicial de Safeguard terminados: 87,5/100; No apto para el contraste delimitado; un incumplimiento crítico de lectura íntegra en C08; cobertura 8/8. Las ocho clasificaciones y citas son correctas respecto de los pasajes recibidos, pero C08 omite la página 0 de una sección de dos páginas. Carga completa, aislamiento probado y auditoría íntegra de C01-C07 (r3) y C08 (r4) conformes; 3673 tokens y cálculos finalizados, diez emisiones conservadas. Máximo conjunto: 111.693.459.456 bytes, sin intercambio ni agotamiento de memoria. Inferencia cerrada; servidor, pesos y accesos conservados. Entrega original y archivos cotejados desde GitHub; recepción independiente pendiente. No acredita aptitud clínica ni modifica otros expedientes.",
   "realizaciones": [
@@ -89,5 +90,13 @@
     "motivo_no_kappa": "n=8 no satisface n=b² con b>=3; no se aplica el umbral de célula ni se sustituye por la puntuación",
     "aptitud_clinica_acreditada": false
   },
-  "recepcion_independiente": "pendiente"
+  "recepcion_independiente": "pendiente",
+  "contraste_lectura_integra_v2": {
+    "banco": "SG-LECTURA-INTEGRA-20261001/r1",
+    "fase": "en ejecución",
+    "resultado": "Contraste de recuperación documental íntegra Safeguard v2 autorizado expresamente y en ejecución, con banco nuevo SG-LECTURA-INTEGRA-20261001/r1 y exactamente tres casos autónomos. Corpus, afirmaciones, referencias reservadas, criticidad y configuración fijados antes de inferir. Contrato de páginas aclarado en la representación efectiva y observador pasivo incorporado; quince pruebas del conductor y veinticinco del MCP conformes. Tres rutas documentales completas comprobadas sin inferencia, con reserva mínima observada de 3869 tokens. Carga completa acreditada; primera secuencia en curso. El resultado anterior de 87,5/100 y C08 se conservan intactos. La nueva puntuación y el dictamen quedan pendientes del cierre y cotejo íntegros.",
+    "fecha_utc": "2026-10-01T15:55:53Z",
+    "evidencia": "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/b8db5c30c94863bc4fd95f050c9ae0b56f5d25d0/respuestas-ejecucion/GPTOSS-SAFEGUARD-INSTALACION-20261001/entrega-02/ADMISION-PREVIA.json",
+    "recepcion_independiente": "pendiente"
+  }
 }
