@@ -1,7 +1,15 @@
 # Ficha técnica del servicio documental MCP local
 
+**Actualización:** 01/10/2026. **Nueva versión verificada localmente:** [0.1.3](0.1.3/LEAME.md). **Seguimiento:** TT-0014 / S39.
+
+La nueva revisión retira el límite de ocho palabras no anunciado, permite recorrer todas las coincidencias y añade registro duradero y reconstrucción determinista de solicitudes y respuestas. Las [pruebas](0.1.3/PRUEBAS.txt) y el [cotejo conservado](0.1.3/evidencias/COTEJO.json) documentan el alcance. La integración completa con Safeguard y la cobertura del motor no han sido ensayadas: no se declara aptitud integral. Un tramo relevante sin observación o reconstrucción determina No apto para el uso exigido por el SV.
+
+Las realizaciones anteriores conservan sus resultados y limitaciones. No se sustituye el componente de campañas Qwen en curso. A continuación se conserva el corte documental anterior.
+
+## Antecedente · 27/09/2026
+
 **Revisión documental:** 2 · 27 de septiembre de 2026.  
-**Componente actual:** [MCP documental local 0.1.1](0.1.1/FICHA_TECNICA.md).  
+**Componente de aquel corte:** [MCP documental local 0.1.1](0.1.1/FICHA_TECNICA.md).  
 **Trazabilidad:** [TT-0014](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/6bf677dca4808621738012f796eda009edeb6194/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0014.md), S39 revisión 23. Recepción pendiente; no se declara cerrado el tique.
 
 La versión 0.1.1 corrige la validación de claves JSON repetidas, la paginación sobre la respuesta serializada y la custodia supervisada. Conserva Rust 1.98.0, Cargo.lock, interfaz MCP stdio y exactamente dos herramientas: buscar_documentos y leer_documento. El [LEAME](0.1.1/LEAME.md) describe componentes y límites.
