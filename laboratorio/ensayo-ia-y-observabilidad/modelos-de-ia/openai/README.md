@@ -12,6 +12,10 @@ Los dos candidatos de 120B tienen **carpetas independientes con sus nombres ofic
 
 La clasificación según una política y la corrección de una respuesta especializada son objetos de evaluación distintos. El [marco del sistema conjunto](https://github.com/juantoniolloretegea/SV-motor/blob/b8ff9198275ee0139dad7565d23733667aadb066/laboratorio/sistema-conjunto-lenguaje-computacion-ia-gobernada/README.md) expone las hipótesis y sus límites. El orden de ensayo de las variantes debe identificarse en el encargo aplicable; este índice no constituye una autorización de ejecución.
 
+## Derivados comunitarios
+
+[Derivado experimental de 4,8B y cinco expertos](comunidad/gpt-oss-4.8b-5-expertos/README.md): cotejo documental de compatibilidad del cargador, sin instalación ni inferencia. Se agrupa aquí por su procedencia de la familia GPT-OSS; no es una publicación oficial de OpenAI. Se conservan el informe y los metadatos originales del 23 de septiembre de 2026.
+
 ## Navegación y fuentes
 
 La [ficha de gpt-oss-20b](gpt-oss-20b/README.md) conserva los antecedentes y fuentes de sus campañas. Cada ficha de 120B identifica sus propias referencias y el alcance de las comprobaciones pendientes.

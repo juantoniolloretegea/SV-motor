@@ -22,7 +22,7 @@ La recepción instrumental confirma un funcionamiento acotado, no la corrección
 ## Componentes y estudios separados
 
 - [Servicio documental MCP](model-context-protocol/README.md): versiones 0.1.0, 0.1.1 y 0.1.2; componente de acceso documental, no modelo.
-- [Derivado comunitario de 4,8B](comunidad/gpt-oss-4.8b-5-expertos/README.md): estudio documental del empaquetado; sin instalación ni inferencia acreditadas. No es una publicación oficial de OpenAI.
+- [Derivado comunitario de 4,8B](openai/comunidad/gpt-oss-4.8b-5-expertos/README.md): estudio documental del empaquetado; sin instalación ni inferencia acreditadas. No es una publicación oficial de OpenAI.
 - [Registro de versiones](../VERSIONES.json): etiquetas, commits, versiones declaradas e identidades de los artefactos publicados.
 
 La capacidad de generar texto, la fidelidad documental, la conformidad contractual y la aptitud para cada dominio se evalúan por separado. Los resultados no se transfieren entre modelos ni se convierten en una tasa global.
