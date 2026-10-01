@@ -1,5 +1,7 @@
 # Resultados y corrección del examen Instruct v7
 
+> **Puntuación final incorporada el 01/10/2026: 28/100 — No apto.** Siete puntos netos de 25 y dos errores críticos eliminatorios. [Cálculo, regla aplicada y datos estructurados](PUNTUACION-FINAL-20261001.md). La regla posterior añade la resta de errores no críticos; el texto histórico del 30/09 y sus adjudicaciones se conservan a continuación.
+
 **30 de septiembre de 2026 · S39 / TT-0016 · Corrección documental para revisión humana.**
 
 Se tramitaron las 25 preguntas: 19 produjeron respuesta final y seis terminaron por impedimento técnico. Ninguna quedó sin ejecutar. La corrección se contrasta con la clave previa, el corpus congelado y las solicitudes y respuestas MCP efectivas; no se deduce de lo que el candidato afirma haber consultado.
