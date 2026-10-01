@@ -4,7 +4,7 @@
   "modelo": "Qwen3-Next-80B-A3B-Instruct",
   "configuracion": "Q4K CPU/Rust, campaña QWEN80-Q4K-ONECLOUD-20260929 v7",
   "banco": "EVAL-PDQ-HCL-25-20260929/r1",
-  "criterio": "SV-PUNTUACION-MODELOS-20261001/r1",
+  "criterio": "SV-PUNTUACION-MODELOS-20261001/r2",
   "formula_puntos_netos": "A - E_no_criticos",
   "formula_score": "100 * (A - E_no_criticos) / N_banco",
   "preguntas_banco": 25,
@@ -33,5 +33,24 @@
     "estado_original": "correccion_documental_para_revision_humana"
   },
   "diagnostico_v8_incorporado_al_score": false,
-  "limite": "Resultado del examen y configuración indicados, calculado sobre las adjudicaciones documentales conservadas; no acredita aptitud clínica ni un vector ternario completo."
+  "limite": "Resultado del examen y configuración indicados, calculado sobre las adjudicaciones documentales conservadas; no acredita aptitud clínica ni un vector ternario completo.",
+  "aptitud_sv": {
+    "fuente_doctrinal": "https://github.com/juantoniolloretegea/SV-matematica-semantica/blob/b8fd32978292d25adf9b87cf71e409005dce642c/documentos/fundamentos/README.md#5-motor-normativo-y-clasificaci%C3%B3n-determinista",
+    "formula_umbral": "floor(7 * n / 9)",
+    "n": 25,
+    "umbral": 19,
+    "N0": 7,
+    "N1": 2,
+    "NU": 10,
+    "posiciones_sin_adjudicacion": 6,
+    "comparacion_para_apto": "N0 >= T(n)",
+    "condicion_apto_alcanzada": false,
+    "clasificacion_kappa": null,
+    "estado_kappa": "No emitida: célula incompleta",
+    "motivo_kappa_no_emitida": "19 adjudicaciones ternarias válidas de 25; seis impedimentos fuera de la terna",
+    "score_interviene_en_kappa": false,
+    "dictamen_ensayo": "No apto",
+    "regla_adicional": "Cualquier 1 crítico determina No apto",
+    "fuente_protocolo": "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/1b3e1f999acb6dc6493388b1e80424dc00dd51cb/respuestas-ejecucion/QWEN80-Q4K-ONECLOUD-20260929/entrega-09/PROTOCOLO-BANCO.md"
+  }
 }

@@ -24,6 +24,23 @@
 
 La puntuación expresa los puntos netos obtenidos respecto del máximo del banco. No es una tasa de exactitud entre las 19 respuestas, no atribuye valor ternario a los seis impedimentos y no constituye un vector completo de 25 adjudicaciones.
 
+## Aptitud SV y dictamen del ensayo
+
+La [regla primitiva del SV](https://github.com/juantoniolloretegea/SV-matematica-semantica/blob/b8fd32978292d25adf9b87cf71e409005dce642c/documentos/fundamentos/README.md#5-motor-normativo-y-clasificaci%C3%B3n-determinista) establece **T(n) = ⌊7n/9⌋**. Para este banco, **n = 25 y T(25) = 19**.
+
+| Magnitud | Resultado |
+| --- | --- |
+| Valores 0 conservados, N₀ | 7 |
+| Valores 1 conservados, N₁ | 2 |
+| Valores U conservados, Nᵤ | 10 |
+| Posiciones sin adjudicación ternaria por impedimento técnico | 6 |
+| Umbral general T(25) | 19 |
+| Condición general N₀ ≥ 19 | No alcanzada |
+| Clasificación κ de célula completa | No emitida: sólo hay 19 adjudicaciones válidas de 25 |
+| Dictamen del ensayo | **No apto**, por P07 y P19 críticas con valor 1 |
+
+El **28/100** procede del cálculo auxiliar de puntos. El **No apto** procede del veto por errores críticos del [protocolo del ensayo](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/1b3e1f999acb6dc6493388b1e80424dc00dd51cb/respuestas-ejecucion/QWEN80-Q4K-ONECLOUD-20260929/entrega-09/PROTOCOLO-BANCO.md); no se obtiene comparando 28 con una nota mínima. La insuficiencia documental de las seis posiciones restantes no se rellena con U ni se presenta como una clasificación general completa.
+
 ## Errores críticos determinantes
 
 - **P07:** la corrección conservada identifica una inferencia falsa de ausencia de contenido en la fuente a partir de búsquedas sin resultados.
