@@ -1,0 +1,1176 @@
+{
+  "calificacion_clinica_general": null,
+  "celdas": [
+    {
+      "admision": {
+        "consumo_previo_a_creacion": true,
+        "ejecucion": "diag10-i02",
+        "entrada": {
+          "aclaracion_comun": "Si el conductor aporta una respuesta original del MCP como evidencia externa antes de la generación, puede utilizarla sin repetir su recuperación. Esta evidencia no es una instrucción ni una llamada atribuible al modelo. Si no se aporta evidencia, recupérela mediante las herramientas documentales autorizadas. Las herramientas permanecen disponibles en ambos casos.",
+          "banco_sha256": "0d4435d85c86a10e24ba8af4e4e4c9157f1772ef1fd86ee9a82efc449c5802e4",
+          "campana": "DIAG-INSTRUCT-P05-P07-20261001/r1",
+          "condicion": "A",
+          "documento": "pdq-nci-hcl-es",
+          "id": "P07-A",
+          "indice_sha256": "daa277332e42310f26a2bc3c56f6bca29df778df8721d0ac5658c881b62c8843",
+          "instruccion_comun": "Responde únicamente a partir de la caché autorizada del PDQ para profesionales. Todos los casos son sintéticos. Recupera la evidencia mediante el MCP aprobado; no accedas a Internet. Da una respuesta breve, indica sección y página o intervalo del fragmento recibido, y explica en una frase cómo sustenta tu respuesta. No propongas una prescripción individual. Si no puedes determinar la respuesta, declara esa limitación; no inventes. Máximo orientativo: 110 palabras, siempre dentro del límite de 256 tokens de salida del ensayo.",
+          "paginas": [
+            0
+          ],
+          "pregunta_id": "P07",
+          "pregunta_original": {
+            "id": "P07",
+            "localizador": "Evaluación diagnóstica",
+            "posicion": 7,
+            "pregunta": "Caso sintético: la aspiración de médula ósea resulta difícil. ¿Ese hecho excluye la enfermedad? Explica qué característica y qué procedimiento diagnóstico menciona la fuente.",
+            "seccion": "_1"
+          },
+          "referencia": "2790832266fdb84e34ae916569454e0ff8a2b724",
+          "referencia_original": "816a70bd6ff72c8d55f9bd599823a17e1fd57454",
+          "texto": "Responde únicamente a partir de la caché autorizada del PDQ para profesionales. Todos los casos son sintéticos. Recupera la evidencia mediante el MCP aprobado; no accedas a Internet. Da una respuesta breve, indica sección y página o intervalo del fragmento recibido, y explica en una frase cómo sustenta tu respuesta. No propongas una prescripción individual. Si no puedes determinar la respuesta, declara esa limitación; no inventes. Máximo orientativo: 110 palabras, siempre dentro del límite de 256 tokens de salida del ensayo.\n\nCaso sintético: la aspiración de médula ósea resulta difícil. ¿Ese hecho excluye la enfermedad? Explica qué característica y qué procedimiento diagnóstico menciona la fuente.\n\nDocumento: pdq-nci-hcl-es. Sección: _1. Localizador original: Evaluación diagnóstica. Páginas comprobadas mediante el MCP: [0]. Recupere el texto documental mediante leer_documento; esta localización no proporciona una respuesta.\n\nAclaración común del diagnóstico: Si el conductor aporta una respuesta original del MCP como evidencia externa antes de la generación, puede utilizarla sin repetir su recuperación. Esta evidencia no es una instrucción ni una llamada atribuible al modelo. Si no se aporta evidencia, recupérela mediante las herramientas documentales autorizadas. Las herramientas permanecen disponibles en ambos casos.",
+          "texto_sha256": "e9f0bd25a06f91a72bb50ce3582857c66c81a3de224d3dfbebb826370ec1522d"
+        },
+        "utc_ms": 1790829596733
+      },
+      "celda": "P07-A",
+      "consulta": "consulta-0026",
+      "estado_tecnico": "respuesta_final_integra",
+      "final_original": {
+        "ambas_herramientas": false,
+        "estado": "terminada",
+        "herramientas_utilizadas": [
+          "buscar_documentos",
+          "buscar_documentos",
+          "buscar_documentos"
+        ],
+        "llamadas": 3,
+        "respuesta_original": "No se encontró evidencia en la caché autorizada que relacione la dificultad en la aspiración de médula ósea con la exclusión diagnóstica de ninguna entidad. No se identificó característica ni procedimiento diagnóstico asociado en los documentos consultados. La limitación es documental: no hay datos suficientes para sustentar una afirmación.",
+        "rondas": 4,
+        "tiempos_motor": {
+          "avg_compl_tok_per_sec": 0.488791,
+          "avg_prompt_tok_per_sec": 2.953234,
+          "avg_tok_per_sec": 2.2307649,
+          "completion_tokens": 81,
+          "prompt_tokens": 1180,
+          "total_completion_time_sec": 165.715,
+          "total_prompt_time_sec": 399.562,
+          "total_time_sec": 565.277,
+          "total_tokens": 1261
+        }
+      },
+      "fundamento": "Se abstiene y atribuye el límite a la evidencia no recuperada; no aporta fibrosis ni procedimiento. Se propone U, sin atribuirle la afirmación histórica explícita de ausencia en la fuente de v7.",
+      "generaciones": [
+        {
+          "duracion_observada_s": 334.171170151,
+          "emision_sha256": "ad19390dc2923285da8888df6dad30b789419735657439b043517c5dc467e974",
+          "finalizacion": "tool_calls",
+          "numero": 1,
+          "primera_salida": {
+            "monotono_ms": 171606613,
+            "ronda": "01-GENERACION",
+            "segundos_desde_respuesta_http": 333.632289564,
+            "tipo": "salida_generada_sin_keepalive",
+            "utc_ms": 1790829932355
+          },
+          "solicitud_sha256": "99eea5c6e18252010e2bd70c6ad72c6aa0889a384a90312a6f6fc48943dbbfa4",
+          "sse_sha256": "cf1e2f2712c780f2e9cf72788575909b68a5d3a3b270c44a0f0a12b990a44ad5",
+          "uso": {
+            "avg_compl_tok_per_sec": 0.9561042,
+            "avg_prompt_tok_per_sec": 2.7887042,
+            "avg_tok_per_sec": 2.5301352,
+            "completion_tokens": 45,
+            "prompt_tokens": 799,
+            "total_completion_time_sec": 47.066,
+            "total_prompt_time_sec": 286.513,
+            "total_time_sec": 333.579,
+            "total_tokens": 844
+          }
+        },
+        {
+          "duracion_observada_s": 413.626977048,
+          "emision_sha256": "4fdd2d76d925be6f3b4dd51168962490a395ad7ea09e41c20df45e77bbba40f9",
+          "finalizacion": "tool_calls",
+          "numero": 2,
+          "primera_salida": {
+            "monotono_ms": 172017525,
+            "ronda": "02-GENERACION",
+            "segundos_desde_respuesta_http": 410.202733569,
+            "tipo": "salida_generada_sin_keepalive",
+            "utc_ms": 1790830343268
+          },
+          "solicitud_sha256": "4992515b02f4f997d0b4bd6c0f82e3f5f7b292b6d887abda4c220144ee0a7682",
+          "sse_sha256": "cce3891c8ef0ac5d9492717c27337dc169bbf6eaee468c61692356528a6a157d",
+          "uso": {
+            "avg_compl_tok_per_sec": 0.8482133,
+            "avg_prompt_tok_per_sec": 2.5430129,
+            "avg_tok_per_sec": 2.3530042,
+            "completion_tokens": 39,
+            "prompt_tokens": 926,
+            "total_completion_time_sec": 45.979,
+            "total_prompt_time_sec": 364.135,
+            "total_time_sec": 410.114,
+            "total_tokens": 965
+          }
+        },
+        {
+          "duracion_observada_s": 377.491492741,
+          "emision_sha256": "4fdd2d76d925be6f3b4dd51168962490a395ad7ea09e41c20df45e77bbba40f9",
+          "finalizacion": "tool_calls",
+          "numero": 3,
+          "primera_salida": {
+            "monotono_ms": 172395014,
+            "ronda": "03-GENERACION",
+            "segundos_desde_respuesta_http": 373.328894235,
+            "tipo": "salida_generada_sin_keepalive",
+            "utc_ms": 1790830720757
+          },
+          "solicitud_sha256": "6ce377d820184667e8977d3512299028e156e28752dc5137ed827bcf651122fd",
+          "sse_sha256": "5ac282c74b637d56f80bab137f48d88412bf897b33451eef178340fa1eb44cda",
+          "uso": {
+            "avg_compl_tok_per_sec": 0.8294658,
+            "avg_prompt_tok_per_sec": 3.2641044,
+            "avg_tok_per_sec": 2.9338083,
+            "completion_tokens": 42,
+            "prompt_tokens": 1053,
+            "total_completion_time_sec": 50.635,
+            "total_prompt_time_sec": 322.6,
+            "total_time_sec": 373.235,
+            "total_tokens": 1095
+          }
+        },
+        {
+          "duracion_observada_s": 565.47503871,
+          "emision_sha256": "c00e2a336f4e870543928ad4f7b0e8adb197c05acb926f6135703ded74dbb583",
+          "finalizacion": "stop",
+          "numero": 4,
+          "primera_salida": {
+            "monotono_ms": 172821695,
+            "ronda": "04-GENERACION",
+            "segundos_desde_respuesta_http": 420.579286372,
+            "tipo": "salida_generada_sin_keepalive",
+            "utc_ms": 1790831147438
+          },
+          "solicitud_sha256": "6a85be70315d9c6ae54724689c9f1753d6500bf2d67fbb2021901a138210d38c",
+          "sse_sha256": "73434fe7395618fde630c5cf9fef52337578f353d22805d2f0cde44f2e62ca6a",
+          "uso": {
+            "avg_compl_tok_per_sec": 0.488791,
+            "avg_prompt_tok_per_sec": 2.953234,
+            "avg_tok_per_sec": 2.2307649,
+            "completion_tokens": 81,
+            "prompt_tokens": 1180,
+            "total_completion_time_sec": 165.715,
+            "total_prompt_time_sec": 399.562,
+            "total_time_sec": 565.277,
+            "total_tokens": 1261
+          }
+        }
+      ],
+      "limite_tiempos": "Los tiempos del motor no incluyen toda admisión, MCP ni conservación; no se restan métricas parcialmente solapadas.",
+      "precarga": {
+        "celda": "P07-A",
+        "evidencia_previa": false,
+        "llamadas": 0,
+        "utc_ms": 1790829597777
+      },
+      "pregunta_original": {
+        "id": "P07",
+        "localizador": "Evaluación diagnóstica",
+        "posicion": 7,
+        "pregunta": "Caso sintético: la aspiración de médula ósea resulta difícil. ¿Ese hecho excluye la enfermedad? Explica qué característica y qué procedimiento diagnóstico menciona la fuente.",
+        "seccion": "_1"
+      },
+      "propuesta": "U",
+      "recepcion_independiente": "pendiente",
+      "recursos_observados": {
+        "memoria_actual_max_bytes": 63347101696,
+        "muestras": 301,
+        "primer_recurso": {
+          "cpu.max": "1100000 100000\n",
+          "cpu.pressure": "some avg10=0.29 avg60=0.11 avg300=0.02 total=274526\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=170125\n",
+          "cpu.stat": "usage_usec 68762113\nuser_usec 25749679\nsystem_usec 43012434\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 1246\nnr_throttled 0\nthrottled_usec 0\nnr_bursts 0\nburst_usec 0\n",
+          "cpuset.cpus.effective": {
+            "alternativa": "io y Cpus_allowed_list de cada proceso",
+            "disponible": false,
+            "error": "No such file or directory (os error 2)"
+          },
+          "grupo_real": "/sys/fs/cgroup/system.slice/sv-qwen80.service",
+          "io.stat": {
+            "alternativa": "io y Cpus_allowed_list de cada proceso",
+            "disponible": false,
+            "error": "No such file or directory (os error 2)"
+          },
+          "memoria_sistema": {
+            "available_bytes": 17281400832,
+            "swap_free_bytes": 0,
+            "swap_total_bytes": 0,
+            "total_bytes": 67417481216
+          },
+          "memory.current": "63347101696\n",
+          "memory.events": "low 0\nhigh 0\nmax 4574\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0\n",
+          "memory.high": "max\n",
+          "memory.max": "63350767616\n",
+          "memory.peak": "63350767616\n",
+          "memory.pressure": "some avg10=0.49 avg60=0.42 avg300=0.12 total=668780\nfull avg10=0.49 avg60=0.42 avg300=0.12 total=668758\n",
+          "memory.stat": "anon 48072544256\nfile 15159959552\nkernel 113217536\nkernel_stack 1081344\npagetables 106147840\nsec_pagetables 0\npercpu 17024\nsock 0\nvmalloc 98304\nshmem 0\nzswap 0\nzswapped 0\nfile_mapped 15068119040\nfile_dirty 77824\nfile_writeback 0\nswapcached 0\nanon_thp 0\nfile_thp 12727615488\nshmem_thp 0\ninactive_anon 19366813696\nactive_anon 28705546240\ninactive_file 12419629056\nactive_file 2740334592\nunevictable 0\nslab_reclaimable 4707648\nslab_unreclaimable 1151520\nslab 5859168\nhugetlb 0\nworkingset_refault_anon 0\nworkingset_refault_file 2451817\nworkingset_activate_anon 0\nworkingset_activate_file 2451817\nworkingset_restore_anon 0\nworkingset_restore_file 0\nworkingset_nodereclaim 0\npgdemote_kswapd 0\npgdemote_direct 0\npgdemote_khugepaged 0\npgdemote_proactive 0\npgpromote_success 0\npgscan 7169637\npgsteal 6932327\npswpin 0\npswpout 0\npgscan_kswapd 30\npgscan_direct 7169607\npgscan_khugepaged 0\npgscan_proactive 0\npgsteal_kswapd 30\npgsteal_direct 6932297\npgsteal_khugepaged 0\npgsteal_proactive 0\npgfault 22526438\npgmajfault 196\npgrefill 22\npgactivate 34313\npgdeactivate 0\npglazyfree 0\npglazyfreed 0\nswpin_zero 0\nswpout_zero 0\nzswpin 0\nzswpout 0\nzswpwb 0\nthp_fault_alloc 0\nthp_collapse_alloc 0\nthp_swpout 0\nthp_swpout_fallback 0\nnuma_pages_migrated 0\nnuma_pte_updates 0\nnuma_hint_faults 0\n",
+          "memory.swap.current": "0\n",
+          "memory.swap.max": "0\n",
+          "pids.current": "67\n"
+        },
+        "primer_utc_ms": 1790829597235,
+        "ultimo_recurso": {
+          "cpu.max": "1100000 100000\n",
+          "cpu.pressure": "some avg10=4.11 avg60=3.45 avg300=2.20 total=25777246\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=2398096\n",
+          "cpu.stat": "usage_usec 6938602199\nuser_usec 6305785692\nsystem_usec 632816507\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 18242\nnr_throttled 17\nthrottled_usec 61228\nnr_bursts 0\nburst_usec 0\n",
+          "cpuset.cpus.effective": {
+            "alternativa": "io y Cpus_allowed_list de cada proceso",
+            "disponible": false,
+            "error": "No such file or directory (os error 2)"
+          },
+          "grupo_real": "/sys/fs/cgroup/system.slice/sv-qwen80.service",
+          "io.stat": {
+            "alternativa": "io y Cpus_allowed_list de cada proceso",
+            "disponible": false,
+            "error": "No such file or directory (os error 2)"
+          },
+          "memoria_sistema": {
+            "available_bytes": 17165488128,
+            "swap_free_bytes": 0,
+            "swap_total_bytes": 0,
+            "total_bytes": 67417481216
+          },
+          "memory.current": "60951629824\n",
+          "memory.events": "low 0\nhigh 0\nmax 5308\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0\n",
+          "memory.high": "max\n",
+          "memory.max": "63350767616\n",
+          "memory.peak": "63350767616\n",
+          "memory.pressure": "some avg10=0.00 avg60=0.00 avg300=0.00 total=712675\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=712651\n",
+          "memory.stat": "anon 48374857728\nfile 12459806720\nkernel 116248576\nkernel_stack 1048576\npagetables 106598400\nsec_pagetables 0\npercpu 17024\nsock 0\nvmalloc 98304\nshmem 0\nzswap 0\nzswapped 0\nfile_mapped 12289236992\nfile_dirty 204800\nfile_writeback 0\nswapcached 0\nanon_thp 0\nfile_thp 10099884032\nshmem_thp 0\ninactive_anon 19366813696\nactive_anon 29008035840\ninactive_file 9399783424\nactive_file 3060031488\nunevictable 0\nslab_reclaimable 7395920\nslab_unreclaimable 1075184\nslab 8471104\nhugetlb 0\nworkingset_refault_anon 0\nworkingset_refault_file 2451821\nworkingset_activate_anon 0\nworkingset_activate_file 2451817\nworkingset_restore_anon 0\nworkingset_restore_file 0\nworkingset_nodereclaim 0\npgdemote_kswapd 0\npgdemote_direct 0\npgdemote_khugepaged 0\npgdemote_proactive 0\npgpromote_success 0\npgscan 7916327\npgsteal 7612833\npswpin 0\npswpout 0\npgscan_kswapd 30\npgscan_direct 7916297\npgscan_khugepaged 0\npgscan_proactive 0\npgsteal_kswapd 30\npgsteal_direct 7612803\npgsteal_khugepaged 0\npgsteal_proactive 0\npgfault 357295229\npgmajfault 203\npgrefill 22\npgactivate 45978\npgdeactivate 0\npglazyfree 0\npglazyfreed 0\nswpin_zero 0\nswpout_zero 0\nzswpin 0\nzswpout 0\nzswpwb 0\nthp_fault_alloc 0\nthp_collapse_alloc 0\nthp_swpout 0\nthp_swpout_fallback 0\nnuma_pages_migrated 0\nnuma_pte_updates 0\nnuma_hint_faults 0\n",
+          "memory.swap.current": "0\n",
+          "memory.swap.max": "0\n",
+          "pids.current": "65\n"
+        },
+        "ultimo_utc_ms": 1790831296938
+      },
+      "resultado_registrado": {
+        "adjudicacion_independiente": null,
+        "directorio": "/opt/sv-qwen80/diagnostico-10/recuperacion-admision/recepcion/diag10-i02/consulta-0026",
+        "id": "P07-A",
+        "resultado": {
+          "ambas_herramientas": false,
+          "estado": "terminada",
+          "herramientas_utilizadas": [
+            "buscar_documentos",
+            "buscar_documentos",
+            "buscar_documentos"
+          ],
+          "llamadas": 3,
+          "respuesta_original": "No se encontró evidencia en la caché autorizada que relacione la dificultad en la aspiración de médula ósea con la exclusión diagnóstica de ninguna entidad. No se identificó característica ni procedimiento diagnóstico asociado en los documentos consultados. La limitación es documental: no hay datos suficientes para sustentar una afirmación.",
+          "rondas": 4,
+          "tiempos_motor": {
+            "avg_compl_tok_per_sec": 0.488791,
+            "avg_prompt_tok_per_sec": 2.953234,
+            "avg_tok_per_sec": 2.2307649,
+            "completion_tokens": 81,
+            "prompt_tokens": 1180,
+            "total_completion_time_sec": 165.715,
+            "total_prompt_time_sec": 399.562,
+            "total_time_sec": 565.277,
+            "total_tokens": 1261
+          }
+        },
+        "resultado_sha256": "ab842caea0285d456def76758aa175b3dc9e372146f4d14f922bed144e2e9c2e",
+        "utc_ms": 1790831297013
+      },
+      "sha256_final": "ab842caea0285d456def76758aa175b3dc9e372146f4d14f922bed144e2e9c2e",
+      "tiempos_http": [
+        {
+          "TT": "TT-0014",
+          "duracion_ms": 448,
+          "error": null,
+          "fase": "01-TOKENS",
+          "otel_errores": 0,
+          "suceso": "S39",
+          "trace_id": "332850ff2644a5eeed74ffc076403a52",
+          "utc_unix_ms": 1790829598268
+        },
+        {
+          "TT": "TT-0014",
+          "duracion_ms": 334267,
+          "error": null,
+          "fase": "01-GENERACION",
+          "otel_errores": 0,
+          "suceso": "S39",
+          "trace_id": "978241eb6e6823499d1864e4f45e45e5",
+          "utc_unix_ms": 1790829932906
+        },
+        {
+          "TT": "TT-0014",
+          "duracion_ms": 29,
+          "error": null,
+          "fase": "02-TOKENS",
+          "otel_errores": 0,
+          "suceso": "S39",
+          "trace_id": "10d23763820d2e5e070fe294dbd4f741",
+          "utc_unix_ms": 1790829933043
+        },
+        {
+          "TT": "TT-0014",
+          "duracion_ms": 413700,
+          "error": null,
+          "fase": "02-GENERACION",
+          "otel_errores": 0,
+          "suceso": "S39",
+          "trace_id": "b7eedfb4614bece6afeb1fa5bd09537b",
+          "utc_unix_ms": 1790830346755
+        },
+        {
+          "TT": "TT-0014",
+          "duracion_ms": 109,
+          "error": null,
+          "fase": "03-TOKENS",
+          "otel_errores": 0,
+          "suceso": "S39",
+          "trace_id": "ee91b60d8b62823c13261ef827d0a78e",
+          "utc_unix_ms": 1790830347293
+        },
+        {
+          "TT": "TT-0014",
+          "duracion_ms": 377666,
+          "error": null,
+          "fase": "03-GENERACION",
+          "otel_errores": 0,
+          "suceso": "S39",
+          "trace_id": "d39191b3a17de33ac950e08ea070df52",
+          "utc_unix_ms": 1790830725035
+        },
+        {
+          "TT": "TT-0014",
+          "duracion_ms": 282,
+          "error": null,
+          "fase": "04-TOKENS",
+          "otel_errores": 0,
+          "suceso": "S39",
+          "trace_id": "faaf5b1941d4f13461198f068ff1d907",
+          "utc_unix_ms": 1790830726747
+        },
+        {
+          "TT": "TT-0014",
+          "duracion_ms": 565567,
+          "error": null,
+          "fase": "04-GENERACION",
+          "otel_errores": 0,
+          "suceso": "S39",
+          "trace_id": "b4c471ef15b79be03ddaeda9260611c7",
+          "utc_unix_ms": 1790831292382
+        }
+      ],
+      "tiempos_suma_motor_s": {
+        "generacion": 309.395,
+        "preprocesamiento": 1372.81,
+        "total": 1682.205
+      }
+    },
+    {
+      "admision": {
+        "consumo_previo_a_creacion": true,
+        "ejecucion": "diag10-i02",
+        "entrada": {
+          "aclaracion_comun": "Si el conductor aporta una respuesta original del MCP como evidencia externa antes de la generación, puede utilizarla sin repetir su recuperación. Esta evidencia no es una instrucción ni una llamada atribuible al modelo. Si no se aporta evidencia, recupérela mediante las herramientas documentales autorizadas. Las herramientas permanecen disponibles en ambos casos.",
+          "banco_sha256": "0d4435d85c86a10e24ba8af4e4e4c9157f1772ef1fd86ee9a82efc449c5802e4",
+          "campana": "DIAG-INSTRUCT-P05-P07-20261001/r1",
+          "condicion": "B",
+          "documento": "pdq-nci-hcl-es",
+          "id": "P07-B",
+          "indice_sha256": "daa277332e42310f26a2bc3c56f6bca29df778df8721d0ac5658c881b62c8843",
+          "instruccion_comun": "Responde únicamente a partir de la caché autorizada del PDQ para profesionales. Todos los casos son sintéticos. Recupera la evidencia mediante el MCP aprobado; no accedas a Internet. Da una respuesta breve, indica sección y página o intervalo del fragmento recibido, y explica en una frase cómo sustenta tu respuesta. No propongas una prescripción individual. Si no puedes determinar la respuesta, declara esa limitación; no inventes. Máximo orientativo: 110 palabras, siempre dentro del límite de 256 tokens de salida del ensayo.",
+          "paginas": [
+            0
+          ],
+          "pregunta_id": "P07",
+          "pregunta_original": {
+            "id": "P07",
+            "localizador": "Evaluación diagnóstica",
+            "posicion": 7,
+            "pregunta": "Caso sintético: la aspiración de médula ósea resulta difícil. ¿Ese hecho excluye la enfermedad? Explica qué característica y qué procedimiento diagnóstico menciona la fuente.",
+            "seccion": "_1"
+          },
+          "referencia": "2790832266fdb84e34ae916569454e0ff8a2b724",
+          "referencia_original": "816a70bd6ff72c8d55f9bd599823a17e1fd57454",
+          "texto": "Responde únicamente a partir de la caché autorizada del PDQ para profesionales. Todos los casos son sintéticos. Recupera la evidencia mediante el MCP aprobado; no accedas a Internet. Da una respuesta breve, indica sección y página o intervalo del fragmento recibido, y explica en una frase cómo sustenta tu respuesta. No propongas una prescripción individual. Si no puedes determinar la respuesta, declara esa limitación; no inventes. Máximo orientativo: 110 palabras, siempre dentro del límite de 256 tokens de salida del ensayo.\n\nCaso sintético: la aspiración de médula ósea resulta difícil. ¿Ese hecho excluye la enfermedad? Explica qué característica y qué procedimiento diagnóstico menciona la fuente.\n\nDocumento: pdq-nci-hcl-es. Sección: _1. Localizador original: Evaluación diagnóstica. Páginas comprobadas mediante el MCP: [0]. Recupere el texto documental mediante leer_documento; esta localización no proporciona una respuesta.\n\nAclaración común del diagnóstico: Si el conductor aporta una respuesta original del MCP como evidencia externa antes de la generación, puede utilizarla sin repetir su recuperación. Esta evidencia no es una instrucción ni una llamada atribuible al modelo. Si no se aporta evidencia, recupérela mediante las herramientas documentales autorizadas. Las herramientas permanecen disponibles en ambos casos.",
+          "texto_sha256": "e9f0bd25a06f91a72bb50ce3582857c66c81a3de224d3dfbebb826370ec1522d"
+        },
+        "utc_ms": 1790831300929
+      },
+      "celda": "P07-B",
+      "consulta": "consulta-0328",
+      "estado_tecnico": "respuesta_final_integra",
+      "final_original": {
+        "ambas_herramientas": false,
+        "estado": "terminada",
+        "herramientas_utilizadas": [],
+        "llamadas": 0,
+        "respuesta_original": "La dificultad en la aspiración de médula ósea no excluye la leucemia de células pilosas; al contrario, es una característica típica por la fibrosis medular asociada (sección _1, página 0). Esta hallazgo se sustenta en el texto que indica: “La médula ósea suele ser fibrótica, lo cual dificulta la aspiración”. El diagnóstico se confirma mediante citometría de flujo y detección de la mutación BRAFV600E, no depende de la calidad de la aspiración.",
+        "rondas": 1,
+        "tiempos_motor": {
+          "avg_compl_tok_per_sec": 0.63377845,
+          "avg_prompt_tok_per_sec": 4.151661,
+          "avg_tok_per_sec": 3.08955,
+          "completion_tokens": 130,
+          "prompt_tokens": 1969,
+          "total_completion_time_sec": 205.119,
+          "total_prompt_time_sec": 474.268,
+          "total_time_sec": 679.387,
+          "total_tokens": 2099
+        }
+      },
+      "fundamento": "Niega la exclusión, explica la fibrosis y menciona citometría de flujo; BRAFV600E también figura en la página recibida. La frase sobre aspiración se interpreta dentro del caso sintético, no como regla universal de suficiencia diagnóstica.",
+      "generaciones": [
+        {
+          "duracion_observada_s": 679.539099093,
+          "emision_sha256": "8ba973b5ef0f97889267a72b97a9e47a1ea7edaa54b3170e2f31090959185727",
+          "finalizacion": "stop",
+          "numero": 1,
+          "primera_salida": {
+            "monotono_ms": 173451778,
+            "ronda": "01-GENERACION",
+            "segundos_desde_respuesta_http": 474.317736289,
+            "tipo": "salida_generada_sin_keepalive",
+            "utc_ms": 1790831777521
+          },
+          "solicitud_sha256": "d022b70618123890c6c50cdb339fdd40ef654625f8ba068e908f26153e52c59e",
+          "sse_sha256": "3e62b7527619be9d53416da5977880f7aea40dce001f7a94cbd4835aaf4f1d0b",
+          "uso": {
+            "avg_compl_tok_per_sec": 0.63377845,
+            "avg_prompt_tok_per_sec": 4.151661,
+            "avg_tok_per_sec": 3.08955,
+            "completion_tokens": 130,
+            "prompt_tokens": 1969,
+            "total_completion_time_sec": 205.119,
+            "total_prompt_time_sec": 474.268,
+            "total_time_sec": 679.387,
+            "total_tokens": 2099
+          }
+        }
+      ],
+      "limite_tiempos": "Los tiempos del motor no incluyen toda admisión, MCP ni conservación; no se restan métricas parcialmente solapadas.",
+      "precarga": {
+        "anterior_a_generacion": true,
+        "autonomas": 0,
+        "autor": "conductor",
+        "bytes": 3312,
+        "celda": "P07-B",
+        "contenido_original_reenviado_sha256": "5ddd28cbb51cbe5537d9e0410026339e267d6b513f9c445092fce28eeb904fab",
+        "documento_completo": false,
+        "fin_utc_ms": 1790831302755,
+        "herramienta": "leer_documento",
+        "inicio_utc_ms": 1790831302306,
+        "llamadas": 1,
+        "pagina": 0,
+        "respuesta_mcp_sha256": "5ddd28cbb51cbe5537d9e0410026339e267d6b513f9c445092fce28eeb904fab"
+      },
+      "pregunta_original": {
+        "id": "P07",
+        "localizador": "Evaluación diagnóstica",
+        "posicion": 7,
+        "pregunta": "Caso sintético: la aspiración de médula ósea resulta difícil. ¿Ese hecho excluye la enfermedad? Explica qué característica y qué procedimiento diagnóstico menciona la fuente.",
+        "seccion": "_1"
+      },
+      "propuesta": "0",
+      "recepcion_independiente": "pendiente",
+      "recursos_observados": {
+        "memoria_actual_max_bytes": 63335297024,
+        "muestras": 125,
+        "primer_recurso": {
+          "cpu.max": "1100000 100000\n",
+          "cpu.pressure": "some avg10=2.76 avg60=3.22 avg300=2.17 total=25785782\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=2406622\n",
+          "cpu.stat": "usage_usec 6938681158\nuser_usec 6305827618\nsystem_usec 632853539\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 18286\nnr_throttled 17\nthrottled_usec 61228\nnr_bursts 0\nburst_usec 0\n",
+          "cpuset.cpus.effective": {
+            "alternativa": "io y Cpus_allowed_list de cada proceso",
+            "disponible": false,
+            "error": "No such file or directory (os error 2)"
+          },
+          "grupo_real": "/sys/fs/cgroup/system.slice/sv-qwen80.service",
+          "io.stat": {
+            "alternativa": "io y Cpus_allowed_list de cada proceso",
+            "disponible": false,
+            "error": "No such file or directory (os error 2)"
+          },
+          "memoria_sistema": {
+            "available_bytes": 17170677760,
+            "swap_free_bytes": 0,
+            "swap_total_bytes": 0,
+            "total_bytes": 67417481216
+          },
+          "memory.current": "60952670208\n",
+          "memory.events": "low 0\nhigh 0\nmax 5308\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0\n",
+          "memory.high": "max\n",
+          "memory.max": "63350767616\n",
+          "memory.peak": "63350767616\n",
+          "memory.pressure": "some avg10=0.00 avg60=0.00 avg300=0.00 total=712675\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=712651\n",
+          "memory.stat": "anon 48375488512\nfile 12459876352\nkernel 116494336\nkernel_stack 1081344\npagetables 106729472\nsec_pagetables 0\npercpu 17024\nsock 0\nvmalloc 98304\nshmem 0\nzswap 0\nzswapped 0\nfile_mapped 12289236992\nfile_dirty 225280\nfile_writeback 0\nswapcached 0\nanon_thp 0\nfile_thp 10099884032\nshmem_thp 0\ninactive_anon 19366813696\nactive_anon 29008646144\ninactive_file 9399844864\nactive_file 3060031488\nunevictable 0\nslab_reclaimable 7414072\nslab_unreclaimable 1135512\nslab 8549584\nhugetlb 0\nworkingset_refault_anon 0\nworkingset_refault_file 2451821\nworkingset_activate_anon 0\nworkingset_activate_file 2451817\nworkingset_restore_anon 0\nworkingset_restore_file 0\nworkingset_nodereclaim 0\npgdemote_kswapd 0\npgdemote_direct 0\npgdemote_khugepaged 0\npgdemote_proactive 0\npgpromote_success 0\npgscan 7916327\npgsteal 7612833\npswpin 0\npswpout 0\npgscan_kswapd 30\npgscan_direct 7916297\npgscan_khugepaged 0\npgscan_proactive 0\npgsteal_kswapd 30\npgsteal_direct 7612803\npgsteal_khugepaged 0\npgsteal_proactive 0\npgfault 357295523\npgmajfault 203\npgrefill 22\npgactivate 45978\npgdeactivate 0\npglazyfree 0\npglazyfreed 0\nswpin_zero 0\nswpout_zero 0\nzswpin 0\nzswpout 0\nzswpwb 0\nthp_fault_alloc 0\nthp_collapse_alloc 0\nthp_swpout 0\nthp_swpout_fallback 0\nnuma_pages_migrated 0\nnuma_pte_updates 0\nnuma_hint_faults 0\n",
+          "memory.swap.current": "0\n",
+          "memory.swap.max": "0\n",
+          "pids.current": "67\n"
+        },
+        "primer_utc_ms": 1790831301507,
+        "ultimo_recurso": {
+          "cpu.max": "1100000 100000\n",
+          "cpu.pressure": "some avg10=9.28 avg60=7.55 avg300=3.55 total=40990440\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=3507930\n",
+          "cpu.stat": "usage_usec 10432592562\nuser_usec 9598260401\nsystem_usec 834332160\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 25104\nnr_throttled 36\nthrottled_usec 121156\nnr_bursts 0\nburst_usec 0\n",
+          "cpuset.cpus.effective": {
+            "alternativa": "io y Cpus_allowed_list de cada proceso",
+            "disponible": false,
+            "error": "No such file or directory (os error 2)"
+          },
+          "grupo_real": "/sys/fs/cgroup/system.slice/sv-qwen80.service",
+          "io.stat": {
+            "alternativa": "io y Cpus_allowed_list de cada proceso",
+            "disponible": false,
+            "error": "No such file or directory (os error 2)"
+          },
+          "memoria_sistema": {
+            "available_bytes": 17080344576,
+            "swap_free_bytes": 0,
+            "swap_total_bytes": 0,
+            "total_bytes": 67417481216
+          },
+          "memory.current": "60776677376\n",
+          "memory.events": "low 0\nhigh 0\nmax 5385\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0\n",
+          "memory.high": "max\n",
+          "memory.max": "63350767616\n",
+          "memory.peak": "63350767616\n",
+          "memory.pressure": "some avg10=0.00 avg60=0.00 avg300=0.00 total=714353\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=714330\n",
+          "memory.stat": "anon 48467009536\nfile 12190146560\nkernel 117997568\nkernel_stack 1048576\npagetables 106778624\nsec_pagetables 0\npercpu 17024\nsock 0\nvmalloc 98304\nshmem 0\nzswap 0\nzswapped 0\nfile_mapped 11969572864\nfile_dirty 229376\nfile_writeback 0\nswapcached 0\nanon_thp 0\nfile_thp 9783214080\nshmem_thp 0\ninactive_anon 19366813696\nactive_anon 29100187648\ninactive_file 9126703104\nactive_file 3063263232\nunevictable 0\nslab_reclaimable 8949408\nslab_unreclaimable 1086256\nslab 10035664\nhugetlb 0\nworkingset_refault_anon 0\nworkingset_refault_file 2451821\nworkingset_activate_anon 0\nworkingset_activate_file 2451817\nworkingset_restore_anon 0\nworkingset_restore_file 0\nworkingset_nodereclaim 0\npgdemote_kswapd 0\npgdemote_direct 0\npgdemote_khugepaged 0\npgdemote_proactive 0\npgpromote_success 0\npgscan 7995159\npgsteal 7690876\npswpin 0\npswpout 0\npgscan_kswapd 30\npgscan_direct 7995129\npgscan_khugepaged 0\npgscan_proactive 0\npgsteal_kswapd 30\npgsteal_direct 7690846\npgsteal_khugepaged 0\npgsteal_proactive 0\npgfault 451014831\npgmajfault 203\npgrefill 22\npgactivate 45978\npgdeactivate 0\npglazyfree 0\npglazyfreed 0\nswpin_zero 0\nswpout_zero 0\nzswpin 0\nzswpout 0\nzswpwb 0\nthp_fault_alloc 0\nthp_collapse_alloc 0\nthp_swpout 0\nthp_swpout_fallback 0\nnuma_pages_migrated 0\nnuma_pte_updates 0\nnuma_hint_faults 0\n",
+          "memory.swap.current": "0\n",
+          "memory.swap.max": "0\n",
+          "pids.current": "65\n"
+        },
+        "ultimo_utc_ms": 1790831983247
+      },
+      "resultado_registrado": {
+        "adjudicacion_independiente": null,
+        "directorio": "/opt/sv-qwen80/diagnostico-10/recuperacion-admision/recepcion/diag10-i02/consulta-0328",
+        "id": "P07-B",
+        "resultado": {
+          "ambas_herramientas": false,
+          "estado": "terminada",
+          "herramientas_utilizadas": [],
+          "llamadas": 0,
+          "respuesta_original": "La dificultad en la aspiración de médula ósea no excluye la leucemia de células pilosas; al contrario, es una característica típica por la fibrosis medular asociada (sección _1, página 0). Esta hallazgo se sustenta en el texto que indica: “La médula ósea suele ser fibrótica, lo cual dificulta la aspiración”. El diagnóstico se confirma mediante citometría de flujo y detección de la mutación BRAFV600E, no depende de la calidad de la aspiración.",
+          "rondas": 1,
+          "tiempos_motor": {
+            "avg_compl_tok_per_sec": 0.63377845,
+            "avg_prompt_tok_per_sec": 4.151661,
+            "avg_tok_per_sec": 3.08955,
+            "completion_tokens": 130,
+            "prompt_tokens": 1969,
+            "total_completion_time_sec": 205.119,
+            "total_prompt_time_sec": 474.268,
+            "total_time_sec": 679.387,
+            "total_tokens": 2099
+          }
+        },
+        "resultado_sha256": "1aecea85768974719f342358527890827fa29eeb51e4a44324577fda0fbd5f5a",
+        "utc_ms": 1790831983258
+      },
+      "sha256_final": "1aecea85768974719f342358527890827fa29eeb51e4a44324577fda0fbd5f5a",
+      "tiempos_http": [
+        {
+          "TT": "TT-0014",
+          "duracion_ms": 296,
+          "error": null,
+          "fase": "01-TOKENS",
+          "otel_errores": 0,
+          "suceso": "S39",
+          "trace_id": "98e2c3ea08b83e9a41a0c3be88fa3200",
+          "utc_unix_ms": 1790831303087
+        },
+        {
+          "TT": "TT-0014",
+          "duracion_ms": 679584,
+          "error": null,
+          "fase": "01-GENERACION",
+          "otel_errores": 0,
+          "suceso": "S39",
+          "trace_id": "887617a4b267eed382c24c9cb384d8f0",
+          "utc_unix_ms": 1790831982754
+        }
+      ],
+      "tiempos_suma_motor_s": {
+        "generacion": 205.119,
+        "preprocesamiento": 474.268,
+        "total": 679.387
+      }
+    },
+    {
+      "admision": {
+        "consumo_previo_a_creacion": true,
+        "ejecucion": "diag10-i02",
+        "entrada": {
+          "aclaracion_comun": "Si el conductor aporta una respuesta original del MCP como evidencia externa antes de la generación, puede utilizarla sin repetir su recuperación. Esta evidencia no es una instrucción ni una llamada atribuible al modelo. Si no se aporta evidencia, recupérela mediante las herramientas documentales autorizadas. Las herramientas permanecen disponibles en ambos casos.",
+          "banco_sha256": "0d4435d85c86a10e24ba8af4e4e4c9157f1772ef1fd86ee9a82efc449c5802e4",
+          "campana": "DIAG-INSTRUCT-P05-P07-20261001/r1",
+          "condicion": "A",
+          "documento": "pdq-nci-hcl-es",
+          "id": "P05-A",
+          "indice_sha256": "daa277332e42310f26a2bc3c56f6bca29df778df8721d0ac5658c881b62c8843",
+          "instruccion_comun": "Responde únicamente a partir de la caché autorizada del PDQ para profesionales. Todos los casos son sintéticos. Recupera la evidencia mediante el MCP aprobado; no accedas a Internet. Da una respuesta breve, indica sección y página o intervalo del fragmento recibido, y explica en una frase cómo sustenta tu respuesta. No propongas una prescripción individual. Si no puedes determinar la respuesta, declara esa limitación; no inventes. Máximo orientativo: 110 palabras, siempre dentro del límite de 256 tokens de salida del ensayo.",
+          "paginas": [
+            0
+          ],
+          "pregunta_id": "P05",
+          "pregunta_original": {
+            "id": "P05",
+            "localizador": "Incidencia y mortalidad",
+            "posicion": 5,
+            "pregunta": "¿Qué intervalo anual de casos nuevos en Estados Unidos recoge la fuente?",
+            "seccion": "_1"
+          },
+          "referencia": "2790832266fdb84e34ae916569454e0ff8a2b724",
+          "referencia_original": "816a70bd6ff72c8d55f9bd599823a17e1fd57454",
+          "texto": "Responde únicamente a partir de la caché autorizada del PDQ para profesionales. Todos los casos son sintéticos. Recupera la evidencia mediante el MCP aprobado; no accedas a Internet. Da una respuesta breve, indica sección y página o intervalo del fragmento recibido, y explica en una frase cómo sustenta tu respuesta. No propongas una prescripción individual. Si no puedes determinar la respuesta, declara esa limitación; no inventes. Máximo orientativo: 110 palabras, siempre dentro del límite de 256 tokens de salida del ensayo.\n\n¿Qué intervalo anual de casos nuevos en Estados Unidos recoge la fuente?\n\nDocumento: pdq-nci-hcl-es. Sección: _1. Localizador original: Incidencia y mortalidad. Páginas comprobadas mediante el MCP: [0]. Recupere el texto documental mediante leer_documento; esta localización no proporciona una respuesta.\n\nAclaración común del diagnóstico: Si el conductor aporta una respuesta original del MCP como evidencia externa antes de la generación, puede utilizarla sin repetir su recuperación. Esta evidencia no es una instrucción ni una llamada atribuible al modelo. Si no se aporta evidencia, recupérela mediante las herramientas documentales autorizadas. Las herramientas permanecen disponibles en ambos casos.",
+          "texto_sha256": "83d879912bfd678180136b21575bb36a1dc826b9b628aa9872526c03e698b7b7"
+        },
+        "utc_ms": 1790831988084
+      },
+      "celda": "P05-A",
+      "consulta": "consulta-0454",
+      "estado_tecnico": "respuesta_final_integra",
+      "final_original": {
+        "ambas_herramientas": false,
+        "estado": "terminada",
+        "herramientas_utilizadas": [
+          "buscar_documentos",
+          "buscar_documentos"
+        ],
+        "llamadas": 2,
+        "respuesta_original": "No se encontró evidencia documental en la caché autorizada del PDQ para profesionales que especifique el intervalo anual de casos nuevos en Estados Unidos. La búsqueda en la sección _1 (Incidencia y mortalidad) y en términos relacionados no arrojó resultados. Por tanto, no es posible determinar el intervalo solicitado con la evidencia disponible.",
+        "rondas": 3,
+        "tiempos_motor": {
+          "avg_compl_tok_per_sec": 0.86013234,
+          "avg_prompt_tok_per_sec": 3.1166356,
+          "avg_tok_per_sec": 2.5960443,
+          "completion_tokens": 85,
+          "prompt_tokens": 1027,
+          "total_completion_time_sec": 98.822,
+          "total_prompt_time_sec": 329.522,
+          "total_time_sec": 428.344,
+          "total_tokens": 1112
+        }
+      },
+      "fundamento": "Declara que no puede determinar el intervalo después de búsquedas vacías; U por insuficiencia documental, no por inexistencia del dato en la caché.",
+      "generaciones": [
+        {
+          "duracion_observada_s": 340.617181944,
+          "emision_sha256": "0247293c1effe0eb227fc96b74c760981b830d6fdcf2aba281f6f58d4c1c8c21",
+          "finalizacion": "tool_calls",
+          "numero": 1,
+          "primera_salida": {
+            "monotono_ms": 173999051,
+            "ronda": "01-GENERACION",
+            "segundos_desde_respuesta_http": 336.394239037,
+            "tipo": "salida_generada_sin_keepalive",
+            "utc_ms": 1790832324794
+          },
+          "solicitud_sha256": "29e73f23cfac6a226d858a7cd3437706e7244575b24b8231d0bf1c93eff18edf",
+          "sse_sha256": "35a42aee02daf326d1f145f7b18fe4b423a55e85196e04c07099ceec0fc26f9a",
+          "uso": {
+            "avg_compl_tok_per_sec": 0.8803762,
+            "avg_prompt_tok_per_sec": 2.6682038,
+            "avg_tok_per_sec": 2.4206092,
+            "completion_tokens": 41,
+            "prompt_tokens": 773,
+            "total_completion_time_sec": 46.571,
+            "total_prompt_time_sec": 289.708,
+            "total_time_sec": 336.279,
+            "total_tokens": 814
+          }
+        },
+        {
+          "duracion_observada_s": 355.272976706,
+          "emision_sha256": "afe3b2690aeb7665e6499645ae2faa6dd53c9302cc4c2d32472be80375df51f8",
+          "finalizacion": "tool_calls",
+          "numero": 2,
+          "primera_salida": {
+            "monotono_ms": 174359520,
+            "ronda": "02-GENERACION",
+            "segundos_desde_respuesta_http": 354.808032563,
+            "tipo": "salida_generada_sin_keepalive",
+            "utc_ms": 1790832685263
+          },
+          "solicitud_sha256": "747ab838ba7f567b0248784d2dcb84eb74daf5d46557cb2570ec4b9da9b51daa",
+          "sse_sha256": "1276fde2c3035efcb153d75bb6fd57aaa727e0088ec395139a62993b3ee237d6",
+          "uso": {
+            "avg_compl_tok_per_sec": 0.91060525,
+            "avg_prompt_tok_per_sec": 2.9058409,
+            "avg_tok_per_sec": 2.652602,
+            "completion_tokens": 41,
+            "prompt_tokens": 900,
+            "total_completion_time_sec": 45.025,
+            "total_prompt_time_sec": 309.721,
+            "total_time_sec": 354.746,
+            "total_tokens": 941
+          }
+        },
+        {
+          "duracion_observada_s": 428.451225703,
+          "emision_sha256": "747f2bd4084d811fde5873954d69b3159cbbc781af5ab5fce4649bdeff78cc18",
+          "finalizacion": "stop",
+          "numero": 3,
+          "primera_salida": {
+            "monotono_ms": 174689729,
+            "ronda": "03-GENERACION",
+            "segundos_desde_respuesta_http": 329.570263773,
+            "tipo": "salida_generada_sin_keepalive",
+            "utc_ms": 1790833015471
+          },
+          "solicitud_sha256": "73cf01566ae07e0facd351f2ada6db693bd6585e147950fe37193d3f1a7ab245",
+          "sse_sha256": "31ca597080da95b675f50164d5c6b079e932f139d2553c54c4932935e23b8dfe",
+          "uso": {
+            "avg_compl_tok_per_sec": 0.86013234,
+            "avg_prompt_tok_per_sec": 3.1166356,
+            "avg_tok_per_sec": 2.5960443,
+            "completion_tokens": 85,
+            "prompt_tokens": 1027,
+            "total_completion_time_sec": 98.822,
+            "total_prompt_time_sec": 329.522,
+            "total_time_sec": 428.344,
+            "total_tokens": 1112
+          }
+        }
+      ],
+      "limite_tiempos": "Los tiempos del motor no incluyen toda admisión, MCP ni conservación; no se restan métricas parcialmente solapadas.",
+      "precarga": {
+        "celda": "P05-A",
+        "evidencia_previa": false,
+        "llamadas": 0,
+        "utc_ms": 1790831988336
+      },
+      "pregunta_original": {
+        "id": "P05",
+        "localizador": "Incidencia y mortalidad",
+        "posicion": 5,
+        "pregunta": "¿Qué intervalo anual de casos nuevos en Estados Unidos recoge la fuente?",
+        "seccion": "_1"
+      },
+      "propuesta": "U",
+      "recepcion_independiente": "pendiente",
+      "recursos_observados": {
+        "memoria_actual_max_bytes": 63091666944,
+        "muestras": 220,
+        "primer_recurso": {
+          "cpu.max": "1100000 100000\n",
+          "cpu.pressure": "some avg10=5.34 avg60=6.90 avg300=3.49 total=40998037\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=3515523\n",
+          "cpu.stat": "usage_usec 10432659412\nuser_usec 9598295882\nsystem_usec 834363529\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 25152\nnr_throttled 36\nthrottled_usec 121156\nnr_bursts 0\nburst_usec 0\n",
+          "cpuset.cpus.effective": {
+            "alternativa": "io y Cpus_allowed_list de cada proceso",
+            "disponible": false,
+            "error": "No such file or directory (os error 2)"
+          },
+          "grupo_real": "/sys/fs/cgroup/system.slice/sv-qwen80.service",
+          "io.stat": {
+            "alternativa": "io y Cpus_allowed_list de cada proceso",
+            "disponible": false,
+            "error": "No such file or directory (os error 2)"
+          },
+          "memoria_sistema": {
+            "available_bytes": 17080352768,
+            "swap_free_bytes": 0,
+            "swap_total_bytes": 0,
+            "total_bytes": 67417481216
+          },
+          "memory.current": "60777705472\n",
+          "memory.events": "low 0\nhigh 0\nmax 5385\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0\n",
+          "memory.high": "max\n",
+          "memory.max": "63350767616\n",
+          "memory.peak": "63350767616\n",
+          "memory.pressure": "some avg10=0.00 avg60=0.00 avg300=0.00 total=714353\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=714330\n",
+          "memory.stat": "anon 48467931136\nfile 12190216192\nkernel 118349824\nkernel_stack 1097728\npagetables 106954752\nsec_pagetables 0\npercpu 17024\nsock 0\nvmalloc 102400\nshmem 0\nzswap 0\nzswapped 0\nfile_mapped 11970191360\nfile_dirty 253952\nfile_writeback 0\nswapcached 0\nanon_thp 0\nfile_thp 9783214080\nshmem_thp 0\ninactive_anon 19366813696\nactive_anon 29101084672\ninactive_file 9126801408\nactive_file 3063267328\nunevictable 0\nslab_reclaimable 8968080\nslab_unreclaimable 1173888\nslab 10141968\nhugetlb 0\nworkingset_refault_anon 0\nworkingset_refault_file 2451821\nworkingset_activate_anon 0\nworkingset_activate_file 2451817\nworkingset_restore_anon 0\nworkingset_restore_file 0\nworkingset_nodereclaim 0\npgdemote_kswapd 0\npgdemote_direct 0\npgdemote_khugepaged 0\npgdemote_proactive 0\npgpromote_success 0\npgscan 7995159\npgsteal 7690876\npswpin 0\npswpout 0\npgscan_kswapd 30\npgscan_direct 7995129\npgscan_khugepaged 0\npgscan_proactive 0\npgsteal_kswapd 30\npgsteal_direct 7690846\npgsteal_khugepaged 0\npgsteal_proactive 0\npgfault 451015261\npgmajfault 203\npgrefill 22\npgactivate 45978\npgdeactivate 0\npglazyfree 0\npglazyfreed 0\nswpin_zero 0\nswpout_zero 0\nzswpin 0\nzswpout 0\nzswpwb 0\nthp_fault_alloc 0\nthp_collapse_alloc 0\nthp_swpout 0\nthp_swpout_fallback 0\nnuma_pages_migrated 0\nnuma_pte_updates 0\nnuma_hint_faults 0\n",
+          "memory.swap.current": "0\n",
+          "memory.swap.max": "0\n",
+          "pids.current": "68\n"
+        },
+        "primer_utc_ms": 1790831988234,
+        "ultimo_recurso": {
+          "cpu.max": "1100000 100000\n",
+          "cpu.pressure": "some avg10=8.36 avg60=6.76 avg300=2.86 total=60679589\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=4879357\n",
+          "cpu.stat": "usage_usec 15369717559\nuser_usec 14088967693\nsystem_usec 1280749865\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 36420\nnr_throttled 41\nthrottled_usec 152007\nnr_bursts 0\nburst_usec 0\n",
+          "cpuset.cpus.effective": {
+            "alternativa": "io y Cpus_allowed_list de cada proceso",
+            "disponible": false,
+            "error": "No such file or directory (os error 2)"
+          },
+          "grupo_real": "/sys/fs/cgroup/system.slice/sv-qwen80.service",
+          "io.stat": {
+            "alternativa": "io y Cpus_allowed_list de cada proceso",
+            "disponible": false,
+            "error": "No such file or directory (os error 2)"
+          },
+          "memoria_sistema": {
+            "available_bytes": 17096351744,
+            "swap_free_bytes": 0,
+            "swap_total_bytes": 0,
+            "total_bytes": 67417481216
+          },
+          "memory.current": "60818968576\n",
+          "memory.events": "low 0\nhigh 0\nmax 5385\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0\n",
+          "memory.high": "max\n",
+          "memory.max": "63350767616\n",
+          "memory.peak": "63350767616\n",
+          "memory.pressure": "some avg10=0.00 avg60=0.00 avg300=0.00 total=714353\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=714330\n",
+          "memory.stat": "anon 48440553472\nfile 12256690176\nkernel 120025088\nkernel_stack 1048576\npagetables 106725376\nsec_pagetables 0\npercpu 17024\nsock 0\nvmalloc 98304\nshmem 0\nzswap 0\nzswapped 0\nfile_mapped 11960938496\nfile_dirty 151552\nfile_writeback 0\nswapcached 0\nanon_thp 0\nfile_thp 9783214080\nshmem_thp 0\ninactive_anon 19243393024\nactive_anon 29197152256\ninactive_file 9193283584\nactive_file 3063263232\nunevictable 0\nslab_reclaimable 11025264\nslab_unreclaimable 1090128\nslab 12115392\nhugetlb 0\nworkingset_refault_anon 0\nworkingset_refault_file 2451821\nworkingset_activate_anon 0\nworkingset_activate_file 2451817\nworkingset_restore_anon 0\nworkingset_restore_file 0\nworkingset_nodereclaim 0\npgdemote_kswapd 0\npgdemote_direct 0\npgdemote_khugepaged 0\npgdemote_proactive 0\npgpromote_success 0\npgscan 7995159\npgsteal 7690876\npswpin 0\npswpout 0\npgscan_kswapd 30\npgscan_direct 7995129\npgscan_khugepaged 0\npgscan_proactive 0\npgsteal_kswapd 30\npgsteal_direct 7690846\npgsteal_khugepaged 0\npgsteal_proactive 0\npgfault 699572501\npgmajfault 203\npgrefill 22\npgactivate 45978\npgdeactivate 0\npglazyfree 0\npglazyfreed 0\nswpin_zero 0\nswpout_zero 0\nzswpin 0\nzswpout 0\nzswpwb 0\nthp_fault_alloc 0\nthp_collapse_alloc 0\nthp_swpout 0\nthp_swpout_fallback 0\nnuma_pages_migrated 0\nnuma_pte_updates 0\nnuma_hint_faults 0\n",
+          "memory.swap.current": "0\n",
+          "memory.swap.max": "0\n",
+          "pids.current": "65\n"
+        },
+        "ultimo_utc_ms": 1790833114965
+      },
+      "resultado_registrado": {
+        "adjudicacion_independiente": null,
+        "directorio": "/opt/sv-qwen80/diagnostico-10/recuperacion-admision/recepcion/diag10-i02/consulta-0454",
+        "id": "P05-A",
+        "resultado": {
+          "ambas_herramientas": false,
+          "estado": "terminada",
+          "herramientas_utilizadas": [
+            "buscar_documentos",
+            "buscar_documentos"
+          ],
+          "llamadas": 2,
+          "respuesta_original": "No se encontró evidencia documental en la caché autorizada del PDQ para profesionales que especifique el intervalo anual de casos nuevos en Estados Unidos. La búsqueda en la sección _1 (Incidencia y mortalidad) y en términos relacionados no arrojó resultados. Por tanto, no es posible determinar el intervalo solicitado con la evidencia disponible.",
+          "rondas": 3,
+          "tiempos_motor": {
+            "avg_compl_tok_per_sec": 0.86013234,
+            "avg_prompt_tok_per_sec": 3.1166356,
+            "avg_tok_per_sec": 2.5960443,
+            "completion_tokens": 85,
+            "prompt_tokens": 1027,
+            "total_completion_time_sec": 98.822,
+            "total_prompt_time_sec": 329.522,
+            "total_time_sec": 428.344,
+            "total_tokens": 1112
+          }
+        },
+        "resultado_sha256": "0508ebc9db93eac1bbe86a68abb79d0844cdafc248d10b61a92a60da0de25277",
+        "utc_ms": 1790833114973
+      },
+      "sha256_final": "0508ebc9db93eac1bbe86a68abb79d0844cdafc248d10b61a92a60da0de25277",
+      "tiempos_http": [
+        {
+          "TT": "TT-0014",
+          "duracion_ms": 27,
+          "error": null,
+          "fase": "01-TOKENS",
+          "otel_errores": 0,
+          "suceso": "S39",
+          "trace_id": "878d98e0c9e2795a2455f9ef53a53073",
+          "utc_unix_ms": 1790831988370
+        },
+        {
+          "TT": "TT-0014",
+          "duracion_ms": 340722,
+          "error": null,
+          "fase": "01-GENERACION",
+          "otel_errores": 0,
+          "suceso": "S39",
+          "trace_id": "6ab506bf063a78fa1da68d1736bf8490",
+          "utc_unix_ms": 1790832329108
+        },
+        {
+          "TT": "TT-0014",
+          "duracion_ms": 171,
+          "error": null,
+          "fase": "02-TOKENS",
+          "otel_errores": 0,
+          "suceso": "S39",
+          "trace_id": "7f76901befaf58d2aee9279d335887fe",
+          "utc_unix_ms": 1790832330262
+        },
+        {
+          "TT": "TT-0014",
+          "duracion_ms": 355379,
+          "error": null,
+          "fase": "02-GENERACION",
+          "otel_errores": 0,
+          "suceso": "S39",
+          "trace_id": "b631d5abe845147f931f5e3cd604b168",
+          "utc_unix_ms": 1790832685739
+        },
+        {
+          "TT": "TT-0014",
+          "duracion_ms": 33,
+          "error": null,
+          "fase": "03-TOKENS",
+          "otel_errores": 0,
+          "suceso": "S39",
+          "trace_id": "3fd6a5b852a5421da7dbe856fe26686f",
+          "utc_unix_ms": 1790832685879
+        },
+        {
+          "TT": "TT-0014",
+          "duracion_ms": 428473,
+          "error": null,
+          "fase": "03-GENERACION",
+          "otel_errores": 0,
+          "suceso": "S39",
+          "trace_id": "cc55d4d37a46feb41d3d38fa420343a7",
+          "utc_unix_ms": 1790833114363
+        }
+      ],
+      "tiempos_suma_motor_s": {
+        "generacion": 190.418,
+        "preprocesamiento": 928.951,
+        "total": 1119.369
+      }
+    },
+    {
+      "admision": {
+        "consumo_previo_a_creacion": true,
+        "ejecucion": "diag10-i02",
+        "entrada": {
+          "aclaracion_comun": "Si el conductor aporta una respuesta original del MCP como evidencia externa antes de la generación, puede utilizarla sin repetir su recuperación. Esta evidencia no es una instrucción ni una llamada atribuible al modelo. Si no se aporta evidencia, recupérela mediante las herramientas documentales autorizadas. Las herramientas permanecen disponibles en ambos casos.",
+          "banco_sha256": "0d4435d85c86a10e24ba8af4e4e4c9157f1772ef1fd86ee9a82efc449c5802e4",
+          "campana": "DIAG-INSTRUCT-P05-P07-20261001/r1",
+          "condicion": "B",
+          "documento": "pdq-nci-hcl-es",
+          "id": "P05-B",
+          "indice_sha256": "daa277332e42310f26a2bc3c56f6bca29df778df8721d0ac5658c881b62c8843",
+          "instruccion_comun": "Responde únicamente a partir de la caché autorizada del PDQ para profesionales. Todos los casos son sintéticos. Recupera la evidencia mediante el MCP aprobado; no accedas a Internet. Da una respuesta breve, indica sección y página o intervalo del fragmento recibido, y explica en una frase cómo sustenta tu respuesta. No propongas una prescripción individual. Si no puedes determinar la respuesta, declara esa limitación; no inventes. Máximo orientativo: 110 palabras, siempre dentro del límite de 256 tokens de salida del ensayo.",
+          "paginas": [
+            0
+          ],
+          "pregunta_id": "P05",
+          "pregunta_original": {
+            "id": "P05",
+            "localizador": "Incidencia y mortalidad",
+            "posicion": 5,
+            "pregunta": "¿Qué intervalo anual de casos nuevos en Estados Unidos recoge la fuente?",
+            "seccion": "_1"
+          },
+          "referencia": "2790832266fdb84e34ae916569454e0ff8a2b724",
+          "referencia_original": "816a70bd6ff72c8d55f9bd599823a17e1fd57454",
+          "texto": "Responde únicamente a partir de la caché autorizada del PDQ para profesionales. Todos los casos son sintéticos. Recupera la evidencia mediante el MCP aprobado; no accedas a Internet. Da una respuesta breve, indica sección y página o intervalo del fragmento recibido, y explica en una frase cómo sustenta tu respuesta. No propongas una prescripción individual. Si no puedes determinar la respuesta, declara esa limitación; no inventes. Máximo orientativo: 110 palabras, siempre dentro del límite de 256 tokens de salida del ensayo.\n\n¿Qué intervalo anual de casos nuevos en Estados Unidos recoge la fuente?\n\nDocumento: pdq-nci-hcl-es. Sección: _1. Localizador original: Incidencia y mortalidad. Páginas comprobadas mediante el MCP: [0]. Recupere el texto documental mediante leer_documento; esta localización no proporciona una respuesta.\n\nAclaración común del diagnóstico: Si el conductor aporta una respuesta original del MCP como evidencia externa antes de la generación, puede utilizarla sin repetir su recuperación. Esta evidencia no es una instrucción ni una llamada atribuible al modelo. Si no se aporta evidencia, recupérela mediante las herramientas documentales autorizadas. Las herramientas permanecen disponibles en ambos casos.",
+          "texto_sha256": "83d879912bfd678180136b21575bb36a1dc826b9b628aa9872526c03e698b7b7"
+        },
+        "utc_ms": 1790833119150
+      },
+      "celda": "P05-B",
+      "consulta": "consulta-0675",
+      "estado_tecnico": "respuesta_final_integra",
+      "final_original": {
+        "ambas_herramientas": false,
+        "estado": "terminada",
+        "herramientas_utilizadas": [],
+        "llamadas": 0,
+        "respuesta_original": "El intervalo anual de casos nuevos en Estados Unidos es de 1.200 a 1.300, según la sección _1, página 0 del documento pdq-nci-hcl-es. Este dato sustenta la respuesta al indicar que la leucemia de células pilosas es una neoplasia poco frecuente con esa incidencia anual documentada en la fuente autorizada.",
+        "rondas": 1,
+        "tiempos_motor": {
+          "avg_compl_tok_per_sec": 0.49579638,
+          "avg_prompt_tok_per_sec": 3.898264,
+          "avg_tok_per_sec": 2.9679127,
+          "completion_tokens": 93,
+          "prompt_tokens": 1943,
+          "total_completion_time_sec": 187.577,
+          "total_prompt_time_sec": 498.427,
+          "total_time_sec": 686.004,
+          "total_tokens": 2036
+        }
+      },
+      "fundamento": "Conserva el intervalo 1200–1300 casos nuevos por año en Estados Unidos y el localizador de la página realmente recibida.",
+      "generaciones": [
+        {
+          "duracion_observada_s": 686.73971624,
+          "emision_sha256": "b617e5aae0cdd7209ecb5914bbb011960460b31e10f1542aa171ffdd4f9d3549",
+          "finalizacion": "stop",
+          "numero": 1,
+          "primera_salida": {
+            "monotono_ms": 175294534,
+            "ronda": "01-GENERACION",
+            "segundos_desde_respuesta_http": 498.466680159,
+            "tipo": "salida_generada_sin_keepalive",
+            "utc_ms": 1790833620277
+          },
+          "solicitud_sha256": "db8f476e65230359a0dae497872c9b2a6bf915d43104c2b6283317c4e402ed1f",
+          "sse_sha256": "96aa3981730b1f1c519c2d9a9b174597b2e7fdaf69c738d6ef5d56722affb3cf",
+          "uso": {
+            "avg_compl_tok_per_sec": 0.49579638,
+            "avg_prompt_tok_per_sec": 3.898264,
+            "avg_tok_per_sec": 2.9679127,
+            "completion_tokens": 93,
+            "prompt_tokens": 1943,
+            "total_completion_time_sec": 187.577,
+            "total_prompt_time_sec": 498.427,
+            "total_time_sec": 686.004,
+            "total_tokens": 2036
+          }
+        }
+      ],
+      "limite_tiempos": "Los tiempos del motor no incluyen toda admisión, MCP ni conservación; no se restan métricas parcialmente solapadas.",
+      "precarga": {
+        "anterior_a_generacion": true,
+        "autonomas": 0,
+        "autor": "conductor",
+        "bytes": 3312,
+        "celda": "P05-B",
+        "contenido_original_reenviado_sha256": "5ddd28cbb51cbe5537d9e0410026339e267d6b513f9c445092fce28eeb904fab",
+        "documento_completo": false,
+        "fin_utc_ms": 1790833121418,
+        "herramienta": "leer_documento",
+        "inicio_utc_ms": 1790833120325,
+        "llamadas": 1,
+        "pagina": 0,
+        "respuesta_mcp_sha256": "5ddd28cbb51cbe5537d9e0410026339e267d6b513f9c445092fce28eeb904fab"
+      },
+      "pregunta_original": {
+        "id": "P05",
+        "localizador": "Incidencia y mortalidad",
+        "posicion": 5,
+        "pregunta": "¿Qué intervalo anual de casos nuevos en Estados Unidos recoge la fuente?",
+        "seccion": "_1"
+      },
+      "propuesta": "0",
+      "recepcion_independiente": "pendiente",
+      "recursos_observados": {
+        "memoria_actual_max_bytes": 63241900032,
+        "muestras": 122,
+        "primer_recurso": {
+          "cpu.max": "1100000 100000\n",
+          "cpu.pressure": "some avg10=5.61 avg60=6.33 avg300=2.82 total=60688313\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=4888082\n",
+          "cpu.stat": "usage_usec 15369785949\nuser_usec 14089003697\nsystem_usec 1280782251\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 36467\nnr_throttled 41\nthrottled_usec 152007\nnr_bursts 0\nburst_usec 0\n",
+          "cpuset.cpus.effective": {
+            "alternativa": "io y Cpus_allowed_list de cada proceso",
+            "disponible": false,
+            "error": "No such file or directory (os error 2)"
+          },
+          "grupo_real": "/sys/fs/cgroup/system.slice/sv-qwen80.service",
+          "io.stat": {
+            "alternativa": "io y Cpus_allowed_list de cada proceso",
+            "disponible": false,
+            "error": "No such file or directory (os error 2)"
+          },
+          "memoria_sistema": {
+            "available_bytes": 17096810496,
+            "swap_free_bytes": 0,
+            "swap_total_bytes": 0,
+            "total_bytes": 67417481216
+          },
+          "memory.current": "60819746816\n",
+          "memory.events": "low 0\nhigh 0\nmax 5385\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0\n",
+          "memory.high": "max\n",
+          "memory.max": "63350767616\n",
+          "memory.peak": "63350767616\n",
+          "memory.pressure": "some avg10=0.00 avg60=0.00 avg300=0.00 total=714353\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=714330\n",
+          "memory.stat": "anon 48441171968\nfile 12256759808\nkernel 120270848\nkernel_stack 1081344\npagetables 106864640\nsec_pagetables 0\npercpu 17024\nsock 0\nvmalloc 98304\nshmem 0\nzswap 0\nzswapped 0\nfile_mapped 11960938496\nfile_dirty 172032\nfile_writeback 0\nswapcached 0\nanon_thp 0\nfile_thp 9783214080\nshmem_thp 0\ninactive_anon 19243393024\nactive_anon 29197766656\ninactive_file 9193357312\nactive_file 3063263232\nunevictable 0\nslab_reclaimable 11043472\nslab_unreclaimable 1145840\nslab 12189312\nhugetlb 0\nworkingset_refault_anon 0\nworkingset_refault_file 2451821\nworkingset_activate_anon 0\nworkingset_activate_file 2451817\nworkingset_restore_anon 0\nworkingset_restore_file 0\nworkingset_nodereclaim 0\npgdemote_kswapd 0\npgdemote_direct 0\npgdemote_khugepaged 0\npgdemote_proactive 0\npgpromote_success 0\npgscan 7995159\npgsteal 7690876\npswpin 0\npswpout 0\npgscan_kswapd 30\npgscan_direct 7995129\npgscan_khugepaged 0\npgscan_proactive 0\npgsteal_kswapd 30\npgsteal_direct 7690846\npgsteal_khugepaged 0\npgsteal_proactive 0\npgfault 699572790\npgmajfault 203\npgrefill 22\npgactivate 45978\npgdeactivate 0\npglazyfree 0\npglazyfreed 0\nswpin_zero 0\nswpout_zero 0\nzswpin 0\nzswpout 0\nzswpwb 0\nthp_fault_alloc 0\nthp_collapse_alloc 0\nthp_swpout 0\nthp_swpout_fallback 0\nnuma_pages_migrated 0\nnuma_pte_updates 0\nnuma_hint_faults 0\n",
+          "memory.swap.current": "0\n",
+          "memory.swap.max": "0\n",
+          "pids.current": "67\n"
+        },
+        "primer_utc_ms": 1790833119726,
+        "ultimo_recurso": {
+          "cpu.max": "1100000 100000\n",
+          "cpu.pressure": "some avg10=6.09 avg60=5.95 avg300=2.79 total=72348795\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=5851573\n",
+          "cpu.stat": "usage_usec 18573577502\nuser_usec 17100975834\nsystem_usec 1472601668\nnice_usec 0\ncore_sched.force_idle_usec 0\nnr_periods 43393\nnr_throttled 73\nthrottled_usec 267930\nnr_bursts 0\nburst_usec 0\n",
+          "cpuset.cpus.effective": {
+            "alternativa": "io y Cpus_allowed_list de cada proceso",
+            "disponible": false,
+            "error": "No such file or directory (os error 2)"
+          },
+          "grupo_real": "/sys/fs/cgroup/system.slice/sv-qwen80.service",
+          "io.stat": {
+            "alternativa": "io y Cpus_allowed_list de cada proceso",
+            "disponible": false,
+            "error": "No such file or directory (os error 2)"
+          },
+          "memoria_sistema": {
+            "available_bytes": 16963096576,
+            "swap_free_bytes": 0,
+            "swap_total_bytes": 0,
+            "total_bytes": 67417481216
+          },
+          "memory.current": "60841160704\n",
+          "memory.events": "low 0\nhigh 0\nmax 5425\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0\n",
+          "memory.high": "max\n",
+          "memory.max": "63350767616\n",
+          "memory.peak": "63350767616\n",
+          "memory.pressure": "some avg10=0.00 avg60=0.00 avg300=0.00 total=715280\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=715256\n",
+          "memory.stat": "anon 48585097216\nfile 12132782080\nkernel 121565184\nkernel_stack 1048576\npagetables 107008000\nsec_pagetables 0\npercpu 17024\nsock 0\nvmalloc 98304\nshmem 0\nzswap 0\nzswapped 0\nfile_mapped 11796848640\nfile_dirty 221184\nfile_writeback 0\nswapcached 0\nanon_thp 0\nfile_thp 9621733376\nshmem_thp 0\ninactive_anon 19243393024\nactive_anon 29341696000\ninactive_file 9065885696\nactive_file 3066617856\nunevictable 0\nslab_reclaimable 12284192\nslab_unreclaimable 1087512\nslab 13371704\nhugetlb 0\nworkingset_refault_anon 0\nworkingset_refault_file 2451821\nworkingset_activate_anon 0\nworkingset_activate_file 2451817\nworkingset_restore_anon 0\nworkingset_restore_file 0\nworkingset_nodereclaim 0\npgdemote_kswapd 0\npgdemote_direct 0\npgdemote_khugepaged 0\npgdemote_proactive 0\npgpromote_success 0\npgscan 8036039\npgsteal 7730937\npswpin 0\npswpout 0\npgscan_kswapd 30\npgscan_direct 8036009\npgscan_khugepaged 0\npgscan_proactive 0\npgsteal_kswapd 30\npgsteal_direct 7730907\npgsteal_khugepaged 0\npgsteal_proactive 0\npgfault 792604367\npgmajfault 203\npgrefill 22\npgactivate 45978\npgdeactivate 0\npglazyfree 0\npglazyfreed 0\nswpin_zero 0\nswpout_zero 0\nzswpin 0\nzswpout 0\nzswpwb 0\nthp_fault_alloc 0\nthp_collapse_alloc 0\nthp_swpout 0\nthp_swpout_fallback 0\nnuma_pages_migrated 0\nnuma_pte_updates 0\nnuma_hint_faults 0\n",
+          "memory.swap.current": "0\n",
+          "memory.swap.max": "0\n",
+          "pids.current": "65\n"
+        },
+        "ultimo_utc_ms": 1790833812251
+      },
+      "resultado_registrado": {
+        "adjudicacion_independiente": null,
+        "directorio": "/opt/sv-qwen80/diagnostico-10/recuperacion-admision/recepcion/diag10-i02/consulta-0675",
+        "id": "P05-B",
+        "resultado": {
+          "ambas_herramientas": false,
+          "estado": "terminada",
+          "herramientas_utilizadas": [],
+          "llamadas": 0,
+          "respuesta_original": "El intervalo anual de casos nuevos en Estados Unidos es de 1.200 a 1.300, según la sección _1, página 0 del documento pdq-nci-hcl-es. Este dato sustenta la respuesta al indicar que la leucemia de células pilosas es una neoplasia poco frecuente con esa incidencia anual documentada en la fuente autorizada.",
+          "rondas": 1,
+          "tiempos_motor": {
+            "avg_compl_tok_per_sec": 0.49579638,
+            "avg_prompt_tok_per_sec": 3.898264,
+            "avg_tok_per_sec": 2.9679127,
+            "completion_tokens": 93,
+            "prompt_tokens": 1943,
+            "total_completion_time_sec": 187.577,
+            "total_prompt_time_sec": 498.427,
+            "total_time_sec": 686.004,
+            "total_tokens": 2036
+          }
+        },
+        "resultado_sha256": "62414da8ec57ec5f6922cd687912e3bc36ffeb116f7ee94735ecba52604ec4b0",
+        "utc_ms": 1790833812286
+      },
+      "sha256_final": "62414da8ec57ec5f6922cd687912e3bc36ffeb116f7ee94735ecba52604ec4b0",
+      "tiempos_http": [
+        {
+          "TT": "TT-0014",
+          "duracion_ms": 259,
+          "error": null,
+          "fase": "01-TOKENS",
+          "otel_errores": 0,
+          "suceso": "S39",
+          "trace_id": "f608302f456813edf583ef5fd7812a8f",
+          "utc_unix_ms": 1790833121710
+        },
+        {
+          "TT": "TT-0014",
+          "duracion_ms": 686968,
+          "error": null,
+          "fase": "01-GENERACION",
+          "otel_errores": 0,
+          "suceso": "S39",
+          "trace_id": "fe9de0394205e3f62e91e7c85ac494a8",
+          "utc_unix_ms": 1790833808736
+        }
+      ],
+      "tiempos_suma_motor_s": {
+        "generacion": 187.577,
+        "preprocesamiento": 498.427,
+        "total": 686.004
+      }
+    }
+  ],
+  "encargo": "2790832266fdb84e34ae916569454e0ff8a2b724",
+  "entrega_commit": "598039cae73f8f40f820bc5e3f78551a722ab58e",
+  "informe": "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/598039cae73f8f40f820bc5e3f78551a722ab58e/respuestas-ejecucion/QWEN80-Q4K-ONECLOUD-20260929/entrega-10/INFORME.md",
+  "intentos_invalidos_previos": 1,
+  "propuestas": {
+    "0": 2,
+    "1": 0,
+    "U": 2,
+    "impedimentos_celdas": 0
+  },
+  "prueba": "DIAG-INSTRUCT-P05-P07-20261001/r1",
+  "recepcion_independiente": "pendiente",
+  "vinculos": [
+    "S39",
+    "TT-0016",
+    "TT-0014"
+  ]
+}

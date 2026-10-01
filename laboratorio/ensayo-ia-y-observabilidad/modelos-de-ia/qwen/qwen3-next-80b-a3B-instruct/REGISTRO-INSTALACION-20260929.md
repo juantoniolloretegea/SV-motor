@@ -1,6 +1,16 @@
 # Registro instrumental de instalación: Qwen3-Next-80B-A3B-Instruct Q4K
 
-## Estado vigente · Cierre del examen v7, 30/09/2026
+## Estado vigente · Diagnóstico P05–P07, 01/10/2026
+
+El diagnóstico contemporáneo completó cuatro celdas y conservó sus primeras respuestas: P07-A U, P07-B 0, P05-A U y P05-B 0, como propuesta pendiente de recepción independiente. A realizó búsquedas vacías sin lectura; B recibió previamente la página fijada mediante una llamada real del conductor. La respuesta documental se transmitió íntegra antes de generar. No hubo quinta celda ni repetición de finales.
+
+El resultado es compatible con una limitación del recorrido de recuperación y no demuestra por sí solo un defecto del buscador. Se trata de dos preguntas bajo un protocolo diagnóstico nuevo, sin calificación clínica general ni sustitución del examen v7. El intento instrumental previo cerró antes de generar; la corrección de admisión obtuvo 72 pruebas y doce controles dinámicos conformes.
+
+Cierre conforme: 255 archivos sincronizados, cero procesos propios, carga deshabilitada y sockets sin escucha. Se conservaron la instancia y sus accesos. Pico del grupo: 59 GiB exactos, sin intercambio ni OOM observados; no se acredita margen estático. La prueba humana de la interfaz permanece pendiente.
+
+[Informe y evidencias](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/598039cae73f8f40f820bc5e3f78551a722ab58e/respuestas-ejecucion/QWEN80-Q4K-ONECLOUD-20260929/entrega-10/INFORME.md), [resultados del diagnóstico](tests-y-pruebas-efectuadas/DIAGNOSTICO-P05-P07-20261001.md). Commit de entrega: `598039cae73f8f40f820bc5e3f78551a722ab58e`; 17 archivos cotejados. S39 / TT-0016 / TT-0014 permanecen sujetos a recepción independiente; no se cierran tiques. Los antecedentes siguientes se conservan.
+
+## Antecedente · Cierre del examen v7, 30/09/2026
 
 **Ejecución terminada: 19 respuestas finales, seis impedimentos técnicos y cero preguntas sin ejecutar.** P25 terminó a las 18:46:05.912 UTC y la guarda cerró conforme a las 18:46:07.897 UTC. Carga deshabilitada, ausencia de procesos propios comprobada, servicio y conductor detenidos, socket enmascarado; instancia y accesos administrativos conservados.
 
