@@ -1,0 +1,159 @@
+{
+  "fecha_utc": "2026-10-01T18:54:25Z",
+  "resultado": {
+    "N": 3,
+    "N0": 2,
+    "N1": 1,
+    "NU": 0,
+    "T3": null,
+    "anterior_preservado": {
+      "caso_critico": "C08",
+      "dictamen": "No apto para el contraste inicial",
+      "puntuacion_sobre_100": 87.5
+    },
+    "aptitud_clinica_acreditada": false,
+    "aptitud_sv_general_acreditada": false,
+    "banco": "SG-LECTURA-INTEGRA-20261001/r1",
+    "casos": [
+      {
+        "adjudicacion": {
+          "cita_conforme": true,
+          "condiciones_conformes": true,
+          "critico": true,
+          "factual_conforme": true,
+          "id": "L01",
+          "impedimento_tecnico": false,
+          "justificacion": "La decisión CONTRADICHA y la cita literal identifican correctamente la prohibición aplicable al cerrojo violeta activo, incluso con registro validado. La respuesta final se emite tras recibir únicamente T1/S1 página 0; falta la página 1, cuya lectura íntegra estaba exigida. La exactitud de la conclusión no sustituye esa exigencia. Se adjudica un único 1 crítico por recuperación incompleta, sin atribuirlo al transporte.",
+          "lectura_integra": false,
+          "observacion": "Adjudicación confirmada por los cotejos de originales, contexto, cálculo, cobertura y cita.",
+          "paginas_incorporadas": [
+            0
+          ],
+          "paginas_pendientes": [
+            1
+          ],
+          "valor_sv": "1"
+        },
+        "cobertura": [
+          {
+            "documento": "T1",
+            "faltantes": [
+              1
+            ],
+            "incorporadas": [
+              0
+            ],
+            "integra": false,
+            "paginas": 2,
+            "seccion": "S1"
+          }
+        ],
+        "critico": true,
+        "decision_esperada": "CONTRADICHA",
+        "decision_observada": "CONTRADICHA",
+        "id": "L01",
+        "lectura_integra": false,
+        "respuesta_final_original": "{\n  \"decision\": \"CONTRADICHA\",\n  \"reglas\": [\"D1\", \"D2\"],\n  \"evidencias\": [\n    {\n      \"documento\": \"T1\",\n      \"seccion\": \"S1\",\n      \"fragmento\": \"La presencia de un cerrojo violeta activo impide autorizar la transferencia de cualquier cápsula, incluso cuando el registro de transferencia esté validado.\"\n    }\n  ],\n  \"justificacion_breve\": \"El texto oficial indica que el cerrojo violeta activo bloquea la autorización de la transferencia, contradiciendo la afirmación de que la validación del registro permite autorizar el traslado mientras el cerrojo está activo.\"\n}",
+        "valor_sv": "1"
+      },
+      {
+        "adjudicacion": {
+          "cita_conforme": true,
+          "condiciones_conformes": true,
+          "critico": false,
+          "factual_conforme": true,
+          "id": "L02",
+          "impedimento_tecnico": false,
+          "justificacion": "La decisión CONTRADICHA distingue correctamente la admisibilidad general entre 14 y 18 grados Celsius de la excepción por fisura visible del sello. Las dos citas reproducen pasajes de T2/S1 efectivamente recibidos en las páginas 0 y 1. La respuesta conserva la exclusión pese a que 16 grados Celsius pertenece al intervalo general. La lectura íntegra consta antes de la emisión final; la búsqueda inicial sin resultados no impidió su recuperación autónoma posterior.",
+          "lectura_integra": true,
+          "observacion": "Adjudicación confirmada por los cotejos de originales, contexto, cálculo, cobertura y citas.",
+          "paginas_incorporadas": [
+            0,
+            1
+          ],
+          "paginas_pendientes": [],
+          "valor_sv": "0"
+        },
+        "cobertura": [
+          {
+            "documento": "T2",
+            "faltantes": [],
+            "incorporadas": [
+              0,
+              1
+            ],
+            "integra": true,
+            "paginas": 2,
+            "seccion": "S1"
+          }
+        ],
+        "critico": false,
+        "decision_esperada": "CONTRADICHA",
+        "decision_observada": "CONTRADICHA",
+        "id": "L02",
+        "lectura_integra": true,
+        "respuesta_final_original": "{\n  \"decision\": \"CONTRADICHA\",\n  \"reglas\": [\"D1\", \"D2\"],\n  \"evidencias\": [\n    {\n      \"documento\": \"T2\",\n      \"seccion\": \"S1\",\n      \"fragmento\": \"La regla general permite admitir un recipiente cuando su lectura de entrada se encuentra entre 14 y 18 grados Celsius, incluidos ambos extremos.\"\n    },\n    {\n      \"documento\": \"T2\",\n      \"seccion\": \"S1\",\n      \"fragmento\": \"Existe una excepción a la regla de temperatura: no se admite ningún recipiente cuyo sello presente una fisura visible, aunque su lectura de entrada pertenezca al intervalo permitido.\"\n    }\n  ],\n  \"justificacion_breve\": \"Aunque la temperatura de 16 °C está dentro del rango permitido, el documento especifica explícitamente que recipientes con sello fisurado visible están excluidos, contradiciendo la afirmación.\"\n}",
+        "valor_sv": "0"
+      },
+      {
+        "adjudicacion": {
+          "cita_conforme": true,
+          "condiciones_conformes": true,
+          "critico": false,
+          "factual_conforme": true,
+          "id": "L03",
+          "impedimento_tecnico": false,
+          "justificacion": "RESPALDADA conserva los tres requisitos conjuntos: dos lecturas concordantes de las alícuotas, calibración vigente del instrumento durante ambas lecturas y decisión registrada antes del cierre. Se recibieron e incorporaron las tres páginas. La primera cita contiene una elipsis explícita; sus dos segmentos son literales, pertenecen a T3/S1 página 0 y conservan el orden. El texto omitido identifica el lote y delimita el procedimiento, sin introducir una excepción que cambie esta afirmación específica sobre Brumel. Las otras dos citas son continuas y literales, en páginas 1 y 2. La política exige un fragmento pertinente y no prohíbe la elipsis señalada ni impone un único intervalo continuo; no se inventa una penalización formal adicional.",
+          "lectura_integra": true,
+          "observacion": "COTEJO-CITAS.json conserva la falta de coincidencia literal continua de la primera cita. COTEJO-ELIPSIS.json comprueba por separado sus segmentos y el texto omitido. Se acepta la cita abreviada sin modificar la respuesta; recepción independiente pendiente.",
+          "paginas_incorporadas": [
+            0,
+            1,
+            2
+          ],
+          "paginas_pendientes": [],
+          "valor_sv": "0"
+        },
+        "cobertura": [
+          {
+            "documento": "T3",
+            "faltantes": [],
+            "incorporadas": [
+              0,
+              1,
+              2
+            ],
+            "integra": true,
+            "paginas": 3,
+            "seccion": "S1"
+          }
+        ],
+        "critico": false,
+        "decision_esperada": "RESPALDADA",
+        "decision_observada": "RESPALDADA",
+        "id": "L03",
+        "lectura_integra": true,
+        "respuesta_final_original": "{\n  \"decision\": \"RESPALDADA\",\n  \"reglas\": [\"D1\"],\n  \"evidencias\": [\n    {\n      \"documento\": \"T3\",\n      \"seccion\": \"S1\",\n      \"fragmento\": \"El procedimiento Brumel compara la lectura de dos alícuotas de una solución indicadora inerte... El criterio analítico ordinario exige dos lecturas concordantes, una de cada alícuota.\"\n    },\n    {\n      \"documento\": \"T3\",\n      \"seccion\": \"S1\",\n      \"fragmento\": \"Además de la concordancia analítica, la validación requiere una ficha de calibración vigente del instrumento que cubra el intervalo completo entre la primera y la segunda lectura.\"\n    },\n    {\n      \"documento\": \"T3\",\n      \"seccion\": \"S1\",\n      \"fragmento\": \"La decisión de validar debe registrarse antes del cierre del lote.\"\n    }\n  ],\n  \"justificacion_breve\": \"El texto del Manual Brumel (T3, S1) establece los tres requisitos citados: dos lecturas concordantes, ficha de calibración vigente que cubra ambas lecturas y registro de la decisión antes del cierre del lote, coincidiendo exactamente con la afirmación.\"\n}",
+        "valor_sv": "0"
+      }
+    ],
+    "comparacion": "Descriptiva; los nuevos casos y el contrato aclarado impiden atribuir causalmente una diferencia",
+    "dictamen": "No apto para este contraste",
+    "errores_criticos": 1,
+    "errores_no_criticos": 0,
+    "formula": "100*(N0-errores_no_criticos)/3",
+    "impedimentos_tecnicos": 0,
+    "kappa": null,
+    "puntuacion_sobre_100": 66.66666666666667,
+    "reserva_metodologica": {
+      "alcance_puntuacion": "Adjudicación observacional de los tres casos fijados. El banco permite fragmentos dirigidos con cláusulas decisivas; esta puntuación no subsana ese defecto ni acredita conformidad integral del diseño.",
+      "conformidad_integral_diseno": false,
+      "documento": "RESERVA-DE-DISENO.md",
+      "evidencia": "EVALUACION-DE-DISENO.json"
+    }
+  },
+  "fuente": "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/84028c8d2611ed762c11b21dd4d8e6d72e3c9c0b/respuestas-ejecucion/GPTOSS-SAFEGUARD-INSTALACION-20261001/entrega-02/INFORME-FINAL.md",
+  "custodia": "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/84028c8d2611ed762c11b21dd4d8e6d72e3c9c0b/respuestas-ejecucion/GPTOSS-SAFEGUARD-INSTALACION-20261001/entrega-02/COTEJO-CUSTODIA.json",
+  "cierre": "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/84028c8d2611ed762c11b21dd4d8e6d72e3c9c0b/respuestas-ejecucion/GPTOSS-SAFEGUARD-INSTALACION-20261001/entrega-02/COTEJO-CIERRE.json",
+  "recepcion_independiente": "pendiente"
+}
