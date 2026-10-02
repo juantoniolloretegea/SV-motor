@@ -263,6 +263,10 @@ El componente se desarrolla y comprueba en Rust, reutilizando los contratos y co
 
 El recorrido de admisión es: **comprobación sin modelo → comprobación de integración efectiva → contraste delimitado → evaluación**. El diseño es transversal; cada candidato exige un perfil comprobado y conserva resultados propios. No se trasladan automáticamente a otro modelo los resultados favorables o desfavorables de una realización.
 
+### Realización experimental comprobada · L01-ARBITRO · 02/10/2026
+
+[Realización y 47 comprobaciones Rust](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/fc02eee0abfb49b9e653dc21e4540c8467a62e7e/respuestas-ejecucion/ARBITRO-SV-SAFEGUARD-20261002/entrega-01/REALIZACION-Y-COMPROBACIONES.md) y [entrega cotejada](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/fc02eee0abfb49b9e653dc21e4540c8467a62e7e/respuestas-ejecucion/ARBITRO-SV-SAFEGUARD-20261002/entrega-01/INFORME-FINAL.md). Dos páginas incorporadas, una generación y resultado 0; condición asistida conforme. Se utilizan operaciones públicas documentales LIG/0.1 sin modificar núcleo, semántica ni IR ni constituir autoridad productiva R1. La adjudicación semántica es externa. Esta comprobación de un caso conocido no constituye una implementación general del Árbitro ni acredita aptitud clínica. Recepción independiente pendiente.
+
 ---
 
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
