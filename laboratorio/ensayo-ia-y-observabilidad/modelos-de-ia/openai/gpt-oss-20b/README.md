@@ -1,5 +1,7 @@
 # OpenAI · gpt-oss-20b
 
+**Conservación documental · 02–03/10/2026:** [inventario, entrega y límites de custodia](clon-codespace/CUSTODIA_20261002.md). Entorno detenido y conservado; sin nuevas inferencias ni modificación del dictamen experimental.
+
 ## Estado de cierre del 26/09/2026
 
 La Dirección ha cerrado esta campaña y excluido la configuración ensayada de la función médica prevista. Se conserva como resultado experimental; no se inicia entrenamiento ni se acredita aptitud clínica. Véanse el [dictamen y archivo de cierre](imagen-onecloud/cierre-20260926/README.md) y el [estado de conservación y retirada](imagen-onecloud/cierre-20260926/RECEPCION.md). La entrega técnica histórica que sigue no constituye una aprobación para uso médico.
