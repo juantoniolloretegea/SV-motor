@@ -95,9 +95,9 @@ sequenceDiagram
     C->>C: Construir y cotejar la entrada efectiva y su capacidad
     C->>R: Conservar entrada, transformaciones y resultado de controles
     alt Alguna precondición no se acredita
-        C->>R: Bloqueo anterior a la inferencia; causa y alcance
+        C->>R: Bloqueo anterior a la inferencia, causa y alcance
     else Precondiciones comprobadas
-        C->>M: Política, afirmación y páginas completas; sin clave reservada
+        C->>M: Política, afirmación y páginas completas, sin clave reservada
         loop Durante la única generación prevista
             M-->>C: Emisiones por canal y datos observables
             C->>R: Conservar originales y telemetría
@@ -109,7 +109,7 @@ sequenceDiagram
             Note over E: Recibe por vía separada la clave fijada antes de inferir
             E->>R: Cotejo semántico, adjudicación y reservas
         else Requisito incumplido o no comprobable
-            C->>R: Bloqueo posterior a generación; original conservado
+            C->>R: Bloqueo posterior a generación, original conservado
         end
     end
 ```
