@@ -1,66 +1,62 @@
-# Comprobaciones del controlador y del sistema compuesto
+# Verificación del Árbitro SV y del sistema compuesto
 
-**Edición 1 · 2 de octubre de 2026.** Plan de comprobación, sin resultados ejecutados. [Diseño](DISENO.md) · [Presentación](README.md).
+**Especificación de comprobación · 2 de octubre de 2026.** [Diseño](DISENO.md) · [Presentación](README.md).
 
-## 1. Componente local sin inferencia
+## 1. Comprobación sin inferencia
 
-Implementar las obligaciones del diseño en Rust y comprobarlas con documentos, recibos y respuestas simulados. El programa debe admitir un recorrido conforme y bloquear recorridos inválidos por su causa correcta; bloquear todo no constituye éxito.
+La realización mínima en Rust deberá aceptar un recorrido conforme y detectar los siguientes defectos con su atribución correcta. Se utilizan fuentes y emisiones sintéticas separadas del caso de evaluación.
 
-| Situación introducida | Resultado exigido |
+| Situación | Resultado exigido |
 | --- | --- |
-| Falta una página obligatoria. | Bloqueo antes de inferir; identificación de la ausencia. |
-| Hay una página duplicada en lugar de la faltante. | Bloqueo por conjunto incompleto, aunque coincida la cantidad. |
-| Documento o revisión distintos de los fijados. | Bloqueo de identidad, sin sustitución silenciosa. |
-| Contenido modificado respecto de su identidad fijada. | Bloqueo de integridad. |
-| Página descargada pero ausente de la entrada efectiva. | Bloqueo de incorporación. |
-| La plantilla o un ajuste posterior trunca la entrada. | Bloqueo antes de la generación. |
-| El contenido íntegro no cabe con la reserva fijada. | Bloqueo de capacidad, sin resumen automático. |
-| Una fuente intenta ordenar cambios de política o lectura exterior. | La fuente conserva condición de dato; no altera reglas ni acceso. |
-| Llega un recibo o una respuesta perteneciente a otro caso. | Rechazo de la mezcla por identidad de ejecución y caso. |
-| Aparece una emisión antes de completar las precondiciones. | No se presenta como respuesta admitida; incidente conservado. |
-| La salida está mal formada o usa categorías no permitidas. | Original conservado y salida no admitida, sin reparación ni nueva generación automática. |
-| Cita inexistente, referencia ajena o fragmento modificado. | Resultado negativo de procedencia; no admisión como conforme. |
-| Se pierde la conservación, hay interrupción o no se acredita finalización. | Detención con estado alcanzado; no se deduce éxito de un archivo parcial. |
-| Se reanuda un proceso con una ejecución ya concluida. | Se impide duplicar la inferencia; la identidad no se reutiliza para obtener otra respuesta. |
-| Formato, cita y cobertura conformes, pero excepción ignorada. | Se distingue admisión instrumental de incorrección semántica. |
-| Recorrido conforme completo. | Una sola consulta simulada, admisión y entrega a evaluación. |
-| Clasificación correcta de evidencia insuficiente en un caso previsto. | Se permite su evaluación conforme al criterio; no se fuerza una cita inventada ni se convierte automáticamente en U. |
+| Dos páginas completas, identidad válida y entrada suficiente. | Admisión del recorrido simulado y conservación íntegra. |
+| Falta una página o aparece una repetida en su lugar. | Impedimento anterior a la consulta; conjunto discrepante identificado. |
+| Revisión o contenido distintos de los fijados. | Rechazo de identidad o integridad. |
+| La plantilla, tokenización o límite de contexto excluyen parte del documento. | Impedimento anterior a inferencia. |
+| Servicio MCP con reglas declaradas que no aplica. | Detección mediante solicitudes legítimas y prohibidas. |
+| Herramienta, argumento, localizador o ruta no autorizados. | Rechazo sin ejecución ni reparación silenciosa de argumentos. |
+| Devolución que no corresponde a la solicitud. | Detección y conservación de ambos originales. |
+| Documento que contiene órdenes para cambiar las reglas. | Conservación como datos, sin autoridad sobre el recorrido. |
+| Ruta directa al MCP o al motor que evita los controles. | Acceso impedido por la realización efectiva. |
+| Interrupción de registro, aislamiento, identidad o memoria. | Cierre seguro y conservación de la incidencia disponible. |
+| Salida inválida, incompleta o con cita no localizable. | Original conservado; incumplimiento identificado sin otra generación. |
+| Cita auténtica con conclusión contraria a una excepción. | No presumir verdad por procedencia; adjudicación semántica separada. |
+| Error técnico presentado como U o como 1 del candidato. | Rechazo de esa atribución sin evaluación válida. |
+| Obligaciones convertidas en una célula de dimensión inválida. | Rechazo; no rellenar posiciones ni aplicar el umbral. |
+| Pictograma incoherente con la valoración o con su evidencia. | Detección; no mostrar conformidad general. |
+| Restauración del registro conservado. | Reconstrucción de entrada, secuencia, decisiones y originales. |
 
-Comprobar también que ninguna vía de presentación final eluda la admisión, que las esperas tengan límites técnicos y que cualquier recuperación conserve identidad, incertidumbre y originales. La cobertura de pruebas se describirá con precisión: una lista de casos no acredita exploración exhaustiva de todos los estados posibles.
-
-**Condición de continuación:** todas las obligaciones exigidas tienen comprobación significativa, los casos inválidos se detectan, existe un recorrido conforme y se conservan fuentes, configuración y resultados. Si falla esta etapa, se corrige el instrumento; no se utiliza inferencia del candidato para depurarlo.
+No se requiere construir un comprobador general ni añadir un motor de reglas ajeno. Las comprobaciones deben demostrar las propiedades del componente y sus fronteras; una mera repetición del algoritmo dentro del ensayo no es evidencia independiente suficiente.
 
 ## 2. Integración efectiva
 
-Antes de consultar al modelo, comprobar la identidad actual de la instalación y las versiones realmente usadas; contrato MCP; fronteras de observación; entrada después de plantilla y tokenización; canales y finalización; aislamiento; límites de memoria y contexto; conservación, recuperación y cierre.
+Antes de cargar el candidato se cotejan las revisiones reales del Lenguaje y de los contratos utilizados, el Árbitro, MCP, motor, modelo, corpus, plantilla y tokenizador. La documentación distingue declaración, compilación y uso efectivo.
 
-Debe distinguirse lo declarado, lo compilado, lo instalado y lo efectivamente utilizado. La existencia de una biblioteca, una prueba estática o un cliente documental no demuestra integración con el modelo. La instalación de referencia es un punto de partida, no una confirmación de disponibilidad actual.
+Se verifica la entrada en la frontera de admisión del motor, el cálculo de contexto y reserva, la separación de la clave, el aislamiento y la conservación de todos los canales disponibles. Se ensayan el cierre y la recuperación de evidencias sin activar una consulta del candidato.
 
-El control debe poder demostrar entrega efectiva sin consultar la clave reservada ni añadir ayuda después de observar la respuesta. No se modifica el banco de otro ensayo. La introducción de una gramática de generación exige comprobar por separado que no elimina emisiones ni altera el formato conversacional requerido.
+La semántica SV mantiene una única autoridad. El Árbitro ejecuta decisiones y registra hechos; no sustituye el núcleo por otra función de clasificación. Si falta una representación imprescindible, se especifica la carencia y se detiene antes de inferir.
 
-**Condición de continuación:** recorrido legítimo completo y observado, con capacidad suficiente dentro de las cotas existentes y sin tramos instrumentales no auditables. Si exige recursos nuevos, modificaciones del banco o una recuperación no contemplada, debe delimitarse esa nueva decisión antes de actuar.
+## 3. Primer contraste con Safeguard
 
-## 3. Contraste inicial finito
+El primer contraste consiste en **una sola condición asistida del caso L01 anterior**, con identidad nueva. El controlador incorpora las dos páginas completas antes de una generación. Se preservan la afirmación, el corpus y la política de clasificación; el cambio de suministro documental queda explícito.
 
-Se proponen exactamente tres casos nuevos y reservados: uno con afirmación respaldada, uno contradicho por una condición o excepción y uno con evidencia insuficiente dentro del corpus fijado. La ficha, política, clave de corrección, criticidad y criterios se conservarán antes de la inferencia. El ejemplo explicativo del diseño queda excluido del banco.
+La [aplicación al modelo](../../openai/gpt-oss-safeguard-120b/CONTROL-DOCUMENTAL-ASISTIDO.md) define la comparación. El encargo de ejecución fija las fuentes y los límites exactos antes de activar. No se ejecuta una batería adicional ni se repite una respuesta para mejorarla.
 
-Una consulta prevista por caso, con contexto independiente y configuración identificada. Conservar cada resultado original; no abrir rondas de recordatorios, reparación o repetición para mejorar respuestas. Un incidente instrumental exige conservación y diagnóstico; este diseño no concede por sí solo repetición automática. El encargo ejecutable deberá fijar la identidad y ubicación de su entrega antes de comenzar.
+La adquisición completa es una propiedad del conjunto dirigido. La prueba no vuelve a evaluar descubrimiento autónomo ni demuestra que el modelo haya aprendido a leer todas las páginas por iniciativa propia.
 
-Se informará por separado de cobertura documental, incorporación efectiva, admisión instrumental, clasificación factual, fundamento, cumplimiento de la política, errores críticos y resultado conforme al criterio SV aplicable. Los impedimentos y los casos no ejecutados tendrán sus propios recuentos. Tiempo, memoria, intervenciones y errores se incluirán como magnitudes instrumentales.
+## 4. Interpretación y cierre
 
-La puntuación no sustituye el criterio de aptitud. La regla SV de aptitud que corresponda al banco debe constar expresamente en el encargo; tres casos de funcionamiento no forman por sí solos una célula completa ni permiten declarar aptitud general. No se suman los resultados nuevos a los contrastes históricos ni se compensan incumplimientos críticos con aciertos de otra etapa.
+Se presentan por separado:
 
-## 4. Decisión sobre utilidad
+1. Conformidad del instrumento y de la entrada efectiva.
+2. Respuesta original y corrección de su contenido.
+3. Adjudicación de la condición asistida en la terna cuando proceda, criticidad, puntuación y alcance.
+4. Incidencias instrumentales, carencias y atribución acreditada.
 
-El primer contraste pregunta si el sistema compuesto funciona y conserva correctamente su separación de responsabilidades. Si la entrega es conforme y la interpretación falla, se registra ese fallo; no se justifica repetir indefinidamente para mantener al candidato en evaluación. Si la instrumentación falla, el resultado no demuestra incapacidad semántica del modelo.
+Una respuesta correcta con entrada completa acredita únicamente ese recorrido. Una respuesta incorrecta con entrada completa permite atribuir el fallo semántico al candidato si las demás condiciones están comprobadas. Un fallo de entrega no permite esa atribución.
 
-Tres casos no estiman fiabilidad general ni acreditan una mejora causal frente a experimentos con bancos distintos. Una comparación de estrategias o de pictogramas requeriría un diseño específico posterior, con contenido equivalente y criterios previos. No queda abierta por completar este contraste.
+El único caso no constituye una célula SV: no se calcula κ ni se aplica T(1). Se usa el criterio común de puntuación para N fijo = 1, con exclusión crítica cuando corresponda, sin emitir aptitud general ni clínica. Los resultados históricos permanecen íntegros.
 
-## 5. Entrega y recepción
-
-La entrega de ejecución conservará originales, fuentes, versiones, entradas efectivas, intercambios documentales, emisiones, decisiones, errores y telemetría; incluirá copia recuperada y cotejada desde la sede de custodia. Los resultados se presentarán en texto legible y datos estructurados.
-
-Sedes: encargo y evidencias de ejecución en SV-sala-de-maquinas; diseño común en esta carpeta de SV-motor; aplicación y resultados en el expediente del modelo; sucesos, tiques y Calidad en sus registros existentes. Para Safeguard se conserva la relación con TT-0018, TT-0014 si afecta a la interfaz documental, y S39. No se declara cerrada una recepción pendiente por publicar el diseño.
+El contraste termina tras la única generación o al aparecer un impedimento que impida admitirla o continuarla. Se conserva la evidencia, se cierra la inferencia y se mantiene la infraestructura según el encargo. Un resultado favorable no activa otro experimento por sí mismo.
 
 ---
 

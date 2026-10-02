@@ -1,216 +1,267 @@
-# Diseño del sistema de clasificación con control documental
+# Diseño del Árbitro Director del Lenguaje de Computación SV
 
-**Edición 1 · 2 de octubre de 2026.** Especificación propuesta, no implementación acreditada. [Presentación y alcance](README.md) · [Comprobaciones exigidas](VERIFICACION.md).
+**Diseño definido · 2 de octubre de 2026.** [Presentación](README.md) · [Verificación](VERIFICACION.md).
 
-## 1. Objeto y responsabilidad
+## 1. Gobierno y responsabilidad
 
-El sistema compuesto debe permitir distinguir una entrega documental defectuosa de una interpretación incorrecta aun disponiendo de las fuentes pertinentes. El controlador ejecutará obligaciones verificables; el modelo conservará la responsabilidad de clasificar y fundamentar su respuesta.
+El Árbitro Director es un componente previsto del Lenguaje de Computación SV, gobernado por los contratos, las restricciones y la semántica del SV. Dirige la ejecución de un modelo identificado y reacciona a incidencias mediante reglas explícitas. Su función comprende la preparación documental, el servicio MCP y sus reglas, la entrada efectiva del motor, la generación, la conservación y la admisión de resultados.
 
-**En esta primera versión, el controlador obtiene e incorpora todas las páginas fijadas para el caso antes de consultar al modelo.** No se examina búsqueda autónoma ni descubrimiento de páginas por el candidato. Esa asistencia forma parte del objeto evaluado y debe figurar en sus resultados.
+La autoridad de dominio constituye las obligaciones y los criterios aplicables. El Lenguaje comprueba y conserva esa representación. El Árbitro ejecuta las operaciones permitidas y presenta sus evidencias. El candidato y los documentos no pueden modificar dichas autoridades.
 
-La suficiencia del conjunto documental se revisa antes de la ejecución. «Todas las páginas previstas» no equivale a «todas las fuentes pertinentes de cualquier problema abierto». El primer alcance utiliza un corpus pequeño y cerrado.
+La implementación deberá identificar qué elementos del Lenguaje están realmente representados y disponibles. No basta denominar «contrato SV» a un texto de instrucciones ni atribuir a un componente declarado capacidades todavía no compiladas o utilizadas.
 
-| Componente | Responsabilidad | Evidencia o producto |
-| --- | --- | --- |
-| Preparación del contraste | Fijar afirmación, fuentes, revisiones, páginas, política, criterios, criticidad y límites. Separar la clave de corrección. | Ficha del caso y referencia reservada, ambas identificadas antes de inferir. |
-| Caché documental | Conservar los originales autorizados y sus versiones. | Documentos y manifiesto de identidad. |
-| Servicio MCP | Responder a las lecturas autorizadas, sin acceso documental exterior durante el contraste. | Solicitudes, devoluciones, errores y referencias de página. |
-| Controlador Rust | Ejecutar las lecturas, comprobar la entrada efectiva, conservar el recorrido y gobernar la admisión. | Recibos documentales, entrada cotejada, decisiones y motivos. |
-| Motor y modelo | Recibir la entrada identificada, generar la clasificación y expresar su fundamento. | Emisiones originales y telemetría disponible. |
-| Evaluación independiente | Contrastar clasificación, fundamento, condiciones y excepciones con la referencia reservada. | Resultado motivado, terna y alcance aplicables. |
-| Registro de evidencias | Vincular y conservar todos los objetos observables del recorrido. | Secuencia de acontecimientos y objetos cotejados. |
-| Presentación mediante pictogramas | Mostrar obligaciones y estados a partir del registro. | Símbolo, texto, identificador de regla y enlace a la evidencia. |
+### Diagrama de gobierno
+
+```mermaid
+flowchart TD
+    SV["Sistema Vectorial: fundamentos, restricciones y autoridad de dominio"]
+    L["Lenguaje de Computación: representación y contratos autorizados"]
+    A["Árbitro Director: ejecución y supervisión mediante reglas"]
+    P["Perfil del modelo: identidad, interfaces y límites"]
+    D["MCP: reglas efectivas, caché y acceso documental"]
+    M["Un modelo identificado"]
+    R["Registro íntegro de operaciones y emisiones"]
+    E["Evaluación competente del contenido"]
+    V["Presentación: obligación, 0 / 1 / U válido y evidencia"]
+    SV --> L
+    L --> A
+    P --> A
+    A -->|Control de solicitudes y devoluciones| D
+    A -->|Entrada admitida y generación acotada| M
+    A --> R
+    D --> R
+    M --> R
+    R --> E
+    L -->|Semántica aplicable| E
+    E --> V
+    R -->|Incidencias instrumentales identificadas| V
+```
+
+El perfil adapta el recorrido a un candidato sin alterar los fundamentos del SV. El Árbitro no selecciona automáticamente modelos, no delega su dirección en otra IA y no establece una segunda álgebra en el alojamiento o en el transporte.
 
 ## 2. Diagrama funcional
 
 ```mermaid
 flowchart TD
-    subgraph P["Preparación anterior a la inferencia"]
-        A["Ficha fijada: afirmación, documentos, revisiones, páginas, política y límites"]
-        K["Clave de corrección reservada y separada"]
+    subgraph P["Preparación"]
+        A["Ficha: afirmación, documentos, revisiones, páginas, política y límites"]
+        K["Clave de corrección reservada"]
+        S{"¿Identidad, aislamiento, contrato y reglas del MCP comprobados?"}
     end
-    subgraph D["Adquisición e incorporación documental"]
-        B["Controlador Rust: solicitar todas las páginas previstas"]
+    subgraph D["Adquisición e incorporación"]
+        B["Árbitro en Rust: solicitar todas las páginas fijadas"]
         C["MCP local y caché autorizada"]
-        E{"¿Identidad, revisión, integridad y conjunto de páginas conformes?"}
-        F["Construir entrada y conservar plantilla, transformaciones y tokenización"]
-        G{"¿Entrada efectiva completa, observable y dentro del contexto con reserva?"}
+        E{"¿Conjunto exacto, revisiones e integridad conformes?"}
+        F["Construir entrada, plantilla y tokenización efectivas"]
+        G{"¿Contenido íntegro, observable y con reserva suficiente?"}
     end
     subgraph M["Generación y admisión"]
-        H["Una consulta al candidato con política, afirmación y páginas"]
+        H["Una consulta al candidato"]
         I["Conservar emisiones originales y telemetría"]
-        J{"¿Conservación, formato, reglas, referencias y citas conformes?"}
-        L["Respuesta admitida instrumentalmente; contenido aún sin adjudicar"]
+        J{"¿Finalización, estructura, referencias, citas y custodia conformes?"}
+        L["Admisión instrumental"]
     end
-    subgraph V["Evaluación separada"]
-        N["Cotejo independiente de conclusión, condiciones y excepciones"]
-        O["Resultado del sistema compuesto y límites de la conclusión"]
-    end
-    A --> B
-    B -->|Solicitudes identificadas| C
-    C -->|Contenido y recibos| E
+    N["Cotejo competente del contenido y sus excepciones"]
+    O["Resultado delimitado del sistema compuesto"]
+    X["Detener recorrido afectado y conservar causa"]
+    R["Registro transversal de identidades, acontecimientos y evidencias"]
+    Q["Pictogramas y texto vinculados al registro"]
+    A --> S
+    S -->|Sí| B
+    S -->|No| X
+    B --> C
+    C --> E
     E -->|Sí| F
+    E -->|No| X
     F --> G
     G -->|Sí| H
+    G -->|No| X
     H --> I
     I --> J
     J -->|Sí| L
-    L --> N
-    K -->|Sólo a la evaluación| N
-    N --> O
-    E -->|No| X["Bloquear el recorrido; conservar causa y estado alcanzado"]
-    G -->|No| X
     J -->|No| X
-    A -.-> R["Registro transversal: preparación, intercambios, entrada, emisiones y decisiones"]
+    L --> N
+    K -->|Sólo para evaluación| N
+    N --> O
+    A -.-> R
     C -.-> R
     F -.-> R
     I -.-> R
     J -.-> R
     N -.-> R
     X -.-> R
-    R --> Q["Pictogramas para revisión humana: estado, regla y evidencia"]
+    R --> Q
 ```
 
-**Lectura del diagrama.** Las flechas continuas muestran el recorrido y sus dependencias. Las discontinuas representan conservación de evidencias, sin intervención sobre el contenido del candidato. La clave reservada no tiene conexión con la entrada del modelo. El registro abarca cada petición y devolución, aunque el dibujo agrupe operaciones para facilitar su lectura.
+Las flechas continuas expresan el recorrido. Las discontinuas expresan conservación. La clave de corrección queda fuera de la entrada y de las herramientas del modelo.
 
-El bloqueo detiene el recorrido afectado. Si falla identidad, aislamiento, integridad, control o custodia del conjunto, se detiene la ejecución completa. Un fallo acotado sólo permite continuar otro caso cuando se acredita su independencia y se conserva íntegramente el incidente. No existe una salida alternativa que permita presentar una emisión como admitida eludiendo los controles.
+Una pérdida de identidad, aislamiento, integridad, control o custodia detiene la ejecución afectada. Las emisiones producidas antes de un bloqueo se conservan como originales, aunque no sean admitidas. No existe una vía de publicación que eluda la admisión.
 
-## 3. Diagrama de intercambio y puntos de comprobación
+## 3. Intercambios y fronteras observables
 
 ```mermaid
 sequenceDiagram
-    participant C as Controlador Rust
-    participant D as MCP y caché local
+    participant C as Árbitro SV en Rust
+    participant D as MCP y caché
     participant M as Motor y candidato
     participant R as Registro de evidencias
-    participant E as Evaluación independiente
-    C->>R: Conservar ficha, política, configuración y versiones
-    loop Cada página fijada en la ficha
-        C->>R: Registrar solicitud y su identidad
-        C->>D: Pedir documento, revisión y página
-        D-->>C: Devolver contenido, identidad y estado
-        C->>R: Conservar respuesta original y cotejo
+    participant E as Evaluación competente
+    C->>R: Conservar contrato, ficha, política y configuración
+    C->>D: Comprobar identidad, reglas efectivas y herramientas
+    D-->>C: Configuración y respuestas de comprobación
+    C->>C: Cotejar declaración y comportamiento
+    C->>R: Conservar resultado del control previo
+    loop Cada página exigida
+        C->>C: Validar herramienta, argumentos, revisión y límites
+        C->>R: Conservar solicitud identificada
+        C->>D: Solicitar documento, sección y página
+        D-->>C: Contenido y metadatos
+        C->>C: Cotejar respuesta con solicitud y corpus
+        C->>R: Conservar original y comprobación
     end
-    C->>C: Verificar conjunto completo y ausencia de sustituciones
-    C->>C: Construir y cotejar la entrada efectiva y su capacidad
-    C->>R: Conservar entrada, transformaciones y resultado de controles
-    alt Alguna precondición no se acredita
-        C->>R: Bloqueo anterior a la inferencia, causa y alcance
-    else Precondiciones comprobadas
-        C->>M: Política, afirmación y páginas completas, sin clave reservada
-        loop Durante la única generación prevista
-            M-->>C: Emisiones por canal y datos observables
-            C->>R: Conservar originales y telemetría
+    C->>C: Cotejar conjunto exacto y entrada efectiva del motor
+    C->>R: Conservar representación, transformaciones y tokenización
+    alt Precondición incumplida o no acreditada
+        C->>R: Conservar incidencia y detener antes de inferir
+    else Precondiciones acreditadas
+        C->>M: Política, afirmación y páginas completas sin clave
+        loop Una generación con sus canales observables
+            M-->>C: Emisiones y telemetría
+            C->>R: Conservar originales vinculados a la entrada
         end
-        C->>C: Validar finalización, estructura, referencias y citas
-        C->>R: Conservar decisión de admisión y motivos
-        alt Requisitos instrumentales conformes
-            C->>E: Respuesta original y expediente instrumental
-            Note over E: Recibe por vía separada la clave fijada antes de inferir
-            E->>R: Cotejo semántico, adjudicación y reservas
-        else Requisito incumplido o no comprobable
-            C->>R: Bloqueo posterior a generación, original conservado
-        end
+        C->>C: Comprobar finalización, estructura, referencias y citas
+        C->>R: Conservar decisión de admisión motivada
+        C->>E: Original y expediente disponibles para evaluación
+        Note over E: La clave prefijada llega por una vía separada
+        E->>R: Adjudicación, atribución y alcance
     end
 ```
 
-El motor debe ofrecer un punto de observación suficiente para vincular la entrada cotejada con la generación efectiva. Conservar el texto que se quiso enviar no demuestra que se utilizara íntegro. Si la integración no permite comprobar esta frontera, el diseño no está listo para el contraste.
+El punto de observación de la entrada debe corresponder a lo que el motor admite realmente, después de aplicar plantilla y tokenización. El texto preparado para enviar no demuestra por sí solo su incorporación. Si esta frontera no puede cotejarse, la integración no está preparada para el contraste.
 
-## 4. Contrato de entrada y autoridad
+## 4. Contrato, algoritmo y reacción
 
-La ficha del caso contendrá, como mínimo: identidad y revisión del contraste; identidad del caso; afirmación; documentos y revisiones; conjunto exacto de páginas; política y reglas con identificadores; formato esperado; criticidad; límites de contexto, memoria, tiempo técnico y generación; y criterio de conservación. La clave científica se conserva por separado y no será accesible al recorrido de generación.
+La ficha identifica el caso, su revisión, la afirmación, las fuentes y sus revisiones, el conjunto exacto de páginas, la política, el formato esperado, las obligaciones, la criticidad, los recursos y el criterio de cierre. La clave de corrección se conserva en un ámbito inaccesible al candidato.
 
-Cada página se vinculará a un documento y una revisión, con numeración y convención de índices expresas, contenido y huella. El conjunto recibido debe coincidir con el exigido; contar páginas no basta. Una página repetida no sustituye a otra ausente. Toda transformación de representación debe quedar definida, conservada y cotejada; no se permite una normalización que altere sentido, condiciones, cifras o excepciones.
+La secuencia mínima es:
 
-La incorporación se comprueba después de construir la representación conversacional efectiva, incluidas plantilla y tokenización. Debe caber el contenido íntegro con las reservas de generación y recursos fijadas. Si no cabe, falta contenido o existe truncamiento, se detiene antes de inferir; no se recorta, resume, sustituye ni amplía el contexto silenciosamente.
+1. Verificar autoridad, identidad, configuración efectiva y aislamiento.
+2. Obtener mediante MCP cada página fijada y cotejar su identidad y contenido.
+3. Comprobar la igualdad del conjunto esperado y el recibido. Una página duplicada no sustituye a una ausente.
+4. Construir la entrada completa y cotejar su representación efectiva, contexto y reserva.
+5. Admitir una generación sólo cuando sus precondiciones estén acreditadas.
+6. Conservar todas las emisiones originales y la telemetría durante el cálculo.
+7. Validar el resultado sin reescribirlo y conservar las decisiones de admisión.
+8. Someter el contenido a la evaluación competente y presentar resultado y evidencias.
 
-Los documentos y las emisiones del candidato son datos. No pueden cambiar el catálogo, la política, los criterios, la criticidad ni los estados del controlador. Instrucciones incrustadas en un documento no adquieren autoridad. El modelo y el servicio documental deben carecer de rutas de acceso a Internet o a otras fuentes durante el contraste; esta condición se comprueba en el entorno y en la interfaz, además de expresarse en la política.
+Cada reacción queda prefijada por la regla correspondiente: continuar una operación autorizada, obtener evidencia pendiente por una ruta permitida, mantener la decisión sin resolver o detener. El Árbitro no suaviza obligaciones, altera el corpus ni repite generaciones para obtener un resultado favorable.
 
-## 5. Obligaciones comprobables
+Si el conjunto no cabe con la reserva necesaria, se detiene antes de inferir. No se permite recortar, resumir o sustituir páginas, ni ampliar silenciosamente el contexto. La recuperación de una incidencia exige conservar su causa y acreditar una nueva condición de admisión; no constituye permiso general de reintento.
 
-Los identificadores siguientes corresponden a esta edición de diseño; su realización deberá conservar una correspondencia inequívoca entre regla, comprobación y evidencia.
+### Control del MCP
 
-| Regla | Condición exigida | Evidencia propia del controlador | Consecuencia si no se acredita |
-| --- | --- | --- | --- |
-| O01 · Autoridad e identidad | Caso, política, configuración y corpus coinciden con las revisiones fijadas. | Fichas y cotejos de identidad. | No admitir la consulta. |
-| O02 · Cobertura | Conjunto exacto de páginas recibido, íntegro y sin sustituciones. | Solicitudes, devoluciones y cotejo del conjunto. | No admitir la consulta. |
-| O03 · Incorporación | Todo el contenido exigido pertenece a la entrada efectiva y cabe con reserva. | Entrada, plantilla, transformaciones, tokenización y punto de admisión del motor. | No admitir la consulta. |
-| O04 · Aislamiento y control | Se conservan las fuentes permitidas, los límites y una sola secuencia prevista por caso. | Configuración comprobada y acontecimientos de ejecución. | Detener con el alcance que corresponda. |
-| O05 · Salida identificable | Existe finalización comprobada y la estructura y categorías son válidas. | Original y resultado de validación. | No admitir la salida; no repararla. |
-| O06 · Referencias y fragmentos | Identificadores autorizados y citas literales localizables en lo incorporado. | Cotejo de referencias y fragmentos. | No admitir la salida como conforme. |
-| O07 · Custodia | Los objetos exigidos y sus relaciones están conservados y cotejados. | Manifiesto, huellas y recuperación verificada. | No declarar recepción conforme; detener si la pérdida compromete el control. |
-| O08 · Evaluación de contenido | Una recepción competente contrasta significado, condiciones y excepciones. | Adjudicación motivada frente a la clave reservada. | Mantener evaluación pendiente o registrar el resultado desfavorable; nunca presumir corrección. |
+Antes de comenzar se cotejan su realización, configuración cargada, reglas, herramientas expuestas y acceso efectivo a archivos y red. Las huellas acreditan identidad; las pruebas de comportamiento acreditan que las reglas se aplican.
 
-O01–O07 son obligaciones instrumentales. O08 pertenece a una función evaluadora separada. Un campo escrito por el modelo, como «he leído todas las páginas», no constituye evidencia para O02 u O03.
+Antes de cada solicitud se comprueban identidad del caso, herramienta permitida, argumentos, localizadores y límites. Después de cada devolución se cotejan correspondencia, revisión, contenido, formato e incidencias. Ambas fronteras conservan sus originales.
 
-## 6. Salida del candidato, admisión y estados
+Las pruebas deben incluir solicitudes legítimas y solicitudes prohibidas. Bloquear todo no demuestra un servicio correcto. Ningún acceso directo del candidato, una ruta alternativa o una instrucción documental puede eludir al Árbitro. El aislamiento se aplica también en el entorno de ejecución.
 
-La ficha de respuesta solicitará: identidad del caso; una clasificación entre `RESPALDADA`, `CONTRADICHA` y `EVIDENCIA_INSUFICIENTE`; identificadores de las reglas aplicadas; referencias a documentos, revisiones y páginas; fragmentos probatorios literales; y justificación breve. Cada referencia deberá señalar contenido efectivamente incorporado. La ausencia justificada de un fragmento probatorio positivo en la clase de insuficiencia se definirá en el criterio previo, sin fabricar citas ni exigir una prueba textual de inexistencia.
+## 5. Obligaciones y evidencias
 
-Para el primer formato se usarán fragmentos continuos literales. Una conclusión que dependa de varias partes deberá referenciarlas por separado. La justificación puede reformular el texto, siempre que conserve contenido, condiciones, negaciones, unidades, ámbito y excepciones. La coincidencia literal de una cita es una comprobación de procedencia, no una prueba de que respalde la conclusión.
-
-La validación del formato es obligatoria. Una gramática que restrinja la generación será opcional y sólo se incorporará tras acreditar compatibilidad con el motor, el formato conversacional y todos los canales observables. La restricción de forma no hace determinista la interpretación ni garantiza verdad.
-
-| Estado del recorrido | Condición para alcanzarlo | Salida autorizada |
+| Obligación | Exigencia | Evidencia |
 | --- | --- | --- |
-| Preparado | Ficha y autoridad fijadas. | Solicitudes documentales previstas. |
-| Documentación cotejada | O01 y O02 conformes. | Construcción de la entrada. |
-| Entrada admitida | O03 y controles previos O04 conformes. | Una consulta prevista. |
-| Generación en curso | Entrada admitida y conservación activa. | Emisiones originales para auditoría, todavía no respuesta admitida. |
-| Original conservado | Finalización y originales disponibles. | Validación de O05–O07. |
-| Admitido instrumentalmente | Requisitos de salida y custodia conformes. | Evaluación independiente del contenido. |
-| Evaluado | Cotejo independiente documentado. | Resultado motivado con alcance y reservas. |
-| Bloqueado | Requisito incumplido o no comprobable. | Causa, atribución provisional y originales disponibles; sin corrección automática. |
+| O01 · Autoridad e identidad | Coincidencia de caso, reglas, corpus y realizaciones con lo fijado. | Referencias y cotejos de identidad. |
+| O02 · Cobertura | Conjunto completo de páginas, sin sustituciones. | Solicitudes, devoluciones y comparación del conjunto. |
+| O03 · Incorporación | Contenido íntegro en la entrada efectiva y con reserva. | Representación, tokenización y admisión del motor. |
+| O04 · Reglas y aislamiento | Aplicación efectiva de límites y reglas, incluido el MCP. | Configuración, pruebas externas y control de operaciones. |
+| O05 · Salida | Finalización y estructura válidas. | Emisión original y comprobación. |
+| O06 · Referencias y citas | Procedencia comprobada de referencias y fragmentos. | Cotejo con lo incorporado. |
+| O07 · Custodia | Objetos y relaciones conservados y recuperables. | Manifiesto, huellas y recuperación cotejada. |
+| O08 · Contenido | Conclusión fiel, con condiciones y excepciones pertinentes. | Evaluación competente frente a referencia reservada. |
 
-No se generará otra respuesta para mejorar una fallida, ni se corregirá el original antes de conservarlo. La posible atribución será instrumental, del candidato o no determinada, con su evidencia. La existencia de un bloqueo no asigna automáticamente un valor científico.
+La tabla identifica obligaciones; **no constituye por sí misma una célula SV ni autoriza asignar n = 8**. O01–O07 describen comprobaciones instrumentales. O08 requiere adjudicación del contenido. El testimonio del modelo sobre lo que leyó no acredita O02 ni O03.
 
-La clasificación `EVIDENCIA_INSUFICIENTE` puede ser correcta para el caso y no equivale por sí sola a U. La terna SV, la puntuación y la declaración de aptitud pertenecen al criterio de evaluación del contraste. Un impedimento técnico se conserva aparte. La admisión instrumental tampoco significa «Apto».
+## 6. Terna del SV, incidencias y aptitud
 
-## 7. Pictogramas asociados a obligaciones
+Los [pilares del Lenguaje](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/PILARES_Y_RESTRICCIONES_DE_DISENO_DEL_LENGUAJE_DE_COMPUTACION_SV_2026_09_05.md) y los [fundamentos del SV](https://github.com/juantoniolloretegea/SV-matematica-semantica/blob/b8fd32978292d25adf9b87cf71e409005dce642c/documentos/fundamentos/README.md) gobiernan su interpretación:
 
-En la primera versión, los pictogramas se destinan a la revisión humana. Se obtienen del registro del controlador y de la evaluación, nunca del testimonio del modelo. Su función es hacer visible qué se exigía, qué se comprobó y dónde está la evidencia.
-
-| Representación prevista | Obligaciones representadas | Texto de interpretación |
+| Valor | Significado | Condición de uso |
 | --- | --- | --- |
-| Documento identificado | O01 | Documento y revisión cotejados. |
-| Conjunto de páginas | O02 y O03, mostradas por separado | Páginas recibidas; páginas incorporadas a la entrada efectiva. |
-| Acceso restringido | O04 | Fuentes y límites comprobados para esta ejecución. |
-| Ficha de respuesta | O05 | Finalización y estructura conformes. |
-| Cita vinculada | O06 | Fragmento localizado en el contenido incorporado. |
-| Archivo de evidencias | O07 | Conservación y recuperación cotejadas. |
-| Examen del contenido | O08 | Evaluación realizada; mostrar además su resultado y alcance. |
+| 0 | Apto respecto del parámetro constituido. | Evaluación válida que acredita el cumplimiento exigido. |
+| 1 | No apto respecto del parámetro constituido. | Evaluación válida que acredita el incumplimiento. |
+| U | Indeterminado. | Parámetro válidamente constituido cuya evaluación permanece indeterminada. |
 
-Cada elemento incluirá regla y versión, estado, fecha del acontecimiento, identidad del caso y enlace a su evidencia. Estados operativos: **pendiente, comprobado, incumplido o no comprobable**. Color, símbolo y texto se complementan; el color no será el único portador del significado. No se mostrará conformidad general mientras el contenido permanezca pendiente, ni un símbolo de éxito por el solo hecho de haberse realizado una evaluación desfavorable.
+Los acontecimientos técnicos y las fases del recorrido se registran con su descripción y evidencia. Un error de red, memoria, referencia, conservación o representación no es una evaluación U. Tampoco «operación terminada» implica 0. Una falta documental causada por el instrumento es una incidencia; una omisión del candidato evaluada sobre un requisito válido puede justificar 1. La atribución exige evidencia.
 
-Los pictogramas no son valores 0/1/U ni dictámenes. No se transmiten imágenes o braille al modelo en este primer alcance. Una eventual utilidad de esas representaciones para el candidato exigiría otro contraste de contenido equivalente y una entrada compatible, sin deducir mejora de comprensión por su apariencia.
+```mermaid
+flowchart TD
+    A["Evidencia observable y contrato autorizado"]
+    B{"¿Existe parámetro válido y evaluación competente?"}
+    I["Registrar incidencia o evaluación pendiente sin inventar 0, 1 o U"]
+    C["Aplicar la semántica canónica del SV"]
+    V0["0: Apto para ese parámetro"]
+    V1["1: No apto para ese parámetro"]
+    VU["U: indeterminación válida"]
+    R["Árbitro: reacción prefijada y trazable"]
+    P["Pictograma con valor, regla, alcance y evidencia"]
+    A --> B
+    B -->|No| I
+    B -->|Sí| C
+    C --> V0
+    C --> V1
+    C --> VU
+    V0 --> R
+    V1 --> R
+    VU --> R
+    I --> R
+    R --> P
+```
 
-## 8. Contraejemplo que debe poder distinguirse
+La terna expresa la evaluación; no prescribe por sí sola una acción universal. Una regla autorizada vincula cada resultado con la operación permitida. El Árbitro no resuelve U por conveniencia ni convierte una carencia instrumental en valoración de dominio.
 
-Ejemplo ilustrativo, excluido de los casos reservados:
+La clasificación de una célula completa exige **n = b², b ≥ 3**, orden posicional fijado y valores válidos en todas sus posiciones. El umbral es **T(n) = ⌊7n/9⌋** conforme a la función canónica: N1 ≥ T(n) determina No apto, N0 ≥ T(n) determina Apto y los restantes casos son indeterminados. No se completan posiciones ausentes con U ni se aplica esta regla a una colección arbitraria de comprobaciones.
 
-- Página 0: el intervalo ordinario de inspección es de doce meses.
-- Página 1: con señal R, el intervalo es de tres meses; esta excepción prevalece.
-- Dato: R está presente. Afirmación: «El intervalo aplicable es de doce meses».
+Las relaciones de compuerta y supervisión del SV pueden fundamentar el condicionamiento de operaciones, pero su uso exige representación y realización acreditadas. El alojamiento del modelo no debe reproducir una función soberana alternativa de clasificación.
 
-Si falta la página 1, el controlador debe impedir la consulta. Si ambas páginas están incorporadas y el modelo responde «respaldada» citando literalmente la página 0, puede cumplir estructura y procedencia, pero su conclusión es incorrecta. La evaluación semántica debe identificar la excepción ignorada. Así se distingue entrega insuficiente de interpretación incorrecta sin convertir una cita auténtica en prueba de verdad.
+La [puntuación de modelos](../../CRITERIO-PUNTUACION-MODELOS-20261001.md) y la regla adicional de exclusión por error crítico conservan su función propia. Un resultado crítico no queda compensado por otros aciertos. Una puntuación elevada, una estructura correcta o una admisión instrumental no bastan para declarar aptitud.
 
-Si las premisas y una regla de dominio se formalizan y validan, un programa podrá comprobar esa conclusión concreta. No se presupone un comprobador universal del significado ni se introduce otro modelo como juez infalible.
+## 7. Respuesta, significado y representación visual
 
-## 9. Conservación y reconstrucción
+El candidato produce la clasificación documental prevista en su política, las referencias, las citas y la justificación. Esas categorías no son una autoevaluación en la terna SV: una respuesta `EVIDENCIA_INSUFICIENTE` puede ser correcta si así lo exige el caso.
 
-Conservar, vinculados por identidad y secuencia: caso y política; configuración y versiones del controlador, MCP, motor, modelo y tokenizador; corpus original y páginas; solicitudes y devoluciones MCP; transformaciones; entrada efectiva; parámetros y condiciones de generación; emisiones originales por canal; finalización, errores e interrupciones; decisiones de admisión; evaluación; y telemetría de tiempo, memoria y control disponible.
+Las citas se cotejan contra el contenido efectivamente incorporado. Una cita auténtica puede acompañar una conclusión incorrecta. La justificación admite paráfrasis fieles, conservando condiciones, negaciones, cifras, unidades, ámbito, temporalidad, excepciones y grado de incertidumbre. No se exige identidad verbal donde no se haya pedido cita literal.
 
-El registro será acumulativo. Las correcciones documentales se incorporarán como revisiones relacionadas, sin sobrescribir el original. Debe acreditarse la conservación previa a la admisión y verificarse su recuperación para la entrega. Un fallo del propio registro exige detener y conservar por un medio independiente disponible la evidencia del fallo; si ni siquiera puede acreditarse esa conservación, se declara la carencia y no se presenta el expediente como completo.
+Una restricción de formato o gramática sólo se incorpora si está prevista y es compatible con el motor y sus canales. No acredita corrección semántica y no autoriza reparar una salida después de observarla.
 
-Se conservará la emisión de análisis cuando el motor la produzca y sea observable. Esto no equivale a observar todo el cálculo interno ni a probar que el texto de análisis explique fielmente sus causas. La frontera que debe ser auditable abarca las operaciones instrumentales y todas las emisiones accesibles; no se promete acceso a estados internos no instrumentados.
+Los pictogramas muestran la obligación, su identificador, el valor válido `0`, `1` o `U`, la fecha, el caso y la evidencia. Su rótulo siempre explicita el alcance. Cuando no existe valoración válida, muestran «sin evaluación» o la incidencia concreta **sin atribuirle un valor de la terna**. No se introduce un código de colores con significado alternativo.
 
-Un tercero deberá poder reconstruir qué se proporcionó, qué ocurrió, qué controles se aplicaron y por qué se admitió o bloqueó la respuesta. Una ejecución experimental similar exige las mismas identidades y condiciones declaradas, pero no presupone palabras idénticas. Las diferencias de significado se evaluarán; no se aceptarán por conservar la estructura. Las huellas acreditan identidad de objetos, no verdad científica.
+Los signos proceden del registro y de la evaluación, no de la afirmación del modelo. En este alcance son una presentación humana; no se envían imágenes o braille al candidato.
 
-## 10. Realización y retorno
+## 8. Contraejemplo de comprobación
 
-El desarrollo y las comprobaciones propias se realizarán en Rust. Se conservará el MCP disponible si satisface el contrato. Un cambio de SDK requerirá demostrar su necesidad y comprobarlo; no se adopta por actualidad o por incorporar más funciones. La primera realización no incluirá Stateright, Regorus, un editor visual general, entrenamiento ni cambios de pesos.
+Un documento de prueba indica en su página 0 un intervalo ordinario de doce meses; su página 1 establece tres meses si concurre la señal R. La afirmación sostiene que, existiendo R, el intervalo es de doce meses.
 
-La secuencia de continuación es: **controlador comprobado sin modelo → integración efectiva acreditada → contraste nuevo finito → decisión sobre la utilidad del sistema compuesto**. Los requisitos de cada etapa y las condiciones para detenerla figuran en [VERIFICACION.md](VERIFICACION.md). Los resultados y dictámenes de experimentos anteriores permanecen intactos.
+- Si falta la página 1, la consulta debe quedar impedida antes de inferir.
+- Si ambas páginas llegan al modelo y éste acepta la afirmación citando la página 0, estructura y procedencia pueden ser conformes mientras el contenido es incorrecto.
+- Si existe una regla de dominio formalizada y validada para ese intervalo, puede cotejarse esa conclusión concreta mediante un algoritmo. No se presupone un verificador universal del significado.
+
+Este ejemplo pertenece a la comprobación instrumental y no sustituye el caso reservado de evaluación.
+
+## 9. Custodia y reconstrucción
+
+Se conservan vinculados por identidad y secuencia: contrato, política, fichas, corpus, realizaciones, configuración efectiva, reglas del MCP, solicitudes, devoluciones, transformaciones, entrada real, tokenización, parámetros, emisiones por canal, finalización, errores, decisiones, evaluación y telemetría.
+
+El registro es acumulativo y precede a la admisión. Las correcciones documentales se relacionan con el original sin sobrescribirlo. La entrega requiere comprobar su recuperación.
+
+Se conserva el canal de análisis emitido cuando sea observable. Esto no acredita observar todo el cálculo interno ni que su texto explique fielmente las causas de una respuesta. La exigencia instrumental es no dejar sin evidencia ninguna frontera del recorrido definido. Si una frontera obligatoria no puede observarse, se declara la carencia y no se inicia el contraste.
+
+La reconstrucción permite determinar qué se proporcionó, qué ocurrió y por qué se admitió o detuvo la ejecución. Una realización experimental similar conserva las condiciones declaradas; sus diferencias de contenido requieren evaluación aunque cambien las palabras. Las huellas acreditan identidad de los objetos, no verdad científica.
+
+## 10. Realización y reutilización
+
+El componente se desarrolla y comprueba en Rust, reutilizando los contratos y componentes efectivos del Lenguaje. Se documentan sus identificadores y revisiones. La falta de una representación necesaria se comunica como limitación concreta antes de inferir; no se simula integración mediante rótulos o duplicación de la semántica.
+
+El recorrido de admisión es: **comprobación sin modelo → comprobación de integración efectiva → contraste delimitado → evaluación**. El diseño es transversal; cada candidato exige un perfil comprobado y conserva resultados propios. No se trasladan automáticamente a otro modelo los resultados favorables o desfavorables de una realización.
 
 ---
 

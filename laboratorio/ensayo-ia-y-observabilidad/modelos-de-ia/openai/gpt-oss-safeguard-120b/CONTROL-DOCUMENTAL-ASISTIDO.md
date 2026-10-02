@@ -1,34 +1,45 @@
-# Aplicación prevista del control documental a GPT-OSS-Safeguard-120B
+# GPT-OSS-Safeguard-120B bajo dirección del Árbitro SV
 
-**Corte de diseño · 2 de octubre de 2026.** Primer candidato previsto para un sistema compuesto nuevo; implementación, integración y contraste todavía no acreditados.
+**Aplicación experimental delimitada · 2 de octubre de 2026.**
 
-## Sede común y función del modelo
+## Objeto
 
-El diseño reutilizable se conserva en [Control documental asistido: controlador, algoritmo y pictogramas](../../model-context-protocol/controlador-pictograma-algoritmo/README.md). La [especificación y sus diagramas](../../model-context-protocol/controlador-pictograma-algoritmo/DISENO.md) y el [plan de comprobación](../../model-context-protocol/controlador-pictograma-algoritmo/VERIFICACION.md) tienen allí su sede única. Esta nota vincula su aplicación al expediente del modelo sin duplicar la especificación.
+Comprobar una condición asistida del caso L01 con el Árbitro Director del Lenguaje de Computación SV: adquirir e incorporar íntegramente la sección documental fijada antes de una única generación de GPT-OSS-Safeguard-120B.
 
-El controlador Rust obtendrá mediante MCP todas las páginas previamente fijadas y comprobará su incorporación efectiva antes de consultar a Safeguard. El modelo clasificará una afirmación conforme a una política expresa y fundamentará su respuesta con los pasajes recibidos. La evaluación científica se mantendrá separada de la admisión instrumental.
+El [diseño común](../../model-context-protocol/controlador-pictograma-algoritmo/README.md), sus [cuatro diagramas](../../model-context-protocol/controlador-pictograma-algoritmo/DISENO.md) y el [plan de comprobación](../../model-context-protocol/controlador-pictograma-algoritmo/VERIFICACION.md) definen el instrumento transversal. Esta aplicación identifica su alcance para el candidato.
 
-El nuevo objeto es la clasificación con adquisición documental asistida. No se atribuirá al modelo la recuperación realizada por el controlador ni se presentará como prueba de lectura autónoma exhaustiva. Los pictogramas serán una representación para revisión humana; no se incorporarán a la entrada del candidato.
+## Antecedente y comparación
 
-## Relación con los resultados anteriores
+La [entrega-02](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/84028c8d2611ed762c11b21dd4d8e6d72e3c9c0b/respuestas-ejecucion/GPTOSS-SAFEGUARD-INSTALACION-20261001/entrega-02/INFORME-FINAL.md) conserva L01 = 1 crítico por omitir una de las dos páginas de lectura obligatoria. Su clasificación factual y su cita fueron correctas. El contraste completo obtuvo 66,67/100 y No apto para su alcance.
 
-La [ficha técnica](FICHA_TECNICA.md), el [estado estructurado](ESTADO.json) y las [pruebas anteriores](tests-y-pruebas-efectuadas) conservan sus evidencias y conclusiones. El contraste inicial registró 87,5/100 y el posterior 66,67/100; ambos declararon **No apto para su contraste delimitado**, con incumplimiento crítico de lectura íntegra. La nueva arquitectura no corrige retrospectivamente esos resultados ni cambia sus reservas o recepciones pendientes.
+La nueva condición, **L01-ARBITRO**, utiliza la misma afirmación y las dos páginas originales T1/S1, índices 0 y 1. El Árbitro realiza la adquisición documental; el modelo recibe el contenido íntegro y clasifica. Esta intervención cambia el modo de suministro y se identifica expresamente.
 
-El comportamiento del sistema compuesto deberá recibir identidad, resultados y límites propios. No se promedian sus puntuaciones con las históricas ni se interpreta la asistencia documental como una mejora ya demostrada del candidato.
+| Aspecto | L01 conservado | L01-ARBITRO |
+| --- | --- | --- |
+| Adquisición de páginas | A cargo del candidato mediante herramientas. | A cargo del Árbitro antes de consultar al candidato. |
+| Contenido efectivo | Una de las dos páginas exigidas. | Deben acreditarse ambas páginas antes de inferir. |
+| Objeto evaluado | Consulta documental autónoma y respuesta. | Recorrido dirigido y respuesta con documentación completa. |
+| Resultado | Conservado, sin modificación. | Pendiente de ejecución y evaluación. |
 
-## Condiciones antes de inferir
+La nueva condición no reabre la calificación histórica ni acredita cumplimiento autónomo. Al reutilizar un caso conocido, tampoco constituye una muestra nueva de generalización.
 
-1. Comprobar el controlador localmente en Rust sin modelo, incluidos recorridos adversariales y uno conforme.
-2. Acreditar identidad actual, compatibilidad del motor y MCP, incorporación efectiva de todos los pasajes, observación, conservación, aislamiento y capacidad dentro de las cotas existentes.
-3. Fijar un encargo propio para tres casos nuevos reservados, con política, clave, criticidad y criterios anteriores a la generación; una consulta prevista por caso y sin rondas de mejora.
+## Condiciones
 
-Se parte de la instalación conservada, cuya disponibilidad actual deberá comprobarse. El diseño no exige ajuste de pesos, entrenamiento, recursos nuevos, incorporación de otros candidatos ni modificación de ensayos ajenos. La publicación de esta nota no inicia inferencia.
+- Desarrollo y comprobaciones acotados en Rust antes de inferir.
+- Cotejo del MCP y de sus reglas, corpus local, entrada efectiva, aislamiento y custodia.
+- Política de clasificación y formato anteriores conservados; instrucción de adquisición adaptada de forma explícita al suministro asistido.
+- Una única generación, sin corrección de la salida ni repetición.
+- Sin cambios de pesos, cuantización, motor numérico, esfuerzo de razonamiento o recursos.
+- Evaluación del contenido separada de las comprobaciones instrumentales.
+- Pictogramas humanos derivados de la evidencia y de valoraciones válidas, sin otra IA directora.
 
-## Documentación y retorno
+## Resultado que puede concluirse
 
-Los resultados efectivos se incorporarán a este expediente cuando existan, con enlace a originales y entrega en SV-sala-de-maquinas. Se mantendrá la relación con [TT-0018](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0018.md), [TT-0014](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0014.md) cuando afecte a la interfaz documental, [S39](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/sucesos/SUCESOS_SV.md#s39) y las [actas de Calidad](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/tree/main/docs/calidad/tuberias-ia/continuacion-15-09-2026) según su alcance.
+Si el recorrido acredita incorporación íntegra y la respuesta cumple el criterio prefijado, habrá conformidad de esta condición del conjunto **Lenguaje + Árbitro + MCP + modelo**. Un fallo semántico con incorporación completa y comprobada quedará diferenciado de una deficiencia instrumental.
 
-Retorno: controlador comprobado → integración acreditada → contraste finito → decisión sobre utilidad del sistema compuesto. Ninguna de esas etapas se declara completada por esta nota.
+El informe conservará respuesta, terna aplicable, criticidad, puntuación para N = 1, tiempos y recursos. No calculará una célula ni un umbral sobre ese único caso. Un fallo técnico se mantendrá fuera de la terna. Los dictámenes anteriores y la ausencia de aptitud clínica permanecen.
+
+La ejecución y las evidencias tendrán identidad propia en la sede de encargos. Este expediente enlazará su entrega una vez efectuada y cotejada.
 
 ---
 

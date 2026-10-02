@@ -1,44 +1,41 @@
-# Control documental asistido: controlador, algoritmo y pictogramas
+# Árbitro Director del Lenguaje de Computación SV
 
-**Edición de diseño 1 · 2 de octubre de 2026.** Estado: especificación documental; componente nuevo no implementado, no comprobado en ejecución y no desplegado.
+**Diseño definido · 2 de octubre de 2026. Realización y comprobación experimental pendientes.**
 
-Este diseño separa las obligaciones documentales que puede ejecutar un programa de la interpretación que corresponde al modelo. Un controlador desarrollado en Rust obtendrá mediante el servicio MCP todas las páginas fijadas para cada caso, comprobará su incorporación efectiva a la entrada y condicionará la admisión de la respuesta a requisitos verificables. Una evaluación independiente determinará después la corrección del contenido.
+El **Árbitro Director**, abreviado **Árbitro SV**, es el componente previsto del Lenguaje de Computación SV que dirige y supervisa la ejecución de un modelo concreto conforme a las reglas del Sistema Vectorial. Coordina la entrada documental, las herramientas, la generación, la conservación y la admisión de resultados. Su respuesta ante incidencias se determina mediante reglas y algoritmos explícitos.
 
-**La documentación completa debe llegar antes de la consulta. Su presencia y una cita auténtica no garantizan que la conclusión sea correcta.**
+El Árbitro supervisa también el servicio MCP: su identidad, sus reglas efectivas, sus límites de acceso y cada solicitud y devolución. La autoridad procede del SV y de los contratos del Lenguaje; una declaración del servicio o del candidato no sustituye su comprobación.
 
-## Organización y lectura
+## Organización
 
 | Documento | Contenido |
 | --- | --- |
-| [Diseño y diagramas](DISENO.md) | Responsabilidades, recorrido completo, intercambio entre componentes, obligaciones, estados, registro y límites. |
-| [Comprobaciones y criterios de continuación](VERIFICACION.md) | Casos adversariales, recorrido conforme, integración y contraste inicial limitado. |
-| [Aplicación prevista a Safeguard](../../openai/gpt-oss-safeguard-120b/CONTROL-DOCUMENTAL-ASISTIDO.md) | Primer candidato, relación con su expediente y separación de los resultados anteriores. |
+| [Diseño y diagramas](DISENO.md) | Gobierno, funciones, recorrido, intercambios, obligaciones, terna y evidencias. |
+| [Verificación](VERIFICACION.md) | Comprobaciones instrumentales, integración y límites de la evaluación. |
+| [Aplicación a Safeguard](../../openai/gpt-oss-safeguard-120b/CONTROL-DOCUMENTAL-ASISTIDO.md) | Primer contraste asistido y relación con los resultados del candidato. |
 
-La carpeta conserva el nombre `controlador-pictograma-algoritmo` y permanece bajo `model-context-protocol` por su relación con el servicio documental compartido. El controlador pertenece a la aplicación que utiliza MCP: no es una función que el protocolo proporcione automáticamente. El diseño común tiene aquí su única sede; cada modelo mantiene en su expediente su configuración, aplicación y resultados propios.
+## Funciones
 
-## Función de cada parte
+- **Algoritmo:** expresa condiciones, relaciones y reacciones permitidas.
+- **Árbitro:** ejecuta esas reglas, comprueba sus precondiciones y controla las fronteras del recorrido.
+- **MCP documental:** proporciona contenido de la caché autorizada mediante un contrato verificable.
+- **Modelo:** interpreta los documentos y produce una respuesta conforme a la política recibida.
+- **Pictogramas:** representan para la revisión humana la obligación, su valoración válida en `(0,1,U)` y la evidencia que la sustenta.
+- **Evaluación competente:** adjudica el contenido y conserva la diferencia entre conformidad instrumental y aptitud para el dominio.
 
-- **Algoritmo:** determina condiciones, comprobaciones y transiciones permitidas mediante reglas explícitas.
-- **Controlador:** ejecuta ese algoritmo, solicita los documentos, conserva evidencias y admite o bloquea el recorrido.
-- **MCP documental:** permite leer la caché autorizada mediante un contrato identificado y auditable.
-- **Modelo:** clasifica la afirmación y explica su fundamento conforme a la política y los pasajes recibidos.
-- **Pictogramas:** representan para la revisión humana el estado de cada obligación y enlazan su evidencia. No ejecutan reglas ni constituyen una autoridad adicional.
+El Árbitro opera sobre un modelo identificado en cada ejecución. La reutilización con otros candidatos requiere comprobar su perfil, sus interfaces y sus límites. El diseño común conserva una sola sede documental y cada modelo mantiene su aplicación y sus resultados.
 
-Las capas pueden complementarse porque comprueban propiedades distintas. Su composición no demuestra por sí sola una mejora de fiabilidad ni compensa un incumplimiento crítico.
+## Gobierno y alcance
 
-## Primer alcance
+La terna conserva el significado del SV: **0 = Apto, 1 = No apto, U = indeterminado**. Un fallo de transporte, una página ausente, una identidad desconocida o una pérdida de custodia se describen como incidencias instrumentales; no se convierten automáticamente en U. La constitución de parámetros, la asignación de valores y las reglas de aptitud pertenecen a las fuentes competentes del SV.
 
-Adquisición documental íntegra y asistida, corpus cerrado, una consulta prevista por caso y salida estructurada. Primero se comprobará el controlador sin modelo; después, la integración; por último, se propone un contraste nuevo de tres casos reservados. Safeguard será el primer candidato previsto, con identidad y resultados del sistema compuesto separados de sus contrastes anteriores.
+El control determinista permite exigir propiedades observables, como incorporar todas las páginas previstas antes de inferir. No convierte en determinista la interpretación del modelo ni garantiza la verdad de una conclusión. La evaluación del contenido sigue siendo necesaria.
 
-Se mantiene el servicio MCP existente si satisface el contrato. La primera versión no incorpora Stateright, Regorus, un editor visual de reglas ni representaciones braille o pictográficas como entrada del modelo. No requiere ajuste de pesos ni sustitución del motor por el empleado en un ejemplo de terceros.
+El primer alcance utiliza Rust y el servicio documental local ya disponible. Los pictogramas proceden del registro comprobado y se destinan a la presentación humana. No se incorpora otra inteligencia artificial como directora ni se modifican los pesos del candidato.
 
-La publicación de esta especificación no acredita implementación, disponibilidad actual del servidor, recepción favorable ni ejecución de nuevos casos. La continuación se rige por las etapas y límites de [verificación](VERIFICACION.md).
+## Fundamento
 
-## Relación documental
-
-[Ficha del servicio MCP](../FICHA_TECNICA.md) · [TT-0014, componente documental](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0014.md) · [Expediente Safeguard](../../openai/gpt-oss-safeguard-120b/FICHA_TECNICA.md).
-
-Los originales de una futura ejecución tendrán su entrega identificada en SV-sala-de-maquinas; la aplicación y los resultados se registrarán en el expediente de cada modelo. Los sucesos, tiques y actas de Calidad conservarán la recepción que les corresponda, sin sustituirla por este diseño.
+La especificación se vincula a los [pilares del Lenguaje](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/PILARES_Y_RESTRICCIONES_DE_DISENO_DEL_LENGUAJE_DE_COMPUTACION_SV_2026_09_05.md), a sus [perfiles y contratos](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/ACTA_TECNICA_DE_PERFILES_CONTRATOS_Y_ENSAMBLAJE_DEL_LENGUAJE_SV_2026_09_06.md) y a los [fundamentos matemáticos y semánticos del SV](https://github.com/juantoniolloretegea/SV-matematica-semantica/blob/b8fd32978292d25adf9b87cf71e409005dce642c/documentos/fundamentos/README.md).
 
 ---
 
