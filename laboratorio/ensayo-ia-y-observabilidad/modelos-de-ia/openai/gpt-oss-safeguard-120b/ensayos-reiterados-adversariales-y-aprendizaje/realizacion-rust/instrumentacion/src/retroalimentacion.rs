@@ -19,7 +19,7 @@ pub fn validar_plan(p: &Value) -> Result<(), String> {
     if casos.len() != NUM_CASOS { return fail("Número de casos distinto"); }
     for (i, c) in casos.iter().enumerate() {
         let id = format!("{bloque}{:02}", i + 1);
-        if c["id"] != id || c["documento"] != format!("D{id}") || c["seccion"] != "S1" || c["afirmacion"].as_str().is_none_or(str::is_empty) { return fail("Correspondencia del caso"); }
+        if c["id"] != id || c["documento"] != format!("BANCO-{bloque}") || c["seccion"] != id || c["afirmacion"].as_str().is_none_or(str::is_empty) { return fail("Correspondencia del caso"); }
         let anteriores = c["antecedentes"].as_array().ok_or("Antecedentes ausentes")?;
         if anteriores.len() as u64 != capa { return fail("Antecedentes incompletos o adicionales"); }
         for (j, a) in anteriores.iter().enumerate() {
@@ -38,7 +38,7 @@ pub fn contenido(caso: &Value, capa: u64, paginas: &Value) -> Result<String, Str
 
 #[cfg(test)] pub fn plan_prueba(capa: u64) -> Value {
     json!({"campana":"SG-RETROALIMENTACION-20261003","bloque":"A","capa":capa,"max_revisiones":3,"casos":(1..=9).map(|i|{
-        let id=format!("A{i:02}");json!({"id":id,"documento":format!("D{id}"),"seccion":"S1","afirmacion":"Afirmación sintética", "antecedentes":(0..capa).map(|j|json!({"id":id,"capa":j,"respuesta_final":"original","sha256":huella(b"original")})).collect::<Vec<_>>()})
+        let id=format!("A{i:02}");json!({"id":id,"documento":"BANCO-A","seccion":id,"afirmacion":"Afirmación sintética", "antecedentes":(0..capa).map(|j|json!({"id":id,"capa":j,"respuesta_final":"original","sha256":huella(b"original")})).collect::<Vec<_>>()})
     }).collect::<Vec<_>>()})
 }
 

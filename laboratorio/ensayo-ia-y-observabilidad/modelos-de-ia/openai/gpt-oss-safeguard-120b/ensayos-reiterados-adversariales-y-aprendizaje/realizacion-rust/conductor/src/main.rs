@@ -9,6 +9,13 @@ use sv_arbitro_comprobaciones::{Ficha,Pagina,ligaduras,cotejar_entrada,retroalim
 type R<T>=anyhow::Result<T>;
 fn hash(b:&[u8])->String{format!("{:x}",Sha256::digest(b))}
 fn emit(v:Value){audit::emit(v)}
+#[test] fn catalogo_compatible_con_mcp_conservado(){
+ let c:sv_mcp_documental::Catalog=serde_json::from_slice(include_bytes!("../../cache/catalogo.json")).unwrap();
+ c.validate(true).unwrap();assert_eq!(c.documents.len(),1);assert_eq!(c.documents[0].sections.len(),9);
+ let mut d=c.clone();d.documents[0].url="urn:incorrecta".into();assert!(d.validate(true).is_err());
+ let mut d=c.clone();d.documents=vec![c.documents[0].clone();9];assert!(d.validate(true).is_err());
+ for (i,s) in c.documents[0].sections.iter().enumerate(){assert_eq!(s.id,format!("A{:02}",i+1));assert_eq!(s.text.chars().count().div_ceil(2000),2);}
+}
 fn template_json(v:&Value)->R<String>{Ok(minijinja::Environment::new().render_str("{{ value|tojson }}",minijinja::context!{value=>v})?)}
 fn encuadrar_llamada(n:u64,name:&str,original:&str)->(String,bool){let (arguments,valid)=match parse_strict(original.as_bytes()){Ok(v)=>(v,true),Err(_)=>(json!(original),false)};(format!("{}\n",json!({"jsonrpc":"2.0","id":n,"method":"tools/call","params":{"name":name,"arguments":arguments}})),valid)}
 struct Mcp{next:u64}
@@ -59,14 +66,14 @@ fn probe()->R<()> {
 
 const SHA_POLITICA:&str="5df8ce54a97e72c4a12d05d064b818e73a082e92b699c5e2a70f2ef7eb19c5b9";
 struct Entrada { tokens:Vec<u32>, mensajes:Value, renderizado:String, ligadura:String }
-fn esperadas(documento:&str)->R<Ficha>{
+fn esperadas(documento:&str,seccion:&str)->R<Ficha>{
  let raw=fs::read("/cache/catalogo.json")?;
- anyhow::ensure!(hash(&raw)=="a52d2ba40915ab36dec884faa39cd9d17b267553292fd1afcfd4789e266eda95","Catálogo distinto");
+ anyhow::ensure!(hash(&raw)=="17c5227bf619fb31475910e631e736043305c69e2bcd2b89a9350d422c32e415","Catálogo distinto");
  let cat=parse_strict(&raw)?;
- let texto=cat["documents"].as_array().unwrap().iter().find(|v|v["id"]==documento).and_then(|v|v["sections"].as_array()).and_then(|a|a.iter().find(|s|s["id"]=="S1")).and_then(|s|s["text"].as_str()).ok_or_else(||anyhow::anyhow!("Documento/S1 ausente"))?;
+ let texto=cat["documents"].as_array().unwrap().iter().find(|v|v["id"]==documento).and_then(|v|v["sections"].as_array()).and_then(|a|a.iter().find(|s|s["id"]==seccion)).and_then(|s|s["text"].as_str()).ok_or_else(||anyhow::anyhow!("Documento/S1 ausente"))?;
  let revision=hash(texto.as_bytes());
  let chars=texto.chars().collect::<Vec<_>>();
- Ficha::nueva(chars.chunks(2000).enumerate().map(|(i,c)|Pagina{documento:documento.into(),seccion:"S1".into(),revision:revision.clone(),indice:i,total:2,texto:c.iter().collect()}).collect()).map_err(|e|anyhow::anyhow!("{e:?}"))
+ Ficha::nueva(chars.chunks(2000).enumerate().map(|(i,c)|Pagina{documento:documento.into(),seccion:seccion.into(),revision:revision.clone(),indice:i,total:2,texto:c.iter().collect()}).collect()).map_err(|e|anyhow::anyhow!("{e:?}"))
 }
 fn pagina_mcp(f:&Ficha,indice:usize,r:&Value)->R<Pagina>{
  anyhow::ensure!(r["result"]["isError"]==false,"Error del MCP");
@@ -80,7 +87,7 @@ fn pagina_mcp(f:&Ficha,indice:usize,r:&Value)->R<Pagina>{
 fn obtener(mcp:&mut Mcp,f:&Ficha)->R<Vec<Pagina>>{
  let mut recibidas=Vec::new();
  for indice in 0..2{
-  let args=json!({"documento":f.paginas()[0].documento,"seccion":"S1","pagina":indice});
+  let args=json!({"documento":f.paginas()[0].documento,"seccion":f.paginas()[0].seccion,"pagina":indice});
   let req=json!({"name":"leer_documento","arguments":args});
   anyhow::ensure!(f.solicitud(&serde_json::to_vec(&req)?).map_err(|e|anyhow::anyhow!("{e:?}"))?==indice,"Solicitud no fijada");
   let r=mcp.call("leer_documento",args)?;recibidas.push(pagina_mcp(f,indice,&r)?);
@@ -124,7 +131,7 @@ async fn run()->R<()> {
  let tokenizer=Tokenizer::from_file("/modelo/tokenizer.json").map_err(anyhow::Error::msg)?;
  let policy=fs::read_to_string("/config/politica.txt")?;
  let plan_raw=fs::read("/config/plan.json")?;
- anyhow::ensure!(hash(&plan_raw)=="a091c50859f5ffd24428ced70a6aff795c5cc05e55a83f365c8cecf58ee90b4b","Plan distinto");
+ anyhow::ensure!(hash(&plan_raw)=="378f643c5bd7401d8b6a970ff581df566f0ce712f91029e17ef38ba3946c83e6","Plan distinto");
  let plan=parse_strict(&plan_raw)?;retroalimentacion::validar_plan(&plan).map_err(anyhow::Error::msg)?;let capa=plan["capa"].as_u64().unwrap();
  let casos=plan["casos"].as_array().ok_or_else(||anyhow::anyhow!("Sin casos"))?;
  anyhow::ensure!(casos.len()==9,"Número de casos distinto");
@@ -136,8 +143,8 @@ async fn run()->R<()> {
  let mut preparadas=Vec::new();
  for (i,caso) in casos.iter().enumerate(){
   let id=caso["id"].as_str().unwrap();
-  anyhow::ensure!(id==format!("{}{:02}",plan["bloque"].as_str().unwrap(),i+1)&&caso["documento"]==format!("D{id}")&&caso["seccion"]=="S1","Correspondencia alterada");
-  let f=esperadas(caso["documento"].as_str().unwrap())?;let paginas=obtener(&mut mcp,&f)?;
+  anyhow::ensure!(id==format!("{}{:02}",plan["bloque"].as_str().unwrap(),i+1)&&caso["documento"]==format!("BANCO-{}",plan["bloque"].as_str().unwrap())&&caso["seccion"]==id,"Correspondencia alterada");
+  let f=esperadas(caso["documento"].as_str().unwrap(),caso["seccion"].as_str().unwrap())?;let paginas=obtener(&mut mcp,&f)?;
   let preparada=entrada(&f,&paginas,caso,capa,&policy,&template,&tokenizer)?;
   let sha=hash(&serde_json::to_vec(&preparada.tokens)?);
   emit(json!({"evento":"ligaduras_documentales","id":id,"nucleo_revision":"1c6b84238e62e867c4d5c5ab8069c9ae8f67dccc",
@@ -146,13 +153,13 @@ async fn run()->R<()> {
   emit(contexto("contexto_previsto",caso,&preparada,capa));acuerdo("preparacion",id,&sha)?;preparadas.push(preparada);
  }
  if mode=="instrumental" {
-  for args in [json!({"documento":"DA01","seccion":"S1","pagina":-1}),json!({"documento":"DA01","seccion":"S1","pagina":999}),json!({"documento":"../externo","seccion":"S1","pagina":0})] {
+  for args in [json!({"documento":"BANCO-A","seccion":"A01","pagina":-1}),json!({"documento":"BANCO-A","seccion":"A01","pagina":999}),json!({"documento":"../externo","seccion":"S1","pagina":0})] {
    let r=mcp.call("leer_documento",args)?;
    anyhow::ensure!(r["result"]["isError"]==true||r["error"].is_object(),"MCP no rechaza petición prohibida");
   }
   let r=mcp.call("herramienta_no_autorizada",json!({}))?;
   anyhow::ensure!(r["result"]["isError"]==true||r["error"].is_object(),"MCP no rechaza herramienta ajena");
-  let f=esperadas("DA09")?;let _=obtener(&mut mcp,&f)?;
+  let f=esperadas("BANCO-A","A09")?;let _=obtener(&mut mcp,&f)?;
   emit(json!({"evento":"pruebas_instrumentales_fin","conforme":true,"rutas_completas":9,"paginas":[0,1],"inferencia":false}));
   emit(json!({"evento":"fin_conductor","modo":mode}));return Ok(())
  }
@@ -163,7 +170,7 @@ async fn run()->R<()> {
  for (i,caso) in casos.iter().enumerate(){
   let id=caso["id"].as_str().unwrap();audit::begin(i+1);
   emit(json!({"evento":"caso_inicio","id":id,"orden":i+1,"historial":caso["antecedentes"],"capa":capa,"contexto_nuevo":true}));
-  let f=esperadas(caso["documento"].as_str().unwrap())?;let paginas=obtener(&mut mcp,&f)?;
+  let f=esperadas(caso["documento"].as_str().unwrap(),caso["seccion"].as_str().unwrap())?;let paginas=obtener(&mut mcp,&f)?;
   let efectiva=entrada(&f,&paginas,caso,capa,&policy,&template,&tokenizer)?;
   anyhow::ensure!(efectiva.tokens==preparadas[i].tokens&&efectiva.mensajes==preparadas[i].mensajes,"Entrada efectiva distinta");
   let sha=hash(&serde_json::to_vec(&efectiva.tokens)?);

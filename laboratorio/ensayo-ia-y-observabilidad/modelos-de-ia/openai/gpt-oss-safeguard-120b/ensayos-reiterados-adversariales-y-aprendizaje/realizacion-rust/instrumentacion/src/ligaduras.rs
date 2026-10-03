@@ -32,7 +32,7 @@ pub fn contrato(f:&Ficha)->Result<(IrProgram,BindingContract,BindingRequest),Str
         admission:RuleBinding{object:"Adm".into(),definition:get("Integridad")},ternarizer:None,
         provenance:vec![get(&format!("Pagina{}",pagina.indice))],
     }).collect();
-    let c=BindingContract{schema:BINDING_SCHEMA.into(),identifier:"SG-ARBITRO-NUEVOS-20261002-r1".into(),version:"1".into(),
+    let c=BindingContract{schema:BINDING_SCHEMA.into(),identifier:"SG-RETROALIMENTACION-20261003-r1".into(),version:"1".into(),
         program:ProgramIdentity::of(&p),domain:"D".into(),agent:"AG".into(),constitution:get("Constitucion"),authority:get("Declaracion"),
         instances:inst,operations:vec![OperationBindings{identifier:"Suministrar".into(),version:"1".into(),definition:get("Suministrar"),
             uses:(0..2).map(|i|BindingUse{identifier:format!("U{i}"),instance:format!("I{i}"),destination:None,alias_of:None}).collect(),

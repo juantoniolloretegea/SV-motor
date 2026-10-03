@@ -112,7 +112,7 @@ fn run(mode:&str,id:&str)->R<()> {
        let wire=d["wire"].as_str().ok_or("Solicitud sin bytes")?.as_bytes();
        if d["actor"]!="arbitro"{return Err("Atribución MCP discordante".into())}
        solicitudes+=1;if solicitudes>128{return Err("Presupuesto de comunicaciones agotado".into())}
-       if mode=="contraste"{validar_solicitud(wire,puerta.documento())?;}
+       if mode=="contraste"{validar_solicitud(wire,puerta.documento(),puerta.id())?;}
        log(&l,"mcp_stdin",wire)?;mcp.stdin.as_mut().ok_or("MCP sin entrada")?.write_all(wire)?;mcp.stdin.as_mut().unwrap().flush()?;
        if d["espera"]==true{
         let reply=mrx.recv_timeout(Duration::from_secs(30))?;
@@ -178,7 +178,7 @@ fn main(){let a=std::env::args().collect::<Vec<_>>();let r=match a.get(1).map(St
 
 #[cfg(test)]mod tests{
  use super::*;
- fn plan_prueba()->Value{json!({"campana":"SG-RETROALIMENTACION-20261003","bloque":"A","capa":0,"max_revisiones":3,"casos":(1..=9).map(|i|json!({"id":format!("A{i:02}"),"documento":format!("DA{i:02}"),"seccion":"S1","afirmacion":"sintetica","antecedentes":[]})).collect::<Vec<_>>()})}
+ fn plan_prueba()->Value{json!({"campana":"SG-RETROALIMENTACION-20261003","bloque":"A","capa":0,"max_revisiones":3,"casos":(1..=9).map(|i|json!({"id":format!("A{i:02}"),"documento":"BANCO-A","seccion":format!("A{i:02}"),"afirmacion":"sintetica","antecedentes":[]})).collect::<Vec<_>>()})}
  static SIGUIENTE_PRUEBA:std::sync::atomic::AtomicU64=std::sync::atomic::AtomicU64::new(0);
  fn preparar_punto()->R<(PathBuf,Log,Puerta)>{
   let out=std::env::current_dir()?.join(format!("prueba-punto-{}-{}-{}",std::process::id(),now(),SIGUIENTE_PRUEBA.fetch_add(1,Ordering::SeqCst)));fs::create_dir(&out)?;fs::create_dir(out.join("mcp"))?;
@@ -190,7 +190,7 @@ fn main(){let a=std::env::args().collect::<Vec<_>>();let r=match a.get(1).map(St
   save(&out.join("mcp/diario.jsonl"),b"diario sintetico\n")?;
   let plan=plan_prueba();let mut puerta=Puerta::nueva(&plan)?;let mut primera=Value::Null;
   for i in 0..9{
-   let t=json!([i+1]);let v=json!({"id":sv_arbitro_comprobaciones::ciclo::IDS[i],"documento":sv_arbitro_comprobaciones::ciclo::DOCS[i],"seccion":"S1","tokens":t,"tokens_sha256":h(&serde_json::to_vec(&t)?),"max_salida":8192,"ronda":0,"paginas":[0,1],"funciones":[],"mensajes":["sintetico"],"plantilla_efectiva":"sintetica"});
+   let t=json!([i+1]);let v=json!({"id":sv_arbitro_comprobaciones::ciclo::IDS[i],"documento":sv_arbitro_comprobaciones::ciclo::DOCS[i],"seccion":sv_arbitro_comprobaciones::ciclo::IDS[i],"tokens":t,"tokens_sha256":h(&serde_json::to_vec(&t)?),"max_salida":8192,"ronda":0,"paginas":[0,1],"funciones":[],"mensajes":["sintetico"],"plantilla_efectiva":"sintetica"});
    puerta.preparar(&v,None)?;puerta.solicitar("preparacion",v["id"].as_str().unwrap(),v["tokens_sha256"].as_str().unwrap(),"contraste")?;if i==0{primera=v;}
   }
   let sha=primera["tokens_sha256"].as_str().unwrap();puerta.solicitar("carga","A01",sha,"contraste")?;puerta.motor(&primera)?;puerta.solicitar("generacion","A01",sha,"contraste")?;
@@ -231,7 +231,7 @@ fn main(){let a=std::env::args().collect::<Vec<_>>();let r=match a.get(1).map(St
   assert!(p.adjudicar(&json!({"id":"A01","salida_sha256":"falsa","accion":"continuar"})).is_err());
   p.adjudicar(&json!({"id":"A01","salida_sha256":h(b"original"),"accion":"continuar"}))?;assert_eq!(p.id(),"A02");
   // Caso siguiente sintético; el control final cierra sin otra admisión.
-  let t=json!([2]);let entrada=json!({"id":"A02","documento":"DA02","seccion":"S1","tokens":t,"tokens_sha256":h(&serde_json::to_vec(&t)?),"max_salida":8192,"ronda":0,"paginas":[0,1],"funciones":[],"mensajes":["sintetico"],"plantilla_efectiva":"sintetica"});
+  let t=json!([2]);let entrada=json!({"id":"A02","documento":"BANCO-A","seccion":"A02","tokens":t,"tokens_sha256":h(&serde_json::to_vec(&t)?),"max_salida":8192,"ronda":0,"paginas":[0,1],"funciones":[],"mensajes":["sintetico"],"plantilla_efectiva":"sintetica"});
   p.motor(&entrada)?;p.solicitar("generacion","A02",entrada["tokens_sha256"].as_str().unwrap(),"contraste")?;p.emision(&json!({"id":"A02","texto":"segundo","tokens":[1]}))?;p.terminar(&json!({"id":"A02","completo":true}))?;p.solicitar("adjudicacion","A02",entrada["tokens_sha256"].as_str().unwrap(),"contraste")?;p.adjudicar(&json!({"id":"A02","salida_sha256":h(b"segundo"),"accion":"cerrar"}))?;assert!(p.cerrado());assert!(p.motor(&entrada).is_err());
   Ok(())
  }
