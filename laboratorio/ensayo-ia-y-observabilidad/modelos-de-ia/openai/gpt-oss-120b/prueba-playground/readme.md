@@ -39,4 +39,11 @@ Los originales conservan el texto renderizado, incluida la pregunta, sin corregi
 
 El pasaje del NCI y los originales del modelo se conservan como materiales de evaluación; su publicación no constituye una recomendación clínica. Las fuentes de terceros conservan sus derechos y condiciones de uso.
 
+## Autoría, licencia y alcance
+
+El régimen de autoría y licencia indicado a continuación se aplica al trabajo propio contenido en esta carpeta y a todos los ensayos, documentos y subcarpetas que se incorporen a ella, incluido `ensayo-1`. Comprende su diseño experimental, documentación, análisis y presentación de resultados. La atribución corresponde al titular identificado; el Sistema Vectorial SV no sustituye a dicho titular.
+
+Las fuentes, los componentes y los demás materiales de terceros conservan sus derechos y licencias. Su incorporación como evidencia no supone atribuir su autoría al titular de este trabajo ni modificar sus condiciones de uso.
+
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
+
