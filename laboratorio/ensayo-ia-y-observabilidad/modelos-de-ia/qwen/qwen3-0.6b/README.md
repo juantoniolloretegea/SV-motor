@@ -1,6 +1,6 @@
 # Qwen · configuración experimental
 
-**Conservación documental · 02–03/10/2026:** [inventario, entrega y límites de custodia](clon-codespace/CUSTODIA_20261002.md). Entorno detenido y conservado; sin nuevas inferencias ni modificación del dictamen experimental.
+**Conservación documental · 02–03/10/2026:** [inventario, entrega y límites de custodia](clon-codespace/CUSTODIA_20261002.md). Codespace eliminado el 03/10/2026 tras verificar la conservación; sin nuevas inferencias ni modificación del dictamen experimental.
 
 **Modelo:** Qwen3-0.6B · GGUF Q4_K_M · CPU.  
 **Aplicación:** EIO conversación 0.1.3 · Beta 1.  
