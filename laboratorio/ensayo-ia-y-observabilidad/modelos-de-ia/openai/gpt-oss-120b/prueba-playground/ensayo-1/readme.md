@@ -69,9 +69,9 @@ sequenceDiagram
     Rust->>Rust: Comparación adicional de saltos de línea
     Rust-->>Evaluacion: Ambos resultados, sin sustituir el original
     Evaluacion->>Modelo: Reserva declarada, misma pregunta, fuente y A/B
-    Note over Modelo,Evaluacion: La interfaz devuelve un error; no hay respuesta final recibida
+    Note over Modelo,Evaluacion: La interfaz devuelve un error, no hay respuesta final recibida
     Evaluacion->>Modelo: Reanudación técnica autorizada en la misma conversación
-    Note over Modelo,Evaluacion: Nuevo error; la evaluación final continúa pendiente
+    Note over Modelo,Evaluacion: Nuevo error, la evaluación final continúa pendiente
 ```
 
 La comparación textual no decide la verdad de una afirmación. El comprobador calcula las huellas; el candidato declara no haberlas calculado. La evaluación externa debe distinguir extracción de datos, interpretación de desenlaces, respaldo de las conclusiones y fidelidad de la adversarial. El razonamiento que la interfaz expone se conserva como texto emitido, sin considerarlo una observación completa ni una explicación causal certificada del cálculo interno.
