@@ -24,6 +24,7 @@ La segunda fase produjo un error de servicio tanto en el primer envío como en e
 | [Consulta sobre límites](CONSULTA-LIMITES-ENTRADA.txt) y [registro](CONSULTA-LIMITES-REGISTRO.json) | Comprobación previa a la repetición; no se obtuvo respuesta técnica. |
 | [Petición de reanudación](ENTRADA-02-REINTENTO.txt), [original observado](ORIGINAL-FASE-02-REINTENTO.txt) y [captura](IMPEDIMENTO-REINTENTO.png) | Reintento de la segunda fase en la conversación conservada. |
 | [Comprobación mínima](CONSULTA-MINIMA-REGISTRO.json) y [captura](CONSULTA-MINIMA.png) | Pregunta trivial con razonamiento Low; no se recibió respuesta. |
+| [Comprobaciones posteriores al borrado local y a la renovación de acceso](CONSULTA-MINIMA-08-REGISTRO.json) | Dos envíos mínimos adicionales: solicitud de autenticación y error de generación tras renovar el acceso. |
 | [Comprobador Rust](cotejo-rust/comprobar.rs) | Reproducción de las comprobaciones de identidad y representación. |
 | [Manifiesto](MANIFIESTO.json) | Tamaños y SHA-256 de los archivos conservados. |
 
@@ -88,10 +89,20 @@ Las horas son UTC del 3 de octubre de 2026 y corresponden a observaciones de la 
 | 4 | 04:36:58.789 | Solicitud de responder a la consulta técnica tras recargar; High; 199 caracteres | Mismo error. |
 | 5 | 04:40:31.016 | Reanudación de la fase adversarial original; High; 529 caracteres adicionales | Mismo error; sin nueva respuesta. |
 | 6 | 04:48:38.701 | «¿Cuánto es 2 + 2? Responda sólo con la cifra.»; conversación nueva, Low verificado | Mismo error; ninguna respuesta aritmética recibida. |
+| 7 | 06:09:10.105 | Pregunta mínima; conversación nueva, Low, tras declaración de borrado local | Solicitud de autenticación; sin respuesta del modelo. |
+| 8 | 06:14:04.469 | Misma pregunta mínima; conversación nueva, Low, tras renovar el acceso | Error de generación; ninguna respuesta recibida. |
 
 El primer envío tiene un final observado a las 04:12:20.773 UTC. La interfaz mostraba «Thought for 13 seconds»; ese indicador no acredita la duración total del servicio. Se conserva también el [texto de razonamiento desplegado](RAZONAMIENTO-01-PARRAFOS.json), con 63 párrafos anteriores al JSON final. La extracción registra su presentación observable; no se dispone de la transmisión original ni de telemetría del servidor.
 
-Las dos fases clínicas, las consultas técnicas y la comprobación mínima mantienen registros diferenciados. Los cinco mensajes de error son sucesos del servicio, no cinco errores del modelo. La recuperación de una respuesta posterior deberá añadir su propio registro y conservar esta cadena.
+Las dos fases clínicas, las consultas técnicas y la comprobación mínima mantienen registros diferenciados. Los seis mensajes de error de generación y la solicitud posterior de autenticación son incidencias del servicio; no se contabilizan como errores del modelo. La recuperación de una respuesta posterior deberá añadir su propio registro y conservar esta cadena.
+
+## Comprobación posterior a la renovación del acceso
+
+Se realizó una nueva comprobación de disponibilidad tras la declaración de borrado de los datos locales de navegación. No se verificaron de forma independiente el borrado íntegro de la caché, un contexto privado ni la eliminación del historial remoto. La aplicación recuperó inicialmente una conversación anterior; cada nueva consulta se envió después de comprobar una conversación vacía.
+
+El envío 7, con gpt-oss-120b y Low, produjo «Sign in to continue», sin respuesta del modelo. Tras actualizar la página apareció el acceso ordinario de la demostración. Se renovó la sesión mediante ese control y se comprobó de nuevo una conversación vacía. El envío 8 repitió exactamente la pregunta mínima y produjo «An error occurred when generating a response.», también sin respuesta. La renovación del acceso no restableció la generación. No se atribuye retrospectivamente a autenticación la causa de los cinco errores anteriores.
+
+Se conservan por separado los registros [7](CONSULTA-MINIMA-07-REGISTRO.json) y [8](CONSULTA-MINIMA-08-REGISTRO.json), sus entradas, textos observados y capturas. No incluyen datos de la cuenta. Son comprobaciones de disponibilidad, no unidades adicionales del contraste documental. La puntuación y la terna permanecen sin adjudicar; el ensayo continúa abierto. La siguiente consulta científica depende de recuperar la disponibilidad del servicio.
 
 ## Criterios y resultados pendientes
 

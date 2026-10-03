@@ -62,6 +62,14 @@ La [entrada](CONSULTA-MINIMA-ENTRADA.txt), el [texto observado](CONSULTA-MINIMA-
 
 El selector queda en Low tras esta comprobación. Una reanudación de la fase clínica debe declarar su ajuste de razonamiento; no se asume que conserva High. El ensayo permanece abierto y no se activa otro intento automáticamente.
 
+## Comprobación posterior a la renovación del acceso
+
+Se realizó una nueva comprobación de disponibilidad tras la declaración de borrado de los datos locales de navegación. No se verificaron de forma independiente el borrado íntegro de la caché, un contexto privado ni la eliminación del historial remoto. La aplicación recuperó inicialmente una conversación anterior; cada nueva consulta se envió después de comprobar una conversación vacía.
+
+El envío 7, con gpt-oss-120b y Low, produjo «Sign in to continue», sin respuesta del modelo. Tras actualizar la página apareció el acceso ordinario de la demostración. Se renovó la sesión mediante ese control y se comprobó de nuevo una conversación vacía. El envío 8 repitió exactamente la pregunta mínima y produjo «An error occurred when generating a response.», también sin respuesta. La renovación del acceso no restableció la generación. No se atribuye retrospectivamente a autenticación la causa de los cinco errores anteriores.
+
+Se conservan por separado los registros [7](CONSULTA-MINIMA-07-REGISTRO.json) y [8](CONSULTA-MINIMA-08-REGISTRO.json), sus entradas, textos observados y capturas. No incluyen datos de la cuenta. Son comprobaciones de disponibilidad, no unidades adicionales del contraste documental. La puntuación y la terna permanecen sin adjudicar; el ensayo continúa abierto. La siguiente consulta científica depende de recuperar la disponibilidad del servicio.
+
 ## Reproducción de los cotejos
 
 El [manifiesto](MANIFIESTO.json) identifica por SHA-256 y tamaño los archivos conservados. El comprobador en Rust contrasta esos archivos, analiza el JSON original y reproduce por separado la igualdad estricta y la comparación de saltos. Desde una copia de esta carpeta puede ejecutarse:
