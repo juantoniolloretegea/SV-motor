@@ -8,7 +8,8 @@ fn save(p:&Path,b:&[u8])->R<()>{let mut f=fs::OpenOptions::new().create_new(true
 fn main()->R<()>{
  let a=std::env::args().collect::<Vec<_>>();let base=Path::new(a.get(1).ok_or("Preparación requerida")?);let recorrido=Path::new(a.get(2).ok_or("Recorrido instrumental requerido")?);
  let audit=auditar(recorrido,false,false)?;ck(audit["conforme"]==true&&audit["emisiones"]==0&&audit["calculos"]==0,"Custodia instrumental no conforme")?;
- let raw=fs::read(recorrido.join("modelo.stdout"))?;let informe=val(&base.join("cotejos/INSTRUMENTAL-02.json"))?;
+ let nombre=a.get(3).map(String::as_str).unwrap_or("INSTRUMENTAL-02");ck(nombre.chars().all(|c|c.is_ascii_alphanumeric()||c=='-'),"Nombre de comprobación inválido")?;
+ let raw=fs::read(recorrido.join("modelo.stdout"))?;let informe=val(&base.join(format!("cotejos/{nombre}.json")))?;
  ck(informe["conforme"]==true&&informe["entradas_prefijadas"]==9&&informe["emisiones_decodificadas"]==0&&informe["inferencia"]==false&&informe["modelo_stdout_sha256"]==huella(&raw),"Entradas sin cotejo externo")?;
  let plan=val(&base.join("config/plan.json"))?;validar_plan(&plan)?;ck(plan["capa"]==0&&plan["bloque"]=="A","Condición distinta")?;
  let contrato=val(&base.join("config/contrato.json"))?;
@@ -19,6 +20,7 @@ fn main()->R<()>{
  let entradas=e.iter().filter(|v|v["datos"]["evento"]=="contexto_previsto").map(|v|v["datos"].clone()).collect::<Vec<_>>();ck(entradas.len()==9,"Nueve entradas exigidas")?;
  for (i,d) in entradas.iter().enumerate(){let c=&plan["casos"][i];ck(d["id"]==c["id"]&&d["documento"]==c["documento"]&&d["seccion"]==c["seccion"]&&d["funciones"]==json!([]),"Caso o sección discordante")?;}
  let b=serde_json::to_vec_pretty(&entradas)?;
- save(&base.join("cotejos/FIJACION-ENTRADAS.json"),&serde_json::to_vec_pretty(&json!({"conforme":true,"admision_sha256":huella(&b),"entradas":informe["detalle"],"inferencia":false,"cotejo_custodia":audit,"modelo_stdout_sha256":huella(&raw)}))?)?;
- save(&base.join("config/ADMISION.json"),&b)?;println!("Nueve entradas fijadas sin carga ni inferencia: {}",huella(&b));Ok(())
+ let adm=base.join("config/ADMISION.json");let existente=adm.exists();if existente{ck(fs::read(&adm)?==b,"Recuperación cambia entradas fijadas")?;}
+ save(&base.join(format!("cotejos/FIJACION-{nombre}.json")),&serde_json::to_vec_pretty(&json!({"conforme":true,"admision_sha256":huella(&b),"entradas":informe["detalle"],"inferencia":false,"cotejo_custodia":audit,"modelo_stdout_sha256":huella(&raw),"admision_previa_identica":existente}))?)?;
+ if !existente{save(&adm,&b)?;}println!("Nueve entradas fijadas sin carga ni inferencia: {}",huella(&b));Ok(())
 }

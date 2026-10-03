@@ -65,7 +65,7 @@ fn comprobar_admision_contraste(v:&Value)->R<()>{if v.as_array().map(Vec::len)!=
 fn run(mode:&str,id:&str)->R<()> {
  if !id.chars().all(|c|c.is_ascii_alphanumeric()||c=='-'){return Err("Identificador inválido".into())}
  if mode!="instrumental" && mode!="contraste"{return Err("Modo no autorizado".into())}
- if mode=="contraste" && id!="retro-A0-01"{return Err("Sólo la condición fijada".into())}
+ if mode=="contraste" && id!="retro-A0-02"{return Err("Sólo la condición fijada".into())}
  if mode=="contraste" && Path::new("/opt/sv-safeguard/retroalimentacion-20261003/A0/UNICA-CARGA-ADMITIDA.json").exists(){return Err("Carga anterior preservada; no se admite repetición".into())}
  let esperada:Option<Value>=if mode=="contraste"{Some(serde_json::from_slice(&fs::read("/opt/sv-safeguard/retroalimentacion-20261003/A0/config/ADMISION.json")?)?)}else{None};
  if mode=="contraste"{comprobar_admision_contraste(esperada.as_ref().ok_or("Admisión ausente")?)?;}
@@ -112,7 +112,7 @@ fn run(mode:&str,id:&str)->R<()> {
        let wire=d["wire"].as_str().ok_or("Solicitud sin bytes")?.as_bytes();
        if d["actor"]!="arbitro"{return Err("Atribución MCP discordante".into())}
        solicitudes+=1;if solicitudes>128{return Err("Presupuesto de comunicaciones agotado".into())}
-       if mode=="contraste"{validar_solicitud(wire,puerta.documento(),puerta.id())?;}
+       if mode=="contraste"||entradas<9{validar_solicitud(wire,puerta.documento(),puerta.seccion())?;}
        log(&l,"mcp_stdin",wire)?;mcp.stdin.as_mut().ok_or("MCP sin entrada")?.write_all(wire)?;mcp.stdin.as_mut().unwrap().flush()?;
        if d["espera"]==true{
         let reply=mrx.recv_timeout(Duration::from_secs(30))?;

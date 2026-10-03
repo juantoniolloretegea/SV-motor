@@ -11,6 +11,7 @@ impl Puerta{
 
  pub fn id(&self)->&str{self.plan["casos"][self.indice.min(NUM_CASOS-1)]["id"].as_str().unwrap()}
  pub fn documento(&self)->&str{self.plan["casos"][if self.cargado{self.indice.min(NUM_CASOS-1)}else{self.preparadas.len().min(NUM_CASOS-1)}]["documento"].as_str().unwrap()}
+ pub fn seccion(&self)->&str{self.plan["casos"][if self.cargado{self.indice.min(NUM_CASOS-1)}else{self.preparadas.len().min(NUM_CASOS-1)}]["seccion"].as_str().unwrap()}
  pub fn pendientes(&self)->bool{self.pendiente}
  pub fn salida_sha256(&self)->Option<&str>{self.salida.as_deref()}
  pub fn cerrado(&self)->bool{self.cerrado}
@@ -86,5 +87,10 @@ pub fn validar_solicitud(b:&[u8],documento:&str,seccion:&str)->R<()>{
  #[test]fn no_generacion_directa(){assert!(Puerta::nueva(&crate::retroalimentacion::plan_prueba(0)).unwrap().solicitar("generacion","A01","h","contraste").is_err());}
  #[test]fn no_decimo_caso(){let mut p=preparada();for i in 0..IDS.len()-1{emitir(&mut p,i);p.adjudicar(&control(i,"continuar")).unwrap();}emitir(&mut p,IDS.len()-1);assert!(p.adjudicar(&control(IDS.len()-1,"continuar")).is_err());}
  #[test]fn mcp_no_accede_a_otro_documento(){let v=json!({"method":"tools/call","params":{"name":"leer_documento","arguments":{"documento":"N-A","seccion":"S1","pagina":1}}});let b=serde_json::to_vec(&v).unwrap();assert!(validar_solicitud(&b,"N-A","S1").is_ok());assert!(validar_solicitud(&b,"N-B","S1").is_err());assert!(validar_solicitud(&b,"N-A","S2").is_err());}
+ #[test]fn seccion_sigue_preparacion_y_retorna_al_primer_caso_tras_carga(){
+  let mut p=Puerta::nueva(&crate::retroalimentacion::plan_prueba(0)).unwrap();
+  for i in 0..9 {assert_eq!(p.seccion(),IDS[i]);for pag in [0,1]{let q=serde_json::to_vec(&json!({"method":"tools/call","params":{"name":"leer_documento","arguments":{"documento":"BANCO-A","seccion":IDS[i],"pagina":pag}}})).unwrap();validar_solicitud(&q,p.documento(),p.seccion()).unwrap();if i>0{assert!(validar_solicitud(&q,p.documento(),IDS[i-1]).is_err());}}let d=c(i);p.preparar(&d,None).unwrap();p.solicitar("preparacion",IDS[i],d["tokens_sha256"].as_str().unwrap(),"contraste").unwrap();}
+  let d=c(0);p.solicitar("carga","A01",d["tokens_sha256"].as_str().unwrap(),"contraste").unwrap();assert_eq!(p.seccion(),"A01");
+ }
  #[test]fn original_incompleto_impide_adjudicacion(){let mut p=preparada();p.motor(&c(0)).unwrap();p.solicitar("generacion","A01",c(0)["tokens_sha256"].as_str().unwrap(),"contraste").unwrap();assert!(p.terminar(&json!({"id":"A01","completo":false})).is_err());}
 }
