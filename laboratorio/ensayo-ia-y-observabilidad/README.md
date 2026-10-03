@@ -1,8 +1,8 @@
 # Ensayo de inteligencia artificial y observabilidad
 
-**Edición documental 2.17 · 30 de septiembre de 2026.**
+**Edición documental 2.18 · 3 de octubre de 2026.**
 
-**Corte de evidencias:** 30/09/2026, 08:42 UTC. Las comunicaciones posteriores se identifican por separado; esta página no es un monitor de ejecución.
+**Corte de evidencias:** 03/10/2026, 09:37 UTC. Los resultados conservan la fecha y el alcance de su propia entrega; esta página no es un monitor de ejecución.
 
 <a id="objeto-y-criterio-experimental"></a>
 
@@ -16,22 +16,32 @@ Esta página reúne el estado de los candidatos, la secuencia de publicaciones, 
 
 ## Estado actual
 
-La línea experimental vigente es **Qwen3-Next-80B-A3B-Instruct, cuantizado en UQFF Q4K, en la vía B nativa CPU**. Se han recibido favorablemente dos consultas documentales completas con búsqueda y lectura reales mediante MCP. La ronda posterior de 25 preguntas **no tiene todavía un resultado final recibido**. Funcionamiento documental, respuesta conservada y aptitud son resultados distintos.
+La línea experimental en curso es la **Preevaluación de examen de 25 preguntas de tricoleucemia** con **GPT-OSS-Safeguard-120B**, el **Árbitro-Director del Sistema Vectorial SV** y el **Aprendizaje por Retroalimentación del Sistema Vectorial SV**. La capa inicial A0 está en ejecución; aún no tiene puntuación ni dictamen de capa. El examen de 25 preguntas permanece condicionado a superar esta preevaluación. Sus [condiciones y evidencias](modelos-de-ia/openai/gpt-oss-safeguard-120b/ensayos-reiterados-adversariales-y-aprendizaje/readme.md) tienen identidad propia y conservan los anteriores dictámenes No apto.
 
 | Modelo o configuración | Resultado y alcance | Situación al corte |
 |---|---|---|
 | [Qwen3-0.6B · Q4_K_M](modelos-de-ia/qwen/qwen3-0.6b/README.md) | Inferencia nativa y controles parciales; cuatro consultas DOC-01 terminadas sin conformidad contractual completa. | Campaña cerrada con limitaciones. |
 | [GPT-OSS-20B · MXFP4](modelos-de-ia/openai/gpt-oss-20b/README.md) | Funcionamiento técnico y bancos documentales conservados; la evaluación médica no acreditó la función prevista. | Configuración excluida de esa selección; archivo conservado. |
-| [Qwen3.8-27B](modelos-de-ia/qwen/qwen3.8-27b/README.md) | Respuesta completa en la selección mínima, con omisión material y deficiencias de citas y localización. | **No pasa** en la selección examinada. |
-| [GPT-OSS-120B](modelos-de-ia/openai/gpt-oss-120b/README.md) | Comprobación preliminar entregada: los archivos de pesos superaban el límite de memoria de la configuración considerada. Sin consumo máximo de inferencia medido. | Alternativa condicionada; [TT-0015](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0015.md). |
-| [Qwen3-Next-80B-A3B-Instruct](modelos-de-ia/qwen/qwen3-next-80b-a3B-instruct/REGISTRO-INSTALACION-20260929.md) | Dos consultas MCP recibidas. En la campaña posterior se comunican ocho respuestas conservadas y una interrupción en P09. | Evaluación parcial y recepción pendientes; [TT-0016](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0016.md). |
-| [Qwen3-Next-80B-A3B-Thinking](modelos-de-ia/qwen/qwen3-next-80b-a3b-thinking) | Prueba documental independiente preparada y transmisión humana comunicada. La carpeta del modelo ha sido incorporada después del corte. | Sin resultado recibido; [TT-0017](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0017.md). |
+| [Qwen3.8-27B](modelos-de-ia/qwen/qwen3.8-27b/README.md) | Respuesta completa en la selección mínima, con omisión material y deficiencias de citas y localización. | **No apto** en la selección examinada. |
+| [GPT-OSS-120B](modelos-de-ia/openai/gpt-oss-120b/README.md) | El estudio preliminar no llegó a inferencia: los pesos superaban la cota de la configuración considerada. La [demostración pública posterior](modelos-de-ia/openai/gpt-oss-120b/prueba-playground/readme.md) obtuvo −100/100 en tres respuestas relacionadas; no constituye un examen completo ni mide recursos de una instalación propia. | Viabilidad nativa pendiente; [TT-0015](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0015.md). Ensayo 1 público abierto, con impedimentos de servicio conservados. |
+| [Qwen3-Next-80B-A3B-Instruct](modelos-de-ia/qwen/qwen3-next-80b-a3B-instruct/REGISTRO-INSTALACION-20260929.md) | Dos consultas MCP recibidas. Examen posterior: **28/100; No apto**. Diecinueve finales: siete aciertos, dos errores críticos y diez U; seis impedimentos técnicos. | Examen y diagnóstico terminados; [puntuación](modelos-de-ia/qwen/qwen3-next-80b-a3B-instruct/tests-y-pruebas-efectuadas/PUNTUACION-FINAL-20261001.md), [archivo y retirada](modelos-de-ia/qwen/qwen3-next-80b-a3B-instruct/tests-y-pruebas-efectuadas/ARCHIVO-Y-RETIRADA-20261001.md). Recepción científica independiente pendiente; [TT-0016](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0016.md). |
+| [Qwen3-Next-80B-A3B-Thinking](modelos-de-ia/qwen/qwen3-next-80b-a3b-thinking) | Primera consulta documental publicada: respuesta tras 5516,496 segundos, dos oraciones donde se exigía una y modificación de saltos de línea. Pico de 59 GiB, sin intercambio ni agotamiento; sin margen estable demostrado. | [Registro de la primera entrega](modelos-de-ia/qwen/qwen3-next-80b-a3b-thinking/REGISTRO-INSTALACION-20260930.md), pendiente de recepción independiente. El examen posterior tiene encargo propio; no consta entrega final publicada al corte. [TT-0017](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0017.md). |
+| [GPT-OSS-Safeguard-120B](modelos-de-ia/openai/gpt-oss-safeguard-120b/ensayos-reiterados-adversariales-y-aprendizaje/readme.md) | Contrastes anteriores separados: **87,5/100**, **66,67/100** y **50/100**, con **No apto** en sus respectivos alcances. El diagnóstico D01 reprodujo el error crítico del último contraste. | Nueva preevaluación con retroalimentación en A0; resultados pendientes. No se ha acreditado acceso al examen ni aptitud clínica. [Expediente v3](modelos-de-ia/openai/gpt-oss-safeguard-120b/tests-y-pruebas-efectuadas/ARBITRO-SV-SAFEGUARD-V3-20261002.md) · [TT-0018](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0018.md). |
+
+Safeguard es un candidato distinto del GPT-OSS-120B ordinario. Su función declarada por OpenAI es la clasificación de seguridad conforme a políticas textuales; el contraste actual estudia clasificación documental bajo una política explícita. No presupone capacidad médica general. La demostración pública, las instalaciones nativas, los contrastes asistidos y los exámenes conservan resultados separados.
+
+<details>
+<summary><strong>Antecedente instrumental Qwen · corte del 30/09/2026, 08:42 UTC</strong></summary>
+
+La línea principal de aquel corte era Instruct en UQFF Q4K, vía B nativa CPU. Dos consultas documentales habían recibido conformidad instrumental; la ronda posterior de 25 preguntas aún no disponía de un resultado final recibido. Thinking tenía una prueba independiente preparada y su carpeta fue incorporada después de aquel corte.
 
 La [recepción instrumental de Instruct](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/816a70bd6ff72c8d55f9bd599823a17e1fd57454/respuestas-ejecucion/QWEN80-Q4K-ONECLOUD-20260929/revision-entrega-08/RECEPCION.md) —original de acceso restringido— coteja dos recorridos completos: solicitud del modelo, búsqueda, lectura del catálogo local, incorporación de su resultado y respuesta final. Las citas coinciden con la fuente tras convertir exclusivamente los saltos LF/CRLF en espacios. Las duraciones fueron **1532,618 y 1535,382 segundos**; el máximo registrado del grupo alcanzó **59 GiB**, sin agotamiento de memoria registrado en esos intentos. Estos datos no acreditan holgura de memoria, rapidez interactiva ni capacidad general de cualquier configuración de 64 GB.
 
-El avance posterior es **una comunicación de ejecución todavía pendiente de recepción independiente**: P01–P08 conservadas, P09 sin respuesta final y P10–P25 sin ejecutar en ese aviso. P09 propuso dos lecturas en un intercambio limitado a una; el rechazo se propagó al cierre de la campaña. La continuación correctiva está preparada para distinguir el fallo de un ítem de un fallo general de seguridad o conservación. Su preparación no demuestra que se haya ejecutado. Ocho respuestas conservadas no equivalen a ocho respuestas correctas.
+El aviso posterior de aquel corte comunicaba P01–P08 conservadas, P09 sin respuesta final y P10–P25 sin ejecutar. P09 propuso dos lecturas en un intercambio limitado a una; el rechazo se propagó al cierre de aquel segmento. La continuación correctiva estaba preparada para distinguir el fallo de un ítem de un fallo general de seguridad o conservación, pero aún no se acreditaba su ejecución. Ocho respuestas conservadas no equivalían a ocho respuestas correctas. El examen completo y su diagnóstico posteriores conservan ese antecedente.
 
-Thinking se sigue de forma independiente: su plantilla, razonamiento generado, respuesta final y llamadas a herramientas necesitan tratamiento diferenciado. Los resultados de Instruct no se transfieren a esta variante. El [registro de modelos](modelos-de-ia/README.md) conserva antecedentes; las fichas de seguimiento anteriores identifican el estado actualizado de estas dos líneas.
+</details>
+
+Thinking mantiene tratamiento independiente de plantilla, razonamiento emitido, respuesta final y llamadas a herramientas. No recibe los resultados de Instruct por extensión. El [registro de modelos](modelos-de-ia/README.md) enlaza los expedientes; cada entrega y recepción fija el alcance de lo acreditado.
 
 ## Evaluación documental y resultado
 
@@ -46,13 +56,25 @@ El [banco de preguntas](https://github.com/juantoniolloretegea/SVperitus-dataset
 | **U** | Indeterminación auténtica: no se acredita 0 y no hay falsedad relevante demostrada. |
 | **Intento inválido o pendiente** | Fallo técnico, evidencia perdida o pregunta no ejecutada. Se registra fuera de la terna; no se rellena con U. |
 
-La clasificación auxiliar aplica **T(n)=⌊7n/9⌋**, que para 25 posiciones vale 19. El dictamen del instrumento incorpora además la criticidad: cualquier 1 crítico determina **No apto**; si no hay 1 crítico pero existe U crítica, corresponde **U (indeterminación honesta)**; las veinte críticas en 0 y la clasificación auxiliar favorable permiten **Apto**. Con esta distribución, las veinte respuestas críticas correctas ya superan el umbral. Los errores no críticos siguen siendo visibles.
+La puntuación y la aptitud siguen el [criterio común](modelos-de-ia/CRITERIO-PUNTUACION-MODELOS-20261001.md). La **puntuación sobre 100 es 100 × (aciertos − errores no críticos) / N**, con N fijado antes del ensayo. U y blanco no suman ni restan; no se recortan saldos negativos ni se reduce el denominador por incidencias. Los errores críticos se contabilizan aparte y tienen efecto eliminatorio. Así, Instruct conserva 100 × (7 − 0) / 25 = **28/100**, junto a sus dos errores críticos.
 
-Sólo tras **25 adjudicaciones válidas e independientes** se constituye el vector ordenado y su frame o polígono. Cada posición queda ligada a pregunta, fuente, respuesta, configuración y fundamento de corrección. Las comprobaciones sintéticas del evaluador Rust acreditan su cálculo en esos casos, no la validez médica de las respuestas.
+La clasificación SV se calcula separadamente con **T(n)=⌊7n/9⌋**: primero N₁ ≥ T(n) determina No apto; después N₀ ≥ T(n) determina Apto; en otro caso corresponde Indeterminado. Requiere un vector completo de adjudicaciones válidas. Para 25 posiciones, T(25) = 19. El dictamen del instrumento incorpora además la criticidad: cualquier 1 crítico determina **No apto**; si no hay 1 crítico pero existe U crítica, corresponde **U (indeterminación honesta)**; las veinte críticas en 0 y la clasificación auxiliar favorable permiten **Apto**. Con esta distribución, las veinte respuestas críticas correctas ya superan el umbral. Los errores no críticos siguen siendo visibles.
 
-La futura visualización **egui** deberá facilitar la lectura humana y la relación entre frames; no se declara implementada. **Un frame Apto puede formar parte de un conjunto No apto**: la composición y la aptitud de dominio necesitan reglas aún no constituidas por esta ronda. Una U puede motivar nuevas preguntas con identidad propia, conservando los resultados anteriores.
+Un error crítico acreditado permite declarar No apto en el alcance de la prueba aunque existan posiciones impedidas; no autoriza a completar un vector ni a atribuirle κ. Sólo tras **25 adjudicaciones válidas e independientes** se constituye el vector ordenado y su frame o polígono. Cada posición queda ligada a pregunta, fuente, respuesta, configuración y fundamento de corrección. Las comprobaciones sintéticas del evaluador Rust acreditan su cálculo en esos casos, no la validez médica de las respuestas.
+
+La célula canónica **(9,3)** contiene vectores de nueve componentes ternarios y un universo de **3⁹ = 19.683 vectores posibles**. Las capas experimentales son filas sucesivas de vectores, no una matriz de 3 × 3. El par vector–frame debe conservar identidad, posiciones, fuentes y revisión. La futura visualización **egui** presentará inicialmente el frame o los frames y permitirá consultar los valores y evidencias a petición; no se declara implementada. **Un frame Apto puede formar parte de un conjunto No apto**: la composición y la aptitud de dominio necesitan reglas aún no constituidas por esta ronda. Una U puede motivar nuevas preguntas con identidad propia, conservando los resultados anteriores.
 
 La secuencia es: suficiencia instrumental → evaluación documental → dictamen limitado al banco → decisión sobre una eventual fase posterior. La vía A/WebAssembly conserva su dependencia de una selección favorable y de autorización propia. No se acredita aptitud clínica general, uso productivo ni integración en el núcleo del SV.
+
+## Preevaluación de Safeguard con retroalimentación
+
+El [protocolo completo](modelos-de-ia/openai/gpt-oss-safeguard-120b/ensayos-reiterados-adversariales-y-aprendizaje/readme.md) fija un bloque A de nueve casos y un bloque B de nueve casos nuevos. Cada caso tiene respuesta inicial y **tres revisiones adversariales como máximo**; se recorre cada capa completa antes de preparar la siguiente. La admisión se decide sobre la capa 3, sin seleccionar retrospectivamente la mejor. B sólo comienza si A cumple; el máximo de ambos bloques es 72 generaciones.
+
+El Árbitro-Director del Sistema Vectorial SV entrega las fuentes íntegras mediante MCP, comprueba sus ligaduras y bytes, conserva entradas, canales emitidos y telemetría, y organiza la revisión con los antecedentes completos del propio caso en `pensamiento-afinado`. La clave externa permanece reservada. El candidato explica qué mantiene o modifica; el cotejo externo adjudica **0, 1 o U**, y el Árbitro-Director aplica la continuación o el cierre fijados. No es otra IA ni certifica por sí mismo la verdad de la respuesta.
+
+El **Aprendizaje por Retroalimentación del Sistema Vectorial SV** es aquí revisión contextual acumulativa, sin entrenamiento ni ajuste de pesos. Se conservan aciertos ganados y perdidos, transiciones de la terna, puntuaciones, criticidad, tiempos, tokens, memoria e incidencias. Para cada bloque, **T(9)=7**; la conformidad exige además nueve respuestas evaluables, todas las críticas en 0, custodia conforme y ausencia de incidencias pendientes. El bloque B debe cumplir las mismas condiciones antes de proponer acceso al examen de 25 preguntas.
+
+La preparación acredita 41 comprobaciones Rust conformes e igualdad de las nueve entradas prefijadas. **A0 está en ejecución; A1–A3 y B no se han ejecutado al corte.** La fase posterior requiere conservar y evaluar la capa anterior. Un progreso favorable no autoriza una cuarta revisión. El Núcleo, la semántica V0.2 y la IR 0.3 permanecen intactos; las necesidades de representación se documentan para la recepción competente conforme al [sistema conjunto](../sistema-conjunto-lenguaje-computacion-ia-gobernada/README.md), sin correcciones silenciosas.
 
 ## Harmony, Candle y funciones del conjunto
 
@@ -65,19 +87,19 @@ En la línea GPT-OSS, **Harmony** es el formato requerido de conversación. Es e
 | Harmony / openai-harmony | Estructura y análisis de la conversación GPT-OSS. | Es necesario comprobar plantilla, identificadores, canales y fin de turno conjuntamente. |
 | Candle | Operaciones numéricas utilizadas por la implementación de inferencia. | No es un modelo auxiliar ni sustituye el formato Harmony. |
 | MCP documental | Búsqueda textual y lectura del catálogo local. | El protocolo no verifica por sí mismo la verdad de las afirmaciones ni concede permisos. |
-| Control Rust / Árbitro SV | Admisión, permisos, límites y supervisión previstos. | No se atribuye una implementación integral a la suma de MCP y cliente. |
+| Árbitro-Director del Sistema Vectorial SV | Suministro documental, admisión, custodia, límites y recorrido de retroalimentación. | Realización y comprobaciones en Rust identificadas por contraste; no constituye autoridad del Núcleo ni un verificador general de verdad. |
 | OpenTelemetry Rust y observador | Trazas instrumentadas y medidas de procesos o cgroup, respectivamente. | Deben declararse cobertura, pérdidas y ámbito; no constituyen observación exhaustiva. |
 | Axum, Hyper y Reqwest | Servicio y transporte HTTP. | Son componentes de comunicación; no son medidores de recursos. |
 
 La base mistral.rs [0.9.3](https://github.com/EricLBuehler/mistral.rs/blob/24dbf5c256f232176ee5949485ba264049407fbe/Cargo.toml) fija Candle en `35d7ae7…`; la base [0.9.4](https://github.com/EricLBuehler/mistral.rs/blob/2370966bb91e2e3dafa0b1521b87c50fd5c01244/Cargo.toml), en `66a8cf1…`. Ambas declaran Candle 0.11.0 y `openai-harmony` 0.0.8. El número de versión común no hace equivalentes sus fuentes ni acredita el binario utilizado. Las modificaciones CPU del antecedente GPT-OSS-20B requieren cotejo específico antes de aplicarse al 120B.
 
-**Antecedente GPT-OSS, separado de la campaña Qwen:** la compatibilidad conceptual entre Candle y Harmony está fundamentada; la cualificación del ensamblaje 120B permanece pendiente. Deben verificarse el tratamiento de errores y truncamientos de Harmony, el vocabulario local identificado, la ruta numérica MXFP4, las dependencias efectivamente compiladas y los controles de red y herramientas. El [adaptador examinado](https://github.com/EricLBuehler/mistral.rs/blob/24dbf5c256f232176ee5949485ba264049407fbe/mistralrs-core/src/reasoning_parsers/harmony.rs) descarta determinados errores de análisis; este hallazgo estático no constituye una explotación reproducida. La [biblioteca Harmony](https://github.com/openai/harmony/blob/ec7606df9e87e3d0a1fec9f50928c1e407f0c438/src/tiktoken_ext/public_encodings.rs) admite un vocabulario local verificado y contempla descarga si no se fija el directorio local y falta una caché válida. El ensayo debe acreditar funcionamiento sin red. Usar Rust o incluir una dependencia no constituye una certificación de seguridad.
+**Antecedente GPT-OSS, separado de la campaña Qwen:** la compatibilidad conceptual entre Candle y Harmony está fundamentada; la cualificación del ensamblaje **GPT-OSS-120B ordinario** permanece pendiente; Safeguard tiene instalación, comprobaciones y resultados propios. Deben verificarse el tratamiento de errores y truncamientos de Harmony, el vocabulario local identificado, la ruta numérica MXFP4, las dependencias efectivamente compiladas y los controles de red y herramientas. El [adaptador examinado](https://github.com/EricLBuehler/mistral.rs/blob/24dbf5c256f232176ee5949485ba264049407fbe/mistralrs-core/src/reasoning_parsers/harmony.rs) descarta determinados errores de análisis; este hallazgo estático no constituye una explotación reproducida. La [biblioteca Harmony](https://github.com/openai/harmony/blob/ec7606df9e87e3d0a1fec9f50928c1e407f0c438/src/tiktoken_ext/public_encodings.rs) admite un vocabulario local verificado y contempla descarga si no se fija el directorio local y falta una caché válida. El ensayo debe acreditar funcionamiento sin red. Usar Rust o incluir una dependencia no constituye una certificación de seguridad.
 
 <a id="composición-de-la-conversación-qwen"></a>
 
 ## Versiones de los componentes
 
-La **edición documental 2.17**, las **aplicaciones 0.1.x/0.2.x**, el **MCP 0.1.x**, los **modelos** y los **archivos de recuperación v1** tienen identidades independientes. Una numeración no sustituye a las restantes. Las realizaciones conservadas identifican Rust 1.98.0 y sus dependencias en cada expediente.
+La **edición documental 2.18**, las **aplicaciones 0.1.x/0.2.x**, el **MCP 0.1.x**, los **modelos** y los **archivos de recuperación v1** tienen identidades independientes. Una numeración no sustituye a las restantes. Los antecedentes identifican Rust 1.98.0; la preparación de retroalimentación identifica Rust 1.98.1. Cada expediente fija sus fuentes, dependencias, ejecutables y comprobaciones; una compilación no acredita utilización efectiva.
 
 <details>
 <summary><strong>EIO conversación · Qwen3-0.6B · 0.1.0 → 0.1.4</strong></summary>
@@ -118,15 +140,16 @@ Las versiones de fuentes pueden abarcar varios commits; el enlace identifica el 
 </details>
 
 <details>
-<summary><strong>MCP documental · 0.1.0 → 0.1.1 → 0.1.2</strong></summary>
+<summary><strong>MCP documental · 0.1.0 → 0.1.1 → 0.1.2 → 0.1.3</strong></summary>
 
 | Versión | Cambio y resultado conservado | Acceso completo |
 |---|---|---|
 | 0.1.0 | Prototipo de búsqueda textual y lectura paginada; preparación incompleta y reparos conservados. | [Paquete y documentación](modelos-de-ia/model-context-protocol/0.1.0/README.md) |
 | 0.1.1 | Rechazo de claves JSON duplicadas, paginación sobre la respuesta completa y custodia supervisada. Controles dirigidos documentados; recepción pendiente. | [Fuentes y uso](modelos-de-ia/model-context-protocol/0.1.1/LEAME.md) · [Ficha y alcance](modelos-de-ia/model-context-protocol/0.1.1/FICHA_TECNICA.md) |
 | 0.1.2 | Añade el cliente mínimo con supervisión independiente y observador del conjunto. Ese cliente no ofrece herramientas al modelo. | [Fuentes, uso y límites](modelos-de-ia/model-context-protocol/0.1.2/LEAME.md) |
+| 0.1.3 | Lectura íntegra y paginación verificadas; búsqueda acotada por caracteres, sin la restricción anterior de ocho palabras. Veinticinco comprobaciones Rust conservadas. | [Fuentes, uso y comprobaciones](modelos-de-ia/model-context-protocol/0.1.3/LEAME.md) |
 
-Son versiones del componente documental, sin publicación Release específica en este corte. TT-0014 conserva su recepción propia; la selección del modelo tiene criterios separados.
+Son versiones del componente documental. El corte del 27/09 no registraba una publicación Release específica; las conservaciones posteriores se identifican en los expedientes que las utilizan. TT-0014 conserva su recepción propia; la selección del modelo tiene criterios separados.
 
 </details>
 
@@ -138,7 +161,7 @@ Instruct utiliza una realización CPU identificada del motor mistral.rs 0.9.4 y 
 
 El desarrollo experimental y sus controles se realizan en Rust. Las excepciones criptográficas nativas declaradas se identifican en el registro; no se presenta el conjunto de dependencias como íntegramente Rust.
 
-La [carpeta de Thinking](modelos-de-ia/qwen/qwen3-next-80b-a3b-thinking) conserva su documentación propia conforme avance la realización. La presencia de esa carpeta no acredita instalación, carga, inferencia ni recepción.
+La [carpeta de Thinking](modelos-de-ia/qwen/qwen3-next-80b-a3b-thinking) conserva la instalación y la primera respuesta documental, con sus salvedades y recepción pendiente. La existencia de fuentes, una ejecución y su recepción son estados distintos; la entrega inicial no acredita el examen posterior.
 
 </details>
 
@@ -146,7 +169,7 @@ La [carpeta de Thinking](modelos-de-ia/qwen/qwen3-next-80b-a3b-thinking) conserv
 
 ## Publicaciones en orden cronológico
 
-Se conservan **cinco publicaciones preliminares: dos distribuciones y tres archivos de recuperación o cierre**. Cada desplegable conduce a la publicación completa, sus activos y la documentación de alcance. Las revisiones v1 corresponden a paquetes fechados distintos.
+La primera secuencia conserva **cinco publicaciones preliminares: dos distribuciones y tres archivos de recuperación o cierre**. Las entregas posteriores se relacionan a continuación de esa secuencia. Cada desplegable conduce a la publicación completa, sus activos y la documentación de alcance. Las revisiones v1 corresponden a paquetes fechados distintos.
 
 <details>
 <summary><strong>22/09/2026 · EIO conversación 0.1.3-beta.1 · Qwen3-0.6B</strong></summary>
@@ -187,19 +210,31 @@ Conserva una imagen posterior de cierre y los pesos cifrados identificados. No s
 <details>
 <summary><strong>27/09/2026 · Qwen3.8-27B · archivo de cierre v1</strong></summary>
 
-Reúne las imágenes del diagnóstico inicial y del cierre, sin pesos Qwen. Se conservan sus comprobaciones de integridad, sin arranque acreditado en una instancia restaurada. La configuración mantiene el dictamen No pasa.
+Reúne las imágenes del diagnóstico inicial y del cierre, sin pesos Qwen. Se conservan sus comprobaciones de integridad, sin arranque acreditado en una instancia restaurada. La configuración mantiene el dictamen No apto.
 
 [Publicación completa y activos](https://github.com/juantoniolloretegea/SV-motor/releases/tag/qwen38-27b-archivo-cierre-20260927-v1) · [Ficha o procedimiento y límites](modelos-de-ia/qwen/qwen3.8-27b/imagen-onecloud/README.md).
 
 </details>
 
-El archivo posterior conserva la historia anterior y su dictamen. La publicación de activos cifrados no concede acceso al contenido reservado. GPT-OSS-120B no tiene distribución ni imagen publicada en este corte. Las huellas publicadas se identifican en [VERSIONES.json](VERSIONES.json); esta revisión documental no ha descargado ni recalculado los grandes activos binarios.
+El archivo posterior conserva la historia anterior y su dictamen. La publicación de activos cifrados no concede acceso al contenido reservado. El GPT-OSS-120B ordinario no tiene distribución ni imagen propias publicadas en las fuentes consultadas; su exploración pública se conserva separadamente. Las huellas publicadas se identifican en [VERSIONES.json](VERSIONES.json); esta revisión documental no ha descargado ni recalculado los grandes activos binarios.
+
+### Entregas y conservación posteriores
+
+| Fecha | Publicación y evidencia | Alcance |
+|---|---|---|
+| 30/09–01/10/2026 | [Examen Instruct, puntuación y originales](modelos-de-ia/qwen/qwen3-next-80b-a3B-instruct/tests-y-pruebas-efectuadas/PUNTUACION-FINAL-20261001.md) · [Archivo final](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/releases/tag/qwen80-instruct-archivo-cierre-20261001-v1) | Examen, diagnóstico y conservación sin pesos; retirada registrada. La recepción científica se distingue del cierre administrativo. |
+| 30/09/2026 | [Primera entrega Thinking](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/1cf92e92768938bd304ee22a792d16fc7a12bb9e/respuestas-ejecucion/QWEN80-THINKING-Q4K-ONECLOUD-20260930/entrega-01/INFORME.md) | Veintiocho archivos de evidencias y registros propios; consulta inicial, no examen de 25 preguntas. |
+| 01–02/10/2026 | [Instalación Safeguard](modelos-de-ia/openai/gpt-oss-safeguard-120b/tests-y-pruebas-efectuadas/INSTALACION-CONTRASTE-20261001.md) · [Lectura íntegra](modelos-de-ia/openai/gpt-oss-safeguard-120b/tests-y-pruebas-efectuadas/LECTURA-INTEGRA-V2-20261001.md) · [Contraste con Árbitro-Director](modelos-de-ia/openai/gpt-oss-safeguard-120b/tests-y-pruebas-efectuadas/ARBITRO-SV-SAFEGUARD-V3-20261002.md) | Resultados, originales, incidencias y conservaciones de cada condición; no se suman como una única puntuación. |
+| 02–03/10/2026 | [Demostración pública GPT-OSS-120B](modelos-de-ia/openai/gpt-oss-120b/prueba-playground/readme.md) · [Ensayo 1](modelos-de-ia/openai/gpt-oss-120b/prueba-playground/ensayo-1/readme.md) | Respuestas, relectura y cadena de impedimentos conservadas. Sin resultado adversarial final ni medición de una instalación propia. |
+| 03/10/2026 | [Preevaluación Safeguard](modelos-de-ia/openai/gpt-oss-safeguard-120b/ensayos-reiterados-adversariales-y-aprendizaje/readme.md) · [Conservación de preparación A0](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/releases/tag/safeguard-retroalimentacion-20261003-preparacion-a0) | Preparación y correcciones instrumentales recuperadas y cotejadas; la inferencia A0 está en curso y sus resultados finales siguen pendientes. |
+
+Los enlaces de SV-sala-de-maquinas mantienen el acceso restringido de los originales. Las síntesis públicas enlazan su procedencia; no sustituyen los paquetes, sus manifiestos ni la recepción independiente.
 
 <a id="historia-de-la-edición-documental"></a>
 
 ## Historia completa de la edición documental
 
-La secuencia comienza en **0.1** y avanza hasta la presente **2.17**. Se conserva la historia anterior y se incorpora la edición 2.16 mediante su referencia inmutable. Cada desplegable conserva lo relevante de su corte y ofrece el texto íntegro; sus estados históricos no sustituyen al estado actual.
+La secuencia comienza en **0.1** y avanza hasta la presente **2.18**. Se conservan todas las ediciones anteriores y sus referencias inmutables. Cada desplegable conserva lo relevante de su corte y ofrece el texto íntegro; sus estados históricos no sustituyen al estado actual.
 
 El salto **0.2 → 2.0** se conserva tal como fue publicado; no se ha localizado una edición 1.x en el historial de este archivo. Cuando una edición reúne varios commits, se muestran todos en orden. Las fechas siguientes son las de esos commits en Europe/Madrid; una cabecera histórica puede conservar una fecha anterior.
 
@@ -408,12 +443,21 @@ Incorpora todas las ediciones anteriores y sus cortes, los antecedentes de las a
 </details>
 
 
-<details open>
+<details>
 <summary><strong>2.17 · 30/09/2026 · Qwen80, evaluación documental y seguimiento diferenciado</strong></summary>
 
 Actualiza el estado desde las fuentes recibidas: funcionamiento documental de Instruct, campaña posterior parcial, seguimiento independiente de Thinking y situación condicionada de GPT-OSS-120B. Explica el banco, la criticidad, la indeterminación y el vínculo con vector y frame. Conserva las ediciones, publicaciones y diagramas anteriores; añade el recorrido documental vigente y enlaza S39 y TT-0014 a TT-0017.
 
 [Registro estructurado](VERSIONES.json). La revisión exacta queda identificada por el commit que contiene esta edición.
+
+</details>
+
+<details open>
+<summary><strong>2.18 · 03/10/2026 · resultados por modelo y preevaluación con retroalimentación</strong></summary>
+
+Incorpora el cierre de Instruct, la primera entrega documental de Thinking, los contrastes propios de Safeguard y la exploración pública del GPT-OSS-120B ordinario. Sitúa la nueva preevaluación Safeguard en A0, separa puntuación, regla SV y criticidad, y describe el recorrido acotado de retroalimentación. Conserva las publicaciones, diagramas y ediciones anteriores, y añade la representación de la fase actual.
+
+[Texto íntegro de la edición 2.17](https://github.com/juantoniolloretegea/SV-motor/blob/ca0c159787038af2126d78194499fdd8e0340722/laboratorio/ensayo-ia-y-observabilidad/README.md). La revisión exacta de la edición presente queda identificada por el commit que la contiene.
 
 </details>
 
@@ -448,7 +492,7 @@ Los controles sintéticos iniciales se completaron. La prueba con el modelo se i
 
 ### Antecedente de continuación de la vía B · GPT-OSS-120B
 
-Este esquema conserva la propuesta del 27/09/2026. El candidato sigue condicionado y no representa la realización Qwen80 vigente.
+Este esquema conserva la propuesta del 27/09/2026 para el GPT-OSS-120B ordinario. Su ensamblaje sigue condicionado; la figura es distinta de las realizaciones posteriores de Qwen80 y Safeguard.
 
 ```mermaid
 flowchart TD
@@ -467,13 +511,13 @@ flowchart TD
   I -.-> E
 ```
 
-**Alcance de la figura:** composición funcional prevista, pendiente de cualificación. Harmony representa la preparación y el análisis de mensajes; Candle proporciona cálculo numérico dentro del motor. Los pesos mantienen identidad separada. El control previsto forma parte de las funciones del Árbitro SV; no se declara una implementación integral.
+**Alcance de la figura:** composición funcional prevista, pendiente de cualificación. Harmony representa la preparación y el análisis de mensajes; Candle proporciona cálculo numérico dentro del motor. Los pesos mantienen identidad separada. El control previsto pertenece a las funciones del Árbitro-Director del Sistema Vectorial SV; este esquema histórico no acredita una implementación integral.
 
 El acceso documental previo por controlador y las llamadas autónomas del modelo son recorridos distintos. El cliente mínimo 0.1.2 no habilita estas últimas. La inferencia prevista deberá operar sin Internet; la adquisición administrativa de documentos y recursos precede al ensayo. Las líneas de observación señalan cobertura que debe acreditarse, no una captura exhaustiva ya conseguida.
 
 Las figuras históricas A/B conservan sus archivos y alcance. El esquema previo del candidato continúa accesible dentro de la [edición 2.15](https://github.com/juantoniolloretegea/SV-motor/blob/63f5bd5e9b8ef147ba6a92d7beba6f94fb5ea3eb/laboratorio/ensayo-ia-y-observabilidad/README.md).
 
-### Recorrido vigente: consulta, evaluación y retorno
+### Recorrido Qwen: consulta, evaluación y retorno · 30/09/2026
 
 ```mermaid
 flowchart TD
@@ -493,7 +537,29 @@ flowchart TD
   D -. "Reglas de dominio pendientes" .-> F["Relación entre frames y aptitud de conjunto"]
 ```
 
-**Alcance de la figura:** la recepción instrumental de Instruct está acreditada; el examen posterior permanece parcial. Los nodos de corrección, vector completo y dictamen representan resultados aún pendientes. Thinking conserva su prueba y su recepción propias. Las líneas discontinuas señalan recorridos condicionados, no avances ya conseguidos. El diagnóstico conserva los intentos anteriores; la continuación no permite sustituirlos por el mejor resultado.
+**Alcance de la figura:** conserva el recorrido del corte del 30/09, cuando la recepción instrumental de Instruct estaba acreditada y su examen permanecía parcial. Los nodos pendientes pertenecen a ese corte. El examen terminó después con 28/100 y No apto por errores críticos, sin vector completo debido a seis impedimentos. Thinking conserva prueba y recepción propias. Las líneas discontinuas señalan recorridos condicionados. El diagnóstico conserva los intentos anteriores; la continuación no permite sustituirlos por el mejor resultado.
+
+### Preevaluación Safeguard: recorrido acotado de la configuración actual
+
+```mermaid
+flowchart TD
+  A["Bloque A: nueve casos, fuentes y política fijados"] --> D["Árbitro-Director del Sistema Vectorial SV"]
+  D --> M["MCP: fuentes íntegras y ligaduras verificadas"]
+  M --> C["Safeguard: una respuesta por caso y capa"]
+  C --> K["Custodia: entrada, salida y telemetría"]
+  K --> E["Cotejo externo de la capa completa: 0, 1, U"]
+  E --> R{"¿Se ha completado la capa 3?"}
+  R -->|No| P["Antecedentes propios completos y nueva revisión"]
+  P --> D
+  R -->|Sí| F{"¿Cumple regla SV, criticidad y custodia?"}
+  F -->|No| N["Resultado conservado; sin acceso al examen"]
+  F -->|Sí| B["Bloque B nuevo: mismo procedimiento y límite"]
+  B --> V["Evaluación final de B y sus controles"]
+  V --> Q["Propuesta de acceso al examen sólo si B cumple"]
+  D -. "Incidencia instrumental" .-> I["Contención y conservación sin adjudicación SV"]
+```
+
+**Alcance de la figura:** diseño fijado para respuesta inicial y tres revisiones por caso, nunca un ciclo ilimitado. A0 está en ejecución al corte; las demás capas y B son etapas condicionadas. El Árbitro-Director organiza también el **Aprendizaje por Retroalimentación del Sistema Vectorial SV**; el modelo mantiene sus pesos y capacidades nativas. Una mejora sólo se atribuye a la configuración ensayada. El [diseño del componente](modelos-de-ia/model-context-protocol/controlador-pictograma-algoritmo/DISENO.md) y el protocolo propio concretan sus fronteras con el Núcleo.
 
 <a id="evidencia-y-seguimiento"></a>
 
@@ -509,10 +575,12 @@ La secuencia de identificación es **configuración → campaña → resultado �
 | Continuidad y dictámenes | [S39](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/sucesos/SUCESOS_SV.md#s39) y [Acta 004](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/continuacion-15-09-2026/ACTA_004_FINALIDAD_ALCANCE_Y_CONTINUIDAD_EIO_2026_09_22.md). |
 | Alcances de los tiques | [TT-0013: cierre GPT-OSS-20B](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0013.md), [TT-0014: MCP](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0014.md) y [TT-0015: viabilidad GPT-OSS-120B](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0015.md). |
 
-El seguimiento vigente se completa con [TT-0016: banco y evaluación de Instruct](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0016.md) y [TT-0017: primera prueba Thinking](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0017.md). TT-0013 conserva su cierre acotado; TT-0014 mantiene su recepción propia pendiente; TT-0015 dispone de un estudio preliminar adverso para la configuración considerada, sin inferencia. Ninguno de los tiques abiertos se cierra mediante esta actualización documental.
+El seguimiento vigente se completa con [TT-0016: banco y evaluación de Instruct](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0016.md) y [TT-0017: primera prueba Thinking](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0017.md). TT-0013 conserva su cierre acotado; TT-0014 mantiene su recepción propia pendiente; TT-0015 dispone de un estudio preliminar adverso para la configuración considerada, sin inferencia. Safeguard conserva su seguimiento en [TT-0018](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0018.md), con recepciones anteriores pendientes. La nueva preevaluación tiene protocolo y estado propios; no constituye cierre de S39 ni de los tiques abiertos. El retorno al Lenguaje y al Núcleo sigue la [guía del sistema conjunto](../sistema-conjunto-lenguaje-computacion-ia-gobernada/README.md).
 
 Los enlaces de las tablas permiten lectura pública de las fichas y los resultados resumidos. Los originales de acceso restringido mantienen su custodia propia. Una huella identifica bytes; no acredita veracidad clínica, restauración funcional o conformidad general. La revisión de continuidad no repite los ensayos ni modifica sus resultados.
 
 ## Licencias
 
-Sistema Vectorial SV · [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/deed.es). Se conservan el [aviso de EIO conversación](conversacion-nativa/AVISO_LICENCIAS.json), el [aviso de GPT-OSS y su controlador](modelos-de-ia/openai/gpt-oss-20b/controlador-nativo/AVISO_LICENCIAS.json) y los avisos específicos de cada entrega. Cada componente mantiene su licencia; una publicación no amplía derechos de uso o distribución.
+[Texto de la licencia CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/deed.es). Se conservan el [aviso de EIO conversación](conversacion-nativa/AVISO_LICENCIAS.json), el [aviso de GPT-OSS y su controlador](modelos-de-ia/openai/gpt-oss-20b/controlador-nativo/AVISO_LICENCIAS.json) y los avisos específicos de cada entrega. Cada componente mantiene su licencia; una publicación no amplía derechos de uso o distribución.
+
+© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
