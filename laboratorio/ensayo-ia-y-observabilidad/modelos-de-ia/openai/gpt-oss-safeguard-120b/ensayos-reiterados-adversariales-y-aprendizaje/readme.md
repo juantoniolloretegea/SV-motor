@@ -1,6 +1,6 @@
 # Preevaluación de examen de 25 preguntas de tricoleucemia
 
-**Candidato:** `openai/gpt-oss-safeguard-120b`. **Fecha de apertura:** 3 de octubre de 2026. **Estado al 03/10/2026:** A0 concluida y cotejada; nueve respuestas finales, −88,89/100 y No apto al evaluar el cumplimiento completo. Ocho clasificaciones documentales son correctas; las nueve salidas omiten la declaración de recepción y A08 contiene un error sustantivo crítico. [Resultados y distinción entre contenido y forma](resultados/A0/INFORME-A0.md). A1 preparada con los originales completos de A0; su activación y avance se distinguen de la preparación. Se conserva la [constancia de inicio de A0](ensayo-1/INICIO-A0.json).
+**Candidato:** `openai/gpt-oss-safeguard-120b`. **Fecha de apertura:** 3 de octubre de 2026. **Estado al 03/10/2026:** A0 concluida y cotejada; nueve respuestas finales, −88,89/100 y No apto al evaluar el cumplimiento completo. Ocho clasificaciones documentales son correctas; las nueve salidas omiten la declaración de recepción y A08 contiene un error sustantivo crítico. [Resultados y distinción entre contenido y forma](resultados/A0/INFORME-A0.md). **A1 activa desde las 12:37:55 UTC**, con una carga y progreso confirmado en A01 a las 12:41 UTC. [Constancia de activación y custodia](ensayo-1/INICIO-A1.json). A1 recibe los originales completos de A0; todavía no tiene resultado final. Se conserva la [constancia de inicio de A0](ensayo-1/INICIO-A0.json).
 
 ## Objetivo y alcance
 
