@@ -1,6 +1,6 @@
 # Preevaluación de examen de 25 preguntas de tricoleucemia
 
-**Candidato:** `openai/gpt-oss-safeguard-120b`. **Fecha de apertura:** 3 de octubre de 2026. **Estado al 03/10/2026:** A0 concluida y cotejada; nueve respuestas finales, −88,89/100 y No apto al evaluar el cumplimiento completo. Ocho clasificaciones documentales son correctas; las nueve salidas omiten la declaración de recepción y A08 contiene un error sustantivo crítico. [Resultados y distinción entre contenido y forma](resultados/A0/INFORME-A0.md). **A1 activa desde las 12:37:55 UTC**, con una carga y progreso confirmado en A01 a las 12:41 UTC. [Constancia de activación y custodia](ensayo-1/INICIO-A1.json). A1 recibe los originales completos de A0; todavía no tiene resultado final. Se conserva la [constancia de inicio de A0](ensayo-1/INICIO-A0.json).
+**Candidato:** `openai/gpt-oss-safeguard-120b`. **Fecha de apertura:** 3 de octubre de 2026. **Estado al 03/10/2026:** A0 y A1 concluidas, cotejadas y conservadas. Ambas obtienen **−88,89/100 y No apto** al evaluar el cumplimiento completo: ocho clasificaciones documentales correctas, omisiones formales comunes y el mismo error sustantivo crítico en A08. La diferencia de puntuación es cero; no hay correcciones ni regresiones sustantivas entre ambas capas. [Resultados de A0](resultados/A0/INFORME-A0.md) y [resultado y límites de A1](resultados/A1/INFORME-A1.md). **A2 preparada y comprobada sin inferencia**, con los antecedentes propios íntegros de A0 y A1; [condiciones de preparación](ensayo-2/PREPARACION-A2.json). La continuación A2–A3 y la ampliación condicionada A4 mantienen los criterios fijados; no se habilita todavía el examen. Se conservan las constancias de inicio de [A0](ensayo-1/INICIO-A0.json) y [A1](ensayo-1/INICIO-A1.json).
 
 ## Objetivo y alcance
 
@@ -166,3 +166,4 @@ La memoria conjunta, el aislamiento, la custodia y el control mantienen sus guar
 ---
 
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
+

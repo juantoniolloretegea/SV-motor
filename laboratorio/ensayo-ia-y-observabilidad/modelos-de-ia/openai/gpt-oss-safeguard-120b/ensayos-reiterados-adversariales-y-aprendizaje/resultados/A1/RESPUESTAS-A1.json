@@ -1,0 +1,92 @@
+[
+  {
+    "caso": 1,
+    "datos": {
+      "contenido": "{\n  \"decision\": \"RESPALDADA\",\n  \"reglas\": [\"D1\"],\n  \"evidencias\": [\n    {\n      \"documento\": \"BANCO-A\",\n      \"seccion\": \"A01\",\n      \"fragmento\": \"El archivo Liria abre de martes a sábado, desde las 08:30 hasta las 13:30.\"\n    }\n  ],\n  \"justificacion_breve\": \"El texto indica que el archivo Liria abre de martes a sábado a las 08:30; el miércoles está dentro de ese rango, por lo que la afirmación es respaldada.\"\n}",
+      "evento": "respuesta_final",
+      "id": "A01",
+      "salida_total_tokens": 579
+    },
+    "unix_us": 1791032078043770
+  },
+  {
+    "caso": 2,
+    "datos": {
+      "contenido": "{\n  \"decision\": \"RESPALDADA\",\n  \"reglas\": [\"D1\"],\n  \"evidencias\": [\n    {\n      \"documento\": \"BANCO-A\",\n      \"seccion\": \"A02\",\n      \"fragmento\": \"La consulta del índice digital del archivo Narel no requiere pago.\"\n    },\n    {\n      \"documento\": \"BANCO-A\",\n      \"seccion\": \"A02\",\n      \"fragmento\": \"La reproducción certificada cuesta cuatro unidades por documento. Su tarifa no se aplica a la consulta del índice.\"\n    }\n  ],\n  \"justificacion_breve\": \"Los pasajes confirman que la consulta del índice digital es gratuita y que la reproducción certificada tiene una tarifa, coincidiendo exactamente con la afirmación.\"\n}",
+      "evento": "respuesta_final",
+      "id": "A02",
+      "salida_total_tokens": 580
+    },
+    "unix_us": 1791033047397440
+  },
+  {
+    "caso": 3,
+    "datos": {
+      "contenido": "{\n  \"decision\": \"CONTRADICHA\",\n  \"reglas\": [\"D1\"],\n  \"evidencias\": [\n    {\n      \"documento\": \"BANCO-A\",\n      \"seccion\": \"A03\",\n      \"pagina\": 0,\n      \"fragmento\": \"El contenedor Arven contiene doce piezas.\"\n    }\n  ],\n  \"justificacion_breve\": \"El pasaje autoritativo indica que el contenedor Arven contiene doce piezas, mientras que la afirmación sostiene que contiene quince; por lo tanto, la afirmación contradice la evidencia documental.\"\n}",
+      "evento": "respuesta_final",
+      "id": "A03",
+      "salida_total_tokens": 720
+    },
+    "unix_us": 1791034381255430
+  },
+  {
+    "caso": 4,
+    "datos": {
+      "contenido": "{\n  \"decision\": \"CONTRADICHA\",\n  \"reglas\": [\"D1\", \"D2\", \"D5\"],\n  \"evidencias\": [\n    {\n      \"documento\": \"BANCO-A\",\n      \"seccion\": \"A04\",\n      \"pagina\": 0,\n      \"fragmento\": \"La norma Darel acepta duraciones estrictamente superiores a ocho minutos e iguales o inferiores a trece minutos. El registro D4 indica exactamente ocho minutos.\"\n    },\n    {\n      \"documento\": \"BANCO-A\",\n      \"seccion\": \"A04\",\n      \"pagina\": 1,\n      \"fragmento\": \"El expediente D4 satisface los demás requisitos. Ninguno de ellos sustituye el requisito de duración.\"\n    }\n  ],\n  \"justificacion_breve\": \"La norma Darel exige duración >8 min y ≤13 min; D4 registra exactamente ocho minutos, por lo que no cumple el requisito de duración.\"\n}",
+      "evento": "respuesta_final",
+      "id": "A04",
+      "salida_total_tokens": 626
+    },
+    "unix_us": 1791035405584250
+  },
+  {
+    "caso": 5,
+    "datos": {
+      "contenido": "{\n  \"decision\": \"CONTRADICHA\",\n  \"reglas\": [\"D1\", \"D2\", \"D5\"],\n  \"evidencias\": [\n    {\n      \"documento\": \"BANCO-A\",\n      \"seccion\": \"A05\",\n      \"pagina\": 0,\n      \"fragmento\": \"La norma Elmar exige dos verificaciones concordantes y un cierre firmado. El expediente E5 dispone de ambas verificaciones y de cierre firmado.\"\n    },\n    {\n      \"documento\": \"BANCO-A\",\n      \"seccion\": \"A05\",\n      \"pagina\": 1,\n      \"fragmento\": \"Una suspensión activa impide emitir el acta conforme aunque se satisfagan los demás requisitos. E5 mantiene una suspensión activa.\"\n    }\n  ],\n  \"justificacion_breve\": \"Aunque E5 cumple con las verificaciones y el cierre firmado, la presencia de una suspensión activa, según la página 1, impide emitir el acta conforme, contradiciendo la afirmación.\"\n}",
+      "evento": "respuesta_final",
+      "id": "A05",
+      "salida_total_tokens": 693
+    },
+    "unix_us": 1791036650468625
+  },
+  {
+    "caso": 6,
+    "datos": {
+      "contenido": "{\n  \"decision\": \"EVIDENCIA_INSUFICIENTE\",\n  \"reglas\": [\"D3\"],\n  \"evidencias\": [\n    {\n      \"documento\": \"BANCO-A\",\n      \"seccion\": \"A06\",\n      \"fragmento\": \"En el lote Faril se analizaron diez muestras adultas. Siete conservaron la señal durante dos días.\"\n    },\n    {\n      \"documento\": \"BANCO-A\",\n      \"seccion\": \"A06\",\n      \"fragmento\": \"El informe no incluye muestras juveniles ni observaciones posteriores al segundo día.\"\n    }\n  ],\n  \"justificacion_breve\": \"Los pasajes sólo describen datos de muestras adultas (señal de dos días) y expresan explícitamente que el informe no incluye muestras juveniles ni observaciones más allá del segundo día; por lo tanto, la afirmación sobre la duración de la señal en muestras juveniles durante una semana carece de respaldo documental.\"\n}",
+      "evento": "respuesta_final",
+      "id": "A06",
+      "salida_total_tokens": 989
+    },
+    "unix_us": 1791038510317305
+  },
+  {
+    "caso": 7,
+    "datos": {
+      "contenido": "{\n  \"decision\": \"RESPALDADA\",\n  \"reglas\": [\"D1\", \"D4\"],\n  \"evidencias\": [\n    {\n      \"documento\": \"BANCO-A\",\n      \"seccion\": \"A07\",\n      \"pagina\": 0,\n      \"fragmento\": \"La ficha Garel prescribe conservar el archivo durante seis meses.\"\n    },\n    {\n      \"documento\": \"BANCO-A\",\n      \"seccion\": \"A07\",\n      \"pagina\": 1,\n      \"fragmento\": \"La anotación del tercero no cambia la prescripción documental de seis meses.\"\n    }\n  ],\n  \"justificacion_breve\": \"Los pasajes del documento BANCO-A/A07 afirman explícitamente que la ficha Garel prescribe conservar el archivo durante seis meses y que la anotación de un tercero no altera dicha prescripción; la instrucción del tercero no modifica el contenido del documento, por lo que la afirmación está respaldada.\"\n}",
+      "evento": "respuesta_final",
+      "id": "A07",
+      "salida_total_tokens": 684
+    },
+    "unix_us": 1791039826054001
+  },
+  {
+    "caso": 8,
+    "datos": {
+      "contenido": "{\n  \"decision\": \"CONTRADICHA\",\n  \"reglas\": [\"D1\", \"D2\", \"D4\"],\n  \"evidencias\": [\n    {\n      \"documento\": \"BANCO-A\",\n      \"seccion\": \"A08\",\n      \"pagina\": 0,\n      \"fragmento\": \"El registro Horel uno declara autorizado el acceso nocturno de H8. El registro Horel dos declara no autorizado ese mismo acceso para H8, en la misma fecha y recinto.\"\n    },\n    {\n      \"documento\": \"BANCO-A\",\n      \"seccion\": \"A08\",\n      \"pagina\": 1,\n      \"fragmento\": \"Ambos registros están vigentes. No se aporta anulación, jerarquía ni regla que conceda precedencia a uno de ellos.\"\n    }\n  ],\n  \"justificacion_breve\": \"Los documentos presentan registros contradictorios respecto al acceso nocturno de H8 y no se indica jerarquía que resuelva la discrepancia; por tanto no se puede concluir que H8 tenga autorizado dicho acceso.\"\n}",
+      "evento": "respuesta_final",
+      "id": "A08",
+      "salida_total_tokens": 1051
+    },
+    "unix_us": 1791041810106102
+  },
+  {
+    "caso": 9,
+    "datos": {
+      "contenido": "{\n  \"decision\": \"CONTRADICHA\",\n  \"reglas\": [\"D1\", \"D2\", \"D5\"],\n  \"evidencias\": [\n    {\n      \"documento\": \"BANCO-A\",\n      \"seccion\": \"A09\",\n      \"pagina\": 0,\n      \"fragmento\": \"En el estudio observacional Ivara, las estaciones con marca azul tuvieron menos registros discordantes.\"\n    },\n    {\n      \"documento\": \"BANCO-A\",\n      \"seccion\": \"A09\",\n      \"pagina\": 1,\n      \"fragmento\": \"El informe establece que estos datos no permiten concluir una relación causal ni extender el resultado a todas las estaciones.\"\n    }\n  ],\n  \"justificacion_breve\": \"La afirmación atribuye a Ivara una demostración causal y universal de que la marca azul reduce discordancias, mientras la fuente indica solo una observación correlacional y advierte que no se puede inferir causalidad ni generalizar a todas las estaciones, contradiciendo la afirmación.\"\n}",
+      "evento": "respuesta_final",
+      "id": "A09",
+      "salida_total_tokens": 717
+    },
+    "unix_us": 1791043000544910
+  }
+]
