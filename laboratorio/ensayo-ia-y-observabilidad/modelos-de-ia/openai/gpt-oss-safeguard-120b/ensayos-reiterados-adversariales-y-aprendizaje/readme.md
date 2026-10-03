@@ -1,6 +1,6 @@
 # Preevaluación de examen de 25 preguntas de tricoleucemia
 
-**Candidato:** `openai/gpt-oss-safeguard-120b`. **Fecha de apertura:** 3 de octubre de 2026. **Estado:** preparación experimental; todavía sin resultados de esta condición.
+**Candidato:** `openai/gpt-oss-safeguard-120b`. **Fecha de apertura:** 3 de octubre de 2026. **Estado al 03/10/2026, 09:01 UTC:** A0 en ejecución; A01 en cálculo, con una carga y una secuencia. Todavía sin respuesta final ni puntuación de esta condición. La [constancia de inicio](ensayo-1/INICIO-A0.json) identifica las comprobaciones y su conservación.
 
 ## Objetivo y alcance
 

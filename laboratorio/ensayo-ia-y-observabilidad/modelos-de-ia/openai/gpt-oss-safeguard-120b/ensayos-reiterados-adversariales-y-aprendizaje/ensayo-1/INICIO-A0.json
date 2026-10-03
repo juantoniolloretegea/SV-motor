@@ -1,0 +1,38 @@
+{
+  "fase": "Preevaluación de examen de 25 preguntas de tricoleucemia",
+  "responsable_del_recorrido": "Árbitro-Director del Sistema Vectorial SV",
+  "modelo": "openai/gpt-oss-safeguard-120b",
+  "revision_modelo": "3c7391182603991a904031244e7822488c67796d",
+  "corte_utc": "2026-10-03T09:01:15Z",
+  "condicion": "A0",
+  "ejecucion": "retro-A0-02",
+  "estado_observado": "Carga terminada; A01 en cálculo con avance de capas",
+  "carga_inicio_unix_us": 1791017951082517,
+  "carga_fin_unix_us": 1791018021832027,
+  "cargas": 1,
+  "secuencias_simultaneas": 1,
+  "respuestas_finales_observadas": 0,
+  "puntuacion": null,
+  "dictamen": null,
+  "pruebas_rust": {"instrumentacion": 28, "custodio": 6, "conductor": 7, "fallos": 0},
+  "archivos_modelo_cotejados": 27,
+  "archivos_nucleo_cotejados_sin_cambios": 61,
+  "entradas": {"casos": 9, "paginas_por_caso": 2, "admision_sha256": "b21c9a1ef7fcfba7745fe2474122109b7edc974bd91cf0c8c0e31720e74c51af", "identicas_tras_rectificacion": true},
+  "comprobaciones": ["Fronteras MCP y custodia íntegra", "Identidad de política, fuentes, plantilla y tokenizador", "Igualdad de entrada antes y después de tokenización", "Restricción de solicitudes al caso actual", "Aislamiento comprobado bajo las identidades de modelo y MCP"],
+  "incidencias_previas": [
+    {"identidad": "retro-instrumental-01", "causa": "Catálogo incompatible con el límite del MCP", "modelo_cargado": false, "respuesta": false, "valor_sv": null},
+    {"identidad": "retro-A0-01", "causa": "Discordancia de sección al avanzar la preparación", "modelo_cargado": false, "respuesta": false, "valor_sv": null}
+  ],
+  "guardas": {"intercambio_bytes_observados": 0, "agotamiento_memoria_observado": false, "limite_total_por_reloj": null, "cierre_sin_progreso_real_segundos": 3600, "casos_de_esta_carga": 9, "maximo_revisiones_adversariales_por_caso": 3},
+  "conservacion": {
+    "realizacion_revision": "af9da21077d90eabc930d731ec287eed5bbcf964",
+    "edicion": "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/releases/tag/safeguard-retroalimentacion-20261003-preparacion-a0",
+    "archivos": [
+      {"nombre": "PREPARACION-A0-20261003.tar.gz", "bytes": 1125195, "sha256": "96879cc82f12466d888c1f7853d436a711ecf4554ab6eae0a3917f530c1d57ce", "recuperacion_independiente_identica_en_rust": true},
+      {"nombre": "RECUPERACION-A0-03.tar.gz", "bytes": 966568, "sha256": "61ef4d6c32fe067ba15339aec9d914ab0322089c4424f0d5e4ea528496fdac8a", "recuperacion_independiente_identica_en_rust": true}
+    ],
+    "originales_en_curso": "Se conservan durante la ejecución; su conservación final y evaluación permanecen pendientes"
+  },
+  "limites": "Las incidencias instrumentales no se convierten en 0, 1 o U. No se alteran resultados anteriores. No se habilita todavía el examen de 25 preguntas.",
+  "licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0)."
+}
