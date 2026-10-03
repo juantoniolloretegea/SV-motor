@@ -1,0 +1,65 @@
+{
+  "fase": "Preevaluación de examen de 25 preguntas de tricoleucemia",
+  "condicion": "Aprendizaje por Retroalimentación del Sistema Vectorial SV",
+  "responsable": "Árbitro-Director del Sistema Vectorial SV",
+  "bloque": "A",
+  "capa": 3,
+  "estado": "Preparación comprobada sin inferencia",
+  "inferencia": false,
+  "identidad_prevista": "retro-A3-01",
+  "razonamiento": {
+    "actual": "high",
+    "anterior": "medium",
+    "verificacion": "Comprobación en Rust de Reasoning: high en las nueve entradas Harmony, con cotejo independiente de plantilla y tokens; comparación exacta antes de generar",
+    "comparabilidad": "A2 a A3 combina revisión adicional y mayor esfuerzo; no permite aislar la contribución causal de cada factor"
+  },
+  "pruebas_rust": {
+    "instrumentacion": 28,
+    "custodio": 6,
+    "conductor": 7,
+    "preparacion_antecedentes": 4
+  },
+  "aislamiento": {
+    "identidad_modelo": "conforme",
+    "identidad_mcp": "conforme",
+    "sin_red": true,
+    "catalogo_solo_lectura": true,
+    "custodia_externa_inaccesible": true
+  },
+  "entradas": {
+    "casos": 9,
+    "paginas_por_caso": 2,
+    "antecedentes_propios_por_caso": 3,
+    "capas_antecedentes": [
+      0,
+      1,
+      2
+    ],
+    "originales_completos": true,
+    "clave_excluida": true,
+    "entrada_tokens_minima": 2739,
+    "entrada_tokens_maxima": 3095,
+    "reserva_minima_tras_salida_maxima": 21481,
+    "contexto": 32768,
+    "salida_maxima": 8192,
+    "admision_sha256": "31a7e7fc9c3f1caa074ea8a0c34044a811f9e0f0c1b4b3c5fd903942991cdb35",
+    "plan_sha256": "ad49bd52e3b29daf6437f2d02405e7379700490b154cfa5e5b0356dc1616c92a",
+    "politica_sha256": "5df8ce54a97e72c4a12d05d064b818e73a082e92b699c5e2a70f2ef7eb19c5b9",
+    "catalogo_sha256": "17c5227bf619fb31475910e631e736043305c69e2bcd2b89a9350d422c32e415"
+  },
+  "integridad": {
+    "archivos_modelo": 27,
+    "archivos_nucleo": 61,
+    "pesos_sin_cambios": true,
+    "nucleo_sin_cambios": true,
+    "semantica": "V0.2 intacta",
+    "ir": "0.3 intacta"
+  },
+  "custodia_preparacion": {
+    "url": "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/releases/tag/safeguard-retroalimentacion-20261003-preparacion-a3",
+    "archivo": "PREPARACION-A3-20261003.tar.gz",
+    "bytes": 2300654,
+    "sha256": "8d0c8ac7b36b09c4e079e90a76337629a4488fbaa5957c5ec9e2b9e0820f076e"
+  },
+  "criterio": "Preparación instrumental; no adjudica contenido, aptitud ni autoridad nuclear. La activación se acredita mediante constancia independiente."
+}
