@@ -1,10 +1,10 @@
 # Preevaluación de examen de 25 preguntas de tricoleucemia
 
-**Candidato:** `openai/gpt-oss-safeguard-120b`. **Fecha de apertura:** 3 de octubre de 2026. **Estado al 03/10/2026, 09:01 UTC:** A0 en ejecución; A01 en cálculo, con una carga y una secuencia. Todavía sin respuesta final ni puntuación de esta condición. La [constancia de inicio](ensayo-1/INICIO-A0.json) identifica las comprobaciones y su conservación.
+**Candidato:** `openai/gpt-oss-safeguard-120b`. **Fecha de apertura:** 3 de octubre de 2026. **Estado al 03/10/2026:** A0 concluida y cotejada; nueve respuestas finales, −88,89/100 y No apto al evaluar el cumplimiento completo. Ocho clasificaciones documentales son correctas; las nueve salidas omiten la declaración de recepción y A08 contiene un error sustantivo crítico. [Resultados y distinción entre contenido y forma](resultados/A0/INFORME-A0.md). A1 preparada con los originales completos de A0; su activación y avance se distinguen de la preparación. Se conserva la [constancia de inicio de A0](ensayo-1/INICIO-A0.json).
 
 ## Objetivo y alcance
 
-Determinar si el candidato, con suministro documental íntegro y revisiones adversariales organizadas por el Árbitro-Director del Sistema Vectorial SV, reúne las condiciones previas para realizar el examen de 25 preguntas. Se compara una respuesta inicial con hasta tres revisiones sucesivas, conservando todas las respuestas, sus fundamentos y sus valores en la terna **(0, 1, U)**. El examen general constituye una actuación posterior y separada.
+Determinar si el candidato, con suministro documental íntegro y revisiones adversariales organizadas por el Árbitro-Director del Sistema Vectorial SV, reúne las condiciones previas para realizar el examen de 25 preguntas. Se compara una respuesta inicial con tres revisiones sucesivas y, si el bloque A no alcanza conformidad, una cuarta revisión adicional delimitada, conservando todas las respuestas, sus fundamentos y sus valores en la terna **(0, 1, U)**. El examen general constituye una actuación posterior y separada.
 
 El **Aprendizaje por Retroalimentación del Sistema Vectorial SV** consiste aquí en una revisión contextual acumulativa. Los pesos permanecen intactos: no se ejecutan entrenamiento, propagación de gradientes ni ajuste de parámetros. Una mejora observada corresponderá a la configuración y al procedimiento ensayados; no demostrará aprendizaje persistente del modelo ni aptitud clínica.
 
@@ -24,7 +24,7 @@ Se reutilizan la instalación y las capacidades nativas del candidato. La revisi
 | Bloque de admisión | Nueve casos nuevos, B01–B09, con fuentes y afirmaciones diferentes |
 | Dificultad prevista por bloque | 1, 2, 2, 3, 3, 4, 4, 5, 5; escala ordinal de diseño, no dificultad empírica acreditada |
 | Respuesta inicial | Capa 0, sin antecedentes de respuesta del caso |
-| Revisiones | Capas 1, 2 y 3 como máximo; una sola generación por caso y capa |
+| Revisiones | A1, A2 y A3; A4 adicional si A3 no alcanza conformidad. B mantiene B1–B3. Una sola generación por caso y capa |
 | Primera fase | `ensayo-1`: respuesta inicial y primera revisión adversarial |
 | Segunda fase | `ensayo-2`: incorporación acumulada de antecedentes y hasta dos revisiones adicionales |
 | Contador | Único por caso; la segunda fase no reinicia el límite |
@@ -39,7 +39,7 @@ La primera admisión de arranque detectó además una discordancia del identific
 
 El bloque A permite medir y diagnosticar la revisión. El bloque B sólo se admite cuando A cumple las condiciones. B no recibe respuestas, correcciones ni etiquetas de A: comienza con la misma política y el procedimiento de revisión ya fijado. Conserva únicamente sus propios antecedentes entre capas. Así se contrasta la aplicabilidad del procedimiento a problemas nuevos, sin presentar la reiteración del mismo caso como generalización. No se modifica el procedimiento al conocer las respuestas de B.
 
-En cada bloque se fijan cuatro observaciones por caso: la respuesta inicial y las tres revisiones. Se recorre una capa completa antes de iniciar la siguiente. Este diseño permite medir tanto correcciones como pérdidas de aciertos, y evita detener la observación al encontrar una respuesta favorable. La admisión se decide sobre la capa 3, nunca sobre la mejor capa retrospectiva. El máximo absoluto es de 72 generaciones para los dos bloques; B queda sin ejecutar si A no satisface sus condiciones finales. Una cuarta revisión o un nuevo banco requieren una delimitación posterior expresa; no se activan por una pendiente favorable.
+En cada bloque se fijan la respuesta inicial y tres revisiones. Se recorre una capa completa antes de iniciar la siguiente, conservando tanto correcciones como pérdidas de aciertos. La ampliación autorizada el 03/10/2026 permite A4 exclusivamente si A3 no alcanza conformidad: 3 + 1 = 4 revisiones adversariales, además de A0. B mantiene su recorrido B0–B3. El máximo conjunto queda en 81 generaciones. La decisión utiliza A3 o A4, según corresponda, y B3; nunca selecciona retrospectivamente la mejor capa. Si A4 sigue sin conformidad, no se admite el examen ni se abre una quinta revisión. Si tampoco mejora, se documenta expresamente esa ausencia de progreso. B queda sin ejecutar cuando A no cumple. Una mejora de puntuación o una pendiente positiva no sustituyen la condición de aptitud.
 
 Un error crítico determina **No apto para la capa evaluada**. En el bloque de desarrollo o de admisión se permite observar su reparación dentro del máximo ya autorizado, sin borrar ese dictamen. La aptitud de la configuración con retroalimentación se juzga por su salida final completa y por el historial conservado. Sólo esa configuración podrá proponerse para el examen; no se atribuirá el resultado al modelo sin Árbitro-Director del Sistema Vectorial SV ni a su respuesta inicial.
 
@@ -60,7 +60,11 @@ flowchart TD
     J --> K{"¿Se ha completado la capa 3 y cumple el criterio?"}
     K -->|Quedan capas| H
     K -->|Capa 3 conforme| L["Bloque nuevo de admisión o conclusión previa al examen"]
-    K -->|Capa 3 no conforme| M["No apto o Indeterminado según evidencia"]
+    K -->|A3 no conforme| O["A4 adicional: una revisión de nueve casos"]
+    O --> P{"¿A4 cumple las condiciones?"}
+    P -->|Sí| L
+    P -->|No| M["No apto o Indeterminado; sin quinta revisión"]
+    K -->|B3 no conforme| M
     B --> N["Incidencia instrumental: conservación y contención"]
 ```
 
@@ -91,7 +95,7 @@ sequenceDiagram
     D->>E: Original íntegro y fuente conservada
     E-->>D: Terna, criticidad y fundamento
     D->>P: Conservar respuesta y relaciones con antecedentes
-    Note over D,P: Máximo tres revisiones por caso, sin borrar capas anteriores
+    Note over D,P: Tres revisiones; A4 adicional condicionada, sin borrar antecedentes
 ```
 
 ## Terna, regla primitiva y puntuación
@@ -100,7 +104,7 @@ La célula canónica **(9,3)** comprende vectores de nueve componentes con valor
 
 Los [Fundamentos algebraico-semánticos, §5.2](https://github.com/juantoniolloretegea/SV-matematica-semantica/blob/b8fd32978292d25adf9b87cf71e409005dce642c/documentos/fundamentos/README.md#52-umbral-can%C3%B3nico) recogen el umbral **T(n) = ⌊7n/9⌋**. Se aplica al vector completo de resultados: primero se comprueba N₁ ≥ T(n), que determina No apto; después N₀ ≥ T(n), que determina Apto; en otro caso, Indeterminado. Para este bloque de n = 9, T(9) = 7. No se calcula κ si falta alguna adjudicación válida. Los fallos técnicos y los casos no ejecutados quedan fuera de la terna. La puntuación auxiliar no cambia el significado de estos valores.
 
-La evolución se representa mediante **v⁽⁰⁾, v⁽¹⁾, v⁽²⁾ y v⁽³⁾**: cuatro filas posibles con las mismas nueve posiciones, una por caso. Las comparaciones conservan la correspondencia entre posiciones y entre capas; no convierten U en un número ni crean una geometría nueva para la célula.
+La evolución se representa mediante **v⁽⁰⁾, v⁽¹⁾, v⁽²⁾ y v⁽³⁾**, más **v⁽⁴⁾** si se aplica la revisión adicional autorizada de A: filas sucesivas con las mismas nueve posiciones, una por caso. Las comparaciones conservan la correspondencia entre posiciones y entre capas; no convierten U en un número ni crean una geometría nueva para la célula.
 
 La puntuación auxiliar sigue el [criterio común publicado](https://github.com/juantoniolloretegea/SV-motor/blob/e5adb61ad4481d5529e1e9af9bcaf27c32957cde/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/CRITERIO-PUNTUACION-MODELOS-20261001.md): **100 × (aciertos − errores no críticos) / 9**. Los errores críticos se registran aparte y tienen efecto eliminatorio sobre el dictamen de la capa. U y blanco no aportan ni restan puntos. No se altera el denominador ni se recortan saldos negativos.
 
@@ -134,7 +138,7 @@ Por caso y capa: terna, clasificación emitida, exactitud sustantiva, fidelidad 
 
 Por bloque y capa: N₀, N₁, Nᵤ, errores críticos y no críticos, blancos, impedimentos, no ejecutados, puntuación sobre 100, T(n), κ y dictamen. Entre capas: matriz completa de transiciones 0/1/U, aciertos ganados y perdidos, abstenciones y nuevas afirmaciones incorrectas. **No se resta aritméticamente 0, 1 o U como si fueran notas ordinales.**
 
-Se informan diferencias de puntuación y pendiente descriptiva entre las capas recorridas, con idénticos casos y denominador. La pendiente no prueba convergencia estadística, aprendizaje de pesos ni seguridad futura. Una disminución de errores por sustitución con U se distingue de un aumento de aciertos. No se ocultan regresiones detrás del promedio.
+Se informan diferencias de puntuación y pendiente descriptiva entre las capas recorridas, con idénticos casos y denominador. La pendiente descriptiva entre capas consecutivas es ΔS = S(capa actual) − S(capa anterior), en puntos sobre 100 por revisión. Se representa junto a transiciones ternarias y errores sustantivos y formales separados. No se fuerza una recta si la trayectoria no es lineal. La pendiente no prueba convergencia estadística, aprendizaje de pesos ni seguridad futura. Una disminución de errores por sustitución con U se distingue de un aumento de aciertos. No se ocultan regresiones detrás del promedio.
 
 Se mantienen las medidas instrumentales: tiempos de carga, entrada y generación; tokens de entrada y salida por canal; memoria corriente y máxima; presión, intercambio y agotamiento; CPU; comunicaciones MCP; incidencias; huellas de todos los objetos y cotejo de recuperación. Se informa lo efectivamente observable sin atribuir acceso completo al cálculo interno del modelo.
 
