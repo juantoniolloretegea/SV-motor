@@ -45,4 +45,8 @@ El cotejo estricto resulta negativo: cinco segmentos son idénticos; F01, F06, F
 
 Se continúa la revisión adversarial con **reserva explícita de representación**. Esta decisión se aparta de la exigencia binaria estricta del recorrido inicial, publicada antes de ejecutar; no la convierte retrospectivamente en cumplida. Se conservan ambos cotejos, el protocolo inicial en su revisión fija y la entrada efectiva de la segunda fase, que declara la reserva. El cambio permite examinar la corrección documental solicitada sin atribuir al modelo identidad de bytes que no ha producido. Los resultados finales se separarán del incumplimiento formal de recepción.
 
+## Continuación tras el impedimento del servicio
+
+La segunda fase no entregó una respuesta. Se autoriza su repetición conservando el intento fallido. Antes se consulta al candidato sobre los límites efectivos de la demostración, distinguiendo sus declaraciones de las comprobaciones externas. Esta continuación amplía el número de intentos técnicos inicialmente previsto; no permite reemplazar una respuesta recibida por otra más favorable. Se mantienen la pregunta, la fuente, los antecedentes y los criterios. Cualquier cambio necesario en su presentación deberá quedar identificado antes del nuevo envío. El ensayo permanece abierto mientras se recupera la disponibilidad efectiva del servicio.
+
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
