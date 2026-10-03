@@ -1,0 +1,112 @@
+--- pdf-extract-0.12.1/Cargo.toml.orig
++++ pdf-extract-0.12.1-sv.1/Cargo.toml
+@@ -7,7 +7,7 @@
+ license = "MIT"
+ name = "pdf-extract"
+ repository = "https://github.com/jrmuizel/pdf-extract"
+-version = "0.12.1"
++version = "0.12.1-sv.1"
+ include = ["src/**/*", "README.md"]
+ 
+ [profile.release]
+@@ -17,7 +17,7 @@
+ adobe-cmap-parser = "0.4.1"
+ encoding_rs = "0.8.34"
+ euclid = "0.20.5"
+-lopdf = {version = "0.42", default-features = false, features = ["wasm_js"]}
++lopdf = {version = "=0.45.0", default-features = false}
+ postscript = "0.14"
+ type1-encoding-parser = "0.1.1"
+ unicode-normalization = "0.1.19"
+--- pdf-extract-0.12.1/src/lib.rs
++++ pdf-extract-0.12.1-sv.1/src/lib.rs
+@@ -780,6 +780,7 @@
+ }
+ 
+ trait PdfFont : Debug {
++    fn source_name(&self) -> String;
+     fn get_width(&self, id: CharCode) -> f64;
+     fn next_char(&self, iter: &mut Iter<u8>) -> Option<(CharCode, u8)>;
+     fn decode_char(&self, char: CharCode) -> String;
+@@ -804,6 +805,7 @@
+ 
+ 
+ impl<'a> PdfFont for PdfSimpleFont<'a> {
++    fn source_name(&self) -> String { get_name_string(self.doc, self.font, b"BaseFont") }
+     fn get_width(&self, id: CharCode) -> f64 {
+         let width = self.widths.get(&id);
+         if let Some(width) = width {
+@@ -857,6 +859,7 @@
+ }
+ 
+ impl<'a> PdfFont for PdfType3Font<'a> {
++    fn source_name(&self) -> String { maybe_get_name_string(self.doc, self.font, b"BaseFont").unwrap_or_default() }
+     fn get_width(&self, id: CharCode) -> f64 {
+         let width = self.widths.get(&id);
+         if let Some(width) = width {
+@@ -1038,6 +1041,7 @@
+ }
+ 
+ impl<'a> PdfFont for PdfCIDFont<'a> {
++    fn source_name(&self) -> String { get_name_string(self.doc, self.font, b"BaseFont") }
+     fn get_width(&self, id: CharCode) -> f64 {
+         let width = self.widths.get(&id);
+         if let Some(width) = width {
+@@ -1254,7 +1258,7 @@
+ // XXX: We'd ideally implement this without having to copy the uncompressed data
+ fn get_contents(contents: &Stream) -> Vec<u8> {
+     if contents.filters().is_ok() {
+-        contents.decompressed_content().unwrap_or_else(|_|contents.content.clone())
++        contents.decompressed_content_with_limit(64 * 1024 * 1024).expect("Flujo PDF no descodificable dentro de la cota")
+     } else {
+         contents.content.clone()
+     }
+@@ -1311,7 +1315,7 @@
+         let is_space = c == 32 && length == 1;
+         if is_space { spacing += ts.word_spacing }
+ 
+-        output.output_character(&trm, w0, spacing, ts.font_size, &font.decode_char(c))?;
++        output.output_character_with_font(&trm, w0, spacing, ts.font_size, &font.decode_char(c), &font.source_name())?;
+         let tj = 0.;
+         let ty = 0.;
+         let tx = ts.horizontal_scaling * ((w0 - tj/1000.)* ts.font_size + spacing);
+@@ -1569,7 +1573,7 @@
+ }
+ 
+ struct Processor<'a> {
+-    font_table: HashMap<Vec<u8>, Rc<dyn PdfFont + 'a>>,
++    font_table: HashMap<(usize, Vec<u8>), Rc<dyn PdfFont + 'a>>,
+     _none: PhantomData<&'a ()>,
+ }
+ 
+@@ -1709,7 +1713,10 @@
+                 "Tf" => {
+                     let fonts: &Dictionary = get(&doc, resources, b"Font");
+                     let name = operation.operands[0].as_name().unwrap();
+-                    let font = self.font_table.entry(name.to_owned()).or_insert_with(|| make_font(doc, get::<&Dictionary>(doc, fonts, name))).clone();
++                    // Cada diccionario de recursos posee su propio espacio de nombres.
++                    // Una forma XObject puede reutilizar T1_0 con otra codificación.
++                    let key = (fonts as *const Dictionary as usize, name.to_owned());
++                    let font = self.font_table.entry(key).or_insert_with(|| make_font(doc, get::<&Dictionary>(doc, fonts, name))).clone();
+                     {
+                         /*let file = font.get_descriptor().and_then(|desc| desc.get_file());
+                     if let Some(file) = file {
+@@ -1877,6 +1884,9 @@
+ 
+ 
+ pub trait OutputDev {
++    fn output_character_with_font(&mut self, trm: &Transform, width: f64, spacing: f64, font_size: f64, text: &str, _font: &str) -> Result<(), OutputError> {
++        self.output_character(trm, width, spacing, font_size, text)
++    }
+     fn begin_page(&mut self, page_num: u32, media_box: &MediaBox, art_box: Option<(f64, f64, f64, f64)>)-> Result<(), OutputError>;
+     fn end_page(&mut self)-> Result<(), OutputError>;
+     fn output_character(&mut self, trm: &Transform, width: f64, spacing: f64, font_size: f64, char: &str) -> Result<(), OutputError>;
+@@ -2415,7 +2425,7 @@
+     let art_box = get::<Option<Vec<f64>>>(&doc, page_dict, b"ArtBox")
+         .map(|x| (x[0], x[1], x[2], x[3]));
+     output.begin_page(page_num, &media_box, art_box)?;
+-    p.process_stream(&doc, doc.get_page_content(object_id).unwrap(), resources, &media_box, output, page_num)?;
++    p.process_stream(&doc, doc.get_page_content_with_limit(object_id, 64 * 1024 * 1024)?, resources, &media_box, output, page_num)?;
+     output.end_page()?;
+     Ok(())
+ }

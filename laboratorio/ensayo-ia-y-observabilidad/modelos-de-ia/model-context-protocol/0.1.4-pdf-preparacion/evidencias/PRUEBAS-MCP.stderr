@@ -1,0 +1,393 @@
+   Compiling quote v1.0.47
+   Compiling libc v0.2.189
+   Compiling icu_properties_data v2.3.0
+   Compiling serde_core v1.0.228
+   Compiling generic-array v0.14.7
+   Compiling httparse v1.10.1
+   Compiling serde v1.0.228
+   Compiling num-traits v0.2.19
+   Compiling syn v3.0.6
+   Compiling syn v2.0.119
+   Compiling string_cache_codegen v0.6.1
+   Compiling block-buffer v0.10.4
+   Compiling web_atoms v0.2.6
+   Compiling crypto-common v0.1.7
+   Compiling selectors v0.33.0
+   Compiling digest v0.10.7
+   Compiling euclid v0.20.14
+   Compiling sha2 v0.10.9
+   Compiling parking_lot_core v0.9.12
+   Compiling parking_lot v0.12.5
+   Compiling socket2 v0.6.5
+   Compiling mio v1.2.3
+   Compiling string_cache v0.9.0
+   Compiling getrandom v0.4.3
+   Compiling getrandom v0.3.4
+   Compiling tokio v1.53.1
+   Compiling rand_core v0.9.5
+   Compiling rand v0.10.3
+   Compiling serde_json v1.0.149
+   Compiling rand_chacha v0.9.0
+   Compiling rand v0.9.5
+   Compiling synstructure v0.14.0
+   Compiling phf_macros v0.13.1
+   Compiling serde_derive v1.0.228
+   Compiling cssparser-macros v0.6.1
+   Compiling derive_more-impl v2.1.1
+   Compiling zerofrom-derive v0.1.8
+   Compiling yoke-derive v0.8.3
+   Compiling zerovec-derive v0.11.6
+   Compiling displaydoc v0.2.7
+   Compiling phf v0.13.1
+   Compiling thiserror-impl v2.0.21
+   Compiling futures-macro v0.3.34
+   Compiling derive_more v2.1.1
+   Compiling cssparser v0.36.0
+   Compiling hyper v1.11.1
+   Compiling zerofrom v0.1.8
+   Compiling yoke v0.8.3
+   Compiling zerovec v0.11.8
+   Compiling zerotrie v0.2.5
+   Compiling tinystr v0.8.4
+   Compiling potential_utf v0.1.6
+   Compiling icu_collections v2.3.0
+   Compiling icu_locale_core v2.3.0
+   Compiling serde_urlencoded v0.7.1
+   Compiling icu_provider v2.3.1
+   Compiling icu_properties v2.3.0
+   Compiling icu_normalizer v2.3.0
+   Compiling idna_adapter v1.2.2
+   Compiling idna v1.1.0
+   Compiling url v2.5.8
+   Compiling futures-util v0.3.34
+   Compiling thiserror v2.0.21
+   Compiling lopdf v0.45.0
+   Compiling opentelemetry v0.31.0
+   Compiling tower v0.5.3
+   Compiling futures-executor v0.3.34
+   Compiling hyper-util v0.1.21
+   Compiling opentelemetry_sdk v0.31.0
+   Compiling tower-http v0.6.11
+   Compiling markup5ever v0.36.1
+   Compiling markup5ever v0.37.1
+   Compiling reqwest v0.12.28
+   Compiling html5ever v0.37.1
+   Compiling html5ever v0.36.1
+   Compiling scraper v0.25.0
+   Compiling html2text v0.16.6
+   Compiling pdf-extract v0.12.1-sv.1 ([DIRECTORIO_DE_PREPARACION]/lector/vendor/pdf-extract)
+warning: private item shadows public glob re-export
+  --> [DIRECTORIO_DE_PREPARACION]/lector/vendor/pdf-extract/src/lib.rs:25:5
+   |
+25 | use std::result::Result;
+   |     ^^^^^^^^^^^^^^^^^^^
+   |
+note: the name `Result` in the type namespace is supposed to be publicly re-exported here
+  --> [DIRECTORIO_DE_PREPARACION]/lector/vendor/pdf-extract/src/lib.rs:6:9
+   |
+ 6 | pub use lopdf::*;
+   |         ^^^^^^^^
+note: but the private item here shadows it
+  --> [DIRECTORIO_DE_PREPARACION]/lector/vendor/pdf-extract/src/lib.rs:25:5
+   |
+25 | use std::result::Result;
+   |     ^^^^^^^^^^^^^^^^^^^
+   = note: `#[warn(hidden_glob_reexports)]` on by default
+
+warning: unused variable: `other`
+   --> [DIRECTORIO_DE_PREPARACION]/lector/vendor/pdf-extract/src/lib.rs:111:17
+    |
+111 |                 other => {dlog!("pages: {:?}", other)}
+    |                 ^^^^^ help: if this is intentional, prefix it with an underscore: `_other`
+    |
+    = note: `#[warn(unused_variables)]` (part of `#[warn(unused)]`) on by default
+
+warning: unused variable: `other`
+   --> [DIRECTORIO_DE_PREPARACION]/lector/vendor/pdf-extract/src/lib.rs:114:9
+    |
+114 |         other => { dlog!("pages: {:?}", other)}
+    |         ^^^^^ help: if this is intentional, prefix it with an underscore: `_other`
+
+warning: unused variable: `e`
+   --> [DIRECTORIO_DE_PREPARACION]/lector/vendor/pdf-extract/src/lib.rs:514:65
+    |
+514 | ...                   Entry::Occupied(e) => {
+    |                                       ^ help: if this is intentional, prefix it with an underscore: `_e`
+
+warning: unused variable: `unicode_map`
+   --> [DIRECTORIO_DE_PREPARACION]/lector/vendor/pdf-extract/src/lib.rs:525:45
+    |
+525 | ...                   if let Some(ref mut unicode_map) = unicode_map {
+    |                                   ^^^^^^^^^^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_unicode_map`
+
+warning: unused variable: `name`
+   --> [DIRECTORIO_DE_PREPARACION]/lector/vendor/pdf-extract/src/lib.rs:539:21
+    |
+539 |                 let name = encoding.get(b"Type").and_then(|x| x.as_name()).and_then(|x| Ok(pdf_to_utf8(x)));
+    |                     ^^^^ help: if this is intentional, prefix it with an underscore: `_name`
+
+warning: unused variable: `name`
+   --> [DIRECTORIO_DE_PREPARACION]/lector/vendor/pdf-extract/src/lib.rs:586:17
+    |
+586 |             let name = if is_core_font(&base_name) {
+    |                 ^^^^ help: if this is intentional, prefix it with an underscore: `_name`
+
+warning: unused variable: `unicode_map`
+   --> [DIRECTORIO_DE_PREPARACION]/lector/vendor/pdf-extract/src/lib.rs:728:45
+    |
+728 | ...                   if let Some(ref unicode_map) = unicode_map {
+    |                                   ^^^^^^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_unicode_map`
+
+warning: unused variable: `name`
+   --> [DIRECTORIO_DE_PREPARACION]/lector/vendor/pdf-extract/src/lib.rs:738:40
+    |
+738 |                 if let Ok(Object::Name(name)) = name_encoded {
+    |                                        ^^^^ help: if this is intentional, prefix it with an underscore: `_name`
+
+warning: unused variable: `base_name`
+   --> [DIRECTORIO_DE_PREPARACION]/lector/vendor/pdf-extract/src/lib.rs:976:13
+    |
+976 |         let base_name = get_name_string(doc, font, b"BaseFont");
+    |             ^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_base_name`
+
+warning: unused variable: `k`
+    --> [DIRECTORIO_DE_PREPARACION]/lector/vendor/pdf-extract/src/lib.rs:2216:14
+     |
+2216 |         for (k, v) in *info {
+     |              ^ help: if this is intentional, prefix it with an underscore: `_k`
+
+warning: unused variable: `s`
+    --> [DIRECTORIO_DE_PREPARACION]/lector/vendor/pdf-extract/src/lib.rs:2218:33
+     |
+2218 | ...   &Object::String(ref s, StringFormat::Literal) => { dlog!("{}: {}", pdf_to_utf8(k), pdf_to_utf8(s)); }
+     |                       ^^^^^ help: if this is intentional, prefix it with an underscore: `_s`
+
+warning: function `get_catalog` is never used
+  --> [DIRECTORIO_DE_PREPARACION]/lector/vendor/pdf-extract/src/lib.rs:92:4
+   |
+92 | fn get_catalog(doc: &Document) -> &Dictionary {
+   |    ^^^^^^^^^^^
+   |
+   = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: function `get_pages` is never used
+   --> [DIRECTORIO_DE_PREPARACION]/lector/vendor/pdf-extract/src/lib.rs:105:4
+    |
+105 | fn get_pages(doc: &Document) -> &Dictionary {
+    |    ^^^^^^^^^
+
+warning: method `decode` is never used
+   --> [DIRECTORIO_DE_PREPARACION]/lector/vendor/pdf-extract/src/lib.rs:799:8
+    |
+795 | impl<'a> dyn PdfFont + 'a {
+    | ------------------------- method in this implementation
+...
+799 |     fn decode(&self, chars: &[u8]) -> String {
+    |        ^^^^^^
+
+warning: fields `contents`, `size`, `bits_per_sample`, `encode`, and `decode` are never read
+    --> [DIRECTORIO_DE_PREPARACION]/lector/vendor/pdf-extract/src/lib.rs:1127:5
+     |
+1124 | struct Type0Func {
+     |        --------- fields in this struct
+...
+1127 |     contents: Vec<u8>,
+     |     ^^^^^^^^
+1128 |     size: Vec<i64>,
+     |     ^^^^
+1129 |     bits_per_sample: i64,
+     |     ^^^^^^^^^^^^^^^
+1130 |     encode: Vec<f64>,
+     |     ^^^^^^
+1131 |     decode: Vec<f64>,
+     |     ^^^^^^
+     |
+     = note: `Type0Func` has derived impls for the traits `Debug` and `Clone`, but these are intentionally ignored during dead code analysis
+
+warning: fields `c0`, `c1`, and `n` are never read
+    --> [DIRECTORIO_DE_PREPARACION]/lector/vendor/pdf-extract/src/lib.rs:1157:5
+     |
+1156 | struct Type2Func {
+     |        --------- fields in this struct
+1157 |     c0: Option<Vec<f64>>,
+     |     ^^
+1158 |     c1: Option<Vec<f64>>,
+     |     ^^
+1159 |     n: f64,
+     |     ^
+     |
+     = note: `Type2Func` has derived impls for the traits `Debug` and `Clone`, but these are intentionally ignored during dead code analysis
+
+warning: field `0` is never read
+    --> [DIRECTORIO_DE_PREPARACION]/lector/vendor/pdf-extract/src/lib.rs:1164:11
+     |
+1164 |     Type0(Type0Func),
+     |     ----- ^^^^^^^^^
+     |     |
+     |     field in this variant
+     |
+     = note: `Function` has derived impls for the traits `Debug` and `Clone`, but these are intentionally ignored during dead code analysis
+help: consider changing the field to be of unit type to suppress this warning while preserving the field numbering, or remove the field
+     |
+1164 -     Type0(Type0Func),
+1164 +     Type0(()),
+     |
+
+warning: field `0` is never read
+    --> [DIRECTORIO_DE_PREPARACION]/lector/vendor/pdf-extract/src/lib.rs:1165:11
+     |
+1165 |     Type2(Type2Func),
+     |     ----- ^^^^^^^^^
+     |     |
+     |     field in this variant
+     |
+     = note: `Function` has derived impls for the traits `Debug` and `Clone`, but these are intentionally ignored during dead code analysis
+help: consider changing the field to be of unit type to suppress this warning while preserving the field numbering, or remove the field
+     |
+1165 -     Type2(Type2Func),
+1165 +     Type2(()),
+     |
+
+warning: fields `white_point`, `black_point`, and `gamma` are never read
+    --> [DIRECTORIO_DE_PREPARACION]/lector/vendor/pdf-extract/src/lib.rs:1401:5
+     |
+1400 | pub struct CalGray {
+     |            ------- fields in this struct
+1401 |     white_point: [f64; 3],
+     |     ^^^^^^^^^^^
+1402 |     black_point: Option<[f64; 3]>,
+     |     ^^^^^^^^^^^
+1403 |     gamma: Option<f64>,
+     |     ^^^^^
+     |
+     = note: `CalGray` has derived impls for the traits `Debug` and `Clone`, but these are intentionally ignored during dead code analysis
+
+warning: fields `white_point`, `black_point`, `gamma`, and `matrix` are never read
+    --> [DIRECTORIO_DE_PREPARACION]/lector/vendor/pdf-extract/src/lib.rs:1408:5
+     |
+1407 | pub struct CalRGB {
+     |            ------ fields in this struct
+1408 |     white_point: [f64; 3],
+     |     ^^^^^^^^^^^
+1409 |     black_point: Option<[f64; 3]>,
+     |     ^^^^^^^^^^^
+1410 |     gamma: Option<[f64; 3]>,
+     |     ^^^^^
+1411 |     matrix: Option<Vec<f64>>
+     |     ^^^^^^
+     |
+     = note: `CalRGB` has derived impls for the traits `Debug` and `Clone`, but these are intentionally ignored during dead code analysis
+
+warning: fields `white_point`, `black_point`, and `range` are never read
+    --> [DIRECTORIO_DE_PREPARACION]/lector/vendor/pdf-extract/src/lib.rs:1416:5
+     |
+1415 | pub struct Lab {
+     |            --- fields in this struct
+1416 |     white_point: [f64; 3],
+     |     ^^^^^^^^^^^
+1417 |     black_point: Option<[f64; 3]>,
+     |     ^^^^^^^^^^^
+1418 |     range: Option<[f64; 4]>,
+     |     ^^^^^
+     |
+     = note: `Lab` has derived impls for the traits `Debug` and `Clone`, but these are intentionally ignored during dead code analysis
+
+warning: fields `name`, `alternate_space`, and `tint_transform` are never read
+    --> [DIRECTORIO_DE_PREPARACION]/lector/vendor/pdf-extract/src/lib.rs:1434:5
+     |
+1433 | pub struct Separation {
+     |            ---------- fields in this struct
+1434 |     name: String,
+     |     ^^^^
+1435 |     alternate_space: AlternateColorSpace,
+     |     ^^^^^^^^^^^^^^^
+1436 |     tint_transform: Box<Function>,
+     |     ^^^^^^^^^^^^^^
+     |
+     = note: `Separation` has a derived impl for the trait `Clone`, but this is intentionally ignored during dead code analysis
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+   --> [DIRECTORIO_DE_PREPARACION]/lector/vendor/pdf-extract/src/lib.rs:685:23
+    |
+685 |     fn get_descriptor(&self) -> Option<PdfFontDescriptor> {
+    |                       ^^^^^            ^^^^^^^^^^^^^^^^^ the same lifetime is hidden here
+    |                       |
+    |                       the lifetime is elided here
+    |
+    = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+    = note: `#[warn(mismatched_lifetime_syntaxes)]` on by default
+help: use `'_` for type paths
+    |
+685 |     fn get_descriptor(&self) -> Option<PdfFontDescriptor<'_>> {
+    |                                                         ++++
+
+warning: hiding a lifetime that's named elsewhere is confusing
+   --> [DIRECTORIO_DE_PREPARACION]/lector/vendor/pdf-extract/src/lib.rs:796:49
+    |
+796 |     fn char_codes(&'a self, chars: &'a [u8]) -> PdfFontIter {
+    |                    --               --          ^^^^^^^^^^^ the same lifetime is hidden here
+    |                    |                |
+    |                    |                the lifetime is named here
+    |                    the lifetime is named here
+    |
+    = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: consistently use `'a`
+    |
+796 |     fn char_codes(&'a self, chars: &'a [u8]) -> PdfFontIter<'a> {
+    |                                                            ++++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+    --> [DIRECTORIO_DE_PREPARACION]/lector/vendor/pdf-extract/src/lib.rs:1931:22
+     |
+1931 |     pub fn new(file: &mut dyn std::io::Write) -> HTMLOutput {
+     |                      ^^^^^^^^^^^^^^^^^^^^^^^     ^^^^^^^^^^ the same lifetime is hidden here
+     |                      |
+     |                      the lifetime is elided here
+     |
+     = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+     |
+1931 |     pub fn new(file: &mut dyn std::io::Write) -> HTMLOutput<'_> {
+     |                                                            ++++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+    --> [DIRECTORIO_DE_PREPARACION]/lector/vendor/pdf-extract/src/lib.rs:2009:22
+     |
+2009 |     pub fn new(file: &mut dyn std::io::Write) -> SVGOutput {
+     |                      ^^^^^^^^^^^^^^^^^^^^^^^     ^^^^^^^^^ the same lifetime is hidden here
+     |                      |
+     |                      the lifetime is elided here
+     |
+     = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+     |
+2009 |     pub fn new(file: &mut dyn std::io::Write) -> SVGOutput<'_> {
+     |                                                           ++++
+
+warning: constant `names` should have an upper case name
+ --> [DIRECTORIO_DE_PREPARACION]/lector/vendor/pdf-extract/src/glyphnames.rs:7:11
+  |
+7 |     const names: [(&'static str, u16); 4700] = [
+  |           ^^^^^
+  |
+  = note: `#[warn(non_upper_case_globals)]` (part of `#[warn(nonstandard_style)]`) on by default
+help: convert the identifier to upper case
+  |
+7 -     const names: [(&'static str, u16); 4700] = [
+7 +     const NAMES: [(&'static str, u16); 4700] = [
+  |
+
+   Compiling sv-pdf-documental v0.1.0 ([DIRECTORIO_DE_PREPARACION]/lector)
+   Compiling sv-mcp-documental v0.1.4-pdf.1 ([DIRECTORIO_DE_PREPARACION]/mcp-documental-0.1.4-pdf)
+warning: `pdf-extract` (lib) generated 28 warnings (run `cargo fix --lib -p pdf-extract` to apply 16 suggestions)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 5m 00s
+     Running unittests src/lib.rs (desarrollo/mcp-pdf-preparacion-20261003/target-linux/debug/deps/sv_mcp_documental-df5dabdfb9061d5c)
+     Running unittests src/bin/cliente-minimo.rs (desarrollo/mcp-pdf-preparacion-20261003/target-linux/debug/deps/cliente_minimo-c1172810c83e5691)
+     Running unittests src/bin/observar-minimo.rs (desarrollo/mcp-pdf-preparacion-20261003/target-linux/debug/deps/observar_minimo-2c6cc08055d7990d)
+     Running unittests src/bin/preparar-pdf.rs (desarrollo/mcp-pdf-preparacion-20261003/target-linux/debug/deps/preparar_pdf-d321fab9a0397057)
+     Running unittests src/main.rs (desarrollo/mcp-pdf-preparacion-20261003/target-linux/debug/deps/sv_mcp_documental-158fce5ce2b6722f)
+     Running unittests src/bin/verificar-diario.rs (desarrollo/mcp-pdf-preparacion-20261003/target-linux/debug/deps/verificar_diario-a57f8dfcccabb192)
+     Running tests/auditoria.rs (desarrollo/mcp-pdf-preparacion-20261003/target-linux/debug/deps/auditoria-9f98fbe010904b1e)
+     Running tests/pdf.rs (desarrollo/mcp-pdf-preparacion-20261003/target-linux/debug/deps/pdf-bcd405dc41293ba4)
+     Running tests/protocolo.rs (desarrollo/mcp-pdf-preparacion-20261003/target-linux/debug/deps/protocolo-06bae576b806c2d8)
+   Doc-tests sv_mcp_documental

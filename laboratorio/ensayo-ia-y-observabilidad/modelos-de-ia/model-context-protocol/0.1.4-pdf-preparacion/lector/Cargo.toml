@@ -1,0 +1,23 @@
+[package]
+name = "sv-pdf-documental"
+version = "0.1.0"
+edition = "2024"
+publish = false
+
+[workspace]
+exclude = ["vendor/pdf-extract"]
+
+[dependencies]
+pdf-extract = { path = "vendor/pdf-extract" }
+lopdf = { version = "=0.45.0", default-features = false }
+unicode-normalization = "=0.1.25"
+serde = { version = "=1.0.228", features = ["derive"] }
+serde_json = "=1.0.149"
+sha2 = "=0.10.9"
+
+[profile.dev]
+debug = 0
+incremental = false
+
+[profile.release]
+strip = true
