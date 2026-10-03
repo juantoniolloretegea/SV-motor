@@ -37,4 +37,12 @@ Si existe final evaluable, puntuación descriptiva: 100 × (aciertos − errores
 
 Se publican entradas, salidas originales, comprobaciones, fuentes identificadas y resultado en esta carpeta. Las referencias y la configuración visibles no acreditan la identidad de pesos ni la configuración interna del servicio. No se incorporan cuentas personales, datos de pacientes ni información de infraestructura. Los originales y las fuentes de terceros conservan sus derechos y su texto sin corrección.
 
+## Reserva de representación antes de la segunda fase
+
+La primera salida contiene JSON válido, nueve segmentos y sus síntesis. La presentación de la página oculta los valores booleanos y nulo; el botón de copia permite recuperarlos sin reconstrucción manual. El original copiado se conserva por separado de la representación visible.
+
+El cotejo estricto resulta negativo: cinco segmentos son idénticos; F01, F06, F07 y F09 contienen la secuencia literal barra inversa+n donde la referencia contiene un salto LF. Una comprobación adicional en Rust, sin modificar el original, confirma que interpretar exclusivamente esa secuencia restablece la igualdad completa de los nueve textos. No falta contenido y no se modifica ninguna palabra, cifra o referencia.
+
+Se continúa la revisión adversarial con **reserva explícita de representación**. Esta decisión se aparta de la exigencia binaria estricta del recorrido inicial, publicada antes de ejecutar; no la convierte retrospectivamente en cumplida. Se conservan ambos cotejos, el protocolo inicial en su revisión fija y la entrada efectiva de la segunda fase, que declara la reserva. El cambio permite examinar la corrección documental solicitada sin atribuir al modelo identidad de bytes que no ha producido. Los resultados finales se separarán del incumplimiento formal de recepción.
+
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
