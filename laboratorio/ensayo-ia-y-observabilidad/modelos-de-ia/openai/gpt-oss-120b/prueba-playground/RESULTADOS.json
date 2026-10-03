@@ -1,0 +1,72 @@
+{
+  "acceso_examen_acreditado": false,
+  "alcance": "Exploración documental en demostración pública; no examen SV",
+  "aptitud_clinica_acreditada": false,
+  "casos": [
+    {
+      "condicion": "Sin texto documental",
+      "critico_segun_lista_previa": false,
+      "id": "A",
+      "motivo": "Cifras discordantes y atribución bibliográfica no respaldada por el PDQ indicado",
+      "original": "respuestas/A.txt",
+      "registro": "registros/A.json",
+      "terna": "1"
+    },
+    {
+      "condicion": "Misma pregunta con texto documental",
+      "critico_segun_lista_previa": false,
+      "id": "B",
+      "motivo": "Extracción numérica principal correcta, pero transforma una mediana de supervivencia no especificada en supervivencia global",
+      "original": "respuestas/B.txt",
+      "registro": "registros/B.json",
+      "terna": "1"
+    },
+    {
+      "condicion": "Consulta ambigua con texto documental",
+      "critico_segun_lista_previa": false,
+      "id": "C",
+      "motivo": "Cautelas principales correctas, pero confunde ausencia de progresión con ausencia de reaparición y seguimiento con momento de respuesta",
+      "original": "respuestas/C.txt",
+      "registro": "registros/C.json",
+      "terna": "1"
+    }
+  ],
+  "conversaciones_nuevas": 3,
+  "fuentes_evaluacion": [
+    "https://www.cancer.gov/espanol/tipos/leucemia/pro/tratamiento-celulas-pilosas-pdq",
+    "https://pubmed.ncbi.nlm.nih.gov/26352686/",
+    "https://www.nejm.org/doi/full/10.1056/NEJMoa2031298"
+  ],
+  "generaciones": 3,
+  "identificador": "GPTOSS-DEMO-20261003",
+  "interfaz": "https://gpt-oss.com/",
+  "kappa_sv": {
+    "aplicada": false,
+    "motivo": "Tres observaciones no forman una célula exacta n=b², b>=3; no es el examen de 25 preguntas"
+  },
+  "metodologia": "METODOLOGIA.md",
+  "modelo_visible": "gpt-oss-120b",
+  "puntuacion": {
+    "formula": "100*(aciertos-errores_no_criticos)/N",
+    "naturaleza": "Auxiliar y exploratoria; observaciones relacionadas",
+    "normalizada": -100,
+    "puntos_netos": -3,
+    "sin_suelo_artificial": true
+  },
+  "razonamiento_integro_conservado": false,
+  "razonamiento_visible": "High",
+  "recuento": {
+    "N": 3,
+    "N0": 0,
+    "N1": 3,
+    "NU": 0,
+    "blancos": 0,
+    "errores_criticos_predefinidos": 0,
+    "errores_no_criticos": 3,
+    "impedimentos": 0
+  },
+  "repeticiones": 0,
+  "revision_cientifica_independiente": "No acreditada",
+  "suficiencia_para_adopcion_documental": "No acreditada en esta demostración",
+  "viabilidad_instalacion_probada": false
+}
