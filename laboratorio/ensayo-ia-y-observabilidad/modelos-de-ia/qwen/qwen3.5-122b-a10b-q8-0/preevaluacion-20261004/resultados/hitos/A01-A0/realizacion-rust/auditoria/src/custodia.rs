@@ -1,0 +1,9 @@
+use crate::{E,read,save,hash};
+use serde_json::json;
+use sha2::{Digest,Sha256};
+use std::{fs::{self,File},io::Read,path::{Path,Component}};
+fn safe(relative:&str)->bool{!relative.is_empty()&&!relative.contains(['\\',':'])&&Path::new(relative).components().all(|c|matches!(c,Component::Normal(_)))}
+pub fn run(manifest:&Path,root:&Path,out:&Path)->Result<(),E>{let m=read(manifest)?;let root=root.canonicalize()?;let mut rows=Vec::new();let mut total=0u64;
+ for e in m["archivos"].as_array().ok_or("Manifiesto sin archivos")?{let relative=e["ruta"].as_str().ok_or("Ruta")?;if !safe(relative){return Err("Ruta de manifiesto fuera de perímetro".into())}let p=root.join(relative);if fs::symlink_metadata(&p)?.file_type().is_symlink()||!p.canonicalize()?.starts_with(&root){return Err("Enlace fuera de perímetro".into())}let mut f=File::open(&p)?;let mut h=Sha256::new();let mut b=[0u8;65536];let mut bytes=0u64;loop{let n=f.read(&mut b)?;if n==0{break}h.update(&b[..n]);bytes+=n as u64;}let sha=format!("{:x}",h.finalize());if e["bytes"]!=bytes||e["sha256"]!=sha{return Err(format!("Cotejo discordante: {relative}").into())}total+=bytes;rows.push(json!({"ruta":relative,"bytes":bytes,"sha256":sha,"conforme":true}));}
+ save(out,&json!({"estado":"CONFORME","realizacion":"Rust; lectura incremental","manifiesto_sha256":hash(&fs::read(manifest)?),"archivos":rows,"numero_archivos":rows.len(),"bytes":total,"alcance":"Identidad de los archivos recuperados respecto del manifiesto indicado; la procedencia del manifiesto y su sede se documentan por separado.","licencia":crate::FOOTER}))?;println!("{}",json!({"estado":"CONFORME","archivos":rows.len(),"bytes":total}));Ok(())}
+#[cfg(test)]mod tests{use super::*;#[test]fn rechaza_salidas_de_perimetro(){for p in ["../a","/a","C:/a","a\\b",""]{assert!(!safe(p));}assert!(safe("A/A01/A0/FINAL.txt"));}}
