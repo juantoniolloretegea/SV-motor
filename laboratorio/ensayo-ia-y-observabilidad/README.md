@@ -1,8 +1,8 @@
 # Ensayo de inteligencia artificial y observabilidad
 
-**Edición documental 2.18 · 3 de octubre de 2026.**
+**Edición documental 2.19 · 4 de octubre de 2026.**
 
-**Corte de evidencias:** 03/10/2026, 09:37 UTC. Los resultados conservan la fecha y el alcance de su propia entrega; esta página no es un monitor de ejecución.
+**Corte de evidencias:** 03/10/2026, 09:37 UTC; incorporación documental de Qwen3.5-122B-A10B · Q8_0 el 04/10/2026. Los resultados conservan la fecha y el alcance de su propia entrega; esta página no es un monitor de ejecución.
 
 <a id="objeto-y-criterio-experimental"></a>
 
@@ -27,6 +27,7 @@ La línea experimental en curso es la **Preevaluación de examen de 25 preguntas
 | [Qwen3-Next-80B-A3B-Instruct](modelos-de-ia/qwen/qwen3-next-80b-a3B-instruct/REGISTRO-INSTALACION-20260929.md) | Dos consultas MCP recibidas. Examen posterior: **28/100; No apto**. Diecinueve finales: siete aciertos, dos errores críticos y diez U; seis impedimentos técnicos. | Examen y diagnóstico terminados; [puntuación](modelos-de-ia/qwen/qwen3-next-80b-a3B-instruct/tests-y-pruebas-efectuadas/PUNTUACION-FINAL-20261001.md), [archivo y retirada](modelos-de-ia/qwen/qwen3-next-80b-a3B-instruct/tests-y-pruebas-efectuadas/ARCHIVO-Y-RETIRADA-20261001.md). Recepción científica independiente pendiente; [TT-0016](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0016.md). |
 | [Qwen3-Next-80B-A3B-Thinking](modelos-de-ia/qwen/qwen3-next-80b-a3b-thinking) | Primera consulta documental publicada: respuesta tras 5516,496 segundos, dos oraciones donde se exigía una y modificación de saltos de línea. Pico de 59 GiB, sin intercambio ni agotamiento; sin margen estable demostrado. | [Registro de la primera entrega](modelos-de-ia/qwen/qwen3-next-80b-a3b-thinking/REGISTRO-INSTALACION-20260930.md), pendiente de recepción independiente. El examen posterior tiene encargo propio; no consta entrega final publicada al corte. [TT-0017](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0017.md). |
 | [GPT-OSS-Safeguard-120B](modelos-de-ia/openai/gpt-oss-safeguard-120b/ensayos-reiterados-adversariales-y-aprendizaje/readme.md) | Contrastes anteriores separados: **87,5/100**, **66,67/100** y **50/100**, con **No apto** en sus respectivos alcances. El diagnóstico D01 reprodujo el error crítico del último contraste. | Nueva preevaluación con retroalimentación en A0; resultados pendientes. No se ha acreditado acceso al examen ni aptitud clínica. [Expediente v3](modelos-de-ia/openai/gpt-oss-safeguard-120b/tests-y-pruebas-efectuadas/ARBITRO-SV-SAFEGUARD-V3-20261002.md) · [TT-0018](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0018.md). |
+| [Qwen3.5-122B-A10B · Q8_0](modelos-de-ia/qwen/qwen3.5-122b-a10b-q8-0/readme.md) | Seleccionado para evaluar fidelidad documental, cumplimiento de la política y tiempo de respuesta. Ficha técnica y comparativa con GPT-OSS publicadas. | Instalación y evaluación previstas; sin inferencia ni dictamen propios. |
 
 Safeguard es un candidato distinto del GPT-OSS-120B ordinario. Su función declarada por OpenAI es la clasificación de seguridad conforme a políticas textuales; el contraste actual estudia clasificación documental bajo una política explícita. No presupone capacidad médica general. La demostración pública, las instalaciones nativas, los contrastes asistidos y los exámenes conservan resultados separados.
 
@@ -99,7 +100,7 @@ La base mistral.rs [0.9.3](https://github.com/EricLBuehler/mistral.rs/blob/24dbf
 
 ## Versiones de los componentes
 
-La **edición documental 2.18**, las **aplicaciones 0.1.x/0.2.x**, el **MCP 0.1.x**, los **modelos** y los **archivos de recuperación v1** tienen identidades independientes. Una numeración no sustituye a las restantes. Los antecedentes identifican Rust 1.98.0; la preparación de retroalimentación identifica Rust 1.98.1. Cada expediente fija sus fuentes, dependencias, ejecutables y comprobaciones; una compilación no acredita utilización efectiva.
+La **edición documental 2.19**, las **aplicaciones 0.1.x/0.2.x**, el **MCP 0.1.x**, los **modelos** y los **archivos de recuperación v1** tienen identidades independientes. Una numeración no sustituye a las restantes. Los antecedentes identifican Rust 1.98.0; la preparación de retroalimentación identifica Rust 1.98.1. Cada expediente fija sus fuentes, dependencias, ejecutables y comprobaciones; una compilación no acredita utilización efectiva.
 
 <details>
 <summary><strong>EIO conversación · Qwen3-0.6B · 0.1.0 → 0.1.4</strong></summary>
@@ -165,6 +166,15 @@ La [carpeta de Thinking](modelos-de-ia/qwen/qwen3-next-80b-a3b-thinking) conserv
 
 </details>
 
+<details>
+<summary><strong>Qwen3.5-122B-A10B · GGUF Q8_0</strong></summary>
+
+Modelo de 122 mil millones de parámetros totales y aproximadamente 10 mil millones activos por token, en la distribución GGUF Q8_0 de Unsloth. Se prevé ejecución nativa en CPU con 256 GB de RAM; la realización y sus medidas están pendientes.
+
+[Ficha técnica](modelos-de-ia/qwen/qwen3.5-122b-a10b-q8-0/ficha-tecnica/FICHA_TECNICA.md) · [Identidad y archivos](modelos-de-ia/qwen/qwen3.5-122b-a10b-q8-0/ficha-tecnica/IDENTIDAD_Y_ARCHIVOS.json) · [Justificación y comparativa](modelos-de-ia/qwen/qwen3.5-122b-a10b-q8-0/readme.md).
+
+</details>
+
 <a id="versión-distribuida"></a>
 
 ## Publicaciones en orden cronológico
@@ -227,6 +237,7 @@ El archivo posterior conserva la historia anterior y su dictamen. La publicació
 | 01–02/10/2026 | [Instalación Safeguard](modelos-de-ia/openai/gpt-oss-safeguard-120b/tests-y-pruebas-efectuadas/INSTALACION-CONTRASTE-20261001.md) · [Lectura íntegra](modelos-de-ia/openai/gpt-oss-safeguard-120b/tests-y-pruebas-efectuadas/LECTURA-INTEGRA-V2-20261001.md) · [Contraste con Árbitro-Director](modelos-de-ia/openai/gpt-oss-safeguard-120b/tests-y-pruebas-efectuadas/ARBITRO-SV-SAFEGUARD-V3-20261002.md) | Resultados, originales, incidencias y conservaciones de cada condición; no se suman como una única puntuación. |
 | 02–03/10/2026 | [Demostración pública GPT-OSS-120B](modelos-de-ia/openai/gpt-oss-120b/prueba-playground/readme.md) · [Ensayo 1](modelos-de-ia/openai/gpt-oss-120b/prueba-playground/ensayo-1/readme.md) | Respuestas, relectura y cadena de impedimentos conservadas. Sin resultado adversarial final ni medición de una instalación propia. |
 | 03/10/2026 | [Preevaluación Safeguard](modelos-de-ia/openai/gpt-oss-safeguard-120b/ensayos-reiterados-adversariales-y-aprendizaje/readme.md) · [Conservación de preparación A0](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/releases/tag/safeguard-retroalimentacion-20261003-preparacion-a0) | Preparación y correcciones instrumentales recuperadas y cotejadas; la inferencia A0 está en curso y sus resultados finales siguen pendientes. |
+| 04/10/2026 | [Expediente Qwen3.5-122B-A10B · Q8_0](modelos-de-ia/qwen/qwen3.5-122b-a10b-q8-0/readme.md) · [Revisión documental](modelos-de-ia/qwen/qwen3.5-122b-a10b-q8-0/seguimiento/REVISION_DOCUMENTAL_20261004.md) | Ficha técnica, justificación, comparativa y criterios de recepción; instalación y evaluación pendientes. |
 
 Los enlaces de SV-sala-de-maquinas mantienen el acceso restringido de los originales. Las síntesis públicas enlazan su procedencia; no sustituyen los paquetes, sus manifiestos ni la recepción independiente.
 
@@ -234,7 +245,7 @@ Los enlaces de SV-sala-de-maquinas mantienen el acceso restringido de los origin
 
 ## Historia completa de la edición documental
 
-La secuencia comienza en **0.1** y avanza hasta la presente **2.18**. Se conservan todas las ediciones anteriores y sus referencias inmutables. Cada desplegable conserva lo relevante de su corte y ofrece el texto íntegro; sus estados históricos no sustituyen al estado actual.
+La secuencia comienza en **0.1** y avanza hasta la presente **2.19**. Se conservan todas las ediciones anteriores y sus referencias inmutables. Cada desplegable conserva lo relevante de su corte y ofrece el texto íntegro; sus estados históricos no sustituyen al estado actual.
 
 El salto **0.2 → 2.0** se conserva tal como fue publicado; no se ha localizado una edición 1.x en el historial de este archivo. Cuando una edición reúne varios commits, se muestran todos en orden. Las fechas siguientes son las de esos commits en Europe/Madrid; una cabecera histórica puede conservar una fecha anterior.
 
@@ -452,12 +463,21 @@ Actualiza el estado desde las fuentes recibidas: funcionamiento documental de In
 
 </details>
 
-<details open>
+<details>
 <summary><strong>2.18 · 03/10/2026 · resultados por modelo y preevaluación con retroalimentación</strong></summary>
 
 Incorpora el cierre de Instruct, la primera entrega documental de Thinking, los contrastes propios de Safeguard y la exploración pública del GPT-OSS-120B ordinario. Sitúa la nueva preevaluación Safeguard en A0, separa puntuación, regla SV y criticidad, y describe el recorrido acotado de retroalimentación. Conserva las publicaciones, diagramas y ediciones anteriores, y añade la representación de la fase actual.
 
 [Texto íntegro de la edición 2.17](https://github.com/juantoniolloretegea/SV-motor/blob/ca0c159787038af2126d78194499fdd8e0340722/laboratorio/ensayo-ia-y-observabilidad/README.md). La revisión exacta de la edición presente queda identificada por el commit que la contiene.
+
+</details>
+
+<details open>
+<summary><strong>2.19 · 04/10/2026 · Incorporación de Qwen3.5-122B-A10B · Q8_0</strong></summary>
+
+Añade el candidato a la tabla de estado, los componentes y la secuencia de entregas. Enlaza su expediente técnico y conserva los resultados anteriores con su corte de evidencias.
+
+[Texto íntegro de la edición 2.18](https://github.com/juantoniolloretegea/SV-motor/blob/c4690d062f48a7970a4b8b943f4cb583d4eb1035/laboratorio/ensayo-ia-y-observabilidad/README.md). La revisión exacta de la edición presente queda identificada por el commit que la contiene.
 
 </details>
 
