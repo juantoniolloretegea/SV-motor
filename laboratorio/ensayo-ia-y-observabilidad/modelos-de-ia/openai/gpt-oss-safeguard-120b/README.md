@@ -16,6 +16,8 @@ La [guía del sistema conjunto](https://github.com/juantoniolloretegea/SV-motor/
 
 La [conservación cifrada sin pesos](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/releases/tag/safeguard-imagen-20261004-v1), de acceso restringido, está publicada y recuperada íntegramente. El cotejo Rust acredita reconstrucción, descifrado, inventario y contenido: 281.859 entradas y 160 entradas de adjudicaciones conformes. Se conserva una corrección instrumental de tres nombres Linux, con sus antecedentes. [Procedimiento y comprobantes](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/tree/1abbaf1a50133938f92baa9cd1826c0f6a962c33/respuestas-ejecucion/SAFEGUARD-CONSERVACION-20261004). No se ha ensayado arranque restaurado; la recepción del archivo no acredita retirada administrativa ni habilita inferencias.
 
+La retirada administrativa posterior del servidor de origen y de su disco exclusivo quedó comprobada el 4 de octubre de 2026, después de la conservación cotejada. El [acta de retirada](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/d7bae43cab1f900afc2dcc5e8c0e35c61215e5a3/respuestas-ejecucion/SAFEGUARD-CONSERVACION-20261004/ACTA-RETIRADA.md), de acceso restringido, conserva esta acreditación separada. No se ha ensayado arranque restaurado y no se habilitan nuevas inferencias con Safeguard.
+
 ## Documentación
 
 - [Ficha técnica y condiciones de prueba](FICHA_TECNICA.md).
