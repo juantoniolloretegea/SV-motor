@@ -1,19 +1,19 @@
 {
   "esquema": "sv.eio.registro-versiones/1",
-  "edicion_documental": "2.20",
+  "edicion_documental": "2.21",
   "fecha_corte": "2026-10-04",
-  "commit_base_consultado": "2e51917bb5864689cb6d2735fef9f2b1db35ce42",
+  "commit_base_consultado": "80e2ad521ab402e6cc6d9fdcab231111e633e3c8",
   "criterio": "Identidad separada para modelo, aplicacion, componente MCP, archivo de conservacion y edicion documental",
   "revision_actual": {
-    "version": "2.20",
-    "naturaleza": "cierre_documental_safeguard",
+    "version": "2.21",
+    "naturaleza": "recepcion_custodia_safeguard",
+    "commit": "El commit que contiene este archivo; sin autorreferencia circular",
     "cambios": [
-      "Cierre definitivo con No apto para acceder al examen en esta evaluación",
-      "Clasificación A08 y omisiones formales separadas de incidencias A3 y D02",
-      "Antecedentes y diagramas conservados",
-      "Qwen mantiene recepción propia pendiente"
-    ],
-    "commit": "El commit que contiene este archivo; sin autorreferencia circular"
+      "Conservación privada sin pesos publicada y recuperada íntegramente",
+      "Contenido e inventario cotejados en Rust; corrección de rutas Unix conservada",
+      "Resultados, antecedentes y diagramas sin alteración",
+      "Arranque restaurado y retirada administrativa no acreditados por el archivo"
+    ]
   },
   "componentes": [
     {
@@ -1058,5 +1058,30 @@
     "documento": "ensayos-reiterados-adversariales-y-aprendizaje/resultados/cierre-20261004/INFORME-FINAL.md",
     "conservacion": "Recepción de imagen documentada por separado; no inferir arranque restaurado",
     "alcance_recuentos_anteriores": "Los recuentos conservados en ejecución y contrastes anteriores corresponden a sus cortes históricos, incluido 10/02/2026 23:40:32; no son el total acumulado de la campaña cerrada."
+  },
+  "revision_2_20_conservada": {
+    "version": "2.20",
+    "naturaleza": "cierre_documental_safeguard",
+    "cambios": [
+      "Cierre definitivo con No apto para acceder al examen en esta evaluación",
+      "Clasificación A08 y omisiones formales separadas de incidencias A3 y D02",
+      "Antecedentes y diagramas conservados",
+      "Qwen mantiene recepción propia pendiente"
+    ],
+    "commit": "El commit que contiene este archivo; sin autorreferencia circular"
+  },
+  "recepcion_custodia_safeguard_20261004": {
+    "fecha_recepcion_estructura_utc": "2026-10-04T16:26:05Z",
+    "fecha_recepcion_complemento_utc": "2026-10-04T16:38:36Z",
+    "estado": "publicada_recuperada_cotejada",
+    "release": "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/releases/tag/safeguard-imagen-20261004-v1",
+    "comprobantes": "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/tree/1abbaf1a50133938f92baa9cd1826c0f6a962c33/respuestas-ejecucion/SAFEGUARD-CONSERVACION-20261004",
+    "activos": 13,
+    "entradas_conformes": 281859,
+    "adjudicaciones_conformes": 160,
+    "pesos_incluidos": false,
+    "arranque_restaurado": false,
+    "retirada_administrativa": "no acreditada por esta recepción",
+    "dictamen_modificado": false
   }
 }

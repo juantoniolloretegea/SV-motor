@@ -1,8 +1,8 @@
 # Ensayo de inteligencia artificial y observabilidad
 
-**Edición documental 2.20 · 4 de octubre de 2026.**
+**Edición documental 2.21 · 4 de octubre de 2026.**
 
-**Corte de evidencias:** cierre técnico de Safeguard cotejado el 04/10/2026, 10:43 UTC. Para los restantes expedientes se conserva el corte del 03/10/2026, 09:37 UTC, y la incorporación documental de Qwen3.5-122B-A10B · Q8_0 del 04/10/2026. Los resultados conservan la fecha y el alcance de su propia entrega; esta página no es un monitor de ejecución.
+**Corte de evidencias:** cierre técnico de Safeguard cotejado el 04/10/2026, 10:43 UTC; conservación cifrada recibida estructuralmente a las 16:26 UTC y complemento corrector a las 16:38 UTC. Para los restantes expedientes se conserva el corte del 03/10/2026, 09:37 UTC, y la incorporación documental de Qwen3.5-122B-A10B · Q8_0 del 04/10/2026. Los resultados conservan la fecha y el alcance de su propia entrega; esta página no es un monitor de ejecución.
 
 <a id="objeto-y-criterio-experimental"></a>
 
@@ -17,6 +17,8 @@ Esta página reúne el estado de los candidatos, la secuencia de publicaciones, 
 ## Estado actual
 
 La **Preevaluación de examen de 25 preguntas de tricoleucemia** con **GPT-OSS-Safeguard-120B** ha terminado: **No apto para acceder al examen en esta evaluación**. A0–A3 mantienen ocho clasificaciones documentales correctas de nueve, el error crítico A08 y omisiones formales. D01 y D03 reproducen el error; D02 quedó sin final por límite temporal. La incidencia de custodia de A3 se conserva separadamente. [Cierre final y reservas](modelos-de-ia/openai/gpt-oss-safeguard-120b/ensayos-reiterados-adversariales-y-aprendizaje/resultados/cierre-20261004/INFORME-FINAL.md). No se habilitan más inferencias, B ni el examen. Qwen3.5-122B-A10B · Q8_0 conserva su condición de candidato con recepción propia pendiente.
+
+La [conservación cifrada sin pesos](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/releases/tag/safeguard-imagen-20261004-v1), de acceso restringido, está publicada y recuperada íntegramente. El cotejo Rust acredita reconstrucción, descifrado, inventario y contenido: 281.859 entradas y 160 entradas de adjudicaciones conformes. Se conserva una corrección instrumental de tres nombres Linux, con sus antecedentes. [Procedimiento y comprobantes](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/tree/1abbaf1a50133938f92baa9cd1826c0f6a962c33/respuestas-ejecucion/SAFEGUARD-CONSERVACION-20261004). No se ha ensayado arranque restaurado; la recepción del archivo no acredita retirada administrativa ni habilita inferencias.
 
 | Modelo o configuración | Resultado y alcance | Situación al corte |
 |---|---|---|
@@ -255,7 +257,7 @@ Los enlaces de SV-sala-de-maquinas mantienen el acceso restringido de los origin
 
 ## Historia completa de la edición documental
 
-La secuencia comienza en **0.1** y avanza hasta la presente **2.20**. Se conservan todas las ediciones anteriores y sus referencias inmutables. Cada desplegable conserva lo relevante de su corte y ofrece el texto íntegro; sus estados históricos no sustituyen al estado actual.
+La secuencia comienza en **0.1** y avanza hasta la presente **2.21**. Se conservan todas las ediciones anteriores y sus referencias inmutables. Cada desplegable conserva lo relevante de su corte y ofrece el texto íntegro; sus estados históricos no sustituyen al estado actual.
 
 El salto **0.2 → 2.0** se conserva tal como fue publicado; no se ha localizado una edición 1.x en el historial de este archivo. Cuando una edición reúne varios commits, se muestran todos en orden. Las fechas siguientes son las de esos commits en Europe/Madrid; una cabecera histórica puede conservar una fecha anterior.
 
@@ -499,6 +501,15 @@ Añade el candidato a la tabla de estado, los componentes y la secuencia de entr
 Incorpora el cierre definitivo, distingue clasificación y forma de las incidencias instrumentales de A3 y D02 y conserva las reservas metodológicas. Mantiene todos los antecedentes y diagramas. La recepción de conservación y un eventual arranque restaurado se acreditan por separado.
 
 [Edición precedente 2.19](https://github.com/juantoniolloretegea/SV-motor/blob/e6fad79538b2848c7a1fd4c1d6a28ecb7809ba7a/laboratorio/ensayo-ia-y-observabilidad/README.md).
+
+</details>
+
+<details>
+<summary><strong>2.21 · 04/10/2026 · Recepción de la conservación cifrada de Safeguard</strong></summary>
+
+Se acredita publicación privada, recuperación íntegra, descifrado y cotejo Rust del archivo sin pesos. Se conserva la incidencia de representación de tres nombres Linux y su corrección documentada. El dictamen experimental y los diagramas permanecen intactos. No se acredita arranque restaurado ni retirada administrativa.
+
+[Edición precedente 2.20](https://github.com/juantoniolloretegea/SV-motor/blob/80e2ad521ab402e6cc6d9fdcab231111e633e3c8/laboratorio/ensayo-ia-y-observabilidad/README.md).
 
 </details>
 

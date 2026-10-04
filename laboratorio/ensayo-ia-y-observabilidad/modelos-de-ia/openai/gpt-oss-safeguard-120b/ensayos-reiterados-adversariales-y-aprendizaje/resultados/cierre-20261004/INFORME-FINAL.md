@@ -71,6 +71,8 @@ Las adjudicaciones originales de A3 y D01–D03, la entrega técnica, los cotejo
 | A2 | [safeguard-retroalimentacion-20261003-a2](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/releases/tag/safeguard-retroalimentacion-20261003-a2) |
 | Preparación de A3 | [safeguard-retroalimentacion-20261003-preparacion-a3](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/releases/tag/safeguard-retroalimentacion-20261003-preparacion-a3) |
 
+La [conservación cifrada sin pesos](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/releases/tag/safeguard-imagen-20261004-v1), de acceso restringido, está publicada y recuperada íntegramente. El cotejo Rust acredita reconstrucción, descifrado, inventario y contenido: 281.859 entradas y 160 entradas de adjudicaciones conformes. Se conserva una corrección instrumental de tres nombres Linux, con sus antecedentes. [Procedimiento y comprobantes](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/tree/1abbaf1a50133938f92baa9cd1826c0f6a962c33/respuestas-ejecucion/SAFEGUARD-CONSERVACION-20261004). No se ha ensayado arranque restaurado; la recepción del archivo no acredita retirada administrativa ni habilita inferencias.
+
 Estas ediciones tienen acceso restringido. El resultado científico, la publicación documental, la recepción de la imagen y un eventual arranque restaurado son hechos distintos. Su acreditación se conserva por separado. La recuperación de archivos no se presentará como arranque de una máquina restaurada.
 
 ## 6. Continuidad delimitada

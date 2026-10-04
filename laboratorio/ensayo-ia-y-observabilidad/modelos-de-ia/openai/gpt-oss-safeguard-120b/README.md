@@ -12,6 +12,10 @@ Esta carpeta separa la identidad, configuración, fuentes y pruebas de Safeguard
 
 La [guía del sistema conjunto](https://github.com/juantoniolloretegea/SV-motor/blob/b8ff9198275ee0139dad7565d23733667aadb066/laboratorio/sistema-conjunto-lenguaje-computacion-ia-gobernada/README.md) contempla tanto la clasificación conforme a una política como la hipótesis de un interlocutor especializado. Son funciones por contrastar. El antecedente no fija una prioridad definitiva de ensayo de Safeguard. Su preparación exige delimitar la función elegida y el encargo correspondiente, sin ejecutar ambos modelos por el mero hecho de documentarlos.
 
+## Conservación
+
+La [conservación cifrada sin pesos](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/releases/tag/safeguard-imagen-20261004-v1), de acceso restringido, está publicada y recuperada íntegramente. El cotejo Rust acredita reconstrucción, descifrado, inventario y contenido: 281.859 entradas y 160 entradas de adjudicaciones conformes. Se conserva una corrección instrumental de tres nombres Linux, con sus antecedentes. [Procedimiento y comprobantes](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/tree/1abbaf1a50133938f92baa9cd1826c0f6a962c33/respuestas-ejecucion/SAFEGUARD-CONSERVACION-20261004). No se ha ensayado arranque restaurado; la recepción del archivo no acredita retirada administrativa ni habilita inferencias.
+
 ## Documentación
 
 - [Ficha técnica y condiciones de prueba](FICHA_TECNICA.md).
