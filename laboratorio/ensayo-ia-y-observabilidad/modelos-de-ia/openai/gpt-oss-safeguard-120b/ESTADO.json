@@ -1,6 +1,6 @@
 {
   "esquema": "sv.eio.candidato/1",
-  "fecha_corte": "2026-10-02T23:40:32.523Z",
+  "fecha_corte": "2026-10-04T10:43:00Z",
   "modelo": "openai/gpt-oss-safeguard-120b",
   "variante": "safeguard",
   "revision_modelo": "3c7391182603991a904031244e7822488c67796d",
@@ -13,7 +13,7 @@
     "alcance": "Primera condición ARBITRO-SV-SAFEGUARD-20261002/v3 cerrada: seis originales evaluables, N₀=4, N₁=2 (N01 formal y N06 crítico), Nᵤ=0; 50/100 y No apto para este contraste previo. N01 conserva su original de v2 y se evalúa de forma diferida; N02–N06 se generaron una sola vez en una carga adicional. El suministro documental y la custodia son conformes. N06 reconoce fuentes incompatibles sin precedencia, pero clasifica CONTRADICHA frente a EVIDENCIA_INSUFICIENTE. Sin seis ceros ni acceso acreditado al examen. Cierre material cotejado, servidor, pesos y accesos conservados; recepción independiente pendiente. D01 reproduce el error crítico: CONTRADICHA frente a EVIDENCIA_INSUFICIENTE, pese a reconocer fuentes incompatibles sin precedencia. El control externo cerró la condición tras una carga y una generación. F01–F06 no se ejecutaron; no acreditan rendimiento ni generalización. Sin nueva hipótesis causal discriminante, se cierra esta vía conforme al §7. Inferencia detenida, carga deshabilitada, servidor, pesos y accesos conservados; recepción independiente pendiente. S39 revisión 37; suceso general abierto.",
     "revision_suceso": 37
   },
-  "estado": "arbitro_v3_cerrado_no_apto_recepcion_pendiente",
+  "estado": "evaluacion_terminada_no_apto_para_acceder_al_examen",
   "funcion_declarada": "clasificacion_textual_con_politica_explicita",
   "funcion_sv_definitiva": null,
   "prioridad_de_ensayo": null,
@@ -1398,5 +1398,32 @@
     "carga_deshabilitada": true,
     "evidencia": "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/19778e3692802316c86b3a6107d625e0042cf95c/respuestas-ejecucion/ARBITRO-SV-SAFEGUARD-20261002/entrega-03/condiciones/consistencia-01/INFORME-FINAL.md",
     "recuperacion_github": "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/19778e3692802316c86b3a6107d625e0042cf95c/respuestas-ejecucion/ARBITRO-SV-SAFEGUARD-20261002/entrega-03/condiciones/consistencia-01/COTEJO-RECUPERACION-GITHUB.json"
+  },
+  "cierre_evaluacion_20261004": {
+    "fecha": "2026-10-04",
+    "dictamen": "No apto para acceder al examen en esta evaluación",
+    "inferencia_autorizada": false,
+    "examen_habilitado": false,
+    "capas": [
+      "A0",
+      "A1",
+      "A2",
+      "A3"
+    ],
+    "clasificaciones_correctas_por_capa": 8,
+    "casos_por_capa": 9,
+    "puntuacion_por_capa": -88.88888888888889,
+    "error_critico": "A08",
+    "diagnosticos_finales_erroneos": [
+      "D01",
+      "D03"
+    ],
+    "diagnostico_sin_final": "D02",
+    "incidencia_A3": "Agotamiento de memoria del custodio después de A09; nueve finales conservadas",
+    "incidencia_D02": "Interrupción temporal sin clasificación ni valor SV",
+    "cierre_D03_normal": true,
+    "documento": "ensayos-reiterados-adversariales-y-aprendizaje/resultados/cierre-20261004/INFORME-FINAL.md",
+    "conservacion": "Recepción de imagen documentada por separado; no inferir arranque restaurado",
+    "alcance_recuentos_anteriores": "Los recuentos conservados en ejecución y contrastes anteriores corresponden a sus cortes históricos, incluido 10/02/2026 23:40:32; no son el total acumulado de la campaña cerrada."
   }
 }

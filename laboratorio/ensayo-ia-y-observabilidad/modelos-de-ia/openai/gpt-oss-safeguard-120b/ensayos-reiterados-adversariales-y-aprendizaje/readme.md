@@ -1,6 +1,15 @@
 # Preevaluación de examen de 25 preguntas de tricoleucemia
 
+**Candidato:** `openai/gpt-oss-safeguard-120b`. **Apertura:** 3 de octubre de 2026. **Cierre:** 4 de octubre de 2026. **No apto para acceder al examen en esta evaluación.** A0–A3 conservan ocho categorías correctas de nueve, omisiones formales y el error crítico A08. D01 y D03 reproducen ese error; D02 no produjo una final por límite temporal. La incidencia del custodio de A3 se registra por separado. No quedan habilitados A4, B ni el examen. [Informe final, condiciones y reservas](resultados/cierre-20261004/INFORME-FINAL.md).
+
+<details>
+<summary>Estado histórico del 3 de octubre y alcance del protocolo conservado</summary>
+
 **Candidato:** `openai/gpt-oss-safeguard-120b`. **Fecha de apertura:** 3 de octubre de 2026. **Estado al 03/10/2026:** A0, A1 y A2 concluidas, cotejadas y conservadas. Las tres obtienen **−88,89/100 y No apto**: ocho clasificaciones documentales correctas, omisiones formales comunes y el mismo error crítico A08. No hay mejora entre estas capas. [Resultados de A0](resultados/A0/INFORME-A0.md), [A1](resultados/A1/INFORME-A1.md) y [A2, comparación y reservas de interpretación](resultados/A2/INFORME-A2.md). **A3 activa desde las 20:45:03 UTC**, con los 27 antecedentes propios completos y **razonamiento alto**. Carga terminada y cálculo de A01 con progreso comprobado; todavía sin resultado final de A3. [Constancia de activación](ensayo-2/INICIO-A3.json). [Preparación A3](ensayo-2/PREPARACION-A3.json) y [condición declarada](ensayo-2/CONDICION-A3.json). El paso de A2 a A3 combina una revisión adicional con mayor esfuerzo; no permite aislar el efecto causal de cada factor. A4 sigue condicionada a la falta de conformidad de A3. B y el examen permanecen condicionados. Se conservan las constancias de inicio de [A0](ensayo-1/INICIO-A0.json), [A1](ensayo-1/INICIO-A1.json) y [A2](ensayo-2/INICIO-A2.json).
+
+</details>
+
+El diseño y los diagramas siguientes se conservan como antecedentes. Las continuaciones condicionales que describen no revocan el cierre definitivo indicado arriba.
 
 ## Objetivo y alcance
 
