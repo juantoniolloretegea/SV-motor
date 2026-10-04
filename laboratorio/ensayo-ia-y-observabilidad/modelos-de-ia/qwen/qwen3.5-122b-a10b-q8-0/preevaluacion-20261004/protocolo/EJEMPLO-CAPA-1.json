@@ -1,0 +1,41 @@
+{
+  "decision": "RESPALDADA",
+  "evidencias": [
+    {
+      "documento": "EJ",
+      "fragmento": "El archivo abre de lunes a viernes, de 09:00 a 14:00",
+      "pagina": 0,
+      "seccion": "S1"
+    }
+  ],
+  "justificacion_breve": "La fuente sigue respaldando el día y la hora afirmados.",
+  "recepcion_documental": [
+    {
+      "documento": "EJ",
+      "paginas": [
+        0
+      ],
+      "seccion": "S1"
+    }
+  ],
+  "reglas": [
+    "D1",
+    "D2"
+  ],
+  "revision": {
+    "adversarial": [
+      {
+        "conclusion": "mantener",
+        "contraste_documental": "EJ/S1, página 0, incluye de lunes a viernes; el martes pertenece a ese intervalo. La evidencia citada conserva la hora de inicio.",
+        "objecion": "La respuesta anterior podría haber incluido un día ajeno al horario."
+      }
+    ],
+    "antecedentes": [
+      {
+        "capa": 0,
+        "caso": "EJ-01"
+      }
+    ],
+    "fundamento_del_cambio_o_mantenimiento": "Se mantiene porque el contraste no encuentra una condición incompatible ni un dato ausente que afecte a la afirmación."
+  }
+}

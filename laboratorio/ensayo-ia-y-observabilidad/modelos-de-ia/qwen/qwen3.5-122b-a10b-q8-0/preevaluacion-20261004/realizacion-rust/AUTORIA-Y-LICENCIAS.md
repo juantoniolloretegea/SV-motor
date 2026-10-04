@@ -1,0 +1,3 @@
+Los componentes propios realizan transporte, comprobaciones y conservación, sin modificar el Núcleo. La ruta de tokenización reproduce de forma delimitada el BPE qwen35 de mistral.rs, revisión fijada; se conserva su licencia MIT en LICENCIA-MISTRAL-RS.txt. Los componentes de terceros conservan sus licencias.
+
+© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).

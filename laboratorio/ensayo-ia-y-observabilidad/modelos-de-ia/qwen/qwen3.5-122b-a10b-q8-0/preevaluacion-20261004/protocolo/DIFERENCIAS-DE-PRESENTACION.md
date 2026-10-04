@@ -1,0 +1,5 @@
+# Adaptación prospectiva de presentación
+
+Se conservan literalmente las definiciones, reglas D1–D5, contradicción e insuficiencia y los seis ejemplos didácticos originales. Se sustituye el formato abreviado y la búsqueda selectiva por un contrato completo y la lectura de todas las páginas; se incorporan los dos ejemplos completos del encargo. Las huellas corresponden al instrumento. La clave permanece en su sede reservada local y no se copia al servidor. El catálogo MCP de cada caso adaptará sólo su metadato URL al identificador sintético admitido; textos y huellas permanecen idénticos. Esta adaptación no modifica resultados históricos ni acredita una causa de error.
+
+© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).

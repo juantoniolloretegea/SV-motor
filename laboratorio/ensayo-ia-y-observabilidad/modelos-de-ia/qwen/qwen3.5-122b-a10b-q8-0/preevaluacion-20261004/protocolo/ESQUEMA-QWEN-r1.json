@@ -1,0 +1,178 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "decision": {
+      "enum": [
+        "RESPALDADA",
+        "CONTRADICHA",
+        "EVIDENCIA_INSUFICIENTE"
+      ]
+    },
+    "evidencias": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "documento": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "fragmento": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "pagina": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "seccion": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "required": [
+          "documento",
+          "fragmento",
+          "pagina",
+          "seccion"
+        ],
+        "type": "object"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "justificacion_breve": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "recepcion_documental": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "documento": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "paginas": {
+            "items": {
+              "minimum": 0,
+              "type": "integer"
+            },
+            "minItems": 1,
+            "type": "array",
+            "uniqueItems": true
+          },
+          "seccion": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "required": [
+          "documento",
+          "paginas",
+          "seccion"
+        ],
+        "type": "object"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "reglas": {
+      "items": {
+        "enum": [
+          "D1",
+          "D2",
+          "D3",
+          "D4",
+          "D5"
+        ]
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "revision": {
+      "anyOf": [
+        {
+          "type": "null"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "adversarial": {
+              "items": {
+                "additionalProperties": false,
+                "properties": {
+                  "conclusion": {
+                    "enum": [
+                      "mantener",
+                      "corregir",
+                      "retirar",
+                      "indeterminar"
+                    ]
+                  },
+                  "contraste_documental": {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  "objecion": {
+                    "minLength": 1,
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "conclusion",
+                  "contraste_documental",
+                  "objecion"
+                ],
+                "type": "object"
+              },
+              "minItems": 1,
+              "type": "array"
+            },
+            "antecedentes": {
+              "items": {
+                "additionalProperties": false,
+                "properties": {
+                  "capa": {
+                    "minimum": 0,
+                    "type": "integer"
+                  },
+                  "caso": {
+                    "minLength": 1,
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "capa",
+                  "caso"
+                ],
+                "type": "object"
+              },
+              "minItems": 1,
+              "type": "array"
+            },
+            "fundamento_del_cambio_o_mantenimiento": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "adversarial",
+            "antecedentes",
+            "fundamento_del_cambio_o_mantenimiento"
+          ],
+          "type": "object"
+        }
+      ]
+    }
+  },
+  "required": [
+    "decision",
+    "evidencias",
+    "justificacion_breve",
+    "recepcion_documental",
+    "reglas",
+    "revision"
+  ],
+  "type": "object"
+}
