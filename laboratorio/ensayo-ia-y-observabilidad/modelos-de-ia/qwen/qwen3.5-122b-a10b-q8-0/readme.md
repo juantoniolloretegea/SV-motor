@@ -1,8 +1,8 @@
 # Qwen3.5-122B-A10B · Q8_0
 
-**Expediente de selección técnica · Versión 1.0 · 4 de octubre de 2026**
+**Expediente de selección técnica · Versión 1.1 · 4 de octubre de 2026**
 
-**Estado:** candidato seleccionado para preparación y evaluación; instalación, inferencia, rendimiento y aptitud todavía no acreditados en este expediente.
+**Estado:** instalación y primera respuesta instrumental acreditadas; evaluación documental, viabilidad temporal y aptitud pendientes. Véase la [recepción instrumental del 4 de octubre](seguimiento/RECEPCION_INSTRUMENTAL_20261004.md), con sus mediciones y reservas.
 
 Se estudia **Qwen3.5-122B-A10B**, desarrollado por Qwen, en la distribución **GGUF Q8_0 de Unsloth**. El objetivo es comprobar si puede interpretar fuentes locales delimitadas, aplicar una política explícita y producir respuestas completas y verificables bajo el gobierno del Sistema Vectorial SV.
 
@@ -38,7 +38,7 @@ flowchart LR
     E --> F["Registro de capacidades, límites y necesidades"]
 ```
 
-El diagrama describe una secuencia prevista. Su publicación no acredita la ejecución de los pasos posteriores a la selección.
+El diagrama conserva la secuencia del ensayo. La recepción instrumental mínima está documentada; la evaluación documental y la adjudicación de aptitud siguen pendientes.
 
 ## Organización y continuidad
 
