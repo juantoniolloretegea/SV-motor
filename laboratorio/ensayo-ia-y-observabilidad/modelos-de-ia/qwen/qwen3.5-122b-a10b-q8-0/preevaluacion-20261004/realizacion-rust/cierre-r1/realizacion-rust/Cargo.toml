@@ -1,0 +1,13 @@
+[package]
+name = "sv-qwen-preevaluacion"
+version = "0.1.0"
+edition = "2024"
+publish = false
+[workspace]
+[dependencies]
+serde_json = "=1.0.151"
+sha2 = "=0.10.9"
+sha1 = "=0.10.6"
+[profile.dev]
+debug = 0
+incremental = false

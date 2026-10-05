@@ -1,0 +1,64 @@
+{
+  "tipo": "observacion_de_solo_lectura",
+  "solicitud_activa": "A05/A0",
+  "metodo": "Lectura de cgroup v2 memory.stat y de /proc/<pid>/status de los procesos enumerados en cgroup.procs; no es una medicion de ancho de banda ni un perfil de tiempo de CPU.",
+  "memoria": {
+    "utc": "2026-10-05T10:56:11Z",
+    "unidad": "bytes salvo contadores de eventos",
+    "anon": 133055254528,
+    "file": 90105851904,
+    "kernel": 304254976,
+    "file_mapped": 90092470272,
+    "file_dirty": 0,
+    "file_writeback": 0,
+    "workingset_refault_anon": 0,
+    "workingset_refault_file": 3840,
+    "pgscan": 9923824,
+    "pgsteal": 9923822,
+    "pgfault": 57096672,
+    "pgmajfault": 379
+  },
+  "procesos": {
+    "utc": "2026-10-05T10:56:42Z",
+    "lista": [
+      {
+        "pid": 3512,
+        "name": "time",
+        "VmRSS_kB": 1636,
+        "VmSwap_kB": 0,
+        "Threads": 1,
+        "Cpus_allowed_list": "0-127",
+        "Mems_allowed_list": "0"
+      },
+      {
+        "pid": 3514,
+        "name": "mistralrs-sv-cp",
+        "VmRSS_kB": 218009484,
+        "VmSwap_kB": 0,
+        "Threads": 122,
+        "Cpus_allowed_list": "0-127",
+        "Mems_allowed_list": "0"
+      }
+    ]
+  },
+  "sistema_cpu": {
+    "utc": "2026-10-05T11:20:48Z",
+    "procesadores_en_linea_getconf": 48,
+    "online": "0-47",
+    "present": "0-47",
+    "cpu_max_del_modelo": "max 100000",
+    "modelo_declarado": "AMD EPYC 7542 32-Core Processor",
+    "virtualizacion": "KVM, full",
+    "topologia_visible_al_invitado": {"hilos_por_nucleo": 1, "nucleos_por_socket": 48, "sockets": 1, "nodos_NUMA": 1},
+    "alcance": "La topologia presentada al invitado no acredita la topologia fisica ni la dedicacion exclusiva del anfitrion. La mascara del proceso no sustituye la lista de CPU presentes y en linea."
+  },
+  "limites_de_interpretacion": [
+    "El proceso principal de la unidad es el medidor time; sus contadores no sustituyen los del proceso del modelo.",
+    "Threads cuenta hilos existentes, no hilos simultaneamente ejecutando calculo ni el paralelismo optimo.",
+    "Cpus_allowed_list no acredita recursos fisicos exclusivos, topologia del anfitrion ni ancho de banda efectivo.",
+    "anon, file y kernel son ocupacion del grupo; no bytes transferidos por token. file_mapped es un subconjunto y no se suma de nuevo.",
+    "Los contadores de fallos de pagina y recuperacion son acumulados; una muestra no atribuye su coste temporal ni demuestra el cuello de botella.",
+    "No se modificaron configuracion, pesos, motor ni solicitud; no se ejecuto una inferencia o prueba de rendimiento adicional."
+  ],
+  "autoría_y_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0)."
+}

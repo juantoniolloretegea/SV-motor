@@ -1,0 +1,847 @@
+{
+  "encargo": "QWEN35-PRE-20261004/r1",
+  "fecha": "2026-10-05",
+  "candidato": "Qwen3.5-122B-A10B Q8_0",
+  "dictamen": "Admisión no acreditada por impedimento",
+  "causa": "Margen temporal prospectivo insuficiente para otra solicitud de 18000 s; bloque A0 incompleto. Se conserva además el error sustantivo crítico de A06.",
+  "generaciones_cientificas": 7,
+  "reparaciones": 0,
+  "reintentos": 0,
+  "vector_parcial": [
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "1",
+    "0",
+    null,
+    null
+  ],
+  "medidas_rust": {
+    "N0": 6,
+    "N1": 1,
+    "NU": 0,
+    "conforme": false,
+    "criticos_todos_en_0": false,
+    "custodia_conforme": false,
+    "denominador": 9,
+    "errores_criticos": 1,
+    "errores_no_criticos": 0,
+    "incidencias_pendientes": false,
+    "kappa": null,
+    "puntuacion": null,
+    "terna_completa": false
+  },
+  "cobertura": {
+    "A0_evaluables": 7,
+    "A0_previstos": 9,
+    "paginas_recibidas": 14,
+    "paginas_por_caso": 2
+  },
+  "no_ejecutado": [
+    "A08/A0",
+    "A09/A0",
+    "A1–A3",
+    "B0–B3",
+    "R-PDF-01",
+    "examen de 25 preguntas"
+  ],
+  "motivos_no_ejecucion": {
+    "A08_A09": "12840,271266571 s restantes, inferiores a 18000 s de reserva por solicitud",
+    "A1_A3": "A0 sin completar y margen insuficiente; no se revisan casos aislados",
+    "B": "A no conforme",
+    "R_PDF": "Condicionado a B conforme, no alcanzado",
+    "examen": "Fuera del encargo y admisión no acreditada"
+  },
+  "presupuesto_control": {
+    "incidencia": null,
+    "reparaciones": 0,
+    "segundos_consumidos": 73559.728733429,
+    "solicitudes": 7,
+    "ultima_solicitud": "A07-0"
+  },
+  "margen_segundos": 12840.271266571,
+  "tiempos_separados": {
+    "preparacion_inicial_segundos": 1654.6746543,
+    "campana_inicio_utc": "2026-10-04T19:50:39.7598094Z",
+    "corte_cierre_utc": "2026-10-05T18:06:48Z",
+    "campana_hasta_corte_segundos": 80168.2401906,
+    "alcance": "Campaña incluye preparación, ejecución, intervalos y primera consolidación; no es suma de carga/inferencia. El modelo ya estaba cargado. No se añade otra carga ni LISTO a la serie."
+  },
+  "comparaciones": {
+    "capas_completas": 0,
+    "correcciones_regresiones": null,
+    "delta_S": null,
+    "resultado_asistido": "No ejecutado",
+    "motivo": "No existe segunda capa ni primer bloque completo; no se calcula aprendizaje o transferencia"
+  },
+  "recepcion_independiente": {
+    "A01_A03": "Favorable; lectura y adjudicación independientes, misma realización de comprobación Rust",
+    "A04_A07": "Pendiente al último corte competente",
+    "fase": "Pendiente; no equivale a recepción clínica o auditoría numérica universal"
+  },
+  "estado_final": {
+    "modelo_cargado": true,
+    "solicitudes_activas": 0,
+    "solicitudes_en_espera": 0,
+    "arranque_automatico": false,
+    "reinicio_automatico": false,
+    "reinicios": 0,
+    "OOM": 0,
+    "intercambio": 0,
+    "corte_utc": "2026-10-05T18:06:48Z"
+  },
+  "identidad": {
+    "motor_base": "4400935451da5e2dc7379a3f92fbbada66557f6c",
+    "correccion": "CPU Q8_0 r2 recibida, sin modificaciones durante la serie",
+    "motor_sha256": "badd26375ed6378777c60c834d8527bfcc742bdb3adb912bf7a591875eea311b",
+    "revision_oficial": "dc4d348443bc740c68e2d77492492c11606384d5",
+    "revision_GGUF": "51eab4d59d53f573fb9206cb3ce613f1d0aa392b",
+    "MCP": "0.1.4-pdf.1"
+  },
+  "guardas": "Sin modificación de pesos, Núcleo, semántica V0.2, IR 0.3, recursos o perfiles; clave separada del candidato, red externa denegada y una secuencia.",
+  "limitaciones": [
+    "Siete casos sintéticos, sin capacidad clínica acreditada",
+    "No se ha medido perfil completo, ancho de banda físico ni paralelismo óptimo",
+    "Recodificación de texto por canales distinta del total nativo, sin asignar la diferencia",
+    "Conservación documental y de componentes, no imagen ni restauración probada"
+  ],
+  "custodia_en_este_corte": {
+    "hitos_A01_A07": "Publicados, recuperados y cotejados, incluidos manifiestos",
+    "fase": "Preparación local; publicación y recuperación posteriores se acreditan separadamente"
+  },
+  "referencias_inmutables": [
+    {
+      "caso": "A01",
+      "cientifica": {
+        "repositorio": "SV-motor",
+        "revision": "1d611d8639d64d4790b402e3ebe16fe5960a51af",
+        "carpeta": "laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/qwen/qwen3.5-122b-a10b-q8-0/preevaluacion-20261004/resultados/hitos/A01-A0"
+      },
+      "reservada": {
+        "repositorio": "SV-sala-de-maquinas",
+        "revision": "9a038211db4982305139df68fe9c83cefd20400b",
+        "carpeta": "respuestas-ejecucion/QWEN35-PREEVALUACION-20261004/hito-A01-A0"
+      }
+    },
+    {
+      "caso": "A02",
+      "cientifica": {
+        "repositorio": "SV-motor",
+        "revision": "bd72953e0931d1a7d382cb63e5c03c97b9154666",
+        "carpeta": "laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/qwen/qwen3.5-122b-a10b-q8-0/preevaluacion-20261004/resultados/hitos/A02-A0"
+      },
+      "reservada": {
+        "repositorio": "SV-sala-de-maquinas",
+        "revision": "cd5b64128a1ba17999d6e453beca161bbbb66cae",
+        "carpeta": "respuestas-ejecucion/QWEN35-PREEVALUACION-20261004/hito-A02-A0"
+      }
+    },
+    {
+      "caso": "A03",
+      "cientifica": {
+        "repositorio": "SV-motor",
+        "revision": "11cc9f986ac45afd0c8316d4b443064e954db135",
+        "carpeta": "laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/qwen/qwen3.5-122b-a10b-q8-0/preevaluacion-20261004/resultados/hitos/A03-A0"
+      },
+      "reservada": {
+        "repositorio": "SV-sala-de-maquinas",
+        "revision": "b0c057018019a30a89040a22c3f71f450e84e033",
+        "carpeta": "respuestas-ejecucion/QWEN35-PREEVALUACION-20261004/hito-A03-A0"
+      }
+    },
+    {
+      "caso": "A04",
+      "cientifica": {
+        "repositorio": "SV-motor",
+        "revision": "149c4b848475802942af35ab39e7335081398480",
+        "carpeta": "laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/qwen/qwen3.5-122b-a10b-q8-0/preevaluacion-20261004/resultados/hitos/A04-A0"
+      },
+      "reservada": {
+        "repositorio": "SV-sala-de-maquinas",
+        "revision": "85051ccf2c93b6fb3cafc727e3f568b51006f109",
+        "carpeta": "respuestas-ejecucion/QWEN35-PREEVALUACION-20261004/hito-A04-A0"
+      }
+    },
+    {
+      "caso": "A05",
+      "cientifica": {
+        "repositorio": "SV-motor",
+        "revision": "e45c161813392dcd3cd810487f8a90475ec36b12",
+        "carpeta": "laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/qwen/qwen3.5-122b-a10b-q8-0/preevaluacion-20261004/resultados/hitos/A05-A0"
+      },
+      "reservada": {
+        "repositorio": "SV-sala-de-maquinas",
+        "revision": "cbaf6d2a9dd0fbad2a6b8cfa7ad262eb8992ec22",
+        "carpeta": "respuestas-ejecucion/QWEN35-PREEVALUACION-20261004/hito-A05-A0"
+      }
+    },
+    {
+      "caso": "A06",
+      "cientifica": {
+        "repositorio": "SV-motor",
+        "revision": "4ffee5f08d46fd02d60283a400917c8e6ed92ec1",
+        "carpeta": "laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/qwen/qwen3.5-122b-a10b-q8-0/preevaluacion-20261004/resultados/hitos/A06-A0"
+      },
+      "reservada": {
+        "repositorio": "SV-sala-de-maquinas",
+        "revision": "379ff5718dcb50b86c2ec3b072f6020174cf5b7d",
+        "carpeta": "respuestas-ejecucion/QWEN35-PREEVALUACION-20261004/hito-A06-A0"
+      }
+    },
+    {
+      "caso": "A07",
+      "cientifica": {
+        "repositorio": "SV-motor",
+        "revision": "f9dede73478b5d2fc01bd3390f59cdb93568b023",
+        "carpeta": "laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/qwen/qwen3.5-122b-a10b-q8-0/preevaluacion-20261004/resultados/hitos/A07-A0"
+      },
+      "reservada": {
+        "repositorio": "SV-sala-de-maquinas",
+        "revision": "c91564f6fbc26e458942d67087566dc097b65a1e",
+        "carpeta": "respuestas-ejecucion/QWEN35-PREEVALUACION-20261004/hito-A07-A0"
+      }
+    }
+  ],
+  "mediciones_por_caso": [
+    {
+      "caso": "A01",
+      "resultado_original": {
+        "adjudicado": false,
+        "completa": true,
+        "done": true,
+        "final_bytes": 618,
+        "final_sha256": "42dab6fa22c105393981d52833cc29eb887364350ccac4caeee39f503d333762",
+        "primer_contenido_final_segundos": 7185.565369052,
+        "primer_token_observable_segundos": 391.951540063,
+        "razonamiento_bytes": 5019,
+        "razonamiento_sha256": "da5d68b886c7553dab70d96dd5218b0f8e6291fc11d252ffa085737a9bb99971",
+        "salida_sse_bytes": 531584,
+        "segundos": 8232.722806332,
+        "terminacion": "stop",
+        "unix_admision": 1791145094.4402127,
+        "usage": {
+          "avg_compl_tok_per_sec": 0.21569496,
+          "avg_prompt_tok_per_sec": 5.4122887,
+          "avg_tok_per_sec": 0.46309003,
+          "completion_tokens": 1691,
+          "prompt_tokens": 2121,
+          "total_completion_time_sec": 7839.775,
+          "total_prompt_time_sec": 391.886,
+          "total_time_sec": 8231.661,
+          "total_tokens": 3812
+        }
+      },
+      "auditoria": {
+        "adjudicacion_sustantiva": "Pendiente de lectura y contraste externo; no se infiere por coincidencia de etiqueta",
+        "capa": 0,
+        "caso": "A01",
+        "contrato_formal_conforme": true,
+        "decision_observada": "RESPALDADA",
+        "defecto_formal": null,
+        "diarios": {
+          "mcp_intercambios": {
+            "conforme": true,
+            "registros": 9,
+            "ultima_huella": "17adb811e7cf10cb5b65d35e6ded78a73634d6cc9921d7c19d861377b957becc"
+          },
+          "salida": {
+            "conforme": true,
+            "registros": 1692,
+            "ultima_huella": "abbab84735562dc3cb4c3a556995968eb2854c5cdbcb72924b7114896cb23d60"
+          },
+          "telemetria": {
+            "conforme": true,
+            "registros": 1643,
+            "ultima_huella": "6dcc50aa63dac5fa4f44baa385768e7e53e22fe33fe0ac5fd8975ca01e990403"
+          }
+        },
+        "encargo": "QWEN35-PRE-20261004/r1",
+        "final_sha256": "42dab6fa22c105393981d52833cc29eb887364350ccac4caeee39f503d333762",
+        "fuente_resultado_sha256": "c79d8527cf126cfd156e2e0c50bc7d1f5e0a5ef9381ad1819a1d5d2e2dc9de27",
+        "integridad_conforme": true,
+        "memoria": {
+          "eventos_finales": "low 0\nhigh 1582\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0\n",
+          "eventos_iniciales": "low 0\nhigh 1503\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0\n",
+          "intercambio_maximo_muestreado": 0,
+          "maximo_muestreado": 225135276032,
+          "mayor_intervalo_sin_progreso_observado": 391.076121606
+        },
+        "razonamiento_sha256": "da5d68b886c7553dab70d96dd5218b0f8e6291fc11d252ffa085737a9bb99971",
+        "salida_sse_sha256": "f5c98956662864f367c7673a1aebaf4ff6ec4f6f0d523893ac62cc84a5ff1f62",
+        "tiempos": {
+          "cierre_emitido_segundos": 8232.720675162,
+          "fin_entrada_observado_segundos": 396.085257446,
+          "limite_observacion_entrada": "Intervalo hasta actualización del contador nativo; no temporización interna exacta",
+          "primer_contenido_final_segundos": 7185.563404946,
+          "primer_token_emitido_segundos": 391.949777825,
+          "resolucion_telemetria_nominal_segundos": 5,
+          "segundos_totales": 8232.722806332
+        },
+        "usage_nativo": {
+          "avg_compl_tok_per_sec": 0.21569496,
+          "avg_prompt_tok_per_sec": 5.4122887,
+          "avg_tok_per_sec": 0.46309003,
+          "completion_tokens": 1691,
+          "prompt_tokens": 2121,
+          "total_completion_time_sec": 7839.775,
+          "total_prompt_time_sec": 391.886,
+          "total_time_sec": 8231.661,
+          "total_tokens": 3812
+        }
+      },
+      "tokens_recodificados": {
+        "razonamiento": 1464,
+        "final": 225
+      }
+    },
+    {
+      "caso": "A02",
+      "resultado_original": {
+        "adjudicado": false,
+        "completa": true,
+        "done": true,
+        "final_bytes": 836,
+        "final_sha256": "efe10b53487889857c74693f8902a723219311c65bc5261887d88a7b3a88c107",
+        "primer_contenido_final_segundos": 11957.187943465,
+        "primer_token_observable_segundos": 392.186833291,
+        "razonamiento_bytes": 9988,
+        "razonamiento_sha256": "0bf41797af5aa2c121f07ca9a2d3f629a5f55cdfe7fa6003f58431d6274bd51e",
+        "salida_sse_bytes": 879228,
+        "segundos": 13164.299115189,
+        "terminacion": "stop",
+        "unix_admision": 1791154475.4652028,
+        "usage": {
+          "avg_compl_tok_per_sec": 0.21800394,
+          "avg_prompt_tok_per_sec": 5.398816,
+          "avg_tok_per_sec": 0.3723447,
+          "completion_tokens": 2784,
+          "prompt_tokens": 2117,
+          "total_completion_time_sec": 12770.411,
+          "total_prompt_time_sec": 392.123,
+          "total_time_sec": 13162.534,
+          "total_tokens": 4901
+        }
+      },
+      "auditoria": {
+        "adjudicacion_sustantiva": "Pendiente de lectura y contraste externo; no se infiere por coincidencia de etiqueta",
+        "capa": 0,
+        "caso": "A02",
+        "contrato_formal_conforme": true,
+        "decision_observada": "RESPALDADA",
+        "defecto_formal": null,
+        "diarios": {
+          "mcp_intercambios": {
+            "conforme": true,
+            "registros": 9,
+            "ultima_huella": "7725d104c38ba32b1760f315900576cf1e4927fbe1bf0c0273866e2866a5a81c"
+          },
+          "salida": {
+            "conforme": true,
+            "registros": 2785,
+            "ultima_huella": "66c060cdc61e63e5643d0bfac405dd36aab9792bcbe445bf698aef86ddd84ecb"
+          },
+          "telemetria": {
+            "conforme": true,
+            "registros": 2627,
+            "ultima_huella": "f0669fd97ea3d661e462a85917f7fd296c05874e08955a8bc49638911b5fc8ad"
+          }
+        },
+        "encargo": "QWEN35-PRE-20261004/r1",
+        "final_sha256": "efe10b53487889857c74693f8902a723219311c65bc5261887d88a7b3a88c107",
+        "fuente_resultado_sha256": "e0808f92a9e02546d810fb9fb4e6b64d08f02498e9966060257bf57d350eacda",
+        "integridad_conforme": true,
+        "memoria": {
+          "eventos_finales": "low 0\nhigh 1582\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0\n",
+          "eventos_iniciales": "low 0\nhigh 1582\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0\n",
+          "intercambio_maximo_muestreado": 0,
+          "maximo_muestreado": 225137139712,
+          "mayor_intervalo_sin_progreso_observado": 391.019835664
+        },
+        "razonamiento_sha256": "0bf41797af5aa2c121f07ca9a2d3f629a5f55cdfe7fa6003f58431d6274bd51e",
+        "salida_sse_sha256": "07846d15eec4aa1667f539307733ed005bd70dc92e9f12e9e163c3845367c006",
+        "tiempos": {
+          "cierre_emitido_segundos": 13164.296951619,
+          "fin_entrada_observado_segundos": 396.032126732,
+          "limite_observacion_entrada": "Intervalo hasta actualización del contador nativo; no temporización interna exacta",
+          "primer_contenido_final_segundos": 11957.186275626,
+          "primer_token_emitido_segundos": 392.184928676,
+          "resolucion_telemetria_nominal_segundos": 5,
+          "segundos_totales": 13164.299115189
+        },
+        "usage_nativo": {
+          "avg_compl_tok_per_sec": 0.21800394,
+          "avg_prompt_tok_per_sec": 5.398816,
+          "avg_tok_per_sec": 0.3723447,
+          "completion_tokens": 2784,
+          "prompt_tokens": 2117,
+          "total_completion_time_sec": 12770.411,
+          "total_prompt_time_sec": 392.123,
+          "total_time_sec": 13162.534,
+          "total_tokens": 4901
+        }
+      },
+      "tokens_recodificados": {
+        "razonamiento": 2520,
+        "final": 262
+      }
+    },
+    {
+      "caso": "A03",
+      "resultado_original": {
+        "adjudicado": false,
+        "completa": true,
+        "done": true,
+        "final_bytes": 526,
+        "final_sha256": "34a4d1eab5fcd376d2f365ea2a5e1d5a0ae1aa99177c27f9924dac4a8d64f7e0",
+        "primer_contenido_final_segundos": 7754.775303676,
+        "primer_token_observable_segundos": 388.053247203,
+        "razonamiento_bytes": 5498,
+        "razonamiento_sha256": "aaee82edb434ea3aaf9308e56a8388da068af0727bd33dd3b29974d0b8f9eca7",
+        "salida_sse_bytes": 550429,
+        "segundos": 8654.705140274,
+        "terminacion": "stop",
+        "unix_admision": 1791168561.857411,
+        "usage": {
+          "avg_compl_tok_per_sec": 0.21135834,
+          "avg_prompt_tok_per_sec": 5.435721,
+          "avg_tok_per_sec": 0.44559628,
+          "completion_tokens": 1747,
+          "prompt_tokens": 2109,
+          "total_completion_time_sec": 8265.584,
+          "total_prompt_time_sec": 387.989,
+          "total_time_sec": 8653.573,
+          "total_tokens": 3856
+        }
+      },
+      "auditoria": {
+        "adjudicacion_sustantiva": "Pendiente de lectura y contraste externo; no se infiere por coincidencia de etiqueta",
+        "capa": 0,
+        "caso": "A03",
+        "contrato_formal_conforme": true,
+        "decision_observada": "CONTRADICHA",
+        "defecto_formal": null,
+        "diarios": {
+          "mcp_intercambios": {
+            "conforme": true,
+            "registros": 9,
+            "ultima_huella": "79965f7df85bc52fd4d4105800db76b45a3bce3c35a4f151d6c1daafc9472679"
+          },
+          "salida": {
+            "conforme": true,
+            "registros": 1748,
+            "ultima_huella": "5ca275fcdc93ed5adbe0929fdf5024af867b8d77437c25c5abceeb4ed197fcf6"
+          },
+          "telemetria": {
+            "conforme": true,
+            "registros": 1727,
+            "ultima_huella": "f79f9c78a714c4b23722d89bc075caab2a882f6a9320bb9cb3710ce0c88b79bc"
+          }
+        },
+        "encargo": "QWEN35-PRE-20261004/r1",
+        "final_sha256": "34a4d1eab5fcd376d2f365ea2a5e1d5a0ae1aa99177c27f9924dac4a8d64f7e0",
+        "fuente_resultado_sha256": "b16937d845d947d2814474516c4134ac2213eecc0a4638f525c3601afb10372c",
+        "integridad_conforme": true,
+        "memoria": {
+          "eventos_finales": "low 0\nhigh 1582\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0\n",
+          "eventos_iniciales": "low 0\nhigh 1582\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0\n",
+          "intercambio_maximo_muestreado": 0,
+          "maximo_muestreado": 225119432704,
+          "mayor_intervalo_sin_progreso_observado": 385.990592996
+        },
+        "razonamiento_sha256": "aaee82edb434ea3aaf9308e56a8388da068af0727bd33dd3b29974d0b8f9eca7",
+        "salida_sse_sha256": "aed2cc6cf2fc176177b7cd4684709db32087669064c89dab97ebfdb9e5150939",
+        "tiempos": {
+          "cierre_emitido_segundos": 8654.701923827,
+          "fin_entrada_observado_segundos": 391.000222699,
+          "limite_observacion_entrada": "Intervalo hasta actualización del contador nativo; no temporización interna exacta",
+          "primer_contenido_final_segundos": 7754.773583927,
+          "primer_token_emitido_segundos": 388.051597057,
+          "resolucion_telemetria_nominal_segundos": 5,
+          "segundos_totales": 8654.705140274
+        },
+        "usage_nativo": {
+          "avg_compl_tok_per_sec": 0.21135834,
+          "avg_prompt_tok_per_sec": 5.435721,
+          "avg_tok_per_sec": 0.44559628,
+          "completion_tokens": 1747,
+          "prompt_tokens": 2109,
+          "total_completion_time_sec": 8265.584,
+          "total_prompt_time_sec": 387.989,
+          "total_time_sec": 8653.573,
+          "total_tokens": 3856
+        }
+      },
+      "tokens_recodificados": {
+        "razonamiento": 1554,
+        "final": 191
+      }
+    },
+    {
+      "caso": "A04",
+      "resultado_original": {
+        "adjudicado": false,
+        "completa": true,
+        "done": true,
+        "final_bytes": 876,
+        "final_sha256": "b8bdba0c97c43c3a9066e36ca1026f473df6afa90207e2ce70d4c0cecd8ac9f8",
+        "primer_contenido_final_segundos": 8179.441370019,
+        "primer_token_observable_segundos": 393.59408617,
+        "razonamiento_bytes": 6066,
+        "razonamiento_sha256": "70ad921d14e42af9cd589205946c9a82a89eb9bb46780c21f4c33760268f84f6",
+        "salida_sse_bytes": 602080,
+        "segundos": 9511.126912435,
+        "terminacion": "stop",
+        "unix_admision": 1791177713.4300542,
+        "usage": {
+          "avg_compl_tok_per_sec": 0.21017139,
+          "avg_prompt_tok_per_sec": 5.394774,
+          "avg_tok_per_sec": 0.4247154,
+          "completion_tokens": 1916,
+          "prompt_tokens": 2123,
+          "total_completion_time_sec": 9116.369,
+          "total_prompt_time_sec": 393.529,
+          "total_time_sec": 9509.898,
+          "total_tokens": 4039
+        }
+      },
+      "auditoria": {
+        "adjudicacion_sustantiva": "Pendiente de lectura y contraste externo; no se infiere por coincidencia de etiqueta",
+        "capa": 0,
+        "caso": "A04",
+        "contrato_formal_conforme": true,
+        "decision_observada": "CONTRADICHA",
+        "defecto_formal": null,
+        "diarios": {
+          "mcp_intercambios": {
+            "conforme": true,
+            "registros": 9,
+            "ultima_huella": "378b1f7df79ef5480020f004ca5d306feec7e78e4497afe6c03615f6cd769c1d"
+          },
+          "salida": {
+            "conforme": true,
+            "registros": 1917,
+            "ultima_huella": "1ddd6d8036cc164ba1d12b476f3e70166608c2218927e9cd9cdd02a8ef104193"
+          },
+          "telemetria": {
+            "conforme": true,
+            "registros": 1898,
+            "ultima_huella": "cc409e0cd0ccfc22358eadfe89b42c8b8059f2f6f9052aac70a34e083f55f330"
+          }
+        },
+        "encargo": "QWEN35-PRE-20261004/r1",
+        "final_sha256": "b8bdba0c97c43c3a9066e36ca1026f473df6afa90207e2ce70d4c0cecd8ac9f8",
+        "fuente_resultado_sha256": "b2ee6970164067e98f8c503e807cba59475c88cda16f57c7dc1d7d9afbd80c33",
+        "integridad_conforme": true,
+        "memoria": {
+          "eventos_finales": "low 0\nhigh 1582\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0\n",
+          "eventos_iniciales": "low 0\nhigh 1582\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0\n",
+          "intercambio_maximo_muestreado": 0,
+          "maximo_muestreado": 225182179328,
+          "mayor_intervalo_sin_progreso_observado": 391.017656053
+        },
+        "razonamiento_sha256": "70ad921d14e42af9cd589205946c9a82a89eb9bb46780c21f4c33760268f84f6",
+        "salida_sse_sha256": "246a1f878cf6f3079c7f02fc1c432710de0569409c1deef6072a78ae5b155e38",
+        "tiempos": {
+          "cierre_emitido_segundos": 9511.124509024,
+          "fin_entrada_observado_segundos": 396.026784157,
+          "limite_observacion_entrada": "Intervalo hasta actualización del contador nativo; no temporización interna exacta",
+          "primer_contenido_final_segundos": 8179.439411513,
+          "primer_token_emitido_segundos": 393.592564294,
+          "resolucion_telemetria_nominal_segundos": 5,
+          "segundos_totales": 9511.126912435
+        },
+        "usage_nativo": {
+          "avg_compl_tok_per_sec": 0.21017139,
+          "avg_prompt_tok_per_sec": 5.394774,
+          "avg_tok_per_sec": 0.4247154,
+          "completion_tokens": 1916,
+          "prompt_tokens": 2123,
+          "total_completion_time_sec": 9116.369,
+          "total_prompt_time_sec": 393.529,
+          "total_time_sec": 9509.898,
+          "total_tokens": 4039
+        }
+      },
+      "tokens_recodificados": {
+        "razonamiento": 1629,
+        "final": 285
+      }
+    },
+    {
+      "caso": "A05",
+      "resultado_original": {
+        "adjudicado": false,
+        "completa": true,
+        "done": true,
+        "final_bytes": 988,
+        "final_sha256": "4b7f2209a0fd3b30f5a64bd6a9aecbf814e956db4488bf262e76313b9b660901",
+        "primer_contenido_final_segundos": 11653.352004417,
+        "primer_token_observable_segundos": 396.498363748,
+        "razonamiento_bytes": 9227,
+        "razonamiento_sha256": "981faa474b520fc114be1aa6405c7b14d7bab21a52cf0d8a0be22c65e46707a7",
+        "salida_sse_bytes": 836961,
+        "segundos": 13091.946017879,
+        "terminacion": "stop",
+        "unix_admision": 1791187697.212954,
+        "usage": {
+          "avg_compl_tok_per_sec": 0.20915668,
+          "avg_prompt_tok_per_sec": 5.3702006,
+          "avg_tok_per_sec": 0.36546198,
+          "completion_tokens": 2655,
+          "prompt_tokens": 2129,
+          "total_completion_time_sec": 12693.834,
+          "total_prompt_time_sec": 396.447,
+          "total_time_sec": 13090.281,
+          "total_tokens": 4784
+        }
+      },
+      "auditoria": {
+        "adjudicacion_sustantiva": "Pendiente de lectura y contraste externo; no se infiere por coincidencia de etiqueta",
+        "capa": 0,
+        "caso": "A05",
+        "contrato_formal_conforme": true,
+        "decision_observada": "CONTRADICHA",
+        "defecto_formal": null,
+        "diarios": {
+          "mcp_intercambios": {
+            "conforme": true,
+            "registros": 9,
+            "ultima_huella": "ab2ea14fe7413daee359fe35593f2240d72048f2acbbaec1b58ec34f0a039fb8"
+          },
+          "salida": {
+            "conforme": true,
+            "registros": 2656,
+            "ultima_huella": "d2a3696c577fcb7a9c5a51ecda0bd8aaea79a33c6a6a16cae30ea555f299b36e"
+          },
+          "telemetria": {
+            "conforme": true,
+            "registros": 2612,
+            "ultima_huella": "43d8efe796a336f5554675de558361f400c28f1cb8708af99e14f5cb5baffaa8"
+          }
+        },
+        "encargo": "QWEN35-PRE-20261004/r1",
+        "final_sha256": "4b7f2209a0fd3b30f5a64bd6a9aecbf814e956db4488bf262e76313b9b660901",
+        "fuente_resultado_sha256": "f7bc90f148e9cb7e7984d6da452741d2eb08e8b92de44a89a5b19425008ecd7d",
+        "integridad_conforme": true,
+        "memoria": {
+          "eventos_finales": "low 0\nhigh 1582\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0\n",
+          "eventos_iniciales": "low 0\nhigh 1582\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0\n",
+          "intercambio_maximo_muestreado": 0,
+          "maximo_muestreado": 225177632768,
+          "mayor_intervalo_sin_progreso_observado": 395.984485862
+        },
+        "razonamiento_sha256": "981faa474b520fc114be1aa6405c7b14d7bab21a52cf0d8a0be22c65e46707a7",
+        "salida_sse_sha256": "990492bd7d62e4c831a6eab00583f2aeb12900b9cdd29bc3b3cecab19977403a",
+        "tiempos": {
+          "cierre_emitido_segundos": 13091.943817088,
+          "fin_entrada_observado_segundos": 400.993609763,
+          "limite_observacion_entrada": "Intervalo hasta actualización del contador nativo; no temporización interna exacta",
+          "primer_contenido_final_segundos": 11653.346702534,
+          "primer_token_emitido_segundos": 396.497053659,
+          "resolucion_telemetria_nominal_segundos": 5,
+          "segundos_totales": 13091.946017879
+        },
+        "usage_nativo": {
+          "avg_compl_tok_per_sec": 0.20915668,
+          "avg_prompt_tok_per_sec": 5.3702006,
+          "avg_tok_per_sec": 0.36546198,
+          "completion_tokens": 2655,
+          "prompt_tokens": 2129,
+          "total_completion_time_sec": 12693.834,
+          "total_prompt_time_sec": 396.447,
+          "total_time_sec": 13090.281,
+          "total_tokens": 4784
+        }
+      },
+      "tokens_recodificados": {
+        "razonamiento": 2347,
+        "final": 305
+      }
+    },
+    {
+      "caso": "A06",
+      "resultado_original": {
+        "adjudicado": false,
+        "completa": true,
+        "done": true,
+        "final_bytes": 919,
+        "final_sha256": "749b41f702bd03397f6409e46d0d6d0b55923a4e46e241ee8a305b4ce4a8bb80",
+        "primer_contenido_final_segundos": 7459.002730999,
+        "primer_token_observable_segundos": 399.021909784,
+        "razonamiento_bytes": 5816,
+        "razonamiento_sha256": "638de9dfa58d943a46219af328650b6d74b86d9478dede73484736a0db17073a",
+        "salida_sse_bytes": 550967,
+        "segundos": 8812.145835575,
+        "terminacion": "stop",
+        "unix_admision": 1791201338.3062894,
+        "usage": {
+          "avg_compl_tok_per_sec": 0.20850998,
+          "avg_prompt_tok_per_sec": 5.283764,
+          "avg_tok_per_sec": 0.4383145,
+          "completion_tokens": 1754,
+          "prompt_tokens": 2108,
+          "total_completion_time_sec": 8412.067,
+          "total_prompt_time_sec": 398.958,
+          "total_time_sec": 8811.025,
+          "total_tokens": 3862
+        }
+      },
+      "auditoria": {
+        "adjudicacion_sustantiva": "Pendiente de lectura y contraste externo; no se infiere por coincidencia de etiqueta",
+        "capa": 0,
+        "caso": "A06",
+        "contrato_formal_conforme": true,
+        "decision_observada": "CONTRADICHA",
+        "defecto_formal": null,
+        "diarios": {
+          "mcp_intercambios": {
+            "conforme": true,
+            "registros": 9,
+            "ultima_huella": "bede4fdcb927e60d0b553af0015f8a391c7cf3a43c99668371e51f52b42b2401"
+          },
+          "salida": {
+            "conforme": true,
+            "registros": 1755,
+            "ultima_huella": "6dc042326b6bf872d1debc630b709dcce12403cede32dead38dfc46385845da0"
+          },
+          "telemetria": {
+            "conforme": true,
+            "registros": 1758,
+            "ultima_huella": "75de505866d935424ef48faf74082b1882352ce087bb4e21e96c19b37f120d40"
+          }
+        },
+        "encargo": "QWEN35-PRE-20261004/r1",
+        "final_sha256": "749b41f702bd03397f6409e46d0d6d0b55923a4e46e241ee8a305b4ce4a8bb80",
+        "fuente_resultado_sha256": "5076b67d4787c1549bbbee8a82770d9b6d4e49a06568c59a7645f9c8b28abf07",
+        "integridad_conforme": true,
+        "memoria": {
+          "eventos_finales": "low 0\nhigh 1582\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0\n",
+          "eventos_iniciales": "low 0\nhigh 1582\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0\n",
+          "intercambio_maximo_muestreado": 0,
+          "maximo_muestreado": 225177513984,
+          "mayor_intervalo_sin_progreso_observado": 396.053049709
+        },
+        "razonamiento_sha256": "638de9dfa58d943a46219af328650b6d74b86d9478dede73484736a0db17073a",
+        "salida_sse_sha256": "74e34a5e38db3c96dae6eefaefadeba898a73752066f16f962b18fdb708d56d8",
+        "tiempos": {
+          "cierre_emitido_segundos": 8812.143656535,
+          "fin_entrada_observado_segundos": 401.063512941,
+          "limite_observacion_entrada": "Intervalo hasta actualización del contador nativo; no temporización interna exacta",
+          "primer_contenido_final_segundos": 7459.000851451,
+          "primer_token_emitido_segundos": 399.020375164,
+          "resolucion_telemetria_nominal_segundos": 5,
+          "segundos_totales": 8812.145835575
+        },
+        "usage_nativo": {
+          "avg_compl_tok_per_sec": 0.20850998,
+          "avg_prompt_tok_per_sec": 5.283764,
+          "avg_tok_per_sec": 0.4383145,
+          "completion_tokens": 1754,
+          "prompt_tokens": 2108,
+          "total_completion_time_sec": 8412.067,
+          "total_prompt_time_sec": 398.958,
+          "total_time_sec": 8811.025,
+          "total_tokens": 3862
+        }
+      },
+      "tokens_recodificados": {
+        "razonamiento": 1467,
+        "final": 284
+      }
+    },
+    {
+      "caso": "A07",
+      "resultado_original": {
+        "adjudicado": false,
+        "completa": true,
+        "done": true,
+        "final_bytes": 882,
+        "final_sha256": "c0de26cbc399e3c5f2bdd0598380d1b6c82a2237a0518b7cf3ff2d9c2a3c4317",
+        "primer_contenido_final_segundos": 10672.57282589,
+        "primer_token_observable_segundos": 402.17396238,
+        "razonamiento_bytes": 8387,
+        "razonamiento_sha256": "4443350b2e9fd415fcbe61027ab3f31cad50be0ff6601726619ee79e88ea613f",
+        "salida_sse_bytes": 758664,
+        "segundos": 12077.172063298,
+        "terminacion": "stop",
+        "unix_admision": 1791210741.0222368,
+        "usage": {
+          "avg_compl_tok_per_sec": 0.20619233,
+          "avg_prompt_tok_per_sec": 5.2747025,
+          "avg_tok_per_sec": 0.37496868,
+          "completion_tokens": 2407,
+          "prompt_tokens": 2121,
+          "total_completion_time_sec": 11673.567,
+          "total_prompt_time_sec": 402.108,
+          "total_time_sec": 12075.675,
+          "total_tokens": 4528
+        }
+      },
+      "auditoria": {
+        "adjudicacion_sustantiva": "Pendiente de lectura y contraste externo; no se infiere por coincidencia de etiqueta",
+        "capa": 0,
+        "caso": "A07",
+        "contrato_formal_conforme": true,
+        "decision_observada": "RESPALDADA",
+        "defecto_formal": null,
+        "diarios": {
+          "mcp_intercambios": {
+            "conforme": true,
+            "registros": 9,
+            "ultima_huella": "5f7cedb884d2a0b9a29e825dc2207f3ae564f457323975e3b7fe0f2c6f8ed907"
+          },
+          "salida": {
+            "conforme": true,
+            "registros": 2408,
+            "ultima_huella": "942926243c59b86710f73390da5beb8c5e63743c19a7b447bc7f3d572788c863"
+          },
+          "telemetria": {
+            "conforme": true,
+            "registros": 2410,
+            "ultima_huella": "4266b5b5db346f6983ce7360cfd162dfa0e1484eaec8b12cecd3d530a10daab6"
+          }
+        },
+        "encargo": "QWEN35-PRE-20261004/r1",
+        "final_sha256": "c0de26cbc399e3c5f2bdd0598380d1b6c82a2237a0518b7cf3ff2d9c2a3c4317",
+        "fuente_resultado_sha256": "a8c4f228f2a5e0868ba2ae0ed88c6fd1c0f8a3f728f1213a4f4a5620ffcc9030",
+        "integridad_conforme": true,
+        "memoria": {
+          "eventos_finales": "low 0\nhigh 1582\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0\n",
+          "eventos_iniciales": "low 0\nhigh 1582\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0\n",
+          "intercambio_maximo_muestreado": 0,
+          "maximo_muestreado": 225213444096,
+          "mayor_intervalo_sin_progreso_observado": 401.063927686
+        },
+        "razonamiento_sha256": "4443350b2e9fd415fcbe61027ab3f31cad50be0ff6601726619ee79e88ea613f",
+        "salida_sse_sha256": "6673ada11c4ee6ecc92ea68f37789ab016b2f79ca6b48504e3ee3ecc7db6a615",
+        "tiempos": {
+          "cierre_emitido_segundos": 12077.169834645,
+          "fin_entrada_observado_segundos": 406.073463223,
+          "limite_observacion_entrada": "Intervalo hasta actualización del contador nativo; no temporización interna exacta",
+          "primer_contenido_final_segundos": 10672.571209596,
+          "primer_token_emitido_segundos": 402.172182078,
+          "resolucion_telemetria_nominal_segundos": 5,
+          "segundos_totales": 12077.172063298
+        },
+        "usage_nativo": {
+          "avg_compl_tok_per_sec": 0.20619233,
+          "avg_prompt_tok_per_sec": 5.2747025,
+          "avg_tok_per_sec": 0.37496868,
+          "completion_tokens": 2407,
+          "prompt_tokens": 2121,
+          "total_completion_time_sec": 11673.567,
+          "total_prompt_time_sec": 402.108,
+          "total_time_sec": 12075.675,
+          "total_tokens": 4528
+        }
+      },
+      "tokens_recodificados": {
+        "razonamiento": 2121,
+        "final": 284
+      }
+    }
+  ],
+  "licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0)."
+}
