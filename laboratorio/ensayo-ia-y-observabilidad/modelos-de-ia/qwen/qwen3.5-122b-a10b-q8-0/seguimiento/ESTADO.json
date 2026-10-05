@@ -1,9 +1,9 @@
 {
-  "version_documental": "1.1",
-  "fecha": "2026-10-04",
+  "version_documental": "1.2",
+  "fecha": "2026-10-05",
   "candidato": "Qwen3.5-122B-A10B",
   "representacion": "GGUF Q8_0",
-  "seleccion": "Instalado y recibido instrumentalmente; pruebas iniciales y admisión al examen pendientes",
+  "seleccion": "Instalado y recibido instrumentalmente; preevaluación parcial A01–A04 conforme, bloque incompleto y admisión al examen pendiente",
   "instalacion_acreditada": true,
   "inferencia_acreditada": true,
   "aptitud_acreditada": false,
@@ -22,12 +22,40 @@
   "antecedente_experimental": "GPT-OSS-Safeguard-120B, informes publicados A0–A2",
   "alcance_antecedentes": "Corte documental de selección; no adjudica diagnósticos posteriores.",
   "requisitos_pendientes": [
-    "Comprobar entrada documental efectiva y recorrido MCP-modelo",
-    "Fijar política, banco, criticidad, revisiones y cotas",
-    "Contrastar viabilidad temporal y memoria: latencia inicial elevada",
-    "Adjudicar contenido y forma independientemente"
+    "Completar y adjudicar los casos restantes dentro de las cotas originales",
+    "Consolidar la custodia y recibir el alcance de la fase",
+    "Determinar viabilidad temporal de la campaña y aptitud según el protocolo"
   ],
   "intervencion_sobre_nucleo": false,
   "funcion_inicial": "Consulta e interpretación textual de corpus local delimitado",
-  "fuentes": "../fuentes/FUENTES.md"
+  "fuentes": "../fuentes/FUENTES.md",
+  "corte_anterior": {
+    "version_documental": "1.1",
+    "fecha": "2026-10-04",
+    "referencia": "https://github.com/juantoniolloretegea/SV-motor/blob/149c4b848475802942af35ab39e7335081398480/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/qwen/qwen3.5-122b-a10b-q8-0/seguimiento/ESTADO.json"
+  },
+  "fecha_corte_documental_utc": "2026-10-05T10:20:04Z",
+  "preevaluacion": {
+    "bloque": "A",
+    "capa": 0,
+    "vector_parcial": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "NE",
+      "NE",
+      "NE",
+      "NE",
+      "NE"
+    ],
+    "NE_fuera_de_terna": true,
+    "caso_critico_cerrado": "A04",
+    "kappa": null,
+    "puntuacion_global": null,
+    "dictamen": null,
+    "evidencia": "https://github.com/juantoniolloretegea/SV-motor/blob/149c4b848475802942af35ab39e7335081398480/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/qwen/qwen3.5-122b-a10b-q8-0/preevaluacion-20261004/resultados/hitos/A04-A0/vector-parcial/CAPA.json",
+    "alcance_hito": "https://github.com/juantoniolloretegea/SV-motor/blob/149c4b848475802942af35ab39e7335081398480/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/qwen/qwen3.5-122b-a10b-q8-0/preevaluacion-20261004/resultados/hitos/A04-A0/ALCANCE.md"
+  },
+  "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0)."
 }

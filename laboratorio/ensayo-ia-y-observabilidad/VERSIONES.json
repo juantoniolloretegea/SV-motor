@@ -1,18 +1,18 @@
 {
   "esquema": "sv.eio.registro-versiones/1",
-  "edicion_documental": "2.21",
-  "fecha_corte": "2026-10-04",
-  "commit_base_consultado": "80e2ad521ab402e6cc6d9fdcab231111e633e3c8",
+  "edicion_documental": "2.22",
+  "fecha_corte": "2026-10-05",
+  "commit_base_consultado": "149c4b848475802942af35ab39e7335081398480",
   "criterio": "Identidad separada para modelo, aplicacion, componente MCP, archivo de conservacion y edicion documental",
   "revision_actual": {
-    "version": "2.21",
-    "naturaleza": "recepcion_custodia_safeguard",
+    "version": "2.22",
+    "naturaleza": "conciliacion_documental_cierres_y_preevaluacion",
     "commit": "El commit que contiene este archivo; sin autorreferencia circular",
     "cambios": [
-      "Conservación privada sin pesos publicada y recuperada íntegramente",
-      "Contenido e inventario cotejados en Rust; corrección de rutas Unix conservada",
-      "Resultados, antecedentes y diagramas sin alteración",
-      "Arranque restaurado y retirada administrativa no acreditados por el archivo"
+      "Cierre, conservación y retirada de Safeguard diferenciados",
+      "Thinking cerrado y conservado; eliminación de instancia y disco pendiente",
+      "Qwen3.5 Q8_0 instalado en UpCloud; A01–A04 = 0, bloque incompleto",
+      "S39 revisión 38 y tiques concordantes; sin cambios de ejecución"
     ]
   },
   "componentes": [
@@ -124,11 +124,24 @@
       "modelo": "Qwen/Qwen3-Next-80B-A3B-Thinking",
       "formato": "UQFF",
       "cuantizacion": "Q4K",
-      "estado": "encargo_transmitido_sin_resultado_recibido",
+      "estado": "examen_cerrado_no_apto_por_inviabilidad_operativa_conservacion_cotejada_retirada_pendiente",
       "registro": "https://github.com/juantoniolloretegea/SV-motor/tree/main/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/qwen/qwen3-next-80b-a3b-thinking",
       "tique": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0017.md",
       "compatibilidad_efectiva": null,
-      "memoria_maxima_medida": null
+      "memoria_maxima_medida": null,
+      "estado_anterior_conservado": "encargo_transmitido_sin_resultado_recibido",
+      "evidencia_cierre": "https://github.com/juantoniolloretegea/SV-motor/releases/tag/qwen3-next-80b-a3b-thinking-archivo-cierre-20261005-v1",
+      "puntuacion_global_contenido": null
+    },
+    {
+      "modelo": "Qwen/Qwen3.5-122B-A10B",
+      "representacion": "GGUF Q8_0",
+      "estado": "instalado_en_preevaluacion_parcial",
+      "evidencia_recepcion": "https://github.com/juantoniolloretegea/SV-motor/blob/149c4b848475802942af35ab39e7335081398480/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/qwen/qwen3.5-122b-a10b-q8-0/seguimiento/RECEPCION_INSTRUMENTAL_20261004.md",
+      "evidencia_parcial": "https://github.com/juantoniolloretegea/SV-motor/blob/149c4b848475802942af35ab39e7335081398480/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/qwen/qwen3.5-122b-a10b-q8-0/preevaluacion-20261004/resultados/hitos/A04-A0/vector-parcial/CAPA.json",
+      "casos_0": 4,
+      "pendientes": 5,
+      "dictamen": null
     }
   ],
   "publicaciones": [
@@ -1000,7 +1013,7 @@
     ],
     "diagramas": "Dos figuras SVG y esquema Mermaid GPT-OSS conservados; añadido recorrido documental Qwen"
   },
-  "fecha_corte_evidencias_utc": "2026-09-30T08:42:00Z",
+  "fecha_corte_evidencias_utc": "2026-10-05T10:20:04Z",
   "evaluacion_documental": {
     "ronda": "EVAL-PDQ-HCL-25-20260929/r1",
     "preguntas": "https://github.com/juantoniolloretegea/SVperitus-dataset/blob/6f1118a323bcefac9400d01274e4f8d1db3636ff/dominios/inmunologia/tes-examenes-conocimientos/ronda-01-pdq-tricoleucemia-20260929/PREGUNTAS.md",
@@ -1083,5 +1096,42 @@
     "arranque_restaurado": false,
     "retirada_administrativa": "no acreditada por esta recepción",
     "dictamen_modificado": false
+  },
+  "revision_2_21_conservada": {
+    "version": "2.21",
+    "naturaleza": "recepcion_custodia_safeguard",
+    "commit": "El commit que contiene este archivo; sin autorreferencia circular",
+    "cambios": [
+      "Conservación privada sin pesos publicada y recuperada íntegramente",
+      "Contenido e inventario cotejados en Rust; corrección de rutas Unix conservada",
+      "Resultados, antecedentes y diagramas sin alteración",
+      "Arranque restaurado y retirada administrativa no acreditados por el archivo"
+    ],
+    "referencia": "https://github.com/juantoniolloretegea/SV-motor/blob/149c4b848475802942af35ab39e7335081398480/laboratorio/ensayo-ia-y-observabilidad/VERSIONES.json"
+  },
+  "conciliacion_20261005": {
+    "safeguard": {
+      "resultado": "Preevaluación Safeguard cerrada: No apto para acceder al examen en esta evaluación. A0–A3 sin mejora, −88,89/100 por capa; error crítico A08 y omisiones formales. Tres diagnósticos agotados, con D02 sin final por cota temporal. Conservación cifrada recuperada y cotejada; instancia y disco de origen eliminados el 04/10/2026.",
+      "evidencias": [
+        "https://github.com/juantoniolloretegea/SV-motor/blob/149c4b848475802942af35ab39e7335081398480/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/openai/gpt-oss-safeguard-120b/ensayos-reiterados-adversariales-y-aprendizaje/resultados/cierre-20261004/INFORME-FINAL.md",
+        "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/d7bae43cab1f900afc2dcc5e8c0e35c61215e5a3/respuestas-ejecucion/SAFEGUARD-CONSERVACION-20261004/ACTA-RETIRADA.md"
+      ]
+    },
+    "thinking": {
+      "resultado": "Examen Thinking cerrado: No apto en las condiciones evaluadas por demoras operativas excesivas y falta de finalización fiable. Nueve finales conservadas, cuatro impedimentos terminales, P14 incompleta y once preguntas no ejecutadas; sin puntuación global de contenido. Conservación final publicada y cotejada. La eliminación de la instancia y su disco sigue pendiente según la última evidencia.",
+      "evidencias": [
+        "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/0212a5ae1ccd3d42b5a26796068c0a3981d380c5/respuestas-ejecucion/QWEN80-THINKING-Q4K-ONECLOUD-20260930/entrega-03/CIERRE-Y-CONSERVACION.md",
+        "https://github.com/juantoniolloretegea/SV-motor/releases/tag/qwen3-next-80b-a3b-thinking-archivo-cierre-20261005-v1",
+        "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/releases/tag/thinking-imagen-cierre-20261005-v1"
+      ]
+    },
+    "qwen35": {
+      "resultado": "Qwen3.5-122B-A10B GGUF Q8_0 instalado y recibido instrumentalmente en UpCloud, 48 CPU y 256 GB de RAM nominal, sin GPU. Bloque A, capa A0: A01–A04 adjudicados 0, incluido A04 crítico; cinco posiciones pendientes, sin κ, puntuación global ni admisión al examen.",
+      "evidencias": [
+        "https://github.com/juantoniolloretegea/SV-motor/blob/149c4b848475802942af35ab39e7335081398480/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/qwen/qwen3.5-122b-a10b-q8-0/seguimiento/RECEPCION_INSTRUMENTAL_20261004.md",
+        "https://github.com/juantoniolloretegea/SV-motor/blob/149c4b848475802942af35ab39e7335081398480/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/qwen/qwen3.5-122b-a10b-q8-0/preevaluacion-20261004/resultados/hitos/A04-A0/vector-parcial/CAPA.json"
+      ]
+    },
+    "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0)."
   }
 }

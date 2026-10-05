@@ -1,8 +1,8 @@
 # Qwen3.5-122B-A10B · Q8_0
 
-**Expediente de selección técnica · Versión 1.1 · 4 de octubre de 2026**
+**Expediente de selección técnica · Versión 1.2 · 5 de octubre de 2026**
 
-**Estado:** instalación y primera respuesta instrumental acreditadas; evaluación documental, viabilidad temporal y aptitud pendientes. Véase la [recepción instrumental del 4 de octubre](seguimiento/RECEPCION_INSTRUMENTAL_20261004.md), con sus mediciones y reservas.
+**Estado:** instalación y primera respuesta instrumental acreditadas; preevaluación documental en curso. El [hito A04/A0](https://github.com/juantoniolloretegea/SV-motor/blob/149c4b848475802942af35ab39e7335081398480/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/qwen/qwen3.5-122b-a10b-q8-0/preevaluacion-20261004/resultados/hitos/A04-A0/vector-parcial/CAPA.json) contiene A01–A04 = 0, incluido A04 crítico, y cinco posiciones pendientes. No hay κ, puntuación global ni admisión al examen. Véase la [recepción instrumental del 4 de octubre](seguimiento/RECEPCION_INSTRUMENTAL_20261004.md), con sus mediciones y reservas.
 
 Se estudia **Qwen3.5-122B-A10B**, desarrollado por Qwen, en la distribución **GGUF Q8_0 de Unsloth**. El objetivo es comprobar si puede interpretar fuentes locales delimitadas, aplicar una política explícita y producir respuestas completas y verificables bajo el gobierno del Sistema Vectorial SV.
 
@@ -38,7 +38,7 @@ flowchart LR
     E --> F["Registro de capacidades, límites y necesidades"]
 ```
 
-El diagrama conserva la secuencia del ensayo. La recepción instrumental mínima está documentada; la evaluación documental y la adjudicación de aptitud siguen pendientes.
+El diagrama conserva la secuencia del ensayo. La recepción instrumental mínima está documentada; la evaluación documental tiene cuatro casos adjudicados y sigue incompleta; la adjudicación de aptitud permanece pendiente.
 
 ## Organización y continuidad
 
