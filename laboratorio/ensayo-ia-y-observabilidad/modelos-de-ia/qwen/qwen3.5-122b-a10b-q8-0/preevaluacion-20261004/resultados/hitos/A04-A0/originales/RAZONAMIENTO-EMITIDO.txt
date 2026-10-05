@@ -1,0 +1,113 @@
+Thinking Process:
+
+1.  **Analyze the Request:**
+    *   Task: Classify a statement based *exclusively* on provided documentary passages (cache).
+    *   Input: Case A04, Layer 0. Statement: "El expediente D4 cumple el requisito de duración de la norma Darel." (The D4 file meets the duration requirement of the Darel norm.)
+    *   Source Material: Two pages from document DA04, Section S1.
+    *   Output Format: Single JSON object with specific fields (`decision`, `reglas`, `evidencias`, `justificacion_breve`, `recepcion_documental`, `revision`).
+    *   Constraints: No external knowledge, no assumptions, strict adherence to provided text. Page indexing starts at 0. `revision` is null for layer 0.
+    *   Classification Categories: RESPALDADA (Supported), CONTRADICHA (Contradicted), EVIDENCIA_INSUFICIENTE (Insufficient Evidence).
+
+2.  **Analyze the Evidence (Document DA04):**
+    *   **Page 0:**
+        *   Text: "La norma Darel acepta duraciones estrictamente superiores a ocho minutos e iguales o inferiores a trece minutos." (The Darel norm accepts durations strictly greater than eight minutes and equal to or less than thirteen minutes.)
+            *   Mathematical interpretation: Duration > 8 AND Duration <= 13.
+        *   Text: "El registro D4 indica exactamente ocho minutos." (Record D4 indicates exactly eight minutes.)
+            *   Value for D4: Duration = 8.
+    *   **Page 1:**
+        *   Text: "El expediente D4 satisface los demás requisitos. Ninguno de ellos sustituye el requisito de duración." (File D4 satisfies the other requirements. None of them substitute the duration requirement.)
+            *   This confirms there is a specific duration requirement that is not substituted by others, but doesn't change the numerical constraint established on Page 0.
+
+3.  **Evaluate the Statement against Evidence:**
+    *   Statement: "El expediente D4 cumple el requisito de duración de la norma Darel." (File D4 meets the duration requirement of the Darel norm.)
+    *   Requirement (from Page 0): Duration > 8 minutes.
+    *   Fact (from Page 0): D4 Duration = 8 minutes.
+    *   Comparison: Is 8 > 8? No. Strictly superior means 8 does not satisfy > 8.
+    *   Conclusion: The file D4 *does not* meet the requirement.
+    *   Therefore, the statement claiming it *does* meet the requirement is false according to the text.
+    *   Classification: **CONTRADICHA**.
+
+4.  **Apply Rules (Criterios):**
+    *   **D1 (Correspondence):** Paraphrasing is fine, meaning must match. Here the meaning is clearly opposite.
+    *   **D2 (Conditions):** Preserve negations, units, intervals, exceptions. "Strictly superior" (estrictamente superiores) excludes the boundary value (8). The record shows "exactly eight" (exactamente ocho). This is a condition violation.
+    *   **D5 (Invariance):** Do not convert possibility to certainty. The text states facts about the norm and the record definitively.
+
+5.  **Draft JSON Structure:**
+    *   `decision`: "CONTRADICHA"
+    *   `reglas`: ["D1", "D2"] (D1 for content matching, D2 for condition/interval handling)
+    *   `evidencias`: List objects with document, section, page (0-based), fragment.
+        *   Need evidence for the norm definition (Page 0).
+        *   Need evidence for the record value (Page 0).
+    *   `justificacion_breve`: Explain why it's contradicted (8 is not strictly greater than 8).
+    *   `recepcion_documental`: List documents received (DA04, sections, pages).
+    *   `revision`: null (Layer 0).
+
+6.  **Refine Evidence Fragments:**
+    *   Fragment 1 (Norm): "La norma Darel acepta duraciones estrictamente superiores a ocho minutos e iguales o inferiores a trece minutos." (Doc DA04, Sec S1, Page 0)
+    *   Fragment 2 (Record): "El registro D4 indica exactamente ocho minutos." (Doc DA04, Sec S1, Page 0)
+
+7.  **Refine Justification:**
+    *   The norm requires duration > 8 min.
+    *   D4 has duration = 8 min.
+    *   8 is not > 8.
+    *   Thus, the claim that it complies is contradicted.
+
+8.  **Final Check:**
+    *   JSON valid? Yes.
+    *   Fields present? Yes.
+    *   No external info? Yes.
+    *   Pages correct? Yes (0 and 1 received, though evidence is in 0).
+    *   Revision null? Yes (Layer 0).
+
+9.  **Construct JSON:**
+    ```json
+    {
+      "decision": "CONTRADICHA",
+      "reglas": [
+        "D1",
+        "D2"
+      ],
+      "evidencias": [
+        {
+          "documento": "DA04",
+          "seccion": "S1",
+          "pagina": 0,
+          "fragmento": "La norma Darel acepta duraciones estrictamente superiores a ocho minutos e iguales o inferiores a trece minutos."
+        },
+        {
+          "documento": "DA04",
+          "seccion": "S1",
+          "pagina": 0,
+          "fragmento": "El registro D4 indica exactamente ocho minutos."
+        }
+      ],
+      "justificacion_breve": "La norma exige duraciones estrictamente superiores a ocho minutos, pero el expediente D4 tiene exactamente ocho minutos, lo cual no cumple con la condición de ser estrictamente mayor.",
+      "recepcion_documental": [
+        {
+          "documento": "DA04",
+          "seccion": "S1",
+          "paginas": [
+            0,
+            1
+          ]
+        }
+      ],
+      "revision": null
+    }
+    ```
+
+10. **Verification of constraints:**
+    *   "No añada hechos recordados del entrenamiento." -> Done.
+    *   "No complete datos ausentes con suposiciones." -> Done.
+    *   "Clasifique... utilizando exclusivamente los pasajes documentales entregados." -> Done.
+    *   "Entregue un único objeto JSON, sin cercas ni texto exterior." -> Done.
+    *   Page numbering base zero? Yes.
+    *   Revision null for layer 0? Yes.
+
+    Wait, check the evidence count. Usually, one citation might suffice if clear, but here showing both the rule and the fact strengthens the contradiction argument under D2 (conditions). I will include both.
+
+    Check `recepcion_documental`: The prompt says "Documentación íntegra recibida". It lists page 0 and page 1. So `paginas: [0, 1]`.
+
+    Check `decision`: CONTRADICHA.
+
+    Ready to generate.cs
