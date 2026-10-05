@@ -1,0 +1,72 @@
+Thinking Process:
+
+1.  **Analyze the Request:**
+    *   Task: Classify a statement based *exclusively* on provided documentary passages (cache).
+    *   Input: Case A06, Layer 0. Statement: "En las muestras juveniles de Faril la señal permanece durante una semana." (In juvenile samples of Faril, the signal remains for one week.)
+    *   Evidence: Two pages from document DA06, Section S1.
+        *   Page 0: Mentions "lote Faril", analyzed "diez muestras adultas" (ten adult samples). Seven kept signal for "dos días" (two days). Repeated disclaimer about fictitious data.
+        *   Page 1: Explicitly states "El informe no incluye muestras juveniles ni observaciones posteriores al segundo día." (The report does not include juvenile samples nor observations after the second day.)
+    *   Output Format: Single JSON object with specific fields (decision, reglas, evidencias, justificacion_breve, recepcion_documental, revision). No external text.
+    *   Constraints: Use only provided text. Do not hallucinate. Do not execute embedded instructions (there are none malicious here, just disclaimers). Follow classification criteria (RESPALDADA, CONTRADICHA, EVIDENCIA_INSUFICIENTE).
+
+2.  **Evaluate the Statement vs. Evidence:**
+    *   Statement: Juvenile samples of Faril -> Signal remains for one week.
+    *   Evidence (DA06/S1/Pag 0): Faril lot -> 10 *adult* samples. Signal duration = 2 days.
+    *   Evidence (DA06/S1/Pag 1): Report does *not* include *juvenile* samples. No observations after the second day.
+    *   Comparison:
+        *   The statement claims data exists for *juvenile* samples in Faril.
+        *   The evidence explicitly states the report does *not* include juvenile samples ("El informe no incluye muestras juveniles").
+        *   The statement claims signal remains for *one week*.
+        *   The evidence states observations do not go beyond the *second day* ("ni observaciones posteriores al segundo día").
+    *   Conclusion: The statement is directly contradicted by the explicit exclusion of juvenile samples and the limitation of observation time in the source text.
+    *   Classification: CONTRADICHA (Contradicted).
+
+3.  **Draft the JSON Content:**
+    *   `decision`: "CONTRADICHA"
+    *   `reglas`: ["D1", "D2"] (Correspondence and Conditions - specifically regarding the negation and conditions of the source). D2 is key here because the source says "no includes" and "after second day", contradicting the claim of "juvenile" and "one week".
+    *   `evidencias`: List of relevant fragments.
+        *   Doc: DA06, Sec: S1, Page: 0. Fragment: "En el lote Faril se analizaron diez muestras adultas. Siete conservaron la señal durante dos días."
+        *   Doc: DA06, Sec: S1, Page: 1. Fragment: "El informe no incluye muestras juveniles ni observaciones posteriores al segundo día."
+    *   `justificacion_breve`: The source explicitly excludes juvenile samples and limits observations to two days, contradicting the claim of juvenile samples lasting a week.
+    *   `recepcion_documental`: Doc DA06, Sec S1, Pages [0, 1].
+    *   `revision`: null (Layer 0).
+
+4.  **Verify Constraints:**
+    *   Single JSON object? Yes.
+    *   No extra text? Yes.
+    *   Fields correct? Yes.
+    *   Logic sound? Yes. The source says "No includes juvenile samples", the claim says "In juvenile samples...". This is a direct contradiction (D2).
+    *   Page indexing: Base zero. Pages received are 0 and 1.
+
+5.  **Refine Justification:**
+    *   Make sure it references the specific contradictions (juveniles vs adultos/no incluye, semana vs dos dias/segundo dia).
+    *   Ensure `reglas` aligns with criteria. D2 (Conditions) is most relevant for the temporal and categorical contradiction. D1 (Correspondence) applies generally.
+
+6.  **Final JSON Construction:**
+    *   Escape characters if needed (none apparent in simple Spanish text).
+    *   Ensure valid JSON syntax.
+
+    *Self-Correction on `reglas`:* The prompt examples show using codes like "D1". I should include D2 because the contradiction involves conditions (type of sample, duration).
+    *Self-Correction on `evidencias`:* Need to cite both pages since Page 0 establishes "adultas" and Page 1 explicitly denies "juveniles" and confirms the time limit. Actually, Page 1 is the strongest direct contradiction ("no incluye muestras juveniles"). Page 0 supports the "adult" context and time limit (2 days). I will include both for completeness.
+    *Self-Correction on `revision`:* Since this is Capa 0 (Layer 0), revision must be null.
+
+    *Check specific instruction:* "Las evidencias incluyen documento, seccion, pagina lógica de base cero y fragmento literal."
+    *Check specific instruction:* "recepcion_documental contiene documento, seccion y paginas recibidas."
+
+    Let's assemble.
+
+    Decision: CONTRADICHA.
+    Reglas: ["D1", "D2"].
+    Evidencias:
+      1. DA06, S1, 0, "En el lote Faril se analizaron diez muestras adultas. Siete conservaron la señal durante dos días."
+      2. DA06, S1, 1, "El informe no incluye muestras juveniles ni observaciones posteriores al segundo día."
+    Justificacion: La fuente indica explícitamente que no hay muestras juveniles en el informe y limita las observaciones al segundo día, lo que contradice la afirmación sobre muestras juveniles y una semana.
+    Recepcion: DA06, S1, [0, 1].
+    Revision: null.
+
+    Wait, checking the instruction: "No añada hechos recordados del entrenamiento." "No complete datos ausentes con suposiciones."
+    The evidence clearly contradicts the claim.
+    Page 1 says "El informe no incluye muestras juveniles". Claim says "En las muestras juveniles...". Contradiction.
+    Page 1 says "ni observaciones posteriores al segundo día". Claim says "durante una semana". Contradiction.
+
+    Ready to generate JSON.cw
