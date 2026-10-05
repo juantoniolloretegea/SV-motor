@@ -1,8 +1,18 @@
 # Ensayo de inteligencia artificial y observabilidad
 
-**Edición documental 2.22 · 5 de octubre de 2026.**
+**Edición documental 2.23 · 5 de octubre de 2026.**
 
-**Corte de evidencias:** conciliación documental del 05/10/2026, 10:20 UTC. Safeguard cerrado y retirado el 04/10; Thinking cerrado y conservado en las ediciones del 05/10, con eliminación del servidor pendiente; Qwen3.5 instalado y preevaluación parcial publicada hasta A04/A0. Cada evidencia conserva su fecha y alcance. Esta página no es un monitor de ejecución.
+**Corte experimental conservado de la edición 2.22:** conciliación documental del 05/10/2026, 10:20 UTC. Safeguard cerrado y retirado el 04/10; Thinking cerrado y conservado en las ediciones del 05/10, con eliminación del servidor pendiente; Qwen3.5 instalado y preevaluación parcial publicada hasta A04/A0. Cada evidencia conserva su fecha y alcance. Esta página no es un monitor de ejecución.
+
+## Incorporación de CubeCL · 05/10/2026
+
+**Candidatos conservados en estudio:** [Kimi K3](https://github.com/juantoniolloretegea/SV-motor/blob/main/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/kimi/kimi-k3/ESTUDIO-VIABILIDAD-20261005.md) y [GLM-5.3, con Flash como variante distinta](https://github.com/juantoniolloretegea/SV-motor/blob/main/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/zai-org/glm-5.3/ESTUDIO-VIABILIDAD-20261005.md). La evaluación actual es documental y de viabilidad; no hay despliegue ni ensayo de respuestas. No se ha acordado su descarte definitivo. El cierre de la búsqueda técnica anterior y los impedimentos actuales no se convierten en un dictamen sobre su aptitud.
+
+Se incorpora [CubeCL, con rust-gpu como alternativa](inferencia/cubecl-evaluacion-20261005/ESTUDIO.md), como componente de cálculo en evaluación. La prioridad es provisional: actividad comunitaria reciente y operaciones reutilizables, con una limitación concreta MFMA/CDNA por LLVM para MI300X aún pendiente de contraste. No constituye un modelo, una instalación ni un motor de inferencia recibido.
+
+La revisión 2.23 incorpora estas familias en estudio y los componentes de cálculo. Los resultados experimentales reproducidos a continuación conservan el corte explícito de la edición 2.22; las fichas de los modelos mantienen sus evidencias posteriores. La [retirada posterior de Thinking](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/2ddf814bb039b0c7876745023ea165baf38ed6f9/respuestas-ejecucion/QWEN80-THINKING-Q4K-ONECLOUD-20260930/entrega-03/retirada-20261005/ACTA-RETIRADA.md), de acceso restringido, complementa aquel corte y acredita eliminación de la instancia y su almacenamiento asociado; no se ha ensayado arranque restaurado.
+
+Trazabilidad: [TT-0020](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0020.md), S39 revisión 39, Acta 004 §33 y RETP-2026-278. Las necesidades N-C01–N-C05 separan realización efectiva, operación matricial, exactitud independiente, coste medido y mantenimiento. Núcleo, semántica V0.2 e IR 0.3 intactos. Esta publicación no abre ejecución GPU ni modifica las campañas de los candidatos.
 
 <a id="objeto-y-criterio-experimental"></a>
 
@@ -14,7 +24,7 @@ Esta página reúne el estado de los candidatos, la secuencia de publicaciones, 
 
 <a id="estado-vigente--27092026"></a>
 
-## Estado actual
+## Estado experimental al corte conservado
 
 La **Preevaluación de examen de 25 preguntas de tricoleucemia** con **GPT-OSS-Safeguard-120B** ha terminado: **No apto para acceder al examen en esta evaluación**. A0–A3 mantienen ocho clasificaciones documentales correctas de nueve, el error crítico A08 y omisiones formales. D01 y D03 reproducen el error; D02 quedó sin final por límite temporal. La incidencia de custodia de A3 se conserva separadamente. [Cierre final y reservas](modelos-de-ia/openai/gpt-oss-safeguard-120b/ensayos-reiterados-adversariales-y-aprendizaje/resultados/cierre-20261004/INFORME-FINAL.md). No se habilitan más inferencias, B ni el examen. Qwen3.5-122B-A10B · Q8_0 está instalado en UpCloud, recibido instrumentalmente y en preevaluación: A01–A04 = 0 en A0; cinco posiciones pendientes. A04 es crítico. No hay puntuación global ni admisión al examen.
 
@@ -641,5 +651,12 @@ Los enlaces de las tablas permiten lectura pública de las fichas y los resultad
 ## Licencias
 
 [Texto de la licencia CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/deed.es). Se conservan el [aviso de EIO conversación](conversacion-nativa/AVISO_LICENCIAS.json), el [aviso de GPT-OSS y su controlador](modelos-de-ia/openai/gpt-oss-20b/controlador-nativo/AVISO_LICENCIAS.json) y los avisos específicos de cada entrega. Cada componente mantiene su licencia; una publicación no amplía derechos de uso o distribución.
+
+<details>
+<summary><strong>2.23 · 05/10/2026 · CubeCL como componente de cálculo en evaluación</strong></summary>
+
+Alta documental de la base de cálculo Rust para AMD; rust-gpu como alternativa. Fuentes, mantenimiento, limitación MFMA y necesidades de recepción delimitadas. S39 revisión 39, TT-0020, Acta 004 §33 y RETP-2026-278. Se preserva el corte experimental anterior y se enlaza la retirada posterior de Thinking. [Edición 2.22 íntegra](https://github.com/juantoniolloretegea/SV-motor/blob/0b5104c4658bc98a9612fd2a97d7b8a5214b63cc/laboratorio/ensayo-ia-y-observabilidad/README.md).
+
+</details>
 
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).

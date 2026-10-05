@@ -1,8 +1,10 @@
 # Modelos de IA
 
-**Edición documental 10 · 3 de octubre de 2026.**
+**Edición documental 11 · 5 de octubre de 2026.**
 
-**Corte experimental:** 03/10/2026, 09:37 UTC. Cada expediente conserva la fecha, configuración y alcance de sus propios resultados.
+**Corte experimental conservado de la edición 10:** 03/10/2026, 09:37 UTC. Cada expediente conserva la fecha, configuración y alcance de sus propios resultados.
+
+La edición 11 incorpora los candidatos Kimi K3 y GLM de zai-org, el componente de cálculo y su trazabilidad. La tabla y descripción experimental de la edición 10 se conservan como antecedente fechado, sin reactivar sus instrucciones de continuación. El [índice general, con corte posterior](../README.md), y cada expediente reúnen sus sucesores. [Qwen3.5-122B-A10B Q8_0](qwen/qwen3.5-122b-a10b-q8-0/readme.md) conserva su instalación CPU en UpCloud y preevaluación propias; no se atribuye a CubeCL.
 
 El [índice general del ensayo](../README.md) reúne el estado, la cronología de publicaciones, las versiones de los componentes y sus diagramas. Este catálogo mantiene una entrada por modelo y separa la demostración pública de las realizaciones nativas.
 
@@ -18,6 +20,15 @@ El [índice general del ensayo](../README.md) reúne el estado, la cronología d
 
 Las vías de ejecución pertenecen a configuraciones concretas. La vía A requiere inferencia en el navegador mediante WebAssembly; una interfaz web conectada a un proceso nativo corresponde a B. La fase en curso utiliza Safeguard en vía B. Thinking conserva su realización independiente. A queda diferida hasta Apto experimental nativo y autorización específica. La demostración pública del GPT-OSS-120B ordinario no acredita recursos ni funcionamiento de una instalación propia, y sus resultados no se atribuyen a Safeguard.
 
+## Candidatos adicionales en estudio de viabilidad · 05/10/2026
+
+| Familia o candidato | Estado documental | Estado experimental |
+|---|---|---|
+| [Kimi K3](kimi/kimi-k3/ESTUDIO-VIABILIDAD-20261005.md) | Se mantiene como candidato; impedimentos de memoria y realización Rust/AMD documentados | No instalado ni ensayado; sin dictamen de aptitud |
+| [GLM-5.3 y GLM-5.3-Flash de zai-org](zai-org/glm-5.3/ESTUDIO-VIABILIDAD-20261005.md) | Se mantienen en estudio, con variantes separadas y reservas propias | No instalados ni ensayados; sin dictamen de aptitud |
+
+El cierre de una búsqueda delimitada sin vía admisible inmediata no descarta definitivamente estos candidatos. Su evaluación documental se separa de las pruebas de respuestas. Qwen permanece como línea independiente en UpCloud. CubeCL y rust-gpu son medios de cálculo posibles; no reemplazan a estas familias.
+
 ## Puntuación, terna y acceso al examen
 
 El [criterio común](CRITERIO-PUNTUACION-MODELOS-20261001.md) separa la **puntuación 100 × (aciertos − errores no críticos) / N** del dictamen SV. U y blanco no suman ni restan; un error crítico determina No apto en el alcance fijado. No se reduce N por incidencias ni se recortan puntuaciones negativas.
@@ -29,6 +40,9 @@ La **Preevaluación de examen de 25 preguntas de tricoleucemia** tiene nueve cas
 Al corte sólo A0 está en ejecución. El [protocolo, estado y conservación](openai/gpt-oss-safeguard-120b/ensayos-reiterados-adversariales-y-aprendizaje/readme.md) distinguen preparación, ejecución y evaluación. Los dictámenes No apto anteriores permanecen intactos; no se ha acreditado acceso al examen ni aptitud clínica.
 
 ## Componentes y estudios separados
+
+- [CubeCL y rust-gpu: cálculo Rust para AMD](../inferencia/cubecl-evaluacion-20261005/ESTUDIO.md): nueva incorporación documental AMD-CALCULO-RUST-20261005. CubeCL recibe prioridad provisional de estudio; rust-gpu es alternativa. No son modelos ni motores completos recibidos. Limitación MFMA/LLVM en MI300X y necesidades N-C01–N-C05 pendientes; [TT-0020](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0020.md).
+
 
 - [Servicio documental MCP](model-context-protocol/README.md): versiones 0.1.0, 0.1.1, 0.1.2 y [0.1.3](model-context-protocol/0.1.3/LEAME.md); acceso documental y comprobaciones propias, sin transferencia automática de conformidad al modelo.
 - [Árbitro-Director del Sistema Vectorial SV](model-context-protocol/controlador-pictograma-algoritmo/DISENO.md): control del recorrido y conservación de evidencias; realización y comprobaciones en Rust. La corrección semántica requiere cotejo externo.
