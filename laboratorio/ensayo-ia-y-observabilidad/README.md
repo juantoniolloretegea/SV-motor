@@ -1,34 +1,27 @@
 # Ensayo de inteligencia artificial y observabilidad
 
-**Edición documental 2.23 · 5 de octubre de 2026.**
+**Edición documental 2.24 · 5 de octubre de 2026.**
 
-**Corte experimental conservado de la edición 2.22:** conciliación documental del 05/10/2026, 10:20 UTC. Safeguard cerrado y retirado el 04/10; Thinking cerrado y conservado en las ediciones del 05/10, con eliminación del servidor pendiente; Qwen3.5 instalado y preevaluación parcial publicada hasta A04/A0. Cada evidencia conserva su fecha y alcance. Esta página no es un monitor de ejecución.
-
-## Incorporación de CubeCL · 05/10/2026
-
-**Candidatos conservados en estudio:** [Kimi K3](https://github.com/juantoniolloretegea/SV-motor/blob/main/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/kimi/kimi-k3/ESTUDIO-VIABILIDAD-20261005.md) y [GLM-5.3, con Flash como variante distinta](https://github.com/juantoniolloretegea/SV-motor/blob/main/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/zai-org/glm-5.3/ESTUDIO-VIABILIDAD-20261005.md). La evaluación actual es documental y de viabilidad; no hay despliegue ni ensayo de respuestas. No se ha acordado su descarte definitivo. El cierre de la búsqueda técnica anterior y los impedimentos actuales no se convierten en un dictamen sobre su aptitud.
-
-Se incorpora [CubeCL, con rust-gpu como alternativa](inferencia/cubecl-evaluacion-20261005/ESTUDIO.md), como componente de cálculo en evaluación. La prioridad es provisional: actividad comunitaria reciente y operaciones reutilizables, con una limitación concreta MFMA/CDNA por LLVM para MI300X aún pendiente de contraste. No constituye un modelo, una instalación ni un motor de inferencia recibido.
-
-La revisión 2.23 incorpora estas familias en estudio y los componentes de cálculo. Los resultados experimentales reproducidos a continuación conservan el corte explícito de la edición 2.22; las fichas de los modelos mantienen sus evidencias posteriores. La [retirada posterior de Thinking](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/2ddf814bb039b0c7876745023ea165baf38ed6f9/respuestas-ejecucion/QWEN80-THINKING-Q4K-ONECLOUD-20260930/entrega-03/retirada-20261005/ACTA-RETIRADA.md), de acceso restringido, complementa aquel corte y acredita eliminación de la instancia y su almacenamiento asociado; no se ha ensayado arranque restaurado.
-
-Trazabilidad: [TT-0020](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0020.md), S39 revisión 39, Acta 004 §33 y RETP-2026-278. Las necesidades N-C01–N-C05 separan realización efectiva, operación matricial, exactitud independiente, coste medido y mantenimiento. Núcleo, semántica V0.2 e IR 0.3 intactos. Esta publicación no abre ejecución GPU ni modifica las campañas de los candidatos.
+**Corte documental:** 05/10/2026. Reúne el cierre publicado de la fase Qwen3.5, los cierres de Safeguard y Thinking, los candidatos Kimi/GLM en estudio y la autorización de una prueba instrumental de cálculo Rust en AMD. Cada fuente conserva su fecha, alcance y recepción; esta página no es un monitor de ejecución.
 
 <a id="objeto-y-criterio-experimental"></a>
 
+## Objeto y alcance
+
 Investigación experimental sobre ejecución de modelos auxiliares, fidelidad documental, control y observación mediante Rust. Pertenece a la investigación lateral (p1+P3)-Bis y mantiene evaluaciones diferenciadas para inmunología y ciberseguridad. Las propuestas del modelo carecen de autoridad para modificar el conocimiento admitido o las decisiones del SV.
 
-Esta página reúne el estado de los candidatos, la secuencia de publicaciones, las versiones de los componentes y sus límites. El [registro estructurado de versiones](VERSIONES.json) fija las referencias por commit y distingue fuentes, distribuciones y archivos de conservación.
+Esta página relaciona configuraciones, resultados, componentes, publicaciones y antecedentes. El [registro estructurado](VERSIONES.json) distingue sus identidades; el [catálogo de modelos](modelos-de-ia/README.md) enlaza las fichas. El Núcleo del SV, la semántica V0.2 y la IR 0.3 permanecen intactos.
 
-**Consulta:** [estado actual](#estado-actual) · [evaluación y resultado](#evaluación-documental-y-resultado) · [componentes](#versiones-de-los-componentes) · [publicaciones](#publicaciones-en-orden-cronológico) · [historia completa](#historia-completa-de-la-edición-documental) · [diagramas](#vías-de-ejecución-y-diagramas) · [seguimiento](#trazabilidad-y-criterios-de-lectura).
+**Consulta:** [estado actual](#estado-actual) · [familias en estudio](#familias-en-estudio-de-viabilidad) · [evaluación](#evaluación-documental-y-resultado) · [funciones](#componentes-y-funciones-del-conjunto) · [versiones](#versiones-de-los-componentes) · [publicaciones](#publicaciones-en-orden-cronológico) · [historia](#historia-completa-de-la-edición-documental) · [diagramas](#vías-de-ejecución-y-diagramas) · [trazabilidad](#trazabilidad-y-criterios-de-lectura).
 
 <a id="estado-vigente--27092026"></a>
+<a id="estado-experimental-al-corte-conservado"></a>
 
-## Estado experimental al corte conservado
+## Estado actual
 
-La **Preevaluación de examen de 25 preguntas de tricoleucemia** con **GPT-OSS-Safeguard-120B** ha terminado: **No apto para acceder al examen en esta evaluación**. A0–A3 mantienen ocho clasificaciones documentales correctas de nueve, el error crítico A08 y omisiones formales. D01 y D03 reproducen el error; D02 quedó sin final por límite temporal. La incidencia de custodia de A3 se conserva separadamente. [Cierre final y reservas](modelos-de-ia/openai/gpt-oss-safeguard-120b/ensayos-reiterados-adversariales-y-aprendizaje/resultados/cierre-20261004/INFORME-FINAL.md). No se habilitan más inferencias, B ni el examen. Qwen3.5-122B-A10B · Q8_0 está instalado en UpCloud, recibido instrumentalmente y en preevaluación: A01–A04 = 0 en A0; cinco posiciones pendientes. A04 es crítico. No hay puntuación global ni admisión al examen.
+La fase **Qwen3.5-122B-A10B Q8_0** ha concluido con **admisión no acreditada por impedimento temporal**. Se completaron siete solicitudes iniciales: seis adjudicaciones 0 y un error sustantivo crítico, A06. A08 y A09 no se ejecutaron; tampoco las revisiones adversariales, el bloque B o el examen. La capa está incompleta, sin κ ni puntuación global. Se conserva el [dictamen y su alcance](https://github.com/juantoniolloretegea/SV-motor/blob/0b5104c4658bc98a9612fd2a97d7b8a5214b63cc/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/qwen/qwen3.5-122b-a10b-q8-0/preevaluacion-20261004/resultados/cierre-r1/INFORME-FINAL.md); el resultado no constituye un descarte universal de la familia Qwen. La recepción independiente de A04–A07 y de la fase permanece pendiente en el corte de la entrega.
 
-La [conservación cifrada sin pesos](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/releases/tag/safeguard-imagen-20261004-v1), de acceso restringido, está publicada y recuperada íntegramente. El cotejo Rust acredita reconstrucción, descifrado, inventario y contenido: 281.859 entradas y 160 entradas de adjudicaciones conformes. Se conserva una corrección instrumental de tres nombres Linux, con sus antecedentes. [Procedimiento y comprobantes](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/tree/1abbaf1a50133938f92baa9cd1826c0f6a962c33/respuestas-ejecucion/SAFEGUARD-CONSERVACION-20261004). No se ha ensayado arranque restaurado. La [eliminación posterior de la instancia y su disco](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/d7bae43cab1f900afc2dcc5e8c0e35c61215e5a3/respuestas-ejecucion/SAFEGUARD-CONSERVACION-20261004/ACTA-RETIRADA.md), de acceso restringido, está acreditada por acta del 04/10 y se distingue de la recepción del archivo. No se habilitan inferencias.
+**Safeguard** cerró su preevaluación sin acceso al examen; **Thinking** cerró por inviabilidad operativa. La retirada de sus recursos se distingue de la conservación documental y del resultado experimental. Kimi K3 y GLM-5.3/Flash continúan en estudio de viabilidad, sin dictamen de aptitud ni descarte definitivo.
 
 | Modelo o configuración | Resultado y alcance | Situación al corte |
 |---|---|---|
@@ -37,9 +30,19 @@ La [conservación cifrada sin pesos](https://github.com/juantoniolloretegea/SV-s
 | [Qwen3.8-27B](modelos-de-ia/qwen/qwen3.8-27b/README.md) | Respuesta completa en la selección mínima, con omisión material y deficiencias de citas y localización. | **No apto** en la selección examinada. |
 | [GPT-OSS-120B](modelos-de-ia/openai/gpt-oss-120b/README.md) | El estudio preliminar no llegó a inferencia: los pesos superaban la cota de la configuración considerada. La [demostración pública posterior](modelos-de-ia/openai/gpt-oss-120b/prueba-playground/readme.md) obtuvo −100/100 en tres respuestas relacionadas; no constituye un examen completo ni mide recursos de una instalación propia. | Viabilidad nativa pendiente; [TT-0015](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0015.md). Ensayo 1 público abierto, con impedimentos de servicio conservados. |
 | [Qwen3-Next-80B-A3B-Instruct](modelos-de-ia/qwen/qwen3-next-80b-a3B-instruct/REGISTRO-INSTALACION-20260929.md) | Dos consultas MCP recibidas. Examen posterior: **28/100; No apto**. Diecinueve finales: siete aciertos, dos errores críticos y diez U; seis impedimentos técnicos. | Examen y diagnóstico terminados; [puntuación](modelos-de-ia/qwen/qwen3-next-80b-a3B-instruct/tests-y-pruebas-efectuadas/PUNTUACION-FINAL-20261001.md), [archivo y retirada](modelos-de-ia/qwen/qwen3-next-80b-a3B-instruct/tests-y-pruebas-efectuadas/ARCHIVO-Y-RETIRADA-20261001.md). Recepción científica independiente pendiente; [TT-0016](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0016.md). |
-| [Qwen3-Next-80B-A3B-Thinking](modelos-de-ia/qwen/qwen3-next-80b-a3b-thinking) | Examen cerrado: **No apto en las condiciones evaluadas por demoras operativas excesivas y falta de finalización fiable**. Nueve finales pendientes de adjudicación de contenido, cuatro impedimentos, P14 incompleta y once no ejecutadas; sin puntuación global. | [Cierre público](https://github.com/juantoniolloretegea/SV-motor/releases/tag/qwen3-next-80b-a3b-thinking-archivo-cierre-20261005-v1) y [conservación privada cotejada](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/releases/tag/thinking-imagen-cierre-20261005-v1). Pendiente eliminar instancia y disco; no hay arranque restaurado ensayado. [TT-0017](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0017.md). |
+| [Qwen3-Next-80B-A3B-Thinking](modelos-de-ia/qwen/qwen3-next-80b-a3b-thinking) | Examen cerrado: **No apto en las condiciones evaluadas por demoras operativas excesivas y falta de finalización fiable**. Nueve finales pendientes de adjudicación de contenido, cuatro impedimentos, P14 incompleta y once no ejecutadas; sin puntuación global. | [Cierre público](https://github.com/juantoniolloretegea/SV-motor/releases/tag/qwen3-next-80b-a3b-thinking-archivo-cierre-20261005-v1) y [conservación privada cotejada](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/releases/tag/thinking-imagen-cierre-20261005-v1). [Instancia y almacenamiento retirados](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/2ddf814bb039b0c7876745023ea165baf38ed6f9/respuestas-ejecucion/QWEN80-THINKING-Q4K-ONECLOUD-20260930/entrega-03/retirada-20261005/ACTA-RETIRADA.md); no hay arranque restaurado ensayado. [TT-0017](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0017.md). |
 | [GPT-OSS-Safeguard-120B](modelos-de-ia/openai/gpt-oss-safeguard-120b/ensayos-reiterados-adversariales-y-aprendizaje/readme.md) | Contrastes anteriores separados: **87,5/100**, **66,67/100** y **50/100**, con **No apto** en sus respectivos alcances. El diagnóstico D01 reprodujo el error crítico del último contraste. | Preevaluación terminada: A0–A3 sin mejora, −88,89/100 según la rúbrica completa y **No apto para acceder al examen**. Diagnósticos e incidencias separados en el [cierre](modelos-de-ia/openai/gpt-oss-safeguard-120b/ensayos-reiterados-adversariales-y-aprendizaje/resultados/cierre-20261004/INFORME-FINAL.md). Sin aptitud clínica acreditada. [Expediente v3](modelos-de-ia/openai/gpt-oss-safeguard-120b/tests-y-pruebas-efectuadas/ARBITRO-SV-SAFEGUARD-V3-20261002.md) · [TT-0018](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0018.md). |
-| [Qwen3.5-122B-A10B · Q8_0](modelos-de-ia/qwen/qwen3.5-122b-a10b-q8-0/readme.md) | Instalado en UpCloud: 48 CPU, 256 GB nominales de RAM, sin GPU. Recepción mínima LISTO en 48,459 s; [A01–A04 = 0 en A0](https://github.com/juantoniolloretegea/SV-motor/blob/149c4b848475802942af35ab39e7335081398480/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/qwen/qwen3.5-122b-a10b-q8-0/preevaluacion-20261004/resultados/hitos/A04-A0/vector-parcial/CAPA.json), incluido A04 crítico. | Preevaluación en curso, cinco posiciones sin adjudicación, sin κ ni puntuación global. Viabilidad temporal y admisión al examen pendientes; [TT-0019](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0019.md). |
+| [Qwen3.5-122B-A10B · Q8_0](modelos-de-ia/qwen/qwen3.5-122b-a10b-q8-0/readme.md) | Realización CPU en UpCloud: 48 CPU y 256 GB nominales de RAM, sin GPU. Fase A0 concluida: seis 0, un 1 crítico en A06 y dos casos no ejecutados. | [Admisión no acreditada por impedimento temporal](https://github.com/juantoniolloretegea/SV-motor/blob/0b5104c4658bc98a9612fd2a97d7b8a5214b63cc/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/qwen/qwen3.5-122b-a10b-q8-0/preevaluacion-20261004/resultados/cierre-r1/INFORME-FINAL.md); sin revisiones, B ni examen. Custodia de fase cotejada; recepción independiente de A04–A07 y fase pendiente. [TT-0019](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0019.md). |
+
+### Familias en estudio de viabilidad
+
+| Familia o candidato | Objeto del estudio | Situación y dependencia |
+|---|---|---|
+| [Kimi K3](modelos-de-ia/kimi/kimi-k3/ESTUDIO-VIABILIDAD-20261005.md) | Alternativa independiente para AMD; se conserva K3 como identidad de estudio. | Sin instalación o inferencia. Las representaciones examinadas exceden la configuración de una MI300X; falta una realización Rust completa admisible. |
+| [GLM-5.3 de zai-org](modelos-de-ia/zai-org/glm-5.3/ESTUDIO-VIABILIDAD-20261005.md) | Viabilidad de la arquitectura y representación concreta en AMD. | Sin instalación o inferencia. Memoria distribuida y realización completa aún no acreditadas. |
+| [GLM-5.3-Flash de zai-org](modelos-de-ia/zai-org/glm-5.3/ESTUDIO-VIABILIDAD-20261005.md) | Variante distinta, con arquitectura y resultados propios. | Algunas representaciones permiten estudiar el alojamiento de pesos; memoria total, motor Rust y recepción GPU pendientes. |
+
+Los candidatos permanecen en estudio. El cierre de una búsqueda técnica delimitada no constituye un descarte definitivo ni una evaluación de respuestas. Tampoco se sustituyen por modelos menores ni se transfieren puntuaciones entre versiones. Su posible realización depende de los [componentes de cálculo](#cálculo-rust-para-amd), que tienen un objeto de prueba distinto.
 
 Safeguard es un candidato distinto del GPT-OSS-120B ordinario. Su función declarada por OpenAI es la clasificación de seguridad conforme a políticas textuales; el contraste actual estudia clasificación documental bajo una política explícita. No presupone capacidad médica general. La demostración pública, las instalaciones nativas, los contrastes asistidos y los exámenes conservan resultados separados.
 
@@ -97,7 +100,9 @@ La preparación acredita 41 comprobaciones Rust conformes e igualdad de las nuev
 
 </details>
 
-## Harmony, Candle y funciones del conjunto
+<a id="harmony-candle-y-funciones-del-conjunto"></a>
+
+## Componentes y funciones del conjunto
 
 En la línea GPT-OSS, **Harmony** es el formato requerido de conversación. Es el formato de mensajes, canales, llamadas y terminación; la biblioteca oficial `openai-harmony` proporciona su codificación y análisis. **Candle** aporta operaciones numéricas y tensores. En las bases de mistral.rs examinadas se utilizan ambas bibliotecas: sus funciones son complementarias. [Formato oficial](https://github.com/openai/harmony) · [Candle](https://github.com/huggingface/candle).
 
@@ -116,11 +121,28 @@ La base mistral.rs [0.9.3](https://github.com/EricLBuehler/mistral.rs/blob/24dbf
 
 **Antecedente GPT-OSS, separado de la campaña Qwen:** la compatibilidad conceptual entre Candle y Harmony está fundamentada; la cualificación del ensamblaje **GPT-OSS-120B ordinario** permanece pendiente; Safeguard tiene instalación, comprobaciones y resultados propios. Deben verificarse el tratamiento de errores y truncamientos de Harmony, el vocabulario local identificado, la ruta numérica MXFP4, las dependencias efectivamente compiladas y los controles de red y herramientas. El [adaptador examinado](https://github.com/EricLBuehler/mistral.rs/blob/24dbf5c256f232176ee5949485ba264049407fbe/mistralrs-core/src/reasoning_parsers/harmony.rs) descarta determinados errores de análisis; este hallazgo estático no constituye una explotación reproducida. La [biblioteca Harmony](https://github.com/openai/harmony/blob/ec7606df9e87e3d0a1fec9f50928c1e407f0c438/src/tiktoken_ext/public_encodings.rs) admite un vocabulario local verificado y contempla descarga si no se fija el directorio local y falta una caché válida. El ensayo debe acreditar funcionamiento sin red. Usar Rust o incluir una dependencia no constituye una certificación de seguridad.
 
+<a id="incorporación-de-cubecl--05102026"></a>
+
+### Cálculo Rust para AMD
+
+[CubeCL y rust-gpu](inferencia/cubecl-evaluacion-20261005/ESTUDIO.md) son posibles bases de cálculo GPU. CubeCL conserva prioridad provisional por su adecuación funcional y mantenimiento observado; rust-gpu es una alternativa. No son modelos ni incorporan automáticamente las arquitecturas Kimi o GLM a mistral.rs.
+
+| Elemento | Función y límite constatado | Estado al corte |
+|---|---|---|
+| CubeCL / LLVM | Compilación de operaciones Rust para AMD; la revisión examinada excluye MFMA de CDNA en esta vía. | Evaluación documental concluida; adaptación y contraste MI300X/gfx942 pendientes. |
+| CubeK / Burn | Operaciones reutilizables y composición de modelos. | Su existencia no acredita la arquitectura completa o la cuantización de un candidato. |
+| rust-gpu / SPIR-V | Compilación de Rust a SPIR-V para cálculo GPU. | Compatibilidad efectiva de controlador y extensiones matriciales en MI300X pendiente. |
+| SPIR-V | Representación intermedia externa al SV. | La revisión del estándar no acredita su implementación ni modifica la IR 0.3 del SV. |
+
+La dirección ha autorizado crear **una instancia AMD MI300X** e iniciar una prueba instrumental delimitada: multiplicación matricial f16 con acumulación f32, vía LLVM/MFMA, referencia independiente Rust y medidas de tiempo y memoria. El [encargo de ejecución](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/main/encargos-ejecucion/AMD-CUBECL-MFMA-20261005/v1/ENCARGO.md), de acceso restringido, fija configuración, cotas, conservación y cierre. Al corte de esta edición se registra la autorización; no se afirma creación del recurso ni resultado experimental.
+
+[TT-0020](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0020.md) identifica las necesidades N-C01–N-C05. Una operación correcta no acredita un motor completo, un modelo o su acceso al examen. La prueba AMD y los expedientes de Qwen mantienen resultados y límites independientes.
+
 <a id="composición-de-la-conversación-qwen"></a>
 
 ## Versiones de los componentes
 
-La **edición documental 2.22**, las **aplicaciones 0.1.x/0.2.x**, el **MCP 0.1.x**, los **modelos** y los **archivos de recuperación v1** tienen identidades independientes. Una numeración no sustituye a las restantes. Los antecedentes identifican Rust 1.98.0; la preparación de retroalimentación identifica Rust 1.98.1. Cada expediente fija sus fuentes, dependencias, ejecutables y comprobaciones; una compilación no acredita utilización efectiva.
+La **edición documental 2.24**, las **aplicaciones 0.1.x/0.2.x**, el **MCP 0.1.x**, los **modelos** y los **archivos de recuperación v1** tienen identidades independientes. Una numeración no sustituye a las restantes. Los antecedentes identifican Rust 1.98.0; la preparación de retroalimentación identifica Rust 1.98.1. Cada expediente fija sus fuentes, dependencias, ejecutables y comprobaciones; una compilación no acredita utilización efectiva.
 
 <details>
 <summary><strong>EIO conversación · Qwen3-0.6B · 0.1.0 → 0.1.4</strong></summary>
@@ -182,16 +204,29 @@ Instruct utiliza una realización CPU identificada del motor mistral.rs 0.9.4 y 
 
 El desarrollo experimental y sus controles se realizan en Rust. Las excepciones criptográficas nativas declaradas se identifican en el registro; no se presenta el conjunto de dependencias como íntegramente Rust.
 
-La [carpeta de Thinking](modelos-de-ia/qwen/qwen3-next-80b-a3b-thinking) conserva la instalación y primera respuesta, con sus salvedades. El examen posterior tiene [cierre propio publicado](https://github.com/juantoniolloretegea/SV-motor/releases/tag/qwen3-next-80b-a3b-thinking-archivo-cierre-20261005-v1), por inviabilidad operativa, y [conservación cotejada](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/releases/tag/thinking-imagen-cierre-20261005-v1). El contenido de nueve finales sigue pendiente de adjudicación. La eliminación de la instancia y su disco permanece pendiente según la última evidencia; no se confunde con el cierre del examen.
+La [carpeta de Thinking](modelos-de-ia/qwen/qwen3-next-80b-a3b-thinking) conserva la instalación y primera respuesta, con sus salvedades. El examen posterior tiene [cierre propio publicado](https://github.com/juantoniolloretegea/SV-motor/releases/tag/qwen3-next-80b-a3b-thinking-archivo-cierre-20261005-v1), por inviabilidad operativa, y [conservación cotejada](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/releases/tag/thinking-imagen-cierre-20261005-v1). El contenido de nueve finales sigue pendiente de adjudicación. La [retirada administrativa posterior](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/2ddf814bb039b0c7876745023ea165baf38ed6f9/respuestas-ejecucion/QWEN80-THINKING-Q4K-ONECLOUD-20260930/entrega-03/retirada-20261005/ACTA-RETIRADA.md) acredita eliminación de la instancia y su almacenamiento asociado; no se ha ensayado arranque restaurado.
 
 </details>
 
 <details>
 <summary><strong>Qwen3.5-122B-A10B · GGUF Q8_0</strong></summary>
 
-Modelo de 122 mil millones de parámetros totales y aproximadamente 10 mil millones activos por token, en la distribución GGUF Q8_0 de Unsloth. La [recepción instrumental del 04/10](https://github.com/juantoniolloretegea/SV-motor/blob/149c4b848475802942af35ab39e7335081398480/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/qwen/qwen3.5-122b-a10b-q8-0/seguimiento/RECEPCION_INSTRUMENTAL_20261004.md) acredita ejecución nativa con 48 CPU y 256 GB nominales de RAM, aproximadamente 251,65 GiB efectivos, sin GPU. La preevaluación parcial tiene cuatro casos conformes y cinco pendientes; la viabilidad temporal de la campaña sigue en evaluación.
+Modelo de 122 mil millones de parámetros totales y aproximadamente 10 mil millones activos por token, en la distribución GGUF Q8_0 de Unsloth. La [recepción instrumental del 04/10](https://github.com/juantoniolloretegea/SV-motor/blob/149c4b848475802942af35ab39e7335081398480/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/qwen/qwen3.5-122b-a10b-q8-0/seguimiento/RECEPCION_INSTRUMENTAL_20261004.md) acredita ejecución nativa con 48 CPU y 256 GB nominales de RAM, aproximadamente 251,65 GiB efectivos, sin GPU. La [fase inicial cerrada](https://github.com/juantoniolloretegea/SV-motor/blob/0b5104c4658bc98a9612fd2a97d7b8a5214b63cc/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/qwen/qwen3.5-122b-a10b-q8-0/preevaluacion-20261004/resultados/cierre-r1/INFORME-FINAL.md) conserva seis aciertos, un error crítico y dos casos no ejecutados; admisión no acreditada por impedimento temporal. Se mantiene la instalación, con recepción independiente de fase pendiente.
 
 [Ficha técnica](modelos-de-ia/qwen/qwen3.5-122b-a10b-q8-0/ficha-tecnica/FICHA_TECNICA.md) · [Identidad y archivos](modelos-de-ia/qwen/qwen3.5-122b-a10b-q8-0/ficha-tecnica/IDENTIDAD_Y_ARCHIVOS.json) · [Justificación y comparativa](modelos-de-ia/qwen/qwen3.5-122b-a10b-q8-0/readme.md).
+
+</details>
+
+<details>
+<summary><strong>Cálculo AMD en evaluación · CubeCL, rust-gpu y SPIR-V</strong></summary>
+
+| Componente | Identidad documental examinada | Alcance |
+|---|---|---|
+| CubeCL | v0.11.0-pre.4, preliminar; revisión 2a8814843c319ae07b15453ef35dce32fd8b9997 | Prioridad provisional; la realización exacta y cualquier adaptación deben quedar fijadas antes del contraste. |
+| rust-gpu | v0.10.0; revisión c49441a4c472098f5b221984f5bea1dbf866ad10 | Alternativa; soporte efectivo del dispositivo pendiente. |
+| SPIR-V | 1.6 revisión 8, publicada el 10/09/2026 | Estándar externo; no es una versión del SV ni una recepción de la GPU. |
+
+[Estudio y fuentes](inferencia/cubecl-evaluacion-20261005/ESTUDIO.md) · [Registro de la consulta](inferencia/cubecl-evaluacion-20261005/FUENTES.json). Se distinguen publicación, código leído, compilación y ejecución recibida; no se mezclan revisiones como si fueran una distribución única.
 
 </details>
 
@@ -250,6 +285,8 @@ El archivo posterior conserva la historia anterior y su dictamen. La publicació
 
 ### Entregas y conservación posteriores
 
+Cada fila describe el corte de su publicación; los estados superados se mantienen como antecedentes y se actualizan en la tabla de estado actual.
+
 | Fecha | Publicación y evidencia | Alcance |
 |---|---|---|
 | 30/09–01/10/2026 | [Examen Instruct, puntuación y originales](modelos-de-ia/qwen/qwen3-next-80b-a3B-instruct/tests-y-pruebas-efectuadas/PUNTUACION-FINAL-20261001.md) · [Archivo final](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/releases/tag/qwen80-instruct-archivo-cierre-20261001-v1) | Examen, diagnóstico y conservación sin pesos; retirada registrada. La recepción científica se distingue del cierre administrativo. |
@@ -263,13 +300,18 @@ El archivo posterior conserva la historia anterior y su dictamen. La publicació
 | 04/10/2026 | [Retirada Safeguard](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/d7bae43cab1f900afc2dcc5e8c0e35c61215e5a3/respuestas-ejecucion/SAFEGUARD-CONSERVACION-20261004/ACTA-RETIRADA.md) | Instancia y disco eliminados después de conservación cotejada. |
 | 05/10/2026 | [Cierre Thinking](https://github.com/juantoniolloretegea/SV-motor/releases/tag/qwen3-next-80b-a3b-thinking-archivo-cierre-20261005-v1) · [Conservación](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/releases/tag/thinking-imagen-cierre-20261005-v1) | Examen cerrado por inviabilidad operativa; recuperación y cotejo conformes; eliminación del origen pendiente. |
 
+| 05/10/2026 | [Retirada administrativa Thinking](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/2ddf814bb039b0c7876745023ea165baf38ed6f9/respuestas-ejecucion/QWEN80-THINKING-Q4K-ONECLOUD-20260930/entrega-03/retirada-20261005/ACTA-RETIRADA.md) | Instancia y almacenamiento eliminados tras la conservación cotejada; no acredita arranque restaurado. |
+| 05/10/2026 | [Cierre de fase Qwen3.5](https://github.com/juantoniolloretegea/SV-motor/blob/0b5104c4658bc98a9612fd2a97d7b8a5214b63cc/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/qwen/qwen3.5-122b-a10b-q8-0/preevaluacion-20261004/resultados/cierre-r1/INFORME-FINAL.md) · [Conservación única de fase](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/releases/tag/qwen35-preevaluacion-20261004-r1) | Siete solicitudes iniciales, seis 0 y un 1 crítico; dos no ejecutadas. Sin κ ni puntuación global. Custodia posterior cotejada; recepción independiente de fase pendiente. |
+| 05/10/2026 | [Kimi K3](modelos-de-ia/kimi/kimi-k3/ESTUDIO-VIABILIDAD-20261005.md) · [GLM-5.3/Flash](modelos-de-ia/zai-org/glm-5.3/ESTUDIO-VIABILIDAD-20261005.md) · [Cálculo Rust para AMD](inferencia/cubecl-evaluacion-20261005/ESTUDIO.md) | Candidatos en estudio de viabilidad; CubeCL prioritario provisional y rust-gpu alternativo. Documentación recuperada y cotejada. |
+| 05/10/2026 | [Prueba instrumental AMD](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/main/encargos-ejecucion/AMD-CUBECL-MFMA-20261005/v1/ENCARGO.md) | Autorización delimitada de servidor y operación matricial; sin recepción experimental declarada en esta edición. |
+
 Los enlaces de SV-sala-de-maquinas mantienen el acceso restringido de los originales. Las síntesis públicas enlazan su procedencia; no sustituyen los paquetes, sus manifiestos ni la recepción independiente.
 
 <a id="historia-de-la-edición-documental"></a>
 
 ## Historia completa de la edición documental
 
-La secuencia comienza en **0.1** y avanza hasta la presente **2.22**. Se conservan todas las ediciones anteriores y sus referencias inmutables. Cada desplegable conserva lo relevante de su corte y ofrece el texto íntegro; sus estados históricos no sustituyen al estado actual.
+La secuencia comienza en **0.1** y avanza hasta la presente **2.24**. Se conservan todas las ediciones anteriores y sus referencias inmutables. Cada desplegable conserva lo relevante de su corte y ofrece el texto íntegro; sus estados históricos no sustituyen al estado actual.
 
 El salto **0.2 → 2.0** se conserva tal como fue publicado; no se ha localizado una edición 1.x en el historial de este archivo. Cuando una edición reúne varios commits, se muestran todos en orden. Las fechas siguientes son las de esos commits en Europe/Madrid; una cabecera histórica puede conservar una fecha anterior.
 
@@ -505,8 +547,6 @@ Añade el candidato a la tabla de estado, los componentes y la secuencia de entr
 
 </details>
 
-<a id="dos-vías-de-ejecución"></a>
-
 <details>
 <summary><strong>2.20 · 04/10/2026 · Cierre de la preevaluación de Safeguard</strong></summary>
 
@@ -531,6 +571,24 @@ Se acredita publicación privada, recuperación íntegra, descifrado y cotejo Ru
 Actualiza la instalación CPU de Qwen3.5 y los cuatro casos publicados; distingue el cierre, conservación y eliminación de Safeguard y Thinking. Concuerda con S39 revisión 38, Acta 004 §32 y TT-0014/0017/0018/0019. Conserva las reservas y los antecedentes. [Edición 2.21 íntegra](https://github.com/juantoniolloretegea/SV-motor/blob/149c4b848475802942af35ab39e7335081398480/laboratorio/ensayo-ia-y-observabilidad/README.md).
 
 </details>
+
+<details>
+<summary><strong>2.23 · 05/10/2026 · Kimi/GLM y cálculo Rust para AMD</strong></summary>
+
+Incorpora Kimi K3 y GLM-5.3/Flash como candidatos en estudio, con CubeCL y rust-gpu como componentes de cálculo diferenciados. Conserva fuentes, mantenimiento, impedimentos y necesidades de recepción. S39 revisión 39, TT-0020, Acta 004 §33 y RETP-2026-278. No declaró despliegue ni aptitud de los candidatos.
+
+[Edición 2.23 íntegra](https://github.com/juantoniolloretegea/SV-motor/blob/e1ef11a0c87dbd9cf3dda0d0461b980c1272f440/laboratorio/ensayo-ia-y-observabilidad/README.md) · [Edición 2.22 íntegra](https://github.com/juantoniolloretegea/SV-motor/blob/0b5104c4658bc98a9612fd2a97d7b8a5214b63cc/laboratorio/ensayo-ia-y-observabilidad/README.md).
+
+</details>
+
+<details>
+<summary><strong>2.24 · 05/10/2026 · Ordenación documental y prueba instrumental AMD</strong></summary>
+
+Integra los candidatos en el apartado de estado, el cálculo GPU en funciones y versiones, y cada incorporación en publicaciones e historia. Actualiza el estado principal desde el cierre Qwen3.5 y la retirada Thinking; conserva las fuentes y los cortes históricos. Registra la autorización de la prueba instrumental AMD y remite al encargo delimitado. Mantiene los diagramas y las ediciones precedentes.
+
+</details>
+
+<a id="dos-vías-de-ejecución"></a>
 
 ## Vías de ejecución y diagramas
 
@@ -608,7 +666,9 @@ flowchart TD
 
 **Alcance de la figura:** conserva el recorrido del corte del 30/09, cuando la recepción instrumental de Instruct estaba acreditada y su examen permanecía parcial. Los nodos pendientes pertenecen a ese corte. El examen terminó después con 28/100 y No apto por errores críticos, sin vector completo debido a seis impedimentos. Thinking conserva prueba y recepción propias. Las líneas discontinuas señalan recorridos condicionados. El diagnóstico conserva los intentos anteriores; la continuación no permite sustituirlos por el mejor resultado.
 
-### Preevaluación Safeguard: recorrido acotado de la configuración actual
+<a id="preevaluación-safeguard-recorrido-acotado-de-la-configuración-actual"></a>
+
+### Preevaluación Safeguard: recorrido histórico acotado
 
 ```mermaid
 flowchart TD
@@ -628,7 +688,7 @@ flowchart TD
   D -. "Incidencia instrumental" .-> I["Contención y conservación sin adjudicación SV"]
 ```
 
-**Alcance de la figura:** diseño fijado para respuesta inicial y tres revisiones por caso, nunca un ciclo ilimitado. A0 está en ejecución al corte; las demás capas y B son etapas condicionadas. El Árbitro-Director organiza también el **Aprendizaje por Retroalimentación del Sistema Vectorial SV**; el modelo mantiene sus pesos y capacidades nativas. Una mejora sólo se atribuye a la configuración ensayada. El [diseño del componente](modelos-de-ia/model-context-protocol/controlador-pictograma-algoritmo/DISENO.md) y el protocolo propio concretan sus fronteras con el Núcleo.
+**Alcance histórico de la figura:** diseño fijado para respuesta inicial y tres revisiones por caso, nunca un ciclo ilimitado. Representa el corte de preparación con A0 en ejecución; el cierre posterior y las modificaciones autorizadas se conservan en su expediente. La figura no autoriza reactivación. El Árbitro-Director organiza también el **Aprendizaje por Retroalimentación del Sistema Vectorial SV**; el modelo mantiene sus pesos y capacidades nativas. Una mejora sólo se atribuye a la configuración ensayada. El [diseño del componente](modelos-de-ia/model-context-protocol/controlador-pictograma-algoritmo/DISENO.md) y el protocolo propio concretan sus fronteras con el Núcleo.
 
 <a id="evidencia-y-seguimiento"></a>
 
@@ -642,21 +702,15 @@ La secuencia de identificación es **configuración → campaña → resultado �
 | Archivos distribuidos e integridad declarada | Publicación correspondiente, manifiesto y [VERSIONES.json](VERSIONES.json). |
 | Contrato y límites del ensayo | [EIO-CONTRATO-01, revisión 1](contrato/README.md). |
 | Continuidad y dictámenes | [S39](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/sucesos/SUCESOS_SV.md#s39) y [Acta 004](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/continuacion-15-09-2026/ACTA_004_FINALIDAD_ALCANCE_Y_CONTINUIDAD_EIO_2026_09_22.md). |
+| Cálculo Rust para AMD y candidatos asociados | [TT-0020](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0020.md), S39 revisión 39, Acta 004 §33, RETP-2026-278 y [encargo instrumental](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/main/encargos-ejecucion/AMD-CUBECL-MFMA-20261005/v1/ENCARGO.md). La autorización posterior se distingue de la recepción aún pendiente. |
 | Alcances de los tiques | [TT-0013: cierre GPT-OSS-20B](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0013.md), [TT-0014: MCP](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0014.md) y [TT-0015: viabilidad GPT-OSS-120B](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0015.md). |
 
-El seguimiento vigente se completa con [TT-0016: banco y evaluación de Instruct](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0016.md) y [TT-0017: prueba y cierre Thinking](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0017.md). TT-0013 conserva su cierre acotado; TT-0014 mantiene su recepción propia pendiente; TT-0015 dispone de un estudio preliminar adverso para la configuración considerada, sin inferencia. Safeguard conserva su seguimiento en [TT-0018](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0018.md), con recepciones anteriores pendientes. La nueva preevaluación tiene protocolo y estado propios en [TT-0019](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0019.md). TT-0017 y TT-0018 finalizan su alcance experimental y documental, con reservas y situación de infraestructura separadas. S39 continúa en ejecución y TT-0014 conserva su recepción integral pendiente. El retorno al Lenguaje y al Núcleo sigue la [guía del sistema conjunto](../sistema-conjunto-lenguaje-computacion-ia-gobernada/README.md).
+El seguimiento vigente se completa con [TT-0016: banco y evaluación de Instruct](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0016.md) y [TT-0017: prueba y cierre Thinking](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0017.md). TT-0013 conserva su cierre acotado; TT-0014 mantiene su recepción propia pendiente; TT-0015 dispone de un estudio preliminar adverso para la configuración considerada, sin inferencia. Safeguard conserva su seguimiento en [TT-0018](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0018.md), con recepciones anteriores pendientes. La preevaluación Qwen3.5 tiene protocolo y seguimiento propios en [TT-0019](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0019.md). TT-0017 y TT-0018 finalizan su alcance experimental y documental, con reservas y situación de infraestructura separadas. S39 continúa en ejecución y TT-0014 conserva su recepción integral pendiente. El retorno al Lenguaje y al Núcleo sigue la [guía del sistema conjunto](../sistema-conjunto-lenguaje-computacion-ia-gobernada/README.md).
 
 Los enlaces de las tablas permiten lectura pública de las fichas y los resultados resumidos. Los originales de acceso restringido mantienen su custodia propia. Una huella identifica bytes; no acredita veracidad clínica, restauración funcional o conformidad general. La revisión de continuidad no repite los ensayos ni modifica sus resultados.
 
 ## Licencias
 
 [Texto de la licencia CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/deed.es). Se conservan el [aviso de EIO conversación](conversacion-nativa/AVISO_LICENCIAS.json), el [aviso de GPT-OSS y su controlador](modelos-de-ia/openai/gpt-oss-20b/controlador-nativo/AVISO_LICENCIAS.json) y los avisos específicos de cada entrega. Cada componente mantiene su licencia; una publicación no amplía derechos de uso o distribución.
-
-<details>
-<summary><strong>2.23 · 05/10/2026 · CubeCL como componente de cálculo en evaluación</strong></summary>
-
-Alta documental de la base de cálculo Rust para AMD; rust-gpu como alternativa. Fuentes, mantenimiento, limitación MFMA y necesidades de recepción delimitadas. S39 revisión 39, TT-0020, Acta 004 §33 y RETP-2026-278. Se preserva el corte experimental anterior y se enlaza la retirada posterior de Thinking. [Edición 2.22 íntegra](https://github.com/juantoniolloretegea/SV-motor/blob/0b5104c4658bc98a9612fd2a97d7b8a5214b63cc/laboratorio/ensayo-ia-y-observabilidad/README.md).
-
-</details>
 
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).

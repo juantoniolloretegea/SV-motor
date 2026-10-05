@@ -1,19 +1,19 @@
 {
   "esquema": "sv.eio.registro-versiones/1",
-  "edicion_documental": "2.23",
+  "edicion_documental": "2.24",
   "fecha_corte": "2026-10-05",
-  "commit_base_consultado": "0b5104c4658bc98a9612fd2a97d7b8a5214b63cc",
+  "commit_base_consultado": "e1ef11a0c87dbd9cf3dda0d0461b980c1272f440",
   "criterio": "Identidad separada para modelo, aplicacion, componente MCP, archivo de conservacion y edicion documental",
   "revision_actual": {
-    "version": "2.23",
-    "naturaleza": "incorporacion_documental_componente_calculo_Rust",
-    "commit": "El commit que contiene este archivo; sin autorreferencia circular",
+    "version": "2.24",
+    "naturaleza": "ordenacion_documental_y_autorizacion_prueba_instrumental_AMD",
+    "commit": "El que contiene este archivo; sin autorreferencia circular",
     "cambios": [
-      "Kimi K3 y GLM-5.3/Flash permanecen como candidatos en estudio, sin descarte definitivo ni ensayo",
-      "CubeCL prioritario provisional y rust-gpu alternativa; sin despliegue",
-      "Fuentes, mantenimiento y limitación MFMA/LLVM en MI300X",
-      "TT-0020; S39 revisión 39; Acta 004 §33; RETP-2026-278",
-      "Cortes experimentales anteriores preservados como históricos"
+      "Candidatos integrados en estado; cálculo AMD en componentes, versiones y cronología",
+      "Historia y licencias separadas; diagramas preservados",
+      "Qwen3.5: cierre de fase y admisión no acreditada por impedimento temporal",
+      "Thinking: retirada administrativa posterior acreditada",
+      "Prueba de una operación CubeCL/MFMA autorizada en una MI300X; creación y resultados no declarados"
     ]
   },
   "componentes": [
@@ -142,24 +142,50 @@
       "modelo": "Qwen/Qwen3-Next-80B-A3B-Thinking",
       "formato": "UQFF",
       "cuantizacion": "Q4K",
-      "estado": "examen_cerrado_no_apto_por_inviabilidad_operativa_conservacion_cotejada_retirada_pendiente",
+      "estado": "examen_cerrado_no_apto_por_inviabilidad_operativa_conservado_y_retirado",
       "registro": "https://github.com/juantoniolloretegea/SV-motor/tree/main/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/qwen/qwen3-next-80b-a3b-thinking",
       "tique": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0017.md",
       "compatibilidad_efectiva": null,
       "memoria_maxima_medida": null,
       "estado_anterior_conservado": "encargo_transmitido_sin_resultado_recibido",
       "evidencia_cierre": "https://github.com/juantoniolloretegea/SV-motor/releases/tag/qwen3-next-80b-a3b-thinking-archivo-cierre-20261005-v1",
-      "puntuacion_global_contenido": null
+      "puntuacion_global_contenido": null,
+      "estado_anterior_retirada_pendiente": "examen_cerrado_no_apto_por_inviabilidad_operativa_conservacion_cotejada_retirada_pendiente",
+      "evidencia_retirada": "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/2ddf814bb039b0c7876745023ea165baf38ed6f9/respuestas-ejecucion/QWEN80-THINKING-Q4K-ONECLOUD-20260930/entrega-03/retirada-20261005/ACTA-RETIRADA.md"
     },
     {
       "modelo": "Qwen/Qwen3.5-122B-A10B",
       "representacion": "GGUF Q8_0",
-      "estado": "instalado_en_preevaluacion_parcial",
+      "estado": "fase_inicial_cerrada_admision_no_acreditada_por_impedimento_temporal",
       "evidencia_recepcion": "https://github.com/juantoniolloretegea/SV-motor/blob/149c4b848475802942af35ab39e7335081398480/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/qwen/qwen3.5-122b-a10b-q8-0/seguimiento/RECEPCION_INSTRUMENTAL_20261004.md",
       "evidencia_parcial": "https://github.com/juantoniolloretegea/SV-motor/blob/149c4b848475802942af35ab39e7335081398480/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/qwen/qwen3.5-122b-a10b-q8-0/preevaluacion-20261004/resultados/hitos/A04-A0/vector-parcial/CAPA.json",
-      "casos_0": 4,
-      "pendientes": 5,
-      "dictamen": null
+      "casos_0": [
+        "A01",
+        "A02",
+        "A03",
+        "A04",
+        "A05",
+        "A07"
+      ],
+      "dictamen": "Admisión no acreditada por impedimento temporal",
+      "estado_anterior_conservado": {
+        "estado": "instalado_en_preevaluacion_parcial",
+        "casos_0": 4,
+        "pendientes": 5,
+        "dictamen": null,
+        "evidencia_parcial": "https://github.com/juantoniolloretegea/SV-motor/blob/149c4b848475802942af35ab39e7335081398480/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/qwen/qwen3.5-122b-a10b-q8-0/preevaluacion-20261004/resultados/hitos/A04-A0/vector-parcial/CAPA.json"
+      },
+      "evidencia_cierre": "https://github.com/juantoniolloretegea/SV-motor/blob/0b5104c4658bc98a9612fd2a97d7b8a5214b63cc/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/qwen/qwen3.5-122b-a10b-q8-0/preevaluacion-20261004/resultados/cierre-r1/INFORME-FINAL.md",
+      "casos_1_criticos": [
+        "A06"
+      ],
+      "no_ejecutados": [
+        "A08",
+        "A09"
+      ],
+      "revisiones_ejecutadas": false,
+      "examen_iniciado": false,
+      "recepcion_independiente_fase": "pendiente"
     },
     {
       "modelo": "moonshotai/Kimi-K3",
@@ -1198,6 +1224,31 @@
     "ir_sv": "0.3 intacta",
     "SPIRV": "formato externo distinto de IR SV",
     "prueba_gpu_ejecutada": false,
+    "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0)."
+  },
+  "revision_2_23_conservada": {
+    "version": "2.23",
+    "naturaleza": "incorporacion_documental_componente_calculo_Rust",
+    "commit": "El commit que contiene este archivo; sin autorreferencia circular",
+    "cambios": [
+      "Kimi K3 y GLM-5.3/Flash permanecen como candidatos en estudio, sin descarte definitivo ni ensayo",
+      "CubeCL prioritario provisional y rust-gpu alternativa; sin despliegue",
+      "Fuentes, mantenimiento y limitación MFMA/LLVM en MI300X",
+      "TT-0020; S39 revisión 39; Acta 004 §33; RETP-2026-278",
+      "Cortes experimentales anteriores preservados como históricos"
+    ]
+  },
+  "ordenacion_20261005": {
+    "fuente_anterior": "e1ef11a0c87dbd9cf3dda0d0461b980c1272f440",
+    "estado_qwen_fuente": "https://github.com/juantoniolloretegea/SV-motor/blob/0b5104c4658bc98a9612fd2a97d7b8a5214b63cc/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/qwen/qwen3.5-122b-a10b-q8-0/preevaluacion-20261004/resultados/cierre-r1/INFORME-FINAL.md",
+    "encargo_amd": "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/main/encargos-ejecucion/AMD-CUBECL-MFMA-20261005/v1/ENCARGO.md",
+    "instancia_creada_acreditada": false,
+    "resultado_gpu_acreditado": false,
+    "candidatos_mantenidos": [
+      "Kimi K3",
+      "GLM-5.3",
+      "GLM-5.3-Flash"
+    ],
     "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0)."
   }
 }
