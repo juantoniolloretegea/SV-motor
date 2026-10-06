@@ -1,8 +1,8 @@
 # Qwen3.5-122B-A10B · Q8_0
 
-**Expediente de selección técnica · Versión 1.3 · 6 de octubre de 2026**
+**Expediente de selección técnica · Versión 1.4 · 6 de octubre de 2026**
 
-**Estado vigente:** Preevaluación cerrada: admisión no acreditada por impedimento temporal. Siete respuestas A0, seis conformes y un error crítico A06; A08/A09 sin ejecutar. Conservación cifrada sin pesos recuperada y cotejada con Rust. Retirada administrativa pendiente; arranque restaurado no ensayado. Recepción científica independiente de A04–A07 y fase pendiente al último corte competente. Véase el [cierre y conservación](seguimiento/cierre-20261006/DICTAMEN-CIERRE.md), el [archivo público](https://github.com/juantoniolloretegea/SV-motor/releases/tag/qwen3.5-122b-a10b-q8-0-archivo-cierre-20261006-v1) y la [edición cifrada restringida](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/releases/tag/qwen35-122b-q8-imagen-cierre-20261006-v1). El hito anterior de cuatro casos se conserva en la historia del expediente y no sustituye al cierre de siete respuestas.
+**Estado vigente:** Preevaluación cerrada: admisión no acreditada por impedimento temporal. Siete respuestas A0, seis conformes y un error crítico A06; A08/A09 sin ejecutar. Conservación cifrada sin pesos recuperada y cotejada con Rust. Instancia y disco exclusivo retirados; desaparición cotejada. Arranque restaurado no ensayado. Recepción científica independiente de A04–A07 y fase pendiente al último corte competente. Véase el [cierre y conservación](seguimiento/cierre-20261006/DICTAMEN-CIERRE.md), el [archivo público](https://github.com/juantoniolloretegea/SV-motor/releases/tag/qwen3.5-122b-a10b-q8-0-archivo-cierre-20261006-v1) y la [edición cifrada restringida](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/releases/tag/qwen35-122b-q8-imagen-cierre-20261006-v1). El hito anterior de cuatro casos se conserva en la historia del expediente y no sustituye al cierre de siete respuestas.
 
 Se estudia **Qwen3.5-122B-A10B**, desarrollado por Qwen, en la distribución **GGUF Q8_0 de Unsloth**. El objetivo es comprobar si puede interpretar fuentes locales delimitadas, aplicar una política explícita y producir respuestas completas y verificables bajo el gobierno del Sistema Vectorial SV.
 
@@ -50,3 +50,8 @@ Cada subcarpeta tiene una función única. La ficha conserva especificaciones; l
 ---
 
 Documentación del Sistema Vectorial SV. Los modelos y componentes de terceros conservan sus licencias de origen.
+
+## Constancia posterior de retirada · 06/10/2026
+
+La instancia y su disco exclusivo están retirados, con desaparición cotejada. Conservación estructural conforme; arranque restaurado no ensayado. Véase el [acta posterior](https://github.com/juantoniolloretegea/SV-motor/blob/main/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/qwen/qwen3.5-122b-a10b-q8-0/seguimiento/cierre-20261006/ACTA-RETIRADA.md). Los cortes anteriores conservan su fecha y alcance.
+

@@ -19,3 +19,8 @@ El acceso a las fuentes se realiza mediante el [MCP documental](../model-context
 Una respuesta conservada no equivale a una respuesta correcta. Los fallos técnicos y las preguntas pendientes no se convierten en U. Sólo después de la corrección independiente de todas las posiciones procede un vector completo, su frame y el dictamen **Apto, No apto o U**, limitado al banco evaluado.
 
 Se conservan las carpetas y los antecedentes históricos. [Índice anterior](https://github.com/juantoniolloretegea/SV-motor/blob/2e51917bb5864689cb6d2735fef9f2b1db35ce42/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/qwen/README.md) · [Catálogo de modelos](../README.md) · [Documentación general del ensayo](../../README.md).
+
+## Constancia posterior de retirada · 06/10/2026
+
+La instancia y su disco exclusivo están retirados, con desaparición cotejada. Conservación estructural conforme; arranque restaurado no ensayado. Véase el [acta posterior](https://github.com/juantoniolloretegea/SV-motor/blob/main/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/qwen/qwen3.5-122b-a10b-q8-0/seguimiento/cierre-20261006/ACTA-RETIRADA.md). Los cortes anteriores conservan su fecha y alcance.
+
