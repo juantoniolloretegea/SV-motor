@@ -2,7 +2,13 @@
 
 Fecha de apertura: 6 de octubre de 2026. Identificador solicitado: `gpt-6-astra`.
 
-## Resultado comprobado
+## Segunda prueba instrumentada
+
+Una autorización posterior permite una segunda inferencia, ya con observación local Rust desde antes del envío hasta después del cierre. Resultado: 4296 ms, primer texto a 3984 ms, 49/12/61 tokens, 16 eventos; 28 muestras de proceso y conexiones, intervalo máximo 284 ms, sin fallos registrados. Se miden CPU, memoria y E/S del cliente, extremos y estados TCP y puertos. Memoria residente máxima: 26,6211 MiB; CPU acumulada en la ventana: 500 ms. Estos recursos pertenecen al cliente e incluyen la instrumentación.
+
+La corrección del ensamblaje de texto queda incorporada y probada para el contrato estrecho de esta prueba. Los 17 archivos del nuevo expediente se cotejan en Rust; no hay tercera generación. En el conjunto de ambas actuaciones hay un rechazo y dos generaciones. Se restablece a desactivado el uso adicional de créditos. La recepción integral del instrumento, su generalización, privacidad y criptografía siguen pendientes. Véase [informe de instrumentación y límites](PRUEBA-INSTRUMENTADA-20261006.md).
+
+## Antecedente: primera prueba de conexión
 
 **Conectividad e inferencia acreditadas en una prueba artificial:** OpenAI declaró `gpt-6-astra`, emitió `response.completed` y devolvió «CONEXION ASTRA CONFIRMADA». Tiempo total medido en Rust: 3223 ms; primer texto: 2913 ms. Uso comunicado: 49 tokens de entrada y 12 de salida, total 61; razonamiento y caché: 0.
 
