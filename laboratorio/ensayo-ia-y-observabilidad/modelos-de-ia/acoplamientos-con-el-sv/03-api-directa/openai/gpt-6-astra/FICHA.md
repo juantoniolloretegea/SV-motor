@@ -2,7 +2,15 @@
 
 Fecha de apertura: 6 de octubre de 2026. Identificador solicitado: `gpt-6-astra`.
 
-## Segunda prueba instrumentada
+## Tercera prueba: entrega estructurada
+
+Una consulta artificial concluida, JSON válido y cotejo Rust de 22 archivos. Resultado correcto: 904; se reciben justificación breve, afirmaciones con datos de apoyo, código Rust propuesto, limitaciones y condiciones de revisión. No se habilitan herramientas ni se ejecuta el código propuesto. El resumen opcional del proveedor no se recibe.
+
+Duración: 17,910 s; primer texto: 4,661 s; uso: 584/605/1189 tokens; 599 eventos y 79 muestras instrumentales, sin fallos registrados. Una alerta por referencias textuales se identifica como falso positivo del comprobador local; el informe original y la revisión posterior se conservan sin otra llamada. El uso temporal de créditos queda desactivado.
+
+Véase [tercera prueba y condiciones de continuación](PRUEBA-ENTREGA-ESTRUCTURADA-20261006.md). Esta fase acredita entrega instrumental; catálogo, adversariales y examen permanecen separados y sin ejecutar. La recepción integral del instrumento científico sigue pendiente. En las tres actuaciones se conservan un rechazo inicial y tres generaciones, sin transferir resultados de unos contratos a otros.
+
+## Antecedente: segunda prueba instrumentada
 
 Una autorización posterior permite una segunda inferencia, ya con observación local Rust desde antes del envío hasta después del cierre. Resultado: 4296 ms, primer texto a 3984 ms, 49/12/61 tokens, 16 eventos; 28 muestras de proceso y conexiones, intervalo máximo 284 ms, sin fallos registrados. Se miden CPU, memoria y E/S del cliente, extremos y estados TCP y puertos. Memoria residente máxima: 26,6211 MiB; CPU acumulada en la ventana: 500 ms. Estos recursos pertenecen al cliente e incluyen la instrumentación.
 
@@ -28,7 +36,7 @@ El código propio está escrito en Rust y prohíbe `unsafe`. El transporte HTTPS
 
 ## Método y observabilidad
 
-Una solicitud, sin reintentos automáticos, `store=false`, `stream=true` y esfuerzo de razonamiento `low`. Se conserva la petición artificial, la respuesta recibida, su estado terminal, modelo declarado, uso comunicado, duración propia, primer evento, primer texto, tamaños y SHA-256. La ausencia de `response.completed` impide declarar terminación satisfactoria.
+En las dos primeras pruebas: una generación por actuación, sin reintentos automáticos, `store=false`, `stream=true` y esfuerzo de razonamiento `low`. La tercera usa `medium`, resumen `auto` y JSON estricto conforme a su informe. Se conserva la petición artificial, la respuesta recibida, su estado terminal, modelo declarado, uso comunicado, duración propia, primer evento, primer texto, tamaños y SHA-256. La ausencia de `response.completed` impide declarar terminación satisfactoria.
 
 La modalidad preliminar no admite `max_output_tokens`. El límite local de 120 segundos y un MiB restringe la espera y la recepción locales; no acredita cancelación remota ni una cota económica. Los créditos descontados y su liquidación no se deducen de los tokens si el proveedor no los comunica. No se modifican recargas ni medios de pago.
 
