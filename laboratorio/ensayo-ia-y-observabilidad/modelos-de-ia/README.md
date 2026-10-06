@@ -1,10 +1,10 @@
 # Modelos de IA
 
-**Edición documental 11 · 5 de octubre de 2026.**
+**Edición documental 12 · 6 de octubre de 2026.**
 
 **Corte experimental conservado de la edición 10:** 03/10/2026, 09:37 UTC. Cada expediente conserva la fecha, configuración y alcance de sus propios resultados.
 
-La edición 11 incorpora los candidatos Kimi K3 y GLM de zai-org, el componente de cálculo y su trazabilidad. La tabla y descripción experimental de la edición 10 se conservan como antecedente fechado, sin reactivar sus instrucciones de continuación. El [índice general, con corte posterior](../README.md), y cada expediente reúnen sus sucesores. [Qwen3.5-122B-A10B Q8_0](qwen/qwen3.5-122b-a10b-q8-0/readme.md) conserva su instalación CPU en UpCloud y preevaluación propias; no se atribuye a CubeCL.
+La edición 11 incorpora los candidatos Kimi K3 y GLM de zai-org, el componente de cálculo y su trazabilidad. La tabla y descripción experimental de la edición 10 se conservan como antecedente fechado, sin reactivar sus instrucciones de continuación. El [índice general, con corte posterior](../README.md), y cada expediente reúnen sus sucesores. [Qwen3.5-122B-A10B Q8_0](qwen/qwen3.5-122b-a10b-q8-0/readme.md) conserva su realización CPU y su fase cerrada, con [archivo de cierre](https://github.com/juantoniolloretegea/SV-motor/releases/tag/qwen3.5-122b-a10b-q8-0-archivo-cierre-20261006-v1) y [custodia cifrada cotejada](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/releases/tag/qwen35-122b-q8-imagen-cierre-20261006-v1), sin duplicar pesos. Retirada administrativa pendiente; arranque restaurado no ensayado. No se atribuye a CubeCL.
 
 El [índice general del ensayo](../README.md) reúne el estado, la cronología de publicaciones, las versiones de los componentes y sus diagramas. Este catálogo mantiene una entrada por modelo y separa la demostración pública de las realizaciones nativas.
 
