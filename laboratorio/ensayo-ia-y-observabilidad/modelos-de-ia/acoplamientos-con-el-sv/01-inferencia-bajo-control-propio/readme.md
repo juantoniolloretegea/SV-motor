@@ -1,10 +1,23 @@
 # Nodo 01 · Inferencia bajo control propio
 
-**Versión documental 1.0 · 6 de octubre de 2026.**
+**Versión documental 1.1 · 6 de octubre de 2026.**
 
-**Estado:** especificación preparatoria. Este documento no acredita un motor integrado, un modelo aceptado ni una ejecución en curso.
+**Estado:** marco de la modalidad y remisión a los expedientes existentes. Cada expediente conserva su realización, evidencia, dictamen y fecha.
 
 Este nodo desarrolla la primera modalidad del [marco común de acoplamientos](../readme.md). Sus contratos, fuentes rectoras, correspondencia N-01–N-10 y registros de seguimiento son los allí identificados. La independencia de esta modalidad permite examinarla y aceptarla por separado, conservando las obligaciones del SV y de cada dominio.
+
+## Expedientes en su ubicación de origen
+
+Los expedientes de modelos permanecen en sus carpetas de origen, hermanas de `acoplamientos-con-el-sv`, con sus referencias publicadas. Este nodo ofrece su marco común y el acceso a esos expedientes; no requiere trasladarlos a su interior.
+
+| Familia o estudio | Expediente conservado | Relación con esta modalidad |
+|---|---|---|
+| Qwen | [Índice de Qwen](../../qwen/README.md) | Realizaciones y ensayos identificados por modelo y configuración. |
+| GPT-OSS / OpenAI | [Índice de GPT-OSS](../../openai/README.md) | Realizaciones y estudios de pesos abiertos. Las demostraciones públicas allí documentadas conservan su modalidad propia. |
+| Kimi | [Estudio de viabilidad de Kimi K3](../../kimi/kimi-k3/ESTUDIO-VIABILIDAD-20261005.md) | Candidato pendiente de disponibilidad de recursos. |
+| Z.ai | [Estudio de viabilidad de GLM](../../zai-org/glm-5.3/ESTUDIO-VIABILIDAD-20261005.md) | Candidatos pendientes de disponibilidad de recursos. |
+
+La modalidad se determina por quién administra la inferencia, no por el nombre de la familia ni por la carpeta en que comenzó su estudio. Los expedientes mediante plataforma gestionada o API externa se consultan en los [nodos 02](../02-plataforma-gestionada/readme.md) y [03](../03-api-directa/readme.md). El [MCP documental](../../model-context-protocol) es un componente de apoyo y no un modelo ni una cuarta modalidad.
 
 ## 1. Objeto y alcance
 

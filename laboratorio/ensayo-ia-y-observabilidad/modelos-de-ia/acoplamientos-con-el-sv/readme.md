@@ -1,6 +1,6 @@
 # Acoplamientos de modelos de inteligencia artificial con el Sistema Vectorial SV
 
-**Versión documental 1.0 · 6 de octubre de 2026.**
+**Versión documental 1.1 · 6 de octubre de 2026.**
 
 **Estado:** organización y requisitos del trabajo experimental. La publicación de esta documentación no acredita una integración ejecutada ni la aceptación de un modelo.
 
@@ -27,6 +27,12 @@ En esta documentación, **nodo experimental** designa una modalidad de acoplamie
 La independencia de los nodos permite pruebas y decisiones separadas. Las obligaciones de autoridad, privacidad, fidelidad y trazabilidad proceden de las mismas fuentes competentes. Un resultado favorable en un nodo no habilita los otros ni permite sumar garantías parciales para declarar conforme el conjunto.
 
 La modalidad depende del control efectivo y de las relaciones de servicio. Un motor administrado por el proyecto puede utilizar una API local o de red y seguir perteneciendo al nodo 01. El nodo 03 se refiere aquí al servicio de inferencia de un proveedor externo. La posición física del servidor, por sí sola, no resuelve esta clasificación.
+
+### Ubicación de los expedientes
+
+Los expedientes de modelos conservan sus rutas en [Qwen](../qwen/README.md), [GPT-OSS/OpenAI](../openai/README.md), [Kimi](../kimi/kimi-k3/ESTUDIO-VIABILIDAD-20261005.md) y [Z.ai](../zai-org/glm-5.3/ESTUDIO-VIABILIDAD-20261005.md), junto a esta carpeta. El [README del nodo 01](01-inferencia-bajo-control-propio/readme.md#expedientes-en-su-ubicación-de-origen) remite a ellos y distingue realizaciones de estudios de viabilidad. Kimi y Z.ai se mantienen como candidatos pendientes de disponibilidad de recursos.
+
+Por tanto, la carpeta del nodo 01 contiene su marco de acoplamiento y las remisiones; no pretende reunir físicamente todos sus antecedentes. Los nuevos expedientes de los nodos 02 y 03 se organizan por modalidad y modelo en sus carpetas respectivas. Se mantienen las ubicaciones anteriores para conservar los enlaces distribuidos. Una misma familia puede aparecer en varias modalidades, con resultados y condiciones propios.
 
 La prioridad de evaluación acordada al abrir este estudio es OpenAI → Grok → Qwen → Claude → Z.ai. Se conservan como preferencias Sol 6.1, Grok 4.7, el candidato Qwen más alto disponible y Claude Opus 5.5; el candidato concreto de Z.ai se identificará antes de su prueba. Estas preferencias no acreditan disponibilidad, acceso, equivalencia de versiones ni conformidad. Cada encargo fijará el identificador efectivo y la modalidad compatible con sus condiciones. Kimi queda como candidato condicionado a disponibilidad, sin incorporarlo como prestación existente.
 

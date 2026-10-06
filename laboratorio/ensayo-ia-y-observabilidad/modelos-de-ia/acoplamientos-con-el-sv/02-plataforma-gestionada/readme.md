@@ -1,10 +1,12 @@
 # Nodo 02 · Inferencia mediante plataforma gestionada
 
-**Versión documental 1.0 · 6 de octubre de 2026.**
+**Versión documental 1.1 · 6 de octubre de 2026.**
 
 **Estado:** especificación preparatoria. Kaggle es el primer caso considerado; esta documentación no acredita integración, recursos concedidos ni ejecución de modelos.
 
 Este nodo desarrolla la segunda modalidad del [marco común de acoplamientos](../readme.md). Mantiene las fuentes rectoras, obligaciones de privacidad, correspondencia N-01–N-10 y seguimiento allí establecidos. Su aceptación se determina por separado de la inferencia bajo control propio y de la API directa.
+
+Los expedientes específicos de esta modalidad se organizan aquí por plataforma y modelo. Los estudios anteriores mantienen sus rutas y se consultan mediante las [remisiones del nodo 01](../01-inferencia-bajo-control-propio/readme.md#expedientes-en-su-ubicación-de-origen); su ubicación no los convierte en resultados de plataforma gestionada.
 
 ## 1. Objeto y distribución de responsabilidades
 

@@ -1,12 +1,20 @@
 # Modelos de IA
 
-**Edición documental 12 · 6 de octubre de 2026.**
+**Edición documental 13 · 6 de octubre de 2026.**
 
 **Corte experimental conservado de la edición 10:** 03/10/2026, 09:37 UTC. Cada expediente conserva la fecha, configuración y alcance de sus propios resultados.
 
 La edición 11 incorpora los candidatos Kimi K3 y GLM de zai-org, el componente de cálculo y su trazabilidad. La tabla y descripción experimental de la edición 10 se conservan como antecedente fechado, sin reactivar sus instrucciones de continuación. El [índice general, con corte posterior](../README.md), y cada expediente reúnen sus sucesores. [Qwen3.5-122B-A10B Q8_0](qwen/qwen3.5-122b-a10b-q8-0/readme.md) conserva su realización CPU y su fase cerrada, con [archivo de cierre](https://github.com/juantoniolloretegea/SV-motor/releases/tag/qwen3.5-122b-a10b-q8-0-archivo-cierre-20261006-v1) y [custodia cifrada cotejada](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/releases/tag/qwen35-122b-q8-imagen-cierre-20261006-v1), sin duplicar pesos. Retirada administrativa pendiente; arranque restaurado no ensayado. No se atribuye a CubeCL.
 
-El [índice general del ensayo](../README.md) reúne el estado, la cronología de publicaciones, las versiones de los componentes y sus diagramas. Este catálogo mantiene una entrada por modelo y separa la demostración pública de las realizaciones nativas.
+El [índice general del ensayo](../README.md) reúne el estado, la cronología de publicaciones, las versiones de los componentes y sus diagramas. Este catálogo relaciona los expedientes por modelo y separa las demostraciones públicas, las realizaciones nativas y los acoplamientos con servicios externos.
+
+## Organización de los expedientes y modalidades de acoplamiento
+
+La organización distingue los expedientes por modelo y las [tres modalidades de acoplamiento](acoplamientos-con-el-sv/readme.md#2-tres-nodos-experimentales). Las carpetas existentes conservan su ubicación y los enlaces ya publicados.
+
+El [nodo 01](acoplamientos-con-el-sv/01-inferencia-bajo-control-propio/readme.md#expedientes-en-su-ubicación-de-origen) reúne la especificación de inferencia bajo control propio y remite a los expedientes de [Qwen](qwen/README.md) y [GPT-OSS/OpenAI](openai/README.md), así como a los estudios de [Kimi](kimi/kimi-k3/ESTUDIO-VIABILIDAD-20261005.md) y [Z.ai](zai-org/glm-5.3/ESTUDIO-VIABILIDAD-20261005.md). Estos documentos permanecen en sus carpetas de origen. Kimi y Z.ai se mantienen como candidatos pendientes de disponibilidad de recursos. La pertenencia a una familia no determina la modalidad: cada realización, estudio o demostración conserva su alcance y estado.
+
+Los expedientes específicos de plataforma gestionada se organizan en el [nodo 02](acoplamientos-con-el-sv/02-plataforma-gestionada/readme.md) y los de API de proveedor en el [nodo 03](acoplamientos-con-el-sv/03-api-directa/readme.md), por modelo. Los antecedentes se enlazan desde allí sin trasladarlos ni duplicar sus resultados.
 
 | Secuencia del estudio | Modelo y ficha | Resultado y situación |
 |---|---|---|

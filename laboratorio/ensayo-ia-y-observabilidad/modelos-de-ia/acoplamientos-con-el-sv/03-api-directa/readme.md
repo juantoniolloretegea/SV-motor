@@ -1,10 +1,12 @@
 # Nodo 03 · Inferencia mediante API directa de proveedor
 
-**Versión documental 1.0 · 6 de octubre de 2026.**
+**Versión documental 1.1 · 6 de octubre de 2026.**
 
 **Estado:** especificación preparatoria. No acredita un cliente integrado, una llamada ejecutada ni un modelo aceptado.
 
 Este nodo desarrolla la tercera modalidad del [marco común de acoplamientos](../readme.md). Se refiere a servicios de inferencia de proveedores externos; una API que exponga un motor administrado por el proyecto se examina en el [nodo 01](../01-inferencia-bajo-control-propio/readme.md). Se conservan las mismas obligaciones del SV y una aceptación independiente para esta modalidad.
+
+Los expedientes de API externa se organizan aquí por proveedor y modelo. La carpeta [OpenAI de este nodo](openai) corresponde a esta modalidad y se distingue del [índice histórico de GPT-OSS](../../openai/README.md), que conserva los antecedentes en su ubicación original. Las [remisiones del nodo 01](../01-inferencia-bajo-control-propio/readme.md#expedientes-en-su-ubicación-de-origen) permiten consultarlos sin trasladarlos ni atribuir sus resultados a una API externa.
 
 ## 1. Objeto y alcance del control
 
