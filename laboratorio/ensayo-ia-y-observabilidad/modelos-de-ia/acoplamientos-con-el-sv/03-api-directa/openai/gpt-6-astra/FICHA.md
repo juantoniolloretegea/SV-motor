@@ -48,4 +48,10 @@ El expediente de la prueba se encuentra en `prueba-conexion-20261006/`. La auten
 - [Modelos e inferencia mediante Sign in with ChatGPT](https://developers.openai.com/siwc/token-sharing-open-source/models-and-inference).
 - [Limitaciones de la modalidad preliminar](https://developers.openai.com/siwc/token-sharing-open-source/preview-limitations).
 
+## Preparación del catálogo y decisión de alojamiento · 06/10/2026
+
+Se fija el [contrato del catálogo, anexo y examen](CONTRATO-CATALOGO-20261006.md): Astra por API; caché, control, evaluación y custodia en el SV, en equipo propio. El Árbitro-Director y sus auxiliares Rust mantienen el gobierno, con el modelo excluido de clave, adjudicación y telemetría. Prohibida la navegación. Se conservan banco A/B, dos páginas completas por caso, política, revisiones y criterios; el anexo MCP/PDF precede al examen y no altera su calificación.
+
+[Preparación local comprobada](PREPARACION-CATALOGO-20261006.md): 18 casos, 36 páginas previstas, política idéntica y siete comprobaciones Rust conformes. Ninguna consulta al modelo. Pendientes la recepción del recorrido MCP y del transporte científico en este entorno, y la admisión efectiva de consumo. No se rehace el Árbitro ni se atribuye a esta preparación la recepción integral del acoplamiento.
+
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
