@@ -1,0 +1,291 @@
+{
+  "admision": {
+    "causa": "Criticidades no fijadas antes del ensayo; no pueden asignarse retrospectivamente para cerrar la admisión",
+    "cobertura": "9/9",
+    "dictamen": "No acreditada",
+    "errores_criticos": null,
+    "errores_no_criticos": null,
+    "incidencia": "PDF08: entrega JSON inválida y evidencias incompletas; no se atribuye un error médico no demostrado",
+    "indeterminacion_semantica": "La falta de criticidad no se codifica como U",
+    "parametros_criticos": null,
+    "puntuacion_sobre_100": null,
+    "recepcion_independiente": "Pendiente",
+    "regla_eliminatoria": "Un solo valor 1 en un parámetro crítico determina No apto, aunque kappa sea Apto o la puntuación sea alta",
+    "regla_puntuacion": "100*(A-En)/N; pendiente de En, sin sustituir kappa"
+  },
+  "alcance": "Lectura matemática y visual posterior de nueve adjudicaciones documentales; no admisión clínica ni nueva inferencia",
+  "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+  "contrato": "SV-ASTRA-PDF-LECTURA-0.3.0",
+  "esquema": "sv-lectura-documental/1",
+  "fecha": "2026-10-07",
+  "frmat": {
+    "alfabeto": [
+      "0",
+      "1",
+      "U"
+    ],
+    "b": 3,
+    "cardinalidad": 19683,
+    "kappa": "Apto",
+    "n": 9,
+    "recuentos": {
+      "N0": 8,
+      "N1": 1,
+      "NU": 0
+    },
+    "regla": "T(n)=floor(7n/9); N1≥T: No apto; N0≥T: Apto; resto: Indeterminado",
+    "umbral": 7,
+    "vector": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "1",
+      "0"
+    ]
+  },
+  "frvis": {
+    "colores": {
+      "0": "rojo",
+      "1": "verde",
+      "U": "azul"
+    },
+    "convencion": "Logo SV, adenda 12/09/2026 §5.1",
+    "formula": "theta_i=2*pi*(i-1)/9; V_i=(rho(v_i)*cos(theta_i),rho(v_i)*sin(theta_i)); cierre V9-V1",
+    "orientacion_matematica": "V1 sobre el semieje x positivo, sentido antihorario",
+    "posiciones": [
+      {
+        "angulo_vueltas": {
+          "denominador": 9,
+          "numerador": 0
+        },
+        "caso": "PDF01",
+        "color": "rojo",
+        "criticidad": null,
+        "estado_criticidad": "No fijada antes del ensayo",
+        "i": 1,
+        "paginas_fisicas": [
+          1
+        ],
+        "pregunta": "Según la ficha, ¿en qué tipo de célula se origina la leucemia de células peludas y cómo explica que su acumulación en la médula ósea produzca anemia, sangrado e infecciones? Relacione el origen celular, el efecto sobre la producción sanguínea y las consecuencias, sin añadir mecanismos externos.",
+        "radio": 1,
+        "respuesta_sha256": "48311671ec68d49f26fbf6e1fc8be7e9ea7c3761bd690d3954134dd42bd2f410",
+        "rgb": [
+          181,
+          42,
+          45
+        ],
+        "titulo": "Origen celular y producción sanguínea",
+        "valor": "0"
+      },
+      {
+        "angulo_vueltas": {
+          "denominador": 9,
+          "numerador": 1
+        },
+        "caso": "PDF02",
+        "color": "rojo",
+        "criticidad": null,
+        "estado_criticidad": "No fijada antes del ensayo",
+        "i": 2,
+        "paginas_fisicas": [
+          2
+        ],
+        "pregunta": "¿Abarca esta hoja informativa la leucemia variante de células peludas? Explique la distinción que establece y si, con esta fuente solamente, sería válido trasladar a la variante los tratamientos que describe para la enfermedad que estudia.",
+        "radio": 1,
+        "respuesta_sha256": "8b8783ea32c337c6d6c98dfdc91cb83d363e5d93a49660b144e596adeda691d6",
+        "rgb": [
+          181,
+          42,
+          45
+        ],
+        "titulo": "Límite de aplicabilidad a la variante",
+        "valor": "0"
+      },
+      {
+        "angulo_vueltas": {
+          "denominador": 9,
+          "numerador": 2
+        },
+        "caso": "PDF03",
+        "color": "rojo",
+        "criticidad": null,
+        "estado_criticidad": "No fijada antes del ensayo",
+        "i": 3,
+        "paginas_fisicas": [
+          3
+        ],
+        "pregunta": "Según el documento, ¿por qué puede obtenerse una aspiración de médula ósea seca y qué procedimiento permite examinar la médula en ese supuesto? Distinga la muestra líquida de la muestra obtenida por biopsia y no interprete el fracaso de la aspiración como ausencia de enfermedad.",
+        "radio": 1,
+        "respuesta_sha256": "af2a9fac48ea3127c89bbc8d19de95eb6382c0bf5cc9b90daf3d846562d39884",
+        "rgb": [
+          181,
+          42,
+          45
+        ],
+        "titulo": "Aspiración seca y biopsia",
+        "valor": "0"
+      },
+      {
+        "angulo_vueltas": {
+          "denominador": 9,
+          "numerador": 3
+        },
+        "caso": "PDF04",
+        "color": "rojo",
+        "criticidad": null,
+        "estado_criticidad": "No fijada antes del ensayo",
+        "i": 4,
+        "paginas_fisicas": [
+          4
+        ],
+        "pregunta": "Distinga la información aportada por la citometría de flujo, BRAF V600E e IGHV en esta ficha. Enumere los antígenos B y los adicionales que cita; explique el valor atribuido a BRAF V600E y la relación de IGHV con el pronóstico. Conserve los matices de frecuencia y el contexto de tratamiento que especifica el texto.",
+        "radio": 1,
+        "respuesta_sha256": "971138d9866b7fd093c134b73c12c4da70d036f17bd5f5508391454b63a13d0a",
+        "rgb": [
+          181,
+          42,
+          45
+        ],
+        "titulo": "Citometría, BRAF e IGHV",
+        "valor": "0"
+      },
+      {
+        "angulo_vueltas": {
+          "denominador": 9,
+          "numerador": 4
+        },
+        "caso": "PDF05",
+        "color": "rojo",
+        "criticidad": null,
+        "estado_criticidad": "No fijada antes del ensayo",
+        "i": 5,
+        "paginas_fisicas": [
+          5
+        ],
+        "pregunta": "¿En qué condiciones contempla la ficha la espera vigilante, qué proporción aproximada menciona, qué seguimiento exige y qué hallazgos señala como motivos para iniciar tratamiento? No proponga una pauta individual ni invente umbrales numéricos de laboratorio.",
+        "radio": 1,
+        "respuesta_sha256": "71df0080312f19f9d95a413c87391f7279997e657c5b7ddd312c2df5658e424c",
+        "rgb": [
+          181,
+          42,
+          45
+        ],
+        "titulo": "Espera vigilante e inicio de tratamiento",
+        "valor": "0"
+      },
+      {
+        "angulo_vueltas": {
+          "denominador": 9,
+          "numerador": 5
+        },
+        "caso": "PDF06",
+        "color": "rojo",
+        "criticidad": null,
+        "estado_criticidad": "No fijada antes del ensayo",
+        "i": 6,
+        "paginas_fisicas": [
+          5,
+          8
+        ],
+        "pregunta": "Enumere los cuatro elementos con los que la ficha define la remisión completa. Relacione esa definición con el seguimiento a largo plazo: ¿equivale a curación o permite abandonar los controles? Indique qué seguimiento describe y qué señala cuando empiezan a disminuir los conteos sanguíneos.",
+        "radio": 1,
+        "respuesta_sha256": "c64edd50381d6c72daaf7cf5f50682807339996031d6b1e745f8cec7d08605da",
+        "rgb": [
+          181,
+          42,
+          45
+        ],
+        "titulo": "Remisión y seguimiento",
+        "valor": "0"
+      },
+      {
+        "angulo_vueltas": {
+          "denominador": 9,
+          "numerador": 6
+        },
+        "caso": "PDF07",
+        "color": "rojo",
+        "criticidad": null,
+        "estado_criticidad": "No fijada antes del ensayo",
+        "i": 7,
+        "paginas_fisicas": [
+          5
+        ],
+        "pregunta": "¿Por qué explica la ficha que el riesgo de infección puede aumentar después de iniciar cladribina o pentostatina aunque se esté tratando la leucemia? Distinga el riesgo previo del efecto inmunosupresor del tratamiento y resuma la actuación de comunicación y prevención que atribuye al equipo asistencial y al paciente, sin prescribir fármacos.",
+        "radio": 1,
+        "respuesta_sha256": "d5ef23d5477b014939581d295d5a08a20ab94588765bc1815eda384cb750a3af",
+        "rgb": [
+          181,
+          42,
+          45
+        ],
+        "titulo": "Inmunosupresión y riesgo infeccioso",
+        "valor": "0"
+      },
+      {
+        "angulo_vueltas": {
+          "denominador": 9,
+          "numerador": 7
+        },
+        "caso": "PDF08",
+        "color": "verde",
+        "criticidad": null,
+        "estado_criticidad": "No fijada antes del ensayo",
+        "i": 8,
+        "paginas_fisicas": [
+          6,
+          7
+        ],
+        "pregunta": "Relacione rituximab, moxetumomab pasudotox-tdfk y LMB-2 con sus dianas celulares según la ficha. Para cada uno distinga el contexto de uso o investigación descrito. En moxetumomab conserve todas las condiciones de población y tratamientos previos que da esta edición. No convierta las menciones de 2018 en afirmaciones de disponibilidad actual.",
+        "radio": 2,
+        "respuesta_sha256": "c36cc0087d7308112cc5d024530362afc9cdfa1b290ed82c2249dc3fea7d4813",
+        "rgb": [
+          21,
+          119,
+          80
+        ],
+        "titulo": "Dianas y condiciones de uso o investigación",
+        "valor": "1"
+      },
+      {
+        "angulo_vueltas": {
+          "denominador": 9,
+          "numerador": 8
+        },
+        "caso": "PDF09",
+        "color": "rojo",
+        "criticidad": null,
+        "estado_criticidad": "No fijada antes del ensayo",
+        "i": 9,
+        "paginas_fisicas": [
+          7
+        ],
+        "pregunta": "¿Permite esta ficha fijar una dosis y una duración adecuadas de vemurafenib para la leucemia de células peludas? Fundamente lo que puede concluir y lo que no: distinga los resultados comunicados, el contexto de investigación y la información que el propio documento deja pendiente. No complete las lagunas con memoria ni con fuentes externas.",
+        "radio": 1,
+        "respuesta_sha256": "9d051ae5543d36296264de607984ade16f22d2c2e5bc0b12b7b9d04d999f12ef",
+        "rgb": [
+          181,
+          42,
+          45
+        ],
+        "titulo": "Límites documentales de dosis y duración",
+        "valor": "0"
+      }
+    ],
+    "radios": {
+      "0": 1,
+      "1": 2,
+      "U": 3
+    },
+    "transformacion_pantalla": "(x_p,y_p)=(c_x+s*y,c_y-s*x); PDF01 arriba, sentido horario; s>0"
+  },
+  "origen": {
+    "adjudicaciones_modificadas": false,
+    "banco_sha256": "256fbc2d86918def88290ef9f28dbd4036b32619d4912245d7c1a9859aa72056",
+    "capa_sha256": "7338a7f7c2a06111421cefeffb4cfd03811e11784180866f8a500d3acbd3b589"
+  }
+}
