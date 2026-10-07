@@ -1,0 +1,95 @@
+{
+  "alerta_limite": false,
+  "auditoria_sha256": "21cfb28875955a4a78340d9ad8de60c5662c8c7120712db7306c2facd3a19912",
+  "caso": "P07",
+  "critico": true,
+  "estado_documental_candidato": "respuesta_fundada",
+  "etapa": 0,
+  "final_sha256": "4f6ba617b8483ff7bf2881d88635a58f30d35d0a3e4df6149d9695894416b335",
+  "formal_conforme": true,
+  "fundamento_sustantivo": "Vincula aspiración difícil con fibrosis medular; no la convierte en exclusión ni confirmación. Menciona citometría de flujo y la salvedad documental de biopsia para determinados ensayos.",
+  "limite_documental": null,
+  "medicion": {
+    "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+    "bytes_sse": 132032,
+    "caso": "P07-R0",
+    "cpu_delta_ms": 2625,
+    "duracion_ms": 17106,
+    "duracion_observada_ms": 20602,
+    "eventos_sse": 429,
+    "fallos_medicion": 0,
+    "final_sha256": "4f6ba617b8483ff7bf2881d88635a58f30d35d0a3e4df6149d9695894416b335",
+    "intervalo_maximo_ms": 288,
+    "io_escritura_delta_bytes": 505908,
+    "io_lectura_delta_bytes": 17839828,
+    "muestras": 75,
+    "observaciones_udp": 0,
+    "primer_texto_ms": 3890,
+    "rss_maximo_bytes": 41312256,
+    "solicitud_sha256": "46252fb8828f6d468e8cc0d135a61168063133e131c2c20a176aa00ac11b25d3",
+    "sse_sha256": "aac168db53b9bf132edaf7ed9ff07c7c7e1df597fde171beb503d10ffd1be6cb",
+    "tcp_estados": [
+      "CloseWait",
+      "Established",
+      "Listen"
+    ],
+    "tcp_maximo_simultaneo": 4,
+    "telemetria_sha256": "decc2eb198192be37d8f266cae8a855f9331f62e4728ef88822b2a14845de3bf",
+    "uso": {
+      "entrada_cache_tokens": 0,
+      "entrada_tokens": 3615,
+      "razonamiento_tokens": 0,
+      "salida_tokens": 434,
+      "total_tokens": 4049
+    }
+  },
+  "naturaleza_defecto": null,
+  "observaciones_revision": [],
+  "pasajes_contrastados": [
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "La médula ósea suele ser fibrótica, lo cual dificulta la aspiración",
+      "pagina": 0,
+      "seccion": "_1"
+    },
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "por lo general, es posible diagnosticar la\nleucemia de células pilosas mediante una citometría de flujo.",
+      "pagina": 0,
+      "seccion": "_1"
+    }
+  ],
+  "recepcion_independiente": "pendiente",
+  "respuesta_original": "{\n  \"caso\": \"P07\",\n  \"estado_documental\": \"respuesta_fundada\",\n  \"etapa\": 0,\n  \"evidencias\": [\n    {\n      \"cita_literal_breve\": \"La médula ósea suele ser fibrótica, lo cual dificulta la aspiración\",\n      \"documento\": \"pdq-nci-hcl-es\",\n      \"fragmentos\": [0],\n      \"seccion\": \"_1\"\n    },\n    {\n      \"cita_literal_breve\": \"por lo general, es posible diagnosticar la\\nleucemia de células pilosas mediante una citometría de flujo.\",\n      \"documento\": \"pdq-nci-hcl-es\",\n      \"fragmentos\": [0],\n      \"seccion\": \"_1\"\n    }\n  ],\n  \"fundamentos_verificables\": [\n    \"La fuente describe la fibrosis medular y la dificultad de aspiración como características compatibles con la enfermedad; por tanto, esa dificultad no la excluye.\",\n    \"La evaluación diagnóstica indica que, por lo general, es posible realizar el diagnóstico mediante citometría de flujo; distingue de ello la posible exigencia de biopsia medular para inscribirse en un ensayo clínico.\"\n  ],\n  \"insuficiencias\": [\n    \"La dificultad de aspiración por sí sola no confirma el diagnóstico del caso sintético; no se aportan resultados de pruebas diagnósticas.\"\n  ],\n  \"respuesta\": \"No. La dificultad de aspiración no excluye la leucemia de células pilosas: la fuente señala que la médula ósea suele ser fibrótica, lo que dificulta aspirarla. También indica que, por lo general, es posible diagnosticar la enfermedad mediante citometría de flujo, aunque quizás se requiera una biopsia medular para la inscripción en un ensayo clínico. Esta compatibilidad no equivale a confirmar el diagnóstico del caso.\",\n  \"revision\": \"Etapa 0: respuesta provisional; no existen antecedentes ni entregas anteriores que contrastar.\"\n}",
+  "revision_citas": {
+    "citas": [
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "La médula ósea suele ser fibrótica, lo cual dificulta la aspiración"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "por lo general, es posible diagnosticar la\nleucemia de células pilosas mediante una citometría de flujo."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "solicitud_sha256": "46252fb8828f6d468e8cc0d135a61168063133e131c2c20a176aa00ac11b25d3",
+  "sustantivo": "correcto",
+  "valor": "0"
+}

@@ -1,0 +1,96 @@
+{
+  "alerta_limite": false,
+  "auditoria_sha256": "3ef6fd430f4c70a5b067c1d3d51a03d338dcf00c72609e498daad745a7d67556",
+  "caso": "P04",
+  "critico": true,
+  "estado_documental_candidato": "respuesta_fundada",
+  "etapa": 0,
+  "final_sha256": "73e93cb19a3a525c5cb59814f61aefca0c2415d24a56112337c35346dd0d3ac6",
+  "formal_conforme": true,
+  "fundamento_sustantivo": "Relaciona ausencia de síntomas y recuentos aceptables con la posibilidad de observación. Conserva la condicionalidad y la dependencia de progresión, sin convertir el diagnóstico en tratamiento obligatorio ni garantizar que nunca será necesario.",
+  "limite_documental": null,
+  "medicion": {
+    "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+    "bytes_sse": 132417,
+    "caso": "P04-R0",
+    "cpu_delta_ms": 3813,
+    "duracion_ms": 36522,
+    "duracion_observada_ms": 40092,
+    "eventos_sse": 430,
+    "fallos_medicion": 0,
+    "final_sha256": "73e93cb19a3a525c5cb59814f61aefca0c2415d24a56112337c35346dd0d3ac6",
+    "intervalo_maximo_ms": 290,
+    "io_escritura_delta_bytes": 657574,
+    "io_lectura_delta_bytes": 17925138,
+    "muestras": 145,
+    "observaciones_udp": 0,
+    "primer_texto_ms": 18615,
+    "rss_maximo_bytes": 39374848,
+    "solicitud_sha256": "daca15a08d2b65baac1d8cf2254cfd3b91b782b24e7594d2705dca7fb970de99",
+    "sse_sha256": "d3617269d3b339edf39822b76055e0c6227478f43820d26219aff06edc08238f",
+    "tcp_estados": [
+      "CloseWait",
+      "Established",
+      "FinWait1",
+      "Listen"
+    ],
+    "tcp_maximo_simultaneo": 4,
+    "telemetria_sha256": "dec772580d317c6711e60290a350492cbd27e60b2c7d68e84dffaa1bd36ebaed",
+    "uso": {
+      "entrada_cache_tokens": 0,
+      "entrada_tokens": 16766,
+      "razonamiento_tokens": 0,
+      "salida_tokens": 435,
+      "total_tokens": 17201
+    }
+  },
+  "naturaleza_defecto": null,
+  "observaciones_revision": [],
+  "pasajes_contrastados": [
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "Si el paciente es asintomático y los recuentos sanguíneos se mantienen dentro de los límites\naceptables, quizás el tratamiento no sea necesario.",
+      "pagina": 0,
+      "seccion": "_13"
+    },
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "Observación cautelosa, cuando sea posible.",
+      "pagina": 0,
+      "seccion": "_13"
+    }
+  ],
+  "recepcion_independiente": "pendiente",
+  "respuesta_original": "{\n  \"caso\": \"P04\",\n  \"estado_documental\": \"respuesta_fundada\",\n  \"etapa\": 0,\n  \"evidencias\": [\n    {\n      \"cita_literal_breve\": \"Si el paciente es asintomático y los recuentos sanguíneos se mantienen dentro de los límites\\naceptables, quizás el tratamiento no sea necesario.\",\n      \"documento\": \"pdq-nci-hcl-es\",\n      \"fragmentos\": [0],\n      \"seccion\": \"_13\"\n    },\n    {\n      \"cita_literal_breve\": \"Observación cautelosa, cuando sea posible.\",\n      \"documento\": \"pdq-nci-hcl-es\",\n      \"fragmentos\": [0],\n      \"seccion\": \"_13\"\n    }\n  ],\n  \"fundamentos_verificables\": [\n    \"El supuesto reúne las dos condiciones que el documento vincula con la posibilidad de no necesitar tratamiento: ausencia de síntomas y recuentos sanguíneos aceptables.\",\n    \"El documento fundamenta la decisión de tratar en signos de progresión: citopenias, especialmente sintomáticas; empeoramiento de la esplenomegalia; y otras complicaciones, a menudo infecciosas. Además, incluye la observación cautelosa entre las opciones.\"\n  ],\n  \"insuficiencias\": [\n    \"La expresión «quizás» no garantiza que nunca se necesite tratamiento ni establece una exención incondicional; esta conclusión no constituye una prescripción individual.\"\n  ],\n  \"respuesta\": \"No. Según el documento, el diagnóstico por sí solo no obliga a comenzar tratamiento inmediato. En una persona asintomática con recuentos sanguíneos aceptables, quizás el tratamiento no sea necesario; la observación cautelosa es una opción cuando sea posible. Esto permite descartar la obligatoriedad automática, pero no afirmar que el tratamiento nunca será necesario.\",\n  \"revision\": \"Etapa 0: respuesta provisional. No existen antecedentes ni entregas anteriores que contrastar.\"\n}",
+  "revision_citas": {
+    "citas": [
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "Si el paciente es asintomático y los recuentos sanguíneos se mantienen dentro de los límites\naceptables, quizás el tratamiento no sea necesario."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "Observación cautelosa, cuando sea posible."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "solicitud_sha256": "daca15a08d2b65baac1d8cf2254cfd3b91b782b24e7594d2705dca7fb970de99",
+  "sustantivo": "correcto",
+  "valor": "0"
+}

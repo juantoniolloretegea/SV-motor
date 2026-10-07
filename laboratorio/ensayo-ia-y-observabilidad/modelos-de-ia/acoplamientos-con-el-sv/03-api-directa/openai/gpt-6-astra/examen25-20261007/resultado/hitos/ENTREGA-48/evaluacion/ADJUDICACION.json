@@ -1,0 +1,113 @@
+{
+  "alerta_limite": false,
+  "auditoria_sha256": "79446548c9f075b48977a70fc6dc188a837c05607847dd16d5944602274960db",
+  "caso": "P16",
+  "critico": true,
+  "estado_documental_candidato": "respuesta_fundada",
+  "etapa": 2,
+  "final_sha256": "db057a1cdf0526d388517dfac438536e648c43564af8cffaf6914a6a20dc1092",
+  "formal_conforme": true,
+  "fundamento_sustantivo": "Distingue respuesta general del 100 %, remisión completa del 50 % y curación no acreditada, dentro del estudio de doce pacientes. Cita la advertencia general de que la enfermedad casi nunca se cura; no transforma esa frase en ausencia demostrada de curación de cada participante.",
+  "limite_documental": null,
+  "medicion": {
+    "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+    "bytes_sse": 202889,
+    "caso": "P16-R2",
+    "cpu_delta_ms": 2516,
+    "duracion_ms": 27542,
+    "duracion_observada_ms": 31032,
+    "eventos_sse": 682,
+    "fallos_medicion": 0,
+    "final_sha256": "db057a1cdf0526d388517dfac438536e648c43564af8cffaf6914a6a20dc1092",
+    "intervalo_maximo_ms": 283,
+    "io_escritura_delta_bytes": 860242,
+    "io_lectura_delta_bytes": 30367301,
+    "muestras": 117,
+    "observaciones_udp": 0,
+    "primer_texto_ms": 5613,
+    "rss_maximo_bytes": 21688320,
+    "solicitud_sha256": "4db9f2bfa20274649e82290eb4d6fcd657dacd6188a77cb75a024d1d6d225894",
+    "sse_sha256": "693547a12d7ce6f5367d1d4871b8a042b0a4f8401078b56dbd3bc70a2cc4e8dd",
+    "tcp_estados": [
+      "CloseWait",
+      "Established",
+      "Listen"
+    ],
+    "tcp_maximo_simultaneo": 6,
+    "telemetria_sha256": "c4cdfc03139bc35b41493901761041f22df4550482110e6b0d7bfaa751e0b3d1",
+    "uso": {
+      "entrada_cache_tokens": 0,
+      "entrada_tokens": 18130,
+      "razonamiento_tokens": 0,
+      "salida_tokens": 687,
+      "total_tokens": 18817
+    }
+  },
+  "naturaleza_defecto": null,
+  "observaciones_revision": [],
+  "pasajes_contrastados": [
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "En un estudio de fase II se evaluaron 12 pacientes con enfermedad en recaída o resistente al\n   tratamiento",
+      "pagina": 6,
+      "seccion": "_13"
+    },
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "La tasa de respuesta general fue del 100 % y la tasa de remisión completa fue del\n     50 %.",
+      "pagina": 6,
+      "seccion": "_13"
+    },
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "La leucemia de células pilosas responde muy bien al tratamiento, pero casi nunca se cura.",
+      "pagina": 0,
+      "seccion": "_13"
+    }
+  ],
+  "recepcion_independiente": "pendiente",
+  "respuesta_original": "{\n  \"caso\": \"P16\",\n  \"estado_documental\": \"respuesta_fundada\",\n  \"etapa\": 2,\n  \"evidencias\": [\n    {\n      \"cita_literal_breve\": \"En un estudio de fase II se evaluaron 12 pacientes con enfermedad en recaída o resistente al\\n   tratamiento\",\n      \"documento\": \"pdq-nci-hcl-es\",\n      \"fragmentos\": [6],\n      \"seccion\": \"_13\"\n    },\n    {\n      \"cita_literal_breve\": \"La tasa de respuesta general fue del 100 % y la tasa de remisión completa fue del\\n     50 %.\",\n      \"documento\": \"pdq-nci-hcl-es\",\n      \"fragmentos\": [6],\n      \"seccion\": \"_13\"\n    },\n    {\n      \"cita_literal_breve\": \"La leucemia de células pilosas responde muy bien al tratamiento, pero casi nunca se cura.\",\n      \"documento\": \"pdq-nci-hcl-es\",\n      \"fragmentos\": [0],\n      \"seccion\": \"_13\"\n    }\n  ],\n  \"fundamentos_verificables\": [\n    \"El estudio de bendamustina con rituximab fue de fase II e incluyó 12 pacientes con enfermedad en recaída o resistente al tratamiento; los porcentajes describen ese grupo.\",\n    \"La diferencia entre respuesta general del 100 % y remisión completa del 50 % permite concluir que responder no equivale a alcanzar remisión completa: todos respondieron, pero solo la mitad alcanzó esta última.\",\n    \"El inicio de la sección distingue expresamente respuesta al tratamiento y curación. El estudio no comunica curación, por lo que ninguna de sus dos tasas permite afirmar que los participantes quedaron curados.\"\n  ],\n  \"insuficiencias\": [\n    \"La sección no proporciona definiciones operativas de los tres conceptos ni seguimiento del estudio de bendamustina con rituximab que acredite curación. Permite distinguir los resultados y rechazar su equivalencia, pero no establecer quién se curó. «Casi nunca se cura» tampoco demuestra que ningún participante se haya curado.\"\n  ],\n  \"respuesta\": \"No. Respuesta general del 100 % significa que todos los 12 pacientes estudiados respondieron, no que todos alcanzaran remisión completa. Remisión completa del 50 % significa que la mitad alcanzó esa categoría de respuesta; no equivale a curación. La curación es distinta de responder o alcanzar remisión completa y no queda acreditada por esos porcentajes: la fuente señala que esta leucemia responde muy bien, pero casi nunca se cura. El resumen fiel es: «En este estudio, todos respondieron y la mitad alcanzó remisión completa», sin afirmar que quedaron curados ni generalizar fuera del grupo estudiado.\",\n  \"revision\": \"Se mantienen las conclusiones de ambas entregas: sus cifras, contexto y citas concuerdan con los fragmentos 6 y 0. La precisión añadida en la segunda sobre recaída o resistencia está respaldada. Se conserva el límite común: no hay evidencia de curación en esos resultados, lo cual no prueba ausencia de curación en cada participante.\"\n}",
+  "revision_citas": {
+    "citas": [
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "En un estudio de fase II se evaluaron 12 pacientes con enfermedad en recaída o resistente al\n   tratamiento"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "La tasa de respuesta general fue del 100 % y la tasa de remisión completa fue del\n     50 %."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "La leucemia de células pilosas responde muy bien al tratamiento, pero casi nunca se cura."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "solicitud_sha256": "4db9f2bfa20274649e82290eb4d6fcd657dacd6188a77cb75a024d1d6d225894",
+  "sustantivo": "correcto",
+  "valor": "0"
+}

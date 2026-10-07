@@ -1,0 +1,97 @@
+{
+  "alerta_limite": false,
+  "auditoria_sha256": "9b8f64d3ad71b6d1f71c6d9b50a945663730a8e61b3f8a5a3b1e1457213b5968",
+  "caso": "P17",
+  "critico": true,
+  "estado_documental_candidato": "respuesta_fundada",
+  "etapa": 1,
+  "final_sha256": "1a089cf5ba340d9bd040d3a5190e58805753f9506ae4bc01816c5791076a3af3",
+  "formal_conforme": true,
+  "fundamento_sustantivo": "Conserva 94 % frente a 12 % sin ERC y seguimiento mediano de 96 meses. Explicita mayor necesidad transfusional y recuentos mayores al mes. No confunde ERC con supervivencia ni niega la contrapartida clínica.",
+  "limite_documental": null,
+  "medicion": {
+    "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+    "bytes_sse": 192201,
+    "caso": "P17-R1",
+    "cpu_delta_ms": 2344,
+    "duracion_ms": 21608,
+    "duracion_observada_ms": 24849,
+    "eventos_sse": 646,
+    "fallos_medicion": 0,
+    "final_sha256": "1a089cf5ba340d9bd040d3a5190e58805753f9506ae4bc01816c5791076a3af3",
+    "intervalo_maximo_ms": 282,
+    "io_escritura_delta_bytes": 751409,
+    "io_lectura_delta_bytes": 29219619,
+    "muestras": 94,
+    "observaciones_udp": 0,
+    "primer_texto_ms": 4122,
+    "rss_maximo_bytes": 39448576,
+    "solicitud_sha256": "950e2b7b9c2224b7eadcad2f9efa2c2f8a0bbdaf905c728cd8be61f35bc2bbd1",
+    "sse_sha256": "b87a197510a21f4b7aa7e7aecef2a96200c79e0c75c9a9bd84ae89a5536a9614",
+    "tcp_estados": [
+      "CloseWait",
+      "Established",
+      "Listen"
+    ],
+    "tcp_maximo_simultaneo": 6,
+    "telemetria_sha256": "d5ec9c3853179994897f4da25c1ba1e7910837c6f479b0d5d1acf6676f29fc67",
+    "uso": {
+      "entrada_cache_tokens": 0,
+      "entrada_tokens": 17437,
+      "razonamiento_tokens": 0,
+      "salida_tokens": 651,
+      "total_tokens": 18088
+    }
+  },
+  "naturaleza_defecto": null,
+  "observaciones_revision": [
+    "El enunciado histórico denomina inmediata a la contrapartida, pero el pasaje no fecha las transfusiones. R1 y R2 corrigen prudentemente esa precisión temporal. Se registra como observación del diseño y mejora expositiva; no altera las cifras ni justifica penalización del candidato."
+  ],
+  "pasajes_contrastados": [
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "Al cabo de una mediana de seguimiento de 96 meses, el 94 % de los pacientes que recibió el\n     tratamiento simultáneo no presentó ERC, en comparación con el 12 % de los pacientes que recibió\n     el tratamiento diferido.",
+      "pagina": 4,
+      "seccion": "_13"
+    },
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "Si bien los pacientes que se sometieron al tratamiento simultáneo tuvieron mayor necesidad de\n     transfusiones de plaquetas, presentaron recuentos más altos de neutrófilos y plaquetas al cabo\n     de un mes.",
+      "pagina": 4,
+      "seccion": "_13"
+    }
+  ],
+  "recepcion_independiente": "pendiente",
+  "respuesta_original": "{\n  \"caso\": \"P17\",\n  \"estado_documental\": \"respuesta_fundada\",\n  \"etapa\": 1,\n  \"evidencias\": [\n    {\n      \"cita_literal_breve\": \"Al cabo de una mediana de seguimiento de 96 meses, el 94 % de los pacientes que recibió el\\n     tratamiento simultáneo no presentó ERC, en comparación con el 12 % de los pacientes que recibió\\n     el tratamiento diferido.\",\n      \"documento\": \"pdq-nci-hcl-es\",\n      \"fragmentos\": [4],\n      \"seccion\": \"_13\"\n    },\n    {\n      \"cita_literal_breve\": \"Si bien los pacientes que se sometieron al tratamiento simultáneo tuvieron mayor necesidad de\\n     transfusiones de plaquetas, presentaron recuentos más altos de neutrófilos y plaquetas al cabo\\n     de un mes.\",\n      \"documento\": \"pdq-nci-hcl-es\",\n      \"fragmentos\": [4],\n      \"seccion\": \"_13\"\n    }\n  ],\n  \"fundamentos_verificables\": [\n    \"El fragmento 4 describe un ensayo de fase II con asignación aleatoria de 68 pacientes sin tratamiento previo. El rituximab simultáneo comenzaba el día 1; el diferido, después de 6 meses de cladribina si persistía una prueba positiva de ERC.\",\n    \"Los porcentajes comunicados corresponden a ausencia de ERC, no a una demostración de superioridad en todos los desenlaces clínicos.\",\n    \"La mayor necesidad de transfusiones de plaquetas constituye una contrapartida clínica documentada, pese a los recuentos de neutrófilos y plaquetas más altos al mes.\"\n  ],\n  \"insuficiencias\": [\n    \"El resumen no cuantifica la diferencia en necesidad de transfusiones ni precisa cuándo se administraron. Permite identificar esa contrapartida, pero no determinar su magnitud o calendario exacto.\"\n  ],\n  \"respuesta\": \"Con una mediana de seguimiento de 96 meses, no presentó enfermedad residual cuantificable (ERC) el 94 % del grupo con rituximab simultáneo, frente al 12 % del grupo diferido. La contrapartida fue una mayor necesidad de transfusiones de plaquetas con el tratamiento simultáneo, aunque al cabo de un mes sus recuentos de neutrófilos y plaquetas eran más altos. Por ello, la ventaja en ausencia de ERC no equivale a ser «mejor y sin coste clínico». El resumen no precisa el momento exacto de las transfusiones.\",\n  \"revision\": \"Se mantienen los porcentajes, el seguimiento y las citas, concordantes con el fragmento 4. Se matiza la denominación previa de contrapartida «inmediata»: la fuente documenta mayor necesidad transfusional, pero no fecha las transfusiones. Se conserva el beneficio hematológico al mes para no presentar solo el coste y se delimita la ventaja al desenlace de ERC.\"\n}",
+  "revision_citas": {
+    "citas": [
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "Al cabo de una mediana de seguimiento de 96 meses, el 94 % de los pacientes que recibió el\n     tratamiento simultáneo no presentó ERC, en comparación con el 12 % de los pacientes que recibió\n     el tratamiento diferido."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "Si bien los pacientes que se sometieron al tratamiento simultáneo tuvieron mayor necesidad de\n     transfusiones de plaquetas, presentaron recuentos más altos de neutrófilos y plaquetas al cabo\n     de un mes."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "solicitud_sha256": "950e2b7b9c2224b7eadcad2f9efa2c2f8a0bbdaf905c728cd8be61f35bc2bbd1",
+  "sustantivo": "correcto",
+  "valor": "0"
+}

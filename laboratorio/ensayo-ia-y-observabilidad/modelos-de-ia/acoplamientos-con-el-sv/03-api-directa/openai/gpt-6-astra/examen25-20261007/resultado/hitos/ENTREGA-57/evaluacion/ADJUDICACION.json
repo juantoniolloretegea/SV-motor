@@ -1,0 +1,114 @@
+{
+  "alerta_limite": false,
+  "auditoria_sha256": "c46db3c0a355aad4e658aa34a1469e2383d0b1d664126071711cb60bbf3e9702",
+  "caso": "P19",
+  "critico": true,
+  "estado_documental_candidato": "respuesta_fundada",
+  "etapa": 2,
+  "final_sha256": "3b8b35dc662c4d0d09076290da9aa6d9592df70cdcb7cd8b126b923c92d73e32",
+  "formal_conforme": true,
+  "fundamento_sustantivo": "Distingue normalización periférica y pocos o ningún cambio medular. Conserva la progresión de casi todos a los 12 o 18 meses como descripción general, sin convertirla en pronóstico individual ni en curación.",
+  "limite_documental": null,
+  "medicion": {
+    "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+    "bytes_sse": 186696,
+    "caso": "P19-R2",
+    "cpu_delta_ms": 2125,
+    "duracion_ms": 23051,
+    "duracion_observada_ms": 26440,
+    "eventos_sse": 623,
+    "fallos_medicion": 0,
+    "final_sha256": "3b8b35dc662c4d0d09076290da9aa6d9592df70cdcb7cd8b126b923c92d73e32",
+    "intervalo_maximo_ms": 280,
+    "io_escritura_delta_bytes": 700625,
+    "io_lectura_delta_bytes": 30345324,
+    "muestras": 100,
+    "observaciones_udp": 0,
+    "primer_texto_ms": 4966,
+    "rss_maximo_bytes": 25608192,
+    "solicitud_sha256": "2c75955d8150ce2c6f2f3a5cbe266a1c78fd8cb5128d5a8bf62837cf5036009b",
+    "sse_sha256": "b0c5a6b8532b7b6fa14fa93ad4f4798e80ddb576814844efb85f12e8235bc7e7",
+    "tcp_estados": [
+      "CloseWait",
+      "Established",
+      "FinWait1",
+      "Listen"
+    ],
+    "tcp_maximo_simultaneo": 4,
+    "telemetria_sha256": "5aa1e19945cd128f1b61d0077ec899e6dc9f460af2d126705212fcf5c60d3cff",
+    "uso": {
+      "entrada_cache_tokens": 0,
+      "entrada_tokens": 18041,
+      "razonamiento_tokens": 0,
+      "salida_tokens": 628,
+      "total_tokens": 18669
+    }
+  },
+  "naturaleza_defecto": null,
+  "observaciones_revision": [],
+  "pasajes_contrastados": [
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "la esplenectomía normaliza la sangre periférica de forma parcial o\ncompleta.",
+      "pagina": 7,
+      "seccion": "_13"
+    },
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "los pacientes suelen tener pocos\ncambios o ninguno en la médula ósea",
+      "pagina": 7,
+      "seccion": "_13"
+    },
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "casi todos ellos presentan enfermedad progresiva dentro\nde los 12 o 18 meses posteriores al procedimiento.",
+      "pagina": 7,
+      "seccion": "_13"
+    }
+  ],
+  "recepcion_independiente": "pendiente",
+  "respuesta_original": "{\n  \"caso\": \"P19\",\n  \"estado_documental\": \"respuesta_fundada\",\n  \"etapa\": 2,\n  \"evidencias\": [\n    {\n      \"cita_literal_breve\": \"la esplenectomía normaliza la sangre periférica de forma parcial o\\ncompleta.\",\n      \"documento\": \"pdq-nci-hcl-es\",\n      \"fragmentos\": [7],\n      \"seccion\": \"_13\"\n    },\n    {\n      \"cita_literal_breve\": \"los pacientes suelen tener pocos\\ncambios o ninguno en la médula ósea\",\n      \"documento\": \"pdq-nci-hcl-es\",\n      \"fragmentos\": [7],\n      \"seccion\": \"_13\"\n    },\n    {\n      \"cita_literal_breve\": \"casi todos ellos presentan enfermedad progresiva dentro\\nde los 12 o 18 meses posteriores al procedimiento.\",\n      \"documento\": \"pdq-nci-hcl-es\",\n      \"fragmentos\": [7],\n      \"seccion\": \"_13\"\n    }\n  ],\n  \"fundamentos_verificables\": [\n    \"La fuente describe normalización parcial o completa de la sangre periférica en la mayoría de los pacientes, pero pocos cambios o ninguno en la médula ósea después de la esplenectomía. Esta distinción permite concluir que la mejoría de los recuentos no acredita erradicación medular.\",\n    \"La progresión descrita en casi todos los pacientes dentro de los 12 o 18 meses posteriores al procedimiento muestra por qué no debe equipararse la respuesta periférica con curación; no constituye una predicción individual.\"\n  ],\n  \"insuficiencias\": [\n    \"El caso solo aporta mejoría de recuentos, sin evaluación medular ni seguimiento individual. No queda acreditado su estado medular concreto ni su desenlace; esa limitación no impide resolver la pregunta sobre el significado del dato periférico.\"\n  ],\n  \"respuesta\": \"La mejoría de los recuentos periféricos no demuestra erradicación medular ni curación. La fuente señala que la esplenectomía normaliza parcial o completamente la sangre periférica en la mayoría de los pacientes, mientras que en la médula ósea suele haber pocos cambios o ninguno. Además, casi todos presentan enfermedad progresiva dentro de los 12 o 18 meses posteriores al procedimiento. Por tanto, mejorar los recuentos no acredita eliminar la enfermedad. Esta evolución general tampoco determina el desenlace del caso sintético.\",\n  \"revision\": \"Ambas entregas sostienen una conclusión respaldada por el fragmento 7 y emplean citas exactas. Se mantiene la distinción entre mejoría periférica y erradicación medular. La precisión de la segunda entrega sobre «la mayoría» coincide con el pasaje que comienza en el fragmento 6 y continúa en el 7. No se requiere retirar la conclusión ni declarar U.\"\n}",
+  "revision_citas": {
+    "citas": [
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "la esplenectomía normaliza la sangre periférica de forma parcial o\ncompleta."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "los pacientes suelen tener pocos\ncambios o ninguno en la médula ósea"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "casi todos ellos presentan enfermedad progresiva dentro\nde los 12 o 18 meses posteriores al procedimiento."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "solicitud_sha256": "2c75955d8150ce2c6f2f3a5cbe266a1c78fd8cb5128d5a8bf62837cf5036009b",
+  "sustantivo": "correcto",
+  "valor": "0"
+}

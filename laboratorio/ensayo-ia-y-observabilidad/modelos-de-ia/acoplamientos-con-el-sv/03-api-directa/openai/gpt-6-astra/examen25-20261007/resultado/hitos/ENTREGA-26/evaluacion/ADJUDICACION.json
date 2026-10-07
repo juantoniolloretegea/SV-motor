@@ -1,0 +1,77 @@
+{
+  "alerta_limite": false,
+  "auditoria_sha256": "455d8fdd1b8344a4702e78c10feac6e7a2021bcd267b876a919fe8ef077d27e0",
+  "caso": "P09",
+  "critico": true,
+  "estado_documental_candidato": "respuesta_fundada",
+  "etapa": 1,
+  "final_sha256": "9764c954ee03ec6bf364bff318582b20b8c74ba2abc2e41ef054a96d7a15994b",
+  "formal_conforme": true,
+  "fundamento_sustantivo": "Reconoce que la insuficiencia renal o hepática moderada a grave impide considerar libre de restricción el uso de análogos de purina. No inventa una dosis que anule la advertencia.",
+  "limite_documental": null,
+  "medicion": {
+    "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+    "bytes_sse": 126066,
+    "caso": "P09-R1",
+    "cpu_delta_ms": 2203,
+    "duracion_ms": 15599,
+    "duracion_observada_ms": 19223,
+    "eventos_sse": 404,
+    "fallos_medicion": 0,
+    "final_sha256": "9764c954ee03ec6bf364bff318582b20b8c74ba2abc2e41ef054a96d7a15994b",
+    "intervalo_maximo_ms": 288,
+    "io_escritura_delta_bytes": 489044,
+    "io_lectura_delta_bytes": 18568874,
+    "muestras": 70,
+    "observaciones_udp": 0,
+    "primer_texto_ms": 4017,
+    "rss_maximo_bytes": 45170688,
+    "solicitud_sha256": "b2875261e80f408246f8521475e084c57a279a4f8a31582f3fe3bfe885bbaf76",
+    "sse_sha256": "cb96234c5e592b42d624e972a28af911a71d2c6369a3d0c77d70ef0e4ad716fd",
+    "tcp_estados": [
+      "CloseWait",
+      "Established",
+      "Listen"
+    ],
+    "tcp_maximo_simultaneo": 4,
+    "telemetria_sha256": "130d6e32a9f1ecd59d708f88907edb8919a0ad4959f42d692d86f4ad89094517",
+    "uso": {
+      "entrada_cache_tokens": 0,
+      "entrada_tokens": 17207,
+      "razonamiento_tokens": 0,
+      "salida_tokens": 409,
+      "total_tokens": 17616
+    }
+  },
+  "naturaleza_defecto": null,
+  "observaciones_revision": [],
+  "pasajes_contrastados": [
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "Los análogos de purina se deben evitar en casos\nde infección activa y de deficiencia renal o hepática moderada a grave.",
+      "pagina": 5,
+      "seccion": "_13"
+    }
+  ],
+  "recepcion_independiente": "pendiente",
+  "respuesta_original": "{\n  \"caso\": \"P09\",\n  \"estado_documental\": \"respuesta_fundada\",\n  \"etapa\": 1,\n  \"evidencias\": [\n    {\n      \"cita_literal_breve\": \"Los análogos de purina se deben evitar en casos\\nde infección activa y de deficiencia renal o hepática moderada a grave.\",\n      \"documento\": \"pdq-nci-hcl-es\",\n      \"fragmentos\": [5],\n      \"seccion\": \"_13\"\n    }\n  ],\n  \"fundamentos_verificables\": [\n    \"El apartado de pentostatina formula expresamente la restricción para los análogos de purina como clase, no solo para ese fármaco.\",\n    \"El apartado de cladribina recoge la misma restricción en el pasaje que continúa entre los fragmentos 4 y 5.\",\n    \"La insuficiencia renal o hepática moderada o grave planteada en el caso corresponde a la condición que la fuente denomina deficiencia renal o hepática moderada a grave; por ello, no puede considerarse libre de esa restricción.\"\n  ],\n  \"insuficiencias\": [],\n  \"respuesta\": \"No. La fuente establece que los análogos de purina se deben evitar en casos de deficiencia renal o hepática moderada a grave. Por tanto, el supuesto sintético no permite considerar su uso libre de esa restricción. La conclusión mantiene el alcance de «se deben evitar»: no lo transforma en una prohibición absoluta ni constituye una prescripción individual.\",\n  \"revision\": \"Se mantiene la conclusión provisional: la cita es literal y corresponde al fragmento 5 de la sección _13. La atribución de la restricción a la clase y su presencia también en cladribina están respaldadas. No se identifican omisiones que alteren la respuesta ni motivos para declarar U.\"\n}",
+  "revision_citas": {
+    "citas": [
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "Los análogos de purina se deben evitar en casos\nde infección activa y de deficiencia renal o hepática moderada a grave."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "solicitud_sha256": "b2875261e80f408246f8521475e084c57a279a4f8a31582f3fe3bfe885bbaf76",
+  "sustantivo": "correcto",
+  "valor": "0"
+}

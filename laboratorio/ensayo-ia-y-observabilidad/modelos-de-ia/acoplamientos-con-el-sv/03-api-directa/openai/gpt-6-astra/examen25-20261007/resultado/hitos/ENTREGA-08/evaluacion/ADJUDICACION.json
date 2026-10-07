@@ -1,0 +1,97 @@
+{
+  "alerta_limite": true,
+  "auditoria_sha256": "9a17e0863156d008e78a8286c9b63c2bee399cf1fa0969b884a5bda491b89eaa",
+  "caso": "P03",
+  "critico": true,
+  "estado_documental_candidato": "respuesta_fundada",
+  "etapa": 1,
+  "final_sha256": "1edfea36be3a2cb570e5f9968dadc6ec6f7b1f284204c310fe94511479bf784b",
+  "formal_conforme": true,
+  "fundamento_sustantivo": "Reconoce la ausencia documental de un sistema de estadificación de aceptación general. Distingue esa afirmación de negar toda propuesta posible; no inventa estadios.",
+  "limite_documental": "El 0 acredita reconocer la ausencia de estadificación aceptada en esta fuente; no acredita disponer de un sistema de estadificación ni elegir uno.",
+  "medicion": {
+    "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+    "bytes_sse": 107858,
+    "caso": "P03-R1",
+    "cpu_delta_ms": 2000,
+    "duracion_ms": 15271,
+    "duracion_observada_ms": 18704,
+    "eventos_sse": 336,
+    "fallos_medicion": 0,
+    "final_sha256": "1edfea36be3a2cb570e5f9968dadc6ec6f7b1f284204c310fe94511479bf784b",
+    "intervalo_maximo_ms": 296,
+    "io_escritura_delta_bytes": 449390,
+    "io_lectura_delta_bytes": 18475448,
+    "muestras": 68,
+    "observaciones_udp": 0,
+    "primer_texto_ms": 4064,
+    "rss_maximo_bytes": 22691840,
+    "solicitud_sha256": "424f797437569ea41a9b2e47e7b23b81cf9dd1e9a428f2341146b9e2fe0b91c4",
+    "sse_sha256": "9c2756af74dcccf34d194856fc3f0f6adef78fe29111b5f3cbb4eff01c965938",
+    "tcp_estados": [
+      "CloseWait",
+      "Established",
+      "Listen"
+    ],
+    "tcp_maximo_simultaneo": 6,
+    "telemetria_sha256": "c26064e0701d2459430f2357131e8b8557748eeee01e70fd22b966835927b6f9",
+    "uso": {
+      "entrada_cache_tokens": 0,
+      "entrada_tokens": 1537,
+      "razonamiento_tokens": 0,
+      "salida_tokens": 341,
+      "total_tokens": 1878
+    }
+  },
+  "naturaleza_defecto": null,
+  "observaciones_revision": [],
+  "pasajes_contrastados": [
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "No existe un sistema de estadificación de aceptación general para el pronóstico y tratamiento de la\nleucemia de células pilosas.",
+      "pagina": 0,
+      "seccion": "_3"
+    },
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "No existe un sistema de estadificación de aceptación general para el pronóstico y tratamiento de la\nleucemia de células pilosas.",
+      "origen": "cotejo adicional del evaluador contra el suministro; no cita atribuida al candidato",
+      "pagina": 0,
+      "seccion": "_3"
+    }
+  ],
+  "recepcion_independiente": "pendiente",
+  "respuesta_original": "{\n  \"caso\": \"P03\",\n  \"estado_documental\": \"respuesta_fundada\",\n  \"etapa\": 1,\n  \"evidencias\": [\n    {\n      \"cita_literal_breve\": \"No existe un sistema de estadificación de aceptación general para el pronóstico y tratamiento de la\\nleucemia de células pilosas.\",\n      \"documento\": \"pdq-nci-hcl-es\",\n      \"fragmentos\": [0],\n      \"seccion\": \"_3\"\n    }\n  ],\n  \"fundamentos_verificables\": [\n    \"La sección _3, suministrada completa, declara expresamente la ausencia de un sistema de estadificación de aceptación general para el pronóstico y tratamiento de la leucemia de células pilosas. Esto fundamenta la respuesta negativa.\"\n  ],\n  \"insuficiencias\": [\n    \"La declaración no permite concluir que no existan propuestas de estadificación: se refiere específicamente a un sistema de aceptación general. Este límite no impide resolver la pregunta.\"\n  ],\n  \"respuesta\": \"No. El documento no ofrece un sistema de estadificación de aceptación general para decidir el pronóstico y el tratamiento de esta leucemia; afirma expresamente que no existe un sistema con ese carácter.\",\n  \"revision\": \"Se mantiene la conclusión provisional: coincide con la declaración explícita de la sección _3. La cita reproduce literalmente el fragmento 0 y su identificación es correcta. Se conserva el límite sobre posibles propuestas de estadificación, sin afirmar su existencia ni su inexistencia. No se detectan omisiones que alteren la respuesta.\"\n}",
+  "revision_citas": {
+    "citas": [
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "No existe un sistema de estadificación de aceptación general para el pronóstico y tratamiento de la\nleucemia de células pilosas."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "No existe un sistema de estadificación de aceptación general para el pronóstico y tratamiento de la\nleucemia de células pilosas."
+              }
+            ]
+          }
+        ],
+        "origen": "cotejo del evaluador"
+      }
+    ]
+  },
+  "solicitud_sha256": "424f797437569ea41a9b2e47e7b23b81cf9dd1e9a428f2341146b9e2fe0b91c4",
+  "sustantivo": "correcto",
+  "valor": "0"
+}

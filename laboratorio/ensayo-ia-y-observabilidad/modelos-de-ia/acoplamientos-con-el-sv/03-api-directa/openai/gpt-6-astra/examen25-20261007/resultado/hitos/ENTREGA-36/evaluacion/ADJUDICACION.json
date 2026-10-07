@@ -1,0 +1,116 @@
+{
+  "alerta_limite": true,
+  "auditoria_sha256": "06ddc852f2c9aa37fe730ddbddb1c048cf3bfcd009b7a7ce2dded2b376d9e102",
+  "caso": "P12",
+  "critico": true,
+  "estado_documental_candidato": "respuesta_fundada",
+  "etapa": 2,
+  "final_sha256": "130fca8fc1871c4d0b7f970828c77cdf5ca3a6c916e3a5465ad66213ab8606eb",
+  "formal_conforme": true,
+  "fundamento_sustantivo": "La medición de ERC evalúa la profundidad de remisión; no demuestra obligación de cambiar el tratamiento. Mantiene la incertidumbre explícita de la fuente y distingue el indicador de la decisión.",
+  "limite_documental": "El cero acredita distinguir medición y decisión ante una utilidad terapéutica aún no aclarada por la fuente; no acredita disponer de una regla terapéutica individual.",
+  "medicion": {
+    "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+    "bytes_sse": 171756,
+    "caso": "P12-R2",
+    "cpu_delta_ms": 2891,
+    "duracion_ms": 22046,
+    "duracion_observada_ms": 25726,
+    "eventos_sse": 567,
+    "fallos_medicion": 0,
+    "final_sha256": "130fca8fc1871c4d0b7f970828c77cdf5ca3a6c916e3a5465ad66213ab8606eb",
+    "intervalo_maximo_ms": 293,
+    "io_escritura_delta_bytes": 661086,
+    "io_lectura_delta_bytes": 19544500,
+    "muestras": 93,
+    "observaciones_udp": 0,
+    "primer_texto_ms": 3916,
+    "rss_maximo_bytes": 48787456,
+    "solicitud_sha256": "2414949f24455a550c840b7dc4456096ab17989ff6f6cb7ca7ac614c167e8a1f",
+    "sse_sha256": "a9454c13aa0971152eb98ca1a97314446ffa643768e9e6f2606444a9410fd43b",
+    "tcp_estados": [
+      "CloseWait",
+      "Established",
+      "Listen",
+      "SynSent"
+    ],
+    "tcp_maximo_simultaneo": 4,
+    "telemetria_sha256": "fc0bcb6525e2cf67cc494b5a25f5eaeaaa159c2e03b6032d08da7d4366972a21",
+    "uso": {
+      "entrada_cache_tokens": 0,
+      "entrada_tokens": 4845,
+      "razonamiento_tokens": 0,
+      "salida_tokens": 572,
+      "total_tokens": 5417
+    }
+  },
+  "naturaleza_defecto": null,
+  "observaciones_revision": [],
+  "pasajes_contrastados": [
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "La intensidad de la remisión completa se puede evaluar con la enfermedad residual cuantificable\n(ERC) mediante el uso del gen *BRAF* mutante o el reordenamiento del gen de la inmunoglobulina de\ncadena pesada.",
+      "pagina": 1,
+      "seccion": "_1"
+    },
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "Sin embargo, la utilidad de la ERC para modificar las elecciones terapéuticas no está\nclara y se necesitan más evaluaciones.",
+      "pagina": 1,
+      "seccion": "_1"
+    },
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "Sin embargo, la utilidad de la ERC para modificar las elecciones terapéuticas no está\nclara y se necesitan más evaluaciones.",
+      "origen": "cotejo adicional del evaluador contra el suministro; no cita atribuida al candidato",
+      "pagina": 0,
+      "seccion": "_1"
+    }
+  ],
+  "recepcion_independiente": "pendiente",
+  "respuesta_original": "{\n  \"caso\": \"P12\",\n  \"estado_documental\": \"respuesta_fundada\",\n  \"etapa\": 2,\n  \"evidencias\": [\n    {\n      \"cita_literal_breve\": \"La intensidad de la remisión completa se puede evaluar con la enfermedad residual cuantificable\\n(ERC) mediante el uso del gen *BRAF* mutante o el reordenamiento del gen de la inmunoglobulina de\\ncadena pesada.\",\n      \"documento\": \"pdq-nci-hcl-es\",\n      \"fragmentos\": [1],\n      \"seccion\": \"_1\"\n    },\n    {\n      \"cita_literal_breve\": \"Sin embargo, la utilidad de la ERC para modificar las elecciones terapéuticas no está\\nclara y se necesitan más evaluaciones.\",\n      \"documento\": \"pdq-nci-hcl-es\",\n      \"fragmentos\": [1],\n      \"seccion\": \"_1\"\n    }\n  ],\n  \"fundamentos_verificables\": [\n    \"Medir: la fuente describe la ERC como medio para evaluar la intensidad de la remisión completa, mediante el gen BRAF mutante o el reordenamiento del gen de la inmunoglobulina de cadena pesada.\",\n    \"Decidir: la fuente declara que no está clara la utilidad de la ERC para modificar las elecciones terapéuticas. La posibilidad de medirla no acredita, por tanto, una obligación de cambiar el tratamiento ante su detección.\"\n  ],\n  \"insuficiencias\": [\n    \"No queda acreditada una obligación de modificar el tratamiento por la sola detección de ERC: el documento reconoce expresamente que su utilidad para modificar las elecciones terapéuticas necesita más evaluaciones. Tampoco queda acreditado que nunca deba cambiarse el tratamiento. Este límite explícito permite resolver la pregunta documental sin declarar U.\"\n  ],\n  \"respuesta\": \"No. El documento permite evaluar la intensidad de la remisión completa mediante enfermedad residual cuantificable (ERC), pero no demuestra que detectarla obligue por sí solo a cambiar el tratamiento. Medir describe la profundidad de la remisión; decidir exige establecer la utilidad de ese resultado para modificar las elecciones terapéuticas, que la fuente declara todavía no clara y necesitada de más evaluaciones. Esta conclusión no implica que siempre deba mantenerse el tratamiento ni constituye una prescripción individual.\",\n  \"revision\": \"Se mantiene la conclusión de ambas entregas: distinguen correctamente medición y decisión, y sus dos citas coinciden literalmente con la sección _1, fragmento 1. Ninguna convierte la incertidumbre documental en una prohibición de cambiar el tratamiento. No se identifican discrepancias sustantivas que requieran corrección.\"\n}",
+  "revision_citas": {
+    "citas": [
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "La intensidad de la remisión completa se puede evaluar con la enfermedad residual cuantificable\n(ERC) mediante el uso del gen *BRAF* mutante o el reordenamiento del gen de la inmunoglobulina de\ncadena pesada."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "Sin embargo, la utilidad de la ERC para modificar las elecciones terapéuticas no está\nclara y se necesitan más evaluaciones."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "Sin embargo, la utilidad de la ERC para modificar las elecciones terapéuticas no está\nclara y se necesitan más evaluaciones."
+              }
+            ]
+          }
+        ],
+        "origen": "cotejo del evaluador"
+      }
+    ]
+  },
+  "solicitud_sha256": "2414949f24455a550c840b7dc4456096ab17989ff6f6cb7ca7ac614c167e8a1f",
+  "sustantivo": "correcto",
+  "valor": "0"
+}

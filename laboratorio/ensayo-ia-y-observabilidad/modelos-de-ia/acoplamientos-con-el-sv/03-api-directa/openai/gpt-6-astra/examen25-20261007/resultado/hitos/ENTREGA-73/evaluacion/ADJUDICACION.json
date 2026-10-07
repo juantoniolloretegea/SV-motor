@@ -1,0 +1,95 @@
+{
+  "alerta_limite": false,
+  "auditoria_sha256": "7518c58078ab247c7fe011b13911e04be476235df0f8c04a88f24c288a6133d5",
+  "caso": "P25",
+  "critico": false,
+  "estado_documental_candidato": "respuesta_fundada",
+  "etapa": 0,
+  "final_sha256": "cf4d2c8eb0fa9881b43d578af8aaf7959878f2204db22fda23d69965b08eb968",
+  "formal_conforme": true,
+  "fundamento_sustantivo": "Identifica la actualización editorial de 14/11/2024 y la distingue de la recuperación de 26/09/2026. No convierte la descarga en revisión del contenido ni afirma la inexistencia de actualizaciones fuera del expediente congelado.",
+  "limite_documental": null,
+  "medicion": {
+    "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+    "bytes_sse": 117743,
+    "caso": "P25-R0",
+    "cpu_delta_ms": 1938,
+    "duracion_ms": 15642,
+    "duracion_observada_ms": 19261,
+    "eventos_sse": 378,
+    "fallos_medicion": 0,
+    "final_sha256": "cf4d2c8eb0fa9881b43d578af8aaf7959878f2204db22fda23d69965b08eb968",
+    "intervalo_maximo_ms": 283,
+    "io_escritura_delta_bytes": 454345,
+    "io_lectura_delta_bytes": 28203057,
+    "muestras": 73,
+    "observaciones_udp": 0,
+    "primer_texto_ms": 4109,
+    "rss_maximo_bytes": 47013888,
+    "solicitud_sha256": "bdc214c834708fd62b18dbdfefa761eb9ee33c4bbf8db31512feb55f355eed17",
+    "sse_sha256": "4506c0c2d53f036b458a2ac54a7fd446254faeb4514d94daa0dd59831047bdf3",
+    "tcp_estados": [
+      "CloseWait",
+      "Established",
+      "Listen"
+    ],
+    "tcp_maximo_simultaneo": 4,
+    "telemetria_sha256": "190e3836e5172d4c8945d8cafb2c54d4b15775fa5ba7486c5693e9e51bbee0cf",
+    "uso": {
+      "entrada_cache_tokens": 0,
+      "entrada_tokens": 1421,
+      "razonamiento_tokens": 0,
+      "salida_tokens": 383,
+      "total_tokens": 1804
+    }
+  },
+  "naturaleza_defecto": null,
+  "observaciones_revision": [],
+  "pasajes_contrastados": [
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "Actualizaciones más recientes a este resumen (11/14/2024)",
+      "pagina": 0,
+      "seccion": "_333"
+    },
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "Se incorporaron cambios editoriales en este resumen.",
+      "pagina": 0,
+      "seccion": "_333"
+    }
+  ],
+  "recepcion_independiente": "pendiente",
+  "respuesta_original": "{\n  \"caso\": \"P25\",\n  \"estado_documental\": \"respuesta_fundada\",\n  \"etapa\": 0,\n  \"evidencias\": [\n    {\n      \"cita_literal_breve\": \"Actualizaciones más recientes a este resumen (11/14/2024)\",\n      \"documento\": \"pdq-nci-hcl-es\",\n      \"fragmentos\": [0],\n      \"seccion\": \"_333\"\n    },\n    {\n      \"cita_literal_breve\": \"Se incorporaron cambios editoriales en este resumen.\",\n      \"documento\": \"pdq-nci-hcl-es\",\n      \"fragmentos\": [0],\n      \"seccion\": \"_333\"\n    }\n  ],\n  \"fundamentos_verificables\": [\n    \"El encabezado de la sección _333 declara 11/14/2024, equivalente al 14 de noviembre de 2024.\",\n    \"El metadato recuperado_utc registra 2026-09-26T12:20:31Z: corresponde a la recuperación del expediente, no a una actualización editorial del contenido.\",\n    \"La sección describe cambios editoriales; no declara una actualización en septiembre de 2026.\"\n  ],\n  \"insuficiencias\": [],\n  \"respuesta\": \"La fecha de actualización declarada por la fuente congelada es el 14 de noviembre de 2024 (11/14/2024). No debe sustituirse por la fecha de descarga, 26 de septiembre de 2026: esta última registra cuándo se recuperó el expediente, no cuándo se actualizó su contenido. La descarga posterior no acredita una revisión editorial posterior a la fecha declarada.\",\n  \"revision\": \"Respuesta provisional de etapa 0. No existen antecedentes ni entregas anteriores que contrastar.\"\n}",
+  "revision_citas": {
+    "citas": [
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "Actualizaciones más recientes a este resumen (11/14/2024)"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "Se incorporaron cambios editoriales en este resumen."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "solicitud_sha256": "bdc214c834708fd62b18dbdfefa761eb9ee33c4bbf8db31512feb55f355eed17",
+  "sustantivo": "correcto",
+  "valor": "0"
+}

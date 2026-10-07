@@ -1,0 +1,115 @@
+{
+  "alerta_limite": false,
+  "auditoria_sha256": "4573dfe36af2a5826d7ceb87aa44a9132b476242fc99bde1d44a06806b4f8e16",
+  "caso": "P23",
+  "critico": true,
+  "estado_documental_candidato": "respuesta_fundada",
+  "etapa": 0,
+  "final_sha256": "7991535dacb8a509e978f58a9b4880942d37ee764ffde0a644b0bb7bf62a2ed9",
+  "formal_conforme": true,
+  "fundamento_sustantivo": "Conserva conjuntamente progresión e infección activa: necesidad de valorar tratamiento y evitación de análogos de purinas en presencia de infección activa. No inventa una alternativa, pauta, dosis ni prohibición de todo tratamiento.",
+  "limite_documental": null,
+  "medicion": {
+    "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+    "bytes_sse": 164096,
+    "caso": "P23-R0",
+    "cpu_delta_ms": 2312,
+    "duracion_ms": 21489,
+    "duracion_observada_ms": 25081,
+    "eventos_sse": 546,
+    "fallos_medicion": 0,
+    "final_sha256": "7991535dacb8a509e978f58a9b4880942d37ee764ffde0a644b0bb7bf62a2ed9",
+    "intervalo_maximo_ms": 282,
+    "io_escritura_delta_bytes": 639118,
+    "io_lectura_delta_bytes": 28302411,
+    "muestras": 95,
+    "observaciones_udp": 0,
+    "primer_texto_ms": 3992,
+    "rss_maximo_bytes": 45613056,
+    "solicitud_sha256": "16663bed7e2ec5ed786c90b5a14d5050c6c7bd27e91ec48a54864bb6a20f1965",
+    "sse_sha256": "c121c8775cb099bbcb4f262712dc9e5172d21b9651a1765fee9a35d7093752e5",
+    "tcp_estados": [
+      "CloseWait",
+      "Established",
+      "Listen"
+    ],
+    "tcp_maximo_simultaneo": 4,
+    "telemetria_sha256": "5dbe3da99670d84c42f6f7fe4bdd974ea0ad426f286877d9589096a374b03452",
+    "uso": {
+      "entrada_cache_tokens": 0,
+      "entrada_tokens": 16784,
+      "razonamiento_tokens": 0,
+      "salida_tokens": 551,
+      "total_tokens": 17335
+    }
+  },
+  "naturaleza_defecto": null,
+  "observaciones_revision": [
+    "R0 utiliza «necesidad de intervenir», expresión susceptible de exceso si se separa del resto: la propia respuesta exige valoración y no prescribe inicio automático. R1 y R2 precisan «valorar tratamiento». Se registra la mejora de precisión, sin ocultarla ni imputar una indicación individual que no se formuló."
+  ],
+  "pasajes_contrastados": [
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "Citopenias (en especial, si son sintomáticas).",
+      "pagina": 0,
+      "seccion": "_13"
+    },
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "Presencia de otras complicaciones, a menudo infecciosas.",
+      "pagina": 0,
+      "seccion": "_13"
+    },
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "Los análogos de purina se deben evitar en casos\nde infección activa y de deficiencia renal o hepática moderada a grave.",
+      "pagina": 5,
+      "seccion": "_13"
+    }
+  ],
+  "recepcion_independiente": "pendiente",
+  "respuesta_original": "{\n  \"caso\": \"P23\",\n  \"estado_documental\": \"respuesta_fundada\",\n  \"etapa\": 0,\n  \"evidencias\": [\n    {\n      \"cita_literal_breve\": \"Citopenias (en especial, si son sintomáticas).\",\n      \"documento\": \"pdq-nci-hcl-es\",\n      \"fragmentos\": [0],\n      \"seccion\": \"_13\"\n    },\n    {\n      \"cita_literal_breve\": \"Presencia de otras complicaciones, a menudo infecciosas.\",\n      \"documento\": \"pdq-nci-hcl-es\",\n      \"fragmentos\": [0],\n      \"seccion\": \"_13\"\n    },\n    {\n      \"cita_literal_breve\": \"Los análogos de purina se deben evitar en casos\\nde infección activa y de deficiencia renal o hepática moderada a grave.\",\n      \"documento\": \"pdq-nci-hcl-es\",\n      \"fragmentos\": [5],\n      \"seccion\": \"_13\"\n    }\n  ],\n  \"fundamentos_verificables\": [\n    \"El inicio de la sección fundamenta la decisión de tratar en signos de progresión, entre ellos las citopenias sintomáticas y las complicaciones infecciosas.\",\n    \"La advertencia sobre infección activa limita la elección de análogos de purina; no anula la necesidad de valorar tratamiento. La sección incluye opciones distintas de cladribina y pentostatina, pero su enumeración no establece una pauta para este caso.\"\n  ],\n  \"insuficiencias\": [\n    \"La fuente no establece un algoritmo específico que determine alternativa, secuencia o momento de inicio para esta combinación de circunstancias. Por tanto, no queda acreditada una pauta individual ni que deba aplazarse todo tratamiento.\"\n  ],\n  \"respuesta\": \"Las citopenias ahora sintomáticas y la infección activa justifican valorar tratamiento: ya no corresponde trasladar sin más la posibilidad de observación del paciente asintomático con recuentos aceptables. Sin embargo, valorar tratamiento no equivale a iniciar cladribina o pentostatina: el PDQ advierte que los análogos de purina deben evitarse en infección activa. Ambas afirmaciones son compatibles: una aborda la necesidad de intervenir y la otra restringe la elección terapéutica. La fuente no permite deducir una pauta individual, una alternativa obligatoria ni un plazo concreto de inicio.\",\n  \"revision\": \"Etapa 0: respuesta provisional; no existen antecedentes ni entregas anteriores que contrastar.\"\n}",
+  "revision_citas": {
+    "citas": [
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "Citopenias (en especial, si son sintomáticas)."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "Presencia de otras complicaciones, a menudo infecciosas."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "Los análogos de purina se deben evitar en casos\nde infección activa y de deficiencia renal o hepática moderada a grave."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "solicitud_sha256": "16663bed7e2ec5ed786c90b5a14d5050c6c7bd27e91ec48a54864bb6a20f1965",
+  "sustantivo": "correcto",
+  "valor": "0"
+}

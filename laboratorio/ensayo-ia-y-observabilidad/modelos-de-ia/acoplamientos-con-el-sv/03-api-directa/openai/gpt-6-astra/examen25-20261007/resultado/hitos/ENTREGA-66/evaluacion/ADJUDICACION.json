@@ -1,0 +1,131 @@
+{
+  "alerta_limite": false,
+  "auditoria_sha256": "3fec025b3ad3aab42f2c31776e02b7d5c9c6ec11259a652d3212f580fea9ec32",
+  "caso": "P22",
+  "critico": true,
+  "estado_documental_candidato": "respuesta_fundada",
+  "etapa": 2,
+  "final_sha256": "d73915c9e7ada04483429a6b6bf8949f47191bbd4c9a138b091203334767867f",
+  "formal_conforme": true,
+  "fundamento_sustantivo": "Conserva la ausencia de BRAF V600E y las diferencias de respuesta y duración de la variante. No transforma menor respuesta en imposibilidad absoluta ni atribuye a la variante los resultados propios de la forma clásica.",
+  "limite_documental": null,
+  "medicion": {
+    "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+    "bytes_sse": 198606,
+    "caso": "P22-R2",
+    "cpu_delta_ms": 2343,
+    "duracion_ms": 23036,
+    "duracion_observada_ms": 26688,
+    "eventos_sse": 667,
+    "fallos_medicion": 0,
+    "final_sha256": "d73915c9e7ada04483429a6b6bf8949f47191bbd4c9a138b091203334767867f",
+    "intervalo_maximo_ms": 277,
+    "io_escritura_delta_bytes": 756227,
+    "io_lectura_delta_bytes": 30402269,
+    "muestras": 101,
+    "observaciones_udp": 0,
+    "primer_texto_ms": 3796,
+    "rss_maximo_bytes": 45371392,
+    "solicitud_sha256": "1f93fa0821b5a3d44e5c2f7531f275d47ebe37449f303f4303dbf7f1c87058e4",
+    "sse_sha256": "c183571e704a1cff61cec5f910dd3b9fc185a6453f1281c5b67f7379eb1d7a64",
+    "tcp_estados": [
+      "CloseWait",
+      "Established",
+      "Listen"
+    ],
+    "tcp_maximo_simultaneo": 4,
+    "telemetria_sha256": "5296effe3a067822829ec8cecab67459de6feeb086cffb184f21d4eadfc166eb",
+    "uso": {
+      "entrada_cache_tokens": 0,
+      "entrada_tokens": 4933,
+      "razonamiento_tokens": 0,
+      "salida_tokens": 672,
+      "total_tokens": 5605
+    }
+  },
+  "naturaleza_defecto": null,
+  "observaciones_revision": [],
+  "pasajes_contrastados": [
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "La mutación *BRAF*V600E es una característica genética que\ndefine la leucemia de células pilosas y que se puede usar para el diagnóstico.",
+      "pagina": 0,
+      "seccion": "_1"
+    },
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "Las células de la variante de la\nleucemia de células pilosas también carecen de mutaciones en *BRAF*.",
+      "pagina": 1,
+      "seccion": "_1"
+    },
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "una menor respuesta de la enfermedad al\ntratamiento con análogos de los nucleósidos de purina",
+      "pagina": 1,
+      "seccion": "_1"
+    },
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "una duración de la respuesta más\ncorta.",
+      "pagina": 1,
+      "seccion": "_1"
+    }
+  ],
+  "recepcion_independiente": "pendiente",
+  "respuesta_original": "{\n  \"caso\": \"P22\",\n  \"estado_documental\": \"respuesta_fundada\",\n  \"etapa\": 2,\n  \"evidencias\": [\n    {\n      \"cita_literal_breve\": \"La mutación *BRAF*V600E es una característica genética que\\ndefine la leucemia de células pilosas y que se puede usar para el diagnóstico.\",\n      \"documento\": \"pdq-nci-hcl-es\",\n      \"fragmentos\": [0],\n      \"seccion\": \"_1\"\n    },\n    {\n      \"cita_literal_breve\": \"Las células de la variante de la\\nleucemia de células pilosas también carecen de mutaciones en *BRAF*.\",\n      \"documento\": \"pdq-nci-hcl-es\",\n      \"fragmentos\": [1],\n      \"seccion\": \"_1\"\n    },\n    {\n      \"cita_literal_breve\": \"una menor respuesta de la enfermedad al\\ntratamiento con análogos de los nucleósidos de purina\",\n      \"documento\": \"pdq-nci-hcl-es\",\n      \"fragmentos\": [1],\n      \"seccion\": \"_1\"\n    },\n    {\n      \"cita_literal_breve\": \"una duración de la respuesta más\\ncorta.\",\n      \"documento\": \"pdq-nci-hcl-es\",\n      \"fragmentos\": [1],\n      \"seccion\": \"_1\"\n    }\n  ],\n  \"fundamentos_verificables\": [\n    \"El contraste entre BRAF V600E como característica definitoria y la ausencia de mutaciones en BRAF en la variante impide asumir equivalencia molecular.\",\n    \"La fuente atribuye a la variante menor respuesta a los análogos de los nucleósidos de purina y menor duración de la respuesta: son dos diferencias terapéuticas distintas.\",\n    \"Estas tres premisas invalidan la equivalencia automática planteada, pero no establecen ausencia absoluta de respuesta ni un resultado individual.\"\n  ],\n  \"insuficiencias\": [\n    \"La sección suministrada ofrece diferencias cualitativas, sin tasas comparativas ni duraciones numéricas de respuesta; no permite cuantificar la expectativa individual. Este límite no impide resolver la comparación solicitada.\"\n  ],\n  \"respuesta\": \"Las tres diferencias son: (1) la variante carece de mutaciones en BRAF, frente a BRAF V600E como característica definitoria de la forma clásica; (2) presenta menor respuesta al tratamiento con análogos de los nucleósidos de purina; y (3) la duración de la respuesta es más corta. Por tanto, la fuente no respalda trasladar automáticamente ni el supuesto molecular ni la misma expectativa terapéutica a la variante. Esto no significa que nunca responda ni constituye una predicción o prescripción individual.\",\n  \"revision\": \"El cotejo de ambas entregas con los fragmentos 0 y 1 confirma las tres diferencias y la exactitud de sus citas. Se mantiene la conclusión común; la cita molecular añadida en la segunda entrega aporta respaldo explícito al contraste ya formulado en la primera. No se requieren correcciones sustantivas.\"\n}",
+  "revision_citas": {
+    "citas": [
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "La mutación *BRAF*V600E es una característica genética que\ndefine la leucemia de células pilosas y que se puede usar para el diagnóstico."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "Las células de la variante de la\nleucemia de células pilosas también carecen de mutaciones en *BRAF*."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "una menor respuesta de la enfermedad al\ntratamiento con análogos de los nucleósidos de purina"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "una duración de la respuesta más\ncorta."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "solicitud_sha256": "1f93fa0821b5a3d44e5c2f7531f275d47ebe37449f303f4303dbf7f1c87058e4",
+  "sustantivo": "correcto",
+  "valor": "0"
+}

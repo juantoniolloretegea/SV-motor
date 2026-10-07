@@ -1,0 +1,78 @@
+{
+  "alerta_limite": false,
+  "auditoria_sha256": "b4deb0a96786617fd794335856a6965cead8ab48c5b29bc0c24229c9ef02a886",
+  "caso": "P13",
+  "critico": true,
+  "estado_documental_candidato": "respuesta_fundada",
+  "etapa": 0,
+  "final_sha256": "534afa745a617b81f1c42c1f389467f91d96f18479b607cd6f2ac8082430bc21",
+  "formal_conforme": true,
+  "fundamento_sustantivo": "Exige comprobar el estado BRAF de la persona; la frecuencia de la mutación no prueba su presencia individual. No propone técnica ni prescribe. Las revisiones conservan el contexto pandémico del pasaje.",
+  "limite_documental": null,
+  "medicion": {
+    "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+    "bytes_sse": 99734,
+    "caso": "P13-R0",
+    "cpu_delta_ms": 2156,
+    "duracion_ms": 13244,
+    "duracion_observada_ms": 16730,
+    "eventos_sse": 311,
+    "fallos_medicion": 0,
+    "final_sha256": "534afa745a617b81f1c42c1f389467f91d96f18479b607cd6f2ac8082430bc21",
+    "intervalo_maximo_ms": 286,
+    "io_escritura_delta_bytes": 379628,
+    "io_lectura_delta_bytes": 17925214,
+    "muestras": 61,
+    "observaciones_udp": 0,
+    "primer_texto_ms": 3777,
+    "rss_maximo_bytes": 49184768,
+    "solicitud_sha256": "4dc758149377f92a5e6cc997377cbb739c227785eddfcd1e1acc5da28f29cef8",
+    "sse_sha256": "264c0d0975a9ce79e3eef43ad19542b7b8c667be46cbd85884ad72a4e3c8010e",
+    "tcp_estados": [
+      "CloseWait",
+      "Established",
+      "FinWait1",
+      "Listen"
+    ],
+    "tcp_maximo_simultaneo": 4,
+    "telemetria_sha256": "9d9b64b73498bf6c4a6053445d730c2d37cb1c9924f57bf5c1a4f81f4efd683d",
+    "uso": {
+      "entrada_cache_tokens": 0,
+      "entrada_tokens": 16783,
+      "razonamiento_tokens": 0,
+      "salida_tokens": 316,
+      "total_tokens": 17099
+    }
+  },
+  "naturaleza_defecto": null,
+  "observaciones_revision": [],
+  "pasajes_contrastados": [
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "La mayoría de los pacientes con leucemia de células pilosas tienen\n   una mutación en *BRAF*, sin embargo, este estado se debe comprobar",
+      "pagina": 1,
+      "seccion": "_13"
+    }
+  ],
+  "recepcion_independiente": "pendiente",
+  "respuesta_original": "{\n  \"caso\": \"P13\",\n  \"estado_documental\": \"respuesta_fundada\",\n  \"etapa\": 0,\n  \"evidencias\": [\n    {\n      \"cita_literal_breve\": \"La mayoría de los pacientes con leucemia de células pilosas tienen\\n   una mutación en *BRAF*, sin embargo, este estado se debe comprobar\",\n      \"documento\": \"pdq-nci-hcl-es\",\n      \"fragmentos\": [1],\n      \"seccion\": \"_13\"\n    }\n  ],\n  \"fundamentos_verificables\": [\n    \"La fuente distingue la frecuencia elevada de la mutación de la exigencia de comprobar ese estado. Por tanto, la frecuencia poblacional no sustituye la comprobación en la persona sintética.\"\n  ],\n  \"insuficiencias\": [\n    \"No se aporta el resultado molecular de la persona sintética; no queda acreditado que presente una mutación en BRAF. Esta ausencia no impide identificar la comprobación exigida por la fuente.\"\n  ],\n  \"respuesta\": \"La fuente no permite omitir la comprobación del estado mutacional de BRAF en la persona sintética. Que la mutación sea muy frecuente no acredita que esté presente en ese caso; es necesario comprobarlo, sin presumir un resultado positivo a partir de la frecuencia poblacional.\",\n  \"revision\": \"Respuesta provisional de etapa 0. No existen antecedentes ni entregas anteriores que contrastar.\"\n}",
+  "revision_citas": {
+    "citas": [
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "La mayoría de los pacientes con leucemia de células pilosas tienen\n   una mutación en *BRAF*, sin embargo, este estado se debe comprobar"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "solicitud_sha256": "4dc758149377f92a5e6cc997377cbb739c227785eddfcd1e1acc5da28f29cef8",
+  "sustantivo": "correcto",
+  "valor": "0"
+}

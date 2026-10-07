@@ -1,0 +1,48 @@
+{
+  "conformidad_ISO": "No evaluada; referencias y alcance en la adenda de continuidad",
+  "duracion_total_caida_proveedor": null,
+  "entregas_completas": 75,
+  "estado_examen": "entregas_pendientes_recibidas",
+  "incidencias": [
+    {
+      "caso": "P01-R0",
+      "causa_receptor_local": "Evento ajeno al contrato",
+      "duracion_operacion_ms": 32247,
+      "error_proveedor": null,
+      "evento_terminal": "keepalive",
+      "fin_operacion_utc_ms": 1791380058258,
+      "http": 200,
+      "inicio_envio_utc_ms": 1791380026012,
+      "latencia_error_ms": null,
+      "respuesta_entregada": false,
+      "revision": "r1",
+      "sse_sha256": "98c28d0055b4736492e69e8b5b5542287e29566b70e6b1f7901287a29de55d1b",
+      "uso_proveedor": null
+    },
+    {
+      "caso": "P15-R0",
+      "causa_receptor_local": "Evento posterior al cierre",
+      "duracion_operacion_ms": 2141,
+      "error_proveedor": {
+        "code": "server_is_overloaded",
+        "message": "Our servers are currently overloaded. Please try again later."
+      },
+      "evento_terminal": "response.failed",
+      "fin_operacion_utc_ms": 1791381735527,
+      "http": 200,
+      "inicio_envio_utc_ms": 1791381733385,
+      "latencia_error_ms": 2095,
+      "respuesta_entregada": false,
+      "revision": "r2",
+      "sse_sha256": "170e181a30135469562653365009e5106c46d963258b71ff49c0e279c59af4d2",
+      "uso_proveedor": null
+    }
+  ],
+  "intentos": 77,
+  "intentos_sin_entrega": 2,
+  "limite": "Las pausas locales y los intervalos sin peticiones no demuestran indisponibilidad continua del proveedor",
+  "modelo": "gpt-6-astra",
+  "periodos_observados_r3": [],
+  "proveedor": "OpenAI",
+  "puntuacion_proveedor": null
+}

@@ -1,0 +1,134 @@
+{
+  "alerta_limite": false,
+  "auditoria_sha256": "09f5b595ecd72df4404a0e54f31de04896df8dc86b710c8645143ffa1c5892f2",
+  "caso": "P23",
+  "critico": true,
+  "estado_documental_candidato": "respuesta_fundada",
+  "etapa": 1,
+  "final_sha256": "3f210b699e65da78d1d3e4ee741315a554a866985c30b9bbe3b310f700f48e83",
+  "formal_conforme": true,
+  "fundamento_sustantivo": "Conserva conjuntamente progresión e infección activa: necesidad de valorar tratamiento y evitación de análogos de purinas en presencia de infección activa. No inventa una alternativa, pauta, dosis ni prohibición de todo tratamiento.",
+  "limite_documental": null,
+  "medicion": {
+    "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+    "bytes_sse": 228081,
+    "caso": "P23-R1",
+    "cpu_delta_ms": 3172,
+    "duracion_ms": 28431,
+    "duracion_observada_ms": 32313,
+    "eventos_sse": 775,
+    "fallos_medicion": 0,
+    "final_sha256": "3f210b699e65da78d1d3e4ee741315a554a866985c30b9bbe3b310f700f48e83",
+    "intervalo_maximo_ms": 340,
+    "io_escritura_delta_bytes": 905958,
+    "io_lectura_delta_bytes": 29378219,
+    "muestras": 121,
+    "observaciones_udp": 0,
+    "primer_texto_ms": 4050,
+    "rss_maximo_bytes": 45694976,
+    "solicitud_sha256": "187c661827273620200444be678d368229ac972c0468d31d13569a79cbf9982d",
+    "sse_sha256": "7309ff5e8c32a6ec97747564546d3164ba0d7dbe0f440f56e6188aaf8532b8ce",
+    "tcp_estados": [
+      "CloseWait",
+      "Established",
+      "FinWait1",
+      "Listen"
+    ],
+    "tcp_maximo_simultaneo": 4,
+    "telemetria_sha256": "dfcbe0739ab456fbc88ecc2b50e54db4cd7b8447106ef0772a538d4c9106f704",
+    "uso": {
+      "entrada_cache_tokens": 0,
+      "entrada_tokens": 17433,
+      "razonamiento_tokens": 0,
+      "salida_tokens": 780,
+      "total_tokens": 18213
+    }
+  },
+  "naturaleza_defecto": null,
+  "observaciones_revision": [
+    "R0 utiliza «necesidad de intervenir», expresión susceptible de exceso si se separa del resto: la propia respuesta exige valoración y no prescribe inicio automático. R1 y R2 precisan «valorar tratamiento». Se registra la mejora de precisión, sin ocultarla ni imputar una indicación individual que no se formuló."
+  ],
+  "pasajes_contrastados": [
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "Citopenias (en especial, si son sintomáticas).",
+      "pagina": 0,
+      "seccion": "_13"
+    },
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "Presencia de otras complicaciones, a menudo infecciosas.",
+      "pagina": 0,
+      "seccion": "_13"
+    },
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "Si el paciente es asintomático y los recuentos sanguíneos se mantienen dentro de los límites\naceptables, quizás el tratamiento no sea necesario.",
+      "pagina": 0,
+      "seccion": "_13"
+    },
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "Los análogos de purina se deben evitar en casos\nde infección activa y de deficiencia renal o hepática moderada a grave.",
+      "pagina": 5,
+      "seccion": "_13"
+    }
+  ],
+  "recepcion_independiente": "pendiente",
+  "respuesta_original": "{\n  \"caso\": \"P23\",\n  \"estado_documental\": \"respuesta_fundada\",\n  \"etapa\": 1,\n  \"evidencias\": [\n    {\n      \"cita_literal_breve\": \"Citopenias (en especial, si son sintomáticas).\",\n      \"documento\": \"pdq-nci-hcl-es\",\n      \"fragmentos\": [0],\n      \"seccion\": \"_13\"\n    },\n    {\n      \"cita_literal_breve\": \"Presencia de otras complicaciones, a menudo infecciosas.\",\n      \"documento\": \"pdq-nci-hcl-es\",\n      \"fragmentos\": [0],\n      \"seccion\": \"_13\"\n    },\n    {\n      \"cita_literal_breve\": \"Si el paciente es asintomático y los recuentos sanguíneos se mantienen dentro de los límites\\naceptables, quizás el tratamiento no sea necesario.\",\n      \"documento\": \"pdq-nci-hcl-es\",\n      \"fragmentos\": [0],\n      \"seccion\": \"_13\"\n    },\n    {\n      \"cita_literal_breve\": \"Los análogos de purina se deben evitar en casos\\nde infección activa y de deficiencia renal o hepática moderada a grave.\",\n      \"documento\": \"pdq-nci-hcl-es\",\n      \"fragmentos\": [5],\n      \"seccion\": \"_13\"\n    }\n  ],\n  \"fundamentos_verificables\": [\n    \"El PDQ fundamenta la decisión de tratar en signos de progresión que incluyen citopenias sintomáticas y complicaciones, a menudo infecciosas. Estos criterios sustentan valorar tratamiento, sin determinar por sí solos una pauta.\",\n    \"La posibilidad de no tratar se describe para pacientes asintomáticos con recuentos aceptables; esa justificación no se traslada sin más al supuesto ahora sintomático.\",\n    \"La advertencia de evitar análogos de purina en infección activa aparece en los apartados de cladribina y pentostatina, fuera de las recomendaciones específicas de la pandemia. Restringe la elección terapéutica, pero no establece que deba aplazarse todo tratamiento.\"\n  ],\n  \"insuficiencias\": [\n    \"La sección suministrada ofrece criterios para valorar tratamiento, una advertencia sobre análogos de purina y otras opciones terapéuticas, pero no un algoritmo para esta combinación de circunstancias. No acredita una alternativa obligatoria, una secuencia ni un plazo de inicio individual; faltaría una pauta documental específica para determinarlos.\"\n  ],\n  \"respuesta\": \"Las citopenias sintomáticas y la infección activa sustentan valorar tratamiento según los signos de progresión descritos por el PDQ. La posibilidad previa de observación no se traslada automáticamente al nuevo escenario. Esto no equivale a iniciar cladribina o pentostatina: la fuente indica evitar los análogos de purina en infección activa. No hay contradicción: los criterios de tratamiento motivan la valoración, mientras la advertencia restringe la elección terapéutica. La fuente no determina para este caso una alternativa obligatoria, una secuencia ni un plazo, y tampoco permite concluir que deba aplazarse todo tratamiento.\",\n  \"revision\": \"Se mantiene la conclusión provisional y sus citas, contrastadas con la sección completa. Se añade la cita que respalda el límite de la observación y se precisa que la advertencia no depende del contexto pandémico. La expresión anterior «necesidad de intervenir» se sustituye por «valorar tratamiento» para no sugerir una intervención inmediata obligatoria. Los límites sobre pauta y momento de inicio permanecen justificados.\"\n}",
+  "revision_citas": {
+    "citas": [
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "Citopenias (en especial, si son sintomáticas)."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "Presencia de otras complicaciones, a menudo infecciosas."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "Si el paciente es asintomático y los recuentos sanguíneos se mantienen dentro de los límites\naceptables, quizás el tratamiento no sea necesario."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "Los análogos de purina se deben evitar en casos\nde infección activa y de deficiencia renal o hepática moderada a grave."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "solicitud_sha256": "187c661827273620200444be678d368229ac972c0468d31d13569a79cbf9982d",
+  "sustantivo": "correcto",
+  "valor": "0"
+}

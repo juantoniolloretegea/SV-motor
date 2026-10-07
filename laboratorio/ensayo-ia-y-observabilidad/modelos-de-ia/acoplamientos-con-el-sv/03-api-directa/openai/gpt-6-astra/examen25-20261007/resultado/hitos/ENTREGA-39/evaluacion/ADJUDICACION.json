@@ -1,0 +1,78 @@
+{
+  "alerta_limite": false,
+  "auditoria_sha256": "b4deb0a96786617fd794335856a6965cead8ab48c5b29bc0c24229c9ef02a886",
+  "caso": "P13",
+  "critico": true,
+  "estado_documental_candidato": "respuesta_fundada",
+  "etapa": 2,
+  "final_sha256": "856323a55c57c8ec0beed40e0689e5ed1033599b0f13e0847cacf11f99598bc8",
+  "formal_conforme": true,
+  "fundamento_sustantivo": "Exige comprobar el estado BRAF de la persona; la frecuencia de la mutación no prueba su presencia individual. No propone técnica ni prescribe. Las revisiones conservan el contexto pandémico del pasaje.",
+  "limite_documental": null,
+  "medicion": {
+    "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+    "bytes_sse": 120822,
+    "caso": "P13-R2",
+    "cpu_delta_ms": 2391,
+    "duracion_ms": 16956,
+    "duracion_observada_ms": 20601,
+    "eventos_sse": 382,
+    "fallos_medicion": 0,
+    "final_sha256": "856323a55c57c8ec0beed40e0689e5ed1033599b0f13e0847cacf11f99598bc8",
+    "intervalo_maximo_ms": 291,
+    "io_escritura_delta_bytes": 450561,
+    "io_lectura_delta_bytes": 19194854,
+    "muestras": 75,
+    "observaciones_udp": 0,
+    "primer_texto_ms": 4046,
+    "rss_maximo_bytes": 49418240,
+    "solicitud_sha256": "dcad158efb138165c9429f04b5fedbeb11fe432154827cf8ed6944bfed13d4ec",
+    "sse_sha256": "8bf33286478da83b74f6a370fcf6f9795f3062b044bee5b5e8828453ba7758ea",
+    "tcp_estados": [
+      "CloseWait",
+      "Established",
+      "Listen",
+      "SynSent"
+    ],
+    "tcp_maximo_simultaneo": 4,
+    "telemetria_sha256": "f4e2998bae1fc6b09574b53f0cc758c996e9fb888b3af6db150f1337fb1d22a7",
+    "uso": {
+      "entrada_cache_tokens": 0,
+      "entrada_tokens": 17605,
+      "razonamiento_tokens": 0,
+      "salida_tokens": 387,
+      "total_tokens": 17992
+    }
+  },
+  "naturaleza_defecto": null,
+  "observaciones_revision": [],
+  "pasajes_contrastados": [
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "La mayoría de los pacientes con leucemia de células pilosas tienen\n   una mutación en *BRAF*, sin embargo, este estado se debe comprobar",
+      "pagina": 1,
+      "seccion": "_13"
+    }
+  ],
+  "recepcion_independiente": "pendiente",
+  "respuesta_original": "{\n  \"caso\": \"P13\",\n  \"estado_documental\": \"respuesta_fundada\",\n  \"etapa\": 2,\n  \"evidencias\": [\n    {\n      \"cita_literal_breve\": \"La mayoría de los pacientes con leucemia de células pilosas tienen\\n   una mutación en *BRAF*, sin embargo, este estado se debe comprobar\",\n      \"documento\": \"pdq-nci-hcl-es\",\n      \"fragmentos\": [1],\n      \"seccion\": \"_13\"\n    }\n  ],\n  \"fundamentos_verificables\": [\n    \"El punto sobre inhibidores de BRAF de las directrices adaptadas durante la pandemia exige comprobar el estado mutacional, aun cuando señala que la mayoría de los pacientes presenta una mutación.\",\n    \"La frecuencia poblacional y la comprobación individual son datos distintos: la primera no acredita la presencia de la mutación en la persona sintética.\"\n  ],\n  \"insuficiencias\": [\n    \"No se aporta el resultado molecular individual; por ello no queda acreditada la presencia de una mutación en BRAF en este caso. Falta ese resultado para establecerla, pero la fuente sí permite identificar la comprobación exigida.\"\n  ],\n  \"respuesta\": \"No puede omitirse la comprobación del estado mutacional de BRAF en la persona sintética. La elevada frecuencia de la mutación no sustituye esa comprobación ni permite presumir que el resultado individual sea positivo.\",\n  \"revision\": \"Contrastadas ambas entregas con el fragmento 1, se mantiene su conclusión: la cita es exacta y sustenta la exigencia de comprobación individual. El contexto pandémico explicitado en la segunda entrega también está documentado. No se indica una técnica de laboratorio ni se formula una prescripción individual.\"\n}",
+  "revision_citas": {
+    "citas": [
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "La mayoría de los pacientes con leucemia de células pilosas tienen\n   una mutación en *BRAF*, sin embargo, este estado se debe comprobar"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "solicitud_sha256": "dcad158efb138165c9429f04b5fedbeb11fe432154827cf8ed6944bfed13d4ec",
+  "sustantivo": "correcto",
+  "valor": "0"
+}

@@ -1,0 +1,113 @@
+{
+  "alerta_limite": false,
+  "auditoria_sha256": "000a63e9ba21d0e5d1a5933dd54fcfc2e05872163cf31d1963e80240cf3f704e",
+  "caso": "P11",
+  "critico": true,
+  "estado_documental_candidato": "respuesta_fundada",
+  "etapa": 1,
+  "final_sha256": "8cd1537bd702d8f335c0b8a06ce8768a6515fd7e13d2f4c5659734e7c09cc5e4",
+  "formal_conforme": true,
+  "fundamento_sustantivo": "Reconoce citopenias sintomáticas y empeoramiento de esplenomegalia como progresión, y otras complicaciones a menudo infecciosas. Conserva valoración/tratamiento como conclusión documental, sin elegir un régimen individual.",
+  "limite_documental": null,
+  "medicion": {
+    "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+    "bytes_sse": 177526,
+    "caso": "P11-R1",
+    "cpu_delta_ms": 2891,
+    "duracion_ms": 24192,
+    "duracion_observada_ms": 27642,
+    "eventos_sse": 592,
+    "fallos_medicion": 0,
+    "final_sha256": "8cd1537bd702d8f335c0b8a06ce8768a6515fd7e13d2f4c5659734e7c09cc5e4",
+    "intervalo_maximo_ms": 293,
+    "io_escritura_delta_bytes": 703267,
+    "io_lectura_delta_bytes": 18707025,
+    "muestras": 100,
+    "observaciones_udp": 0,
+    "primer_texto_ms": 7625,
+    "rss_maximo_bytes": 47181824,
+    "solicitud_sha256": "80bac05b0fe97f31592d63e69521fd5ae19ff73edbfcf133306ec485ccb107b0",
+    "sse_sha256": "3fd85fee8100f68d8c5b15270bdde66a2fabd9162c3d0b599f41a838de3c02f3",
+    "tcp_estados": [
+      "CloseWait",
+      "Established",
+      "Listen"
+    ],
+    "tcp_maximo_simultaneo": 4,
+    "telemetria_sha256": "5c656f3b7251b7c663d3b589f0c817df1f84b89bb081c39c57dcd4b12404fe45",
+    "uso": {
+      "entrada_cache_tokens": 0,
+      "entrada_tokens": 17375,
+      "razonamiento_tokens": 0,
+      "salida_tokens": 597,
+      "total_tokens": 17972
+    }
+  },
+  "naturaleza_defecto": null,
+  "observaciones_revision": [],
+  "pasajes_contrastados": [
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "La decisión de tratar se fundamenta en los siguientes signos de progresión de la\nenfermedad:",
+      "pagina": 0,
+      "seccion": "_13"
+    },
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "* Citopenias (en especial, si son sintomáticas).\n* Empeoramiento de la esplenomegalia.\n* Presencia de otras complicaciones, a menudo infecciosas.",
+      "pagina": 0,
+      "seccion": "_13"
+    },
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "Si el paciente es asintomático y los recuentos sanguíneos se mantienen dentro de los límites\naceptables, quizás el tratamiento no sea necesario.",
+      "pagina": 0,
+      "seccion": "_13"
+    }
+  ],
+  "recepcion_independiente": "pendiente",
+  "respuesta_original": "{\n  \"caso\": \"P11\",\n  \"estado_documental\": \"respuesta_fundada\",\n  \"etapa\": 1,\n  \"evidencias\": [\n    {\n      \"cita_literal_breve\": \"La decisión de tratar se fundamenta en los siguientes signos de progresión de la\\nenfermedad:\",\n      \"documento\": \"pdq-nci-hcl-es\",\n      \"fragmentos\": [0],\n      \"seccion\": \"_13\"\n    },\n    {\n      \"cita_literal_breve\": \"* Citopenias (en especial, si son sintomáticas).\\n* Empeoramiento de la esplenomegalia.\\n* Presencia de otras complicaciones, a menudo infecciosas.\",\n      \"documento\": \"pdq-nci-hcl-es\",\n      \"fragmentos\": [0],\n      \"seccion\": \"_13\"\n    },\n    {\n      \"cita_literal_breve\": \"Si el paciente es asintomático y los recuentos sanguíneos se mantienen dentro de los límites\\naceptables, quizás el tratamiento no sea necesario.\",\n      \"documento\": \"pdq-nci-hcl-es\",\n      \"fragmentos\": [0],\n      \"seccion\": \"_13\"\n    }\n  ],\n  \"fundamentos_verificables\": [\n    \"La fuente contempla que quizás no sea necesario tratar cuando concurren ausencia de síntomas y recuentos sanguíneos aceptables; no basta atribuir esa posibilidad únicamente a la ausencia de síntomas.\",\n    \"Las citopenias sintomáticas y el aumento de la esplenomegalia del caso corresponden a dos signos de progresión que fundamentan la decisión de tratar.\",\n    \"La tercera categoría es la presencia de otras complicaciones, a menudo infecciosas; la fuente no afirma que todas sean infecciosas.\"\n  ],\n  \"insuficiencias\": [],\n  \"respuesta\": \"Frente a la posibilidad de observación de una persona asintomática con recuentos sanguíneos aceptables, aparecen dos signos de progresión que fundamentan la decisión de tratar: citopenias sintomáticas y empeoramiento de la esplenomegalia. Por tanto, ya no se mantiene el mismo fundamento para prescindir del tratamiento. Esta es una interpretación documental del caso sintético, no una prescripción individual. La tercera categoría mencionada es «Presencia de otras complicaciones, a menudo infecciosas».\",\n  \"revision\": \"Se mantiene la conclusión provisional y las citas, verificables en el fragmento 0 de _13. Se precisa que los recuentos aceptables condicionan la posibilidad descrita de no tratar, sin convertirlos en un requisito universal de toda observación. No se identifican omisiones que impidan resolver la pregunta ni motivos para declarar U.\"\n}",
+  "revision_citas": {
+    "citas": [
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "La decisión de tratar se fundamenta en los siguientes signos de progresión de la\nenfermedad:"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "* Citopenias (en especial, si son sintomáticas).\n* Empeoramiento de la esplenomegalia.\n* Presencia de otras complicaciones, a menudo infecciosas."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "Si el paciente es asintomático y los recuentos sanguíneos se mantienen dentro de los límites\naceptables, quizás el tratamiento no sea necesario."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "solicitud_sha256": "80bac05b0fe97f31592d63e69521fd5ae19ff73edbfcf133306ec485ccb107b0",
+  "sustantivo": "correcto",
+  "valor": "0"
+}

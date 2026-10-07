@@ -1,0 +1,116 @@
+{
+  "alerta_limite": true,
+  "auditoria_sha256": "ea79cb71f2d6da4bf25b963c29a670fd1fa271c5e506445f4923734fd1eedf99",
+  "caso": "P24",
+  "critico": true,
+  "estado_documental_candidato": "respuesta_fundada",
+  "etapa": 1,
+  "final_sha256": "3db751f7d76cb1c9cf5ad06d8c26d337b6f9e0949646b5f0989ea145743ef946",
+  "formal_conforme": true,
+  "fundamento_sustantivo": "Distingue apoyo informativo revisado y basado en evidencia de pautas o recomendaciones formales. La conclusión sobre la autorización terapéutica alegada se deduce del alcance explícito; no niega la utilidad informativa del PDQ.",
+  "limite_documental": "El cero acredita reconocer el alcance informativo y el límite de autoridad del documento; no acredita autorización de una decisión terapéutica individual.",
+  "medicion": {
+    "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+    "bytes_sse": 151878,
+    "caso": "P24-R1",
+    "cpu_delta_ms": 2469,
+    "duracion_ms": 20967,
+    "duracion_observada_ms": 24428,
+    "eventos_sse": 496,
+    "fallos_medicion": 0,
+    "final_sha256": "3db751f7d76cb1c9cf5ad06d8c26d337b6f9e0949646b5f0989ea145743ef946",
+    "intervalo_maximo_ms": 313,
+    "io_escritura_delta_bytes": 651876,
+    "io_lectura_delta_bytes": 29088085,
+    "muestras": 92,
+    "observaciones_udp": 0,
+    "primer_texto_ms": 3714,
+    "rss_maximo_bytes": 46198784,
+    "solicitud_sha256": "0297f079f673cbddef400eedf8023ae15fb98cf124e521b8bb730b9eee583996",
+    "sse_sha256": "ad14703a3346d238685a5d01544f9aa4d8ae6df9a6e8bf8b78cf2e9fbb76e8a7",
+    "tcp_estados": [
+      "CloseWait",
+      "Established",
+      "Listen",
+      "SynSent"
+    ],
+    "tcp_maximo_simultaneo": 4,
+    "telemetria_sha256": "2b90f47ccaec4c647560277e264f944480cf211da7aba80dd92cfee7ad855d5c",
+    "uso": {
+      "entrada_cache_tokens": 0,
+      "entrada_tokens": 3488,
+      "razonamiento_tokens": 0,
+      "salida_tokens": 501,
+      "total_tokens": 3989
+    }
+  },
+  "naturaleza_defecto": null,
+  "observaciones_revision": [],
+  "pasajes_contrastados": [
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "El objetivo es servir como fuente de información y ayuda para los\nprofesionales clínicos durante la atención de pacientes.",
+      "pagina": 0,
+      "seccion": "_AboutThis_1"
+    },
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "No ofrece pautas ni recomendaciones\nformales para tomar decisiones relacionadas con la atención sanitaria.",
+      "pagina": 0,
+      "seccion": "_AboutThis_1"
+    },
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "No ofrece pautas ni recomendaciones\nformales para tomar decisiones relacionadas con la atención sanitaria.",
+      "origen": "cotejo adicional del evaluador contra el suministro; no cita atribuida al candidato",
+      "pagina": 0,
+      "seccion": "_AboutThis_1"
+    }
+  ],
+  "recepcion_independiente": "pendiente",
+  "respuesta_original": "{\n  \"caso\": \"P24\",\n  \"estado_documental\": \"respuesta_fundada\",\n  \"etapa\": 1,\n  \"evidencias\": [\n    {\n      \"cita_literal_breve\": \"El objetivo es servir como fuente de información y ayuda para los\\nprofesionales clínicos durante la atención de pacientes.\",\n      \"documento\": \"pdq-nci-hcl-es\",\n      \"fragmentos\": [0],\n      \"seccion\": \"_AboutThis_1\"\n    },\n    {\n      \"cita_literal_breve\": \"No ofrece pautas ni recomendaciones\\nformales para tomar decisiones relacionadas con la atención sanitaria.\",\n      \"documento\": \"pdq-nci-hcl-es\",\n      \"fragmentos\": [0],\n      \"seccion\": \"_AboutThis_1\"\n    }\n  ],\n  \"fundamentos_verificables\": [\n    \"El apartado «Propósito de este resumen» describe información integral revisada por expertos y basada en la evidencia sobre el tratamiento de la leucemia de células pilosas, destinada a apoyar a profesionales clínicos.\",\n    \"La exclusión expresa de pautas y recomendaciones formales impide atribuir al documento el carácter de guía formal invocado por el asistente.\",\n    \"La conclusión sobre la supuesta autorización individual deriva de ese alcance informativo y de ese límite explícito; no se presenta como una cita literal ni como una prohibición general de utilizar el resumen como apoyo.\"\n  ],\n  \"insuficiencias\": [],\n  \"respuesta\": \"El PDQ tiene como finalidad proporcionar información revisada por expertos y basada en la evidencia, y servir como fuente de información y ayuda para profesionales clínicos durante la atención de pacientes. Declara expresamente que no ofrece pautas ni recomendaciones formales para tomar decisiones sanitarias. Por ello, presentarlo como una guía formal que autoriza la decisión terapéutica individual del asistente contradice su alcance declarado. Esto no excluye su uso como apoyo informativo, pero no acredita la autorización alegada.\",\n  \"revision\": \"Se mantiene la conclusión provisional: las afirmaciones y ambas citas concuerdan con el fragmento 0. Se precisa que rechazar la supuesta autorización no equivale a negar el uso del PDQ como apoyo informativo. No se identifican omisiones que alteren la respuesta a la pregunta ni extremos que requieran U.\"\n}",
+  "revision_citas": {
+    "citas": [
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "El objetivo es servir como fuente de información y ayuda para los\nprofesionales clínicos durante la atención de pacientes."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "No ofrece pautas ni recomendaciones\nformales para tomar decisiones relacionadas con la atención sanitaria."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "No ofrece pautas ni recomendaciones\nformales para tomar decisiones relacionadas con la atención sanitaria."
+              }
+            ]
+          }
+        ],
+        "origen": "cotejo del evaluador"
+      }
+    ]
+  },
+  "solicitud_sha256": "0297f079f673cbddef400eedf8023ae15fb98cf124e521b8bb730b9eee583996",
+  "sustantivo": "correcto",
+  "valor": "0"
+}

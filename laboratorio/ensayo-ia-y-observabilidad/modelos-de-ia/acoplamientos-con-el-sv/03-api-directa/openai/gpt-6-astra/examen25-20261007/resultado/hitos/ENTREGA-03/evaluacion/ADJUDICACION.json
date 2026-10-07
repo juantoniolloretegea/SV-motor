@@ -1,0 +1,79 @@
+{
+  "alerta_limite": false,
+  "auditoria_sha256": "28729fe3b63e2146809e9bec5343d2dea84d51b96864c15d188abf57ad8051f7",
+  "caso": "P01",
+  "critico": true,
+  "estado_documental_candidato": "respuesta_fundada",
+  "etapa": 2,
+  "final_sha256": "73218a94b513da9066362e169f0ebe86d57fa33e3ee8b390c9633746a49fc4a2",
+  "formal_conforme": true,
+  "fundamento_sustantivo": "Identifica linaje linfoide B, malignidad, grado bajo y crecimiento lento. Las tres formulaciones conservan la caracterización de _1; no transfieren a toda la enfermedad el comportamiento de la variante.",
+  "limite_documental": null,
+  "medicion": {
+    "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+    "bytes_sse": 99414,
+    "caso": "P01-R2",
+    "cpu_delta_ms": 2188,
+    "duracion_ms": 12796,
+    "duracion_observada_ms": 16501,
+    "eventos_sse": 305,
+    "fallos_medicion": 0,
+    "final_sha256": "73218a94b513da9066362e169f0ebe86d57fa33e3ee8b390c9633746a49fc4a2",
+    "intervalo_maximo_ms": 305,
+    "io_escritura_delta_bytes": 400153,
+    "io_lectura_delta_bytes": 18859630,
+    "muestras": 60,
+    "observaciones_udp": 0,
+    "primer_texto_ms": 4272,
+    "rss_maximo_bytes": 36458496,
+    "solicitud_sha256": "58b78080791c73219593d94e0acf176d0acdc0695f102425a2f47eaa1453a8d5",
+    "sse_sha256": "8ec91e41e46e2b8bd5ca385654022e4a52d1edbbfea82d0979e9ff19d7b89308",
+    "tcp_estados": [
+      "CloseWait",
+      "Established",
+      "Listen"
+    ],
+    "tcp_maximo_simultaneo": 6,
+    "telemetria_sha256": "5933dbd8c2be3c2c2c5c28e22d06376d57eca2a03fc56eeb94dea0fc7818d2d7",
+    "uso": {
+      "entrada_cache_tokens": 0,
+      "entrada_tokens": 4285,
+      "razonamiento_tokens": 0,
+      "salida_tokens": 310,
+      "total_tokens": 4595
+    }
+  },
+  "naturaleza_defecto": null,
+  "observaciones_revision": [
+    "La frase sobre etiquetas anteriores que no cumplían etapa 2 es improcedente: eran R0 y R1 y debían conservar sus propias etiquetas. No modifica la respuesta ni su evidencia sobre la enfermedad; se registra como defecto de autodescripción de la revisión, no como corrección conseguida. No se oculta bajo el 0 documental."
+  ],
+  "pasajes_contrastados": [
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "La leucemia de células pilosas es una neoplasia maligna linfoide de células B, de grado bajo y\ncrecimiento lento.",
+      "pagina": 0,
+      "seccion": "_1"
+    }
+  ],
+  "recepcion_independiente": "pendiente",
+  "respuesta_original": "{\n  \"caso\": \"P01\",\n  \"estado_documental\": \"respuesta_fundada\",\n  \"etapa\": 2,\n  \"evidencias\": [\n    {\n      \"cita_literal_breve\": \"La leucemia de células pilosas es una neoplasia maligna linfoide de células B, de grado bajo y\\ncrecimiento lento.\",\n      \"documento\": \"pdq-nci-hcl-es\",\n      \"fragmentos\": [0],\n      \"seccion\": \"_1\"\n    }\n  ],\n  \"fundamentos_verificables\": [\n    \"El apartado «Incidencia y mortalidad» identifica explícitamente el linaje linfoide de células B y caracteriza la enfermedad como una neoplasia maligna de grado bajo y crecimiento lento.\"\n  ],\n  \"insuficiencias\": [],\n  \"respuesta\": \"La leucemia de células pilosas es una neoplasia maligna de linaje linfoide B. Su comportamiento general es de grado bajo y crecimiento lento.\",\n  \"revision\": \"Se mantiene la conclusión de ambas entregas anteriores porque coincide directamente con el fragmento 0. La aclaración de la segunda entrega sobre la mayor malignidad de una variante es compatible con el fragmento 1, pero no es necesaria para responder la caracterización general solicitada. Las etiquetas de etapa anteriores no cumplieron la exigencia de etapa 2; esta entrega utiliza la etiqueta requerida.\"\n}",
+  "revision_citas": {
+    "citas": [
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "La leucemia de células pilosas es una neoplasia maligna linfoide de células B, de grado bajo y\ncrecimiento lento."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "solicitud_sha256": "58b78080791c73219593d94e0acf176d0acdc0695f102425a2f47eaa1453a8d5",
+  "sustantivo": "correcto",
+  "valor": "0"
+}

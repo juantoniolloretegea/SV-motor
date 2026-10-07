@@ -1,0 +1,114 @@
+{
+  "alerta_limite": false,
+  "auditoria_sha256": "cef87af8598decacff15bb578eb7c42da6b1c29fb71a33ecc795c02dd0b3da25",
+  "caso": "P04",
+  "critico": true,
+  "estado_documental_candidato": "respuesta_fundada",
+  "etapa": 2,
+  "final_sha256": "43229590f2e21ee966a4a3005de28277e583a2012712410aab58548afe14a239",
+  "formal_conforme": true,
+  "fundamento_sustantivo": "Relaciona ausencia de síntomas y recuentos aceptables con la posibilidad de observación. Conserva la condicionalidad y la dependencia de progresión, sin convertir el diagnóstico en tratamiento obligatorio ni garantizar que nunca será necesario.",
+  "limite_documental": null,
+  "medicion": {
+    "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+    "bytes_sse": 176694,
+    "caso": "P04-R2",
+    "cpu_delta_ms": 2890,
+    "duracion_ms": 22848,
+    "duracion_observada_ms": 26510,
+    "eventos_sse": 586,
+    "fallos_medicion": 0,
+    "final_sha256": "43229590f2e21ee966a4a3005de28277e583a2012712410aab58548afe14a239",
+    "intervalo_maximo_ms": 294,
+    "io_escritura_delta_bytes": 670617,
+    "io_lectura_delta_bytes": 19824045,
+    "muestras": 96,
+    "observaciones_udp": 0,
+    "primer_texto_ms": 4712,
+    "rss_maximo_bytes": 39899136,
+    "solicitud_sha256": "822e3f771a3a162fd8684c140e1a129a7cbc2237ba25f8a8b478277962db7b17",
+    "sse_sha256": "6e92b3f13148d00aad9e298ca93744c389ee7d4095a9afe01c6153fb19d2102a",
+    "tcp_estados": [
+      "CloseWait",
+      "Established",
+      "Listen",
+      "SynSent"
+    ],
+    "tcp_maximo_simultaneo": 4,
+    "telemetria_sha256": "5100b8beb858fbfdc288fc2f0333996f823d73a14c3bd1a28af1a81be0897589",
+    "uso": {
+      "entrada_cache_tokens": 0,
+      "entrada_tokens": 17961,
+      "razonamiento_tokens": 0,
+      "salida_tokens": 591,
+      "total_tokens": 18552
+    }
+  },
+  "naturaleza_defecto": null,
+  "observaciones_revision": [],
+  "pasajes_contrastados": [
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "Si el paciente es asintomático y los recuentos sanguíneos se mantienen dentro de los límites\naceptables, quizás el tratamiento no sea necesario.",
+      "pagina": 0,
+      "seccion": "_13"
+    },
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "Observación cautelosa, cuando sea posible.",
+      "pagina": 0,
+      "seccion": "_13"
+    },
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "La decisión de tratar se fundamenta en los siguientes signos de progresión de la\nenfermedad:",
+      "pagina": 0,
+      "seccion": "_13"
+    }
+  ],
+  "recepcion_independiente": "pendiente",
+  "respuesta_original": "{\n  \"caso\": \"P04\",\n  \"estado_documental\": \"respuesta_fundada\",\n  \"etapa\": 2,\n  \"evidencias\": [\n    {\n      \"cita_literal_breve\": \"Si el paciente es asintomático y los recuentos sanguíneos se mantienen dentro de los límites\\naceptables, quizás el tratamiento no sea necesario.\",\n      \"documento\": \"pdq-nci-hcl-es\",\n      \"fragmentos\": [0],\n      \"seccion\": \"_13\"\n    },\n    {\n      \"cita_literal_breve\": \"Observación cautelosa, cuando sea posible.\",\n      \"documento\": \"pdq-nci-hcl-es\",\n      \"fragmentos\": [0],\n      \"seccion\": \"_13\"\n    },\n    {\n      \"cita_literal_breve\": \"La decisión de tratar se fundamenta en los siguientes signos de progresión de la\\nenfermedad:\",\n      \"documento\": \"pdq-nci-hcl-es\",\n      \"fragmentos\": [0],\n      \"seccion\": \"_13\"\n    }\n  ],\n  \"fundamentos_verificables\": [\n    \"La ausencia de síntomas y los recuentos aceptables del caso coinciden con las condiciones bajo las cuales el documento indica que quizás no sea necesario tratar. Esto permite deducir que el diagnóstico aislado no obliga al tratamiento inmediato.\",\n    \"El documento incluye la observación cautelosa y fundamenta la decisión de tratar en citopenias, especialmente sintomáticas, empeoramiento de la esplenomegalia u otras complicaciones, a menudo infecciosas.\",\n    \"«Quizás» y «cuando sea posible» impiden convertir esa posibilidad en una garantía de que nunca se necesitará tratamiento.\"\n  ],\n  \"insuficiencias\": [\n    \"El pasaje no define umbrales numéricos de recuentos aceptables ni un calendario de vigilancia; estas limitaciones no impiden resolver la pregunta sobre la obligatoriedad automática.\"\n  ],\n  \"respuesta\": \"No. Según el documento, el diagnóstico por sí solo no obliga a comenzar tratamiento inmediato. Si la persona permanece asintomática y mantiene recuentos sanguíneos aceptables, quizás el tratamiento no sea necesario; la observación cautelosa figura entre las opciones cuando sea posible. Esto descarta una obligación automática, pero no asegura que el tratamiento nunca vaya a ser necesario. Es una conclusión documental, no una prescripción individual.\",\n  \"revision\": \"Se mantiene la conclusión de ambas entregas: las citas y los fundamentos sustantivos concuerdan con el fragmento 0. La segunda añadió apoyo sobre progresión y límites no especificados, sin modificar la conclusión. Ninguna de esas diferencias exige retirar la respuesta o declarar U.\"\n}",
+  "revision_citas": {
+    "citas": [
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "Si el paciente es asintomático y los recuentos sanguíneos se mantienen dentro de los límites\naceptables, quizás el tratamiento no sea necesario."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "Observación cautelosa, cuando sea posible."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "La decisión de tratar se fundamenta en los siguientes signos de progresión de la\nenfermedad:"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "solicitud_sha256": "822e3f771a3a162fd8684c140e1a129a7cbc2237ba25f8a8b478277962db7b17",
+  "sustantivo": "correcto",
+  "valor": "0"
+}

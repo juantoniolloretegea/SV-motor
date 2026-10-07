@@ -1,0 +1,96 @@
+{
+  "alerta_limite": false,
+  "auditoria_sha256": "e14e51142ed328392eb9bc2aaeda755c286d32c53d1f80af4a2e1cf58ab8dd4a",
+  "caso": "P15",
+  "critico": false,
+  "estado_documental_candidato": "respuesta_fundada",
+  "etapa": 1,
+  "final_sha256": "270d58a951eb2507b3e798810dff8e4022dba9263027d0f0cde32b6527bbb37f",
+  "formal_conforme": true,
+  "fundamento_sustantivo": "Selecciona citometría de flujo y aspiración de médula ósea y biopsia, expresamente incluidas en la evaluación diagnóstica. Respeta «es posible utilizar», sin obligatoriedad universal ni prescripción individual.",
+  "limite_documental": null,
+  "medicion": {
+    "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+    "bytes_sse": 115685,
+    "caso": "P15-R1",
+    "cpu_delta_ms": 1891,
+    "duracion_ms": 15218,
+    "duracion_observada_ms": 18813,
+    "eventos_sse": 366,
+    "fallos_medicion": 0,
+    "final_sha256": "270d58a951eb2507b3e798810dff8e4022dba9263027d0f0cde32b6527bbb37f",
+    "intervalo_maximo_ms": 282,
+    "io_escritura_delta_bytes": 456471,
+    "io_lectura_delta_bytes": 29028669,
+    "muestras": 71,
+    "observaciones_udp": 0,
+    "primer_texto_ms": 4126,
+    "rss_maximo_bytes": 47038464,
+    "solicitud_sha256": "f42cd108d3e43799210fc18ea45aa8f25f8058528be439e950ea705ad386cb5a",
+    "sse_sha256": "7014969916a65fa1e37a33efaa9a341405580d6c4dcbdc5ca1542fe61aadfc12",
+    "tcp_estados": [
+      "CloseWait",
+      "Established",
+      "Listen",
+      "SynSent"
+    ],
+    "tcp_maximo_simultaneo": 4,
+    "telemetria_sha256": "889e3e2cf9d54bc9655150970e4c7399c0a168df346546258723e0f4780c988e",
+    "uso": {
+      "entrada_cache_tokens": 0,
+      "entrada_tokens": 4027,
+      "razonamiento_tokens": 0,
+      "salida_tokens": 371,
+      "total_tokens": 4398
+    }
+  },
+  "naturaleza_defecto": null,
+  "observaciones_revision": [],
+  "pasajes_contrastados": [
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "Para diagnosticar la leucemia de células pilosas, es posible utilizar las siguientes pruebas y\nprocedimientos:",
+      "pagina": 0,
+      "seccion": "_1"
+    },
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "* Citometría de flujo.\n* Aspiración de médula ósea y biopsia.",
+      "pagina": 0,
+      "seccion": "_1"
+    }
+  ],
+  "recepcion_independiente": "pendiente",
+  "respuesta_original": "{\n  \"caso\": \"P15\",\n  \"estado_documental\": \"respuesta_fundada\",\n  \"etapa\": 1,\n  \"evidencias\": [\n    {\n      \"cita_literal_breve\": \"Para diagnosticar la leucemia de células pilosas, es posible utilizar las siguientes pruebas y\\nprocedimientos:\",\n      \"documento\": \"pdq-nci-hcl-es\",\n      \"fragmentos\": [0],\n      \"seccion\": \"_1\"\n    },\n    {\n      \"cita_literal_breve\": \"* Citometría de flujo.\\n* Aspiración de médula ósea y biopsia.\",\n      \"documento\": \"pdq-nci-hcl-es\",\n      \"fragmentos\": [0],\n      \"seccion\": \"_1\"\n    }\n  ],\n  \"fundamentos_verificables\": [\n    \"La lista de evaluación diagnóstica incluye expresamente la citometría de flujo y la aspiración de médula ósea y biopsia.\",\n    \"La expresión «es posible utilizar» presenta las pruebas y procedimientos como posibilidades diagnósticas, no como obligaciones universales.\"\n  ],\n  \"insuficiencias\": [],\n  \"respuesta\": \"Dos procedimientos incluidos expresamente son la citometría de flujo y la aspiración de médula ósea y biopsia. El documento los presenta como posibilidades diagnósticas, sin exigir ninguno en todos los casos.\",\n  \"revision\": \"Se mantiene el contenido de la respuesta provisional: ambos elementos y las citas corresponden a la sección _1, fragmento 0. No se atribuye obligatoriedad universal ni se formula una indicación individual. La omisión de las demás pruebas no afecta a la respuesta, pues se solicitan solo dos.\"\n}",
+  "revision_citas": {
+    "citas": [
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "Para diagnosticar la leucemia de células pilosas, es posible utilizar las siguientes pruebas y\nprocedimientos:"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "* Citometría de flujo.\n* Aspiración de médula ósea y biopsia."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "solicitud_sha256": "f42cd108d3e43799210fc18ea45aa8f25f8058528be439e950ea705ad386cb5a",
+  "sustantivo": "correcto",
+  "valor": "0"
+}
