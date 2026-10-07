@@ -1,0 +1,13 @@
+[package]
+name="sv-safeguard-verificador-diag-a08-02"
+version="0.1.0"
+edition="2024"
+[workspace]
+[dependencies]
+serde_json={version="=1.0.149",features=["preserve_order"]}
+sha2="=0.10.9"
+tokenizers={version="=0.23.2",default-features=false,features=["fancy-regex"]}
+minijinja={version="=2.14.0",features=["json"]}
+minijinja-contrib={version="=2.14.0",features=["pycompat"]}
+
+sv-arbitro-comprobaciones={path="../instrumentacion"}

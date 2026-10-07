@@ -1,0 +1,2 @@
+use std::{fs,path::Path,io::Read};use sha2::{Sha256,Digest};use serde_json::json;
+fn main()->Result<(),Box<dyn std::error::Error>>{let mut rows=Vec::new();for a in std::env::args().skip(1){let p=Path::new(&a);let mut f=fs::File::open(p)?;let n=f.metadata()?.len();let mut h=Sha256::new();let mut b=[0u8;65536];loop{let k=f.read(&mut b)?;if k==0{break}h.update(&b[..k]);}rows.push(json!({"archivo":p.file_name().unwrap().to_string_lossy(),"bytes":n,"sha256":format!("{:x}",h.finalize())}));}println!("{}",serde_json::to_string_pretty(&rows)?);Ok(())}

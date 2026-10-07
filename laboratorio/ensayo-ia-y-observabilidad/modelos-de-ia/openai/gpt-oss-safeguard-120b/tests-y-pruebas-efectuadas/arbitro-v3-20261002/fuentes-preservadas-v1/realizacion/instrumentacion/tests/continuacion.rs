@@ -1,0 +1,22 @@
+use serde_json::{json,Value};use sv_arbitro_comprobaciones::{huella,ciclo::{Puerta,IDS,DOCS,validar_solicitud}};
+fn c(i:usize)->Value{let t=json!([10+i]);json!({"id":IDS[i],"documento":DOCS[i],"seccion":"S1","tokens":t,"tokens_sha256":huella(&serde_json::to_vec(&t).unwrap()),"max_salida":4096,"paginas":[0,1],"funciones":[],"mensajes":[{"role":"system","content":"sintetico"},{"role":"user","content":IDS[i]}],"plantilla_efectiva":IDS[i]})}
+fn resume()->Value{serde_json::from_str(include_str!("../../config/REANUDACION.json")).unwrap()}
+fn rh()->String{huella(&serde_json::to_vec(&resume()).unwrap())}
+fn preparada()->Puerta{let mut p=Puerta::default();for i in 0..6{let v=c(i);p.preparar(&v,Some(&v)).unwrap();p.solicitar("preparacion",IDS[i],v["tokens_sha256"].as_str().unwrap(),"contraste").unwrap();}p}
+fn admitida()->Puerta{let mut p=preparada();p.heredar(&resume(),&rh()).unwrap();p.solicitar("carga","N02",c(1)["tokens_sha256"].as_str().unwrap(),"contraste").unwrap();p}
+fn emitir(p:&mut Puerta,i:usize){let v=c(i);p.motor(&v).unwrap();p.solicitar("generacion",IDS[i],v["tokens_sha256"].as_str().unwrap(),"contraste").unwrap();p.emision(&json!({"id":IDS[i],"texto":"original sintetico","tokens":[1]})).unwrap();p.terminar(&json!({"id":IDS[i],"completo":true})).unwrap();p.solicitar("adjudicacion",IDS[i],v["tokens_sha256"].as_str().unwrap(),"contraste").unwrap();}
+fn control(i:usize,accion:&str)->Value{json!({"id":IDS[i],"salida_sha256":huella(b"original sintetico"),"accion":accion})}
+#[test]fn continuacion_completa_desde_original_heredado(){let mut p=admitida();for i in 1..6{emitir(&mut p,i);p.adjudicar(&control(i,if i<5{"continuar"}else{"cerrar"})).unwrap();}assert!(p.cerrado());assert!(p.motor(&c(0)).is_err());}
+#[test]fn n01_jamas_se_regenera(){let mut p=admitida();assert!(p.motor(&c(0)).is_err());assert!(p.solicitar("generacion","N01",c(0)["tokens_sha256"].as_str().unwrap(),"contraste").is_err());}
+#[test]fn no_carga_sin_evaluacion(){let mut p=preparada();assert!(p.solicitar("carga","N02",c(1)["tokens_sha256"].as_str().unwrap(),"contraste").is_err());let mut r=resume();r.as_object_mut().unwrap().remove("evaluacion_sha256");let sha=huella(&serde_json::to_vec(&r).unwrap());assert!(p.heredar(&r,&sha).is_err());}
+#[test]fn identidad_y_huella_discordantes(){for k in ["id","salida_sha256","revision","cotejo_sha256"]{let mut r=resume();r[k]=json!("alterado");assert!(preparada().heredar(&r,&rh()).is_err());}}
+#[test]fn no_reutiliza_cierre_antiguo(){let mut r=resume();r["accion"]=json!("cerrar");let sha=huella(&serde_json::to_vec(&r).unwrap());assert!(preparada().heredar(&r,&sha).is_err());}
+#[test]fn no_otra_carga(){let mut p=admitida();assert!(p.solicitar("carga","N02",c(1)["tokens_sha256"].as_str().unwrap(),"contraste").is_err());}
+#[test]fn no_salto_ni_duplicacion(){let mut p=admitida();assert!(p.motor(&c(2)).is_err());emitir(&mut p,1);assert!(p.motor(&c(2)).is_err());p.adjudicar(&control(1,"continuar")).unwrap();assert!(p.motor(&c(1)).is_err());}
+#[test]fn informe_externo_con_original_distinto_no_avanza(){let mut p=admitida();emitir(&mut p,1);let mut c=control(1,"continuar");c["salida_sha256"]=json!("falso");assert!(p.adjudicar(&c).is_err());}
+#[test]fn cierre_no_reabre(){let mut p=admitida();emitir(&mut p,1);p.adjudicar(&control(1,"cerrar")).unwrap();assert!(p.motor(&c(2)).is_err());}
+#[test]fn clave_excluida_del_control(){let mut p=admitida();emitir(&mut p,1);let mut v=control(1,"continuar");v["decision"]=json!("etiqueta");assert!(p.adjudicar(&v).is_err());}
+#[test]fn no_memoria_heredada(){let mut p=admitida();let mut v=c(1);v["mensajes"].as_array_mut().unwrap().push(json!({"role":"assistant","content":"respuesta anterior"}));assert!(p.motor(&v).is_err());}
+#[test]fn datos_entrada_alterados(){let mut p=Puerta::default();let mut v=c(0);v["tokens"]=json!([99]);assert!(p.preparar(&v,Some(&c(0))).is_err());}
+#[test]fn pagina_ausente_y_documento_ajeno(){let mut v=c(0);v["paginas"]=json!([0]);assert!(Puerta::default().preparar(&v,None).is_err());let q=json!({"method":"tools/call","params":{"name":"leer_documento","arguments":{"documento":"N-B","seccion":"S1","pagina":0}}});assert!(validar_solicitud(&serde_json::to_vec(&q).unwrap(),"N-A").is_err());}
+#[test]fn limite_de_seis_no_se_amplia(){let mut p=admitida();for i in 1..5{emitir(&mut p,i);p.adjudicar(&control(i,"continuar")).unwrap();}emitir(&mut p,5);assert!(p.adjudicar(&control(5,"continuar")).is_err());}

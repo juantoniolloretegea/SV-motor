@@ -1,0 +1,16 @@
+[package]
+name = "cotejo-ensayo1"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "comprobar"
+path = "comprobar.rs"
+
+[dependencies]
+sha2 = "=0.10.9"
+serde_json = "=1.0.151"
+
+[profile.dev]
+debug = 0
+incremental = false
