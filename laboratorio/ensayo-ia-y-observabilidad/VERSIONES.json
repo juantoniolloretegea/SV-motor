@@ -1,18 +1,19 @@
 {
   "esquema": "sv.eio.registro-versiones/1",
-  "edicion_documental": "2.26",
+  "edicion_documental": "2.27",
   "fecha_corte": "2026-10-07",
-  "commit_base_consultado": "e1ef11a0c87dbd9cf3dda0d0461b980c1272f440",
+  "commit_base_consultado": "365c0004164a5e7c7dd7e5ecb230ebba7f7a1582",
   "criterio": "Identidad separada para modelo, aplicacion, componente MCP, archivo de conservacion y edicion documental",
   "revision_actual": {
-    "version": "2.26",
-    "naturaleza": "cierre_documental_examen_astra_nodo03",
+    "version": "2.27",
+    "naturaleza": "orientacion_tres_nodos_y_conciliacion_documental",
     "commit": "El que contiene este archivo; sin autorreferencia circular",
     "cambios": [
-      "GPT-6 Astra visible en la portada, el catálogo y su expediente propio del nodo 03",
-      "Diferencia explícita entre inferencia propia del nodo 01 y API externa del nodo 03",
-      "Examen P01–P25 cerrado como Apto para el contrato documental, sin nuevas inferencias",
-      "Resultados y diagramas históricos conservados; no revalidación de los otros expedientes"
+      "Tres nodos enlazados antes del estado; distinción respecto de vías A/B",
+      "Astra integrado en versiones, publicaciones, historia y seguimiento TT-0021",
+      "Retirada Qwen3.5 conciliada con acta posterior; antecedentes conservados",
+      "JavaScript mínimo limitado a presentación e interoperabilidad, sin autoridad sobre lógica o directrices del SV",
+      "Diagramas, rutas y anclas históricos conservados; sin nuevas inferencias"
     ]
   },
   "componentes": [
@@ -1301,5 +1302,28 @@
     "informe": "laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/openai/gpt-6-astra/examen25-20261007/resultado/INFORME.md",
     "revision_evidencia": "a8cd2319c004f76a1159cb382f7ed93b2d648bf3",
     "alcance": "Cierre de esta prueba; no cierre de S39 general, de TT-0021 ni aceptación general del nodo 03."
+  },
+  "revision_2_26_conservada": {
+    "version": "2.26",
+    "naturaleza": "cierre_documental_examen_astra_nodo03",
+    "commit": "El que contiene este archivo; sin autorreferencia circular",
+    "cambios": [
+      "GPT-6 Astra visible en la portada, el catálogo y su expediente propio del nodo 03",
+      "Diferencia explícita entre inferencia propia del nodo 01 y API externa del nodo 03",
+      "Examen P01–P25 cerrado como Apto para el contrato documental, sin nuevas inferencias",
+      "Resultados y diagramas históricos conservados; no revalidación de los otros expedientes"
+    ]
+  },
+  "conciliacion_portada_20261007": {
+    "fuente_precedente": "365c0004164a5e7c7dd7e5ecb230ebba7f7a1582",
+    "patron_documental": "11a84870221355a8b5f9b22db67d574f8bb3f1eb",
+    "nodos": [
+      "01-inferencia-bajo-control-propio",
+      "02-plataforma-gestionada",
+      "03-api-directa"
+    ],
+    "retirada_qwen35_fuente": "modelos-de-ia/qwen/qwen3.5-122b-a10b-q8-0/seguimiento/cierre-20261006/ACTA-RETIRADA.md",
+    "resultados_modificados": false,
+    "inferencias_nuevas": 0
   }
 }

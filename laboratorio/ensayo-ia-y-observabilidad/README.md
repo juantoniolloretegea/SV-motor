@@ -1,8 +1,8 @@
 # Ensayo de inteligencia artificial y observabilidad
 
-**Edición documental 2.26 · 7 de octubre de 2026.**
+**Edición documental 2.27 · 7 de octubre de 2026.**
 
-**Actualización de esta edición:** cierre documental del examen de GPT-6 Astra, nodo 03, el 07/10/2026. Los demás expedientes conservan sus cortes del 05–06/10/2026 y sus propios resultados; esta revisión no acredita nuevas ejecuciones de aquellos modelos. Cada fuente mantiene su fecha, alcance y recepción; esta página no es un monitor de ejecución.
+**Actualización de esta edición:** orientación mediante los tres nodos de acoplamiento y conciliación de estado, versiones, publicaciones e historia. Los resultados mantienen las fechas y los límites de sus respectivos expedientes; esta revisión documental no acredita nuevas ejecuciones.
 
 <a id="objeto-y-criterio-experimental"></a>
 
@@ -12,27 +12,28 @@ Investigación experimental sobre ejecución de modelos auxiliares, fidelidad do
 
 Esta página relaciona configuraciones, resultados, componentes, publicaciones y antecedentes. El [registro estructurado](VERSIONES.json) distingue sus identidades; el [catálogo de modelos](modelos-de-ia/README.md) enlaza las fichas. El Núcleo del SV, la semántica V0.2 y la IR 0.3 permanecen intactos.
 
-**Consulta:** [estado actual](#estado-actual) · [familias en estudio](#familias-en-estudio-de-viabilidad) · [evaluación](#evaluación-documental-y-resultado) · [funciones](#componentes-y-funciones-del-conjunto) · [versiones](#versiones-de-los-componentes) · [publicaciones](#publicaciones-en-orden-cronológico) · [historia](#historia-completa-de-la-edición-documental) · [diagramas](#vías-de-ejecución-y-diagramas) · [trazabilidad](#trazabilidad-y-criterios-de-lectura).
+**Consulta:** [tres nodos](#tres-nodos-de-acoplamiento) · [estado actual](#estado-actual) · [familias en estudio](#familias-en-estudio-de-viabilidad) · [evaluación](#evaluación-documental-y-resultado) · [funciones](#componentes-y-funciones-del-conjunto) · [versiones](#versiones-de-los-componentes) · [publicaciones](#publicaciones-en-orden-cronológico) · [historia](#historia-completa-de-la-edición-documental) · [diagramas](#vías-de-ejecución-y-diagramas) · [trazabilidad](#trazabilidad-y-criterios-de-lectura).
+
+## Tres nodos de acoplamiento
+
+El [marco común](modelos-de-ia/acoplamientos-con-el-sv/readme.md) distingue tres modalidades experimentales. Cada nodo puede examinar varios modelos y conserva especificación, pruebas y aceptación propias; no equivale necesariamente a un servidor ni a una marca.
+
+| Nodo y acceso a su documentación | Modalidad | Alcance documentado |
+|---|---|---|
+| [01 · Inferencia bajo control propio](modelos-de-ia/acoplamientos-con-el-sv/01-inferencia-bajo-control-propio/readme.md) | El proyecto administra el motor, los pesos y el entorno de inferencia. | Reúne las remisiones a los expedientes de instalación, evaluación y viabilidad. Cada modelo conserva su resultado y sus condiciones. |
+| [02 · Plataforma gestionada](modelos-de-ia/acoplamientos-con-el-sv/02-plataforma-gestionada/readme.md) | Una plataforma organiza la evaluación y el acceso gestionado a modelos; Kaggle es el caso considerado. | Especificación preparatoria. No acredita integración recibida, recursos concedidos ni ejecución de modelos en esta modalidad. |
+| [03 · API directa de proveedor](modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/readme.md) | El SV prepara solicitudes y recibe respuestas de un servicio externo de inferencia. | GPT-6 Astra dispone de una prueba documental cerrada. Sus pesos y su inferencia permanecen en OpenAI; suministro, controles y mediciones propios se realizan en Rust. |
+
+La modalidad depende del control efectivo de la inferencia y de la relación de servicio. Un motor administrado por el proyecto puede exponer una API y seguir perteneciendo al nodo 01. Los expedientes históricos conservan sus ubicaciones, enlazadas desde ese nodo; no se trasladan ni se atribuyen resultados por la sola pertenencia a una familia.
+
+Las [vías técnicas A/B y sus diagramas](#vías-de-ejecución-y-diagramas) describen las arquitecturas históricas de navegador y proceso nativo. Son un criterio distinto de las tres modalidades anteriores y conservan su alcance original.
 
 <a id="estado-vigente--27092026"></a>
 <a id="estado-experimental-al-corte-conservado"></a>
 
 ## Estado actual
 
-**GPT-6 Astra · OpenAI · Nodo 03:** examen documental P01–P25 concluido y cerrado como **Apto para el contrato documental de esta edición**. Las 25 respuestas finales son correctas, incluidas las 20 críticas; no hay errores ni U. Se satisface T(25)=⌊7×25/9⌋=19. Véanse el [expediente del modelo](modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/openai/gpt-6-astra/readme.md) y el [informe de resultados](modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/openai/gpt-6-astra/examen25-20261007/resultado/INFORME.md).
-
-**Diferencia entre los nodos 01 y 03:**
-
-| Modalidad | Dónde se ejecuta la inferencia | Qué administra el SV |
-|---|---|---|
-| Nodo 01 · Inferencia bajo control propio | Motor y pesos en infraestructura administrada por el proyecto. | El entorno de ejecución propio y los controles de la prueba. |
-| Nodo 03 · GPT-6 Astra mediante API | OpenAI ejecuta el modelo; sus pesos no están alojados en los servidores del SV. | Fuentes, solicitudes, recepción, adjudicación e instrumentación propias, bajo el Árbitro-Director y sus componentes Rust. |
-
-La modalidad depende de dónde se realiza la inferencia, no de la marca. Los expedientes de GPT-OSS y Astra son distintos y no comparten automáticamente resultados. Las preguntas y el criterio documental permiten comparación, pero Astra incorpora tres fases universales R0/R1/R2 y condiciones instrumentales propias. El dictamen no acredita aptitud clínica ni una réplica instrumental idéntica del nodo 01.
-
-La fase **Qwen3.5-122B-A10B Q8_0** ha concluido con **admisión no acreditada por impedimento temporal**. Se completaron siete solicitudes iniciales: seis adjudicaciones 0 y un error sustantivo crítico, A06. A08 y A09 no se ejecutaron; tampoco las revisiones adversariales, el bloque B o el examen. La capa está incompleta, sin κ ni puntuación global. Se conserva el [dictamen y su alcance](https://github.com/juantoniolloretegea/SV-motor/blob/0b5104c4658bc98a9612fd2a97d7b8a5214b63cc/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/qwen/qwen3.5-122b-a10b-q8-0/preevaluacion-20261004/resultados/cierre-r1/INFORME-FINAL.md); el resultado no constituye un descarte universal de la familia Qwen. La recepción independiente de A04–A07 y de la fase permanece pendiente en el corte de la entrega.
-
-**Safeguard** cerró su preevaluación sin acceso al examen; **Thinking** cerró por inviabilidad operativa. La retirada de sus recursos se distingue de la conservación documental y del resultado experimental. Kimi K3 y GLM-5.3/Flash continúan en estudio de viabilidad, sin dictamen de aptitud ni descarte definitivo.
+La tabla distingue el resultado experimental, su alcance y la situación documental o administrativa más reciente acreditada. Los candidatos en estudio se presentan a continuación; sus expedientes no equivalen a realizaciones ya ejecutadas.
 
 | Modelo o configuración | Resultado y alcance | Situación al corte |
 |---|---|---|
@@ -44,7 +45,7 @@ La fase **Qwen3.5-122B-A10B Q8_0** ha concluido con **admisión no acreditada po
 | [Qwen3-Next-80B-A3B-Instruct](modelos-de-ia/qwen/qwen3-next-80b-a3B-instruct/REGISTRO-INSTALACION-20260929.md) | Dos consultas MCP recibidas. Examen posterior: **28/100; No apto**. Diecinueve finales: siete aciertos, dos errores críticos y diez U; seis impedimentos técnicos. | Examen y diagnóstico terminados; [puntuación](modelos-de-ia/qwen/qwen3-next-80b-a3B-instruct/tests-y-pruebas-efectuadas/PUNTUACION-FINAL-20261001.md), [archivo y retirada](modelos-de-ia/qwen/qwen3-next-80b-a3B-instruct/tests-y-pruebas-efectuadas/ARCHIVO-Y-RETIRADA-20261001.md). Recepción científica independiente pendiente; [TT-0016](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0016.md). |
 | [Qwen3-Next-80B-A3B-Thinking](modelos-de-ia/qwen/qwen3-next-80b-a3b-thinking) | Examen cerrado: **No apto en las condiciones evaluadas por demoras operativas excesivas y falta de finalización fiable**. Nueve finales pendientes de adjudicación de contenido, cuatro impedimentos, P14 incompleta y once no ejecutadas; sin puntuación global. | [Cierre público](https://github.com/juantoniolloretegea/SV-motor/releases/tag/qwen3-next-80b-a3b-thinking-archivo-cierre-20261005-v1) y [conservación privada cotejada](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/releases/tag/thinking-imagen-cierre-20261005-v1). [Instancia y almacenamiento retirados](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/2ddf814bb039b0c7876745023ea165baf38ed6f9/respuestas-ejecucion/QWEN80-THINKING-Q4K-ONECLOUD-20260930/entrega-03/retirada-20261005/ACTA-RETIRADA.md); no hay arranque restaurado ensayado. [TT-0017](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0017.md). |
 | [GPT-OSS-Safeguard-120B](modelos-de-ia/openai/gpt-oss-safeguard-120b/ensayos-reiterados-adversariales-y-aprendizaje/readme.md) | Contrastes anteriores separados: **87,5/100**, **66,67/100** y **50/100**, con **No apto** en sus respectivos alcances. El diagnóstico D01 reprodujo el error crítico del último contraste. | Preevaluación terminada: A0–A3 sin mejora, −88,89/100 según la rúbrica completa y **No apto para acceder al examen**. Diagnósticos e incidencias separados en el [cierre](modelos-de-ia/openai/gpt-oss-safeguard-120b/ensayos-reiterados-adversariales-y-aprendizaje/resultados/cierre-20261004/INFORME-FINAL.md). Sin aptitud clínica acreditada. [Expediente v3](modelos-de-ia/openai/gpt-oss-safeguard-120b/tests-y-pruebas-efectuadas/ARBITRO-SV-SAFEGUARD-V3-20261002.md) · [TT-0018](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0018.md). |
-| [Qwen3.5-122B-A10B · Q8_0](modelos-de-ia/qwen/qwen3.5-122b-a10b-q8-0/readme.md) | Realización CPU en UpCloud: 48 CPU y 256 GB nominales de RAM, sin GPU. Fase A0 concluida: seis 0, un 1 crítico en A06 y dos casos no ejecutados. | [Admisión no acreditada por impedimento temporal](https://github.com/juantoniolloretegea/SV-motor/blob/0b5104c4658bc98a9612fd2a97d7b8a5214b63cc/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/qwen/qwen3.5-122b-a10b-q8-0/preevaluacion-20261004/resultados/cierre-r1/INFORME-FINAL.md); sin revisiones, B ni examen. Custodia de fase y [imagen de instalación cotejadas](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/releases/tag/qwen35-122b-q8-imagen-cierre-20261006-v1); [archivo público](https://github.com/juantoniolloretegea/SV-motor/releases/tag/qwen3.5-122b-a10b-q8-0-archivo-cierre-20261006-v1). Retirada administrativa pendiente; arranque restaurado no ensayado. Recepción independiente de A04–A07 y fase pendiente. [TT-0019](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0019.md). |
+| [Qwen3.5-122B-A10B · Q8_0](modelos-de-ia/qwen/qwen3.5-122b-a10b-q8-0/readme.md) | Realización CPU en UpCloud: 48 CPU y 256 GB nominales de RAM, sin GPU. Fase A0 concluida: seis 0, un 1 crítico en A06 y dos casos no ejecutados. | [Admisión no acreditada por impedimento temporal](https://github.com/juantoniolloretegea/SV-motor/blob/0b5104c4658bc98a9612fd2a97d7b8a5214b63cc/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/qwen/qwen3.5-122b-a10b-q8-0/preevaluacion-20261004/resultados/cierre-r1/INFORME-FINAL.md); sin revisiones, B ni examen. Custodia de fase y [imagen de instalación cotejadas](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/releases/tag/qwen35-122b-q8-imagen-cierre-20261006-v1); [archivo público](https://github.com/juantoniolloretegea/SV-motor/releases/tag/qwen3.5-122b-a10b-q8-0-archivo-cierre-20261006-v1). [Instancia y disco retirados el 06/10/2026](modelos-de-ia/qwen/qwen3.5-122b-a10b-q8-0/seguimiento/cierre-20261006/ACTA-RETIRADA.md); arranque restaurado no ensayado. Recepción independiente de A04–A07 y fase pendiente. [TT-0019](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0019.md). |
 
 ### Familias en estudio de viabilidad
 
@@ -91,6 +92,8 @@ La clasificación SV se calcula separadamente con **T(n)=⌊7n/9⌋**: primero N
 Un error crítico acreditado permite declarar No apto en el alcance de la prueba aunque existan posiciones impedidas; no autoriza a completar un vector ni a atribuirle κ. Sólo tras **25 adjudicaciones válidas e independientes** se constituye el vector ordenado y su frame o polígono. Cada posición queda ligada a pregunta, fuente, respuesta, configuración y fundamento de corrección. Las comprobaciones sintéticas del evaluador Rust acreditan su cálculo en esos casos, no la validez médica de las respuestas.
 
 La célula canónica **(9,3)** contiene vectores de nueve componentes ternarios y un universo de **3⁹ = 19.683 vectores posibles**. Las capas experimentales son filas sucesivas de vectores, no una matriz de 3 × 3. El par vector–frame debe conservar identidad, posiciones, fuentes y revisión. El expediente de Astra incorpora el visor Rust/egui 0.5.0 con el frame de 25 posiciones, valores y evidencias consultables. Su ejecución y pruebas se acreditan en aquel expediente; no se atribuyen retrospectivamente a los modelos anteriores. **Un frame Apto puede formar parte de un conjunto No apto**: la composición y la aptitud de dominio necesitan reglas aún no constituidas por esta ronda. Una U puede motivar nuevas preguntas con identidad propia, conservando los resultados anteriores.
+
+Los expedientes de GPT-OSS y Astra conservan resultados independientes. El examen de Astra utiliza tres fases universales: respuesta inicial R0, autocrítica documental R1 y verificación final neutral R2. El banco y el criterio permiten comparación dentro de los límites documentados; no acreditan una réplica instrumental idéntica ni aptitud clínica.
 
 La secuencia es: suficiencia instrumental → evaluación documental → dictamen limitado al banco → decisión sobre una eventual fase posterior. La vía A/WebAssembly conserva su dependencia de una selección favorable y de autorización propia. No se acredita aptitud clínica general, uso productivo ni integración en el núcleo del SV.
 
@@ -154,7 +157,7 @@ La dirección ha autorizado crear **una instancia AMD MI300X** e iniciar una pru
 
 ## Versiones de los componentes
 
-La **edición documental 2.25**, las **aplicaciones 0.1.x/0.2.x**, el **MCP 0.1.x**, los **modelos** y los **archivos de recuperación v1** tienen identidades independientes. Una numeración no sustituye a las restantes. Los antecedentes identifican Rust 1.98.0; la preparación de retroalimentación identifica Rust 1.98.1. Cada expediente fija sus fuentes, dependencias, ejecutables y comprobaciones; una compilación no acredita utilización efectiva.
+La **edición documental 2.27**, las **aplicaciones 0.1.x/0.2.x**, el **MCP 0.1.x**, los **modelos** y los **archivos de recuperación v1** tienen identidades independientes. Una numeración no sustituye a las restantes. Los antecedentes identifican Rust 1.98.0; la preparación de retroalimentación identifica Rust 1.98.1. Cada expediente fija sus fuentes, dependencias, ejecutables y comprobaciones; una compilación no acredita utilización efectiva.
 
 <details>
 <summary><strong>EIO conversación · Qwen3-0.6B · 0.1.0 → 0.1.4</strong></summary>
@@ -223,7 +226,7 @@ La [carpeta de Thinking](modelos-de-ia/qwen/qwen3-next-80b-a3b-thinking) conserv
 <details>
 <summary><strong>Qwen3.5-122B-A10B · GGUF Q8_0</strong></summary>
 
-Modelo de 122 mil millones de parámetros totales y aproximadamente 10 mil millones activos por token, en la distribución GGUF Q8_0 de Unsloth. La [recepción instrumental del 04/10](https://github.com/juantoniolloretegea/SV-motor/blob/149c4b848475802942af35ab39e7335081398480/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/qwen/qwen3.5-122b-a10b-q8-0/seguimiento/RECEPCION_INSTRUMENTAL_20261004.md) acredita ejecución nativa con 48 CPU y 256 GB nominales de RAM, aproximadamente 251,65 GiB efectivos, sin GPU. La [fase inicial cerrada](https://github.com/juantoniolloretegea/SV-motor/blob/0b5104c4658bc98a9612fd2a97d7b8a5214b63cc/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/qwen/qwen3.5-122b-a10b-q8-0/preevaluacion-20261004/resultados/cierre-r1/INFORME-FINAL.md) conserva seis aciertos, un error crítico y dos casos no ejecutados; admisión no acreditada por impedimento temporal. La instalación se conserva en [imagen cifrada cotejada](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/releases/tag/qwen35-122b-q8-imagen-cierre-20261006-v1), sin duplicar pesos; retirada administrativa pendiente y arranque restaurado no ensayado. La recepción científica independiente de fase conserva su reserva.
+Modelo de 122 mil millones de parámetros totales y aproximadamente 10 mil millones activos por token, en la distribución GGUF Q8_0 de Unsloth. La [recepción instrumental del 04/10](https://github.com/juantoniolloretegea/SV-motor/blob/149c4b848475802942af35ab39e7335081398480/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/qwen/qwen3.5-122b-a10b-q8-0/seguimiento/RECEPCION_INSTRUMENTAL_20261004.md) acredita ejecución nativa con 48 CPU y 256 GB nominales de RAM, aproximadamente 251,65 GiB efectivos, sin GPU. La [fase inicial cerrada](https://github.com/juantoniolloretegea/SV-motor/blob/0b5104c4658bc98a9612fd2a97d7b8a5214b63cc/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/qwen/qwen3.5-122b-a10b-q8-0/preevaluacion-20261004/resultados/cierre-r1/INFORME-FINAL.md) conserva seis aciertos, un error crítico y dos casos no ejecutados; admisión no acreditada por impedimento temporal. La instalación se conserva en [imagen cifrada cotejada](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/releases/tag/qwen35-122b-q8-imagen-cierre-20261006-v1), sin duplicar pesos; [instancia y disco retirados](modelos-de-ia/qwen/qwen3.5-122b-a10b-q8-0/seguimiento/cierre-20261006/ACTA-RETIRADA.md) y arranque restaurado no ensayado. La recepción científica independiente de fase conserva su reserva.
 
 [Ficha técnica](modelos-de-ia/qwen/qwen3.5-122b-a10b-q8-0/ficha-tecnica/FICHA_TECNICA.md) · [Identidad y archivos](modelos-de-ia/qwen/qwen3.5-122b-a10b-q8-0/ficha-tecnica/IDENTIDAD_Y_ARCHIVOS.json) · [Justificación y comparativa](modelos-de-ia/qwen/qwen3.5-122b-a10b-q8-0/readme.md).
 
@@ -243,6 +246,13 @@ Modelo de 122 mil millones de parámetros totales y aproximadamente 10 mil millo
 </details>
 
 <a id="versión-distribuida"></a>
+
+<details>
+<summary><strong>GPT-6 Astra · nodo 03 · cliente Rust y visor egui 0.5.0</strong></summary>
+
+El identificador del candidato es `gpt-6-astra`; no es la versión del cliente ni del visor. El [expediente](modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/openai/gpt-6-astra/readme.md) identifica el transporte, el controlador del examen y las evidencias de ejecución. El visor Rust/egui 0.5.0 presenta las 25 adjudicaciones finales y permite consultar sus fundamentos. La [ficha](modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/openai/gpt-6-astra/FICHA.md) mantiene la excepción criptográfica pendiente y los límites de esta realización; el cierre documental no constituye admisión general del acoplamiento.
+
+</details>
 
 ## Publicaciones en orden cronológico
 
@@ -295,6 +305,8 @@ Reúne las imágenes del diagnóstico inicial y del cierre, sin pesos Qwen. Se c
 
 El archivo posterior conserva la historia anterior y su dictamen. La publicación de activos cifrados no concede acceso al contenido reservado. El GPT-OSS-120B ordinario no tiene distribución ni imagen propias publicadas en las fuentes consultadas; su exploración pública se conserva separadamente. Las huellas publicadas se identifican en [VERSIONES.json](VERSIONES.json); esta revisión documental no ha descargado ni recalculado los grandes activos binarios.
 
+<a id="constancia-posterior-de-retirada--06102026"></a>
+
 ### Entregas y conservación posteriores
 
 Cada fila describe el corte de su publicación; los estados superados se mantienen como antecedentes y se actualizan en la tabla de estado actual.
@@ -317,6 +329,8 @@ Cada fila describe el corte de su publicación; los estados superados se mantien
 | 05/10/2026 | [Kimi K3](modelos-de-ia/kimi/kimi-k3/ESTUDIO-VIABILIDAD-20261005.md) · [GLM-5.3/Flash](modelos-de-ia/zai-org/glm-5.3/ESTUDIO-VIABILIDAD-20261005.md) · [Cálculo Rust para AMD](inferencia/cubecl-evaluacion-20261005/ESTUDIO.md) | Candidatos en estudio de viabilidad; CubeCL prioritario provisional y rust-gpu alternativo. Documentación recuperada y cotejada. |
 | 05/10/2026 | [Prueba instrumental AMD](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/main/encargos-ejecucion/AMD-CUBECL-MFMA-20261005/v1/ENCARGO.md) | Autorización delimitada de servidor y operación matricial; sin recepción experimental declarada en esta edición. |
 | 06/10/2026 | [Archivo Qwen3.5 Q8_0](https://github.com/juantoniolloretegea/SV-motor/releases/tag/qwen3.5-122b-a10b-q8-0-archivo-cierre-20261006-v1) · [Conservación cifrada](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/releases/tag/qwen35-122b-q8-imagen-cierre-20261006-v1) | Instalación y expedientes conservados sin duplicar pesos; recuperación, descifrado, inventario y contenido cotejados con Rust. Retirada administrativa pendiente; arranque restaurado no ensayado. |
+| 06/10/2026 | [Retirada de Qwen3.5 Q8_0](modelos-de-ia/qwen/qwen3.5-122b-a10b-q8-0/seguimiento/cierre-20261006/ACTA-RETIRADA.md) | Instancia y disco retirados después de conservación cotejada. Mantiene el resultado experimental, sus reservas y la ausencia de arranque restaurado ensayado. |
+| 07/10/2026 | [Examen de GPT-6 Astra · nodo 03](modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/openai/gpt-6-astra/examen25-20261007/resultado/INFORME.md) · [Expediente y evidencias](modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/openai/gpt-6-astra/readme.md) | Apto para el contrato documental P01–P25: 25 respuestas finales R2 correctas, incluidas las 20 críticas. Control e instrumentación propios en Rust; inferencia en OpenAI. |
 
 Los enlaces de SV-sala-de-maquinas mantienen el acceso restringido de los originales. Las síntesis públicas enlazan su procedencia; no sustituyen los paquetes, sus manifiestos ni la recepción independiente.
 
@@ -324,7 +338,7 @@ Los enlaces de SV-sala-de-maquinas mantienen el acceso restringido de los origin
 
 ## Historia completa de la edición documental
 
-La secuencia comienza en **0.1** y avanza hasta la presente **2.25**. Se conservan todas las ediciones anteriores y sus referencias inmutables. Cada desplegable conserva lo relevante de su corte y ofrece el texto íntegro; sus estados históricos no sustituyen al estado actual.
+La secuencia comienza en **0.1** y avanza hasta la presente **2.27**. Se conservan todas las ediciones anteriores y sus referencias inmutables. Cada desplegable conserva lo relevante de su corte y ofrece el texto íntegro; sus estados históricos no sustituyen al estado actual.
 
 El salto **0.2 → 2.0** se conserva tal como fue publicado; no se ha localizado una edición 1.x en el historial de este archivo. Cuando una edición reúne varios commits, se muestran todos en orden. Las fechas siguientes son las de esos commits en Europe/Madrid; una cabecera histórica puede conservar una fecha anterior.
 
@@ -601,8 +615,6 @@ Integra los candidatos en el apartado de estado, el cálculo GPU en funciones y 
 
 </details>
 
-<a id="dos-vías-de-ejecución"></a>
-
 <details>
 <summary><strong>2.25 · 06/10/2026 · Conservación de Qwen3.5 Q8_0</strong></summary>
 
@@ -612,6 +624,26 @@ Añade la imagen cifrada y el complemento de la instalación, su recuperación e
 
 </details>
 
+<details>
+<summary><strong>2.26 · 07/10/2026 · Cierre documental de Astra en el nodo 03</strong></summary>
+
+Incorpora Astra a la tabla de estado con su examen documental Apto y distingue su inferencia remota de la administración propia del nodo 01. Identifica el visor egui de 25 posiciones. Conserva los resultados anteriores y sus límites; no acredita nuevas ejecuciones de otros modelos.
+
+[Texto íntegro de la edición 2.26](https://github.com/juantoniolloretegea/SV-motor/blob/365c0004164a5e7c7dd7e5ecb230ebba7f7a1582/laboratorio/ensayo-ia-y-observabilidad/README.md).
+
+</details>
+
+<details>
+<summary><strong>2.27 · 07/10/2026 · Orientación de los tres nodos y conciliación documental</strong></summary>
+
+Sitúa las tres modalidades enlazadas antes de los resultados y distingue los nodos de las vías técnicas A/B. Integra Astra en versiones, publicaciones y seguimiento; concilia la retirada de Qwen3.5 con el estado actual, conservando los cortes históricos. Mantiene las rutas de expedientes, los diagramas y las anclas publicadas. La revisión se limita a organización y correspondencia documental.
+
+[Edición precedente 2.26](https://github.com/juantoniolloretegea/SV-motor/blob/365c0004164a5e7c7dd7e5ecb230ebba7f7a1582/laboratorio/ensayo-ia-y-observabilidad/README.md). La revisión exacta de 2.27 se identifica por el commit que contiene este documento y su registro de versiones.
+
+</details>
+
+<a id="dos-vías-de-ejecución"></a>
+
 ## Vías de ejecución y diagramas
 
 | Vía | Lugar de la inferencia | Función del navegador | Alcance |
@@ -619,7 +651,7 @@ Añade la imagen cifrada y el complemento de la instalación, su recuperación e
 | **A · navegador** | Trabajador del navegador, mediante Rust compilado a WebAssembly. | Interfaz y alojamiento del trabajador. | Compatibilidad y recursos determinados para cada modelo, motor y navegador. |
 | **B · nativa** | Proceso nativo en el anfitrión, separado de la interfaz. | Presentación y transporte de solicitudes. | Fronteras del servicio, supervisión, custodia y terminación sujetas a comprobación. |
 
-Una página que consulta un modelo nativo corresponde a la vía B, aunque incorpore WebAssembly en otro componente. HTML y CSS resuelven la presentación; JavaScript se limita al transporte y la interacción necesarios. En la aplicación nativa, Rust ejecuta la inferencia y los controles propios del ensayo.
+Una página que consulta un modelo nativo corresponde a la vía B, aunque incorpore WebAssembly en otro componente. HTML y CSS resuelven la presentación; JavaScript se limita al transporte y la interacción necesarios. JavaScript no decide directrices, adjudicaciones, permisos ni controles del SV; las entradas relevantes se validan y autorizan en Rust. En la aplicación nativa, Rust ejecuta la inferencia y los controles propios del ensayo.
 
 La elección de una vía responde a la factibilidad y al resultado buscado. No exige ensayar todas las combinaciones de modelos y soportes. Una vía no realizada puede retomarse si surge una pregunta concreta. Comparar modelos distintos en vías distintas permite valorar ambas configuraciones, pero no atribuir sus diferencias exclusivamente a WebAssembly.
 
@@ -725,6 +757,7 @@ La secuencia de identificación es **configuración → campaña → resultado �
 | Contrato y límites del ensayo | [EIO-CONTRATO-01, revisión 1](contrato/README.md). |
 | Continuidad y dictámenes | [S39](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/sucesos/SUCESOS_SV.md#s39) y [Acta 004](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/continuacion-15-09-2026/ACTA_004_FINALIDAD_ALCANCE_Y_CONTINUIDAD_EIO_2026_09_22.md). |
 | Cálculo Rust para AMD y candidatos asociados | [TT-0020](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0020.md), S39 revisión 39, Acta 004 §33, RETP-2026-278 y [encargo instrumental](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/main/encargos-ejecucion/AMD-CUBECL-MFMA-20261005/v1/ENCARGO.md). La autorización posterior se distingue de la recepción aún pendiente. |
+| GPT-6 Astra y acoplamiento del nodo 03 | [TT-0021](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0021.md), S39 revisión 58, Acta 004 §52 y RETP-2026-297. Examen documental cerrado como Apto; las dependencias generales y la recepción independiente conservan su alcance propio. |
 | Alcances de los tiques | [TT-0013: cierre GPT-OSS-20B](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0013.md), [TT-0014: MCP](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0014.md) y [TT-0015: viabilidad GPT-OSS-120B](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0015.md). |
 
 El seguimiento vigente se completa con [TT-0016: banco y evaluación de Instruct](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0016.md) y [TT-0017: prueba y cierre Thinking](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0017.md). TT-0013 conserva su cierre acotado; TT-0014 mantiene su recepción propia pendiente; TT-0015 dispone de un estudio preliminar adverso para la configuración considerada, sin inferencia. Safeguard conserva su seguimiento en [TT-0018](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0018.md), con recepciones anteriores pendientes. La preevaluación Qwen3.5 tiene protocolo y seguimiento propios en [TT-0019](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0019.md). TT-0017 y TT-0018 finalizan su alcance experimental y documental, con reservas y situación de infraestructura separadas. S39 continúa en ejecución y TT-0014 conserva su recepción integral pendiente. El retorno al Lenguaje y al Núcleo sigue la [guía del sistema conjunto](../sistema-conjunto-lenguaje-computacion-ia-gobernada/README.md).
@@ -734,9 +767,5 @@ Los enlaces de las tablas permiten lectura pública de las fichas y los resultad
 ## Licencias
 
 [Texto de la licencia CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/deed.es). Se conservan el [aviso de EIO conversación](conversacion-nativa/AVISO_LICENCIAS.json), el [aviso de GPT-OSS y su controlador](modelos-de-ia/openai/gpt-oss-20b/controlador-nativo/AVISO_LICENCIAS.json) y los avisos específicos de cada entrega. Cada componente mantiene su licencia; una publicación no amplía derechos de uso o distribución.
-
-## Constancia posterior de retirada · 06/10/2026
-
-La instancia y su disco exclusivo están retirados, con desaparición cotejada. Conservación estructural conforme; arranque restaurado no ensayado. Véase el [acta posterior](https://github.com/juantoniolloretegea/SV-motor/blob/main/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/qwen/qwen3.5-122b-a10b-q8-0/seguimiento/cierre-20261006/ACTA-RETIRADA.md). Los cortes anteriores conservan su fecha y alcance.
 
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
