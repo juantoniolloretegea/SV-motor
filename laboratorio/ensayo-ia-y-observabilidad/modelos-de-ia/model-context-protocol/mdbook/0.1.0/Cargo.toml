@@ -1,0 +1,20 @@
+[package]
+name = "sv-mcp-documental"
+version = "0.1.5-mdbook.1"
+edition = "2021"
+rust-version = "1.93"
+publish = false
+
+[dependencies]
+serde = { version = "=1.0.228", features = ["derive"] }
+serde_json = "=1.0.149"
+sha2 = "=0.10.9"
+pulldown-cmark = { version = "=0.13.0", default-features = false }
+
+[profile.dev]
+debug = 0
+incremental = false
+
+[profile.release]
+strip = true
+
