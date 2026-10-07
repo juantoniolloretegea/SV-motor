@@ -2,7 +2,7 @@
 
 ---
 
-> Ver los siguientes enlaces:
+> Ver los siguientes enlaces:  
 > 1.- [Introducción](https://rust-lang.github.io/mdBook/)  
 > 2.- [Github](https://github.com/rust-lang/mdbook)  
 > 3.- [Releases](https://github.com/rust-lang/mdBook/releases)  
