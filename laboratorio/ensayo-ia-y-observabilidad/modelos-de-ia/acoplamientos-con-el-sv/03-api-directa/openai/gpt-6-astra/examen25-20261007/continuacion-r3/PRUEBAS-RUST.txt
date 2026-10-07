@@ -1,0 +1,234 @@
+   Compiling sv-comprobacion-acceso-openai v0.1.0 (C:\laboratorio\watson-local\lenguaje-computacion-sv\desarrollo\acoplamientos-con-el-sv\03-api-directa\openai\gpt-6.1-sol\acceso)
+warning: unused imports: `Command` and `Stdio`
+ --> src\bin\astra-examen25-r3\pdf.rs:4:94
+  |
+4 | use std::{fs::{self, File, OpenOptions}, io::{Read, Write}, path::{Path, PathBuf}, process::{Command, Stdio}, thread, time::{Duration...
+  |                                                                                              ^^^^^^^  ^^^^^
+  |
+  = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+warning: unused import: `num`
+ --> src\bin\astra-examen25-r3\suministro.rs:4:40
+  |
+4 | use crate::suministro_pdf::{parse,need,num,sha,contenido,R};
+  |                                        ^^^
+
+warning: unused variable: `source_hash`
+  --> src\bin\astra-examen25-r3\suministro.rs:55:44
+   |
+55 | fn cotejar_diario(base:&Path,bin_hash:&str,source_hash:&str)->R<()> {
+   |                                            ^^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_source_hash`
+   |
+   = note: `#[warn(unused_variables)]` (part of `#[warn(unused)]`) on by default
+
+warning: constant `RUN` is never used
+  --> src\bin\astra-examen25-r3\..\..\catalogo\mod.rs:12:11
+   |
+12 | pub const RUN:&str="ejecucion/astra-catalogo-20261007";
+   |           ^^^
+   |
+   = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: constant `MCP` is never used
+  --> src\bin\astra-examen25-r3\..\..\catalogo\mod.rs:13:7
+   |
+13 | const MCP:&str="compilacion/mcp-linux/debug/sv-mcp-documental";
+   |       ^^^
+
+warning: constant `AUDIT` is never used
+  --> src\bin\astra-examen25-r3\..\..\catalogo\mod.rs:14:7
+   |
+14 | const AUDIT:&str="compilacion/mcp-linux/debug/verificar-diario";
+   |       ^^^^^
+
+warning: function `read` is never used
+  --> src\bin\astra-examen25-r3\..\..\catalogo\mod.rs:19:8
+   |
+19 | pub fn read(p:&Path)->R<Value>{estricto::parse(&fs::read(p).map_err(e)?).map_err(e)}
+   |        ^^^^
+
+warning: function `linux` is never used
+  --> src\bin\astra-examen25-r3\..\..\catalogo\mod.rs:38:4
+   |
+38 | fn linux(p:&Path)->R<String>{guard(p)?;Ok(p.to_string_lossy().replace("C:","/mnt/c").replace('\\',"/"))}
+   |    ^^^^^
+
+warning: function `command` is never used
+  --> src\bin\astra-examen25-r3\..\..\catalogo\mod.rs:39:4
+   |
+39 | fn command(bin:&str,args:&[String])->Command{
+   |    ^^^^^^^
+
+warning: function `local` is never used
+  --> src\bin\astra-examen25-r3\..\..\catalogo\mod.rs:45:4
+   |
+45 | fn local(mut cmd:Command,input:Vec<u8>,out:&Path,label:&str)->R<Vec<u8>>{
+   |    ^^^^^
+
+warning: function `preflight` is never used
+  --> src\bin\astra-examen25-r3\..\..\catalogo\mod.rs:72:8
+   |
+72 | pub fn preflight()->R<Value>{
+   |        ^^^^^^^^^
+
+warning: function `prepare` is never used
+   --> src\bin\astra-examen25-r3\..\..\catalogo\mod.rs:114:8
+    |
+114 | pub fn prepare()->R<()>{
+    |        ^^^^^^^
+
+warning: function `page` is never used
+   --> src\bin\astra-examen25-r3\..\..\catalogo\mod.rs:120:8
+    |
+120 | pub fn page(v:&Value)->String{format!("<!doctype html><html lang='es'><meta charset='utf-8'><title>SV · Astra · Catálogo A0</title>...
+    |        ^^^^
+
+warning: function `start_page` is never used
+   --> src\bin\astra-examen25-r3\..\..\catalogo\mod.rs:121:8
+    |
+121 | pub fn start_page()->String{"<!doctype html><html lang='es'><meta charset='utf-8'><h1>SV · Astra · Catálogo A0</h1><p>Nueve solicit...
+    |        ^^^^^^^^^^
+
+warning: function `one` is never used
+   --> src\bin\astra-examen25-r3\..\..\catalogo\mod.rs:127:4
+    |
+127 | fn one(token:&str,out:&Path,case:&str)->R<Value>{
+    |    ^^^
+
+warning: function `infer` is never used
+   --> src\bin\astra-examen25-r3\..\..\catalogo\mod.rs:181:8
+    |
+181 | pub fn infer(token:&str)->R<Value>{
+    |        ^^^^^
+
+warning: constant `BIN` is never used
+ --> src\bin\astra-examen25-r3\suministro.rs:6:7
+  |
+6 | const BIN:&str="compilacion/mcp-pdf-linux/debug";
+  |       ^^^
+
+warning: function `path` is never used
+  --> src\bin\astra-examen25-r3\suministro.rs:17:4
+   |
+17 | fn path(s:&str)->R<PathBuf>{let p=Path::new(ROOT).join(s);guard(&p)?;Ok(p)}
+   |    ^^^^
+
+warning: function `put` is never used
+  --> src\bin\astra-examen25-r3\suministro.rs:20:4
+   |
+20 | fn put(p:&Path,b:&[u8])->R<()>{guard(p)?;let mut f=OpenOptions::new().create_new(true).write(true).open(p).map_err(err)?;f.write_all...
+   |    ^^^
+
+warning: function `save` is never used
+  --> src\bin\astra-examen25-r3\suministro.rs:21:4
+   |
+21 | fn save(p:&Path,v:&Value)->R<()>{put(p,&serde_json::to_vec_pretty(v).map_err(err)?)}
+   |    ^^^^
+
+warning: function `linux` is never used
+  --> src\bin\astra-examen25-r3\suministro.rs:22:4
+   |
+22 | fn linux(p:&Path)->R<String>{guard(p)?;Ok(p.to_string_lossy().replace("C:","/mnt/c").replace('\\',"/"))}
+   |    ^^^^^
+
+warning: function `command` is never used
+  --> src\bin\astra-examen25-r3\suministro.rs:23:4
+   |
+23 | fn command(bin:&str,args:&[String])->R<Command>{
+   |    ^^^^^^^
+
+warning: struct `Process` is never constructed
+  --> src\bin\astra-examen25-r3\suministro.rs:29:8
+   |
+29 | struct Process{child:Child,input:Option<ChildStdin>,rx:mpsc::Receiver<R<Vec<u8>>>,stdout:Vec<u8>,stderr:Option<thread::JoinHandle<st...
+   |        ^^^^^^^
+
+warning: associated items `start`, `write`, `response`, and `finish` are never used
+  --> src\bin\astra-examen25-r3\suministro.rs:31:8
+   |
+30 | impl Process{
+   | ------------ associated items in this implementation
+31 |     fn start(mut cmd:Command)->R<Self>{
+   |        ^^^^^
+...
+39 |     fn write(&mut self,v:&Value)->R<()>{let mut b=serde_json::to_vec(v).map_err(err)?;b.push(b'\n');need(b.len()<=16384,"Solicitud M...
+   |        ^^^^^
+40 |     fn response(&mut self)->R<Value>{let left=Duration::from_secs(35).checked_sub(self.started.elapsed()).ok_or("Plazo auxiliar agot...
+   |        ^^^^^^^^
+41 |     fn finish(mut self,out:&Path,label:&str)->R<Vec<u8>>{
+   |        ^^^^^^
+
+warning: function `once` is never used
+  --> src\bin\astra-examen25-r3\suministro.rs:53:4
+   |
+53 | fn once(bin:&str,args:&[String],out:&Path,label:&str)->R<Value>{let p=Process::start(command(bin,args)?)?;let b=p.finish(out,label)?...
+   |    ^^^^
+
+warning: function `preparar` is never used
+   --> src\bin\astra-examen25-r3\suministro.rs:100:8
+    |
+100 | pub fn preparar(root:&Path)->R<Value> {
+    |        ^^^^^^^^
+
+warning: `sv-comprobacion-acceso-openai` (bin "astra-examen25-r3" test) generated 26 warnings (run `cargo fix --bin "astra-examen25-r3" -p sv-comprobacion-acceso-openai --tests` to apply 3 suggestions)
+    Finished `test` profile [unoptimized] target(s) in 2.86s
+     Running unittests src\bin\astra-examen25-r3\main.rs (compilacion\telemetria\debug\deps\astra_examen25_r3-39057a893d90a551.exe)
+
+running 54 tests
+test catalogo::estricto::tests::exterior ... ok
+test catalogo::tests::no_despacha_herramientas ... ok
+test catalogo::estricto::tests::repeticion_anidada ... ok
+test catalogo::tests::rechaza_omision_y_desorden ... ok
+test catalogo::estricto::tests::conserva_tipos ... ok
+test catalogo::tests::no_admite_citas_externas_ni_recepcion_parcial ... ok
+test contrato::tests::rechaza_historia_incompleta_y_herramientas ... ok
+test localizadores::tests::impide_citas_fuera_de_seccion ... ok
+test catalogo::tests::ambas_paginas_y_prohibicion ... ok
+test localizadores::tests::cita_no_exige_literalidad_de_conclusion ... ok
+test localizadores::tests::rechaza_fabricacion_duplicacion_y_salto ... ok
+test contrato::tests::validacion_rechaza_campos_extra_y_tipos ... ok
+test pdf::tests::error_sin_cierre_no_es_respuesta ... ok
+test contrato::tests::u_no_es_un_relleno ... ok
+test pdf::tests::sse_fragmentado_unicode ... ok
+test pdf::tests::mantenimiento_rechaza_contenido_saltos_y_poscierre ... ok
+test contrato::tests::tres_etapas_y_fuente_inmutable ... ok
+test pdf::tests::mantenimiento_observado_no_equivale_a_respuesta ... ok
+test pdf::tests::sse_no_truncado_ni_doble_cierre ... ok
+test pdf::tests::sse_rechaza_herramientas_y_saltos ... ok
+test servicio::tests::cinco_minutos_son_un_limite_real ... ok
+test servicio::tests::comienza_por_siguiente_y_deja_15_al_final ... ok
+test pdf::tests::sobrecarga_conserva_error_y_cierre ... ok
+test servicio::tests::dos_fallos_conservan_orden ... ok
+test servicio::tests::fallo_no_repite_antes_de_siguientes ... ok
+test suministro::tests::reconstruccion_sin_espacios_inventados ... ok
+test suministro_pdf::estricto::tests::conserva_tipos ... ok
+test suministro_pdf::estricto::tests::repeticion_anidada ... ok
+test suministro::tests::suministro_por_lista_cerrada ... ok
+test suministro_pdf::estricto::tests::exterior ... ok
+test servicio::tests::no_repite_ya_encolada - should panic ... ok
+test suministro_pdf::tests::banco_es_inmutable ... ok
+test suministro_pdf::tests::director_no_compone_antes_de_admision ... ok
+test suministro_pdf::tests::director_rechaza_telemetria_y_clave_alteradas ... ok
+test suministro_pdf::tests::diez_paginas_y_extraccion_se_cotejan ... ok
+test suministro_pdf::tests::rechaza_cursor_final_y_offset_falsos ... ok
+test suministro_pdf::tests::rechaza_fuente_huella_y_pagina_ajenas ... ok
+test suministro_pdf::tests::direccion_rechaza_sin_aislamiento_o_diario_distinto ... ok
+test suministro_pdf::tests::rechaza_perdida_duplicacion_y_desorden ... ok
+test suministro_pdf::tests::unicode_integro ... ok
+test suministro_pdf::tests::representaciones_rpc_deben_coincidir ... ok
+test tests::cliente_previo_no_sustituible ... ok
+test tests::cliente_emitido_obligatorio ... ok
+test suministro_pdf::tests::direccion_impide_recorrido_parcial_y_recepcion_repetida ... ok
+test tests::rechazo_duplicado ... ok
+test tests::rechazo_denegado ... ok
+test tests::rechazo_estado ... ok
+test suministro_pdf::tests::direccion_rechaza_inyeccion_de_herramientas_clave_historial_o_cambio_de_modelo ... ok
+test tests::retorno_valido ... ok
+test tests::rechazo_token_sin_firma ... ok
+test suministro_pdf::tests::nueve_solicitudes_solo_contienen_paginas_admitidas ... ok
+test catalogo::tests::preserva_recepcion_sse_y_rechaza_alteracion ... ok
+test pdf::tests::mantenimiento_conserva_texto_y_uso ... ok
+test tests::firmas_identidad_y_contexto ... ok
+
+test result: ok. 54 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 2.00s
+
