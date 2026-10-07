@@ -1,0 +1,111 @@
+{
+  "alcance_no_entregado": "Respuesta inicial P15/R0; sus dos revisiones dependientes quedaron pendientes. Las 42 entregas completas anteriores se conservaron.",
+  "argumento_proveedor": {
+    "code": "server_is_overloaded",
+    "message": "Our servers are currently overloaded. Please try again later."
+  },
+  "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+  "causa_receptor_secundaria": "Evento posterior al cierre",
+  "clasificacion": "interrupcion_comunicada_por_el_proveedor",
+  "duracion_total_indisponibilidad_ms": null,
+  "estado": "Entrega recuperada; evaluación del servicio pendiente",
+  "examen": "ASTRA-EXAMEN25-20261007",
+  "fuentes": {
+    "intentos_sha256": "6e8e9c7cf0f12cad2ad23848952cb7c9bd812a63a66f15371e90da4ee4ff5bc3",
+    "servicio_sha256": "c807d52e6f8b7c7073257659173bd86267b1ca99bccc2772a8204988fe48f965"
+  },
+  "hecho": {
+    "caso": "P15-R0",
+    "completa": false,
+    "duracion_operacion_ms": 2141,
+    "fin_operacion_utc_ms": 1791381735527,
+    "inicio_envio_utc_ms": 1791381733385,
+    "resultado_sha256": "e3ef4893874d0dfd0f127f174705ba9b343c2b5e42639889617c7400254020c7",
+    "revision": "r2",
+    "sse_sha256": "170e181a30135469562653365009e5106c46d963258b71ff49c0e279c59af4d2"
+  },
+  "id": "SV-SERVICIO-OPENAI-20261007-001",
+  "intervencion_local": "La pausa de recepción y corrección del receptor no acredita indisponibilidad continua del proveedor. La causa local secundaria se conserva separadamente.",
+  "latencia_hasta_error_ms": 2095,
+  "marco_normativo": {
+    "alcance": "Referencias para gestión y evaluación posterior; no declara certificación, conformidad integral ni incumplimiento de cláusulas no auditadas",
+    "complementarias": [
+      "ISO/IEC 20000-1:2018",
+      "ISO/IEC 25010:2023"
+    ],
+    "referencias_principales": [
+      {
+        "norma": "ISO/IEC 42001:2023",
+        "url": "https://www.iso.org/standard/42001"
+      },
+      {
+        "norma": "ISO 9001:2026",
+        "publicacion": "2026-09-16",
+        "url": "https://www.iso.org/standard/88464.html"
+      }
+    ]
+  },
+  "modelo": "gpt-6-astra",
+  "proveedor": "OpenAI",
+  "puntuacion_proveedor": null,
+  "recuperacion_pregunta": [
+    {
+      "caso": "P15-R0",
+      "completa": true,
+      "duracion_operacion_ms": 12684,
+      "fin_operacion_utc_ms": 1791383942654,
+      "inicio_envio_utc_ms": 1791383929970,
+      "resultado_sha256": "1cd81803b4b3c7e3fed2a2e77040cbf2fac9f582069f98941ddc2eced9a599a9",
+      "revision": "r3",
+      "sse_sha256": "9e85ed81a3181e2a884cdbb7246e1fbef08873f62be2b7d065217ae4a5e2a3ba"
+    },
+    {
+      "caso": "P15-R1",
+      "completa": true,
+      "duracion_operacion_ms": 15220,
+      "fin_operacion_utc_ms": 1791383962257,
+      "inicio_envio_utc_ms": 1791383947037,
+      "resultado_sha256": "a55fcd27913cf1282b2e2e8a9fe81154cfc903cf63b1000eecf2ac98e78d4b36",
+      "revision": "r3",
+      "sse_sha256": "7014969916a65fa1e37a33efaa9a341405580d6c4dcbdc5ca1542fe61aadfc12"
+    },
+    {
+      "caso": "P15-R2",
+      "completa": true,
+      "duracion_operacion_ms": 14207,
+      "fin_operacion_utc_ms": 1791383980916,
+      "inicio_envio_utc_ms": 1791383966709,
+      "resultado_sha256": "e7c366b6066d4d4556f6373c3d720380ecbf74428745e68fb46ce7975435d4c4",
+      "revision": "r3",
+      "sse_sha256": "718e9c2a629092fa05104f9838bd7c97b57b47540f0d2c92a833ba48b9247b23"
+    }
+  ],
+  "recuperacion_servicio_observada": {
+    "caso": "P16-R0",
+    "completa": true,
+    "duracion_operacion_ms": 23050,
+    "fin_operacion_utc_ms": 1791383143033,
+    "inicio_envio_utc_ms": 1791383119982,
+    "resultado_sha256": "89aa780ff2a7757f8b1a9966be1ec6162e7da9a74e598515ad382a2cfb2005fa",
+    "revision": "r3",
+    "sse_sha256": "397f660fff2a27e5bde66ed562b1d0273d18f53af7f653a573195e7b216ddc64"
+  },
+  "regla_continuidad": {
+    "al_agotar": "prueba no válida por falta de recursos que garanticen el examen",
+    "alcanzada_en_r3": false,
+    "aplazar_pregunta": true,
+    "aplicar_desde": "adenda r3 autorizada durante la interrupción",
+    "puntuacion_candidato_por_fallo_servicio": null,
+    "ventana_operativa_ms": 300000
+  },
+  "suceso": "S39",
+  "tiques": [
+    "TT-0016",
+    "TT-0021"
+  ],
+  "uso_intento_interrumpido": {
+    "entrada_tokens": null,
+    "salida_tokens": null,
+    "total_tokens": null
+  }
+}
