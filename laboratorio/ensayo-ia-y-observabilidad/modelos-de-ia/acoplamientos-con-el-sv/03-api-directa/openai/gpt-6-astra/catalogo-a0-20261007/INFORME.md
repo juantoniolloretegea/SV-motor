@@ -1,5 +1,7 @@
 # GPT-6 Astra · A01–A09 · Capa inicial A0
 
+**Corrección de la entrega gráfica · 07/10/2026:** el HTML anterior era una captura estática y no contenía un polígono interactivo. Se sustituye por el visor Rust/egui 0.2.0, compilado a WebAssembly e incorporado en un HTML autónomo. Resultados científicos inalterados. [Defecto, corrección y pruebas](CORRECCION-VISOR.md).
+
 Fecha: 7 de octubre de 2026. Nodo 03, inferencia mediante API; gobierno, caché, instrumentación y evaluación en el SV. Continuación de S39 y TT-0021.
 
 ## Resultado y alcance
@@ -56,7 +58,7 @@ Comprobaciones de realización: 33 pruebas Rust del cliente antes de inferir; nu
 
 ## Representación y comparación
 
-El vector completo `(0,0,0,0,0,0,0,0,0)` se representa en **egui**, con nueve posiciones ordenadas, sin sustituir ausencias por U. Se comprobaron la correspondencia de datos y la captura de la ventana; la inspección visual confirma las nueve posiciones y el resultado. [Presentación egui](POLIGONO-EGUI.html), [representación documental](FRAME.html), [datos de adjudicación](CAPA.json), [métricas](METRICAS.json) y [respuestas íntegras](ENTREGAS.json).
+El vector completo `(0,0,0,0,0,0,0,0,0)` se representa en **egui**, con nueve posiciones ordenadas, sin sustituir ausencias por U. La primera comprobación sólo acreditó datos y captura de nueve botones: no acreditaba geometría poligonal ni interacción en HTML. La entrega 0.2.0 corrige ambos defectos, conforme al informe de corrección. [Presentación egui](POLIGONO-EGUI.html), [representación documental](FRAME.html), [datos de adjudicación](CAPA.json), [métricas](METRICAS.json) y [respuestas íntegras](ENTREGAS.json).
 
 La comparación con nodo 01 conserva corpus, afirmaciones, política, contrato de respuesta y criterios de puntuación. Cambian plataforma, transporte y observabilidad: no se equiparan memoria, GPU, tokenizador, semilla o duración de inferencia interna. El antecedente Qwen A0 disponible abarca siete casos; no procede enfrentar una puntuación global incompleta a este vector de nueve. A06 se resuelve aquí conservando población y horizonte temporal, distinción documentada en la adjudicación.
 

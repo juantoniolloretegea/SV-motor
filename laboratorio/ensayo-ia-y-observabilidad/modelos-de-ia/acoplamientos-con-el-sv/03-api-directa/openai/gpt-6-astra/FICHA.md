@@ -1,5 +1,7 @@
 # GPT-6 Astra · Nodo 03 · OpenAI
 
+**Corrección de la entrega gráfica · 07/10/2026:** el HTML anterior era una captura estática y no contenía un polígono interactivo. Se sustituye por el visor Rust/egui 0.2.0, compilado a WebAssembly e incorporado en un HTML autónomo. Resultados científicos inalterados. [Defecto, corrección y pruebas](catalogo-a0-20261007/CORRECCION-VISOR.md).
+
 Fecha de apertura: 6 de octubre de 2026. Identificador solicitado: `gpt-6-astra`.
 
 ## Catálogo A0 ejecutado · 07/10/2026

@@ -1,54 +1,47 @@
 {
-  "alcance": "Correspondencia de los datos representados; inspección visual separada",
-  "captura_sha256": "4ab5fa9637dbec20e51e19ad73ed9ff02a5cd834a753c462d90c7b6daac93f3f",
-  "conforme": true,
+  "version": "0.2.0",
+  "fecha_utc": "2026-10-07T06:17:50Z",
   "fuente_sha256": "1be4b387d9fb44fe4a6e9d3bfae0aa2db24cd93caf3aa389722a2a964dc766be",
-  "posiciones": [
+  "html_sha256": "06cd685246bc7c3447a640e67b97d269124aea72fc011c7ecec4936a17c736d9",
+  "html_bytes": 3663353,
+  "correccion": "La entrega anterior era una captura estática de nueve botones, sin polígono ni interacción en HTML. Queda sustituida por egui/Rust WebAssembly autónomo.",
+  "revision_anterior": "a88ddfe7be8f5f8c8f535f0c46d61fd518e92786",
+  "pruebas_rust": {
+    "controles": [
+      "Fuente fijada, incompletos, símbolo y orden",
+      "Radios 1/2/3 y orden de posiciones",
+      "Eventos de pulsación en nueve vértices y nueve botones; fundamento dibujado; fuente inmutable",
+      "Trazado cerrado con los nueve vértices calculados"
+    ],
+    "resultado": "4 conformes, 0 fallidas"
+  },
+  "navegador": {
+    "seleccion_vertice": "A01 a A06, fundamento actualizado",
+    "seleccion_boton": "A06 a A09, fundamento actualizado",
+    "errores_y_avisos_observados": 0,
+    "apertura_file_verificada": false,
+    "entorno": "Navegador integrado, vista HTTP de bucle local",
+    "pasajes": "Ocultar y volver a mostrar, cotejado visualmente",
+    "trazabilidad": "Desplegable con huellas de respuesta y auditoría",
+    "limite": "El navegador automatizado no permite file://. Se verificó el mismo HTML servido localmente; la apertura directa descargada no se declara comprobada."
+  },
+  "independencia": {
+    "solicitudes_modelo": 0,
+    "CAPA_modificada": false,
+    "nucleo_modificado": false,
+    "tokens_inferencia_nuevos": 0,
+    "CSP": "connect-src none; sin recursos externos"
+  },
+  "artefactos": [
     {
-      "caso": "A01",
-      "posicion": 1,
-      "valor": "0"
+      "sha256": "2b149b735adabd93122993e10923b99c05a2b2ad3af6e33ce73c135b91ca4749",
+      "bytes": 75523,
+      "nombre": "POLIGONO-INTERACTIVO-A06.jpg"
     },
     {
-      "caso": "A02",
-      "posicion": 2,
-      "valor": "0"
-    },
-    {
-      "caso": "A03",
-      "posicion": 3,
-      "valor": "0"
-    },
-    {
-      "caso": "A04",
-      "posicion": 4,
-      "valor": "0"
-    },
-    {
-      "caso": "A05",
-      "posicion": 5,
-      "valor": "0"
-    },
-    {
-      "caso": "A06",
-      "posicion": 6,
-      "valor": "0"
-    },
-    {
-      "caso": "A07",
-      "posicion": 7,
-      "valor": "0"
-    },
-    {
-      "caso": "A08",
-      "posicion": 8,
-      "valor": "0"
-    },
-    {
-      "caso": "A09",
-      "posicion": 9,
-      "valor": "0"
+      "sha256": "8c1f60c35159ea1c275c3781f48b458f895c328ff4a29e591843bb518fa5113f",
+      "bytes": 67363,
+      "nombre": "A09-PASAJES-OCULTOS.jpg"
     }
-  ],
-  "realizacion": "eframe/egui 0.33.3; captura de la ventana renderizada"
+  ]
 }
