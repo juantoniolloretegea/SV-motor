@@ -30,7 +30,7 @@ Se conserva el límite del preparador de **64 páginas físicas**, distinto del 
 | MCP documental 0.1.4 | Protocolo real y suministro por fragmentos; aislamiento de conexiones | Compilado y ejecutado en Linux/WSL |
 | Verificador del diario | Reproducción de 101 eventos y 33 tramas | Compilado y ejecutado en Linux/WSL |
 | `sv-suministro-pdf-astra` 0.1.0 | Recepción, admisión y composición limitada por el Árbitro-Director | Compilado y ejecutado en Windows |
-| Instrumentación SV en Rust | Proceso propio, CPU, memoria, E/S, hilos y TCP; diario encadenado | Incorporada al ejecutable y utilizada |
+| Instrumentación SV en Rust | Proceso propio, CPU, memoria, E/S y TCP; diario encadenado | Incorporada al ejecutable y utilizada |
 | Transporte del proveedor y candidato | Inferencia y entrega del modelo | No utilizados en esta comprobación |
 
 Los ejecutables utilizados están identificados por tamaño y SHA-256 en el recibo original; la proyección pública conserva esas identidades sin datos de sesión. El código nuevo incorpora copias exactas del analizador JSON estricto y de la biblioteca de instrumentación ya existentes; [PROCEDENCIA.json](PROCEDENCIA.json) identifica sus originales y huellas. No se altera su sede anterior. La [fuente canónica del MCP](https://github.com/juantoniolloretegea/SV-motor/tree/3f12e5054523f313ce148d37f0bdaee16bcff98a/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/model-context-protocol/0.1.4-pdf-preparacion) conserva el preparador, el protocolo y la variante del extractor.
@@ -45,7 +45,7 @@ La primera recepción local se conserva. Tras incorporar las dependencias de fue
 
 En r2 se obtuvieron **24 muestras, 68 registros, cero fallos de medición y 275 ms de intervalo máximo**, frente a un objetivo de 250 ms. La extracción observada duró 4806 ms y el proceso MCP de suministro 696 ms. Son duraciones locales de procesos invocados, no tiempo de respuesta del candidato ni coste facturable. La denegación de conexiones externas y locales se comprobó en el MCP con error EPERM.
 
-La instrumentación observa el proceso Windows propio; los identificadores registrados al invocar WSL corresponden al transporte Windows, no acreditan por sí solos CPU o memoria individual de los procesos Linux. No se observan recursos internos del proveedor. La constancia conserva `plataforma_recibida: false`: la custodia de las muestras es conforme, pero no se convierte por ello en calibración integral ni certificación externa del instrumento. El extractor conserva avisos de compilación anteriores; no se afirma compilación sin avisos.
+La instrumentación observa el proceso Windows propio; los identificadores registrados al invocar WSL corresponden al transporte Windows, no acreditan por sí solos CPU o memoria individual de los procesos Linux. No se observan recursos internos del proveedor, hilos y manejadores del sistema operativo, asignaciones individuales de memoria Rust, retransmisiones o RTT de TCP, ni tiempos DNS y TLS separados. La constancia conserva `plataforma_recibida: false`: la custodia de las muestras es conforme, pero no se convierte por ello en calibración integral ni certificación externa del instrumento. El extractor conserva avisos de compilación anteriores; no se afirma compilación sin avisos.
 
 ## Conservación y continuación
 
