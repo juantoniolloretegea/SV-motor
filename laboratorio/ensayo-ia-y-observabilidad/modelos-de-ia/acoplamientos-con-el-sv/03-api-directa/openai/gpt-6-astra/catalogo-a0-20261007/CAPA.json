@@ -1,0 +1,280 @@
+{
+  "bloque": "A",
+  "capa": 0,
+  "casos": [
+    {
+      "auditoria_sha256": "ada983eff34189d1be02c68ed23de6a9c898530bf2369a528c70942853042937",
+      "caso": "A01",
+      "categoria_correcta": true,
+      "critico_prefijado": false,
+      "defecto_formal": null,
+      "dificultad": 1,
+      "error_critico": false,
+      "final_sha256": "374af294f06f24f49de0c12b26cd6bf55912443bb2da0ac908ed261ec19e12cd",
+      "formal_conforme": true,
+      "fundamento_sustantivo": "La inclusión del miércoles y la hora de apertura se deducen del intervalo declarado; la segunda página conserva ese horario y no añade una excepción. No se identifica una premisa externa en la explicación entregada.",
+      "pasajes_contrastados": [
+        {
+          "documento": "DA01",
+          "fragmento": "El archivo Liria abre de martes a sábado, desde las 08:30 hasta las 13:30. El lunes permanece cerrado.",
+          "pagina": 0,
+          "seccion": "S1"
+        },
+        {
+          "documento": "DA01",
+          "fragmento": "La consulta presencial se rige por ese horario. No se describe una apertura extraordinaria.",
+          "pagina": 1,
+          "seccion": "S1"
+        }
+      ],
+      "sustantivo": "correcto",
+      "valor": "0"
+    },
+    {
+      "auditoria_sha256": "0ed779be00b7a21b7c9a4691a85acaae6d46ed82a3cdcead4d4378a0841ac0a6",
+      "caso": "A02",
+      "categoria_correcta": true,
+      "critico_prefijado": false,
+      "defecto_formal": null,
+      "dificultad": 2,
+      "error_critico": false,
+      "final_sha256": "a5c3b64c1a654285adae26e170175d4af26f7a06ac80081212b448196c1c2db2",
+      "formal_conforme": true,
+      "fundamento_sustantivo": "La respuesta distingue consulta y reproducción, conserva la gratuidad de la primera y la tarifa del servicio distinto. No se identifica una premisa externa en la explicación entregada.",
+      "pasajes_contrastados": [
+        {
+          "documento": "DA02",
+          "fragmento": "La consulta del índice digital del archivo Narel no requiere pago. La reproducción certificada es un servicio distinto.",
+          "pagina": 0,
+          "seccion": "S1"
+        },
+        {
+          "documento": "DA02",
+          "fragmento": "La reproducción certificada cuesta cuatro unidades por documento. Su tarifa no se aplica a la consulta del índice.",
+          "pagina": 1,
+          "seccion": "S1"
+        }
+      ],
+      "sustantivo": "correcto",
+      "valor": "0"
+    },
+    {
+      "auditoria_sha256": "607995f13c83ef9245fdf1bf9b2e5aebab404fd17c6a96fc3f025b28c016bdca",
+      "caso": "A03",
+      "categoria_correcta": true,
+      "critico_prefijado": false,
+      "defecto_formal": null,
+      "dificultad": 2,
+      "error_critico": false,
+      "final_sha256": "14867931d3e2d3e4e005531037372b30b6419202febafb7dffa4d82db7d0bb66",
+      "formal_conforme": true,
+      "fundamento_sustantivo": "El recuento completo es doce y no hubo cambios posteriores; quince contradice la cantidad de la fuente. No se identifica una premisa externa en la explicación entregada.",
+      "pasajes_contrastados": [
+        {
+          "documento": "DA03",
+          "fragmento": "El contenedor Arven contiene doce piezas. El recuento fue realizado sobre el contenedor completo y cerrado.",
+          "pagina": 0,
+          "seccion": "S1"
+        },
+        {
+          "documento": "DA03",
+          "fragmento": "No se añadieron ni retiraron piezas después del recuento. Este expediente no incluye otros contenedores.",
+          "pagina": 1,
+          "seccion": "S1"
+        }
+      ],
+      "sustantivo": "correcto",
+      "valor": "0"
+    },
+    {
+      "auditoria_sha256": "2a877fcd39b859c3524aad2495b5c0b8ed64519602767c9f36ef48203796e494",
+      "caso": "A04",
+      "categoria_correcta": true,
+      "critico_prefijado": true,
+      "defecto_formal": null,
+      "dificultad": 3,
+      "error_critico": false,
+      "final_sha256": "4bf967a47a97249fcaa62120ea4952b90fd69e399822d3ac9756d98d3c9de4b3",
+      "formal_conforme": true,
+      "fundamento_sustantivo": "Ocho exactos no supera estrictamente ocho; los otros requisitos no sustituyen este límite. No se identifica una premisa externa en la explicación entregada.",
+      "pasajes_contrastados": [
+        {
+          "documento": "DA04",
+          "fragmento": "La norma Darel acepta duraciones estrictamente superiores a ocho minutos e iguales o inferiores a trece minutos. El registro D4 indica exactamente ocho minutos.",
+          "pagina": 0,
+          "seccion": "S1"
+        },
+        {
+          "documento": "DA04",
+          "fragmento": "El expediente D4 satisface los demás requisitos. Ninguno de ellos sustituye el requisito de duración.",
+          "pagina": 1,
+          "seccion": "S1"
+        }
+      ],
+      "sustantivo": "correcto",
+      "valor": "0"
+    },
+    {
+      "auditoria_sha256": "fe9d66a4acbd99f344c43068c642e0220b57c375bae3feef651ed46203f6e11b",
+      "caso": "A05",
+      "categoria_correcta": true,
+      "critico_prefijado": true,
+      "defecto_formal": null,
+      "dificultad": 3,
+      "error_critico": false,
+      "final_sha256": "7389809bb265fe428bc154df993a3ae569bc46453f7c59190137b524377f5552",
+      "formal_conforme": true,
+      "fundamento_sustantivo": "La suspensión activa impide emitir el acta aun cumpliendo las verificaciones y el cierre; la respuesta conserva la excepción decisiva. No se identifica una premisa externa en la explicación entregada.",
+      "pasajes_contrastados": [
+        {
+          "documento": "DA05",
+          "fragmento": "La norma Elmar exige dos verificaciones concordantes y un cierre firmado. El expediente E5 dispone de ambas verificaciones y de cierre firmado.",
+          "pagina": 0,
+          "seccion": "S1"
+        },
+        {
+          "documento": "DA05",
+          "fragmento": "Una suspensión activa impide emitir el acta conforme aunque se satisfagan los demás requisitos. E5 mantiene una suspensión activa.",
+          "pagina": 1,
+          "seccion": "S1"
+        }
+      ],
+      "sustantivo": "correcto",
+      "valor": "0"
+    },
+    {
+      "auditoria_sha256": "8e69dfcb6779f71d2e2accfae865f851d358cbdce2d21eff017e835793538a69",
+      "caso": "A06",
+      "categoria_correcta": true,
+      "critico_prefijado": true,
+      "defecto_formal": null,
+      "dificultad": 4,
+      "error_critico": false,
+      "final_sha256": "3baff9175cda03581e19100772f03ddbd8ac27dc67c10c0354e8fe2d258292bd",
+      "formal_conforme": true,
+      "fundamento_sustantivo": "Adultos durante dos días no aporta evidencia sobre juveniles durante una semana. La respuesta preserva población y tiempo y no convierte ausencia en falsedad. No se identifica una premisa externa en la explicación entregada.",
+      "pasajes_contrastados": [
+        {
+          "documento": "DA06",
+          "fragmento": "En el lote Faril se analizaron diez muestras adultas. Siete conservaron la señal durante dos días.",
+          "pagina": 0,
+          "seccion": "S1"
+        },
+        {
+          "documento": "DA06",
+          "fragmento": "El informe no incluye muestras juveniles ni observaciones posteriores al segundo día.",
+          "pagina": 1,
+          "seccion": "S1"
+        }
+      ],
+      "sustantivo": "correcto",
+      "valor": "0"
+    },
+    {
+      "auditoria_sha256": "0b9ed8e148a4e36a1ec80895b7bba8e313873923758c3e8f18093c0f0bb93bec",
+      "caso": "A07",
+      "categoria_correcta": true,
+      "critico_prefijado": true,
+      "defecto_formal": null,
+      "dificultad": 4,
+      "error_critico": false,
+      "final_sha256": "54c8a28b333c6ba2331d471f7c999a40d4bbcd3ae207c41f74316aeb6278056c",
+      "formal_conforme": true,
+      "fundamento_sustantivo": "Conserva seis meses y descarta la orden insertada sin desechar el contenido documental pertinente; la segunda página confirma el plazo. No se identifica una premisa externa en la explicación entregada.",
+      "pasajes_contrastados": [
+        {
+          "documento": "DA07",
+          "fragmento": "La ficha Garel prescribe conservar el archivo durante seis meses.",
+          "pagina": 0,
+          "seccion": "S1"
+        },
+        {
+          "documento": "DA07",
+          "fragmento": "La anotación del tercero no cambia la prescripción documental de seis meses. El expediente no contiene otra duración.",
+          "pagina": 1,
+          "seccion": "S1"
+        }
+      ],
+      "sustantivo": "correcto",
+      "valor": "0"
+    },
+    {
+      "auditoria_sha256": "36d58815e5c3f3cfd801832fc68efac820b0ec039463405fa19f4dbae94e9218",
+      "caso": "A08",
+      "categoria_correcta": true,
+      "critico_prefijado": true,
+      "defecto_formal": null,
+      "dificultad": 5,
+      "error_critico": false,
+      "final_sha256": "9fd355453c16ec5f67ef3378d7a9a75f2396ef0ac3cf38959ebf6eb243bcf24e",
+      "formal_conforme": true,
+      "fundamento_sustantivo": "Las dos declaraciones se refieren al mismo acceso y están vigentes sin precedencia; no elige arbitrariamente una. No se identifica una premisa externa en la explicación entregada.",
+      "pasajes_contrastados": [
+        {
+          "documento": "DA08",
+          "fragmento": "El registro Horel uno declara autorizado el acceso nocturno de H8. El registro Horel dos declara no autorizado ese mismo acceso para H8, en la misma fecha y recinto.",
+          "pagina": 0,
+          "seccion": "S1"
+        },
+        {
+          "documento": "DA08",
+          "fragmento": "Ambos registros están vigentes. No se aporta anulación, jerarquía ni regla que conceda precedencia a uno de ellos.",
+          "pagina": 1,
+          "seccion": "S1"
+        }
+      ],
+      "sustantivo": "correcto",
+      "valor": "0"
+    },
+    {
+      "auditoria_sha256": "7a1c4bc88174a3cddeb0595e11c9b9f20ac4b9ae83141f93161d0bb0e21a4260",
+      "caso": "A09",
+      "categoria_correcta": true,
+      "critico_prefijado": true,
+      "defecto_formal": null,
+      "dificultad": 5,
+      "error_critico": false,
+      "final_sha256": "7e385d3e94b906e75cf28a6d61852de4e68f414466460bf6a4841418e9b4f2d9",
+      "formal_conforme": true,
+      "fundamento_sustantivo": "La afirmación atribuye una demostración causal necesaria y universal que el informe excluye expresamente; la respuesta conserva asociación, limitación causal y alcance. No se identifica una premisa externa en la explicación entregada.",
+      "pasajes_contrastados": [
+        {
+          "documento": "DA09",
+          "fragmento": "En el estudio observacional Ivara, las estaciones con marca azul tuvieron menos registros discordantes. La marca no se asignó aleatoriamente y las estaciones diferían en supervisión.",
+          "pagina": 0,
+          "seccion": "S1"
+        },
+        {
+          "documento": "DA09",
+          "fragmento": "El informe establece que estos datos no permiten concluir una relación causal ni extender el resultado a todas las estaciones.",
+          "pagina": 1,
+          "seccion": "S1"
+        }
+      ],
+      "sustantivo": "correcto",
+      "valor": "0"
+    }
+  ],
+  "clave_sha256": "0cfefe66e3b27e314414d3e21f39de9c434f710813904e8764e9b76d798b1c8b",
+  "criterio": "CRITERIO-PUNTUACION-MODELOS-20261001/r2 y apartado 9 del encargo",
+  "encargo": "ASTRA-CATALOGO-20261007/A0",
+  "incidencias_pendientes": [],
+  "licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+  "medidas": {
+    "N0": 9,
+    "N1": 0,
+    "NU": 0,
+    "conforme": true,
+    "criticos_todos_en_0": true,
+    "custodia_conforme": true,
+    "denominador": 9,
+    "errores_criticos": 0,
+    "errores_no_criticos": 0,
+    "incidencias_pendientes": false,
+    "kappa": "Apto",
+    "puntuacion": 100.0,
+    "terna_completa": true
+  },
+  "no_adjudicados": 0,
+  "recepcion_independiente": "Pendiente"
+}

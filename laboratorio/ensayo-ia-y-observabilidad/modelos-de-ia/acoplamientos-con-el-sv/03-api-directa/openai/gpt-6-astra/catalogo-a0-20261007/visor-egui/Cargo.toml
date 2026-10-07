@@ -1,0 +1,12 @@
+[package]
+name = "sv-visor-catalogo"
+version = "0.1.0"
+edition = "2021"
+publish = false
+[dependencies]
+eframe = { version = "=0.33.3", default-features = false, features = ["default_fonts", "glow"] }
+serde_json = "=1.0.151"
+sha2 = "=0.10.9"
+image = { version = "=0.25.8", default-features = false, features = ["png"] }
+[profile.dev]
+debug = 0

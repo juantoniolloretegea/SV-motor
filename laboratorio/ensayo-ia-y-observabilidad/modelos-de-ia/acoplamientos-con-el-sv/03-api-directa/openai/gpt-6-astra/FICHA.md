@@ -2,6 +2,12 @@
 
 Fecha de apertura: 6 de octubre de 2026. Identificador solicitado: `gpt-6-astra`.
 
+## Catálogo A0 ejecutado · 07/10/2026
+
+Nueve casos completos y adjudicados: 9/9 correctos, incluidos los seis críticos; κ Apto y 100/100, limitados a A0. Dos páginas íntegras por caso; sin herramientas del candidato ni premisas externas identificadas en el contraste. Tiempo conjunto con observación: 90,992 s; 20.051 tokens. 340 muestras Rust y 1.874 eventos, sin fallos de captura. Polígono completo presentado en egui. [Informe y evidencias](catalogo-a0-20261007/INFORME.md).
+
+Adversariales, B, anexo PDF y examen permanecen separados. Importes atribuibles no comunicados; recepción independiente y criptografía nativa pendientes. Los apartados siguientes conservan el estado de cada antecedente en su fecha.
+
 ## Tercera prueba: entrega estructurada
 
 Una consulta artificial concluida, JSON válido y cotejo Rust de 22 archivos. Resultado correcto: 904; se reciben justificación breve, afirmaciones con datos de apoyo, código Rust propuesto, limitaciones y condiciones de revisión. No se habilitan herramientas ni se ejecuta el código propuesto. El resumen opcional del proveedor no se recibe.
