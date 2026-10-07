@@ -1,0 +1,149 @@
+{
+  "adjudicacion": "pendiente de contraste externo al candidato",
+  "caso": "PDF05",
+  "custodia_remota": false,
+  "esquema": "sv-hito-instrumental/1",
+  "fecha_registro_ms": 1791361815414,
+  "modelo": "gpt-6-astra",
+  "momento": "inmediatamente tras la entrega y el cierre de observación",
+  "nodo": "03",
+  "originales": [
+    {
+      "bytes": 11327,
+      "ruta": "ejecucion/astra-pdf-banco-20261007-r2\\originales\\PDF05\\SOLICITUD.json",
+      "sha256": "c7aaa5f48757b1bdbd47021af0be9aab25555ac66cf709f4013fc0f63283b917"
+    },
+    {
+      "bytes": 6282,
+      "ruta": "ejecucion/astra-pdf-banco-20261007-r2\\originales\\PDF05\\RESULTADO.json",
+      "sha256": "595b1d70f9a97141634aa8c97238b8cce32f1451fc436cba7cc83343d7bbeb18"
+    },
+    {
+      "bytes": 137,
+      "ruta": "ejecucion/astra-pdf-banco-20261007-r2\\originales\\PDF05\\HTTP.json",
+      "sha256": "31c805c3ec98867c994ee198c8984b051fdc63e965294c6f724de58db88c68ad"
+    },
+    {
+      "bytes": 217007,
+      "ruta": "ejecucion/astra-pdf-banco-20261007-r2\\originales\\PDF05\\SALIDA-SSE.txt",
+      "sha256": "21fc2f71adc62055243cad84b59861710f6a48adf450edd2b2aa0ccc08fbe125"
+    },
+    {
+      "bytes": 3202,
+      "ruta": "ejecucion/astra-pdf-banco-20261007-r2\\originales\\PDF05\\FINAL.txt",
+      "sha256": "71df0080312f19f9d95a413c87391f7279997e657c5b7ddd312c2df5658e424c"
+    },
+    {
+      "bytes": 8435,
+      "ruta": "ejecucion/astra-pdf-banco-20261007-r2\\originales\\PDF05\\ENTREGA-PROVEEDOR.json",
+      "sha256": "a2ecdad5a8992776f9b3d0d682adad8e826a3743ad1f48037b60364ce2e8f365"
+    },
+    {
+      "bytes": 1264,
+      "ruta": "ejecucion/astra-pdf-banco-20261007-r2\\originales\\PDF05\\AUDITORIA-FORMAL.json",
+      "sha256": "a08a7d3c7aee11c912113241cfc6d0133a5200d760514bd75913c3346797b830"
+    },
+    {
+      "bytes": 678301,
+      "ruta": "ejecucion/astra-pdf-banco-20261007-r2\\originales\\PDF05\\instrumentacion/telemetria.jsonl",
+      "sha256": "de1302075b474e97044429326bd9617a685eb9f43ac4bb589395fce4ebca0352"
+    }
+  ],
+  "resultado": {
+    "adjudicado": false,
+    "cabeceras_proveedor": {},
+    "caso": "PDF05",
+    "completa": true,
+    "contrato_formal_conforme": true,
+    "coste_monetario_atribuible": null,
+    "creditos_atribuibles": null,
+    "duracion_ms": 24808,
+    "estado": "entrega_recibida",
+    "evento_terminal": "response.completed",
+    "eventos": 760,
+    "herramientas_ejecutadas": 0,
+    "herramientas_habilitadas": 0,
+    "http": 200,
+    "limites": [
+      "CPU porcentual sin calibración externa",
+      "Sin medida separada DNS/TLS, RTT, retransmisiones, asignaciones del montículo, hilos ni recursos internos del proveedor",
+      "La ausencia de herramientas no prueba aislamiento de infraestructura de OpenAI; fuente exclusiva exigida y respuesta pendiente de contraste sustantivo",
+      "Criptografía C/ensamblador pendiente conforme a excepción experimental autorizada"
+    ],
+    "modelo_declarado": "gpt-6-astra",
+    "modelo_solicitado": "gpt-6-astra",
+    "par_remoto_http": "172.66.0.243:443",
+    "primer_evento_ms": 2063,
+    "primer_texto_ms": 3104,
+    "respuesta_bytes": 217007,
+    "respuesta_texto": "{\n  \"respuesta\": \"La ficha contempla la espera vigilante tras el diagnóstico inicial para pacientes con conteos estables de células sanguíneas y sin síntomas; menciona aproximadamente al 10 % de los pacientes. Consiste en posponer el tratamiento hasta la aparición o progresión de signos y síntomas de la enfermedad. Exige seguimiento frecuente, incluidos análisis de sangre, para poder iniciar el tratamiento si la enfermedad avanza. Señala como motivos para iniciarlo los conteos bajos de células sanguíneas —deficiencia de glóbulos rojos, plaquetas o glóbulos blancos— o la presencia de síntomas, entre ellos pérdida de peso sin explicación, infecciones recurrentes o molestias físicas por agrandamiento del bazo y/o del hígado. Estas afirmaciones corresponden a la edición de agosto de 2018, no a una pauta individual ni a una validación de su vigencia clínica actual.\",\n  \"fundamentos_verificables\": [\n    \"La ficha vincula expresamente la posible espera vigilante con conteos estables y ausencia de síntomas al diagnóstico, y sitúa ese grupo en aproximadamente el 10 %.\",\n    \"Define la espera vigilante como aplazamiento del tratamiento con seguimiento frecuente, incluidos análisis de sangre.\",\n    \"Distingue como motivos para tratar tanto los conteos bajos de células sanguíneas como la presencia de síntomas.\"\n  ],\n  \"evidencias\": [\n    {\n      \"documento\": \"LLS-HCL-2018\",\n      \"pagina_fisica\": 5,\n      \"seccion\": \"PDF-P0004\",\n      \"fragmentos\": [\n        {\n          \"inicio_caracter\": 0,\n          \"fin_caracter_exclusivo\": 2000\n        }\n      ],\n      \"cita_literal_breve\": \"En el caso de aproximadamente el 10 por ciento de los pacientes (que tienen conteos estables de células sanguíneas y no presentan síntomas al momento del diagnóstico), el enfoque de tratamiento podría ser el de la “espera vigilante”.\"\n    },\n    {\n      \"documento\": \"LLS-HCL-2018\",\n      \"pagina_fisica\": 5,\n      \"seccion\": \"PDF-P0004\",\n      \"fragmentos\": [\n        {\n          \"inicio_caracter\": 0,\n          \"fin_caracter_exclusivo\": 2000\n        }\n      ],\n      \"cita_literal_breve\": \"Es necesario realizar un seguimiento frecuente del paciente, incluyendo análisis de sangre, para que pueda iniciarse el tratamiento si la enfermedad empieza a avanzar.\"\n    },\n    {\n      \"documento\": \"LLS-HCL-2018\",\n      \"pagina_fisica\": 5,\n      \"seccion\": \"PDF-P0004\",\n      \"fragmentos\": [\n        {\n          \"inicio_caracter\": 0,\n          \"fin_caracter_exclusivo\": 2000\n        }\n      ],\n      \"cita_literal_breve\": \"Los pacientes deberían iniciar el tratamiento si tienen conteos bajos de células sanguíneas (deficiencia de glóbulos rojos, plaquetas o glóbulos blancos). También deberían iniciar el tratamiento si presentan síntomas, entre ellos, pérdida de peso sin explicación, infecciones recurrentes o molestias físicas debido al agrandamiento del bazo e/o hígado.\"\n    }\n  ],\n  \"insuficiencias\": [\n    \"El pasaje no establece umbrales numéricos para los conteos bajos ni un intervalo concreto para el seguimiento frecuente.\",\n    \"El material permite describir lo que sostiene esta edición, pero no determinar su vigencia clínica actual.\"\n  ]\n}",
+    "resumen_proveedor": [],
+    "telemetria": {
+      "bytes": 678301,
+      "fallos_medicion": 0,
+      "integridad": "conforme",
+      "intervalo_maximo_ms": 283,
+      "intervalo_objetivo_ms": 250,
+      "muestras": 106,
+      "plataforma_recibida": false,
+      "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+      "registros": 1588,
+      "sha256": "de1302075b474e97044429326bd9617a685eb9f43ac4bb589395fce4ebca0352"
+    },
+    "telemetria_conforme": true,
+    "uso_proveedor": {
+      "attribution": {
+        "items": {
+          "msg_00d1d18d24bc277f016ac603003c5887d286620b2d2c735541": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 2585,
+                "output_tokens": 0
+              }
+            ],
+            "input_tokens": 2585,
+            "output_tokens": 0
+          },
+          "msg_00d1d18d24bc277f016ac60301c0a887d29ef96f10857ee7c9": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 2,
+                "output_tokens": 756
+              }
+            ],
+            "input_tokens": 2,
+            "output_tokens": 756
+          }
+        },
+        "request_fields": {
+          "instructions": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "input_tokens": 326,
+            "output_tokens": 0
+          }
+        }
+      },
+      "input_tokens": 2913,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 756,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3669
+    },
+    "utc_fin_ms": 1791361814303,
+    "version_http": "HTTP/1.1"
+  }
+}

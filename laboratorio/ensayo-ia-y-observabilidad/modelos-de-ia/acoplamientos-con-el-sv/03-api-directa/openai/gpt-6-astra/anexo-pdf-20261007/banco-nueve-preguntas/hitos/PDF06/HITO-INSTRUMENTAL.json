@@ -1,0 +1,149 @@
+{
+  "adjudicacion": "pendiente de contraste externo al candidato",
+  "caso": "PDF06",
+  "custodia_remota": false,
+  "esquema": "sv-hito-instrumental/1",
+  "fecha_registro_ms": 1791361840148,
+  "modelo": "gpt-6-astra",
+  "momento": "inmediatamente tras la entrega y el cierre de observación",
+  "nodo": "03",
+  "originales": [
+    {
+      "bytes": 19640,
+      "ruta": "ejecucion/astra-pdf-banco-20261007-r2\\originales\\PDF06\\SOLICITUD.json",
+      "sha256": "6db70a6ad590dcb7457edb9c1f5ca45f108fd8ef6d9892d28c001837fab1a523"
+    },
+    {
+      "bytes": 6052,
+      "ruta": "ejecucion/astra-pdf-banco-20261007-r2\\originales\\PDF06\\RESULTADO.json",
+      "sha256": "ef00db29f75ece15c06a05ff25c4718e0ec88b08d8d0b39f3465fe68325b5e62"
+    },
+    {
+      "bytes": 140,
+      "ruta": "ejecucion/astra-pdf-banco-20261007-r2\\originales\\PDF06\\HTTP.json",
+      "sha256": "7e0cbfe7cc90849d717099159ec406e04f78785e8a1c10387e146c9b949a9df7"
+    },
+    {
+      "bytes": 201946,
+      "ruta": "ejecucion/astra-pdf-banco-20261007-r2\\originales\\PDF06\\SALIDA-SSE.txt",
+      "sha256": "64bea384211bf04c63ee0c9a9354408391ac614172fae8ba35b56f769367ddbc"
+    },
+    {
+      "bytes": 2981,
+      "ruta": "ejecucion/astra-pdf-banco-20261007-r2\\originales\\PDF06\\FINAL.txt",
+      "sha256": "c64edd50381d6c72daaf7cf5f50682807339996031d6b1e745f8cec7d08605da"
+    },
+    {
+      "bytes": 7969,
+      "ruta": "ejecucion/astra-pdf-banco-20261007-r2\\originales\\PDF06\\ENTREGA-PROVEEDOR.json",
+      "sha256": "caa2a6c87412176d37d49cb77edef028692d50f3ff3a272b4555aca35c9246dd"
+    },
+    {
+      "bytes": 83,
+      "ruta": "ejecucion/astra-pdf-banco-20261007-r2\\originales\\PDF06\\AUDITORIA-FORMAL.json",
+      "sha256": "e6d0118da52bd581303611eb454b7bde8bd07ff29ce67fb804bf49d680876555"
+    },
+    {
+      "bytes": 552220,
+      "ruta": "ejecucion/astra-pdf-banco-20261007-r2\\originales\\PDF06\\instrumentacion/telemetria.jsonl",
+      "sha256": "cc6015ea38e18d2cc04e319f34fd66f3e8d9b6feed052edf4c9a3494a7e13d50"
+    }
+  ],
+  "resultado": {
+    "adjudicado": false,
+    "cabeceras_proveedor": {},
+    "caso": "PDF06",
+    "completa": true,
+    "contrato_formal_conforme": false,
+    "coste_monetario_atribuible": null,
+    "creditos_atribuibles": null,
+    "duracion_ms": 21128,
+    "estado": "entrega_recibida",
+    "evento_terminal": "response.completed",
+    "eventos": 705,
+    "herramientas_ejecutadas": 0,
+    "herramientas_habilitadas": 0,
+    "http": 200,
+    "limites": [
+      "CPU porcentual sin calibración externa",
+      "Sin medida separada DNS/TLS, RTT, retransmisiones, asignaciones del montículo, hilos ni recursos internos del proveedor",
+      "La ausencia de herramientas no prueba aislamiento de infraestructura de OpenAI; fuente exclusiva exigida y respuesta pendiente de contraste sustantivo",
+      "Criptografía C/ensamblador pendiente conforme a excepción experimental autorizada"
+    ],
+    "modelo_declarado": "gpt-6-astra",
+    "modelo_solicitado": "gpt-6-astra",
+    "par_remoto_http": "162.159.140.245:443",
+    "primer_evento_ms": 2146,
+    "primer_texto_ms": 3320,
+    "respuesta_bytes": 201946,
+    "respuesta_texto": "{\n  \"respuesta\": {\n    \"elementos_de_remision_completa\": [\n      \"Normalización de los conteos de células sanguíneas.\",\n      \"Desaparición de las células peludas leucémicas de la sangre y la médula ósea.\",\n      \"Disminución del tamaño del bazo, determinada mediante el examen físico.\",\n      \"Ausencia de síntomas de la enfermedad.\"\n    ],\n    \"relacion_con_el_seguimiento\": \"Según la ficha, la remisión completa no equivale a curación ni permite abandonar los controles: clasifica la leucemia de células peludas como una forma crónica de cáncer porque nunca desaparece por completo. Describe exámenes periódicos y pruebas rutinarias de sangre para evaluar los conteos de células sanguíneas y confirmar que se mantiene la remisión. Cuando los conteos empiezan a disminuir, señala que los pacientes deben hablar con sus médicos sobre las opciones de tratamiento.\"\n  },\n  \"fundamentos_verificables\": [\n    \"La página 5 enumera expresamente los cuatro criterios de remisión completa.\",\n    \"La conclusión de que remisión no significa curación ni fin de los controles se basa en dos afirmaciones de la página 8: la enfermedad nunca desaparece por completo y los pacientes en remisión completa deben someterse a exámenes periódicos.\",\n    \"La página 8 vincula el seguimiento con los conteos sanguíneos e indica conversar sobre opciones de tratamiento si estos disminuyen; no establece que esa disminución implique iniciar automáticamente un tratamiento.\"\n  ],\n  \"evidencias\": [\n    {\n      \"documento\": \"LLS-HCL-2018\",\n      \"pagina_fisica\": 5,\n      \"seccion\": \"PDF-P0004\",\n      \"fragmentos\": [\n        {\n          \"inicio_caracter\": 2000,\n          \"fin_caracter_exclusivo\": 4000\n        }\n      ],\n      \"cita_literal_breve\": \"Una remisión completa significa lo siguiente: [...] Normalización de los conteos de células sanguíneas [...] Desaparición de las células peludas leucémicas de la sangre y la médula ósea [...] Disminución del tamaño del bazo (determinada por medio del examen físico) [...] Ausencia de síntomas de la enfermedad\"\n    },\n    {\n      \"documento\": \"LLS-HCL-2018\",\n      \"pagina_fisica\": 8,\n      \"seccion\": \"PDF-P0007\",\n      \"fragmentos\": [\n        {\n          \"inicio_caracter\": 0,\n          \"fin_caracter_exclusivo\": 2000\n        }\n      ],\n      \"cita_literal_breve\": \"La leucemia de células peludas se clasifica como una forma crónica de cáncer porque nunca desaparece por completo. [...] Los pacientes deberían someterse de forma rutinaria a pruebas de sangre [...] Si los conteos de células sanguíneas empiezan a disminuir, los pacientes deben hablar sobre las opciones de tratamiento con sus médicos.\"\n    }\n  ],\n  \"insuficiencias\": [\n    \"Los pasajes no especifican intervalos concretos para los controles ni umbrales numéricos de descenso de los conteos sanguíneos.\",\n    \"La respuesta se limita a la edición identificada como FS16S 8/18; no determina su vigencia clínica actual.\"\n  ]\n}",
+    "resumen_proveedor": [],
+    "telemetria": {
+      "bytes": 552220,
+      "fallos_medicion": 0,
+      "integridad": "conforme",
+      "intervalo_maximo_ms": 345,
+      "intervalo_objetivo_ms": 250,
+      "muestras": 92,
+      "plataforma_recibida": false,
+      "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+      "registros": 1267,
+      "sha256": "cc6015ea38e18d2cc04e319f34fd66f3e8d9b6feed052edf4c9a3494a7e13d50"
+    },
+    "telemetria_conforme": true,
+    "uso_proveedor": {
+      "attribution": {
+        "items": {
+          "msg_0e6b2e0f5b947805016ac6031cd74487d2bcc9160410e4364e": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 4900,
+                "output_tokens": 0
+              }
+            ],
+            "input_tokens": 4900,
+            "output_tokens": 0
+          },
+          "msg_0e6b2e0f5b947805016ac6031e72b887d281906010530045e8": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 2,
+                "output_tokens": 701
+              }
+            ],
+            "input_tokens": 2,
+            "output_tokens": 701
+          }
+        },
+        "request_fields": {
+          "instructions": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "input_tokens": 326,
+            "output_tokens": 0
+          }
+        }
+      },
+      "input_tokens": 5228,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 701,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 5929
+    },
+    "utc_fin_ms": 1791361839063,
+    "version_http": "HTTP/1.1"
+  }
+}

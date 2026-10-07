@@ -1,0 +1,192 @@
+{
+  "auditoria_sha256": "479b06d69ba48a9f7f3bc6df649ea3465166d9ca0828ed78a097f190622e7f00",
+  "caso": "PDF07",
+  "final_sha256": "d5ef23d5477b014939581d295d5a08a20ab94588765bc1815eda384cb750a3af",
+  "formal_conforme": true,
+  "formal_original_conforme": true,
+  "fundamento_sustantivo": "Separa la deficiencia previa de glóbulos blancos y su reducción adicional por cladribina/pentostatina. Mantiene la relación con riesgo infeccioso y asigna educación preventiva al equipo y comunicación de signos al paciente. No prescribe fármacos ni añade medidas preventivas ajenas al pasaje. Cuatro citas literales y localizadores comprobados.",
+  "medicion": {
+    "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+    "bytes_sse": 265599,
+    "caso": "PDF07",
+    "cpu_delta_ms": 2266,
+    "duracion_ms": 28085,
+    "duracion_observada_ms": 31200,
+    "eventos_sse": 939,
+    "fallos_medicion": 0,
+    "final_sha256": "d5ef23d5477b014939581d295d5a08a20ab94588765bc1815eda384cb750a3af",
+    "intervalo_maximo_ms": 282,
+    "io_escritura_delta_bytes": 1033202,
+    "io_lectura_delta_bytes": 13733242,
+    "muestras": 118,
+    "observaciones_udp": 0,
+    "primer_texto_ms": 3301,
+    "rss_maximo_bytes": 38526976,
+    "solicitud_sha256": "8faf269da69e3a0784fe980439ed1958b8faadca0813f204d18180967b2093dd",
+    "sse_sha256": "a9493217e3c9c2367887772630250a20fc83813065ad4a99a5f7b2c43cbdabb8",
+    "tcp_estados": [
+      "CloseWait",
+      "Established",
+      "Listen"
+    ],
+    "tcp_maximo_simultaneo": 4,
+    "telemetria_sha256": "16092d151df152d87693687b9ed70b574a3e4dc6ae9059dace5badde6f693f76",
+    "uso": {
+      "entrada_cache_tokens": 0,
+      "entrada_tokens": 2934,
+      "razonamiento_tokens": 0,
+      "salida_tokens": 935,
+      "total_tokens": 3869
+    }
+  },
+  "naturaleza_defecto": null,
+  "pasajes_contrastados": [
+    {
+      "documento": "LLS-HCL-2018",
+      "fragmento": "A menudo los pacientes ya tienen una deficiencia de glóbulos blancos antes del tratamiento, lo que aumenta su riesgo de infección.",
+      "pagina": 4,
+      "seccion": "PDF-P0004"
+    },
+    {
+      "documento": "LLS-HCL-2018",
+      "fragmento": "tanto la cladribina como la pentostatina son medicamentos “inmunosupresores”, lo que significa que reducen aún más la cantidad de glóbulos blancos.",
+      "pagina": 4,
+      "seccion": "PDF-P0004"
+    },
+    {
+      "documento": "LLS-HCL-2018",
+      "fragmento": "Los médicos deberían instruir a los pacientes sobre cómo prevenir las infecciones.",
+      "pagina": 4,
+      "seccion": "PDF-P0004"
+    },
+    {
+      "documento": "LLS-HCL-2018",
+      "fragmento": "es importante que los pacientes se comuniquen con el equipo de profesionales médicos encargados de su atención si presentan algún signo o síntoma de una infección, por ejemplo, fiebre o sarpullido.",
+      "pagina": 4,
+      "seccion": "PDF-P0004"
+    }
+  ],
+  "recepcion_independiente": "pendiente",
+  "respuesta_original": "{\n  \"respuesta\": \"La ficha distingue dos componentes del riesgo de infección: antes del tratamiento, los pacientes a menudo ya tienen una deficiencia de glóbulos blancos; después de iniciarlo, la cladribina y la pentostatina, por su efecto inmunosupresor, reducen aún más esos glóbulos blancos. Por eso, aunque se esté tratando la leucemia, puede disminuir la capacidad del organismo para combatir infecciones y aumentar el riesgo de enfermedades potencialmente mortales. En cuanto a prevención y comunicación, la ficha atribuye a los médicos la tarea de instruir a los pacientes sobre cómo prevenir infecciones, y destaca que los pacientes deben comunicarse con su equipo asistencial si presentan signos o síntomas de infección, como fiebre o sarpullido. Esta explicación corresponde a la edición FS16S 8/18, no a una evaluación de su vigencia clínica actual.\",\n  \"fundamentos_verificables\": [\n    {\n      \"afirmacion\": \"El riesgo previo se vincula con una deficiencia de glóbulos blancos que a menudo existe antes del tratamiento.\",\n      \"base_documental\": \"Página física 5, sección PDF-P0004, fragmento de caracteres 4000–4950.\"\n    },\n    {\n      \"afirmacion\": \"El aumento del riesgo tras iniciar cladribina o pentostatina se explica por una reducción adicional de glóbulos blancos debida a su efecto inmunosupresor, no por la ausencia de tratamiento de la leucemia.\",\n      \"base_documental\": \"El mismo pasaje vincula explícitamente la inmunosupresión con la menor capacidad de combatir infecciones.\"\n    },\n    {\n      \"afirmacion\": \"La actuación descrita combina educación preventiva por los médicos y comunicación del paciente al equipo ante posibles signos de infección.\",\n      \"base_documental\": \"Párrafo final de la página física 5.\"\n    }\n  ],\n  \"evidencias\": [\n    {\n      \"documento\": \"LLS-HCL-2018\",\n      \"pagina_fisica\": 5,\n      \"seccion\": \"PDF-P0004\",\n      \"fragmentos\": [\n        {\n          \"inicio_caracter\": 4000,\n          \"fin_caracter_exclusivo\": 4950\n        }\n      ],\n      \"cita_literal_breve\": \"A menudo los pacientes ya tienen una deficiencia de glóbulos blancos antes del tratamiento, lo que aumenta su riesgo de infección.\"\n    },\n    {\n      \"documento\": \"LLS-HCL-2018\",\n      \"pagina_fisica\": 5,\n      \"seccion\": \"PDF-P0004\",\n      \"fragmentos\": [\n        {\n          \"inicio_caracter\": 4000,\n          \"fin_caracter_exclusivo\": 4950\n        }\n      ],\n      \"cita_literal_breve\": \"tanto la cladribina como la pentostatina son medicamentos “inmunosupresores”, lo que significa que reducen aún más la cantidad de glóbulos blancos.\"\n    },\n    {\n      \"documento\": \"LLS-HCL-2018\",\n      \"pagina_fisica\": 5,\n      \"seccion\": \"PDF-P0004\",\n      \"fragmentos\": [\n        {\n          \"inicio_caracter\": 4000,\n          \"fin_caracter_exclusivo\": 4950\n        }\n      ],\n      \"cita_literal_breve\": \"Los médicos deberían instruir a los pacientes sobre cómo prevenir las infecciones.\"\n    },\n    {\n      \"documento\": \"LLS-HCL-2018\",\n      \"pagina_fisica\": 5,\n      \"seccion\": \"PDF-P0004\",\n      \"fragmentos\": [\n        {\n          \"inicio_caracter\": 4000,\n          \"fin_caracter_exclusivo\": 4950\n        }\n      ],\n      \"cita_literal_breve\": \"es importante que los pacientes se comuniquen con el equipo de profesionales médicos encargados de su atención si presentan algún signo o síntoma de una infección, por ejemplo, fiebre o sarpullido.\"\n    }\n  ],\n  \"insuficiencias\": [\n    \"El pasaje no detalla medidas concretas de prevención ni cuantifica la magnitud o duración del aumento del riesgo.\",\n    \"El material permite responder la pregunta documental, pero no determinar el riesgo de una persona concreta ni la vigencia clínica actual de esta edición.\"\n  ]\n}",
+  "revision_citas": {
+    "adjudicacion_sustantiva": false,
+    "citas": [
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "elipsis_explicitas": 0,
+            "normalizacion": "sólo espacios; omisiones [...] comprobadas por segmentos literales ordenados; no semejanza",
+            "segmentos": [
+              {
+                "fin_utf8_texto_normalizado": 217,
+                "inicio_utf8_texto_normalizado": 85,
+                "texto": "A menudo los pacientes ya tienen una deficiencia de glóbulos blancos antes del tratamiento, lo que aumenta su riesgo de infección."
+              }
+            ]
+          }
+        ],
+        "fragmentos": [
+          {
+            "fin_caracter_exclusivo": 4950,
+            "indice": 2,
+            "inicio_caracter": 4000
+          }
+        ],
+        "identificador_cotejado": "PDF-P0004",
+        "lista_de_citas": false,
+        "pagina_fisica": 5,
+        "seccion_recibida": "PDF-P0004",
+        "titulo_documental_cotejado": null
+      },
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "elipsis_explicitas": 0,
+            "normalizacion": "sólo espacios; omisiones [...] comprobadas por segmentos literales ordenados; no semejanza",
+            "segmentos": [
+              {
+                "fin_utf8_texto_normalizado": 459,
+                "inicio_utf8_texto_normalizado": 305,
+                "texto": "tanto la cladribina como la pentostatina son medicamentos “inmunosupresores”, lo que significa que reducen aún más la cantidad de glóbulos blancos."
+              }
+            ]
+          }
+        ],
+        "fragmentos": [
+          {
+            "fin_caracter_exclusivo": 4950,
+            "indice": 2,
+            "inicio_caracter": 4000
+          }
+        ],
+        "identificador_cotejado": "PDF-P0004",
+        "lista_de_citas": false,
+        "pagina_fisica": 5,
+        "seccion_recibida": "PDF-P0004",
+        "titulo_documental_cotejado": null
+      },
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "elipsis_explicitas": 0,
+            "normalizacion": "sólo espacios; omisiones [...] comprobadas por segmentos literales ordenados; no semejanza",
+            "segmentos": [
+              {
+                "fin_utf8_texto_normalizado": 740,
+                "inicio_utf8_texto_normalizado": 655,
+                "texto": "Los médicos deberían instruir a los pacientes sobre cómo prevenir las infecciones."
+              }
+            ]
+          }
+        ],
+        "fragmentos": [
+          {
+            "fin_caracter_exclusivo": 4950,
+            "indice": 2,
+            "inicio_caracter": 4000
+          }
+        ],
+        "identificador_cotejado": "PDF-P0004",
+        "lista_de_citas": false,
+        "pagina_fisica": 5,
+        "seccion_recibida": "PDF-P0004",
+        "titulo_documental_cotejado": null
+      },
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "elipsis_explicitas": 0,
+            "normalizacion": "sólo espacios; omisiones [...] comprobadas por segmentos literales ordenados; no semejanza",
+            "segmentos": [
+              {
+                "fin_utf8_texto_normalizado": 952,
+                "inicio_utf8_texto_normalizado": 750,
+                "texto": "es importante que los pacientes se comuniquen con el equipo de profesionales médicos encargados de su atención si presentan algún signo o síntoma de una infección, por ejemplo, fiebre o sarpullido."
+              }
+            ]
+          }
+        ],
+        "fragmentos": [
+          {
+            "fin_caracter_exclusivo": 4950,
+            "indice": 2,
+            "inicio_caracter": 4000
+          }
+        ],
+        "identificador_cotejado": "PDF-P0004",
+        "lista_de_citas": false,
+        "pagina_fisica": 5,
+        "seccion_recibida": "PDF-P0004",
+        "titulo_documental_cotejado": null
+      }
+    ],
+    "conforme": true
+  },
+  "solicitud_sha256": "8faf269da69e3a0784fe980439ed1958b8faadca0813f204d18180967b2093dd",
+  "sustantivo": "correcto",
+  "valor": "0"
+}

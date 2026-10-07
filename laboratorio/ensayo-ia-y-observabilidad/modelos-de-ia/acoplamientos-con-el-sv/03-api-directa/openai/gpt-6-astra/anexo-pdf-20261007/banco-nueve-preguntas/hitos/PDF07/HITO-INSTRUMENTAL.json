@@ -1,0 +1,149 @@
+{
+  "adjudicacion": "pendiente de contraste externo al candidato",
+  "caso": "PDF07",
+  "custodia_remota": false,
+  "esquema": "sv-hito-instrumental/1",
+  "fecha_registro_ms": 1791361871791,
+  "modelo": "gpt-6-astra",
+  "momento": "inmediatamente tras la entrega y el cierre de observación",
+  "nodo": "03",
+  "originales": [
+    {
+      "bytes": 11413,
+      "ruta": "ejecucion/astra-pdf-banco-20261007-r2\\originales\\PDF07\\SOLICITUD.json",
+      "sha256": "8faf269da69e3a0784fe980439ed1958b8faadca0813f204d18180967b2093dd"
+    },
+    {
+      "bytes": 6890,
+      "ruta": "ejecucion/astra-pdf-banco-20261007-r2\\originales\\PDF07\\RESULTADO.json",
+      "sha256": "660daa705014b65c0400317e863e1d944e316937f7d0649acb85661b4a37dac1"
+    },
+    {
+      "bytes": 140,
+      "ruta": "ejecucion/astra-pdf-banco-20261007-r2\\originales\\PDF07\\HTTP.json",
+      "sha256": "497e730fbef7277beb7d66fd33a7044d66b052011d4ac608374da25ad06a360a"
+    },
+    {
+      "bytes": 265599,
+      "ruta": "ejecucion/astra-pdf-banco-20261007-r2\\originales\\PDF07\\SALIDA-SSE.txt",
+      "sha256": "a9493217e3c9c2367887772630250a20fc83813065ad4a99a5f7b2c43cbdabb8"
+    },
+    {
+      "bytes": 3748,
+      "ruta": "ejecucion/astra-pdf-banco-20261007-r2\\originales\\PDF07\\FINAL.txt",
+      "sha256": "d5ef23d5477b014939581d295d5a08a20ab94588765bc1815eda384cb750a3af"
+    },
+    {
+      "bytes": 9645,
+      "ruta": "ejecucion/astra-pdf-banco-20261007-r2\\originales\\PDF07\\ENTREGA-PROVEEDOR.json",
+      "sha256": "2df4f4144113fa89b821f97c8713e0900fa6b164251bc5dcb1f9b9ce4b1b0327"
+    },
+    {
+      "bytes": 1629,
+      "ruta": "ejecucion/astra-pdf-banco-20261007-r2\\originales\\PDF07\\AUDITORIA-FORMAL.json",
+      "sha256": "3107eb0c608120a927bdedcb5c5a7cba2507c6070e59748ecd47266707b031b0"
+    },
+    {
+      "bytes": 753664,
+      "ruta": "ejecucion/astra-pdf-banco-20261007-r2\\originales\\PDF07\\instrumentacion/telemetria.jsonl",
+      "sha256": "16092d151df152d87693687b9ed70b574a3e4dc6ae9059dace5badde6f693f76"
+    }
+  ],
+  "resultado": {
+    "adjudicado": false,
+    "cabeceras_proveedor": {},
+    "caso": "PDF07",
+    "completa": true,
+    "contrato_formal_conforme": true,
+    "coste_monetario_atribuible": null,
+    "creditos_atribuibles": null,
+    "duracion_ms": 28085,
+    "estado": "entrega_recibida",
+    "evento_terminal": "response.completed",
+    "eventos": 939,
+    "herramientas_ejecutadas": 0,
+    "herramientas_habilitadas": 0,
+    "http": 200,
+    "limites": [
+      "CPU porcentual sin calibración externa",
+      "Sin medida separada DNS/TLS, RTT, retransmisiones, asignaciones del montículo, hilos ni recursos internos del proveedor",
+      "La ausencia de herramientas no prueba aislamiento de infraestructura de OpenAI; fuente exclusiva exigida y respuesta pendiente de contraste sustantivo",
+      "Criptografía C/ensamblador pendiente conforme a excepción experimental autorizada"
+    ],
+    "modelo_declarado": "gpt-6-astra",
+    "modelo_solicitado": "gpt-6-astra",
+    "par_remoto_http": "162.159.140.245:443",
+    "primer_evento_ms": 1632,
+    "primer_texto_ms": 3301,
+    "respuesta_bytes": 265599,
+    "respuesta_texto": "{\n  \"respuesta\": \"La ficha distingue dos componentes del riesgo de infección: antes del tratamiento, los pacientes a menudo ya tienen una deficiencia de glóbulos blancos; después de iniciarlo, la cladribina y la pentostatina, por su efecto inmunosupresor, reducen aún más esos glóbulos blancos. Por eso, aunque se esté tratando la leucemia, puede disminuir la capacidad del organismo para combatir infecciones y aumentar el riesgo de enfermedades potencialmente mortales. En cuanto a prevención y comunicación, la ficha atribuye a los médicos la tarea de instruir a los pacientes sobre cómo prevenir infecciones, y destaca que los pacientes deben comunicarse con su equipo asistencial si presentan signos o síntomas de infección, como fiebre o sarpullido. Esta explicación corresponde a la edición FS16S 8/18, no a una evaluación de su vigencia clínica actual.\",\n  \"fundamentos_verificables\": [\n    {\n      \"afirmacion\": \"El riesgo previo se vincula con una deficiencia de glóbulos blancos que a menudo existe antes del tratamiento.\",\n      \"base_documental\": \"Página física 5, sección PDF-P0004, fragmento de caracteres 4000–4950.\"\n    },\n    {\n      \"afirmacion\": \"El aumento del riesgo tras iniciar cladribina o pentostatina se explica por una reducción adicional de glóbulos blancos debida a su efecto inmunosupresor, no por la ausencia de tratamiento de la leucemia.\",\n      \"base_documental\": \"El mismo pasaje vincula explícitamente la inmunosupresión con la menor capacidad de combatir infecciones.\"\n    },\n    {\n      \"afirmacion\": \"La actuación descrita combina educación preventiva por los médicos y comunicación del paciente al equipo ante posibles signos de infección.\",\n      \"base_documental\": \"Párrafo final de la página física 5.\"\n    }\n  ],\n  \"evidencias\": [\n    {\n      \"documento\": \"LLS-HCL-2018\",\n      \"pagina_fisica\": 5,\n      \"seccion\": \"PDF-P0004\",\n      \"fragmentos\": [\n        {\n          \"inicio_caracter\": 4000,\n          \"fin_caracter_exclusivo\": 4950\n        }\n      ],\n      \"cita_literal_breve\": \"A menudo los pacientes ya tienen una deficiencia de glóbulos blancos antes del tratamiento, lo que aumenta su riesgo de infección.\"\n    },\n    {\n      \"documento\": \"LLS-HCL-2018\",\n      \"pagina_fisica\": 5,\n      \"seccion\": \"PDF-P0004\",\n      \"fragmentos\": [\n        {\n          \"inicio_caracter\": 4000,\n          \"fin_caracter_exclusivo\": 4950\n        }\n      ],\n      \"cita_literal_breve\": \"tanto la cladribina como la pentostatina son medicamentos “inmunosupresores”, lo que significa que reducen aún más la cantidad de glóbulos blancos.\"\n    },\n    {\n      \"documento\": \"LLS-HCL-2018\",\n      \"pagina_fisica\": 5,\n      \"seccion\": \"PDF-P0004\",\n      \"fragmentos\": [\n        {\n          \"inicio_caracter\": 4000,\n          \"fin_caracter_exclusivo\": 4950\n        }\n      ],\n      \"cita_literal_breve\": \"Los médicos deberían instruir a los pacientes sobre cómo prevenir las infecciones.\"\n    },\n    {\n      \"documento\": \"LLS-HCL-2018\",\n      \"pagina_fisica\": 5,\n      \"seccion\": \"PDF-P0004\",\n      \"fragmentos\": [\n        {\n          \"inicio_caracter\": 4000,\n          \"fin_caracter_exclusivo\": 4950\n        }\n      ],\n      \"cita_literal_breve\": \"es importante que los pacientes se comuniquen con el equipo de profesionales médicos encargados de su atención si presentan algún signo o síntoma de una infección, por ejemplo, fiebre o sarpullido.\"\n    }\n  ],\n  \"insuficiencias\": [\n    \"El pasaje no detalla medidas concretas de prevención ni cuantifica la magnitud o duración del aumento del riesgo.\",\n    \"El material permite responder la pregunta documental, pero no determinar el riesgo de una persona concreta ni la vigencia clínica actual de esta edición.\"\n  ]\n}",
+    "resumen_proveedor": [],
+    "telemetria": {
+      "bytes": 753664,
+      "fallos_medicion": 0,
+      "integridad": "conforme",
+      "intervalo_maximo_ms": 282,
+      "intervalo_objetivo_ms": 250,
+      "muestras": 118,
+      "plataforma_recibida": false,
+      "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+      "registros": 1753,
+      "sha256": "16092d151df152d87693687b9ed70b574a3e4dc6ae9059dace5badde6f693f76"
+    },
+    "telemetria_conforme": true,
+    "uso_proveedor": {
+      "attribution": {
+        "items": {
+          "msg_0950ff8b1a6e96ff016ac60335278887d2a3745d0f58c20b7e": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 2606,
+                "output_tokens": 0
+              }
+            ],
+            "input_tokens": 2606,
+            "output_tokens": 0
+          },
+          "msg_0950ff8b1a6e96ff016ac6033709a487d2a308325358df143a": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 2,
+                "output_tokens": 935
+              }
+            ],
+            "input_tokens": 2,
+            "output_tokens": 935
+          }
+        },
+        "request_fields": {
+          "instructions": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "input_tokens": 326,
+            "output_tokens": 0
+          }
+        }
+      },
+      "input_tokens": 2934,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 935,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3869
+    },
+    "utc_fin_ms": 1791361870682,
+    "version_http": "HTTP/1.1"
+  }
+}

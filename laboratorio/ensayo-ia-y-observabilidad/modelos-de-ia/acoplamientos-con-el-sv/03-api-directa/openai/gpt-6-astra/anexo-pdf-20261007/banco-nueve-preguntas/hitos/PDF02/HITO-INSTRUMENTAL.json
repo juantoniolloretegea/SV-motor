@@ -1,0 +1,149 @@
+{
+  "adjudicacion": "pendiente de contraste externo al candidato",
+  "caso": "PDF02",
+  "custodia_remota": false,
+  "esquema": "sv-hito-instrumental/1",
+  "fecha_registro_ms": 1791361722657,
+  "modelo": "gpt-6-astra",
+  "momento": "inmediatamente tras la entrega y el cierre de observación",
+  "nodo": "03",
+  "originales": [
+    {
+      "bytes": 10777,
+      "ruta": "ejecucion/astra-pdf-banco-20261007-r2\\originales\\PDF02\\SOLICITUD.json",
+      "sha256": "6b381d5ab440365c7e9e0f19f0c3b436ea372c153446ac9141f4cd0555e756e3"
+    },
+    {
+      "bytes": 5067,
+      "ruta": "ejecucion/astra-pdf-banco-20261007-r2\\originales\\PDF02\\RESULTADO.json",
+      "sha256": "fff78fc942a90cc8995475704c36124a4f81638300cb84ead967f192b32cfc2c"
+    },
+    {
+      "bytes": 137,
+      "ruta": "ejecucion/astra-pdf-banco-20261007-r2\\originales\\PDF02\\HTTP.json",
+      "sha256": "8f23a131b3cc6d18d28efc91345d936426b9585ccb71d3d79dfcda889e5cfa4d"
+    },
+    {
+      "bytes": 135508,
+      "ruta": "ejecucion/astra-pdf-banco-20261007-r2\\originales\\PDF02\\SALIDA-SSE.txt",
+      "sha256": "5a85a3c1eb531e2b707420b8f5fb7e2b234add049a048aff8e8a4f69e47c48ad"
+    },
+    {
+      "bytes": 2044,
+      "ruta": "ejecucion/astra-pdf-banco-20261007-r2\\originales\\PDF02\\FINAL.txt",
+      "sha256": "8b8783ea32c337c6d6c98dfdc91cb83d363e5d93a49660b144e596adeda691d6"
+    },
+    {
+      "bytes": 6007,
+      "ruta": "ejecucion/astra-pdf-banco-20261007-r2\\originales\\PDF02\\ENTREGA-PROVEEDOR.json",
+      "sha256": "19851b1ffaa516e1dbdf526b867784a03c8273ca991d26e072511c86ec388917"
+    },
+    {
+      "bytes": 51,
+      "ruta": "ejecucion/astra-pdf-banco-20261007-r2\\originales\\PDF02\\AUDITORIA-FORMAL.json",
+      "sha256": "4e9b35f221e360080fc117955e4d53be3fae3aac7ce6020f38bbf04e8bed176c"
+    },
+    {
+      "bytes": 389499,
+      "ruta": "ejecucion/astra-pdf-banco-20261007-r2\\originales\\PDF02\\instrumentacion/telemetria.jsonl",
+      "sha256": "5b91df217385eb6137309761eb035cc621ee130c482754b0d2f08a211fc361cf"
+    }
+  ],
+  "resultado": {
+    "adjudicado": false,
+    "cabeceras_proveedor": {},
+    "caso": "PDF02",
+    "completa": true,
+    "contrato_formal_conforme": false,
+    "coste_monetario_atribuible": null,
+    "creditos_atribuibles": null,
+    "duracion_ms": 15879,
+    "estado": "entrega_recibida",
+    "evento_terminal": "response.completed",
+    "eventos": 462,
+    "herramientas_ejecutadas": 0,
+    "herramientas_habilitadas": 0,
+    "http": 200,
+    "limites": [
+      "CPU porcentual sin calibración externa",
+      "Sin medida separada DNS/TLS, RTT, retransmisiones, asignaciones del montículo, hilos ni recursos internos del proveedor",
+      "La ausencia de herramientas no prueba aislamiento de infraestructura de OpenAI; fuente exclusiva exigida y respuesta pendiente de contraste sustantivo",
+      "Criptografía C/ensamblador pendiente conforme a excepción experimental autorizada"
+    ],
+    "modelo_declarado": "gpt-6-astra",
+    "modelo_solicitado": "gpt-6-astra",
+    "par_remoto_http": "172.66.0.243:443",
+    "primer_evento_ms": 2404,
+    "primer_texto_ms": 3593,
+    "respuesta_bytes": 135508,
+    "respuesta_texto": "{\n  \"respuesta\": \"No. Esta hoja informativa excluye expresamente la leucemia variante de células peludas. Explica que inicialmente se consideró un subtipo de la leucemia de células peludas, pero que en 2008 la Organización Mundial de la Salud concluyó que era una enfermedad biológicamente distinta. Según la ficha, la variante es más infrecuente, presenta un curso clínico diferente y sus tratamientos son distintos. Por tanto, con esta fuente solamente no sería válido trasladar a la variante los tratamientos descritos para la enfermedad que estudia.\",\n  \"fundamentos_verificables\": [\n    \"La exclusión de la variante es explícita: la hoja se centra únicamente en los síntomas, el diagnóstico y el tratamiento de la leucemia de células peludas.\",\n    \"La conclusión de no extrapolar tratamientos se apoya en dos premisas expresas: la variante constituye una enfermedad biológicamente distinta y sus tratamientos son distintos.\"\n  ],\n  \"evidencias\": [\n    {\n      \"documento\": \"LLS-HCL-2018\",\n      \"pagina_fisica\": 2,\n      \"seccion\": \"PDF-P0001\",\n      \"fragmentos\": [\n        {\n          \"inicio_caracter\": 0,\n          \"fin_caracter_exclusivo\": 2000\n        }\n      ],\n      \"cita_literal_breve\": [\n        \"Inicialmente se pensó que esta variante constituía un subtipo de leucemia de células peludas.\",\n        \"en el 2008, la Organización Mundial de la Salud llegó a la conclusión de que constituye una enfermedad biológicamente distinta\",\n        \"presenta un curso clínico diferente y los tratamientos para esta enfermedad son distintos.\",\n        \"esta hoja informativa no abarca la leucemia variante de células peludas.\"\n      ]\n    }\n  ],\n  \"insuficiencias\": [\n    \"La página suministrada no especifica los tratamientos de la variante ni permite determinar si algún tratamiento concreto podría ser compartido por ambas enfermedades.\",\n    \"La respuesta se limita a la edición identificada como FS16S 8/18; no establece la vigencia clínica actual de esa clasificación ni de los tratamientos.\"\n  ]\n}",
+    "resumen_proveedor": [],
+    "telemetria": {
+      "bytes": 389499,
+      "fallos_medicion": 0,
+      "integridad": "conforme",
+      "intervalo_maximo_ms": 283,
+      "intervalo_objetivo_ms": 250,
+      "muestras": 72,
+      "plataforma_recibida": false,
+      "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+      "registros": 799,
+      "sha256": "5b91df217385eb6137309761eb035cc621ee130c482754b0d2f08a211fc361cf"
+    },
+    "telemetria_conforme": true,
+    "uso_proveedor": {
+      "attribution": {
+        "items": {
+          "msg_062c5d7e2c7a2ec4016ac602ac5ae487d2a7404c013df33185": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 2484,
+                "output_tokens": 0
+              }
+            ],
+            "input_tokens": 2484,
+            "output_tokens": 0
+          },
+          "msg_062c5d7e2c7a2ec4016ac602ae853087d2a47f5551063ec718": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 2,
+                "output_tokens": 458
+              }
+            ],
+            "input_tokens": 2,
+            "output_tokens": 458
+          }
+        },
+        "request_fields": {
+          "instructions": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "input_tokens": 326,
+            "output_tokens": 0
+          }
+        }
+      },
+      "input_tokens": 2812,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 458,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3270
+    },
+    "utc_fin_ms": 1791361721587,
+    "version_http": "HTTP/1.1"
+  }
+}

@@ -1,0 +1,149 @@
+{
+  "adjudicacion": "pendiente de contraste externo al candidato",
+  "caso": "PDF04",
+  "custodia_remota": false,
+  "esquema": "sv-hito-instrumental/1",
+  "fecha_registro_ms": 1791361787039,
+  "modelo": "gpt-6-astra",
+  "momento": "inmediatamente tras la entrega y el cierre de observación",
+  "nodo": "03",
+  "originales": [
+    {
+      "bytes": 10925,
+      "ruta": "ejecucion/astra-pdf-banco-20261007-r2\\originales\\PDF04\\SOLICITUD.json",
+      "sha256": "921cde54e16417dc2648a7bf30aa587ec66bfbdbbc72302654f4244d809fc1e2"
+    },
+    {
+      "bytes": 8303,
+      "ruta": "ejecucion/astra-pdf-banco-20261007-r2\\originales\\PDF04\\RESULTADO.json",
+      "sha256": "70ef654f52b5e10024bea70ca1cfb6bd002c1d7b7d2cfc52c450912da4cab369"
+    },
+    {
+      "bytes": 137,
+      "ruta": "ejecucion/astra-pdf-banco-20261007-r2\\originales\\PDF04\\HTTP.json",
+      "sha256": "6f144af2ac9ebf9696533f58fe890714e00547f0143ee47f6b0cdf6ca447230a"
+    },
+    {
+      "bytes": 368614,
+      "ruta": "ejecucion/astra-pdf-banco-20261007-r2\\originales\\PDF04\\SALIDA-SSE.txt",
+      "sha256": "b862d2be8de9191f3eebba398d282139e1600437687a733a4242d95a5073667c"
+    },
+    {
+      "bytes": 5144,
+      "ruta": "ejecucion/astra-pdf-banco-20261007-r2\\originales\\PDF04\\FINAL.txt",
+      "sha256": "971138d9866b7fd093c134b73c12c4da70d036f17bd5f5508391454b63a13d0a"
+    },
+    {
+      "bytes": 12468,
+      "ruta": "ejecucion/astra-pdf-banco-20261007-r2\\originales\\PDF04\\ENTREGA-PROVEEDOR.json",
+      "sha256": "e1275465c70ee8319430a684c4b2d0fc63c3dc3bb253dd806b3dd89ef544874d"
+    },
+    {
+      "bytes": 71,
+      "ruta": "ejecucion/astra-pdf-banco-20261007-r2\\originales\\PDF04\\AUDITORIA-FORMAL.json",
+      "sha256": "9baa734056c39d61873e9a47a74a0138d56af93d95e78d4b5cb943c196131a7e"
+    },
+    {
+      "bytes": 1089895,
+      "ruta": "ejecucion/astra-pdf-banco-20261007-r2\\originales\\PDF04\\instrumentacion/telemetria.jsonl",
+      "sha256": "bd82c7d1bb529ac97c0918267cfc3019f1739e361f22ec4262005b87d472d6ee"
+    }
+  ],
+  "resultado": {
+    "adjudicado": false,
+    "cabeceras_proveedor": {},
+    "caso": "PDF04",
+    "completa": true,
+    "contrato_formal_conforme": false,
+    "coste_monetario_atribuible": null,
+    "creditos_atribuibles": null,
+    "duracion_ms": 40096,
+    "estado": "entrega_recibida",
+    "evento_terminal": "response.completed",
+    "eventos": 1316,
+    "herramientas_ejecutadas": 0,
+    "herramientas_habilitadas": 0,
+    "http": 200,
+    "limites": [
+      "CPU porcentual sin calibración externa",
+      "Sin medida separada DNS/TLS, RTT, retransmisiones, asignaciones del montículo, hilos ni recursos internos del proveedor",
+      "La ausencia de herramientas no prueba aislamiento de infraestructura de OpenAI; fuente exclusiva exigida y respuesta pendiente de contraste sustantivo",
+      "Criptografía C/ensamblador pendiente conforme a excepción experimental autorizada"
+    ],
+    "modelo_declarado": "gpt-6-astra",
+    "modelo_solicitado": "gpt-6-astra",
+    "par_remoto_http": "172.66.0.243:443",
+    "primer_evento_ms": 1540,
+    "primer_texto_ms": 3689,
+    "respuesta_bytes": 368614,
+    "respuesta_texto": "{\n  \"respuesta\": {\n    \"citometria_de_flujo\": \"Clasifica las células según las proteínas o marcadores de su superficie, cuya configuración se denomina inmunofenotipo. La ficha describe una disposición característica de las células peludas, distinta de la de las células B sanas y otras células B malignas. Cita CD19, CD20 y CD22 como antígenos presentes en las células B, y CD11c, CD25, CD103 y CD123 como antígenos que las células de esta enfermedad también expresan. Habla de proteínas relativamente específicas, no de especificidad absoluta.\",\n    \"BRAF_V600E\": \"Las pruebas moleculares buscan mutaciones genéticas específicas en el ADN. Según la ficha, en casi todos los casos de leucemia de células peludas las células leucémicas presentan BRAF V600E. Le atribuye valor como marcador molecular confiable para diferenciar esta enfermedad de otras leucemias y linfomas de células B; no afirma que esté presente en todos los casos.\",\n    \"IGHV\": \"La ficha indica que aproximadamente el 80–90% de los pacientes presenta hipermutación en un gen de la región variable de la cadena pesada de la inmunoglobulina, IGHV. En el contexto del tratamiento con quimioterapia convencional, atribuye a los pacientes con mutación de IGHV un mejor pronóstico que a quienes no tienen la mutación, que suelen tener un desenlace menos favorable. Además, enumera el gen IGHV sin mutación entre los signos asociados a pronóstico desfavorable y resistencia a la quimioterapia con análogos de purinas.\",\n    \"alcance\": \"Estas son las atribuciones de la edición FS16S 8/18: caracterización inmunofenotípica mediante citometría, diferenciación molecular mediante BRAF V600E e información pronóstica de IGHV en los contextos terapéuticos indicados. No constituyen una actualización clínica ni una predicción individual.\"\n  },\n  \"fundamentos_verificables\": [\n    \"La distinción entre las tres pruebas se basa en las funciones expresamente descritas: clasificación por marcadores de superficie, identificación de una mutación para diferenciación diagnóstica y asociación de IGHV con el desenlace clínico.\",\n    \"Los matices «relativamente específicas», «casi todos», «aproximadamente del 80% al 90%» y «suelen» impiden convertir estas descripciones en reglas universales.\",\n    \"La comparación pronóstica de IGHV se sitúa explícitamente bajo quimioterapia convencional; la lista de factores desfavorables añade el contexto específico de los análogos de purinas.\"\n  ],\n  \"evidencias\": [\n    {\n      \"documento\": \"LLS-HCL-2018\",\n      \"pagina_fisica\": 4,\n      \"seccion\": \"PDF-P0003 — Citometría de flujo\",\n      \"fragmentos\": [\n        {\"inicio_caracter\": 0, \"fin_caracter_exclusivo\": 2000}\n      ],\n      \"cita_literal_breve\": \"Además de los antígenos CD19, CD20 y CD22, presentes en las células B, las células de esta enfermedad también expresan los antígenos CD11c, CD25, CD103 y CD123.\"\n    },\n    {\n      \"documento\": \"LLS-HCL-2018\",\n      \"pagina_fisica\": 4,\n      \"seccion\": \"PDF-P0003 — Pruebas moleculares\",\n      \"fragmentos\": [\n        {\"inicio_caracter\": 0, \"fin_caracter_exclusivo\": 2000}\n      ],\n      \"cita_literal_breve\": \"En casi todos los casos de leucemia de células peludas, las células leucémicas tienen una mutación en el gen BRAF V600E. Esta mutación puede servir como marcador molecular confiable para diferenciar la leucemia de células peludas de otras leucemias y linfomas de células B.\"\n    },\n    {\n      \"documento\": \"LLS-HCL-2018\",\n      \"pagina_fisica\": 4,\n      \"seccion\": \"PDF-P0003 — Pruebas moleculares\",\n      \"fragmentos\": [\n        {\"inicio_caracter\": 0, \"fin_caracter_exclusivo\": 2000},\n        {\"inicio_caracter\": 2000, \"fin_caracter_exclusivo\": 4000}\n      ],\n      \"cita_literal_breve\": \"Aproximadamente del 80% al 90% de los pacientes con leucemia de células peludas tienen una hipermutación en un gen de la región variable de la cadena pesada de la inmunoglobulina\"\n    },\n    {\n      \"documento\": \"LLS-HCL-2018\",\n      \"pagina_fisica\": 4,\n      \"seccion\": \"PDF-P0003 — Pruebas moleculares\",\n      \"fragmentos\": [\n        {\"inicio_caracter\": 0, \"fin_caracter_exclusivo\": 2000}\n      ],\n      \"cita_literal_breve\": \"en el caso del tratamiento con una quimioterapia convencional, los pacientes con mutación de IGHV tienen un mejor pronóstico\"\n    },\n    {\n      \"documento\": \"LLS-HCL-2018\",\n      \"pagina_fisica\": 4,\n      \"seccion\": \"PDF-P0003 — Planificación del tratamiento\",\n      \"fragmentos\": [\n        {\"inicio_caracter\": 2000, \"fin_caracter_exclusivo\": 4000}\n      ],\n      \"cita_literal_breve\": \"Los siguientes signos están asociados a un pronóstico desfavorable y a la resistencia a la quimioterapia con análogos de purinas [...] Gen IGHV sin mutación\"\n    }\n  ],\n  \"insuficiencias\": [\n    \"Los pasajes no cuantifican el rendimiento diagnóstico de la citometría ni de BRAF V600E, ni la magnitud de la diferencia pronóstica vinculada a IGHV.\",\n    \"El material basta para la distinción solicitada, pero corresponde únicamente a la edición FS16S 8/18 y no permite determinar su vigencia clínica actual.\"\n  ]\n}",
+    "resumen_proveedor": [],
+    "telemetria": {
+      "bytes": 1089895,
+      "fallos_medicion": 0,
+      "integridad": "conforme",
+      "intervalo_maximo_ms": 272,
+      "intervalo_objetivo_ms": 250,
+      "muestras": 163,
+      "plataforma_recibida": false,
+      "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+      "registros": 2454,
+      "sha256": "bd82c7d1bb529ac97c0918267cfc3019f1739e361f22ec4262005b87d472d6ee"
+    },
+    "telemetria_conforme": true,
+    "uso_proveedor": {
+      "attribution": {
+        "items": {
+          "msg_07d6090e45f65c3b016ac602d448f887d2a0e6def1385b358b": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 2512,
+                "output_tokens": 0
+              }
+            ],
+            "input_tokens": 2512,
+            "output_tokens": 0
+          },
+          "msg_07d6090e45f65c3b016ac602d6b00487d2a615d9be4ceec9c1": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 2,
+                "output_tokens": 1312
+              }
+            ],
+            "input_tokens": 2,
+            "output_tokens": 1312
+          }
+        },
+        "request_fields": {
+          "instructions": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "input_tokens": 326,
+            "output_tokens": 0
+          }
+        }
+      },
+      "input_tokens": 2840,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 1312,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4152
+    },
+    "utc_fin_ms": 1791361785878,
+    "version_http": "HTTP/1.1"
+  }
+}

@@ -1,0 +1,149 @@
+{
+  "adjudicacion": "pendiente de contraste externo al candidato",
+  "caso": "PDF09",
+  "custodia_remota": false,
+  "esquema": "sv-hito-instrumental/1",
+  "fecha_registro_ms": 1791361939719,
+  "modelo": "gpt-6-astra",
+  "momento": "inmediatamente tras la entrega y el cierre de observación",
+  "nodo": "03",
+  "originales": [
+    {
+      "bytes": 11196,
+      "ruta": "ejecucion/astra-pdf-banco-20261007-r2\\originales\\PDF09\\SOLICITUD.json",
+      "sha256": "ba4c6b21a66b6a081018db9dc1582f652e3d45e2fb27d19ec1379a6fba2ca803"
+    },
+    {
+      "bytes": 6752,
+      "ruta": "ejecucion/astra-pdf-banco-20261007-r2\\originales\\PDF09\\RESULTADO.json",
+      "sha256": "18cacf5d9e7669eb24650f16450cf9e5a92c312024e39ea0d76931b3584827d0"
+    },
+    {
+      "bytes": 140,
+      "ruta": "ejecucion/astra-pdf-banco-20261007-r2\\originales\\PDF09\\HTTP.json",
+      "sha256": "ac155525288b430dcd5575653e5664fe541ddc0a56494308eba600c9554e2aa3"
+    },
+    {
+      "bytes": 245066,
+      "ruta": "ejecucion/astra-pdf-banco-20261007-r2\\originales\\PDF09\\SALIDA-SSE.txt",
+      "sha256": "1220d2ef7e7acff25d1e05fddb7a63050113a45853ed7df1a606105e60c1a402"
+    },
+    {
+      "bytes": 3627,
+      "ruta": "ejecucion/astra-pdf-banco-20261007-r2\\originales\\PDF09\\FINAL.txt",
+      "sha256": "9d051ae5543d36296264de607984ade16f22d2c2e5bc0b12b7b9d04d999f12ef"
+    },
+    {
+      "bytes": 9369,
+      "ruta": "ejecucion/astra-pdf-banco-20261007-r2\\originales\\PDF09\\ENTREGA-PROVEEDOR.json",
+      "sha256": "ba2f52c42de0b92dbae338dfa79c13753b9523db6de5f66a64cc50dadabca556"
+    },
+    {
+      "bytes": 1384,
+      "ruta": "ejecucion/astra-pdf-banco-20261007-r2\\originales\\PDF09\\AUDITORIA-FORMAL.json",
+      "sha256": "49801af998729c91134f4d1b3dee695154cc4b7e2326c51a61474520f96d5fd8"
+    },
+    {
+      "bytes": 689860,
+      "ruta": "ejecucion/astra-pdf-banco-20261007-r2\\originales\\PDF09\\instrumentacion/telemetria.jsonl",
+      "sha256": "383e7941263dba6b5319b4cf95f006d666f7c05d158501477bdc4a537ee8a0da"
+    }
+  ],
+  "resultado": {
+    "adjudicado": false,
+    "cabeceras_proveedor": {},
+    "caso": "PDF09",
+    "completa": true,
+    "contrato_formal_conforme": true,
+    "coste_monetario_atribuible": null,
+    "creditos_atribuibles": null,
+    "duracion_ms": 27262,
+    "estado": "entrega_recibida",
+    "evento_terminal": "response.completed",
+    "eventos": 862,
+    "herramientas_ejecutadas": 0,
+    "herramientas_habilitadas": 0,
+    "http": 200,
+    "limites": [
+      "CPU porcentual sin calibración externa",
+      "Sin medida separada DNS/TLS, RTT, retransmisiones, asignaciones del montículo, hilos ni recursos internos del proveedor",
+      "La ausencia de herramientas no prueba aislamiento de infraestructura de OpenAI; fuente exclusiva exigida y respuesta pendiente de contraste sustantivo",
+      "Criptografía C/ensamblador pendiente conforme a excepción experimental autorizada"
+    ],
+    "modelo_declarado": "gpt-6-astra",
+    "modelo_solicitado": "gpt-6-astra",
+    "par_remoto_http": "162.159.140.245:443",
+    "primer_evento_ms": 1480,
+    "primer_texto_ms": 2716,
+    "respuesta_bytes": 245066,
+    "respuesta_texto": "{\n  \"respuesta\": \"No. Esta edición de la ficha no permite fijar una dosis ni una duración adecuadas de vemurafenib para la leucemia de células peludas: declara expresamente que ambas quedan por determinar en ensayos clínicos. Comunica casos de remisiones completas en pacientes con enfermedad en recaída o resistente al tratamiento previo, pero esos resultados no establecen una pauta de administración. En el marco temporal de la edición FS16S 8/18, presenta vemurafenib como un enfoque en investigación para esos pacientes y señala su aprobación por la FDA para melanoma, no como una aprobación para la leucemia de células peludas.\",\n  \"fundamentos_verificables\": [\n    {\n      \"conclusion\": \"Se comunicaron remisiones completas, pero no una pauta adecuada de dosis y duración.\",\n      \"premisas\": [\n        \"La ficha informa casos de remisiones completas tras administrar vemurafenib en enfermedad en recaída o resistente.\",\n        \"Inmediatamente después indica que la dosis y la duración adecuadas aún deben determinarse en ensayos clínicos.\"\n      ]\n    },\n    {\n      \"conclusion\": \"El contexto descrito es de investigación para la leucemia de células peludas.\",\n      \"premisas\": [\n        \"Vemurafenib figura dentro de «Enfoques en fase de investigación».\",\n        \"Se describe su evaluación en ensayos clínicos en pacientes con recaída o resistencia farmacológica.\",\n        \"La aprobación por la FDA mencionada en el pasaje corresponde al melanoma.\"\n      ]\n    }\n  ],\n  \"evidencias\": [\n    {\n      \"documento\": \"LLS-HCL-2018\",\n      \"pagina_fisica\": 7,\n      \"seccion\": \"PDF-P0006\",\n      \"fragmentos\": [\n        {\n          \"inicio_caracter\": 0,\n          \"fin_caracter_exclusivo\": 2000\n        }\n      ],\n      \"cita_literal_breve\": \"Se han informado casos de remisiones completas tras la administración de vemurafenib en pacientes con leucemia de células peludas en recaída o resistente al tratamiento previo.\"\n    },\n    {\n      \"documento\": \"LLS-HCL-2018\",\n      \"pagina_fisica\": 7,\n      \"seccion\": \"PDF-P0006\",\n      \"fragmentos\": [\n        {\n          \"inicio_caracter\": 0,\n          \"fin_caracter_exclusivo\": 2000\n        },\n        {\n          \"inicio_caracter\": 2000,\n          \"fin_caracter_exclusivo\": 4000\n        }\n      ],\n      \"cita_literal_breve\": \"Aún queda por determinar, en los ensayos clínicos, la dosis y la duración adecuadas del tratamiento.\"\n    },\n    {\n      \"documento\": \"LLS-HCL-2018\",\n      \"pagina_fisica\": 7,\n      \"seccion\": \"PDF-P0006\",\n      \"fragmentos\": [\n        {\n          \"inicio_caracter\": 0,\n          \"fin_caracter_exclusivo\": 2000\n        }\n      ],\n      \"cita_literal_breve\": \"En este momento, el vemurafenib está aprobado por la FDA para el tratamiento del melanoma, y en ensayos clínicos actuales se está evaluando este medicamento en pacientes con leucemia de células peludas que presentan una recaída o resistencia farmacológica.\"\n    }\n  ],\n  \"insuficiencias\": [\n    \"Los pasajes no proporcionan una dosis ni una duración establecidas; el propio documento deja ambas pendientes de determinación.\",\n    \"La comunicación de casos de remisión completa no incluye aquí datos suficientes para cuantificar la probabilidad o la duración de la respuesta ni para deducir una pauta adecuada.\",\n    \"Las conclusiones se limitan a la edición FS16S 8/18; el material no permite determinar la situación clínica o regulatoria actual.\",\n    \"La frase sobre dosis y duración está dividida entre dos fragmentos consecutivos, pero se recupera completa al unirlos; no hay una laguna textual relevante para esta pregunta.\"\n  ]\n}",
+    "resumen_proveedor": [],
+    "telemetria": {
+      "bytes": 689860,
+      "fallos_medicion": 0,
+      "integridad": "conforme",
+      "intervalo_maximo_ms": 276,
+      "intervalo_objetivo_ms": 250,
+      "muestras": 115,
+      "plataforma_recibida": false,
+      "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+      "registros": 1581,
+      "sha256": "383e7941263dba6b5319b4cf95f006d666f7c05d158501477bdc4a537ee8a0da"
+    },
+    "telemetria_conforme": true,
+    "uso_proveedor": {
+      "attribution": {
+        "items": {
+          "msg_0c5fb5ca35114dac016ac60379c05087d28ec544ebb6bc2ffd": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 2594,
+                "output_tokens": 0
+              }
+            ],
+            "input_tokens": 2594,
+            "output_tokens": 0
+          },
+          "msg_0c5fb5ca35114dac016ac6037b433c87d29f37e5e87ecf467a": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 2,
+                "output_tokens": 858
+              }
+            ],
+            "input_tokens": 2,
+            "output_tokens": 858
+          }
+        },
+        "request_fields": {
+          "instructions": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "input_tokens": 326,
+            "output_tokens": 0
+          }
+        }
+      },
+      "input_tokens": 2922,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 858,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3780
+    },
+    "utc_fin_ms": 1791361938606,
+    "version_http": "HTTP/1.1"
+  }
+}

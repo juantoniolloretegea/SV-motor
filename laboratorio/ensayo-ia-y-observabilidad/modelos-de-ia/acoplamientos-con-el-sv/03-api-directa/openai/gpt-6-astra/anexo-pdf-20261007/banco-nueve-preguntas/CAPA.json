@@ -1,0 +1,1518 @@
+{
+  "aptitud_clinica": false,
+  "casos": [
+    {
+      "auditoria_sha256": "479b06d69ba48a9f7f3bc6df649ea3465166d9ca0828ed78a097f190622e7f00",
+      "caso": "PDF01",
+      "final_sha256": "48311671ec68d49f26fbf6e1fc8be7e9ea7c3761bd690d3954134dd42bd2f410",
+      "formal_conforme": true,
+      "formal_original_conforme": false,
+      "fundamento_sustantivo": "Conserva el origen en el linfocito B y la secuencia documental: proliferación y acumulación medular, inhibición de células sanguíneas normales y anemia, sangrado e infecciones. Las mutaciones y el ADN de las células descendientes figuran en la introducción suministrada. No introduce mecanismos externos. El título añadido al identificador de sección existe en esa página y no impide localizar las cuatro citas.",
+      "medicion": {
+        "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+        "bytes_sse": 225680,
+        "caso": "PDF01",
+        "cpu_delta_ms": 1734,
+        "duracion_ms": 24695,
+        "duracion_observada_ms": 27730,
+        "eventos_sse": 795,
+        "fallos_medicion": 0,
+        "final_sha256": "48311671ec68d49f26fbf6e1fc8be7e9ea7c3761bd690d3954134dd42bd2f410",
+        "intervalo_maximo_ms": 278,
+        "io_escritura_delta_bytes": 918608,
+        "io_lectura_delta_bytes": 13732514,
+        "muestras": 105,
+        "observaciones_udp": 0,
+        "primer_texto_ms": 3477,
+        "rss_maximo_bytes": 35262464,
+        "solicitud_sha256": "6929d3af185d898c82d6503ef394d17e65eb6486406f0a39239df2c668f02a5f",
+        "sse_sha256": "548fb9593895a3484305261459c6c57d84feb9080fec984bdc9d757313d9af5e",
+        "tcp_estados": [
+          "CloseWait",
+          "Established",
+          "Listen"
+        ],
+        "tcp_maximo_simultaneo": 6,
+        "telemetria_sha256": "d8e175f87103383d506caffdf4a3469e4c9d4b0fbad372339e0da8154e922c53",
+        "uso": {
+          "entrada_cache_tokens": 0,
+          "entrada_tokens": 2844,
+          "razonamiento_tokens": 0,
+          "salida_tokens": 791,
+          "total_tokens": 3635
+        }
+      },
+      "naturaleza_defecto": null,
+      "pasajes_contrastados": [
+        {
+          "documento": "LLS-HCL-2018",
+          "fragmento": "se inicia en una célula B (linfocito B)",
+          "pagina": 0,
+          "seccion": "PDF-P0000"
+        },
+        {
+          "documento": "LLS-HCL-2018",
+          "fragmento": "Todas las células que surgen a partir de la célula leucémica inicial también tienen el ADN mutado. Por consiguiente, las células leucémicas se multiplican de forma descontrolada.",
+          "pagina": 0,
+          "seccion": "PDF-P0000"
+        },
+        {
+          "documento": "LLS-HCL-2018",
+          "fragmento": "estas inhiben el desarrollo de otras células sanguíneas, entre ellas, glóbulos rojos, plaquetas y glóbulos blancos.",
+          "pagina": 0,
+          "seccion": "PDF-P0000"
+        },
+        {
+          "documento": "LLS-HCL-2018",
+          "fragmento": "Esto puede producir una deficiencia de células sanguíneas que a su vez puede provocar anemia, sangrado excesivo e/o infecciones.",
+          "pagina": 0,
+          "seccion": "PDF-P0000"
+        }
+      ],
+      "recepcion_independiente": "pendiente",
+      "respuesta_original": "{\n  \"respuesta\": \"Según la ficha, la leucemia de células peludas se origina en una célula B o linfocito B, un tipo de glóbulo blanco. Las mutaciones pueden transformarla en una célula leucémica que continúa creciendo y dividiéndose; sus descendientes también contienen el ADN mutado y se multiplican de forma descontrolada. Al acumularse en la médula ósea, estas células inhiben el desarrollo de glóbulos rojos, plaquetas y glóbulos blancos. Así quedan muy pocas células sanguíneas normales funcionales, una deficiencia que la ficha relaciona con anemia, sangrado excesivo e infecciones.\",\n  \"fundamentos_verificables\": [\n    \"Origen celular: la introducción identifica expresamente al linfocito B como la célula de origen y describe la proliferación de sus descendientes con ADN mutado.\",\n    \"Relación causal: la acumulación de células leucémicas en la médula inhibe el desarrollo de otras células sanguíneas; la consiguiente deficiencia de células normales funcionales puede provocar las tres consecuencias indicadas.\"\n  ],\n  \"evidencias\": [\n    {\n      \"documento\": \"LLS-HCL-2018\",\n      \"pagina_fisica\": 1,\n      \"seccion\": \"PDF-P0000 — Introducción\",\n      \"fragmentos\": [\n        {\n          \"inicio_caracter\": 2000,\n          \"fin_caracter_exclusivo\": 4000\n        }\n      ],\n      \"cita_literal_breve\": \"se inicia en una célula B (linfocito B)\"\n    },\n    {\n      \"documento\": \"LLS-HCL-2018\",\n      \"pagina_fisica\": 1,\n      \"seccion\": \"PDF-P0000 — Introducción\",\n      \"fragmentos\": [\n        {\n          \"inicio_caracter\": 2000,\n          \"fin_caracter_exclusivo\": 4000\n        }\n      ],\n      \"cita_literal_breve\": \"Todas las células que surgen a partir de la célula leucémica inicial también tienen el ADN mutado. Por consiguiente, las células leucémicas se multiplican de forma descontrolada.\"\n    },\n    {\n      \"documento\": \"LLS-HCL-2018\",\n      \"pagina_fisica\": 1,\n      \"seccion\": \"PDF-P0000 — Introducción\",\n      \"fragmentos\": [\n        {\n          \"inicio_caracter\": 2000,\n          \"fin_caracter_exclusivo\": 4000\n        }\n      ],\n      \"cita_literal_breve\": \"estas inhiben el desarrollo de otras células sanguíneas, entre ellas, glóbulos rojos, plaquetas y glóbulos blancos.\"\n    },\n    {\n      \"documento\": \"LLS-HCL-2018\",\n      \"pagina_fisica\": 1,\n      \"seccion\": \"PDF-P0000 — Introducción\",\n      \"fragmentos\": [\n        {\n          \"inicio_caracter\": 2000,\n          \"fin_caracter_exclusivo\": 4000\n        }\n      ],\n      \"cita_literal_breve\": \"Esto puede producir una deficiencia de células sanguíneas que a su vez puede provocar anemia, sangrado excesivo e/o infecciones.\"\n    }\n  ],\n  \"insuficiencias\": [\n    \"No falta información para responder a la relación solicitada. El pasaje no detalla mecanismos adicionales ni vincula individualmente cada tipo de célula disminuida con cada consecuencia.\",\n    \"La respuesta se limita a la edición identificada como FS16S 8/18; no establece su vigencia clínica actual.\"\n  ]\n}",
+      "revision_citas": {
+        "adjudicacion_sustantiva": false,
+        "citas": [
+          {
+            "citas": [
+              {
+                "conforme": true,
+                "elipsis_explicitas": 0,
+                "normalizacion": "sólo espacios; omisiones [...] comprobadas por segmentos literales ordenados; no semejanza",
+                "segmentos": [
+                  {
+                    "fin_utf8_texto_normalizado": 174,
+                    "inicio_utf8_texto_normalizado": 134,
+                    "texto": "se inicia en una célula B (linfocito B)"
+                  }
+                ]
+              }
+            ],
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 4000,
+                "indice": 1,
+                "inicio_caracter": 2000
+              }
+            ],
+            "identificador_cotejado": "PDF-P0000",
+            "lista_de_citas": false,
+            "pagina_fisica": 1,
+            "seccion_recibida": "PDF-P0000 — Introducción",
+            "titulo_documental_cotejado": "Introducción"
+          },
+          {
+            "citas": [
+              {
+                "conforme": true,
+                "elipsis_explicitas": 0,
+                "normalizacion": "sólo espacios; omisiones [...] comprobadas por segmentos literales ordenados; no semejanza",
+                "segmentos": [
+                  {
+                    "fin_utf8_texto_normalizado": 822,
+                    "inicio_utf8_texto_normalizado": 638,
+                    "texto": "Todas las células que surgen a partir de la célula leucémica inicial también tienen el ADN mutado. Por consiguiente, las células leucémicas se multiplican de forma descontrolada."
+                  }
+                ]
+              }
+            ],
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 4000,
+                "indice": 1,
+                "inicio_caracter": 2000
+              }
+            ],
+            "identificador_cotejado": "PDF-P0000",
+            "lista_de_citas": false,
+            "pagina_fisica": 1,
+            "seccion_recibida": "PDF-P0000 — Introducción",
+            "titulo_documental_cotejado": "Introducción"
+          },
+          {
+            "citas": [
+              {
+                "conforme": true,
+                "elipsis_explicitas": 0,
+                "normalizacion": "sólo espacios; omisiones [...] comprobadas por segmentos literales ordenados; no semejanza",
+                "segmentos": [
+                  {
+                    "fin_utf8_texto_normalizado": 1618,
+                    "inicio_utf8_texto_normalizado": 1499,
+                    "texto": "estas inhiben el desarrollo de otras células sanguíneas, entre ellas, glóbulos rojos, plaquetas y glóbulos blancos."
+                  }
+                ]
+              }
+            ],
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 4000,
+                "indice": 1,
+                "inicio_caracter": 2000
+              }
+            ],
+            "identificador_cotejado": "PDF-P0000",
+            "lista_de_citas": false,
+            "pagina_fisica": 1,
+            "seccion_recibida": "PDF-P0000 — Introducción",
+            "titulo_documental_cotejado": "Introducción"
+          },
+          {
+            "citas": [
+              {
+                "conforme": true,
+                "elipsis_explicitas": 0,
+                "normalizacion": "sólo espacios; omisiones [...] comprobadas por segmentos literales ordenados; no semejanza",
+                "segmentos": [
+                  {
+                    "fin_utf8_texto_normalizado": 1884,
+                    "inicio_utf8_texto_normalizado": 1754,
+                    "texto": "Esto puede producir una deficiencia de células sanguíneas que a su vez puede provocar anemia, sangrado excesivo e/o infecciones."
+                  }
+                ]
+              }
+            ],
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 4000,
+                "indice": 1,
+                "inicio_caracter": 2000
+              }
+            ],
+            "identificador_cotejado": "PDF-P0000",
+            "lista_de_citas": false,
+            "pagina_fisica": 1,
+            "seccion_recibida": "PDF-P0000 — Introducción",
+            "titulo_documental_cotejado": "Introducción"
+          }
+        ],
+        "conforme": true
+      },
+      "solicitud_sha256": "6929d3af185d898c82d6503ef394d17e65eb6486406f0a39239df2c668f02a5f",
+      "sustantivo": "correcto",
+      "valor": "0"
+    },
+    {
+      "auditoria_sha256": "479b06d69ba48a9f7f3bc6df649ea3465166d9ca0828ed78a097f190622e7f00",
+      "caso": "PDF02",
+      "final_sha256": "8b8783ea32c337c6d6c98dfdc91cb83d363e5d93a49660b144e596adeda691d6",
+      "formal_conforme": true,
+      "formal_original_conforme": false,
+      "fundamento_sustantivo": "Identifica la exclusión explícita de la variante y preserva distinción biológica, curso clínico y tratamientos distintos. La negativa a trasladar automáticamente tratamientos se deriva de esas premisas; no convierte ese límite en imposibilidad absoluta de compartir algún fármaco. Las cuatro citas se entregan como lista en un campo cuyo tipo escalar no se había exigido; todas se cotejan literalmente.",
+      "medicion": {
+        "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+        "bytes_sse": 135508,
+        "caso": "PDF02",
+        "cpu_delta_ms": 1219,
+        "duracion_ms": 15879,
+        "duracion_observada_ms": 18932,
+        "eventos_sse": 462,
+        "fallos_medicion": 0,
+        "final_sha256": "8b8783ea32c337c6d6c98dfdc91cb83d363e5d93a49660b144e596adeda691d6",
+        "intervalo_maximo_ms": 283,
+        "io_escritura_delta_bytes": 531682,
+        "io_lectura_delta_bytes": 13732606,
+        "muestras": 72,
+        "observaciones_udp": 0,
+        "primer_texto_ms": 3593,
+        "rss_maximo_bytes": 36421632,
+        "solicitud_sha256": "6b381d5ab440365c7e9e0f19f0c3b436ea372c153446ac9141f4cd0555e756e3",
+        "sse_sha256": "5a85a3c1eb531e2b707420b8f5fb7e2b234add049a048aff8e8a4f69e47c48ad",
+        "tcp_estados": [
+          "CloseWait",
+          "Established",
+          "FinWait1",
+          "Listen"
+        ],
+        "tcp_maximo_simultaneo": 6,
+        "telemetria_sha256": "5b91df217385eb6137309761eb035cc621ee130c482754b0d2f08a211fc361cf",
+        "uso": {
+          "entrada_cache_tokens": 0,
+          "entrada_tokens": 2812,
+          "razonamiento_tokens": 0,
+          "salida_tokens": 458,
+          "total_tokens": 3270
+        }
+      },
+      "naturaleza_defecto": null,
+      "pasajes_contrastados": [
+        {
+          "documento": "LLS-HCL-2018",
+          "fragmento": "Inicialmente se pensó que esta variante constituía un subtipo de leucemia de células peludas.",
+          "pagina": 1,
+          "seccion": "PDF-P0001"
+        },
+        {
+          "documento": "LLS-HCL-2018",
+          "fragmento": "en el 2008, la Organización Mundial de la Salud llegó a la conclusión de que constituye una enfermedad biológicamente distinta",
+          "pagina": 1,
+          "seccion": "PDF-P0001"
+        },
+        {
+          "documento": "LLS-HCL-2018",
+          "fragmento": "presenta un curso clínico diferente y los tratamientos para esta enfermedad son distintos.",
+          "pagina": 1,
+          "seccion": "PDF-P0001"
+        },
+        {
+          "documento": "LLS-HCL-2018",
+          "fragmento": "esta hoja informativa no abarca la leucemia variante de células peludas.",
+          "pagina": 1,
+          "seccion": "PDF-P0001"
+        }
+      ],
+      "recepcion_independiente": "pendiente",
+      "respuesta_original": "{\n  \"respuesta\": \"No. Esta hoja informativa excluye expresamente la leucemia variante de células peludas. Explica que inicialmente se consideró un subtipo de la leucemia de células peludas, pero que en 2008 la Organización Mundial de la Salud concluyó que era una enfermedad biológicamente distinta. Según la ficha, la variante es más infrecuente, presenta un curso clínico diferente y sus tratamientos son distintos. Por tanto, con esta fuente solamente no sería válido trasladar a la variante los tratamientos descritos para la enfermedad que estudia.\",\n  \"fundamentos_verificables\": [\n    \"La exclusión de la variante es explícita: la hoja se centra únicamente en los síntomas, el diagnóstico y el tratamiento de la leucemia de células peludas.\",\n    \"La conclusión de no extrapolar tratamientos se apoya en dos premisas expresas: la variante constituye una enfermedad biológicamente distinta y sus tratamientos son distintos.\"\n  ],\n  \"evidencias\": [\n    {\n      \"documento\": \"LLS-HCL-2018\",\n      \"pagina_fisica\": 2,\n      \"seccion\": \"PDF-P0001\",\n      \"fragmentos\": [\n        {\n          \"inicio_caracter\": 0,\n          \"fin_caracter_exclusivo\": 2000\n        }\n      ],\n      \"cita_literal_breve\": [\n        \"Inicialmente se pensó que esta variante constituía un subtipo de leucemia de células peludas.\",\n        \"en el 2008, la Organización Mundial de la Salud llegó a la conclusión de que constituye una enfermedad biológicamente distinta\",\n        \"presenta un curso clínico diferente y los tratamientos para esta enfermedad son distintos.\",\n        \"esta hoja informativa no abarca la leucemia variante de células peludas.\"\n      ]\n    }\n  ],\n  \"insuficiencias\": [\n    \"La página suministrada no especifica los tratamientos de la variante ni permite determinar si algún tratamiento concreto podría ser compartido por ambas enfermedades.\",\n    \"La respuesta se limita a la edición identificada como FS16S 8/18; no establece la vigencia clínica actual de esa clasificación ni de los tratamientos.\"\n  ]\n}",
+      "revision_citas": {
+        "adjudicacion_sustantiva": false,
+        "citas": [
+          {
+            "citas": [
+              {
+                "conforme": true,
+                "elipsis_explicitas": 0,
+                "normalizacion": "sólo espacios; omisiones [...] comprobadas por segmentos literales ordenados; no semejanza",
+                "segmentos": [
+                  {
+                    "fin_utf8_texto_normalizado": 229,
+                    "inicio_utf8_texto_normalizado": 133,
+                    "texto": "Inicialmente se pensó que esta variante constituía un subtipo de leucemia de células peludas."
+                  }
+                ]
+              },
+              {
+                "conforme": true,
+                "elipsis_explicitas": 0,
+                "normalizacion": "sólo espacios; omisiones [...] comprobadas por segmentos literales ordenados; no semejanza",
+                "segmentos": [
+                  {
+                    "fin_utf8_texto_normalizado": 373,
+                    "inicio_utf8_texto_normalizado": 243,
+                    "texto": "en el 2008, la Organización Mundial de la Salud llegó a la conclusión de que constituye una enfermedad biológicamente distinta"
+                  }
+                ]
+              },
+              {
+                "conforme": true,
+                "elipsis_explicitas": 0,
+                "normalizacion": "sólo espacios; omisiones [...] comprobadas por segmentos literales ordenados; no semejanza",
+                "segmentos": [
+                  {
+                    "fin_utf8_texto_normalizado": 599,
+                    "inicio_utf8_texto_normalizado": 508,
+                    "texto": "presenta un curso clínico diferente y los tratamientos para esta enfermedad son distintos."
+                  }
+                ]
+              },
+              {
+                "conforme": true,
+                "elipsis_explicitas": 0,
+                "normalizacion": "sólo espacios; omisiones [...] comprobadas por segmentos literales ordenados; no semejanza",
+                "segmentos": [
+                  {
+                    "fin_utf8_texto_normalizado": 689,
+                    "inicio_utf8_texto_normalizado": 616,
+                    "texto": "esta hoja informativa no abarca la leucemia variante de células peludas."
+                  }
+                ]
+              }
+            ],
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 2000,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "identificador_cotejado": "PDF-P0001",
+            "lista_de_citas": true,
+            "pagina_fisica": 2,
+            "seccion_recibida": "PDF-P0001",
+            "titulo_documental_cotejado": null
+          }
+        ],
+        "conforme": true
+      },
+      "solicitud_sha256": "6b381d5ab440365c7e9e0f19f0c3b436ea372c153446ac9141f4cd0555e756e3",
+      "sustantivo": "correcto",
+      "valor": "0"
+    },
+    {
+      "auditoria_sha256": "479b06d69ba48a9f7f3bc6df649ea3465166d9ca0828ed78a097f190622e7f00",
+      "caso": "PDF03",
+      "final_sha256": "af2a9fac48ea3127c89bbc8d19de95eb6382c0bf5cc9b90daf3d846562d39884",
+      "formal_conforme": true,
+      "formal_original_conforme": true,
+      "fundamento_sustantivo": "Distingue aspiración líquida y biopsia sólida con médula, relaciona la aspiración seca con fibrosis y cicatrices y no deduce ausencia de enfermedad. Explica la biopsia como alternativa documental. Advierte la frase que continúa en la página siguiente sin confundirla con falta de información para responder. Las tres citas y sus localizadores son verificables.",
+      "medicion": {
+        "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+        "bytes_sse": 212766,
+        "caso": "PDF03",
+        "cpu_delta_ms": 1219,
+        "duracion_ms": 17131,
+        "duracion_observada_ms": 20252,
+        "eventos_sse": 746,
+        "fallos_medicion": 0,
+        "final_sha256": "af2a9fac48ea3127c89bbc8d19de95eb6382c0bf5cc9b90daf3d846562d39884",
+        "intervalo_maximo_ms": 272,
+        "io_escritura_delta_bytes": 788735,
+        "io_lectura_delta_bytes": 13732829,
+        "muestras": 77,
+        "observaciones_udp": 0,
+        "primer_texto_ms": 2840,
+        "rss_maximo_bytes": 36757504,
+        "solicitud_sha256": "7b52b433a1568eb1f2aed090073c468142f1e36498a25eda5e79379f2e403733",
+        "sse_sha256": "fc6dee8f7cd6e6bf0f74e9bb71949f1e90e7d1e099476e0a0ccd34a733f3afcb",
+        "tcp_estados": [
+          "CloseWait",
+          "Established",
+          "Listen"
+        ],
+        "tcp_maximo_simultaneo": 6,
+        "telemetria_sha256": "30ebff5e98a48f83a18daf08c3c2a9ae6b8fd59e911ae2014a6021068616d66d",
+        "uso": {
+          "entrada_cache_tokens": 0,
+          "entrada_tokens": 2845,
+          "razonamiento_tokens": 0,
+          "salida_tokens": 742,
+          "total_tokens": 3587
+        }
+      },
+      "naturaleza_defecto": null,
+      "pasajes_contrastados": [
+        {
+          "documento": "LLS-HCL-2018",
+          "fragmento": "para extraer (succionar) una muestra líquida de células. En una biopsia de médula ósea, se usa una aguja especial más ancha para extraer una muestra de hueso sólido que contiene médula ósea.",
+          "pagina": 2,
+          "seccion": "PDF-P0002"
+        },
+        {
+          "documento": "LLS-HCL-2018",
+          "fragmento": "las células peludas a menudo producen tejido fibroso que causa cicatrices en la médula ósea. La presencia de cicatrices hace que la aspiración sea “seca”, lo que significa que no puede obtenerse una muestra líquida.",
+          "pagina": 2,
+          "seccion": "PDF-P0002"
+        },
+        {
+          "documento": "LLS-HCL-2018",
+          "fragmento": "Si no es posible realizar una aspiración, el médico puede examinar la muestra de la biopsia de médula ósea a fin de detectar anomalías.",
+          "pagina": 2,
+          "seccion": "PDF-P0002"
+        }
+      ],
+      "recepcion_independiente": "pendiente",
+      "respuesta_original": "{\n  \"respuesta\": \"Según la ficha, puede obtenerse una aspiración de médula ósea «seca» porque las células peludas a menudo producen tejido fibroso que causa cicatrices en la médula e impide obtener una muestra líquida. En ese supuesto, puede examinarse la muestra de una biopsia de médula ósea para detectar anomalías. La aspiración extrae por succión una muestra líquida de células; la biopsia extrae una muestra de hueso sólido que contiene médula ósea. Por tanto, el fracaso de la aspiración no debe interpretarse como ausencia de enfermedad: indica que no se logró obtener la muestra líquida, y la biopsia permite examinar la médula.\",\n  \"fundamentos_verificables\": [\n    \"La ficha vincula explícitamente la aspiración seca con las cicatrices producidas por tejido fibroso y la define como la imposibilidad de obtener una muestra líquida.\",\n    \"El documento indica que, si no es posible realizar la aspiración, puede examinarse la biopsia para detectar anomalías; señala que su análisis generalmente revela infiltrados celulares con mayor tejido fibroso.\",\n    \"La conclusión de que una aspiración fallida no demuestra ausencia de enfermedad se deduce de esas dos premisas documentales.\"\n  ],\n  \"evidencias\": [\n    {\n      \"documento\": \"LLS-HCL-2018\",\n      \"pagina_fisica\": 3,\n      \"seccion\": \"PDF-P0002\",\n      \"fragmentos\": [\n        {\n          \"inicio_caracter\": 2000,\n          \"fin_caracter_exclusivo\": 4000\n        }\n      ],\n      \"cita_literal_breve\": \"para extraer (succionar) una muestra líquida de células. En una biopsia de médula ósea, se usa una aguja especial más ancha para extraer una muestra de hueso sólido que contiene médula ósea.\"\n    },\n    {\n      \"documento\": \"LLS-HCL-2018\",\n      \"pagina_fisica\": 3,\n      \"seccion\": \"PDF-P0002\",\n      \"fragmentos\": [\n        {\n          \"inicio_caracter\": 4000,\n          \"fin_caracter_exclusivo\": 4602\n        }\n      ],\n      \"cita_literal_breve\": \"las células peludas a menudo producen tejido fibroso que causa cicatrices en la médula ósea. La presencia de cicatrices hace que la aspiración sea “seca”, lo que significa que no puede obtenerse una muestra líquida.\"\n    },\n    {\n      \"documento\": \"LLS-HCL-2018\",\n      \"pagina_fisica\": 3,\n      \"seccion\": \"PDF-P0002\",\n      \"fragmentos\": [\n        {\n          \"inicio_caracter\": 4000,\n          \"fin_caracter_exclusivo\": 4602\n        }\n      ],\n      \"cita_literal_breve\": \"Si no es posible realizar una aspiración, el médico puede examinar la muestra de la biopsia de médula ósea a fin de detectar anomalías.\"\n    }\n  ],\n  \"insuficiencias\": [\n    \"El texto recibido termina con la frase incompleta «En algunos pacientes con leucemia». Esa interrupción no impide responder la pregunta, pues las explicaciones pertinentes están completas.\",\n    \"La respuesta se limita a la edición identificada como FS16S 8/18; los pasajes no permiten determinar su vigencia clínica actual ni establecer un diagnóstico individual.\"\n  ]\n}",
+      "revision_citas": {
+        "adjudicacion_sustantiva": false,
+        "citas": [
+          {
+            "citas": [
+              {
+                "conforme": true,
+                "elipsis_explicitas": 0,
+                "normalizacion": "sólo espacios; omisiones [...] comprobadas por segmentos literales ordenados; no semejanza",
+                "segmentos": [
+                  {
+                    "fin_utf8_texto_normalizado": 1921,
+                    "inicio_utf8_texto_normalizado": 1723,
+                    "texto": "para extraer (succionar) una muestra líquida de células. En una biopsia de médula ósea, se usa una aguja especial más ancha para extraer una muestra de hueso sólido que contiene médula ósea."
+                  }
+                ]
+              }
+            ],
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 4000,
+                "indice": 1,
+                "inicio_caracter": 2000
+              }
+            ],
+            "identificador_cotejado": "PDF-P0002",
+            "lista_de_citas": false,
+            "pagina_fisica": 3,
+            "seccion_recibida": "PDF-P0002",
+            "titulo_documental_cotejado": null
+          },
+          {
+            "citas": [
+              {
+                "conforme": true,
+                "elipsis_explicitas": 0,
+                "normalizacion": "sólo espacios; omisiones [...] comprobadas por segmentos literales ordenados; no semejanza",
+                "segmentos": [
+                  {
+                    "fin_utf8_texto_normalizado": 293,
+                    "inicio_utf8_texto_normalizado": 69,
+                    "texto": "las células peludas a menudo producen tejido fibroso que causa cicatrices en la médula ósea. La presencia de cicatrices hace que la aspiración sea “seca”, lo que significa que no puede obtenerse una muestra líquida."
+                  }
+                ]
+              }
+            ],
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 4602,
+                "indice": 2,
+                "inicio_caracter": 4000
+              }
+            ],
+            "identificador_cotejado": "PDF-P0002",
+            "lista_de_citas": false,
+            "pagina_fisica": 3,
+            "seccion_recibida": "PDF-P0002",
+            "titulo_documental_cotejado": null
+          },
+          {
+            "citas": [
+              {
+                "conforme": true,
+                "elipsis_explicitas": 0,
+                "normalizacion": "sólo espacios; omisiones [...] comprobadas por segmentos literales ordenados; no semejanza",
+                "segmentos": [
+                  {
+                    "fin_utf8_texto_normalizado": 434,
+                    "inicio_utf8_texto_normalizado": 294,
+                    "texto": "Si no es posible realizar una aspiración, el médico puede examinar la muestra de la biopsia de médula ósea a fin de detectar anomalías."
+                  }
+                ]
+              }
+            ],
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 4602,
+                "indice": 2,
+                "inicio_caracter": 4000
+              }
+            ],
+            "identificador_cotejado": "PDF-P0002",
+            "lista_de_citas": false,
+            "pagina_fisica": 3,
+            "seccion_recibida": "PDF-P0002",
+            "titulo_documental_cotejado": null
+          }
+        ],
+        "conforme": true
+      },
+      "solicitud_sha256": "7b52b433a1568eb1f2aed090073c468142f1e36498a25eda5e79379f2e403733",
+      "sustantivo": "correcto",
+      "valor": "0"
+    },
+    {
+      "auditoria_sha256": "479b06d69ba48a9f7f3bc6df649ea3465166d9ca0828ed78a097f190622e7f00",
+      "caso": "PDF04",
+      "final_sha256": "971138d9866b7fd093c134b73c12c4da70d036f17bd5f5508391454b63a13d0a",
+      "formal_conforme": true,
+      "formal_original_conforme": false,
+      "fundamento_sustantivo": "Enumera CD19/CD20/CD22 y CD11c/CD25/CD103/CD123; distingue inmunofenotipo, diferenciación mediante BRAF V600E y pronóstico asociado a IGHV. Conserva casi todos, 80–90% y el contexto de quimioterapia convencional. La mención adicional a resistencia a análogos de purinas procede de la misma página. Los títulos añadidos pertenecen a la fuente y la elipsis marcada conserva segmentos literales ordenados, sin inventar una cita continua.",
+      "medicion": {
+        "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+        "bytes_sse": 368614,
+        "caso": "PDF04",
+        "cpu_delta_ms": 2703,
+        "duracion_ms": 40096,
+        "duracion_observada_ms": 43160,
+        "eventos_sse": 1316,
+        "fallos_medicion": 0,
+        "final_sha256": "971138d9866b7fd093c134b73c12c4da70d036f17bd5f5508391454b63a13d0a",
+        "intervalo_maximo_ms": 272,
+        "io_escritura_delta_bytes": 1475106,
+        "io_lectura_delta_bytes": 13732754,
+        "muestras": 163,
+        "observaciones_udp": 0,
+        "primer_texto_ms": 3689,
+        "rss_maximo_bytes": 37298176,
+        "solicitud_sha256": "921cde54e16417dc2648a7bf30aa587ec66bfbdbbc72302654f4244d809fc1e2",
+        "sse_sha256": "b862d2be8de9191f3eebba398d282139e1600437687a733a4242d95a5073667c",
+        "tcp_estados": [
+          "CloseWait",
+          "Established",
+          "FinWait1",
+          "Listen"
+        ],
+        "tcp_maximo_simultaneo": 6,
+        "telemetria_sha256": "bd82c7d1bb529ac97c0918267cfc3019f1739e361f22ec4262005b87d472d6ee",
+        "uso": {
+          "entrada_cache_tokens": 0,
+          "entrada_tokens": 2840,
+          "razonamiento_tokens": 0,
+          "salida_tokens": 1312,
+          "total_tokens": 4152
+        }
+      },
+      "naturaleza_defecto": null,
+      "pasajes_contrastados": [
+        {
+          "documento": "LLS-HCL-2018",
+          "fragmento": "Además de los antígenos CD19, CD20 y CD22, presentes en las células B, las células de esta enfermedad también expresan los antígenos CD11c, CD25, CD103 y CD123.",
+          "pagina": 3,
+          "seccion": "PDF-P0003"
+        },
+        {
+          "documento": "LLS-HCL-2018",
+          "fragmento": "En casi todos los casos de leucemia de células peludas, las células leucémicas tienen una mutación en el gen BRAF V600E. Esta mutación puede servir como marcador molecular confiable para diferenciar la leucemia de células peludas de otras leucemias y linfomas de células B.",
+          "pagina": 3,
+          "seccion": "PDF-P0003"
+        },
+        {
+          "documento": "LLS-HCL-2018",
+          "fragmento": "Aproximadamente del 80% al 90% de los pacientes con leucemia de células peludas tienen una hipermutación en un gen de la región variable de la cadena pesada de la inmunoglobulina",
+          "pagina": 3,
+          "seccion": "PDF-P0003"
+        },
+        {
+          "documento": "LLS-HCL-2018",
+          "fragmento": "en el caso del tratamiento con una quimioterapia convencional, los pacientes con mutación de IGHV tienen un mejor pronóstico",
+          "pagina": 3,
+          "seccion": "PDF-P0003"
+        },
+        {
+          "documento": "LLS-HCL-2018",
+          "fragmento": "Los siguientes signos están asociados a un pronóstico desfavorable y a la resistencia a la quimioterapia con análogos de purinas",
+          "pagina": 3,
+          "seccion": "PDF-P0003"
+        },
+        {
+          "documento": "LLS-HCL-2018",
+          "fragmento": "Gen IGHV sin mutación",
+          "pagina": 3,
+          "seccion": "PDF-P0003"
+        }
+      ],
+      "recepcion_independiente": "pendiente",
+      "respuesta_original": "{\n  \"respuesta\": {\n    \"citometria_de_flujo\": \"Clasifica las células según las proteínas o marcadores de su superficie, cuya configuración se denomina inmunofenotipo. La ficha describe una disposición característica de las células peludas, distinta de la de las células B sanas y otras células B malignas. Cita CD19, CD20 y CD22 como antígenos presentes en las células B, y CD11c, CD25, CD103 y CD123 como antígenos que las células de esta enfermedad también expresan. Habla de proteínas relativamente específicas, no de especificidad absoluta.\",\n    \"BRAF_V600E\": \"Las pruebas moleculares buscan mutaciones genéticas específicas en el ADN. Según la ficha, en casi todos los casos de leucemia de células peludas las células leucémicas presentan BRAF V600E. Le atribuye valor como marcador molecular confiable para diferenciar esta enfermedad de otras leucemias y linfomas de células B; no afirma que esté presente en todos los casos.\",\n    \"IGHV\": \"La ficha indica que aproximadamente el 80–90% de los pacientes presenta hipermutación en un gen de la región variable de la cadena pesada de la inmunoglobulina, IGHV. En el contexto del tratamiento con quimioterapia convencional, atribuye a los pacientes con mutación de IGHV un mejor pronóstico que a quienes no tienen la mutación, que suelen tener un desenlace menos favorable. Además, enumera el gen IGHV sin mutación entre los signos asociados a pronóstico desfavorable y resistencia a la quimioterapia con análogos de purinas.\",\n    \"alcance\": \"Estas son las atribuciones de la edición FS16S 8/18: caracterización inmunofenotípica mediante citometría, diferenciación molecular mediante BRAF V600E e información pronóstica de IGHV en los contextos terapéuticos indicados. No constituyen una actualización clínica ni una predicción individual.\"\n  },\n  \"fundamentos_verificables\": [\n    \"La distinción entre las tres pruebas se basa en las funciones expresamente descritas: clasificación por marcadores de superficie, identificación de una mutación para diferenciación diagnóstica y asociación de IGHV con el desenlace clínico.\",\n    \"Los matices «relativamente específicas», «casi todos», «aproximadamente del 80% al 90%» y «suelen» impiden convertir estas descripciones en reglas universales.\",\n    \"La comparación pronóstica de IGHV se sitúa explícitamente bajo quimioterapia convencional; la lista de factores desfavorables añade el contexto específico de los análogos de purinas.\"\n  ],\n  \"evidencias\": [\n    {\n      \"documento\": \"LLS-HCL-2018\",\n      \"pagina_fisica\": 4,\n      \"seccion\": \"PDF-P0003 — Citometría de flujo\",\n      \"fragmentos\": [\n        {\"inicio_caracter\": 0, \"fin_caracter_exclusivo\": 2000}\n      ],\n      \"cita_literal_breve\": \"Además de los antígenos CD19, CD20 y CD22, presentes en las células B, las células de esta enfermedad también expresan los antígenos CD11c, CD25, CD103 y CD123.\"\n    },\n    {\n      \"documento\": \"LLS-HCL-2018\",\n      \"pagina_fisica\": 4,\n      \"seccion\": \"PDF-P0003 — Pruebas moleculares\",\n      \"fragmentos\": [\n        {\"inicio_caracter\": 0, \"fin_caracter_exclusivo\": 2000}\n      ],\n      \"cita_literal_breve\": \"En casi todos los casos de leucemia de células peludas, las células leucémicas tienen una mutación en el gen BRAF V600E. Esta mutación puede servir como marcador molecular confiable para diferenciar la leucemia de células peludas de otras leucemias y linfomas de células B.\"\n    },\n    {\n      \"documento\": \"LLS-HCL-2018\",\n      \"pagina_fisica\": 4,\n      \"seccion\": \"PDF-P0003 — Pruebas moleculares\",\n      \"fragmentos\": [\n        {\"inicio_caracter\": 0, \"fin_caracter_exclusivo\": 2000},\n        {\"inicio_caracter\": 2000, \"fin_caracter_exclusivo\": 4000}\n      ],\n      \"cita_literal_breve\": \"Aproximadamente del 80% al 90% de los pacientes con leucemia de células peludas tienen una hipermutación en un gen de la región variable de la cadena pesada de la inmunoglobulina\"\n    },\n    {\n      \"documento\": \"LLS-HCL-2018\",\n      \"pagina_fisica\": 4,\n      \"seccion\": \"PDF-P0003 — Pruebas moleculares\",\n      \"fragmentos\": [\n        {\"inicio_caracter\": 0, \"fin_caracter_exclusivo\": 2000}\n      ],\n      \"cita_literal_breve\": \"en el caso del tratamiento con una quimioterapia convencional, los pacientes con mutación de IGHV tienen un mejor pronóstico\"\n    },\n    {\n      \"documento\": \"LLS-HCL-2018\",\n      \"pagina_fisica\": 4,\n      \"seccion\": \"PDF-P0003 — Planificación del tratamiento\",\n      \"fragmentos\": [\n        {\"inicio_caracter\": 2000, \"fin_caracter_exclusivo\": 4000}\n      ],\n      \"cita_literal_breve\": \"Los siguientes signos están asociados a un pronóstico desfavorable y a la resistencia a la quimioterapia con análogos de purinas [...] Gen IGHV sin mutación\"\n    }\n  ],\n  \"insuficiencias\": [\n    \"Los pasajes no cuantifican el rendimiento diagnóstico de la citometría ni de BRAF V600E, ni la magnitud de la diferencia pronóstica vinculada a IGHV.\",\n    \"El material basta para la distinción solicitada, pero corresponde únicamente a la edición FS16S 8/18 y no permite determinar su vigencia clínica actual.\"\n  ]\n}",
+      "revision_citas": {
+        "adjudicacion_sustantiva": false,
+        "citas": [
+          {
+            "citas": [
+              {
+                "conforme": true,
+                "elipsis_explicitas": 0,
+                "normalizacion": "sólo espacios; omisiones [...] comprobadas por segmentos literales ordenados; no semejanza",
+                "segmentos": [
+                  {
+                    "fin_utf8_texto_normalizado": 932,
+                    "inicio_utf8_texto_normalizado": 766,
+                    "texto": "Además de los antígenos CD19, CD20 y CD22, presentes en las células B, las células de esta enfermedad también expresan los antígenos CD11c, CD25, CD103 y CD123."
+                  }
+                ]
+              }
+            ],
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 2000,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "identificador_cotejado": "PDF-P0003",
+            "lista_de_citas": false,
+            "pagina_fisica": 4,
+            "seccion_recibida": "PDF-P0003 — Citometría de flujo",
+            "titulo_documental_cotejado": "Citometría de flujo"
+          },
+          {
+            "citas": [
+              {
+                "conforme": true,
+                "elipsis_explicitas": 0,
+                "normalizacion": "sólo espacios; omisiones [...] comprobadas por segmentos literales ordenados; no semejanza",
+                "segmentos": [
+                  {
+                    "fin_utf8_texto_normalizado": 1374,
+                    "inicio_utf8_texto_normalizado": 1094,
+                    "texto": "En casi todos los casos de leucemia de células peludas, las células leucémicas tienen una mutación en el gen BRAF V600E. Esta mutación puede servir como marcador molecular confiable para diferenciar la leucemia de células peludas de otras leucemias y linfomas de células B."
+                  }
+                ]
+              }
+            ],
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 2000,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "identificador_cotejado": "PDF-P0003",
+            "lista_de_citas": false,
+            "pagina_fisica": 4,
+            "seccion_recibida": "PDF-P0003 — Pruebas moleculares",
+            "titulo_documental_cotejado": "Pruebas moleculares"
+          },
+          {
+            "citas": [
+              {
+                "conforme": true,
+                "elipsis_explicitas": 0,
+                "normalizacion": "sólo espacios; omisiones [...] comprobadas por segmentos literales ordenados; no semejanza",
+                "segmentos": [
+                  {
+                    "fin_utf8_texto_normalizado": 1709,
+                    "inicio_utf8_texto_normalizado": 1528,
+                    "texto": "Aproximadamente del 80% al 90% de los pacientes con leucemia de células peludas tienen una hipermutación en un gen de la región variable de la cadena pesada de la inmunoglobulina"
+                  }
+                ]
+              }
+            ],
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 2000,
+                "indice": 0,
+                "inicio_caracter": 0
+              },
+              {
+                "fin_caracter_exclusivo": 4000,
+                "indice": 1,
+                "inicio_caracter": 2000
+              }
+            ],
+            "identificador_cotejado": "PDF-P0003",
+            "lista_de_citas": false,
+            "pagina_fisica": 4,
+            "seccion_recibida": "PDF-P0003 — Pruebas moleculares",
+            "titulo_documental_cotejado": "Pruebas moleculares"
+          },
+          {
+            "citas": [
+              {
+                "conforme": true,
+                "elipsis_explicitas": 0,
+                "normalizacion": "sólo espacios; omisiones [...] comprobadas por segmentos literales ordenados; no semejanza",
+                "segmentos": [
+                  {
+                    "fin_utf8_texto_normalizado": 1894,
+                    "inicio_utf8_texto_normalizado": 1768,
+                    "texto": "en el caso del tratamiento con una quimioterapia convencional, los pacientes con mutación de IGHV tienen un mejor pronóstico"
+                  }
+                ]
+              }
+            ],
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 2000,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "identificador_cotejado": "PDF-P0003",
+            "lista_de_citas": false,
+            "pagina_fisica": 4,
+            "seccion_recibida": "PDF-P0003 — Pruebas moleculares",
+            "titulo_documental_cotejado": "Pruebas moleculares"
+          },
+          {
+            "citas": [
+              {
+                "conforme": true,
+                "elipsis_explicitas": 1,
+                "normalizacion": "sólo espacios; omisiones [...] comprobadas por segmentos literales ordenados; no semejanza",
+                "segmentos": [
+                  {
+                    "fin_utf8_texto_normalizado": 1632,
+                    "inicio_utf8_texto_normalizado": 1501,
+                    "texto": "Los siguientes signos están asociados a un pronóstico desfavorable y a la resistencia a la quimioterapia con análogos de purinas"
+                  },
+                  {
+                    "fin_utf8_texto_normalizado": 1896,
+                    "inicio_utf8_texto_normalizado": 1874,
+                    "texto": "Gen IGHV sin mutación"
+                  }
+                ]
+              }
+            ],
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 4000,
+                "indice": 1,
+                "inicio_caracter": 2000
+              }
+            ],
+            "identificador_cotejado": "PDF-P0003",
+            "lista_de_citas": false,
+            "pagina_fisica": 4,
+            "seccion_recibida": "PDF-P0003 — Planificación del tratamiento",
+            "titulo_documental_cotejado": "Planificación del tratamiento"
+          }
+        ],
+        "conforme": true
+      },
+      "solicitud_sha256": "921cde54e16417dc2648a7bf30aa587ec66bfbdbbc72302654f4244d809fc1e2",
+      "sustantivo": "correcto",
+      "valor": "0"
+    },
+    {
+      "auditoria_sha256": "479b06d69ba48a9f7f3bc6df649ea3465166d9ca0828ed78a097f190622e7f00",
+      "caso": "PDF05",
+      "final_sha256": "71df0080312f19f9d95a413c87391f7279997e657c5b7ddd312c2df5658e424c",
+      "formal_conforme": true,
+      "formal_original_conforme": true,
+      "fundamento_sustantivo": "Mantiene aproximadamente 10%, conteos estables y ausencia de síntomas; exige seguimiento frecuente con análisis. Distingue los conteos bajos o la presencia de síntomas como motivos documentales de tratamiento, sin umbrales inventados ni pauta individual. El uso de o es coherente con las dos indicaciones sucesivas de la fuente y no se penaliza por el y del resumen de la clave. Tres citas literales comprobadas.",
+      "medicion": {
+        "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+        "bytes_sse": 217007,
+        "caso": "PDF05",
+        "cpu_delta_ms": 1578,
+        "duracion_ms": 24808,
+        "duracion_observada_ms": 27998,
+        "eventos_sse": 760,
+        "fallos_medicion": 0,
+        "final_sha256": "71df0080312f19f9d95a413c87391f7279997e657c5b7ddd312c2df5658e424c",
+        "intervalo_maximo_ms": 283,
+        "io_escritura_delta_bytes": 907137,
+        "io_lectura_delta_bytes": 13733156,
+        "muestras": 106,
+        "observaciones_udp": 0,
+        "primer_texto_ms": 3104,
+        "rss_maximo_bytes": 37429248,
+        "solicitud_sha256": "c7aaa5f48757b1bdbd47021af0be9aab25555ac66cf709f4013fc0f63283b917",
+        "sse_sha256": "21fc2f71adc62055243cad84b59861710f6a48adf450edd2b2aa0ccc08fbe125",
+        "tcp_estados": [
+          "CloseWait",
+          "Established",
+          "Listen"
+        ],
+        "tcp_maximo_simultaneo": 4,
+        "telemetria_sha256": "de1302075b474e97044429326bd9617a685eb9f43ac4bb589395fce4ebca0352",
+        "uso": {
+          "entrada_cache_tokens": 0,
+          "entrada_tokens": 2913,
+          "razonamiento_tokens": 0,
+          "salida_tokens": 756,
+          "total_tokens": 3669
+        }
+      },
+      "naturaleza_defecto": null,
+      "pasajes_contrastados": [
+        {
+          "documento": "LLS-HCL-2018",
+          "fragmento": "En el caso de aproximadamente el 10 por ciento de los pacientes (que tienen conteos estables de células sanguíneas y no presentan síntomas al momento del diagnóstico), el enfoque de tratamiento podría ser el de la “espera vigilante”.",
+          "pagina": 4,
+          "seccion": "PDF-P0004"
+        },
+        {
+          "documento": "LLS-HCL-2018",
+          "fragmento": "Es necesario realizar un seguimiento frecuente del paciente, incluyendo análisis de sangre, para que pueda iniciarse el tratamiento si la enfermedad empieza a avanzar.",
+          "pagina": 4,
+          "seccion": "PDF-P0004"
+        },
+        {
+          "documento": "LLS-HCL-2018",
+          "fragmento": "Los pacientes deberían iniciar el tratamiento si tienen conteos bajos de células sanguíneas (deficiencia de glóbulos rojos, plaquetas o glóbulos blancos). También deberían iniciar el tratamiento si presentan síntomas, entre ellos, pérdida de peso sin explicación, infecciones recurrentes o molestias físicas debido al agrandamiento del bazo e/o hígado.",
+          "pagina": 4,
+          "seccion": "PDF-P0004"
+        }
+      ],
+      "recepcion_independiente": "pendiente",
+      "respuesta_original": "{\n  \"respuesta\": \"La ficha contempla la espera vigilante tras el diagnóstico inicial para pacientes con conteos estables de células sanguíneas y sin síntomas; menciona aproximadamente al 10 % de los pacientes. Consiste en posponer el tratamiento hasta la aparición o progresión de signos y síntomas de la enfermedad. Exige seguimiento frecuente, incluidos análisis de sangre, para poder iniciar el tratamiento si la enfermedad avanza. Señala como motivos para iniciarlo los conteos bajos de células sanguíneas —deficiencia de glóbulos rojos, plaquetas o glóbulos blancos— o la presencia de síntomas, entre ellos pérdida de peso sin explicación, infecciones recurrentes o molestias físicas por agrandamiento del bazo y/o del hígado. Estas afirmaciones corresponden a la edición de agosto de 2018, no a una pauta individual ni a una validación de su vigencia clínica actual.\",\n  \"fundamentos_verificables\": [\n    \"La ficha vincula expresamente la posible espera vigilante con conteos estables y ausencia de síntomas al diagnóstico, y sitúa ese grupo en aproximadamente el 10 %.\",\n    \"Define la espera vigilante como aplazamiento del tratamiento con seguimiento frecuente, incluidos análisis de sangre.\",\n    \"Distingue como motivos para tratar tanto los conteos bajos de células sanguíneas como la presencia de síntomas.\"\n  ],\n  \"evidencias\": [\n    {\n      \"documento\": \"LLS-HCL-2018\",\n      \"pagina_fisica\": 5,\n      \"seccion\": \"PDF-P0004\",\n      \"fragmentos\": [\n        {\n          \"inicio_caracter\": 0,\n          \"fin_caracter_exclusivo\": 2000\n        }\n      ],\n      \"cita_literal_breve\": \"En el caso de aproximadamente el 10 por ciento de los pacientes (que tienen conteos estables de células sanguíneas y no presentan síntomas al momento del diagnóstico), el enfoque de tratamiento podría ser el de la “espera vigilante”.\"\n    },\n    {\n      \"documento\": \"LLS-HCL-2018\",\n      \"pagina_fisica\": 5,\n      \"seccion\": \"PDF-P0004\",\n      \"fragmentos\": [\n        {\n          \"inicio_caracter\": 0,\n          \"fin_caracter_exclusivo\": 2000\n        }\n      ],\n      \"cita_literal_breve\": \"Es necesario realizar un seguimiento frecuente del paciente, incluyendo análisis de sangre, para que pueda iniciarse el tratamiento si la enfermedad empieza a avanzar.\"\n    },\n    {\n      \"documento\": \"LLS-HCL-2018\",\n      \"pagina_fisica\": 5,\n      \"seccion\": \"PDF-P0004\",\n      \"fragmentos\": [\n        {\n          \"inicio_caracter\": 0,\n          \"fin_caracter_exclusivo\": 2000\n        }\n      ],\n      \"cita_literal_breve\": \"Los pacientes deberían iniciar el tratamiento si tienen conteos bajos de células sanguíneas (deficiencia de glóbulos rojos, plaquetas o glóbulos blancos). También deberían iniciar el tratamiento si presentan síntomas, entre ellos, pérdida de peso sin explicación, infecciones recurrentes o molestias físicas debido al agrandamiento del bazo e/o hígado.\"\n    }\n  ],\n  \"insuficiencias\": [\n    \"El pasaje no establece umbrales numéricos para los conteos bajos ni un intervalo concreto para el seguimiento frecuente.\",\n    \"El material permite describir lo que sostiene esta edición, pero no determinar su vigencia clínica actual.\"\n  ]\n}",
+      "revision_citas": {
+        "adjudicacion_sustantiva": false,
+        "citas": [
+          {
+            "citas": [
+              {
+                "conforme": true,
+                "elipsis_explicitas": 0,
+                "normalizacion": "sólo espacios; omisiones [...] comprobadas por segmentos literales ordenados; no semejanza",
+                "segmentos": [
+                  {
+                    "fin_utf8_texto_normalizado": 668,
+                    "inicio_utf8_texto_normalizado": 426,
+                    "texto": "En el caso de aproximadamente el 10 por ciento de los pacientes (que tienen conteos estables de células sanguíneas y no presentan síntomas al momento del diagnóstico), el enfoque de tratamiento podría ser el de la “espera vigilante”."
+                  }
+                ]
+              }
+            ],
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 2000,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "identificador_cotejado": "PDF-P0004",
+            "lista_de_citas": false,
+            "pagina_fisica": 5,
+            "seccion_recibida": "PDF-P0004",
+            "titulo_documental_cotejado": null
+          },
+          {
+            "citas": [
+              {
+                "conforme": true,
+                "elipsis_explicitas": 0,
+                "normalizacion": "sólo espacios; omisiones [...] comprobadas por segmentos literales ordenados; no semejanza",
+                "segmentos": [
+                  {
+                    "fin_utf8_texto_normalizado": 1128,
+                    "inicio_utf8_texto_normalizado": 960,
+                    "texto": "Es necesario realizar un seguimiento frecuente del paciente, incluyendo análisis de sangre, para que pueda iniciarse el tratamiento si la enfermedad empieza a avanzar."
+                  }
+                ]
+              }
+            ],
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 2000,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "identificador_cotejado": "PDF-P0004",
+            "lista_de_citas": false,
+            "pagina_fisica": 5,
+            "seccion_recibida": "PDF-P0004",
+            "titulo_documental_cotejado": null
+          },
+          {
+            "citas": [
+              {
+                "conforme": true,
+                "elipsis_explicitas": 0,
+                "normalizacion": "sólo espacios; omisiones [...] comprobadas por segmentos literales ordenados; no semejanza",
+                "segmentos": [
+                  {
+                    "fin_utf8_texto_normalizado": 1493,
+                    "inicio_utf8_texto_normalizado": 1129,
+                    "texto": "Los pacientes deberían iniciar el tratamiento si tienen conteos bajos de células sanguíneas (deficiencia de glóbulos rojos, plaquetas o glóbulos blancos). También deberían iniciar el tratamiento si presentan síntomas, entre ellos, pérdida de peso sin explicación, infecciones recurrentes o molestias físicas debido al agrandamiento del bazo e/o hígado."
+                  }
+                ]
+              }
+            ],
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 2000,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "identificador_cotejado": "PDF-P0004",
+            "lista_de_citas": false,
+            "pagina_fisica": 5,
+            "seccion_recibida": "PDF-P0004",
+            "titulo_documental_cotejado": null
+          }
+        ],
+        "conforme": true
+      },
+      "solicitud_sha256": "c7aaa5f48757b1bdbd47021af0be9aab25555ac66cf709f4013fc0f63283b917",
+      "sustantivo": "correcto",
+      "valor": "0"
+    },
+    {
+      "auditoria_sha256": "479b06d69ba48a9f7f3bc6df649ea3465166d9ca0828ed78a097f190622e7f00",
+      "caso": "PDF06",
+      "final_sha256": "c64edd50381d6c72daaf7cf5f50682807339996031d6b1e745f8cec7d08605da",
+      "formal_conforme": true,
+      "formal_original_conforme": false,
+      "fundamento_sustantivo": "Conserva los cuatro elementos de remisión completa, incluida disminución del bazo; no declara curación ni abandono de controles. Vincula pruebas sanguíneas periódicas y conversación sobre opciones terapéuticas al descenso de conteos sin imponer tratamiento automático. Las dos citas contienen omisiones explícitas [...]; sus segmentos aparecen literalmente y en orden en los fragmentos indicados. Su sentido coincide con la prueba instrumental PDF06 anterior, sin que dos observaciones acrediten estabilidad general.",
+      "medicion": {
+        "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+        "bytes_sse": 201946,
+        "caso": "PDF06",
+        "cpu_delta_ms": 1562,
+        "duracion_ms": 21128,
+        "duracion_observada_ms": 24378,
+        "eventos_sse": 705,
+        "fallos_medicion": 0,
+        "final_sha256": "c64edd50381d6c72daaf7cf5f50682807339996031d6b1e745f8cec7d08605da",
+        "intervalo_maximo_ms": 345,
+        "io_escritura_delta_bytes": 764130,
+        "io_lectura_delta_bytes": 13741469,
+        "muestras": 92,
+        "observaciones_udp": 0,
+        "primer_texto_ms": 3320,
+        "rss_maximo_bytes": 37756928,
+        "solicitud_sha256": "6db70a6ad590dcb7457edb9c1f5ca45f108fd8ef6d9892d28c001837fab1a523",
+        "sse_sha256": "64bea384211bf04c63ee0c9a9354408391ac614172fae8ba35b56f769367ddbc",
+        "tcp_estados": [
+          "CloseWait",
+          "Established",
+          "Listen"
+        ],
+        "tcp_maximo_simultaneo": 4,
+        "telemetria_sha256": "cc6015ea38e18d2cc04e319f34fd66f3e8d9b6feed052edf4c9a3494a7e13d50",
+        "uso": {
+          "entrada_cache_tokens": 0,
+          "entrada_tokens": 5228,
+          "razonamiento_tokens": 0,
+          "salida_tokens": 701,
+          "total_tokens": 5929
+        }
+      },
+      "naturaleza_defecto": null,
+      "pasajes_contrastados": [
+        {
+          "documento": "LLS-HCL-2018",
+          "fragmento": "Una remisión completa significa lo siguiente:",
+          "pagina": 4,
+          "seccion": "PDF-P0004"
+        },
+        {
+          "documento": "LLS-HCL-2018",
+          "fragmento": "Normalización de los conteos de células sanguíneas",
+          "pagina": 4,
+          "seccion": "PDF-P0004"
+        },
+        {
+          "documento": "LLS-HCL-2018",
+          "fragmento": "Desaparición de las células peludas leucémicas de la sangre y la médula ósea",
+          "pagina": 4,
+          "seccion": "PDF-P0004"
+        },
+        {
+          "documento": "LLS-HCL-2018",
+          "fragmento": "Disminución del tamaño del bazo (determinada por medio del examen físico)",
+          "pagina": 4,
+          "seccion": "PDF-P0004"
+        },
+        {
+          "documento": "LLS-HCL-2018",
+          "fragmento": "Ausencia de síntomas de la enfermedad",
+          "pagina": 4,
+          "seccion": "PDF-P0004"
+        },
+        {
+          "documento": "LLS-HCL-2018",
+          "fragmento": "La leucemia de células peludas se clasifica como una forma crónica de cáncer porque nunca desaparece por completo.",
+          "pagina": 7,
+          "seccion": "PDF-P0007"
+        },
+        {
+          "documento": "LLS-HCL-2018",
+          "fragmento": "Los pacientes deberían someterse de forma rutinaria a pruebas de sangre",
+          "pagina": 7,
+          "seccion": "PDF-P0007"
+        },
+        {
+          "documento": "LLS-HCL-2018",
+          "fragmento": "Si los conteos de células sanguíneas empiezan a disminuir, los pacientes deben hablar sobre las opciones de tratamiento con sus médicos.",
+          "pagina": 7,
+          "seccion": "PDF-P0007"
+        }
+      ],
+      "recepcion_independiente": "pendiente",
+      "respuesta_original": "{\n  \"respuesta\": {\n    \"elementos_de_remision_completa\": [\n      \"Normalización de los conteos de células sanguíneas.\",\n      \"Desaparición de las células peludas leucémicas de la sangre y la médula ósea.\",\n      \"Disminución del tamaño del bazo, determinada mediante el examen físico.\",\n      \"Ausencia de síntomas de la enfermedad.\"\n    ],\n    \"relacion_con_el_seguimiento\": \"Según la ficha, la remisión completa no equivale a curación ni permite abandonar los controles: clasifica la leucemia de células peludas como una forma crónica de cáncer porque nunca desaparece por completo. Describe exámenes periódicos y pruebas rutinarias de sangre para evaluar los conteos de células sanguíneas y confirmar que se mantiene la remisión. Cuando los conteos empiezan a disminuir, señala que los pacientes deben hablar con sus médicos sobre las opciones de tratamiento.\"\n  },\n  \"fundamentos_verificables\": [\n    \"La página 5 enumera expresamente los cuatro criterios de remisión completa.\",\n    \"La conclusión de que remisión no significa curación ni fin de los controles se basa en dos afirmaciones de la página 8: la enfermedad nunca desaparece por completo y los pacientes en remisión completa deben someterse a exámenes periódicos.\",\n    \"La página 8 vincula el seguimiento con los conteos sanguíneos e indica conversar sobre opciones de tratamiento si estos disminuyen; no establece que esa disminución implique iniciar automáticamente un tratamiento.\"\n  ],\n  \"evidencias\": [\n    {\n      \"documento\": \"LLS-HCL-2018\",\n      \"pagina_fisica\": 5,\n      \"seccion\": \"PDF-P0004\",\n      \"fragmentos\": [\n        {\n          \"inicio_caracter\": 2000,\n          \"fin_caracter_exclusivo\": 4000\n        }\n      ],\n      \"cita_literal_breve\": \"Una remisión completa significa lo siguiente: [...] Normalización de los conteos de células sanguíneas [...] Desaparición de las células peludas leucémicas de la sangre y la médula ósea [...] Disminución del tamaño del bazo (determinada por medio del examen físico) [...] Ausencia de síntomas de la enfermedad\"\n    },\n    {\n      \"documento\": \"LLS-HCL-2018\",\n      \"pagina_fisica\": 8,\n      \"seccion\": \"PDF-P0007\",\n      \"fragmentos\": [\n        {\n          \"inicio_caracter\": 0,\n          \"fin_caracter_exclusivo\": 2000\n        }\n      ],\n      \"cita_literal_breve\": \"La leucemia de células peludas se clasifica como una forma crónica de cáncer porque nunca desaparece por completo. [...] Los pacientes deberían someterse de forma rutinaria a pruebas de sangre [...] Si los conteos de células sanguíneas empiezan a disminuir, los pacientes deben hablar sobre las opciones de tratamiento con sus médicos.\"\n    }\n  ],\n  \"insuficiencias\": [\n    \"Los pasajes no especifican intervalos concretos para los controles ni umbrales numéricos de descenso de los conteos sanguíneos.\",\n    \"La respuesta se limita a la edición identificada como FS16S 8/18; no determina su vigencia clínica actual.\"\n  ]\n}",
+      "revision_citas": {
+        "adjudicacion_sustantiva": false,
+        "citas": [
+          {
+            "citas": [
+              {
+                "conforme": true,
+                "elipsis_explicitas": 4,
+                "normalizacion": "sólo espacios; omisiones [...] comprobadas por segmentos literales ordenados; no semejanza",
+                "segmentos": [
+                  {
+                    "fin_utf8_texto_normalizado": 1006,
+                    "inicio_utf8_texto_normalizado": 960,
+                    "texto": "Una remisión completa significa lo siguiente:"
+                  },
+                  {
+                    "fin_utf8_texto_normalizado": 1064,
+                    "inicio_utf8_texto_normalizado": 1011,
+                    "texto": "Normalización de los conteos de células sanguíneas"
+                  },
+                  {
+                    "fin_utf8_texto_normalizado": 1150,
+                    "inicio_utf8_texto_normalizado": 1069,
+                    "texto": "Desaparición de las células peludas leucémicas de la sangre y la médula ósea"
+                  },
+                  {
+                    "fin_utf8_texto_normalizado": 1231,
+                    "inicio_utf8_texto_normalizado": 1155,
+                    "texto": "Disminución del tamaño del bazo (determinada por medio del examen físico)"
+                  },
+                  {
+                    "fin_utf8_texto_normalizado": 1274,
+                    "inicio_utf8_texto_normalizado": 1236,
+                    "texto": "Ausencia de síntomas de la enfermedad"
+                  }
+                ]
+              }
+            ],
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 4000,
+                "indice": 1,
+                "inicio_caracter": 2000
+              }
+            ],
+            "identificador_cotejado": "PDF-P0004",
+            "lista_de_citas": false,
+            "pagina_fisica": 5,
+            "seccion_recibida": "PDF-P0004",
+            "titulo_documental_cotejado": null
+          },
+          {
+            "citas": [
+              {
+                "conforme": true,
+                "elipsis_explicitas": 2,
+                "normalizacion": "sólo espacios; omisiones [...] comprobadas por segmentos literales ordenados; no semejanza",
+                "segmentos": [
+                  {
+                    "fin_utf8_texto_normalizado": 174,
+                    "inicio_utf8_texto_normalizado": 57,
+                    "texto": "La leucemia de células peludas se clasifica como una forma crónica de cáncer porque nunca desaparece por completo."
+                  },
+                  {
+                    "fin_utf8_texto_normalizado": 337,
+                    "inicio_utf8_texto_normalizado": 265,
+                    "texto": "Los pacientes deberían someterse de forma rutinaria a pruebas de sangre"
+                  },
+                  {
+                    "fin_utf8_texto_normalizado": 586,
+                    "inicio_utf8_texto_normalizado": 447,
+                    "texto": "Si los conteos de células sanguíneas empiezan a disminuir, los pacientes deben hablar sobre las opciones de tratamiento con sus médicos."
+                  }
+                ]
+              }
+            ],
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 2000,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "identificador_cotejado": "PDF-P0007",
+            "lista_de_citas": false,
+            "pagina_fisica": 8,
+            "seccion_recibida": "PDF-P0007",
+            "titulo_documental_cotejado": null
+          }
+        ],
+        "conforme": true
+      },
+      "solicitud_sha256": "6db70a6ad590dcb7457edb9c1f5ca45f108fd8ef6d9892d28c001837fab1a523",
+      "sustantivo": "correcto",
+      "valor": "0"
+    },
+    {
+      "auditoria_sha256": "479b06d69ba48a9f7f3bc6df649ea3465166d9ca0828ed78a097f190622e7f00",
+      "caso": "PDF07",
+      "final_sha256": "d5ef23d5477b014939581d295d5a08a20ab94588765bc1815eda384cb750a3af",
+      "formal_conforme": true,
+      "formal_original_conforme": true,
+      "fundamento_sustantivo": "Separa la deficiencia previa de glóbulos blancos y su reducción adicional por cladribina/pentostatina. Mantiene la relación con riesgo infeccioso y asigna educación preventiva al equipo y comunicación de signos al paciente. No prescribe fármacos ni añade medidas preventivas ajenas al pasaje. Cuatro citas literales y localizadores comprobados.",
+      "medicion": {
+        "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+        "bytes_sse": 265599,
+        "caso": "PDF07",
+        "cpu_delta_ms": 2266,
+        "duracion_ms": 28085,
+        "duracion_observada_ms": 31200,
+        "eventos_sse": 939,
+        "fallos_medicion": 0,
+        "final_sha256": "d5ef23d5477b014939581d295d5a08a20ab94588765bc1815eda384cb750a3af",
+        "intervalo_maximo_ms": 282,
+        "io_escritura_delta_bytes": 1033202,
+        "io_lectura_delta_bytes": 13733242,
+        "muestras": 118,
+        "observaciones_udp": 0,
+        "primer_texto_ms": 3301,
+        "rss_maximo_bytes": 38526976,
+        "solicitud_sha256": "8faf269da69e3a0784fe980439ed1958b8faadca0813f204d18180967b2093dd",
+        "sse_sha256": "a9493217e3c9c2367887772630250a20fc83813065ad4a99a5f7b2c43cbdabb8",
+        "tcp_estados": [
+          "CloseWait",
+          "Established",
+          "Listen"
+        ],
+        "tcp_maximo_simultaneo": 4,
+        "telemetria_sha256": "16092d151df152d87693687b9ed70b574a3e4dc6ae9059dace5badde6f693f76",
+        "uso": {
+          "entrada_cache_tokens": 0,
+          "entrada_tokens": 2934,
+          "razonamiento_tokens": 0,
+          "salida_tokens": 935,
+          "total_tokens": 3869
+        }
+      },
+      "naturaleza_defecto": null,
+      "pasajes_contrastados": [
+        {
+          "documento": "LLS-HCL-2018",
+          "fragmento": "A menudo los pacientes ya tienen una deficiencia de glóbulos blancos antes del tratamiento, lo que aumenta su riesgo de infección.",
+          "pagina": 4,
+          "seccion": "PDF-P0004"
+        },
+        {
+          "documento": "LLS-HCL-2018",
+          "fragmento": "tanto la cladribina como la pentostatina son medicamentos “inmunosupresores”, lo que significa que reducen aún más la cantidad de glóbulos blancos.",
+          "pagina": 4,
+          "seccion": "PDF-P0004"
+        },
+        {
+          "documento": "LLS-HCL-2018",
+          "fragmento": "Los médicos deberían instruir a los pacientes sobre cómo prevenir las infecciones.",
+          "pagina": 4,
+          "seccion": "PDF-P0004"
+        },
+        {
+          "documento": "LLS-HCL-2018",
+          "fragmento": "es importante que los pacientes se comuniquen con el equipo de profesionales médicos encargados de su atención si presentan algún signo o síntoma de una infección, por ejemplo, fiebre o sarpullido.",
+          "pagina": 4,
+          "seccion": "PDF-P0004"
+        }
+      ],
+      "recepcion_independiente": "pendiente",
+      "respuesta_original": "{\n  \"respuesta\": \"La ficha distingue dos componentes del riesgo de infección: antes del tratamiento, los pacientes a menudo ya tienen una deficiencia de glóbulos blancos; después de iniciarlo, la cladribina y la pentostatina, por su efecto inmunosupresor, reducen aún más esos glóbulos blancos. Por eso, aunque se esté tratando la leucemia, puede disminuir la capacidad del organismo para combatir infecciones y aumentar el riesgo de enfermedades potencialmente mortales. En cuanto a prevención y comunicación, la ficha atribuye a los médicos la tarea de instruir a los pacientes sobre cómo prevenir infecciones, y destaca que los pacientes deben comunicarse con su equipo asistencial si presentan signos o síntomas de infección, como fiebre o sarpullido. Esta explicación corresponde a la edición FS16S 8/18, no a una evaluación de su vigencia clínica actual.\",\n  \"fundamentos_verificables\": [\n    {\n      \"afirmacion\": \"El riesgo previo se vincula con una deficiencia de glóbulos blancos que a menudo existe antes del tratamiento.\",\n      \"base_documental\": \"Página física 5, sección PDF-P0004, fragmento de caracteres 4000–4950.\"\n    },\n    {\n      \"afirmacion\": \"El aumento del riesgo tras iniciar cladribina o pentostatina se explica por una reducción adicional de glóbulos blancos debida a su efecto inmunosupresor, no por la ausencia de tratamiento de la leucemia.\",\n      \"base_documental\": \"El mismo pasaje vincula explícitamente la inmunosupresión con la menor capacidad de combatir infecciones.\"\n    },\n    {\n      \"afirmacion\": \"La actuación descrita combina educación preventiva por los médicos y comunicación del paciente al equipo ante posibles signos de infección.\",\n      \"base_documental\": \"Párrafo final de la página física 5.\"\n    }\n  ],\n  \"evidencias\": [\n    {\n      \"documento\": \"LLS-HCL-2018\",\n      \"pagina_fisica\": 5,\n      \"seccion\": \"PDF-P0004\",\n      \"fragmentos\": [\n        {\n          \"inicio_caracter\": 4000,\n          \"fin_caracter_exclusivo\": 4950\n        }\n      ],\n      \"cita_literal_breve\": \"A menudo los pacientes ya tienen una deficiencia de glóbulos blancos antes del tratamiento, lo que aumenta su riesgo de infección.\"\n    },\n    {\n      \"documento\": \"LLS-HCL-2018\",\n      \"pagina_fisica\": 5,\n      \"seccion\": \"PDF-P0004\",\n      \"fragmentos\": [\n        {\n          \"inicio_caracter\": 4000,\n          \"fin_caracter_exclusivo\": 4950\n        }\n      ],\n      \"cita_literal_breve\": \"tanto la cladribina como la pentostatina son medicamentos “inmunosupresores”, lo que significa que reducen aún más la cantidad de glóbulos blancos.\"\n    },\n    {\n      \"documento\": \"LLS-HCL-2018\",\n      \"pagina_fisica\": 5,\n      \"seccion\": \"PDF-P0004\",\n      \"fragmentos\": [\n        {\n          \"inicio_caracter\": 4000,\n          \"fin_caracter_exclusivo\": 4950\n        }\n      ],\n      \"cita_literal_breve\": \"Los médicos deberían instruir a los pacientes sobre cómo prevenir las infecciones.\"\n    },\n    {\n      \"documento\": \"LLS-HCL-2018\",\n      \"pagina_fisica\": 5,\n      \"seccion\": \"PDF-P0004\",\n      \"fragmentos\": [\n        {\n          \"inicio_caracter\": 4000,\n          \"fin_caracter_exclusivo\": 4950\n        }\n      ],\n      \"cita_literal_breve\": \"es importante que los pacientes se comuniquen con el equipo de profesionales médicos encargados de su atención si presentan algún signo o síntoma de una infección, por ejemplo, fiebre o sarpullido.\"\n    }\n  ],\n  \"insuficiencias\": [\n    \"El pasaje no detalla medidas concretas de prevención ni cuantifica la magnitud o duración del aumento del riesgo.\",\n    \"El material permite responder la pregunta documental, pero no determinar el riesgo de una persona concreta ni la vigencia clínica actual de esta edición.\"\n  ]\n}",
+      "revision_citas": {
+        "adjudicacion_sustantiva": false,
+        "citas": [
+          {
+            "citas": [
+              {
+                "conforme": true,
+                "elipsis_explicitas": 0,
+                "normalizacion": "sólo espacios; omisiones [...] comprobadas por segmentos literales ordenados; no semejanza",
+                "segmentos": [
+                  {
+                    "fin_utf8_texto_normalizado": 217,
+                    "inicio_utf8_texto_normalizado": 85,
+                    "texto": "A menudo los pacientes ya tienen una deficiencia de glóbulos blancos antes del tratamiento, lo que aumenta su riesgo de infección."
+                  }
+                ]
+              }
+            ],
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 4950,
+                "indice": 2,
+                "inicio_caracter": 4000
+              }
+            ],
+            "identificador_cotejado": "PDF-P0004",
+            "lista_de_citas": false,
+            "pagina_fisica": 5,
+            "seccion_recibida": "PDF-P0004",
+            "titulo_documental_cotejado": null
+          },
+          {
+            "citas": [
+              {
+                "conforme": true,
+                "elipsis_explicitas": 0,
+                "normalizacion": "sólo espacios; omisiones [...] comprobadas por segmentos literales ordenados; no semejanza",
+                "segmentos": [
+                  {
+                    "fin_utf8_texto_normalizado": 459,
+                    "inicio_utf8_texto_normalizado": 305,
+                    "texto": "tanto la cladribina como la pentostatina son medicamentos “inmunosupresores”, lo que significa que reducen aún más la cantidad de glóbulos blancos."
+                  }
+                ]
+              }
+            ],
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 4950,
+                "indice": 2,
+                "inicio_caracter": 4000
+              }
+            ],
+            "identificador_cotejado": "PDF-P0004",
+            "lista_de_citas": false,
+            "pagina_fisica": 5,
+            "seccion_recibida": "PDF-P0004",
+            "titulo_documental_cotejado": null
+          },
+          {
+            "citas": [
+              {
+                "conforme": true,
+                "elipsis_explicitas": 0,
+                "normalizacion": "sólo espacios; omisiones [...] comprobadas por segmentos literales ordenados; no semejanza",
+                "segmentos": [
+                  {
+                    "fin_utf8_texto_normalizado": 740,
+                    "inicio_utf8_texto_normalizado": 655,
+                    "texto": "Los médicos deberían instruir a los pacientes sobre cómo prevenir las infecciones."
+                  }
+                ]
+              }
+            ],
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 4950,
+                "indice": 2,
+                "inicio_caracter": 4000
+              }
+            ],
+            "identificador_cotejado": "PDF-P0004",
+            "lista_de_citas": false,
+            "pagina_fisica": 5,
+            "seccion_recibida": "PDF-P0004",
+            "titulo_documental_cotejado": null
+          },
+          {
+            "citas": [
+              {
+                "conforme": true,
+                "elipsis_explicitas": 0,
+                "normalizacion": "sólo espacios; omisiones [...] comprobadas por segmentos literales ordenados; no semejanza",
+                "segmentos": [
+                  {
+                    "fin_utf8_texto_normalizado": 952,
+                    "inicio_utf8_texto_normalizado": 750,
+                    "texto": "es importante que los pacientes se comuniquen con el equipo de profesionales médicos encargados de su atención si presentan algún signo o síntoma de una infección, por ejemplo, fiebre o sarpullido."
+                  }
+                ]
+              }
+            ],
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 4950,
+                "indice": 2,
+                "inicio_caracter": 4000
+              }
+            ],
+            "identificador_cotejado": "PDF-P0004",
+            "lista_de_citas": false,
+            "pagina_fisica": 5,
+            "seccion_recibida": "PDF-P0004",
+            "titulo_documental_cotejado": null
+          }
+        ],
+        "conforme": true
+      },
+      "solicitud_sha256": "8faf269da69e3a0784fe980439ed1958b8faadca0813f204d18180967b2093dd",
+      "sustantivo": "correcto",
+      "valor": "0"
+    },
+    {
+      "auditoria_sha256": "479b06d69ba48a9f7f3bc6df649ea3465166d9ca0828ed78a097f190622e7f00",
+      "caso": "PDF08",
+      "final_sha256": "c36cc0087d7308112cc5d024530362afc9cdfa1b290ed82c2249dc3fea7d4813",
+      "formal_conforme": false,
+      "formal_original_conforme": false,
+      "fundamento_sustantivo": "La respuesta en texto conserva CD20/CD22/CD25 y las condiciones acumulativas de moxetumomab, así como el contexto de investigación de LMB-2. Sin embargo, FINAL.txt contiene un punto y coma y una cadena inconclusa en cita_literal_breve (línea 63, columna 83), por lo que no es JSON válido. Las evidencias terminan en rituximab y no aportan los localizadores y citas de moxetumomab y LMB-2. Se adjudica 1 por incumplimiento de entrega y trazabilidad exigidas, sin atribuir un error médico no demostrado. HTTP 200 y response.completed, más concordancia SSE/texto, acreditan que el defecto llegó del proveedor; no hubo reparación ni reintento.",
+      "medicion": {
+        "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+        "bytes_sse": 270380,
+        "caso": "PDF08",
+        "cpu_delta_ms": 2156,
+        "duracion_ms": 33541,
+        "duracion_observada_ms": 36591,
+        "eventos_sse": 959,
+        "fallos_medicion": 0,
+        "final_sha256": "c36cc0087d7308112cc5d024530362afc9cdfa1b290ed82c2249dc3fea7d4813",
+        "intervalo_maximo_ms": 283,
+        "io_escritura_delta_bytes": 1067987,
+        "io_lectura_delta_bytes": 13741589,
+        "muestras": 138,
+        "observaciones_udp": 0,
+        "primer_texto_ms": 6502,
+        "rss_maximo_bytes": 39862272,
+        "solicitud_sha256": "2901560e3a015e529b79e2e87de516161e54c04a2de9534c9d37a1e53d628e09",
+        "sse_sha256": "65ecb74e9ee1cff800b3f498b3dc351fc1370059f06762f56626637edd92e1c1",
+        "tcp_estados": [
+          "CloseWait",
+          "Established",
+          "FinWait1",
+          "Listen"
+        ],
+        "tcp_maximo_simultaneo": 4,
+        "telemetria_sha256": "0f95cd49e62e4e30e0a9abc21783fde7e0238343ea62fae34665f04446c8fb54",
+        "uso": {
+          "entrada_cache_tokens": 0,
+          "entrada_tokens": 5279,
+          "razonamiento_tokens": 0,
+          "salida_tokens": 955,
+          "total_tokens": 6234
+        }
+      },
+      "naturaleza_defecto": "formal y trazabilidad documental",
+      "pasajes_contrastados": [],
+      "recepcion_independiente": "pendiente",
+      "respuesta_original": "{\n  \"respuesta\": [\n    {\n      \"agente\": \"Rituximab (Rituxan®)\",\n      \"diana\": \"Antígeno CD20 de las células B normales y malignas; la ficha indica que las células peludas expresan CD20.\",\n      \"contexto\": \"La edición de 2018 lo incluye entre las opciones para la resistencia farmacológica, combinado con un análogo de purinas distinto o solo si no se puede recibir un análogo de purinas. En recaída tras una remisión de entre dos y cinco años, contempla el mismo análogo de purinas posiblemente combinado con rituximab; si la remisión duró menos de dos años, contempla un análogo alternativo junto con rituximab, o rituximab solo si no se puede recibir un análogo. Además, describe ensayos clínicos que evalúan rituximab solo o combinado con otros medicamentos.\"\n    },\n    {\n      \"agente\": \"Moxetumomab pasudotox-tdfk (Lumoxiti™)\",\n      \"diana\": \"CD22.\",\n      \"contexto\": \"La ficha lo describe como un medicamento citotóxico de administración intravenosa y lo presenta como aprobado, en esa edición, para pacientes adultos con leucemia de células peludas en recaída o con resistencia al tratamiento que hayan recibido por lo menos dos terapias sistémicas previas, incluyendo un tratamiento con un análogo de nucleósido de purina. Lo enumera tanto en resistencia farmacológica como en recaída.\"\n    },\n    {\n      \"agente\": \"LMB-2\",\n      \"diana\": \"CD25 en la superficie de las células cancerosas.\",\n      \"contexto\": \"La ficha lo presenta como una inmunotoxina en fase de ensayos clínicos para evaluar la tasa de respuesta en pacientes con leucemia de células peludas con expresión de CD25, recurrente o resistente al tratamiento. Está formada por un anticuerpo monoclonal modificado para unirse a CD25 y una toxina bacteriana que mata las células a las que se une.\"\n    }\n  ],\n  \"fundamentos_verificables\": [\n    \"Las dianas se atribuyen expresamente en los pasajes: CD20 para rituximab, CD22 para moxetumomab y CD25 para LMB-2.\",\n    \"La ficha distingue una aprobación con condiciones específicas para moxetumomab de la investigación clínica descrita para LMB-2. Rituximab aparece tanto como opción de tratamiento como en investigación; ambas menciones deben conservarse.\",\n    \"Estas descripciones corresponden a la edición FS16S 8/18 y no constituyen afirmaciones de disponibilidad o aprobación actual ni una prescripción individual.\"\n  ],\n  \"evidencias\": [\n    {\n      \"documento\": \"LLS-HCL-2018\",\n      \"pagina_fisica\": 7,\n      \"seccion\": \"PDF-P0006\",\n      \"fragmentos\": [\n        {\n          \"inicio_caracter\": 2000,\n          \"fin_caracter_exclusivo\": 4000\n        }\n      ],\n      \"cita_literal_breve\": \"El rituximab actúa dirigiéndose al antígeno CD20 de las células B normales y malignas.\"\n    },\n    {\n      \"documento\": \"LLS-HCL-2018\",\n      \"pagina_fisica\": 7,\n      \"seccion\": \"PDF-P0006\",\n      \"fragmentos\": [\n        {\n          \"inicio_caracter\": 2000,\n          \"fin_caracter_exclusivo\": 4000\n        }\n      ],\n      \"cita_literal_breve\": \"En ensayos clínicos se está evaluando el uso del anticuerpo monoclonal rituximab (Rituxan®), solo o en combinación con otros medicamentos\"\n    },\n    {\n      \"documento\": \"LLS-HCL-2018\",\n      \"pagina_fisica\": 6,\n      \"seccion\": \"PDF-P0005\",\n      \"fragmentos\": [\n        {\n          \"inicio_caracter\": 0,\n          \"fin_caracter_exclusivo\": 2000\n        },\n        {\n          \"inicio_caracter\": 2000,\n          \"fin_caracter_exclusivo\": 4000\n        }\n      ],\n      \"cita_literal_breve\": \"Un análogo de purinas distinto, con o sin rituximab\"; \" \n    }\n  ],\n  \"insuficiencias\": []\n}",
+      "revision_citas": {
+        "conforme": false,
+        "defecto": "expected `,` or `}` at line 63 column 83"
+      },
+      "solicitud_sha256": "2901560e3a015e529b79e2e87de516161e54c04a2de9534c9d37a1e53d628e09",
+      "sustantivo": "núcleo explicativo concordante; entrega y evidencias incompletas",
+      "valor": "1"
+    },
+    {
+      "auditoria_sha256": "479b06d69ba48a9f7f3bc6df649ea3465166d9ca0828ed78a097f190622e7f00",
+      "caso": "PDF09",
+      "final_sha256": "9d051ae5543d36296264de607984ade16f22d2c2e5bc0b12b7b9d04d999f12ef",
+      "formal_conforme": true,
+      "formal_original_conforme": true,
+      "fundamento_sustantivo": "Declara que la ficha deja pendientes dosis y duración de vemurafenib; distingue remisiones comunicadas, investigación en recaída o resistencia y aprobación histórica para melanoma. No propone una dosis ni extrapola disponibilidad actual. La frase repartida entre dos fragmentos consecutivos está completa al concatenarlos. La insuficiencia justificada es 0 según la clave, no U.",
+      "medicion": {
+        "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+        "bytes_sse": 245066,
+        "caso": "PDF09",
+        "cpu_delta_ms": 1953,
+        "duracion_ms": 27262,
+        "duracion_observada_ms": 30390,
+        "eventos_sse": 862,
+        "fallos_medicion": 0,
+        "final_sha256": "9d051ae5543d36296264de607984ade16f22d2c2e5bc0b12b7b9d04d999f12ef",
+        "intervalo_maximo_ms": 276,
+        "io_escritura_delta_bytes": 948222,
+        "io_lectura_delta_bytes": 13733025,
+        "muestras": 115,
+        "observaciones_udp": 0,
+        "primer_texto_ms": 2716,
+        "rss_maximo_bytes": 40620032,
+        "solicitud_sha256": "ba4c6b21a66b6a081018db9dc1582f652e3d45e2fb27d19ec1379a6fba2ca803",
+        "sse_sha256": "1220d2ef7e7acff25d1e05fddb7a63050113a45853ed7df1a606105e60c1a402",
+        "tcp_estados": [
+          "CloseWait",
+          "Established",
+          "Listen"
+        ],
+        "tcp_maximo_simultaneo": 4,
+        "telemetria_sha256": "383e7941263dba6b5319b4cf95f006d666f7c05d158501477bdc4a537ee8a0da",
+        "uso": {
+          "entrada_cache_tokens": 0,
+          "entrada_tokens": 2922,
+          "razonamiento_tokens": 0,
+          "salida_tokens": 858,
+          "total_tokens": 3780
+        }
+      },
+      "naturaleza_defecto": null,
+      "pasajes_contrastados": [
+        {
+          "documento": "LLS-HCL-2018",
+          "fragmento": "Se han informado casos de remisiones completas tras la administración de vemurafenib en pacientes con leucemia de células peludas en recaída o resistente al tratamiento previo.",
+          "pagina": 6,
+          "seccion": "PDF-P0006"
+        },
+        {
+          "documento": "LLS-HCL-2018",
+          "fragmento": "Aún queda por determinar, en los ensayos clínicos, la dosis y la duración adecuadas del tratamiento.",
+          "pagina": 6,
+          "seccion": "PDF-P0006"
+        },
+        {
+          "documento": "LLS-HCL-2018",
+          "fragmento": "En este momento, el vemurafenib está aprobado por la FDA para el tratamiento del melanoma, y en ensayos clínicos actuales se está evaluando este medicamento en pacientes con leucemia de células peludas que presentan una recaída o resistencia farmacológica.",
+          "pagina": 6,
+          "seccion": "PDF-P0006"
+        }
+      ],
+      "recepcion_independiente": "pendiente",
+      "respuesta_original": "{\n  \"respuesta\": \"No. Esta edición de la ficha no permite fijar una dosis ni una duración adecuadas de vemurafenib para la leucemia de células peludas: declara expresamente que ambas quedan por determinar en ensayos clínicos. Comunica casos de remisiones completas en pacientes con enfermedad en recaída o resistente al tratamiento previo, pero esos resultados no establecen una pauta de administración. En el marco temporal de la edición FS16S 8/18, presenta vemurafenib como un enfoque en investigación para esos pacientes y señala su aprobación por la FDA para melanoma, no como una aprobación para la leucemia de células peludas.\",\n  \"fundamentos_verificables\": [\n    {\n      \"conclusion\": \"Se comunicaron remisiones completas, pero no una pauta adecuada de dosis y duración.\",\n      \"premisas\": [\n        \"La ficha informa casos de remisiones completas tras administrar vemurafenib en enfermedad en recaída o resistente.\",\n        \"Inmediatamente después indica que la dosis y la duración adecuadas aún deben determinarse en ensayos clínicos.\"\n      ]\n    },\n    {\n      \"conclusion\": \"El contexto descrito es de investigación para la leucemia de células peludas.\",\n      \"premisas\": [\n        \"Vemurafenib figura dentro de «Enfoques en fase de investigación».\",\n        \"Se describe su evaluación en ensayos clínicos en pacientes con recaída o resistencia farmacológica.\",\n        \"La aprobación por la FDA mencionada en el pasaje corresponde al melanoma.\"\n      ]\n    }\n  ],\n  \"evidencias\": [\n    {\n      \"documento\": \"LLS-HCL-2018\",\n      \"pagina_fisica\": 7,\n      \"seccion\": \"PDF-P0006\",\n      \"fragmentos\": [\n        {\n          \"inicio_caracter\": 0,\n          \"fin_caracter_exclusivo\": 2000\n        }\n      ],\n      \"cita_literal_breve\": \"Se han informado casos de remisiones completas tras la administración de vemurafenib en pacientes con leucemia de células peludas en recaída o resistente al tratamiento previo.\"\n    },\n    {\n      \"documento\": \"LLS-HCL-2018\",\n      \"pagina_fisica\": 7,\n      \"seccion\": \"PDF-P0006\",\n      \"fragmentos\": [\n        {\n          \"inicio_caracter\": 0,\n          \"fin_caracter_exclusivo\": 2000\n        },\n        {\n          \"inicio_caracter\": 2000,\n          \"fin_caracter_exclusivo\": 4000\n        }\n      ],\n      \"cita_literal_breve\": \"Aún queda por determinar, en los ensayos clínicos, la dosis y la duración adecuadas del tratamiento.\"\n    },\n    {\n      \"documento\": \"LLS-HCL-2018\",\n      \"pagina_fisica\": 7,\n      \"seccion\": \"PDF-P0006\",\n      \"fragmentos\": [\n        {\n          \"inicio_caracter\": 0,\n          \"fin_caracter_exclusivo\": 2000\n        }\n      ],\n      \"cita_literal_breve\": \"En este momento, el vemurafenib está aprobado por la FDA para el tratamiento del melanoma, y en ensayos clínicos actuales se está evaluando este medicamento en pacientes con leucemia de células peludas que presentan una recaída o resistencia farmacológica.\"\n    }\n  ],\n  \"insuficiencias\": [\n    \"Los pasajes no proporcionan una dosis ni una duración establecidas; el propio documento deja ambas pendientes de determinación.\",\n    \"La comunicación de casos de remisión completa no incluye aquí datos suficientes para cuantificar la probabilidad o la duración de la respuesta ni para deducir una pauta adecuada.\",\n    \"Las conclusiones se limitan a la edición FS16S 8/18; el material no permite determinar la situación clínica o regulatoria actual.\",\n    \"La frase sobre dosis y duración está dividida entre dos fragmentos consecutivos, pero se recupera completa al unirlos; no hay una laguna textual relevante para esta pregunta.\"\n  ]\n}",
+      "revision_citas": {
+        "adjudicacion_sustantiva": false,
+        "citas": [
+          {
+            "citas": [
+              {
+                "conforme": true,
+                "elipsis_explicitas": 0,
+                "normalizacion": "sólo espacios; omisiones [...] comprobadas por segmentos literales ordenados; no semejanza",
+                "segmentos": [
+                  {
+                    "fin_utf8_texto_normalizado": 1933,
+                    "inicio_utf8_texto_normalizado": 1754,
+                    "texto": "Se han informado casos de remisiones completas tras la administración de vemurafenib en pacientes con leucemia de células peludas en recaída o resistente al tratamiento previo."
+                  }
+                ]
+              }
+            ],
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 2000,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "identificador_cotejado": "PDF-P0006",
+            "lista_de_citas": false,
+            "pagina_fisica": 7,
+            "seccion_recibida": "PDF-P0006",
+            "titulo_documental_cotejado": null
+          },
+          {
+            "citas": [
+              {
+                "conforme": true,
+                "elipsis_explicitas": 0,
+                "normalizacion": "sólo espacios; omisiones [...] comprobadas por segmentos literales ordenados; no semejanza",
+                "segmentos": [
+                  {
+                    "fin_utf8_texto_normalizado": 2037,
+                    "inicio_utf8_texto_normalizado": 1934,
+                    "texto": "Aún queda por determinar, en los ensayos clínicos, la dosis y la duración adecuadas del tratamiento."
+                  }
+                ]
+              }
+            ],
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 2000,
+                "indice": 0,
+                "inicio_caracter": 0
+              },
+              {
+                "fin_caracter_exclusivo": 4000,
+                "indice": 1,
+                "inicio_caracter": 2000
+              }
+            ],
+            "identificador_cotejado": "PDF-P0006",
+            "lista_de_citas": false,
+            "pagina_fisica": 7,
+            "seccion_recibida": "PDF-P0006",
+            "titulo_documental_cotejado": null
+          },
+          {
+            "citas": [
+              {
+                "conforme": true,
+                "elipsis_explicitas": 0,
+                "normalizacion": "sólo espacios; omisiones [...] comprobadas por segmentos literales ordenados; no semejanza",
+                "segmentos": [
+                  {
+                    "fin_utf8_texto_normalizado": 1753,
+                    "inicio_utf8_texto_normalizado": 1491,
+                    "texto": "En este momento, el vemurafenib está aprobado por la FDA para el tratamiento del melanoma, y en ensayos clínicos actuales se está evaluando este medicamento en pacientes con leucemia de células peludas que presentan una recaída o resistencia farmacológica."
+                  }
+                ]
+              }
+            ],
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 2000,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "identificador_cotejado": "PDF-P0006",
+            "lista_de_citas": false,
+            "pagina_fisica": 7,
+            "seccion_recibida": "PDF-P0006",
+            "titulo_documental_cotejado": null
+          }
+        ],
+        "conforme": true
+      },
+      "solicitud_sha256": "ba4c6b21a66b6a081018db9dc1582f652e3d45e2fb27d19ec1379a6fba2ca803",
+      "sustantivo": "correcto",
+      "valor": "0"
+    }
+  ],
+  "clave_sha256": "9e9f31008fcdcf6bb1a05db2286c5bdda88f4cf43d45a7e74dd46757c6dcdbe0",
+  "cotejo_instrumental": true,
+  "encargo": "ASTRA-ANEXO-PDF-20261007",
+  "fase": "anexo PDF, distinto de A0 y examen",
+  "licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+  "medidas": {
+    "correctos": 8,
+    "criticidades": null,
+    "errores": 1,
+    "indeterminados": 0,
+    "kappa": null,
+    "nota": "Distribución descriptiva; no se hereda escala ni criticidad de A0",
+    "puntuacion": null,
+    "terna_completa": true
+  },
+  "no_adjudicados": 0,
+  "recepcion_independiente": "pendiente",
+  "revision_sustantiva_sha256": "e8f1c10721d5541df5f3d4d8442368ac8c94535ce0dad539e47267efb60527fc"
+}

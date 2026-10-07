@@ -1,0 +1,149 @@
+{
+  "adjudicacion": "pendiente de contraste externo al candidato",
+  "caso": "PDF01",
+  "custodia_remota": false,
+  "esquema": "sv-hito-instrumental/1",
+  "fecha_registro_ms": 1791361703261,
+  "modelo": "gpt-6-astra",
+  "momento": "inmediatamente tras la entrega y el cierre de observación",
+  "nodo": "03",
+  "originales": [
+    {
+      "bytes": 10685,
+      "ruta": "ejecucion/astra-pdf-banco-20261007-r2\\originales\\PDF01\\SOLICITUD.json",
+      "sha256": "6929d3af185d898c82d6503ef394d17e65eb6486406f0a39239df2c668f02a5f"
+    },
+    {
+      "bytes": 6122,
+      "ruta": "ejecucion/astra-pdf-banco-20261007-r2\\originales\\PDF01\\RESULTADO.json",
+      "sha256": "910598bf4b91c16650caf9977f012f9ffba5d5e80f03dd76fe2767b6cfba18df"
+    },
+    {
+      "bytes": 140,
+      "ruta": "ejecucion/astra-pdf-banco-20261007-r2\\originales\\PDF01\\HTTP.json",
+      "sha256": "f58a30f9fa3656554a5e0afca0649fdfeaebfccb3630bc89b746b3dc4b27e629"
+    },
+    {
+      "bytes": 225680,
+      "ruta": "ejecucion/astra-pdf-banco-20261007-r2\\originales\\PDF01\\SALIDA-SSE.txt",
+      "sha256": "548fb9593895a3484305261459c6c57d84feb9080fec984bdc9d757313d9af5e"
+    },
+    {
+      "bytes": 3009,
+      "ruta": "ejecucion/astra-pdf-banco-20261007-r2\\originales\\PDF01\\FINAL.txt",
+      "sha256": "48311671ec68d49f26fbf6e1fc8be7e9ea7c3761bd690d3954134dd42bd2f410"
+    },
+    {
+      "bytes": 8107,
+      "ruta": "ejecucion/astra-pdf-banco-20261007-r2\\originales\\PDF01\\ENTREGA-PROVEEDOR.json",
+      "sha256": "7e10646ef2d10ebb6f489987f835338bd531278623a7b64de2200b624377c2a1"
+    },
+    {
+      "bytes": 71,
+      "ruta": "ejecucion/astra-pdf-banco-20261007-r2\\originales\\PDF01\\AUDITORIA-FORMAL.json",
+      "sha256": "9baa734056c39d61873e9a47a74a0138d56af93d95e78d4b5cb943c196131a7e"
+    },
+    {
+      "bytes": 683180,
+      "ruta": "ejecucion/astra-pdf-banco-20261007-r2\\originales\\PDF01\\instrumentacion/telemetria.jsonl",
+      "sha256": "d8e175f87103383d506caffdf4a3469e4c9d4b0fbad372339e0da8154e922c53"
+    }
+  ],
+  "resultado": {
+    "adjudicado": false,
+    "cabeceras_proveedor": {},
+    "caso": "PDF01",
+    "completa": true,
+    "contrato_formal_conforme": false,
+    "coste_monetario_atribuible": null,
+    "creditos_atribuibles": null,
+    "duracion_ms": 24695,
+    "estado": "entrega_recibida",
+    "evento_terminal": "response.completed",
+    "eventos": 795,
+    "herramientas_ejecutadas": 0,
+    "herramientas_habilitadas": 0,
+    "http": 200,
+    "limites": [
+      "CPU porcentual sin calibración externa",
+      "Sin medida separada DNS/TLS, RTT, retransmisiones, asignaciones del montículo, hilos ni recursos internos del proveedor",
+      "La ausencia de herramientas no prueba aislamiento de infraestructura de OpenAI; fuente exclusiva exigida y respuesta pendiente de contraste sustantivo",
+      "Criptografía C/ensamblador pendiente conforme a excepción experimental autorizada"
+    ],
+    "modelo_declarado": "gpt-6-astra",
+    "modelo_solicitado": "gpt-6-astra",
+    "par_remoto_http": "162.159.140.245:443",
+    "primer_evento_ms": 2162,
+    "primer_texto_ms": 3477,
+    "respuesta_bytes": 225680,
+    "respuesta_texto": "{\n  \"respuesta\": \"Según la ficha, la leucemia de células peludas se origina en una célula B o linfocito B, un tipo de glóbulo blanco. Las mutaciones pueden transformarla en una célula leucémica que continúa creciendo y dividiéndose; sus descendientes también contienen el ADN mutado y se multiplican de forma descontrolada. Al acumularse en la médula ósea, estas células inhiben el desarrollo de glóbulos rojos, plaquetas y glóbulos blancos. Así quedan muy pocas células sanguíneas normales funcionales, una deficiencia que la ficha relaciona con anemia, sangrado excesivo e infecciones.\",\n  \"fundamentos_verificables\": [\n    \"Origen celular: la introducción identifica expresamente al linfocito B como la célula de origen y describe la proliferación de sus descendientes con ADN mutado.\",\n    \"Relación causal: la acumulación de células leucémicas en la médula inhibe el desarrollo de otras células sanguíneas; la consiguiente deficiencia de células normales funcionales puede provocar las tres consecuencias indicadas.\"\n  ],\n  \"evidencias\": [\n    {\n      \"documento\": \"LLS-HCL-2018\",\n      \"pagina_fisica\": 1,\n      \"seccion\": \"PDF-P0000 — Introducción\",\n      \"fragmentos\": [\n        {\n          \"inicio_caracter\": 2000,\n          \"fin_caracter_exclusivo\": 4000\n        }\n      ],\n      \"cita_literal_breve\": \"se inicia en una célula B (linfocito B)\"\n    },\n    {\n      \"documento\": \"LLS-HCL-2018\",\n      \"pagina_fisica\": 1,\n      \"seccion\": \"PDF-P0000 — Introducción\",\n      \"fragmentos\": [\n        {\n          \"inicio_caracter\": 2000,\n          \"fin_caracter_exclusivo\": 4000\n        }\n      ],\n      \"cita_literal_breve\": \"Todas las células que surgen a partir de la célula leucémica inicial también tienen el ADN mutado. Por consiguiente, las células leucémicas se multiplican de forma descontrolada.\"\n    },\n    {\n      \"documento\": \"LLS-HCL-2018\",\n      \"pagina_fisica\": 1,\n      \"seccion\": \"PDF-P0000 — Introducción\",\n      \"fragmentos\": [\n        {\n          \"inicio_caracter\": 2000,\n          \"fin_caracter_exclusivo\": 4000\n        }\n      ],\n      \"cita_literal_breve\": \"estas inhiben el desarrollo de otras células sanguíneas, entre ellas, glóbulos rojos, plaquetas y glóbulos blancos.\"\n    },\n    {\n      \"documento\": \"LLS-HCL-2018\",\n      \"pagina_fisica\": 1,\n      \"seccion\": \"PDF-P0000 — Introducción\",\n      \"fragmentos\": [\n        {\n          \"inicio_caracter\": 2000,\n          \"fin_caracter_exclusivo\": 4000\n        }\n      ],\n      \"cita_literal_breve\": \"Esto puede producir una deficiencia de células sanguíneas que a su vez puede provocar anemia, sangrado excesivo e/o infecciones.\"\n    }\n  ],\n  \"insuficiencias\": [\n    \"No falta información para responder a la relación solicitada. El pasaje no detalla mecanismos adicionales ni vincula individualmente cada tipo de célula disminuida con cada consecuencia.\",\n    \"La respuesta se limita a la edición identificada como FS16S 8/18; no establece su vigencia clínica actual.\"\n  ]\n}",
+    "resumen_proveedor": [],
+    "telemetria": {
+      "bytes": 683180,
+      "fallos_medicion": 0,
+      "integridad": "conforme",
+      "intervalo_maximo_ms": 278,
+      "intervalo_objetivo_ms": 250,
+      "muestras": 105,
+      "plataforma_recibida": false,
+      "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+      "registros": 1491,
+      "sha256": "d8e175f87103383d506caffdf4a3469e4c9d4b0fbad372339e0da8154e922c53"
+    },
+    "telemetria_conforme": true,
+    "uso_proveedor": {
+      "attribution": {
+        "items": {
+          "msg_0ed745f859258ab7016ac60290236487d2aac07d65dcfdd658": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 2516,
+                "output_tokens": 0
+              }
+            ],
+            "input_tokens": 2516,
+            "output_tokens": 0
+          },
+          "msg_0ed745f859258ab7016ac602921ddc87d292cae3b5b3004092": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 2,
+                "output_tokens": 791
+              }
+            ],
+            "input_tokens": 2,
+            "output_tokens": 791
+          }
+        },
+        "request_fields": {
+          "instructions": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "input_tokens": 326,
+            "output_tokens": 0
+          }
+        }
+      },
+      "input_tokens": 2844,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 791,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3635
+    },
+    "utc_fin_ms": 1791361702159,
+    "version_http": "HTTP/1.1"
+  }
+}

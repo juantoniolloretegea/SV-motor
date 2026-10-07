@@ -1,0 +1,243 @@
+{
+  "auditoria_sha256": "479b06d69ba48a9f7f3bc6df649ea3465166d9ca0828ed78a097f190622e7f00",
+  "caso": "PDF04",
+  "final_sha256": "971138d9866b7fd093c134b73c12c4da70d036f17bd5f5508391454b63a13d0a",
+  "formal_conforme": true,
+  "formal_original_conforme": false,
+  "fundamento_sustantivo": "Enumera CD19/CD20/CD22 y CD11c/CD25/CD103/CD123; distingue inmunofenotipo, diferenciación mediante BRAF V600E y pronóstico asociado a IGHV. Conserva casi todos, 80–90% y el contexto de quimioterapia convencional. La mención adicional a resistencia a análogos de purinas procede de la misma página. Los títulos añadidos pertenecen a la fuente y la elipsis marcada conserva segmentos literales ordenados, sin inventar una cita continua.",
+  "medicion": {
+    "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+    "bytes_sse": 368614,
+    "caso": "PDF04",
+    "cpu_delta_ms": 2703,
+    "duracion_ms": 40096,
+    "duracion_observada_ms": 43160,
+    "eventos_sse": 1316,
+    "fallos_medicion": 0,
+    "final_sha256": "971138d9866b7fd093c134b73c12c4da70d036f17bd5f5508391454b63a13d0a",
+    "intervalo_maximo_ms": 272,
+    "io_escritura_delta_bytes": 1475106,
+    "io_lectura_delta_bytes": 13732754,
+    "muestras": 163,
+    "observaciones_udp": 0,
+    "primer_texto_ms": 3689,
+    "rss_maximo_bytes": 37298176,
+    "solicitud_sha256": "921cde54e16417dc2648a7bf30aa587ec66bfbdbbc72302654f4244d809fc1e2",
+    "sse_sha256": "b862d2be8de9191f3eebba398d282139e1600437687a733a4242d95a5073667c",
+    "tcp_estados": [
+      "CloseWait",
+      "Established",
+      "FinWait1",
+      "Listen"
+    ],
+    "tcp_maximo_simultaneo": 6,
+    "telemetria_sha256": "bd82c7d1bb529ac97c0918267cfc3019f1739e361f22ec4262005b87d472d6ee",
+    "uso": {
+      "entrada_cache_tokens": 0,
+      "entrada_tokens": 2840,
+      "razonamiento_tokens": 0,
+      "salida_tokens": 1312,
+      "total_tokens": 4152
+    }
+  },
+  "naturaleza_defecto": null,
+  "pasajes_contrastados": [
+    {
+      "documento": "LLS-HCL-2018",
+      "fragmento": "Además de los antígenos CD19, CD20 y CD22, presentes en las células B, las células de esta enfermedad también expresan los antígenos CD11c, CD25, CD103 y CD123.",
+      "pagina": 3,
+      "seccion": "PDF-P0003"
+    },
+    {
+      "documento": "LLS-HCL-2018",
+      "fragmento": "En casi todos los casos de leucemia de células peludas, las células leucémicas tienen una mutación en el gen BRAF V600E. Esta mutación puede servir como marcador molecular confiable para diferenciar la leucemia de células peludas de otras leucemias y linfomas de células B.",
+      "pagina": 3,
+      "seccion": "PDF-P0003"
+    },
+    {
+      "documento": "LLS-HCL-2018",
+      "fragmento": "Aproximadamente del 80% al 90% de los pacientes con leucemia de células peludas tienen una hipermutación en un gen de la región variable de la cadena pesada de la inmunoglobulina",
+      "pagina": 3,
+      "seccion": "PDF-P0003"
+    },
+    {
+      "documento": "LLS-HCL-2018",
+      "fragmento": "en el caso del tratamiento con una quimioterapia convencional, los pacientes con mutación de IGHV tienen un mejor pronóstico",
+      "pagina": 3,
+      "seccion": "PDF-P0003"
+    },
+    {
+      "documento": "LLS-HCL-2018",
+      "fragmento": "Los siguientes signos están asociados a un pronóstico desfavorable y a la resistencia a la quimioterapia con análogos de purinas",
+      "pagina": 3,
+      "seccion": "PDF-P0003"
+    },
+    {
+      "documento": "LLS-HCL-2018",
+      "fragmento": "Gen IGHV sin mutación",
+      "pagina": 3,
+      "seccion": "PDF-P0003"
+    }
+  ],
+  "recepcion_independiente": "pendiente",
+  "respuesta_original": "{\n  \"respuesta\": {\n    \"citometria_de_flujo\": \"Clasifica las células según las proteínas o marcadores de su superficie, cuya configuración se denomina inmunofenotipo. La ficha describe una disposición característica de las células peludas, distinta de la de las células B sanas y otras células B malignas. Cita CD19, CD20 y CD22 como antígenos presentes en las células B, y CD11c, CD25, CD103 y CD123 como antígenos que las células de esta enfermedad también expresan. Habla de proteínas relativamente específicas, no de especificidad absoluta.\",\n    \"BRAF_V600E\": \"Las pruebas moleculares buscan mutaciones genéticas específicas en el ADN. Según la ficha, en casi todos los casos de leucemia de células peludas las células leucémicas presentan BRAF V600E. Le atribuye valor como marcador molecular confiable para diferenciar esta enfermedad de otras leucemias y linfomas de células B; no afirma que esté presente en todos los casos.\",\n    \"IGHV\": \"La ficha indica que aproximadamente el 80–90% de los pacientes presenta hipermutación en un gen de la región variable de la cadena pesada de la inmunoglobulina, IGHV. En el contexto del tratamiento con quimioterapia convencional, atribuye a los pacientes con mutación de IGHV un mejor pronóstico que a quienes no tienen la mutación, que suelen tener un desenlace menos favorable. Además, enumera el gen IGHV sin mutación entre los signos asociados a pronóstico desfavorable y resistencia a la quimioterapia con análogos de purinas.\",\n    \"alcance\": \"Estas son las atribuciones de la edición FS16S 8/18: caracterización inmunofenotípica mediante citometría, diferenciación molecular mediante BRAF V600E e información pronóstica de IGHV en los contextos terapéuticos indicados. No constituyen una actualización clínica ni una predicción individual.\"\n  },\n  \"fundamentos_verificables\": [\n    \"La distinción entre las tres pruebas se basa en las funciones expresamente descritas: clasificación por marcadores de superficie, identificación de una mutación para diferenciación diagnóstica y asociación de IGHV con el desenlace clínico.\",\n    \"Los matices «relativamente específicas», «casi todos», «aproximadamente del 80% al 90%» y «suelen» impiden convertir estas descripciones en reglas universales.\",\n    \"La comparación pronóstica de IGHV se sitúa explícitamente bajo quimioterapia convencional; la lista de factores desfavorables añade el contexto específico de los análogos de purinas.\"\n  ],\n  \"evidencias\": [\n    {\n      \"documento\": \"LLS-HCL-2018\",\n      \"pagina_fisica\": 4,\n      \"seccion\": \"PDF-P0003 — Citometría de flujo\",\n      \"fragmentos\": [\n        {\"inicio_caracter\": 0, \"fin_caracter_exclusivo\": 2000}\n      ],\n      \"cita_literal_breve\": \"Además de los antígenos CD19, CD20 y CD22, presentes en las células B, las células de esta enfermedad también expresan los antígenos CD11c, CD25, CD103 y CD123.\"\n    },\n    {\n      \"documento\": \"LLS-HCL-2018\",\n      \"pagina_fisica\": 4,\n      \"seccion\": \"PDF-P0003 — Pruebas moleculares\",\n      \"fragmentos\": [\n        {\"inicio_caracter\": 0, \"fin_caracter_exclusivo\": 2000}\n      ],\n      \"cita_literal_breve\": \"En casi todos los casos de leucemia de células peludas, las células leucémicas tienen una mutación en el gen BRAF V600E. Esta mutación puede servir como marcador molecular confiable para diferenciar la leucemia de células peludas de otras leucemias y linfomas de células B.\"\n    },\n    {\n      \"documento\": \"LLS-HCL-2018\",\n      \"pagina_fisica\": 4,\n      \"seccion\": \"PDF-P0003 — Pruebas moleculares\",\n      \"fragmentos\": [\n        {\"inicio_caracter\": 0, \"fin_caracter_exclusivo\": 2000},\n        {\"inicio_caracter\": 2000, \"fin_caracter_exclusivo\": 4000}\n      ],\n      \"cita_literal_breve\": \"Aproximadamente del 80% al 90% de los pacientes con leucemia de células peludas tienen una hipermutación en un gen de la región variable de la cadena pesada de la inmunoglobulina\"\n    },\n    {\n      \"documento\": \"LLS-HCL-2018\",\n      \"pagina_fisica\": 4,\n      \"seccion\": \"PDF-P0003 — Pruebas moleculares\",\n      \"fragmentos\": [\n        {\"inicio_caracter\": 0, \"fin_caracter_exclusivo\": 2000}\n      ],\n      \"cita_literal_breve\": \"en el caso del tratamiento con una quimioterapia convencional, los pacientes con mutación de IGHV tienen un mejor pronóstico\"\n    },\n    {\n      \"documento\": \"LLS-HCL-2018\",\n      \"pagina_fisica\": 4,\n      \"seccion\": \"PDF-P0003 — Planificación del tratamiento\",\n      \"fragmentos\": [\n        {\"inicio_caracter\": 2000, \"fin_caracter_exclusivo\": 4000}\n      ],\n      \"cita_literal_breve\": \"Los siguientes signos están asociados a un pronóstico desfavorable y a la resistencia a la quimioterapia con análogos de purinas [...] Gen IGHV sin mutación\"\n    }\n  ],\n  \"insuficiencias\": [\n    \"Los pasajes no cuantifican el rendimiento diagnóstico de la citometría ni de BRAF V600E, ni la magnitud de la diferencia pronóstica vinculada a IGHV.\",\n    \"El material basta para la distinción solicitada, pero corresponde únicamente a la edición FS16S 8/18 y no permite determinar su vigencia clínica actual.\"\n  ]\n}",
+  "revision_citas": {
+    "adjudicacion_sustantiva": false,
+    "citas": [
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "elipsis_explicitas": 0,
+            "normalizacion": "sólo espacios; omisiones [...] comprobadas por segmentos literales ordenados; no semejanza",
+            "segmentos": [
+              {
+                "fin_utf8_texto_normalizado": 932,
+                "inicio_utf8_texto_normalizado": 766,
+                "texto": "Además de los antígenos CD19, CD20 y CD22, presentes en las células B, las células de esta enfermedad también expresan los antígenos CD11c, CD25, CD103 y CD123."
+              }
+            ]
+          }
+        ],
+        "fragmentos": [
+          {
+            "fin_caracter_exclusivo": 2000,
+            "indice": 0,
+            "inicio_caracter": 0
+          }
+        ],
+        "identificador_cotejado": "PDF-P0003",
+        "lista_de_citas": false,
+        "pagina_fisica": 4,
+        "seccion_recibida": "PDF-P0003 — Citometría de flujo",
+        "titulo_documental_cotejado": "Citometría de flujo"
+      },
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "elipsis_explicitas": 0,
+            "normalizacion": "sólo espacios; omisiones [...] comprobadas por segmentos literales ordenados; no semejanza",
+            "segmentos": [
+              {
+                "fin_utf8_texto_normalizado": 1374,
+                "inicio_utf8_texto_normalizado": 1094,
+                "texto": "En casi todos los casos de leucemia de células peludas, las células leucémicas tienen una mutación en el gen BRAF V600E. Esta mutación puede servir como marcador molecular confiable para diferenciar la leucemia de células peludas de otras leucemias y linfomas de células B."
+              }
+            ]
+          }
+        ],
+        "fragmentos": [
+          {
+            "fin_caracter_exclusivo": 2000,
+            "indice": 0,
+            "inicio_caracter": 0
+          }
+        ],
+        "identificador_cotejado": "PDF-P0003",
+        "lista_de_citas": false,
+        "pagina_fisica": 4,
+        "seccion_recibida": "PDF-P0003 — Pruebas moleculares",
+        "titulo_documental_cotejado": "Pruebas moleculares"
+      },
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "elipsis_explicitas": 0,
+            "normalizacion": "sólo espacios; omisiones [...] comprobadas por segmentos literales ordenados; no semejanza",
+            "segmentos": [
+              {
+                "fin_utf8_texto_normalizado": 1709,
+                "inicio_utf8_texto_normalizado": 1528,
+                "texto": "Aproximadamente del 80% al 90% de los pacientes con leucemia de células peludas tienen una hipermutación en un gen de la región variable de la cadena pesada de la inmunoglobulina"
+              }
+            ]
+          }
+        ],
+        "fragmentos": [
+          {
+            "fin_caracter_exclusivo": 2000,
+            "indice": 0,
+            "inicio_caracter": 0
+          },
+          {
+            "fin_caracter_exclusivo": 4000,
+            "indice": 1,
+            "inicio_caracter": 2000
+          }
+        ],
+        "identificador_cotejado": "PDF-P0003",
+        "lista_de_citas": false,
+        "pagina_fisica": 4,
+        "seccion_recibida": "PDF-P0003 — Pruebas moleculares",
+        "titulo_documental_cotejado": "Pruebas moleculares"
+      },
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "elipsis_explicitas": 0,
+            "normalizacion": "sólo espacios; omisiones [...] comprobadas por segmentos literales ordenados; no semejanza",
+            "segmentos": [
+              {
+                "fin_utf8_texto_normalizado": 1894,
+                "inicio_utf8_texto_normalizado": 1768,
+                "texto": "en el caso del tratamiento con una quimioterapia convencional, los pacientes con mutación de IGHV tienen un mejor pronóstico"
+              }
+            ]
+          }
+        ],
+        "fragmentos": [
+          {
+            "fin_caracter_exclusivo": 2000,
+            "indice": 0,
+            "inicio_caracter": 0
+          }
+        ],
+        "identificador_cotejado": "PDF-P0003",
+        "lista_de_citas": false,
+        "pagina_fisica": 4,
+        "seccion_recibida": "PDF-P0003 — Pruebas moleculares",
+        "titulo_documental_cotejado": "Pruebas moleculares"
+      },
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "elipsis_explicitas": 1,
+            "normalizacion": "sólo espacios; omisiones [...] comprobadas por segmentos literales ordenados; no semejanza",
+            "segmentos": [
+              {
+                "fin_utf8_texto_normalizado": 1632,
+                "inicio_utf8_texto_normalizado": 1501,
+                "texto": "Los siguientes signos están asociados a un pronóstico desfavorable y a la resistencia a la quimioterapia con análogos de purinas"
+              },
+              {
+                "fin_utf8_texto_normalizado": 1896,
+                "inicio_utf8_texto_normalizado": 1874,
+                "texto": "Gen IGHV sin mutación"
+              }
+            ]
+          }
+        ],
+        "fragmentos": [
+          {
+            "fin_caracter_exclusivo": 4000,
+            "indice": 1,
+            "inicio_caracter": 2000
+          }
+        ],
+        "identificador_cotejado": "PDF-P0003",
+        "lista_de_citas": false,
+        "pagina_fisica": 4,
+        "seccion_recibida": "PDF-P0003 — Planificación del tratamiento",
+        "titulo_documental_cotejado": "Planificación del tratamiento"
+      }
+    ],
+    "conforme": true
+  },
+  "solicitud_sha256": "921cde54e16417dc2648a7bf30aa587ec66bfbdbbc72302654f4244d809fc1e2",
+  "sustantivo": "correcto",
+  "valor": "0"
+}

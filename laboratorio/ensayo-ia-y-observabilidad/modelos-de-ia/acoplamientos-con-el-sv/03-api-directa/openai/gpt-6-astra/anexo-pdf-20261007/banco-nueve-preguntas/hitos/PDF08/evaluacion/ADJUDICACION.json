@@ -1,0 +1,54 @@
+{
+  "auditoria_sha256": "479b06d69ba48a9f7f3bc6df649ea3465166d9ca0828ed78a097f190622e7f00",
+  "caso": "PDF08",
+  "final_sha256": "c36cc0087d7308112cc5d024530362afc9cdfa1b290ed82c2249dc3fea7d4813",
+  "formal_conforme": false,
+  "formal_original_conforme": false,
+  "fundamento_sustantivo": "La respuesta en texto conserva CD20/CD22/CD25 y las condiciones acumulativas de moxetumomab, así como el contexto de investigación de LMB-2. Sin embargo, FINAL.txt contiene un punto y coma y una cadena inconclusa en cita_literal_breve (línea 63, columna 83), por lo que no es JSON válido. Las evidencias terminan en rituximab y no aportan los localizadores y citas de moxetumomab y LMB-2. Se adjudica 1 por incumplimiento de entrega y trazabilidad exigidas, sin atribuir un error médico no demostrado. HTTP 200 y response.completed, más concordancia SSE/texto, acreditan que el defecto llegó del proveedor; no hubo reparación ni reintento.",
+  "medicion": {
+    "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+    "bytes_sse": 270380,
+    "caso": "PDF08",
+    "cpu_delta_ms": 2156,
+    "duracion_ms": 33541,
+    "duracion_observada_ms": 36591,
+    "eventos_sse": 959,
+    "fallos_medicion": 0,
+    "final_sha256": "c36cc0087d7308112cc5d024530362afc9cdfa1b290ed82c2249dc3fea7d4813",
+    "intervalo_maximo_ms": 283,
+    "io_escritura_delta_bytes": 1067987,
+    "io_lectura_delta_bytes": 13741589,
+    "muestras": 138,
+    "observaciones_udp": 0,
+    "primer_texto_ms": 6502,
+    "rss_maximo_bytes": 39862272,
+    "solicitud_sha256": "2901560e3a015e529b79e2e87de516161e54c04a2de9534c9d37a1e53d628e09",
+    "sse_sha256": "65ecb74e9ee1cff800b3f498b3dc351fc1370059f06762f56626637edd92e1c1",
+    "tcp_estados": [
+      "CloseWait",
+      "Established",
+      "FinWait1",
+      "Listen"
+    ],
+    "tcp_maximo_simultaneo": 4,
+    "telemetria_sha256": "0f95cd49e62e4e30e0a9abc21783fde7e0238343ea62fae34665f04446c8fb54",
+    "uso": {
+      "entrada_cache_tokens": 0,
+      "entrada_tokens": 5279,
+      "razonamiento_tokens": 0,
+      "salida_tokens": 955,
+      "total_tokens": 6234
+    }
+  },
+  "naturaleza_defecto": "formal y trazabilidad documental",
+  "pasajes_contrastados": [],
+  "recepcion_independiente": "pendiente",
+  "respuesta_original": "{\n  \"respuesta\": [\n    {\n      \"agente\": \"Rituximab (Rituxan®)\",\n      \"diana\": \"Antígeno CD20 de las células B normales y malignas; la ficha indica que las células peludas expresan CD20.\",\n      \"contexto\": \"La edición de 2018 lo incluye entre las opciones para la resistencia farmacológica, combinado con un análogo de purinas distinto o solo si no se puede recibir un análogo de purinas. En recaída tras una remisión de entre dos y cinco años, contempla el mismo análogo de purinas posiblemente combinado con rituximab; si la remisión duró menos de dos años, contempla un análogo alternativo junto con rituximab, o rituximab solo si no se puede recibir un análogo. Además, describe ensayos clínicos que evalúan rituximab solo o combinado con otros medicamentos.\"\n    },\n    {\n      \"agente\": \"Moxetumomab pasudotox-tdfk (Lumoxiti™)\",\n      \"diana\": \"CD22.\",\n      \"contexto\": \"La ficha lo describe como un medicamento citotóxico de administración intravenosa y lo presenta como aprobado, en esa edición, para pacientes adultos con leucemia de células peludas en recaída o con resistencia al tratamiento que hayan recibido por lo menos dos terapias sistémicas previas, incluyendo un tratamiento con un análogo de nucleósido de purina. Lo enumera tanto en resistencia farmacológica como en recaída.\"\n    },\n    {\n      \"agente\": \"LMB-2\",\n      \"diana\": \"CD25 en la superficie de las células cancerosas.\",\n      \"contexto\": \"La ficha lo presenta como una inmunotoxina en fase de ensayos clínicos para evaluar la tasa de respuesta en pacientes con leucemia de células peludas con expresión de CD25, recurrente o resistente al tratamiento. Está formada por un anticuerpo monoclonal modificado para unirse a CD25 y una toxina bacteriana que mata las células a las que se une.\"\n    }\n  ],\n  \"fundamentos_verificables\": [\n    \"Las dianas se atribuyen expresamente en los pasajes: CD20 para rituximab, CD22 para moxetumomab y CD25 para LMB-2.\",\n    \"La ficha distingue una aprobación con condiciones específicas para moxetumomab de la investigación clínica descrita para LMB-2. Rituximab aparece tanto como opción de tratamiento como en investigación; ambas menciones deben conservarse.\",\n    \"Estas descripciones corresponden a la edición FS16S 8/18 y no constituyen afirmaciones de disponibilidad o aprobación actual ni una prescripción individual.\"\n  ],\n  \"evidencias\": [\n    {\n      \"documento\": \"LLS-HCL-2018\",\n      \"pagina_fisica\": 7,\n      \"seccion\": \"PDF-P0006\",\n      \"fragmentos\": [\n        {\n          \"inicio_caracter\": 2000,\n          \"fin_caracter_exclusivo\": 4000\n        }\n      ],\n      \"cita_literal_breve\": \"El rituximab actúa dirigiéndose al antígeno CD20 de las células B normales y malignas.\"\n    },\n    {\n      \"documento\": \"LLS-HCL-2018\",\n      \"pagina_fisica\": 7,\n      \"seccion\": \"PDF-P0006\",\n      \"fragmentos\": [\n        {\n          \"inicio_caracter\": 2000,\n          \"fin_caracter_exclusivo\": 4000\n        }\n      ],\n      \"cita_literal_breve\": \"En ensayos clínicos se está evaluando el uso del anticuerpo monoclonal rituximab (Rituxan®), solo o en combinación con otros medicamentos\"\n    },\n    {\n      \"documento\": \"LLS-HCL-2018\",\n      \"pagina_fisica\": 6,\n      \"seccion\": \"PDF-P0005\",\n      \"fragmentos\": [\n        {\n          \"inicio_caracter\": 0,\n          \"fin_caracter_exclusivo\": 2000\n        },\n        {\n          \"inicio_caracter\": 2000,\n          \"fin_caracter_exclusivo\": 4000\n        }\n      ],\n      \"cita_literal_breve\": \"Un análogo de purinas distinto, con o sin rituximab\"; \" \n    }\n  ],\n  \"insuficiencias\": []\n}",
+  "revision_citas": {
+    "conforme": false,
+    "defecto": "expected `,` or `}` at line 63 column 83"
+  },
+  "solicitud_sha256": "2901560e3a015e529b79e2e87de516161e54c04a2de9534c9d37a1e53d628e09",
+  "sustantivo": "núcleo explicativo concordante; entrega y evidencias incompletas",
+  "valor": "1"
+}

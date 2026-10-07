@@ -1,0 +1,158 @@
+{
+  "auditoria_sha256": "479b06d69ba48a9f7f3bc6df649ea3465166d9ca0828ed78a097f190622e7f00",
+  "caso": "PDF05",
+  "final_sha256": "71df0080312f19f9d95a413c87391f7279997e657c5b7ddd312c2df5658e424c",
+  "formal_conforme": true,
+  "formal_original_conforme": true,
+  "fundamento_sustantivo": "Mantiene aproximadamente 10%, conteos estables y ausencia de síntomas; exige seguimiento frecuente con análisis. Distingue los conteos bajos o la presencia de síntomas como motivos documentales de tratamiento, sin umbrales inventados ni pauta individual. El uso de o es coherente con las dos indicaciones sucesivas de la fuente y no se penaliza por el y del resumen de la clave. Tres citas literales comprobadas.",
+  "medicion": {
+    "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+    "bytes_sse": 217007,
+    "caso": "PDF05",
+    "cpu_delta_ms": 1578,
+    "duracion_ms": 24808,
+    "duracion_observada_ms": 27998,
+    "eventos_sse": 760,
+    "fallos_medicion": 0,
+    "final_sha256": "71df0080312f19f9d95a413c87391f7279997e657c5b7ddd312c2df5658e424c",
+    "intervalo_maximo_ms": 283,
+    "io_escritura_delta_bytes": 907137,
+    "io_lectura_delta_bytes": 13733156,
+    "muestras": 106,
+    "observaciones_udp": 0,
+    "primer_texto_ms": 3104,
+    "rss_maximo_bytes": 37429248,
+    "solicitud_sha256": "c7aaa5f48757b1bdbd47021af0be9aab25555ac66cf709f4013fc0f63283b917",
+    "sse_sha256": "21fc2f71adc62055243cad84b59861710f6a48adf450edd2b2aa0ccc08fbe125",
+    "tcp_estados": [
+      "CloseWait",
+      "Established",
+      "Listen"
+    ],
+    "tcp_maximo_simultaneo": 4,
+    "telemetria_sha256": "de1302075b474e97044429326bd9617a685eb9f43ac4bb589395fce4ebca0352",
+    "uso": {
+      "entrada_cache_tokens": 0,
+      "entrada_tokens": 2913,
+      "razonamiento_tokens": 0,
+      "salida_tokens": 756,
+      "total_tokens": 3669
+    }
+  },
+  "naturaleza_defecto": null,
+  "pasajes_contrastados": [
+    {
+      "documento": "LLS-HCL-2018",
+      "fragmento": "En el caso de aproximadamente el 10 por ciento de los pacientes (que tienen conteos estables de células sanguíneas y no presentan síntomas al momento del diagnóstico), el enfoque de tratamiento podría ser el de la “espera vigilante”.",
+      "pagina": 4,
+      "seccion": "PDF-P0004"
+    },
+    {
+      "documento": "LLS-HCL-2018",
+      "fragmento": "Es necesario realizar un seguimiento frecuente del paciente, incluyendo análisis de sangre, para que pueda iniciarse el tratamiento si la enfermedad empieza a avanzar.",
+      "pagina": 4,
+      "seccion": "PDF-P0004"
+    },
+    {
+      "documento": "LLS-HCL-2018",
+      "fragmento": "Los pacientes deberían iniciar el tratamiento si tienen conteos bajos de células sanguíneas (deficiencia de glóbulos rojos, plaquetas o glóbulos blancos). También deberían iniciar el tratamiento si presentan síntomas, entre ellos, pérdida de peso sin explicación, infecciones recurrentes o molestias físicas debido al agrandamiento del bazo e/o hígado.",
+      "pagina": 4,
+      "seccion": "PDF-P0004"
+    }
+  ],
+  "recepcion_independiente": "pendiente",
+  "respuesta_original": "{\n  \"respuesta\": \"La ficha contempla la espera vigilante tras el diagnóstico inicial para pacientes con conteos estables de células sanguíneas y sin síntomas; menciona aproximadamente al 10 % de los pacientes. Consiste en posponer el tratamiento hasta la aparición o progresión de signos y síntomas de la enfermedad. Exige seguimiento frecuente, incluidos análisis de sangre, para poder iniciar el tratamiento si la enfermedad avanza. Señala como motivos para iniciarlo los conteos bajos de células sanguíneas —deficiencia de glóbulos rojos, plaquetas o glóbulos blancos— o la presencia de síntomas, entre ellos pérdida de peso sin explicación, infecciones recurrentes o molestias físicas por agrandamiento del bazo y/o del hígado. Estas afirmaciones corresponden a la edición de agosto de 2018, no a una pauta individual ni a una validación de su vigencia clínica actual.\",\n  \"fundamentos_verificables\": [\n    \"La ficha vincula expresamente la posible espera vigilante con conteos estables y ausencia de síntomas al diagnóstico, y sitúa ese grupo en aproximadamente el 10 %.\",\n    \"Define la espera vigilante como aplazamiento del tratamiento con seguimiento frecuente, incluidos análisis de sangre.\",\n    \"Distingue como motivos para tratar tanto los conteos bajos de células sanguíneas como la presencia de síntomas.\"\n  ],\n  \"evidencias\": [\n    {\n      \"documento\": \"LLS-HCL-2018\",\n      \"pagina_fisica\": 5,\n      \"seccion\": \"PDF-P0004\",\n      \"fragmentos\": [\n        {\n          \"inicio_caracter\": 0,\n          \"fin_caracter_exclusivo\": 2000\n        }\n      ],\n      \"cita_literal_breve\": \"En el caso de aproximadamente el 10 por ciento de los pacientes (que tienen conteos estables de células sanguíneas y no presentan síntomas al momento del diagnóstico), el enfoque de tratamiento podría ser el de la “espera vigilante”.\"\n    },\n    {\n      \"documento\": \"LLS-HCL-2018\",\n      \"pagina_fisica\": 5,\n      \"seccion\": \"PDF-P0004\",\n      \"fragmentos\": [\n        {\n          \"inicio_caracter\": 0,\n          \"fin_caracter_exclusivo\": 2000\n        }\n      ],\n      \"cita_literal_breve\": \"Es necesario realizar un seguimiento frecuente del paciente, incluyendo análisis de sangre, para que pueda iniciarse el tratamiento si la enfermedad empieza a avanzar.\"\n    },\n    {\n      \"documento\": \"LLS-HCL-2018\",\n      \"pagina_fisica\": 5,\n      \"seccion\": \"PDF-P0004\",\n      \"fragmentos\": [\n        {\n          \"inicio_caracter\": 0,\n          \"fin_caracter_exclusivo\": 2000\n        }\n      ],\n      \"cita_literal_breve\": \"Los pacientes deberían iniciar el tratamiento si tienen conteos bajos de células sanguíneas (deficiencia de glóbulos rojos, plaquetas o glóbulos blancos). También deberían iniciar el tratamiento si presentan síntomas, entre ellos, pérdida de peso sin explicación, infecciones recurrentes o molestias físicas debido al agrandamiento del bazo e/o hígado.\"\n    }\n  ],\n  \"insuficiencias\": [\n    \"El pasaje no establece umbrales numéricos para los conteos bajos ni un intervalo concreto para el seguimiento frecuente.\",\n    \"El material permite describir lo que sostiene esta edición, pero no determinar su vigencia clínica actual.\"\n  ]\n}",
+  "revision_citas": {
+    "adjudicacion_sustantiva": false,
+    "citas": [
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "elipsis_explicitas": 0,
+            "normalizacion": "sólo espacios; omisiones [...] comprobadas por segmentos literales ordenados; no semejanza",
+            "segmentos": [
+              {
+                "fin_utf8_texto_normalizado": 668,
+                "inicio_utf8_texto_normalizado": 426,
+                "texto": "En el caso de aproximadamente el 10 por ciento de los pacientes (que tienen conteos estables de células sanguíneas y no presentan síntomas al momento del diagnóstico), el enfoque de tratamiento podría ser el de la “espera vigilante”."
+              }
+            ]
+          }
+        ],
+        "fragmentos": [
+          {
+            "fin_caracter_exclusivo": 2000,
+            "indice": 0,
+            "inicio_caracter": 0
+          }
+        ],
+        "identificador_cotejado": "PDF-P0004",
+        "lista_de_citas": false,
+        "pagina_fisica": 5,
+        "seccion_recibida": "PDF-P0004",
+        "titulo_documental_cotejado": null
+      },
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "elipsis_explicitas": 0,
+            "normalizacion": "sólo espacios; omisiones [...] comprobadas por segmentos literales ordenados; no semejanza",
+            "segmentos": [
+              {
+                "fin_utf8_texto_normalizado": 1128,
+                "inicio_utf8_texto_normalizado": 960,
+                "texto": "Es necesario realizar un seguimiento frecuente del paciente, incluyendo análisis de sangre, para que pueda iniciarse el tratamiento si la enfermedad empieza a avanzar."
+              }
+            ]
+          }
+        ],
+        "fragmentos": [
+          {
+            "fin_caracter_exclusivo": 2000,
+            "indice": 0,
+            "inicio_caracter": 0
+          }
+        ],
+        "identificador_cotejado": "PDF-P0004",
+        "lista_de_citas": false,
+        "pagina_fisica": 5,
+        "seccion_recibida": "PDF-P0004",
+        "titulo_documental_cotejado": null
+      },
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "elipsis_explicitas": 0,
+            "normalizacion": "sólo espacios; omisiones [...] comprobadas por segmentos literales ordenados; no semejanza",
+            "segmentos": [
+              {
+                "fin_utf8_texto_normalizado": 1493,
+                "inicio_utf8_texto_normalizado": 1129,
+                "texto": "Los pacientes deberían iniciar el tratamiento si tienen conteos bajos de células sanguíneas (deficiencia de glóbulos rojos, plaquetas o glóbulos blancos). También deberían iniciar el tratamiento si presentan síntomas, entre ellos, pérdida de peso sin explicación, infecciones recurrentes o molestias físicas debido al agrandamiento del bazo e/o hígado."
+              }
+            ]
+          }
+        ],
+        "fragmentos": [
+          {
+            "fin_caracter_exclusivo": 2000,
+            "indice": 0,
+            "inicio_caracter": 0
+          }
+        ],
+        "identificador_cotejado": "PDF-P0004",
+        "lista_de_citas": false,
+        "pagina_fisica": 5,
+        "seccion_recibida": "PDF-P0004",
+        "titulo_documental_cotejado": null
+      }
+    ],
+    "conforme": true
+  },
+  "solicitud_sha256": "c7aaa5f48757b1bdbd47021af0be9aab25555ac66cf709f4013fc0f63283b917",
+  "sustantivo": "correcto",
+  "valor": "0"
+}
