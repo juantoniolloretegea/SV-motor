@@ -1,6 +1,12 @@
 # OpenAI
 
-**Índice de modelos · 1 de octubre de 2026.**
+**Remisión actualizada · 7 de octubre de 2026.** [GPT-6 Astra](../acoplamientos-con-el-sv/03-api-directa/openai/gpt-6-astra/readme.md) figura en el **nodo 03**, con el examen documental cerrado como **Apto**: 25 respuestas finales correctas, incluidas las 20 críticas. OpenAI ejecuta la inferencia; el SV conserva el control de las fuentes, la evaluación y la instrumentación propias. [Informe](../acoplamientos-con-el-sv/03-api-directa/openai/gpt-6-astra/examen25-20261007/resultado/INFORME.md).
+
+Los expedientes GPT-OSS siguientes son distintos. Sus realizaciones bajo control propio corresponden al nodo 01; sus estudios y demostraciones conservan el alcance expresamente declarado. La pertenencia a OpenAI no determina el nodo ni permite trasladar resultados entre modelos.
+
+## Antecedente del índice · 1 de octubre de 2026
+
+La tabla siguiente conserva el estado de aquel corte. Sus actualizaciones posteriores se consultan en el [catálogo de modelos](../README.md) y en el [estado general del ensayo](../../README.md#estado-actual).
 
 | Modelo | Función y estado documentado |
 |---|---|
@@ -25,3 +31,5 @@ La [ficha de gpt-oss-20b](gpt-oss-20b/README.md) conserva los antecedentes y fue
 ---
 
 Sistema Vectorial SV · [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/deed.es). Los componentes de terceros conservan sus licencias.
+
+© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).

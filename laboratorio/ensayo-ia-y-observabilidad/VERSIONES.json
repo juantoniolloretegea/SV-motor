@@ -1,19 +1,18 @@
 {
   "esquema": "sv.eio.registro-versiones/1",
-  "edicion_documental": "2.24",
-  "fecha_corte": "2026-10-05",
+  "edicion_documental": "2.26",
+  "fecha_corte": "2026-10-07",
   "commit_base_consultado": "e1ef11a0c87dbd9cf3dda0d0461b980c1272f440",
   "criterio": "Identidad separada para modelo, aplicacion, componente MCP, archivo de conservacion y edicion documental",
   "revision_actual": {
-    "version": "2.24",
-    "naturaleza": "ordenacion_documental_y_autorizacion_prueba_instrumental_AMD",
+    "version": "2.26",
+    "naturaleza": "cierre_documental_examen_astra_nodo03",
     "commit": "El que contiene este archivo; sin autorreferencia circular",
     "cambios": [
-      "Candidatos integrados en estado; cálculo AMD en componentes, versiones y cronología",
-      "Historia y licencias separadas; diagramas preservados",
-      "Qwen3.5: cierre de fase y admisión no acreditada por impedimento temporal",
-      "Thinking: retirada administrativa posterior acreditada",
-      "Prueba de una operación CubeCL/MFMA autorizada en una MI300X; creación y resultados no declarados"
+      "GPT-6 Astra visible en la portada, el catálogo y su expediente propio del nodo 03",
+      "Diferencia explícita entre inferencia propia del nodo 01 y API externa del nodo 03",
+      "Examen P01–P25 cerrado como Apto para el contrato documental, sin nuevas inferencias",
+      "Resultados y diagramas históricos conservados; no revalidación de los otros expedientes"
     ]
   },
   "componentes": [
@@ -213,6 +212,26 @@
       "inferencia": false,
       "dictamen_aptitud": null,
       "descarte_definitivo": false
+    },
+    {
+      "modelo": "gpt-6-astra",
+      "proveedor": "OpenAI",
+      "nodo": "03",
+      "fecha": "2026-10-07",
+      "estado": "prueba_documental_finalizada",
+      "dictamen": "Apto para el contrato documental",
+      "correctas_finales": 25,
+      "criticas_correctas": 20,
+      "umbral": 19,
+      "fase_final": "R2",
+      "entregas_completas": 75,
+      "intentos_interrumpidos": 2,
+      "puntuacion_ponderada": null,
+      "aptitud_clinica_acreditada": false,
+      "expediente": "laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/openai/gpt-6-astra/readme.md",
+      "informe": "laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/openai/gpt-6-astra/examen25-20261007/resultado/INFORME.md",
+      "revision_evidencia": "a8cd2319c004f76a1159cb382f7ed93b2d648bf3",
+      "alcance": "Cierre de esta prueba; no cierre de S39 general, de TT-0021 ni aceptación general del nodo 03."
     }
   ],
   "publicaciones": [
@@ -1250,5 +1269,37 @@
       "GLM-5.3-Flash"
     ],
     "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0)."
+  },
+  "revision_2_24_conservada": {
+    "version": "2.24",
+    "naturaleza": "ordenacion_documental_y_autorizacion_prueba_instrumental_AMD",
+    "commit": "El que contiene este archivo; sin autorreferencia circular",
+    "cambios": [
+      "Candidatos integrados en estado; cálculo AMD en componentes, versiones y cronología",
+      "Historia y licencias separadas; diagramas preservados",
+      "Qwen3.5: cierre de fase y admisión no acreditada por impedimento temporal",
+      "Thinking: retirada administrativa posterior acreditada",
+      "Prueba de una operación CubeCL/MFMA autorizada en una MI300X; creación y resultados no declarados"
+    ]
+  },
+  "cierre_astra_20261007": {
+    "modelo": "gpt-6-astra",
+    "proveedor": "OpenAI",
+    "nodo": "03",
+    "fecha": "2026-10-07",
+    "estado": "prueba_documental_finalizada",
+    "dictamen": "Apto para el contrato documental",
+    "correctas_finales": 25,
+    "criticas_correctas": 20,
+    "umbral": 19,
+    "fase_final": "R2",
+    "entregas_completas": 75,
+    "intentos_interrumpidos": 2,
+    "puntuacion_ponderada": null,
+    "aptitud_clinica_acreditada": false,
+    "expediente": "laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/openai/gpt-6-astra/readme.md",
+    "informe": "laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/openai/gpt-6-astra/examen25-20261007/resultado/INFORME.md",
+    "revision_evidencia": "a8cd2319c004f76a1159cb382f7ed93b2d648bf3",
+    "alcance": "Cierre de esta prueba; no cierre de S39 general, de TT-0021 ni aceptación general del nodo 03."
   }
 }

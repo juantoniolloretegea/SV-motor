@@ -1,5 +1,14 @@
 # GPT-6 Astra · Nodo 03 · OpenAI
 
+## Estado vigente · cierre documental del 07/10/2026
+
+**Examen P01–P25 concluido y cerrado: Apto para el contrato documental de esta edición.** Las 25 respuestas finales R2 son correctas, incluidas las 20 críticas; T(25)=19. [Expediente e índice de evidencias](readme.md) · [Informe final](examen25-20261007/resultado/INFORME.md).
+
+GPT-6 Astra pertenece al nodo 03: inferencia en OpenAI mediante API; suministro, control, recepción, adjudicación e instrumentación propios bajo el Árbitro-Director del SV en Rust. No es una instalación de pesos en los servidores del SV. El cierre de esta prueba no acredita aptitud clínica ni resuelve la dependencia criptográfica nativa.
+
+## Antecedentes de las pruebas instrumentales y de preparación
+
+Los apartados siguientes conservan sus fechas y resultados. Las expresiones «pendiente» o «antes de la campaña» corresponden a esos antecedentes; el estado vigente del examen es el indicado arriba.
 **Corrección de la entrega gráfica · 07/10/2026:** el HTML anterior era una captura estática y no contenía un polígono interactivo. Se sustituye por el visor Rust/egui 0.2.0, compilado a WebAssembly e incorporado en un HTML autónomo. Resultados científicos inalterados. [Defecto, corrección y pruebas](catalogo-a0-20261007/CORRECCION-VISOR.md).
 
 Fecha de apertura: 6 de octubre de 2026. Identificador solicitado: `gpt-6-astra`.

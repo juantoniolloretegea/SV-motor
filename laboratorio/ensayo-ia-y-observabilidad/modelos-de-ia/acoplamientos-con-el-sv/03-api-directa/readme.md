@@ -1,13 +1,18 @@
 # Nodo 03 · Inferencia mediante API directa de proveedor
 
-**Versión documental 1.1 · 6 de octubre de 2026.**
+**Versión documental 1.2 · 7 de octubre de 2026.**
 
-**Estado:** especificación preparatoria. No acredita un cliente integrado, una llamada ejecutada ni un modelo aceptado.
+**Estado:** modalidad con ejecución experimental acreditada. El examen de GPT-6 Astra se cierra como Apto para su contrato documental; la integración general y las dependencias pendientes conservan su alcance propio.
 
 Este nodo desarrolla la tercera modalidad del [marco común de acoplamientos](../readme.md). Se refiere a servicios de inferencia de proveedores externos; una API que exponga un motor administrado por el proyecto se examina en el [nodo 01](../01-inferencia-bajo-control-propio/readme.md). Se conservan las mismas obligaciones del SV y una aceptación independiente para esta modalidad.
 
 Los expedientes de API externa se organizan aquí por proveedor y modelo. La carpeta [OpenAI de este nodo](openai) corresponde a esta modalidad y se distingue del [índice histórico de GPT-OSS](../../openai/README.md), que conserva los antecedentes en su ubicación original. Las [remisiones del nodo 01](../01-inferencia-bajo-control-propio/readme.md#expedientes-en-su-ubicación-de-origen) permiten consultarlos sin trasladarlos ni atribuir sus resultados a una API externa.
 
+## Expediente comprobado · GPT-6 Astra
+
+[GPT-6 Astra · OpenAI](openai/gpt-6-astra/readme.md) concluye el examen documental P01–P25 del 07/10/2026: **Apto**, 25 respuestas finales correctas y las 20 críticas en 0; T(25)=19. La inferencia se ejecuta en OpenAI. El Árbitro-Director y los componentes Rust del SV administran suministro, orden, recepción, adjudicación y medición propios. [Informe de resultados](openai/gpt-6-astra/examen25-20261007/resultado/INFORME.md).
+
+Esta recepción corresponde al expediente y a su contrato; no extiende la aptitud a otros modelos, a uso clínico o a toda la modalidad. La dependencia criptográfica nativa y la evaluación del servicio del proveedor permanecen identificadas por separado.
 ## 1. Objeto y alcance del control
 
 El SV prepara una solicitud autorizada y la dirige mediante un cliente Rust a la API del proveedor. Recibe una respuesta y aplica las comprobaciones previstas por la función, el dominio y el protocolo experimental.

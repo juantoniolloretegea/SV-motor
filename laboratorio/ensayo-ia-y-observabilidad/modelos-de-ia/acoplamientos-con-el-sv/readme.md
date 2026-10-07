@@ -1,8 +1,8 @@
 # Acoplamientos de modelos de inteligencia artificial con el Sistema Vectorial SV
 
-**Versión documental 1.1 · 6 de octubre de 2026.**
+**Versión documental 1.2 · 7 de octubre de 2026.**
 
-**Estado:** organización y requisitos del trabajo experimental. La publicación de esta documentación no acredita una integración ejecutada ni la aceptación de un modelo.
+**Estado:** organización y requisitos del trabajo experimental. El [expediente de GPT-6 Astra, nodo 03](03-api-directa/openai/gpt-6-astra/readme.md), acredita su examen cerrado como Apto para el contrato documental del 07/10/2026. Esa recepción no constituye aceptación general de los tres nodos ni de otros modelos.
 
 ## 1. Finalidad y pertenencia al sistema
 
@@ -121,7 +121,7 @@ Se distinguen cuatro comprobaciones: identidad y conservación; conformidad inst
 
 ## 8. Documentación y retorno al SV
 
-Cada nodo conservará, cuando exista trabajo material, su especificación experimental, realización identificada, pruebas positivas y negativas, resultados, incidencias y decisión de aceptación con límites explícitos. Esta edición sólo constituye su organización documental y las obligaciones de preparación.
+Cada nodo conservará, cuando exista trabajo material, su especificación experimental, realización identificada, pruebas positivas y negativas, resultados, incidencias y decisión de aceptación con límites explícitos. Las condiciones generales se contrastan con las realizaciones acreditadas en cada expediente; el cierre documental de Astra se mantiene limitado al examen y a su configuración.
 
 Los hechos comprobados se relacionan con el registro de sucesos; las deficiencias y sus condiciones de resolución, con el tique correspondiente; las valoraciones y decisiones, con las actas de calidad. Se reutilizan las referencias existentes y se identifica cualquier alta que proceda. Este README no crea un registro paralelo ni asigna números de sucesos, tiques o actas.
 

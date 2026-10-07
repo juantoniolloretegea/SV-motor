@@ -1,8 +1,8 @@
 # Ensayo de inteligencia artificial y observabilidad
 
-**Edición documental 2.25 · 6 de octubre de 2026.**
+**Edición documental 2.26 · 7 de octubre de 2026.**
 
-**Corte documental conservado de los demás expedientes:** 05/10/2026. Esta edición añade únicamente el cierre de conservación de Qwen3.5 del 06/10/2026; no revalida la ejecución o los resultados de los estudios distintos. Reúne el cierre publicado de la fase Qwen3.5, los cierres de Safeguard y Thinking, los candidatos Kimi/GLM en estudio y la autorización de una prueba instrumental de cálculo Rust en AMD. Cada fuente conserva su fecha, alcance y recepción; esta página no es un monitor de ejecución.
+**Actualización de esta edición:** cierre documental del examen de GPT-6 Astra, nodo 03, el 07/10/2026. Los demás expedientes conservan sus cortes del 05–06/10/2026 y sus propios resultados; esta revisión no acredita nuevas ejecuciones de aquellos modelos. Cada fuente mantiene su fecha, alcance y recepción; esta página no es un monitor de ejecución.
 
 <a id="objeto-y-criterio-experimental"></a>
 
@@ -19,12 +19,24 @@ Esta página relaciona configuraciones, resultados, componentes, publicaciones y
 
 ## Estado actual
 
+**GPT-6 Astra · OpenAI · Nodo 03:** examen documental P01–P25 concluido y cerrado como **Apto para el contrato documental de esta edición**. Las 25 respuestas finales son correctas, incluidas las 20 críticas; no hay errores ni U. Se satisface T(25)=⌊7×25/9⌋=19. Véanse el [expediente del modelo](modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/openai/gpt-6-astra/readme.md) y el [informe de resultados](modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/openai/gpt-6-astra/examen25-20261007/resultado/INFORME.md).
+
+**Diferencia entre los nodos 01 y 03:**
+
+| Modalidad | Dónde se ejecuta la inferencia | Qué administra el SV |
+|---|---|---|
+| Nodo 01 · Inferencia bajo control propio | Motor y pesos en infraestructura administrada por el proyecto. | El entorno de ejecución propio y los controles de la prueba. |
+| Nodo 03 · GPT-6 Astra mediante API | OpenAI ejecuta el modelo; sus pesos no están alojados en los servidores del SV. | Fuentes, solicitudes, recepción, adjudicación e instrumentación propias, bajo el Árbitro-Director y sus componentes Rust. |
+
+La modalidad depende de dónde se realiza la inferencia, no de la marca. Los expedientes de GPT-OSS y Astra son distintos y no comparten automáticamente resultados. Las preguntas y el criterio documental permiten comparación, pero Astra incorpora tres fases universales R0/R1/R2 y condiciones instrumentales propias. El dictamen no acredita aptitud clínica ni una réplica instrumental idéntica del nodo 01.
+
 La fase **Qwen3.5-122B-A10B Q8_0** ha concluido con **admisión no acreditada por impedimento temporal**. Se completaron siete solicitudes iniciales: seis adjudicaciones 0 y un error sustantivo crítico, A06. A08 y A09 no se ejecutaron; tampoco las revisiones adversariales, el bloque B o el examen. La capa está incompleta, sin κ ni puntuación global. Se conserva el [dictamen y su alcance](https://github.com/juantoniolloretegea/SV-motor/blob/0b5104c4658bc98a9612fd2a97d7b8a5214b63cc/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/qwen/qwen3.5-122b-a10b-q8-0/preevaluacion-20261004/resultados/cierre-r1/INFORME-FINAL.md); el resultado no constituye un descarte universal de la familia Qwen. La recepción independiente de A04–A07 y de la fase permanece pendiente en el corte de la entrega.
 
 **Safeguard** cerró su preevaluación sin acceso al examen; **Thinking** cerró por inviabilidad operativa. La retirada de sus recursos se distingue de la conservación documental y del resultado experimental. Kimi K3 y GLM-5.3/Flash continúan en estudio de viabilidad, sin dictamen de aptitud ni descarte definitivo.
 
 | Modelo o configuración | Resultado y alcance | Situación al corte |
 |---|---|---|
+| [GPT-6 Astra · OpenAI · Nodo 03](modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/openai/gpt-6-astra/readme.md) | Examen documental: **Apto**, 25/25 correctas, 20/20 críticas, T(25)=19; R2 es la respuesta final en los 25 casos. | Prueba documental cerrada el 07/10/2026. Inferencia en OpenAI; control del SV en Rust. [Resultado y límites](modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/openai/gpt-6-astra/examen25-20261007/resultado/INFORME.md). |
 | [Qwen3-0.6B · Q4_K_M](modelos-de-ia/qwen/qwen3-0.6b/README.md) | Inferencia nativa y controles parciales; cuatro consultas DOC-01 terminadas sin conformidad contractual completa. | Campaña cerrada con limitaciones. |
 | [GPT-OSS-20B · MXFP4](modelos-de-ia/openai/gpt-oss-20b/README.md) | Funcionamiento técnico y bancos documentales conservados; la evaluación médica no acreditó la función prevista. | Configuración excluida de esa selección; archivo conservado. |
 | [Qwen3.8-27B](modelos-de-ia/qwen/qwen3.8-27b/README.md) | Respuesta completa en la selección mínima, con omisión material y deficiencias de citas y localización. | **No apto** en la selección examinada. |
@@ -78,7 +90,7 @@ La clasificación SV se calcula separadamente con **T(n)=⌊7n/9⌋**: primero N
 
 Un error crítico acreditado permite declarar No apto en el alcance de la prueba aunque existan posiciones impedidas; no autoriza a completar un vector ni a atribuirle κ. Sólo tras **25 adjudicaciones válidas e independientes** se constituye el vector ordenado y su frame o polígono. Cada posición queda ligada a pregunta, fuente, respuesta, configuración y fundamento de corrección. Las comprobaciones sintéticas del evaluador Rust acreditan su cálculo en esos casos, no la validez médica de las respuestas.
 
-La célula canónica **(9,3)** contiene vectores de nueve componentes ternarios y un universo de **3⁹ = 19.683 vectores posibles**. Las capas experimentales son filas sucesivas de vectores, no una matriz de 3 × 3. El par vector–frame debe conservar identidad, posiciones, fuentes y revisión. La futura visualización **egui** presentará inicialmente el frame o los frames y permitirá consultar los valores y evidencias a petición; no se declara implementada. **Un frame Apto puede formar parte de un conjunto No apto**: la composición y la aptitud de dominio necesitan reglas aún no constituidas por esta ronda. Una U puede motivar nuevas preguntas con identidad propia, conservando los resultados anteriores.
+La célula canónica **(9,3)** contiene vectores de nueve componentes ternarios y un universo de **3⁹ = 19.683 vectores posibles**. Las capas experimentales son filas sucesivas de vectores, no una matriz de 3 × 3. El par vector–frame debe conservar identidad, posiciones, fuentes y revisión. El expediente de Astra incorpora el visor Rust/egui 0.5.0 con el frame de 25 posiciones, valores y evidencias consultables. Su ejecución y pruebas se acreditan en aquel expediente; no se atribuyen retrospectivamente a los modelos anteriores. **Un frame Apto puede formar parte de un conjunto No apto**: la composición y la aptitud de dominio necesitan reglas aún no constituidas por esta ronda. Una U puede motivar nuevas preguntas con identidad propia, conservando los resultados anteriores.
 
 La secuencia es: suficiencia instrumental → evaluación documental → dictamen limitado al banco → decisión sobre una eventual fase posterior. La vía A/WebAssembly conserva su dependencia de una selección favorable y de autorización propia. No se acredita aptitud clínica general, uso productivo ni integración en el núcleo del SV.
 

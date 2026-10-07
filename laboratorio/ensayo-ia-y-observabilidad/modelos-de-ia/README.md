@@ -1,6 +1,6 @@
 # Modelos de IA
 
-**Edición documental 13 · 6 de octubre de 2026.**
+**Edición documental 14 · 7 de octubre de 2026.**
 
 **Corte experimental conservado de la edición 10:** 03/10/2026, 09:37 UTC. Cada expediente conserva la fecha, configuración y alcance de sus propios resultados.
 
@@ -16,6 +16,17 @@ El [nodo 01](acoplamientos-con-el-sv/01-inferencia-bajo-control-propio/readme.md
 
 Los expedientes específicos de plataforma gestionada se organizan en el [nodo 02](acoplamientos-con-el-sv/02-plataforma-gestionada/readme.md) y los de API de proveedor en el [nodo 03](acoplamientos-con-el-sv/03-api-directa/readme.md), por modelo. Los antecedentes se enlazan desde allí sin trasladarlos ni duplicar sus resultados.
 
+## GPT-6 Astra · Nodo 03 · cierre del 07/10/2026
+
+El [expediente de GPT-6 Astra](acoplamientos-con-el-sv/03-api-directa/openai/gpt-6-astra/readme.md) contiene el examen documental P01–P25, concluido como **Apto para el contrato documental**: 25 respuestas finales correctas, incluidas las 20 críticas; T(25)=19. [Informe y evidencias](acoplamientos-con-el-sv/03-api-directa/openai/gpt-6-astra/examen25-20261007/resultado/INFORME.md).
+
+Astra pertenece al **nodo 03**: OpenAI ejecuta la inferencia mediante su API y el SV administra las fuentes y los controles propios en Rust. En el **nodo 01**, motor y pesos se ejecutan en infraestructura administrada por el proyecto. Las carpetas históricas de Qwen y GPT-OSS conservan sus ubicaciones; Astra tiene un expediente propio dentro del nodo 03. No se trasladan ni se mezclan sus resultados.
+
+El examen Astra utiliza respuesta provisional, autocrítica y verificación final neutral (R0/R1/R2) en todas las preguntas; se adjudica como final R2, sin elegir retrospectivamente la mejor fase. La recepción documental no constituye aptitud clínica ni una prueba idéntica en instrumentación a las del nodo 01.
+
+## Antecedente experimental de la edición 10 · 03/10/2026
+
+La tabla y el estado de ejecución que siguen se conservan con su fecha histórica. No describen el estado actual de Astra ni reanudan campañas anteriores.
 | Secuencia del estudio | Modelo y ficha | Resultado y situación |
 |---|---|---|
 | 1 | [Qwen3-0.6B · Q4_K_M](qwen/qwen3-0.6b/README.md) | Campaña cerrada como realización parcial; distribución 0.1.3-beta.1 conservada. |
