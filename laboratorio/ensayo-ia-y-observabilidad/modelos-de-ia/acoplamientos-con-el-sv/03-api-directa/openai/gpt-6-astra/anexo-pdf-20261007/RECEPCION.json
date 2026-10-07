@@ -1,0 +1,216 @@
+{
+  "esquema": "sv.recepcion-suministro-pdf.v1",
+  "fecha": "2026-10-07",
+  "suceso": "S39",
+  "tique": "TT-0021",
+  "alcance": "Proyección técnica sin texto del PDF, clave ni datos de sesión",
+  "recepcion": "r2",
+  "control_original": {
+    "ruta": "ejecucion/astra-pdf-20261007/recepcion-r2/CONTROL-ARBITRO.json",
+    "bytes": 6051,
+    "sha256": "fbfa9b2110cb2be34b83a30daaf9e2f1a0c20abbd3334b6dc3034b9932f2f6ba"
+  },
+  "cotejo": {
+    "casos": 9,
+    "conforme": true,
+    "control_sha256": "fbfa9b2110cb2be34b83a30daaf9e2f1a0c20abbd3334b6dc3034b9932f2f6ba",
+    "diario_reproducido": true,
+    "fragmentos": 30,
+    "inferencias": 0,
+    "paginas": 10,
+    "solicitudes_recompuestas_identicas": true,
+    "telemetria_cotejada": true
+  },
+  "original_sha256": "21322ed388c999bd0713ba5ec5c7ab34402d4bb4cd6100903aa5ea6d8bf35d9c",
+  "banco_sha256": "256fbc2d86918def88290ef9f28dbd4036b32619d4912245d7c1a9859aa72056",
+  "clave_sha256": "9e9f31008fcdcf6bb1a05db2286c5bdda88f4cf43d45a7e74dd46757c6dcdbe0",
+  "arbitro_director": {
+    "adjudicacion_ejercida": false,
+    "clave_en_contexto": false,
+    "continuacion_automatica": false,
+    "funcion_ejercida": "control de fuente, recorrido, aislamiento, instrumentación y composición por lista cerrada"
+  },
+  "componentes": [
+    {
+      "bytes": 7474992,
+      "funcion": "extracción Rust aislada",
+      "ruta": "compilacion/mcp-pdf-linux/debug/preparar-pdf",
+      "sha256": "77bcb2dd4c6eaff1067f08cd77ef3cd99635025cc0ba410e46c40fee3f9377c7"
+    },
+    {
+      "bytes": 1840560,
+      "funcion": "servicio documental Rust aislado",
+      "ruta": "compilacion/mcp-pdf-linux/debug/sv-mcp-documental",
+      "sha256": "0d63f350b47e57022a1e5facc5ba96ce4e1b01940ac633e24a7f48fcfed29354"
+    },
+    {
+      "bytes": 1817848,
+      "funcion": "reproducción Rust del protocolo",
+      "ruta": "compilacion/mcp-pdf-linux/debug/verificar-diario",
+      "sha256": "637b37596274fce8c5dbd6af3edfcaddbbbeabc15bc10f98765b42f88bb86247"
+    },
+    {
+      "bytes": 1555968,
+      "funcion": "auxiliar de admisión documental del Árbitro-Director; composición sin envío y telemetría Rust",
+      "ruta": "compilacion\\telemetria\\debug\\sv-suministro-pdf-astra.exe",
+      "sha256": "be54c5eefc76835520533a6ec26fed75bd8ed4166ae54fa1a5cb4fa83b649cc9"
+    }
+  ],
+  "casos": [
+    {
+      "caso": "PDF01",
+      "envio_autorizado_por_este_instrumento": false,
+      "fragmentos": 3,
+      "paginas_fisicas": [
+        1
+      ],
+      "solicitud_bytes": 10685,
+      "solicitud_sha256": "3be87de8ea5b456c714fd8f113e2fa6fe68ddcf34c7cbd10ea7447ddee46f298",
+      "suministro_admitido": true
+    },
+    {
+      "caso": "PDF02",
+      "envio_autorizado_por_este_instrumento": false,
+      "fragmentos": 3,
+      "paginas_fisicas": [
+        2
+      ],
+      "solicitud_bytes": 10777,
+      "solicitud_sha256": "30b30e77050e648648f15afba26e07d240f197c33e872702116f7af239fbd020",
+      "suministro_admitido": true
+    },
+    {
+      "caso": "PDF03",
+      "envio_autorizado_por_este_instrumento": false,
+      "fragmentos": 3,
+      "paginas_fisicas": [
+        3
+      ],
+      "solicitud_bytes": 11000,
+      "solicitud_sha256": "6dcdd79dcf90aca12301337114245be954f39ec76b3729b8f551b1240613d220",
+      "suministro_admitido": true
+    },
+    {
+      "caso": "PDF04",
+      "envio_autorizado_por_este_instrumento": false,
+      "fragmentos": 3,
+      "paginas_fisicas": [
+        4
+      ],
+      "solicitud_bytes": 10925,
+      "solicitud_sha256": "6a287e53b81c45ff4686b3c803da34ff8fb7c34817fe7d4a346208c44fff78ee",
+      "suministro_admitido": true
+    },
+    {
+      "caso": "PDF05",
+      "envio_autorizado_por_este_instrumento": false,
+      "fragmentos": 3,
+      "paginas_fisicas": [
+        5
+      ],
+      "solicitud_bytes": 11327,
+      "solicitud_sha256": "f9e333b316b318fe81b666da79921c5cdaf5858617a01f28a372064852167271",
+      "suministro_admitido": true
+    },
+    {
+      "caso": "PDF06",
+      "envio_autorizado_por_este_instrumento": false,
+      "fragmentos": 6,
+      "paginas_fisicas": [
+        5,
+        8
+      ],
+      "solicitud_bytes": 19640,
+      "solicitud_sha256": "706144ae5d466934c5af2c896db465ecbd9d17ce5f2573868378a4d7a6b6e7c3",
+      "suministro_admitido": true
+    },
+    {
+      "caso": "PDF07",
+      "envio_autorizado_por_este_instrumento": false,
+      "fragmentos": 3,
+      "paginas_fisicas": [
+        5
+      ],
+      "solicitud_bytes": 11413,
+      "solicitud_sha256": "e7bcfab27321e6e70c9b8b3f87cc04fb2962054cb0e4985c6165e2f14f7bd61b",
+      "suministro_admitido": true
+    },
+    {
+      "caso": "PDF08",
+      "envio_autorizado_por_este_instrumento": false,
+      "fragmentos": 6,
+      "paginas_fisicas": [
+        6,
+        7
+      ],
+      "solicitud_bytes": 19760,
+      "solicitud_sha256": "6f5e01f69d56e0c9ac4d3df9640038e4bf5a8928a3a7b1f0550534a8b98a5381",
+      "suministro_admitido": true
+    },
+    {
+      "caso": "PDF09",
+      "envio_autorizado_por_este_instrumento": false,
+      "fragmentos": 3,
+      "paginas_fisicas": [
+        7
+      ],
+      "solicitud_bytes": 11196,
+      "solicitud_sha256": "8d8b3c702d45fcbd0c1d11a3ea1da31c7682b6e499e4d6f7ec94c2ec224d155b",
+      "suministro_admitido": true
+    }
+  ],
+  "diario": {
+    "alcance": "recorrido documental MCP reconstruido; no evalúa el modelo",
+    "diario_sha256": "de911a9732951b7a7dcac1c546915510ecc08bcbc8e908ac15690f845852cbdb",
+    "estado": "conforme",
+    "eventos": 101,
+    "tramas": 33,
+    "ultima_huella": "d96d152d1c84a2ffd4377ae83f6e5d87ba7df1d7ad7736b1d31e49aa15e3b66e"
+  },
+  "telemetria": {
+    "bytes": 38135,
+    "fallos_medicion": 0,
+    "integridad": "conforme",
+    "intervalo_maximo_ms": 275,
+    "intervalo_objetivo_ms": 250,
+    "muestras": 24,
+    "plataforma_recibida": false,
+    "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+    "registros": 68,
+    "sha256": "c828136dd7c5232208218d3093b398e547fb4427f0644df3a512d753b21dea4b"
+  },
+  "aislamiento": {
+    "red_externa_error": 1,
+    "alcance": "Denegación de conexiones en el MCP Linux",
+    "red_local_error": 1
+  },
+  "pruebas": [
+    {
+      "archivo": "PRUEBAS-SUMINISTRO-r2.txt",
+      "sha256": "e425f8f9b0a9c0e0d9bd56834b811830e4032f122169fbbc443889cd1c45d436",
+      "bytes": 2052,
+      "fallos": 0,
+      "pruebas": 16
+    },
+    {
+      "archivo": "PRUEBAS-MCP.txt",
+      "sha256": "eb17fd36db91e1d370c1ae73f8a8a1f7792bee488b4448273d6247508efe2f3c",
+      "bytes": 22019,
+      "fallos": 0,
+      "pruebas": 29
+    },
+    {
+      "archivo": "PRUEBAS-EXTRACTOR.txt",
+      "sha256": "3d1cd6b62ba45f4bf365160c757689319a8b1484227460b3b5a6d2bc329c5c6d",
+      "bytes": 13935,
+      "fallos": 0,
+      "pruebas": 7
+    }
+  ],
+  "pruebas_distintas": 52,
+  "inferencias": 0,
+  "tokens_candidato": 0,
+  "coste_asistencia": null,
+  "creditos_atribuibles": null,
+  "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0)."
+}
