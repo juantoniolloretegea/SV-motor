@@ -1,5 +1,7 @@
 ## Convertir textos de Markdown en libros
 
+"mdBook es una utilidad para crear libros electrónicos modernos a partir de archivos Markdown. Consulte la [Guía del usuario](https://rust-lang.github.io/mdBook/) para ver la lista de funciones e información sobre la instalación y el uso. La Guía del usuario también sirve como demostración para mostrar cómo luce un libro.
+
 ---
 
 > Ver los siguientes enlaces:  
