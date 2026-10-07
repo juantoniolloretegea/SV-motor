@@ -13,7 +13,7 @@ fn main() {
         r#"<!doctype html>
 <html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline' 'wasm-unsafe-eval'; style-src 'unsafe-inline'; img-src data: blob:; connect-src 'none'; worker-src 'none'; font-src data:; object-src 'none'; base-uri 'none'; form-action 'none'">
-<title>SV · Polígono interactivo egui · Astra · Anexo PDF · 0.3.0</title>
+<title>SV · Polígono interactivo egui · Astra · Anexo PDF · 0.3.1</title>
 <style>html,body{{margin:0;background:#fafafa;font:14px system-ui;color:#1b3e63;height:100%;overflow:hidden}}canvas{{display:block;width:100%;height:calc(100% - 75px);touch-action:none}}#seleccion{{display:block;height:65px;padding:5px 14px;box-sizing:border-box;overflow:auto;border-top:1px solid #ddd;font-size:13px}}#estado{{position:absolute;top:30%;left:10%;right:10%;background:white;padding:25px;border:1px solid #999}}noscript{{position:absolute;inset:20px;background:white;padding:20px}}</style></head>
 <body><canvas id="visor" aria-label="Polígono SV interactivo; seleccione PDF01 a PDF09 para consultar evidencias"></canvas>
 <output id="seleccion" aria-live="polite">Preparando la representación local…</output>
@@ -34,7 +34,7 @@ try {{
     );
     let path = dir.join("POLIGONO-EGUI.html");
     fs::write(&path, &html).unwrap();
-    let prueba = serde_json::json!({"version":"0.3.0","fuente_sha256":sv_visor_pdf::HUELLA,"dictamen_sha256":sv_visor_pdf::contrato::huella(sv_visor_pdf::DICTAMEN),"contrato":sv_visor_pdf::contrato::CONTRATO,"html_sha256":format!("{:x}",Sha256::digest(html.as_bytes())),"html_bytes":html.len(),"wasm_sha256":format!("{:x}",Sha256::digest(&wasm)),"wasm_bytes":wasm.len(),"javascript_sha256":format!("{:x}",Sha256::digest(js.as_bytes())),"red":"connect-src none; recursos incluidos en HTML","adjudicacion":"CAPA.json inmutable, comprobada por Rust antes de representar","limite":"El empaquetado no acredita por sí mismo interacción; prueba de navegador separada"});
+    let prueba = serde_json::json!({"version":"0.3.1","fuente_sha256":sv_visor_pdf::HUELLA,"dictamen_sha256":sv_visor_pdf::contrato::huella(sv_visor_pdf::DICTAMEN),"contrato":sv_visor_pdf::contrato::CONTRATO,"html_sha256":format!("{:x}",Sha256::digest(html.as_bytes())),"html_bytes":html.len(),"wasm_sha256":format!("{:x}",Sha256::digest(&wasm)),"wasm_bytes":wasm.len(),"javascript_sha256":format!("{:x}",Sha256::digest(js.as_bytes())),"red":"connect-src none; recursos incluidos en HTML","adjudicacion":"CAPA.json inmutable, comprobada por Rust antes de representar","limite":"El empaquetado no acredita por sí mismo interacción; prueba de navegador separada"});
     fs::write(
         dir.join("MANIFIESTO.json"),
         serde_json::to_vec_pretty(&prueba).unwrap(),

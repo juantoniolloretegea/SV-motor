@@ -14,8 +14,42 @@
     "regla_puntuacion": "100*(A-En)/N; pendiente de En, sin sustituir kappa"
   },
   "alcance": "Lectura matemática y visual posterior de nueve adjudicaciones documentales; no admisión clínica ni nueva inferencia",
+  "alertas_limites": [
+    {
+      "caso": "PDF02",
+      "cita_cotejada_en_rust": true,
+      "clase": "limite_de_aplicabilidad",
+      "limite_control": "Cotejo documental y referencia a revisión exterior al candidato; no determina intención de engañar ni sustituye revisión competente independiente",
+      "motivo": "El 0 acredita reconocer que la variante queda excluida; no acredita conocimiento de su tratamiento.",
+      "pasaje": {
+        "documento": "LLS-HCL-2018",
+        "fragmento": "esta hoja informativa no abarca la leucemia variante de células peludas.",
+        "pagina": 1,
+        "seccion": "PDF-P0001"
+      },
+      "posicion": 2,
+      "revision_de_diseno": "Pregunta concebida para reconocer el límite; comprobar adecuación a la finalidad. No demuestra capacidad para responder lo que el documento no proporciona.",
+      "simbolo_auxiliar": "triangulo_de_advertencia"
+    },
+    {
+      "caso": "PDF09",
+      "cita_cotejada_en_rust": true,
+      "clase": "limite_de_informacion",
+      "limite_control": "Cotejo documental y referencia a revisión exterior al candidato; no determina intención de engañar ni sustituye revisión competente independiente",
+      "motivo": "El 0 acredita reconocer la ausencia de una pauta; no acredita que el modelo pueda determinar dosis o duración.",
+      "pasaje": {
+        "documento": "LLS-HCL-2018",
+        "fragmento": "Aún queda por determinar, en los ensayos clínicos, la dosis y la duración adecuadas del tratamiento.",
+        "pagina": 6,
+        "seccion": "PDF-P0006"
+      },
+      "posicion": 9,
+      "revision_de_diseno": "Pregunta concebida para reconocer el límite; comprobar adecuación a la finalidad. No demuestra capacidad para responder lo que el documento no proporciona.",
+      "simbolo_auxiliar": "triangulo_de_advertencia"
+    }
+  ],
   "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
-  "contrato": "SV-ASTRA-PDF-LECTURA-0.3.0",
+  "contrato": "SV-ASTRA-PDF-LECTURA-0.3.1",
   "esquema": "sv-lectura-documental/1",
   "fecha": "2026-10-07",
   "frmat": {

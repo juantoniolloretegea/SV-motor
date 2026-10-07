@@ -1,5 +1,7 @@
 # Criticidad y abstención justificada en el siguiente encargo
 
+**Regla transversal:** esta obligación rige para los tres nodos, todos los modelos y cualquier fuente suministrada. Su sede común es el [Contrato transversal de suficiencia documental](../../../../../../CONTRATO-TRANSVERSAL-SUFICIENCIA-DOCUMENTAL-20261007.md). Los casos PDF citados son aplicaciones, no una restricción de alcance.
+
 7 de octubre de 2026 · S39 / TT-0021 · Preparación del contrato; ninguna solicitud nueva ejecutada.
 
 ## Regla de admisión
@@ -20,7 +22,7 @@ Para una declaración de indeterminación se preparan estos campos: `estado_resp
 
 | Situación comprobada | Tratamiento |
 |---|---|
-| El documento deja un punto abierto y el candidato identifica correctamente ese límite con evidencia | Puede ser respuesta correcta, valor 0; ejemplo documental: PDF09 |
+| El documento deja un punto abierto y el candidato identifica correctamente ese límite con evidencia | Sólo puede ser 0 si la pregunta evaluaba reconocer ese límite, siempre acompañado de símbolo de peligro, alcance y cotejo; ejemplo documental: PDF09 |
 | Existe una indeterminación sustantiva que el contrato reconoce y la declaración está justificada | U, conservando causa y evidencia |
 | El candidato alega que faltan datos que estaban suministrados y bastaban para responder | No se acepta U automáticamente; revisar el incumplimiento con fundamento, sin adjudicación médica por búsqueda de palabras |
 | Fallo de suministro, transporte o instrumento que impide una entrega evaluable | Incidencia técnica fuera de la terna; no se inventa U ni se culpa al candidato |
@@ -29,5 +31,12 @@ Para una declaración de indeterminación se preparan estos campos: `estado_resp
 El Árbitro mantiene separados la autodeclaración del candidato, la evidencia recibida, la adjudicación y la telemetría. Debe registrar la frecuencia y el fundamento de las U y detectar abstenciones injustificadas; nunca premiar U por defecto ni penalizar una abstención documental correcta. Una nueva ejecución verificará que esta instrucción esté realmente en la solicitud enviada y conservará su huella. Hasta entonces, la adenda acredita preparación, no transmisión ni una prueba realizada.
 
 Las criticidades concretas del próximo banco y su recepción competente siguen pendientes. Esta adenda no las inventa ni modifica las respuestas ya obtenidas.
+## Alarma de diseño y examen de la alegación del candidato
+
+Todo 0 que acredite reconocimiento de un límite documental debe mostrar un símbolo de peligro y una explicación junto al resultado. El resumen global y el polígono conservarán una remisión visible a esa alerta; no bastará relegarla a un apartado cerrado. Se identificará qué capacidad no queda demostrada.
+
+El Árbitro-Director comprobará por separado: objetivo de la pregunta, material íntegro realmente suministrado, afirmación concreta de insuficiencia, pasajes y localizadores, contradicciones y cobertura requerida. Si la pregunta exigía una respuesta que el material no permite obtener, se registrará una incidencia de diseño para revisión competente; no se otorgará 0 con el fin de ocultarla ni se forzará al candidato a inventar. Si el material sí permite responder, la supuesta carencia no se acepta sin contraste. Una afirmación sin respaldo, una contradicción o una abstención injustificada deben conservar su evidencia; no se atribuye intención de mentir sin prueba.
+
+El objetivo deliberado de una pregunta puede ser reconocer un límite. Incluso en ese caso, el 0 conserva la advertencia y no se transforma en acreditación del conocimiento ausente. La verificación instrumental de una cita y la revisión de su significado tienen funciones distintas. Ambas deben quedar registradas fuera del control del candidato.
 
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).

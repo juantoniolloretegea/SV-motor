@@ -8,6 +8,31 @@ pub const FUENTE: &[u8] = include_bytes!("CAPA.json");
 pub const HUELLA: &str = "7338a7f7c2a06111421cefeffb4cfd03811e11784180866f8a500d3acbd3b589";
 pub const PIE: &str = "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).";
 const AZUL: Color32 = Color32::from_rgb(27, 62, 99);
+fn simbolo_peligro(p: &egui::Painter, centro: Pos2) {
+    p.add(egui::Shape::convex_polygon(
+        vec![
+            centro + Vec2::new(0., -9.),
+            centro + Vec2::new(9., 8.),
+            centro + Vec2::new(-9., 8.),
+        ],
+        Color32::from_rgb(255, 228, 126),
+        Stroke::new(1.2_f32, Color32::BLACK),
+    ));
+    p.text(
+        centro + Vec2::new(0., 2.),
+        egui::Align2::CENTER_CENTER,
+        "!",
+        egui::FontId::proportional(13.),
+        Color32::BLACK,
+    );
+}
+fn aviso(ui: &mut egui::Ui, texto: &str) {
+    ui.horizontal_wrapped(|ui| {
+        let (r, _) = ui.allocate_exact_size(Vec2::new(22., 22.), Sense::hover());
+        simbolo_peligro(ui.painter(), r.center());
+        ui.strong(texto);
+    });
+}
 fn texto_acotado(ui: &mut egui::Ui, texto: &str) {
     let ancho = (ui.clip_rect().right() - ui.next_widget_position().x - 18.).max(80.);
     let galeria = ui.fonts_mut(|f| {
@@ -93,10 +118,21 @@ impl Default for Visor {
 impl Visor {
     pub fn resumen_seleccion(&self) -> String {
         let c = &self.datos["casos"][self.seleccionado];
+        let alerta = if self.dictamen["alertas_limites"]
+            .as_array()
+            .unwrap()
+            .iter()
+            .any(|a| a["posicion"] == self.seleccionado + 1)
+        {
+            "[ALERTA: 0 por límite documental] "
+        } else {
+            ""
+        };
         format!(
-            "{} · Valor {} · {}",
+            "{} · Valor {} · {}{}",
             c["caso"].as_str().unwrap(),
             c["valor"].as_str().unwrap(),
+            alerta,
             c["fundamento_sustantivo"].as_str().unwrap()
         )
     }
@@ -153,6 +189,14 @@ impl Visor {
                 p.circle_stroke(*punto, 11., Stroke::new(2_f32, AZUL));
             }
             p.circle_filled(*punto, 6., color(val));
+            if self.dictamen["alertas_limites"]
+                .as_array()
+                .unwrap()
+                .iter()
+                .any(|a| a["posicion"] == i + 1)
+            {
+                simbolo_peligro(&p, *punto + Vec2::new(14., -15.));
+            }
             p.text(
                 etiqueta,
                 egui::Align2::CENTER_CENTER,
@@ -178,6 +222,22 @@ impl Visor {
         ui.set_max_width(ui.available_width());
         ui.heading(format!("{} · Fundamento", c["caso"].as_str().unwrap()));
         ui.strong(contrato::TITULOS[self.seleccionado]);
+        if let Some(a) = self.dictamen["alertas_limites"]
+            .as_array()
+            .unwrap()
+            .iter()
+            .find(|a| a["posicion"] == self.seleccionado + 1)
+        {
+            aviso(ui, "ALERTA DE DISEÑO Y SUFICIENCIA DOCUMENTAL");
+            texto_acotado(ui, a["motivo"].as_str().unwrap());
+            texto_acotado(ui,"Límite contrastado con la fuente y sus citas; no basta la afirmación del modelo. Revisar que esta pregunta mida la capacidad que se pretende evaluar.");
+            egui::CollapsingHeader::new("Prueba documental del límite y control exterior al candidato").default_open(true).show(ui,|ui| {
+                let p=&a["pasaje"];
+                ui.strong(format!("{} · página {} · {}",p["documento"].as_str().unwrap(),p["pagina"].as_u64().unwrap()+1,p["seccion"].as_str().unwrap()));
+                texto_acotado(ui,p["fragmento"].as_str().unwrap());
+                texto_acotado(ui,"Cita y localizador cotejados por el revisor Rust del ensayo. La revisión semántica permanece exterior al candidato; no se atribuye al comprobador mecánico una decisión médica ni detección de intención de engañar.");
+            });
+        }
         ui.add_space(8.);
         let val = c["valor"].as_str().unwrap();
         ui.colored_label(
@@ -266,19 +326,21 @@ impl Visor {
         ctx.set_visuals(egui::Visuals::light());
         egui::CentralPanel::default().show(ctx,|ui| { ui.style_mut().wrap_mode = Some(egui::TextWrapMode::Wrap); egui::ScrollArea::vertical().scroll_bar_visibility(egui::scroll_area::ScrollBarVisibility::AlwaysVisible).auto_shrink([false,false]).show(ui,|ui| {
             ui.heading("SV · Polígono de adjudicación · Astra · Anexo PDF");
-            ui.label("Anexo PDF01–PDF09 · Edición 07/10/2026 · Visor interactivo 0.3.0 · Rust / egui");
+            ui.label("Anexo PDF01–PDF09 · Edición 07/10/2026 · Visor interactivo 0.3.1 · Rust / egui");
             ui.strong("GPT-6 Astra · Fidelidad documental a LLS 2018 · Nueve respuestas recibidas y adjudicadas");
             ui.colored_label(AZUL,egui::RichText::new("Admisión del candidato: NO ACREDITADA · Clasificación matemática κ: APTO").size(20.).strong());
             ui.label("T(n) = parte entera inferior de 7n/9. Para n=9: T=7; N0=8 >= 7; N1=1; NU=0. Vector v = (0, 0, 0, 0, 0, 0, 0, 1, 0).");
             ui.strong("REGLA ELIMINATORIA: un solo error crítico determina NO APTO, aunque κ sea Apto o la puntuación sea alta.");
             ui.label("Criticidades no fijadas antes del ensayo: número de errores críticos y puntuación sobre 100 NO DETERMINADOS. Cobertura: 9/9. κ no sustituye las condiciones de admisión.");
             ui.label("PDF08 incumple formato JSON y trazabilidad. No se ha demostrado una contradicción médica. Recepción independiente pendiente; este anexo no habilita un uso clínico.");
+            aviso(ui,"ALERTA: PDF02 y PDF09 obtienen 0 por reconocer límites de la fuente; no acreditan el conocimiento que ésta no proporciona.");
             let m=&self.datos["medidas"];
             ui.colored_label(AZUL,egui::RichText::new(format!("Correctas: {} · Errores: {} · Indeterminadas: {}",m["correctos"],m["errores"],m["indeterminados"])).size(20.));
             ui.horizontal_wrapped(|ui| { for (s,desc) in [("0","correcto · rojo · radio 1"),("1","error · verde · radio 2"),("U","indeterminación sustantiva · azul · radio 3")] {ui.colored_label(color(s),egui::RichText::new(format!("{s}: {desc}   ")).strong());} });
             ui.small("Convención del logo SV: el verde identifica 1, no aprobación. El significado procede del símbolo y de su contrato.");
             ui.horizontal_wrapped(|ui| { self.botones.clear(); for i in 0..9 {
-                let b=ui.selectable_label(self.seleccionado==i,format!("PDF{:02} · {}",i+1,self.datos["casos"][i]["valor"].as_str().unwrap()));
+                let advertencia=if self.dictamen["alertas_limites"].as_array().unwrap().iter().any(|a|a["posicion"]==i+1){" [!]"}else{""};
+                let b=ui.selectable_label(self.seleccionado==i,format!("PDF{:02} · {}{}",i+1,self.datos["casos"][i]["valor"].as_str().unwrap(),advertencia));
                 self.botones.push(b.rect); if b.clicked() { self.seleccionado=i; }
             }});
             ui.separator();
@@ -294,6 +356,7 @@ impl Visor {
                 ui.label(format!("SHA-256 de DICTAMEN.json: {}",contrato::huella(DICTAMEN)));
                 ui.label("La adenda §5.1 distingue dos convenciones históricas. Esta edición aplica el logo SV: 0 rojo/r1, 1 verde/r2, U azul/r3. Tonos RGB de realización: (181,42,45), (21,119,80), (36,87,181); los nombres de color proceden de la fuente, no esos tonos exactos.");
                 ui.label("La clasificación κ se incorpora como lectura posterior conforme a los fundamentos, sin cambiar respuestas ni asignar criticidades a posteriori. El documento original queda conservado.");
+                ui.label("El triángulo de peligro es una advertencia auxiliar sobre suficiencia documental y diseño; no cambia símbolos, radios o colores del vector. PDF02 y PDF09 conservan 0, acompañado de la limitación contrastada.");
                 for r in serde_json::from_slice::<Value>(include_bytes!("REFERENCIAS.json")).unwrap().as_array().unwrap() {
                     ui.hyperlink_to(r["nombre"].as_str().unwrap(),format!("https://github.com/juantoniolloretegea/{}/blob/{}/{}",r["repo"].as_str().unwrap(),r["revision"].as_str().unwrap(),r["ruta"].as_str().unwrap()));
                 }
@@ -519,5 +582,19 @@ mod tests {
                 );
             }
         }
+    }
+    #[test]
+    fn advertencias_visibles_sin_convertir_ceros_en_otro_simbolo() {
+        let mut app = Visor::default();
+        app.seleccionado = 8;
+        let ctx = egui::Context::default();
+        let salida = cuadro(&mut app, &ctx, vec![]);
+        let triangulos=salida.shapes.iter().filter(|s|matches!(&s.shape,egui::Shape::Path(p) if p.closed && p.points.len()==3 && p.fill==Color32::from_rgb(255,228,126))).count();
+        assert_eq!(triangulos, 4); // aviso general, dos posiciones y aviso del detalle.
+        assert!(app
+            .resumen_seleccion()
+            .contains("[ALERTA: 0 por límite documental]"));
+        assert_eq!(app.datos["casos"][8]["valor"], "0");
+        assert_eq!(app.dictamen["frmat"]["recuentos"]["N0"], 8);
     }
 }

@@ -1,6 +1,8 @@
 # Lectura SV del anexo PDF: dictamen, criticidad y pareja matemática/visual
 
-7 de octubre de 2026 · GPT-6 Astra · Nodo 03 · S39 / TT-0021 · Visor 0.3.0.
+**Regla transversal:** esta obligación rige para los tres nodos, todos los modelos y cualquier fuente suministrada. Su sede común es el [Contrato transversal de suficiencia documental](../../../../../../CONTRATO-TRANSVERSAL-SUFICIENCIA-DOCUMENTAL-20261007.md). Los casos PDF citados son aplicaciones, no una restricción de alcance.
+
+7 de octubre de 2026 · GPT-6 Astra · Nodo 03 · S39 / TT-0021 · Visor 0.3.1.
 
 La versión anterior mostraba el reparto de valores, pero omitía la clasificación matemática, el estado de admisión, el inventario de criticidades y la correspondencia formal con la imagen. También aplicaba una convención cromática propia. Esta rectificación incorpora esas distinciones conservando las nueve adjudicaciones y todas las respuestas originales.
 
@@ -27,7 +29,7 @@ El documento de admisión anterior excluyó conjuntamente κ y los criterios esp
 
 ## Pareja vinculada y colores
 
-Se representa **Frame_C=(frmat,frvis)**, con C=`SV-ASTRA-PDF-LECTURA-0.3.0`. Esta es una realización experimental de la correspondencia documentada, no la declaración de un tipo nuevo en la IR del Lenguaje.
+Se representa **Frame_C=(frmat,frvis)**, con C=`SV-ASTRA-PDF-LECTURA-0.3.1`. Esta es una realización experimental de la correspondencia documentada, no la declaración de un tipo nuevo en la IR del Lenguaje.
 
 `frmat` conserva el vector plano, su orden, su alfabeto, el vínculo de cada posición con una pregunta y la huella de la respuesta. Hay 3⁹=19.683 estados posibles. La célula no se convierte en matriz ni en espacio vectorial algebraico.
 
@@ -47,18 +49,27 @@ En coordenadas matemáticas, V1 está sobre +x y el recorrido es antihorario. En
 
 `derivar.rs` produce en Rust un `DICTAMEN.json` independiente desde CAPA y el banco fijados por SHA-256. No modifica las adjudicaciones ni consulta al candidato. El visor coteja íntegramente ese documento antes de representar; rechaza cambios de orden, valor, radio, color o criticidad, aunque conserven los recuentos.
 
-Se conservan diez comprobaciones Rust favorables: tamaños y umbrales; 19.683 estados de tamaño nueve; veto por un error crítico en cualquiera de las nueve posiciones aunque κ sea Apto; rechazo de vectores incompletos; identidad y correspondencia de la pareja; radios y orden; colores de las tres circunferencias y los vértices; polígono cerrado; interacción sobre los nueve vértices y botones sin mutar la fuente; y texto del fundamento dentro de anchos de 760 y 1.280 píxeles. `PRUEBAS-RUST.txt` conserva el resultado.
+Se conservan doce comprobaciones Rust favorables: tamaños y umbrales; 19.683 estados de tamaño nueve; veto por un error crítico en cualquiera de las nueve posiciones aunque κ sea Apto; rechazo de vectores incompletos; identidad y correspondencia de la pareja; radios y orden; colores de las tres circunferencias y los vértices; polígono cerrado; interacción sobre los nueve vértices y botones sin mutar la fuente; texto del fundamento dentro de anchos de 760 y 1.280 píxeles; rechazo de un límite sin pasaje o cotejo acreditado; y advertencias visibles que conservan los valores originales. `PRUEBAS-RUST.txt` conserva el resultado.
 
-Se comprobó además el HTML autónomo en el navegador: selección PDF08, lectura de su fundamento íntegro, representación cromática, pareja matemática/visual, inventario, apertura de fuentes y licencia. `COTEJO-EGUI.json` relaciona estas observaciones y sus capturas locales con el SHA-256 del HTML. Las comprobaciones de representación no se presentan como auditoría clínica independiente ni calibración de la instrumentación del ensayo.
+Se comprobó además el HTML autónomo en el navegador: selecciones PDF08 y PDF09, alertas de suficiencia y lectura de los fundamentos íntegros, representación cromática, pareja matemática/visual, inventario, apertura de fuentes y licencia. `COTEJO-EGUI.json` relaciona estas observaciones y sus capturas locales con el SHA-256 del HTML. Las comprobaciones de representación no se presentan como auditoría clínica independiente ni calibración de la instrumentación del ensayo.
 
 El HTML incluye Rust compilado a WebAssembly y el enlace JavaScript necesario para iniciarlo; no realiza inferencia y mantiene `connect-src 'none'`. El servidor de vista sólo sirve este archivo en la interfaz local. La adjudicación original sigue procediendo del expediente del ensayo bajo el Árbitro-Director; el candidato no interviene en este cálculo ni en su comprobación.
 
 ## Conservación y continuación
 
-CAPA original: SHA-256 `7338a7f7c2a06111421cefeffb4cfd03811e11784180866f8a500d3acbd3b589`. Se mantienen los valores, originales, suministro, clave, medidas y criterio de evaluación de PDF01–PDF09. No hubo nuevas inferencias ni reparación de PDF08. El visor actual se sustituye por 0.3.0; la versión anterior permanece recuperable en su revisión publicada. La lectura derivada se añade en `lectura-sv-v03/`.
+CAPA original: SHA-256 `7338a7f7c2a06111421cefeffb4cfd03811e11784180866f8a500d3acbd3b589`. Se mantienen los valores, originales, suministro, clave, medidas y criterio de evaluación de PDF01–PDF09. No hubo nuevas inferencias ni reparación de PDF08. El visor actual se sustituye por 0.3.1; la versión anterior permanece recuperable en su revisión publicada. La lectura derivada se añade en `lectura-sv-v03/`.
 
 La [adenda de criticidad y abstención](ADENDA-CRITICIDAD-Y-ABSTENCION.md) fija la obligación de permitir U justificada en el siguiente encargo. Está preparada, **no enviada al modelo**; no modifica retrospectivamente lo recibido. Antes de una nueva ejecución deberán quedar constituidas y verificadas las criticidades y el contrato completo. TT-0021 conserva su estado pendiente; no se inicia otra fase mediante esta rectificación.
 
 Las referencias inmutables de fundamentos, pilares, puntuación, encaje visual y paridad figuran en `REFERENCIAS.json` y en el visor. El registro económico separa cero llamadas al candidato del consumo de asistencia, que carece de desglose atribuible.
+## Alerta asociada al 0 por reconocimiento de límites
+
+PDF02 y PDF09 llevan un triángulo de peligro en su vértice, marca [!] en el selector, aviso general y advertencia desarrollada junto a la respuesta. Es una anotación auxiliar: no es un cuarto estado ni altera los colores o radios del SV. Ambos conservan el 0 original con su alcance visible.
+
+En PDF02, la fuente excluye la variante. En PDF09, la página física 7 declara: «Aún queda por determinar, en los ensayos clínicos, la dosis y la duración adecuadas del tratamiento». Ese 0 sólo acredita reconocer correctamente tal límite; no acredita conocer el tratamiento de la variante ni poder proporcionar dosis y duración. Una lectura que ocultara esa diferencia sería insuficiente.
+
+Las preguntas se concibieron para reconocer esos límites. Se abre, aun así, la advertencia de diseño y suficiencia documental: debe comprobarse que ese objetivo coincida con la capacidad que se pretende medir. Si se necesitaba una pauta concreta y la fuente no la proporciona, existe una carencia del ensayo que no puede encubrirse como acierto ni exigirse resolver al modelo.
+
+La alerta se vincula en Rust al pasaje exacto y a la revisión de citas ya conservada en el expediente bajo el Árbitro-Director. Se rechaza su acreditación cuando falta el pasaje o el cotejo. La revisión semántica original es exterior al candidato; el comprobador mecánico no decide por sí solo verdad médica, alucinación ni intención de engañar. La recepción competente independiente continúa pendiente. En el próximo contrato, toda alegación de insuficiencia deberá contrastarse contra el material efectivamente suministrado y la finalidad de la pregunta antes de adjudicarla.
 
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).

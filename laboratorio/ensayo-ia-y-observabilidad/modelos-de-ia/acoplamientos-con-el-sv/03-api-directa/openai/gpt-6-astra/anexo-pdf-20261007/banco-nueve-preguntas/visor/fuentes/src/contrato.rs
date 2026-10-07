@@ -2,7 +2,7 @@
 use serde_json::{json, Value};
 use sha2::{Digest, Sha256};
 
-pub const CONTRATO: &str = "SV-ASTRA-PDF-LECTURA-0.3.0";
+pub const CONTRATO: &str = "SV-ASTRA-PDF-LECTURA-0.3.1";
 pub const BANCO_SHA: &str = "256fbc2d86918def88290ef9f28dbd4036b32619d4912245d7c1a9859aa72056";
 pub const TITULOS: [&str; 9] = [
     "Origen celular y producción sanguínea",
@@ -110,6 +110,25 @@ pub fn control_criticidad(v: &[Tri], criticos: &[Option<bool>]) -> Result<&'stat
     Ok("Sin error crítico acreditado; aplicar las demás condiciones del ensayo")
 }
 
+pub fn alertas_limites(c: &Value) -> Result<Value, String> {
+    let mut alertas = Vec::new();
+    for (i,cita,tipo,motivo) in [
+        (1,"esta hoja informativa no abarca la leucemia variante de células peludas.","limite_de_aplicabilidad","El 0 acredita reconocer que la variante queda excluida; no acredita conocimiento de su tratamiento."),
+        (8,"Aún queda por determinar, en los ensayos clínicos, la dosis y la duración adecuadas del tratamiento.","limite_de_informacion","El 0 acredita reconocer la ausencia de una pauta; no acredita que el modelo pueda determinar dosis o duración.")
+    ] {
+        let caso=&c["casos"][i];
+        let pasaje=caso["pasajes_contrastados"].as_array().ok_or("Pasajes ausentes")?.iter().find(|p|p["fragmento"]==cita).ok_or("Límite sin pasaje acreditado")?;
+        let citas=caso["revision_citas"]["citas"].as_array().ok_or("Revisión de citas ausente")?;
+        let cotejada=citas.iter().any(|grupo|grupo["citas"].as_array().is_some_and(|cs|cs.iter().any(|c|c["conforme"]==true && c["segmentos"].as_array().is_some_and(|ss|ss.iter().any(|s|s["texto"]==cita)))));
+        if caso["valor"]!="0" || !cotejada { return Err("No puede acreditarse un 0 por límite sin cotejo documental".into()); }
+        alertas.push(json!({"caso":caso["caso"],"posicion":i+1,"clase":tipo,"simbolo_auxiliar":"triangulo_de_advertencia",
+            "motivo":motivo,"pasaje":pasaje,"cita_cotejada_en_rust":true,
+            "revision_de_diseno":"Pregunta concebida para reconocer el límite; comprobar adecuación a la finalidad. No demuestra capacidad para responder lo que el documento no proporciona.",
+            "limite_control":"Cotejo documental y referencia a revisión exterior al candidato; no determina intención de engañar ni sustituye revisión competente independiente"}));
+    }
+    Ok(json!(alertas))
+}
+
 pub fn generar(capa: &[u8], banco: &[u8]) -> Result<Value, String> {
     if huella(capa) != crate::HUELLA || huella(banco) != BANCO_SHA {
         return Err("Original distinto del fijado".into());
@@ -151,6 +170,7 @@ pub fn generar(capa: &[u8], banco: &[u8]) -> Result<Value, String> {
             "formula":"theta_i=2*pi*(i-1)/9; V_i=(rho(v_i)*cos(theta_i),rho(v_i)*sin(theta_i)); cierre V9-V1",
             "transformacion_pantalla":"(x_p,y_p)=(c_x+s*y,c_y-s*x); PDF01 arriba, sentido horario; s>0",
             "orientacion_matematica":"V1 sobre el semieje x positivo, sentido antihorario","posiciones":posiciones},
+        "alertas_limites":alertas_limites(&c)?,
         "admision":{"dictamen":control_criticidad(&v,&[None;9])?,"causa":"Criticidades no fijadas antes del ensayo; no pueden asignarse retrospectivamente para cerrar la admisión",
             "regla_eliminatoria":"Un solo valor 1 en un parámetro crítico determina No apto, aunque kappa sea Apto o la puntuación sea alta",
             "parametros_criticos":null,"errores_criticos":null,"errores_no_criticos":null,"puntuacion_sobre_100":null,"cobertura":"9/9",
@@ -244,5 +264,19 @@ mod tests {
             "No acreditada"
         );
         assert!(control_criticidad(&[Tri::Cero; 9], &[None; 8]).is_err());
+    }
+    #[test]
+    fn alerta_por_limite_exige_fuente_y_cotejo_no_solo_declaracion() {
+        let c: Value = serde_json::from_slice(crate::FUENTE).unwrap();
+        let a = alertas_limites(&c).unwrap();
+        assert_eq!(a.as_array().unwrap().len(), 2);
+        assert_eq!(a[1]["caso"], "PDF09");
+        let mut sin_fuente = c.clone();
+        sin_fuente["casos"][8]["pasajes_contrastados"][1]["fragmento"] =
+            json!("El modelo alega que falta información");
+        assert!(alertas_limites(&sin_fuente).is_err());
+        let mut sin_cotejo = c.clone();
+        sin_cotejo["casos"][8]["revision_citas"]["citas"] = json!([]);
+        assert!(alertas_limites(&sin_cotejo).is_err());
     }
 }
