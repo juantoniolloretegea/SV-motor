@@ -1,0 +1,184 @@
+{
+  "adjudicacion": "pendiente de contraste externo al candidato",
+  "caso": "PDF08",
+  "custodia_remota": false,
+  "esquema": "sv-hito-instrumental/1",
+  "etapa": 1,
+  "fecha_registro_ms": 1791375252544,
+  "modelo": "gpt-6-astra",
+  "momento": "inmediatamente tras la entrega y el cierre de observación",
+  "nodo": "03",
+  "originales": [
+    {
+      "bytes": 30256,
+      "ruta": "ejecucion/astra-pdf-doble-20261007\\originales\\PDF08\\R1\\SOLICITUD.json",
+      "sha256": "076eef518008bfee51fa11c4571a77781fa637db71d162f9068100467ee772fd"
+    },
+    {
+      "bytes": 11245,
+      "ruta": "ejecucion/astra-pdf-doble-20261007\\originales\\PDF08\\R1\\RESULTADO.json",
+      "sha256": "ab97d6013e34ff522d98b707681b123308d7b8b51bed2184efa5e98be891d70a"
+    },
+    {
+      "bytes": 140,
+      "ruta": "ejecucion/astra-pdf-doble-20261007\\originales\\PDF08\\R1\\HTTP.json",
+      "sha256": "357c6ae1df900ebba062bd2867d24380c22463effde8918a4075044451a6e587"
+    },
+    {
+      "bytes": 535805,
+      "ruta": "ejecucion/astra-pdf-doble-20261007\\originales\\PDF08\\R1\\SALIDA-SSE.txt",
+      "sha256": "a2ef504927c87612c077ad8d1ce652028d700c0bedeb9040069ab8cdeb4aad7a"
+    },
+    {
+      "bytes": 6977,
+      "ruta": "ejecucion/astra-pdf-doble-20261007\\originales\\PDF08\\R1\\FINAL.txt",
+      "sha256": "24c3cb83b0cc7cac0db0faf058313df76f19633fcee61645dbc116e9ce2c2094"
+    },
+    {
+      "bytes": 17363,
+      "ruta": "ejecucion/astra-pdf-doble-20261007\\originales\\PDF08\\R1\\ENTREGA-PROVEEDOR.json",
+      "sha256": "212fa4a356847272f835410c89e9da05acfb20641ef0bfdfbd17cfe782f99f03"
+    },
+    {
+      "bytes": 3824,
+      "ruta": "ejecucion/astra-pdf-doble-20261007\\originales\\PDF08\\R1\\AUDITORIA-FORMAL.json",
+      "sha256": "960c91d3bfca45235dffc4e0a18caf9a07fb21662f4481970286d6cd0b61e763"
+    },
+    {
+      "bytes": 1432072,
+      "ruta": "ejecucion/astra-pdf-doble-20261007\\originales\\PDF08\\R1\\instrumentacion/telemetria.jsonl",
+      "sha256": "7e3f5e25efbb67850e5857f89b2c0f8163680120e6f0e69d1e92fdfb881278c9"
+    }
+  ],
+  "resultado": {
+    "adjudicado": false,
+    "cabeceras_proveedor": {},
+    "caso": "PDF08-R1",
+    "completa": true,
+    "contrato_formal_conforme": true,
+    "coste_monetario_atribuible": null,
+    "creditos_atribuibles": null,
+    "duracion_ms": 55850,
+    "estado": "entrega_recibida",
+    "evento_terminal": "response.completed",
+    "eventos": 1898,
+    "herramientas_ejecutadas": 0,
+    "herramientas_habilitadas": 0,
+    "http": 200,
+    "limites": [
+      "CPU porcentual sin calibración externa",
+      "Sin medida separada DNS/TLS, RTT, retransmisiones, asignaciones del montículo, hilos ni recursos internos del proveedor",
+      "La ausencia de herramientas no prueba aislamiento de infraestructura de OpenAI; fuente exclusiva exigida y respuesta pendiente de contraste sustantivo",
+      "Criptografía C/ensamblador pendiente conforme a excepción experimental autorizada"
+    ],
+    "modelo_declarado": "gpt-6-astra",
+    "modelo_solicitado": "gpt-6-astra",
+    "par_remoto_http": "162.159.140.245:443",
+    "primer_evento_ms": 1895,
+    "primer_texto_ms": 5922,
+    "respuesta_bytes": 535805,
+    "respuesta_texto": "{\n  \"caso\": \"PDF08\",\n  \"estado_documental\": \"respuesta_fundada\",\n  \"etapa\": 1,\n  \"evidencias\": [\n    {\n      \"cita_literal_breve\": \"El rituximab actúa \\ndirigiéndose al antígeno CD20 de las células B \\nnormales y malignas.\",\n      \"documento\": \"LLS-HCL-2018\",\n      \"fragmentos\": [1],\n      \"pagina_fisica\": 7,\n      \"seccion\": \"PDF-P0006\"\n    },\n    {\n      \"cita_literal_breve\": \"En ensayos \\nclínicos se está evaluando el uso del anticuerpo \\nmonoclonal rituximab (Rituxan®), solo o en \\ncombinación con otros medicamentos, para el \\ntratamiento de la leucemia de células peludas.\",\n      \"documento\": \"LLS-HCL-2018\",\n      \"fragmentos\": [1],\n      \"pagina_fisica\": 7,\n      \"seccion\": \"PDF-P0006\"\n    },\n    {\n      \"cita_literal_breve\": \"Un análogo de purinas distinto, con o sin rituximab \\n(Rituxan®)\",\n      \"documento\": \"LLS-HCL-2018\",\n      \"fragmentos\": [0],\n      \"pagina_fisica\": 6,\n      \"seccion\": \"PDF-P0005\"\n    },\n    {\n      \"cita_literal_breve\": \"Rituximab (si el paciente no puede recibir la terapia \\ncon un análogo de purinas)\",\n      \"documento\": \"LLS-HCL-2018\",\n      \"fragmentos\": [0],\n      \"pagina_fisica\": 6,\n      \"seccion\": \"PDF-P0005\"\n    },\n    {\n      \"cita_literal_breve\": \"Los pacientes con remisiones que han durado \\nentre dos y cinco años pueden beneficiarse de \\nun tratamiento adicional con el mismo análogo de \\npurinas, posiblemente combinado con rituximab\",\n      \"documento\": \"LLS-HCL-2018\",\n      \"fragmentos\": [1],\n      \"pagina_fisica\": 6,\n      \"seccion\": \"PDF-P0005\"\n    },\n    {\n      \"cita_literal_breve\": \"Si la remisión duró menos de dos años, sus opciones \\nincluyen:\\n\\n○○ Tratamiento con un análogo de purinas alternativo, \\njunto con rituximab\\n\\n○○ Rituximab (si el paciente no puede recibir terapia \\ncon un análogo de purinas)\",\n      \"documento\": \"LLS-HCL-2018\",\n      \"fragmentos\": [1],\n      \"pagina_fisica\": 6,\n      \"seccion\": \"PDF-P0005\"\n    },\n    {\n      \"cita_literal_breve\": \"los \\ninvestigadores están evaluando este medicamento \\n—solo o en combinación con el medicamento \\nrituximab— como tratamiento para la leucemia \\nde células peludas resistente al tratamiento o en \\nrecaída.\",\n      \"documento\": \"LLS-HCL-2018\",\n      \"fragmentos\": [1],\n      \"pagina_fisica\": 7,\n      \"seccion\": \"PDF-P0006\"\n    },\n    {\n      \"cita_literal_breve\": \"El moxetumomab pasudotox-tdfk (LumoxitiTM), un \\nmedicamento citotóxico dirigido a CD22 que se \\n administra por vía intravenosa, está aprobado para \\nel tratamiento de pacientes adultos con recaída o \\nresistencia al tratamiento de la leucemia de células \\npeludas que han recibido por lo menos dos terapias \\nsistémicas previas, incluyendo un tratamiento con un \\nanálogo de nucleósido de purina.\",\n      \"documento\": \"LLS-HCL-2018\",\n      \"fragmentos\": [1],\n      \"pagina_fisica\": 6,\n      \"seccion\": \"PDF-P0005\"\n    },\n    {\n      \"cita_literal_breve\": \"La \\ninmunotoxina LMB-2 está en fase de ensayos \\nclínicos para evaluar la tasa de respuesta al \\ntratamiento en pacientes que tienen leucemia de \\ncélulas peludas con expresión de CD25 recurrente \\no resistente al tratamiento.\",\n      \"documento\": \"LLS-HCL-2018\",\n      \"fragmentos\": [2],\n      \"pagina_fisica\": 7,\n      \"seccion\": \"PDF-P0006\"\n    },\n    {\n      \"cita_literal_breve\": \"un anticuerpo monoclonal \\nmodificado por ingeniería genética de modo que se \\nuna a las células cancerosas que tienen CD25 en \\nsu superficie, y una toxina producida por bacterias\",\n      \"documento\": \"LLS-HCL-2018\",\n      \"fragmentos\": [2],\n      \"pagina_fisica\": 7,\n      \"seccion\": \"PDF-P0006\"\n    }\n  ],\n  \"fundamentos_verificables\": [\n    \"La ficha identifica CD20 como diana de rituximab, CD22 como diana de moxetumomab y CD25 como diana del componente de anticuerpo de LMB-2.\",\n    \"Rituximab aparece tanto entre las opciones para resistencia o recaída de la página 6 como entre los tratamientos en investigación de la página 7; una mención no elimina la otra.\",\n    \"La aprobación atribuida a moxetumomab en esta edición exige población adulta, leucemia de células peludas en recaída o resistente y por lo menos dos terapias sistémicas previas, incluyendo un análogo de nucleósido de purina.\",\n    \"LMB-2 se presenta en ensayos para evaluar respuesta en enfermedad con expresión de CD25, recurrente o resistente; el pasaje no le atribuye aprobación.\"\n  ],\n  \"insuficiencias\": [\n    \"La edición de 2018 y los pasajes recibidos no acreditan disponibilidad, aprobación ni situación de investigación actuales. Para determinar esos extremos faltaría documentación actualizada, que no forma parte del material autorizado.\"\n  ],\n  \"respuesta\": \"Según la ficha de 2018:\\n\\n• Rituximab (Rituxan): su diana es CD20 en las células B normales y malignas; la ficha señala que las células peludas expresan este antígeno. En resistencia al tratamiento, figura un análogo de purinas distinto con o sin rituximab, o rituximab si no se puede recibir un análogo de purinas. En recaída tras una remisión de dos a cinco años, contempla el mismo análogo posiblemente combinado con rituximab; si la remisión duró menos de dos años, un análogo alternativo junto con rituximab, o rituximab si no se puede recibir un análogo. También lo describe en ensayos clínicos, solo o combinado con otros medicamentos para la leucemia de células peludas. Específicamente, menciona la evaluación de ibrutinib solo o con rituximab en enfermedad resistente o en recaída.\\n\\n• Moxetumomab pasudotox-tdfk (Lumoxiti): citotóxico dirigido a CD22 y administrado por vía intravenosa. Esta edición lo presenta como aprobado para pacientes adultos con leucemia de células peludas en recaída o resistente al tratamiento que hayan recibido por lo menos dos terapias sistémicas previas, incluyendo un tratamiento con un análogo de nucleósido de purina. Lo enumera entre las opciones tanto para resistencia como para recaída.\\n\\n• LMB-2: inmunotoxina cuyo anticuerpo monoclonal modificado se une a CD25 en la superficie de las células cancerosas y está unido a una toxina bacteriana. Se describe en ensayos clínicos para evaluar la tasa de respuesta en pacientes con leucemia de células peludas con expresión de CD25, recurrente o resistente al tratamiento; no se presenta como un tratamiento aprobado.\\n\\nEstas descripciones corresponden a la edición de 2018, no establecen disponibilidad actual ni constituyen recomendaciones para una persona concreta.\",\n  \"revision\": \"Se mantiene el contenido sustantivo de la respuesta provisional: las dianas, los contextos y todas las condiciones de moxetumomab están respaldados. Se amplían las evidencias para documentar directamente rituximab cuando no puede recibirse un análogo de purinas, la combinación investigada con ibrutinib y la toxina bacteriana de LMB-2. No se identifica una incoherencia relevante ni un truncamiento que impida responder esta pregunta; se conserva el límite temporal.\"\n}",
+    "resumen_proveedor": [],
+    "telemetria": {
+      "bytes": 1432072,
+      "fallos_medicion": 0,
+      "integridad": "conforme",
+      "intervalo_maximo_ms": 294,
+      "intervalo_objetivo_ms": 250,
+      "muestras": 213,
+      "plataforma_recibida": false,
+      "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+      "registros": 3343,
+      "sha256": "7e3f5e25efbb67850e5857f89b2c0f8163680120e6f0e69d1e92fdfb881278c9"
+    },
+    "telemetria_conforme": true,
+    "uso_proveedor": {
+      "attribution": {
+        "items": {
+          "msg_0337bb0cd60f1665016ac6375cc6a087d2940079d8d5ac9039": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 4951,
+                "output_tokens": 0
+              }
+            ],
+            "input_tokens": 4951,
+            "output_tokens": 0
+          },
+          "msg_0337bb0cd60f1665016ac6375cc6c487d2a53603911218ca51": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 1589,
+                "output_tokens": 0
+              }
+            ],
+            "input_tokens": 1589,
+            "output_tokens": 0
+          },
+          "msg_0337bb0cd60f1665016ac6375cc6dc87d283a59b3ba3c670ff": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 68,
+                "output_tokens": 0
+              }
+            ],
+            "input_tokens": 68,
+            "output_tokens": 0
+          },
+          "msg_0337bb0cd60f1665016ac637610b3087d29754bbd75faf2b66": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 2,
+                "output_tokens": 1903
+              }
+            ],
+            "input_tokens": 2,
+            "output_tokens": 1903
+          }
+        },
+        "request_fields": {
+          "instructions": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "input_tokens": 691,
+            "output_tokens": 0
+          },
+          "text.format": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "input_tokens": 182,
+            "output_tokens": 0
+          }
+        }
+      },
+      "input_tokens": 7483,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 1903,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 9386
+    },
+    "utc_fin_ms": 1791375250851,
+    "version_http": "HTTP/1.1"
+  }
+}

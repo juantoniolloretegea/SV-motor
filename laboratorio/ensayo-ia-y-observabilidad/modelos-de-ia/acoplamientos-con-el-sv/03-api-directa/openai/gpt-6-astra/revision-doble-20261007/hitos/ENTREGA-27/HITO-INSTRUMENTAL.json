@@ -1,0 +1,212 @@
+{
+  "adjudicacion": "pendiente de contraste externo al candidato",
+  "caso": "PDF09",
+  "custodia_remota": false,
+  "esquema": "sv-hito-instrumental/1",
+  "etapa": 2,
+  "fecha_registro_ms": 1791375417178,
+  "modelo": "gpt-6-astra",
+  "momento": "inmediatamente tras la entrega y el cierre de observación",
+  "nodo": "03",
+  "originales": [
+    {
+      "bytes": 22867,
+      "ruta": "ejecucion/astra-pdf-doble-20261007\\originales\\PDF09\\R2\\SOLICITUD.json",
+      "sha256": "8b60876af2ccebead8e4a8a7934fd0b4c96b86116785af631e1fc6a6138593d4"
+    },
+    {
+      "bytes": 8334,
+      "ruta": "ejecucion/astra-pdf-doble-20261007\\originales\\PDF09\\R2\\RESULTADO.json",
+      "sha256": "a34b7c4d44fc86688a08035eae84d0f6174d52fb91691ff8d813aa5f318570b1"
+    },
+    {
+      "bytes": 137,
+      "ruta": "ejecucion/astra-pdf-doble-20261007\\originales\\PDF09\\R2\\HTTP.json",
+      "sha256": "c6296f3706a38ed4a597158238c0d9652f4e806ed04bc2c73562503e00aad892"
+    },
+    {
+      "bytes": 244944,
+      "ruta": "ejecucion/astra-pdf-doble-20261007\\originales\\PDF09\\R2\\SALIDA-SSE.txt",
+      "sha256": "8fcc4613a6ce52545fd71744f628adbc91423dbb554902d1da508d2dcd454894"
+    },
+    {
+      "bytes": 3455,
+      "ruta": "ejecucion/astra-pdf-doble-20261007\\originales\\PDF09\\R2\\FINAL.txt",
+      "sha256": "27a9d41db66504e3df3d9c7d53758817ca84e5bc8b3f3e3a600b8bf12fe7eddd"
+    },
+    {
+      "bytes": 10740,
+      "ruta": "ejecucion/astra-pdf-doble-20261007\\originales\\PDF09\\R2\\ENTREGA-PROVEEDOR.json",
+      "sha256": "e4a69894a5266131120dfc3b83061b38226b14f6b7f0c17dedbf9fc9bee84562"
+    },
+    {
+      "bytes": 1449,
+      "ruta": "ejecucion/astra-pdf-doble-20261007\\originales\\PDF09\\R2\\AUDITORIA-FORMAL.json",
+      "sha256": "1c839274e8d7c3144f75bc3b3e52bd02dd6d22df06de850bc5321b1d3dc5bb7b"
+    },
+    {
+      "bytes": 678743,
+      "ruta": "ejecucion/astra-pdf-doble-20261007\\originales\\PDF09\\R2\\instrumentacion/telemetria.jsonl",
+      "sha256": "4c60576cf20656f19695b47b786646041fec6f7d00908f982792c9200ae9609b"
+    }
+  ],
+  "resultado": {
+    "adjudicado": false,
+    "cabeceras_proveedor": {},
+    "caso": "PDF09-R2",
+    "completa": true,
+    "contrato_formal_conforme": true,
+    "coste_monetario_atribuible": null,
+    "creditos_atribuibles": null,
+    "duracion_ms": 29480,
+    "estado": "entrega_recibida",
+    "evento_terminal": "response.completed",
+    "eventos": 829,
+    "herramientas_ejecutadas": 0,
+    "herramientas_habilitadas": 0,
+    "http": 200,
+    "limites": [
+      "CPU porcentual sin calibración externa",
+      "Sin medida separada DNS/TLS, RTT, retransmisiones, asignaciones del montículo, hilos ni recursos internos del proveedor",
+      "La ausencia de herramientas no prueba aislamiento de infraestructura de OpenAI; fuente exclusiva exigida y respuesta pendiente de contraste sustantivo",
+      "Criptografía C/ensamblador pendiente conforme a excepción experimental autorizada"
+    ],
+    "modelo_declarado": "gpt-6-astra",
+    "modelo_solicitado": "gpt-6-astra",
+    "par_remoto_http": "172.66.0.243:443",
+    "primer_evento_ms": 3286,
+    "primer_texto_ms": 7080,
+    "respuesta_bytes": 244944,
+    "respuesta_texto": "{\n  \"caso\": \"PDF09\",\n  \"estado_documental\": \"respuesta_fundada\",\n  \"etapa\": 2,\n  \"evidencias\": [\n    {\n      \"cita_literal_breve\": \"Se han informado casos \\nde remisiones completas tras la administración de \\nvemurafenib en pacientes con leucemia de células \\npeludas en recaída o resistente al tratamiento previo.\",\n      \"documento\": \"LLS-HCL-2018\",\n      \"fragmentos\": [0],\n      \"pagina_fisica\": 7,\n      \"seccion\": \"PDF-P0006\"\n    },\n    {\n      \"cita_literal_breve\": \"En este momento, el vemurafenib está aprobado \\npor la FDA para el tratamiento del melanoma, y \\nen ensayos clínicos actuales se está evaluando \\neste medicamento en pacientes con leucemia \\nde células peludas que presentan una recaída o \\nresistencia farmacológica.\",\n      \"documento\": \"LLS-HCL-2018\",\n      \"fragmentos\": [0],\n      \"pagina_fisica\": 7,\n      \"seccion\": \"PDF-P0006\"\n    },\n    {\n      \"cita_literal_breve\": \"Aún queda por determinar, en los ensayos clínicos, \\nla dosis y la duración adecuadas del tratamiento.\",\n      \"documento\": \"LLS-HCL-2018\",\n      \"fragmentos\": [0, 1],\n      \"pagina_fisica\": 7,\n      \"seccion\": \"PDF-P0006\"\n    }\n  ],\n  \"fundamentos_verificables\": [\n    \"La ficha comunica casos de remisión completa, pero no los presenta como determinación de una dosis o duración adecuadas.\",\n    \"El vemurafenib para la leucemia de células peludas en recaída o resistente se describe en el contexto de ensayos clínicos. La aprobación por la FDA mencionada corresponde al melanoma y no acredita una aprobación para esta leucemia.\",\n    \"La frase repartida entre los fragmentos 0 y 1 declara explícitamente pendientes la dosis y la duración adecuadas. Ese límite permite responder negativamente a la pregunta sin completar datos ausentes.\"\n  ],\n  \"insuficiencias\": [\n    \"No se aporta una dosis ni una duración adecuadas para esta enfermedad; el documento deja ambas pendientes de determinación en ensayos clínicos. Faltan resultados que resuelvan esos parámetros.\",\n    \"El pasaje no indica el número de pacientes, la tasa de respuesta ni la duración de las remisiones comunicadas, por lo que no permite cuantificar esos resultados.\",\n    \"La conclusión se limita a la edición FS16S 8/18. El material recibido no acredita la situación clínica o regulatoria actual.\"\n  ],\n  \"respuesta\": \"No. Esta ficha no permite fijar una dosis ni una duración adecuadas de vemurafenib para la leucemia de células peludas. Comunica casos de remisión completa en pacientes en recaída o resistentes al tratamiento previo, pero sitúa su evaluación para esta enfermedad en ensayos clínicos, dentro de los enfoques en fase de investigación. La aprobación por la FDA que menciona es para melanoma. El propio documento señala expresamente que aún queda por determinar en los ensayos clínicos la dosis y la duración adecuadas del tratamiento. Por tanto, los resultados comunicados pueden reconocerse, pero no permiten deducir una pauta ni completar esos parámetros pendientes. Esta conclusión corresponde exclusivamente a la edición de 2018.\",\n  \"revision\": \"Se mantienen las conclusiones sustantivas de ambas entregas porque coinciden con la fuente. La cita sobre dosis y duración es exacta y continua al unir los fragmentos 0 y 1; el corte no implica una laguna. No se detecta una incoherencia relevante para esta pregunta. La respuesta negativa está expresamente fundada en el documento, por lo que no procede declarar U.\"\n}",
+    "resumen_proveedor": [],
+    "telemetria": {
+      "bytes": 678743,
+      "fallos_medicion": 0,
+      "integridad": "conforme",
+      "intervalo_maximo_ms": 294,
+      "intervalo_objetivo_ms": 250,
+      "muestras": 120,
+      "plataforma_recibida": false,
+      "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+      "registros": 1532,
+      "sha256": "4c60576cf20656f19695b47b786646041fec6f7d00908f982792c9200ae9609b"
+    },
+    "telemetria_conforme": true,
+    "uso_proveedor": {
+      "attribution": {
+        "items": {
+          "msg_06c18bdc8f2c4f95016ac6381d6a7c87d28fd84cba177b1882": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 2594,
+                "output_tokens": 0
+              }
+            ],
+            "input_tokens": 2594,
+            "output_tokens": 0
+          },
+          "msg_06c18bdc8f2c4f95016ac6381d6aa487d2b9b6c4bce417a5bd": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 740,
+                "output_tokens": 0
+              }
+            ],
+            "input_tokens": 740,
+            "output_tokens": 0
+          },
+          "msg_06c18bdc8f2c4f95016ac6381d6ac087d2a8f9c288bf755fb5": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 27,
+                "output_tokens": 0
+              }
+            ],
+            "input_tokens": 27,
+            "output_tokens": 0
+          },
+          "msg_06c18bdc8f2c4f95016ac6381d6ad887d280d41eea1283903f": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 872,
+                "output_tokens": 0
+              }
+            ],
+            "input_tokens": 872,
+            "output_tokens": 0
+          },
+          "msg_06c18bdc8f2c4f95016ac6381d6af887d2bca0a44b96dbdc34": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 67,
+                "output_tokens": 0
+              }
+            ],
+            "input_tokens": 67,
+            "output_tokens": 0
+          },
+          "msg_06c18bdc8f2c4f95016ac638216f3087d28862f67843ed0e0d": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 2,
+                "output_tokens": 834
+              }
+            ],
+            "input_tokens": 2,
+            "output_tokens": 834
+          }
+        },
+        "request_fields": {
+          "instructions": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "input_tokens": 690,
+            "output_tokens": 0
+          },
+          "text.format": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "input_tokens": 182,
+            "output_tokens": 0
+          }
+        }
+      },
+      "input_tokens": 5174,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 834,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 6008
+    },
+    "utc_fin_ms": 1791375415824,
+    "version_http": "HTTP/1.1"
+  }
+}

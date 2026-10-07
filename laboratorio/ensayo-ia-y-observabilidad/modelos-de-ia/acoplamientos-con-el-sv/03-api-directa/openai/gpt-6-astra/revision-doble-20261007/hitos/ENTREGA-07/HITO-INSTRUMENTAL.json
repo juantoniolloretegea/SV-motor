@@ -1,0 +1,156 @@
+{
+  "adjudicacion": "pendiente de contraste externo al candidato",
+  "caso": "PDF03",
+  "custodia_remota": false,
+  "esquema": "sv-hito-instrumental/1",
+  "etapa": 0,
+  "fecha_registro_ms": 1791374575007,
+  "modelo": "gpt-6-astra",
+  "momento": "inmediatamente tras la entrega y el cierre de observación",
+  "nodo": "03",
+  "originales": [
+    {
+      "bytes": 14847,
+      "ruta": "ejecucion/astra-pdf-doble-20261007\\originales\\PDF03\\R0\\SOLICITUD.json",
+      "sha256": "3050efafaff38d3de89ff4f5b66b33f469d68956b6d66477f7f6a28fa7447ba4"
+    },
+    {
+      "bytes": 6244,
+      "ruta": "ejecucion/astra-pdf-doble-20261007\\originales\\PDF03\\R0\\RESULTADO.json",
+      "sha256": "0c4b4f44ec23361f45d25f7e0050f19fb7d73d34119bfd737795987c9fb4623b"
+    },
+    {
+      "bytes": 140,
+      "ruta": "ejecucion/astra-pdf-doble-20261007\\originales\\PDF03\\R0\\HTTP.json",
+      "sha256": "072e00b761f06f42dfb9dd234bac6c73f61ea9912b35413fffbabc9459ad4dc6"
+    },
+    {
+      "bytes": 228854,
+      "ruta": "ejecucion/astra-pdf-doble-20261007\\originales\\PDF03\\R0\\SALIDA-SSE.txt",
+      "sha256": "059622fa14050dce3035c5f3ff9049cd714fd3c19d70fd45d3328dbebb614192"
+    },
+    {
+      "bytes": 2976,
+      "ruta": "ejecucion/astra-pdf-doble-20261007\\originales\\PDF03\\R0\\FINAL.txt",
+      "sha256": "1505892d9f1251783189605a8104ddfe27195f91a3b5f9f79e3da9187e78dee5"
+    },
+    {
+      "bytes": 8186,
+      "ruta": "ejecucion/astra-pdf-doble-20261007\\originales\\PDF03\\R0\\ENTREGA-PROVEEDOR.json",
+      "sha256": "c27de1c0e91429448c4427ffffcca96a5597a47ec663ea44f29664defb331646"
+    },
+    {
+      "bytes": 1694,
+      "ruta": "ejecucion/astra-pdf-doble-20261007\\originales\\PDF03\\R0\\AUDITORIA-FORMAL.json",
+      "sha256": "6117185d94e5492354c298a44a3ffe0019b5ecf9ecc15a9f77577b10a52c61e9"
+    },
+    {
+      "bytes": 642011,
+      "ruta": "ejecucion/astra-pdf-doble-20261007\\originales\\PDF03\\R0\\instrumentacion/telemetria.jsonl",
+      "sha256": "5191d446c66ac5cbbfec7556d1903595dcd671fe83046123e31523e75aaa614c"
+    }
+  ],
+  "resultado": {
+    "adjudicado": false,
+    "cabeceras_proveedor": {},
+    "caso": "PDF03-R0",
+    "completa": true,
+    "contrato_formal_conforme": true,
+    "coste_monetario_atribuible": null,
+    "creditos_atribuibles": null,
+    "duracion_ms": 26337,
+    "estado": "entrega_recibida",
+    "evento_terminal": "response.completed",
+    "eventos": 778,
+    "herramientas_ejecutadas": 0,
+    "herramientas_habilitadas": 0,
+    "http": 200,
+    "limites": [
+      "CPU porcentual sin calibración externa",
+      "Sin medida separada DNS/TLS, RTT, retransmisiones, asignaciones del montículo, hilos ni recursos internos del proveedor",
+      "La ausencia de herramientas no prueba aislamiento de infraestructura de OpenAI; fuente exclusiva exigida y respuesta pendiente de contraste sustantivo",
+      "Criptografía C/ensamblador pendiente conforme a excepción experimental autorizada"
+    ],
+    "modelo_declarado": "gpt-6-astra",
+    "modelo_solicitado": "gpt-6-astra",
+    "par_remoto_http": "162.159.140.245:443",
+    "primer_evento_ms": 2332,
+    "primer_texto_ms": 4493,
+    "respuesta_bytes": 228854,
+    "respuesta_texto": "{\n  \"caso\": \"PDF03\",\n  \"estado_documental\": \"respuesta_fundada\",\n  \"etapa\": 0,\n  \"evidencias\": [\n    {\n      \"cita_literal_breve\": \"las células peludas a menudo producen tejido fibroso \\nque causa cicatrices en la médula ósea.\",\n      \"documento\": \"LLS-HCL-2018\",\n      \"fragmentos\": [2],\n      \"pagina_fisica\": 3,\n      \"seccion\": \"PDF-P0002\"\n    },\n    {\n      \"cita_literal_breve\": \"La presencia \\nde cicatrices hace que la aspiración sea “seca”, lo que \\nsignifica que no puede obtenerse una muestra líquida.\",\n      \"documento\": \"LLS-HCL-2018\",\n      \"fragmentos\": [2],\n      \"pagina_fisica\": 3,\n      \"seccion\": \"PDF-P0002\"\n    },\n    {\n      \"cita_literal_breve\": \"En una biopsia de médula ósea, se usa una aguja \\nespecial más ancha para extraer una muestra de hueso \\nsólido que contiene médula ósea.\",\n      \"documento\": \"LLS-HCL-2018\",\n      \"fragmentos\": [1],\n      \"pagina_fisica\": 3,\n      \"seccion\": \"PDF-P0002\"\n    },\n    {\n      \"cita_literal_breve\": \"Si no es posible realizar una aspiración, el médico \\npuede examinar la muestra de la biopsia de médula \\nósea a fin de detectar anomalías.\",\n      \"documento\": \"LLS-HCL-2018\",\n      \"fragmentos\": [2],\n      \"pagina_fisica\": 3,\n      \"seccion\": \"PDF-P0002\"\n    }\n  ],\n  \"fundamentos_verificables\": [\n    \"La ficha atribuye la aspiración seca a las cicatrices causadas por el tejido fibroso que a menudo producen las células peludas, y define «seca» como imposibilidad de obtener una muestra líquida.\",\n    \"La aspiración extrae por succión una muestra líquida de células; la biopsia extrae hueso sólido que contiene médula ósea (fragmento 1).\",\n    \"El documento permite examinar la biopsia cuando falla la aspiración y señala que generalmente muestra infiltrados celulares con mayor tejido fibroso. Por tanto, el fracaso de la extracción líquida no implica ausencia de enfermedad.\"\n  ],\n  \"insuficiencias\": [\n    \"El pasaje termina con una oración incompleta («En algunos pacientes con leucemia»), pero la explicación de la aspiración seca y la alternativa mediante biopsia están completas.\",\n    \"La respuesta se limita a la edición FS16S 8/18 suministrada; no acredita su vigencia clínica actual.\"\n  ],\n  \"respuesta\": \"Según la ficha, puede obtenerse una aspiración de médula ósea «seca» porque las células peludas a menudo producen tejido fibroso que causa cicatrices e impide obtener la muestra líquida. La aspiración busca extraer por succión una muestra líquida de células; en cambio, la biopsia obtiene una muestra de hueso sólido que contiene médula ósea. Si no es posible realizar la aspiración, puede examinarse la muestra de la biopsia para detectar anomalías; la ficha indica que generalmente revela infiltrados celulares con mayor tejido fibroso. Una aspiración seca significa que no se consiguió la muestra líquida, no que esté ausente la enfermedad.\",\n  \"revision\": \"Etapa 0: respuesta provisional; no existen antecedentes.\"\n}",
+    "resumen_proveedor": [],
+    "telemetria": {
+      "bytes": 642011,
+      "fallos_medicion": 0,
+      "integridad": "conforme",
+      "intervalo_maximo_ms": 292,
+      "intervalo_objetivo_ms": 250,
+      "muestras": 108,
+      "plataforma_recibida": false,
+      "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+      "registros": 1469,
+      "sha256": "5191d446c66ac5cbbfec7556d1903595dcd671fe83046123e31523e75aaa614c"
+    },
+    "telemetria_conforme": true,
+    "uso_proveedor": {
+      "attribution": {
+        "items": {
+          "msg_05e5a66dded4481c016ac634d5c22487d28b75cc71067864cf": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 2517,
+                "output_tokens": 0
+              }
+            ],
+            "input_tokens": 2517,
+            "output_tokens": 0
+          },
+          "msg_05e5a66dded4481c016ac634d806d487d2ba5eddd14446c4aa": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 2,
+                "output_tokens": 783
+              }
+            ],
+            "input_tokens": 2,
+            "output_tokens": 783
+          }
+        },
+        "request_fields": {
+          "instructions": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "input_tokens": 654,
+            "output_tokens": 0
+          },
+          "text.format": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "input_tokens": 182,
+            "output_tokens": 0
+          }
+        }
+      },
+      "input_tokens": 3355,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 783,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4138
+    },
+    "utc_fin_ms": 1791374573870,
+    "version_http": "HTTP/1.1"
+  }
+}

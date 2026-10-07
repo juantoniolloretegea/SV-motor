@@ -1,0 +1,131 @@
+{
+  "alerta_limite": false,
+  "auditoria_sha256": "6117185d94e5492354c298a44a3ffe0019b5ecf9ecc15a9f77577b10a52c61e9",
+  "caso": "PDF03",
+  "critico": true,
+  "estado_documental_candidato": "respuesta_fundada",
+  "etapa": 0,
+  "final_sha256": "1505892d9f1251783189605a8104ddfe27195f91a3b5f9f79e3da9187e78dee5",
+  "formal_conforme": true,
+  "fundamento_sustantivo": "Relaciona fibrosis y aspiración seca sin convertirla en ausencia de enfermedad; distingue muestra líquida de muestra sólida y función de la biopsia. El final de página completo acaba en otra frase inconclusa; no falta información necesaria para esta pregunta. Distingue aspiración y biopsia correctamente.",
+  "medicion": {
+    "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+    "bytes_sse": 228854,
+    "caso": "PDF03-R0",
+    "cpu_delta_ms": 3093,
+    "duracion_ms": 26337,
+    "duracion_observada_ms": 29580,
+    "eventos_sse": 778,
+    "fallos_medicion": 0,
+    "final_sha256": "1505892d9f1251783189605a8104ddfe27195f91a3b5f9f79e3da9187e78dee5",
+    "intervalo_maximo_ms": 292,
+    "io_escritura_delta_bytes": 882641,
+    "io_lectura_delta_bytes": 13879049,
+    "muestras": 108,
+    "observaciones_udp": 0,
+    "primer_texto_ms": 4493,
+    "rss_maximo_bytes": 38846464,
+    "solicitud_sha256": "3050efafaff38d3de89ff4f5b66b33f469d68956b6d66477f7f6a28fa7447ba4",
+    "sse_sha256": "059622fa14050dce3035c5f3ff9049cd714fd3c19d70fd45d3328dbebb614192",
+    "tcp_estados": [
+      "CloseWait",
+      "Established",
+      "FinWait1",
+      "Listen",
+      "SynSent"
+    ],
+    "tcp_maximo_simultaneo": 4,
+    "telemetria_sha256": "5191d446c66ac5cbbfec7556d1903595dcd671fe83046123e31523e75aaa614c",
+    "uso": {
+      "entrada_cache_tokens": 0,
+      "entrada_tokens": 3355,
+      "razonamiento_tokens": 0,
+      "salida_tokens": 783,
+      "total_tokens": 4138
+    }
+  },
+  "naturaleza_defecto": null,
+  "pasajes_contrastados": [
+    {
+      "documento": "LLS-HCL-2018",
+      "fragmento": "las células peludas a menudo producen tejido fibroso \nque causa cicatrices en la médula ósea.",
+      "pagina": 2,
+      "seccion": "PDF-P0002"
+    },
+    {
+      "documento": "LLS-HCL-2018",
+      "fragmento": "La presencia \nde cicatrices hace que la aspiración sea “seca”, lo que \nsignifica que no puede obtenerse una muestra líquida.",
+      "pagina": 2,
+      "seccion": "PDF-P0002"
+    },
+    {
+      "documento": "LLS-HCL-2018",
+      "fragmento": "En una biopsia de médula ósea, se usa una aguja \nespecial más ancha para extraer una muestra de hueso \nsólido que contiene médula ósea.",
+      "pagina": 2,
+      "seccion": "PDF-P0002"
+    },
+    {
+      "documento": "LLS-HCL-2018",
+      "fragmento": "Si no es posible realizar una aspiración, el médico \npuede examinar la muestra de la biopsia de médula \nósea a fin de detectar anomalías.",
+      "pagina": 2,
+      "seccion": "PDF-P0002"
+    }
+  ],
+  "recepcion_independiente": "pendiente",
+  "respuesta_original": "{\n  \"caso\": \"PDF03\",\n  \"estado_documental\": \"respuesta_fundada\",\n  \"etapa\": 0,\n  \"evidencias\": [\n    {\n      \"cita_literal_breve\": \"las células peludas a menudo producen tejido fibroso \\nque causa cicatrices en la médula ósea.\",\n      \"documento\": \"LLS-HCL-2018\",\n      \"fragmentos\": [2],\n      \"pagina_fisica\": 3,\n      \"seccion\": \"PDF-P0002\"\n    },\n    {\n      \"cita_literal_breve\": \"La presencia \\nde cicatrices hace que la aspiración sea “seca”, lo que \\nsignifica que no puede obtenerse una muestra líquida.\",\n      \"documento\": \"LLS-HCL-2018\",\n      \"fragmentos\": [2],\n      \"pagina_fisica\": 3,\n      \"seccion\": \"PDF-P0002\"\n    },\n    {\n      \"cita_literal_breve\": \"En una biopsia de médula ósea, se usa una aguja \\nespecial más ancha para extraer una muestra de hueso \\nsólido que contiene médula ósea.\",\n      \"documento\": \"LLS-HCL-2018\",\n      \"fragmentos\": [1],\n      \"pagina_fisica\": 3,\n      \"seccion\": \"PDF-P0002\"\n    },\n    {\n      \"cita_literal_breve\": \"Si no es posible realizar una aspiración, el médico \\npuede examinar la muestra de la biopsia de médula \\nósea a fin de detectar anomalías.\",\n      \"documento\": \"LLS-HCL-2018\",\n      \"fragmentos\": [2],\n      \"pagina_fisica\": 3,\n      \"seccion\": \"PDF-P0002\"\n    }\n  ],\n  \"fundamentos_verificables\": [\n    \"La ficha atribuye la aspiración seca a las cicatrices causadas por el tejido fibroso que a menudo producen las células peludas, y define «seca» como imposibilidad de obtener una muestra líquida.\",\n    \"La aspiración extrae por succión una muestra líquida de células; la biopsia extrae hueso sólido que contiene médula ósea (fragmento 1).\",\n    \"El documento permite examinar la biopsia cuando falla la aspiración y señala que generalmente muestra infiltrados celulares con mayor tejido fibroso. Por tanto, el fracaso de la extracción líquida no implica ausencia de enfermedad.\"\n  ],\n  \"insuficiencias\": [\n    \"El pasaje termina con una oración incompleta («En algunos pacientes con leucemia»), pero la explicación de la aspiración seca y la alternativa mediante biopsia están completas.\",\n    \"La respuesta se limita a la edición FS16S 8/18 suministrada; no acredita su vigencia clínica actual.\"\n  ],\n  \"respuesta\": \"Según la ficha, puede obtenerse una aspiración de médula ósea «seca» porque las células peludas a menudo producen tejido fibroso que causa cicatrices e impide obtener la muestra líquida. La aspiración busca extraer por succión una muestra líquida de células; en cambio, la biopsia obtiene una muestra de hueso sólido que contiene médula ósea. Si no es posible realizar la aspiración, puede examinarse la muestra de la biopsia para detectar anomalías; la ficha indica que generalmente revela infiltrados celulares con mayor tejido fibroso. Una aspiración seca significa que no se consiguió la muestra líquida, no que esté ausente la enfermedad.\",\n  \"revision\": \"Etapa 0: respuesta provisional; no existen antecedentes.\"\n}",
+  "revision_citas": {
+    "citas": [
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "las células peludas a menudo producen tejido fibroso \nque causa cicatrices en la médula ósea."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "La presencia \nde cicatrices hace que la aspiración sea “seca”, lo que \nsignifica que no puede obtenerse una muestra líquida."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "En una biopsia de médula ósea, se usa una aguja \nespecial más ancha para extraer una muestra de hueso \nsólido que contiene médula ósea."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "Si no es posible realizar una aspiración, el médico \npuede examinar la muestra de la biopsia de médula \nósea a fin de detectar anomalías."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "solicitud_sha256": "3050efafaff38d3de89ff4f5b66b33f469d68956b6d66477f7f6a28fa7447ba4",
+  "sustantivo": "correcto",
+  "valor": "0"
+}

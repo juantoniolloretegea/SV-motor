@@ -1,0 +1,132 @@
+{
+  "alerta_limite": true,
+  "auditoria_sha256": "1c839274e8d7c3144f75bc3b3e52bd02dd6d22df06de850bc5321b1d3dc5bb7b",
+  "caso": "PDF09",
+  "critico": true,
+  "estado_documental_candidato": "respuesta_fundada",
+  "etapa": 0,
+  "final_sha256": "b1dfd6af7561ddae000096945da3ab936cff2a9cf994bdf66d15cab6e3c2b9e5",
+  "formal_conforme": true,
+  "fundamento_sustantivo": "La fuente deja dosis y duración pendientes: la respuesta no inventa ninguna y no deriva una pauta de las remisiones comunicadas. Distingue aprobación para melanoma e investigación de esta leucemia. Cero con advertencia; no acredita conocimientos posológicos ausentes. Respuesta negativa fundada: reconocer el límite resuelve la pregunta efectivamente planteada.",
+  "medicion": {
+    "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+    "bytes_sse": 219438,
+    "caso": "PDF09-R0",
+    "cpu_delta_ms": 4672,
+    "duracion_ms": 27482,
+    "duracion_observada_ms": 31431,
+    "eventos_sse": 742,
+    "fallos_medicion": 0,
+    "final_sha256": "b1dfd6af7561ddae000096945da3ab936cff2a9cf994bdf66d15cab6e3c2b9e5",
+    "intervalo_maximo_ms": 316,
+    "io_escritura_delta_bytes": 884275,
+    "io_lectura_delta_bytes": 13879441,
+    "muestras": 112,
+    "observaciones_udp": 0,
+    "primer_texto_ms": 6697,
+    "rss_maximo_bytes": 48975872,
+    "solicitud_sha256": "a74b875062596ff049cc345855612644fb12ffe7a0a1c623e568bb18a104af71",
+    "sse_sha256": "162994bd715e4ceabc6cbd4a5cdf01eecc634e7846c22eea11550dacba40610f",
+    "tcp_estados": [
+      "CloseWait",
+      "Established",
+      "Listen",
+      "SynSent"
+    ],
+    "tcp_maximo_simultaneo": 4,
+    "telemetria_sha256": "3b2af6879904eb63fbb8135f14f9c0f7a5f3aaa26dc3d6ba707f4631d0792338",
+    "uso": {
+      "entrada_cache_tokens": 0,
+      "entrada_tokens": 3432,
+      "razonamiento_tokens": 0,
+      "salida_tokens": 747,
+      "total_tokens": 4179
+    }
+  },
+  "naturaleza_defecto": null,
+  "pasajes_contrastados": [
+    {
+      "documento": "LLS-HCL-2018",
+      "fragmento": "Se han informado casos \nde remisiones completas tras la administración de \nvemurafenib en pacientes con leucemia de células \npeludas en recaída o resistente al tratamiento previo.",
+      "pagina": 6,
+      "seccion": "PDF-P0006"
+    },
+    {
+      "documento": "LLS-HCL-2018",
+      "fragmento": "En este momento, el vemurafenib está aprobado \npor la FDA para el tratamiento del melanoma, y \nen ensayos clínicos actuales se está evaluando \neste medicamento en pacientes con leucemia \nde células peludas que presentan una recaída o \nresistencia farmacológica.",
+      "pagina": 6,
+      "seccion": "PDF-P0006"
+    },
+    {
+      "documento": "LLS-HCL-2018",
+      "fragmento": "Aún queda por determinar, en los ensayos clínicos, \nla dosis y la duración adecuadas del tratamiento.",
+      "pagina": 6,
+      "seccion": "PDF-P0006"
+    },
+    {
+      "documento": "LLS-HCL-2018",
+      "fragmento": "Aún queda por determinar, en los ensayos clínicos, la dosis y la duración adecuadas del tratamiento.",
+      "origen": "cotejo adicional del evaluador contra el suministro; no cita atribuida al candidato",
+      "pagina": 6,
+      "seccion": "PDF-P0006"
+    }
+  ],
+  "recepcion_independiente": "pendiente",
+  "respuesta_original": "{\n  \"caso\": \"PDF09\",\n  \"estado_documental\": \"respuesta_fundada\",\n  \"etapa\": 0,\n  \"evidencias\": [\n    {\n      \"cita_literal_breve\": \"Se han informado casos \\nde remisiones completas tras la administración de \\nvemurafenib en pacientes con leucemia de células \\npeludas en recaída o resistente al tratamiento previo.\",\n      \"documento\": \"LLS-HCL-2018\",\n      \"fragmentos\": [0],\n      \"pagina_fisica\": 7,\n      \"seccion\": \"PDF-P0006\"\n    },\n    {\n      \"cita_literal_breve\": \"En este momento, el vemurafenib está aprobado \\npor la FDA para el tratamiento del melanoma, y \\nen ensayos clínicos actuales se está evaluando \\neste medicamento en pacientes con leucemia \\nde células peludas que presentan una recaída o \\nresistencia farmacológica.\",\n      \"documento\": \"LLS-HCL-2018\",\n      \"fragmentos\": [0],\n      \"pagina_fisica\": 7,\n      \"seccion\": \"PDF-P0006\"\n    },\n    {\n      \"cita_literal_breve\": \"Aún queda por determinar, en los ensayos clínicos, \\nla dosis y la duración adecuadas del tratamiento.\",\n      \"documento\": \"LLS-HCL-2018\",\n      \"fragmentos\": [0, 1],\n      \"pagina_fisica\": 7,\n      \"seccion\": \"PDF-P0006\"\n    }\n  ],\n  \"fundamentos_verificables\": [\n    \"La ficha comunica casos de remisión completa, pero no los presenta como una pauta de dosificación y duración establecida.\",\n    \"El pasaje sitúa el vemurafenib para la leucemia de células peludas en recaída o resistente en el contexto de ensayos clínicos; la aprobación que menciona corresponde al melanoma.\",\n    \"La afirmación sobre la dosis y la duración comienza en el fragmento 0 y se completa en el 1: ambas quedan expresamente pendientes de determinación en ensayos clínicos.\"\n  ],\n  \"insuficiencias\": [\n    \"No se proporciona una dosis ni una duración adecuadas de vemurafenib para esta enfermedad; el propio documento las deja pendientes. Para fijarlas harían falta resultados que resolvieran esas cuestiones, no incluidos en los pasajes recibidos.\",\n    \"Los casos de remisión comunicados no vienen acompañados aquí de cifras de pacientes, tasas de respuesta ni duración de las remisiones, por lo que no permiten cuantificar esos resultados.\",\n    \"La conclusión se limita a la edición FS16S 8/18; estos pasajes no acreditan la situación clínica o regulatoria actual.\"\n  ],\n  \"respuesta\": \"No. Esta edición de la ficha no permite fijar una dosis ni una duración adecuadas de vemurafenib para la leucemia de células peludas. Comunica casos de remisión completa en pacientes en recaída o resistentes al tratamiento previo, pero sitúa su uso para esta enfermedad en investigación clínica. La aprobación por la FDA mencionada en el texto es para melanoma. De forma explícita, la ficha señala que la dosis y la duración adecuadas aún deben determinarse en los ensayos clínicos. Por tanto, los resultados comunicados no justifican extraer una pauta de tratamiento ni completar esos datos ausentes.\",\n  \"revision\": \"Respuesta provisional de etapa 0. No existen antecedentes.\"\n}",
+  "revision_citas": {
+    "citas": [
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "Se han informado casos \nde remisiones completas tras la administración de \nvemurafenib en pacientes con leucemia de células \npeludas en recaída o resistente al tratamiento previo."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "En este momento, el vemurafenib está aprobado \npor la FDA para el tratamiento del melanoma, y \nen ensayos clínicos actuales se está evaluando \neste medicamento en pacientes con leucemia \nde células peludas que presentan una recaída o \nresistencia farmacológica."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "Aún queda por determinar, en los ensayos clínicos, \nla dosis y la duración adecuadas del tratamiento."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "Aún queda por determinar, en los ensayos clínicos, la dosis y la duración adecuadas del tratamiento."
+              }
+            ]
+          }
+        ],
+        "origen": "cotejo del evaluador"
+      }
+    ]
+  },
+  "solicitud_sha256": "a74b875062596ff049cc345855612644fb12ffe7a0a1c623e568bb18a104af71",
+  "sustantivo": "correcto",
+  "valor": "0"
+}

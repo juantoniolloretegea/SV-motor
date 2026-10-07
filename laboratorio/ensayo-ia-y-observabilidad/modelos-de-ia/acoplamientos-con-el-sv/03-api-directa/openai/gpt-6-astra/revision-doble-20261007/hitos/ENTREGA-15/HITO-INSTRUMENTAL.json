@@ -1,0 +1,212 @@
+{
+  "adjudicacion": "pendiente de contraste externo al candidato",
+  "caso": "PDF05",
+  "custodia_remota": false,
+  "esquema": "sv-hito-instrumental/1",
+  "etapa": 2,
+  "fecha_registro_ms": 1791374899176,
+  "modelo": "gpt-6-astra",
+  "momento": "inmediatamente tras la entrega y el cierre de observación",
+  "nodo": "03",
+  "originales": [
+    {
+      "bytes": 23971,
+      "ruta": "ejecucion/astra-pdf-doble-20261007\\originales\\PDF05\\R2\\SOLICITUD.json",
+      "sha256": "224c2e5c8b5c6ed9b3a591f54eef9fc130603a9296a528b078c2c22519da4ef4"
+    },
+    {
+      "bytes": 9044,
+      "ruta": "ejecucion/astra-pdf-doble-20261007\\originales\\PDF05\\R2\\RESULTADO.json",
+      "sha256": "6c59ef056abdc60bb9c3576b159bd436f6abcde20cc114cc750f70ccd6f68d51"
+    },
+    {
+      "bytes": 137,
+      "ruta": "ejecucion/astra-pdf-doble-20261007\\originales\\PDF05\\R2\\HTTP.json",
+      "sha256": "cfd920b296439be3bddc410e505ef28d0cc1de4e60629e164ed2f5f216810462"
+    },
+    {
+      "bytes": 296749,
+      "ruta": "ejecucion/astra-pdf-doble-20261007\\originales\\PDF05\\R2\\SALIDA-SSE.txt",
+      "sha256": "778d3d34eba50320f76da0de42a053f1f5de065391061837f6a196e0a30817ea"
+    },
+    {
+      "bytes": 4101,
+      "ruta": "ejecucion/astra-pdf-doble-20261007\\originales\\PDF05\\R2\\FINAL.txt",
+      "sha256": "6c641a1dd489538c5ef24309b0c8fda187a0eff0fb708e0237badd15c3cf7c7b"
+    },
+    {
+      "bytes": 12153,
+      "ruta": "ejecucion/astra-pdf-doble-20261007\\originales\\PDF05\\R2\\ENTREGA-PROVEEDOR.json",
+      "sha256": "9b5b96fe0a1a4aa488bd9cdf2feed25f2b31eb67671e7d06fc0e59e9c0e6ad04"
+    },
+    {
+      "bytes": 2035,
+      "ruta": "ejecucion/astra-pdf-doble-20261007\\originales\\PDF05\\R2\\AUDITORIA-FORMAL.json",
+      "sha256": "4ed346bc5e162e95e11e8ac14ed4bd3fd4373ecf353a7fb1c582d685050496fb"
+    },
+    {
+      "bytes": 822047,
+      "ruta": "ejecucion/astra-pdf-doble-20261007\\originales\\PDF05\\R2\\instrumentacion/telemetria.jsonl",
+      "sha256": "163ab507698dedb84ef425fd7e0df6628a2dd460213e3c1ccdca00406b58c872"
+    }
+  ],
+  "resultado": {
+    "adjudicado": false,
+    "cabeceras_proveedor": {},
+    "caso": "PDF05-R2",
+    "completa": true,
+    "contrato_formal_conforme": true,
+    "coste_monetario_atribuible": null,
+    "creditos_atribuibles": null,
+    "duracion_ms": 32865,
+    "estado": "entrega_recibida",
+    "evento_terminal": "response.completed",
+    "eventos": 1019,
+    "herramientas_ejecutadas": 0,
+    "herramientas_habilitadas": 0,
+    "http": 200,
+    "limites": [
+      "CPU porcentual sin calibración externa",
+      "Sin medida separada DNS/TLS, RTT, retransmisiones, asignaciones del montículo, hilos ni recursos internos del proveedor",
+      "La ausencia de herramientas no prueba aislamiento de infraestructura de OpenAI; fuente exclusiva exigida y respuesta pendiente de contraste sustantivo",
+      "Criptografía C/ensamblador pendiente conforme a excepción experimental autorizada"
+    ],
+    "modelo_declarado": "gpt-6-astra",
+    "modelo_solicitado": "gpt-6-astra",
+    "par_remoto_http": "172.66.0.243:443",
+    "primer_evento_ms": 2410,
+    "primer_texto_ms": 7078,
+    "respuesta_bytes": 296749,
+    "respuesta_texto": "{\n  \"caso\": \"PDF05\",\n  \"estado_documental\": \"respuesta_fundada\",\n  \"etapa\": 2,\n  \"evidencias\": [\n    {\n      \"cita_literal_breve\": \"En el caso de aproximadamente el 10 por ciento de \\nlos pacientes (que tienen conteos estables de células \\nsanguíneas y no presentan síntomas al momento del \\ndiagnóstico), el enfoque de tratamiento podría ser el de \\nla “espera vigilante”.\",\n      \"documento\": \"LLS-HCL-2018\",\n      \"fragmentos\": [0],\n      \"pagina_fisica\": 5,\n      \"seccion\": \"PDF-P0004\"\n    },\n    {\n      \"cita_literal_breve\": \"La espera vigilante es un enfoque \\nmédico adecuado que implica posponer el tratamiento \\nhasta la aparición o progresión de signos y síntomas \\nde la enfermedad.\",\n      \"documento\": \"LLS-HCL-2018\",\n      \"fragmentos\": [0],\n      \"pagina_fisica\": 5,\n      \"seccion\": \"PDF-P0004\"\n    },\n    {\n      \"cita_literal_breve\": \"Es necesario \\nrealizar un seguimiento frecuente del paciente, \\nincluyendo análisis de sangre, para que pueda iniciarse \\nel tratamiento si la enfermedad empieza a avanzar.\",\n      \"documento\": \"LLS-HCL-2018\",\n      \"fragmentos\": [0],\n      \"pagina_fisica\": 5,\n      \"seccion\": \"PDF-P0004\"\n    },\n    {\n      \"cita_literal_breve\": \"Los pacientes deberían iniciar el tratamiento si tienen \\nconteos bajos de células sanguíneas (deficiencia de \\nglóbulos rojos, plaquetas o glóbulos blancos).\",\n      \"documento\": \"LLS-HCL-2018\",\n      \"fragmentos\": [0],\n      \"pagina_fisica\": 5,\n      \"seccion\": \"PDF-P0004\"\n    },\n    {\n      \"cita_literal_breve\": \"También \\ndeberían iniciar el tratamiento si presentan síntomas, \\nentre ellos, pérdida de peso sin explicación, infecciones \\nrecurrentes o molestias físicas debido al agrandamiento \\ndel bazo e/o hígado.\",\n      \"documento\": \"LLS-HCL-2018\",\n      \"fragmentos\": [0],\n      \"pagina_fisica\": 5,\n      \"seccion\": \"PDF-P0004\"\n    }\n  ],\n  \"fundamentos_verificables\": [\n    \"Las condiciones y la proporción aproximada figuran conjuntamente: conteos sanguíneos estables y ausencia de síntomas al diagnóstico, en aproximadamente el 10 % de los pacientes.\",\n    \"La ficha define la espera vigilante como aplazamiento del tratamiento, no del seguimiento: exige controles frecuentes que incluyan análisis de sangre.\",\n    \"Los conteos bajos y la presencia de síntomas se presentan como motivos para iniciar tratamiento; la expresión «entre ellos» indica que los síntomas citados son ejemplos.\"\n  ],\n  \"insuficiencias\": [\n    \"El pasaje no concreta la frecuencia de los controles ni aporta umbrales numéricos para definir conteos bajos; no permite establecer esos detalles.\",\n    \"La respuesta se limita a la edición FS16S 8/18. Los pasajes recibidos no acreditan su vigencia clínica actual.\"\n  ],\n  \"respuesta\": \"Según la ficha de 2018, la espera vigilante puede contemplarse en pacientes con conteos estables de células sanguíneas y sin síntomas al momento del diagnóstico; menciona aproximadamente el 10 % de los pacientes. Consiste en posponer el tratamiento hasta la aparición o progresión de signos y síntomas de la enfermedad.\\n\\nExige seguimiento frecuente, incluidos análisis de sangre, para poder iniciar tratamiento si la enfermedad empieza a avanzar.\\n\\nComo motivos para iniciar tratamiento, la ficha señala:\\n• Conteos bajos de células sanguíneas: deficiencia de glóbulos rojos, plaquetas o glóbulos blancos.\\n• Presencia de síntomas, entre ellos pérdida de peso sin explicación, infecciones recurrentes o molestias físicas debidas al agrandamiento del bazo y/o del hígado.\\n\\nEl pasaje no establece intervalos concretos de seguimiento ni umbrales numéricos de laboratorio. Esta descripción no constituye una pauta individual.\",\n  \"revision\": \"El contraste de ambas entregas con el fragmento 0 de la página física 5 permite mantener su contenido sustantivo: condiciones, proporción, seguimiento y motivos de inicio están respaldados. Se conserva la cita de la definición incorporada en la segunda entrega y la precisión de que los síntomas son ejemplos. No se requieren correcciones sustantivas ni una declaración U.\"\n}",
+    "resumen_proveedor": [],
+    "telemetria": {
+      "bytes": 822047,
+      "fallos_medicion": 0,
+      "integridad": "conforme",
+      "intervalo_maximo_ms": 292,
+      "intervalo_objetivo_ms": 250,
+      "muestras": 133,
+      "plataforma_recibida": false,
+      "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+      "registros": 1895,
+      "sha256": "163ab507698dedb84ef425fd7e0df6628a2dd460213e3c1ccdca00406b58c872"
+    },
+    "telemetria_conforme": true,
+    "uso_proveedor": {
+      "attribution": {
+        "items": {
+          "msg_04ca0cac0424faa2016ac63613531487d289fb83a15cc3c2a3": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 2585,
+                "output_tokens": 0
+              }
+            ],
+            "input_tokens": 2585,
+            "output_tokens": 0
+          },
+          "msg_04ca0cac0424faa2016ac63613533087d2933941460b4e9872": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 862,
+                "output_tokens": 0
+              }
+            ],
+            "input_tokens": 862,
+            "output_tokens": 0
+          },
+          "msg_04ca0cac0424faa2016ac63613534487d286c7ac5d08384270": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 27,
+                "output_tokens": 0
+              }
+            ],
+            "input_tokens": 27,
+            "output_tokens": 0
+          },
+          "msg_04ca0cac0424faa2016ac63613535487d2a3a2359cac714409": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 1034,
+                "output_tokens": 0
+              }
+            ],
+            "input_tokens": 1034,
+            "output_tokens": 0
+          },
+          "msg_04ca0cac0424faa2016ac63613536887d2a89ffa14b5b75365": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 67,
+                "output_tokens": 0
+              }
+            ],
+            "input_tokens": 67,
+            "output_tokens": 0
+          },
+          "msg_04ca0cac0424faa2016ac6361842f487d2883ce67aaf8824fd": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 2,
+                "output_tokens": 1024
+              }
+            ],
+            "input_tokens": 2,
+            "output_tokens": 1024
+          }
+        },
+        "request_fields": {
+          "instructions": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "input_tokens": 690,
+            "output_tokens": 0
+          },
+          "text.format": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "input_tokens": 182,
+            "output_tokens": 0
+          }
+        }
+      },
+      "input_tokens": 5449,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 1024,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 6473
+    },
+    "utc_fin_ms": 1791374898005,
+    "version_http": "HTTP/1.1"
+  }
+}
