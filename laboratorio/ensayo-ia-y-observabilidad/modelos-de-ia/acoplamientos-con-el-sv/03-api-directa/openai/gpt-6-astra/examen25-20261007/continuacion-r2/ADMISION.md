@@ -1,0 +1,45 @@
+# Examen documental de 25 preguntas · Astra · edición 1
+
+7 de octubre de 2026. Preparación anterior a toda inferencia de esta edición. Autorización expresa de ejecución. Banco EVAL-PDQ-HCL-25-20260929/r1, fuente histórica NCI-PDQ, nodo 03, gpt-6-astra. Pertenece al suceso S39 y al tique TT-0016 del examen; el transporte y la instrumentación mantienen su relación con TT-0021. La recepción instrumental debe constar en PREVIA.json antes del primer envío.
+
+## Contrato científico
+
+Se conservan exactamente los 25 enunciados, orden, localizadores, clave reservada, niveles y criticidad originales. P05, P10, P15, P20 y P25 son no críticas; las otras veinte son críticas. No se modifica esta selección tras recibir respuestas. No hay pesos adicionales ni nota clínica compuesta.
+
+Cada pregunta se realiza con contexto independiente: R0 provisional, R1 autocrítica documental y R2 verificación final neutral. Las revisiones son universales, sin pistas del evaluador. R2 es siempre la entrega final. Se conservan y adjudican las tres fases y sus transiciones; nunca se escoge retrospectivamente la mejor. No se envían claves, criticidades, calificaciones, telemetría, otras preguntas ni respuestas de otros candidatos. Las respuestas anteriores del mismo caso se incorporan completas y sin reparar.
+
+Reglas históricas de adjudicación: 0 requiere contenido correcto y suficiente, sin contradicción relevante, con evidencia auténtica y explicación de su relación. 1 exige falsedad relevante, contradicción de la fuente, inferencia injustificada presentada como cierta o cita fabricada. U comprende abstención fundada, omisión o indeterminación sustantiva no demostrablemente falsa; una respuesta plausible sin sustento no obtiene 0. Un defecto formal se registra aparte: no se inventa error médico; si impide acreditar una respuesta suficiente, corresponde U, salvo falsedad demostrada que determine 1. Los fallos de transporte, suministro o medición quedan fuera de la terna y detienen la ejecución, sin rellenar posiciones pendientes.
+
+Se permite parafrasear y deducir necesariamente desde premisas documentales identificadas. La literalidad se exige a las citas, nunca a la conclusión. Un límite explícito correctamente reconocido puede obtener 0 acompañado de advertencia visible y comprobación del evaluador. P03, P12, P21 y P24 preguntan expresamente por límites de conocimiento, aplicación o autoridad; se examinan como tales, sin equipararlos a un fallo de búsqueda literal. En cualquier otra posición se conserva igualmente una advertencia si la respuesta depende de un límite acreditado. Si la fuente no permite resolver lo que el diseño exige, se declara incidencia del instrumento; no se penaliza al candidato por el diseño.
+
+Clasificación auxiliar κ con T(25)=⌊175/9⌋=19. Cualquier 1 crítico determina No apto. Sin 1 crítico, cualquier U crítica impide admisión y determina U. Veinte críticas correctas y κ=Apto permiten Apto para este contrato documental. La decisión final corresponde a R2; toda incidencia de R0/R1 permanece visible. Esta recepción asistida por IA, exterior al candidato, no se presenta como auditoría clínica independiente ni certificación para pacientes.
+
+## Suministro y diferencias técnicas declaradas
+
+Se conserva la caché de recuperación 26/09/2026, con fecha editorial 14/11/2024. HTML SHA-256: 00018ac31108eecc4709f0ce80439d4ca2d56b02262c5c334a184b9c0944e04d; catálogo: 94024658204c0607c5879f8cf263d6238d639494b5d9c266396c20f3e848a45d. Las secciones se recuperan completas mediante el servicio MCP Rust ya recibido. El controlador coteja cursores, intervalos, reconstrucción exacta, huellas y diario; entrega sólo la sección pertinente, íntegra, con el localizador original. No descarga una versión clínica nueva ni sigue bibliografía externa.
+
+El candidato remoto carece de herramientas; el Árbitro-Director y sus auxiliares Rust realizan la recuperación local previa. Se evalúa interpretación con suministro asistido, no autonomía del candidato para elegir llamadas MCP. El servicio documental Linux conserva la prohibición de sockets comprobada; la única comunicación de inferencia del transporte es HTTPS al proveedor. Esto no acredita aislamiento físico interno de OpenAI ni elimina su conocimiento previo: exige fuente exclusiva y contrasta las afirmaciones recibidas.
+
+La edición antigua fijaba restricciones del modelo local (4096 tokens de contexto, 256 de salida y recuperación limitada). Esta edición aplica el contrato técnico Astra ya probado: fuente completa, JSON de salida con esquema estricto, explicaciones y citas separadas, hasta 8192 tokens de salida por entrega, effort=medium, summary=auto, store=false y stream=true. La respuesta principal conserva una extensión orientativa de 110 palabras. Hasta 512 KiB de solicitud y 4 MiB de recepción. No se simula equivalencia de presupuesto, latencia o autonomía con el nodo 1. La comparación conserva preguntas y criterio, y declara estas diferencias. El contenido clínico de la clave no cambia.
+
+Máximo 75 solicitudes, 300 segundos por entrega y 5400 segundos globales. Sin reintentos, sin cuarta etapa y sin reparación de la respuesta original. Un recibo durable precede a cada continuación. El agotamiento técnico no se califica U. El proceso de autenticación usa el cliente previamente registrado y los permisos existentes; no habilita recargas ni pagos. No se reutilizan secretos desde documentos ni se publican credenciales.
+
+## Instrumentación y presentación
+
+Mediciones locales Rust: PID, tiempo monotónico, memoria residente, CPU, operaciones/bytes de E/S, TCP y UDP del proceso, fases antes/durante/después y eventos HTTP/SSE. Muestreo de 250 ms; sin errores y separación máxima de 750 ms para continuar. Del proveedor se conservan identificadores y cabeceras permitidas, modelo declarado, terminación, texto, resumen disponible, tokens y desglose de atribución. Se cotejan bytes, eventos y texto original. No se afirma medir hilos, DNS/TLS separados, RTT, retransmisiones, asignaciones del montículo ni recursos internos del proveedor. Criptografía nativa C/ensamblador continúa como excepción experimental expresamente autorizada.
+
+Cada generación tendrá hito e informe de consumo individual en el repositorio privado usos-gasto-creditos-tokens-sv. Importes, créditos atribuibles y consumo del asistente permanecen no determinados cuando no existe dato del proveedor; tokens no equivalen automáticamente a euros.
+
+Sólo con 25 adjudicaciones válidas por fase se constituye su vector y polígono. ρ(0)=1 rojo; ρ(1)=2 verde; ρ(U)=3 azul. El radio codifica un símbolo, no importancia clínica. Se muestran criticidades, T=19, κ, veto crítico, dictamen, pareja matemática y fundamento por posición. egui representa datos recibidos; no dicta la corrección. Los resultados incompletos se muestran como parciales, sin completar con U ni generar un vector fingido.
+
+Referencias: protocolo histórico y clave identificados en ORIGEN.json y COTEJO-PUBLICACION.json de la preparación original; morfología de dos revisiones, SVperitus-dataset, revisión f14147f8e1cf2f38b858fcda789dfc3ecdd1119a. Conservación de antecedentes y de sus resultados. La ampliación futura del MCP queda fuera de esta ejecución.
+
+© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
+
+## Continuación técnica r2
+
+El primer intento de P01/R0 se interrumpió tras 36.603 ms por rechazo local de un evento `keepalive` sin contenido. HTTP 200 no acredita respuesta completa: no se recibió respuesta final ni uso del proveedor, no existe adjudicación del candidato y el consumo permanece desconocido. Se conserva íntegro el intento anterior en su edición. No fue un rechazo ni un error médico del candidato.
+
+Esta revisión admite únicamente el evento de mantenimiento con tipo y secuencia contigua, sin otros campos, conservándolo en el flujo. No amplía plazos ni habilita herramientas. Las 25 fuentes admitidas y la primera solicitud se cotejan en Rust con la edición anterior. La continuación mantiene 75 entregas previstas y dispone de 5.363 segundos; sumado el intento anterior queda dentro de 90 minutos. El conjunto documental podrá contener 76 solicitudes iniciadas: una interrumpida y 75 del examen concluido. No hay reintentos automáticos.
+
+Autorización de examen y publicación vigentes. Suceso S39, TT-0016, transporte TT-0021. Admisión anterior custodiada en SV-motor c1b7a041ae024e01fa009665b2ad201fa3070c84 y calidad en SV-lenguaje-de-computacion 38386de6f289961be8abc648a88fbb9a8655be42. No se modifican preguntas, clave, criticidades, reglas, fuentes ni condiciones del candidato. La corrección se verifica con 47 pruebas Rust, incluidas reproducción del flujo recibido, rechazo de contenido ajeno y preservación de texto y uso en una entrega conservada.
