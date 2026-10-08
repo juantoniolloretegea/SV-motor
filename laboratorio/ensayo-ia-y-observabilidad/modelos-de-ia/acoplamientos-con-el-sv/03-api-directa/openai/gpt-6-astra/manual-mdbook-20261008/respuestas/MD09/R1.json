@@ -1,0 +1,34 @@
+{
+  "caso": "MD09",
+  "estado_documental": "respuesta_fundada",
+  "etapa": 1,
+  "evidencias": [
+    {
+      "cita_literal_breve": "Este tramo no implementa bindings, APIs, FFI ni wrappers reales. Solo abre el frente documental y de gobierno.",
+      "documento": "MANUAL_TRAMO10",
+      "fragmentos": [0],
+      "seccion": "MD-L000022-L000025"
+    },
+    {
+      "cita_literal_breve": "Pendiente de desarrollo.",
+      "documento": "MANUAL_TRAMO10",
+      "fragmentos": [0],
+      "seccion": "MD-L000026-L000028"
+    },
+    {
+      "cita_literal_breve": "Este tramo fija la estructura mínima de trabajo para documentar cómo el lenguaje SV podrá relacionarse con otros lenguajes de programación sin degradar su semántica propia.",
+      "documento": "MANUAL_TRAMO10",
+      "fragmentos": [0],
+      "seccion": "MD-L000003-L000006"
+    }
+  ],
+  "fundamentos_verificables": [
+    "La sección 4 delimita expresamente la aportación del tramo: abre el frente documental y de gobierno, pero no implementa ninguno de los cuatro mecanismos enumerados.",
+    "La sección 1 describe una estructura mínima de trabajo documental. La sección 3 presenta como tareas pendientes fijar los tipos de compatibilidad admitidos, la prioridad de lenguajes anfitriones, las garantías semánticas mínimas, el criterio de activación por lenguaje y los límites de fase; no acredita su implementación.",
+    "La sección 5 declara inequívocamente el estado pendiente de desarrollo. La existencia del texto preparatorio no equivale a una implementación operativa.",
+    "El sujeto de la declaración negativa es este tramo. Por ello, no prueba la inexistencia de implementaciones en otros repositorios ni determina su estado actual."
+  ],
+  "insuficiencias": [],
+  "respuesta": "El tramo 10 declara expresamente que no implementa bindings, APIs, FFI ni wrappers reales; su aportación se limita a abrir el frente documental y de gobierno. Establece una estructura mínima de trabajo para documentar la relación del lenguaje SV con otros lenguajes preservando su semántica, no mecanismos operativos de compatibilidad. Su estado documental es «Pendiente de desarrollo».\n\nEsta conclusión se refiere exclusivamente al documento suministrado: no acredita ni descarta implementaciones existentes actualmente en otros repositorios.",
+  "revision": "Se mantiene la conclusión provisional: las citas son literales y sus secciones e índices de fragmento coinciden con la fuente. El contraste con la sección 3 confirma la distinción entre tareas previstas e implementación y se incorpora como fundamento complementario; su omisión anterior no alteraba la respuesta solicitada. Se conserva el límite al propio tramo, sin inferir una inexistencia general de implementaciones. No procede declarar U, pues ambos extremos preguntados están expresamente documentados."
+}

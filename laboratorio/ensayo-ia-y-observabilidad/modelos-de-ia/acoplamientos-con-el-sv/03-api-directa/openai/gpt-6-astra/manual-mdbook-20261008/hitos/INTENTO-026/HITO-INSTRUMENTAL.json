@@ -1,0 +1,191 @@
+{
+  "adjudicacion": "pendiente de contraste exterior al candidato",
+  "caso": "MD09",
+  "directorio": "ejecucion/astra-manual-20261008\\intentos/ENVIO-026/MD09/R1",
+  "entrega_numero": 26,
+  "esquema": "sv-hito-instrumental/2",
+  "etapa": 1,
+  "fecha_registro_ms": 1791431642620,
+  "modelo": "gpt-6-astra",
+  "nodo": "03",
+  "numero_intento": 26,
+  "originales": [
+    {
+      "bytes": 63599,
+      "ruta": "ejecucion/astra-manual-20261008\\intentos/ENVIO-026/MD09/R1\\SOLICITUD.json",
+      "sha256": "96e6ddf6fcb88691e6160061848b1eb08cac19041ebc3471de8862f8c048acbf"
+    },
+    {
+      "bytes": 7010,
+      "ruta": "ejecucion/astra-manual-20261008\\intentos/ENVIO-026/MD09/R1\\RESULTADO.json",
+      "sha256": "caf08b099ad2c9b74035eaf13ef92d50f88ea65d15b963b7ed374a95724dfa4e"
+    },
+    {
+      "bytes": 140,
+      "ruta": "ejecucion/astra-manual-20261008\\intentos/ENVIO-026/MD09/R1\\HTTP.json",
+      "sha256": "b25d3e0711e901dcc2e184b27320183f941238071ccff405bcd5a454e3b74d28"
+    },
+    {
+      "bytes": 196261,
+      "ruta": "ejecucion/astra-manual-20261008\\intentos/ENVIO-026/MD09/R1\\SALIDA-SSE.txt",
+      "sha256": "e5cba5e4c90a017a21c385f98951b1b78debd5a6812990336498a41a333691a4"
+    },
+    {
+      "bytes": 2856,
+      "ruta": "ejecucion/astra-manual-20261008\\intentos/ENVIO-026/MD09/R1\\FINAL.txt",
+      "sha256": "a14bdae81d013de2e015ef95d7d358e99c67ba8914b6d3548dcfbbc5c190af0e"
+    },
+    {
+      "bytes": 8684,
+      "ruta": "ejecucion/astra-manual-20261008\\intentos/ENVIO-026/MD09/R1\\ENTREGA-PROVEEDOR.json",
+      "sha256": "22d876364970375738277d06e585162f20b1dd728cadd6cc5c708680288c8e44"
+    },
+    {
+      "bytes": 1386,
+      "ruta": "ejecucion/astra-manual-20261008\\intentos/ENVIO-026/MD09/R1\\AUDITORIA-FORMAL.json",
+      "sha256": "593193b733b66872e88deed69184409deaba290aa784cc3b6174a2aa9e0f5bc6"
+    },
+    {
+      "bytes": 587200,
+      "ruta": "ejecucion/astra-manual-20261008\\intentos/ENVIO-026/MD09/R1\\instrumentacion/telemetria.jsonl",
+      "sha256": "8c3cd5de425c0dc217c0f967395d71114eca00664f0f80de0e34ccaf1e7fb5e9"
+    }
+  ],
+  "resultado": {
+    "adjudicado": false,
+    "cabeceras_proveedor": {},
+    "caso": "MD09-R1",
+    "completa": true,
+    "contrato_formal_conforme": true,
+    "coste_monetario_atribuible": null,
+    "creditos_atribuibles": null,
+    "duracion_intento_instrumentado_ms": 24139,
+    "duracion_ms": 20486,
+    "duracion_operacion_ms": 20788,
+    "entrega_numero": 26,
+    "estado": "entrega_recibida",
+    "evento_terminal": "response.completed",
+    "eventos": 659,
+    "herramientas_ejecutadas": 0,
+    "herramientas_habilitadas": 0,
+    "http": 200,
+    "incidencia_servicio": null,
+    "limites": [
+      "CPU porcentual sin calibración externa",
+      "Sin medida separada DNS/TLS, RTT, retransmisiones, asignaciones del montículo, hilos ni recursos internos del proveedor",
+      "La ausencia de herramientas no prueba aislamiento de infraestructura de OpenAI; fuente exclusiva exigida y respuesta pendiente de contraste sustantivo",
+      "Criptografía C/ensamblador pendiente conforme a excepción experimental autorizada"
+    ],
+    "modelo_declarado": "gpt-6-astra",
+    "modelo_solicitado": "gpt-6-astra",
+    "numero_intento": 26,
+    "par_remoto_http": "162.159.140.245:443",
+    "primer_evento_ms": 1597,
+    "primer_texto_ms": 3739,
+    "respuesta_bytes": 196261,
+    "respuesta_texto": "{\n  \"caso\": \"MD09\",\n  \"estado_documental\": \"respuesta_fundada\",\n  \"etapa\": 1,\n  \"evidencias\": [\n    {\n      \"cita_literal_breve\": \"Este tramo no implementa bindings, APIs, FFI ni wrappers reales. Solo abre el frente documental y de gobierno.\",\n      \"documento\": \"MANUAL_TRAMO10\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000022-L000025\"\n    },\n    {\n      \"cita_literal_breve\": \"Pendiente de desarrollo.\",\n      \"documento\": \"MANUAL_TRAMO10\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000026-L000028\"\n    },\n    {\n      \"cita_literal_breve\": \"Este tramo fija la estructura mínima de trabajo para documentar cómo el lenguaje SV podrá relacionarse con otros lenguajes de programación sin degradar su semántica propia.\",\n      \"documento\": \"MANUAL_TRAMO10\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000003-L000006\"\n    }\n  ],\n  \"fundamentos_verificables\": [\n    \"La sección 4 delimita expresamente la aportación del tramo: abre el frente documental y de gobierno, pero no implementa ninguno de los cuatro mecanismos enumerados.\",\n    \"La sección 1 describe una estructura mínima de trabajo documental. La sección 3 presenta como tareas pendientes fijar los tipos de compatibilidad admitidos, la prioridad de lenguajes anfitriones, las garantías semánticas mínimas, el criterio de activación por lenguaje y los límites de fase; no acredita su implementación.\",\n    \"La sección 5 declara inequívocamente el estado pendiente de desarrollo. La existencia del texto preparatorio no equivale a una implementación operativa.\",\n    \"El sujeto de la declaración negativa es este tramo. Por ello, no prueba la inexistencia de implementaciones en otros repositorios ni determina su estado actual.\"\n  ],\n  \"insuficiencias\": [],\n  \"respuesta\": \"El tramo 10 declara expresamente que no implementa bindings, APIs, FFI ni wrappers reales; su aportación se limita a abrir el frente documental y de gobierno. Establece una estructura mínima de trabajo para documentar la relación del lenguaje SV con otros lenguajes preservando su semántica, no mecanismos operativos de compatibilidad. Su estado documental es «Pendiente de desarrollo».\\n\\nEsta conclusión se refiere exclusivamente al documento suministrado: no acredita ni descarta implementaciones existentes actualmente en otros repositorios.\",\n  \"revision\": \"Se mantiene la conclusión provisional: las citas son literales y sus secciones e índices de fragmento coinciden con la fuente. El contraste con la sección 3 confirma la distinción entre tareas previstas e implementación y se incorpora como fundamento complementario; su omisión anterior no alteraba la respuesta solicitada. Se conserva el límite al propio tramo, sin inferir una inexistencia general de implementaciones. No procede declarar U, pues ambos extremos preguntados están expresamente documentados.\"\n}",
+    "resumen_proveedor": [],
+    "telemetria": {
+      "bytes": 587200,
+      "fallos_medicion": 0,
+      "integridad": "conforme",
+      "intervalo_maximo_ms": 287,
+      "intervalo_objetivo_ms": 250,
+      "muestras": 88,
+      "plataforma_recibida": false,
+      "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+      "registros": 1388,
+      "sha256": "8c3cd5de425c0dc217c0f967395d71114eca00664f0f80de0e34ccaf1e7fb5e9"
+    },
+    "telemetria_conforme": true,
+    "uso_proveedor": {
+      "attribution": {
+        "items": {
+          "msg_0fb400d7d60df1b6016ac713c6cc1c87d287ddee37f5b13e1c": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 17562,
+                "output_tokens": 0
+              }
+            ],
+            "input_tokens": 17562,
+            "output_tokens": 0
+          },
+          "msg_0fb400d7d60df1b6016ac713c6cc3487d282a399b0e82d3357": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 533,
+                "output_tokens": 0
+              }
+            ],
+            "input_tokens": 533,
+            "output_tokens": 0
+          },
+          "msg_0fb400d7d60df1b6016ac713c6cc4487d299e73e169bf1a5d8": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 68,
+                "output_tokens": 0
+              }
+            ],
+            "input_tokens": 68,
+            "output_tokens": 0
+          },
+          "msg_0fb400d7d60df1b6016ac713c9413487d293817fa2e0aa7e81": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 2,
+                "output_tokens": 664
+              }
+            ],
+            "input_tokens": 2,
+            "output_tokens": 664
+          }
+        },
+        "request_fields": {
+          "instructions": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "input_tokens": 555,
+            "output_tokens": 0
+          },
+          "text.format": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "input_tokens": 172,
+            "output_tokens": 0
+          }
+        }
+      },
+      "input_tokens": 18892,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 664,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 19556
+    },
+    "utc_fin_ms": 1791431641510,
+    "utc_inicio_operacion_ms": 1791431620725,
+    "version_http": "HTTP/1.1"
+  }
+}

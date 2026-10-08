@@ -1,0 +1,13 @@
+# Reconstrucción y dependencias
+
+El ejecutable utilizado está identificado en PREVIA.json. Los siete fuentes del controlador de admisión se sitúan en src/bin/astra-manual del cliente de acceso existente; sv-recibir-manual.rs y sv-metricas-manual.rs se sitúan en src/bin. No son proyectos Cargo independientes. Se conservan los módulos catalogo/estricto, catalogo/recepcion y demás dependencias mediante el inventario transversal publicado del SV. No se sustituye el cliente de acceso ni se incluyen sus registros de autorización.
+
+Sede de dependencias compartidas: [inventario transversal](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/tree/5e2088d475f235af85d1fae0b5de52170c0aa131/docs/calidad/tuberias-ia/continuacion-15-09-2026/mapa/inventario-transversal-de-codigo-mantenido-versiones-y-dependencias). MCP: [edición recibida](https://github.com/juantoniolloretegea/SV-motor/tree/b4f6fed400e8d9e6c7bccaa8023ca40a8de83d74/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/model-context-protocol/mdbook/0.1.0). Las identidades concretas utilizadas constan en PREVIA.json.
+
+El directorio visor sí contiene Cargo.toml y Cargo.lock propios. Las fuentes publicadas con rutas sustituidas deben configurar una raíz de trabajo equivalente antes de compilar; no se declara reproducibilidad binaria a partir de esa proyección. La fuente CAPA-R2 y la pareja derivada se verifican antes de dibujar; el HTML incluye WebAssembly y el JavaScript de inicialización. Puede descargarse y abrirse localmente, sin descargas auxiliares. Se utilizó Rust 1.98.0 para wasm32-unknown-unknown y wasm-bindgen 0.2.129, disponibles antes de esta actuación.
+
+Los HITO-INSTRUMENTAL registran el estado al recibir cada entrega; su campo adjudicación pendiente es histórico. La ADJUDICACION contigua conserva la recepción posterior. Ningún original se reescribe para simular conocimiento previo del resultado.
+
+El archivo privado conserva solicitudes, respuestas, SSE, mediciones completas, suministro y manifiesto de sus originales. El paquete ZIP se representa como texto base64 para mantener un cotejo uniforme por bytes y SHA-256; debe decodificarse antes de extraerlo. No contiene credenciales, saldos ni clave reservada. Los saldos de cuenta, cuando disponibles, se conservan por separado sólo en el repositorio privado y no se atribuyen al ensayo.
+
+© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).

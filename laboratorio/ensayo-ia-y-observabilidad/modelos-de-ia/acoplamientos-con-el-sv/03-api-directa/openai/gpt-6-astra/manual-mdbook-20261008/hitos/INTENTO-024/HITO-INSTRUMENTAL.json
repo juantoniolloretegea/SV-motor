@@ -1,0 +1,219 @@
+{
+  "adjudicacion": "pendiente de contraste exterior al candidato",
+  "caso": "MD08",
+  "directorio": "ejecucion/astra-manual-20261008\\intentos/ENVIO-024/MD08/R2",
+  "entrega_numero": 24,
+  "esquema": "sv-hito-instrumental/2",
+  "etapa": 2,
+  "fecha_registro_ms": 1791431599492,
+  "modelo": "gpt-6-astra",
+  "nodo": "03",
+  "numero_intento": 24,
+  "originales": [
+    {
+      "bytes": 68232,
+      "ruta": "ejecucion/astra-manual-20261008\\intentos/ENVIO-024/MD08/R2\\SOLICITUD.json",
+      "sha256": "5e0106ab75a599b1ce7e60020643a3926b52f97c4f056a5cf9d3b791c294f9fc"
+    },
+    {
+      "bytes": 8793,
+      "ruta": "ejecucion/astra-manual-20261008\\intentos/ENVIO-024/MD08/R2\\RESULTADO.json",
+      "sha256": "fac4ffc63ff1df18abbe2f476c4670675378eaa499c2e00461476905e7ea61c8"
+    },
+    {
+      "bytes": 137,
+      "ruta": "ejecucion/astra-manual-20261008\\intentos/ENVIO-024/MD08/R2\\HTTP.json",
+      "sha256": "78e2d35101d64ece80abb70d1856862c1efad564c7b193f4ac50b176654fd514"
+    },
+    {
+      "bytes": 262605,
+      "ruta": "ejecucion/astra-manual-20261008\\intentos/ENVIO-024/MD08/R2\\SALIDA-SSE.txt",
+      "sha256": "39fa6a7873559bc5bcf9feeb7ab229f3373cadf03c84362fe6f8b42afb40dc90"
+    },
+    {
+      "bytes": 3772,
+      "ruta": "ejecucion/astra-manual-20261008\\intentos/ENVIO-024/MD08/R2\\FINAL.txt",
+      "sha256": "6b57a145804353758e2b19fe4225c9b62a223071414261f14d22271faed7cf09"
+    },
+    {
+      "bytes": 11438,
+      "ruta": "ejecucion/astra-manual-20261008\\intentos/ENVIO-024/MD08/R2\\ENTREGA-PROVEEDOR.json",
+      "sha256": "743918909c6fe6e0156819017bc45d72ed4afee46b6388a9ba68063f1963cd7f"
+    },
+    {
+      "bytes": 2135,
+      "ruta": "ejecucion/astra-manual-20261008\\intentos/ENVIO-024/MD08/R2\\AUDITORIA-FORMAL.json",
+      "sha256": "cb37063a6c91efbb864266abd1a0f4b903cc2c07a7cd46f869ba48a69c190174"
+    },
+    {
+      "bytes": 755330,
+      "ruta": "ejecucion/astra-manual-20261008\\intentos/ENVIO-024/MD08/R2\\instrumentacion/telemetria.jsonl",
+      "sha256": "047b5035eb26cc29aacd23f9694670b3b47b01279d18bd817051ab1b2a488348"
+    }
+  ],
+  "resultado": {
+    "adjudicado": false,
+    "cabeceras_proveedor": {},
+    "caso": "MD08-R2",
+    "completa": true,
+    "contrato_formal_conforme": true,
+    "coste_monetario_atribuible": null,
+    "creditos_atribuibles": null,
+    "duracion_intento_instrumentado_ms": 27901,
+    "duracion_ms": 24204,
+    "duracion_operacion_ms": 24548,
+    "entrega_numero": 24,
+    "estado": "entrega_recibida",
+    "evento_terminal": "response.completed",
+    "eventos": 900,
+    "herramientas_ejecutadas": 0,
+    "herramientas_habilitadas": 0,
+    "http": 200,
+    "incidencia_servicio": null,
+    "limites": [
+      "CPU porcentual sin calibración externa",
+      "Sin medida separada DNS/TLS, RTT, retransmisiones, asignaciones del montículo, hilos ni recursos internos del proveedor",
+      "La ausencia de herramientas no prueba aislamiento de infraestructura de OpenAI; fuente exclusiva exigida y respuesta pendiente de contraste sustantivo",
+      "Criptografía C/ensamblador pendiente conforme a excepción experimental autorizada"
+    ],
+    "modelo_declarado": "gpt-6-astra",
+    "modelo_solicitado": "gpt-6-astra",
+    "numero_intento": 24,
+    "par_remoto_http": "172.66.0.243:443",
+    "primer_evento_ms": 1509,
+    "primer_texto_ms": 3067,
+    "respuesta_bytes": 262605,
+    "respuesta_texto": "{\n  \"caso\": \"MD08\",\n  \"estado_documental\": \"respuesta_fundada\",\n  \"etapa\": 2,\n  \"evidencias\": [\n    {\n      \"cita_literal_breve\": \"## 3. Qué deberá fijar\\n\\n- tipos de compatibilidad admitidos;\\n- prioridad por lenguajes anfitriones;\\n- garantías semánticas mínimas;\\n- criterio de activación por lenguaje;\\n- y límites de fase.\",\n      \"documento\": \"MANUAL_TRAMO10\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000014-L000021\"\n    },\n    {\n      \"cita_literal_breve\": \"Este tramo fija la estructura mínima de trabajo para documentar cómo el lenguaje SV podrá relacionarse con otros lenguajes de programación sin degradar su semántica propia.\",\n      \"documento\": \"MANUAL_TRAMO10\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000003-L000006\"\n    },\n    {\n      \"cita_literal_breve\": \"Este tramo no implementa bindings, APIs, FFI ni wrappers reales. Solo abre el frente documental y de gobierno.\",\n      \"documento\": \"MANUAL_TRAMO10\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000022-L000025\"\n    },\n    {\n      \"cita_literal_breve\": \"Pendiente de desarrollo.\",\n      \"documento\": \"MANUAL_TRAMO10\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000026-L000028\"\n    },\n    {\n      \"cita_literal_breve\": \"La presentación de un documento en este libro no acredita una nueva aprobación.\",\n      \"documento\": \"MANUAL_PRESENTACION\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000011-L000014\"\n    }\n  ],\n  \"fundamentos_verificables\": [\n    \"La sección 3 enumera explícitamente las cinco cuestiones. Su encabezado en futuro indica contenidos que el tramo deberá concretar, no decisiones técnicas ya resueltas.\",\n    \"El objeto declarado establece una estructura mínima de trabajo; junto con el estado pendiente de desarrollo, fundamenta calificar la lista como preparatoria, prospectiva y programática. Estas calificaciones son una interpretación del alcance documental, no categorías literales de la fuente.\",\n    \"La sección 4 distingue expresamente la apertura documental y de gobierno de la implementación de interfaces. Esta limitación se refiere al tramo y no acredita la inexistencia de implementaciones en otros repositorios.\",\n    \"La presentación distingue la publicación del documento de una nueva aprobación.\"\n  ],\n  \"insuficiencias\": [],\n  \"respuesta\": \"El tramo 10 deberá fijar cinco cuestiones:\\n1. Los tipos de compatibilidad admitidos.\\n2. La prioridad por lenguajes anfitriones.\\n3. Las garantías semánticas mínimas.\\n4. El criterio de activación por lenguaje.\\n5. Los límites de fase.\\n\\nLa enumeración tiene carácter preparatorio, prospectivo y programático: delimita las materias que deberá concretar el desarrollo del tramo, pero no determina todavía sus soluciones. Forma parte de una estructura mínima de trabajo para documentar la relación del SV con otros lenguajes sin degradar su semántica propia.\\n\\nEl documento declara su estado pendiente de desarrollo y limita su aportación al frente documental y de gobierno: no implementa bindings, APIs, FFI ni wrappers reales. Su publicación tampoco acredita una nueva aprobación. Estas conclusiones describen el documento conservado, no el estado actual de otros repositorios.\",\n  \"revision\": \"Contrastadas ambas entregas con la fuente, se mantiene la enumeración: las dos recogen los cinco elementos sin omisiones ni cambios de sentido. Se mantiene también la interpretación prospectiva, apoyada en el encabezado de la sección 3, el objeto y el estado declarado. El apoyo adicional de la segunda entrega es pertinente, pero no corrige un error sustantivo de la primera. Se precisa que «preparatorio, prospectivo y programático» es una caracterización fundada, no una cita literal. No hay extremos de la pregunta que requieran declarar U.\"\n}",
+    "resumen_proveedor": [],
+    "telemetria": {
+      "bytes": 755330,
+      "fallos_medicion": 0,
+      "integridad": "conforme",
+      "intervalo_maximo_ms": 284,
+      "intervalo_objetivo_ms": 250,
+      "muestras": 103,
+      "plataforma_recibida": false,
+      "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+      "registros": 1815,
+      "sha256": "047b5035eb26cc29aacd23f9694670b3b47b01279d18bd817051ab1b2a488348"
+    },
+    "telemetria_conforme": true,
+    "uso_proveedor": {
+      "attribution": {
+        "items": {
+          "msg_028f584d09c9cbf2016ac71397e67887d2904a0088e091fc8e": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 17545,
+                "output_tokens": 0
+              }
+            ],
+            "input_tokens": 17545,
+            "output_tokens": 0
+          },
+          "msg_028f584d09c9cbf2016ac71397e6a087d2971e0ac252261aac": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 651,
+                "output_tokens": 0
+              }
+            ],
+            "input_tokens": 651,
+            "output_tokens": 0
+          },
+          "msg_028f584d09c9cbf2016ac71397e6b087d2aa0d4799c005e851": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 27,
+                "output_tokens": 0
+              }
+            ],
+            "input_tokens": 27,
+            "output_tokens": 0
+          },
+          "msg_028f584d09c9cbf2016ac71397e6c087d28a263ee016ba9aaf": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 912,
+                "output_tokens": 0
+              }
+            ],
+            "input_tokens": 912,
+            "output_tokens": 0
+          },
+          "msg_028f584d09c9cbf2016ac71397e6d087d281e402226af38c71": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 67,
+                "output_tokens": 0
+              }
+            ],
+            "input_tokens": 67,
+            "output_tokens": 0
+          },
+          "msg_028f584d09c9cbf2016ac71399c3c487d280541c3b04db5fa5": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 2,
+                "output_tokens": 905
+              }
+            ],
+            "input_tokens": 2,
+            "output_tokens": 905
+          }
+        },
+        "request_fields": {
+          "instructions": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "input_tokens": 554,
+            "output_tokens": 0
+          },
+          "text.format": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "input_tokens": 172,
+            "output_tokens": 0
+          }
+        }
+      },
+      "input_tokens": 19930,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 905,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 20835
+    },
+    "utc_fin_ms": 1791431598384,
+    "utc_inicio_operacion_ms": 1791431573837,
+    "version_http": "HTTP/1.1"
+  }
+}

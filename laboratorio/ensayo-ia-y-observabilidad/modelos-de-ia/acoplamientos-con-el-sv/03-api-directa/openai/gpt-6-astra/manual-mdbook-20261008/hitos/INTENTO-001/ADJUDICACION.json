@@ -1,0 +1,181 @@
+{
+  "alerta": {
+    "caso": "MD01",
+    "cita_cotejada_en_rust": true,
+    "motivo": "El estatuto del constructor es preparatorio. Reconocer correctamente ese límite no acredita que el manual esté desarrollado ni un generador implementado. La pregunta sí cuenta con evidencia suficiente.",
+    "pasaje": {
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmento": "No es todavía el manual final.",
+      "origen": "cotejo adicional del evaluador",
+      "seccion": "MD-L000003-L000008"
+    },
+    "posicion": 1
+  },
+  "alerta_limite": true,
+  "auditoria_sha256": "58b859693df0d34fae9145809c0e357af6cf11fece77a9e61de09d942e2f7e4c",
+  "caso": "MD01",
+  "critico": true,
+  "estado_documental_candidato": "respuesta_fundada",
+  "etapa": 0,
+  "final_sha256": "9f4a83981177e90174efe465275fca81d768997fbccd1d05db4aef7577cb8643",
+  "formal_conforme": true,
+  "fundamento_sustantivo": "Distingue correctamente arquitectura de construcción y manual terminado; los requisitos complementarios se corresponden con el constructor y no atribuye implementación.",
+  "medicion": {
+    "adjudicacion": false,
+    "caso": "MD01",
+    "completa": true,
+    "directorio": "ejecucion/astra-manual-20261008\\intentos/ENVIO-001/MD01/R0",
+    "duracion_ms": 25310,
+    "duracion_operacion_ms": 25712,
+    "entrega": 1,
+    "etapa": 0,
+    "final_sha256": "9f4a83981177e90174efe465275fca81d768997fbccd1d05db4aef7577cb8643",
+    "formal_conforme": true,
+    "http": 200,
+    "intento": 1,
+    "respuesta": "{\n  \"caso\": \"MD01\",\n  \"estado_documental\": \"respuesta_fundada\",\n  \"etapa\": 0,\n  \"evidencias\": [\n    {\n      \"cita_literal_breve\": \"Este constructor fija la arquitectura de trabajo del manual del lenguaje SVP (extensión `.svp`).\",\n      \"documento\": \"MANUAL_CONSTRUCTOR\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000003-L000008\"\n    },\n    {\n      \"cita_literal_breve\": \"Su finalidad es permitir un cierre progresivo por capítulos o tramos sin perder el eje del sistema ni dispersarse en caminos laterales.\",\n      \"documento\": \"MANUAL_CONSTRUCTOR\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000003-L000008\"\n    },\n    {\n      \"cita_literal_breve\": \"No es todavía el manual final. Es la **máquina de construirlo**.\",\n      \"documento\": \"MANUAL_CONSTRUCTOR\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000003-L000008\"\n    },\n    {\n      \"cita_literal_breve\": \"subordinado al pliego, a la Frontera normativa, a la IR y a la gramática vigente;\",\n      \"documento\": \"MANUAL_CONSTRUCTOR\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000009-L000017\"\n    },\n    {\n      \"cita_literal_breve\": \"Todo tramo del manual deberá declarar:\",\n      \"documento\": \"MANUAL_CONSTRUCTOR\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000092-L000108\"\n    },\n    {\n      \"cita_literal_breve\": \"Un tramo se considerará cerrable cuando reúna, como mínimo:\",\n      \"documento\": \"MANUAL_CONSTRUCTOR\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000109-L000118\"\n    },\n    {\n      \"cita_literal_breve\": \"Es una demostración de publicación y consulta; no constituye un manual terminado ni modifica el estado de aprobación de sus contenidos.\",\n      \"documento\": \"MANUAL_PRESENTACION\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000001-L000004\"\n    }\n  ],\n  \"fundamentos_verificables\": [\n    \"La sección Naturaleza atribuye al constructor una función organizativa: establece cómo elaborar y cerrar progresivamente el manual, no presenta ese trabajo como concluido.\",\n    \"Las secciones Regla general, Ficha obligatoria por tramo y Criterio de cierre concretan esa función mediante subordinación normativa, requisitos de documentación y condiciones mínimas para considerar cerrable cada tramo.\",\n    \"La presentación confirma que publicar y consultar estos documentos no equivale a terminar el manual ni a aprobar nuevamente sus contenidos.\"\n  ],\n  \"insuficiencias\": [],\n  \"respuesta\": \"El constructor cumple la función de arquitectura de trabajo para elaborar el manual del lenguaje SVP: organiza su desarrollo por tramos nucleares y permite cerrarlos progresivamente sin perder la coherencia del sistema ni dispersarse en asuntos laterales.\\n\\nPara ello establece la estructura temática, una ficha obligatoria para cada tramo y criterios mínimos de cierre. Exige delimitar el objeto y lo que queda fuera, explicitar dependencias y relación con la IR, aportar ejemplos y contraejemplos, y mantener la subordinación al pliego, la Frontera normativa y la gramática vigente.\\n\\nLa diferencia respecto de un manual final es, por tanto, entre el instrumento que organiza y regula su construcción y el manual ya desarrollado: el constructor prescribe lo que deberá contener y satisfacer cada tramo, pero no acredita que esos contenidos estén terminados o cerrados. La edición suministrada tampoco convierte ese plan en un manual final ni modifica la aprobación de sus contenidos. Esta conclusión se refiere al estado documental conservado, no al estado actual de otros repositorios.\",\n  \"revision\": \"Respuesta provisional de etapa 0. No existen antecedentes ni entregas anteriores que contrastar. La distinción entre arquitectura de construcción y manual terminado se apoya en la declaración expresa del constructor y en el estado indicado por la presentación.\"\n}",
+    "resultado_sha256": "a5ec82b9ad6a02a492b6971d4c3e1b512a9b41073917d0d264284a950464852a",
+    "resumen_proveedor": [],
+    "solicitud_sha256": "525034cc326d037e0aec9d605da1bbbd53b8ff36a6d44a5528b324b7aa69a7ab",
+    "telemetria": {
+      "bytes": 822504,
+      "fallos_medicion": 0,
+      "integridad": "conforme",
+      "intervalo_maximo_ms": 287,
+      "intervalo_objetivo_ms": 250,
+      "muestras": 106,
+      "plataforma_recibida": false,
+      "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+      "registros": 1893,
+      "sha256": "51458daa84ed17c6acc8cac9eca8152fc5a05123aa3d58ec6f781a531f14ad45"
+    },
+    "uso_proveedor": {
+      "attribution": {
+        "items": {
+          "msg_0ed64f4b0e577a31016ac710e8a82087d2b66810ad3da85842": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 17538,
+                "output_tokens": 0
+              }
+            ],
+            "input_tokens": 17538,
+            "output_tokens": 0
+          },
+          "msg_0ed64f4b0e577a31016ac710eaa47887d2b173119dc29faeec": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 2,
+                "output_tokens": 898
+              }
+            ],
+            "input_tokens": 2,
+            "output_tokens": 898
+          }
+        },
+        "request_fields": {
+          "instructions": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "input_tokens": 518,
+            "output_tokens": 0
+          },
+          "text.format": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "input_tokens": 172,
+            "output_tokens": 0
+          }
+        }
+      },
+      "input_tokens": 18230,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 898,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 19128
+    }
+  },
+  "naturaleza_defecto": null,
+  "pasajes_contrastados": [
+    {
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmento": "Este constructor fija la arquitectura de trabajo del manual del lenguaje SVP (extensión `.svp`).",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000003-L000008"
+    },
+    {
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmento": "Su finalidad es permitir un cierre progresivo por capítulos o tramos sin perder el eje del sistema ni dispersarse en caminos laterales.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000003-L000008"
+    },
+    {
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmento": "No es todavía el manual final. Es la **máquina de construirlo**.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000003-L000008"
+    },
+    {
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmento": "subordinado al pliego, a la Frontera normativa, a la IR y a la gramática vigente;",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000009-L000017"
+    },
+    {
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmento": "Todo tramo del manual deberá declarar:",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000092-L000108"
+    },
+    {
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmento": "Un tramo se considerará cerrable cuando reúna, como mínimo:",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000109-L000118"
+    },
+    {
+      "documento": "MANUAL_PRESENTACION",
+      "fragmento": "Es una demostración de publicación y consulta; no constituye un manual terminado ni modifica el estado de aprobación de sus contenidos.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000001-L000004"
+    },
+    {
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmento": "No es todavía el manual final.",
+      "origen": "cotejo adicional del evaluador",
+      "seccion": "MD-L000003-L000008"
+    }
+  ],
+  "recepcion_independiente": "pendiente",
+  "respuesta_original": "{\n  \"caso\": \"MD01\",\n  \"estado_documental\": \"respuesta_fundada\",\n  \"etapa\": 0,\n  \"evidencias\": [\n    {\n      \"cita_literal_breve\": \"Este constructor fija la arquitectura de trabajo del manual del lenguaje SVP (extensión `.svp`).\",\n      \"documento\": \"MANUAL_CONSTRUCTOR\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000003-L000008\"\n    },\n    {\n      \"cita_literal_breve\": \"Su finalidad es permitir un cierre progresivo por capítulos o tramos sin perder el eje del sistema ni dispersarse en caminos laterales.\",\n      \"documento\": \"MANUAL_CONSTRUCTOR\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000003-L000008\"\n    },\n    {\n      \"cita_literal_breve\": \"No es todavía el manual final. Es la **máquina de construirlo**.\",\n      \"documento\": \"MANUAL_CONSTRUCTOR\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000003-L000008\"\n    },\n    {\n      \"cita_literal_breve\": \"subordinado al pliego, a la Frontera normativa, a la IR y a la gramática vigente;\",\n      \"documento\": \"MANUAL_CONSTRUCTOR\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000009-L000017\"\n    },\n    {\n      \"cita_literal_breve\": \"Todo tramo del manual deberá declarar:\",\n      \"documento\": \"MANUAL_CONSTRUCTOR\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000092-L000108\"\n    },\n    {\n      \"cita_literal_breve\": \"Un tramo se considerará cerrable cuando reúna, como mínimo:\",\n      \"documento\": \"MANUAL_CONSTRUCTOR\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000109-L000118\"\n    },\n    {\n      \"cita_literal_breve\": \"Es una demostración de publicación y consulta; no constituye un manual terminado ni modifica el estado de aprobación de sus contenidos.\",\n      \"documento\": \"MANUAL_PRESENTACION\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000001-L000004\"\n    }\n  ],\n  \"fundamentos_verificables\": [\n    \"La sección Naturaleza atribuye al constructor una función organizativa: establece cómo elaborar y cerrar progresivamente el manual, no presenta ese trabajo como concluido.\",\n    \"Las secciones Regla general, Ficha obligatoria por tramo y Criterio de cierre concretan esa función mediante subordinación normativa, requisitos de documentación y condiciones mínimas para considerar cerrable cada tramo.\",\n    \"La presentación confirma que publicar y consultar estos documentos no equivale a terminar el manual ni a aprobar nuevamente sus contenidos.\"\n  ],\n  \"insuficiencias\": [],\n  \"respuesta\": \"El constructor cumple la función de arquitectura de trabajo para elaborar el manual del lenguaje SVP: organiza su desarrollo por tramos nucleares y permite cerrarlos progresivamente sin perder la coherencia del sistema ni dispersarse en asuntos laterales.\\n\\nPara ello establece la estructura temática, una ficha obligatoria para cada tramo y criterios mínimos de cierre. Exige delimitar el objeto y lo que queda fuera, explicitar dependencias y relación con la IR, aportar ejemplos y contraejemplos, y mantener la subordinación al pliego, la Frontera normativa y la gramática vigente.\\n\\nLa diferencia respecto de un manual final es, por tanto, entre el instrumento que organiza y regula su construcción y el manual ya desarrollado: el constructor prescribe lo que deberá contener y satisfacer cada tramo, pero no acredita que esos contenidos estén terminados o cerrados. La edición suministrada tampoco convierte ese plan en un manual final ni modifica la aprobación de sus contenidos. Esta conclusión se refiere al estado documental conservado, no al estado actual de otros repositorios.\",\n  \"revision\": \"Respuesta provisional de etapa 0. No existen antecedentes ni entregas anteriores que contrastar. La distinción entre arquitectura de construcción y manual terminado se apoya en la declaración expresa del constructor y en el estado indicado por la presentación.\"\n}",
+  "solicitud_sha256": "525034cc326d037e0aec9d605da1bbbd53b8ff36a6d44a5528b324b7aa69a7ab",
+  "sustantivo": "correcto",
+  "valor": "0"
+}

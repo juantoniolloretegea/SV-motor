@@ -1,0 +1,177 @@
+{
+  "alerta": {
+    "caso": "MD09",
+    "cita_cotejada_en_rust": true,
+    "motivo": "La respuesta correcta identifica un límite explícito del documento. No equivale a una implementación recibida ni a una carencia del corpus para esta pregunta; el límite fue contrastado con la fuente.",
+    "pasaje": {
+      "documento": "MANUAL_TRAMO10",
+      "fragmento": "Este tramo no implementa bindings, APIs, FFI ni wrappers reales. Solo abre el frente documental y de gobierno.",
+      "origen": "cotejo adicional del evaluador",
+      "seccion": "MD-L000022-L000025"
+    },
+    "posicion": 9
+  },
+  "alerta_limite": true,
+  "auditoria_sha256": "593193b733b66872e88deed69184409deaba290aa784cc3b6174a2aa9e0f5bc6",
+  "caso": "MD09",
+  "critico": true,
+  "estado_documental_candidato": "respuesta_fundada",
+  "etapa": 1,
+  "final_sha256": "a14bdae81d013de2e015ef95d7d358e99c67ba8914b6d3548dcfbbc5c190af0e",
+  "formal_conforme": true,
+  "fundamento_sustantivo": "Identifica las cuatro implementaciones expresamente excluidas y el estado pendiente, con alcance limitado al tramo. No infiere inexistencia global ni utiliza U sin necesidad. Las tres entregas concuerdan con la fuente.",
+  "medicion": {
+    "adjudicacion": false,
+    "caso": "MD09",
+    "completa": true,
+    "directorio": "ejecucion/astra-manual-20261008\\intentos/ENVIO-026/MD09/R1",
+    "duracion_ms": 20486,
+    "duracion_operacion_ms": 20788,
+    "entrega": 26,
+    "etapa": 1,
+    "final_sha256": "a14bdae81d013de2e015ef95d7d358e99c67ba8914b6d3548dcfbbc5c190af0e",
+    "formal_conforme": true,
+    "http": 200,
+    "intento": 26,
+    "respuesta": "{\n  \"caso\": \"MD09\",\n  \"estado_documental\": \"respuesta_fundada\",\n  \"etapa\": 1,\n  \"evidencias\": [\n    {\n      \"cita_literal_breve\": \"Este tramo no implementa bindings, APIs, FFI ni wrappers reales. Solo abre el frente documental y de gobierno.\",\n      \"documento\": \"MANUAL_TRAMO10\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000022-L000025\"\n    },\n    {\n      \"cita_literal_breve\": \"Pendiente de desarrollo.\",\n      \"documento\": \"MANUAL_TRAMO10\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000026-L000028\"\n    },\n    {\n      \"cita_literal_breve\": \"Este tramo fija la estructura mínima de trabajo para documentar cómo el lenguaje SV podrá relacionarse con otros lenguajes de programación sin degradar su semántica propia.\",\n      \"documento\": \"MANUAL_TRAMO10\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000003-L000006\"\n    }\n  ],\n  \"fundamentos_verificables\": [\n    \"La sección 4 delimita expresamente la aportación del tramo: abre el frente documental y de gobierno, pero no implementa ninguno de los cuatro mecanismos enumerados.\",\n    \"La sección 1 describe una estructura mínima de trabajo documental. La sección 3 presenta como tareas pendientes fijar los tipos de compatibilidad admitidos, la prioridad de lenguajes anfitriones, las garantías semánticas mínimas, el criterio de activación por lenguaje y los límites de fase; no acredita su implementación.\",\n    \"La sección 5 declara inequívocamente el estado pendiente de desarrollo. La existencia del texto preparatorio no equivale a una implementación operativa.\",\n    \"El sujeto de la declaración negativa es este tramo. Por ello, no prueba la inexistencia de implementaciones en otros repositorios ni determina su estado actual.\"\n  ],\n  \"insuficiencias\": [],\n  \"respuesta\": \"El tramo 10 declara expresamente que no implementa bindings, APIs, FFI ni wrappers reales; su aportación se limita a abrir el frente documental y de gobierno. Establece una estructura mínima de trabajo para documentar la relación del lenguaje SV con otros lenguajes preservando su semántica, no mecanismos operativos de compatibilidad. Su estado documental es «Pendiente de desarrollo».\\n\\nEsta conclusión se refiere exclusivamente al documento suministrado: no acredita ni descarta implementaciones existentes actualmente en otros repositorios.\",\n  \"revision\": \"Se mantiene la conclusión provisional: las citas son literales y sus secciones e índices de fragmento coinciden con la fuente. El contraste con la sección 3 confirma la distinción entre tareas previstas e implementación y se incorpora como fundamento complementario; su omisión anterior no alteraba la respuesta solicitada. Se conserva el límite al propio tramo, sin inferir una inexistencia general de implementaciones. No procede declarar U, pues ambos extremos preguntados están expresamente documentados.\"\n}",
+    "resultado_sha256": "caf08b099ad2c9b74035eaf13ef92d50f88ea65d15b963b7ed374a95724dfa4e",
+    "resumen_proveedor": [],
+    "solicitud_sha256": "96e6ddf6fcb88691e6160061848b1eb08cac19041ebc3471de8862f8c048acbf",
+    "telemetria": {
+      "bytes": 587200,
+      "fallos_medicion": 0,
+      "integridad": "conforme",
+      "intervalo_maximo_ms": 287,
+      "intervalo_objetivo_ms": 250,
+      "muestras": 88,
+      "plataforma_recibida": false,
+      "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+      "registros": 1388,
+      "sha256": "8c3cd5de425c0dc217c0f967395d71114eca00664f0f80de0e34ccaf1e7fb5e9"
+    },
+    "uso_proveedor": {
+      "attribution": {
+        "items": {
+          "msg_0fb400d7d60df1b6016ac713c6cc1c87d287ddee37f5b13e1c": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 17562,
+                "output_tokens": 0
+              }
+            ],
+            "input_tokens": 17562,
+            "output_tokens": 0
+          },
+          "msg_0fb400d7d60df1b6016ac713c6cc3487d282a399b0e82d3357": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 533,
+                "output_tokens": 0
+              }
+            ],
+            "input_tokens": 533,
+            "output_tokens": 0
+          },
+          "msg_0fb400d7d60df1b6016ac713c6cc4487d299e73e169bf1a5d8": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 68,
+                "output_tokens": 0
+              }
+            ],
+            "input_tokens": 68,
+            "output_tokens": 0
+          },
+          "msg_0fb400d7d60df1b6016ac713c9413487d293817fa2e0aa7e81": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 2,
+                "output_tokens": 664
+              }
+            ],
+            "input_tokens": 2,
+            "output_tokens": 664
+          }
+        },
+        "request_fields": {
+          "instructions": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "input_tokens": 555,
+            "output_tokens": 0
+          },
+          "text.format": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "input_tokens": 172,
+            "output_tokens": 0
+          }
+        }
+      },
+      "input_tokens": 18892,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 664,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 19556
+    }
+  },
+  "naturaleza_defecto": null,
+  "pasajes_contrastados": [
+    {
+      "documento": "MANUAL_TRAMO10",
+      "fragmento": "Este tramo no implementa bindings, APIs, FFI ni wrappers reales. Solo abre el frente documental y de gobierno.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000022-L000025"
+    },
+    {
+      "documento": "MANUAL_TRAMO10",
+      "fragmento": "Pendiente de desarrollo.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000026-L000028"
+    },
+    {
+      "documento": "MANUAL_TRAMO10",
+      "fragmento": "Este tramo fija la estructura mínima de trabajo para documentar cómo el lenguaje SV podrá relacionarse con otros lenguajes de programación sin degradar su semántica propia.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000003-L000006"
+    },
+    {
+      "documento": "MANUAL_TRAMO10",
+      "fragmento": "Este tramo no implementa bindings, APIs, FFI ni wrappers reales. Solo abre el frente documental y de gobierno.",
+      "origen": "cotejo adicional del evaluador",
+      "seccion": "MD-L000022-L000025"
+    }
+  ],
+  "recepcion_independiente": "pendiente",
+  "respuesta_original": "{\n  \"caso\": \"MD09\",\n  \"estado_documental\": \"respuesta_fundada\",\n  \"etapa\": 1,\n  \"evidencias\": [\n    {\n      \"cita_literal_breve\": \"Este tramo no implementa bindings, APIs, FFI ni wrappers reales. Solo abre el frente documental y de gobierno.\",\n      \"documento\": \"MANUAL_TRAMO10\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000022-L000025\"\n    },\n    {\n      \"cita_literal_breve\": \"Pendiente de desarrollo.\",\n      \"documento\": \"MANUAL_TRAMO10\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000026-L000028\"\n    },\n    {\n      \"cita_literal_breve\": \"Este tramo fija la estructura mínima de trabajo para documentar cómo el lenguaje SV podrá relacionarse con otros lenguajes de programación sin degradar su semántica propia.\",\n      \"documento\": \"MANUAL_TRAMO10\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000003-L000006\"\n    }\n  ],\n  \"fundamentos_verificables\": [\n    \"La sección 4 delimita expresamente la aportación del tramo: abre el frente documental y de gobierno, pero no implementa ninguno de los cuatro mecanismos enumerados.\",\n    \"La sección 1 describe una estructura mínima de trabajo documental. La sección 3 presenta como tareas pendientes fijar los tipos de compatibilidad admitidos, la prioridad de lenguajes anfitriones, las garantías semánticas mínimas, el criterio de activación por lenguaje y los límites de fase; no acredita su implementación.\",\n    \"La sección 5 declara inequívocamente el estado pendiente de desarrollo. La existencia del texto preparatorio no equivale a una implementación operativa.\",\n    \"El sujeto de la declaración negativa es este tramo. Por ello, no prueba la inexistencia de implementaciones en otros repositorios ni determina su estado actual.\"\n  ],\n  \"insuficiencias\": [],\n  \"respuesta\": \"El tramo 10 declara expresamente que no implementa bindings, APIs, FFI ni wrappers reales; su aportación se limita a abrir el frente documental y de gobierno. Establece una estructura mínima de trabajo para documentar la relación del lenguaje SV con otros lenguajes preservando su semántica, no mecanismos operativos de compatibilidad. Su estado documental es «Pendiente de desarrollo».\\n\\nEsta conclusión se refiere exclusivamente al documento suministrado: no acredita ni descarta implementaciones existentes actualmente en otros repositorios.\",\n  \"revision\": \"Se mantiene la conclusión provisional: las citas son literales y sus secciones e índices de fragmento coinciden con la fuente. El contraste con la sección 3 confirma la distinción entre tareas previstas e implementación y se incorpora como fundamento complementario; su omisión anterior no alteraba la respuesta solicitada. Se conserva el límite al propio tramo, sin inferir una inexistencia general de implementaciones. No procede declarar U, pues ambos extremos preguntados están expresamente documentados.\"\n}",
+  "solicitud_sha256": "96e6ddf6fcb88691e6160061848b1eb08cac19041ebc3471de8862f8c048acbf",
+  "sustantivo": "correcto",
+  "valor": "0"
+}

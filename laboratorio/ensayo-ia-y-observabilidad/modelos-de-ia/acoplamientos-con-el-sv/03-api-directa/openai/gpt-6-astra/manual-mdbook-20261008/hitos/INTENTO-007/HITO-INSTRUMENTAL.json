@@ -1,0 +1,163 @@
+{
+  "adjudicacion": "pendiente de contraste exterior al candidato",
+  "caso": "MD03",
+  "directorio": "ejecucion/astra-manual-20261008\\intentos/ENVIO-007/MD03/R0",
+  "entrega_numero": 7,
+  "esquema": "sv-hito-instrumental/2",
+  "etapa": 0,
+  "fecha_registro_ms": 1791431133008,
+  "modelo": "gpt-6-astra",
+  "nodo": "03",
+  "numero_intento": 7,
+  "originales": [
+    {
+      "bytes": 60703,
+      "ruta": "ejecucion/astra-manual-20261008\\intentos/ENVIO-007/MD03/R0\\SOLICITUD.json",
+      "sha256": "08e7f815d53ae4552984d9a6df45d6b053206ac4b64337e76a916fdb922cdf88"
+    },
+    {
+      "bytes": 6178,
+      "ruta": "ejecucion/astra-manual-20261008\\intentos/ENVIO-007/MD03/R0\\RESULTADO.json",
+      "sha256": "e0a433612d46da5408ec423900bf2998c14c92c750747189417c7780624e8f9e"
+    },
+    {
+      "bytes": 140,
+      "ruta": "ejecucion/astra-manual-20261008\\intentos/ENVIO-007/MD03/R0\\HTTP.json",
+      "sha256": "f9f7fa7142ff740ca4d0b33b0706dd7e1e241da49e53fcb3e95c6d8678d30d50"
+    },
+    {
+      "bytes": 221668,
+      "ruta": "ejecucion/astra-manual-20261008\\intentos/ENVIO-007/MD03/R0\\SALIDA-SSE.txt",
+      "sha256": "7217509c7e73f79d1ad7dc0cd250b9180052e4c9d6ca398f613ff0fa5cc6da89"
+    },
+    {
+      "bytes": 2789,
+      "ruta": "ejecucion/astra-manual-20261008\\intentos/ENVIO-007/MD03/R0\\FINAL.txt",
+      "sha256": "b324eef572070d609fd0dd8933f2f23a55fa7683f5eb3cb69cbb4fb8d6ec9464"
+    },
+    {
+      "bytes": 7836,
+      "ruta": "ejecucion/astra-manual-20261008\\intentos/ENVIO-007/MD03/R0\\ENTREGA-PROVEEDOR.json",
+      "sha256": "ceb85a561a29212c51fde14ae6efa8ff6390dc8346185852dca3149138d29887"
+    },
+    {
+      "bytes": 2151,
+      "ruta": "ejecucion/astra-manual-20261008\\intentos/ENVIO-007/MD03/R0\\AUDITORIA-FORMAL.json",
+      "sha256": "ad9755568d448395f96eb95ea37a34bc4f7c7f56a0ed6832e8e4a1540a570243"
+    },
+    {
+      "bytes": 665207,
+      "ruta": "ejecucion/astra-manual-20261008\\intentos/ENVIO-007/MD03/R0\\instrumentacion/telemetria.jsonl",
+      "sha256": "525093bab018ac244b76f6ee5ee217f81f3ac40fd71925e4ad9d85c74e03bd98"
+    }
+  ],
+  "resultado": {
+    "adjudicado": false,
+    "cabeceras_proveedor": {},
+    "caso": "MD03-R0",
+    "completa": true,
+    "contrato_formal_conforme": true,
+    "coste_monetario_atribuible": null,
+    "creditos_atribuibles": null,
+    "duracion_intento_instrumentado_ms": 22452,
+    "duracion_ms": 18527,
+    "duracion_operacion_ms": 18948,
+    "entrega_numero": 7,
+    "estado": "entrega_recibida",
+    "evento_terminal": "response.completed",
+    "eventos": 760,
+    "herramientas_ejecutadas": 0,
+    "herramientas_habilitadas": 0,
+    "http": 200,
+    "incidencia_servicio": null,
+    "limites": [
+      "CPU porcentual sin calibración externa",
+      "Sin medida separada DNS/TLS, RTT, retransmisiones, asignaciones del montículo, hilos ni recursos internos del proveedor",
+      "La ausencia de herramientas no prueba aislamiento de infraestructura de OpenAI; fuente exclusiva exigida y respuesta pendiente de contraste sustantivo",
+      "Criptografía C/ensamblador pendiente conforme a excepción experimental autorizada"
+    ],
+    "modelo_declarado": "gpt-6-astra",
+    "modelo_solicitado": "gpt-6-astra",
+    "numero_intento": 7,
+    "par_remoto_http": "162.159.140.245:443",
+    "primer_evento_ms": 1646,
+    "primer_texto_ms": 2950,
+    "respuesta_bytes": 221668,
+    "respuesta_texto": "{\n  \"caso\": \"MD03\",\n  \"estado_documental\": \"respuesta_fundada\",\n  \"etapa\": 0,\n  \"evidencias\": [\n    {\n      \"cita_literal_breve\": \"### Tramo 3 — Célula, evaluación y clasificación\\n- `CellSpec`;\\n- `CellState`;\\n- `evaluate`;\\n- umbral;\\n- criticidad.\",\n      \"documento\": \"MANUAL_CONSTRUCTOR\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000041-L000047\"\n    },\n    {\n      \"cita_literal_breve\": \"### Tramo 5 — Resolución y régimen de la U\\n- `resolve`;\\n- `Context`;\\n- `Mechanism`;\\n- reapertura.\",\n      \"documento\": \"MANUAL_CONSTRUCTOR\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000054-L000059\"\n    },\n    {\n      \"cita_literal_breve\": \"### Tramo 6 — Trayectoria, frame y datos de transición\\n- `Frame`;\\n- `TransitionData`;\\n- `Trajectory`;\\n- regla append-only.\",\n      \"documento\": \"MANUAL_CONSTRUCTOR\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000060-L000065\"\n    },\n    {\n      \"cita_literal_breve\": \"No es todavía el manual final.\",\n      \"documento\": \"MANUAL_CONSTRUCTOR\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000003-L000008\"\n    },\n    {\n      \"cita_literal_breve\": \"El índice original registra once tramos pendientes, SVP-MAN-00 a SVP-MAN-10.\",\n      \"documento\": \"MANUAL_PRESENTACION\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000005-L000010\"\n    }\n  ],\n  \"fundamentos_verificables\": [\n    \"Los encabezados de los tramos 3, 5 y 6 sitúan expresamente las tres materias consultadas; las listas que siguen a cada encabezado enumeran sus contenidos asociados.\",\n    \"Se trata de la arquitectura prevista del manual conservada en la edición suministrada, no de definiciones desarrolladas ni de una acreditación de implementación. El constructor declara que aún no es el manual final y la presentación registra los tramos como pendientes.\"\n  ],\n  \"insuficiencias\": [],\n  \"respuesta\": \"El constructor distribuye las materias así:\\n\\n1. Evaluación de células: tramo 3 — Célula, evaluación y clasificación. Materias asociadas: `CellSpec`, `CellState`, `evaluate`, umbral y criticidad.\\n2. Resolución de U: tramo 5 — Resolución y régimen de la U. Materias asociadas: `resolve`, `Context`, `Mechanism` y reapertura.\\n3. Datos de transición: tramo 6 — Trayectoria, frame y datos de transición. Materias asociadas: `Frame`, `TransitionData`, `Trajectory` y regla append-only.\\n\\nEstas son enumeraciones del plan documental: los pasajes no desarrollan las definiciones de esos términos ni acreditan su implementación. Tampoco permiten afirmar el estado actual de otros repositorios.\",\n  \"revision\": \"Respuesta provisional de etapa 0. No existen antecedentes ni entregas anteriores que contrastar. La identificación y las listas se apoyan directamente en los tres apartados del constructor, sin añadir definiciones.\"\n}",
+    "resumen_proveedor": [],
+    "telemetria": {
+      "bytes": 665207,
+      "fallos_medicion": 0,
+      "integridad": "conforme",
+      "intervalo_maximo_ms": 284,
+      "intervalo_objetivo_ms": 250,
+      "muestras": 82,
+      "plataforma_recibida": false,
+      "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+      "registros": 1634,
+      "sha256": "525093bab018ac244b76f6ee5ee217f81f3ac40fd71925e4ad9d85c74e03bd98"
+    },
+    "telemetria_conforme": true,
+    "uso_proveedor": {
+      "attribution": {
+        "items": {
+          "msg_0b9870ed36e917fb016ac711cb2da087d297f8f08bd822753d": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 17562,
+                "output_tokens": 0
+              }
+            ],
+            "input_tokens": 17562,
+            "output_tokens": 0
+          },
+          "msg_0b9870ed36e917fb016ac711ccc4bc87d29f1da22ddacd1d8e": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 2,
+                "output_tokens": 765
+              }
+            ],
+            "input_tokens": 2,
+            "output_tokens": 765
+          }
+        },
+        "request_fields": {
+          "instructions": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "input_tokens": 518,
+            "output_tokens": 0
+          },
+          "text.format": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "input_tokens": 172,
+            "output_tokens": 0
+          }
+        }
+      },
+      "input_tokens": 18254,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 765,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 19019
+    },
+    "utc_fin_ms": 1791431131863,
+    "utc_inicio_operacion_ms": 1791431112918,
+    "version_http": "HTTP/1.1"
+  }
+}

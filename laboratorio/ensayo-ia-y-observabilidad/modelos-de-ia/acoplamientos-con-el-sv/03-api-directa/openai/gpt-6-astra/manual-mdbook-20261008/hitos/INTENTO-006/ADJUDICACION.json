@@ -1,0 +1,236 @@
+{
+  "alerta": null,
+  "alerta_limite": false,
+  "auditoria_sha256": "60b72bd145fe79fb776e7c71c74fd2052b5d8ef5efcd7af28947bc9c5083195c",
+  "caso": "MD02",
+  "critico": true,
+  "estado_documental_candidato": "respuesta_fundada",
+  "etapa": 2,
+  "final_sha256": "1b06f3d1c8f518e8e471f69c3f47ff1223de2eac3dfc0d1db25ae356c05047aa",
+  "formal_conforme": true,
+  "fundamento_sustantivo": "Verifica sin alterar el contenido y mantiene la diferencia entre cerrable, aprobado e implementado; la delimitación histórica está sustentada.",
+  "medicion": {
+    "adjudicacion": false,
+    "caso": "MD02",
+    "completa": true,
+    "directorio": "ejecucion/astra-manual-20261008\\intentos/ENVIO-006/MD02/R2",
+    "duracion_ms": 32439,
+    "duracion_operacion_ms": 33012,
+    "entrega": 6,
+    "etapa": 2,
+    "final_sha256": "1b06f3d1c8f518e8e471f69c3f47ff1223de2eac3dfc0d1db25ae356c05047aa",
+    "formal_conforme": true,
+    "http": 200,
+    "intento": 6,
+    "respuesta": "{\n  \"caso\": \"MD02\",\n  \"estado_documental\": \"respuesta_fundada\",\n  \"etapa\": 2,\n  \"evidencias\": [\n    {\n      \"cita_literal_breve\": \"subordinado al pliego, a la Frontera normativa, a la IR y a la gramática vigente;\",\n      \"documento\": \"MANUAL_CONSTRUCTOR\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000009-L000017\"\n    },\n    {\n      \"cita_literal_breve\": \"verificable mediante ejemplos, contraejemplos y relación explícita con la implementación.\",\n      \"documento\": \"MANUAL_CONSTRUCTOR\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000009-L000017\"\n    },\n    {\n      \"cita_literal_breve\": \"10. Relación con IR y docs públicos\",\n      \"documento\": \"MANUAL_CONSTRUCTOR\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000092-L000108\"\n    },\n    {\n      \"cita_literal_breve\": \"correspondencia visible con la IR o con la superficie vigente;\",\n      \"documento\": \"MANUAL_CONSTRUCTOR\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000109-L000118\"\n    },\n    {\n      \"cita_literal_breve\": \"uno o más ejemplos `.svp` suficientemente nucleares;\",\n      \"documento\": \"MANUAL_CONSTRUCTOR\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000109-L000118\"\n    },\n    {\n      \"cita_literal_breve\": \"ausencia de contradicción local suficiente con el pliego o con la Frontera normativa.\",\n      \"documento\": \"MANUAL_CONSTRUCTOR\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000109-L000118\"\n    },\n    {\n      \"cita_literal_breve\": \"La presentación de un documento en este libro no acredita una nueva aprobación.\",\n      \"documento\": \"MANUAL_PRESENTACION\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000011-L000014\"\n    },\n    {\n      \"cita_literal_breve\": \"Sus fuentes pertenecen a la revisión f97173e07a9dfb8385ed1268d11de422b291507d del repositorio SV-lenguaje-de-computacion.\",\n      \"documento\": \"MANUAL_PRESENTACION\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000005-L000010\"\n    },\n    {\n      \"cita_literal_breve\": \"Este tramo no implementa bindings, APIs, FFI ni wrappers reales. Solo abre el frente documental y de gobierno.\",\n      \"documento\": \"MANUAL_TRAMO10\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000022-L000025\"\n    }\n  ],\n  \"fundamentos_verificables\": [\n    \"La regla general del constructor enumera las cuatro referencias de subordinación y exige verificabilidad mediante ejemplos, contraejemplos y relación explícita con la implementación.\",\n    \"La ficha obligatoria concreta una obligación de documentación: declarar la relación con la IR y los documentos públicos. El criterio de cierre exige correspondencia visible con la IR o la superficie vigente; esta alternativa no sustituye la subordinación general a las cuatro referencias.\",\n    \"Los cinco mínimos del criterio de cierre son condiciones para considerar un tramo cerrable, no una declaración de que esté cerrado o aprobado.\",\n    \"La publicación conserva documentos de una revisión identificada y no acredita nueva aprobación. La exclusión de implementación del tramo 10 describe el alcance de ese documento, sin demostrar el estado actual de otros repositorios.\"\n  ],\n  \"insuficiencias\": [],\n  \"respuesta\": \"Cada tramo debe subordinarse a cuatro referencias: (1) el pliego, (2) la Frontera normativa, (3) la representación intermedia (IR) y (4) la gramática vigente.\\n\\nDebe mantener una relación explícita con la implementación y ser verificable mediante ejemplos y contraejemplos. Además, su ficha obligatoria debe declarar la relación con la IR y los documentos públicos.\\n\\nPara considerarlo cerrable, el constructor exige como mínimo:\\n1. Exposición sobria del objeto.\\n2. Correspondencia visible con la IR o con la superficie vigente.\\n3. Uno o más ejemplos .svp suficientemente nucleares.\\n4. Delimitación expresa de lo que queda fuera.\\n5. Ausencia de contradicción local suficiente con el pliego o con la Frontera normativa.\\n\\nEstas son exigencias de elaboración y cierre documental, no acreditación de funcionalidades implementadas ni aprobación automática. Así, el tramo 10 conservado declara expresamente que no implementa bindings, APIs, FFI ni wrappers reales: solo abre el frente documental y de gobierno. Esa declaración pertenece al documento de la revisión f97173e07a9dfb8385ed1268d11de422b291507d y no determina el estado actual de otros repositorios. La publicación del manual tampoco acredita una nueva aprobación.\",\n  \"revision\": \"El contraste de ambas entregas con la fuente confirma su contenido sustantivo: las cuatro referencias, la relación explícita y verificable con la implementación y los cinco mínimos de cierre están documentados. Se mantienen las precisiones de la segunda entrega sobre la diferencia entre cerrable y aprobado y sobre el alcance histórico del tramo 10, porque la fuente las respalda, no por ser posteriores. Las citas y localizadores utilizados son correctos. La pregunta queda resuelta sin necesidad de U.\"\n}",
+    "resultado_sha256": "d590b499f4ceccd3b2048464b124712c93cc3d333199a2c9e8d2b445ec3208f5",
+    "resumen_proveedor": [],
+    "solicitud_sha256": "38b671070551df59da3edd93d92db8e7c8b6cb8a10a2a24ddc1af11be7d105e1",
+    "telemetria": {
+      "bytes": 1015481,
+      "fallos_medicion": 0,
+      "integridad": "conforme",
+      "intervalo_maximo_ms": 285,
+      "intervalo_objetivo_ms": 250,
+      "muestras": 134,
+      "plataforma_recibida": false,
+      "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+      "registros": 2450,
+      "sha256": "ef8a67b5d19eab805fedae89b91d7dec42798781d19c79e79f0026fbe9b8aff6"
+    },
+    "uso_proveedor": {
+      "attribution": {
+        "items": {
+          "msg_0bdd8c6ccbda29f7016ac711a695dc87d298cfd5df7d0eac2d": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 17544,
+                "output_tokens": 0
+              }
+            ],
+            "input_tokens": 17544,
+            "output_tokens": 0
+          },
+          "msg_0bdd8c6ccbda29f7016ac711a695f887d293e37d2f115d8b24": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 930,
+                "output_tokens": 0
+              }
+            ],
+            "input_tokens": 930,
+            "output_tokens": 0
+          },
+          "msg_0bdd8c6ccbda29f7016ac711a6960887d285b5f3fd0cce25b6": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 27,
+                "output_tokens": 0
+              }
+            ],
+            "input_tokens": 27,
+            "output_tokens": 0
+          },
+          "msg_0bdd8c6ccbda29f7016ac711a6961887d29f9f6dc6446cc647": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 1234,
+                "output_tokens": 0
+              }
+            ],
+            "input_tokens": 1234,
+            "output_tokens": 0
+          },
+          "msg_0bdd8c6ccbda29f7016ac711a6962887d2a2ec6f7722fb8b38": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 67,
+                "output_tokens": 0
+              }
+            ],
+            "input_tokens": 67,
+            "output_tokens": 0
+          },
+          "msg_0bdd8c6ccbda29f7016ac711a9166087d2affe96ee28c2b864": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 2,
+                "output_tokens": 1211
+              }
+            ],
+            "input_tokens": 2,
+            "output_tokens": 1211
+          }
+        },
+        "request_fields": {
+          "instructions": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "input_tokens": 554,
+            "output_tokens": 0
+          },
+          "text.format": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "input_tokens": 172,
+            "output_tokens": 0
+          }
+        }
+      },
+      "input_tokens": 20530,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 1211,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 21741
+    }
+  },
+  "naturaleza_defecto": null,
+  "pasajes_contrastados": [
+    {
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmento": "subordinado al pliego, a la Frontera normativa, a la IR y a la gramática vigente;",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000009-L000017"
+    },
+    {
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmento": "verificable mediante ejemplos, contraejemplos y relación explícita con la implementación.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000009-L000017"
+    },
+    {
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmento": "10. Relación con IR y docs públicos",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000092-L000108"
+    },
+    {
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmento": "correspondencia visible con la IR o con la superficie vigente;",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000109-L000118"
+    },
+    {
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmento": "uno o más ejemplos `.svp` suficientemente nucleares;",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000109-L000118"
+    },
+    {
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmento": "ausencia de contradicción local suficiente con el pliego o con la Frontera normativa.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000109-L000118"
+    },
+    {
+      "documento": "MANUAL_PRESENTACION",
+      "fragmento": "La presentación de un documento en este libro no acredita una nueva aprobación.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000011-L000014"
+    },
+    {
+      "documento": "MANUAL_PRESENTACION",
+      "fragmento": "Sus fuentes pertenecen a la revisión f97173e07a9dfb8385ed1268d11de422b291507d del repositorio SV-lenguaje-de-computacion.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000005-L000010"
+    },
+    {
+      "documento": "MANUAL_TRAMO10",
+      "fragmento": "Este tramo no implementa bindings, APIs, FFI ni wrappers reales. Solo abre el frente documental y de gobierno.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000022-L000025"
+    }
+  ],
+  "recepcion_independiente": "pendiente",
+  "respuesta_original": "{\n  \"caso\": \"MD02\",\n  \"estado_documental\": \"respuesta_fundada\",\n  \"etapa\": 2,\n  \"evidencias\": [\n    {\n      \"cita_literal_breve\": \"subordinado al pliego, a la Frontera normativa, a la IR y a la gramática vigente;\",\n      \"documento\": \"MANUAL_CONSTRUCTOR\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000009-L000017\"\n    },\n    {\n      \"cita_literal_breve\": \"verificable mediante ejemplos, contraejemplos y relación explícita con la implementación.\",\n      \"documento\": \"MANUAL_CONSTRUCTOR\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000009-L000017\"\n    },\n    {\n      \"cita_literal_breve\": \"10. Relación con IR y docs públicos\",\n      \"documento\": \"MANUAL_CONSTRUCTOR\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000092-L000108\"\n    },\n    {\n      \"cita_literal_breve\": \"correspondencia visible con la IR o con la superficie vigente;\",\n      \"documento\": \"MANUAL_CONSTRUCTOR\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000109-L000118\"\n    },\n    {\n      \"cita_literal_breve\": \"uno o más ejemplos `.svp` suficientemente nucleares;\",\n      \"documento\": \"MANUAL_CONSTRUCTOR\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000109-L000118\"\n    },\n    {\n      \"cita_literal_breve\": \"ausencia de contradicción local suficiente con el pliego o con la Frontera normativa.\",\n      \"documento\": \"MANUAL_CONSTRUCTOR\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000109-L000118\"\n    },\n    {\n      \"cita_literal_breve\": \"La presentación de un documento en este libro no acredita una nueva aprobación.\",\n      \"documento\": \"MANUAL_PRESENTACION\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000011-L000014\"\n    },\n    {\n      \"cita_literal_breve\": \"Sus fuentes pertenecen a la revisión f97173e07a9dfb8385ed1268d11de422b291507d del repositorio SV-lenguaje-de-computacion.\",\n      \"documento\": \"MANUAL_PRESENTACION\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000005-L000010\"\n    },\n    {\n      \"cita_literal_breve\": \"Este tramo no implementa bindings, APIs, FFI ni wrappers reales. Solo abre el frente documental y de gobierno.\",\n      \"documento\": \"MANUAL_TRAMO10\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000022-L000025\"\n    }\n  ],\n  \"fundamentos_verificables\": [\n    \"La regla general del constructor enumera las cuatro referencias de subordinación y exige verificabilidad mediante ejemplos, contraejemplos y relación explícita con la implementación.\",\n    \"La ficha obligatoria concreta una obligación de documentación: declarar la relación con la IR y los documentos públicos. El criterio de cierre exige correspondencia visible con la IR o la superficie vigente; esta alternativa no sustituye la subordinación general a las cuatro referencias.\",\n    \"Los cinco mínimos del criterio de cierre son condiciones para considerar un tramo cerrable, no una declaración de que esté cerrado o aprobado.\",\n    \"La publicación conserva documentos de una revisión identificada y no acredita nueva aprobación. La exclusión de implementación del tramo 10 describe el alcance de ese documento, sin demostrar el estado actual de otros repositorios.\"\n  ],\n  \"insuficiencias\": [],\n  \"respuesta\": \"Cada tramo debe subordinarse a cuatro referencias: (1) el pliego, (2) la Frontera normativa, (3) la representación intermedia (IR) y (4) la gramática vigente.\\n\\nDebe mantener una relación explícita con la implementación y ser verificable mediante ejemplos y contraejemplos. Además, su ficha obligatoria debe declarar la relación con la IR y los documentos públicos.\\n\\nPara considerarlo cerrable, el constructor exige como mínimo:\\n1. Exposición sobria del objeto.\\n2. Correspondencia visible con la IR o con la superficie vigente.\\n3. Uno o más ejemplos .svp suficientemente nucleares.\\n4. Delimitación expresa de lo que queda fuera.\\n5. Ausencia de contradicción local suficiente con el pliego o con la Frontera normativa.\\n\\nEstas son exigencias de elaboración y cierre documental, no acreditación de funcionalidades implementadas ni aprobación automática. Así, el tramo 10 conservado declara expresamente que no implementa bindings, APIs, FFI ni wrappers reales: solo abre el frente documental y de gobierno. Esa declaración pertenece al documento de la revisión f97173e07a9dfb8385ed1268d11de422b291507d y no determina el estado actual de otros repositorios. La publicación del manual tampoco acredita una nueva aprobación.\",\n  \"revision\": \"El contraste de ambas entregas con la fuente confirma su contenido sustantivo: las cuatro referencias, la relación explícita y verificable con la implementación y los cinco mínimos de cierre están documentados. Se mantienen las precisiones de la segunda entrega sobre la diferencia entre cerrable y aprobado y sobre el alcance histórico del tramo 10, porque la fuente las respalda, no por ser posteriores. Las citas y localizadores utilizados son correctos. La pregunta queda resuelta sin necesidad de U.\"\n}",
+  "solicitud_sha256": "38b671070551df59da3edd93d92db8e7c8b6cb8a10a2a24ddc1af11be7d105e1",
+  "sustantivo": "correcto",
+  "valor": "0"
+}

@@ -1,0 +1,219 @@
+{
+  "adjudicacion": "pendiente de contraste exterior al candidato",
+  "caso": "MD03",
+  "directorio": "ejecucion/astra-manual-20261008\\intentos/ENVIO-009/MD03/R2",
+  "entrega_numero": 9,
+  "esquema": "sv-hito-instrumental/2",
+  "etapa": 2,
+  "fecha_registro_ms": 1791431195278,
+  "modelo": "gpt-6-astra",
+  "nodo": "03",
+  "numero_intento": 9,
+  "originales": [
+    {
+      "bytes": 68360,
+      "ruta": "ejecucion/astra-manual-20261008\\intentos/ENVIO-009/MD03/R2\\SOLICITUD.json",
+      "sha256": "dbb4747c00cd5b5e71bd3e875cba56b9b0f40f99a83438ccfda936cf091b876f"
+    },
+    {
+      "bytes": 8684,
+      "ruta": "ejecucion/astra-manual-20261008\\intentos/ENVIO-009/MD03/R2\\RESULTADO.json",
+      "sha256": "6f49631d33e47ee726549e8047f0458d5d28874c2dc4cf18550c0299d2caa011"
+    },
+    {
+      "bytes": 137,
+      "ruta": "ejecucion/astra-manual-20261008\\intentos/ENVIO-009/MD03/R2\\HTTP.json",
+      "sha256": "dec1777accdb010ffa203a17dde3affb1e824d8442b71ab2322242a407681f3c"
+    },
+    {
+      "bytes": 280051,
+      "ruta": "ejecucion/astra-manual-20261008\\intentos/ENVIO-009/MD03/R2\\SALIDA-SSE.txt",
+      "sha256": "f72d8e1e5e81c39cd955858b130d1f5384802688cb27d788578cc2bc12b432d3"
+    },
+    {
+      "bytes": 3642,
+      "ruta": "ejecucion/astra-manual-20261008\\intentos/ENVIO-009/MD03/R2\\FINAL.txt",
+      "sha256": "8b2bed7c4c73d51afbf08fd51729b1bbfec3461584fa1a61ec0aacf4a502b5b7"
+    },
+    {
+      "bytes": 11220,
+      "ruta": "ejecucion/astra-manual-20261008\\intentos/ENVIO-009/MD03/R2\\ENTREGA-PROVEEDOR.json",
+      "sha256": "b8f65325bacb9afc6eafadfbb0f9360a036d0a7b986daea0a5615fea4274152f"
+    },
+    {
+      "bytes": 2528,
+      "ruta": "ejecucion/astra-manual-20261008\\intentos/ENVIO-009/MD03/R2\\AUDITORIA-FORMAL.json",
+      "sha256": "28e0850ff12affc03491caaa233609752dbf18b2dc437f76015c3256c23d0618"
+    },
+    {
+      "bytes": 854272,
+      "ruta": "ejecucion/astra-manual-20261008\\intentos/ENVIO-009/MD03/R2\\instrumentacion/telemetria.jsonl",
+      "sha256": "f6114dd314de6339ce3a8a811f38dded09357c0f752b446fec7e95f856f40f0e"
+    }
+  ],
+  "resultado": {
+    "adjudicado": false,
+    "cabeceras_proveedor": {},
+    "caso": "MD03-R2",
+    "completa": true,
+    "contrato_formal_conforme": true,
+    "coste_monetario_atribuible": null,
+    "creditos_atribuibles": null,
+    "duracion_intento_instrumentado_ms": 29765,
+    "duracion_ms": 25723,
+    "duracion_operacion_ms": 26238,
+    "entrega_numero": 9,
+    "estado": "entrega_recibida",
+    "evento_terminal": "response.completed",
+    "eventos": 968,
+    "herramientas_ejecutadas": 0,
+    "herramientas_habilitadas": 0,
+    "http": 200,
+    "incidencia_servicio": null,
+    "limites": [
+      "CPU porcentual sin calibración externa",
+      "Sin medida separada DNS/TLS, RTT, retransmisiones, asignaciones del montículo, hilos ni recursos internos del proveedor",
+      "La ausencia de herramientas no prueba aislamiento de infraestructura de OpenAI; fuente exclusiva exigida y respuesta pendiente de contraste sustantivo",
+      "Criptografía C/ensamblador pendiente conforme a excepción experimental autorizada"
+    ],
+    "modelo_declarado": "gpt-6-astra",
+    "modelo_solicitado": "gpt-6-astra",
+    "numero_intento": 9,
+    "par_remoto_http": "172.66.0.243:443",
+    "primer_evento_ms": 1726,
+    "primer_texto_ms": 3510,
+    "respuesta_bytes": 280051,
+    "respuesta_texto": "{\n  \"caso\": \"MD03\",\n  \"estado_documental\": \"respuesta_fundada\",\n  \"etapa\": 2,\n  \"evidencias\": [\n    {\n      \"cita_literal_breve\": \"### Tramo 3 — Célula, evaluación y clasificación\\n- `CellSpec`;\\n- `CellState`;\\n- `evaluate`;\\n- umbral;\\n- criticidad.\",\n      \"documento\": \"MANUAL_CONSTRUCTOR\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000041-L000047\"\n    },\n    {\n      \"cita_literal_breve\": \"### Tramo 5 — Resolución y régimen de la U\\n- `resolve`;\\n- `Context`;\\n- `Mechanism`;\\n- reapertura.\",\n      \"documento\": \"MANUAL_CONSTRUCTOR\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000054-L000059\"\n    },\n    {\n      \"cita_literal_breve\": \"### Tramo 6 — Trayectoria, frame y datos de transición\\n- `Frame`;\\n- `TransitionData`;\\n- `Trajectory`;\\n- regla append-only.\",\n      \"documento\": \"MANUAL_CONSTRUCTOR\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000060-L000065\"\n    },\n    {\n      \"cita_literal_breve\": \"No es todavía el manual final.\",\n      \"documento\": \"MANUAL_CONSTRUCTOR\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000003-L000008\"\n    },\n    {\n      \"cita_literal_breve\": \"El índice original registra once tramos pendientes, SVP-MAN-00 a SVP-MAN-10.\",\n      \"documento\": \"MANUAL_PRESENTACION\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000005-L000010\"\n    },\n    {\n      \"cita_literal_breve\": \"Sus fuentes pertenecen a la revisión f97173e07a9dfb8385ed1268d11de422b291507d del repositorio SV-lenguaje-de-computacion.\",\n      \"documento\": \"MANUAL_PRESENTACION\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000005-L000010\"\n    }\n  ],\n  \"fundamentos_verificables\": [\n    \"Los encabezados del constructor sitúan expresamente la evaluación de células en el tramo 3, la resolución y régimen de la U en el tramo 5 y los datos de transición en el tramo 6. Sus listas proporcionan todas las materias enumeradas en la respuesta.\",\n    \"El índice corrobora las entradas pendientes 03, 05 y 06. Los títulos empleados en la respuesta son los del constructor, no las formulaciones abreviadas del índice.\",\n    \"Los apartados citados enumeran contenidos previstos, sin desarrollar sus definiciones. El carácter no final del constructor y la procedencia declarada impiden presentar esta enumeración como prueba de implementación o como descripción del estado actual de otros repositorios.\"\n  ],\n  \"insuficiencias\": [],\n  \"respuesta\": \"El constructor sitúa las materias en los siguientes tramos:\\n\\n1. Evaluación de células: tramo 3 — Célula, evaluación y clasificación. Materias asociadas: `CellSpec`, `CellState`, `evaluate`, umbral y criticidad.\\n2. Resolución de U: tramo 5 — Resolución y régimen de la U. Materias asociadas: `resolve`, `Context`, `Mechanism` y reapertura.\\n3. Datos de transición: tramo 6 — Trayectoria, frame y datos de transición. Materias asociadas: `Frame`, `TransitionData`, `Trajectory` y regla append-only.\\n\\nEstas listas pertenecen a la arquitectura prevista del manual y no desarrollan las definiciones de los términos. En la edición suministrada los tres tramos figuran pendientes. El documento conservado no acredita por ello su implementación ni el estado actual de otros repositorios.\",\n  \"revision\": \"Se mantiene el contenido sustantivo de ambas entregas: los números de tramo, los títulos y todas las materias asociadas coinciden con la fuente, y las citas son literales. La precisión histórica añadida en la segunda entrega también está respaldada por la presentación, aunque no es necesaria para identificar los tramos. No se detectan omisiones ni definiciones inventadas; no hay ningún extremo solicitado que requiera U.\"\n}",
+    "resumen_proveedor": [],
+    "telemetria": {
+      "bytes": 854272,
+      "fallos_medicion": 0,
+      "integridad": "conforme",
+      "intervalo_maximo_ms": 286,
+      "intervalo_objetivo_ms": 250,
+      "muestras": 109,
+      "plataforma_recibida": false,
+      "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+      "registros": 2081,
+      "sha256": "f6114dd314de6339ce3a8a811f38dded09357c0f752b446fec7e95f856f40f0e"
+    },
+    "telemetria_conforme": true,
+    "uso_proveedor": {
+      "attribution": {
+        "items": {
+          "msg_024cf8f8b5557511016ac712021ebc87d2bda4db86748cf88f": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 17562,
+                "output_tokens": 0
+              }
+            ],
+            "input_tokens": 17562,
+            "output_tokens": 0
+          },
+          "msg_024cf8f8b5557511016ac712021ed887d2bb2b60ce663b2a05": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 758,
+                "output_tokens": 0
+              }
+            ],
+            "input_tokens": 758,
+            "output_tokens": 0
+          },
+          "msg_024cf8f8b5557511016ac712021eec87d280ca97919b73f9d5": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 27,
+                "output_tokens": 0
+              }
+            ],
+            "input_tokens": 27,
+            "output_tokens": 0
+          },
+          "msg_024cf8f8b5557511016ac712021efc87d2bb32d64581453ea6": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 981,
+                "output_tokens": 0
+              }
+            ],
+            "input_tokens": 981,
+            "output_tokens": 0
+          },
+          "msg_024cf8f8b5557511016ac712021f1087d29e9f3503651865ad": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 67,
+                "output_tokens": 0
+              }
+            ],
+            "input_tokens": 67,
+            "output_tokens": 0
+          },
+          "msg_024cf8f8b5557511016ac712045ee087d29738434938a52519": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 2,
+                "output_tokens": 973
+              }
+            ],
+            "input_tokens": 2,
+            "output_tokens": 973
+          }
+        },
+        "request_fields": {
+          "instructions": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "input_tokens": 554,
+            "output_tokens": 0
+          },
+          "text.format": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "input_tokens": 172,
+            "output_tokens": 0
+          }
+        }
+      },
+      "input_tokens": 20123,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 973,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 21096
+    },
+    "utc_fin_ms": 1791431194104,
+    "utc_inicio_operacion_ms": 1791431167869,
+    "version_http": "HTTP/1.1"
+  }
+}

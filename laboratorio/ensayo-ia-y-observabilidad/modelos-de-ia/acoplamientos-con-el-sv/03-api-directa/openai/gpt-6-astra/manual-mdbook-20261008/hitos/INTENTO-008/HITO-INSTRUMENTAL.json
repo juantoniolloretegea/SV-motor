@@ -1,0 +1,191 @@
+{
+  "adjudicacion": "pendiente de contraste exterior al candidato",
+  "caso": "MD03",
+  "directorio": "ejecucion/astra-manual-20261008\\intentos/ENVIO-008/MD03/R1",
+  "entrega_numero": 8,
+  "esquema": "sv-hito-instrumental/2",
+  "etapa": 1,
+  "fecha_registro_ms": 1791431165318,
+  "modelo": "gpt-6-astra",
+  "nodo": "03",
+  "numero_intento": 8,
+  "originales": [
+    {
+      "bytes": 64229,
+      "ruta": "ejecucion/astra-manual-20261008\\intentos/ENVIO-008/MD03/R1\\SOLICITUD.json",
+      "sha256": "62d3c266b1d0d55e09cbfc91c051d5ec7d80959c5dcd6dd83bef26e1d5c374a2"
+    },
+    {
+      "bytes": 7938,
+      "ruta": "ejecucion/astra-manual-20261008\\intentos/ENVIO-008/MD03/R1\\RESULTADO.json",
+      "sha256": "51b3dfbb26cb5fa36613e685fbd4a3b54c787d54b1effa7150e2a7547cd8979f"
+    },
+    {
+      "bytes": 140,
+      "ruta": "ejecucion/astra-manual-20261008\\intentos/ENVIO-008/MD03/R1\\HTTP.json",
+      "sha256": "64683884c0100b38845e5db065b93b54835b2dc00d3a231f2a93c0f63b8046b1"
+    },
+    {
+      "bytes": 283697,
+      "ruta": "ejecucion/astra-manual-20261008\\intentos/ENVIO-008/MD03/R1\\SALIDA-SSE.txt",
+      "sha256": "cc152a017eb4ce4e12e0602de0665b5767fcf6e1556ec259f71026e5a3785588"
+    },
+    {
+      "bytes": 3706,
+      "ruta": "ejecucion/astra-manual-20261008\\intentos/ENVIO-008/MD03/R1\\FINAL.txt",
+      "sha256": "cc517c3a8b532d7760f19c5f607d2b176b515bb6d5f5b331ae9b5853cea478e8"
+    },
+    {
+      "bytes": 10538,
+      "ruta": "ejecucion/astra-manual-20261008\\intentos/ENVIO-008/MD03/R1\\ENTREGA-PROVEEDOR.json",
+      "sha256": "14ca8114006846c5631cc1d591622d26bcd7b20e8186d8c8437407826804a61c"
+    },
+    {
+      "bytes": 2528,
+      "ruta": "ejecucion/astra-manual-20261008\\intentos/ENVIO-008/MD03/R1\\AUDITORIA-FORMAL.json",
+      "sha256": "28e0850ff12affc03491caaa233609752dbf18b2dc437f76015c3256c23d0618"
+    },
+    {
+      "bytes": 850777,
+      "ruta": "ejecucion/astra-manual-20261008\\intentos/ENVIO-008/MD03/R1\\instrumentacion/telemetria.jsonl",
+      "sha256": "76e1ed5027ba4de9d5d588e800bebd22aba3a171d7851b6ae42d76e1de0e8e7d"
+    }
+  ],
+  "resultado": {
+    "adjudicado": false,
+    "cabeceras_proveedor": {},
+    "caso": "MD03-R1",
+    "completa": true,
+    "contrato_formal_conforme": true,
+    "coste_monetario_atribuible": null,
+    "creditos_atribuibles": null,
+    "duracion_intento_instrumentado_ms": 32180,
+    "duracion_ms": 28181,
+    "duracion_operacion_ms": 28639,
+    "entrega_numero": 8,
+    "estado": "entrega_recibida",
+    "evento_terminal": "response.completed",
+    "eventos": 983,
+    "herramientas_ejecutadas": 0,
+    "herramientas_habilitadas": 0,
+    "http": 200,
+    "incidencia_servicio": null,
+    "limites": [
+      "CPU porcentual sin calibración externa",
+      "Sin medida separada DNS/TLS, RTT, retransmisiones, asignaciones del montículo, hilos ni recursos internos del proveedor",
+      "La ausencia de herramientas no prueba aislamiento de infraestructura de OpenAI; fuente exclusiva exigida y respuesta pendiente de contraste sustantivo",
+      "Criptografía C/ensamblador pendiente conforme a excepción experimental autorizada"
+    ],
+    "modelo_declarado": "gpt-6-astra",
+    "modelo_solicitado": "gpt-6-astra",
+    "numero_intento": 8,
+    "par_remoto_http": "162.159.140.245:443",
+    "primer_evento_ms": 1530,
+    "primer_texto_ms": 3562,
+    "respuesta_bytes": 283697,
+    "respuesta_texto": "{\n  \"caso\": \"MD03\",\n  \"estado_documental\": \"respuesta_fundada\",\n  \"etapa\": 1,\n  \"evidencias\": [\n    {\n      \"cita_literal_breve\": \"### Tramo 3 — Célula, evaluación y clasificación\\n- `CellSpec`;\\n- `CellState`;\\n- `evaluate`;\\n- umbral;\\n- criticidad.\",\n      \"documento\": \"MANUAL_CONSTRUCTOR\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000041-L000047\"\n    },\n    {\n      \"cita_literal_breve\": \"### Tramo 5 — Resolución y régimen de la U\\n- `resolve`;\\n- `Context`;\\n- `Mechanism`;\\n- reapertura.\",\n      \"documento\": \"MANUAL_CONSTRUCTOR\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000054-L000059\"\n    },\n    {\n      \"cita_literal_breve\": \"### Tramo 6 — Trayectoria, frame y datos de transición\\n- `Frame`;\\n- `TransitionData`;\\n- `Trajectory`;\\n- regla append-only.\",\n      \"documento\": \"MANUAL_CONSTRUCTOR\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000060-L000065\"\n    },\n    {\n      \"cita_literal_breve\": \"No es todavía el manual final.\",\n      \"documento\": \"MANUAL_CONSTRUCTOR\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000003-L000008\"\n    },\n    {\n      \"cita_literal_breve\": \"El índice original registra once tramos pendientes, SVP-MAN-00 a SVP-MAN-10.\",\n      \"documento\": \"MANUAL_PRESENTACION\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000005-L000010\"\n    },\n    {\n      \"cita_literal_breve\": \"Sus fuentes pertenecen a la revisión f97173e07a9dfb8385ed1268d11de422b291507d del repositorio SV-lenguaje-de-computacion.\",\n      \"documento\": \"MANUAL_PRESENTACION\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000005-L000010\"\n    }\n  ],\n  \"fundamentos_verificables\": [\n    \"Los encabezados y las listas de los tramos 3, 5 y 6 identifican directamente las tres ubicaciones y todas sus materias asociadas; no es necesario deducir definiciones.\",\n    \"MANUAL_INDICE confirma las ubicaciones 03, 05 y 06 como entradas pendientes, aunque abrevia o reordena algunos títulos respecto del constructor. Se conservan aquí los títulos del constructor, que es el documento preguntado.\",\n    \"El constructor presenta una arquitectura de trabajo, no un manual final. La presentación vincula los textos conservados a una revisión concreta; por tanto, sus enumeraciones no acreditan implementación ni el estado actual de otros repositorios.\",\n    \"MANUAL_TRAMO10 trata la compatibilidad interlenguajes y no añade definiciones ni modifica la distribución de las materias consultadas.\"\n  ],\n  \"insuficiencias\": [],\n  \"respuesta\": \"El constructor sitúa las materias en estos tres tramos:\\n\\n1. Evaluación de células: tramo 3 — Célula, evaluación y clasificación. Incluye `CellSpec`, `CellState`, `evaluate`, umbral y criticidad.\\n2. Resolución de U: tramo 5 — Resolución y régimen de la U. Incluye `resolve`, `Context`, `Mechanism` y reapertura.\\n3. Datos de transición: tramo 6 — Trayectoria, frame y datos de transición. Incluye `Frame`, `TransitionData`, `Trajectory` y regla append-only.\\n\\nSon materias enumeradas en la arquitectura prevista del manual, no definiciones desarrolladas. En la edición suministrada estos tramos figuran pendientes. Esta información corresponde al documento conservado y no acredita su implementación ni el estado actual de otros repositorios.\",\n  \"revision\": \"Se mantiene el contenido sustantivo de la respuesta provisional: las tres ubicaciones, los títulos y las listas coinciden con el constructor, sin omisiones de materias asociadas ni definiciones añadidas. Las citas son literales y sus localizadores corresponden a los fragmentos suministrados. Se añade evidencia de la revisión de procedencia para fundamentar mejor el límite histórico. No hay un extremo solicitado indeterminable que requiera U.\"\n}",
+    "resumen_proveedor": [],
+    "telemetria": {
+      "bytes": 850777,
+      "fallos_medicion": 0,
+      "integridad": "conforme",
+      "intervalo_maximo_ms": 332,
+      "intervalo_objetivo_ms": 250,
+      "muestras": 117,
+      "plataforma_recibida": false,
+      "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+      "registros": 2041,
+      "sha256": "76e1ed5027ba4de9d5d588e800bebd22aba3a171d7851b6ae42d76e1de0e8e7d"
+    },
+    "telemetria_conforme": true,
+    "uso_proveedor": {
+      "attribution": {
+        "items": {
+          "msg_0ed15a5748aa22ba016ac711e1a4e887d29a911a844cf31c64": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 17562,
+                "output_tokens": 0
+              }
+            ],
+            "input_tokens": 17562,
+            "output_tokens": 0
+          },
+          "msg_0ed15a5748aa22ba016ac711e1a50087d2af3f14f733fbafed": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 758,
+                "output_tokens": 0
+              }
+            ],
+            "input_tokens": 758,
+            "output_tokens": 0
+          },
+          "msg_0ed15a5748aa22ba016ac711e1a51087d28fea6d43ca127aaa": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 68,
+                "output_tokens": 0
+              }
+            ],
+            "input_tokens": 68,
+            "output_tokens": 0
+          },
+          "msg_0ed15a5748aa22ba016ac711e4019087d2ba79b0f0b6f8888d": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 2,
+                "output_tokens": 988
+              }
+            ],
+            "input_tokens": 2,
+            "output_tokens": 988
+          }
+        },
+        "request_fields": {
+          "instructions": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "input_tokens": 555,
+            "output_tokens": 0
+          },
+          "text.format": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "input_tokens": 172,
+            "output_tokens": 0
+          }
+        }
+      },
+      "input_tokens": 19117,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 988,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 20105
+    },
+    "utc_fin_ms": 1791431164152,
+    "utc_inicio_operacion_ms": 1791431135515,
+    "version_http": "HTTP/1.1"
+  }
+}

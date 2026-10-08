@@ -1,0 +1,193 @@
+{
+  "alerta": {
+    "caso": "MD08",
+    "cita_cotejada_en_rust": true,
+    "motivo": "El carácter futuro está expresamente documentado; responderlo correctamente no acredita desarrollo ni implementación. La pregunta tiene evidencia suficiente.",
+    "pasaje": {
+      "documento": "MANUAL_TRAMO10",
+      "fragmento": "Pendiente de desarrollo.",
+      "origen": "cotejo adicional del evaluador",
+      "seccion": "MD-L000026-L000028"
+    },
+    "posicion": 8
+  },
+  "alerta_limite": true,
+  "auditoria_sha256": "cb37063a6c91efbb864266abd1a0f4b903cc2c07a7cd46f869ba48a69c190174",
+  "caso": "MD08",
+  "critico": false,
+  "estado_documental_candidato": "respuesta_fundada",
+  "etapa": 1,
+  "final_sha256": "f4e169b4564ebadf2836c16942105dc623953d6417e76e81a45dbbddd89d76af",
+  "formal_conforme": true,
+  "fundamento_sustantivo": "Enumera las cinco materias completas y distingue lo que deberá desarrollarse de soluciones ya fijadas. Mantiene el alcance preparatorio sin atribuir implementación ni aprobación; la revisión final identifica correctamente que la ampliación anterior no corregía un error sustantivo.",
+  "medicion": {
+    "adjudicacion": false,
+    "caso": "MD08",
+    "completa": true,
+    "directorio": "ejecucion/astra-manual-20261008\\intentos/ENVIO-023/MD08/R1",
+    "duracion_ms": 26241,
+    "duracion_operacion_ms": 26544,
+    "entrega": 23,
+    "etapa": 1,
+    "final_sha256": "f4e169b4564ebadf2836c16942105dc623953d6417e76e81a45dbbddd89d76af",
+    "formal_conforme": true,
+    "http": 200,
+    "intento": 23,
+    "respuesta": "{\n  \"caso\": \"MD08\",\n  \"estado_documental\": \"respuesta_fundada\",\n  \"etapa\": 1,\n  \"evidencias\": [\n    {\n      \"cita_literal_breve\": \"## 3. Qué deberá fijar\\n\\n- tipos de compatibilidad admitidos;\\n- prioridad por lenguajes anfitriones;\\n- garantías semánticas mínimas;\\n- criterio de activación por lenguaje;\\n- y límites de fase.\",\n      \"documento\": \"MANUAL_TRAMO10\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000014-L000021\"\n    },\n    {\n      \"cita_literal_breve\": \"Este tramo fija la estructura mínima de trabajo para documentar cómo el lenguaje SV podrá relacionarse con otros lenguajes de programación sin degradar su semántica propia.\",\n      \"documento\": \"MANUAL_TRAMO10\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000003-L000006\"\n    },\n    {\n      \"cita_literal_breve\": \"Este tramo no implementa bindings, APIs, FFI ni wrappers reales. Solo abre el frente documental y de gobierno.\",\n      \"documento\": \"MANUAL_TRAMO10\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000022-L000025\"\n    },\n    {\n      \"cita_literal_breve\": \"Pendiente de desarrollo.\",\n      \"documento\": \"MANUAL_TRAMO10\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000026-L000028\"\n    },\n    {\n      \"cita_literal_breve\": \"La presentación de un documento en este libro no acredita una nueva aprobación.\",\n      \"documento\": \"MANUAL_PRESENTACION\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000011-L000014\"\n    }\n  ],\n  \"fundamentos_verificables\": [\n    \"Los cinco elementos corresponden exactamente a la enumeración de la sección 3 del tramo 10. El encabezado «Qué deberá fijar» los sitúa como materias por desarrollar, no como soluciones ya determinadas.\",\n    \"El objeto declarado es fijar una estructura mínima de trabajo para documentar la relación con otros lenguajes preservando la semántica del SV. De ello y del estado pendiente se deduce el carácter preparatorio y programático de la enumeración.\",\n    \"La exclusión expresa de implementaciones distingue el alcance documental y de gobierno de la disponibilidad efectiva de bindings, APIs, FFI o wrappers. La exclusión se refiere a este tramo y no demuestra su inexistencia en otros repositorios.\",\n    \"La presentación separa publicación y aprobación: reproducir el documento no acredita una aprobación nueva.\"\n  ],\n  \"insuficiencias\": [],\n  \"respuesta\": \"El tramo 10 deberá fijar estas cinco cuestiones:\\n1. Los tipos de compatibilidad admitidos.\\n2. La prioridad por lenguajes anfitriones.\\n3. Las garantías semánticas mínimas.\\n4. El criterio de activación por lenguaje.\\n5. Los límites de fase.\\n\\nLa enumeración tiene carácter preparatorio, prospectivo y programático: señala las materias que deberá concretar el desarrollo del tramo, no ofrece todavía sus soluciones. Forma parte de la estructura mínima de trabajo destinada a documentar la relación del SV con otros lenguajes sin degradar su semántica.\\n\\nEl documento permanece pendiente de desarrollo y abre el frente documental y de gobierno; expresamente no implementa bindings, APIs, FFI ni wrappers reales. Su publicación tampoco acredita una nueva aprobación. Estas conclusiones se limitan al documento suministrado y no describen el estado actual de otros repositorios.\",\n  \"revision\": \"Se mantiene la enumeración completa y la interpretación de su carácter futuro: ambas concuerdan con la sección 3. Se añade como apoyo el objeto declarado del tramo, que fundamenta directamente su carácter de estructura de trabajo. Se mantienen los límites sobre implementación y aprobación, precisando que no equivalen a afirmar la inexistencia de implementaciones en otros repositorios. Las citas anteriores son literales y sus localizadores corresponden a los fragmentos recibidos; no se identifican omisiones que impidan resolver la pregunta ni motivos para declarar U.\"\n}",
+    "resultado_sha256": "75f426045be663939849774894639db304b50bb9db3960b8001e52ce891b7b49",
+    "resumen_proveedor": [],
+    "solicitud_sha256": "9c7aba3e526a52eca86efeb9754c302e375a77085e85a18fbea58199c90c51fb",
+    "telemetria": {
+      "bytes": 833675,
+      "fallos_medicion": 0,
+      "integridad": "conforme",
+      "intervalo_maximo_ms": 327,
+      "intervalo_objetivo_ms": 250,
+      "muestras": 109,
+      "plataforma_recibida": false,
+      "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+      "registros": 2025,
+      "sha256": "1fef6a4297f857a89fa4c52d97973aa2120ac4f2b9bd4d79f335990d9ceed1de"
+    },
+    "uso_proveedor": {
+      "attribution": {
+        "items": {
+          "msg_0bba06d9e4071b6b016ac71379e65487d2bf449720926a61a3": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 17545,
+                "output_tokens": 0
+              }
+            ],
+            "input_tokens": 17545,
+            "output_tokens": 0
+          },
+          "msg_0bba06d9e4071b6b016ac71379e67087d29b31de97e6f5a46d": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 651,
+                "output_tokens": 0
+              }
+            ],
+            "input_tokens": 651,
+            "output_tokens": 0
+          },
+          "msg_0bba06d9e4071b6b016ac71379e68887d2ac5d572fe0c3c63a": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 68,
+                "output_tokens": 0
+              }
+            ],
+            "input_tokens": 68,
+            "output_tokens": 0
+          },
+          "msg_0bba06d9e4071b6b016ac7137bd11887d28bf1d3999e54b852": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 2,
+                "output_tokens": 919
+              }
+            ],
+            "input_tokens": 2,
+            "output_tokens": 919
+          }
+        },
+        "request_fields": {
+          "instructions": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "input_tokens": 555,
+            "output_tokens": 0
+          },
+          "text.format": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "input_tokens": 172,
+            "output_tokens": 0
+          }
+        }
+      },
+      "input_tokens": 18993,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 919,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 19912
+    }
+  },
+  "naturaleza_defecto": null,
+  "pasajes_contrastados": [
+    {
+      "documento": "MANUAL_TRAMO10",
+      "fragmento": "## 3. Qué deberá fijar\n\n- tipos de compatibilidad admitidos;\n- prioridad por lenguajes anfitriones;\n- garantías semánticas mínimas;\n- criterio de activación por lenguaje;\n- y límites de fase.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000014-L000021"
+    },
+    {
+      "documento": "MANUAL_TRAMO10",
+      "fragmento": "Este tramo fija la estructura mínima de trabajo para documentar cómo el lenguaje SV podrá relacionarse con otros lenguajes de programación sin degradar su semántica propia.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000003-L000006"
+    },
+    {
+      "documento": "MANUAL_TRAMO10",
+      "fragmento": "Este tramo no implementa bindings, APIs, FFI ni wrappers reales. Solo abre el frente documental y de gobierno.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000022-L000025"
+    },
+    {
+      "documento": "MANUAL_TRAMO10",
+      "fragmento": "Pendiente de desarrollo.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000026-L000028"
+    },
+    {
+      "documento": "MANUAL_PRESENTACION",
+      "fragmento": "La presentación de un documento en este libro no acredita una nueva aprobación.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000011-L000014"
+    },
+    {
+      "documento": "MANUAL_TRAMO10",
+      "fragmento": "Pendiente de desarrollo.",
+      "origen": "cotejo adicional del evaluador",
+      "seccion": "MD-L000026-L000028"
+    }
+  ],
+  "recepcion_independiente": "pendiente",
+  "respuesta_original": "{\n  \"caso\": \"MD08\",\n  \"estado_documental\": \"respuesta_fundada\",\n  \"etapa\": 1,\n  \"evidencias\": [\n    {\n      \"cita_literal_breve\": \"## 3. Qué deberá fijar\\n\\n- tipos de compatibilidad admitidos;\\n- prioridad por lenguajes anfitriones;\\n- garantías semánticas mínimas;\\n- criterio de activación por lenguaje;\\n- y límites de fase.\",\n      \"documento\": \"MANUAL_TRAMO10\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000014-L000021\"\n    },\n    {\n      \"cita_literal_breve\": \"Este tramo fija la estructura mínima de trabajo para documentar cómo el lenguaje SV podrá relacionarse con otros lenguajes de programación sin degradar su semántica propia.\",\n      \"documento\": \"MANUAL_TRAMO10\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000003-L000006\"\n    },\n    {\n      \"cita_literal_breve\": \"Este tramo no implementa bindings, APIs, FFI ni wrappers reales. Solo abre el frente documental y de gobierno.\",\n      \"documento\": \"MANUAL_TRAMO10\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000022-L000025\"\n    },\n    {\n      \"cita_literal_breve\": \"Pendiente de desarrollo.\",\n      \"documento\": \"MANUAL_TRAMO10\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000026-L000028\"\n    },\n    {\n      \"cita_literal_breve\": \"La presentación de un documento en este libro no acredita una nueva aprobación.\",\n      \"documento\": \"MANUAL_PRESENTACION\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000011-L000014\"\n    }\n  ],\n  \"fundamentos_verificables\": [\n    \"Los cinco elementos corresponden exactamente a la enumeración de la sección 3 del tramo 10. El encabezado «Qué deberá fijar» los sitúa como materias por desarrollar, no como soluciones ya determinadas.\",\n    \"El objeto declarado es fijar una estructura mínima de trabajo para documentar la relación con otros lenguajes preservando la semántica del SV. De ello y del estado pendiente se deduce el carácter preparatorio y programático de la enumeración.\",\n    \"La exclusión expresa de implementaciones distingue el alcance documental y de gobierno de la disponibilidad efectiva de bindings, APIs, FFI o wrappers. La exclusión se refiere a este tramo y no demuestra su inexistencia en otros repositorios.\",\n    \"La presentación separa publicación y aprobación: reproducir el documento no acredita una aprobación nueva.\"\n  ],\n  \"insuficiencias\": [],\n  \"respuesta\": \"El tramo 10 deberá fijar estas cinco cuestiones:\\n1. Los tipos de compatibilidad admitidos.\\n2. La prioridad por lenguajes anfitriones.\\n3. Las garantías semánticas mínimas.\\n4. El criterio de activación por lenguaje.\\n5. Los límites de fase.\\n\\nLa enumeración tiene carácter preparatorio, prospectivo y programático: señala las materias que deberá concretar el desarrollo del tramo, no ofrece todavía sus soluciones. Forma parte de la estructura mínima de trabajo destinada a documentar la relación del SV con otros lenguajes sin degradar su semántica.\\n\\nEl documento permanece pendiente de desarrollo y abre el frente documental y de gobierno; expresamente no implementa bindings, APIs, FFI ni wrappers reales. Su publicación tampoco acredita una nueva aprobación. Estas conclusiones se limitan al documento suministrado y no describen el estado actual de otros repositorios.\",\n  \"revision\": \"Se mantiene la enumeración completa y la interpretación de su carácter futuro: ambas concuerdan con la sección 3. Se añade como apoyo el objeto declarado del tramo, que fundamenta directamente su carácter de estructura de trabajo. Se mantienen los límites sobre implementación y aprobación, precisando que no equivalen a afirmar la inexistencia de implementaciones en otros repositorios. Las citas anteriores son literales y sus localizadores corresponden a los fragmentos recibidos; no se identifican omisiones que impidan resolver la pregunta ni motivos para declarar U.\"\n}",
+  "solicitud_sha256": "9c7aba3e526a52eca86efeb9754c302e375a77085e85a18fbea58199c90c51fb",
+  "sustantivo": "correcto",
+  "valor": "0"
+}

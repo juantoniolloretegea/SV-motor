@@ -1,0 +1,52 @@
+{
+  "caso": "MD03",
+  "estado_documental": "respuesta_fundada",
+  "etapa": 1,
+  "evidencias": [
+    {
+      "cita_literal_breve": "### Tramo 3 — Célula, evaluación y clasificación\n- `CellSpec`;\n- `CellState`;\n- `evaluate`;\n- umbral;\n- criticidad.",
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmentos": [0],
+      "seccion": "MD-L000041-L000047"
+    },
+    {
+      "cita_literal_breve": "### Tramo 5 — Resolución y régimen de la U\n- `resolve`;\n- `Context`;\n- `Mechanism`;\n- reapertura.",
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmentos": [0],
+      "seccion": "MD-L000054-L000059"
+    },
+    {
+      "cita_literal_breve": "### Tramo 6 — Trayectoria, frame y datos de transición\n- `Frame`;\n- `TransitionData`;\n- `Trajectory`;\n- regla append-only.",
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmentos": [0],
+      "seccion": "MD-L000060-L000065"
+    },
+    {
+      "cita_literal_breve": "No es todavía el manual final.",
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmentos": [0],
+      "seccion": "MD-L000003-L000008"
+    },
+    {
+      "cita_literal_breve": "El índice original registra once tramos pendientes, SVP-MAN-00 a SVP-MAN-10.",
+      "documento": "MANUAL_PRESENTACION",
+      "fragmentos": [0],
+      "seccion": "MD-L000005-L000010"
+    },
+    {
+      "cita_literal_breve": "Sus fuentes pertenecen a la revisión f97173e07a9dfb8385ed1268d11de422b291507d del repositorio SV-lenguaje-de-computacion.",
+      "documento": "MANUAL_PRESENTACION",
+      "fragmentos": [0],
+      "seccion": "MD-L000005-L000010"
+    }
+  ],
+  "fundamentos_verificables": [
+    "Los encabezados y las listas de los tramos 3, 5 y 6 identifican directamente las tres ubicaciones y todas sus materias asociadas; no es necesario deducir definiciones.",
+    "MANUAL_INDICE confirma las ubicaciones 03, 05 y 06 como entradas pendientes, aunque abrevia o reordena algunos títulos respecto del constructor. Se conservan aquí los títulos del constructor, que es el documento preguntado.",
+    "El constructor presenta una arquitectura de trabajo, no un manual final. La presentación vincula los textos conservados a una revisión concreta; por tanto, sus enumeraciones no acreditan implementación ni el estado actual de otros repositorios.",
+    "MANUAL_TRAMO10 trata la compatibilidad interlenguajes y no añade definiciones ni modifica la distribución de las materias consultadas."
+  ],
+  "insuficiencias": [],
+  "respuesta": "El constructor sitúa las materias en estos tres tramos:\n\n1. Evaluación de células: tramo 3 — Célula, evaluación y clasificación. Incluye `CellSpec`, `CellState`, `evaluate`, umbral y criticidad.\n2. Resolución de U: tramo 5 — Resolución y régimen de la U. Incluye `resolve`, `Context`, `Mechanism` y reapertura.\n3. Datos de transición: tramo 6 — Trayectoria, frame y datos de transición. Incluye `Frame`, `TransitionData`, `Trajectory` y regla append-only.\n\nSon materias enumeradas en la arquitectura prevista del manual, no definiciones desarrolladas. En la edición suministrada estos tramos figuran pendientes. Esta información corresponde al documento conservado y no acredita su implementación ni el estado actual de otros repositorios.",
+  "revision": "Se mantiene el contenido sustantivo de la respuesta provisional: las tres ubicaciones, los títulos y las listas coinciden con el constructor, sin omisiones de materias asociadas ni definiciones añadidas. Las citas son literales y sus localizadores corresponden a los fragmentos suministrados. Se añade evidencia de la revisión de procedencia para fundamentar mejor el límite histórico. No hay un extremo solicitado indeterminable que requiera U."
+}

@@ -1,0 +1,57 @@
+{
+  "caso": "MD02",
+  "estado_documental": "respuesta_fundada",
+  "etapa": 0,
+  "evidencias": [
+    {
+      "cita_literal_breve": "subordinado al pliego, a la Frontera normativa, a la IR y a la gramática vigente;",
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmentos": [0],
+      "seccion": "MD-L000009-L000017"
+    },
+    {
+      "cita_literal_breve": "verificable mediante ejemplos, contraejemplos y relación explícita con la implementación.",
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmentos": [0],
+      "seccion": "MD-L000009-L000017"
+    },
+    {
+      "cita_literal_breve": "10. Relación con IR y docs públicos",
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmentos": [0],
+      "seccion": "MD-L000092-L000108"
+    },
+    {
+      "cita_literal_breve": "correspondencia visible con la IR o con la superficie vigente;",
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmentos": [0],
+      "seccion": "MD-L000109-L000118"
+    },
+    {
+      "cita_literal_breve": "ausencia de contradicción local suficiente con el pliego o con la Frontera normativa.",
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmentos": [0],
+      "seccion": "MD-L000109-L000118"
+    },
+    {
+      "cita_literal_breve": "La presentación de un documento en este libro no acredita una nueva aprobación.",
+      "documento": "MANUAL_PRESENTACION",
+      "fragmentos": [0],
+      "seccion": "MD-L000011-L000014"
+    },
+    {
+      "cita_literal_breve": "Este tramo no implementa bindings, APIs, FFI ni wrappers reales. Solo abre el frente documental y de gobierno.",
+      "documento": "MANUAL_TRAMO10",
+      "fragmentos": [0],
+      "seccion": "MD-L000022-L000025"
+    }
+  ],
+  "fundamentos_verificables": [
+    "La regla general del constructor enumera cuatro referencias de subordinación: pliego, Frontera normativa, representación intermedia (IR) y gramática vigente; exige además verificabilidad mediante ejemplos, contraejemplos y una relación explícita con la implementación.",
+    "La ficha obligatoria y el criterio de cierre concretan esa exigencia: declarar la relación con IR y documentos públicos, mostrar correspondencia con la IR o la superficie vigente y aportar ejemplos .svp, delimitación del alcance y ausencia de contradicción local suficiente con las referencias normativas.",
+    "Estas son condiciones documentales de elaboración y cierre, no una certificación de implementación: la presentación no acredita nueva aprobación y el tramo 10 excluye expresamente implementar los mecanismos de integración mencionados."
+  ],
+  "insuficiencias": [],
+  "respuesta": "Cada tramo debe subordinarse a: (1) el pliego, (2) la Frontera normativa, (3) la representación intermedia (IR) y (4) la gramática vigente.\n\nSu relación con la implementación debe ser explícita y verificable mediante ejemplos y contraejemplos. La ficha de cada tramo debe declarar su relación con la IR y los documentos públicos. Para considerarlo cerrable, el constructor exige como mínimo exposición sobria del objeto, correspondencia visible con la IR o la superficie vigente, uno o más ejemplos .svp suficientemente nucleares, delimitación expresa de lo que queda fuera y ausencia de contradicción local suficiente con el pliego o la Frontera normativa.\n\nSe trata de requisitos para construir y cerrar el manual, no de prueba de que ya estén cumplidos ni de que las funcionalidades estén implementadas. En particular, el tramo 10 declara que no implementa bindings, APIs, FFI ni wrappers reales; abre únicamente el frente documental y de gobierno. La publicación tampoco acredita una nueva aprobación.",
+  "revision": "Etapa 0: respuesta provisional sin antecedentes de entregas anteriores. Se distingue la exigencia documental de vinculación con la implementación de la acreditación de funcionalidades efectivamente implementadas."
+}

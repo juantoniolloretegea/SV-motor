@@ -1,0 +1,70 @@
+{
+  "caso": "MD02",
+  "estado_documental": "respuesta_fundada",
+  "etapa": 1,
+  "evidencias": [
+    {
+      "cita_literal_breve": "subordinado al pliego, a la Frontera normativa, a la IR y a la gramática vigente;",
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmentos": [0],
+      "seccion": "MD-L000009-L000017"
+    },
+    {
+      "cita_literal_breve": "verificable mediante ejemplos, contraejemplos y relación explícita con la implementación.",
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmentos": [0],
+      "seccion": "MD-L000009-L000017"
+    },
+    {
+      "cita_literal_breve": "10. Relación con IR y docs públicos",
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmentos": [0],
+      "seccion": "MD-L000092-L000108"
+    },
+    {
+      "cita_literal_breve": "correspondencia visible con la IR o con la superficie vigente;",
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmentos": [0],
+      "seccion": "MD-L000109-L000118"
+    },
+    {
+      "cita_literal_breve": "uno o más ejemplos `.svp` suficientemente nucleares;",
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmentos": [0],
+      "seccion": "MD-L000109-L000118"
+    },
+    {
+      "cita_literal_breve": "ausencia de contradicción local suficiente con el pliego o con la Frontera normativa.",
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmentos": [0],
+      "seccion": "MD-L000109-L000118"
+    },
+    {
+      "cita_literal_breve": "La presentación de un documento en este libro no acredita una nueva aprobación.",
+      "documento": "MANUAL_PRESENTACION",
+      "fragmentos": [0],
+      "seccion": "MD-L000011-L000014"
+    },
+    {
+      "cita_literal_breve": "Sus fuentes pertenecen a la revisión f97173e07a9dfb8385ed1268d11de422b291507d del repositorio SV-lenguaje-de-computacion.",
+      "documento": "MANUAL_PRESENTACION",
+      "fragmentos": [0],
+      "seccion": "MD-L000005-L000010"
+    },
+    {
+      "cita_literal_breve": "Este tramo no implementa bindings, APIs, FFI ni wrappers reales. Solo abre el frente documental y de gobierno.",
+      "documento": "MANUAL_TRAMO10",
+      "fragmentos": [0],
+      "seccion": "MD-L000022-L000025"
+    }
+  ],
+  "fundamentos_verificables": [
+    "La regla general enumera expresamente las cuatro referencias de subordinación y exige ejemplos, contraejemplos y relación explícita con la implementación; no basta, por tanto, con una exposición conceptual sin ese vínculo verificable.",
+    "La ficha obligatoria exige declarar la relación con IR y documentos públicos. El criterio de cierre concreta la correspondencia exigida como visible con la IR o con la superficie vigente; esa alternativa no elimina la subordinación general a las cuatro referencias.",
+    "El constructor habla de condiciones mínimas para considerar un tramo cerrable, no de cierre automático ni de aprobación. La presentación reserva las revisiones y los cierres a sus sedes competentes.",
+    "La declaración de no implementación del tramo 10 corresponde al documento conservado en la revisión identificada. No permite afirmar que esos mecanismos estén ausentes actualmente de otros repositorios."
+  ],
+  "insuficiencias": [],
+  "respuesta": "Cada tramo debe subordinarse a cuatro referencias: (1) el pliego, (2) la Frontera normativa, (3) la representación intermedia (IR) y (4) la gramática vigente.\n\nLa relación con la implementación debe ser explícita y verificable mediante ejemplos y contraejemplos. Además, la ficha obligatoria debe declarar la relación del tramo con la IR y los documentos públicos.\n\nPara considerarlo cerrable, el constructor exige como mínimo:\n1. Exposición sobria del objeto.\n2. Correspondencia visible con la IR o con la superficie vigente.\n3. Uno o más ejemplos .svp suficientemente nucleares.\n4. Delimitación expresa de lo que queda fuera.\n5. Ausencia de contradicción local suficiente con el pliego o con la Frontera normativa.\n\nSon requisitos de elaboración y cierre documental, no pruebas de que las funcionalidades ya estén implementadas ni una aprobación automática. Por ejemplo, el tramo 10 conservado declara que no implementa bindings, APIs, FFI ni wrappers reales y que solo abre el frente documental y de gobierno. Esta declaración se refiere al documento de la revisión f97173e07a9dfb8385ed1268d11de422b291507d, no al estado actual de otros repositorios. La publicación en esta edición tampoco acredita una nueva aprobación.",
+  "revision": "Se mantiene la respuesta sustantiva: las cuatro referencias, la exigencia de verificabilidad y los cinco mínimos de cierre están respaldados por la fuente; las citas anteriores son literales y sus localizadores son correctos. Se precisa que «cerrable» no equivale a cerrado o aprobado y se añade el alcance histórico de la declaración del tramo 10 para evitar extrapolarla al estado actual de otros repositorios. No se detecta una omisión que impida resolver la pregunta ni un extremo exigido que requiera U."
+}

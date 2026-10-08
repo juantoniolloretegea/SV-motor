@@ -1,0 +1,191 @@
+{
+  "adjudicacion": "pendiente de contraste exterior al candidato",
+  "caso": "MD07",
+  "directorio": "ejecucion/astra-manual-20261008\\intentos/ENVIO-020/MD07/R1",
+  "entrega_numero": 20,
+  "esquema": "sv-hito-instrumental/2",
+  "etapa": 1,
+  "fecha_registro_ms": 1791431493777,
+  "modelo": "gpt-6-astra",
+  "nodo": "03",
+  "numero_intento": 20,
+  "originales": [
+    {
+      "bytes": 63880,
+      "ruta": "ejecucion/astra-manual-20261008\\intentos/ENVIO-020/MD07/R1\\SOLICITUD.json",
+      "sha256": "98345928b2cb989cce09c3b912452e96ae7a921becc7282c4820cb34da8bb3a0"
+    },
+    {
+      "bytes": 7650,
+      "ruta": "ejecucion/astra-manual-20261008\\intentos/ENVIO-020/MD07/R1\\RESULTADO.json",
+      "sha256": "31fad8ec56a88cc2a21f260b5bc8360e93832a87ed64f4c1499d4d6f7efc1e93"
+    },
+    {
+      "bytes": 137,
+      "ruta": "ejecucion/astra-manual-20261008\\intentos/ENVIO-020/MD07/R1\\HTTP.json",
+      "sha256": "8ead76ae84fcacf9edc63ca8da4c635a3fea886be730fbf57a64856d234914b2"
+    },
+    {
+      "bytes": 247828,
+      "ruta": "ejecucion/astra-manual-20261008\\intentos/ENVIO-020/MD07/R1\\SALIDA-SSE.txt",
+      "sha256": "c79d5943a9e4d6e5f743c7b651a5b092af5d3d5220ea2703b23b8cb6af9b0ed3"
+    },
+    {
+      "bytes": 3441,
+      "ruta": "ejecucion/astra-manual-20261008\\intentos/ENVIO-020/MD07/R1\\FINAL.txt",
+      "sha256": "aeb2f52a174a89317aab033b5b2a5d568f9eb088b8820d45f8c1ecee82976a17"
+    },
+    {
+      "bytes": 9968,
+      "ruta": "ejecucion/astra-manual-20261008\\intentos/ENVIO-020/MD07/R1\\ENTREGA-PROVEEDOR.json",
+      "sha256": "30f682eeee1c74d283c81ea4c53f1fc74fcd9157fe592c672d1a5585af97e651"
+    },
+    {
+      "bytes": 2510,
+      "ruta": "ejecucion/astra-manual-20261008\\intentos/ENVIO-020/MD07/R1\\AUDITORIA-FORMAL.json",
+      "sha256": "d2b2afd103c0e999190c768791bd09ba1764a214c3d15c2d06080a1eabbac46c"
+    },
+    {
+      "bytes": 728769,
+      "ruta": "ejecucion/astra-manual-20261008\\intentos/ENVIO-020/MD07/R1\\instrumentacion/telemetria.jsonl",
+      "sha256": "174a3604beafde8fdfcc23d5cca194f13a0d93f0a844e44d9f255d4622f9a4e9"
+    }
+  ],
+  "resultado": {
+    "adjudicado": false,
+    "cabeceras_proveedor": {},
+    "caso": "MD07-R1",
+    "completa": true,
+    "contrato_formal_conforme": true,
+    "coste_monetario_atribuible": null,
+    "creditos_atribuibles": null,
+    "duracion_intento_instrumentado_ms": 28835,
+    "duracion_ms": 25180,
+    "duracion_operacion_ms": 25486,
+    "entrega_numero": 20,
+    "estado": "entrega_recibida",
+    "evento_terminal": "response.completed",
+    "eventos": 849,
+    "herramientas_ejecutadas": 0,
+    "herramientas_habilitadas": 0,
+    "http": 200,
+    "incidencia_servicio": null,
+    "limites": [
+      "CPU porcentual sin calibración externa",
+      "Sin medida separada DNS/TLS, RTT, retransmisiones, asignaciones del montículo, hilos ni recursos internos del proveedor",
+      "La ausencia de herramientas no prueba aislamiento de infraestructura de OpenAI; fuente exclusiva exigida y respuesta pendiente de contraste sustantivo",
+      "Criptografía C/ensamblador pendiente conforme a excepción experimental autorizada"
+    ],
+    "modelo_declarado": "gpt-6-astra",
+    "modelo_solicitado": "gpt-6-astra",
+    "numero_intento": 20,
+    "par_remoto_http": "172.66.0.243:443",
+    "primer_evento_ms": 1765,
+    "primer_texto_ms": 3948,
+    "respuesta_bytes": 247828,
+    "respuesta_texto": "{\n  \"caso\": \"MD07\",\n  \"estado_documental\": \"respuesta_fundada\",\n  \"etapa\": 1,\n  \"evidencias\": [\n    {\n      \"cita_literal_breve\": \"sin degradar su semántica propia.\",\n      \"documento\": \"MANUAL_TRAMO10\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000003-L000006\"\n    },\n    {\n      \"cita_literal_breve\": \"preservación semántica del SV.\",\n      \"documento\": \"MANUAL_CONSTRUCTOR\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000085-L000091\"\n    },\n    {\n      \"cita_literal_breve\": \"La compatibilidad interlenguajes del SV se tratará como tramo propio del manual y deberá coordinarse con la política y protocolo de compatibilidad interlenguajes del Lenguaje SV.\",\n      \"documento\": \"MANUAL_CONSTRUCTOR\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000119-L000122\"\n    },\n    {\n      \"cita_literal_breve\": \"Política y protocolo de compatibilidad interlenguajes del Lenguaje SV\",\n      \"documento\": \"MANUAL_TRAMO10\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000007-L000013\"\n    },\n    {\n      \"cita_literal_breve\": \"Este tramo no implementa bindings, APIs, FFI ni wrappers reales. Solo abre el frente documental y de gobierno.\",\n      \"documento\": \"MANUAL_TRAMO10\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000022-L000025\"\n    },\n    {\n      \"cita_literal_breve\": \"Pendiente de desarrollo.\",\n      \"documento\": \"MANUAL_TRAMO10\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000026-L000028\"\n    }\n  ],\n  \"fundamentos_verificables\": [\n    \"El objeto del tramo 10 exige que la relación con otros lenguajes no degrade la semántica propia del SV; el constructor confirma ese requisito al incluir la preservación semántica del SV en el temario del tramo.\",\n    \"El constructor establece tanto el tratamiento de la compatibilidad como tramo propio del manual como su coordinación con la política y protocolo de compatibilidad interlenguajes del Lenguaje SV. El tramo 10 también enumera ese documento entre sus dependencias.\",\n    \"El alcance preparatorio está expresamente delimitado: el tramo abre un frente documental y de gobierno, no implementa las integraciones enumeradas y declara su desarrollo pendiente. Estas afirmaciones describen el documento suministrado, no el estado actual de implementaciones en otros repositorios.\"\n  ],\n  \"insuficiencias\": [],\n  \"respuesta\": \"Debe preservarse la semántica propia del SV, sin degradarla al relacionarlo con otros lenguajes de programación. La documentación de esa compatibilidad debe constituir un tramo propio del manual y coordinarse con la Política y protocolo de compatibilidad interlenguajes del Lenguaje SV, que el tramo 10 también reconoce como dependencia.\\n\\nEs una exigencia de documentación y gobierno, no una acreditación de integraciones implementadas: en la versión suministrada, el tramo 10 está pendiente de desarrollo y declara que no implementa bindings, APIs, FFI ni wrappers reales. Esto no permite concluir cuál es el estado actual de otros repositorios.\",\n  \"revision\": \"Se mantiene la conclusión provisional: sus afirmaciones sustantivas y sus citas coinciden con la fuente. Se amplía la cita del constructor para respaldar expresamente el tratamiento como tramo propio y se añade la dependencia declarada en el tramo 10. Se precisa que el estado pendiente y la ausencia de implementación se refieren al documento suministrado. No se detectan omisiones que impidan responder los dos extremos preguntados ni se requiere U.\"\n}",
+    "resumen_proveedor": [],
+    "telemetria": {
+      "bytes": 728769,
+      "fallos_medicion": 0,
+      "integridad": "conforme",
+      "intervalo_maximo_ms": 284,
+      "intervalo_objetivo_ms": 250,
+      "muestras": 106,
+      "plataforma_recibida": false,
+      "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+      "registros": 1730,
+      "sha256": "174a3604beafde8fdfcc23d5cca194f13a0d93f0a844e44d9f255d4622f9a4e9"
+    },
+    "telemetria_conforme": true,
+    "uso_proveedor": {
+      "attribution": {
+        "items": {
+          "msg_0c3dd07b41870a36016ac7132d830887d282d1d2d384494978": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 17556,
+                "output_tokens": 0
+              }
+            ],
+            "input_tokens": 17556,
+            "output_tokens": 0
+          },
+          "msg_0c3dd07b41870a36016ac7132d832087d2a124d4639efb747c": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 640,
+                "output_tokens": 0
+              }
+            ],
+            "input_tokens": 640,
+            "output_tokens": 0
+          },
+          "msg_0c3dd07b41870a36016ac7132d833087d28d78653fa4cf40d5": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 68,
+                "output_tokens": 0
+              }
+            ],
+            "input_tokens": 68,
+            "output_tokens": 0
+          },
+          "msg_0c3dd07b41870a36016ac7132fe32087d28c0bce6a25ae478b": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 2,
+                "output_tokens": 854
+              }
+            ],
+            "input_tokens": 2,
+            "output_tokens": 854
+          }
+        },
+        "request_fields": {
+          "instructions": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "input_tokens": 555,
+            "output_tokens": 0
+          },
+          "text.format": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "input_tokens": 172,
+            "output_tokens": 0
+          }
+        }
+      },
+      "input_tokens": 18993,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 854,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 19847
+    },
+    "utc_fin_ms": 1791431492661,
+    "utc_inicio_operacion_ms": 1791431467176,
+    "version_http": "HTTP/1.1"
+  }
+}

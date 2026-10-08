@@ -1,0 +1,46 @@
+{
+  "caso": "MD08",
+  "estado_documental": "respuesta_fundada",
+  "etapa": 2,
+  "evidencias": [
+    {
+      "cita_literal_breve": "## 3. Qué deberá fijar\n\n- tipos de compatibilidad admitidos;\n- prioridad por lenguajes anfitriones;\n- garantías semánticas mínimas;\n- criterio de activación por lenguaje;\n- y límites de fase.",
+      "documento": "MANUAL_TRAMO10",
+      "fragmentos": [0],
+      "seccion": "MD-L000014-L000021"
+    },
+    {
+      "cita_literal_breve": "Este tramo fija la estructura mínima de trabajo para documentar cómo el lenguaje SV podrá relacionarse con otros lenguajes de programación sin degradar su semántica propia.",
+      "documento": "MANUAL_TRAMO10",
+      "fragmentos": [0],
+      "seccion": "MD-L000003-L000006"
+    },
+    {
+      "cita_literal_breve": "Este tramo no implementa bindings, APIs, FFI ni wrappers reales. Solo abre el frente documental y de gobierno.",
+      "documento": "MANUAL_TRAMO10",
+      "fragmentos": [0],
+      "seccion": "MD-L000022-L000025"
+    },
+    {
+      "cita_literal_breve": "Pendiente de desarrollo.",
+      "documento": "MANUAL_TRAMO10",
+      "fragmentos": [0],
+      "seccion": "MD-L000026-L000028"
+    },
+    {
+      "cita_literal_breve": "La presentación de un documento en este libro no acredita una nueva aprobación.",
+      "documento": "MANUAL_PRESENTACION",
+      "fragmentos": [0],
+      "seccion": "MD-L000011-L000014"
+    }
+  ],
+  "fundamentos_verificables": [
+    "La sección 3 enumera explícitamente las cinco cuestiones. Su encabezado en futuro indica contenidos que el tramo deberá concretar, no decisiones técnicas ya resueltas.",
+    "El objeto declarado establece una estructura mínima de trabajo; junto con el estado pendiente de desarrollo, fundamenta calificar la lista como preparatoria, prospectiva y programática. Estas calificaciones son una interpretación del alcance documental, no categorías literales de la fuente.",
+    "La sección 4 distingue expresamente la apertura documental y de gobierno de la implementación de interfaces. Esta limitación se refiere al tramo y no acredita la inexistencia de implementaciones en otros repositorios.",
+    "La presentación distingue la publicación del documento de una nueva aprobación."
+  ],
+  "insuficiencias": [],
+  "respuesta": "El tramo 10 deberá fijar cinco cuestiones:\n1. Los tipos de compatibilidad admitidos.\n2. La prioridad por lenguajes anfitriones.\n3. Las garantías semánticas mínimas.\n4. El criterio de activación por lenguaje.\n5. Los límites de fase.\n\nLa enumeración tiene carácter preparatorio, prospectivo y programático: delimita las materias que deberá concretar el desarrollo del tramo, pero no determina todavía sus soluciones. Forma parte de una estructura mínima de trabajo para documentar la relación del SV con otros lenguajes sin degradar su semántica propia.\n\nEl documento declara su estado pendiente de desarrollo y limita su aportación al frente documental y de gobierno: no implementa bindings, APIs, FFI ni wrappers reales. Su publicación tampoco acredita una nueva aprobación. Estas conclusiones describen el documento conservado, no el estado actual de otros repositorios.",
+  "revision": "Contrastadas ambas entregas con la fuente, se mantiene la enumeración: las dos recogen los cinco elementos sin omisiones ni cambios de sentido. Se mantiene también la interpretación prospectiva, apoyada en el encabezado de la sección 3, el objeto y el estado declarado. El apoyo adicional de la segunda entrega es pertinente, pero no corrige un error sustantivo de la primera. Se precisa que «preparatorio, prospectivo y programático» es una caracterización fundada, no una cita literal. No hay extremos de la pregunta que requieran declarar U."
+}

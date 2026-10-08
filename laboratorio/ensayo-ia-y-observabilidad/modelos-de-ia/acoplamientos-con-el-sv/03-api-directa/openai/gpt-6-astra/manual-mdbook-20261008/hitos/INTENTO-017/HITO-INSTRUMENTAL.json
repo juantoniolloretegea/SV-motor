@@ -1,0 +1,191 @@
+{
+  "adjudicacion": "pendiente de contraste exterior al candidato",
+  "caso": "MD06",
+  "directorio": "ejecucion/astra-manual-20261008\\intentos/ENVIO-017/MD06/R1",
+  "entrega_numero": 17,
+  "esquema": "sv-hito-instrumental/2",
+  "etapa": 1,
+  "fecha_registro_ms": 1791431426592,
+  "modelo": "gpt-6-astra",
+  "nodo": "03",
+  "numero_intento": 17,
+  "originales": [
+    {
+      "bytes": 62551,
+      "ruta": "ejecucion/astra-manual-20261008\\intentos/ENVIO-017/MD06/R1\\SOLICITUD.json",
+      "sha256": "b631ecb846b16397412eed0b5828c55471bd3ee57b7e4f1ff0d365fa827dc008"
+    },
+    {
+      "bytes": 5688,
+      "ruta": "ejecucion/astra-manual-20261008\\intentos/ENVIO-017/MD06/R1\\RESULTADO.json",
+      "sha256": "810e9831261243b900723fb701b4fbd96552539847a2cf08978977da8e4a8e3f"
+    },
+    {
+      "bytes": 137,
+      "ruta": "ejecucion/astra-manual-20261008\\intentos/ENVIO-017/MD06/R1\\HTTP.json",
+      "sha256": "80336317b17d0c2e4e7ac599f6e22d0ee16cc56e4cef43f108ddc9180d5c43c6"
+    },
+    {
+      "bytes": 118654,
+      "ruta": "ejecucion/astra-manual-20261008\\intentos/ENVIO-017/MD06/R1\\SALIDA-SSE.txt",
+      "sha256": "7677b96f3ca7234c2ba306700a32c9c99a176c391638944b29893885c232032a"
+    },
+    {
+      "bytes": 1566,
+      "ruta": "ejecucion/astra-manual-20261008\\intentos/ENVIO-017/MD06/R1\\FINAL.txt",
+      "sha256": "cbf72f52be5e5776916257903558ae843f4dedd2dfb85ea57929a478cae9bf30"
+    },
+    {
+      "bytes": 6048,
+      "ruta": "ejecucion/astra-manual-20261008\\intentos/ENVIO-017/MD06/R1\\ENTREGA-PROVEEDOR.json",
+      "sha256": "da4c50b8e05c00bc7642541f2b4ec3e0ab82168ad41bff804b35fecc80ffd363"
+    },
+    {
+      "bytes": 1023,
+      "ruta": "ejecucion/astra-manual-20261008\\intentos/ENVIO-017/MD06/R1\\AUDITORIA-FORMAL.json",
+      "sha256": "88640804c8e8339c09ff8996ee6deacff9b1f437f3e488a43f8a38ad184c84b5"
+    },
+    {
+      "bytes": 327091,
+      "ruta": "ejecucion/astra-manual-20261008\\intentos/ENVIO-017/MD06/R1\\instrumentacion/telemetria.jsonl",
+      "sha256": "9573788223a28cb018e41c3de5d7550e6ff64634b208c01096ff93cc827578b4"
+    }
+  ],
+  "resultado": {
+    "adjudicado": false,
+    "cabeceras_proveedor": {},
+    "caso": "MD06-R1",
+    "completa": true,
+    "contrato_formal_conforme": true,
+    "coste_monetario_atribuible": null,
+    "creditos_atribuibles": null,
+    "duracion_intento_instrumentado_ms": 15521,
+    "duracion_ms": 11781,
+    "duracion_operacion_ms": 12134,
+    "entrega_numero": 17,
+    "estado": "entrega_recibida",
+    "evento_terminal": "response.completed",
+    "eventos": 377,
+    "herramientas_ejecutadas": 0,
+    "herramientas_habilitadas": 0,
+    "http": 200,
+    "incidencia_servicio": null,
+    "limites": [
+      "CPU porcentual sin calibración externa",
+      "Sin medida separada DNS/TLS, RTT, retransmisiones, asignaciones del montículo, hilos ni recursos internos del proveedor",
+      "La ausencia de herramientas no prueba aislamiento de infraestructura de OpenAI; fuente exclusiva exigida y respuesta pendiente de contraste sustantivo",
+      "Criptografía C/ensamblador pendiente conforme a excepción experimental autorizada"
+    ],
+    "modelo_declarado": "gpt-6-astra",
+    "modelo_solicitado": "gpt-6-astra",
+    "numero_intento": 17,
+    "par_remoto_http": "172.66.0.243:443",
+    "primer_evento_ms": 1786,
+    "primer_texto_ms": 3969,
+    "respuesta_bytes": 118654,
+    "respuesta_texto": "{\n  \"caso\": \"MD06\",\n  \"estado_documental\": \"respuesta_fundada\",\n  \"etapa\": 1,\n  \"evidencias\": [\n    {\n      \"cita_literal_breve\": \"Toda idea nueva deberá pasar antes por el Wishlist IRQ del ecosistema SV.\",\n      \"documento\": \"MANUAL_CONSTRUCTOR\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000123-L000125\"\n    },\n    {\n      \"cita_literal_breve\": \"El constructor del manual no autoriza lluvias laterales.\",\n      \"documento\": \"MANUAL_CONSTRUCTOR\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000123-L000125\"\n    }\n  ],\n  \"fundamentos_verificables\": [\n    \"La sección 7 del constructor establece expresamente el paso previo para toda idea nueva. La propuesta de añadir una nueva capacidad queda comprendida en esa regla.\",\n    \"La regla identifica el Wishlist IRQ como paso previo, pero no establece que pasar por él equivalga a aprobar o implementar la capacidad.\"\n  ],\n  \"insuficiencias\": [],\n  \"respuesta\": \"La propuesta de nueva capacidad debe pasar antes por el Wishlist IRQ del ecosistema SV. Así lo exige la regla de control del constructor para toda idea nueva; no autoriza incorporaciones laterales directas. Ese paso previo no acredita por sí solo aprobación ni implementación.\",\n  \"revision\": \"Se mantiene el contenido de la respuesta provisional: el requisito y ambas citas coinciden con la sección 7 del constructor. No se detectan omisiones relevantes para la pregunta. Se conserva la distinción entre el paso previo exigido y una aprobación o implementación que esa regla no acredita. La entrega se identifica ahora como etapa 1.\"\n}",
+    "resumen_proveedor": [],
+    "telemetria": {
+      "bytes": 327091,
+      "fallos_medicion": 0,
+      "integridad": "conforme",
+      "intervalo_maximo_ms": 288,
+      "intervalo_objetivo_ms": 250,
+      "muestras": 57,
+      "plataforma_recibida": false,
+      "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+      "registros": 751,
+      "sha256": "9573788223a28cb018e41c3de5d7550e6ff64634b208c01096ff93cc827578b4"
+    },
+    "telemetria_conforme": true,
+    "uso_proveedor": {
+      "attribution": {
+        "items": {
+          "msg_0429e0c0dfc7d2df016ac712f7a23c87d284a2ea0a43816ada": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 17541,
+                "output_tokens": 0
+              }
+            ],
+            "input_tokens": 17541,
+            "output_tokens": 0
+          },
+          "msg_0429e0c0dfc7d2df016ac712f7a25487d2bf3c1d431f7494d5": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 326,
+                "output_tokens": 0
+              }
+            ],
+            "input_tokens": 326,
+            "output_tokens": 0
+          },
+          "msg_0429e0c0dfc7d2df016ac712f7a26887d2b90ad82bbd13e864": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 68,
+                "output_tokens": 0
+              }
+            ],
+            "input_tokens": 68,
+            "output_tokens": 0
+          },
+          "msg_0429e0c0dfc7d2df016ac712f9f5f887d284eb33f059c6aef6": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 2,
+                "output_tokens": 382
+              }
+            ],
+            "input_tokens": 2,
+            "output_tokens": 382
+          }
+        },
+        "request_fields": {
+          "instructions": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "input_tokens": 555,
+            "output_tokens": 0
+          },
+          "text.format": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "input_tokens": 172,
+            "output_tokens": 0
+          }
+        }
+      },
+      "input_tokens": 18664,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 382,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 19046
+    },
+    "utc_fin_ms": 1791431425493,
+    "utc_inicio_operacion_ms": 1791431413360,
+    "version_http": "HTTP/1.1"
+  }
+}

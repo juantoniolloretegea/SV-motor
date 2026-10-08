@@ -1,0 +1,58 @@
+{
+  "caso": "MD04",
+  "estado_documental": "respuesta_fundada",
+  "etapa": 2,
+  "evidencias": [
+    {
+      "cita_literal_breve": "Todo tramo del manual deberá declarar:",
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmentos": [0],
+      "seccion": "MD-L000092-L000108"
+    },
+    {
+      "cita_literal_breve": "1. ID del tramo\n2. Título\n3. Rango\n4. Objeto\n5. Dependencias\n6. Qué fija\n7. Qué no fija\n8. Ejemplos `.svp`\n9. Errores o contraejemplos\n10. Relación con IR y docs públicos\n11. Criterio de cierre\n12. Estado",
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmentos": [0],
+      "seccion": "MD-L000092-L000108"
+    },
+    {
+      "cita_literal_breve": "delimitación expresa de lo que queda fuera;",
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmentos": [0],
+      "seccion": "MD-L000109-L000118"
+    },
+    {
+      "cita_literal_breve": "## 3. Qué deberá fijar\n\n- tipos de compatibilidad admitidos;\n- prioridad por lenguajes anfitriones;\n- garantías semánticas mínimas;\n- criterio de activación por lenguaje;\n- y límites de fase.",
+      "documento": "MANUAL_TRAMO10",
+      "fragmentos": [0],
+      "seccion": "MD-L000014-L000021"
+    },
+    {
+      "cita_literal_breve": "Este tramo no implementa bindings, APIs, FFI ni wrappers reales. Solo abre el frente documental y de gobierno.",
+      "documento": "MANUAL_TRAMO10",
+      "fragmentos": [0],
+      "seccion": "MD-L000022-L000025"
+    },
+    {
+      "cita_literal_breve": "Pendiente de desarrollo.",
+      "documento": "MANUAL_TRAMO10",
+      "fragmentos": [0],
+      "seccion": "MD-L000026-L000028"
+    },
+    {
+      "cita_literal_breve": "Sus fuentes pertenecen a la revisión f97173e07a9dfb8385ed1268d11de422b291507d del repositorio SV-lenguaje-de-computacion.",
+      "documento": "MANUAL_PRESENTACION",
+      "fragmentos": [0],
+      "seccion": "MD-L000005-L000010"
+    }
+  ],
+  "fundamentos_verificables": [
+    "El constructor enumera doce campos bajo una obligación aplicable a todo tramo. «Qué fija» y «Qué no fija» son dos campos distintos, no opciones alternativas.",
+    "Interpretar esos campos como alcance positivo y delimitación de exclusiones se sustenta en sus denominaciones y en el criterio de cierre, que exige declarar expresamente lo que queda fuera.",
+    "El tramo 10 distingue mediante el futuro «deberá fijar» los contenidos previstos, y declara por separado qué no implementa todavía. Por tanto, enumerar sus objetivos no acredita haberlos desarrollado.",
+    "La presentación vincula el texto reproducido a una revisión concreta. Sus declaraciones no permiten generalizar sobre el estado actual de otros repositorios."
+  ],
+  "insuficiencias": [],
+  "respuesta": "La ficha de todo tramo debe contener los siguientes doce campos, en el orden enumerado por el constructor:\n\n1. ID del tramo.\n2. Título.\n3. Rango.\n4. Objeto.\n5. Dependencias.\n6. Qué fija.\n7. Qué no fija.\n8. Ejemplos `.svp`.\n9. Errores o contraejemplos.\n10. Relación con IR y docs públicos.\n11. Criterio de cierre.\n12. Estado.\n\n**Qué fija y qué no fija son obligaciones distintas y complementarias:**\n\n- **Qué fija:** declara el alcance positivo del tramo: qué establece o determina. No debe confundirse lo establecido con lo previsto. Por ejemplo, el tramo 10 anuncia lo que deberá fijar: tipos de compatibilidad admitidos, prioridad por lenguajes anfitriones, garantías semánticas mínimas, criterio de activación por lenguaje y límites de fase. Son contenidos previstos para desarrollar, no resultados ya acreditados.\n- **Qué no fija:** declara expresamente los límites y exclusiones del tramo. No basta con omitir un asunto: el criterio de cierre exige delimitar lo que queda fuera. En el tramo 10 se especifica que no implementa bindings, APIs, FFI ni wrappers reales; solo abre el frente documental y de gobierno.\n\nEl tramo 10 figura como pendiente de desarrollo en la revisión reproducida. Esta delimitación describe el documento suministrado y no determina el estado actual de implementaciones en otros repositorios.",
+  "revision": "Ambas entregas anteriores enumeraron correctamente los doce campos y distinguieron de forma fundada las dos obligaciones. Se mantienen esos contenidos tras contrastarlos con el constructor y el tramo 10. La precisión añadida en la segunda entrega —que alcance positivo y exclusiones son una explicación apoyada en la fuente, no una definición literal adicional— es válida, pero no corrige un error sustantivo de la primera. Se conserva el límite entre previsiones e implementaciones y entre la revisión reproducida y otros repositorios. Se corrige el cumplimiento formal de etapa: esta entrega final lleva etapa 2. No hay extremos de la pregunta que requieran U."
+}

@@ -1,0 +1,157 @@
+{
+  "alerta": {
+    "caso": "MD08",
+    "cita_cotejada_en_rust": true,
+    "motivo": "El carácter futuro está expresamente documentado; responderlo correctamente no acredita desarrollo ni implementación. La pregunta tiene evidencia suficiente.",
+    "pasaje": {
+      "documento": "MANUAL_TRAMO10",
+      "fragmento": "Pendiente de desarrollo.",
+      "origen": "cotejo adicional del evaluador",
+      "seccion": "MD-L000026-L000028"
+    },
+    "posicion": 8
+  },
+  "alerta_limite": true,
+  "auditoria_sha256": "4c3cd26420906b209cb7e347ce7f4a55d4b3357dee7b2dd7ec0d7bbfa1be5197",
+  "caso": "MD08",
+  "critico": false,
+  "estado_documental_candidato": "respuesta_fundada",
+  "etapa": 0,
+  "final_sha256": "962466830b923b3c47ee449744804726ad441396fadaf192e9a6e146bfeae78f",
+  "formal_conforme": true,
+  "fundamento_sustantivo": "Enumera las cinco materias completas y distingue lo que deberá desarrollarse de soluciones ya fijadas. Mantiene el alcance preparatorio sin atribuir implementación ni aprobación; la revisión final identifica correctamente que la ampliación anterior no corregía un error sustantivo.",
+  "medicion": {
+    "adjudicacion": false,
+    "caso": "MD08",
+    "completa": true,
+    "directorio": "ejecucion/astra-manual-20261008\\intentos/ENVIO-022/MD08/R0",
+    "duracion_ms": 17836,
+    "duracion_operacion_ms": 18106,
+    "entrega": 22,
+    "etapa": 0,
+    "final_sha256": "962466830b923b3c47ee449744804726ad441396fadaf192e9a6e146bfeae78f",
+    "formal_conforme": true,
+    "http": 200,
+    "intento": 22,
+    "respuesta": "{\n  \"caso\": \"MD08\",\n  \"estado_documental\": \"respuesta_fundada\",\n  \"etapa\": 0,\n  \"evidencias\": [\n    {\n      \"cita_literal_breve\": \"## 3. Qué deberá fijar\\n\\n- tipos de compatibilidad admitidos;\\n- prioridad por lenguajes anfitriones;\\n- garantías semánticas mínimas;\\n- criterio de activación por lenguaje;\\n- y límites de fase.\",\n      \"documento\": \"MANUAL_TRAMO10\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000014-L000021\"\n    },\n    {\n      \"cita_literal_breve\": \"Este tramo no implementa bindings, APIs, FFI ni wrappers reales. Solo abre el frente documental y de gobierno.\",\n      \"documento\": \"MANUAL_TRAMO10\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000022-L000025\"\n    },\n    {\n      \"cita_literal_breve\": \"Pendiente de desarrollo.\",\n      \"documento\": \"MANUAL_TRAMO10\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000026-L000028\"\n    },\n    {\n      \"cita_literal_breve\": \"La presentación de un documento en este libro no acredita una nueva aprobación.\",\n      \"documento\": \"MANUAL_PRESENTACION\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000011-L000014\"\n    }\n  ],\n  \"fundamentos_verificables\": [\n    \"La sección 3 enumera expresamente cinco cuestiones bajo un encabezado en futuro: son contenidos que deberán concretarse, no decisiones técnicas ya resueltas.\",\n    \"La sección 4 limita el alcance al frente documental y de gobierno y excluye que el tramo implemente las interfaces citadas; la sección 5 confirma que permanece pendiente de desarrollo.\",\n    \"La presentación impide interpretar la publicación de este documento preparatorio como una nueva aprobación. Estos datos describen el documento suministrado, no el estado actual de implementación de otros repositorios.\"\n  ],\n  \"insuficiencias\": [],\n  \"respuesta\": \"El tramo 10 deberá fijar cinco cuestiones:\\n1. Los tipos de compatibilidad admitidos.\\n2. La prioridad por lenguajes anfitriones.\\n3. Las garantías semánticas mínimas.\\n4. El criterio de activación por lenguaje.\\n5. Los límites de fase.\\n\\nLa enumeración tiene carácter prospectivo y programático: delimita lo que deberá desarrollarse dentro del documento preparatorio, no presenta esas cuestiones como ya resueltas ni acredita capacidades implementadas. El tramo permanece pendiente de desarrollo y abre únicamente el frente documental y de gobierno; expresamente no implementa bindings, APIs, FFI ni wrappers reales. Tampoco su publicación acredita una nueva aprobación ni permite concluir cuál es el estado actual de otros repositorios.\",\n  \"revision\": \"Etapa 0: respuesta provisional. No existen antecedentes ni entregas anteriores que contrastar.\"\n}",
+    "resultado_sha256": "91e037cd1c4644adac05730e5f1899c39f42c2cb343455b4ef0b1b9308e7dc47",
+    "resumen_proveedor": [],
+    "solicitud_sha256": "6a537c9fe3985de7438e54cf5ad0d735ded20e96f07c3c4e0ddca65a0c867e7e",
+    "telemetria": {
+      "bytes": 553828,
+      "fallos_medicion": 0,
+      "integridad": "conforme",
+      "intervalo_maximo_ms": 287,
+      "intervalo_objetivo_ms": 250,
+      "muestras": 78,
+      "plataforma_recibida": false,
+      "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+      "registros": 1325,
+      "sha256": "7dfbfd2ef8c6629675d4540f3584f773849f644334cd31c81d99795111d3a720"
+    },
+    "uso_proveedor": {
+      "attribution": {
+        "items": {
+          "msg_0135ca25df99f8ce016ac7136444d887d2adfe2d9a4d0027f4": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 17545,
+                "output_tokens": 0
+              }
+            ],
+            "input_tokens": 17545,
+            "output_tokens": 0
+          },
+          "msg_0135ca25df99f8ce016ac713676eb487d2966d1efb3a3400ac": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 2,
+                "output_tokens": 658
+              }
+            ],
+            "input_tokens": 2,
+            "output_tokens": 658
+          }
+        },
+        "request_fields": {
+          "instructions": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "input_tokens": 518,
+            "output_tokens": 0
+          },
+          "text.format": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "input_tokens": 172,
+            "output_tokens": 0
+          }
+        }
+      },
+      "input_tokens": 18237,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 658,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 18895
+    }
+  },
+  "naturaleza_defecto": null,
+  "pasajes_contrastados": [
+    {
+      "documento": "MANUAL_TRAMO10",
+      "fragmento": "## 3. Qué deberá fijar\n\n- tipos de compatibilidad admitidos;\n- prioridad por lenguajes anfitriones;\n- garantías semánticas mínimas;\n- criterio de activación por lenguaje;\n- y límites de fase.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000014-L000021"
+    },
+    {
+      "documento": "MANUAL_TRAMO10",
+      "fragmento": "Este tramo no implementa bindings, APIs, FFI ni wrappers reales. Solo abre el frente documental y de gobierno.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000022-L000025"
+    },
+    {
+      "documento": "MANUAL_TRAMO10",
+      "fragmento": "Pendiente de desarrollo.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000026-L000028"
+    },
+    {
+      "documento": "MANUAL_PRESENTACION",
+      "fragmento": "La presentación de un documento en este libro no acredita una nueva aprobación.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000011-L000014"
+    },
+    {
+      "documento": "MANUAL_TRAMO10",
+      "fragmento": "Pendiente de desarrollo.",
+      "origen": "cotejo adicional del evaluador",
+      "seccion": "MD-L000026-L000028"
+    }
+  ],
+  "recepcion_independiente": "pendiente",
+  "respuesta_original": "{\n  \"caso\": \"MD08\",\n  \"estado_documental\": \"respuesta_fundada\",\n  \"etapa\": 0,\n  \"evidencias\": [\n    {\n      \"cita_literal_breve\": \"## 3. Qué deberá fijar\\n\\n- tipos de compatibilidad admitidos;\\n- prioridad por lenguajes anfitriones;\\n- garantías semánticas mínimas;\\n- criterio de activación por lenguaje;\\n- y límites de fase.\",\n      \"documento\": \"MANUAL_TRAMO10\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000014-L000021\"\n    },\n    {\n      \"cita_literal_breve\": \"Este tramo no implementa bindings, APIs, FFI ni wrappers reales. Solo abre el frente documental y de gobierno.\",\n      \"documento\": \"MANUAL_TRAMO10\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000022-L000025\"\n    },\n    {\n      \"cita_literal_breve\": \"Pendiente de desarrollo.\",\n      \"documento\": \"MANUAL_TRAMO10\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000026-L000028\"\n    },\n    {\n      \"cita_literal_breve\": \"La presentación de un documento en este libro no acredita una nueva aprobación.\",\n      \"documento\": \"MANUAL_PRESENTACION\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000011-L000014\"\n    }\n  ],\n  \"fundamentos_verificables\": [\n    \"La sección 3 enumera expresamente cinco cuestiones bajo un encabezado en futuro: son contenidos que deberán concretarse, no decisiones técnicas ya resueltas.\",\n    \"La sección 4 limita el alcance al frente documental y de gobierno y excluye que el tramo implemente las interfaces citadas; la sección 5 confirma que permanece pendiente de desarrollo.\",\n    \"La presentación impide interpretar la publicación de este documento preparatorio como una nueva aprobación. Estos datos describen el documento suministrado, no el estado actual de implementación de otros repositorios.\"\n  ],\n  \"insuficiencias\": [],\n  \"respuesta\": \"El tramo 10 deberá fijar cinco cuestiones:\\n1. Los tipos de compatibilidad admitidos.\\n2. La prioridad por lenguajes anfitriones.\\n3. Las garantías semánticas mínimas.\\n4. El criterio de activación por lenguaje.\\n5. Los límites de fase.\\n\\nLa enumeración tiene carácter prospectivo y programático: delimita lo que deberá desarrollarse dentro del documento preparatorio, no presenta esas cuestiones como ya resueltas ni acredita capacidades implementadas. El tramo permanece pendiente de desarrollo y abre únicamente el frente documental y de gobierno; expresamente no implementa bindings, APIs, FFI ni wrappers reales. Tampoco su publicación acredita una nueva aprobación ni permite concluir cuál es el estado actual de otros repositorios.\",\n  \"revision\": \"Etapa 0: respuesta provisional. No existen antecedentes ni entregas anteriores que contrastar.\"\n}",
+  "solicitud_sha256": "6a537c9fe3985de7438e54cf5ad0d735ded20e96f07c3c4e0ddca65a0c867e7e",
+  "sustantivo": "correcto",
+  "valor": "0"
+}

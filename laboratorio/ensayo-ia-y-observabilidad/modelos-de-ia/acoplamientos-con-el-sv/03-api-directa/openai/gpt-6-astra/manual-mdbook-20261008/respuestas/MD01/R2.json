@@ -1,0 +1,71 @@
+{
+  "caso": "MD01",
+  "estado_documental": "respuesta_fundada",
+  "etapa": 2,
+  "evidencias": [
+    {
+      "cita_literal_breve": "Este constructor fija la arquitectura de trabajo del manual del lenguaje SVP (extensión `.svp`).",
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmentos": [0],
+      "seccion": "MD-L000003-L000008"
+    },
+    {
+      "cita_literal_breve": "Su finalidad es permitir un cierre progresivo por capítulos o tramos sin perder el eje del sistema ni dispersarse en caminos laterales.",
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmentos": [0],
+      "seccion": "MD-L000003-L000008"
+    },
+    {
+      "cita_literal_breve": "No es todavía el manual final. Es la **máquina de construirlo**.",
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmentos": [0],
+      "seccion": "MD-L000003-L000008"
+    },
+    {
+      "cita_literal_breve": "subordinado al pliego, a la Frontera normativa, a la IR y a la gramática vigente;",
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmentos": [0],
+      "seccion": "MD-L000009-L000017"
+    },
+    {
+      "cita_literal_breve": "y verificable mediante ejemplos, contraejemplos y relación explícita con la implementación.",
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmentos": [0],
+      "seccion": "MD-L000009-L000017"
+    },
+    {
+      "cita_literal_breve": "Todo tramo del manual deberá declarar:",
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmentos": [0],
+      "seccion": "MD-L000092-L000108"
+    },
+    {
+      "cita_literal_breve": "Un tramo se considerará cerrable cuando reúna, como mínimo:",
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmentos": [0],
+      "seccion": "MD-L000109-L000118"
+    },
+    {
+      "cita_literal_breve": "Es una demostración de publicación y consulta; no constituye un manual terminado ni modifica el estado de aprobación de sus contenidos.",
+      "documento": "MANUAL_PRESENTACION",
+      "fragmentos": [0],
+      "seccion": "MD-L000001-L000004"
+    },
+    {
+      "cita_literal_breve": "Este tramo no implementa bindings, APIs, FFI ni wrappers reales. Solo abre el frente documental y de gobierno.",
+      "documento": "MANUAL_TRAMO10",
+      "fragmentos": [0],
+      "seccion": "MD-L000022-L000025"
+    }
+  ],
+  "fundamentos_verificables": [
+    "La sección Naturaleza define expresamente la función organizativa del constructor y lo distingue del manual final. Su expresión máquina de construirlo no acredita por sí misma un programa generador.",
+    "El constructor organiza once tramos, del 0 al 10. Su ficha obligatoria exige doce campos: ID, título, rango, objeto, dependencias, qué fija, qué no fija, ejemplos .svp, errores o contraejemplos, relación con IR y documentos públicos, criterio de cierre y estado (MANUAL_CONSTRUCTOR, MD-L000022-L000108).",
+    "Las condiciones mínimas para considerar cerrable un tramo son: exposición sobria del objeto, correspondencia visible con la IR o la superficie vigente, ejemplos .svp nucleares, delimitación expresa de lo excluido y ausencia de contradicción local suficiente con el pliego o la Frontera normativa (MANUAL_CONSTRUCTOR, MD-L000109-L000118). Son condiciones previstas, no constancias de cierre efectivo.",
+    "El constructor también prevé coordinar la compatibilidad interlenguajes con su política y protocolo, y canalizar las ideas nuevas por el Wishlist IRQ (MANUAL_CONSTRUCTOR, MD-L000119-L000122 y MD-L000123-L000125).",
+    "El índice muestra los tramos 00–09 pendientes y el 10 como documento preparatorio. La presentación declara que constructor y tramo 10 reproducen fuentes de la revisión f97173e07a9dfb8385ed1268d11de422b291507d. Esto delimita la conclusión al contenido conservado, sin acreditar el estado actual de otros repositorios."
+  ],
+  "insuficiencias": [],
+  "respuesta": "El constructor establece la arquitectura de trabajo para elaborar el manual del lenguaje SVP: organiza su desarrollo por tramos nucleares y permite avanzar hacia su cierre progresivo sin perder la coherencia del sistema ni dispersarse en asuntos laterales.\n\nEsa función se concreta en una estructura de once tramos, una ficha obligatoria por tramo y criterios mínimos para considerarlo cerrable. Exige precisar objeto, dependencias, alcance y exclusiones; aportar ejemplos y contraejemplos; explicitar la relación con la IR, los documentos públicos y la implementación; y mantener la subordinación al pliego, la Frontera normativa, la IR y la gramática vigente. Incluye además reglas de coordinación y control de nuevas ideas.\n\nLa diferencia esencial respecto de un manual final es entre el instrumento que organiza su construcción y el resultado terminado. El constructor prescribe qué deberá documentarse y bajo qué condiciones podrá cerrarse cada tramo, pero no acredita que ese desarrollo o cierre ya se haya producido. La expresión máquina de construirlo describe esa función; no demuestra que exista un generador ejecutable.\n\nLa edición suministrada tampoco equivale a un manual terminado ni a una nueva aprobación. El tramo 10 ilustra el límite: es preparatorio y declara que no implementa bindings, APIs, FFI ni wrappers reales. Estas afirmaciones describen la documentación conservada, no el estado actual de otros repositorios.",
+  "revision": "Ambas entregas anteriores sostienen correctamente la distinción central entre arquitectura de construcción y manual final. Se mantienen también las precisiones documentadas de la segunda: cerrable no significa cerrado, y la metáfora máquina no acredita automatización. Se conserva una síntesis de los requisitos y controles porque explica la función del constructor, sin convertirlos en logros implementados. Las citas utilizadas concuerdan con los fragmentos suministrados. Las etapas consignadas en aquellas entregas no cumplieron la instrucción de fijar etapa 2; esta entrega utiliza el valor exigido. No se identifica un extremo de la pregunta que requiera U."
+}

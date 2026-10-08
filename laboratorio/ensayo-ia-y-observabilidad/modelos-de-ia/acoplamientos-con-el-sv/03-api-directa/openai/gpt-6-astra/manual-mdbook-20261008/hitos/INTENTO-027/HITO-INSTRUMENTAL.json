@@ -1,0 +1,219 @@
+{
+  "adjudicacion": "pendiente de contraste exterior al candidato",
+  "caso": "MD09",
+  "directorio": "ejecucion/astra-manual-20261008\\intentos/ENVIO-027/MD09/R2",
+  "entrega_numero": 27,
+  "esquema": "sv-hito-instrumental/2",
+  "etapa": 2,
+  "fecha_registro_ms": 1791431663816,
+  "modelo": "gpt-6-astra",
+  "nodo": "03",
+  "numero_intento": 27,
+  "originales": [
+    {
+      "bytes": 66803,
+      "ruta": "ejecucion/astra-manual-20261008\\intentos/ENVIO-027/MD09/R2\\SOLICITUD.json",
+      "sha256": "3e43165c03e99b2ea4a34b3a965a5a986e2d035fa5a57d111a7a502ee67c2880"
+    },
+    {
+      "bytes": 7559,
+      "ruta": "ejecucion/astra-manual-20261008\\intentos/ENVIO-027/MD09/R2\\RESULTADO.json",
+      "sha256": "ae9261e3853391e9151c86bbb7d3afcbef6d2bdbfc6a62d4f175d9d004f98bd0"
+    },
+    {
+      "bytes": 140,
+      "ruta": "ejecucion/astra-manual-20261008\\intentos/ENVIO-027/MD09/R2\\HTTP.json",
+      "sha256": "5a19c241aacc04b04b0976475016a14aa8b88d811c4da7ba08c371d76450019b"
+    },
+    {
+      "bytes": 183387,
+      "ruta": "ejecucion/astra-manual-20261008\\intentos/ENVIO-027/MD09/R2\\SALIDA-SSE.txt",
+      "sha256": "35238d7c8e207b935df828d131f945e6fe4007081832ba4618982fecd5367881"
+    },
+    {
+      "bytes": 2592,
+      "ruta": "ejecucion/astra-manual-20261008\\intentos/ENVIO-027/MD09/R2\\FINAL.txt",
+      "sha256": "ca54550b4fd66331a63f60cec61c700965517e6313d588ba45e70e1a23760cb8"
+    },
+    {
+      "bytes": 8966,
+      "ruta": "ejecucion/astra-manual-20261008\\intentos/ENVIO-027/MD09/R2\\ENTREGA-PROVEEDOR.json",
+      "sha256": "fa0da3e8b0ba71e1657342e51e816c5347ed4a5af34d37af72163e5170872b05"
+    },
+    {
+      "bytes": 1386,
+      "ruta": "ejecucion/astra-manual-20261008\\intentos/ENVIO-027/MD09/R2\\AUDITORIA-FORMAL.json",
+      "sha256": "593193b733b66872e88deed69184409deaba290aa784cc3b6174a2aa9e0f5bc6"
+    },
+    {
+      "bytes": 524834,
+      "ruta": "ejecucion/astra-manual-20261008\\intentos/ENVIO-027/MD09/R2\\instrumentacion/telemetria.jsonl",
+      "sha256": "cfb2c24a0b294b2b9d9c4bb2910fa1061e5ecd51b178aa619ed8b1b814941950"
+    }
+  ],
+  "resultado": {
+    "adjudicado": false,
+    "cabeceras_proveedor": {},
+    "caso": "MD09-R2",
+    "completa": true,
+    "contrato_formal_conforme": true,
+    "coste_monetario_atribuible": null,
+    "creditos_atribuibles": null,
+    "duracion_intento_instrumentado_ms": 21067,
+    "duracion_ms": 17221,
+    "duracion_operacion_ms": 17713,
+    "entrega_numero": 27,
+    "estado": "entrega_recibida",
+    "evento_terminal": "response.completed",
+    "eventos": 611,
+    "herramientas_ejecutadas": 0,
+    "herramientas_habilitadas": 0,
+    "http": 200,
+    "incidencia_servicio": null,
+    "limites": [
+      "CPU porcentual sin calibración externa",
+      "Sin medida separada DNS/TLS, RTT, retransmisiones, asignaciones del montículo, hilos ni recursos internos del proveedor",
+      "La ausencia de herramientas no prueba aislamiento de infraestructura de OpenAI; fuente exclusiva exigida y respuesta pendiente de contraste sustantivo",
+      "Criptografía C/ensamblador pendiente conforme a excepción experimental autorizada"
+    ],
+    "modelo_declarado": "gpt-6-astra",
+    "modelo_solicitado": "gpt-6-astra",
+    "numero_intento": 27,
+    "par_remoto_http": "162.159.140.245:443",
+    "primer_evento_ms": 1538,
+    "primer_texto_ms": 2976,
+    "respuesta_bytes": 183387,
+    "respuesta_texto": "{\n  \"caso\": \"MD09\",\n  \"estado_documental\": \"respuesta_fundada\",\n  \"etapa\": 2,\n  \"evidencias\": [\n    {\n      \"cita_literal_breve\": \"Este tramo no implementa bindings, APIs, FFI ni wrappers reales. Solo abre el frente documental y de gobierno.\",\n      \"documento\": \"MANUAL_TRAMO10\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000022-L000025\"\n    },\n    {\n      \"cita_literal_breve\": \"Pendiente de desarrollo.\",\n      \"documento\": \"MANUAL_TRAMO10\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000026-L000028\"\n    },\n    {\n      \"cita_literal_breve\": \"Este tramo fija la estructura mínima de trabajo para documentar cómo el lenguaje SV podrá relacionarse con otros lenguajes de programación sin degradar su semántica propia.\",\n      \"documento\": \"MANUAL_TRAMO10\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000003-L000006\"\n    }\n  ],\n  \"fundamentos_verificables\": [\n    \"La sección 4 distingue expresamente el trabajo documental y de gobierno de la implementación: el tramo no implementa bindings, APIs, FFI ni wrappers reales.\",\n    \"La sección 1 establece una estructura mínima para documentar la compatibilidad preservando la semántica del SV; no acredita mecanismos operativos. La sección 5 fija su estado documental como pendiente de desarrollo.\",\n    \"La declaración negativa tiene como sujeto este tramo. No permite afirmar ni negar la existencia actual de esos mecanismos en otros repositorios.\"\n  ],\n  \"insuficiencias\": [],\n  \"respuesta\": \"El tramo 10 declara que no implementa bindings, APIs, FFI ni wrappers reales: únicamente abre el frente documental y de gobierno. Su aportación es una estructura mínima de trabajo para documentar cómo el lenguaje SV podrá relacionarse con otros lenguajes sin degradar su semántica. Su estado documental es «Pendiente de desarrollo».\\n\\nPor tanto, el documento acredita un trabajo preparatorio, no una implementación operativa de esos mecanismos. Esta conclusión se limita al tramo suministrado y no acredita ni descarta implementaciones actuales en otros repositorios.\",\n  \"revision\": \"Se mantiene la conclusión sustantiva de ambas entregas: coincide con las declaraciones expresas de las secciones 1, 4 y 5, y las citas y localizadores corresponden a la fuente. El fundamento adicional de la segunda entrega sobre las tareas previstas en la sección 3 es correcto, pero no resulta necesario para resolver la pregunta. No procede U: la ausencia de implementación por este tramo y su estado documental están explícitamente declarados; el estado de otros repositorios queda fuera de la conclusión solicitada.\"\n}",
+    "resumen_proveedor": [],
+    "telemetria": {
+      "bytes": 524834,
+      "fallos_medicion": 0,
+      "integridad": "conforme",
+      "intervalo_maximo_ms": 326,
+      "intervalo_objetivo_ms": 250,
+      "muestras": 76,
+      "plataforma_recibida": false,
+      "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+      "registros": 1250,
+      "sha256": "cfb2c24a0b294b2b9d9c4bb2910fa1061e5ecd51b178aa619ed8b1b814941950"
+    },
+    "telemetria_conforme": true,
+    "uso_proveedor": {
+      "attribution": {
+        "items": {
+          "msg_056c54a86c85229f016ac713df437c87d2a0efc29c0b1fb0eb": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 17562,
+                "output_tokens": 0
+              }
+            ],
+            "input_tokens": 17562,
+            "output_tokens": 0
+          },
+          "msg_056c54a86c85229f016ac713df439487d28c8bd37009c3971e": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 533,
+                "output_tokens": 0
+              }
+            ],
+            "input_tokens": 533,
+            "output_tokens": 0
+          },
+          "msg_056c54a86c85229f016ac713df43a487d283fa741d5b19db9c": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 27,
+                "output_tokens": 0
+              }
+            ],
+            "input_tokens": 27,
+            "output_tokens": 0
+          },
+          "msg_056c54a86c85229f016ac713df43b487d2a0f86aebed7ee92d": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 657,
+                "output_tokens": 0
+              }
+            ],
+            "input_tokens": 657,
+            "output_tokens": 0
+          },
+          "msg_056c54a86c85229f016ac713df43c487d280b27266f620d070": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 67,
+                "output_tokens": 0
+              }
+            ],
+            "input_tokens": 67,
+            "output_tokens": 0
+          },
+          "msg_056c54a86c85229f016ac713e0e98087d288568f5bc6623fe7": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 2,
+                "output_tokens": 616
+              }
+            ],
+            "input_tokens": 2,
+            "output_tokens": 616
+          }
+        },
+        "request_fields": {
+          "instructions": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "input_tokens": 554,
+            "output_tokens": 0
+          },
+          "text.format": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "input_tokens": 172,
+            "output_tokens": 0
+          }
+        }
+      },
+      "input_tokens": 19574,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 616,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 20190
+    },
+    "utc_fin_ms": 1791431662694,
+    "utc_inicio_operacion_ms": 1791431644983,
+    "version_http": "HTTP/1.1"
+  }
+}
