@@ -76,15 +76,15 @@ fn main() -> R<()> {
     rows.sort_by_key(|r| r["puesto_coste_tarea"].as_u64().unwrap());
     let out = root.join("resultados");
     fs::create_dir_all(&out)?;
-    let result = json!({"version":"1.0.0","datos_sha256":format!("{:x}",Sha256::digest(&input)),
+    let result = json!({"version":"1.1.0","naturaleza":"evaluacion_externa","datos_sha256":format!("{:x}",Sha256::digest(&input)),
         "referencia":data["referencia_externa"],"fecha":data["fecha_consulta"],
-        "regla":"Menor coste medio por tarea primero; empates conservados; no puntuación global ni coste por acierto.",
+        "regla":"Orden externo de Artificial Analysis: menor coste medio por tarea primero; no ranquin propio SV ni coste por acierto.",
         "modelos":rows,"licencia_documento":data["licencia_documento"]});
     fs::write(
         out.join("RANQUIN.json"),
         serde_json::to_vec_pretty(&result)?,
     )?;
-    let mut csv=String::from("puesto_economico,proveedor,modelo,configuracion,usd_por_tarea,indice_aa,puesto_capacidad,puesto_velocidad,puesto_primera_respuesta\n");
+    let mut csv=String::from("puesto_economico_externo,proveedor,modelo,configuracion_aa,usd_por_tarea_aa,indice_aa,puesto_capacidad_aa,puesto_velocidad_aa,puesto_primera_respuesta_aa\n");
     for r in result["modelos"].as_array().unwrap() {
         csv += &format!(
             "{},{},{},{},{},{},{},{},{}\n",
@@ -102,7 +102,7 @@ fn main() -> R<()> {
     fs::write(out.join("RANQUIN.csv"), csv)?;
     // Gráfico documental; los ejes comienzan en cero. No representa una célula SV.
     let mut svg = String::from(
-        r##"<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="630" viewBox="0 0 1000 630" role="img" aria-labelledby="titulo descripcion"><title id="titulo">Coste por tarea y capacidad de referencia</title><desc id="descripcion">Cuatro modelos de Artificial Analysis v4.3.2; menor coste hacia la izquierda y mayor índice hacia arriba. No es una clasificación de aptitud SV.</desc><rect width="1000" height="630" fill="white"/><g font-family="Arial,sans-serif" fill="#23394a"><text x="65" y="35" font-size="23">Coste por tarea y capacidad · 08/10/2026</text><text x="65" y="60" font-size="14">Artificial Analysis v4.3.2 · configuraciones declaradas · referencia externa al SV</text>"##,
+        r##"<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="630" viewBox="0 0 1000 630" role="img" aria-labelledby="titulo descripcion"><title id="titulo">Artificial Analysis: coste por tarea y capacidad externa</title><desc id="descripcion">Cuatro modelos de Artificial Analysis v4.3.2; menor coste hacia la izquierda y mayor índice hacia arriba. No es una clasificación de aptitud SV.</desc><rect width="1000" height="630" fill="white"/><g font-family="Arial,sans-serif" fill="#23394a"><text x="65" y="35" font-size="23">Artificial Analysis · coste por tarea y capacidad</text><text x="65" y="60" font-size="14">Artificial Analysis v4.3.2 · configuraciones declaradas · referencia externa al SV</text>"##,
     );
     for tick in 0..=6 {
         let x = 80 + tick * 140;
@@ -141,7 +141,7 @@ fn main() -> R<()> {
     svg = svg.replace("</svg>", &footer);
     fs::write(out.join("COSTE-Y-CAPACIDAD.svg"), svg)?;
     println!(
-        "Conforme: cuatro modelos; ranquin económico, empates, referencias y gráfico generados."
+        "Conforme: cuatro modelos; orden económico EXTERNO, empates, referencias y gráfico generados."
     );
     Ok(())
 }

@@ -1,40 +1,56 @@
-# Comparativa de costes de modelos de IA · Nodo 03
+# Resultados del SV y comparación de costes de modelos de IA
 
-**Versión 1.0 · Consulta: 8 de octubre de 2026.** Esta comparación ordena los cuatro modelos por un criterio económico común y presenta junto a él su capacidad y sus condiciones de evaluación. Es una referencia de mercado para interpretar costes; la aptitud para un contrato del SV sigue correspondiendo a su examen y al Árbitro-Director.
+**Versión 1.1 · Corte documental: 8 de octubre de 2026.** Esta edición presenta las ejecuciones del SV, sus datos cuantitativos publicables y las observaciones propias y una clasificación económica externa. Los resultados externos quedan identificados como tales. La calidad, la demora y el coste son magnitudes separadas.
 
-## Ranquin principal: menor coste por tarea
+## Observaciones propias: demora registrada en MD01-R0
 
-Se utiliza el **coste medio ponderado por tarea del Artificial Analysis Intelligence Index v4.3.2**, en las configuraciones declaradas abajo. Se ordena de menor a mayor; los empates se conservan. El coste incluye el consumo considerado por esa fuente, por lo que distingue modelos que necesitan cantidades diferentes de tokens. **Es coste por tarea evaluada, no por tarea acertada.** [Metodología de la fuente](https://artificialanalysis.ai/methodology).
+Se presenta la **demora hasta el primer evento de texto registrada por el cliente** en las dos ejecuciones de la misma pregunta MD01, con el mismo corpus y contrato sustantivo.
 
-| Puesto económico | Modelo y ficha justificativa | Configuración externa | USD por tarea | Índice de capacidad AA¹ |
+| Modelo | Demora registrada | Resultado de R0 |
+|---|---:|---|
+| [GPT-6 Astra](gpt-6-astra/readme.md) | **5,579 s** | Correcta y completa |
+| [Grok 4.7](grok-4.7/readme.md) | **64,239 s** | Correcta y completa |
+
+**Estas observaciones no establecen puestos ni una comparación controlada de latencia.** Hay una ejecución por modelo; las solicitudes tienen adaptaciones diferentes y el reloj de Grok incluye preparación local adicional. El primer evento de texto puede contener un fragmento vacío. Estas limitaciones no se han corregido mediante supuestos.
+
+El [cotejo MD01](COTEJO-MD01.md) publica las huellas, configuraciones y diferencias instrumentales. Los [datos propios](DATOS-SV.json), las [observaciones en JSON](OBSERVACIONES-MD01.json) y su [tabla CSV](OBSERVACIONES-MD01.csv) permiten comprobar estas cifras. R1 se conserva como complemento; R2 de Grok no fue enviado. Qwen y GLM tienen aquí ensayos de otro contenido y no se incorporan artificialmente a MD01.
+
+## Consumos y resultados propios de los cuatro modelos
+
+Se publican **363 registros** de las ejecuciones del SV, con **5.872.866 tokens conocidos**. Son contadores comunicados por los proveedores: tres registros carecen de contadores completos y un registro puede reunir varios intentos. La suma no representa una cantidad uniforme de lenguaje ni 363 tareas comparables.
+
+- [Resultados por ensayo, tiempos, dictámenes y alcance económico](RESULTADOS-SV.md).
+- [Datos de consumo por registro](evidencia-sv/CONSUMOS-POR-REGISTRO.csv) y [agregados por modelo](evidencia-sv/CONSUMOS-POR-MODELO.json).
+- [Las 48 solicitudes de CYB16](evidencia-sv/CYB16-POR-SOLICITUD.csv), con contadores, tiempos y cálculo de **2,35145108 USD estimados**.
+- [Procedencia, cobertura de la comprobación y reproducción pública en Rust](evidencia-sv/PROCEDENCIA.md).
+
+**Ranquin económico propio de los cuatro modelos: no establecido.** Los registros reúnen encargos diferentes y no existe un coste monetario atribuible y comparable para todos. Los 3,59913 USD comunicados en 78 registros de Grok y la estimación de CYB16 no pueden ordenarse como si correspondieran al mismo trabajo. Un importe desconocido conserva esa condición.
+
+## Ranquin económico externo: Artificial Analysis
+
+Este orden utiliza el **coste medio ponderado por tarea del Artificial Analysis Intelligence Index v4.3.2**. No procede de las ejecuciones del SV. Es coste por tarea evaluada, no por respuesta correcta.
+
+| Puesto externo | Modelo | Configuración externa | USD por tarea AA | Índice AA |
 |---:|---|---|---:|---:|
 | **1** | [Z.ai · GLM-5.3](glm-5.3/readme.md) | max | **2,01** | 45 |
 | **2** | [OpenAI · GPT-6 Astra](gpt-6-astra/readme.md) | max | **3,26** | 53 |
 | **3** | [xAI · Grok 4.7](grok-4.7/readme.md) | xhigh | **3,74** | 46 |
-| **4** | [Alibaba Cloud · Qwen3.8-Max-0902](qwen3.8-max-0902/readme.md) | 0902, con razonamiento² | **5,41** | 45 |
+| **4** | [Alibaba Cloud · Qwen3.8-Max-0902](qwen3.8-max-0902/readme.md) | 0902, con razonamiento | **5,41** | 45 |
 
-¹ Un valor mayor indica mejor resultado en el índice externo. **No es un porcentaje de aciertos**, ni una puntuación del SV. ² La ficha Qwen no etiqueta un nivel de esfuerzo equiparable a `max` o `xhigh`. Esas etiquetas tampoco garantizan igual cómputo entre proveedores. Se conserva para cada modelo la entrada principal de la fuente, sin escoger retrospectivamente el ajuste más favorable.
+El índice no es un porcentaje de aciertos. Las etiquetas de esfuerzo no acreditan el mismo cómputo entre proveedores; Qwen no tiene una etiqueta equivalente en su ficha. Fuentes: [GLM](https://artificialanalysis.ai/models/glm-5-3), [Astra](https://artificialanalysis.ai/models/gpt-6-astra), [Grok](https://artificialanalysis.ai/models/grok-4-7), [Qwen](https://artificialanalysis.ai/models/qwen3-8-max) y [metodología](https://artificialanalysis.ai/methodology). Se conserva el corte de la edición anterior, sin presentarlo como una nueva medición.
 
-Fuentes del corte: [GLM-5.3](https://artificialanalysis.ai/models/glm-5-3), [Astra](https://artificialanalysis.ai/models/gpt-6-astra), [Grok](https://artificialanalysis.ai/models/grok-4-7), [Qwen](https://artificialanalysis.ai/models/qwen3-8-max). Las cifras son las publicadas, redondeadas y fechadas; las diferencias no se presentan como significación estadística acreditada.
+![Artificial Analysis: coste por tarea e índice de capacidad externos](COSTE-Y-CAPACIDAD.svg)
 
-## Qué significa el orden
+## Documentación y reproducción
 
-**GLM-5.3 obtiene el menor coste por tarea de esta referencia; Astra obtiene el mayor índice de capacidad entre los cuatro.** Astra precede económicamente a Grok y Qwen aunque sus tokens tengan mayor tarifa: precio unitario y consumo necesario son magnitudes diferentes. Este hallazgo amplía la comparación anterior de precios por token.
+- [Informe: resultados propios, tarifas y evaluaciones externas](INFORME.md).
+- [Método y clases de evidencia](METODO.md).
+- [Datos externos](DATOS.json), [ranquin externo JSON](RANQUIN.json) y [CSV](RANQUIN.csv).
+- [Reproducción en Rust](calculo-rust/REPRODUCCION.md), [manifiesto](MANIFIESTO.json) e [historial de revisiones](HISTORIAL.md).
 
-Por capacidad, el orden observado es Astra, Grok y un empate entre GLM y Qwen a la precisión publicada. La velocidad de generación y el tiempo hasta recibir respuesta constituyen otros órdenes, conservados en el informe. No se combinan mediante pesos elegidos sin una necesidad de uso definida, ni se divide el índice de capacidad por dólares para inventar una tasa de acierto.
+Los datos necesarios para estas tablas se encuentran en esta carpeta pública. Se han excluido datos de cuentas, medios de pago y secretos. Los antecedentes científicos permanecen enlazados a revisiones públicas fijas.
 
-![Coste por tarea e índice de capacidad; cuatro modelos y configuraciones declaradas](COSTE-Y-CAPACIDAD.svg)
-
-## Informe y justificación reproducible
-
-- [Informe comparativo: tarifas, consumo de referencia, velocidad, latencia y límites](INFORME.md).
-- [Método común, reglas de actualización y criterio para un futuro examen SV comparable](METODO.md).
-- [Datos fechados y fuentes](DATOS.json), [ranquin en JSON](RANQUIN.json) y [tabla descargable](RANQUIN.csv).
-- [Cálculo en Rust y reproducción](calculo-rust/REPRODUCCION.md), con [manifiesto de integridad](MANIFIESTO.json).
-
-Cada carpeta de modelo explica su posición, las reservas y el enlace a su expediente del nodo 03. La comparación pública conserva información de mercado; el archivo administrativo mantiene por separado las liquidaciones, saldos y justificantes de las cuentas. Ninguna promoción ni saldo disponible concede ventaja en este ranquin.
-
-**Para seleccionar un modelo en el SV, un fallo crítico no puede compensarse con un menor coste o una mayor velocidad.** Esta publicación no recalifica los exámenes existentes, no acredita aptitud clínica u operativa y no ejecuta una nueva inferencia.
+La admisión a un contrato del SV exige sus criterios de calidad: un error crítico no se compensa con menor coste o demora. Esta revisión no recalifica los ensayos ni acredita una aptitud general.
 
 [Volver al nodo 03](../readme.md).
 

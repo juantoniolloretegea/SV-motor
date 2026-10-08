@@ -1,0 +1,66 @@
+{
+  "version": "1.1.0",
+  "fecha": "2026-10-08",
+  "naturaleza": "observaciones_del_SV",
+  "caso": "MD01",
+  "metrica": "primer_evento_texto_ms",
+  "definicion": "Tiempo del reloj local hasta el primer evento response.output_text.delta; no exige un fragmento no vacío. Orígenes del reloj distintos: consultar COTEJO-MD01.md.",
+  "criterio": "Observaciones R0 sin puestos, una ejecución por modelo; no comparación controlada de latencia intrínseca ni ranquin económico.",
+  "contadores": "Tokens comunicados por cada proveedor durante las ejecuciones del SV; no contaje independiente del proveedor ni volumen lingüístico uniforme.",
+  "filas": [
+    {
+      "modelo": "gpt-6-astra",
+      "etapa": "R0",
+      "input_tokens": 18348,
+      "output_tokens": 1028,
+      "total_tokens": 19376,
+      "primer_evento_texto_ms": 5579,
+      "fuente": "https://github.com/juantoniolloretegea/SV-motor/blob/0246a7df1e9436f4bff4f0d94ac6d36e1f29c1e0/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/openai/gpt-6-astra/manual-mdbook-20261008/replica-md01-20261008/METRICAS-RUST.json"
+    },
+    {
+      "modelo": "gpt-6-astra",
+      "etapa": "R1",
+      "input_tokens": 20165,
+      "output_tokens": 1645,
+      "total_tokens": 21810,
+      "primer_evento_texto_ms": 3519,
+      "fuente": "https://github.com/juantoniolloretegea/SV-motor/blob/0246a7df1e9436f4bff4f0d94ac6d36e1f29c1e0/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/openai/gpt-6-astra/manual-mdbook-20261008/replica-md01-20261008/METRICAS-RUST.json"
+    },
+    {
+      "modelo": "gpt-6-astra",
+      "etapa": "R2",
+      "input_tokens": 22597,
+      "output_tokens": 1762,
+      "total_tokens": 24359,
+      "primer_evento_texto_ms": 3621,
+      "fuente": "https://github.com/juantoniolloretegea/SV-motor/blob/0246a7df1e9436f4bff4f0d94ac6d36e1f29c1e0/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/openai/gpt-6-astra/manual-mdbook-20261008/replica-md01-20261008/METRICAS-RUST.json"
+    },
+    {
+      "modelo": "grok-4.7",
+      "etapa": "R0",
+      "input_tokens": 21546,
+      "output_tokens": 7779,
+      "total_tokens": 29325,
+      "primer_evento_texto_ms": 64239,
+      "fuente": "https://github.com/juantoniolloretegea/SV-motor/blob/091b50a884c893fd4322bbf211b0feb0132bb258/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/xai/grok-4.7/md01-diagnostica-20261008/mediciones/MD01-R0.json"
+    },
+    {
+      "modelo": "grok-4.7",
+      "etapa": "R1",
+      "input_tokens": 25217,
+      "output_tokens": 12247,
+      "total_tokens": 37464,
+      "primer_evento_texto_ms": 117640,
+      "fuente": "https://github.com/juantoniolloretegea/SV-motor/blob/091b50a884c893fd4322bbf211b0feb0132bb258/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/xai/grok-4.7/md01-diagnostica-20261008/mediciones/MD01-R1.json"
+    }
+  ],
+  "limitaciones": [
+    "Selección retrospectiva; una ejecución por modelo y etapa, sin inferencia estadística.",
+    "Mismo corpus, pregunta y contrato sustantivo; solicitudes adaptadas de forma distinta.",
+    "El reloj de Grok incluye preparación local adicional; no existe cota cuantificada para corregirla retrospectivamente.",
+    "R1 y R2 dependen de respuestas anteriores diferentes; no se agregan para clasificar modelos.",
+    "R2 de Grok no se envió; no se convierte en una ejecución con demora o consumo cero.",
+    "GLM-CYB16 y Qwen-P13 corresponden a otros contratos y no se incluyen en este orden."
+  ],
+  "licencia_documento": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0)."
+}

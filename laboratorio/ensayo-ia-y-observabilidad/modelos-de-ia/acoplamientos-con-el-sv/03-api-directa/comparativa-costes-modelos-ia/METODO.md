@@ -1,46 +1,65 @@
-# Método común del ranquin
+# Método y procedencia de las comparaciones
 
-Versión 1.0 · 08/10/2026.
+Versión 1.1 · 08/10/2026.
 
-## Objeto y población
+## Clases de evidencia
 
-Se comparan cuatro modelos determinados del nodo 03: GPT-6 Astra, Grok 4.7, Qwen3.8-Max-0902 y GLM-5.3. No se cambia la versión para mejorar una posición. El ranquin describe el **coste medio por tarea de una referencia externa**, en el corte fechado de sus fichas principales. No declara un ganador universal ni traslada al SV la calificación de un tercero.
+| Clase | Ejemplos | Qué acredita |
+|---|---|---|
+| Observación del SV | Duración desde el cliente, recepción, interrupción, respuesta conservada y evaluación documentada | Lo observado por el instrumento o evaluador dentro de su alcance |
+| Dato comunicado por el proveedor sobre una ejecución SV | Tokens de entrada, salida y caché; importe atribuido a una solicitud | Contador o cargo comunicado; no una medición independiente de sus sistemas |
+| Cálculo derivado | Sumatorios, coste estimado, clasificación por un campo | Resultado reproducible sobre entradas identificadas; no una liquidación |
+| Tarifa comercial | Precio publicado por millón de tokens | Regla de precio aplicable bajo sus condiciones; no consumo medido |
+| Evaluación externa | Índice, coste por tarea o latencia de Artificial Analysis | Resultado de un tercero bajo su procedimiento |
 
-## Criterio aplicado a todos
+La procedencia se asigna a cada magnitud: una misma fila puede contener medición local, contador del proveedor y estimación. Ausente, comunicado, estimado y conciliado son estados distintos. La ausencia nunca se rellena con cero.
 
-1. Misma fuente de evaluación: Artificial Analysis, índice v4.3.2. Misma definición de coste ponderado por tarea para los cuatro.
-2. Misma selección documental: entrada principal de la ficha del modelo exacto. Se conserva el ajuste declarado, incluida la ausencia de etiqueta de esfuerzo para Qwen. No se optimiza cada configuración después de ver sus resultados.
-3. Misma unidad monetaria: USD por tarea, sin convertir saldos, promociones o cuotas de una cuenta en precios comerciales.
-4. Orden ascendente por coste; empate si coincide la cifra publicada. No se añade un desempate favorable a un proveedor. Para capacidad y velocidad se ordena en sentido descendente; para demora, ascendente. Los empates ocupan el mismo puesto y el siguiente puesto refleja cuántos modelos lo preceden.
-5. Calidad, coste y tiempo permanecen visibles como magnitudes distintas. No se ponderan por una preferencia no declarada ni se transforma un índice compuesto en probabilidad de acierto.
-6. Un dato ausente se conserva como ausente. Una configuración o fuente incompatible impide su inclusión en ese orden; no se completa con cero ni con datos de otra versión.
+## Evidencia propia y límites de clasificación
 
-Esta igualdad de método no significa igualdad de recursos de cómputo ni de ajuste interno. El índice externo agrega agentes, programación, razonamiento científico y tareas generales; utiliza evaluaciones con herramientas y fuentes diferentes de un examen documental cerrado del SV. [Metodología de capacidad](https://artificialanalysis.ai/methodology/intelligence-benchmarking).
+Se cotejan primero los ensayos ya conservados. Los [resultados por ensayo](RESULTADOS-SV.md) y las [tablas publicables de consumo](evidencia-sv/PROCEDENCIA.md) separan contenido científico y situación económica. Se publica lo necesario para reproducir las cifras sin cuentas, credenciales, medios de pago ni dependencias de lectura privadas.
 
-## Cómo interpretar la relación capacidad/coste
+Los 363 registros proceden de un índice contrastado; pueden reunir varios intentos y tres carecen de contadores completos. Sólo el subconjunto CYB16 de 48 registros cuenta además con la recuperación y cotejo individual realizada para esta edición. No se extiende ese alcance a expedientes no examinados.
 
-Una comparación multidimensional puede favorecer un modelo en capacidad y otro en coste o demora. El gráfico conserva esa información. La prioridad económica adoptada en esta carpeta es explícita y revisable: «primero, menor coste por tarea». No se denomina a esa prioridad un estándar universal del mercado.
+El cotejo temporal utiliza MD01-R0: mismo corpus, pregunta y contrato sustantivo, una ejecución por candidato. Se conserva el tiempo hasta el primer evento de texto registrado. **El origen de los relojes y las solicitudes completas difieren**; por tanto, se muestran las observaciones sin puestos y no se presenta un ranquin propio de latencia. El [cotejo](COTEJO-MD01.md) conserva las diferencias y los enlaces al instrumento. No se descuentan duraciones desconocidas mediante supuestos.
 
-Las métricas de capacidad, precio por token, coste por tarea, velocidad y latencia están documentadas por la fuente escogida. Los datos de capacidad y coste del índice y las pruebas de rendimiento de API no constituyen una misma ejecución. La metodología externa puede estimar componentes de caché a partir de mediciones representativas. Los resultados aquí son una comparación documental, no una auditoría de sus registros internos. [Definiciones](https://artificialanalysis.ai/methodology) · [Rendimiento de API](https://artificialanalysis.ai/methodology/performance-benchmarking).
+La selección del subconjunto es retrospectiva y no dispone de repeticiones ni intervalos de incertidumbre. R1 y R2 incorporan respuestas previas diferentes: se publican como complemento y no se agregan para fabricar un orden global. R2 de Grok no se envió. CYB16 y P13 no se incluyen en el orden MD01 porque son contratos distintos.
 
-No se publican intervalos propios de incertidumbre porque no se dispone de las repeticiones necesarias. Un empate del índice redondeado no prueba igualdad real; una diferencia pequeña tampoco acredita significación estadística. Las páginas pueden actualizarse: una nueva versión exige un nuevo corte completo de los cuatro modelos y conservación de la edición anterior.
+## Condiciones para una clasificación económica propia
 
-## Continuidad con el informe de costes anterior
+Una comparación monetaria requiere la misma unidad de trabajo y calidad admisible, contabilidad de todos los intentos atribuibles y una modalidad económica identificada. El volumen de tokens de diferentes segmentadores no constituye por sí mismo una unidad lingüística común.
 
-El [informe público](INFORME.md) conserva las tarifas y ejemplos comparables y añade las mediciones externas. El archivo privado continúa custodiando la contabilidad, las fuentes de consumo propias y las conciliaciones. No se trasladan saldos, credenciales, identificadores de cuenta o justificantes a esta carpeta pública. La publicación de una referencia de mercado no incrementa las pruebas ni los tokens del candidato.
+El coste por respuesta final conforme necesita un denominador acreditado y el coste de todas las etapas, intentos e interrupciones del mismo contrato. Si no hay respuestas conformes, el cociente no se presenta como cero. Si falta liquidación, una estimación conserva esa condición. Los costes de ensayos distintos no se ordenan como equivalentes.
 
-## Condiciones de una futura comparación propia del SV
+Cuando el cotejo de evidencia existente no baste, una comparación posterior deberá definir antes de ejecutarse corpus, huellas, preguntas, criticidades, etapas, reloj, límites y ajustes efectivos. Cada candidato recibirá sus propias respuestas anteriores, sin conocer claves ni respuestas de otros. La preparación metodológica no autoriza inferencias ni gasto.
 
-La unidad comparada deberá definirse antes de la ejecución: mismo contrato, contenido y huellas; mismas preguntas, criticidades, etapas, tiempo y presupuesto autorizados. Cada candidato recibe las fuentes completas y sus propias respuestas anteriores, sin conocer la clave, puntuaciones o respuestas de otros candidatos. Las herramientas disponibles y el límite de acceso a Internet se acreditan desde el suministro y transporte del SV.
+El Árbitro-Director conserva la decisión. Un error crítico no se compensa con ventajas de coste o demora. La conformidad instrumental tampoco sustituye la recepción científica ni acredita aptitud clínica u operativa general.
 
-El Árbitro-Director conserva la decisión. La instrumentación Rust registra intentos, recepción completa o interrupciones, contadores del proveedor, medidas propias y lagunas. Las revisiones R0, R1 y R2 se contabilizan juntas; la respuesta final no oculta costes o errores de etapas previas. Los ajustes específicos de razonamiento se declaran y no se equiparan sólo por nombre.
+## Orden externo de Artificial Analysis
 
-El coste por respuesta final válida requiere número acreditado de respuestas conformes y costes atribuibles de todos los intentos del mismo contrato. Si falta liquidación se distingue coste estimado de confirmado; si no hay respuestas válidas, no se publica coste por acierto igual a cero. La admisión exige previamente las condiciones críticas y documentales del SV. Una prueba económica no sustituye recepción científica ni acredita aptitud clínica u operativa.
+La referencia externa mantiene cuatro versiones exactas: GPT-6 Astra, Grok 4.7, Qwen3.8-Max-0902 y GLM-5.3. Se aplica la misma definición de coste medio ponderado por tarea del índice v4.3.2, en el corte conservado del 08/10/2026.
 
-## Reproducibilidad e integridad
+Se utiliza la entrada principal de cada ficha: Astra max, Grok xhigh, GLM max y Qwen con razonamiento sin etiqueta de esfuerzo equivalente. No se escoge retrospectivamente el ajuste más favorable. Igual nombre de ajuste no prueba igual cómputo.
 
-[DATOS.json](DATOS.json) conserva sólo las magnitudes utilizadas, identificadores de modelo, ajustes, fuentes, fecha y reservas. No es una copia de las evaluaciones de terceros. El [programa Rust](calculo-rust/src/main.rs) ordena esas magnitudes, conserva empates y ausencias, calcula el precio ponderado y genera el gráfico. Sus pruebas cubren precisamente los casos que podrían falsear la comparación. El [manifiesto](MANIFIESTO.json) identifica los archivos publicados por bytes y SHA-256; la custodia requiere recuperar y cotejar la revisión remota.
+El orden económico es ascendente en USD por tarea; capacidad y velocidad, descendentes; demora, ascendente. Los empates ocupan el mismo puesto y el siguiente refleja cuántos modelos lo preceden. Coste, calidad y tiempo permanecen separados, sin pesos arbitrarios. El índice compuesto no se transforma en probabilidad de acierto.
 
-Los datos y métodos atribuidos a terceros conservan sus derechos. La licencia del documento propio no se atribuye a sus páginas, software o conjuntos de evaluación.
+Una tarea evaluada puede ser incorrecta: coste por tarea no significa coste por respuesta correcta. Los ensayos del índice y las mediciones de servicio de API no son la misma ejecución. Las cifras redondeadas no acreditan significación estadística. No se dispone de los registros internos del evaluador: esta publicación reproduce su orden documental, no audita su experimento.
+
+Fuentes metodológicas: [definiciones](https://artificialanalysis.ai/methodology), [índice de capacidad](https://artificialanalysis.ai/methodology/intelligence-benchmarking) y [rendimiento de API](https://artificialanalysis.ai/methodology/performance-benchmarking).
+
+## Tarifas y cálculo convencional
+
+El informe conserva los precios comerciales y el ejemplo uniforme de 1.000.000 tokens de entrada ordinaria y 100.000 de salida. La mezcla externa 7:2:1 —caché, entrada ordinaria y salida— es otra comparación convencional; no acredita una tasa real de caché del 70 %.
+
+La caché es un subconjunto de la entrada; el razonamiento facturable incluido en la salida no se suma otra vez. La tarifa específica de caché de Qwen continúa sin confirmación oficial para el supuesto utilizado: el precio externo de 0,25 USD/M se distingue del campo oficial ausente. No se equiparan tarifas, promociones o cuotas a importes liquidados.
+
+## Reproducción, integridad y actualización
+
+[DATOS-SV.json](DATOS-SV.json) identifica la evidencia temporal propia. [DATOS.json](DATOS.json) conserva magnitudes externas, configuraciones, fuentes, fecha y reservas. Las tablas económicas depuradas incorporan ausencias y grado de conciliación.
+
+Los [programas Rust](calculo-rust/REPRODUCCION.md) reproducen las clasificaciones, sumas, estimaciones y huellas. La aritmética conforme no certifica los contadores internos, las facturas, las evaluaciones externas ni la aptitud científica de un modelo.
+
+El [manifiesto](MANIFIESTO.json) identifica bytes y SHA-256 de los archivos publicados, excluyéndose a sí mismo. La revisión remota se recupera y coteja antes de declarar la publicación recibida. Cada actualización conserva su fecha y el [historial](HISTORIAL.md); no se reescriben hitos previos como observaciones nuevas.
+
+Los datos y métodos de terceros mantienen sus derechos. La licencia del documento propio no se atribuye a sus páginas, programas o conjuntos de evaluación.
 
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).

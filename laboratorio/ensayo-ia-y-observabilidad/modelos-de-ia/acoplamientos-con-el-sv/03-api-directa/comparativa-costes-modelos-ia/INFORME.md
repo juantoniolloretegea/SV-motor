@@ -1,8 +1,27 @@
 # Informe comparativo de costes, capacidad y respuesta
 
-Versión 1.0 · 08/10/2026 · Cuatro modelos del nodo 03.
+Versión 1.1 · 08/10/2026 · Cuatro modelos del nodo 03.
 
-El [ranquin principal](readme.md) utiliza una tarea de referencia común para valorar el consumo, además del precio unitario. Se incorpora aquí la comparación de tarifas anterior, ampliada con medidas externas de capacidad, coste por tarea, generación y demora. Los datos de mercado no se mezclan con consumos privados ni con exámenes del SV de distinta composición.
+Este informe separa las observaciones del SV, los contadores e importes comunicados por proveedores sobre nuestras ejecuciones, los cálculos derivados, las tarifas comerciales y las evaluaciones de terceros. El [resumen general](readme.md) presenta las observaciones propias y el ranquin externo con su alcance.
+
+## Evidencia propia del SV
+
+Se publican [363 filas de consumo](evidencia-sv/CONSUMOS-POR-REGISTRO.csv), [agregados por modelo](evidencia-sv/CONSUMOS-POR-MODELO.json) y [48 solicitudes CYB16](evidencia-sv/CYB16-POR-SOLICITUD.csv). La [procedencia y reproducción](evidencia-sv/PROCEDENCIA.md) permiten recalcularlos sin consultar documentación privada. La verificación de 363 filas se refiere al índice; la recuperación y cotejo de expedientes individuales cubre las 48 solicitudes CYB16.
+
+El [informe de resultados propios](RESULTADOS-SV.md) resume los resultados, tiempos y alcance por ensayo: Astra MD01 en tres etapas; Grok MD01 en dos; Qwen P13 en tres; GLM CYB16 en 48 solicitudes. No son cuatro exámenes de idéntica composición.
+
+| Modelo en MD01-R0 | Primer evento de texto registrado |
+|---|---:|
+| GPT-6 Astra | 5,579 s |
+| Grok 4.7 | 64,239 s |
+
+Ambas respuestas R0 son correctas y completas. Hay una ejecución por modelo, solicitudes adaptadas y un origen del reloj diferente: Grok incluye preparación local adicional. El primer evento puede llevar texto vacío. Se publican ambas cifras sin puestos: **no constituyen una comparación controlada de la latencia intrínseca**. El [cotejo](COTEJO-MD01.md) explicita estas diferencias y publica las fuentes.
+
+**No hay un ranquin económico propio conjunto de cuatro modelos acreditado.** Se conocen 3,59913 USD comunicados en 78 registros de Grok, con conciliación parcial, y 2,35145108 USD estimados para CYB16 de GLM; son trabajos distintos. Los importes no comunicados de Astra y Qwen no se convierten en cero ni se rellenan con una tarifa ajena a su modalidad de acceso.
+
+## Referencias comerciales y evaluaciones externas
+
+Los apartados siguientes conservan el corte externo de la edición 1.0. No sustituyen las ejecuciones propias ni afirman una actualización de las páginas del proveedor.
 
 ## 1. Precio de entrada, salida y caché
 
@@ -34,13 +53,13 @@ El ejemplo anterior de 1.000.000 tokens de entrada ordinaria y 100.000 de salida
 
 ## 2. Por qué el coste por tarea cambia el orden
 
-Artificial Analysis publica costes medios ponderados de 2,01 USD para GLM, 3,26 para Astra, 3,74 para Grok y 5,41 para Qwen en su índice v4.3.2. Este es el orden económico principal de esta edición. Su cálculo incorpora el consumo que la fuente atribuye al conjunto de evaluaciones y sus precios; no se obtiene aplicando una cantidad idéntica de tokens a todos. [GLM/Grok](https://artificialanalysis.ai/models/comparisons/grok-4-7-vs-glm-5-3) · [Astra/Qwen](https://artificialanalysis.ai/models/comparisons/gpt-6-astra-vs-qwen3-8-max).
+Artificial Analysis publica costes medios ponderados de 2,01 USD para GLM, 3,26 para Astra, 3,74 para Grok y 5,41 para Qwen en su índice v4.3.2. Este es exclusivamente el orden económico externo de esta edición. Su cálculo incorpora el consumo que la fuente atribuye al conjunto de evaluaciones y sus precios; no se obtiene aplicando una cantidad idéntica de tokens a todos. [GLM/Grok](https://artificialanalysis.ai/models/comparisons/grok-4-7-vs-glm-5-3) · [Astra/Qwen](https://artificialanalysis.ai/models/comparisons/gpt-6-astra-vs-qwen3-8-max).
 
 La fuente también publica magnitudes aproximadas de salida por tarea: Astra 27.000, GLM 71.000, Grok 81.000 y Qwen 108.000 tokens. El razonamiento comunicado forma parte de esas salidas. No se puede reconstruir el coste completo multiplicando sólo estas cifras redondeadas por la tarifa de salida: faltan entrada, caché y ponderaciones. El precio de una unidad y la cantidad consumida explican por qué pueden invertirse posiciones.
 
 **Una tarea evaluada puede haberse resuelto incorrectamente.** Por tanto, estas cantidades no son «dólares por respuesta correcta». Tampoco se divide el coste por 0,53, 0,46 o 0,45: el Intelligence Index es un índice compuesto, no esas tasas de acierto.
 
-## 3. Capacidad y tiempo de respuesta
+## 3. Capacidad y tiempo de respuesta publicados por Artificial Analysis
 
 Se conserva la entrada principal de cada ficha: Astra `max`, Grok `xhigh`, GLM `max` y Qwen 0902 con razonamiento, sin etiqueta de esfuerzo en la ficha. El protocolo externo es común; las configuraciones y recursos de cómputo no son idénticos. Los nombres de los ajustes no prueban equivalencia con los usados en un examen SV.
 
@@ -65,6 +84,6 @@ La decisión de uso del SV requiere primero la conformidad con el contrato perti
 
 El acceso por autorización ChatGPT utilizado en Astra no equivale a liquidación mediante la tarifa API estándar. Los créditos del plan, las cuotas de bienvenida y los saldos disponibles son condiciones administrativas distintas; quedan fuera de este ranquin de mercado. [Distinción de modalidades de OpenAI](https://learn.chatgpt.com/docs/pricing).
 
-Para una clasificación propia de eficiencia del SV sigue siendo pertinente aplicar el mismo CYB16 a los candidatos autorizados: corpus, preguntas, criticidades, etapas y criterios comunes; medición Rust de entrada, salida, demora, fallos e intentos; conciliación por prueba. Su preparación metodológica no autoriza nuevas inferencias ni gasto. El [método](METODO.md) establece cómo preservar la comparación sin trasladar puntuaciones de exámenes heterogéneos.
+La comparación propia comienza por cotejar los ensayos conservados. MD01 permite publicar las observaciones con las reservas expuestas arriba; no permite un coste por resultado conforme común a los cuatro modelos. Una ampliación posterior requeriría condiciones y relojes homogéneos, cobertura de todos los intentos y costes atribuibles. No se prescribe repetir pruebas existentes ni se autoriza nuevo consumo con esta publicación. El [método](METODO.md) conserva estas condiciones.
 
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).

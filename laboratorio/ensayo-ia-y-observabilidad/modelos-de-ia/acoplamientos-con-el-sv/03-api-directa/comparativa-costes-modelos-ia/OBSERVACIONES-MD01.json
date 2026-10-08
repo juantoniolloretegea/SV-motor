@@ -1,0 +1,43 @@
+{
+  "alcance": "Integridad de archivos y reproducción de las observaciones MD01-R0, sin clasificación comparativa. Las mediciones no están homologadas temporalmente. No certifica fuentes de terceros, equivalencia experimental, calidad semántica ni liquidación económica.",
+  "caso": "MD01",
+  "contadores": "Tokens comunicados por cada proveedor durante las ejecuciones del SV; no contaje independiente del proveedor ni volumen lingüístico uniforme.",
+  "criterio": "Observaciones R0 sin puestos, una ejecución por modelo; no comparación controlada de latencia intrínseca ni ranquin económico.",
+  "datos_fuente": "DATOS-SV.json",
+  "definicion": "Tiempo del reloj local hasta el primer evento response.output_text.delta; no exige un fragmento no vacío. Orígenes del reloj distintos: consultar COTEJO-MD01.md.",
+  "etapa_presentada": "R0",
+  "fecha": "2026-10-08",
+  "filas": [
+    {
+      "etapa": "R0",
+      "fuente": "https://github.com/juantoniolloretegea/SV-motor/blob/0246a7df1e9436f4bff4f0d94ac6d36e1f29c1e0/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/openai/gpt-6-astra/manual-mdbook-20261008/replica-md01-20261008/METRICAS-RUST.json",
+      "input_tokens": 18348,
+      "modelo": "gpt-6-astra",
+      "output_tokens": 1028,
+      "primer_evento_texto_ms": 5579,
+      "total_tokens": 19376
+    },
+    {
+      "etapa": "R0",
+      "fuente": "https://github.com/juantoniolloretegea/SV-motor/blob/091b50a884c893fd4322bbf211b0feb0132bb258/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/xai/grok-4.7/md01-diagnostica-20261008/mediciones/MD01-R0.json",
+      "input_tokens": 21546,
+      "modelo": "grok-4.7",
+      "output_tokens": 7779,
+      "primer_evento_texto_ms": 64239,
+      "total_tokens": 29325
+    }
+  ],
+  "licencia_documento": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+  "limitaciones": [
+    "Selección retrospectiva; una ejecución por modelo y etapa, sin inferencia estadística.",
+    "Mismo corpus, pregunta y contrato sustantivo; solicitudes adaptadas de forma distinta.",
+    "El reloj de Grok incluye preparación local adicional; no existe cota cuantificada para corregirla retrospectivamente.",
+    "R1 y R2 dependen de respuestas anteriores diferentes; no se agregan para clasificar modelos.",
+    "R2 de Grok no se envió; no se convierte en una ejecución con demora o consumo cero.",
+    "GLM-CYB16 y Qwen-P13 corresponden a otros contratos y no se incluyen en este orden."
+  ],
+  "metrica": "primer_evento_texto_ms",
+  "naturaleza": "observaciones_no_homologadas_temporalmente",
+  "regla": "Presentación alfabética por identificador de modelo, sin clasificación comparativa ni puestos. Las demoras no determinan el orden de presentación. R1 y R2 no se agregan.",
+  "version": "1.1.0"
+}
