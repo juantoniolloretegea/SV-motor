@@ -1,0 +1,162 @@
+{
+  "alerta_limite": false,
+  "auditoria_sha256": "ccae57e832c5329772bdc43854b409f7601382dcf00f6d4f8c17f2857cddfbeb",
+  "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+  "caso": "P02",
+  "critico": true,
+  "estado_documental_candidato": "respuesta_fundada",
+  "etapa": 0,
+  "final_sha256": "4d7d9bf1b82543d27dcbaa3b6eed5f37608302e8688447c4589ec1f1b57b812b",
+  "formal_conforme": true,
+  "fundamento_sustantivo": "Recupera tres manifestaciones y admite leucocitosis ocasional, con referencia separada a la variante. La redacción «la leucopenia aparece en ocasiones leucocitosis» es defectuosa; el fundamento y la cita distinguen la tendencia y su alternativa. No se afirma expresamente que la leucocitosis sea un grado de leucopenia.",
+  "limite_documental": null,
+  "medicion": {
+    "alcance": "Medición local del cliente; no recursos internos del proveedor. Contadores de caché y razonamiento incluidos, sin sumarlos dos veces.",
+    "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+    "bytes_sse": 101055,
+    "caso": "P02",
+    "completa": true,
+    "cpu_delta_ms": 1469,
+    "duracion_ms": 27800,
+    "duracion_operacion_ms": 28843,
+    "etapa": 0,
+    "eventos_sse": 283,
+    "fallos_medicion": 0,
+    "final_sha256": "4d7d9bf1b82543d27dcbaa3b6eed5f37608302e8688447c4589ec1f1b57b812b",
+    "formal_conforme": true,
+    "intento": 4,
+    "intervalo_maximo_ms": 282,
+    "io_escritura_delta_bytes": 509741,
+    "io_lectura_delta_bytes": 0,
+    "memoria_virtual_maxima_bytes": 5566464,
+    "muestras": 112,
+    "observaciones_udp": 0,
+    "primer_texto_ms": 14492,
+    "proveedor": "Alibaba Cloud",
+    "restricciones_declaradas": {
+      "alcance": "Campos ausentes no equivalen a cero ni a infraestructura inspeccionada.",
+      "num_server_side_tools_used": null,
+      "num_sources_used": null,
+      "store": false,
+      "tool_choice": "none",
+      "tools": [],
+      "zdr_confirmado": false
+    },
+    "resultado": {
+      "bytes": 14853,
+      "sha256": "5a479900d9ea642ceae3c1ab6b6cf920c96ecdd6b7c17342fc0748fe7af411dc"
+    },
+    "rss_maximo_bytes": 19320832,
+    "solicitud": {
+      "bytes": 14916,
+      "sha256": "c088efefbc50943b9451911e90572f2ff80db427cd5f4a00b269a53fdc94c845"
+    },
+    "sse_sha256": "75e2e5bbf6b5d4c032bec238a9ba624b4e44f84c883cf1d1a247460b681f9ef4",
+    "tcp_estados": [
+      "Established",
+      "FinWait1"
+    ],
+    "tcp_maximo_simultaneo": 1,
+    "telemetria_conforme": true,
+    "telemetria_sha256": "1b6cf7fa1712b2cb00f7a6d467cc145bdb2ee79d67b807977154b43e4a176e72",
+    "tokens_cache": 1024,
+    "tokens_entrada": 4345,
+    "tokens_razonamiento": 451,
+    "tokens_salida": 987,
+    "tokens_totales": 5332,
+    "uso_proveedor": {
+      "input_tokens": 4345,
+      "input_tokens_details": {
+        "cached_tokens": 1024
+      },
+      "output_tokens": 987,
+      "output_tokens_details": {
+        "reasoning_tokens": 451
+      },
+      "total_tokens": 5332,
+      "x_details": [
+        {
+          "input_tokens": 4345,
+          "output_tokens": 987,
+          "output_tokens_details": {
+            "reasoning_tokens": 451
+          },
+          "prompt_tokens_details": {
+            "cached_tokens": 1024
+          },
+          "total_tokens": 5332,
+          "x_billing_type": "response_api"
+        }
+      ]
+    }
+  },
+  "naturaleza_defecto": null,
+  "observaciones_revision": [
+    "Debe corregirse la redacción ambigua sobre leucopenia/leucocitosis en usos clínicos. Se contrasta la entrega completa y no se equipara automáticamente a la relación explícita incorrecta del antecedente Grok/R0."
+  ],
+  "pasajes_contrastados": [
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "Esplenomegalia.",
+      "pagina": 0,
+      "seccion": "_1"
+    },
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "Leucopenia de grados diferentes (en ocasiones leucocitosis).",
+      "pagina": 0,
+      "seccion": "_1"
+    },
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "Pancitopenia.",
+      "pagina": 0,
+      "seccion": "_1"
+    }
+  ],
+  "recepcion_independiente": "pendiente",
+  "respuesta_original": "{\"caso\":\"P02\",\"estado_documental\":\"respuesta_fundada\",\"etapa\":0,\"evidencias\":[{\"cita_literal_breve\":\"Esplenomegalia.\",\"documento\":\"pdq-nci-hcl-es\",\"fragmentos\":[0],\"seccion\":\"_1\"},{\"cita_literal_breve\":\"Leucopenia de grados diferentes (en ocasiones leucocitosis).\",\"documento\":\"pdq-nci-hcl-es\",\"fragmentos\":[0],\"seccion\":\"_1\"},{\"cita_literal_breve\":\"Pancitopenia.\",\"documento\":\"pdq-nci-hcl-es\",\"fragmentos\":[0],\"seccion\":\"_1\"}],\"fundamentos_verificables\":[\"La sección 'Cuadro clínico inicial' enumera cinco manifestaciones habituales: esplenomegalia, leucopenia de grados diferentes, pancitopenia, monocitopenia e infiltración medular por células pilosas. Se seleccionan tres de ellas como respuesta.\",\"El texto indica explícitamente que la leucopenia se presenta 'en ocasiones leucocitosis', lo que confirma que la leucocitosis es una posibilidad, aunque infrecuente, dentro del cuadro clínico habitual.\",\"La variante de la leucemia de células pilosas (fragmento 1) se asocia además a un recuento elevado de glóbulos blancos (15–50 × 10⁹/l), lo que refuerza que la leucocitosis puede observarse en el espectro de la enfermedad, si bien en un subtipo concreto.\"],\"insuficiencias\":[],\"respuesta\":\"Tres manifestaciones habituales de la leucemia de células pilosas son: esplenomegalia, leucopenia de grados diferentes y pancitopenia. Sí puede presentarse leucocitosis: el documento señala que la leucopenia ocurre 'en ocasiones leucocitosis'. Además, la variante de la enfermedad se caracteriza por un recuento elevado de glóbulos blancos (15–50 × 10⁹/l), aunque con marcadores anómalos y ausencia de la mutación BRAF.\",\"revision\":\"Etapa 0: no existen antecedentes. La respuesta se construye directamente del listado de manifestaciones del apartado 'Cuadro clínico inicial' y de la aclaración parenética sobre leucocitosis. Se complementa con el dato de la variante (fragmento 1) para contextualizar la posibilidad de recuentos elevados. No se requiere corrección.\"}",
+  "revision_citas": {
+    "citas": [
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "Esplenomegalia."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "Leucopenia de grados diferentes (en ocasiones leucocitosis)."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "Pancitopenia."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "solicitud_sha256": "c088efefbc50943b9451911e90572f2ff80db427cd5f4a00b269a53fdc94c845",
+  "sustantivo": "correcto",
+  "valor": "0"
+}

@@ -9,6 +9,7 @@ sv-cliente-api = { path = "../cliente-api-rust" }
 sv-instrumentacion = { path = "../instrumentacion-rust" }
 serde_json = "=1.0.151"
 sha2 = "=0.10.9"
+sysinfo = { version = "=0.39.6", default-features = false, features = ["system"] }
 
 [profile.dev]
 debug = 0

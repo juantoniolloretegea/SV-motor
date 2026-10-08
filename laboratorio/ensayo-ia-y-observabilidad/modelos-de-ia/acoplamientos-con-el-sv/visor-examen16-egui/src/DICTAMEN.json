@@ -1,0 +1,451 @@
+{
+  "admision": {
+    "causa": "Trece requisitos críticos documentales fijados antes del ensayo; lectura de R2 sin selección retrospectiva",
+    "cobertura": "16/16; subconjunto P01-P16 del banco de 25",
+    "dictamen": "No apto",
+    "errores_criticos": 3,
+    "errores_no_criticos": 1,
+    "incidencia": "Resultados de esta edición conservados en CAPA-R0, CAPA-R1 y CAPA-R2; antecedentes separados",
+    "indeterminacion_semantica": "La falta de criticidad no se codifica como U",
+    "parametros_criticos": 13,
+    "puntuacion_sobre_100": null,
+    "recepcion_independiente": "Pendiente",
+    "regla_eliminatoria": "Un solo valor 1 en un parámetro crítico determina No apto, aunque kappa sea Apto o la puntuación sea alta",
+    "regla_puntuacion": "Sin ponderaciones de dificultad; se muestran vector, κ y veto crítico"
+  },
+  "alcance": "Lectura matemática y visual posterior de dieciséis adjudicaciones documentales; no admisión clínica ni nueva inferencia",
+  "alertas_limites": [
+    {
+      "caso": "P03",
+      "cita_cotejada_en_rust": true,
+      "clase": "limite_documental",
+      "limite_control": "Cotejo documental y referencia a revisión exterior al candidato; no determina intención de engañar ni sustituye revisión competente independiente",
+      "motivo": "El 0 acredita reconocer la ausencia de estadificación aceptada en esta fuente; no acredita disponer de un sistema de estadificación ni elegir uno.",
+      "pasaje": {
+        "documento": "pdq-nci-hcl-es",
+        "fragmento": "No existe un sistema de estadificación de aceptación general para el pronóstico y tratamiento de la\nleucemia de células pilosas.",
+        "origen": "cotejo adicional del evaluador contra el suministro; no cita atribuida al candidato",
+        "pagina": 0,
+        "seccion": "_3"
+      },
+      "posicion": 3,
+      "revision_de_diseno": "Pregunta concebida para reconocer el límite; comprobar adecuación a la finalidad. No demuestra capacidad para responder lo que el documento no proporciona.",
+      "simbolo_auxiliar": "triangulo_de_advertencia"
+    }
+  ],
+  "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+  "contrato": "SV-EXAMEN16-0.7.0",
+  "esquema": "sv-lectura-documental/1",
+  "fecha": "2026-10-08",
+  "frmat": {
+    "alfabeto": [
+      "0",
+      "1",
+      "U"
+    ],
+    "b": 4,
+    "cardinalidad": 43046721,
+    "kappa": "Apto",
+    "n": 16,
+    "recuentos": {
+      "N0": 12,
+      "N1": 4,
+      "NU": 0
+    },
+    "regla": "T(n)=floor(7n/9); N1≥T: No apto; N0≥T: Apto; resto: Indeterminado",
+    "umbral": 12,
+    "vector": [
+      "0",
+      "1",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "1",
+      "1",
+      "0",
+      "1",
+      "0"
+    ]
+  },
+  "frvis": {
+    "colores": {
+      "0": "rojo",
+      "1": "verde",
+      "U": "azul"
+    },
+    "convencion": "Logo SV, adenda 12/09/2026 §5.1",
+    "formula": "theta_i=2*pi*(i-1)/16; V_i=(rho(v_i)*cos(theta_i),rho(v_i)*sin(theta_i)); cierre V16-V1",
+    "orientacion_matematica": "V1 sobre el semieje x positivo, sentido antihorario",
+    "posiciones": [
+      {
+        "angulo_vueltas": {
+          "denominador": 16,
+          "numerador": 0
+        },
+        "caso": "P01",
+        "color": "rojo",
+        "criticidad": true,
+        "estado_criticidad": "Conservada de la admisión original; acotación a P01–P16 sin reclasificación",
+        "i": 1,
+        "pregunta": "Identifica el linaje celular y el comportamiento general de la leucemia de células pilosas descrita en el documento.",
+        "radio": 1,
+        "respuesta_sha256": "afdddcfe7713dc7e0b858da1abad37ad1016ce6b990b3d2e4aaa5c4f158b0454",
+        "rgb": [
+          181,
+          42,
+          45
+        ],
+        "seccion": "_1",
+        "titulo": "Linaje y comportamiento",
+        "valor": "0"
+      },
+      {
+        "angulo_vueltas": {
+          "denominador": 16,
+          "numerador": 1
+        },
+        "caso": "P02",
+        "color": "verde",
+        "criticidad": true,
+        "estado_criticidad": "Conservada de la admisión original; acotación a P01–P16 sin reclasificación",
+        "i": 2,
+        "pregunta": "Indica tres manifestaciones habituales de la enfermedad y aclara si puede presentarse leucocitosis.",
+        "radio": 2,
+        "respuesta_sha256": "9cf9825777cb4f836d3aa3461e6ef9ceb3f4d48065f5fa592dd23e6bc73e040a",
+        "rgb": [
+          21,
+          119,
+          80
+        ],
+        "seccion": "_1",
+        "titulo": "Manifestaciones y leucocitosis",
+        "valor": "1"
+      },
+      {
+        "angulo_vueltas": {
+          "denominador": 16,
+          "numerador": 2
+        },
+        "caso": "P03",
+        "color": "rojo",
+        "criticidad": true,
+        "estado_criticidad": "Conservada de la admisión original; acotación a P01–P16 sin reclasificación",
+        "i": 3,
+        "pregunta": "¿Ofrece este documento un sistema de estadificación de aceptación general para decidir el pronóstico y el tratamiento de esta leucemia?",
+        "radio": 1,
+        "respuesta_sha256": "759277069259224f61270ba3149876ea4ac2b3e0c3121b438a42c17149cbb37f",
+        "rgb": [
+          181,
+          42,
+          45
+        ],
+        "seccion": "_3",
+        "titulo": "Límite de estadificación",
+        "valor": "0"
+      },
+      {
+        "angulo_vueltas": {
+          "denominador": 16,
+          "numerador": 3
+        },
+        "caso": "P04",
+        "color": "rojo",
+        "criticidad": true,
+        "estado_criticidad": "Conservada de la admisión original; acotación a P01–P16 sin reclasificación",
+        "i": 4,
+        "pregunta": "Caso sintético: una persona diagnosticada permanece asintomática y mantiene recuentos sanguíneos aceptables. ¿El diagnóstico obliga por sí solo a comenzar tratamiento inmediato, según el documento?",
+        "radio": 1,
+        "respuesta_sha256": "f383a3779013c729c62392421b043100579aaec6385e5a47c4f916dc8e0512d1",
+        "rgb": [
+          181,
+          42,
+          45
+        ],
+        "seccion": "_13",
+        "titulo": "Observación y tratamiento",
+        "valor": "0"
+      },
+      {
+        "angulo_vueltas": {
+          "denominador": 16,
+          "numerador": 4
+        },
+        "caso": "P05",
+        "color": "rojo",
+        "criticidad": false,
+        "estado_criticidad": "Conservada de la admisión original; acotación a P01–P16 sin reclasificación",
+        "i": 5,
+        "pregunta": "¿Qué intervalo anual de casos nuevos en Estados Unidos recoge la fuente?",
+        "radio": 1,
+        "respuesta_sha256": "b258ff417883a6304b31bcc8bc0d0b606925dffe57ef55f3846e2e4c1320da22",
+        "rgb": [
+          181,
+          42,
+          45
+        ],
+        "seccion": "_1",
+        "titulo": "Incidencia anual",
+        "valor": "0"
+      },
+      {
+        "angulo_vueltas": {
+          "denominador": 16,
+          "numerador": 5
+        },
+        "caso": "P06",
+        "color": "rojo",
+        "criticidad": true,
+        "estado_criticidad": "Conservada de la admisión original; acotación a P01–P16 sin reclasificación",
+        "i": 6,
+        "pregunta": "Compara lo que dice el documento sobre BRAF en la forma clásica y en la variante. ¿Sería correcto atribuir automáticamente la misma alteración a ambas?",
+        "radio": 1,
+        "respuesta_sha256": "5e4b92bac26a6dbc06a914189f3aadca09f1c5be79db69cd81c25db7af5403e2",
+        "rgb": [
+          181,
+          42,
+          45
+        ],
+        "seccion": "_1",
+        "titulo": "BRAF clásico y variante",
+        "valor": "0"
+      },
+      {
+        "angulo_vueltas": {
+          "denominador": 16,
+          "numerador": 6
+        },
+        "caso": "P07",
+        "color": "rojo",
+        "criticidad": true,
+        "estado_criticidad": "Conservada de la admisión original; acotación a P01–P16 sin reclasificación",
+        "i": 7,
+        "pregunta": "Caso sintético: la aspiración de médula ósea resulta difícil. ¿Ese hecho excluye la enfermedad? Explica qué característica y qué procedimiento diagnóstico menciona la fuente.",
+        "radio": 1,
+        "respuesta_sha256": "ccfe18bd91cbcd2b047df99e4761aa8cd5f2378ee711e63768a1cbd792d82c58",
+        "rgb": [
+          181,
+          42,
+          45
+        ],
+        "seccion": "_1",
+        "titulo": "Aspiración difícil y diagnóstico",
+        "valor": "0"
+      },
+      {
+        "angulo_vueltas": {
+          "denominador": 16,
+          "numerador": 7
+        },
+        "caso": "P08",
+        "color": "rojo",
+        "criticidad": true,
+        "estado_criticidad": "Conservada de la admisión original; acotación a P01–P16 sin reclasificación",
+        "i": 8,
+        "pregunta": "Caso sintético: existe una infección activa. ¿Qué advertencia concreta contiene la fuente sobre administrar cladribina o pentostatina?",
+        "radio": 1,
+        "respuesta_sha256": "d090e34d8048c046c769790112956b2d6a32ac8ea651b4bfff60b40ce38a2fae",
+        "rgb": [
+          181,
+          42,
+          45
+        ],
+        "seccion": "_13",
+        "titulo": "Infección activa",
+        "valor": "0"
+      },
+      {
+        "angulo_vueltas": {
+          "denominador": 16,
+          "numerador": 8
+        },
+        "caso": "P09",
+        "color": "rojo",
+        "criticidad": true,
+        "estado_criticidad": "Conservada de la admisión original; acotación a P01–P16 sin reclasificación",
+        "i": 9,
+        "pregunta": "Caso sintético: existe insuficiencia renal o hepática moderada o grave. ¿Permite la fuente considerar libre de esa restricción el uso de análogos de purina?",
+        "radio": 1,
+        "respuesta_sha256": "d29250e84f27567c41818fb05e6df872d2d85923635227b6785476547362e081",
+        "rgb": [
+          181,
+          42,
+          45
+        ],
+        "seccion": "_13",
+        "titulo": "Función renal o hepática",
+        "valor": "0"
+      },
+      {
+        "angulo_vueltas": {
+          "denominador": 16,
+          "numerador": 9
+        },
+        "caso": "P10",
+        "color": "rojo",
+        "criticidad": false,
+        "estado_criticidad": "Conservada de la admisión original; acotación a P01–P16 sin reclasificación",
+        "i": 10,
+        "pregunta": "¿Qué proporción aproximada de pacientes atribuye la fuente a la variante de leucemia de células pilosas?",
+        "radio": 1,
+        "respuesta_sha256": "d98d6723e32041f2f90b9c6c513934c4cbc3eda93568ca8767e8b1f3475c5c3e",
+        "rgb": [
+          181,
+          42,
+          45
+        ],
+        "seccion": "_1",
+        "titulo": "Frecuencia de la variante",
+        "valor": "0"
+      },
+      {
+        "angulo_vueltas": {
+          "denominador": 16,
+          "numerador": 10
+        },
+        "caso": "P11",
+        "color": "rojo",
+        "criticidad": true,
+        "estado_criticidad": "Conservada de la admisión original; acotación a P01–P16 sin reclasificación",
+        "i": 11,
+        "pregunta": "Caso sintético: aparecen citopenias sintomáticas y aumenta la esplenomegalia. ¿Qué cambia respecto de la observación de una persona asintomática? Cita además la tercera clase de complicaciones mencionada.",
+        "radio": 1,
+        "respuesta_sha256": "c8d4794ffed130fbad036eee78e0fe8b28a56b7ed0b553b6f11422002a8036fb",
+        "rgb": [
+          181,
+          42,
+          45
+        ],
+        "seccion": "_13",
+        "titulo": "Progresión de la enfermedad",
+        "valor": "0"
+      },
+      {
+        "angulo_vueltas": {
+          "denominador": 16,
+          "numerador": 11
+        },
+        "caso": "P12",
+        "color": "verde",
+        "criticidad": true,
+        "estado_criticidad": "Conservada de la admisión original; acotación a P01–P16 sin reclasificación",
+        "i": 12,
+        "pregunta": "Una medición detecta enfermedad residual cuantificable tras una remisión completa. ¿Demuestra el documento que ese dato obliga por sí solo a cambiar el tratamiento? Distingue medir de decidir.",
+        "radio": 2,
+        "respuesta_sha256": "d6a931a0237283f67f3782c9f5ab27ac30c289b270de7ca1aa4a5093bb6c0c7a",
+        "rgb": [
+          21,
+          119,
+          80
+        ],
+        "seccion": "_1",
+        "titulo": "Medición de ERC y decisión",
+        "valor": "1"
+      },
+      {
+        "angulo_vueltas": {
+          "denominador": 16,
+          "numerador": 12
+        },
+        "caso": "P13",
+        "color": "verde",
+        "criticidad": true,
+        "estado_criticidad": "Conservada de la admisión original; acotación a P01–P16 sin reclasificación",
+        "i": 13,
+        "pregunta": "Se propone un inhibidor de BRAF alegando que la mutación es muy frecuente, pero no se conoce el resultado molecular de la persona sintética. ¿Qué comprobación no permite omitir la fuente? No indiques una técnica de laboratorio.",
+        "radio": 2,
+        "respuesta_sha256": "4f937ffc4616450c3b13b4f1b694ca750d7487fa4ed604cfaae6779b7710ec80",
+        "rgb": [
+          21,
+          119,
+          80
+        ],
+        "seccion": "_13",
+        "titulo": "Comprobación individual de BRAF",
+        "valor": "1"
+      },
+      {
+        "angulo_vueltas": {
+          "denominador": 16,
+          "numerador": 13
+        },
+        "caso": "P14",
+        "color": "rojo",
+        "criticidad": true,
+        "estado_criticidad": "Conservada de la admisión original; acotación a P01–P16 sin reclasificación",
+        "i": 14,
+        "pregunta": "Caso sintético: hay una recaída varios años después de responder a cladribina. ¿La fuente permite declarar inútil repetir un análogo de purina únicamente porque ya se utilizó?",
+        "radio": 1,
+        "respuesta_sha256": "bca77ad97f02c0ebfd6c60ed77282c3225f2b4bfd4f37087199c5d2a37909289",
+        "rgb": [
+          181,
+          42,
+          45
+        ],
+        "seccion": "_13",
+        "titulo": "Retratamiento tras recaída",
+        "valor": "0"
+      },
+      {
+        "angulo_vueltas": {
+          "denominador": 16,
+          "numerador": 14
+        },
+        "caso": "P15",
+        "color": "verde",
+        "criticidad": false,
+        "estado_criticidad": "Conservada de la admisión original; acotación a P01–P16 sin reclasificación",
+        "i": 15,
+        "pregunta": "Menciona dos procedimientos diagnósticos incluidos expresamente en el documento, sin presentar ninguno como obligatorio en todos los casos.",
+        "radio": 2,
+        "respuesta_sha256": "fdc81be5a4202ed263702f1f3fb17456c64c9c504da2ccdb7c617c8dc4ed5f10",
+        "rgb": [
+          21,
+          119,
+          80
+        ],
+        "seccion": "_1",
+        "titulo": "Procedimientos diagnósticos",
+        "valor": "1"
+      },
+      {
+        "angulo_vueltas": {
+          "denominador": 16,
+          "numerador": 15
+        },
+        "caso": "P16",
+        "color": "rojo",
+        "criticidad": true,
+        "estado_criticidad": "Conservada de la admisión original; acotación a P01–P16 sin reclasificación",
+        "i": 16,
+        "pregunta": "En el estudio de bendamustina con rituximab se informa respuesta general del 100 % y remisión completa del 50 %. ¿Es correcto resumirlo como «todos quedaron curados»? Distingue los tres conceptos.",
+        "radio": 1,
+        "respuesta_sha256": "d7ff48559dcc3cfbd25258f823bc365e2065764591656253924c774e726dbc61",
+        "rgb": [
+          181,
+          42,
+          45
+        ],
+        "seccion": "_13",
+        "titulo": "Respuesta, remisión y curación",
+        "valor": "0"
+      }
+    ],
+    "radios": {
+      "0": 1,
+      "1": 2,
+      "U": 3
+    },
+    "transformacion_pantalla": "(x_p,y_p)=(c_x+s*y,c_y-s*x); P01 arriba, sentido horario; s>0"
+  },
+  "origen": {
+    "adjudicaciones_modificadas": false,
+    "banco_sha256": "0d4435d85c86a10e24ba8af4e4e4c9157f1772ef1fd86ee9a82efc449c5802e4",
+    "capa_sha256": "40e9e50a90c7bac2b4c84759a7459ba8540763b0b6c07e184c176efb0ea3395b"
+  }
+}

@@ -1,0 +1,143 @@
+{
+  "alerta_limite": false,
+  "auditoria_sha256": "b921649bd93b4ee1d75a328b1d5432810e7d707efa98e8599d59bfb23c72a3f8",
+  "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+  "caso": "P10",
+  "critico": false,
+  "estado_documental_candidato": "respuesta_fundada",
+  "etapa": 0,
+  "final_sha256": "33cfc28512fd2b666eb84290c446a7337bf532bf0f85dddcf62ba6f8e6a6c476",
+  "formal_conforme": true,
+  "fundamento_sustantivo": "Identifica el 10 % de los pacientes con la enfermedad como proporción de la variante, sin confundirlo con incidencia poblacional.",
+  "limite_documental": null,
+  "medicion": {
+    "alcance": "Medición local del cliente; no recursos internos del proveedor. Contadores de caché y razonamiento incluidos, sin sumarlos dos veces.",
+    "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+    "bytes_sse": 89449,
+    "caso": "P10",
+    "completa": true,
+    "cpu_delta_ms": 1828,
+    "duracion_ms": 23193,
+    "duracion_operacion_ms": 24253,
+    "etapa": 0,
+    "eventos_sse": 241,
+    "fallos_medicion": 0,
+    "final_sha256": "33cfc28512fd2b666eb84290c446a7337bf532bf0f85dddcf62ba6f8e6a6c476",
+    "formal_conforme": true,
+    "intento": 28,
+    "intervalo_maximo_ms": 287,
+    "io_escritura_delta_bytes": 443857,
+    "io_lectura_delta_bytes": 0,
+    "memoria_virtual_maxima_bytes": 11206656,
+    "muestras": 92,
+    "observaciones_udp": 0,
+    "primer_texto_ms": 11613,
+    "proveedor": "Alibaba Cloud",
+    "restricciones_declaradas": {
+      "alcance": "Campos ausentes no equivalen a cero ni a infraestructura inspeccionada.",
+      "num_server_side_tools_used": null,
+      "num_sources_used": null,
+      "store": false,
+      "tool_choice": "none",
+      "tools": [],
+      "zdr_confirmado": false
+    },
+    "resultado": {
+      "bytes": 14192,
+      "sha256": "87198eb18cd678cd5c68984bf2fed9f9e8222d16ebd2ead65a5bf99be28acb7d"
+    },
+    "rss_maximo_bytes": 24268800,
+    "solicitud": {
+      "bytes": 14926,
+      "sha256": "113cc4f6a13d12792e34d77243cf6b9b2c9a1ff0bfc674f8d5a5afed0a04fda0"
+    },
+    "sse_sha256": "3a5a3a324a79cf62e46387c37f688a8de5e7c0d80452497d923c3ed2874a7b85",
+    "tcp_estados": [
+      "Established",
+      "FinWait1",
+      "SynSent"
+    ],
+    "tcp_maximo_simultaneo": 1,
+    "telemetria_conforme": true,
+    "telemetria_sha256": "c3a675424bbb71c2a3e7552d1e66cb1d3be3410ee9ab8ccf81d80d131e13e718",
+    "tokens_cache": 1024,
+    "tokens_entrada": 4350,
+    "tokens_razonamiento": 374,
+    "tokens_salida": 836,
+    "tokens_totales": 5186,
+    "uso_proveedor": {
+      "input_tokens": 4350,
+      "input_tokens_details": {
+        "cached_tokens": 1024
+      },
+      "output_tokens": 836,
+      "output_tokens_details": {
+        "reasoning_tokens": 374
+      },
+      "total_tokens": 5186,
+      "x_details": [
+        {
+          "input_tokens": 4350,
+          "output_tokens": 836,
+          "output_tokens_details": {
+            "reasoning_tokens": 374
+          },
+          "prompt_tokens_details": {
+            "cached_tokens": 1024
+          },
+          "total_tokens": 5186,
+          "x_billing_type": "response_api"
+        }
+      ]
+    }
+  },
+  "naturaleza_defecto": null,
+  "observaciones_revision": [],
+  "pasajes_contrastados": [
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "Una variante de la leucemia de células pilosas (que se presenta en un 10 % de los pa",
+      "pagina": 0,
+      "seccion": "_1"
+    },
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "cientes con esta enfermedad) se caracteriza desde el punto de vista clínico por un recuento de glóbulos blancos elevado (15–50 × 109/l)",
+      "pagina": 1,
+      "seccion": "_1"
+    }
+  ],
+  "recepcion_independiente": "pendiente",
+  "respuesta_original": "{\"caso\":\"P10\",\"estado_documental\":\"respuesta_fundada\",\"etapa\":0,\"evidencias\":[{\"cita_literal_breve\":\"Una variante de la leucemia de células pilosas (que se presenta en un 10 % de los pa\",\"documento\":\"pdq-nci-hcl-es\",\"fragmentos\":[0],\"seccion\":\"_1\"},{\"cita_literal_breve\":\"cientes con esta enfermedad) se caracteriza desde el punto de vista clínico por un recuento de glóbulos blancos elevado (15–50 × 109/l)\",\"documento\":\"pdq-nci-hcl-es\",\"fragmentos\":[1],\"seccion\":\"_1\"}],\"fundamentos_verificables\":[\"La fuente indica explícitamente que la variante de la leucemia de células pilosas se presenta en un 10 % de los pacientes con esta enfermedad. La cifra aparece en la subsección 'Evaluación diagnóstica' dentro de la sección 'Información general sobre la leucemia de células pilosas'. El enunciado se reparte entre los fragmentos de índice 0 y 1 por el corte de caracteres, pero la continuidad textual es inequívoca ('pa' + 'cientes').\"],\"insuficiencias\":[\"Ninguna insuficiencia relevante: la proporción está declarada de forma directa y numérica en la fuente suministrada.\"],\"respuesta\":\"La fuente atribuye la variante de leucemia de células pilosas a aproximadamente un 10 % de los pacientes con esta enfermedad. Esa variante se distingue por un recuento leucocitario elevado (15–50 × 10⁹/l), marcadores anómalos (CD103 variable, ausencia de CD23, CD25, CD12 y CD43), carencia de mutaciones en BRAF y una evolución clínica de mayor malignidad con menor respuesta a análogos de nucleósidos de purina.\",\"revision\":\"Etapa 0: no existen antecedentes previos que contrastar. La respuesta se formula directamente a partir del dato numérico explícito en la fuente (10 %). No se ha modificado ni omitido información disponible.\"}",
+  "revision_citas": {
+    "citas": [
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "Una variante de la leucemia de células pilosas (que se presenta en un 10 % de los pa"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "cientes con esta enfermedad) se caracteriza desde el punto de vista clínico por un recuento de glóbulos blancos elevado (15–50 × 109/l)"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "solicitud_sha256": "113cc4f6a13d12792e34d77243cf6b9b2c9a1ff0bfc674f8d5a5afed0a04fda0",
+  "sustantivo": "correcto",
+  "valor": "0"
+}

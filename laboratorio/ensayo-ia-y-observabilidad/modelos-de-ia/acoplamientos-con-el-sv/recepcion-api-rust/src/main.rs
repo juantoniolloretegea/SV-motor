@@ -40,6 +40,13 @@ fn metrics(p:&Path,model:&str)->R<Value>{
 }
 fn receive(root:&Path)->R<Value>{
  let bank=load(&root.join("RESULTADO-BANCO.json"))?;let model=bank["modelo"].as_str().ok_or("Modelo")?;
+ let prior=load(&root.join("PREVIA.json"))?;let mut frozen=vec![];
+ for f in prior["archivos"].as_array().ok_or("Inventario previo ausente")? {
+  let p=PathBuf::from(f["ruta"].as_str().ok_or("Ruta previa ausente")?);let actual=ident(&p)?;
+  need(actual["bytes"]==f["bytes"]&&actual["sha256"]==f["sha256"],"Fuente congelada modificada")?;
+  let rel=p.strip_prefix("C:/SV").map_err(|_|"Procedencia externa")?;
+  frozen.push(json!({"ruta_relativa":rel.to_string_lossy(),"bytes":actual["bytes"],"sha256":actual["sha256"]}));
+ }
  let mut rows=vec![];
  for h in bank["intentos"].as_array().ok_or("Intentos")?{
   let p=PathBuf::from(h["directorio"].as_str().ok_or("Procedencia")?);guard(&p)?;let mut m=metrics(&p,model)?;let result=load(&p.join("RESULTADO.json"))?;need(result==h["resultado"],"Hito no coincide con original")?;
@@ -54,7 +61,9 @@ fn receive(root:&Path)->R<Value>{
  let mut tiempos=rows.iter().filter_map(|r|r["duracion_operacion_ms"].as_u64()).collect::<Vec<_>>();tiempos.sort_unstable();totals["mediana_inferior_operacion_ms"]=json!(tiempos.get(tiempos.len().saturating_sub(1)/2));
  let technical=metrics(&root.join("comprobacion-transporte"),model)?;
  let complete=bank["estado"]=="completo"&&bank["etapas_completas_por_pregunta"]==json!(vec![3;25])&&rows.iter().filter(|r|r["completa"]==true).count()==75;
- let v=json!({"conforme":rows.iter().all(|r|r["telemetria_conforme"]==true),"examen_completo":complete,"estado":bank["estado"],"modelo":model,"casos":rows,"totales":totals,"comprobacion_tecnica":technical,"duracion_banco_ms":bank["duracion_ms"],"reserva_y_coste_acumulados_ticks":bank["coste_o_reserva_acumulados_ticks"],"adjudicacion":"pendiente de revisión sustantiva exterior al candidato","inferencias_nuevas":0,"autoria_licencia":LICENCIA});save(&root.join("METRICAS-RUST.json"),&v)?;Ok(v)
+ let reduced=bank["estado"]=="completo_por_acotacion_humana_a_16"&&bank["contrato_efectivo"]["preguntas"]==16&&bank["contrato_efectivo"]["base"]==4&&bank["etapas_completas_por_pregunta"]==json!(vec![3;16])&&rows.len()==48&&rows.iter().all(|r|r["completa"]==true);
+ if reduced {need(ident(&root.join("CONTRATO-16.json"))?["sha256"]==bank["contrato_sha256"],"Acotación modificada")?;}
+ let v=json!({"conforme":rows.iter().all(|r|r["telemetria_conforme"]==true),"examen_completo":complete,"contrato_efectivo_completo":complete||reduced,"contrato_efectivo":bank["contrato_efectivo"],"estado":bank["estado"],"modelo":model,"casos":rows,"totales":totals,"comprobacion_tecnica":technical,"duracion_banco_ms":bank["duracion_ms"],"reserva_y_coste_acumulados_ticks":bank["coste_o_reserva_acumulados_ticks"],"control_consumo":{"valor":bank["consumo_o_reserva_acumulados"],"unidad":bank["unidad_control"]},"integridad_fuentes":{"conforme":true,"archivos":frozen},"adjudicacion":"pendiente de revisión sustantiva exterior al candidato","inferencias_nuevas":0,"autoria_licencia":LICENCIA});save(&root.join("METRICAS-RUST.json"),&v)?;Ok(v)
 }
 fn main(){let a=std::env::args().collect::<Vec<_>>();let result=(||->R<Value>{need(a.len()==2||a.len()==4,"Uso: sv-recepcion-api DIRECTORIO | individual DIRECTORIO MODELO")?;if a.len()==4{need(a[1]=="individual","Operación desconocida")?;let p=PathBuf::from(&a[2]);guard(&p)?;metrics(&p,&a[3])}else{let p=PathBuf::from(&a[1]);guard(&p)?;receive(&p)}})();match result{Ok(v)=>println!("{}",v),Err(e)=>{eprintln!("Recepción impedida: {e}");std::process::exit(1);}}}
 

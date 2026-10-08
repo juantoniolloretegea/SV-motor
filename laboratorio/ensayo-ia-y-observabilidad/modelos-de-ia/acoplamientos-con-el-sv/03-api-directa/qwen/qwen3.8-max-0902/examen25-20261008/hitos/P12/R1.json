@@ -1,0 +1,146 @@
+{
+  "alerta_limite": false,
+  "auditoria_sha256": "e6d0118da52bd581303611eb454b7bde8bd07ff29ce67fb804bf49d680876555",
+  "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+  "caso": "P12",
+  "critico": true,
+  "estado_documental_candidato": "respuesta_fundada",
+  "etapa": 1,
+  "final_sha256": "89f32ebb4060fa778913531823429f48277ce94e70a5ea3ff7d0e62e8be096b0",
+  "formal_conforme": false,
+  "fundamento_sustantivo": "Distingue medición de profundidad de remisión y decisión terapéutica. Reconoce que la utilidad de ERC para modificar elecciones no está clara y requiere evaluaciones. La auditoría literal rechaza la cita. El diagnóstico Rust confirma coincidencia tras retirar sólo asteriscos; el contenido y sus localizadores se mantienen. Se conserva el contrato original y se declara reserva metodológica por sensibilidad a marcación.",
+  "limite_documental": null,
+  "medicion": {
+    "alcance": "Medición local del cliente; no recursos internos del proveedor. Contadores de caché y razonamiento incluidos, sin sumarlos dos veces.",
+    "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+    "bytes_sse": 155499,
+    "caso": "P12",
+    "completa": true,
+    "cpu_delta_ms": 2266,
+    "duracion_ms": 40626,
+    "duracion_operacion_ms": 41680,
+    "etapa": 1,
+    "eventos_sse": 456,
+    "fallos_medicion": 0,
+    "final_sha256": "89f32ebb4060fa778913531823429f48277ce94e70a5ea3ff7d0e62e8be096b0",
+    "formal_conforme": false,
+    "intento": 35,
+    "intervalo_maximo_ms": 289,
+    "io_escritura_delta_bytes": 789523,
+    "io_lectura_delta_bytes": 0,
+    "memoria_virtual_maxima_bytes": 11325440,
+    "muestras": 160,
+    "observaciones_udp": 0,
+    "primer_texto_ms": 23782,
+    "proveedor": "Alibaba Cloud",
+    "restricciones_declaradas": {
+      "alcance": "Campos ausentes no equivalen a cero ni a infraestructura inspeccionada.",
+      "num_server_side_tools_used": null,
+      "num_sources_used": null,
+      "store": false,
+      "tool_choice": "none",
+      "tools": [],
+      "zdr_confirmado": false
+    },
+    "resultado": {
+      "bytes": 19294,
+      "sha256": "115172c62388799d17e45f86311082da635c833dc6c5aa192e5f2967f79c08cc"
+    },
+    "rss_maximo_bytes": 24449024,
+    "solicitud": {
+      "bytes": 23529,
+      "sha256": "16520f935c08c856be1c4e5efa7cf17d14d2756cd37bcd53c5ae0a11ff87833f"
+    },
+    "sse_sha256": "f8e97d44b2be85e5f11f805f66a1e40f0b0e24a44503a7223a93c0104e146e82",
+    "tcp_estados": [
+      "Established",
+      "FinWait1",
+      "SynSent"
+    ],
+    "tcp_maximo_simultaneo": 1,
+    "telemetria_conforme": true,
+    "telemetria_sha256": "df08d7bf40b78983b7927fa30329d29c2fd874a2bd8ab45914f009f4d245f807",
+    "tokens_cache": 1024,
+    "tokens_entrada": 6166,
+    "tokens_razonamiento": 892,
+    "tokens_salida": 1571,
+    "tokens_totales": 7737,
+    "uso_proveedor": {
+      "input_tokens": 6166,
+      "input_tokens_details": {
+        "cached_tokens": 1024
+      },
+      "output_tokens": 1571,
+      "output_tokens_details": {
+        "reasoning_tokens": 892
+      },
+      "total_tokens": 7737,
+      "x_details": [
+        {
+          "input_tokens": 6166,
+          "output_tokens": 1571,
+          "output_tokens_details": {
+            "reasoning_tokens": 892
+          },
+          "prompt_tokens_details": {
+            "cached_tokens": 1024
+          },
+          "total_tokens": 7737,
+          "x_billing_type": "response_api"
+        }
+      ]
+    }
+  },
+  "naturaleza_defecto": "Incumplimiento de literalidad formal por omisión de marcadores de cursiva o lista; no error médico demostrado.",
+  "observaciones_revision": [
+    "La normalización diagnóstica no modifica las respuestas, las auditorías ni el criterio de admisión.",
+    "Además existe un límite documental contrastado sobre la utilidad decisional de ERC. La posición tiene 1 por literalidad formal; no se presenta como un 0 que acredite una regla terapéutica ausente."
+  ],
+  "pasajes_contrastados": [
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "La intensidad de la remisión completa se puede evaluar con la enfermedad residual cuantificable (ERC) mediante el uso del gen BRAF mutante o el reordenamiento del gen de la inmunoglobulina de cadena pesada.",
+      "pagina": 1,
+      "seccion": "_1"
+    },
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "Sin embargo, la utilidad de la ERC para modificar las elecciones terapéuticas no está clara y se necesitan más evaluaciones.",
+      "pagina": 1,
+      "seccion": "_1"
+    }
+  ],
+  "recepcion_independiente": "pendiente",
+  "respuesta_original": "{\"caso\":\"P12\",\"estado_documental\":\"respuesta_fundada\",\"etapa\":1,\"evidencias\":[{\"cita_literal_breve\":\"La intensidad de la remisión completa se puede evaluar con la enfermedad residual cuantificable (ERC) mediante el uso del gen BRAF mutante o el reordenamiento del gen de la inmunoglobulina de cadena pesada.\",\"documento\":\"pdq-nci-hcl-es\",\"fragmentos\":[1],\"seccion\":\"_1\"},{\"cita_literal_breve\":\"Sin embargo, la utilidad de la ERC para modificar las elecciones terapéuticas no está clara y se necesitan más evaluaciones.\",\"documento\":\"pdq-nci-hcl-es\",\"fragmentos\":[1],\"seccion\":\"_1\"}],\"fundamentos_verificables\":[\"El documento asigna a la ERC una función evaluativa: medir la intensidad de la remisión completa, empleando como marcadores el gen BRAF mutante o el reordenamiento del gen de inmunoglobulina de cadena pesada.\",\"Inmediatamente, la conjunción adversativa «Sin embargo» introduce una restricción explícita: la utilidad de la ERC para modificar elecciones terapéuticas «no está clara y se necesitan más evaluaciones».\",\"La estructura del párrafo separa medir (evaluar profundidad de remisión) de decidir (cambiar tratamiento). El documento no formula ninguna obligación terapéutica derivada únicamente de la detección de ERC.\",\"No existe en la sección _1 suministrada ningún otro pasaje que atribuya a la ERC un papel prescriptivo automático sobre el tratamiento.\"],\"insuficiencias\":[\"El documento no especifica qué evaluaciones adicionales serían necesarias para que la ERC pudiera orientar decisiones terapéuticas; solo constata que faltan.\",\"No se indica en esta sección ningún umbral cuantitativo de ERC ni ningún escenario clínico concreto en el que la medición sí justificara un cambio de tratamiento.\"],\"respuesta\":\"No. El documento no demuestra que la detección de ERC tras remisión completa obligue por sí sola a cambiar el tratamiento. La fuente asigna a la ERC una función de medición: «evaluar la intensidad de la remisión completa». A continuación, introduce una restricción explícita sobre el paso a la decisión: «la utilidad de la ERC para modificar las elecciones terapéuticas no está clara y se necesitan más evaluaciones». Medir la profundidad de la remisión y decidir un cambio terapéutico quedan así diferenciados; la fuente no convierte el dato en mandato.\",\"revision\":\"Se mantiene la respuesta de R0 tras contraste íntegro con la sección _1 (fragmentos 0-2). Verificaciones realizadas: (1) las dos citas coinciden literalmente con el texto del fragmento 1; (2) la conjunción adversativa «Sin embargo» confirma la separación entre evaluación y decisión; (3) se recorrieron los fragmentos 0 y 2 buscando algún pasaje adicional que atribuyera a la ERC un papel prescriptivo y no se halló ninguno; (4) las insuficiencias declaradas (ausencia de umbrales y de especificación de evaluaciones futuras) son fiel reflejo del silencio documental. No se corrige ni retira ningún extremo de R0.\"}",
+  "revision_citas": {
+    "citas": [
+      {
+        "citas": [
+          {
+            "conforme": false,
+            "segmentos": [
+              {
+                "texto": "La intensidad de la remisión completa se puede evaluar con la enfermedad residual cuantificable (ERC) mediante el uso del gen BRAF mutante o el reordenamiento del gen de la inmunoglobulina de cadena pesada."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "citas": [
+          {
+            "conforme": false,
+            "segmentos": [
+              {
+                "texto": "Sin embargo, la utilidad de la ERC para modificar las elecciones terapéuticas no está clara y se necesitan más evaluaciones."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "solicitud_sha256": "16520f935c08c856be1c4e5efa7cf17d14d2756cd37bcd53c5ae0a11ff87833f",
+  "sustantivo": "correcto",
+  "valor": "1"
+}

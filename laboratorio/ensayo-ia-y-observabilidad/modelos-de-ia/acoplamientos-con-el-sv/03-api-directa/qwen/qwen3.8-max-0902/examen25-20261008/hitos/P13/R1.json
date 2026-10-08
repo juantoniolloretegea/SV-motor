@@ -1,0 +1,145 @@
+{
+  "alerta_limite": false,
+  "auditoria_sha256": "686736efe478b718406430dfd4cdd1ff7765485d7411eef29ca851daee7d79b1",
+  "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+  "caso": "P13",
+  "critico": true,
+  "estado_documental_candidato": "respuesta_fundada",
+  "etapa": 1,
+  "final_sha256": "8547ac1607b6e30f875662bfb1095f123ffdd2f8d7741afb64715374eb44b8dc",
+  "formal_conforme": true,
+  "fundamento_sustantivo": "Exige comprobación individual de BRAF y no la sustituye por prevalencia. Sin embargo, incluye el nombre de una técnica en la cita pese a la prohibición del enunciado; R0 también lo incluye en insuficiencias. R1 y R2 añaden una excepción para citas o contenido no prescriptivo que el enunciado no establece. Era posible citar sólo «este estado se debe comprobar». Se valora incumplimiento de entrega, no error sobre BRAF.",
+  "limite_documental": null,
+  "medicion": {
+    "alcance": "Medición local del cliente; no recursos internos del proveedor. Contadores de caché y razonamiento incluidos, sin sumarlos dos veces.",
+    "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+    "bytes_sse": 281228,
+    "caso": "P13",
+    "completa": true,
+    "cpu_delta_ms": 4266,
+    "duracion_ms": 80826,
+    "duracion_operacion_ms": 81920,
+    "etapa": 1,
+    "eventos_sse": 891,
+    "fallos_medicion": 0,
+    "final_sha256": "8547ac1607b6e30f875662bfb1095f123ffdd2f8d7741afb64715374eb44b8dc",
+    "formal_conforme": true,
+    "intento": 38,
+    "intervalo_maximo_ms": 337,
+    "io_escritura_delta_bytes": 1476709,
+    "io_lectura_delta_bytes": 0,
+    "memoria_virtual_maxima_bytes": 11587584,
+    "muestras": 310,
+    "observaciones_udp": 0,
+    "primer_texto_ms": 61772,
+    "proveedor": "Alibaba Cloud",
+    "restricciones_declaradas": {
+      "alcance": "Campos ausentes no equivalen a cero ni a infraestructura inspeccionada.",
+      "num_server_side_tools_used": null,
+      "num_sources_used": null,
+      "store": false,
+      "tool_choice": "none",
+      "tools": [],
+      "zdr_confirmado": false
+    },
+    "resultado": {
+      "bytes": 26087,
+      "sha256": "2d1bf2269e63f3ed6f986144cd41f97b977c0fd50cd1f7cd24ad6ca4d1467086"
+    },
+    "rss_maximo_bytes": 24854528,
+    "solicitud": {
+      "bytes": 66669,
+      "sha256": "1ad7d7b40fcdd81e44a50bdaaeca0265c213ee705dba23f3276a4e94c204a7dd"
+    },
+    "sse_sha256": "2d10e512bf06f59b78f0cb32ae0982e6949fb53a17aab36dcc85e1aea54b3fbe",
+    "tcp_estados": [
+      "Established",
+      "FinWait1",
+      "SynSent"
+    ],
+    "tcp_maximo_simultaneo": 1,
+    "telemetria_conforme": true,
+    "telemetria_sha256": "022b0cacf46016a550faf7de827b7557c9364a59826aa815f07394ad9eaf477f",
+    "tokens_cache": 1024,
+    "tokens_entrada": 21386,
+    "tokens_razonamiento": 2344,
+    "tokens_salida": 3111,
+    "tokens_totales": 24497,
+    "uso_proveedor": {
+      "input_tokens": 21386,
+      "input_tokens_details": {
+        "cached_tokens": 1024
+      },
+      "output_tokens": 3111,
+      "output_tokens_details": {
+        "reasoning_tokens": 2344
+      },
+      "total_tokens": 24497,
+      "x_details": [
+        {
+          "input_tokens": 21386,
+          "output_tokens": 3111,
+          "output_tokens_details": {
+            "reasoning_tokens": 2344
+          },
+          "prompt_tokens_details": {
+            "cached_tokens": 1024
+          },
+          "total_tokens": 24497,
+          "x_billing_type": "response_api"
+        }
+      ]
+    }
+  },
+  "naturaleza_defecto": "Incumplimiento de la prohibición de nombrar una técnica en la entrega; núcleo documental correcto.",
+  "observaciones_revision": [
+    "Reserva interpretativa: «indicar» admite lectura prescriptiva, adoptada por el candidato. La adjudicación aplica la prohibición a toda la entrega; requiere recepción competente y no autoriza afirmar incompetencia médica."
+  ],
+  "pasajes_contrastados": [
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "La mayoría de los pacientes con leucemia de células pilosas tienen una mutación en *BRAF*, sin embargo, este estado se debe comprobar mediante una citometría de flujo.",
+      "pagina": 1,
+      "seccion": "_13"
+    },
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "La mutación *BRAF*V600E se presenta en casi el 100 % de los pacientes con leucemia de células pilosas de tipo clásico y casi nunca en pacientes con otros linfomas y leucemias de células B, incluso las otras variantes de leucemia de células pilosas.",
+      "pagina": 2,
+      "seccion": "_13"
+    }
+  ],
+  "recepcion_independiente": "pendiente",
+  "respuesta_original": "{\"caso\":\"P13\",\"estado_documental\":\"respuesta_fundada\",\"etapa\":1,\"evidencias\":[{\"cita_literal_breve\":\"La mayoría de los pacientes con leucemia de células pilosas tienen una mutación en *BRAF*, sin embargo, este estado se debe comprobar mediante una citometría de flujo.\",\"documento\":\"pdq-nci-hcl-es\",\"fragmentos\":[1],\"seccion\":\"_13\"},{\"cita_literal_breve\":\"La mutación *BRAF*V600E se presenta en casi el 100 % de los pacientes con leucemia de células pilosas de tipo clásico y casi nunca en pacientes con otros linfomas y leucemias de células B, incluso las otras variantes de leucemia de células pilosas.\",\"documento\":\"pdq-nci-hcl-es\",\"fragmentos\":[2],\"seccion\":\"_13\"}],\"fundamentos_verificables\":[\"El documento establece que, pese a la altísima prevalencia de la mutación BRAF V600E en la leucemia de células pilosas clásica (casi el 100 %), el estado mutacional «se debe comprobar» en cada paciente. La conjunción adversativa «sin embargo» vincula explícitamente la frecuencia poblacional con la necesidad de verificación individual, de modo que la primera no sustituye a la segunda.\",\"La comprobación que la fuente no permite omitir es la confirmación del estado de la mutación BRAF en la persona concreta. No se trata de una opción discrecional: el verbo «se debe comprobar» expresa obligación dentro de las directrices adaptadas publicadas en 2021.\",\"La restricción del caso prohíbe indicar una técnica de laboratorio; por ello la respuesta identifica la comprobación exigida (verificación del estado mutacional de BRAF) sin prescribir el método. La cita documental incluye el nombre de la técnica como registro de fidelidad, no como indicación al lector.\"],\"insuficiencias\":[\"La fuente nombra una técnica concreta para efectuar la comprobación, pero la instrucción del caso prohíbe indicarla; se omite deliberadamente en la respuesta y en los fundamentos. La cita de evidencia la reproduce por fidelidad al texto fuente.\",\"El fragmento no explicita la conducta terapéutica a seguir si el resultado molecular individual resultara negativo en un caso de presunta leucemia de células pilosas clásica.\"],\"respuesta\":\"La fuente no permite omitir la comprobación del estado mutacional de BRAF en el paciente concreto. Aunque la mutación BRAF V600E aparece en casi el 100 % de los casos clásicos, el documento impone explícitamente que «este estado se debe comprobar»; la alta frecuencia poblacional no sustituye la verificación individual. Sin ese resultado molecular propio de la persona sintética, la alegación basada solo en la prevalencia es insuficiente para justificar el uso de un inhibidor de BRAF según la fuente.\",\"revision\":\"Etapa 1: se revisa la entrega 0. Se mantiene la respuesta sustantiva, las dos citas y los fundamentos, pues se verifican literalmente en los fragmentos 1 y 2 de la sección _13. Corrección menor: en la etapa 0 la insuficiencia nombraba la técnica de laboratorio al explicar la omisión; se retira ese nombre para cumplir estrictamente la restricción del caso. No se modifica el sentido de la conclusión ni se añaden datos externos. Las citas se conservan íntegras porque reproducen el texto fuente y no constituyen indicación de técnica al lector.\"}",
+  "revision_citas": {
+    "citas": [
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "La mayoría de los pacientes con leucemia de células pilosas tienen una mutación en *BRAF*, sin embargo, este estado se debe comprobar mediante una citometría de flujo."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "La mutación *BRAF*V600E se presenta en casi el 100 % de los pacientes con leucemia de células pilosas de tipo clásico y casi nunca en pacientes con otros linfomas y leucemias de células B, incluso las otras variantes de leucemia de células pilosas."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "solicitud_sha256": "1ad7d7b40fcdd81e44a50bdaaeca0265c213ee705dba23f3276a4e94c204a7dd",
+  "sustantivo": "correcto",
+  "valor": "1"
+}

@@ -1,0 +1,163 @@
+{
+  "alerta_limite": false,
+  "auditoria_sha256": "e6d0118da52bd581303611eb454b7bde8bd07ff29ce67fb804bf49d680876555",
+  "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+  "caso": "P15",
+  "critico": false,
+  "estado_documental_candidato": "respuesta_fundada",
+  "etapa": 0,
+  "final_sha256": "9be97713ca25b5c2fcd8f15abc52b61242f9397c5b812a7b97ddab638ca365c5",
+  "formal_conforme": false,
+  "fundamento_sustantivo": "Recupera citometría y aspiración/biopsia como opciones diagnósticas, sin universalizar su obligatoriedad. La auditoría literal rechaza la cita. El diagnóstico Rust confirma coincidencia tras retirar sólo asteriscos; el contenido y sus localizadores se mantienen. Se conserva el contrato original y se declara reserva metodológica por sensibilidad a marcación.",
+  "limite_documental": null,
+  "medicion": {
+    "alcance": "Medición local del cliente; no recursos internos del proveedor. Contadores de caché y razonamiento incluidos, sin sumarlos dos veces.",
+    "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+    "bytes_sse": 102964,
+    "caso": "P15",
+    "completa": true,
+    "cpu_delta_ms": 1266,
+    "duracion_ms": 24660,
+    "duracion_operacion_ms": 25701,
+    "etapa": 0,
+    "eventos_sse": 284,
+    "fallos_medicion": 0,
+    "final_sha256": "9be97713ca25b5c2fcd8f15abc52b61242f9397c5b812a7b97ddab638ca365c5",
+    "formal_conforme": false,
+    "intento": 43,
+    "intervalo_maximo_ms": 307,
+    "io_escritura_delta_bytes": 506303,
+    "io_lectura_delta_bytes": 0,
+    "memoria_virtual_maxima_bytes": 12435456,
+    "muestras": 100,
+    "observaciones_udp": 0,
+    "primer_texto_ms": 13021,
+    "proveedor": "Alibaba Cloud",
+    "restricciones_declaradas": {
+      "alcance": "Campos ausentes no equivalen a cero ni a infraestructura inspeccionada.",
+      "num_server_side_tools_used": null,
+      "num_sources_used": null,
+      "store": false,
+      "tool_choice": "none",
+      "tools": [],
+      "zdr_confirmado": false
+    },
+    "resultado": {
+      "bytes": 15358,
+      "sha256": "97befe300a6126f3710ca370462c1f08e36497c49e3016dc912bb228bdd23ade"
+    },
+    "rss_maximo_bytes": 26140672,
+    "solicitud": {
+      "bytes": 14973,
+      "sha256": "0ea0d0d8df4012b8c1e7a30d21e5137594415bbbcd37690ca1d673a2a983b75c"
+    },
+    "sse_sha256": "ee3428554a33b0bcf15c27d923124ceeee7ff987e4b6e4f43f3bfc424a5d2979",
+    "tcp_estados": [
+      "Established",
+      "FinWait1",
+      "SynSent"
+    ],
+    "tcp_maximo_simultaneo": 1,
+    "telemetria_conforme": true,
+    "telemetria_sha256": "c701d4874abedfdca1e2f52ae5ef1e4f97341db9acf008972dc532010306af36",
+    "tokens_cache": 1024,
+    "tokens_entrada": 4352,
+    "tokens_razonamiento": 489,
+    "tokens_salida": 982,
+    "tokens_totales": 5334,
+    "uso_proveedor": {
+      "input_tokens": 4352,
+      "input_tokens_details": {
+        "cached_tokens": 1024
+      },
+      "output_tokens": 982,
+      "output_tokens_details": {
+        "reasoning_tokens": 489
+      },
+      "total_tokens": 5334,
+      "x_details": [
+        {
+          "input_tokens": 4352,
+          "output_tokens": 982,
+          "output_tokens_details": {
+            "reasoning_tokens": 489
+          },
+          "prompt_tokens_details": {
+            "cached_tokens": 1024
+          },
+          "total_tokens": 5334,
+          "x_billing_type": "response_api"
+        }
+      ]
+    }
+  },
+  "naturaleza_defecto": "Incumplimiento de literalidad formal por omisión de marcadores de cursiva o lista; no error médico demostrado.",
+  "observaciones_revision": [
+    "La normalización diagnóstica no modifica las respuestas, las auditorías ni el criterio de admisión."
+  ],
+  "pasajes_contrastados": [
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "es posible utilizar las siguientes pruebas y procedimientos: Citometría de flujo. Aspiración de médula ósea y biopsia.",
+      "pagina": 0,
+      "seccion": "_1"
+    },
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "por lo general, es posible diagnosticar la leucemia de células pilosas mediante una citometría de flujo",
+      "pagina": 0,
+      "seccion": "_1"
+    },
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "quizás se requiera una biopsia de la médula ósea para la inscripción en un ensayo clínico",
+      "pagina": 0,
+      "seccion": "_1"
+    }
+  ],
+  "recepcion_independiente": "pendiente",
+  "respuesta_original": "{\"caso\":\"P15\",\"estado_documental\":\"respuesta_fundada\",\"etapa\":0,\"evidencias\":[{\"cita_literal_breve\":\"es posible utilizar las siguientes pruebas y procedimientos: Citometría de flujo. Aspiración de médula ósea y biopsia.\",\"documento\":\"pdq-nci-hcl-es\",\"fragmentos\":[0],\"seccion\":\"_1\"},{\"cita_literal_breve\":\"por lo general, es posible diagnosticar la leucemia de células pilosas mediante una citometría de flujo\",\"documento\":\"pdq-nci-hcl-es\",\"fragmentos\":[0],\"seccion\":\"_1\"},{\"cita_literal_breve\":\"quizás se requiera una biopsia de la médula ósea para la inscripción en un ensayo clínico\",\"documento\":\"pdq-nci-hcl-es\",\"fragmentos\":[0],\"seccion\":\"_1\"}],\"fundamentos_verificables\":[\"El documento enumera seis pruebas bajo la fórmula «es posible utilizar», lo que las presenta como opciones disponibles y no como requisitos universales.\",\"La citometría de flujo se describe como suficiente «por lo general» para el diagnóstico, sin imponerse como única vía obligatoria.\",\"La biopsia de médula ósea se condiciona a un contexto específico (inscripción en ensayo clínico), lo que confirma que no se exige en todos los casos.\",\"Se seleccionan dos procedimientos de la lista: citometría de flujo y aspiración de médula ósea y biopsia, ambos expresamente nombrados.\"],\"insuficiencias\":[],\"respuesta\":\"El documento menciona expresamente, entre otros, la citometría de flujo y la aspiración de médula ósea y biopsia como procedimientos diagnósticos. Ninguno se presenta como obligatorio en todos los casos: la lista se introduce con «es posible utilizar», la citometría de flujo se señala como suficiente «por lo general», y la biopsia se condiciona a la inscripción en un ensayo clínico. Por tanto, ambos son opciones disponibles dentro de la evaluación diagnóstica, sin carácter universalmente imperativo.\",\"revision\":\"Etapa 0: no existen antecedentes. La respuesta se construye directamente a partir de la lista de pruebas de la sección _1 (fragmento 0) y de las matizaciones de alcance que el propio texto aporta. No se requiere corrección.\"}",
+  "revision_citas": {
+    "citas": [
+      {
+        "citas": [
+          {
+            "conforme": false,
+            "segmentos": [
+              {
+                "texto": "es posible utilizar las siguientes pruebas y procedimientos: Citometría de flujo. Aspiración de médula ósea y biopsia."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "citas": [
+          {
+            "conforme": false,
+            "segmentos": [
+              {
+                "texto": "por lo general, es posible diagnosticar la leucemia de células pilosas mediante una citometría de flujo"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "citas": [
+          {
+            "conforme": false,
+            "segmentos": [
+              {
+                "texto": "quizás se requiera una biopsia de la médula ósea para la inscripción en un ensayo clínico"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "solicitud_sha256": "0ea0d0d8df4012b8c1e7a30d21e5137594415bbbcd37690ca1d673a2a983b75c",
+  "sustantivo": "correcto",
+  "valor": "1"
+}

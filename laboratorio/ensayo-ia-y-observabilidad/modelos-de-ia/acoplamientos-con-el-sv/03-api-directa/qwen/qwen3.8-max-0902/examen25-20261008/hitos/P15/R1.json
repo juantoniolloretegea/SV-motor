@@ -1,0 +1,163 @@
+{
+  "alerta_limite": false,
+  "auditoria_sha256": "e6d0118da52bd581303611eb454b7bde8bd07ff29ce67fb804bf49d680876555",
+  "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+  "caso": "P15",
+  "critico": false,
+  "estado_documental_candidato": "respuesta_fundada",
+  "etapa": 1,
+  "final_sha256": "be6ba2a60783b6e7b45b062a62202c845eef3fe6f2acac14f837956ac95fd5db",
+  "formal_conforme": false,
+  "fundamento_sustantivo": "Recupera citometría y aspiración/biopsia como opciones diagnósticas, sin universalizar su obligatoriedad. La auditoría literal rechaza la cita. El diagnóstico Rust confirma coincidencia tras retirar sólo asteriscos; el contenido y sus localizadores se mantienen. Se conserva el contrato original y se declara reserva metodológica por sensibilidad a marcación.",
+  "limite_documental": null,
+  "medicion": {
+    "alcance": "Medición local del cliente; no recursos internos del proveedor. Contadores de caché y razonamiento incluidos, sin sumarlos dos veces.",
+    "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+    "bytes_sse": 171287,
+    "caso": "P15",
+    "completa": true,
+    "cpu_delta_ms": 2156,
+    "duracion_ms": 42568,
+    "duracion_operacion_ms": 43636,
+    "etapa": 1,
+    "eventos_sse": 510,
+    "fallos_medicion": 0,
+    "final_sha256": "be6ba2a60783b6e7b45b062a62202c845eef3fe6f2acac14f837956ac95fd5db",
+    "formal_conforme": false,
+    "intento": 44,
+    "intervalo_maximo_ms": 378,
+    "io_escritura_delta_bytes": 865315,
+    "io_lectura_delta_bytes": 0,
+    "memoria_virtual_maxima_bytes": 12402688,
+    "muestras": 167,
+    "observaciones_udp": 0,
+    "primer_texto_ms": 29620,
+    "proveedor": "Alibaba Cloud",
+    "restricciones_declaradas": {
+      "alcance": "Campos ausentes no equivalen a cero ni a infraestructura inspeccionada.",
+      "num_server_side_tools_used": null,
+      "num_sources_used": null,
+      "store": false,
+      "tool_choice": "none",
+      "tools": [],
+      "zdr_confirmado": false
+    },
+    "resultado": {
+      "bytes": 19929,
+      "sha256": "dfb10ccd34eaef638d8bf1b7651fc2c6568990910a9566d17092cf05bded3d41"
+    },
+    "rss_maximo_bytes": 26402816,
+    "solicitud": {
+      "bytes": 23303,
+      "sha256": "a41ec38888a97f50128ebb549869d2f96be4ed56b631781ef6b56e1c72819c6b"
+    },
+    "sse_sha256": "dc2a7065f51feef04a949568a28d03c473fac76272713d26bf39145b124e142a",
+    "tcp_estados": [
+      "Established",
+      "FinWait1",
+      "SynSent"
+    ],
+    "tcp_maximo_simultaneo": 1,
+    "telemetria_conforme": true,
+    "telemetria_sha256": "b1e9a3883182a6d4ad0bf52935302b9acefdec5141a4de1d04f13136187da345",
+    "tokens_cache": 1024,
+    "tokens_entrada": 6131,
+    "tokens_razonamiento": 1220,
+    "tokens_salida": 1817,
+    "tokens_totales": 7948,
+    "uso_proveedor": {
+      "input_tokens": 6131,
+      "input_tokens_details": {
+        "cached_tokens": 1024
+      },
+      "output_tokens": 1817,
+      "output_tokens_details": {
+        "reasoning_tokens": 1220
+      },
+      "total_tokens": 7948,
+      "x_details": [
+        {
+          "input_tokens": 6131,
+          "output_tokens": 1817,
+          "output_tokens_details": {
+            "reasoning_tokens": 1220
+          },
+          "prompt_tokens_details": {
+            "cached_tokens": 1024
+          },
+          "total_tokens": 7948,
+          "x_billing_type": "response_api"
+        }
+      ]
+    }
+  },
+  "naturaleza_defecto": "Incumplimiento de literalidad formal por omisión de marcadores de cursiva o lista; no error médico demostrado.",
+  "observaciones_revision": [
+    "La normalización diagnóstica no modifica las respuestas, las auditorías ni el criterio de admisión."
+  ],
+  "pasajes_contrastados": [
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "es posible utilizar las siguientes pruebas y procedimientos: Citometría de flujo. Aspiración de médula ósea y biopsia.",
+      "pagina": 0,
+      "seccion": "_1"
+    },
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "por lo general, es posible diagnosticar la leucemia de células pilosas mediante una citometría de flujo",
+      "pagina": 0,
+      "seccion": "_1"
+    },
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "quizás se requiera una biopsia de la médula ósea para la inscripción en un ensayo clínico",
+      "pagina": 0,
+      "seccion": "_1"
+    }
+  ],
+  "recepcion_independiente": "pendiente",
+  "respuesta_original": "{\"caso\":\"P15\",\"estado_documental\":\"respuesta_fundada\",\"etapa\":1,\"evidencias\":[{\"cita_literal_breve\":\"es posible utilizar las siguientes pruebas y procedimientos: Citometría de flujo. Aspiración de médula ósea y biopsia.\",\"documento\":\"pdq-nci-hcl-es\",\"fragmentos\":[0],\"seccion\":\"_1\"},{\"cita_literal_breve\":\"por lo general, es posible diagnosticar la leucemia de células pilosas mediante una citometría de flujo\",\"documento\":\"pdq-nci-hcl-es\",\"fragmentos\":[0],\"seccion\":\"_1\"},{\"cita_literal_breve\":\"quizás se requiera una biopsia de la médula ósea para la inscripción en un ensayo clínico\",\"documento\":\"pdq-nci-hcl-es\",\"fragmentos\":[0],\"seccion\":\"_1\"}],\"fundamentos_verificables\":[\"La lista diagnóstica se introduce con la fórmula «es posible utilizar», que expresa disponibilidad opcional y no obligatoriedad universal; esto se verifica en el fragmento 0 de la sección _1.\",\"La citometría de flujo aparece como suficiente «por lo general», lo cual confirma que no se impone como única vía ni como requisito absoluto en todos los supuestos.\",\"La biopsia de médula ósea se condiciona explícitamente a «la inscripción en un ensayo clínico», restringiendo su exigencia a un contexto particular y no a todo diagnóstico.\",\"Se seleccionan exactamente dos procedimientos de la lista del documento: citometría de flujo y aspiración de médula ósea y biopsia, ambos nombrados expresamente como elementos independientes de la enumeración.\"],\"insuficiencias\":[],\"respuesta\":\"El documento enumera expresamente, entre otros, la citometría de flujo y la aspiración de médula ósea y biopsia como procedimientos diagnósticos. Ninguno se presenta como obligatorio en todos los casos: la lista se introduce con «es posible utilizar», la citometría de flujo se describe como suficiente «por lo general», y la biopsia se condiciona a la inscripción en un ensayo clínico. Ambos constituyen opciones disponibles dentro de la evaluación, sin carácter universalmente imperativo.\",\"revision\":\"Se contrasta la respuesta de R0 con la fuente. Las tres citas literales se verifican palabra por palabra en el fragmento 0 (pagina 0) de la sección _1. La afirmación de que la lista usa «es posible utilizar» es exacta. La caracterización de la citometría como suficiente «por lo general» y de la biopsia como condicional al ensayo clínico reproduce fielmente el texto. No se detecta omisión relevante: la pregunta exige dos procedimientos y no presentarlos como obligatorios, y ambos extremos quedan cubiertos. Se mantiene la respuesta sin corrección.\"}",
+  "revision_citas": {
+    "citas": [
+      {
+        "citas": [
+          {
+            "conforme": false,
+            "segmentos": [
+              {
+                "texto": "es posible utilizar las siguientes pruebas y procedimientos: Citometría de flujo. Aspiración de médula ósea y biopsia."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "citas": [
+          {
+            "conforme": false,
+            "segmentos": [
+              {
+                "texto": "por lo general, es posible diagnosticar la leucemia de células pilosas mediante una citometría de flujo"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "citas": [
+          {
+            "conforme": false,
+            "segmentos": [
+              {
+                "texto": "quizás se requiera una biopsia de la médula ósea para la inscripción en un ensayo clínico"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "solicitud_sha256": "a41ec38888a97f50128ebb549869d2f96be4ed56b631781ef6b56e1c72819c6b",
+  "sustantivo": "correcto",
+  "valor": "1"
+}

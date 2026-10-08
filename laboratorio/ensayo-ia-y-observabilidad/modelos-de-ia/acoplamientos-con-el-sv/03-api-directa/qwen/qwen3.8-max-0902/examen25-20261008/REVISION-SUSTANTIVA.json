@@ -1,0 +1,673 @@
+{
+  "autoridad": "Revisión exterior al candidato; recepción independiente pendiente",
+  "casos": [
+    {
+      "observaciones_revision": [],
+      "naturaleza_defecto": null,
+      "contenido": "correcto",
+      "original_sha256": "17262035b2cc7212f6ad3b4fa19516ae116f472218443523b59e6e0a87012768",
+      "explicacion_limite": null,
+      "alerta_limite": false,
+      "valor": "0",
+      "caso": "P01",
+      "fundamento": "Identifica neoplasia maligna linfoide B, grado bajo y crecimiento lento. Las características adicionales pertenecen a la sección suministrada.",
+      "cita_limite": null,
+      "etapa": 0
+    },
+    {
+      "observaciones_revision": [],
+      "naturaleza_defecto": null,
+      "contenido": "correcto",
+      "original_sha256": "da92eaf16ed99cb5b0a076b2cfd59467527d111c6ef510239fc074dccfe9aea6",
+      "explicacion_limite": null,
+      "alerta_limite": false,
+      "valor": "0",
+      "caso": "P01",
+      "fundamento": "Identifica neoplasia maligna linfoide B, grado bajo y crecimiento lento. Las características adicionales pertenecen a la sección suministrada.",
+      "cita_limite": null,
+      "etapa": 1
+    },
+    {
+      "observaciones_revision": [],
+      "naturaleza_defecto": null,
+      "contenido": "correcto",
+      "original_sha256": "afdddcfe7713dc7e0b858da1abad37ad1016ce6b990b3d2e4aaa5c4f158b0454",
+      "explicacion_limite": null,
+      "alerta_limite": false,
+      "valor": "0",
+      "caso": "P01",
+      "fundamento": "Identifica neoplasia maligna linfoide B, grado bajo y crecimiento lento. Las características adicionales pertenecen a la sección suministrada.",
+      "cita_limite": null,
+      "etapa": 2
+    },
+    {
+      "observaciones_revision": [
+        "Debe corregirse la redacción ambigua sobre leucopenia/leucocitosis en usos clínicos. Se contrasta la entrega completa y no se equipara automáticamente a la relación explícita incorrecta del antecedente Grok/R0."
+      ],
+      "naturaleza_defecto": null,
+      "contenido": "correcto",
+      "original_sha256": "4d7d9bf1b82543d27dcbaa3b6eed5f37608302e8688447c4589ec1f1b57b812b",
+      "explicacion_limite": null,
+      "alerta_limite": false,
+      "valor": "0",
+      "caso": "P02",
+      "fundamento": "Recupera tres manifestaciones y admite leucocitosis ocasional, con referencia separada a la variante. La redacción «la leucopenia aparece en ocasiones leucocitosis» es defectuosa; el fundamento y la cita distinguen la tendencia y su alternativa. No se afirma expresamente que la leucocitosis sea un grado de leucopenia.",
+      "cita_limite": null,
+      "etapa": 0
+    },
+    {
+      "observaciones_revision": [
+        "La normalización diagnóstica no modifica las respuestas, las auditorías ni el criterio de admisión.",
+        "Debe corregirse la redacción ambigua sobre leucopenia/leucocitosis en usos clínicos. Se contrasta la entrega completa y no se equipara automáticamente a la relación explícita incorrecta del antecedente Grok/R0."
+      ],
+      "naturaleza_defecto": "Incumplimiento de literalidad formal por omisión de marcadores de cursiva o lista; no error médico demostrado.",
+      "contenido": "correcto",
+      "original_sha256": "ff3cc762a23363970e1e3eec4d899e2764fac39896093dd9df26239c263ce63b",
+      "explicacion_limite": null,
+      "alerta_limite": false,
+      "valor": "1",
+      "caso": "P02",
+      "fundamento": "Recupera tres manifestaciones y admite leucocitosis ocasional, con referencia separada a la variante. La redacción «la leucopenia aparece en ocasiones leucocitosis» es defectuosa; el fundamento y la cita distinguen la tendencia y su alternativa. No se afirma expresamente que la leucocitosis sea un grado de leucopenia. La auditoría literal rechaza la cita. El diagnóstico Rust confirma coincidencia tras retirar sólo asteriscos; el contenido y sus localizadores se mantienen. Se conserva el contrato original y se declara reserva metodológica por sensibilidad a marcación.",
+      "cita_limite": null,
+      "etapa": 1
+    },
+    {
+      "observaciones_revision": [
+        "La normalización diagnóstica no modifica las respuestas, las auditorías ni el criterio de admisión.",
+        "Debe corregirse la redacción ambigua sobre leucopenia/leucocitosis en usos clínicos. Se contrasta la entrega completa y no se equipara automáticamente a la relación explícita incorrecta del antecedente Grok/R0."
+      ],
+      "naturaleza_defecto": "Incumplimiento de literalidad formal por omisión de marcadores de cursiva o lista; no error médico demostrado.",
+      "contenido": "correcto",
+      "original_sha256": "9cf9825777cb4f836d3aa3461e6ef9ceb3f4d48065f5fa592dd23e6bc73e040a",
+      "explicacion_limite": null,
+      "alerta_limite": false,
+      "valor": "1",
+      "caso": "P02",
+      "fundamento": "Recupera tres manifestaciones y admite leucocitosis ocasional, con referencia separada a la variante. La redacción «la leucopenia aparece en ocasiones leucocitosis» es defectuosa; el fundamento y la cita distinguen la tendencia y su alternativa. No se afirma expresamente que la leucocitosis sea un grado de leucopenia. La auditoría literal rechaza la cita. El diagnóstico Rust confirma coincidencia tras retirar sólo asteriscos; el contenido y sus localizadores se mantienen. Se conserva el contrato original y se declara reserva metodológica por sensibilidad a marcación.",
+      "cita_limite": null,
+      "etapa": 2
+    },
+    {
+      "observaciones_revision": [],
+      "naturaleza_defecto": null,
+      "contenido": "correcto",
+      "original_sha256": "85920ef3cda8efa8e8a9ea9a4a05b7595ccca4dde96bd1c8c8ad186086e7be16",
+      "explicacion_limite": "El 0 acredita reconocer la ausencia de estadificación aceptada en esta fuente; no acredita disponer de un sistema de estadificación ni elegir uno.",
+      "alerta_limite": true,
+      "valor": "0",
+      "caso": "P03",
+      "fundamento": "Reconoce la ausencia expresa de un sistema de estadificación de aceptación general; no inventa uno.",
+      "cita_limite": "No existe un sistema de estadificación de aceptación general para el pronóstico y tratamiento de la\nleucemia de células pilosas.",
+      "etapa": 0
+    },
+    {
+      "observaciones_revision": [],
+      "naturaleza_defecto": null,
+      "contenido": "correcto",
+      "original_sha256": "02c8aac49db9bab031822b73e7701e1dd06ef6783729580810c066dc0f0cf46f",
+      "explicacion_limite": "El 0 acredita reconocer la ausencia de estadificación aceptada en esta fuente; no acredita disponer de un sistema de estadificación ni elegir uno.",
+      "alerta_limite": true,
+      "valor": "0",
+      "caso": "P03",
+      "fundamento": "Reconoce la ausencia expresa de un sistema de estadificación de aceptación general; no inventa uno.",
+      "cita_limite": "No existe un sistema de estadificación de aceptación general para el pronóstico y tratamiento de la\nleucemia de células pilosas.",
+      "etapa": 1
+    },
+    {
+      "observaciones_revision": [],
+      "naturaleza_defecto": null,
+      "contenido": "correcto",
+      "original_sha256": "759277069259224f61270ba3149876ea4ac2b3e0c3121b438a42c17149cbb37f",
+      "explicacion_limite": "El 0 acredita reconocer la ausencia de estadificación aceptada en esta fuente; no acredita disponer de un sistema de estadificación ni elegir uno.",
+      "alerta_limite": true,
+      "valor": "0",
+      "caso": "P03",
+      "fundamento": "Reconoce la ausencia expresa de un sistema de estadificación de aceptación general; no inventa uno.",
+      "cita_limite": "No existe un sistema de estadificación de aceptación general para el pronóstico y tratamiento de la\nleucemia de células pilosas.",
+      "etapa": 2
+    },
+    {
+      "observaciones_revision": [],
+      "naturaleza_defecto": null,
+      "contenido": "correcto",
+      "original_sha256": "4b03f1c85603e57a045edecf90ae7863220db3e49387323293755b5074ae1224",
+      "explicacion_limite": null,
+      "alerta_limite": false,
+      "valor": "0",
+      "caso": "P04",
+      "fundamento": "El diagnóstico aislado no impone tratamiento inmediato: admite observación condicionada al estado asintomático y recuentos aceptables, con vigilancia de progresión.",
+      "cita_limite": null,
+      "etapa": 0
+    },
+    {
+      "observaciones_revision": [],
+      "naturaleza_defecto": null,
+      "contenido": "correcto",
+      "original_sha256": "102800961c4b62e466061453c2c67c3ca123dc3084e9cbb6dfd260e15e1cdf2c",
+      "explicacion_limite": null,
+      "alerta_limite": false,
+      "valor": "0",
+      "caso": "P04",
+      "fundamento": "El diagnóstico aislado no impone tratamiento inmediato: admite observación condicionada al estado asintomático y recuentos aceptables, con vigilancia de progresión.",
+      "cita_limite": null,
+      "etapa": 1
+    },
+    {
+      "observaciones_revision": [],
+      "naturaleza_defecto": null,
+      "contenido": "correcto",
+      "original_sha256": "f383a3779013c729c62392421b043100579aaec6385e5a47c4f916dc8e0512d1",
+      "explicacion_limite": null,
+      "alerta_limite": false,
+      "valor": "0",
+      "caso": "P04",
+      "fundamento": "El diagnóstico aislado no impone tratamiento inmediato: admite observación condicionada al estado asintomático y recuentos aceptables, con vigilancia de progresión.",
+      "cita_limite": null,
+      "etapa": 2
+    },
+    {
+      "observaciones_revision": [],
+      "naturaleza_defecto": null,
+      "contenido": "correcto",
+      "original_sha256": "659c21ec6bac4d8d43e189913ad59e20b4df5ae583deae195f8bf23073c95a8e",
+      "explicacion_limite": null,
+      "alerta_limite": false,
+      "valor": "0",
+      "caso": "P05",
+      "fundamento": "Conserva 1200–1300 casos nuevos al año, referidos a Estados Unidos.",
+      "cita_limite": null,
+      "etapa": 0
+    },
+    {
+      "observaciones_revision": [],
+      "naturaleza_defecto": null,
+      "contenido": "correcto",
+      "original_sha256": "181c7d21b170790ac9d16461c0adaa7463d12a75586e8cbfb8b33a5b43da6569",
+      "explicacion_limite": null,
+      "alerta_limite": false,
+      "valor": "0",
+      "caso": "P05",
+      "fundamento": "Conserva 1200–1300 casos nuevos al año, referidos a Estados Unidos.",
+      "cita_limite": null,
+      "etapa": 1
+    },
+    {
+      "observaciones_revision": [],
+      "naturaleza_defecto": null,
+      "contenido": "correcto",
+      "original_sha256": "b258ff417883a6304b31bcc8bc0d0b606925dffe57ef55f3846e2e4c1320da22",
+      "explicacion_limite": null,
+      "alerta_limite": false,
+      "valor": "0",
+      "caso": "P05",
+      "fundamento": "Conserva 1200–1300 casos nuevos al año, referidos a Estados Unidos.",
+      "cita_limite": null,
+      "etapa": 2
+    },
+    {
+      "observaciones_revision": [],
+      "naturaleza_defecto": null,
+      "contenido": "correcto",
+      "original_sha256": "bff5cbb950f8c6bea6f37ffa517f73cae5c39b76bcfb79f10204ee06d2044a30",
+      "explicacion_limite": null,
+      "alerta_limite": false,
+      "valor": "0",
+      "caso": "P06",
+      "fundamento": "Distingue la característica BRAF V600E de la forma clásica y la ausencia de mutaciones BRAF descrita para la variante; rechaza trasladarla automáticamente.",
+      "cita_limite": null,
+      "etapa": 0
+    },
+    {
+      "observaciones_revision": [],
+      "naturaleza_defecto": null,
+      "contenido": "correcto",
+      "original_sha256": "68ff454c0135d8cf8eeba00dbcdb50cc4b81a1c7679fd80726da9707c072519b",
+      "explicacion_limite": null,
+      "alerta_limite": false,
+      "valor": "0",
+      "caso": "P06",
+      "fundamento": "Distingue la característica BRAF V600E de la forma clásica y la ausencia de mutaciones BRAF descrita para la variante; rechaza trasladarla automáticamente.",
+      "cita_limite": null,
+      "etapa": 1
+    },
+    {
+      "observaciones_revision": [],
+      "naturaleza_defecto": null,
+      "contenido": "correcto",
+      "original_sha256": "5e4b92bac26a6dbc06a914189f3aadca09f1c5be79db69cd81c25db7af5403e2",
+      "explicacion_limite": null,
+      "alerta_limite": false,
+      "valor": "0",
+      "caso": "P06",
+      "fundamento": "Distingue la característica BRAF V600E de la forma clásica y la ausencia de mutaciones BRAF descrita para la variante; rechaza trasladarla automáticamente.",
+      "cita_limite": null,
+      "etapa": 2
+    },
+    {
+      "observaciones_revision": [],
+      "naturaleza_defecto": null,
+      "contenido": "correcto",
+      "original_sha256": "b0ee09bbb52b73957fc458daee4a11b6f5097caf4babecb238ca61298ec81496",
+      "explicacion_limite": null,
+      "alerta_limite": false,
+      "valor": "0",
+      "caso": "P07",
+      "fundamento": "La fibrosis puede dificultar la aspiración sin excluir la enfermedad. Recupera citometría de flujo y la eventual biopsia. La vía alternativa es una deducción contextual, no una especificación del tipo de muestra.",
+      "cita_limite": null,
+      "etapa": 0
+    },
+    {
+      "observaciones_revision": [],
+      "naturaleza_defecto": null,
+      "contenido": "correcto",
+      "original_sha256": "f57e2eed5ae3f41ef956370103f4131720a755c2f9cd21d097a07cbf452c3f31",
+      "explicacion_limite": null,
+      "alerta_limite": false,
+      "valor": "0",
+      "caso": "P07",
+      "fundamento": "La fibrosis puede dificultar la aspiración sin excluir la enfermedad. Recupera citometría de flujo y la eventual biopsia. La vía alternativa es una deducción contextual, no una especificación del tipo de muestra.",
+      "cita_limite": null,
+      "etapa": 1
+    },
+    {
+      "observaciones_revision": [],
+      "naturaleza_defecto": null,
+      "contenido": "correcto",
+      "original_sha256": "ccfe18bd91cbcd2b047df99e4761aa8cd5f2378ee711e63768a1cbd792d82c58",
+      "explicacion_limite": null,
+      "alerta_limite": false,
+      "valor": "0",
+      "caso": "P07",
+      "fundamento": "La fibrosis puede dificultar la aspiración sin excluir la enfermedad. Recupera citometría de flujo y la eventual biopsia. La vía alternativa es una deducción contextual, no una especificación del tipo de muestra.",
+      "cita_limite": null,
+      "etapa": 2
+    },
+    {
+      "observaciones_revision": [],
+      "naturaleza_defecto": null,
+      "contenido": "correcto",
+      "original_sha256": "70a5268e5452e6abe7eb2ccae9f55a3cf6c8d8c98e6cc09934684200b3fa000c",
+      "explicacion_limite": null,
+      "alerta_limite": false,
+      "valor": "0",
+      "caso": "P08",
+      "fundamento": "Recupera la advertencia de evitar análogos de purina en infección activa, aplicable a cladribina y pentostatina; no propone sustituto ni dosis.",
+      "cita_limite": null,
+      "etapa": 0
+    },
+    {
+      "observaciones_revision": [],
+      "naturaleza_defecto": null,
+      "contenido": "correcto",
+      "original_sha256": "4fa6fc230f6c8f2403599200bf96ff1d43a74b8bbd9eef1e80a4cfed0a5ac2f2",
+      "explicacion_limite": null,
+      "alerta_limite": false,
+      "valor": "0",
+      "caso": "P08",
+      "fundamento": "Recupera la advertencia de evitar análogos de purina en infección activa, aplicable a cladribina y pentostatina; no propone sustituto ni dosis.",
+      "cita_limite": null,
+      "etapa": 1
+    },
+    {
+      "observaciones_revision": [],
+      "naturaleza_defecto": null,
+      "contenido": "correcto",
+      "original_sha256": "d090e34d8048c046c769790112956b2d6a32ac8ea651b4bfff60b40ce38a2fae",
+      "explicacion_limite": null,
+      "alerta_limite": false,
+      "valor": "0",
+      "caso": "P08",
+      "fundamento": "Recupera la advertencia de evitar análogos de purina en infección activa, aplicable a cladribina y pentostatina; no propone sustituto ni dosis.",
+      "cita_limite": null,
+      "etapa": 2
+    },
+    {
+      "observaciones_revision": [],
+      "naturaleza_defecto": null,
+      "contenido": "correcto",
+      "original_sha256": "f256a67395df1de8b9a3b3fb26713368952c052fbb9c1ee5ad0ca4ef6eaffcab",
+      "explicacion_limite": null,
+      "alerta_limite": false,
+      "valor": "0",
+      "caso": "P09",
+      "fundamento": "Conserva la restricción ante insuficiencia renal o hepática moderada o grave, sin inventar excepción ni ajuste posológico.",
+      "cita_limite": null,
+      "etapa": 0
+    },
+    {
+      "observaciones_revision": [],
+      "naturaleza_defecto": null,
+      "contenido": "correcto",
+      "original_sha256": "51d6b4e903987390933e97aa70ddc4b38434ed1dd25926c44a71bc1dca4ad81c",
+      "explicacion_limite": null,
+      "alerta_limite": false,
+      "valor": "0",
+      "caso": "P09",
+      "fundamento": "Conserva la restricción ante insuficiencia renal o hepática moderada o grave, sin inventar excepción ni ajuste posológico.",
+      "cita_limite": null,
+      "etapa": 1
+    },
+    {
+      "observaciones_revision": [],
+      "naturaleza_defecto": null,
+      "contenido": "correcto",
+      "original_sha256": "d29250e84f27567c41818fb05e6df872d2d85923635227b6785476547362e081",
+      "explicacion_limite": null,
+      "alerta_limite": false,
+      "valor": "0",
+      "caso": "P09",
+      "fundamento": "Conserva la restricción ante insuficiencia renal o hepática moderada o grave, sin inventar excepción ni ajuste posológico.",
+      "cita_limite": null,
+      "etapa": 2
+    },
+    {
+      "observaciones_revision": [],
+      "naturaleza_defecto": null,
+      "contenido": "correcto",
+      "original_sha256": "33cfc28512fd2b666eb84290c446a7337bf532bf0f85dddcf62ba6f8e6a6c476",
+      "explicacion_limite": null,
+      "alerta_limite": false,
+      "valor": "0",
+      "caso": "P10",
+      "fundamento": "Identifica el 10 % de los pacientes con la enfermedad como proporción de la variante, sin confundirlo con incidencia poblacional.",
+      "cita_limite": null,
+      "etapa": 0
+    },
+    {
+      "observaciones_revision": [],
+      "naturaleza_defecto": null,
+      "contenido": "correcto",
+      "original_sha256": "50d693d4736eebba97f85d863ff4ae9451eaaf20c2186a4e957fed3e876e6c39",
+      "explicacion_limite": null,
+      "alerta_limite": false,
+      "valor": "0",
+      "caso": "P10",
+      "fundamento": "Identifica el 10 % de los pacientes con la enfermedad como proporción de la variante, sin confundirlo con incidencia poblacional.",
+      "cita_limite": null,
+      "etapa": 1
+    },
+    {
+      "observaciones_revision": [],
+      "naturaleza_defecto": null,
+      "contenido": "correcto",
+      "original_sha256": "d98d6723e32041f2f90b9c6c513934c4cbc3eda93568ca8767e8b1f3475c5c3e",
+      "explicacion_limite": null,
+      "alerta_limite": false,
+      "valor": "0",
+      "caso": "P10",
+      "fundamento": "Identifica el 10 % de los pacientes con la enfermedad como proporción de la variante, sin confundirlo con incidencia poblacional.",
+      "cita_limite": null,
+      "etapa": 2
+    },
+    {
+      "observaciones_revision": [
+        "No utilizar «activa la indicación» o «elimina la condición de posibilidad» como orden individual: la respuesta es documental. Su carácter categórico se registra para recepción competente; no se inventa una pauta ausente."
+      ],
+      "naturaleza_defecto": null,
+      "contenido": "correcto",
+      "original_sha256": "a4d0da25ec34bec964baa8498d894cc93b9ec60c0f0b04c5cb896a1d667995a5",
+      "explicacion_limite": null,
+      "alerta_limite": false,
+      "valor": "0",
+      "caso": "P11",
+      "fundamento": "Reconoce citopenias sintomáticas y empeoramiento de esplenomegalia como signos que fundamentan considerar tratamiento; identifica otras complicaciones, a menudo infecciosas. No elige fármaco ni pauta individual. Su afirmación categórica sobre abandonar observación exige cautela: la fuente fundamenta la decisión, sin fijar umbrales ni un automatismo terapéutico.",
+      "cita_limite": null,
+      "etapa": 0
+    },
+    {
+      "observaciones_revision": [
+        "No utilizar «activa la indicación» o «elimina la condición de posibilidad» como orden individual: la respuesta es documental. Su carácter categórico se registra para recepción competente; no se inventa una pauta ausente."
+      ],
+      "naturaleza_defecto": null,
+      "contenido": "correcto",
+      "original_sha256": "c7ad1261a570d158acf1634c5ca8293fa1b412fea916332b0693c348eed9d4b4",
+      "explicacion_limite": null,
+      "alerta_limite": false,
+      "valor": "0",
+      "caso": "P11",
+      "fundamento": "Reconoce citopenias sintomáticas y empeoramiento de esplenomegalia como signos que fundamentan considerar tratamiento; identifica otras complicaciones, a menudo infecciosas. No elige fármaco ni pauta individual. Su afirmación categórica sobre abandonar observación exige cautela: la fuente fundamenta la decisión, sin fijar umbrales ni un automatismo terapéutico.",
+      "cita_limite": null,
+      "etapa": 1
+    },
+    {
+      "observaciones_revision": [
+        "No utilizar «activa la indicación» o «elimina la condición de posibilidad» como orden individual: la respuesta es documental. Su carácter categórico se registra para recepción competente; no se inventa una pauta ausente."
+      ],
+      "naturaleza_defecto": null,
+      "contenido": "correcto",
+      "original_sha256": "c8d4794ffed130fbad036eee78e0fe8b28a56b7ed0b553b6f11422002a8036fb",
+      "explicacion_limite": null,
+      "alerta_limite": false,
+      "valor": "0",
+      "caso": "P11",
+      "fundamento": "Reconoce citopenias sintomáticas y empeoramiento de esplenomegalia como signos que fundamentan considerar tratamiento; identifica otras complicaciones, a menudo infecciosas. No elige fármaco ni pauta individual. Su afirmación categórica sobre abandonar observación exige cautela: la fuente fundamenta la decisión, sin fijar umbrales ni un automatismo terapéutico.",
+      "cita_limite": null,
+      "etapa": 2
+    },
+    {
+      "observaciones_revision": [
+        "La normalización diagnóstica no modifica las respuestas, las auditorías ni el criterio de admisión.",
+        "Además existe un límite documental contrastado sobre la utilidad decisional de ERC. La posición tiene 1 por literalidad formal; no se presenta como un 0 que acredite una regla terapéutica ausente."
+      ],
+      "naturaleza_defecto": "Incumplimiento de literalidad formal por omisión de marcadores de cursiva o lista; no error médico demostrado.",
+      "contenido": "correcto",
+      "original_sha256": "d74713889a47d758638514aa2cee0271e68888008aa8bf4f0e920e2ffa95422d",
+      "explicacion_limite": null,
+      "alerta_limite": false,
+      "valor": "1",
+      "caso": "P12",
+      "fundamento": "Distingue medición de profundidad de remisión y decisión terapéutica. Reconoce que la utilidad de ERC para modificar elecciones no está clara y requiere evaluaciones. La auditoría literal rechaza la cita. El diagnóstico Rust confirma coincidencia tras retirar sólo asteriscos; el contenido y sus localizadores se mantienen. Se conserva el contrato original y se declara reserva metodológica por sensibilidad a marcación.",
+      "cita_limite": null,
+      "etapa": 0
+    },
+    {
+      "observaciones_revision": [
+        "La normalización diagnóstica no modifica las respuestas, las auditorías ni el criterio de admisión.",
+        "Además existe un límite documental contrastado sobre la utilidad decisional de ERC. La posición tiene 1 por literalidad formal; no se presenta como un 0 que acredite una regla terapéutica ausente."
+      ],
+      "naturaleza_defecto": "Incumplimiento de literalidad formal por omisión de marcadores de cursiva o lista; no error médico demostrado.",
+      "contenido": "correcto",
+      "original_sha256": "89f32ebb4060fa778913531823429f48277ce94e70a5ea3ff7d0e62e8be096b0",
+      "explicacion_limite": null,
+      "alerta_limite": false,
+      "valor": "1",
+      "caso": "P12",
+      "fundamento": "Distingue medición de profundidad de remisión y decisión terapéutica. Reconoce que la utilidad de ERC para modificar elecciones no está clara y requiere evaluaciones. La auditoría literal rechaza la cita. El diagnóstico Rust confirma coincidencia tras retirar sólo asteriscos; el contenido y sus localizadores se mantienen. Se conserva el contrato original y se declara reserva metodológica por sensibilidad a marcación.",
+      "cita_limite": null,
+      "etapa": 1
+    },
+    {
+      "observaciones_revision": [
+        "La normalización diagnóstica no modifica las respuestas, las auditorías ni el criterio de admisión.",
+        "Además existe un límite documental contrastado sobre la utilidad decisional de ERC. La posición tiene 1 por literalidad formal; no se presenta como un 0 que acredite una regla terapéutica ausente."
+      ],
+      "naturaleza_defecto": "Incumplimiento de literalidad formal por omisión de marcadores de cursiva o lista; no error médico demostrado.",
+      "contenido": "correcto",
+      "original_sha256": "d6a931a0237283f67f3782c9f5ab27ac30c289b270de7ca1aa4a5093bb6c0c7a",
+      "explicacion_limite": null,
+      "alerta_limite": false,
+      "valor": "1",
+      "caso": "P12",
+      "fundamento": "Distingue medición de profundidad de remisión y decisión terapéutica. Reconoce que la utilidad de ERC para modificar elecciones no está clara y requiere evaluaciones. La auditoría literal rechaza la cita. El diagnóstico Rust confirma coincidencia tras retirar sólo asteriscos; el contenido y sus localizadores se mantienen. Se conserva el contrato original y se declara reserva metodológica por sensibilidad a marcación.",
+      "cita_limite": null,
+      "etapa": 2
+    },
+    {
+      "observaciones_revision": [
+        "Reserva interpretativa: «indicar» admite lectura prescriptiva, adoptada por el candidato. La adjudicación aplica la prohibición a toda la entrega; requiere recepción competente y no autoriza afirmar incompetencia médica."
+      ],
+      "naturaleza_defecto": "Incumplimiento de la prohibición de nombrar una técnica en la entrega; núcleo documental correcto.",
+      "contenido": "correcto",
+      "original_sha256": "954d2a23103e0070bd0561bf33573806a790fdaf834002de140e4c3c6eacfd91",
+      "explicacion_limite": null,
+      "alerta_limite": false,
+      "valor": "1",
+      "caso": "P13",
+      "fundamento": "Exige comprobación individual de BRAF y no la sustituye por prevalencia. Sin embargo, incluye el nombre de una técnica en la cita pese a la prohibición del enunciado; R0 también lo incluye en insuficiencias. R1 y R2 añaden una excepción para citas o contenido no prescriptivo que el enunciado no establece. Era posible citar sólo «este estado se debe comprobar». Se valora incumplimiento de entrega, no error sobre BRAF.",
+      "cita_limite": null,
+      "etapa": 0
+    },
+    {
+      "observaciones_revision": [
+        "Reserva interpretativa: «indicar» admite lectura prescriptiva, adoptada por el candidato. La adjudicación aplica la prohibición a toda la entrega; requiere recepción competente y no autoriza afirmar incompetencia médica."
+      ],
+      "naturaleza_defecto": "Incumplimiento de la prohibición de nombrar una técnica en la entrega; núcleo documental correcto.",
+      "contenido": "correcto",
+      "original_sha256": "8547ac1607b6e30f875662bfb1095f123ffdd2f8d7741afb64715374eb44b8dc",
+      "explicacion_limite": null,
+      "alerta_limite": false,
+      "valor": "1",
+      "caso": "P13",
+      "fundamento": "Exige comprobación individual de BRAF y no la sustituye por prevalencia. Sin embargo, incluye el nombre de una técnica en la cita pese a la prohibición del enunciado; R0 también lo incluye en insuficiencias. R1 y R2 añaden una excepción para citas o contenido no prescriptivo que el enunciado no establece. Era posible citar sólo «este estado se debe comprobar». Se valora incumplimiento de entrega, no error sobre BRAF.",
+      "cita_limite": null,
+      "etapa": 1
+    },
+    {
+      "observaciones_revision": [
+        "Reserva interpretativa: «indicar» admite lectura prescriptiva, adoptada por el candidato. La adjudicación aplica la prohibición a toda la entrega; requiere recepción competente y no autoriza afirmar incompetencia médica."
+      ],
+      "naturaleza_defecto": "Incumplimiento de la prohibición de nombrar una técnica en la entrega; núcleo documental correcto.",
+      "contenido": "correcto",
+      "original_sha256": "4f937ffc4616450c3b13b4f1b694ca750d7487fa4ed604cfaae6779b7710ec80",
+      "explicacion_limite": null,
+      "alerta_limite": false,
+      "valor": "1",
+      "caso": "P13",
+      "fundamento": "Exige comprobación individual de BRAF y no la sustituye por prevalencia. Sin embargo, incluye el nombre de una técnica en la cita pese a la prohibición del enunciado; R0 también lo incluye en insuficiencias. R1 y R2 añaden una excepción para citas o contenido no prescriptivo que el enunciado no establece. Era posible citar sólo «este estado se debe comprobar». Se valora incumplimiento de entrega, no error sobre BRAF.",
+      "cita_limite": null,
+      "etapa": 2
+    },
+    {
+      "observaciones_revision": [],
+      "naturaleza_defecto": null,
+      "contenido": "correcto",
+      "original_sha256": "fd1a2e20f983304d0efdee51ab28a2f6211854ccd0155529740ed2f28275d8c4",
+      "explicacion_limite": null,
+      "alerta_limite": false,
+      "valor": "0",
+      "caso": "P14",
+      "fundamento": "Rechaza declarar inútil repetir un análogo por su uso previo y conserva respuesta frecuente, especialmente tras varios años. No garantiza resultado individual; distingue las restricciones expresas.",
+      "cita_limite": null,
+      "etapa": 0
+    },
+    {
+      "observaciones_revision": [],
+      "naturaleza_defecto": null,
+      "contenido": "correcto",
+      "original_sha256": "d61c93855266d0f69223b6ad97c2a1da1dfcdea9ae0f3f09b1a80b7d0e77be5a",
+      "explicacion_limite": null,
+      "alerta_limite": false,
+      "valor": "0",
+      "caso": "P14",
+      "fundamento": "Rechaza declarar inútil repetir un análogo por su uso previo y conserva respuesta frecuente, especialmente tras varios años. No garantiza resultado individual; distingue las restricciones expresas.",
+      "cita_limite": null,
+      "etapa": 1
+    },
+    {
+      "observaciones_revision": [],
+      "naturaleza_defecto": null,
+      "contenido": "correcto",
+      "original_sha256": "bca77ad97f02c0ebfd6c60ed77282c3225f2b4bfd4f37087199c5d2a37909289",
+      "explicacion_limite": null,
+      "alerta_limite": false,
+      "valor": "0",
+      "caso": "P14",
+      "fundamento": "Rechaza declarar inútil repetir un análogo por su uso previo y conserva respuesta frecuente, especialmente tras varios años. No garantiza resultado individual; distingue las restricciones expresas.",
+      "cita_limite": null,
+      "etapa": 2
+    },
+    {
+      "observaciones_revision": [
+        "La normalización diagnóstica no modifica las respuestas, las auditorías ni el criterio de admisión."
+      ],
+      "naturaleza_defecto": "Incumplimiento de literalidad formal por omisión de marcadores de cursiva o lista; no error médico demostrado.",
+      "contenido": "correcto",
+      "original_sha256": "9be97713ca25b5c2fcd8f15abc52b61242f9397c5b812a7b97ddab638ca365c5",
+      "explicacion_limite": null,
+      "alerta_limite": false,
+      "valor": "1",
+      "caso": "P15",
+      "fundamento": "Recupera citometría y aspiración/biopsia como opciones diagnósticas, sin universalizar su obligatoriedad. La auditoría literal rechaza la cita. El diagnóstico Rust confirma coincidencia tras retirar sólo asteriscos; el contenido y sus localizadores se mantienen. Se conserva el contrato original y se declara reserva metodológica por sensibilidad a marcación.",
+      "cita_limite": null,
+      "etapa": 0
+    },
+    {
+      "observaciones_revision": [
+        "La normalización diagnóstica no modifica las respuestas, las auditorías ni el criterio de admisión."
+      ],
+      "naturaleza_defecto": "Incumplimiento de literalidad formal por omisión de marcadores de cursiva o lista; no error médico demostrado.",
+      "contenido": "correcto",
+      "original_sha256": "be6ba2a60783b6e7b45b062a62202c845eef3fe6f2acac14f837956ac95fd5db",
+      "explicacion_limite": null,
+      "alerta_limite": false,
+      "valor": "1",
+      "caso": "P15",
+      "fundamento": "Recupera citometría y aspiración/biopsia como opciones diagnósticas, sin universalizar su obligatoriedad. La auditoría literal rechaza la cita. El diagnóstico Rust confirma coincidencia tras retirar sólo asteriscos; el contenido y sus localizadores se mantienen. Se conserva el contrato original y se declara reserva metodológica por sensibilidad a marcación.",
+      "cita_limite": null,
+      "etapa": 1
+    },
+    {
+      "observaciones_revision": [
+        "La normalización diagnóstica no modifica las respuestas, las auditorías ni el criterio de admisión."
+      ],
+      "naturaleza_defecto": "Incumplimiento de literalidad formal por omisión de marcadores de cursiva o lista; no error médico demostrado.",
+      "contenido": "correcto",
+      "original_sha256": "fdc81be5a4202ed263702f1f3fb17456c64c9c504da2ccdb7c617c8dc4ed5f10",
+      "explicacion_limite": null,
+      "alerta_limite": false,
+      "valor": "1",
+      "caso": "P15",
+      "fundamento": "Recupera citometría y aspiración/biopsia como opciones diagnósticas, sin universalizar su obligatoriedad. La auditoría literal rechaza la cita. El diagnóstico Rust confirma coincidencia tras retirar sólo asteriscos; el contenido y sus localizadores se mantienen. Se conserva el contrato original y se declara reserva metodológica por sensibilidad a marcación.",
+      "cita_limite": null,
+      "etapa": 2
+    },
+    {
+      "observaciones_revision": [
+        "«Incurabilidad» no debe convertir «casi nunca» en «nunca»; la respuesta principal conserva el matiz de la fuente."
+      ],
+      "naturaleza_defecto": null,
+      "contenido": "correcto",
+      "original_sha256": "277c22026d2483a1c35ac27ff00489e6529f68523f5d7399c8347b671837781a",
+      "explicacion_limite": null,
+      "alerta_limite": false,
+      "valor": "0",
+      "caso": "P16",
+      "fundamento": "Distingue respuesta general 100 %, remisión completa 50 % y curación; no transforma ambas tasas en curación de todos. El enunciado «casi nunca se cura» y las métricas sustentan la distinción. Las definiciones desarrolladas se reconocen como interpretación, no glosario literal.",
+      "cita_limite": null,
+      "etapa": 0
+    },
+    {
+      "observaciones_revision": [
+        "«Incurabilidad» no debe convertir «casi nunca» en «nunca»; la respuesta principal conserva el matiz de la fuente."
+      ],
+      "naturaleza_defecto": null,
+      "contenido": "correcto",
+      "original_sha256": "ef49b94aa87c6cd1a224ba20b4e8b4ba1242df4ac629a8f19f26103c9b2dd563",
+      "explicacion_limite": null,
+      "alerta_limite": false,
+      "valor": "0",
+      "caso": "P16",
+      "fundamento": "Distingue respuesta general 100 %, remisión completa 50 % y curación; no transforma ambas tasas en curación de todos. El enunciado «casi nunca se cura» y las métricas sustentan la distinción. Las definiciones desarrolladas se reconocen como interpretación, no glosario literal.",
+      "cita_limite": null,
+      "etapa": 1
+    },
+    {
+      "observaciones_revision": [
+        "«Incurabilidad» no debe convertir «casi nunca» en «nunca»; la respuesta principal conserva el matiz de la fuente."
+      ],
+      "naturaleza_defecto": null,
+      "contenido": "correcto",
+      "original_sha256": "d7ff48559dcc3cfbd25258f823bc365e2065764591656253924c774e726dbc61",
+      "explicacion_limite": null,
+      "alerta_limite": false,
+      "valor": "0",
+      "caso": "P16",
+      "fundamento": "Distingue respuesta general 100 %, remisión completa 50 % y curación; no transforma ambas tasas en curación de todos. El enunciado «casi nunca se cura» y las métricas sustentan la distinción. Las definiciones desarrolladas se reconocen como interpretación, no glosario literal.",
+      "cita_limite": null,
+      "etapa": 2
+    }
+  ],
+  "reserva_metodologica": "Dictamen del contrato documental, bajo reserva metodológica: algunas citas conservan contenido pero omiten asteriscos; P13 conserva el núcleo correcto y discute el alcance de la prohibición de nombrar una técnica. No se demuestra incompetencia clínica. Revisión exterior asistida por IA; recepción científica independiente pendiente. El contrato se redujo durante la ejecución a las primeras 16 preguntas, sin selección por calificaciones.",
+  "clave_sha256": "9ffde6937234bed15afa9d154c5cc3f3ca40b1926540fbc12d95aa5e1cbf1dec",
+  "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0)."
+}

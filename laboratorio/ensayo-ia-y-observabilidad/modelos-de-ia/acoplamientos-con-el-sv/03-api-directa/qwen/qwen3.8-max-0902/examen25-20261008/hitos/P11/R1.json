@@ -1,0 +1,217 @@
+{
+  "alerta_limite": false,
+  "auditoria_sha256": "78c207f642504f272f4851af0e9c5bd38374f80cb1d0abe6527ffacb0769658f",
+  "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+  "caso": "P11",
+  "critico": true,
+  "estado_documental_candidato": "respuesta_fundada",
+  "etapa": 1,
+  "final_sha256": "c7ad1261a570d158acf1634c5ca8293fa1b412fea916332b0693c348eed9d4b4",
+  "formal_conforme": true,
+  "fundamento_sustantivo": "Reconoce citopenias sintomáticas y empeoramiento de esplenomegalia como signos que fundamentan considerar tratamiento; identifica otras complicaciones, a menudo infecciosas. No elige fármaco ni pauta individual. Su afirmación categórica sobre abandonar observación exige cautela: la fuente fundamenta la decisión, sin fijar umbrales ni un automatismo terapéutico.",
+  "limite_documental": null,
+  "medicion": {
+    "alcance": "Medición local del cliente; no recursos internos del proveedor. Contadores de caché y razonamiento incluidos, sin sumarlos dos veces.",
+    "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+    "bytes_sse": 188662,
+    "caso": "P11",
+    "completa": true,
+    "cpu_delta_ms": 4344,
+    "duracion_ms": 51946,
+    "duracion_operacion_ms": 53025,
+    "etapa": 1,
+    "eventos_sse": 565,
+    "fallos_medicion": 0,
+    "final_sha256": "c7ad1261a570d158acf1634c5ca8293fa1b412fea916332b0693c348eed9d4b4",
+    "formal_conforme": true,
+    "intento": 32,
+    "intervalo_maximo_ms": 288,
+    "io_escritura_delta_bytes": 961781,
+    "io_lectura_delta_bytes": 0,
+    "memoria_virtual_maxima_bytes": 11382784,
+    "muestras": 194,
+    "observaciones_udp": 0,
+    "primer_texto_ms": 32045,
+    "proveedor": "Alibaba Cloud",
+    "restricciones_declaradas": {
+      "alcance": "Campos ausentes no equivalen a cero ni a infraestructura inspeccionada.",
+      "num_server_side_tools_used": null,
+      "num_sources_used": null,
+      "store": false,
+      "tool_choice": "none",
+      "tools": [],
+      "zdr_confirmado": false
+    },
+    "resultado": {
+      "bytes": 21755,
+      "sha256": "ce0d70fa416bfd03877946b27b035a11b40a470cc494bb201786607926cbae16"
+    },
+    "rss_maximo_bytes": 24358912,
+    "solicitud": {
+      "bytes": 66438,
+      "sha256": "8d0805dc70ed233ddb25868196cd56d24a47312475ed1bb43d9e43ba11afbf14"
+    },
+    "sse_sha256": "3f287e548e673db6b6e85e3fb0186ead085ce8c18a94f5667665946d61aa7838",
+    "tcp_estados": [
+      "Established",
+      "FinWait1",
+      "SynSent"
+    ],
+    "tcp_maximo_simultaneo": 1,
+    "telemetria_conforme": true,
+    "telemetria_sha256": "250c027942d11b4a2010f82cd7eb1d6e470022623670cd37e172bcfe2441f0b9",
+    "tokens_cache": 1024,
+    "tokens_entrada": 21369,
+    "tokens_razonamiento": 1188,
+    "tokens_salida": 2033,
+    "tokens_totales": 23402,
+    "uso_proveedor": {
+      "input_tokens": 21369,
+      "input_tokens_details": {
+        "cached_tokens": 1024
+      },
+      "output_tokens": 2033,
+      "output_tokens_details": {
+        "reasoning_tokens": 1188
+      },
+      "total_tokens": 23402,
+      "x_details": [
+        {
+          "input_tokens": 21369,
+          "output_tokens": 2033,
+          "output_tokens_details": {
+            "reasoning_tokens": 1188
+          },
+          "prompt_tokens_details": {
+            "cached_tokens": 1024
+          },
+          "total_tokens": 23402,
+          "x_billing_type": "response_api"
+        }
+      ]
+    }
+  },
+  "naturaleza_defecto": null,
+  "observaciones_revision": [
+    "No utilizar «activa la indicación» o «elimina la condición de posibilidad» como orden individual: la respuesta es documental. Su carácter categórico se registra para recepción competente; no se inventa una pauta ausente."
+  ],
+  "pasajes_contrastados": [
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "La decisión de tratar se fundamenta en los siguientes signos de progresión de la enfermedad:",
+      "pagina": 0,
+      "seccion": "_13"
+    },
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "Citopenias (en especial, si son sintomáticas).",
+      "pagina": 0,
+      "seccion": "_13"
+    },
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "Empeoramiento de la esplenomegalia.",
+      "pagina": 0,
+      "seccion": "_13"
+    },
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "Presencia de otras complicaciones, a menudo infecciosas.",
+      "pagina": 0,
+      "seccion": "_13"
+    },
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "Si el paciente es asintomático y los recuentos sanguíneos se mantienen dentro de los límites aceptables, quizás el tratamiento no sea necesario.",
+      "pagina": 0,
+      "seccion": "_13"
+    },
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "Observación cautelosa, cuando sea posible.",
+      "pagina": 0,
+      "seccion": "_13"
+    }
+  ],
+  "recepcion_independiente": "pendiente",
+  "respuesta_original": "{\"caso\":\"P11\",\"estado_documental\":\"respuesta_fundada\",\"etapa\":1,\"evidencias\":[{\"cita_literal_breve\":\"La decisión de tratar se fundamenta en los siguientes signos de progresión de la enfermedad:\",\"documento\":\"pdq-nci-hcl-es\",\"fragmentos\":[0],\"seccion\":\"_13\"},{\"cita_literal_breve\":\"Citopenias (en especial, si son sintomáticas).\",\"documento\":\"pdq-nci-hcl-es\",\"fragmentos\":[0],\"seccion\":\"_13\"},{\"cita_literal_breve\":\"Empeoramiento de la esplenomegalia.\",\"documento\":\"pdq-nci-hcl-es\",\"fragmentos\":[0],\"seccion\":\"_13\"},{\"cita_literal_breve\":\"Presencia de otras complicaciones, a menudo infecciosas.\",\"documento\":\"pdq-nci-hcl-es\",\"fragmentos\":[0],\"seccion\":\"_13\"},{\"cita_literal_breve\":\"Si el paciente es asintomático y los recuentos sanguíneos se mantienen dentro de los límites aceptables, quizás el tratamiento no sea necesario.\",\"documento\":\"pdq-nci-hcl-es\",\"fragmentos\":[0],\"seccion\":\"_13\"},{\"cita_literal_breve\":\"Observación cautelosa, cuando sea posible.\",\"documento\":\"pdq-nci-hcl-es\",\"fragmentos\":[0],\"seccion\":\"_13\"}],\"fundamentos_verificables\":[\"La fuente enumera tres signos de progresión que fundamentan la decisión de tratar: citopenias sintomáticas, empeoramiento de la esplenomegalia y otras complicaciones a menudo infecciosas. El caso sintético presenta los dos primeros, lo que activa la indicación de tratamiento.\",\"La observación cautelosa se lista como primera opción terapéutica, pero condicionada a «cuando sea posible», y el texto añade que si el paciente es asintomático con recuentos aceptables, «quizás el tratamiento no sea necesario». La aparición de signos de progresión elimina esa condición.\",\"La tercera clase de complicaciones es literalmente la «Presencia de otras complicaciones, a menudo infecciosas», tercer punto de la lista de signos de progresión.\",\"Deducción: el paso de observación a tratamiento se justifica porque los signos presentes coinciden con los criterios explícitos de progresión que la fuente establece como fundamento para tratar. Premisa: la lista es exhaustiva dentro del documento; límite: no se especifican umbrales cuantitativos.\"],\"insuficiencias\":[\"La fuente no cuantifica el grado de citopenia ni de esplenomegalia que obliga al cambio; solo los enuncia cualitativamente como signos de progresión.\",\"No se detalla en la sección suministrada un protocolo concreto de transición entre observación y tratamiento activo más allá de la enumeración de opciones.\"],\"respuesta\":\"En el caso sintético, la observación deja de ser apropiada: las citopenias sintomáticas y el empeoramiento de la esplenomegalia son dos de los tres signos de progresión que, según la fuente, fundamentan la decisión de tratar. Para el paciente asintomático con recuentos aceptables, «quizás el tratamiento no sea necesario»; la observación se mantiene solo «cuando sea posible». La tercera clase mencionada es la «Presencia de otras complicaciones, a menudo infecciosas».\",\"revision\":\"Se mantiene la respuesta de la etapa 0 en su contenido esencial. Se añade como evidencia complementaria la mención «Observación cautelosa, cuando sea posible» (fragmento 0), que refuerza el carácter condicional de la observación. Se verifica que todas las citas son cadenas continuas exactas del texto fuente y que la deducción (paso de observación a tratamiento) se apoya en la estructura explícita de la lista de signos de progresión. No se detecta error ni omisión relevante en la entrega anterior; se conserva el estado respuesta_fundada.\"}",
+  "revision_citas": {
+    "citas": [
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "La decisión de tratar se fundamenta en los siguientes signos de progresión de la enfermedad:"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "Citopenias (en especial, si son sintomáticas)."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "Empeoramiento de la esplenomegalia."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "Presencia de otras complicaciones, a menudo infecciosas."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "Si el paciente es asintomático y los recuentos sanguíneos se mantienen dentro de los límites aceptables, quizás el tratamiento no sea necesario."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "Observación cautelosa, cuando sea posible."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "solicitud_sha256": "8d0805dc70ed233ddb25868196cd56d24a47312475ed1bb43d9e43ba11afbf14",
+  "sustantivo": "correcto",
+  "valor": "0"
+}

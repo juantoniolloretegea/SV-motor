@@ -1,0 +1,179 @@
+{
+  "alerta_limite": false,
+  "auditoria_sha256": "9afbc3e557dbe11fe1109b1a030088c8601f4f25f548e47b60adfd77825e43bd",
+  "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+  "caso": "P01",
+  "critico": true,
+  "estado_documental_candidato": "respuesta_fundada",
+  "etapa": 0,
+  "final_sha256": "17262035b2cc7212f6ad3b4fa19516ae116f472218443523b59e6e0a87012768",
+  "formal_conforme": true,
+  "fundamento_sustantivo": "Identifica neoplasia maligna linfoide B, grado bajo y crecimiento lento. Las características adicionales pertenecen a la sección suministrada.",
+  "limite_documental": null,
+  "medicion": {
+    "alcance": "Medición local del cliente; no recursos internos del proveedor. Contadores de caché y razonamiento incluidos, sin sumarlos dos veces.",
+    "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+    "bytes_sse": 106627,
+    "caso": "P01",
+    "completa": true,
+    "cpu_delta_ms": 2328,
+    "duracion_ms": 27159,
+    "duracion_operacion_ms": 28226,
+    "etapa": 0,
+    "eventos_sse": 296,
+    "fallos_medicion": 0,
+    "final_sha256": "17262035b2cc7212f6ad3b4fa19516ae116f472218443523b59e6e0a87012768",
+    "formal_conforme": true,
+    "intento": 1,
+    "intervalo_maximo_ms": 287,
+    "io_escritura_delta_bytes": 524373,
+    "io_lectura_delta_bytes": 0,
+    "memoria_virtual_maxima_bytes": 4014080,
+    "muestras": 106,
+    "observaciones_udp": 0,
+    "primer_texto_ms": 10985,
+    "proveedor": "Alibaba Cloud",
+    "restricciones_declaradas": {
+      "alcance": "Campos ausentes no equivalen a cero ni a infraestructura inspeccionada.",
+      "num_server_side_tools_used": null,
+      "num_sources_used": null,
+      "store": false,
+      "tool_choice": "none",
+      "tools": [],
+      "zdr_confirmado": false
+    },
+    "resultado": {
+      "bytes": 15979,
+      "sha256": "374e3ebb01ad0674ed505fcdb51d7d85c42d0b02f812724ba45e6b67b74f9109"
+    },
+    "rss_maximo_bytes": 17625088,
+    "solicitud": {
+      "bytes": 14934,
+      "sha256": "de234697571b2fc436f20724187039d114daafe12d7409215b78870244e29970"
+    },
+    "sse_sha256": "89e0053a7fb2f51d168ed22e7ac2d10d4efc458e533f2f7cf4f61c3e0f9c6cf5",
+    "tcp_estados": [
+      "Established",
+      "FinWait1",
+      "SynSent"
+    ],
+    "tcp_maximo_simultaneo": 1,
+    "telemetria_conforme": true,
+    "telemetria_sha256": "6fe376098c4976e881ff37eb0b35311b0ba8e58816d1c39022c206532f788221",
+    "tokens_cache": 0,
+    "tokens_entrada": 4349,
+    "tokens_razonamiento": 333,
+    "tokens_salida": 1029,
+    "tokens_totales": 5378,
+    "uso_proveedor": {
+      "input_tokens": 4349,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens": 1029,
+      "output_tokens_details": {
+        "reasoning_tokens": 333
+      },
+      "total_tokens": 5378,
+      "x_details": [
+        {
+          "input_tokens": 4349,
+          "output_tokens": 1029,
+          "output_tokens_details": {
+            "reasoning_tokens": 333
+          },
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "total_tokens": 5378,
+          "x_billing_type": "response_api"
+        }
+      ]
+    }
+  },
+  "naturaleza_defecto": null,
+  "observaciones_revision": [],
+  "pasajes_contrastados": [
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "La leucemia de células pilosas es una neoplasia maligna linfoide de células B, de grado bajo y crecimiento lento.",
+      "pagina": 0,
+      "seccion": "_1"
+    },
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "Es una enfermedad poco frecuente; solo se presentan de 1200 a 1300 casos nuevos por año en los Estados Unidos.",
+      "pagina": 0,
+      "seccion": "_1"
+    },
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "Este tipo de leucemia no suele causar linfadenopatía, excepto cuando la enfermedad es progresiva con recaídas múltiples.",
+      "pagina": 0,
+      "seccion": "_1"
+    },
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "La médula ósea suele ser fibrótica, lo cual dificulta la aspiración, y tiene células B circulantes con proyecciones citoplasmáticas (apariencia pilosa).",
+      "pagina": 0,
+      "seccion": "_1"
+    }
+  ],
+  "recepcion_independiente": "pendiente",
+  "respuesta_original": "{\"caso\":\"P01\",\"estado_documental\":\"respuesta_fundada\",\"etapa\":0,\"evidencias\":[{\"cita_literal_breve\":\"La leucemia de células pilosas es una neoplasia maligna linfoide de células B, de grado bajo y crecimiento lento.\",\"documento\":\"pdq-nci-hcl-es\",\"fragmentos\":[0],\"seccion\":\"_1\"},{\"cita_literal_breve\":\"Es una enfermedad poco frecuente; solo se presentan de 1200 a 1300 casos nuevos por año en los Estados Unidos.\",\"documento\":\"pdq-nci-hcl-es\",\"fragmentos\":[0],\"seccion\":\"_1\"},{\"cita_literal_breve\":\"Este tipo de leucemia no suele causar linfadenopatía, excepto cuando la enfermedad es progresiva con recaídas múltiples.\",\"documento\":\"pdq-nci-hcl-es\",\"fragmentos\":[0],\"seccion\":\"_1\"},{\"cita_literal_breve\":\"La médula ósea suele ser fibrótica, lo cual dificulta la aspiración, y tiene células B circulantes con proyecciones citoplasmáticas (apariencia pilosa).\",\"documento\":\"pdq-nci-hcl-es\",\"fragmentos\":[0],\"seccion\":\"_1\"}],\"fundamentos_verificables\":[\"El documento clasifica explícitamente la enfermedad como neoplasia maligna linfoide de células B, lo que fija el linaje celular como linfoide B.\",\"El comportamiento general se describe como de grado bajo y crecimiento lento, con baja incidencia anual (1200-1300 casos en EE. UU.).\",\"Las manifestaciones clínicas típicas incluyen esplenomegalia, leucopenia, pancitopenia, monocitopenia e infiltración medular por células con proyecciones citoplasmáticas.\",\"Se señala que habitualmente no produce linfadenopatía salvo en enfermedad progresiva con recaídas múltiples, lo que refuerza su patrón indolente.\",\"La médula ósea fibrótica y la presencia de células B circulantes con apariencia pilosa son rasgos morfológicos característicos descritos en la fuente.\"],\"insuficiencias\":[],\"respuesta\":\"Según el documento, la leucemia de células pilosas es una neoplasia maligna linfoide de células B, de grado bajo y crecimiento lento. Se trata de una enfermedad poco frecuente (1200-1300 casos nuevos anuales en EE. UU.). Su comportamiento clínico habitual incluye esplenomegalia, leucopenia, pancitopenia, monocitopenia e infiltración medular por células con proyecciones citoplasmáticas. No suele causar linfadenopatía, salvo en enfermedad progresiva con recaídas múltiples. La médula ósea tiende a ser fibrótica, dificultando la aspiración.\",\"revision\":\"Etapa 0: no existen antecedentes. La respuesta se construye exclusivamente a partir de la sección _1 del documento pdq-nci-hcl-es, fragmentos 0 y 1. Se identifica el linaje (linfoide B) y el comportamiento (grado bajo, crecimiento lento, poca frecuencia, patrón clínico típico) con citas literales. No se requiere información adicional de otras secciones para resolver la pregunta planteada.\"}",
+  "revision_citas": {
+    "citas": [
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "La leucemia de células pilosas es una neoplasia maligna linfoide de células B, de grado bajo y crecimiento lento."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "Es una enfermedad poco frecuente; solo se presentan de 1200 a 1300 casos nuevos por año en los Estados Unidos."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "Este tipo de leucemia no suele causar linfadenopatía, excepto cuando la enfermedad es progresiva con recaídas múltiples."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "La médula ósea suele ser fibrótica, lo cual dificulta la aspiración, y tiene células B circulantes con proyecciones citoplasmáticas (apariencia pilosa)."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "solicitud_sha256": "de234697571b2fc436f20724187039d114daafe12d7409215b78870244e29970",
+  "sustantivo": "correcto",
+  "valor": "0"
+}

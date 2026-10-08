@@ -1,0 +1,146 @@
+{
+  "alerta_limite": false,
+  "auditoria_sha256": "e6d0118da52bd581303611eb454b7bde8bd07ff29ce67fb804bf49d680876555",
+  "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+  "caso": "P12",
+  "critico": true,
+  "estado_documental_candidato": "respuesta_fundada",
+  "etapa": 0,
+  "final_sha256": "d74713889a47d758638514aa2cee0271e68888008aa8bf4f0e920e2ffa95422d",
+  "formal_conforme": false,
+  "fundamento_sustantivo": "Distingue medición de profundidad de remisión y decisión terapéutica. Reconoce que la utilidad de ERC para modificar elecciones no está clara y requiere evaluaciones. La auditoría literal rechaza la cita. El diagnóstico Rust confirma coincidencia tras retirar sólo asteriscos; el contenido y sus localizadores se mantienen. Se conserva el contrato original y se declara reserva metodológica por sensibilidad a marcación.",
+  "limite_documental": null,
+  "medicion": {
+    "alcance": "Medición local del cliente; no recursos internos del proveedor. Contadores de caché y razonamiento incluidos, sin sumarlos dos veces.",
+    "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+    "bytes_sse": 95361,
+    "caso": "P12",
+    "completa": true,
+    "cpu_delta_ms": 1516,
+    "duracion_ms": 22570,
+    "duracion_operacion_ms": 23610,
+    "etapa": 0,
+    "eventos_sse": 254,
+    "fallos_medicion": 0,
+    "final_sha256": "d74713889a47d758638514aa2cee0271e68888008aa8bf4f0e920e2ffa95422d",
+    "formal_conforme": false,
+    "intento": 34,
+    "intervalo_maximo_ms": 287,
+    "io_escritura_delta_bytes": 459798,
+    "io_lectura_delta_bytes": 0,
+    "memoria_virtual_maxima_bytes": 11235328,
+    "muestras": 91,
+    "observaciones_udp": 0,
+    "primer_texto_ms": 10600,
+    "proveedor": "Alibaba Cloud",
+    "restricciones_declaradas": {
+      "alcance": "Campos ausentes no equivalen a cero ni a infraestructura inspeccionada.",
+      "num_server_side_tools_used": null,
+      "num_sources_used": null,
+      "store": false,
+      "tool_choice": "none",
+      "tools": [],
+      "zdr_confirmado": false
+    },
+    "resultado": {
+      "bytes": 15278,
+      "sha256": "b9a58f649beb7e24de4cd4c382838d9e4c59c2dd6a02fa66428b510411476697"
+    },
+    "rss_maximo_bytes": 24182784,
+    "solicitud": {
+      "bytes": 15034,
+      "sha256": "a32e4c44fb07f5daf462b2a148373e9a73e64604d1b5b66c22810f2f1d09d282"
+    },
+    "sse_sha256": "e2d70fa8e0efa8c8034f7b85d0c3188935e8be3710a2d4205252bdbe4c2ef134",
+    "tcp_estados": [
+      "Established",
+      "FinWait1",
+      "SynSent"
+    ],
+    "tcp_maximo_simultaneo": 1,
+    "telemetria_conforme": true,
+    "telemetria_sha256": "18b6bf3f4252e5b8d93f0d2b2f2449a0ffa2fbdf3a69f533347b65e05850daa0",
+    "tokens_cache": 1024,
+    "tokens_entrada": 4371,
+    "tokens_razonamiento": 341,
+    "tokens_salida": 850,
+    "tokens_totales": 5221,
+    "uso_proveedor": {
+      "input_tokens": 4371,
+      "input_tokens_details": {
+        "cached_tokens": 1024
+      },
+      "output_tokens": 850,
+      "output_tokens_details": {
+        "reasoning_tokens": 341
+      },
+      "total_tokens": 5221,
+      "x_details": [
+        {
+          "input_tokens": 4371,
+          "output_tokens": 850,
+          "output_tokens_details": {
+            "reasoning_tokens": 341
+          },
+          "prompt_tokens_details": {
+            "cached_tokens": 1024
+          },
+          "total_tokens": 5221,
+          "x_billing_type": "response_api"
+        }
+      ]
+    }
+  },
+  "naturaleza_defecto": "Incumplimiento de literalidad formal por omisión de marcadores de cursiva o lista; no error médico demostrado.",
+  "observaciones_revision": [
+    "La normalización diagnóstica no modifica las respuestas, las auditorías ni el criterio de admisión.",
+    "Además existe un límite documental contrastado sobre la utilidad decisional de ERC. La posición tiene 1 por literalidad formal; no se presenta como un 0 que acredite una regla terapéutica ausente."
+  ],
+  "pasajes_contrastados": [
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "La intensidad de la remisión completa se puede evaluar con la enfermedad residual cuantificable (ERC) mediante el uso del gen BRAF mutante o el reordenamiento del gen de la inmunoglobulina de cadena pesada.",
+      "pagina": 1,
+      "seccion": "_1"
+    },
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "Sin embargo, la utilidad de la ERC para modificar las elecciones terapéuticas no está clara y se necesitan más evaluaciones.",
+      "pagina": 1,
+      "seccion": "_1"
+    }
+  ],
+  "recepcion_independiente": "pendiente",
+  "respuesta_original": "{\"caso\":\"P12\",\"estado_documental\":\"respuesta_fundada\",\"etapa\":0,\"evidencias\":[{\"cita_literal_breve\":\"La intensidad de la remisión completa se puede evaluar con la enfermedad residual cuantificable (ERC) mediante el uso del gen BRAF mutante o el reordenamiento del gen de la inmunoglobulina de cadena pesada.\",\"documento\":\"pdq-nci-hcl-es\",\"fragmentos\":[1],\"seccion\":\"_1\"},{\"cita_literal_breve\":\"Sin embargo, la utilidad de la ERC para modificar las elecciones terapéuticas no está clara y se necesitan más evaluaciones.\",\"documento\":\"pdq-nci-hcl-es\",\"fragmentos\":[1],\"seccion\":\"_1\"}],\"fundamentos_verificables\":[\"El documento reconoce la ERC como herramienta para evaluar la intensidad de la remisión completa, es decir, cumple una función de medición.\",\"Inmediatamente después, el texto introduce una restricción explícita: la utilidad de la ERC para modificar elecciones terapéuticas no está clara y se necesitan más evaluaciones.\",\"Por tanto, la fuente separa medir (evaluar profundidad de remisión) de decidir (cambiar tratamiento) y no establece que la detección de ERC obligue por sí sola a una modificación terapéutica.\"],\"insuficiencias\":[\"El documento no detalla qué tipo de evaluaciones adicionales serían necesarias para que la ERC pudiera guiar decisiones terapéuticas; solo señala que faltan.\",\"No se especifica en esta sección ningún umbral de ERC ni ningún escenario concreto en el que la medición sí justificaría un cambio de tratamiento.\"],\"respuesta\":\"No. El documento no demuestra que la detección de ERC obligue por sí sola a cambiar el tratamiento. Reconoce que la ERC sirve para evaluar la intensidad de la remisión completa (medir), pero afirma expresamente que su utilidad para modificar las elecciones terapéuticas «no está clara y se necesitan más evaluaciones» (decidir). Así, la fuente distingue entre obtener un dato residual y tomar una decisión clínica basada en él, y no atribuye a la medición un carácter prescriptivo automático.\",\"revision\":\"Etapa 0: no existen antecedentes. La respuesta se construye directamente sobre el párrafo de ERC en la sección _1 (fragmento 1), que contiene tanto la función evaluativa como la salvedad explícita sobre la incertidumbre terapéutica.\"}",
+  "revision_citas": {
+    "citas": [
+      {
+        "citas": [
+          {
+            "conforme": false,
+            "segmentos": [
+              {
+                "texto": "La intensidad de la remisión completa se puede evaluar con la enfermedad residual cuantificable (ERC) mediante el uso del gen BRAF mutante o el reordenamiento del gen de la inmunoglobulina de cadena pesada."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "citas": [
+          {
+            "conforme": false,
+            "segmentos": [
+              {
+                "texto": "Sin embargo, la utilidad de la ERC para modificar las elecciones terapéuticas no está clara y se necesitan más evaluaciones."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "solicitud_sha256": "a32e4c44fb07f5daf462b2a148373e9a73e64604d1b5b66c22810f2f1d09d282",
+  "sustantivo": "correcto",
+  "valor": "1"
+}

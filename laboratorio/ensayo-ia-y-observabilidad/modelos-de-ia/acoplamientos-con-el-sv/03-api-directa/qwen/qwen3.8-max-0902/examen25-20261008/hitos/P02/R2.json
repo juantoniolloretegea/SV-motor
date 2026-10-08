@@ -1,0 +1,200 @@
+{
+  "alerta_limite": false,
+  "auditoria_sha256": "e6d0118da52bd581303611eb454b7bde8bd07ff29ce67fb804bf49d680876555",
+  "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+  "caso": "P02",
+  "critico": true,
+  "estado_documental_candidato": "respuesta_fundada",
+  "etapa": 2,
+  "final_sha256": "9cf9825777cb4f836d3aa3461e6ef9ceb3f4d48065f5fa592dd23e6bc73e040a",
+  "formal_conforme": false,
+  "fundamento_sustantivo": "Recupera tres manifestaciones y admite leucocitosis ocasional, con referencia separada a la variante. La redacción «la leucopenia aparece en ocasiones leucocitosis» es defectuosa; el fundamento y la cita distinguen la tendencia y su alternativa. No se afirma expresamente que la leucocitosis sea un grado de leucopenia. La auditoría literal rechaza la cita. El diagnóstico Rust confirma coincidencia tras retirar sólo asteriscos; el contenido y sus localizadores se mantienen. Se conserva el contrato original y se declara reserva metodológica por sensibilidad a marcación.",
+  "limite_documental": null,
+  "medicion": {
+    "alcance": "Medición local del cliente; no recursos internos del proveedor. Contadores de caché y razonamiento incluidos, sin sumarlos dos veces.",
+    "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+    "bytes_sse": 180900,
+    "caso": "P02",
+    "completa": true,
+    "cpu_delta_ms": 3687,
+    "duracion_ms": 49485,
+    "duracion_operacion_ms": 50567,
+    "etapa": 2,
+    "eventos_sse": 559,
+    "fallos_medicion": 0,
+    "final_sha256": "9cf9825777cb4f836d3aa3461e6ef9ceb3f4d48065f5fa592dd23e6bc73e040a",
+    "formal_conforme": false,
+    "intento": 6,
+    "intervalo_maximo_ms": 288,
+    "io_escritura_delta_bytes": 932912,
+    "io_lectura_delta_bytes": 0,
+    "memoria_virtual_maxima_bytes": 7479296,
+    "muestras": 188,
+    "observaciones_udp": 0,
+    "primer_texto_ms": 30816,
+    "proveedor": "Alibaba Cloud",
+    "restricciones_declaradas": {
+      "alcance": "Campos ausentes no equivalen a cero ni a infraestructura inspeccionada.",
+      "num_server_side_tools_used": null,
+      "num_sources_used": null,
+      "store": false,
+      "tool_choice": "none",
+      "tools": [],
+      "zdr_confirmado": false
+    },
+    "resultado": {
+      "bytes": 19697,
+      "sha256": "e44f1854e023194886ae3e43b7c1314053d8c3b899d9e5f1158365013a9bfbef"
+    },
+    "rss_maximo_bytes": 20488192,
+    "solicitud": {
+      "bytes": 32643,
+      "sha256": "1e25dee4e5be43fd5a0f04c76509ebddf40e2e7a00e6c7e021c3572f3cc16064"
+    },
+    "sse_sha256": "53512d932502041a5d31268cbffe7391968544e76b68c5db579f6fddda4e2b58",
+    "tcp_estados": [
+      "Established",
+      "FinWait1",
+      "SynSent"
+    ],
+    "tcp_maximo_simultaneo": 1,
+    "telemetria_conforme": true,
+    "telemetria_sha256": "5c60d28c9800e6e39ee7c10643529b6ab703273b49e23dc7fe4626f4e4db01bc",
+    "tokens_cache": 1024,
+    "tokens_entrada": 8305,
+    "tokens_razonamiento": 1242,
+    "tokens_salida": 2074,
+    "tokens_totales": 10379,
+    "uso_proveedor": {
+      "input_tokens": 8305,
+      "input_tokens_details": {
+        "cached_tokens": 1024
+      },
+      "output_tokens": 2074,
+      "output_tokens_details": {
+        "reasoning_tokens": 1242
+      },
+      "total_tokens": 10379,
+      "x_details": [
+        {
+          "input_tokens": 8305,
+          "output_tokens": 2074,
+          "output_tokens_details": {
+            "reasoning_tokens": 1242
+          },
+          "prompt_tokens_details": {
+            "cached_tokens": 1024
+          },
+          "total_tokens": 10379,
+          "x_billing_type": "response_api"
+        }
+      ]
+    }
+  },
+  "naturaleza_defecto": "Incumplimiento de literalidad formal por omisión de marcadores de cursiva o lista; no error médico demostrado.",
+  "observaciones_revision": [
+    "La normalización diagnóstica no modifica las respuestas, las auditorías ni el criterio de admisión.",
+    "Debe corregirse la redacción ambigua sobre leucopenia/leucocitosis en usos clínicos. Se contrasta la entrega completa y no se equipara automáticamente a la relación explícita incorrecta del antecedente Grok/R0."
+  ],
+  "pasajes_contrastados": [
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "Esplenomegalia.",
+      "pagina": 0,
+      "seccion": "_1"
+    },
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "Leucopenia de grados diferentes (en ocasiones leucocitosis).",
+      "pagina": 0,
+      "seccion": "_1"
+    },
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "Pancitopenia.",
+      "pagina": 0,
+      "seccion": "_1"
+    },
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "un recuento de glóbulos blancos elevado (15–50 × 109/l)",
+      "pagina": 1,
+      "seccion": "_1"
+    },
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "Las células de la variante de la leucemia de células pilosas también carecen de mutaciones en BRAF.",
+      "pagina": 1,
+      "seccion": "_1"
+    }
+  ],
+  "recepcion_independiente": "pendiente",
+  "respuesta_original": "{\"caso\":\"P02\",\"estado_documental\":\"respuesta_fundada\",\"etapa\":2,\"evidencias\":[{\"cita_literal_breve\":\"Esplenomegalia.\",\"documento\":\"pdq-nci-hcl-es\",\"fragmentos\":[0],\"seccion\":\"_1\"},{\"cita_literal_breve\":\"Leucopenia de grados diferentes (en ocasiones leucocitosis).\",\"documento\":\"pdq-nci-hcl-es\",\"fragmentos\":[0],\"seccion\":\"_1\"},{\"cita_literal_breve\":\"Pancitopenia.\",\"documento\":\"pdq-nci-hcl-es\",\"fragmentos\":[0],\"seccion\":\"_1\"},{\"cita_literal_breve\":\"un recuento de glóbulos blancos elevado (15–50 × 109/l)\",\"documento\":\"pdq-nci-hcl-es\",\"fragmentos\":[1],\"seccion\":\"_1\"},{\"cita_literal_breve\":\"Las células de la variante de la leucemia de células pilosas también carecen de mutaciones en BRAF.\",\"documento\":\"pdq-nci-hcl-es\",\"fragmentos\":[1],\"seccion\":\"_1\"}],\"fundamentos_verificables\":[\"El apartado 'Cuadro clínico inicial' (fragmento 0) lista cinco manifestaciones que la leucemia de células pilosas 'suele producir': esplenomegalia, leucopenia de grados diferentes, pancitopenia, monocitopenia e infiltración medular por células pilosas. Se eligen tres de ellas, todas textuales.\",\"La posibilidad de leucocitosis queda acreditada por el inciso parentético '(en ocasiones leucocitosis)' que acompaña a la leucopenia en la misma lista.\",\"El fragmento 1 describe la variante (10 % de los pacientes) con recuento elevado de glóbulos blancos (15–50 × 10⁹/l), marcadores anómalos y carencia de mutaciones en BRAF, lo que contextualiza otro escenario de leucocitosis dentro del espectro de la enfermedad.\",\"La fuente emplea 'mutaciones en BRAF' en plural y 'un 10 %' como cifra definida, no aproximada.\"],\"insuficiencias\":[],\"respuesta\":\"Tres manifestaciones habituales de la leucemia de células pilosas son: esplenomegalia, leucopenia de grados diferentes y pancitopenia. Sí puede presentarse leucocitosis: el documento señala que la leucopenia aparece 'en ocasiones leucocitosis'. Además, la variante de la enfermedad (un 10 % de los pacientes) se caracteriza por un recuento elevado de glóbulos blancos (15–50 × 10⁹/l), marcadores anómalos y carencia de mutaciones en BRAF.\",\"revision\":\"Verificación final neutral de R0 y R1 contra la fuente. (1) Las tres manifestaciones elegidas (esplenomegalia, leucopenia de grados diferentes, pancitopenia) figuran literalmente en la lista del fragmento 0; se mantienen en ambas entregas y se confirman. (2) La aclaración sobre leucocitosis reproduce el paréntesis '(en ocasiones leucocitosis)'; correcto en R0 y R1. (3) R1 introdujo '≈10 %', pero la fuente dice 'un 10 %' sin matiz aproximativo; se corrige a 'un 10 %'. (4) R0 usó 'ausencia de la mutación BRAF' (singular); la fuente dice 'carecen de mutaciones en BRAF' (plural); se adopta la forma plural de R1, más fiel. (5) Ninguna entrega inventa datos ni omite extremos exigidos por la pregunta. Se mantiene el contenido sustancial con los dos ajustes menores indicados.\"}",
+  "revision_citas": {
+    "citas": [
+      {
+        "citas": [
+          {
+            "conforme": false,
+            "segmentos": [
+              {
+                "texto": "Esplenomegalia."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "citas": [
+          {
+            "conforme": false,
+            "segmentos": [
+              {
+                "texto": "Leucopenia de grados diferentes (en ocasiones leucocitosis)."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "citas": [
+          {
+            "conforme": false,
+            "segmentos": [
+              {
+                "texto": "Pancitopenia."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "citas": [
+          {
+            "conforme": false,
+            "segmentos": [
+              {
+                "texto": "un recuento de glóbulos blancos elevado (15–50 × 109/l)"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "citas": [
+          {
+            "conforme": false,
+            "segmentos": [
+              {
+                "texto": "Las células de la variante de la leucemia de células pilosas también carecen de mutaciones en BRAF."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "solicitud_sha256": "1e25dee4e5be43fd5a0f04c76509ebddf40e2e7a00e6c7e021c3572f3cc16064",
+  "sustantivo": "correcto",
+  "valor": "1"
+}

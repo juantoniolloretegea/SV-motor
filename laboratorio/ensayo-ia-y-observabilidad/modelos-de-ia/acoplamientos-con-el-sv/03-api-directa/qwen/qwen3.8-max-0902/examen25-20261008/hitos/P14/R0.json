@@ -1,0 +1,125 @@
+{
+  "alerta_limite": false,
+  "auditoria_sha256": "15ba1584186f7c1c9d0f37bce1587cb8d4b118e6ec904ba377c1d278ae040de8",
+  "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+  "caso": "P14",
+  "critico": true,
+  "estado_documental_candidato": "respuesta_fundada",
+  "etapa": 0,
+  "final_sha256": "fd1a2e20f983304d0efdee51ab28a2f6211854ccd0155529740ed2f28275d8c4",
+  "formal_conforme": true,
+  "fundamento_sustantivo": "Rechaza declarar inútil repetir un análogo por su uso previo y conserva respuesta frecuente, especialmente tras varios años. No garantiza resultado individual; distingue las restricciones expresas.",
+  "limite_documental": null,
+  "medicion": {
+    "alcance": "Medición local del cliente; no recursos internos del proveedor. Contadores de caché y razonamiento incluidos, sin sumarlos dos veces.",
+    "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+    "bytes_sse": 108192,
+    "caso": "P14",
+    "completa": true,
+    "cpu_delta_ms": 1500,
+    "duracion_ms": 29555,
+    "duracion_operacion_ms": 30605,
+    "etapa": 0,
+    "eventos_sse": 295,
+    "fallos_medicion": 0,
+    "final_sha256": "fd1a2e20f983304d0efdee51ab28a2f6211854ccd0155529740ed2f28275d8c4",
+    "formal_conforme": true,
+    "intento": 40,
+    "intervalo_maximo_ms": 279,
+    "io_escritura_delta_bytes": 543492,
+    "io_lectura_delta_bytes": 0,
+    "memoria_virtual_maxima_bytes": 12480512,
+    "muestras": 119,
+    "observaciones_udp": 0,
+    "primer_texto_ms": 13516,
+    "proveedor": "Alibaba Cloud",
+    "restricciones_declaradas": {
+      "alcance": "Campos ausentes no equivalen a cero ni a infraestructura inspeccionada.",
+      "num_server_side_tools_used": null,
+      "num_sources_used": null,
+      "store": false,
+      "tool_choice": "none",
+      "tools": [],
+      "zdr_confirmado": false
+    },
+    "resultado": {
+      "bytes": 16383,
+      "sha256": "a4b6857ce094b591f531bf230618336ce4c65d2d8ff83a2b6f701a25e1b489b7"
+    },
+    "rss_maximo_bytes": 25587712,
+    "solicitud": {
+      "bytes": 57649,
+      "sha256": "077f86f5871d9c743d26aede2703b326b4c6811f15d0bae33862da1f1e33c56d"
+    },
+    "sse_sha256": "5600c25d3b23ce8be49daaf779352e585f1a6d237590dd0150a04c10c27ed180",
+    "tcp_estados": [
+      "Established",
+      "FinWait1",
+      "SynSent"
+    ],
+    "tcp_maximo_simultaneo": 1,
+    "telemetria_conforme": true,
+    "telemetria_sha256": "75d8c293e05d7db7f3d38566a58ffbb387961b3ca28a83e68babefb529865ba2",
+    "tokens_cache": 1024,
+    "tokens_entrada": 19452,
+    "tokens_razonamiento": 434,
+    "tokens_salida": 1019,
+    "tokens_totales": 20471,
+    "uso_proveedor": {
+      "input_tokens": 19452,
+      "input_tokens_details": {
+        "cached_tokens": 1024
+      },
+      "output_tokens": 1019,
+      "output_tokens_details": {
+        "reasoning_tokens": 434
+      },
+      "total_tokens": 20471,
+      "x_details": [
+        {
+          "input_tokens": 19452,
+          "output_tokens": 1019,
+          "output_tokens_details": {
+            "reasoning_tokens": 434
+          },
+          "prompt_tokens_details": {
+            "cached_tokens": 1024
+          },
+          "total_tokens": 20471,
+          "x_billing_type": "response_api"
+        }
+      ]
+    }
+  },
+  "naturaleza_defecto": null,
+  "observaciones_revision": [],
+  "pasajes_contrastados": [
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "Los pacientes con leucemia de células pilosas que tienen una recaída después del primer curso de cladribina o pentostatina, a menudo responden bien al repetir el tratamiento con el mismo análogo de las purinas o con otro, en especial si la recaída se presenta después de varios años.",
+      "pagina": 6,
+      "seccion": "_13"
+    }
+  ],
+  "recepcion_independiente": "pendiente",
+  "respuesta_original": "{\"caso\":\"P14\",\"estado_documental\":\"respuesta_fundada\",\"etapa\":0,\"evidencias\":[{\"cita_literal_breve\":\"Los pacientes con leucemia de células pilosas que tienen una recaída después del primer curso de cladribina o pentostatina, a menudo responden bien al repetir el tratamiento con el mismo análogo de las purinas o con otro, en especial si la recaída se presenta después de varios años.\",\"documento\":\"pdq-nci-hcl-es\",\"fragmentos\":[6],\"seccion\":\"_13\"}],\"fundamentos_verificables\":[\"La sección «Repetición del tratamiento con cladribina o pentostatina» afirma explícitamente que la repetición del mismo análogo de purina u otro suele producir buena respuesta, sobre todo cuando la recaída ocurre tras varios años, con nivel de evidencia C3.\",\"Por tanto, el mero hecho de haber utilizado previamente un análogo de purina no constituye, según la fuente, motivo suficiente para declarar inútil su reutilización.\",\"La fuente no establece una contraindicación absoluta basada exclusivamente en el uso previo; al contrario, señala la eficacia esperada de la repetición en ese contexto temporal.\"],\"insuficiencias\":[\"La fuente no cuantifica la tasa de respuesta exacta a la repetición del análogo en este escenario concreto; solo la describe como frecuente («a menudo responden bien»).\",\"No se detallan en este pasaje los criterios específicos que podrían limitar la repetición (p. ej., toxicidad acumulada o resistencia documentada), aunque sí se menciona en otras secciones que los análogos de purina deben evitarse en infección activa o deficiencia renal/hepática moderada a grave.\"],\"respuesta\":\"No. La fuente no permite declarar inútil la repetición de un análogo de purina únicamente por su uso previo. El documento PDQ establece expresamente que, ante una recaída posterior al primer curso de cladribina o pentostatina, los pacientes «a menudo responden bien al repetir el tratamiento con el mismo análogo de las purinas o con otro, en especial si la recaída se presenta después de varios años» (nivel de evidencia C3). En el caso sintético planteado —recaída varios años después de responder a cladribina— la fuente respalda la posibilidad de reutilizar el análogo, no su descarte automático.\",\"revision\":\"Etapa 0: no existen antecedentes. La respuesta se construye directamente a partir del pasaje de la sección «Repetición del tratamiento con cladribina o pentostatina» (fragmento 6), que contradice la premisa de inutilidad por uso previo y, además, enfatiza el escenario temporal del caso (recaída tras varios años). No se modifica ningún contenido anterior.\"}",
+  "revision_citas": {
+    "citas": [
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "Los pacientes con leucemia de células pilosas que tienen una recaída después del primer curso de cladribina o pentostatina, a menudo responden bien al repetir el tratamiento con el mismo análogo de las purinas o con otro, en especial si la recaída se presenta después de varios años."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "solicitud_sha256": "077f86f5871d9c743d26aede2703b326b4c6811f15d0bae33862da1f1e33c56d",
+  "sustantivo": "correcto",
+  "valor": "0"
+}
