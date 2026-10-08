@@ -1,8 +1,8 @@
 # Ensayo de inteligencia artificial y observabilidad
 
-**Edición documental 2.29 · 8 de octubre de 2026.**
+**Edición documental 2.30 · 8 de octubre de 2026.**
 
-**Actualización de esta edición:** incorporación de Grok 4.7 a los índices generales, con su resultado documental ya publicado. Astra, Grok y Qwen quedan identificados en el nodo 03 con sus alcances propios; se conservan los resultados, las reservas y la historia del ensayo.
+**Actualización de esta edición:** GLM-5.3 se incorpora al nodo 03 con el examen documental de ciberseguridad CYB16 concluido. Se distinguen su resultado Apto, la reserva anterior del manual y el estudio independiente de inferencia bajo control propio. Astra, Grok y Qwen conservan sus resultados y emplazamientos.
 
 <a id="objeto-y-criterio-experimental"></a>
 
@@ -40,6 +40,7 @@ La tabla distingue el resultado experimental, su alcance y la situación documen
 | [GPT-6 Astra · OpenAI · Nodo 03](modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/openai/gpt-6-astra/readme.md) | Examen documental: **Apto**, 25/25 correctas, 20/20 críticas, T(25)=19; R2 es la respuesta final en los 25 casos. | Prueba documental cerrada el 07/10/2026. Inferencia en OpenAI; control del SV en Rust. [Resultado y límites](modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/openai/gpt-6-astra/examen25-20261007/resultado/INFORME.md). |
 | [Grok 4.7 · xAI · Nodo 03](modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/xai/grok-4.7/readme.md) | Examen documental: **Apto**, 25/25 respuestas finales correctas, 20/20 críticas; T(25)=19. R2 es la respuesta final en los 25 casos. | [Examen del 08/10/2026](modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/xai/grok-4.7/examen25-20261008/INFORME.md) · [TT-0022](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0022.md). Inferencia en xAI; control propio en Rust. El [diagnóstico posterior del manual](modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/xai/grok-4.7/md01-diagnostica-20261008/INFORME.md) es parcial y tiene alcance separado. |
 | [Qwen3.8-Max-0902 · Alibaba Cloud · Nodo 03](modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/qwen/qwen3.8-max-0902/readme.md) | **Apto documental con reservas**, en el alcance de **16 preguntas**, tras revisión metodológica y réplica separada de P13. | Alcance limitado por disponibilidad de recursos. [Recepción y fundamento](modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/qwen/qwen3.8-max-0902/RECEPCION-DOCUMENTAL-20261008.md); dictamen contractual y polígono originales conservados. Comparación limitada a preguntas y condiciones comunes. |
+| [GLM-5.3 · Z.ai · Nodo 03](modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/zai/glm-5.3/readme.md) | **Apto para el contrato documental de ciberseguridad CYB16**: 16/16 finales R2 correctas, 14/14 críticas; T(16)=12, célula (16,4). | [Examen y límites](modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/zai/glm-5.3/cyb16-20261008/INFORME.md). Revisión científica independiente pendiente; no acredita un agente operativo. La [reserva MD07 del manual](modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/zai/glm-5.3/manual-20261008/revision-md07/REVISION-METODOLOGICA.md) conserva su resultado separado. |
 | [Qwen3-0.6B · Q4_K_M](modelos-de-ia/qwen/qwen3-0.6b/README.md) | Inferencia nativa y controles parciales; cuatro consultas DOC-01 terminadas sin conformidad contractual completa. | Campaña cerrada con limitaciones. |
 | [GPT-OSS-20B · MXFP4](modelos-de-ia/openai/gpt-oss-20b/README.md) | Funcionamiento técnico y bancos documentales conservados; la evaluación médica no acreditó la función prevista. | Configuración excluida de esa selección; archivo conservado. |
 | [Qwen3.8-27B](modelos-de-ia/qwen/qwen3.8-27b/README.md) | Respuesta completa en la selección mínima, con omisión material y deficiencias de citas y localización. | **No apto** en la selección examinada. |
@@ -54,7 +55,7 @@ La tabla distingue el resultado experimental, su alcance y la situación documen
 | Familia o candidato | Objeto del estudio | Situación y dependencia |
 |---|---|---|
 | [Kimi K3](modelos-de-ia/kimi/kimi-k3/ESTUDIO-VIABILIDAD-20261005.md) | Alternativa independiente para AMD; se conserva K3 como identidad de estudio. | Sin instalación o inferencia. Las representaciones examinadas exceden la configuración de una MI300X; falta una realización Rust completa admisible. |
-| [GLM-5.3 de zai-org](modelos-de-ia/zai-org/glm-5.3/ESTUDIO-VIABILIDAD-20261005.md) | Viabilidad de la arquitectura y representación concreta en AMD. | Sin instalación o inferencia. Memoria distribuida y realización completa aún no acreditadas. |
+| [GLM-5.3 de zai-org · Nodo 01](modelos-de-ia/zai-org/glm-5.3/ESTUDIO-VIABILIDAD-20261005.md) | Viabilidad de la arquitectura y representación concreta en AMD bajo control propio; distinta del servicio API del nodo 03. | Sin instalación o inferencia. Memoria distribuida y realización completa aún no acreditadas. |
 | [GLM-5.3-Flash de zai-org](modelos-de-ia/zai-org/glm-5.3/ESTUDIO-VIABILIDAD-20261005.md) | Variante distinta, con arquitectura y resultados propios. | Algunas representaciones permiten estudiar el alojamiento de pesos; memoria total, motor Rust y recepción GPU pendientes. |
 
 Los candidatos permanecen en estudio. El cierre de una búsqueda técnica delimitada no constituye un descarte definitivo ni una evaluación de respuestas. Tampoco se sustituyen por modelos menores ni se transfieren puntuaciones entre versiones. Su posible realización depende de los [componentes de cálculo](#cálculo-rust-para-amd), que tienen un objeto de prueba distinto.
@@ -75,6 +76,8 @@ El aviso posterior de aquel corte comunicaba P01–P08 conservadas, P09 sin resp
 Thinking mantiene tratamiento independiente de plantilla, razonamiento emitido, respuesta final y llamadas a herramientas. No recibe los resultados de Instruct por extensión. El [registro de modelos](modelos-de-ia/README.md) enlaza los expedientes; cada entrega y recepción fija el alcance de lo acreditado.
 
 ## Evaluación documental y resultado
+
+El examen [CYB16 de GLM-5.3](modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/zai/glm-5.3/cyb16-20261008/INFORME.md) utiliza un libro documental de ciberseguridad suministrado por MCP: dieciséis preguntas, catorce críticas y tres etapas completas. Su contrato y sus fuentes son distintos del banco de inmunología descrito a continuación; los resultados no constituyen una clasificación global entre modelos.
 
 La pregunta experimental es si una configuración puede **responder con fundamento verificable dentro de una biblioteca delimitada**. La primera ronda utiliza una captura identificada del [PDQ profesional del NCI sobre leucemia de células pilosas](https://www.cancer.gov/espanol/tipos/leucemia/pro/tratamiento-celulas-pilosas-pdq), consultada desde el catálogo local. La página pública identifica la procedencia; no sustituye los bytes congelados del ensayo.
 
@@ -159,7 +162,7 @@ La dirección ha autorizado crear **una instancia AMD MI300X** e iniciar una pru
 
 ## Versiones de los componentes
 
-La **edición documental 2.29**, las **aplicaciones 0.1.x/0.2.x**, el **MCP 0.1.x**, los **modelos** y los **archivos de recuperación v1** tienen identidades independientes. Una numeración no sustituye a las restantes. Los antecedentes identifican Rust 1.98.0; la preparación de retroalimentación identifica Rust 1.98.1. Cada expediente fija sus fuentes, dependencias, ejecutables y comprobaciones; una compilación no acredita utilización efectiva.
+La **edición documental 2.30**, las **aplicaciones 0.1.x/0.2.x**, el **MCP 0.1.x**, los **modelos** y los **archivos de recuperación v1** tienen identidades independientes. Una numeración no sustituye a las restantes. Los antecedentes identifican Rust 1.98.0; la preparación de retroalimentación identifica Rust 1.98.1. Cada expediente fija sus fuentes, dependencias, ejecutables y comprobaciones; una compilación no acredita utilización efectiva.
 
 <details>
 <summary><strong>EIO conversación · Qwen3-0.6B · 0.1.0 → 0.1.4</strong></summary>
@@ -335,6 +338,7 @@ Cada fila describe el corte de su publicación; los estados superados se mantien
 | 07/10/2026 | [Examen de GPT-6 Astra · nodo 03](modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/openai/gpt-6-astra/examen25-20261007/resultado/INFORME.md) · [Expediente y evidencias](modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/openai/gpt-6-astra/readme.md) | Apto para el contrato documental P01–P25: 25 respuestas finales R2 correctas, incluidas las 20 críticas. Control e instrumentación propios en Rust; inferencia en OpenAI. |
 | 08/10/2026 | [Examen de Grok 4.7 · nodo 03](modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/xai/grok-4.7/examen25-20261008/INFORME.md) | Apto para el contrato documental en R2: 25 correctas, incluidas las 20 críticas. Se conserva el error crítico de R0 y su corrección posterior. [MD01 del manual](modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/xai/grok-4.7/md01-diagnostica-20261008/INFORME.md): diagnóstico parcial, distinto del examen. |
 | 08/10/2026 | [Recepción de Qwen3.8-Max-0902 · nodo 03](modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/qwen/qwen3.8-max-0902/RECEPCION-DOCUMENTAL-20261008.md) | Apto documental con reservas para 16 preguntas, tras revisión del instrumento y réplica P13. La adjudicación contractual original se conserva; no se declara equivalencia con un examen de 25 preguntas. |
+| 08/10/2026 | [GLM-5.3 · CYB16 · Nodo 03](modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/zai/glm-5.3/cyb16-20261008/INFORME.md) | Apto documental en R2: 16 correctas, 14 críticas correctas. R0 y R1 conservan sus errores; MD07 sigue bajo reserva. [Aclaración de las marcas documentales](modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/zai/glm-5.3/cyb16-20261008/ACLARACION-ALERTAS-20261008.md). |
 
 Los enlaces de SV-sala-de-maquinas mantienen el acceso restringido de los originales. Las síntesis públicas enlazan su procedencia; no sustituyen los paquetes, sus manifiestos ni la recepción independiente.
 
@@ -342,7 +346,7 @@ Los enlaces de SV-sala-de-maquinas mantienen el acceso restringido de los origin
 
 ## Historia completa de la edición documental
 
-La secuencia comienza en **0.1** y avanza hasta la presente **2.29**. Se conservan todas las ediciones anteriores y sus referencias inmutables. Cada desplegable conserva lo relevante de su corte y ofrece el texto íntegro; sus estados históricos no sustituyen al estado actual.
+La secuencia comienza en **0.1** y avanza hasta la presente **2.30**. Se conservan todas las ediciones anteriores y sus referencias inmutables. Cada desplegable conserva lo relevante de su corte y ofrece el texto íntegro; sus estados históricos no sustituyen al estado actual.
 
 El salto **0.2 → 2.0** se conserva tal como fue publicado; no se ha localizado una edición 1.x en el historial de este archivo. Cuando una edición reúne varios commits, se muestran todos en orden. Las fechas siguientes son las de esos commits en Europe/Madrid; una cabecera histórica puede conservar una fecha anterior.
 
@@ -660,7 +664,16 @@ Integra Qwen3.8-Max-0902 en la tabla de estado y en el catálogo, con enlace a l
 
 Completa las tablas del ensayo, del catálogo y del nodo 03 con Grok 4.7, cuyo examen y registro de calidad ya estaban publicados. Distingue el examen documental Apto de 25 preguntas del diagnóstico parcial MD01. Conserva las recepciones de Astra y Qwen, las rutas, los resultados y los diagramas. No introduce una nueva evaluación ni inferencia.
 
-[Expediente de Grok](modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/xai/grok-4.7/readme.md) · [Tique técnico](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0022.md). La revisión exacta de 2.29 corresponde al commit que contiene este documento y su registro de versiones.
+[Expediente de Grok](modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/xai/grok-4.7/readme.md) · [Tique técnico](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0022.md). [Texto íntegro de la edición 2.29](https://github.com/juantoniolloretegea/SV-motor/blob/52010b315b230617908a7f5f6d11cfb87f292661/laboratorio/ensayo-ia-y-observabilidad/README.md).
+
+</details>
+
+<details>
+<summary><strong>2.30 · 08/10/2026 · GLM-5.3 y alcance de CYB16</strong></summary>
+
+Incorpora GLM-5.3 a las tablas del ensayo, catálogo y nodo 03; actualiza las fichas de proveedor y modelo. Conserva los tres nodos, el estudio de ejecución propia y los resultados anteriores. Distingue el examen de ciberseguridad Apto de la reserva contractual MD07 y aclara la señalización documental sin modificar el vector ni el visor histórico. No añade inferencias.
+
+[Resultado CYB16](modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/zai/glm-5.3/cyb16-20261008/INFORME.md) · [Aclaración de alcance](modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/zai/glm-5.3/cyb16-20261008/ACLARACION-ALERTAS-20261008.md) · [TT-0024](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0024.md).
 
 </details>
 

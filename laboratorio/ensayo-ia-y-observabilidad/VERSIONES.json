@@ -1,20 +1,20 @@
 {
   "esquema": "sv.eio.registro-versiones/1",
-  "edicion_documental": "2.29",
+  "edicion_documental": "2.30",
   "fecha_corte": "2026-10-08",
-  "commit_base_consultado": "e7093afc20dd042764ba88287e10dea09296227e",
+  "commit_base_consultado": "76dea7a3b6279e3bd3da62680059c860776a13fa",
   "criterio": "Identidad separada para modelo, aplicacion, componente MCP, archivo de conservacion y edicion documental",
   "revision_actual": {
-  "version": "2.29",
-  "naturaleza": "incorporacion_grok_indices_generales",
-  "commit": "El que contiene este archivo; sin autorreferencia circular",
-  "cambios": [
-    "Grok 4.7 enlazado junto a Astra y Qwen en las tres tablas del nodo 03",
-    "Resultado documental histórico conservado: R2 Apto en 25 preguntas, 20 críticas correctas",
-    "MD01 del manual identificado como diagnóstico parcial separado",
-    "Existencia de Grok y Qwen en S39, TT-0022/TT-0023 y Acta 004 cotejada; sin nueva evaluación ni inferencia"
-  ]
-},
+    "version": "2.30",
+    "naturaleza": "incorporacion_glm53_y_aclaracion_documental",
+    "commit": "El que contiene este archivo; sin autorreferencia circular",
+    "cambios": [
+      "GLM-5.3 API en las tablas del ensayo, catálogo y nodo 03",
+      "CYB16 Apto diferenciado de MD07 bajo reserva y del estudio nodo 01",
+      "Aclaración de diez marcas documentales sin cambiar vector ni visor",
+      "Portadas conciliadas con S39 y TT-0024; sin nuevas inferencias"
+    ]
+  },
   "componentes": [
     {
       "id": "eio-conversacion/qwen3-0.6b",
@@ -106,62 +106,62 @@
     }
   ],
   "candidatos": [
-{
-  "modelo": "grok-4.7",
-  "proveedor": "xAI",
-  "nodo": "03",
-  "fecha_examen": "2026-10-08",
-  "estado": "examen_documental_concluido",
-  "dictamen": "Apto para el contrato documental",
-  "preguntas": 25,
-  "criticas": 20,
-  "correctas_finales": 25,
-  "criticas_correctas": 20,
-  "umbral": 19,
-  "fase_final": "R2",
-  "entregas": 75,
-  "resultado_r0": "No apto: error crítico P02",
-  "resultado_r1": "Apto: 25 correctas",
-  "examen": "laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/xai/grok-4.7/examen25-20261008/INFORME.md",
-  "expediente": "laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/xai/grok-4.7/readme.md",
-  "revision_examen": "e238915ae755bfb5e58738c7430e060f39b08baf",
-  "md01": "Diagnóstico parcial: R0 y R1 recibidas, R2 no ejecutada; sin conformidad del conjunto",
-  "tique": "TT-0022",
-  "acta": "004 §§58–59",
-  "recepcion_cientifica_independiente": "pendiente",
-  "aptitud_clinica_acreditada": false,
-  "inferencias_nuevas": 0
-},
-{
-  "modelo": "qwen3.8-max-0902",
-  "proveedor": "Alibaba Cloud",
-  "nodo": "03",
-  "fecha": "2026-10-08",
-  "estado": "recepcion_documental_posterior_con_reservas",
-  "dictamen": "Apto documental con reservas",
-  "preguntas": 16,
-  "criticas": 13,
-  "umbral": 12,
-  "replica_p13_contenido": [
-    "0",
-    "0",
-    "0"
-  ],
-  "dictamen_contractual_original": "No apto contractual bajo reserva metodológica",
-  "vector_original_modificado": false,
-  "puntuacion_nueva": null,
-  "aptitud_clinica_acreditada": false,
-  "recepcion_cientifica_independiente": "pendiente",
-  "reservas": [
-    "P02",
-    "P11",
-    "P16"
-  ],
-  "expediente": "laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/qwen/qwen3.8-max-0902/readme.md",
-  "acta": "laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/qwen/qwen3.8-max-0902/RECEPCION-DOCUMENTAL-20261008.md",
-  "revision_evidencia": "fba54670fbb45727b69566af5ea985204d96ed05",
-  "inferencias_nuevas": 0
-},
+    {
+      "modelo": "grok-4.7",
+      "proveedor": "xAI",
+      "nodo": "03",
+      "fecha_examen": "2026-10-08",
+      "estado": "examen_documental_concluido",
+      "dictamen": "Apto para el contrato documental",
+      "preguntas": 25,
+      "criticas": 20,
+      "correctas_finales": 25,
+      "criticas_correctas": 20,
+      "umbral": 19,
+      "fase_final": "R2",
+      "entregas": 75,
+      "resultado_r0": "No apto: error crítico P02",
+      "resultado_r1": "Apto: 25 correctas",
+      "examen": "laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/xai/grok-4.7/examen25-20261008/INFORME.md",
+      "expediente": "laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/xai/grok-4.7/readme.md",
+      "revision_examen": "e238915ae755bfb5e58738c7430e060f39b08baf",
+      "md01": "Diagnóstico parcial: R0 y R1 recibidas, R2 no ejecutada; sin conformidad del conjunto",
+      "tique": "TT-0022",
+      "acta": "004 §§58–59",
+      "recepcion_cientifica_independiente": "pendiente",
+      "aptitud_clinica_acreditada": false,
+      "inferencias_nuevas": 0
+    },
+    {
+      "modelo": "qwen3.8-max-0902",
+      "proveedor": "Alibaba Cloud",
+      "nodo": "03",
+      "fecha": "2026-10-08",
+      "estado": "recepcion_documental_posterior_con_reservas",
+      "dictamen": "Apto documental con reservas",
+      "preguntas": 16,
+      "criticas": 13,
+      "umbral": 12,
+      "replica_p13_contenido": [
+        "0",
+        "0",
+        "0"
+      ],
+      "dictamen_contractual_original": "No apto contractual bajo reserva metodológica",
+      "vector_original_modificado": false,
+      "puntuacion_nueva": null,
+      "aptitud_clinica_acreditada": false,
+      "recepcion_cientifica_independiente": "pendiente",
+      "reservas": [
+        "P02",
+        "P11",
+        "P16"
+      ],
+      "expediente": "laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/qwen/qwen3.8-max-0902/readme.md",
+      "acta": "laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/qwen/qwen3.8-max-0902/RECEPCION-DOCUMENTAL-20261008.md",
+      "revision_evidencia": "fba54670fbb45727b69566af5ea985204d96ed05",
+      "inferencias_nuevas": 0
+    },
     {
       "modelo": "Qwen/Qwen3-0.6B",
       "estado": "campana_cerrada_con_limitaciones"
@@ -1382,82 +1382,114 @@
     "inferencias_nuevas": 0
   },
   "revision_2_27_conservada": {
-  "version": "2.27",
-  "naturaleza": "orientacion_tres_nodos_y_conciliacion_documental",
-  "commit": "El que contiene este archivo; sin autorreferencia circular",
-  "cambios": [
-    "Tres nodos enlazados antes del estado; distinción respecto de vías A/B",
-    "Astra integrado en versiones, publicaciones, historia y seguimiento TT-0021",
-    "Retirada Qwen3.5 conciliada con acta posterior; antecedentes conservados",
-    "JavaScript mínimo limitado a presentación e interoperabilidad, sin autoridad sobre lógica o directrices del SV",
-    "Diagramas, rutas y anclas históricos conservados; sin nuevas inferencias"
-  ]
-},
+    "version": "2.27",
+    "naturaleza": "orientacion_tres_nodos_y_conciliacion_documental",
+    "commit": "El que contiene este archivo; sin autorreferencia circular",
+    "cambios": [
+      "Tres nodos enlazados antes del estado; distinción respecto de vías A/B",
+      "Astra integrado en versiones, publicaciones, historia y seguimiento TT-0021",
+      "Retirada Qwen3.5 conciliada con acta posterior; antecedentes conservados",
+      "JavaScript mínimo limitado a presentación e interoperabilidad, sin autoridad sobre lógica o directrices del SV",
+      "Diagramas, rutas y anclas históricos conservados; sin nuevas inferencias"
+    ]
+  },
   "recepcion_qwen_20261008": {
-  "modelo": "qwen3.8-max-0902",
-  "proveedor": "Alibaba Cloud",
-  "nodo": "03",
-  "fecha": "2026-10-08",
-  "estado": "recepcion_documental_posterior_con_reservas",
-  "dictamen": "Apto documental con reservas",
-  "preguntas": 16,
-  "criticas": 13,
-  "umbral": 12,
-  "replica_p13_contenido": [
-    "0",
-    "0",
-    "0"
-  ],
-  "dictamen_contractual_original": "No apto contractual bajo reserva metodológica",
-  "vector_original_modificado": false,
-  "puntuacion_nueva": null,
-  "aptitud_clinica_acreditada": false,
-  "recepcion_cientifica_independiente": "pendiente",
-  "reservas": [
-    "P02",
-    "P11",
-    "P16"
-  ],
-  "expediente": "laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/qwen/qwen3.8-max-0902/readme.md",
-  "acta": "laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/qwen/qwen3.8-max-0902/RECEPCION-DOCUMENTAL-20261008.md",
-  "revision_evidencia": "fba54670fbb45727b69566af5ea985204d96ed05",
-  "inferencias_nuevas": 0
-},
+    "modelo": "qwen3.8-max-0902",
+    "proveedor": "Alibaba Cloud",
+    "nodo": "03",
+    "fecha": "2026-10-08",
+    "estado": "recepcion_documental_posterior_con_reservas",
+    "dictamen": "Apto documental con reservas",
+    "preguntas": 16,
+    "criticas": 13,
+    "umbral": 12,
+    "replica_p13_contenido": [
+      "0",
+      "0",
+      "0"
+    ],
+    "dictamen_contractual_original": "No apto contractual bajo reserva metodológica",
+    "vector_original_modificado": false,
+    "puntuacion_nueva": null,
+    "aptitud_clinica_acreditada": false,
+    "recepcion_cientifica_independiente": "pendiente",
+    "reservas": [
+      "P02",
+      "P11",
+      "P16"
+    ],
+    "expediente": "laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/qwen/qwen3.8-max-0902/readme.md",
+    "acta": "laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/qwen/qwen3.8-max-0902/RECEPCION-DOCUMENTAL-20261008.md",
+    "revision_evidencia": "fba54670fbb45727b69566af5ea985204d96ed05",
+    "inferencias_nuevas": 0
+  },
   "revision_2_28_conservada": {
-  "version": "2.28",
-  "naturaleza": "recepcion_documental_qwen_nodo03_alcance16_con_reservas",
-  "commit": "El que contiene este archivo; sin autorreferencia circular",
-  "cambios": [
-    "Qwen integrado en las tablas existentes y en sus índices de nodo, proveedor y modelo",
-    "Recepción posterior separada de la adjudicación original y de la réplica P13",
-    "Dieciséis preguntas por disponibilidad de recursos; sin nueva puntuación ni equivalencia global con 25",
-    "Diagramas, rutas, resultados y antecedentes conservados; sin nuevas inferencias"
-  ]
-},
+    "version": "2.28",
+    "naturaleza": "recepcion_documental_qwen_nodo03_alcance16_con_reservas",
+    "commit": "El que contiene este archivo; sin autorreferencia circular",
+    "cambios": [
+      "Qwen integrado en las tablas existentes y en sus índices de nodo, proveedor y modelo",
+      "Recepción posterior separada de la adjudicación original y de la réplica P13",
+      "Dieciséis preguntas por disponibilidad de recursos; sin nueva puntuación ni equivalencia global con 25",
+      "Diagramas, rutas, resultados y antecedentes conservados; sin nuevas inferencias"
+    ]
+  },
   "incorporacion_grok_indices_20261008": {
-  "modelo": "grok-4.7",
-  "proveedor": "xAI",
-  "nodo": "03",
-  "fecha_examen": "2026-10-08",
-  "estado": "examen_documental_concluido",
-  "dictamen": "Apto para el contrato documental",
-  "preguntas": 25,
-  "criticas": 20,
-  "correctas_finales": 25,
-  "criticas_correctas": 20,
-  "umbral": 19,
-  "fase_final": "R2",
-  "entregas": 75,
-  "resultado_r0": "No apto: error crítico P02",
-  "resultado_r1": "Apto: 25 correctas",
-  "examen": "laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/xai/grok-4.7/examen25-20261008/INFORME.md",
-  "expediente": "laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/xai/grok-4.7/readme.md",
-  "revision_examen": "e238915ae755bfb5e58738c7430e060f39b08baf",
-  "md01": "Diagnóstico parcial: R0 y R1 recibidas, R2 no ejecutada; sin conformidad del conjunto",
-  "tique": "TT-0022",
-  "acta": "004 §§58–59",
-  "recepcion_cientifica_independiente": "pendiente",
-  "aptitud_clinica_acreditada": false,
-  "inferencias_nuevas": 0
-}
+    "modelo": "grok-4.7",
+    "proveedor": "xAI",
+    "nodo": "03",
+    "fecha_examen": "2026-10-08",
+    "estado": "examen_documental_concluido",
+    "dictamen": "Apto para el contrato documental",
+    "preguntas": 25,
+    "criticas": 20,
+    "correctas_finales": 25,
+    "criticas_correctas": 20,
+    "umbral": 19,
+    "fase_final": "R2",
+    "entregas": 75,
+    "resultado_r0": "No apto: error crítico P02",
+    "resultado_r1": "Apto: 25 correctas",
+    "examen": "laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/xai/grok-4.7/examen25-20261008/INFORME.md",
+    "expediente": "laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/xai/grok-4.7/readme.md",
+    "revision_examen": "e238915ae755bfb5e58738c7430e060f39b08baf",
+    "md01": "Diagnóstico parcial: R0 y R1 recibidas, R2 no ejecutada; sin conformidad del conjunto",
+    "tique": "TT-0022",
+    "acta": "004 §§58–59",
+    "recepcion_cientifica_independiente": "pendiente",
+    "aptitud_clinica_acreditada": false,
+    "inferencias_nuevas": 0
+  },
+  "revision_2_29_conservada": {
+    "version": "2.29",
+    "naturaleza": "incorporacion_grok_indices_generales",
+    "commit": "El que contiene este archivo; sin autorreferencia circular",
+    "cambios": [
+      "Grok 4.7 enlazado junto a Astra y Qwen en las tres tablas del nodo 03",
+      "Resultado documental histórico conservado: R2 Apto en 25 preguntas, 20 críticas correctas",
+      "MD01 del manual identificado como diagnóstico parcial separado",
+      "Existencia de Grok y Qwen en S39, TT-0022/TT-0023 y Acta 004 cotejada; sin nueva evaluación ni inferencia"
+    ]
+  },
+  "incorporacion_glm53_indices_20261008": {
+    "modelo": "glm-5.3",
+    "proveedor": "Z.ai",
+    "nodo": "03",
+    "fecha_examen": "2026-10-08",
+    "dictamen": "Apto para el contrato documental CYB16",
+    "preguntas": 16,
+    "criticas": 14,
+    "correctas_finales": 16,
+    "criticas_correctas": 14,
+    "umbral": 12,
+    "fase_final": "R2",
+    "entregas": 48,
+    "examen": "laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/zai/glm-5.3/cyb16-20261008/INFORME.md",
+    "expediente": "laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/zai/glm-5.3/readme.md",
+    "revision_examen": "76dea7a3b6279e3bd3da62680059c860776a13fa",
+    "manual": "No apto contractual bajo reserva MD07; sin recalificación",
+    "recepcion_cientifica_independiente": "pendiente",
+    "aptitud_operativa_acreditada": false,
+    "inferencias_nuevas": 0
+  }
 }
