@@ -1,0 +1,71 @@
+{
+  "version": "1.0.0",
+  "fecha_consulta": "2026-10-08",
+  "referencia_externa": "Artificial Analysis Intelligence Index v4.3.2",
+  "regla_principal": "Coste medio ponderado por tarea publicado por Artificial Analysis, ascendente; empates conservados. No es coste por tarea acertada.",
+  "procedencia": "Transcripción de magnitudes públicas consultadas; no son mediciones propias del SV ni liquidaciones de cuenta.",
+  "modelos": [
+    {
+      "id": "glm-5.3", "proveedor": "Z.ai", "nombre": "GLM-5.3", "configuracion_aa": "max",
+      "indice_aa": 45, "coste_tarea_centavos": 201,
+      "entrada_centavos_millon": 140, "salida_centavos_millon": 440,
+      "cache_oficial_centavos_millon": 26, "cache_aa_centavos_millon": 26,
+      "velocidad_decimas_tokens_s": 825, "primer_token_ms": 2740, "primera_respuesta_ms": 26980,
+      "salida_aproximada_tokens_tarea": 71000, "razonamiento_aproximado_tokens_tarea": 49000,
+      "fuente_aa": "https://artificialanalysis.ai/models/glm-5-3",
+      "fuente_comparacion": "https://artificialanalysis.ai/models/comparisons/grok-4-7-vs-glm-5-3",
+      "fuente_tarifa": "https://docs.z.ai/guides/overview/pricing",
+      "expediente": "zai/glm-5.3"
+    },
+    {
+      "id": "gpt-6-astra", "proveedor": "OpenAI", "nombre": "GPT-6 Astra", "configuracion_aa": "max",
+      "indice_aa": 53, "coste_tarea_centavos": 326,
+      "entrada_centavos_millon": 1000, "salida_centavos_millon": 5000,
+      "cache_oficial_centavos_millon": 100, "cache_aa_centavos_millon": 100,
+      "velocidad_decimas_tokens_s": 445, "primer_token_ms": 410560, "primera_respuesta_ms": 410560,
+      "salida_aproximada_tokens_tarea": 27000, "razonamiento_aproximado_tokens_tarea": 17000,
+      "fuente_aa": "https://artificialanalysis.ai/models/gpt-6-astra",
+      "fuente_comparacion": "https://artificialanalysis.ai/models/comparisons/gpt-6-astra-vs-qwen3-8-max",
+      "fuente_tarifa": "https://developers.openai.com/api/docs/models/gpt-6-astra",
+      "expediente": "openai/gpt-6-astra"
+    },
+    {
+      "id": "grok-4.7", "proveedor": "xAI", "nombre": "Grok 4.7", "configuracion_aa": "xhigh",
+      "indice_aa": 46, "coste_tarea_centavos": 374,
+      "entrada_centavos_millon": 200, "salida_centavos_millon": 600,
+      "cache_oficial_centavos_millon": 50, "cache_aa_centavos_millon": 50,
+      "velocidad_decimas_tokens_s": 681, "primer_token_ms": 91390, "primera_respuesta_ms": 91390,
+      "salida_aproximada_tokens_tarea": 81000, "razonamiento_aproximado_tokens_tarea": 59000,
+      "fuente_aa": "https://artificialanalysis.ai/models/grok-4-7",
+      "fuente_comparacion": "https://artificialanalysis.ai/models/comparisons/grok-4-7-vs-glm-5-3",
+      "fuente_tarifa": "https://docs.x.ai/developers/models/grok-4.7",
+      "expediente": "xai/grok-4.7"
+    },
+    {
+      "id": "qwen3.8-max-0902", "proveedor": "Alibaba Cloud", "nombre": "Qwen3.8-Max-0902", "configuracion_aa": "0902; razonamiento; esfuerzo no etiquetado en la ficha",
+      "indice_aa": 45, "coste_tarea_centavos": 541,
+      "entrada_centavos_millon": 200, "salida_centavos_millon": 600,
+      "cache_oficial_centavos_millon": null, "cache_aa_centavos_millon": 25,
+      "velocidad_decimas_tokens_s": 354, "primer_token_ms": 2900, "primera_respuesta_ms": 59380,
+      "salida_aproximada_tokens_tarea": 108000, "razonamiento_aproximado_tokens_tarea": 71000,
+      "fuente_aa": "https://artificialanalysis.ai/models/qwen3-8-max",
+      "fuente_comparacion": "https://artificialanalysis.ai/models/comparisons/gpt-6-astra-vs-qwen3-8-max",
+      "fuente_tarifa": "https://www.alibabacloud.com/help/en/model-studio/model-pricing",
+      "reserva_cache": "Artificial Analysis publica 0,25 USD/M; no se confirma aquí esa tarifa específica en la cuenta de Singapur. No se emplea para liquidar gastos del SV.",
+      "expediente": "qwen/qwen3.8-max-0902"
+    }
+  ],
+  "fuentes_metodologicas": [
+    "https://artificialanalysis.ai/methodology",
+    "https://artificialanalysis.ai/methodology/intelligence-benchmarking",
+    "https://artificialanalysis.ai/methodology/performance-benchmarking"
+  ],
+  "limites": [
+    "El índice de capacidad no es un porcentaje de preguntas correctas ni una escala para calcular aciertos por dólar.",
+    "Coste por tarea y velocidad proceden de conjuntos de medición distintos en Artificial Analysis; no se usan conjuntamente para reconstruir duraciones de un examen SV.",
+    "Las páginas son dinámicas. Se conserva la lectura de fichas y comparaciones abiertas en esta consulta, no los fragmentos anteriores de buscadores.",
+    "No se trasladan saldos, claves, facturas ni identificadores de cuentas del archivo privado."
+  ],
+  "licencia_documento": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+  "datos_terceros": "Artificial Analysis y proveedores: atribución mediante URLs; sus derechos y condiciones se conservan."
+}
