@@ -1,6 +1,6 @@
 # Resultados del SV y comparación de costes de modelos de IA
 
-**Versión 1.2 · Corte documental: 8 de octubre de 2026.** Esta edición presenta una clasificación propia de calidad, los consumos y observaciones del SV y la referencia económica externa. Los resultados externos quedan identificados como tales. La calidad, la demora y el coste son magnitudes separadas.
+**Versión 1.3 · Corte documental: 8 de octubre de 2026.** Esta edición presenta una clasificación propia de calidad, los consumos y observaciones del SV y la referencia económica externa. Los resultados externos quedan identificados como tales. La calidad, la demora y el coste son magnitudes separadas.
 
 ## Ranquin propio de calidad: MD01, respuesta inicial R0
 

@@ -1,6 +1,6 @@
 # Reproducción de datos, clasificaciones e integridad en Rust
 
-Versión documental 1.1. Los programas trabajan sobre los archivos publicados: no se conectan a los proveedores ni realizan inferencias. Las dependencias están fijadas en Cargo.lock; conservan sus propias licencias.
+Versión documental 1.3. Los programas trabajan sobre los archivos publicados: no se conectan a los proveedores ni realizan inferencias. Las dependencias están fijadas en Cargo.lock; conservan sus propias licencias.
 
 Desde la raíz de esta comparativa:
 
@@ -24,6 +24,10 @@ El cálculo utiliza enteros; separa el precio externo de caché de Qwen de su ta
 El [segundo programa](../evidencia-sv/calculo-consumos-rust/src/main.rs) lee únicamente los dos CSV de evidencia-sv. Reproduce los agregados por modelo, el detalle económico CYB16 y VERIFICACION.json. Comprueba identidades públicas, ausencias, sumas, correspondencias y las 16 preguntas por tres etapas. Usa enteros de 10⁻¹⁰ USD para el cálculo monetario.
 
 Su ejecución vuelve a escribir los tres JSON derivados dentro de evidencia-sv. Una reproducción fiel debe conservar su contenido exacto. El [alcance documental](../evidencia-sv/PROCEDENCIA.md) distingue la reproducción pública de la comprobación contra las fuentes de origen.
+
+## Clasificación documental MD01
+
+[RANQUIN-CALIDAD-SV.json](../RANQUIN-CALIDAD-SV.json) transcribe las dos adjudicaciones publicadas en revisiones fijas, enlazadas en ese mismo archivo. El empate se deriva de su conformidad conjunta, sin sumar los campos ni realizar una adjudicación nueva. La correspondencia con esas fuentes se ha revisado documentalmente; el programa de integridad comprueba los bytes y la huella del archivo, pero no vuelve a evaluar las respuestas ni recalcula semánticamente esta clasificación.
 
 ## Observaciones MD01 e integridad
 

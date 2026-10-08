@@ -23,9 +23,8 @@ Los contratos temporales contienen la misma regla sustantiva y composición de a
 | Máximo de salida solicitado | 8192 | 8192; reserva de semántica respecto del razonamiento |
 | Recepción continua | Sí | Sí |
 | Herramientas disponibles en la solicitud | Ninguna; selección none | Ninguna; campo de selección omitido |
-| Almacenamiento solicitado | No | No, con comprobación de retención cero |
+| Almacenamiento solicitado | No | No; retención cero comunicada por el proveedor |
 | Instrucciones | Contrato del ensayo | Contrato más licencia y aviso |
-| Modalidad | Acceso autorizado asociado a ChatGPT | API directa |
 
 Solicitar medium en dos proveedores no acredita igualdad de cómputo interno. Las solicitudes completas no son idénticas y contienen cantidades diferentes de tokens. Se examinaron la [construcción base](https://github.com/juantoniolloretegea/SV-motor/blob/0246a7df1e9436f4bff4f0d94ac6d36e1f29c1e0/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/openai/gpt-6-astra/manual-mdbook-20261008/replica-md01-20261008/controlador/src/bin/astra-md01-replica/suministro.rs#L82) y la [adaptación para xAI](https://github.com/juantoniolloretegea/SV-motor/blob/091b50a884c893fd4322bbf211b0feb0132bb258/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/cliente-api-rust/src/lib.rs#L25).
 

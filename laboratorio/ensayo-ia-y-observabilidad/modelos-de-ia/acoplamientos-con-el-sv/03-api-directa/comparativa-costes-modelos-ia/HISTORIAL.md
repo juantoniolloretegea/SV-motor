@@ -1,5 +1,9 @@
 # Historial de revisiones
 
+## 1.3 · 8 de octubre de 2026
+
+Se revisan la presentación y las reservas económicas para limitar los informes a resultados, consumo, importes atribuibles y fuentes. Se retiran las referencias a condiciones particulares de acceso y se conserva expresamente la distinción entre tarifa, estimación e importe acreditado. No se alteran contadores, adjudicaciones ni puestos.
+
 ## 1.2 · 8 de octubre de 2026
 
 Se incorpora una clasificación propia limitada a la conformidad de MD01-R0: Astra y Grok comparten el primer puesto según sus adjudicaciones conjuntas 0. Se explicitan contenido y estructura, sin sumarlos ni introducir una rúbrica nueva. Las reservas temporales no se extienden indebidamente a la comparación de calidad.

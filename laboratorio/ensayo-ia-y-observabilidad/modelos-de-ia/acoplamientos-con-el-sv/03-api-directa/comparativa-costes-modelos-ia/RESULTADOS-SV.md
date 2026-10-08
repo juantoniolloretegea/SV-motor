@@ -37,8 +37,8 @@ La pregunta y el corpus coinciden. Las solicitudes completas y el punto inicial 
 |---|---|---|
 | Grok, 78 de sus 79 registros publicados | 3,5991300000 USD | Importe comunicado; conciliación parcial. No equivale a factura ni sólo a MD01. |
 | GLM, CYB16: 48 solicitudes | 2,35145108 USD | Estimación mediante contadores y tarifas; liquidación individual desconocida. |
-| Astra, ensayos publicados | Importe atribuible no comunicado | No aplicar retrospectivamente una tarifa API a otra modalidad de acceso. |
-| Qwen, ensayos publicados | Importe atribuible no comunicado | La cobertura por cuota no acredita coste monetario comparable igual a cero. |
+| Astra, ensayos publicados | Importe atribuible no comunicado | No se dispone de importe atribuible; no se sustituye por una tarifa hipotética. |
+| Qwen, ensayos publicados | Importe atribuible no comunicado | La ausencia de importe no acredita coste cero. |
 
 El cálculo de CYB16 resta de la entrada total los tokens de caché antes de aplicar el precio ordinario; la caché se valora separadamente. El razonamiento está incluido en la salida y no se suma por segunda vez. [Desglose y fórmula reproducible](evidencia-sv/PROCEDENCIA.md).
 

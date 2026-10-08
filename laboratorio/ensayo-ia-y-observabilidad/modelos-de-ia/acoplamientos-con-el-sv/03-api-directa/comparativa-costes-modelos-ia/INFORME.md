@@ -31,7 +31,7 @@ USD por millón de tokens nativos, servicio ordinario de texto en tiempo real y 
 |---|---:|---:|---:|---|
 | Z.ai / GLM-5.3 | 1,40 | 0,26 | 4,40 | [Z.ai](https://docs.z.ai/guides/overview/pricing) |
 | xAI / Grok 4.7 | 2,00 | 0,50 | 6,00 | [xAI](https://docs.x.ai/developers/models/grok-4.7) |
-| Alibaba Cloud / Qwen3.8-Max-0902 | 2,00 | Por confirmar para la cuenta y región específicas | 6,00 | [Alibaba Cloud](https://www.alibabacloud.com/help/en/model-studio/model-pricing) |
+| Alibaba Cloud / Qwen3.8-Max-0902 | 2,00 | Tarifa específica pendiente de confirmar | 6,00 | [Alibaba Cloud](https://www.alibabacloud.com/help/en/model-studio/model-pricing) |
 | OpenAI / GPT-6 Astra | 10,00 | 1,00 | 50,00 | [OpenAI](https://developers.openai.com/api/docs/models/gpt-6-astra) |
 
 La entrada desde caché es un subconjunto de la entrada; el razonamiento facturable incluido en la salida no se suma otra vez. Las tarifas de contexto extenso y otras modalidades requieren un cálculo distinto.
@@ -47,7 +47,7 @@ La definición actual de precio ponderado de Artificial Analysis utiliza **7 par
 | 3 | Grok 4.7 | 1,350 |
 | 4 | GPT-6 Astra | 7,700 |
 
-Qwen utiliza aquí **0,25 USD/M de lectura de caché publicado por Artificial Analysis**, no una tarifa confirmada en la cuenta del SV. Alibaba excluye este modelo de su regla genérica de descuento y remite al precio específico; esa reserva continúa abierta. Por ello, el cálculo con tarifa oficial de caché queda `null` para Qwen en el fichero de resultados. [Comparación externa](https://artificialanalysis.ai/models/comparisons/gpt-6-astra-vs-qwen3-8-max) · [Condiciones oficiales de caché](https://www.alibabacloud.com/help/en/model-studio/context-cache).
+Qwen utiliza aquí **0,25 USD/M de lectura de caché publicado por Artificial Analysis**, sin confirmación en la fuente tarifaria oficial para este modelo. Alibaba excluye este modelo de su regla genérica de descuento y remite al precio específico; esa reserva continúa abierta. Por ello, el cálculo con tarifa oficial de caché queda `null` para Qwen en el fichero de resultados. [Comparación externa](https://artificialanalysis.ai/models/comparisons/gpt-6-astra-vs-qwen3-8-max) · [Condiciones oficiales de caché](https://www.alibabacloud.com/help/en/model-studio/context-cache).
 
 El ejemplo anterior de 1.000.000 tokens de entrada ordinaria y 100.000 de salida sigue dando 1,84 USD para GLM; 2,60 para Grok y Qwen; 15,00 para Astra. Es otro reparto de volumen, sin caché, y no se confunde con la mezcla 7:2:1.
 
@@ -82,7 +82,7 @@ La documentación de mercado permite una preferencia económica por GLM y una pr
 
 La decisión de uso del SV requiere primero la conformidad con el contrato pertinente, sus parámetros críticos, privacidad, licencia y límites operativos. Después pueden compararse coste y tiempo entre candidatos admisibles. **Un error crítico no se compensa con una ventaja económica.**
 
-El acceso por autorización ChatGPT utilizado en Astra no equivale a liquidación mediante la tarifa API estándar. Los créditos del plan, las cuotas de bienvenida y los saldos disponibles son condiciones administrativas distintas; quedan fuera de este ranquin de mercado. [Distinción de modalidades de OpenAI](https://learn.chatgpt.com/docs/pricing).
+El importe atribuible de Astra permanece no determinado. Las tarifas publicadas no se presentan como cargo de las ejecuciones.
 
 La comparación propia comienza por cotejar los ensayos conservados. MD01 permite publicar las observaciones con las reservas expuestas arriba; no permite un coste por resultado conforme común a los cuatro modelos. Una ampliación posterior requeriría condiciones y relojes homogéneos, cobertura de todos los intentos y costes atribuibles. No se prescribe repetir pruebas existentes ni se autoriza nuevo consumo con esta publicación. El [método](METODO.md) conserva estas condiciones.
 

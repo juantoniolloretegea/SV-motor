@@ -66,7 +66,7 @@ La caché es un subconjunto de la entrada; el razonamiento facturable incluido e
 
 [DATOS-SV.json](DATOS-SV.json) identifica la evidencia temporal propia. [DATOS.json](DATOS.json) conserva magnitudes externas, configuraciones, fuentes, fecha y reservas. Las tablas económicas depuradas incorporan ausencias y grado de conciliación.
 
-Los [programas Rust](calculo-rust/REPRODUCCION.md) reproducen las clasificaciones, sumas, estimaciones y huellas. La aritmética conforme no certifica los contadores internos, las facturas, las evaluaciones externas ni la aptitud científica de un modelo.
+Los [programas Rust](calculo-rust/REPRODUCCION.md) reproducen el orden económico externo, las sumas y las estimaciones, y cotejan las huellas. La clasificación documental MD01 transcribe las adjudicaciones enlazadas; su contenido se ha contrastado con ellas y su archivo queda protegido por el manifiesto. El programa no vuelve a adjudicar esas respuestas. La aritmética conforme no certifica los contadores internos, las facturas, las evaluaciones externas ni la aptitud científica de un modelo.
 
 El [manifiesto](MANIFIESTO.json) identifica bytes y SHA-256 de los archivos publicados, excluyéndose a sí mismo. La revisión remota se recupera y coteja antes de declarar la publicación recibida. Cada actualización conserva su fecha y el [historial](HISTORIAL.md); no se reescriben hitos previos como observaciones nuevas.
 

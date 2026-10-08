@@ -22,7 +22,7 @@ La réplica P13 conserva tres etapas, 75.019 tokens y R2 conforme, sin sustituir
 | Demora externa AA hasta la primera respuesta | 59,38 s |
 | Precio ordinario de entrada / salida | 2,00 / 6,00 USD por millón |
 
-[Fuente externa del modelo](https://artificialanalysis.ai/models/qwen3-8-max) · [Tarifa del proveedor](https://www.alibabacloud.com/help/en/model-studio/model-pricing). Las cifras externas no son mediciones del SV, una factura, una probabilidad de acierto ni una garantía de servicio. La lectura de caché de 0,25 USD/M procede de Artificial Analysis; su aplicación a la cuenta y región no queda confirmada aquí. Se conserva la reserva oficial en los datos.
+[Fuente externa del modelo](https://artificialanalysis.ai/models/qwen3-8-max) · [Tarifa del proveedor](https://www.alibabacloud.com/help/en/model-studio/model-pricing). Las cifras externas no son mediciones del SV, una factura, una probabilidad de acierto ni una garantía de servicio. La lectura de caché de 0,25 USD/M procede de Artificial Analysis; la tarifa específica oficial continúa pendiente de confirmar. Se conserva esa reserva en los datos.
 
 El [expediente del modelo en el nodo 03](../../qwen/qwen3.8-max-0902) conserva sus propias pruebas y límites. El ranquin no los sustituye ni los recalifica. Para admitir un uso, el cumplimiento de parámetros críticos prevalece sobre la economía.
 
