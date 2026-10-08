@@ -123,7 +123,7 @@ pub fn preparar(root:&Path)->R<Value> {
     let mut receipts=vec![];fs::create_dir(root.join("fuentes-admitidas")).map_err(err)?;
     for q in bank["preguntas"].as_array().unwrap(){let b=serde_json::to_vec_pretty(&request(q,&all)?).map_err(err)?;let id=q["id"].as_str().unwrap();put(&root.join(format!("fuentes-admitidas/{id}.json")),&b)?;receipts.push(json!({"caso":id,"sha256":sha(&b),"seccion":q["seccion"],"clave_en_contexto":false}));}
     m.event("director_suministro_completo",json!({"secciones":5,"fragmentos":all.len(),"preguntas":25}))?;let measured=m.finish()?;need(measured["fallos_medicion"]==0,"Medición previa fallida")?;
-    let result=json!({"conforme":true,"casos":receipts,"telemetria":measured,"aislamiento":isolation,"diario":audited,"mcp_sha256":bin_hash,"fragmentos":all.len(),"secciones":5,"catalogo_sha256":CAT_SHA,"banco_sha256":BANK_SHA,"clave_sha256":KEY_SHA,"html_sha256":HTML_SHA,"clave_en_candidato":false,"lectura_candidato":"sin herramientas; recibe sólo el contexto compuesto","limite_aislamiento":"MCP sin sockets; no inspecciona infraestructura de OpenAI","inferencias":0});
+    let result=json!({"conforme":true,"casos":receipts,"telemetria":measured,"aislamiento":isolation,"diario":audited,"mcp_sha256":bin_hash,"fragmentos":all.len(),"secciones":5,"catalogo_sha256":CAT_SHA,"banco_sha256":BANK_SHA,"clave_sha256":KEY_SHA,"html_sha256":HTML_SHA,"clave_en_candidato":false,"lectura_candidato":"sin herramientas; recibe sólo el contexto compuesto","limite_aislamiento":"MCP sin sockets; no inspecciona infraestructura del proveedor","inferencias":0});
     save(&dest.join("CONTROL-ARBITRO.json"),&result)?;verificar(root)?;Ok(result)
 }
 pub fn verificar(root:&Path)->R<()> {

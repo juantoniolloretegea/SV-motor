@@ -1,6 +1,7 @@
 #![forbid(unsafe_code)]
 //! Transporte y recepción comunes. La configuración limita proveedor y modelo.
 pub mod estricto;
+pub mod presupuesto;
 use serde::{Deserialize,Serialize};
 use serde_json::{json,Value};
 use std::{fs::{self,OpenOptions},io::{Read,Write},path::Path,time::{Duration,Instant}};
@@ -19,14 +20,31 @@ pub const AVISO:&str="Aviso de derechos: la licencia indicada corresponde al mat
 
 #[derive(Clone,Serialize,Deserialize)]
 #[serde(deny_unknown_fields)]
-pub struct Perfil {pub proveedor:String,pub modelo:String,pub endpoint:String,pub presupuesto_ticks:u64,pub exigir_zdr:bool,pub entrada_ticks_por_token:u64,pub salida_ticks_por_token:u64}
-impl Perfil{pub fn comprobar(&self)->R<()>{need(matches!(self.endpoint.as_str(),"https://api.x.ai/v1/responses"|"https://api.openai.com/v1/responses"),"Destino no admitido")?;need(!self.modelo.is_empty()&&self.presupuesto_ticks>0&&self.entrada_ticks_por_token>0&&self.salida_ticks_por_token>0,"Perfil incompleto")}}
+pub struct Perfil {pub proveedor:String,pub modelo:String,pub endpoint:String,pub presupuesto_ticks:u64,pub exigir_zdr:bool,pub entrada_ticks_por_token:u64,pub salida_ticks_por_token:u64,#[serde(default,skip_serializing_if="Option::is_none")]pub cuota_gratuita_tokens:Option<u64>}
+impl Perfil{pub fn comprobar(&self)->R<()>{
+ let destino=match self.proveedor.as_str(){"xAI"=>self.endpoint=="https://api.x.ai/v1/responses","OpenAI"=>self.endpoint=="https://api.openai.com/v1/responses","Alibaba Cloud"=>{
+  let u=reqwest::Url::parse(&self.endpoint).map_err(|_|"URL inválida")?;
+  let workspace=u.host_str().and_then(|s|s.strip_suffix(".ap-southeast-1.maas.aliyuncs.com")).and_then(|s|s.strip_prefix("ws-"));
+  u.scheme()=="https"&&u.username().is_empty()&&u.password().is_none()&&u.port().is_none()&&u.query().is_none()&&u.fragment().is_none()&&u.path()=="/compatible-mode/v1/responses"&&workspace.is_some_and(|s|!s.is_empty()&&s.len()<=64&&s.bytes().all(|b|b.is_ascii_lowercase()||b.is_ascii_digit()))
+ },_=>false};need(destino,"Destino o proveedor no admitido")?;
+ need(!self.modelo.is_empty()&&self.entrada_ticks_por_token>0&&self.salida_ticks_por_token>0,"Perfil incompleto")?;
+ if let Some(n)=self.cuota_gratuita_tokens{need(self.proveedor=="Alibaba Cloud"&&self.modelo=="qwen3.8-max-0902"&&self.presupuesto_ticks==0&&n>0&&n<=1_000_000,"Cuota gratuita o presupuesto no autorizado")?;}else{need(self.proveedor!="Alibaba Cloud"&&self.presupuesto_ticks>0,"Falta protección de cuota gratuita")?;}Ok(())
+}}
 
 pub fn proteger(q:&mut Value,p:&Perfil)->R<()> {
  p.comprobar()?;q["model"]=json!(p.modelo);q["tools"]=json!([]);q["tool_choice"]=json!("none");q["store"]=json!(false);q["stream"]=json!(true);
  q["instructions"]=json!(format!("{}\n{}\n{}",q["instructions"].as_str().ok_or("Faltan instrucciones")?,LICENCIA,AVISO));
  // Compatibilidad explícita de proveedor; el motor del ensayo no cambia.
  if p.proveedor=="xAI"{q["reasoning"]=json!({"effort":"medium"});q.as_object_mut().ok_or("Solicitud no es objeto")?.remove("tool_choice");}
+ if p.proveedor=="Alibaba Cloud"{
+  q["reasoning"]=json!({"effort":"medium"});
+  // Responses de Alibaba no documenta text.format. El mismo esquema se exige
+  // en las instrucciones y se comprueba en Rust; no se presume garantía remota.
+  let schema=q.pointer("/text/format/schema").cloned().ok_or("Falta esquema de entrega")?;
+  q["instructions"]=json!(format!("{}\nEntregue únicamente un objeto JSON válido, sin cercas Markdown, conforme a este esquema íntegro: {}",q["instructions"].as_str().unwrap(),schema));
+  q.as_object_mut().unwrap().remove("text");
+ }
+ need(q.get("previous_response_id").is_none()&&q.get("conversation").is_none(),"Estado remoto no autorizado")?;
  Ok(())
 }
 pub fn reserva(q:&Value,p:&Perfil)->R<u64>{
@@ -54,7 +72,7 @@ impl Flujo{
     need(matches!(kind,"response.created"|"response.in_progress"|"response.output_item.added"|"response.content_part.added"|"response.output_text.delta"|"response.output_text.done"|"response.content_part.done"|"response.output_item.done"|"response.completed"|"response.failed"|"response.incomplete"|"error"|"response.reasoning_summary_part.added"|"response.reasoning_summary_part.done"|"response.reasoning_summary_text.delta"|"response.reasoning_summary_text.done"|"response.reasoning_text.delta"|"response.reasoning_text.done"|"keepalive"),"Evento ajeno al contrato; original conservado")?;
     if let Some(item)=v.get("item"){need(matches!(item["type"].as_str(),Some("message"|"reasoning")),"Herramienta no admitida")?;}
     self.terminal=matches!(kind,"response.completed"|"response.failed"|"response.incomplete");tipos.push(kind.into());self.eventos.push(v);
-   }else{need(s.is_empty()||s.starts_with(':')||s.starts_with("event:"),"Campo SSE desconocido")?;}
+   }else{need(s.is_empty()||s.starts_with(':')||s.starts_with("event:")||(s.starts_with("id:")&&!s.contains('\0')),"Campo SSE desconocido")?;}
   }Ok(tipos)
  }
  pub fn recibir(&self,modelo:&str)->R<Value>{
@@ -98,7 +116,7 @@ pub fn enviar(p:&Perfil,key:&str,q:&Value,dest:&Path,timeout_ms:u64)->R<Value>{
 }
 
 #[cfg(test)]mod tests{use super::*;
-fn perfil()->Perfil{Perfil{proveedor:"xAI".into(),modelo:"grok-4.7".into(),endpoint:"https://api.x.ai/v1/responses".into(),presupuesto_ticks:50000000000,exigir_zdr:true,entrada_ticks_por_token:20000,salida_ticks_por_token:60000}}
+fn perfil()->Perfil{Perfil{proveedor:"xAI".into(),modelo:"grok-4.7".into(),endpoint:"https://api.x.ai/v1/responses".into(),presupuesto_ticks:50000000000,exigir_zdr:true,entrada_ticks_por_token:20000,salida_ticks_por_token:60000,cuota_gratuita_tokens:None}}
 #[test]fn licencia_y_herramientas_cerradas(){let mut q=json!({"instructions":"Fuente exclusiva","tools":[{"type":"web_search"}],"store":true,"max_output_tokens":8192});proteger(&mut q,&perfil()).unwrap();assert!(q["instructions"].as_str().unwrap().contains(LICENCIA));assert_eq!(q["tools"],json!([]));assert_eq!(q["store"],false);assert!(reserva(&q,&perfil()).unwrap()>8192*60000);}
 #[test]fn destino_fijo_y_contexto_acotado(){let mut p=perfil();p.endpoint="http://example.com".into();assert!(p.comprobar().is_err());assert!(reserva(&json!({"input":"x".repeat(200000),"max_output_tokens":8192}),&perfil()).is_err());}
 #[test]fn rechaza_herramienta_y_json_duplicado(){let mut s=Flujo::default();assert!(s.feed(b"data: {\"type\":\"response.output_item.added\",\"item\":{\"type\":\"web_search_call\"}}\n").is_err());assert!(parse(b"{\"a\":1,\"a\":2}").is_err());}
