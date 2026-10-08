@@ -1,0 +1,136 @@
+{
+  "alerta": null,
+  "alerta_limite": false,
+  "auditoria_sha256": "5e6346204b2a1ac2c32488e414b7fab789f8cd79993556eb2858d360defd6a05",
+  "caso": "C14",
+  "critico": true,
+  "estado_documental_candidato": "respuesta_fundada",
+  "etapa": 0,
+  "fidelidad_documental": "conforme",
+  "final_sha256": "0acbb14fde02ede505b8c688809e1153574a1d52ed335f1db1d8c92a80041123",
+  "formal_conforme": true,
+  "fundamento_sustantivo": "Las tres etapas aplican el máximo excepcional de 24 horas al prestador de servicios de confianza y conservan la alerta temprana. Ambos cómputos parten de la misma constancia, sin acumulación ni reinicio. Distinguen contenido de los avisos y ausencia de demora indebida, sin inventar la necesidad de dos envíos materiales separados.",
+  "justificacion_documental": "Las evidencias literales se cotejan en Rust; la relación entre premisas y conclusión se revisa exteriormente.",
+  "medicion": {
+    "duracion_operacion_ms": 28705,
+    "telemetria": {
+      "bytes": 792096,
+      "fallos_medicion": 0,
+      "integridad": "conforme",
+      "intervalo_maximo_ms": 290,
+      "intervalo_objetivo_ms": 250,
+      "muestras": 107,
+      "plataforma_recibida": false,
+      "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+      "registros": 1972,
+      "sha256": "567bf0ca4e7252f155474247caea6b61dd10ebe4e8d95ced5193b8f8a4ada827"
+    },
+    "uso": {
+      "attribution": {
+        "items": {
+          "msg_016bebd3868e80aa016ac7f9fb55cc87d290cc774ff12211aa": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 18328,
+                "output_tokens": 0
+              }
+            ],
+            "input_tokens": 18328,
+            "output_tokens": 0
+          },
+          "msg_016bebd3868e80aa016ac7f9fd22b087d285e26bdd3c870424": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 2,
+                "output_tokens": 1090
+              }
+            ],
+            "input_tokens": 2,
+            "output_tokens": 1090
+          }
+        },
+        "request_fields": {
+          "instructions": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "input_tokens": 905,
+            "output_tokens": 0
+          },
+          "text.format": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "input_tokens": 172,
+            "output_tokens": 0
+          }
+        }
+      },
+      "input_tokens": 19407,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 1090,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 20497
+    }
+  },
+  "naturaleza_defecto": "ninguno sustantivo identificado",
+  "nota_alcance": "La excepción y sus condiciones están contenidas en la síntesis histórica recibida. La respuesta no determina el procedimiento material ni las obligaciones actuales de una entidad real.",
+  "pasajes_contrastados": [
+    {
+      "documento": "CYB-03",
+      "fragmento": "La notificación del incidente ordinaria se presenta sin demora indebida y, como máximo, en setenta y dos horas desde esa constancia.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000033-L000044"
+    },
+    {
+      "documento": "CYB-03",
+      "fragmento": "Hay una excepción para prestadores de servicios de confianza respecto de los incidentes significativos que afectan a sus servicios de confianza: la notificación del apartado b tiene un máximo de veinticuatro horas desde constancia, igualmente sin demora indebida.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000033-L000044"
+    },
+    {
+      "documento": "CYB-03",
+      "fragmento": "Esta excepción no afirma que desaparezca la alerta temprana.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000033-L000044"
+    },
+    {
+      "documento": "CYB-03",
+      "fragmento": "La alerta temprana se presenta sin demora indebida y, como máximo, en veinticuatro horas desde que se tiene constancia del incidente significativo.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000033-L000044"
+    },
+    {
+      "documento": "CYB-03",
+      "fragmento": "No determina la inclusión jurídica actual de una entidad real ni la totalidad de sus obligaciones nacionales o sectoriales.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000045-L000053"
+    }
+  ],
+  "recepcion_independiente": "pendiente",
+  "respuesta_original": "{\n  \"caso\": \"C14\",\n  \"estado_documental\": \"respuesta_fundada\",\n  \"etapa\": 0,\n  \"evidencias\": [\n    {\n      \"cita_literal_breve\": \"La notificación del incidente ordinaria se presenta sin demora indebida y, como máximo, en setenta y dos horas desde esa constancia.\",\n      \"documento\": \"CYB-03\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000033-L000044\"\n    },\n    {\n      \"cita_literal_breve\": \"Hay una excepción para prestadores de servicios de confianza respecto de los incidentes significativos que afectan a sus servicios de confianza: la notificación del apartado b tiene un máximo de veinticuatro horas desde constancia, igualmente sin demora indebida.\",\n      \"documento\": \"CYB-03\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000033-L000044\"\n    },\n    {\n      \"cita_literal_breve\": \"Esta excepción no afirma que desaparezca la alerta temprana.\",\n      \"documento\": \"CYB-03\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000033-L000044\"\n    },\n    {\n      \"cita_literal_breve\": \"La alerta temprana se presenta sin demora indebida y, como máximo, en veinticuatro horas desde que se tiene constancia del incidente significativo.\",\n      \"documento\": \"CYB-03\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000033-L000044\"\n    },\n    {\n      \"cita_literal_breve\": \"No determina la inclusión jurídica actual de una entidad real ni la totalidad de sus obligaciones nacionales o sectoriales.\",\n      \"documento\": \"CYB-03\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000045-L000053\"\n    }\n  ],\n  \"fundamentos_verificables\": [\n    \"Los hechos estipulados reúnen las condiciones de la excepción descrita en CYB-03: se trata de un prestador de servicios de confianza y el incidente significativo afecta precisamente a esos servicios. Por tanto, el máximo ordinario de 72 horas no rige para la notificación del apartado b en este supuesto.\",\n    \"La excepción reduce a 24 horas desde la constancia del incidente significativo el máximo de la notificación del artículo 23.4.b. No elimina la exigencia de actuar sin demora indebida: el máximo no es una autorización para esperar injustificadamente.\",\n    \"La alerta temprana del artículo 23.4.a conserva su exigencia y su máximo de 24 horas desde la misma constancia. Los plazos no son sucesivos ni se suman: presentar la alerta no inicia otro plazo de 24 horas para la notificación del apartado b.\",\n    \"Coincidir en el máximo temporal no identifica el contenido de ambas comunicaciones. Según la síntesis, la alerta indica, cuando proceda, sospecha de acción ilícita o malintencionada y posibles repercusiones transfronterizas; la notificación del apartado b actualiza la alerta cuando proceda e incluye evaluación inicial de gravedad e impacto e indicadores de compromiso disponibles.\",\n    \"La conclusión interpreta una norma histórica mediante la síntesis recibida del texto original NIS2. No deriva de una recomendación de parcheo ni de una regla del SV. Las citas reproducen literalmente el libro recibido, no el original jurídico.\"\n  ],\n  \"insuficiencias\": [\n    \"No se acredita el Derecho actualmente aplicable a una entidad real: CYB-03 declara que no determina la inclusión jurídica actual ni todas las obligaciones nacionales o sectoriales. Faltarían las disposiciones vigentes y los datos de la entidad necesarios para ese examen. Este límite no impide resolver el supuesto histórico con los hechos estipulados.\"\n  ],\n  \"respuesta\": \"La afirmación es incorrecta: el artículo 23.4.b no admite siempre un máximo de 72 horas. Conforme al texto original descrito en CYB-03, para un prestador de servicios de confianza cuyo incidente significativo afecta a sus servicios de confianza, la notificación del apartado b debe presentarse sin demora indebida y, como máximo, en 24 horas desde que tiene constancia del incidente significativo.\\n\\nLa excepción no suprime la alerta temprana del artículo 23.4.a, que también debe presentarse sin demora indebida y dentro de las 24 horas desde esa constancia. Ambos máximos se cuentan desde el mismo hecho inicial: no hay 24 horas para alertar y otras 24 horas después para notificar. Tampoco la coincidencia temporal permite considerar que una alerta, por sí sola, satisface el contenido exigido para la notificación del apartado b.\\n\\nEsta conclusión se limita al texto original sintetizado y al caso estipulado; no acredita las obligaciones jurídicas actuales de una entidad real.\",\n  \"revision\": \"Respuesta provisional de etapa 0. No existen antecedentes ni entregas anteriores que contrastar. La conclusión se fundamenta en la excepción expresa y conserva el límite de alcance jurídico de la síntesis recibida.\"\n}",
+  "solicitud_sha256": "1fbadb1d2dfe3b8653482035512f2280fe816087a45bd8caa00cce063925cdb9",
+  "sustantivo": "correcto",
+  "valor": "0"
+}

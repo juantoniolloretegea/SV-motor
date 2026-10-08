@@ -1,0 +1,166 @@
+{
+  "alerta": null,
+  "alerta_limite": false,
+  "auditoria_sha256": "6a1eafeb139d3ced5a7e9ded4daa4cf76a29d48b696d2f610c0bb0cf025f09cb",
+  "caso": "C12",
+  "critico": true,
+  "estado_documental_candidato": "respuesta_fundada",
+  "etapa": 0,
+  "fidelidad_documental": "conforme",
+  "final_sha256": "a202d644fa32922d5769d0a4ed12c342ad2a092129b1687452c3deb55a617bef",
+  "formal_conforme": true,
+  "fundamento_sustantivo": "Las tres etapas rechazan la suficiencia de MFA y tratan continuidad, proveedores y evaluación de eficacia, con todos los peligros, entorno físico y factores de proporcionalidad. Proponen un esquema razonado sin inventar una plantilla normativa ni resultados ejecutados. R2 precisa que falta de planes no demuestra ausencia de cualquier recurso de recuperación, manteniendo la conclusión sustantiva de las etapas anteriores.",
+  "justificacion_documental": "Las evidencias literales se cotejan en Rust; la relación entre premisas y conclusión se revisa exteriormente.",
+  "medicion": {
+    "duracion_operacion_ms": 58091,
+    "telemetria": {
+      "bytes": 1467943,
+      "fallos_medicion": 0,
+      "integridad": "conforme",
+      "intervalo_maximo_ms": 291,
+      "intervalo_objetivo_ms": 250,
+      "muestras": 211,
+      "plataforma_recibida": false,
+      "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+      "registros": 3600,
+      "sha256": "ded58311e10956eacf29f2588c34aa211ac1676c18c1b01075cf611e1e285d76"
+    },
+    "uso": {
+      "attribution": {
+        "items": {
+          "msg_0f46c530d3cd4676016ac7f88fc9a887d28f508fe6eef622f1": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 18336,
+                "output_tokens": 0
+              }
+            ],
+            "input_tokens": 18336,
+            "output_tokens": 0
+          },
+          "msg_0f46c530d3cd4676016ac7f89669ac87d280d4bb94975b9503": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 0,
+                "output_tokens": 1811
+              }
+            ],
+            "input_tokens": 0,
+            "output_tokens": 1811
+          },
+          "rs_0f46c530d3cd4676016ac7f8914c7487d290543f75bf84eee3": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "input_tokens": 2,
+            "output_tokens": 80
+          }
+        },
+        "request_fields": {
+          "instructions": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "input_tokens": 905,
+            "output_tokens": 0
+          },
+          "text.format": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "input_tokens": 172,
+            "output_tokens": 0
+          }
+        }
+      },
+      "input_tokens": 19415,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 1891,
+      "output_tokens_details": {
+        "reasoning_tokens": 80
+      },
+      "total_tokens": 21306
+    }
+  },
+  "naturaleza_defecto": "ninguno sustantivo identificado",
+  "nota_alcance": "Es un supuesto de evaluación documental con inclusión estipulada en la Directiva histórica. No acredita implantación, eficacia real ni cumplimiento jurídico actual.",
+  "pasajes_contrastados": [
+    {
+      "documento": "CYB-03",
+      "fragmento": "La presencia de una de estas medidas no prueba suficiencia del conjunto.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000019-L000026"
+    },
+    {
+      "documento": "CYB-03",
+      "fragmento": "Las medidas deben ser técnicas, operativas y organizativas, adecuadas y proporcionadas.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000019-L000026"
+    },
+    {
+      "documento": "CYB-03",
+      "fragmento": "El enfoque comprende todos los peligros y protege los sistemas y su entorno físico.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000019-L000026"
+    },
+    {
+      "documento": "CYB-03",
+      "fragmento": "La revisión de proveedores atiende a vulnerabilidades específicas, calidad general, prácticas de ciberseguridad y desarrollo seguro, además de las evaluaciones coordinadas pertinentes.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000019-L000026"
+    },
+    {
+      "documento": "CYB-03",
+      "fragmento": "No permite deducir una exención total por la sola contratación de un proveedor.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000013-L000018"
+    },
+    {
+      "documento": "CYB-02",
+      "fragmento": "Las copias inmutables y los ensayos periódicos de recuperación forman parte de la resiliencia.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000025-L000032"
+    },
+    {
+      "documento": "CYB-01",
+      "fragmento": "Una comprobación parcial no acredita un conjunto completo.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000037-L000044"
+    },
+    {
+      "documento": "CYB-03",
+      "fragmento": "No determina la inclusión jurídica actual de una entidad real ni la totalidad de sus obligaciones nacionales o sectoriales.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000045-L000053"
+    }
+  ],
+  "recepcion_independiente": "pendiente",
+  "respuesta_original": "{\n  \"caso\": \"C12\",\n  \"estado_documental\": \"respuesta_fundada\",\n  \"etapa\": 0,\n  \"evidencias\": [\n    {\n      \"cita_literal_breve\": \"La presencia de una de estas medidas no prueba suficiencia del conjunto.\",\n      \"documento\": \"CYB-03\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000019-L000026\"\n    },\n    {\n      \"cita_literal_breve\": \"Las medidas deben ser técnicas, operativas y organizativas, adecuadas y proporcionadas.\",\n      \"documento\": \"CYB-03\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000019-L000026\"\n    },\n    {\n      \"cita_literal_breve\": \"El enfoque comprende todos los peligros y protege los sistemas y su entorno físico.\",\n      \"documento\": \"CYB-03\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000019-L000026\"\n    },\n    {\n      \"cita_literal_breve\": \"La revisión de proveedores atiende a vulnerabilidades específicas, calidad general, prácticas de ciberseguridad y desarrollo seguro, además de las evaluaciones coordinadas pertinentes.\",\n      \"documento\": \"CYB-03\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000019-L000026\"\n    },\n    {\n      \"cita_literal_breve\": \"No permite deducir una exención total por la sola contratación de un proveedor.\",\n      \"documento\": \"CYB-03\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000013-L000018\"\n    },\n    {\n      \"cita_literal_breve\": \"Las copias inmutables y los ensayos periódicos de recuperación forman parte de la resiliencia.\",\n      \"documento\": \"CYB-02\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000025-L000032\"\n    },\n    {\n      \"cita_literal_breve\": \"Una comprobación parcial no acredita un conjunto completo.\",\n      \"documento\": \"CYB-01\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000037-L000044\"\n    },\n    {\n      \"cita_literal_breve\": \"No determina la inclusión jurídica actual de una entidad real ni la totalidad de sus obligaciones nacionales o sectoriales.\",\n      \"documento\": \"CYB-03\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000045-L000053\"\n    }\n  ],\n  \"fundamentos_verificables\": [\n    \"Se acepta como hecho sintético que la entidad está comprendida en la Directiva. El análisis aplica el contenido histórico del artículo 21 descrito en CYB-03, no determina el Derecho vigente para una entidad real.\",\n    \"La MFA cubre una parte de la autenticación; su existencia no demuestra continuidad, seguridad de la cadena de suministro ni evaluación de eficacia. Las tres carencias estipuladas afectan a elementos mínimos recogidos en la síntesis del artículo 21.2; la revisión de proveedores se desarrolla además en el artículo 21.3.\",\n    \"La proporcionalidad exige considerar exposición, tamaño, probabilidad y gravedad, incluidas repercusiones sociales y económicas, junto con situación, normas pertinentes y coste de aplicación. No permite inferir suficiencia del conjunto a partir de un único control.\",\n    \"El esquema propuesto es una deducción práctica de esos requisitos: relacionar servicios y dependencias, escenarios, medidas y pruebas permite justificar tanto la adecuación como la cobertura sin inventar una puntuación universal.\",\n    \"Se distinguen tres planos: CYB-03 sintetiza una norma histórica; CYB-02 ofrece recomendaciones, como copias inmutables y ensayos de recuperación; CYB-01 describe reglas del SV sobre evidencia y cobertura. Ni las recomendaciones ni las reglas documentales sustituyen la norma o acreditan cumplimiento jurídico.\",\n    \"Las citas son literales del libro recibido. Los capítulos citados son síntesis identificadas y sus formulaciones no se presentan como citas literales de la Directiva, la guía de INCIBE o el acta original.\"\n  ],\n  \"insuficiencias\": [\n    \"No se aportan inventario, exposición concreta, dimensión, dependencias, características del entorno físico ni datos de probabilidad e impacto. Puede proponerse el esquema solicitado, pero no fijar prioridades específicas, costes, frecuencias de prueba o suficiencia final sin esos datos.\",\n    \"La MFA está estipulada como existente, pero no se acredita su cobertura ni eficacia. Tampoco consta la situación de los demás elementos del artículo 21, salvo las tres carencias expresas; deben evaluarse, no darse por ausentes ni por satisfechos.\",\n    \"La fuente NIS2 no es una versión consolidada y no determina normas nacionales ni actos de ejecución vigentes. El resultado resuelve el supuesto documental, pero no acredita cumplimiento jurídico actual ni agota posibles exigencias sectoriales.\"\n  ],\n  \"respuesta\": \"No. En el supuesto estipulado, disponer de MFA no basta para sostener el cumplimiento del artículo 21 descrito en la síntesis del texto original NIS2. Es una medida parcial dentro de un conjunto técnico, operativo y organizativo.\\n\\nElementos omitidos\\n\\nLas carencias expresamente acreditadas son: continuidad y recuperación; revisión de proveedores dentro de la seguridad de la cadena de suministro; y evaluación de la eficacia de las medidas. No quedan compensadas por la MFA.\\n\\nAdemás, el argumento omite valorar el resto del conjunto mínimo: políticas de análisis de riesgos y seguridad; gestión de incidentes; adquisición, desarrollo y mantenimiento seguros; gestión y divulgación de vulnerabilidades; formación e higiene de ciberseguridad; criptografía; seguridad de recursos humanos, accesos y activos; y autenticación y comunicaciones seguras cuando proceda. No se afirma que todos estos elementos falten: el caso no informa sobre ellos.\\n\\nEsquema propuesto de evaluación proporcionada\\n\\n1. Delimitar el alcance. Identificar servicios, sistemas, activos, responsables, proveedores, dependencias y entorno físico. Registrar qué se examina, en qué momento y con qué evidencias, para no extrapolar una comprobación de MFA a toda la entidad.\\n\\n2. Caracterizar el riesgo. Documentar exposición y tamaño; plantear escenarios que abarquen todos los peligros, incluidos los que afecten al entorno físico; y valorar probabilidad y gravedad con premisas explícitas. Incluir consecuencias para la entidad, los destinatarios y otros servicios, así como repercusiones sociales y económicas. Registrar incertidumbres sin asignar cifras o niveles no sustentados.\\n\\n3. Contrastar todos los elementos mínimos. Elaborar una matriz con: requisito, servicio o dependencia afectada, medida existente, evidencia de aplicación, prueba de eficacia, carencia y acción propuesta. Valorar situación, normas pertinentes y coste al justificar la adecuación y proporcionalidad; no usar la existencia de MFA como sustituto de esta revisión.\\n\\n4. Corregir las tres brechas conocidas. Definir y probar continuidad y recuperación; revisar vulnerabilidades específicas, calidad y prácticas de seguridad y desarrollo de los proveedores, considerando las evaluaciones coordinadas pertinentes; y establecer comprobaciones documentadas de eficacia. Como recomendación complementaria de CYB-02, pueden incorporarse copias inmutables y ensayos periódicos de recuperación. Verificar la identidad de una copia no equivale a probar que el servicio vuelve a funcionar.\\n\\n5. Organizar aprobación y seguimiento. Someter las medidas a aprobación y supervisión del órgano de dirección conforme a la gobernanza descrita en el artículo 20. Asignar responsables y seguimiento de acciones. Ante incumplimientos constatados de las medidas previstas, la síntesis del artículo 21 contempla correcciones apropiadas y proporcionadas sin demora indebida; no aporta un plazo numérico universal para este caso.\\n\\n6. Conservar resultados y límites. Registrar alcance de cada prueba, resultados, dependencias pendientes y riesgos no resueltos. El esquema es una propuesta de evaluación, no una evaluación ejecutada ni una certificación. La conclusión sustentada es que el argumento de suficiencia de la MFA debe rechazarse y que las tres carencias conocidas requieren tratamiento.\",\n  \"revision\": \"Entrega provisional de etapa 0. No existen antecedentes ni entregas anteriores que contrastar. La conclusión se apoya en los hechos estipulados y distingue las carencias acreditadas de los controles cuyo estado se desconoce.\"\n}",
+  "solicitud_sha256": "410a6a9acf5421bf232793d9fe9ece37af07acf7bc56ec35b92ddea51f45b401",
+  "sustantivo": "correcto",
+  "valor": "0"
+}

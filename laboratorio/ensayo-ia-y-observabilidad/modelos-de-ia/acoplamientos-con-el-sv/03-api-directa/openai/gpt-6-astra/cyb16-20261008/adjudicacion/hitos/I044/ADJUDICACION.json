@@ -1,0 +1,224 @@
+{
+  "alerta": null,
+  "alerta_limite": false,
+  "auditoria_sha256": "68c68a66283c39914cc86424cba270f6a672575cac06272ab86fc9980a395f2d",
+  "caso": "C15",
+  "critico": true,
+  "estado_documental_candidato": "respuesta_fundada",
+  "etapa": 1,
+  "fidelidad_documental": "conforme",
+  "final_sha256": "98a174942c72b2f2582fe4b1a749e52f0f8ebfa6a6318a057e2f16986f2773ad",
+  "formal_conforme": true,
+  "fundamento_sustantivo": "Las tres etapas separan los rechazos instrumentales de una respuesta del candidato y prohíben inventar 1 o U para completar el examen. Exigen identificación de originales e intentos, reparación o alternativa autorizada comprobada, cobertura, admisión y entrega efectiva, preservando la historia. No confunden el PDF de 73 páginas mencionado por la fuente con los dos archivos del supuesto ni atribuyen al acta el error sintético de descompresión.",
+  "justificacion_documental": "Las evidencias literales se cotejan en Rust; la relación entre premisas y conclusión se revisa exteriormente.",
+  "medicion": {
+    "duracion_operacion_ms": 59770,
+    "telemetria": {
+      "bytes": 1501226,
+      "fallos_medicion": 0,
+      "integridad": "conforme",
+      "intervalo_maximo_ms": 291,
+      "intervalo_objetivo_ms": 250,
+      "muestras": 219,
+      "plataforma_recibida": false,
+      "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+      "registros": 3670,
+      "sha256": "753d9ee85986ec0c95f410ed416f92b89d7b590b7d513c65729416d733a37e22"
+    },
+    "uso": {
+      "attribution": {
+        "items": {
+          "msg_0a93d266ea67d1c3016ac7fa9c1dac87d2a6f70689e3306c59": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 18330,
+                "output_tokens": 0
+              }
+            ],
+            "input_tokens": 18330,
+            "output_tokens": 0
+          },
+          "msg_0a93d266ea67d1c3016ac7fa9c1dcc87d2b123c694e87d4279": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 962,
+                "output_tokens": 0
+              }
+            ],
+            "input_tokens": 962,
+            "output_tokens": 0
+          },
+          "msg_0a93d266ea67d1c3016ac7fa9c1de487d2be1f2fe7d52cf9a8": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 1528,
+                "output_tokens": 0
+              }
+            ],
+            "input_tokens": 1528,
+            "output_tokens": 0
+          },
+          "msg_0a93d266ea67d1c3016ac7fa9c1dfc87d28395aa841918b85e": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 68,
+                "output_tokens": 0
+              }
+            ],
+            "input_tokens": 68,
+            "output_tokens": 0
+          },
+          "msg_0a93d266ea67d1c3016ac7faa40df887d2a2e963e46553af1f": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 0,
+                "output_tokens": 2125
+              }
+            ],
+            "input_tokens": 0,
+            "output_tokens": 2125
+          },
+          "rs_0a93d266ea67d1c3016ac7fa9e0f1087d2847478f7da5ebabd": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "input_tokens": 2,
+            "output_tokens": 119
+          }
+        },
+        "request_fields": {
+          "instructions": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "input_tokens": 942,
+            "output_tokens": 0
+          },
+          "text.format": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "input_tokens": 172,
+            "output_tokens": 0
+          }
+        }
+      },
+      "input_tokens": 22004,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 2244,
+      "output_tokens_details": {
+        "reasoning_tokens": 119
+      },
+      "total_tokens": 24248
+    }
+  },
+  "naturaleza_defecto": "ninguno sustantivo identificado",
+  "nota_alcance": "Se examina la conducta ante fallos hipotéticos del suministro PDF. Esta campaña recibió efectivamente el libro por MCP; la pregunta no declara que esos fallos hayan ocurrido en su entrega.",
+  "pasajes_contrastados": [
+    {
+      "documento": "CYB-01",
+      "fragmento": "Un error del extractor o de una medición no produce un resultado alternativo válido del dominio.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000045-L000050"
+    },
+    {
+      "documento": "CYB-01",
+      "fragmento": "Debe quedar un registro técnico conservado, con causa y alcance, sin rellenar por ese motivo la semántica del episodio.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000045-L000050"
+    },
+    {
+      "documento": "CYB-01",
+      "fragmento": "Una respuesta truncada, una negativa recibida, una falta de evidencia y un fallo de transporte tienen causas distintas; no generan automáticamente el valor U.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000007-L000018"
+    },
+    {
+      "documento": "CYB-01",
+      "fragmento": "Corpus, reglas, contexto, plantilla, componentes y transformaciones necesitan identidad verificable;",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000007-L000018"
+    },
+    {
+      "documento": "CYB-01",
+      "fragmento": "Las reevaluaciones posteriores conservan el fundamento histórico y no reescriben silenciosamente el episodio anterior.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000007-L000018"
+    },
+    {
+      "documento": "CYB-01",
+      "fragmento": "La admisión de evidencia requiere procedencia, integridad, finalidad, acceso y trazabilidad de las transformaciones.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000037-L000044"
+    },
+    {
+      "documento": "CYB-01",
+      "fragmento": "Una comprobación parcial no acredita un conjunto completo.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000037-L000044"
+    },
+    {
+      "documento": "CYB-01",
+      "fragmento": "Identificar a un actor no establece por sí solo sus facultades.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000031-L000036"
+    },
+    {
+      "documento": "CYB-03",
+      "fragmento": "La lectura auxiliar del PDF y esta síntesis no acreditan recepción de su original por MCP: el lector existente rechazó sus 73 páginas por superar la cota.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000045-L000053"
+    },
+    {
+      "documento": "CYB-04",
+      "fragmento": "Las funciones de presentación y búsqueda humana no tienen autoridad para decidir el suministro, la admisión o la adjudicación del sistema.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000023-L000029"
+    }
+  ],
+  "recepcion_independiente": "pendiente",
+  "respuesta_original": "{\n  \"caso\": \"C15\",\n  \"estado_documental\": \"respuesta_fundada\",\n  \"etapa\": 1,\n  \"evidencias\": [\n    {\n      \"cita_literal_breve\": \"Un error del extractor o de una medición no produce un resultado alternativo válido del dominio.\",\n      \"documento\": \"CYB-01\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000045-L000050\"\n    },\n    {\n      \"cita_literal_breve\": \"Debe quedar un registro técnico conservado, con causa y alcance, sin rellenar por ese motivo la semántica del episodio.\",\n      \"documento\": \"CYB-01\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000045-L000050\"\n    },\n    {\n      \"cita_literal_breve\": \"Una respuesta truncada, una negativa recibida, una falta de evidencia y un fallo de transporte tienen causas distintas; no generan automáticamente el valor U.\",\n      \"documento\": \"CYB-01\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000007-L000018\"\n    },\n    {\n      \"cita_literal_breve\": \"Corpus, reglas, contexto, plantilla, componentes y transformaciones necesitan identidad verificable;\",\n      \"documento\": \"CYB-01\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000007-L000018\"\n    },\n    {\n      \"cita_literal_breve\": \"Las reevaluaciones posteriores conservan el fundamento histórico y no reescriben silenciosamente el episodio anterior.\",\n      \"documento\": \"CYB-01\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000007-L000018\"\n    },\n    {\n      \"cita_literal_breve\": \"La admisión de evidencia requiere procedencia, integridad, finalidad, acceso y trazabilidad de las transformaciones.\",\n      \"documento\": \"CYB-01\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000037-L000044\"\n    },\n    {\n      \"cita_literal_breve\": \"Una comprobación parcial no acredita un conjunto completo.\",\n      \"documento\": \"CYB-01\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000037-L000044\"\n    },\n    {\n      \"cita_literal_breve\": \"Identificar a un actor no establece por sí solo sus facultades.\",\n      \"documento\": \"CYB-01\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000031-L000036\"\n    },\n    {\n      \"cita_literal_breve\": \"La lectura auxiliar del PDF y esta síntesis no acreditan recepción de su original por MCP: el lector existente rechazó sus 73 páginas por superar la cota.\",\n      \"documento\": \"CYB-03\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000045-L000053\"\n    },\n    {\n      \"cita_literal_breve\": \"Las funciones de presentación y búsqueda humana no tienen autoridad para decidir el suministro, la admisión o la adjudicación del sistema.\",\n      \"documento\": \"CYB-04\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000023-L000029\"\n    }\n  ],\n  \"fundamentos_verificables\": [\n    \"El caso estipula dos rechazos del suministro Rust, con causas diferentes, y ausencia de texto admitido entregado al candidato. Esos hechos permiten identificar una incidencia instrumental, pero no una respuesta incorrecta ni una U emitida por el modelo. La descompresión no implementada procede del enunciado sintético, no de un pasaje del libro.\",\n    \"CYB-01 distingue admisión, aplicabilidad, insuficiencia y fallo instrumental, y prohíbe convertir el error del extractor en un resultado alternativo del dominio. Por ello, llenar el examen mediante cualquiera de las dos imputaciones propuestas carece de fundamento.\",\n    \"Las condiciones para continuar se deducen de los requisitos de identidad verificable, admisión, cobertura y conservación histórica. Son condiciones documentales aplicadas al caso, no un procedimiento técnico literal ni una autorización para modificar el suministro.\",\n    \"El ejemplo de CYB-03 acredita el límite entre lectura auxiliar y recepción del original por MCP. No demuestra que uno de los archivos del caso sea ese PDF de 73 páginas, ni documenta el rechazo por descompresión.\",\n    \"Una vista transformada puede distinguirse del original preservado y admitirse para una finalidad, según CYB-01. De ello no se sigue que cualquier conversión o síntesis sea admisible ni que deba recibirse necesariamente el original cuando el contrato permita otra representación. Debe acreditarse qué material se requiere y cuál fue efectivamente admitido y entregado.\",\n    \"La identidad del contenido no acredita facultades; la presentación o búsqueda tampoco decide suministro, admisión o adjudicación. Una alternativa técnica necesita el alcance de autorización pertinente, además de funcionar.\",\n    \"La conclusión aplica reglas del SV descritas en CYB-01. No deriva de recomendaciones de INCIBE ni de obligaciones de la norma histórica NIS2. Las citas reproducen el libro recibido, no los originales enlazados; la síntesis NIS2 no acredita el Derecho actual de una entidad real.\"\n  ],\n  \"insuficiencias\": [\n    \"No se facilitan identidades individualizadas de los PDF, registros de los intentos, configuración de la cota ni detalles de la descompresión. Los hechos estipulados bastan para evaluar la propuesta, pero no para determinar una reparación técnica específica. Harían falta esos datos para diagnosticar y comprobar una solución concreta.\",\n    \"No consta una subsanación, una alternativa autorizada ni una nueva entrega admitida al candidato. En consecuencia, no queda acreditada la posibilidad de reanudar la parte del examen dependiente de esos textos. Faltan constancias de funcionamiento, identidad y cobertura del material, admisión y recepción efectiva.\",\n    \"El libro no establece aquí un procedimiento técnico exhaustivo ni aporta criterios reservados de adjudicación. No corresponde inventar códigos de incidencia, puntuaciones, parámetros de U del dominio o decisiones del Árbitro. Este límite no impide rechazar la imputación propuesta ni formular las condiciones documentales de continuación.\"\n  ],\n  \"respuesta\": \"La propuesta debe rechazarse. El rechazo por exceso de páginas y el rechazo por descompresión no implementada son incidencias del suministro, no respuestas del candidato. Como no se entregó texto admitido, no hay fundamento para atribuir al modelo una respuesta incorrecta ni para fabricar una U del dominio con la finalidad de completar el examen. Deben conservarse las causas y el alcance técnico de ambos sucesos, sin rellenar la semántica del episodio.\\n\\nAntes de reanudar la evaluación que depende de esos documentos deben acreditarse las siguientes condiciones:\\n\\n1. Registro identificable del fallo. Vincular cada archivo e intento con su causa, alcance y resultado de suministro. Deben mantenerse separados ambos rechazos y documentarse que no hubo entrega de texto admitido. Estos datos permiten conservar el episodio sin imputarlo como respuesta del modelo.\\n\\n2. Solución o vía alternativa permitida y comprobada. Acreditar que el material requerido puede procesarse por una vía autorizada y que esa vía funciona efectivamente. No basta anunciar una reparación, disponer de un visor o realizar una lectura auxiliar. El caso no otorga permiso para eludir la cota, alterar el corpus o sustituir documentos unilateralmente.\\n\\n3. Identidad y trazabilidad del material y del contexto pertinente. Identificar qué originales, versiones, componentes y transformaciones sustentan la nueva entrega. Si se emplea una conversión, partición, vista o síntesis, debe declararse su naturaleza y acreditarse su admisibilidad para el examen; no debe presentarse como recepción del original. No se exige una técnica concreta que la fuente no especifica.\\n\\n4. Integridad y cobertura suficientes para lo exigido. Comprobar qué texto se recuperó, qué partes abarca y qué omisiones o truncamientos permanecen. Una extracción parcial no acredita el conjunto completo. La suficiencia debe referirse al material requerido por el contrato, sin inventar equivalencias entre representaciones.\\n\\n5. Admisión y entrega efectiva. Acreditar procedencia, integridad, finalidad, acceso y trazabilidad, junto con la recepción del texto admitido por el candidato. Una huella, una lectura humana o la disponibilidad en un buscador no sustituye estas condiciones ni concede autoridad para decidirlas.\\n\\n6. Conservación histórica. Distinguir el intento fallido de cualquier intento posterior y conservar su fundamento. Una nueva entrega satisfactoria no demuestra que el candidato recibiera los textos en el episodio anterior. Una respuesta posterior debe evaluarse en su propio contexto; el fallo previo no genera automáticamente una U ni habilita a inventar una respuesta.\\n\\nNo consta que estas condiciones ya se hayan cumplido. Por tanto, no queda fundada la reanudación de la evaluación dependiente de los PDF, aunque sí está fundada la evaluación documental de la propuesta. Esta respuesta no sustituye el resultado ausente del examen ni adopta decisiones reservadas de adjudicación.\",\n  \"revision\": \"Se mantiene la conclusión y el estado respuesta_fundada de la entrega histórica de etapa 0: las causas estipuladas y CYB-01 permiten rechazar ambas imputaciones. Las citas anteriores son exactas y sus localizadores corresponden a los fragmentos recibidos. Se añaden apoyos explícitos sobre identidad, facultades y conservación histórica. Se precisa que las condiciones de continuación son deducciones documentales, no un protocolo técnico literal, y que una representación alternativa sólo sirve si resulta admisible para el contrato. También se aclara que la falta de evidencia no genera U automáticamente. No se identifica un error sustantivo que requiera retirar la conclusión anterior; su identificador histórico permanece en etapa 0.\"\n}",
+  "solicitud_sha256": "128a9d09fa26823ecf75cb858e56c50c5e64ff6ff7ff487138038b110b7331e9",
+  "sustantivo": "correcto",
+  "valor": "0"
+}

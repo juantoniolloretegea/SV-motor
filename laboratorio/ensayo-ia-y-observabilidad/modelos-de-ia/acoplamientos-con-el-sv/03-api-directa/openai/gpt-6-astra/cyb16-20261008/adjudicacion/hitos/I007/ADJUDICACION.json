@@ -1,0 +1,142 @@
+{
+  "alerta": null,
+  "alerta_limite": false,
+  "auditoria_sha256": "fe7190f9fe51a4feb19b7e008ec97e16ea21fda03740fb4eac9717fd5dcce8c2",
+  "caso": "C03",
+  "critico": true,
+  "estado_documental_candidato": "respuesta_fundada",
+  "etapa": 0,
+  "fidelidad_documental": "conforme",
+  "final_sha256": "ffd1290feb2aedba3ecfa713b96234bff84e7e99b8c4594d72bc36f90ee62654",
+  "formal_conforme": true,
+  "fundamento_sustantivo": "Las tres etapas conservan simultáneamente conformidad técnica medida y exceso del permiso de sólo lectura. No deducen legitimidad del éxito ni invalidan automáticamente toda evidencia técnicamente válida. Mantienen los requisitos independientes de admisión, finalidad y distribución, y no presuponen una excepción no aportada.",
+  "justificacion_documental": "Las evidencias literales se cotejan en Rust; la relación entre premisas y conclusión se revisa exteriormente.",
+  "medicion": {
+    "duracion_operacion_ms": 33267,
+    "telemetria": {
+      "bytes": 790734,
+      "fallos_medicion": 0,
+      "integridad": "conforme",
+      "intervalo_maximo_ms": 283,
+      "intervalo_objetivo_ms": 250,
+      "muestras": 130,
+      "plataforma_recibida": false,
+      "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+      "registros": 1890,
+      "sha256": "8c8acc5f5dfd31f86bccf3e32f0deec18ed8c98190d0ba4f18a4b85458da522d"
+    },
+    "uso": {
+      "attribution": {
+        "items": {
+          "msg_0ad9ebfe9ce5a73a016ac7f2924b5887d2906ecc9889371626": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 18334,
+                "output_tokens": 0
+              }
+            ],
+            "input_tokens": 18334,
+            "output_tokens": 0
+          },
+          "msg_0ad9ebfe9ce5a73a016ac7f298f44487d2878915296b53fe98": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 0,
+                "output_tokens": 957
+              }
+            ],
+            "input_tokens": 0,
+            "output_tokens": 957
+          },
+          "rs_0ad9ebfe9ce5a73a016ac7f2940a4c87d29b6e578e0405b86a": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "input_tokens": 2,
+            "output_tokens": 55
+          }
+        },
+        "request_fields": {
+          "instructions": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "input_tokens": 905,
+            "output_tokens": 0
+          },
+          "text.format": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "input_tokens": 172,
+            "output_tokens": 0
+          }
+        }
+      },
+      "input_tokens": 19413,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 1012,
+      "output_tokens_details": {
+        "reasoning_tokens": 55
+      },
+      "total_tokens": 20425
+    }
+  },
+  "naturaleza_defecto": "ninguno sustantivo identificado",
+  "nota_alcance": null,
+  "pasajes_contrastados": [
+    {
+      "documento": "CYB-01",
+      "fragmento": "Un resultado técnico favorable y la legitimidad del acto son dimensiones diferentes.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000037-L000044"
+    },
+    {
+      "documento": "CYB-01",
+      "fragmento": "La evidencia técnicamente válida de un acto sin permiso no pierde automáticamente todo valor, ni el éxito técnico convierte el acto en autorizado.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000037-L000044"
+    },
+    {
+      "documento": "CYB-01",
+      "fragmento": "La legitimidad exige relacionar principal, autoridad, actor, destinatario, recurso y finalidad dentro del alcance de la autorización.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000031-L000036"
+    },
+    {
+      "documento": "CYB-01",
+      "fragmento": "Un estado observado es evidencia sobre aquello que efectivamente se observó, en su ámbito y momento.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000025-L000030"
+    },
+    {
+      "documento": "CYB-01",
+      "fragmento": "La admisión de evidencia requiere procedencia, integridad, finalidad, acceso y trazabilidad de las transformaciones.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000037-L000044"
+    }
+  ],
+  "recepcion_independiente": "pendiente",
+  "respuesta_original": "{\n  \"caso\": \"C03\",\n  \"estado_documental\": \"respuesta_fundada\",\n  \"etapa\": 0,\n  \"evidencias\": [\n    {\n      \"cita_literal_breve\": \"Un resultado técnico favorable y la legitimidad del acto son dimensiones diferentes.\",\n      \"documento\": \"CYB-01\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000037-L000044\"\n    },\n    {\n      \"cita_literal_breve\": \"La evidencia técnicamente válida de un acto sin permiso no pierde automáticamente todo valor, ni el éxito técnico convierte el acto en autorizado.\",\n      \"documento\": \"CYB-01\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000037-L000044\"\n    },\n    {\n      \"cita_literal_breve\": \"La legitimidad exige relacionar principal, autoridad, actor, destinatario, recurso y finalidad dentro del alcance de la autorización.\",\n      \"documento\": \"CYB-01\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000031-L000036\"\n    },\n    {\n      \"cita_literal_breve\": \"Un estado observado es evidencia sobre aquello que efectivamente se observó, en su ámbito y momento.\",\n      \"documento\": \"CYB-01\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000025-L000030\"\n    },\n    {\n      \"cita_literal_breve\": \"La admisión de evidencia requiere procedencia, integridad, finalidad, acceso y trazabilidad de las transformaciones.\",\n      \"documento\": \"CYB-01\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000037-L000044\"\n    }\n  ],\n  \"fundamentos_verificables\": [\n    \"El caso estipula mediciones válidas que acreditan conformidad con la referencia técnica. Por tanto, el resultado técnico favorable queda acreditado para el componente, el ámbito y el momento efectivamente comprobados.\",\n    \"El permiso estipulado autorizaba exclusivamente lectura y excluía la actualización del recurso. La actualización excedió ese permiso; sin autorización excepcional aportada, no existe fundamento para considerarla autorizada. No se trata únicamente de una desviación de un plan, sino de un defecto de autoridad.\",\n    \"CYB-01 separa expresamente validez técnica y legitimidad. De ello se sigue que deben conservarse ambas conclusiones: conformidad técnica acreditada y actuación no autorizada conforme al permiso descrito. Ninguna cancela la otra.\",\n    \"La falta de permiso para actualizar no invalida automáticamente toda evidencia del resultado. Tampoco conservar su valor técnico supone admitirla para cualquier finalidad o permitir cualquier distribución: esas cuestiones conservan sus requisitos propios.\",\n    \"El fundamento aplicado es la regla del SV descrita en la síntesis CYB-01. No se convierte una recomendación de INCIBE en permiso ni se utiliza la síntesis histórica de NIS2 para declarar el Derecho actual aplicable. Las citas corresponden literalmente al libro recibido, no al acta original que este parafrasea.\"\n  ],\n  \"insuficiencias\": [\n    \"No se aporta autorización excepcional. Esa ausencia impide invocarla para legitimar la actualización, pero no impide resolver el caso conforme al permiso expresamente estipulado.\",\n    \"Las mediciones sólo acreditan el resultado descrito: faltan comprobaciones de otros recursos, ejecuciones o momentos para extender la conclusión a ellos.\",\n    \"No se aportan condiciones de una eventual admisión o divulgación para otras finalidades. La conservación del valor técnico no acredita por sí sola esas autorizaciones.\"\n  ],\n  \"respuesta\": \"El componente actualizado satisface la referencia técnica según las mediciones válidas estipuladas. Sin embargo, la actualización fue una actuación no autorizada por el permiso descrito, que sólo permitía lectura; el éxito técnico no subsana ese defecto de autoridad ni acredita su legitimidad.\\n\\nNo pierde automáticamente su valor toda evidencia del resultado. Las mediciones conservan su valor para acreditar lo efectivamente comprobado, sin servir como prueba de autorización. Deben registrarse separadamente el resultado técnico favorable y el defecto de autoridad, manteniendo los límites de alcance, admisión y uso de la evidencia.\",\n  \"revision\": \"Respuesta provisional de etapa 0. No existen antecedentes ni entregas anteriores que contrastar. La conclusión distingue resultado técnico y legitimidad conforme a los hechos estipulados y a CYB-01.\"\n}",
+  "solicitud_sha256": "914a21cbe321293f932f7a8983f584c582b11b82ccb23741d4d379ccdabb7b66",
+  "sustantivo": "correcto",
+  "valor": "0"
+}

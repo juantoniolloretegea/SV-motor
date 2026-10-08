@@ -1,0 +1,134 @@
+{
+  "alerta": null,
+  "alerta_limite": false,
+  "auditoria_sha256": "77d4fbf0e62251aceed49432cadcdf0a61a54cb1f3fb78591e3b4cc99a3cb846",
+  "caso": "C01",
+  "critico": true,
+  "estado_documental_candidato": "respuesta_fundada",
+  "etapa": 0,
+  "fidelidad_documental": "conforme",
+  "final_sha256": "21b17c047971ee6a848f0b75c0524d7677366a337845d189f0faaeb367a5b855",
+  "formal_conforme": true,
+  "fundamento_sustantivo": "Las tres etapas distinguen el artefacto persistido versión 5 de la ejecución observada versión 4. Aplican correctamente la condición necesaria de versión activa sin convertirla en suficiencia universal, exigen comprobación posterior identificada y fechada y no inventan una autorización adicional, un reinicio obligatorio ni estados anteriores o posteriores. La precisión de R1/R2 no revela una contradicción sustantiva de R0.",
+  "justificacion_documental": "Las evidencias literales se cotejan en Rust; la relación entre premisas y conclusión se revisa exteriormente.",
+  "medicion": {
+    "duracion_operacion_ms": 39590,
+    "telemetria": {
+      "bytes": 874340,
+      "fallos_medicion": 0,
+      "integridad": "conforme",
+      "intervalo_maximo_ms": 288,
+      "intervalo_objetivo_ms": 250,
+      "muestras": 149,
+      "plataforma_recibida": false,
+      "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+      "registros": 1914,
+      "sha256": "29aa5764cb101287eb3f09370c0d986ab35b48e7415e9513c68252a64e0acf5e"
+    },
+    "uso": {
+      "attribution": {
+        "items": {
+          "msg_0c9984c8e793084f016ac7ef8dd2a487d28d8fd8e52948e363": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 18342,
+                "output_tokens": 0
+              }
+            ],
+            "input_tokens": 18342,
+            "output_tokens": 0
+          },
+          "msg_0c9984c8e793084f016ac7ef95841087d28758e62e946184dc": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 0,
+                "output_tokens": 1009
+              }
+            ],
+            "input_tokens": 0,
+            "output_tokens": 1009
+          },
+          "rs_0c9984c8e793084f016ac7ef8fbe6487d2971c92c313d4418e": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "input_tokens": 2,
+            "output_tokens": 69
+          }
+        },
+        "request_fields": {
+          "instructions": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "input_tokens": 905,
+            "output_tokens": 0
+          },
+          "text.format": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "input_tokens": 172,
+            "output_tokens": 0
+          }
+        }
+      },
+      "input_tokens": 19421,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 1078,
+      "output_tokens_details": {
+        "reasoning_tokens": 69
+      },
+      "total_tokens": 20499
+    }
+  },
+  "naturaleza_defecto": "ninguno sustantivo identificado",
+  "nota_alcance": null,
+  "pasajes_contrastados": [
+    {
+      "documento": "CYB-01",
+      "fragmento": "Una actualización de un archivo y la versión ejecutada por un servicio pueden pertenecer a estados o generaciones distintos; la comprobación debe identificar qué recurso y qué ejecución sustentan la conclusión.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000025-L000030"
+    },
+    {
+      "documento": "CYB-01",
+      "fragmento": "Un estado observado es evidencia sobre aquello que efectivamente se observó, en su ámbito y momento.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000025-L000030"
+    },
+    {
+      "documento": "CYB-01",
+      "fragmento": "Un resultado técnico favorable y la legitimidad del acto son dimensiones diferentes.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000037-L000044"
+    },
+    {
+      "documento": "CYB-02",
+      "fragmento": "La identidad del archivo recuperado y una prueba de puesta en funcionamiento tienen objetos diferentes: sus resultados deben describirse por lo efectivamente comprobado.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000025-L000032"
+    }
+  ],
+  "recepcion_independiente": "pendiente",
+  "respuesta_original": "{\n  \"caso\": \"C01\",\n  \"estado_documental\": \"respuesta_fundada\",\n  \"etapa\": 0,\n  \"evidencias\": [\n    {\n      \"cita_literal_breve\": \"Una actualización de un archivo y la versión ejecutada por un servicio pueden pertenecer a estados o generaciones distintos; la comprobación debe identificar qué recurso y qué ejecución sustentan la conclusión.\",\n      \"documento\": \"CYB-01\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000025-L000030\"\n    },\n    {\n      \"cita_literal_breve\": \"Un estado observado es evidencia sobre aquello que efectivamente se observó, en su ámbito y momento.\",\n      \"documento\": \"CYB-01\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000025-L000030\"\n    },\n    {\n      \"cita_literal_breve\": \"Un resultado técnico favorable y la legitimidad del acto son dimensiones diferentes.\",\n      \"documento\": \"CYB-01\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000037-L000044\"\n    },\n    {\n      \"cita_literal_breve\": \"La identidad del archivo recuperado y una prueba de puesta en funcionamiento tienen objetos diferentes: sus resultados deben describirse por lo efectivamente comprobado.\",\n      \"documento\": \"CYB-02\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000025-L000032\"\n    }\n  ],\n  \"fundamentos_verificables\": [\n    \"Los hechos estipulados acreditan dos estados diferentes: versión 5 instalada en disco y versión 4 ejecutada por el servicio en la medición posterior. No existe contradicción entre ellos, porque corresponden al artefacto persistido y al proceso activo, respectivamente.\",\n    \"El episodio establece como condición necesaria de la corrección que la versión 5 esté activa. La medición identificada y fechada muestra que esa condición no se cumple en el proceso observado; por tanto, la instalación en disco no acredita la corrección operativa.\",\n    \"La autorización de la actualización acredita su legitimidad en el alcance estipulado, pero no demuestra su eficacia sobre el proceso activo. Esta separación aplica la regla de evidencia del SV descrita en CYB-01.\",\n    \"La comprobación posterior debe vincular servicio, recurso, identidad del proceso o nueva ejecución, versión efectivamente activa y momento de observación, y contrastar el resultado con el criterio de corrección del episodio. Una nueva comprobación exclusiva del archivo en disco no resolvería la discrepancia.\",\n    \"Las citas son literales del libro recibido, no de los originales que este sintetiza. CYB-02 contiene recomendaciones y una distinción de evidencia formulada en su síntesis; no concede permisos de intervención. La norma histórica NIS2 sintetizada en CYB-03 no es necesaria para esta conclusión técnica ni acredita Derecho actual aplicable.\"\n  ],\n  \"insuficiencias\": [\n    \"No se aporta una medición posterior que muestre la versión 5 activa. La evidencia disponible acredita versión 5 en disco y versión 4 en ejecución; por ello no puede afirmarse una corrección posterior al momento observado. Esta ausencia no impide resolver negativamente la acreditación solicitada.\",\n    \"No se especifica el mecanismo de activación ni el procedimiento concreto de prueba de la corrección. No cabe afirmar que un reinicio determinado sea necesario o suficiente, ni inventar actuaciones realizadas. Harían falta el procedimiento aplicable, su autorización y los resultados de la comprobación correspondiente.\"\n  ],\n  \"respuesta\": \"No puede darse por acreditada la corrección del servicio. El artefacto persistido está actualizado a la versión 5, pero el proceso activo sigue ejecutando la versión 4 en el momento acreditado. Como el episodio declara que la corrección sólo opera con la versión 5 activa, la condición necesaria no se cumple en esa ejecución.\\n\\nDebe distinguirse la instalación autorizada y realizada en disco de la activación efectiva de la versión corregida. Tras una activación mediante el procedimiento autorizado que corresponda, será necesaria una nueva medición que identifique el servicio, el proceso o nueva ejecución, la hora y la versión realmente activa, junto con la comprobación pertinente del criterio de corrección. No basta repetir la verificación del archivo persistido.\\n\\nLa conclusión se limita al proceso y al momento observados: no permite inventar la duración anterior del estado ni afirmar qué ocurrió después.\",\n  \"revision\": \"Respuesta provisional de etapa 0. No existen antecedentes ni entregas anteriores que contrastar. La conclusión se funda en los hechos estipulados y en la distinción documental entre archivo actualizado, ejecución activa y alcance temporal de la evidencia.\"\n}",
+  "solicitud_sha256": "36305e898d8ed8520d4d4ad52791936266fbfa1bba4f4db08be762b66d92eac9",
+  "sustantivo": "correcto",
+  "valor": "0"
+}

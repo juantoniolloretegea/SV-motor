@@ -1,0 +1,136 @@
+{
+  "alcance_no_entregado": "C08/R2 incompleta en I024; las demás respuestas permanecieron conservadas. Sin cierre ni contadores finales de ese intento.",
+  "argumento_proveedor": {
+    "code": null,
+    "message": null
+  },
+  "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+  "causa_receptor_local_separada": "C01/R0 había sido completada por OpenAI; rechazo inicial del receptor SV corregido y recuperado sin otra inferencia. No se imputa al proveedor.",
+  "clasificacion": "interrupcion_de_recepcion_con_causa_no_determinada",
+  "duracion_total_indisponibilidad_ms": null,
+  "estado": "C08/R2 recuperada al final; evaluación del servicio pendiente",
+  "examen": "ASTRA-CYB16-20261008",
+  "fuentes": {
+    "recepcion_sha256": "fe32de102bc658357512053a38c5921ed5f6b0ae82819b53b68d504fccbb663b"
+  },
+  "hecho": {
+    "caso": "C08",
+    "completa": false,
+    "duracion_operacion_ms": 192508,
+    "etapa": 2,
+    "fin_recepcion_observado_utc_ms": 1791489766210,
+    "hito_sha256": "5baafcd09b4b95922e3b9b8b87ba040b8eaef0831ec4d26a451ec70b42a9bc1f",
+    "http": 200,
+    "incidencia": {
+      "alcance": "Solicitud sin recepción completa; no se atribuye causalidad interna sin argumento del proveedor",
+      "argumento_proveedor": null,
+      "codigo": null,
+      "duracion_operacion_ms": 192508,
+      "error_local": "Lectura interrumpida; original parcial conservado",
+      "http": 200,
+      "proveedor": "OpenAI",
+      "reanudable": true
+    },
+    "inicio_envio_utc_ms": 1791489574900,
+    "intento": 24,
+    "resultado_sha256": "f7c399c6fed5637d6991d58669beb32633f6641e5d9e882c37aec83cedb83ea4",
+    "sse_sha256": "b074e53479716c419abc13f93cf14be34dab76aca558dcb070e94bcae4d93d4d",
+    "telemetria": {
+      "bytes": 1566936,
+      "fallos_medicion": 0,
+      "integridad": "conforme",
+      "intervalo_maximo_ms": 292,
+      "intervalo_objetivo_ms": 250,
+      "muestras": 712,
+      "plataforma_recibida": false,
+      "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+      "registros": 2167,
+      "sha256": "8a3f1d5e16f4841134f333d93943c7b4ef0dea36531b35094936e64ea00d4d91"
+    },
+    "ultima_lectura_https_utc_ms": 1791489601140
+  },
+  "id": "SV-SERVICIO-OPENAI-20261008-001",
+  "intervalo_entre_fin_interrumpido_y_siguiente_entrega_ms": 44480,
+  "limites": "La duración de una solicitud y el intervalo hasta una nueva entrega no acreditan una caída continua del proveedor. HTTP 200 no acredita una respuesta completa. Causalidad interna y efectos remotos desconocidos.",
+  "marco_normativo": {
+    "alcance": "Gestión y evaluación posterior; sin declaración de certificación ni incumplimiento normativo",
+    "referencias_del_registro_existente": [
+      "ISO/IEC 42001:2023",
+      "ISO 9001:2026"
+    ]
+  },
+  "modelo": "gpt-6-astra",
+  "proveedor": "OpenAI",
+  "puntuacion_proveedor": null,
+  "recuperacion_pregunta": {
+    "caso": "C08",
+    "completa": true,
+    "duracion_operacion_ms": 53248,
+    "etapa": 2,
+    "fin_recepcion_observado_utc_ms": 1791491063158,
+    "hito_sha256": "c1487d6724e8ecdd4dba361a088a394832bb9924e0c33d281c6398fc06d4565f",
+    "http": 200,
+    "incidencia": null,
+    "inicio_envio_utc_ms": 1791491011044,
+    "intento": 49,
+    "resultado_sha256": "2175b81a2a8980515926ed4bb9927c913ddf366263081d61a05444baf06dceba",
+    "sse_sha256": "bf313027eba2e09882bc9d1be1608b0ca4bc8a47f6ec1d1826bc71fb3e39918d",
+    "telemetria": {
+      "bytes": 1478311,
+      "fallos_medicion": 0,
+      "integridad": "conforme",
+      "intervalo_maximo_ms": 286,
+      "intervalo_objetivo_ms": 250,
+      "muestras": 204,
+      "plataforma_recibida": false,
+      "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+      "registros": 3657,
+      "sha256": "a4101c57b22307c60f0c4166f549401611a21a2088241b820d24c680127bab32"
+    },
+    "ultima_lectura_https_utc_ms": 1791491063017
+  },
+  "recuperacion_servicio_observada": {
+    "caso": "C09",
+    "completa": true,
+    "duracion_operacion_ms": 42902,
+    "etapa": 0,
+    "fin_recepcion_observado_utc_ms": 1791489810690,
+    "hito_sha256": "2032df4a313fb3bb8e49b75f1ec9eb3df7b80f62e3eddac4895087261b2c190f",
+    "http": 200,
+    "incidencia": null,
+    "inicio_envio_utc_ms": 1791489768974,
+    "intento": 25,
+    "resultado_sha256": "937c0583b79191c73c933c94246e472a74abeeba6b9ad21a50a58f08588ab7de",
+    "sse_sha256": "4845821526fc7923045ff88508bbc1044cf3a840ff5f5634a8436e20da84d3de",
+    "telemetria": {
+      "bytes": 1034929,
+      "fallos_medicion": 0,
+      "integridad": "conforme",
+      "intervalo_maximo_ms": 290,
+      "intervalo_objetivo_ms": 250,
+      "muestras": 156,
+      "plataforma_recibida": false,
+      "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+      "registros": 2515,
+      "sha256": "318a5345292c7137f69cd0c39d8ef9e16ca87ee34040e52b04048a9677f4e749"
+    },
+    "ultima_lectura_https_utc_ms": 1791489810624
+  },
+  "regla_continuidad": {
+    "al_agotar": "prueba no válida por falta de recursos que garanticen el examen",
+    "alcanzada": false,
+    "aplazar_pregunta": true,
+    "puntuacion_candidato_por_fallo_servicio": null,
+    "ventana_operativa_ms": 300000
+  },
+  "suceso": "S39",
+  "tiques": [
+    "TT-0016",
+    "TT-0021"
+  ],
+  "uso_intento_interrumpido": {
+    "entrada_tokens": null,
+    "salida_tokens": null,
+    "total_tokens": null
+  }
+}

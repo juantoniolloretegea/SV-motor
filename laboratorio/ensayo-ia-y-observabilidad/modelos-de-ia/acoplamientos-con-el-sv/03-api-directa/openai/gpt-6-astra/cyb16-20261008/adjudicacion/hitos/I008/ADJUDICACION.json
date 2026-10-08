@@ -1,0 +1,192 @@
+{
+  "alerta": null,
+  "alerta_limite": false,
+  "auditoria_sha256": "f50496b6312a81344e6c0c812980f044707892ed505c9381aa794a39a46bdc8b",
+  "caso": "C03",
+  "critico": true,
+  "estado_documental_candidato": "respuesta_fundada",
+  "etapa": 1,
+  "fidelidad_documental": "conforme",
+  "final_sha256": "f641d134e91f0ea3165ab59517cf1d578561e283b2804fd4c5aec0e16caa1112",
+  "formal_conforme": true,
+  "fundamento_sustantivo": "Las tres etapas conservan simultáneamente conformidad técnica medida y exceso del permiso de sólo lectura. No deducen legitimidad del éxito ni invalidan automáticamente toda evidencia técnicamente válida. Mantienen los requisitos independientes de admisión, finalidad y distribución, y no presuponen una excepción no aportada.",
+  "justificacion_documental": "Las evidencias literales se cotejan en Rust; la relación entre premisas y conclusión se revisa exteriormente.",
+  "medicion": {
+    "duracion_operacion_ms": 39426,
+    "telemetria": {
+      "bytes": 955259,
+      "fallos_medicion": 0,
+      "integridad": "conforme",
+      "intervalo_maximo_ms": 293,
+      "intervalo_objetivo_ms": 250,
+      "muestras": 148,
+      "plataforma_recibida": false,
+      "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+      "registros": 2309,
+      "sha256": "857c0eb4b1505b086e82e38321d595fbd9ede1a1e712f0888b02775492df7379"
+    },
+    "uso": {
+      "attribution": {
+        "items": {
+          "msg_0b4ce93d7eb3d911016ac7f2b4e45c87d290596e54de004712": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 18334,
+                "output_tokens": 0
+              }
+            ],
+            "input_tokens": 18334,
+            "output_tokens": 0
+          },
+          "msg_0b4ce93d7eb3d911016ac7f2b4e48487d2856c1ae77158b459": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 962,
+                "output_tokens": 0
+              }
+            ],
+            "input_tokens": 962,
+            "output_tokens": 0
+          },
+          "msg_0b4ce93d7eb3d911016ac7f2b4e4b487d2be13550dea18d582": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 948,
+                "output_tokens": 0
+              }
+            ],
+            "input_tokens": 948,
+            "output_tokens": 0
+          },
+          "msg_0b4ce93d7eb3d911016ac7f2b4e4dc87d2b8aa2f8c0558639f": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 68,
+                "output_tokens": 0
+              }
+            ],
+            "input_tokens": 68,
+            "output_tokens": 0
+          },
+          "msg_0b4ce93d7eb3d911016ac7f2bc668487d29c6518e998e88004": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 0,
+                "output_tokens": 1253
+              }
+            ],
+            "input_tokens": 0,
+            "output_tokens": 1253
+          },
+          "rs_0b4ce93d7eb3d911016ac7f2b6571887d29bd3930aa9e0d2e7": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "input_tokens": 2,
+            "output_tokens": 66
+          }
+        },
+        "request_fields": {
+          "instructions": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "input_tokens": 942,
+            "output_tokens": 0
+          },
+          "text.format": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "input_tokens": 172,
+            "output_tokens": 0
+          }
+        }
+      },
+      "input_tokens": 21428,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 1319,
+      "output_tokens_details": {
+        "reasoning_tokens": 66
+      },
+      "total_tokens": 22747
+    }
+  },
+  "naturaleza_defecto": "ninguno sustantivo identificado",
+  "nota_alcance": null,
+  "pasajes_contrastados": [
+    {
+      "documento": "CYB-01",
+      "fragmento": "Un resultado técnico favorable y la legitimidad del acto son dimensiones diferentes.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000037-L000044"
+    },
+    {
+      "documento": "CYB-01",
+      "fragmento": "La evidencia técnicamente válida de un acto sin permiso no pierde automáticamente todo valor, ni el éxito técnico convierte el acto en autorizado.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000037-L000044"
+    },
+    {
+      "documento": "CYB-01",
+      "fragmento": "La legitimidad exige relacionar principal, autoridad, actor, destinatario, recurso y finalidad dentro del alcance de la autorización.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000031-L000036"
+    },
+    {
+      "documento": "CYB-01",
+      "fragmento": "Un estado observado es evidencia sobre aquello que efectivamente se observó, en su ámbito y momento.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000025-L000030"
+    },
+    {
+      "documento": "CYB-01",
+      "fragmento": "La admisión de evidencia requiere procedencia, integridad, finalidad, acceso y trazabilidad de las transformaciones.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000037-L000044"
+    },
+    {
+      "documento": "CYB-01",
+      "fragmento": "La recuperabilidad documental no levanta restricciones de privacidad ni autoriza cualquier distribución.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000037-L000044"
+    }
+  ],
+  "recepcion_independiente": "pendiente",
+  "respuesta_original": "{\n  \"caso\": \"C03\",\n  \"estado_documental\": \"respuesta_fundada\",\n  \"etapa\": 1,\n  \"evidencias\": [\n    {\n      \"cita_literal_breve\": \"Un resultado técnico favorable y la legitimidad del acto son dimensiones diferentes.\",\n      \"documento\": \"CYB-01\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000037-L000044\"\n    },\n    {\n      \"cita_literal_breve\": \"La evidencia técnicamente válida de un acto sin permiso no pierde automáticamente todo valor, ni el éxito técnico convierte el acto en autorizado.\",\n      \"documento\": \"CYB-01\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000037-L000044\"\n    },\n    {\n      \"cita_literal_breve\": \"La legitimidad exige relacionar principal, autoridad, actor, destinatario, recurso y finalidad dentro del alcance de la autorización.\",\n      \"documento\": \"CYB-01\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000031-L000036\"\n    },\n    {\n      \"cita_literal_breve\": \"Un estado observado es evidencia sobre aquello que efectivamente se observó, en su ámbito y momento.\",\n      \"documento\": \"CYB-01\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000025-L000030\"\n    },\n    {\n      \"cita_literal_breve\": \"La admisión de evidencia requiere procedencia, integridad, finalidad, acceso y trazabilidad de las transformaciones.\",\n      \"documento\": \"CYB-01\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000037-L000044\"\n    },\n    {\n      \"cita_literal_breve\": \"La recuperabilidad documental no levanta restricciones de privacidad ni autoriza cualquier distribución.\",\n      \"documento\": \"CYB-01\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000037-L000044\"\n    }\n  ],\n  \"fundamentos_verificables\": [\n    \"El resultado técnico favorable es una premisa expresa del caso: las mediciones válidas acreditan que el componente actualizado satisface la referencia técnica. Esta conclusión queda limitada al objeto, ámbito y momento efectivamente comprobados, conforme a CYB-01, MD-L000025-L000030.\",\n    \"El permiso del actor autorizaba exclusivamente lectura y no permitía actualizar ese recurso. La actualización excedió, por tanto, el alcance de la autorización descrita. Al no aportarse una autorización excepcional, no hay fundamento documental para legitimar esa actuación por una excepción.\",\n    \"El defecto acreditado afecta al permiso, no meramente a la conformidad con un plan. La posibilidad de una excepción competente que contempla CYB-01, MD-L000031-L000036, no permite presumir que exista en este caso.\",\n    \"CYB-01, MD-L000037-L000044, separa expresamente resultado técnico y legitimidad: la conformidad técnica no autoriza retrospectivamente la actualización y la falta de permiso no elimina automáticamente el valor de toda evidencia técnicamente válida.\",\n    \"Conservar el valor técnico de las mediciones no equivale a una admisión incondicionada para cualquier finalidad ni a una autorización de divulgación. CYB-01 exige requisitos propios de admisión y mantiene las restricciones de distribución.\",\n    \"La conclusión aplica la regla del SV descrita en CYB-01 a los hechos sintéticos estipulados. No deriva una autorización de las recomendaciones de INCIBE ni una calificación jurídica actual de la síntesis histórica de NIS2. Las citas son literales del libro recibido, no del acta original que el capítulo parafrasea.\"\n  ],\n  \"insuficiencias\": [\n    \"No se aporta autorización excepcional. Con el permiso de sólo lectura disponible, la actuación queda fuera de su alcance; falta un título excepcional competente y aplicable para sostener una legitimación distinta. Esta ausencia no impide resolver los extremos preguntados.\",\n    \"El caso no aporta comprobaciones de otros recursos, ejecuciones o momentos. Por ello no se extiende la conformidad técnica más allá del componente y del alcance efectivamente medidos.\",\n    \"No se describen otras finalidades de admisión o divulgación ni sus condiciones. El valor técnico acreditado no permite concluir que esos usos adicionales estén autorizados; este límite no invalida las mediciones estipuladas como válidas.\"\n  ],\n  \"respuesta\": \"El resultado técnico es favorable: las mediciones válidas acreditan que el componente actualizado satisface la referencia técnica, dentro del alcance efectivamente comprobado.\\n\\nLa actualización, sin embargo, excedió el permiso del actor, que sólo autorizaba lectura. Conforme a la autorización descrita, fue una actuación no autorizada; no se aporta una excepción que permita legitimar ese exceso. El éxito técnico no subsana el defecto de autoridad.\\n\\nNo pierde automáticamente su valor toda evidencia del resultado. Las mediciones conservan valor para acreditar la conformidad técnica comprobada, pero no prueban que la actuación estuviera autorizada. Deben mantenerse separadas ambas conclusiones —resultado técnico favorable y defecto de autoridad—, sin confundir ese valor probatorio con admisión o divulgación irrestrictas.\",\n  \"revision\": \"Se mantiene la conclusión de la entrega histórica de etapa 0: sus afirmaciones centrales y sus cinco citas concuerdan con los hechos estipulados y con CYB-01. No se identifica una omisión que cambie el resultado. Se añade apoyo literal específico para el límite de distribución y se precisa que la ausencia de autorización excepcional impide invocarla, sin afirmar una inexistencia universal. Los límites sobre otros recursos y usos de la evidencia se conservan como límites de alcance, no como motivos para declarar U. La identificación histórica de la entrega anterior como etapa 0 permanece inalterada.\"\n}",
+  "solicitud_sha256": "9859584192d748db0fc7b73a81f0b0313af490441cc1f66ebd737f95ba21da4a",
+  "sustantivo": "correcto",
+  "valor": "0"
+}

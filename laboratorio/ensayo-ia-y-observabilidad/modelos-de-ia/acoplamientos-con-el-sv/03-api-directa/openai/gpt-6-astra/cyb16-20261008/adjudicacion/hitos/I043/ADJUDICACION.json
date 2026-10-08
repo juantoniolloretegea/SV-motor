@@ -1,0 +1,158 @@
+{
+  "alerta": null,
+  "alerta_limite": false,
+  "auditoria_sha256": "48246cbc7c8921bfeab6e4467f3415567060768bca33da63246a77def273e1d7",
+  "caso": "C15",
+  "critico": true,
+  "estado_documental_candidato": "respuesta_fundada",
+  "etapa": 0,
+  "fidelidad_documental": "conforme",
+  "final_sha256": "26ce8d662eaf269c635bf3a3f5cb8ef03297275ecd9d07677e64a361e96346ed",
+  "formal_conforme": true,
+  "fundamento_sustantivo": "Las tres etapas separan los rechazos instrumentales de una respuesta del candidato y prohíben inventar 1 o U para completar el examen. Exigen identificación de originales e intentos, reparación o alternativa autorizada comprobada, cobertura, admisión y entrega efectiva, preservando la historia. No confunden el PDF de 73 páginas mencionado por la fuente con los dos archivos del supuesto ni atribuyen al acta el error sintético de descompresión.",
+  "justificacion_documental": "Las evidencias literales se cotejan en Rust; la relación entre premisas y conclusión se revisa exteriormente.",
+  "medicion": {
+    "duracion_operacion_ms": 48682,
+    "telemetria": {
+      "bytes": 1213414,
+      "fallos_medicion": 0,
+      "integridad": "conforme",
+      "intervalo_maximo_ms": 292,
+      "intervalo_objetivo_ms": 250,
+      "muestras": 179,
+      "plataforma_recibida": false,
+      "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+      "registros": 2962,
+      "sha256": "3b778b964fe24666541bdb9fc050b7ce0e7a041156a69c4db5e3eec5e0200207"
+    },
+    "uso": {
+      "attribution": {
+        "items": {
+          "msg_018499e11ac0d8fd016ac7fa6a068087d28e3b29fac2162429": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 18330,
+                "output_tokens": 0
+              }
+            ],
+            "input_tokens": 18330,
+            "output_tokens": 0
+          },
+          "msg_018499e11ac0d8fd016ac7fa6fc3ec87d2abd5e40e913cd13d": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 0,
+                "output_tokens": 1537
+              }
+            ],
+            "input_tokens": 0,
+            "output_tokens": 1537
+          },
+          "rs_018499e11ac0d8fd016ac7fa6b72e087d2a8c7ba60f47aa349": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "input_tokens": 2,
+            "output_tokens": 51
+          }
+        },
+        "request_fields": {
+          "instructions": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "input_tokens": 905,
+            "output_tokens": 0
+          },
+          "text.format": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "input_tokens": 172,
+            "output_tokens": 0
+          }
+        }
+      },
+      "input_tokens": 19409,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 1588,
+      "output_tokens_details": {
+        "reasoning_tokens": 51
+      },
+      "total_tokens": 20997
+    }
+  },
+  "naturaleza_defecto": "ninguno sustantivo identificado",
+  "nota_alcance": "Se examina la conducta ante fallos hipotéticos del suministro PDF. Esta campaña recibió efectivamente el libro por MCP; la pregunta no declara que esos fallos hayan ocurrido en su entrega.",
+  "pasajes_contrastados": [
+    {
+      "documento": "CYB-01",
+      "fragmento": "Un error del extractor o de una medición no produce un resultado alternativo válido del dominio.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000045-L000050"
+    },
+    {
+      "documento": "CYB-01",
+      "fragmento": "Debe quedar un registro técnico conservado, con causa y alcance, sin rellenar por ese motivo la semántica del episodio.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000045-L000050"
+    },
+    {
+      "documento": "CYB-01",
+      "fragmento": "Una respuesta truncada, una negativa recibida, una falta de evidencia y un fallo de transporte tienen causas distintas; no generan automáticamente el valor U.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000007-L000018"
+    },
+    {
+      "documento": "CYB-01",
+      "fragmento": "La admisión de evidencia requiere procedencia, integridad, finalidad, acceso y trazabilidad de las transformaciones.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000037-L000044"
+    },
+    {
+      "documento": "CYB-01",
+      "fragmento": "Una comprobación parcial no acredita un conjunto completo.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000037-L000044"
+    },
+    {
+      "documento": "CYB-03",
+      "fragmento": "La lectura auxiliar del PDF y esta síntesis no acreditan recepción de su original por MCP: el lector existente rechazó sus 73 páginas por superar la cota.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000045-L000053"
+    },
+    {
+      "documento": "CYB-04",
+      "fragmento": "Las funciones de presentación y búsqueda humana no tienen autoridad para decidir el suministro, la admisión o la adjudicación del sistema.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000023-L000029"
+    }
+  ],
+  "recepcion_independiente": "pendiente",
+  "respuesta_original": "{\n  \"caso\": \"C15\",\n  \"estado_documental\": \"respuesta_fundada\",\n  \"etapa\": 0,\n  \"evidencias\": [\n    {\n      \"cita_literal_breve\": \"Un error del extractor o de una medición no produce un resultado alternativo válido del dominio.\",\n      \"documento\": \"CYB-01\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000045-L000050\"\n    },\n    {\n      \"cita_literal_breve\": \"Debe quedar un registro técnico conservado, con causa y alcance, sin rellenar por ese motivo la semántica del episodio.\",\n      \"documento\": \"CYB-01\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000045-L000050\"\n    },\n    {\n      \"cita_literal_breve\": \"Una respuesta truncada, una negativa recibida, una falta de evidencia y un fallo de transporte tienen causas distintas; no generan automáticamente el valor U.\",\n      \"documento\": \"CYB-01\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000007-L000018\"\n    },\n    {\n      \"cita_literal_breve\": \"La admisión de evidencia requiere procedencia, integridad, finalidad, acceso y trazabilidad de las transformaciones.\",\n      \"documento\": \"CYB-01\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000037-L000044\"\n    },\n    {\n      \"cita_literal_breve\": \"Una comprobación parcial no acredita un conjunto completo.\",\n      \"documento\": \"CYB-01\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000037-L000044\"\n    },\n    {\n      \"cita_literal_breve\": \"La lectura auxiliar del PDF y esta síntesis no acreditan recepción de su original por MCP: el lector existente rechazó sus 73 páginas por superar la cota.\",\n      \"documento\": \"CYB-03\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000045-L000053\"\n    },\n    {\n      \"cita_literal_breve\": \"Las funciones de presentación y búsqueda humana no tienen autoridad para decidir el suministro, la admisión o la adjudicación del sistema.\",\n      \"documento\": \"CYB-04\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000023-L000029\"\n    }\n  ],\n  \"fundamentos_verificables\": [\n    \"Los hechos estipulados sitúan ambos rechazos en el suministro: uno por cota de páginas y otro por descompresión no implementada. Además, establecen que no se entregó texto admitido al candidato. No describen una respuesta incorrecta ni una declaración de incertidumbre emitida por el modelo.\",\n    \"La regla del SV descrita en CYB-01 separa fallo instrumental, admisión, aplicabilidad e insuficiencia. Por tanto, convertir estos rechazos en un resultado del dominio atribuido al candidato alteraría la naturaleza del episodio.\",\n    \"La posibilidad de leer un PDF por otra vía, generar una síntesis o presentar su contenido no demuestra que el original haya sido suministrado y admitido. CYB-03 ofrece expresamente ese límite para el PDF de 73 páginas; no acredita por ello la identidad de los dos archivos del caso.\",\n    \"Las condiciones de continuación se deducen de los requisitos documentales de admisión, identidad, cobertura y conservación histórica de CYB-01. Una transformación o sustitución debe quedar identificada, no presentarse silenciosamente como el original.\",\n    \"Estas conclusiones se apoyan en las reglas del SV expuestas en el libro, no en una obligación jurídica NIS2 ni en una recomendación de INCIBE. Las citas son literales de las síntesis recibidas, no de sus originales enlazados.\"\n  ],\n  \"insuficiencias\": [\n    \"No se aportan registros técnicos individualizados, identidades de los dos PDF, configuración de la cota ni detalles del mecanismo de descompresión. Los hechos estipulados permiten clasificar los rechazos, pero no prescribir una reparación técnica concreta ni afirmar que se haya realizado.\",\n    \"No consta una nueva entrega, su admisión ni la recepción efectiva por el candidato. En consecuencia, no está acreditado que pueda reanudarse la evaluación dependiente de esos textos. Harían falta los registros de la subsanación, la comprobación del contenido resultante y las constancias de suministro y admisión.\",\n    \"Las fuentes no proporcionan un procedimiento técnico exhaustivo de recuperación ni reglas reservadas de adjudicación. Se establecen condiciones documentales para continuar, sin asignar puntuaciones o decisiones al Árbitro.\"\n  ],\n  \"respuesta\": \"La propuesta debe rechazarse. Los dos sucesos son fallos o limitaciones del suministro, no respuestas del candidato. No procede atribuirle una respuesta incorrecta ni fabricar una U del dominio para completar el examen. Debe conservarse el episodio como incidencia técnica, con sus causas diferenciadas y el hecho de que no hubo entrega de texto admitido.\\n\\nAntes de reanudar la evaluación que depende de esos documentos deben acreditarse estas condiciones:\\n\\n1. Registro del fallo: identificar cada archivo y el intento afectado, la causa concreta, su alcance y qué contenido se entregó o no. Deben distinguirse el rechazo por cota y la descompresión no implementada.\\n2. Subsanación comprobada: demostrar que una vía de suministro permitida puede procesar el material requerido. Anunciar una corrección o disponer de una lectura auxiliar no prueba su funcionamiento. No se presupone permiso para eludir la cota o cambiar el corpus.\\n3. Identidad y trazabilidad: vincular el original con el texto obtenido, sus versiones y las transformaciones realizadas. Si se utiliza una vista, conversión, partición o síntesis, debe identificarse como tal y justificarse su admisibilidad para la finalidad del examen; no equivale automáticamente a recibir el original.\\n4. Integridad y cobertura: comprobar qué contenido se recuperó y que cubre lo exigido, haciendo explícitas omisiones, truncamientos y límites. Una extracción parcial no acredita recepción completa.\\n5. Admisión y acceso efectivo: acreditar procedencia, integridad, finalidad, permisos de acceso y entrega del texto admitido al candidato. La disponibilidad en un visor o buscador no sustituye esas condiciones.\\n6. Continuidad histórica: conservar el registro del intento fallido y distinguirlo de cualquier intento posterior. Sólo una respuesta efectivamente producida bajo el suministro acreditado puede examinarse como respuesta del candidato; una eventual U requerirá una insuficiencia documental concreta, no el mero fallo previo del lector.\\n\\nCon los hechos dados puede resolverse la improcedencia de la propuesta y fijarse estas condiciones, pero no afirmar que ya se cumplan. Esta respuesta fundada sobre el fallo de suministro no rellena ni sustituye el resultado ausente del examen.\",\n  \"revision\": \"Respuesta provisional de etapa 0. No existen antecedentes de entrega. Se distingue el fallo instrumental del resultado del dominio y se mantienen explícitos los límites de lo acreditado, sin emitir decisiones de adjudicación.\"\n}",
+  "solicitud_sha256": "7419c3170cde371f5dcae95544b154f2fec407c13475bbfe964cdf8d142b28f7",
+  "sustantivo": "correcto",
+  "valor": "0"
+}

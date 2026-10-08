@@ -3,6 +3,7 @@
 pub mod estricto;
 pub mod presupuesto;
 pub mod chat;
+pub mod responses;
 use serde::{Deserialize,Serialize};
 use serde_json::{json,Value};
 use std::{fs::{self,OpenOptions},io::{Read,Write},path::Path,time::{Duration,Instant}};
@@ -29,7 +30,7 @@ impl Perfil{pub fn comprobar(&self)->R<()>{
   u.scheme()=="https"&&u.username().is_empty()&&u.password().is_none()&&u.port().is_none()&&u.query().is_none()&&u.fragment().is_none()&&u.path()=="/compatible-mode/v1/responses"&&workspace.is_some_and(|s|!s.is_empty()&&s.len()<=64&&s.bytes().all(|b|b.is_ascii_lowercase()||b.is_ascii_digit()))
  },_=>false};need(destino,"Destino o proveedor no admitido")?;
  need(!self.modelo.is_empty()&&self.entrada_ticks_por_token>0&&self.salida_ticks_por_token>0,"Perfil incompleto")?;
- if let Some(n)=self.cuota_gratuita_tokens{need(self.proveedor=="Alibaba Cloud"&&self.modelo=="qwen3.8-max-0902"&&self.presupuesto_ticks==0&&n>0&&n<=1_000_000,"Cuota gratuita o presupuesto no autorizado")?;}else{need(self.proveedor!="Alibaba Cloud"&&(self.presupuesto_ticks>0||self.proveedor=="Z.ai"),"Falta protección de cuota gratuita")?;}Ok(())
+ if let Some(n)=self.cuota_gratuita_tokens{need(self.proveedor=="Alibaba Cloud"&&self.modelo=="qwen3.8-max-0902"&&self.presupuesto_ticks==0&&n>0&&n<=1_000_000,"Cuota gratuita o presupuesto no autorizado")?;}else{need(self.proveedor!="Alibaba Cloud"&&(self.presupuesto_ticks>0||matches!(self.proveedor.as_str(),"Z.ai"|"OpenAI")),"Falta protección de cuota gratuita")?;}Ok(())
 }}
 
 pub fn proteger(q:&mut Value,p:&Perfil)->R<()> {
@@ -80,6 +81,12 @@ impl Flujo{
  }
  pub fn recibir(&self,modelo:&str)->R<Value>{
   need(self.terminal&&self.pending.iter().all(u8::is_ascii_whitespace),"Entrega incompleta")?;
+  if modelo=="gpt-6-astra"{
+   let mut received=responses::extract(&self.eventos,modelo)?;
+   received["respuesta_proveedor"]=self.eventos.last().ok_or("Sin eventos")?["response"].clone();
+   received["eventos"]=json!(self.eventos.len());received["concordancia_sse_texto"]=json!(true);
+   return Ok(received);
+  }
   let terminal=self.eventos.last().ok_or("Sin eventos")?;need(terminal["type"]=="response.completed","Proveedor no completó la respuesta")?;
   let r=&terminal["response"];need(r["status"]=="completed"&&r["model"]==modelo,"Modelo o estado no conforme")?;
   let mut text=String::new();for item in r["output"].as_array().ok_or("Salida ausente")?{
@@ -92,6 +99,17 @@ impl Flujo{
 }
 
 pub fn enviar(p:&Perfil,key:&str,q:&Value,dest:&Path,timeout_ms:u64)->R<Value>{
+ need(p.proveedor!="OpenAI"||p.presupuesto_ticks>0,"Envío con clave API sin presupuesto recibido")?;
+ enviar_interno(p,key,q,dest,timeout_ms)
+}
+/// Sesión verificada por el adaptador OAuth, sin clave API ni presupuesto en USD.
+/// Las cotas de preguntas, intentos, tiempo y tokens pertenecen al Árbitro.
+pub fn enviar_chatgpt(p:&Perfil,token:&str,q:&Value,dest:&Path,timeout_ms:u64)->R<Value>{
+ need(p.proveedor=="OpenAI"&&p.modelo=="gpt-6-astra"&&p.presupuesto_ticks==0&&p.cuota_gratuita_tokens.is_none(),"Modalidad ChatGPT ajena")?;
+ need(q["max_output_tokens"].as_u64().is_some_and(|n|n>0&&n<=16384),"Salida fuera de cota")?;
+ enviar_interno(p,token,q,dest,timeout_ms)
+}
+fn enviar_interno(p:&Perfil,key:&str,q:&Value,dest:&Path,timeout_ms:u64)->R<Value>{
  p.comprobar()?;
  if p.proveedor=="Z.ai"{chat::validar(q,&p.modelo)?;need(p.presupuesto_ticks>0,"Perfil Z.ai limitado a preparación; envío impedido")?;}else{
  let choice=if p.proveedor=="xAI"{q.get("tool_choice").is_none()}else{q["tool_choice"]=="none"};need(q["model"]==p.modelo&&q["tools"]==json!([])&&choice&&q["store"]==false&&q["stream"]==true,"Solicitud fuera de perfil")?;

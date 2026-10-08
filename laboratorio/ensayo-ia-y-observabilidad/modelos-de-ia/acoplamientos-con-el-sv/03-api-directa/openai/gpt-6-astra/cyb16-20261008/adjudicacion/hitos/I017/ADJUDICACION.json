@@ -1,0 +1,208 @@
+{
+  "alerta": null,
+  "alerta_limite": false,
+  "auditoria_sha256": "3961b9bb035fab3c5d89267d07e545b43c995915398247248281070f91c6a561",
+  "caso": "C06",
+  "critico": true,
+  "estado_documental_candidato": "respuesta_fundada",
+  "etapa": 1,
+  "fidelidad_documental": "conforme",
+  "final_sha256": "b4142ed5c39e5b097e6f4ad8df6da3928fa861b4076d5ae7734abae5fee91b4e",
+  "formal_conforme": true,
+  "fundamento_sustantivo": "Preserva el original protegido y prepara únicamente la vista expurgada admitida, con minimización, finalidad, destinatario, autoridad y trazabilidad. Revisa acompañamientos para evitar reintroducir secretos y conserva el mapa de transformaciones bajo custodia sin exigir su envío íntegro. R1/R2 explicitan integridad, fidelidad y suficiencia de la vista, desarrollando la admisión ya requerida en R0; no autorizan un envío concreto ni atribuyen una ejecución inexistente.",
+  "justificacion_documental": "Las evidencias literales se cotejan en Rust; la relación entre premisas y conclusión se revisa exteriormente.",
+  "medicion": {
+    "duracion_operacion_ms": 55312,
+    "telemetria": {
+      "bytes": 1371642,
+      "fallos_medicion": 0,
+      "integridad": "conforme",
+      "intervalo_maximo_ms": 288,
+      "intervalo_objetivo_ms": 250,
+      "muestras": 204,
+      "plataforma_recibida": false,
+      "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+      "registros": 3340,
+      "sha256": "d8036d2d31218577eb01166ea8055359d315369729d1225934a7d5564ab95d52"
+    },
+    "uso": {
+      "attribution": {
+        "items": {
+          "msg_0eaee17c3b767b5a016ac7f49b24f087d2b04ce1d2e4f2206a": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 18338,
+                "output_tokens": 0
+              }
+            ],
+            "input_tokens": 18338,
+            "output_tokens": 0
+          },
+          "msg_0eaee17c3b767b5a016ac7f49b251087d2b244dc57048f55c4": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 962,
+                "output_tokens": 0
+              }
+            ],
+            "input_tokens": 962,
+            "output_tokens": 0
+          },
+          "msg_0eaee17c3b767b5a016ac7f49b252487d2b3168b20a49536d5": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 1370,
+                "output_tokens": 0
+              }
+            ],
+            "input_tokens": 1370,
+            "output_tokens": 0
+          },
+          "msg_0eaee17c3b767b5a016ac7f49b253487d28b7c52a85139bd50": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 68,
+                "output_tokens": 0
+              }
+            ],
+            "input_tokens": 68,
+            "output_tokens": 0
+          },
+          "msg_0eaee17c3b767b5a016ac7f4a35ec487d28d61ea47471bf06f": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 0,
+                "output_tokens": 1816
+              }
+            ],
+            "input_tokens": 0,
+            "output_tokens": 1816
+          },
+          "rs_0eaee17c3b767b5a016ac7f49c6c7c87d2aa05d1c54e9b3d8f": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "input_tokens": 2,
+            "output_tokens": 93
+          }
+        },
+        "request_fields": {
+          "instructions": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "input_tokens": 942,
+            "output_tokens": 0
+          },
+          "text.format": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "input_tokens": 172,
+            "output_tokens": 0
+          }
+        }
+      },
+      "input_tokens": 21854,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 1909,
+      "output_tokens_details": {
+        "reasoning_tokens": 93
+      },
+      "total_tokens": 23763
+    }
+  },
+  "naturaleza_defecto": "ninguno sustantivo identificado",
+  "nota_alcance": "El procedimiento es deducible de las fuentes. Su aprobación no demuestra que una vista concreta, una API o su transferencia estén admitidas: esos datos no se suministraron ni se necesitan para resolver el supuesto.",
+  "pasajes_contrastados": [
+    {
+      "documento": "CYB-01",
+      "fragmento": "Se pueden distinguir originales preservados y vistas admitidas para una finalidad.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000037-L000044"
+    },
+    {
+      "documento": "CYB-01",
+      "fragmento": "La admisión de evidencia requiere procedencia, integridad, finalidad, acceso y trazabilidad de las transformaciones.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000037-L000044"
+    },
+    {
+      "documento": "CYB-01",
+      "fragmento": "Finalidad, destinatarios, minimización y custodia se aplican a datos, registros y explicaciones.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000007-L000018"
+    },
+    {
+      "documento": "CYB-01",
+      "fragmento": "Una huella o una vista recuperable no levanta restricciones de divulgación.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000007-L000018"
+    },
+    {
+      "documento": "CYB-01",
+      "fragmento": "La fidelidad conserva sujeto, negación, tiempo, condición, incertidumbre y destinatario.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000007-L000018"
+    },
+    {
+      "documento": "CYB-02",
+      "fragmento": "La política de la organización debe delimitar los datos que pueden remitirse.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000033-L000038"
+    },
+    {
+      "documento": "CYB-02",
+      "fragmento": "La elección entre servicios externos y realizaciones propias depende de confidencialidad, residencia, jurisdicción, condiciones del proveedor y requisitos de integración.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000033-L000038"
+    },
+    {
+      "documento": "CYB-01",
+      "fragmento": "Una comprobación parcial no acredita un conjunto completo.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000037-L000044"
+    }
+  ],
+  "recepcion_independiente": "pendiente",
+  "respuesta_original": "{\n  \"caso\": \"C06\",\n  \"estado_documental\": \"respuesta_fundada\",\n  \"etapa\": 1,\n  \"evidencias\": [\n    {\n      \"cita_literal_breve\": \"Se pueden distinguir originales preservados y vistas admitidas para una finalidad.\",\n      \"documento\": \"CYB-01\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000037-L000044\"\n    },\n    {\n      \"cita_literal_breve\": \"La admisión de evidencia requiere procedencia, integridad, finalidad, acceso y trazabilidad de las transformaciones.\",\n      \"documento\": \"CYB-01\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000037-L000044\"\n    },\n    {\n      \"cita_literal_breve\": \"Finalidad, destinatarios, minimización y custodia se aplican a datos, registros y explicaciones.\",\n      \"documento\": \"CYB-01\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000007-L000018\"\n    },\n    {\n      \"cita_literal_breve\": \"Una huella o una vista recuperable no levanta restricciones de divulgación.\",\n      \"documento\": \"CYB-01\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000007-L000018\"\n    },\n    {\n      \"cita_literal_breve\": \"La fidelidad conserva sujeto, negación, tiempo, condición, incertidumbre y destinatario.\",\n      \"documento\": \"CYB-01\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000007-L000018\"\n    },\n    {\n      \"cita_literal_breve\": \"La política de la organización debe delimitar los datos que pueden remitirse.\",\n      \"documento\": \"CYB-02\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000033-L000038\"\n    },\n    {\n      \"cita_literal_breve\": \"La elección entre servicios externos y realizaciones propias depende de confidencialidad, residencia, jurisdicción, condiciones del proveedor y requisitos de integración.\",\n      \"documento\": \"CYB-02\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000033-L000038\"\n    },\n    {\n      \"cita_literal_breve\": \"Una comprobación parcial no acredita un conjunto completo.\",\n      \"documento\": \"CYB-01\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000037-L000044\"\n    }\n  ],\n  \"fundamentos_verificables\": [\n    \"El caso estipula la prohibición de remitir ciertos datos de acceso a proveedores externos y la existencia de una vista expurgada con identidad, procedencia y mapa de transformaciones conservados. No estipula que una API concreta esté autorizada ni que la vista haya sido admitida para cualquier finalidad.\",\n    \"CYB-01 distingue preservación del original y admisión de una vista. Por tanto, conservar la evidencia íntegra bajo custodia no exige transmitirla al proveedor; la identidad y la trazabilidad no levantan la prohibición de divulgación.\",\n    \"Revisar el paquete completo, incluidos metadatos, anexos y explicaciones, es una aplicación de la minimización a datos y registros. Conservar el mapa completo internamente y suministrar solo información de trazabilidad permitida es una propuesta derivada de esas premisas, no un procedimiento literal impuesto por la fuente.\",\n    \"La admisión requiere integridad además de identidad y procedencia. La existencia del mapa no demuestra por sí sola que la expurgación conserve el sentido o que permita responder todas las preguntas. La fidelidad y la cobertura deben examinarse según la finalidad concreta.\",\n    \"CYB-01 describe reglas del SV en una síntesis del acta; CYB-02 recoge recomendaciones sobre servicios externos y políticas de datos, sin conceder facultades de envío. Las citas aquí reproducidas son literales del libro recibido, no de los originales enlazados.\",\n    \"La síntesis histórica de NIS2 en CYB-03 no es necesaria para fundamentar la solución ni acredita el Derecho actual aplicable a una entidad real. La prohibición relevante procede del hecho sintético estipulado, no de una obligación jurídica inferida.\"\n  ],\n  \"insuficiencias\": [\n    \"No se aportan el contenido efectivo de la vista y sus acompañamientos, la política completa ni la finalidad detallada y las condiciones de una API concreta. La vista expurgada estipulada permite formular el procedimiento, pero no certificar la admisibilidad de un paquete o destinatario específicos. Antes del envío deben acreditarse esos extremos; esta respuesta no autoriza ni acredita una transmisión.\",\n    \"No se identifica qué conclusiones dependen de la información suprimida. La fuente exige fidelidad y limita la cobertura a lo realmente examinado. Falta contrastar la vista con las preguntas previstas para determinar qué puede sostener; si el contenido permitido resulta insuficiente, debe limitarse la conclusión o declararse esa insuficiencia, sin enviar los datos prohibidos.\"\n  ],\n  \"respuesta\": \"El suministro debe prepararse a partir de la vista expurgada, no del original que contiene los datos prohibidos. Su envío solo procede si se acredita su admisión para la finalidad y el destinatario concretos: estar expurgada y ser trazable no equivale a estar autorizada.\\n\\n1. Preservar el original. Mantenerlo separado del paquete para la API, íntegro y bajo custodia con acceso restringido conforme a la política. Conservar su identidad, procedencia y relación con la vista. No remitirlo ni habilitar al proveedor acceso a los datos prohibidos para verificar la trazabilidad.\\n\\n2. Delimitar finalidad y destinatario. Precisar qué análisis se solicita y qué información mínima requiere. Comprobar el alcance de la autorización y la compatibilidad del proveedor con los requisitos de confidencialidad, residencia, jurisdicción e integración. Si esa compatibilidad no se acredita, no efectuar el envío.\\n\\n3. Admitir la vista para ese uso. Verificar procedencia, integridad, acceso permitido y trazabilidad, aprovechando las identidades y el mapa ya conservados. Examinar también si las supresiones preservan el sentido de los pasajes utilizados, incluidas negaciones, condiciones, tiempos e incertidumbres. Identificar el documento como vista derivada y delimitar qué análisis permite, sin presentarlo como el original completo.\\n\\n4. Preparar un paquete mínimo permitido. Incluir únicamente la vista admitida y los acompañamientos necesarios cuya divulgación esté autorizada. Comprobar que metadatos, anexos, referencias y explicaciones no reintroduzcan los datos excluidos ni permitan acceder externamente a ellos. Mantener bajo custodia el mapa completo de transformaciones; no enviarlo íntegramente si contiene información restringida. Para el proveedor, usar solo identificadores y descripciones de procedencia, transformaciones y alcance que sean necesarios y remitibles.\\n\\n5. Conservar trazabilidad del suministro y de sus límites. Registrar la versión exacta preparada y, si se autoriza y realiza el envío, su contenido, destinatario, finalidad y momento. Esos registros también están sujetos a minimización y custodia: no deben reproducir datos prohibidos en el proveedor externo. Solicitar un análisis limitado a la evidencia suministrada, con indicación de las conclusiones no sustentables por las supresiones. El resultado no acreditará examen del original ni cobertura de lo omitido.\\n\\nLa insuficiencia de la vista para alguna pregunta no justifica divulgar el original: exige limitar el análisis o dejar pendiente ese extremo. Esta es una preparación documental fundada, no una certificación de cumplimiento jurídico ni de ejecución operativa.\",\n  \"revision\": \"Se mantiene la conclusión de la entrega histórica de etapa 0 y sus seis citas, que son literales y están correctamente localizadas en el libro. No se aprecia fundamento para retirar la separación entre original preservado y vista suministrable. Se completa una omisión: comprobar expresamente integridad, fidelidad y suficiencia de la vista, pues identidad y mapa conservados no acreditan por sí solos esos extremos. Se precisa que el registro propuesto y la separación entre mapa interno e información remitible son aplicaciones razonadas de trazabilidad y minimización, no prescripciones textuales ni hechos ya ejecutados. Se mantiene respuesta_fundada porque el procedimiento solicitado es resoluble; la autorización de una API concreta queda expresamente sin acreditar.\"\n}",
+  "solicitud_sha256": "c57fe2d9fc06d446912a0dbf46da2a46b12c245838872842f4590792d330ecdb",
+  "sustantivo": "correcto",
+  "valor": "0"
+}

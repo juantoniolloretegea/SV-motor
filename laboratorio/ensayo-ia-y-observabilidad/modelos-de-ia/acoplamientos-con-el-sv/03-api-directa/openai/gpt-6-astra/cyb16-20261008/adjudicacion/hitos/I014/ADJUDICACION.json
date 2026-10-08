@@ -1,0 +1,184 @@
+{
+  "alerta": null,
+  "alerta_limite": false,
+  "auditoria_sha256": "3fbec83e3dcef67bbc93c08e710071ea3ecd51e048eee3a26873daf02a3f94a4",
+  "caso": "C05",
+  "critico": true,
+  "estado_documental_candidato": "respuesta_fundada",
+  "etapa": 1,
+  "fidelidad_documental": "conforme",
+  "final_sha256": "30e947f37ebea55ee5c800a423f526eb0508021d7ab7cedf1d65ef0eca44e00d",
+  "formal_conforme": true,
+  "fundamento_sustantivo": "Las tres etapas separan integridad, procedencia, identidad y autoridad. La firma y la huella conservan su valor técnico, pero no acreditan facultades sobre el servidor ni finalidad autorizada. No convierten falta de prueba en inexistencia universal del permiso ni añaden como requisito necesario una firma que la fuente no exige.",
+  "justificacion_documental": "Las evidencias literales se cotejan en Rust; la relación entre premisas y conclusión se revisa exteriormente.",
+  "medicion": {
+    "duracion_operacion_ms": 45971,
+    "telemetria": {
+      "bytes": 1141969,
+      "fallos_medicion": 0,
+      "integridad": "conforme",
+      "intervalo_maximo_ms": 299,
+      "intervalo_objetivo_ms": 250,
+      "muestras": 169,
+      "plataforma_recibida": false,
+      "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+      "registros": 2787,
+      "sha256": "45559ff7dd61d720b422ea64656fde2a980bc1a1c11dbe39bcd647424705396c"
+    },
+    "uso": {
+      "attribution": {
+        "items": {
+          "msg_0aa06cff96772178016ac7f40ef00087d29bfaf408d209f161": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 18325,
+                "output_tokens": 0
+              }
+            ],
+            "input_tokens": 18325,
+            "output_tokens": 0
+          },
+          "msg_0aa06cff96772178016ac7f40ef05087d28cfa8b2ea03ef7db": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 962,
+                "output_tokens": 0
+              }
+            ],
+            "input_tokens": 962,
+            "output_tokens": 0
+          },
+          "msg_0aa06cff96772178016ac7f40ef07487d297a49e49c2c482f1": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 1030,
+                "output_tokens": 0
+              }
+            ],
+            "input_tokens": 1030,
+            "output_tokens": 0
+          },
+          "msg_0aa06cff96772178016ac7f40ef08c87d297462809e71f2a1a": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 68,
+                "output_tokens": 0
+              }
+            ],
+            "input_tokens": 68,
+            "output_tokens": 0
+          },
+          "msg_0aa06cff96772178016ac7f417641487d29b706e70b7ccbb50": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 0,
+                "output_tokens": 1430
+              }
+            ],
+            "input_tokens": 0,
+            "output_tokens": 1430
+          },
+          "rs_0aa06cff96772178016ac7f410a7c887d2ba69b1a2cf3f54b2": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "input_tokens": 2,
+            "output_tokens": 68
+          }
+        },
+        "request_fields": {
+          "instructions": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "input_tokens": 942,
+            "output_tokens": 0
+          },
+          "text.format": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "input_tokens": 172,
+            "output_tokens": 0
+          }
+        }
+      },
+      "input_tokens": 21501,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 1498,
+      "output_tokens_details": {
+        "reasoning_tokens": 68
+      },
+      "total_tokens": 22999
+    }
+  },
+  "naturaleza_defecto": "ninguno sustantivo identificado",
+  "nota_alcance": "Se evalúa la insuficiencia de la firma como permiso. La existencia real de facultades distintas permanece sin acreditar; no es un defecto del suministro de esta pregunta.",
+  "pasajes_contrastados": [
+    {
+      "documento": "CYB-01",
+      "fragmento": "Una huella acredita identidad del contenido en la comprobación realizada; una firma puede sustentar procedencia, pero no reemplaza la institución que otorga facultades.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000031-L000036"
+    },
+    {
+      "documento": "CYB-01",
+      "fragmento": "Identificar a un actor no establece por sí solo sus facultades.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000031-L000036"
+    },
+    {
+      "documento": "CYB-01",
+      "fragmento": "La legitimidad exige relacionar principal, autoridad, actor, destinatario, recurso y finalidad dentro del alcance de la autorización.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000031-L000036"
+    },
+    {
+      "documento": "CYB-01",
+      "fragmento": "La temporalidad comprende intervalos de vigencia, hechos anteriores y posteriores y revocación.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000031-L000036"
+    },
+    {
+      "documento": "CYB-01",
+      "fragmento": "Un resultado técnico favorable y la legitimidad del acto son dimensiones diferentes.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000037-L000044"
+    }
+  ],
+  "recepcion_independiente": "pendiente",
+  "respuesta_original": "{\n  \"caso\": \"C05\",\n  \"estado_documental\": \"respuesta_fundada\",\n  \"etapa\": 1,\n  \"evidencias\": [\n    {\n      \"cita_literal_breve\": \"Una huella acredita identidad del contenido en la comprobación realizada; una firma puede sustentar procedencia, pero no reemplaza la institución que otorga facultades.\",\n      \"documento\": \"CYB-01\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000031-L000036\"\n    },\n    {\n      \"cita_literal_breve\": \"Identificar a un actor no establece por sí solo sus facultades.\",\n      \"documento\": \"CYB-01\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000031-L000036\"\n    },\n    {\n      \"cita_literal_breve\": \"La legitimidad exige relacionar principal, autoridad, actor, destinatario, recurso y finalidad dentro del alcance de la autorización.\",\n      \"documento\": \"CYB-01\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000031-L000036\"\n    },\n    {\n      \"cita_literal_breve\": \"La temporalidad comprende intervalos de vigencia, hechos anteriores y posteriores y revocación.\",\n      \"documento\": \"CYB-01\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000031-L000036\"\n    },\n    {\n      \"cita_literal_breve\": \"Un resultado técnico favorable y la legitimidad del acto son dimensiones diferentes.\",\n      \"documento\": \"CYB-01\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000037-L000044\"\n    }\n  ],\n  \"fundamentos_verificables\": [\n    \"El caso estipula huella coincidente y firma verificada, pero declara ausentes del registro las facultades del firmante sobre el servidor destinatario y la finalidad autorizada. Estos hechos permiten evaluar la suficiencia del permiso propuesto sin inventar una autorización ni su inexistencia.\",\n    \"CYB-01 distingue identidad del contenido, identificación del actor, procedencia y facultades institucionales. Por tanto, pasar de una firma verificada a permiso suficiente omite relaciones que la fuente exige para acreditar legitimidad.\",\n    \"La comprobación de la huella conserva su valor respecto del contenido efectivamente comparado. El caso no identifica la referencia utilizada ni declara que sea una referencia aprobada para instalar; no se atribuye esa condición a la mera coincidencia.\",\n    \"El alcance temporal de una autorización también debe comprobarse. La fuente contempla vigencia y revocación; esto justifica pedir esa comprobación, pero no afirmar que en el caso exista una revocación.\",\n    \"La conclusión se apoya en la regla del SV descrita en CYB-01. Las recomendaciones de CYB-02 no conceden permisos y la norma histórica sintetizada en CYB-03 no acredita el Derecho actual aplicable a una entidad real. Ninguna de ellas suple la autoridad ausente del registro.\",\n    \"Las evidencias transcritas son cadenas literales del libro recibido, localizadas en los fragmentos indicados. CYB-01 es una síntesis académica: las citas no se atribuyen como transcripciones del acta original.\"\n  ],\n  \"insuficiencias\": [\n    \"Autorización concreta no acreditada: el registro omite expresamente las facultades del firmante sobre el servidor y la finalidad autorizada. La evidencia disponible —huella coincidente y firma verificada— no resuelve esos extremos. Falta evidencia de autorización o delegación competente que relacione principal, autoridad, actor, destinatario, recurso y finalidad, con alcance y vigencia pertinentes y consideración de posibles revocaciones. La consecuencia es que no puede darse la instalación por autorizada con este registro; tampoco puede afirmarse que nunca existió permiso.\",\n    \"Alcance de la comprobación del contenido: se estipula una huella coincidente, pero no se identifica la referencia comparada ni su aprobación para el despliegue. Se conserva el resultado técnico estipulado sin convertirlo en aprobación del paquete para ese servidor. Este límite no impide resolver la propuesta: aun con identidad del contenido y procedencia acreditadas, seguiría faltando demostrar autoridad.\"\n  ],\n  \"respuesta\": \"No debe aceptarse la propuesta de tratar la firma como permiso suficiente para instalar. La conclusión se refiere a la insuficiencia de la justificación presentada, no a una prohibición absoluta ni a la inexistencia demostrada de cualquier permiso.\\n\\n1. Integridad: la huella coincidente sustenta la coincidencia o identidad del contenido en la comprobación realizada. Su alcance queda limitado al contenido y a la referencia efectivamente comparados; no acredita que esa referencia estuviera aprobada para instalar ni que el firmante tuviera facultades sobre el servidor.\\n\\n2. Procedencia: la firma verificada puede sustentar la atribución del paquete al firmante dentro del alcance de la verificación. Esa procedencia no sustituye el otorgamiento institucional de facultades.\\n\\n3. Identidad: hay que separar la identidad del contenido de la identificación del actor. Incluso admitiendo que el firmante esté identificado, saber quién firma no demuestra qué actuaciones puede autorizar, sobre qué recursos ni con qué finalidad.\\n\\n4. Autoridad: exige acreditar el vínculo entre quien otorga las facultades, quien actúa, el destinatario, el recurso, la finalidad y el alcance de la autorización. Deben atenderse también su vigencia y las posibles revocaciones. El registro omite precisamente las facultades sobre el servidor y la finalidad autorizada.\\n\\nDebe conservarse el valor de la huella y de la firma, sin transformarlo en permiso. Antes de considerar autorizada la instalación, se necesita evidencia competente que cubra esa actuación sobre ese servidor y para esa finalidad. La fuente permite resolver fundadamente que la firma sola es insuficiente; la existencia efectiva de una autorización permanece sin acreditar.\",\n  \"revision\": \"Se mantiene la conclusión de la entrega histórica de etapa 0 tras contrastar sus afirmaciones y las cinco citas con CYB-01: las citas son exactas y los localizadores corresponden. No se identifica un error sustantivo. Se explicita un límite antes implícito: el caso no identifica la referencia de la huella ni acredita su aprobación para instalar. Se conserva la formulación condicional sobre la identificación del firmante y se aclara que verificar vigencia o revocaciones no significa presumir una revocación. Se mantiene respuesta_fundada porque la suficiencia de la firma es resoluble; la autorización concreta no acreditada se identifica como límite, sin afirmar su inexistencia.\"\n}",
+  "solicitud_sha256": "199269f4e6c0fdd7bbb1d8386a33e42b0d09e2c083e7b38ae66f3e28927d2d13",
+  "sustantivo": "correcto",
+  "valor": "0"
+}

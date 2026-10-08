@@ -1,0 +1,142 @@
+{
+  "alerta": null,
+  "alerta_limite": false,
+  "auditoria_sha256": "5699810220d5f8190a785312a156314f382592353a7728a497c191c4c7d8e15d",
+  "caso": "C02",
+  "critico": true,
+  "estado_documental_candidato": "respuesta_fundada",
+  "etapa": 0,
+  "fidelidad_documental": "conforme",
+  "final_sha256": "722a4295947e5351fdf03fa2d8956cdbee02da9029ff3488bcc34db4bc1ef977",
+  "formal_conforme": true,
+  "fundamento_sustantivo": "Las tres etapas separan cobertura insuficiente y error del extractor. No convierten la exclusión de la vulnerabilidad en prueba de ausencia o persistencia ni el fallo de extracción en resultado negativo válido. Conservan originales, cobertura, registro técnico y extremos desconocidos; distinguen reglas recibidas de concreciones de trazabilidad deducidas, sin inventar una plantilla obligatoria.",
+  "justificacion_documental": "Las evidencias literales se cotejan en Rust; la relación entre premisas y conclusión se revisa exteriormente.",
+  "medicion": {
+    "duracion_operacion_ms": 38256,
+    "telemetria": {
+      "bytes": 942901,
+      "fallos_medicion": 0,
+      "integridad": "conforme",
+      "intervalo_maximo_ms": 277,
+      "intervalo_objetivo_ms": 250,
+      "muestras": 148,
+      "plataforma_recibida": false,
+      "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+      "registros": 2122,
+      "sha256": "474ba7e7f582f6d714da475a7e7cd5505d84fef5442b12d2c2aff3d8987a8164"
+    },
+    "uso": {
+      "attribution": {
+        "items": {
+          "msg_09973b8248ad5f5d016ac7f20a077487d2bd55d1abeca25c99": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 18333,
+                "output_tokens": 0
+              }
+            ],
+            "input_tokens": 18333,
+            "output_tokens": 0
+          },
+          "msg_09973b8248ad5f5d016ac7f20fb04487d2b3b4154f9600b170": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "content": [
+              {
+                "cache_write_tokens": 0,
+                "cached_tokens": 0,
+                "input_tokens": 0,
+                "output_tokens": 1146
+              }
+            ],
+            "input_tokens": 0,
+            "output_tokens": 1146
+          },
+          "rs_09973b8248ad5f5d016ac7f20b933887d2bcd91b0990acc66e": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "input_tokens": 2,
+            "output_tokens": 71
+          }
+        },
+        "request_fields": {
+          "instructions": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "input_tokens": 905,
+            "output_tokens": 0
+          },
+          "text.format": {
+            "cache_write_tokens": 0,
+            "cached_tokens": 0,
+            "input_tokens": 172,
+            "output_tokens": 0
+          }
+        }
+      },
+      "input_tokens": 19412,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 1217,
+      "output_tokens_details": {
+        "reasoning_tokens": 71
+      },
+      "total_tokens": 20629
+    }
+  },
+  "naturaleza_defecto": "ninguno sustantivo identificado",
+  "nota_alcance": null,
+  "pasajes_contrastados": [
+    {
+      "documento": "CYB-01",
+      "fragmento": "Un estado observado es evidencia sobre aquello que efectivamente se observó, en su ámbito y momento.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000025-L000030"
+    },
+    {
+      "documento": "CYB-01",
+      "fragmento": "La admisión de evidencia requiere procedencia, integridad, finalidad, acceso y trazabilidad de las transformaciones.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000037-L000044"
+    },
+    {
+      "documento": "CYB-01",
+      "fragmento": "Una comprobación parcial no acredita un conjunto completo.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000037-L000044"
+    },
+    {
+      "documento": "CYB-01",
+      "fragmento": "Un error del extractor o de una medición no produce un resultado alternativo válido del dominio.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000045-L000050"
+    },
+    {
+      "documento": "CYB-01",
+      "fragmento": "Debe quedar un registro técnico conservado, con causa y alcance, sin rellenar por ese motivo la semántica del episodio.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000045-L000050"
+    }
+  ],
+  "recepcion_independiente": "pendiente",
+  "respuesta_original": "{\n  \"caso\": \"C02\",\n  \"estado_documental\": \"respuesta_fundada\",\n  \"etapa\": 0,\n  \"evidencias\": [\n    {\n      \"cita_literal_breve\": \"Un estado observado es evidencia sobre aquello que efectivamente se observó, en su ámbito y momento.\",\n      \"documento\": \"CYB-01\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000025-L000030\"\n    },\n    {\n      \"cita_literal_breve\": \"La admisión de evidencia requiere procedencia, integridad, finalidad, acceso y trazabilidad de las transformaciones.\",\n      \"documento\": \"CYB-01\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000037-L000044\"\n    },\n    {\n      \"cita_literal_breve\": \"Una comprobación parcial no acredita un conjunto completo.\",\n      \"documento\": \"CYB-01\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000037-L000044\"\n    },\n    {\n      \"cita_literal_breve\": \"Un error del extractor o de una medición no produce un resultado alternativo válido del dominio.\",\n      \"documento\": \"CYB-01\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000045-L000050\"\n    },\n    {\n      \"cita_literal_breve\": \"Debe quedar un registro técnico conservado, con causa y alcance, sin rellenar por ese motivo la semántica del episodio.\",\n      \"documento\": \"CYB-01\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000045-L000050\"\n    }\n  ],\n  \"fundamentos_verificables\": [\n    \"Los hechos estipulados diferencian dos causas: en el primer informe falta cobertura de la vulnerabilidad objetivo; en el segundo falló el instrumento de extracción. La coincidencia textual «sin hallazgos» no iguala su valor probatorio.\",\n    \"Aplicando la regla de alcance de la observación de CYB-01, el primer informe sólo puede aportar evidencia sobre las comprobaciones efectivamente realizadas y documentadas, con los requisitos de admisión correspondientes. No permite inferir ausencia o corrección de una vulnerabilidad que el ensayo no examinó.\",\n    \"Aplicando la distinción entre insuficiencia y fallo instrumental de CYB-01, la generación del segundo informe después del error no transforma ese fallo en una observación negativa válida. El error debe conservarse como hecho técnico, no sustituirse por un resultado sobre la vulnerabilidad.\",\n    \"Las reglas empleadas pertenecen al marco documental del SV descrito en la síntesis CYB-01. No se presentan como recomendaciones de INCIBE ni como obligaciones de la norma histórica NIS2. Las citas son literales del libro recibido, no del acta original.\"\n  ],\n  \"insuficiencias\": [\n    \"No se especifican las pruebas ni los recursos efectivamente cubiertos por el primer ensayo. Por ello no puede enumerarse qué otros extremos acredita: debe conservarse su alcance documentado sin ampliarlo. Para evaluar la corrección objetivo falta una comprobación que cubra esa vulnerabilidad en el recurso y estado pertinentes.\",\n    \"Del segundo caso sólo se estipula que el extractor terminó con error; no se facilitan diagnóstico, trazas ni alcance de la afectación. Corresponde registrar esa limitación, sin inventar la causa concreta ni presumir resultados parciales válidos. Para valorar cualquier salida parcial haría falta evidencia de su integridad, procedencia y alcance.\"\n  ],\n  \"respuesta\": \"Los dos informes no acreditan que la vulnerabilidad esté ausente o corregida, pero por razones diferentes.\\n\\n1. Primer informe: insuficiencia de cobertura. «Sin hallazgos» sólo puede referirse al ámbito realmente ensayado, siempre que su ejecución y evidencia estén acreditadas. Como la vulnerabilidad objetivo quedó fuera, el informe no aporta una comprobación de su corrección; ello tampoco demuestra que persista. Corresponde conservar el informe y el registro del ensayo, identificando episodio, recurso y estado observado, pruebas realizadas, evidencias y cobertura efectiva, junto con la exclusión expresa de la vulnerabilidad objetivo. Es un resultado de alcance limitado, no un fallo técnico por ese solo motivo.\\n\\n2. Segundo informe: fallo técnico. El «sin hallazgos» generado pese al error no constituye un resultado negativo válido de la extracción. Lo acreditado por el supuesto es el fallo del extractor y la emisión posterior del informe, no la ausencia de vulnerabilidades. Corresponde conservar el registro técnico del error, con su causa y alcance hasta donde se conozcan, las trazas disponibles y el informe vinculado al fallo, identificado como salida que no sustenta esa conclusión. No procede convertir el error en un conjunto vacío de hallazgos ni en otro resultado del dominio.\\n\\nLa distinción solicitada queda documentalmente fundada. La insuficiencia de cobertura y el fallo instrumental no generan automáticamente U: aquí permiten explicar con precisión qué no acredita cada informe, sin resolver ficticiamente el estado de la vulnerabilidad.\",\n  \"revision\": \"Respuesta provisional de etapa 0. No existen antecedentes ni entregas anteriores que contrastar. Se distingue el alcance limitado de un ensayo del fallo de extracción, sin atribuir a ninguno una comprobación de corrección que no aporta.\"\n}",
+  "solicitud_sha256": "f95b00953196bc1528601d6c42cfb242dfa3e535b3578855f712442a7915bddc",
+  "sustantivo": "correcto",
+  "valor": "0"
+}
