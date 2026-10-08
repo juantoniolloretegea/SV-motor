@@ -1,8 +1,10 @@
 # Qwen3.8-Max-0902 · Nodo 03 · API directa
 
-**Examen de 16 preguntas terminado: No apto para el contrato documental, bajo reserva metodológica.** R2: 12 conformes, cuatro incumplimientos, tres críticos. κ=Apto no anula el veto. Las incidencias afectan a literalidad de marcación y alcance de una instrucción; no demuestran incompetencia clínica. Recepción científica independiente pendiente.
+**Apto documental con reservas, en el alcance de 16 preguntas, tras revisión metodológica y réplica separada de P13.** Recepción del 08/10/2026, con alcance limitado por disponibilidad de recursos. [Fundamento, reservas y relación con el resultado original](RECEPCION-DOCUMENTAL-20261008.md).
 
-[Informe y límites](examen25-20261008/INFORME.md) · [Polígono egui completo](examen25-20261008/web/POLIGONO-EGUI.html) · [Hitos](examen25-20261008/hitos).
+[Adjudicación contractual original](examen25-20261008/INFORME.md) · [Polígono egui original](examen25-20261008/web/POLIGONO-EGUI.html) · [Hitos](examen25-20261008/hitos) · [Réplica P13](replica-p13-20261008/INFORME.md).
+
+El expediente conserva el **No apto contractual original bajo reserva metodológica**, su vector R2 y sus mediciones. La recepción posterior no reemplaza sus valores ni declara cumplimiento literal completo de aquel contrato. Las observaciones P02/P11/P16 y la recepción científica independiente pendiente siguen identificadas; no se acredita aptitud clínica.
 
 El banco original de 25 se acotó durante la ejecución a P01–P16, sin selección por resultados y conservando las tres etapas y criticidades. La ruta histórica se mantiene. Comparación por preguntas comunes, sin equivalencia global con exámenes de 25.
 

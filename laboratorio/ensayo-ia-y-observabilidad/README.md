@@ -1,8 +1,8 @@
 # Ensayo de inteligencia artificial y observabilidad
 
-**Edición documental 2.27 · 7 de octubre de 2026.**
+**Edición documental 2.28 · 8 de octubre de 2026.**
 
-**Actualización de esta edición:** orientación mediante los tres nodos de acoplamiento y conciliación de estado, versiones, publicaciones e historia. Los resultados mantienen las fechas y los límites de sus respectivos expedientes; esta revisión documental no acredita nuevas ejecuciones.
+**Actualización de esta edición:** incorporación de Qwen3.8-Max-0902 al nodo 03, con recepción documental limitada a 16 preguntas tras revisión metodológica y réplica de P13. Se conservan el resultado contractual original, la organización de los tres nodos y la historia del ensayo.
 
 <a id="objeto-y-criterio-experimental"></a>
 
@@ -22,7 +22,7 @@ El [marco común](modelos-de-ia/acoplamientos-con-el-sv/readme.md) distingue tre
 |---|---|---|
 | [01 · Inferencia bajo control propio](modelos-de-ia/acoplamientos-con-el-sv/01-inferencia-bajo-control-propio/readme.md) | El proyecto administra el motor, los pesos y el entorno de inferencia. | Reúne las remisiones a los expedientes de instalación, evaluación y viabilidad. Cada modelo conserva su resultado y sus condiciones. |
 | [02 · Plataforma gestionada](modelos-de-ia/acoplamientos-con-el-sv/02-plataforma-gestionada/readme.md) | Una plataforma organiza la evaluación y el acceso gestionado a modelos; Kaggle es el caso considerado. | Especificación preparatoria. No acredita integración recibida, recursos concedidos ni ejecución de modelos en esta modalidad. |
-| [03 · API directa de proveedor](modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/readme.md) | El SV prepara solicitudes y recibe respuestas de un servicio externo de inferencia. | GPT-6 Astra dispone de una prueba documental cerrada. Sus pesos y su inferencia permanecen en OpenAI; suministro, controles y mediciones propios se realizan en Rust. |
+| [03 · API directa de proveedor](modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/readme.md) | El SV prepara solicitudes y recibe respuestas de un servicio externo de inferencia. | Los expedientes enlazados en la tabla de estado distinguen proveedor, versión y alcance de cada resultado. Pesos e inferencia permanecen en el proveedor; suministro, controles y mediciones propios se realizan en Rust. |
 
 La modalidad depende del control efectivo de la inferencia y de la relación de servicio. Un motor administrado por el proyecto puede exponer una API y seguir perteneciendo al nodo 01. Los expedientes históricos conservan sus ubicaciones, enlazadas desde ese nodo; no se trasladan ni se atribuyen resultados por la sola pertenencia a una familia.
 
@@ -38,6 +38,7 @@ La tabla distingue el resultado experimental, su alcance y la situación documen
 | Modelo o configuración | Resultado y alcance | Situación al corte |
 |---|---|---|
 | [GPT-6 Astra · OpenAI · Nodo 03](modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/openai/gpt-6-astra/readme.md) | Examen documental: **Apto**, 25/25 correctas, 20/20 críticas, T(25)=19; R2 es la respuesta final en los 25 casos. | Prueba documental cerrada el 07/10/2026. Inferencia en OpenAI; control del SV en Rust. [Resultado y límites](modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/openai/gpt-6-astra/examen25-20261007/resultado/INFORME.md). |
+| [Qwen3.8-Max-0902 · Alibaba Cloud · Nodo 03](modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/qwen/qwen3.8-max-0902/readme.md) | **Apto documental con reservas**, en el alcance de **16 preguntas**, tras revisión metodológica y réplica separada de P13. | Alcance limitado por disponibilidad de recursos. [Recepción y fundamento](modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/qwen/qwen3.8-max-0902/RECEPCION-DOCUMENTAL-20261008.md); dictamen contractual y polígono originales conservados. Comparación limitada a preguntas y condiciones comunes. |
 | [Qwen3-0.6B · Q4_K_M](modelos-de-ia/qwen/qwen3-0.6b/README.md) | Inferencia nativa y controles parciales; cuatro consultas DOC-01 terminadas sin conformidad contractual completa. | Campaña cerrada con limitaciones. |
 | [GPT-OSS-20B · MXFP4](modelos-de-ia/openai/gpt-oss-20b/README.md) | Funcionamiento técnico y bancos documentales conservados; la evaluación médica no acreditó la función prevista. | Configuración excluida de esa selección; archivo conservado. |
 | [Qwen3.8-27B](modelos-de-ia/qwen/qwen3.8-27b/README.md) | Respuesta completa en la selección mínima, con omisión material y deficiencias de citas y localización. | **No apto** en la selección examinada. |
@@ -89,7 +90,7 @@ La puntuación y la aptitud siguen el [criterio común](modelos-de-ia/CRITERIO-P
 
 La clasificación SV se calcula separadamente con **T(n)=⌊7n/9⌋**: primero N₁ ≥ T(n) determina No apto; después N₀ ≥ T(n) determina Apto; en otro caso corresponde Indeterminado. Requiere un vector completo de adjudicaciones válidas. Para 25 posiciones, T(25) = 19. El dictamen del instrumento incorpora además la criticidad: cualquier 1 crítico determina **No apto**; si no hay 1 crítico pero existe U crítica, corresponde **U (indeterminación honesta)**; las veinte críticas en 0 y la clasificación auxiliar favorable permiten **Apto**. Con esta distribución, las veinte respuestas críticas correctas ya superan el umbral. Los errores no críticos siguen siendo visibles.
 
-Un error crítico acreditado permite declarar No apto en el alcance de la prueba aunque existan posiciones impedidas; no autoriza a completar un vector ni a atribuirle κ. Sólo tras **25 adjudicaciones válidas e independientes** se constituye el vector ordenado y su frame o polígono. Cada posición queda ligada a pregunta, fuente, respuesta, configuración y fundamento de corrección. Las comprobaciones sintéticas del evaluador Rust acreditan su cálculo en esos casos, no la validez médica de las respuestas.
+Un error crítico acreditado permite declarar No apto en el alcance de la prueba aunque existan posiciones impedidas; no autoriza a completar un vector ni a atribuirle κ. En la edición de 25 preguntas, sólo tras **25 adjudicaciones válidas e independientes** se constituye el vector ordenado y su frame o polígono. Cada posición queda ligada a pregunta, fuente, respuesta, configuración y fundamento de corrección. Las comprobaciones sintéticas del evaluador Rust acreditan su cálculo en esos casos, no la validez médica de las respuestas.
 
 La célula canónica **(9,3)** contiene vectores de nueve componentes ternarios y un universo de **3⁹ = 19.683 vectores posibles**. Las capas experimentales son filas sucesivas de vectores, no una matriz de 3 × 3. El par vector–frame debe conservar identidad, posiciones, fuentes y revisión. El expediente de Astra incorpora el visor Rust/egui 0.5.0 con el frame de 25 posiciones, valores y evidencias consultables. Su ejecución y pruebas se acreditan en aquel expediente; no se atribuyen retrospectivamente a los modelos anteriores. **Un frame Apto puede formar parte de un conjunto No apto**: la composición y la aptitud de dominio necesitan reglas aún no constituidas por esta ronda. Una U puede motivar nuevas preguntas con identidad propia, conservando los resultados anteriores.
 
@@ -157,7 +158,7 @@ La dirección ha autorizado crear **una instancia AMD MI300X** e iniciar una pru
 
 ## Versiones de los componentes
 
-La **edición documental 2.27**, las **aplicaciones 0.1.x/0.2.x**, el **MCP 0.1.x**, los **modelos** y los **archivos de recuperación v1** tienen identidades independientes. Una numeración no sustituye a las restantes. Los antecedentes identifican Rust 1.98.0; la preparación de retroalimentación identifica Rust 1.98.1. Cada expediente fija sus fuentes, dependencias, ejecutables y comprobaciones; una compilación no acredita utilización efectiva.
+La **edición documental 2.28**, las **aplicaciones 0.1.x/0.2.x**, el **MCP 0.1.x**, los **modelos** y los **archivos de recuperación v1** tienen identidades independientes. Una numeración no sustituye a las restantes. Los antecedentes identifican Rust 1.98.0; la preparación de retroalimentación identifica Rust 1.98.1. Cada expediente fija sus fuentes, dependencias, ejecutables y comprobaciones; una compilación no acredita utilización efectiva.
 
 <details>
 <summary><strong>EIO conversación · Qwen3-0.6B · 0.1.0 → 0.1.4</strong></summary>
@@ -331,6 +332,7 @@ Cada fila describe el corte de su publicación; los estados superados se mantien
 | 06/10/2026 | [Archivo Qwen3.5 Q8_0](https://github.com/juantoniolloretegea/SV-motor/releases/tag/qwen3.5-122b-a10b-q8-0-archivo-cierre-20261006-v1) · [Conservación cifrada](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/releases/tag/qwen35-122b-q8-imagen-cierre-20261006-v1) | Instalación y expedientes conservados sin duplicar pesos; recuperación, descifrado, inventario y contenido cotejados con Rust. Retirada administrativa pendiente; arranque restaurado no ensayado. |
 | 06/10/2026 | [Retirada de Qwen3.5 Q8_0](modelos-de-ia/qwen/qwen3.5-122b-a10b-q8-0/seguimiento/cierre-20261006/ACTA-RETIRADA.md) | Instancia y disco retirados después de conservación cotejada. Mantiene el resultado experimental, sus reservas y la ausencia de arranque restaurado ensayado. |
 | 07/10/2026 | [Examen de GPT-6 Astra · nodo 03](modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/openai/gpt-6-astra/examen25-20261007/resultado/INFORME.md) · [Expediente y evidencias](modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/openai/gpt-6-astra/readme.md) | Apto para el contrato documental P01–P25: 25 respuestas finales R2 correctas, incluidas las 20 críticas. Control e instrumentación propios en Rust; inferencia en OpenAI. |
+| 08/10/2026 | [Recepción de Qwen3.8-Max-0902 · nodo 03](modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/qwen/qwen3.8-max-0902/RECEPCION-DOCUMENTAL-20261008.md) | Apto documental con reservas para 16 preguntas, tras revisión del instrumento y réplica P13. La adjudicación contractual original se conserva; no se declara equivalencia con un examen de 25 preguntas. |
 
 Los enlaces de SV-sala-de-maquinas mantienen el acceso restringido de los originales. Las síntesis públicas enlazan su procedencia; no sustituyen los paquetes, sus manifiestos ni la recepción independiente.
 
@@ -338,7 +340,7 @@ Los enlaces de SV-sala-de-maquinas mantienen el acceso restringido de los origin
 
 ## Historia completa de la edición documental
 
-La secuencia comienza en **0.1** y avanza hasta la presente **2.27**. Se conservan todas las ediciones anteriores y sus referencias inmutables. Cada desplegable conserva lo relevante de su corte y ofrece el texto íntegro; sus estados históricos no sustituyen al estado actual.
+La secuencia comienza en **0.1** y avanza hasta la presente **2.28**. Se conservan todas las ediciones anteriores y sus referencias inmutables. Cada desplegable conserva lo relevante de su corte y ofrece el texto íntegro; sus estados históricos no sustituyen al estado actual.
 
 El salto **0.2 → 2.0** se conserva tal como fue publicado; no se ha localizado una edición 1.x en el historial de este archivo. Cuando una edición reúne varios commits, se muestran todos en orden. Las fechas siguientes son las de esos commits en Europe/Madrid; una cabecera histórica puede conservar una fecha anterior.
 
@@ -638,7 +640,16 @@ Incorpora Astra a la tabla de estado con su examen documental Apto y distingue s
 
 Sitúa las tres modalidades enlazadas antes de los resultados y distingue los nodos de las vías técnicas A/B. Integra Astra en versiones, publicaciones y seguimiento; concilia la retirada de Qwen3.5 con el estado actual, conservando los cortes históricos. Mantiene las rutas de expedientes, los diagramas y las anclas publicadas. La revisión se limita a organización y correspondencia documental.
 
-[Edición precedente 2.26](https://github.com/juantoniolloretegea/SV-motor/blob/365c0004164a5e7c7dd7e5ecb230ebba7f7a1582/laboratorio/ensayo-ia-y-observabilidad/README.md). La revisión exacta de 2.27 se identifica por el commit que contiene este documento y su registro de versiones.
+[Edición precedente 2.26](https://github.com/juantoniolloretegea/SV-motor/blob/365c0004164a5e7c7dd7e5ecb230ebba7f7a1582/laboratorio/ensayo-ia-y-observabilidad/README.md). [Texto íntegro de la edición 2.27](https://github.com/juantoniolloretegea/SV-motor/blob/fba54670fbb45727b69566af5ea985204d96ed05/laboratorio/ensayo-ia-y-observabilidad/README.md).
+
+</details>
+
+<details>
+<summary><strong>2.28 · 08/10/2026 · Recepción documental acotada de Qwen en el nodo 03</strong></summary>
+
+Integra Qwen3.8-Max-0902 en la tabla de estado y en el catálogo, con enlace a la recepción del alcance de dieciséis preguntas. Distingue la admisión posterior con reservas del dictamen contractual original y de la réplica P13. Conserva diagramas, rutas y resultados anteriores; no acredita nuevas inferencias.
+
+[Recepción y evidencias](modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/qwen/qwen3.8-max-0902/RECEPCION-DOCUMENTAL-20261008.md). La revisión exacta de 2.28 corresponde al commit que contiene este documento y su registro de versiones.
 
 </details>
 

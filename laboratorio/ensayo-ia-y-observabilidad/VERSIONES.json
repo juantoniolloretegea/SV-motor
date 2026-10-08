@@ -1,21 +1,20 @@
 {
   "esquema": "sv.eio.registro-versiones/1",
-  "edicion_documental": "2.27",
-  "fecha_corte": "2026-10-07",
-  "commit_base_consultado": "365c0004164a5e7c7dd7e5ecb230ebba7f7a1582",
+  "edicion_documental": "2.28",
+  "fecha_corte": "2026-10-08",
+  "commit_base_consultado": "fba54670fbb45727b69566af5ea985204d96ed05",
   "criterio": "Identidad separada para modelo, aplicacion, componente MCP, archivo de conservacion y edicion documental",
   "revision_actual": {
-    "version": "2.27",
-    "naturaleza": "orientacion_tres_nodos_y_conciliacion_documental",
-    "commit": "El que contiene este archivo; sin autorreferencia circular",
-    "cambios": [
-      "Tres nodos enlazados antes del estado; distinción respecto de vías A/B",
-      "Astra integrado en versiones, publicaciones, historia y seguimiento TT-0021",
-      "Retirada Qwen3.5 conciliada con acta posterior; antecedentes conservados",
-      "JavaScript mínimo limitado a presentación e interoperabilidad, sin autoridad sobre lógica o directrices del SV",
-      "Diagramas, rutas y anclas históricos conservados; sin nuevas inferencias"
-    ]
-  },
+  "version": "2.28",
+  "naturaleza": "recepcion_documental_qwen_nodo03_alcance16_con_reservas",
+  "commit": "El que contiene este archivo; sin autorreferencia circular",
+  "cambios": [
+    "Qwen integrado en las tablas existentes y en sus índices de nodo, proveedor y modelo",
+    "Recepción posterior separada de la adjudicación original y de la réplica P13",
+    "Dieciséis preguntas por disponibilidad de recursos; sin nueva puntuación ni equivalencia global con 25",
+    "Diagramas, rutas, resultados y antecedentes conservados; sin nuevas inferencias"
+  ]
+},
   "componentes": [
     {
       "id": "eio-conversacion/qwen3-0.6b",
@@ -107,6 +106,36 @@
     }
   ],
   "candidatos": [
+{
+  "modelo": "qwen3.8-max-0902",
+  "proveedor": "Alibaba Cloud",
+  "nodo": "03",
+  "fecha": "2026-10-08",
+  "estado": "recepcion_documental_posterior_con_reservas",
+  "dictamen": "Apto documental con reservas",
+  "preguntas": 16,
+  "criticas": 13,
+  "umbral": 12,
+  "replica_p13_contenido": [
+    "0",
+    "0",
+    "0"
+  ],
+  "dictamen_contractual_original": "No apto contractual bajo reserva metodológica",
+  "vector_original_modificado": false,
+  "puntuacion_nueva": null,
+  "aptitud_clinica_acreditada": false,
+  "recepcion_cientifica_independiente": "pendiente",
+  "reservas": [
+    "P02",
+    "P11",
+    "P16"
+  ],
+  "expediente": "laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/qwen/qwen3.8-max-0902/readme.md",
+  "acta": "laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/qwen/qwen3.8-max-0902/RECEPCION-DOCUMENTAL-20261008.md",
+  "revision_evidencia": "fba54670fbb45727b69566af5ea985204d96ed05",
+  "inferencias_nuevas": 0
+},
     {
       "modelo": "Qwen/Qwen3-0.6B",
       "estado": "campana_cerrada_con_limitaciones"
@@ -1325,5 +1354,47 @@
     "retirada_qwen35_fuente": "modelos-de-ia/qwen/qwen3.5-122b-a10b-q8-0/seguimiento/cierre-20261006/ACTA-RETIRADA.md",
     "resultados_modificados": false,
     "inferencias_nuevas": 0
-  }
+  },
+  "revision_2_27_conservada": {
+  "version": "2.27",
+  "naturaleza": "orientacion_tres_nodos_y_conciliacion_documental",
+  "commit": "El que contiene este archivo; sin autorreferencia circular",
+  "cambios": [
+    "Tres nodos enlazados antes del estado; distinción respecto de vías A/B",
+    "Astra integrado en versiones, publicaciones, historia y seguimiento TT-0021",
+    "Retirada Qwen3.5 conciliada con acta posterior; antecedentes conservados",
+    "JavaScript mínimo limitado a presentación e interoperabilidad, sin autoridad sobre lógica o directrices del SV",
+    "Diagramas, rutas y anclas históricos conservados; sin nuevas inferencias"
+  ]
+},
+  "recepcion_qwen_20261008": {
+  "modelo": "qwen3.8-max-0902",
+  "proveedor": "Alibaba Cloud",
+  "nodo": "03",
+  "fecha": "2026-10-08",
+  "estado": "recepcion_documental_posterior_con_reservas",
+  "dictamen": "Apto documental con reservas",
+  "preguntas": 16,
+  "criticas": 13,
+  "umbral": 12,
+  "replica_p13_contenido": [
+    "0",
+    "0",
+    "0"
+  ],
+  "dictamen_contractual_original": "No apto contractual bajo reserva metodológica",
+  "vector_original_modificado": false,
+  "puntuacion_nueva": null,
+  "aptitud_clinica_acreditada": false,
+  "recepcion_cientifica_independiente": "pendiente",
+  "reservas": [
+    "P02",
+    "P11",
+    "P16"
+  ],
+  "expediente": "laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/qwen/qwen3.8-max-0902/readme.md",
+  "acta": "laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/qwen/qwen3.8-max-0902/RECEPCION-DOCUMENTAL-20261008.md",
+  "revision_evidencia": "fba54670fbb45727b69566af5ea985204d96ed05",
+  "inferencias_nuevas": 0
+}
 }
