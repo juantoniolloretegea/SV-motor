@@ -22,6 +22,7 @@ pub fn consumo(u:&Value,p:&Perfil)->R<u64>{
 
 /// Valoración tarifaria de los contadores: nunca se presenta como cargo liquidado.
 pub fn estimacion_chat(u:&Value,p:&Perfil)->R<Value>{
+ if p.proveedor=="Moonshot AI"{p.comprobar()?;return crate::kimi::estimacion(u);}
  need(p.proveedor=="Z.ai"&&p.modelo=="glm-5.3"&&p.entrada_ticks_por_token==14000&&p.salida_ticks_por_token==44000,"Tarifa Chat no recibida")?;
  let n=crate::chat::uso(u)?;
  let input=n["input_tokens"].as_u64().ok_or("Entrada")?;
@@ -39,3 +40,5 @@ pub fn estimacion_chat(u:&Value,p:&Perfil)->R<Value>{
  #[test]fn no_inventa_consumo_ni_duplica_razonamiento(){let p=perfil();assert_eq!(consumo(&json!({"input_tokens":7,"output_tokens":9,"total_tokens":16,"output_tokens_details":{"reasoning_tokens":8}}),&p).unwrap(),16);assert!(consumo(&json!({"input_tokens":7,"output_tokens":9,"total_tokens":17}),&p).is_err());assert!(consumo(&json!({}),&p).is_err());}
  #[test]fn contrato_qwen_y_sse(){let p=perfil();let mut q=json!({"instructions":"Sólo fuente","max_output_tokens":1024,"text":{"format":{"schema":{"type":"object","required":["valor"]}}}});crate::proteger(&mut q,&p).unwrap();assert!(q.get("text").is_none());assert!(q["instructions"].as_str().unwrap().contains("required"));assert_eq!(q["tools"],json!([]));assert_eq!(q["tool_choice"],"none");assert_eq!(q["store"],false);assert!(reserva(&q,&p).unwrap()>5120);let mut s=crate::Flujo::default();s.feed(b"id: 1\nevent: response.created\n:HTTP_STATUS/200\ndata: {\"type\":\"response.created\",\"sequence_number\":0}\n\n").unwrap();assert_eq!(s.eventos.len(),1);assert!(s.feed(b"id: x\0y\n").is_err());}
 }
+
+// © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).

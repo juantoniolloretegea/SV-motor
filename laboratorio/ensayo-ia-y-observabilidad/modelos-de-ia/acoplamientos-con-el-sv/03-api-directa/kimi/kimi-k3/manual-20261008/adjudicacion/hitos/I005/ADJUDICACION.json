@@ -1,0 +1,126 @@
+{
+  "alerta": null,
+  "alerta_limite": false,
+  "auditoria_sha256": "00ccf5d9e3749f878992a1ae451b4eff9fc738053d49bc106aa8955af62156b1",
+  "caso": "MD02",
+  "critico": true,
+  "estado_documental_candidato": "respuesta_fundada",
+  "etapa": 1,
+  "fidelidad_documental": "conforme",
+  "final_sha256": "45a4880830159d822f4b47fa53b328cad7a41f7d990490f8d7931ca97c06feed",
+  "formal_conforme": true,
+  "fundamento_sustantivo": "Conserva los cuatro referentes: pliego, Frontera normativa, IR y gramática; exige ejemplos, contraejemplos y relación explícita con la implementación. La mención de IR v0.2 se atribuye al tramo 10 histórico, sin afirmar vigencia externa. No se añade un mecanismo operativo inexistente.",
+  "justificacion_documental": "Citas y estructura cotejadas en Rust. La adjudicación del sentido pertenece a esta revisión exterior.",
+  "medicion": {
+    "duracion_operacion_ms": 77087,
+    "telemetria": {
+      "bytes": 1643825,
+      "fallos_medicion": 0,
+      "integridad": "conforme",
+      "intervalo_maximo_ms": 377,
+      "intervalo_objetivo_ms": 250,
+      "muestras": 285,
+      "plataforma_recibida": false,
+      "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+      "registros": 4270,
+      "sha256": "a11e5ef63605c504010cb54854b0ead2ba4a0002b0fd9613faae04f821a0fb3f"
+    },
+    "uso": {
+      "cached_tokens": 1280,
+      "coste_liquidado_usd": null,
+      "input_tokens": 24048,
+      "output_tokens": 3510,
+      "reasoning_tokens": 1464,
+      "total_tokens": 27558
+    }
+  },
+  "naturaleza_defecto": null,
+  "nota_alcance": "Dependencias declaradas por el documento; no revisión en vivo de la IR.",
+  "pasajes_contrastados": [
+    {
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmento": "subordinado al pliego, a la Frontera normativa, a la IR y a la gramática vigente",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000009-L000017"
+    },
+    {
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmento": "y verificable mediante ejemplos, contraejemplos y relación explícita con la implementación",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000009-L000017"
+    },
+    {
+      "documento": "MANUAL_PRESENTACION",
+      "fragmento": "El manual permanece subordinado al pliego, la Frontera normativa, la representación intermedia y la gramática vigentes.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000011-L000014"
+    },
+    {
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmento": "10. Relación con IR y docs públicos",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000092-L000108"
+    },
+    {
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmento": "correspondencia visible con la IR o con la superficie vigente",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000109-L000118"
+    },
+    {
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmento": "ausencia de contradicción local suficiente con el pliego o con la Frontera normativa",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000109-L000118"
+    },
+    {
+      "documento": "MANUAL_TRAMO10",
+      "fragmento": "- Pliego de condiciones del Sistema Vectorial SV\n- Frontera normativa del lenguaje SV\n- IR canónica v0.2\n- Política y protocolo de compatibilidad interlenguajes del Lenguaje SV",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000007-L000013"
+    },
+    {
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmento": "deberá coordinarse con la política y protocolo de compatibilidad interlenguajes del Lenguaje SV",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000119-L000122"
+    },
+    {
+      "documento": "MANUAL_TRAMO10",
+      "fragmento": "Este tramo no implementa bindings, APIs, FFI ni wrappers reales.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000022-L000025"
+    },
+    {
+      "documento": "MANUAL_PRESENTACION",
+      "fragmento": "La consulta no ejecuta los ejemplos, no incorpora información de los enlaces externos y no realiza inferencia.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000015-L000018"
+    }
+  ],
+  "recepcion_independiente": "pendiente",
+  "respuesta_original": "{\"caso\":\"MD02\",\"estado_documental\":\"respuesta_fundada\",\"etapa\":1,\"evidencias\":[{\"cita_literal_breve\":\"subordinado al pliego, a la Frontera normativa, a la IR y a la gramática vigente\",\"documento\":\"MANUAL_CONSTRUCTOR\",\"fragmentos\":[0],\"seccion\":\"MD-L000009-L000017\"},{\"cita_literal_breve\":\"y verificable mediante ejemplos, contraejemplos y relación explícita con la implementación\",\"documento\":\"MANUAL_CONSTRUCTOR\",\"fragmentos\":[0],\"seccion\":\"MD-L000009-L000017\"},{\"cita_literal_breve\":\"El manual permanece subordinado al pliego, la Frontera normativa, la representación intermedia y la gramática vigentes.\",\"documento\":\"MANUAL_PRESENTACION\",\"fragmentos\":[0],\"seccion\":\"MD-L000011-L000014\"},{\"cita_literal_breve\":\"10. Relación con IR y docs públicos\",\"documento\":\"MANUAL_CONSTRUCTOR\",\"fragmentos\":[0],\"seccion\":\"MD-L000092-L000108\"},{\"cita_literal_breve\":\"correspondencia visible con la IR o con la superficie vigente\",\"documento\":\"MANUAL_CONSTRUCTOR\",\"fragmentos\":[0],\"seccion\":\"MD-L000109-L000118\"},{\"cita_literal_breve\":\"ausencia de contradicción local suficiente con el pliego o con la Frontera normativa\",\"documento\":\"MANUAL_CONSTRUCTOR\",\"fragmentos\":[0],\"seccion\":\"MD-L000109-L000118\"},{\"cita_literal_breve\":\"- Pliego de condiciones del Sistema Vectorial SV\\n- Frontera normativa del lenguaje SV\\n- IR canónica v0.2\\n- Política y protocolo de compatibilidad interlenguajes del Lenguaje SV\",\"documento\":\"MANUAL_TRAMO10\",\"fragmentos\":[0],\"seccion\":\"MD-L000007-L000013\"},{\"cita_literal_breve\":\"deberá coordinarse con la política y protocolo de compatibilidad interlenguajes del Lenguaje SV\",\"documento\":\"MANUAL_CONSTRUCTOR\",\"fragmentos\":[0],\"seccion\":\"MD-L000119-L000122\"},{\"cita_literal_breve\":\"Este tramo no implementa bindings, APIs, FFI ni wrappers reales.\",\"documento\":\"MANUAL_TRAMO10\",\"fragmentos\":[0],\"seccion\":\"MD-L000022-L000025\"},{\"cita_literal_breve\":\"La consulta no ejecuta los ejemplos, no incorpora información de los enlaces externos y no realiza inferencia.\",\"documento\":\"MANUAL_PRESENTACION\",\"fragmentos\":[0],\"seccion\":\"MD-L000015-L000018\"}],\"fundamentos_verificables\":[\"La Regla general del constructor (sección 2) impone a cada tramo la subordinación al pliego, a la Frontera normativa, a la IR y a la gramática vigente, junto con la verificabilidad mediante ejemplos, contraejemplos y relación explícita con la implementación.\",\"La presentación confirma la subordinación del manual en su conjunto a los mismos referentes, denominando a la IR como representación intermedia, lo que permite tratar ambas denominaciones como equivalentes en este corpus.\",\"La ficha obligatoria por tramo (sección 4 del constructor) exige declarar en su punto 10 la relación con la IR y los documentos públicos, institucionalizando la trazabilidad documental de cada tramo.\",\"El criterio de cierre (sección 5 del constructor) exige correspondencia visible con la IR o con la superficie vigente, ejemplos .svp nucleares y ausencia de contradicción local suficiente con el pliego o con la Frontera normativa como condiciones mínimas de cerrabilidad.\",\"El tramo 10 particulariza las dependencias: Pliego de condiciones del Sistema Vectorial SV, Frontera normativa del lenguaje SV, IR canónica v0.2 y Política y protocolo de compatibilidad interlenguajes del Lenguaje SV; la sección 6 del constructor añade que ese tramo deberá coordinarse con dicha política y protocolo.\",\"La relación exigida con la implementación es de verificabilidad y correspondencia documentada, no de ejecución ni de implementación efectiva: la presentación declara que la consulta no ejecuta los ejemplos y el tramo 10 declara que no implementa bindings, APIs, FFI ni wrappers reales, abriendo sólo el frente documental y de gobierno.\",\"Autocrítica de etapa 1: se mantienen todas las afirmaciones de la etapa 0 por verificadas contra la fuente; se incorporan tres evidencias literales que en la etapa 0 respaldaban afirmaciones sin cita registrada (coordinación del tramo 10 con la política interlenguajes, no implementación de bindings/FFI/wrappers, y no ejecución de ejemplos por la consulta), sin alterar el sentido de la respuesta.\"],\"insuficiencias\":[\"Los documentos suministrados no especifican el procedimiento operativo ni las herramientas concretas con que se comprueba la relación explícita con la implementación o la correspondencia visible con la IR; fijan la exigencia, pero no su mecanismo de verificación. Este límite es propio de la fuente y no impide responder la pregunta formulada.\"],\"respuesta\":\"Cada tramo del manual debe subordinarse a cuatro referentes: el pliego (de condiciones del Sistema Vectorial SV), la Frontera normativa del lenguaje SV, la IR o representación intermedia y la gramática vigente. El tramo 10 particulariza estos referentes declarando como dependencias el Pliego de condiciones del Sistema Vectorial SV, la Frontera normativa del lenguaje SV, la IR canónica v0.2 y la Política y protocolo de compatibilidad interlenguajes del Lenguaje SV; además, el constructor exige que ese tramo se coordine con dicha política y protocolo. Respecto de la implementación, el constructor exige que cada tramo sea verificable mediante ejemplos, contraejemplos y relación explícita con la implementación; que su ficha obligatoria declare la relación con la IR y los documentos públicos; y que, para ser cerrable, muestre correspondencia visible con la IR o con la superficie vigente, con uno o más ejemplos .svp suficientemente nucleares y con ausencia de contradicción local suficiente con el pliego o con la Frontera normativa. Esta exigencia es de trazabilidad y verificabilidad documental, no de ejecución ni de implementación efectiva: la edición declara que la consulta no ejecuta los ejemplos ni realiza inferencia, y el tramo 10 declara expresamente que no implementa bindings, APIs, FFI ni wrappers reales, limitándose a abrir el frente documental y de gobierno. Por tanto, lo descrito corresponde a lo previsto en los documentos, no a una implementación ya realizada.\",\"revision\":\"Autocrítica de etapa 1 sobre la provisional de etapa 0. Se contrastaron todas las afirmaciones con los cuatro documentos: las cuatro subordinaciones (pliego, Frontera normativa, IR/representación intermedia, gramática vigente) figuran literalmente en la Regla general del constructor y en la sección Autoridad documental de la presentación; la relación con la implementación (verificabilidad con ejemplos y contraejemplos, ficha punto 10, correspondencia visible con la IR o superficie vigente en el criterio de cierre) figura literalmente en las secciones 2, 4 y 5 del constructor; las dependencias del tramo 10 figuran literalmente en su sección 2. Se mantiene íntegro el sentido de la etapa 0. Se corrige una carencia formal, no de fondo: tres afirmaciones ya presentes carecían de evidencia registrada y ahora se documentan con citas literales (coordinación del tramo 10 con la política y protocolo interlenguajes, sección 6 del constructor; no implementación de bindings, APIs, FFI ni wrappers, sección 4 del tramo 10; no ejecución de ejemplos por la consulta, sección Consulta para personas y modelos de la presentación). No se retira ninguna afirmación y no procede estado U, pues la fuente resuelve la pregunta; la única insuficiencia declarada es un límite explícito de la fuente (ausencia de mecanismo operativo de verificación), compatible con respuesta_fundada.\"}",
+  "solicitud_sha256": "f1da8013a9a04b6ad33b6c9623ac6469f4ca47d86f84e3a9e303a104b9debcea",
+  "sustantivo": "correcto",
+  "valor": "0"
+}

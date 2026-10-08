@@ -1,0 +1,78 @@
+{
+  "alerta": null,
+  "alerta_limite": false,
+  "auditoria_sha256": "11d2fda15697355084982a258929fbcd64f6e7384699708e4fcffbdd80a581ff",
+  "caso": "MD01",
+  "critico": true,
+  "estado_documental_candidato": "respuesta_fundada",
+  "etapa": 0,
+  "fidelidad_documental": "conforme",
+  "final_sha256": "95c3dce6a7a7ed8bce460835e3ee67868810f0e7bf506f2491e0b9c2140dfc38",
+  "formal_conforme": true,
+  "fundamento_sustantivo": "Identifica la arquitectura de trabajo, el cierre progresivo y la diferencia respecto del manual final. No convierte el documento histórico en acreditación de implementación o aprobación actual. Corresponde a MANUAL_CONSTRUCTOR, MD-L000003-L000008, y a la presentación recibida.",
+  "justificacion_documental": "Citas y estructura cotejadas en Rust. La adjudicación del sentido pertenece a esta revisión exterior.",
+  "medicion": {
+    "duracion_operacion_ms": 56232,
+    "telemetria": {
+      "bytes": 1023833,
+      "fallos_medicion": 0,
+      "integridad": "conforme",
+      "intervalo_maximo_ms": 341,
+      "intervalo_objetivo_ms": 250,
+      "muestras": 201,
+      "plataforma_recibida": false,
+      "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+      "registros": 2614,
+      "sha256": "78e3a035e51f3003a6e3a0552a0e8c3cba3acbaaaa65d495cf44af1903f3388a"
+    },
+    "uso": {
+      "cached_tokens": null,
+      "coste_liquidado_usd": null,
+      "input_tokens": 20108,
+      "output_tokens": 2189,
+      "reasoning_tokens": 1324,
+      "total_tokens": 22297
+    }
+  },
+  "naturaleza_defecto": null,
+  "nota_alcance": "Alcance histórico del constructor; no es prueba de implementación.",
+  "pasajes_contrastados": [
+    {
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmento": "Este constructor fija la arquitectura de trabajo del manual del lenguaje SVP",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000003-L000008"
+    },
+    {
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmento": "Su finalidad es permitir un cierre progresivo por capítulos o tramos sin perder el eje del sistema ni dispersarse en caminos laterales.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000003-L000008"
+    },
+    {
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmento": "No es todavía el manual final. Es la **máquina de construirlo**.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000003-L000008"
+    },
+    {
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmento": "El constructor del manual no autoriza lluvias laterales.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000123-L000125"
+    }
+  ],
+  "recepcion_independiente": "pendiente",
+  "respuesta_original": "{\"caso\":\"MD01\",\"estado_documental\":\"respuesta_fundada\",\"etapa\":0,\"evidencias\":[{\"cita_literal_breve\":\"Este constructor fija la arquitectura de trabajo del manual del lenguaje SVP\",\"documento\":\"MANUAL_CONSTRUCTOR\",\"fragmentos\":[0],\"seccion\":\"MD-L000003-L000008\"},{\"cita_literal_breve\":\"Su finalidad es permitir un cierre progresivo por capítulos o tramos sin perder el eje del sistema ni dispersarse en caminos laterales.\",\"documento\":\"MANUAL_CONSTRUCTOR\",\"fragmentos\":[0],\"seccion\":\"MD-L000003-L000008\"},{\"cita_literal_breve\":\"No es todavía el manual final. Es la **máquina de construirlo**.\",\"documento\":\"MANUAL_CONSTRUCTOR\",\"fragmentos\":[0],\"seccion\":\"MD-L000003-L000008\"},{\"cita_literal_breve\":\"El constructor del manual no autoriza lluvias laterales.\",\"documento\":\"MANUAL_CONSTRUCTOR\",\"fragmentos\":[0],\"seccion\":\"MD-L000123-L000125\"}],\"fundamentos_verificables\":[\"La sección 1 (Naturaleza) del constructor declara literalmente su función: fijar la arquitectura de trabajo del manual SVP con la finalidad de un cierre progresivo por capítulos o tramos, conservando el eje del sistema y evitando dispersión.\",\"La misma sección establece de forma explícita la diferencia respecto del manual final: el constructor no es todavía el manual final, sino la máquina de construirlo, es decir, un instrumento metodológico previo al contenido terminado.\",\"El resto del documento es coherente con esa función instrumental: la regla general (MD-L000009-L000017), las unidades de cierre por tramos (MD-L000018-L000021 y ss.), la ficha obligatoria (MD-L000092-L000108), el criterio de cierre (MD-L000109-L000118) y la regla de control (MD-L000123-L000125) operacionalizan cómo se construirá y cerrará cada tramo, no el contenido normativo definitivo del lenguaje.\",\"La regla de control refuerza la función anti-dispersión declarada en la Naturaleza al exigir que toda idea nueva pase antes por el Wishlist IRQ del ecosistema SV.\"],\"insuficiencias\":[],\"respuesta\":\"El constructor cumple la función de fijar la arquitectura de trabajo del manual del lenguaje SVP: es el instrumento que organiza cómo se construirá el manual, estableciendo la regla general que debe cumplir cada tramo, las unidades de cierre recomendadas (tramos 0 a 10), la ficha obligatoria por tramo, el criterio de cierre y una regla de control contra dispersiones. Su finalidad declarada es permitir un cierre progresivo por capítulos o tramos sin perder el eje del sistema ni dispersarse en caminos laterales. La diferencia que establece respecto de un manual final es explícita: el constructor no es todavía el manual final, sino la máquina de construirlo; es decir, un andamiaje metodológico previo que define cómo se producirá, verificará y cerrará cada tramo, y no el contenido normativo terminado del lenguaje.\",\"revision\":\"Etapa 0: no existen antecedentes ni entregas anteriores que contrastar. Esta respuesta provisional inicial se construye directamente desde las secciones del constructor suministradas, sin autoridad previa que mantener, corregir o retirar.\"}",
+  "solicitud_sha256": "cbb3b33b62c0c54cea1d7fb1b18cd3bebf2542b56dd031163a84c272ca621636",
+  "sustantivo": "correcto",
+  "valor": "0"
+}

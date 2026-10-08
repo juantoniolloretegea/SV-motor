@@ -1,0 +1,110 @@
+{
+  "alerta": null,
+  "alerta_limite": false,
+  "auditoria_sha256": "db773370833d207c4354bae6c954ee2458e390e47e6d1b6bcab3bcbd9eae87ab",
+  "caso": "MD03",
+  "critico": false,
+  "estado_documental_candidato": "respuesta_fundada",
+  "etapa": 2,
+  "fidelidad_documental": "conforme",
+  "final_sha256": "207c3bc90c2773278d0eca34d93cfaaf32b3fd51c61a1548ada473fefda91ee3",
+  "formal_conforme": true,
+  "fundamento_sustantivo": "Localiza correctamente evaluación de células en el tramo 3, resolución de U en el 5 y transición en el 6. Enumera las materias asociadas sin inventar definiciones. La pregunta solicita precisamente ubicación y materias; el carácter pendiente de otros capítulos no impide contestarla.",
+  "justificacion_documental": "Citas y estructura cotejadas en Rust. La adjudicación del sentido pertenece a esta revisión exterior.",
+  "medicion": {
+    "duracion_operacion_ms": 65241,
+    "telemetria": {
+      "bytes": 1323359,
+      "fallos_medicion": 0,
+      "integridad": "conforme",
+      "intervalo_maximo_ms": 310,
+      "intervalo_objetivo_ms": 250,
+      "muestras": 229,
+      "plataforma_recibida": false,
+      "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+      "registros": 3438,
+      "sha256": "9a3ddeffd53ec4ca886614b428be20f0cce2aa22894548d2eefdb11f4beb83b1"
+    },
+    "uso": {
+      "cached_tokens": 1280,
+      "coste_liquidado_usd": null,
+      "input_tokens": 27619,
+      "output_tokens": 2811,
+      "reasoning_tokens": 1133,
+      "total_tokens": 30430
+    }
+  },
+  "naturaleza_defecto": null,
+  "nota_alcance": "El enunciado no exige definiciones ausentes: no hay pregunta insoluble.",
+  "pasajes_contrastados": [
+    {
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmento": "## 3. Unidades de cierre recomendadas\n\nSe recomienda cerrar el manual por **tramos nucleares** y no por lluvia de ideas.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000018-L000021"
+    },
+    {
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmento": "### Tramo 3 — Célula, evaluación y clasificación\n- `CellSpec`;\n- `CellState`;\n- `evaluate`;\n- umbral;\n- criticidad.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000041-L000047"
+    },
+    {
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmento": "### Tramo 5 — Resolución y régimen de la U\n- `resolve`;\n- `Context`;\n- `Mechanism`;\n- reapertura.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000054-L000059"
+    },
+    {
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmento": "### Tramo 6 — Trayectoria, frame y datos de transición\n- `Frame`;\n- `TransitionData`;\n- `Trajectory`;\n- regla append-only.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000060-L000065"
+    },
+    {
+      "documento": "MANUAL_INDICE",
+      "fragmento": "- [03 · Célula, evaluación y clasificación — pendiente]()",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000001-L000017"
+    },
+    {
+      "documento": "MANUAL_INDICE",
+      "fragmento": "- [05 · Resolución y régimen de U — pendiente]()",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000001-L000017"
+    },
+    {
+      "documento": "MANUAL_INDICE",
+      "fragmento": "- [06 · Frame, trayectoria y transición — pendiente]()",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000001-L000017"
+    },
+    {
+      "documento": "MANUAL_PRESENTACION",
+      "fragmento": "El índice original registra once tramos pendientes, SVP-MAN-00 a SVP-MAN-10.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000005-L000010"
+    }
+  ],
+  "recepcion_independiente": "pendiente",
+  "respuesta_original": "{\"caso\":\"MD03\",\"estado_documental\":\"respuesta_fundada\",\"etapa\":2,\"evidencias\":[{\"cita_literal_breve\":\"## 3. Unidades de cierre recomendadas\\n\\nSe recomienda cerrar el manual por **tramos nucleares** y no por lluvia de ideas.\",\"documento\":\"MANUAL_CONSTRUCTOR\",\"fragmentos\":[0],\"seccion\":\"MD-L000018-L000021\"},{\"cita_literal_breve\":\"### Tramo 3 — Célula, evaluación y clasificación\\n- `CellSpec`;\\n- `CellState`;\\n- `evaluate`;\\n- umbral;\\n- criticidad.\",\"documento\":\"MANUAL_CONSTRUCTOR\",\"fragmentos\":[0],\"seccion\":\"MD-L000041-L000047\"},{\"cita_literal_breve\":\"### Tramo 5 — Resolución y régimen de la U\\n- `resolve`;\\n- `Context`;\\n- `Mechanism`;\\n- reapertura.\",\"documento\":\"MANUAL_CONSTRUCTOR\",\"fragmentos\":[0],\"seccion\":\"MD-L000054-L000059\"},{\"cita_literal_breve\":\"### Tramo 6 — Trayectoria, frame y datos de transición\\n- `Frame`;\\n- `TransitionData`;\\n- `Trajectory`;\\n- regla append-only.\",\"documento\":\"MANUAL_CONSTRUCTOR\",\"fragmentos\":[0],\"seccion\":\"MD-L000060-L000065\"},{\"cita_literal_breve\":\"- [03 · Célula, evaluación y clasificación — pendiente]()\",\"documento\":\"MANUAL_INDICE\",\"fragmentos\":[0],\"seccion\":\"MD-L000001-L000017\"},{\"cita_literal_breve\":\"- [05 · Resolución y régimen de U — pendiente]()\",\"documento\":\"MANUAL_INDICE\",\"fragmentos\":[0],\"seccion\":\"MD-L000001-L000017\"},{\"cita_literal_breve\":\"- [06 · Frame, trayectoria y transición — pendiente]()\",\"documento\":\"MANUAL_INDICE\",\"fragmentos\":[0],\"seccion\":\"MD-L000001-L000017\"},{\"cita_literal_breve\":\"El índice original registra once tramos pendientes, SVP-MAN-00 a SVP-MAN-10.\",\"documento\":\"MANUAL_PRESENTACION\",\"fragmentos\":[0],\"seccion\":\"MD-L000005-L000010\"}],\"fundamentos_verificables\":[\"El apartado 3 del constructor, «Unidades de cierre recomendadas», establece el cierre por tramos nucleares y enumera los tramos 0 a 10 con sus materias; la ubicación de cada tema se lee directamente de los epígrafes y listas de ese apartado.\",\"La evaluación de células se sitúa en el Tramo 3, titulado «Célula, evaluación y clasificación», cuyas materias declaradas son `CellSpec`, `CellState`, `evaluate`, umbral y criticidad.\",\"La resolución de U se sitúa en el Tramo 5, titulado «Resolución y régimen de la U», cuyas materias declaradas son `resolve`, `Context`, `Mechanism` y reapertura.\",\"Los datos de transición se sitúan en el Tramo 6, titulado «Trayectoria, frame y datos de transición», cuyas materias declaradas son `Frame`, `TransitionData`, `Trajectory` y la regla append-only.\",\"El índice de la edición documental confirma que estos tres tramos figuran como entradas pendientes (03, 05 y 06), es decir, son plan previsto y no capítulos implementados en esta edición.\",\"La presentación de la edición registra que los once tramos, SVP-MAN-00 a SVP-MAN-10, están pendientes, lo que acredita que las materias enumeradas son previsiones del constructor y no contenido desarrollado.\"],\"insuficiencias\":[\"Los documentos suministrados no contienen los capítulos 03, 05 ni 06 desarrollados: el índice los marca como «pendiente» y la presentación registra once tramos pendientes, por lo que no es posible dar las definiciones de `CellSpec`, `CellState`, `evaluate`, umbral, criticidad, `resolve`, `Context`, `Mechanism`, reapertura, `Frame`, `TransitionData`, `Trajectory` ni de la regla append-only; sólo están acreditadas sus denominaciones como materias previstas de cada tramo.\"],\"respuesta\":\"El constructor sitúa cada materia en un tramo nuclear distinto del manual. (1) Evaluación de células: Tramo 3 — «Célula, evaluación y clasificación», con las materias `CellSpec`, `CellState`, `evaluate`, umbral y criticidad. (2) Resolución de U: Tramo 5 — «Resolución y régimen de la U», con las materias `resolve`, `Context`, `Mechanism` y reapertura. (3) Datos de transición: Tramo 6 — «Trayectoria, frame y datos de transición», con las materias `Frame`, `TransitionData`, `Trajectory` y la regla append-only. Estas ubicaciones son plan previsto: el índice de la edición muestra los tramos 03, 05 y 06 como entradas pendientes, sin texto desarrollado, y los documentos aportados no definen ninguno de los términos enumerados, por lo que aquí sólo se identifican las materias asociadas tal como las declara el constructor.\",\"revision\":\"Verificación final neutral de las entregas de etapa 0 y etapa 1 contra la fuente. Resultado del contraste: (a) las tres ubicaciones de tramo y sus materias coinciden literalmente con MANUAL_CONSTRUCTOR MD-L000041-L000047, MD-L000054-L000059 y MD-L000060-L000065 en ambas entregas; (b) el estado pendiente de los tramos 03, 05 y 06 coincide con MANUAL_INDICE MD-L000001-L000017; (c) la evidencia añadida en etapa 1 (MANUAL_PRESENTACION MD-L000005-L000010) es exacta y pertinente, y se mantiene; (d) todas las citas son cadenas continuas exactas, sin puntos suspensivos añadidos, y cada pasaje distinto se cita por separado; (e) ambas entregas distinguen correctamente lo previsto (tramos planificados) de lo implementado (sin capítulos desarrollados) y no inventan definiciones. Diferencia entre entregas: la etapa 1 sólo reforzó la prueba del estado pendiente; no hay contradicciones entre ellas. Ajuste de esta etapa: se añade como evidencia el encabezado y regla del apartado 3 del constructor (MD-L000018-L000021), que respalda el fundamento sobre unidades de cierre; no altera el sentido. Se mantienen íntegras respuesta e insuficiencia; no se retira nada y no procede estado U, pues la fuente resuelve lo preguntado dentro de sus límites explícitos.\"}",
+  "solicitud_sha256": "7857566ce39ec33cecf732a01069265ff0f3dd4f3f68834992bbd637086b88d1",
+  "sustantivo": "correcto",
+  "valor": "0"
+}

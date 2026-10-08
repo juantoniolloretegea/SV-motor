@@ -1,0 +1,94 @@
+{
+  "alerta": null,
+  "alerta_limite": false,
+  "auditoria_sha256": "6f2ea48b744894ccde781506ceb6b62baab690eed59a4827991f4e0425da58f8",
+  "caso": "MD02",
+  "critico": true,
+  "estado_documental_candidato": "respuesta_fundada",
+  "etapa": 0,
+  "fidelidad_documental": "conforme",
+  "final_sha256": "611cccd24a67ec6d1478d00f814f4708c10d43d8ebb81ce3801803ff494c81e7",
+  "formal_conforme": true,
+  "fundamento_sustantivo": "Conserva los cuatro referentes: pliego, Frontera normativa, IR y gramática; exige ejemplos, contraejemplos y relación explícita con la implementación. La mención de IR v0.2 se atribuye al tramo 10 histórico, sin afirmar vigencia externa. No se añade un mecanismo operativo inexistente.",
+  "justificacion_documental": "Citas y estructura cotejadas en Rust. La adjudicación del sentido pertenece a esta revisión exterior.",
+  "medicion": {
+    "duracion_operacion_ms": 55776,
+    "telemetria": {
+      "bytes": 1128675,
+      "fallos_medicion": 0,
+      "integridad": "conforme",
+      "intervalo_maximo_ms": 303,
+      "intervalo_objetivo_ms": 250,
+      "muestras": 208,
+      "plataforma_recibida": false,
+      "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+      "registros": 2910,
+      "sha256": "b2706701474df88dd059d236a4d56b4b1bf64a7d6aa535457087dfcac8c9ceaa"
+    },
+    "uso": {
+      "cached_tokens": 256,
+      "coste_liquidado_usd": null,
+      "input_tokens": 20114,
+      "output_tokens": 2366,
+      "reasoning_tokens": 1087,
+      "total_tokens": 22480
+    }
+  },
+  "naturaleza_defecto": null,
+  "nota_alcance": "Dependencias declaradas por el documento; no revisión en vivo de la IR.",
+  "pasajes_contrastados": [
+    {
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmento": "subordinado al pliego, a la Frontera normativa, a la IR y a la gramática vigente",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000009-L000017"
+    },
+    {
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmento": "y verificable mediante ejemplos, contraejemplos y relación explícita con la implementación",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000009-L000017"
+    },
+    {
+      "documento": "MANUAL_PRESENTACION",
+      "fragmento": "El manual permanece subordinado al pliego, la Frontera normativa, la representación intermedia y la gramática vigentes.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000011-L000014"
+    },
+    {
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmento": "10. Relación con IR y docs públicos",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000092-L000108"
+    },
+    {
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmento": "correspondencia visible con la IR o con la superficie vigente",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000109-L000118"
+    },
+    {
+      "documento": "MANUAL_TRAMO10",
+      "fragmento": "- Pliego de condiciones del Sistema Vectorial SV\n- Frontera normativa del lenguaje SV\n- IR canónica v0.2\n- Política y protocolo de compatibilidad interlenguajes del Lenguaje SV",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000007-L000013"
+    }
+  ],
+  "recepcion_independiente": "pendiente",
+  "respuesta_original": "{\"caso\":\"MD02\",\"estado_documental\":\"respuesta_fundada\",\"etapa\":0,\"evidencias\":[{\"cita_literal_breve\":\"subordinado al pliego, a la Frontera normativa, a la IR y a la gramática vigente\",\"documento\":\"MANUAL_CONSTRUCTOR\",\"fragmentos\":[0],\"seccion\":\"MD-L000009-L000017\"},{\"cita_literal_breve\":\"y verificable mediante ejemplos, contraejemplos y relación explícita con la implementación\",\"documento\":\"MANUAL_CONSTRUCTOR\",\"fragmentos\":[0],\"seccion\":\"MD-L000009-L000017\"},{\"cita_literal_breve\":\"El manual permanece subordinado al pliego, la Frontera normativa, la representación intermedia y la gramática vigentes.\",\"documento\":\"MANUAL_PRESENTACION\",\"fragmentos\":[0],\"seccion\":\"MD-L000011-L000014\"},{\"cita_literal_breve\":\"10. Relación con IR y docs públicos\",\"documento\":\"MANUAL_CONSTRUCTOR\",\"fragmentos\":[0],\"seccion\":\"MD-L000092-L000108\"},{\"cita_literal_breve\":\"correspondencia visible con la IR o con la superficie vigente\",\"documento\":\"MANUAL_CONSTRUCTOR\",\"fragmentos\":[0],\"seccion\":\"MD-L000109-L000118\"},{\"cita_literal_breve\":\"- Pliego de condiciones del Sistema Vectorial SV\\n- Frontera normativa del lenguaje SV\\n- IR canónica v0.2\\n- Política y protocolo de compatibilidad interlenguajes del Lenguaje SV\",\"documento\":\"MANUAL_TRAMO10\",\"fragmentos\":[0],\"seccion\":\"MD-L000007-L000013\"}],\"fundamentos_verificables\":[\"La Regla general del constructor (sección 2) impone a cada tramo cuatro cualidades; entre ellas, la subordinación al pliego, a la Frontera normativa, a la IR y a la gramática vigente, y la verificabilidad mediante ejemplos, contraejemplos y relación explícita con la implementación.\",\"La presentación de la edición documental confirma la misma subordinación para el manual en su conjunto, denominando a la IR como representación intermedia, y añade que la presentación de un documento en el libro no acredita una nueva aprobación.\",\"La ficha obligatoria por tramo (sección 4 del constructor) exige declarar en su punto 10 la relación con la IR y con los documentos públicos, lo que institucionaliza la trazabilidad documental de cada tramo.\",\"El criterio de cierre (sección 5 del constructor) exige, como condición mínima de cerrabilidad, correspondencia visible con la IR o con la superficie vigente, además de ejemplos .svp nucleares y ausencia de contradicción local suficiente con el pliego o la Frontera normativa.\",\"El tramo 10 particulariza estas exigencias: su sección 2 declara como dependencias el Pliego de condiciones del Sistema Vectorial SV, la Frontera normativa del lenguaje SV, la IR canónica v0.2 y la Política y protocolo de compatibilidad interlenguajes del Lenguaje SV.\",\"La relación exigida con la implementación es de verificabilidad y correspondencia documentada, no de ejecución: la presentación precisa que la consulta no ejecuta los ejemplos, y el tramo 10 declara que no implementa bindings, APIs, FFI ni wrappers reales, de modo que lo previsto es documental y de gobierno, no implementado.\"],\"insuficiencias\":[\"Los documentos suministrados no especifican el procedimiento operativo ni las herramientas concretas con que se comprueba la relación explícita con la implementación o la correspondencia visible con la IR; sólo fijan la exigencia, no su mecanismo de verificación.\"],\"respuesta\":\"Cada tramo del manual debe subordinarse a cuatro referentes: el pliego (de condiciones del Sistema Vectorial SV), la Frontera normativa del lenguaje SV, la IR o representación intermedia (en el tramo 10 concretada como IR canónica v0.2) y la gramática vigente. El tramo 10 añade como dependencia propia la Política y protocolo de compatibilidad interlenguajes del Lenguaje SV. En cuanto a la implementación, el constructor exige que cada tramo sea verificable mediante ejemplos, contraejemplos y relación explícita con la implementación; que su ficha obligatoria declare la relación con la IR y los documentos públicos; y que, para ser cerrable, muestre correspondencia visible con la IR o con la superficie vigente, con uno o más ejemplos .svp nucleares y sin contradicción local suficiente con el pliego o la Frontera normativa. Se trata de una exigencia de trazabilidad y verificabilidad documental, no de ejecución: la edición aclara que la consulta no ejecuta los ejemplos y el tramo 10 declara que no implementa bindings, APIs, FFI ni wrappers reales, por lo que lo establecido es previsto y documental, no una implementación efectiva.\",\"revision\":\"Etapa 0: no existen antecedentes que contrastar; esta es la primera entrega y se fundamenta exclusivamente en los fragmentos documentales suministrados.\"}",
+  "solicitud_sha256": "2b314622246cb0abae06a77708f6c4d35915db382eb8c1816f3d0d6d795ddc61",
+  "sustantivo": "correcto",
+  "valor": "0"
+}

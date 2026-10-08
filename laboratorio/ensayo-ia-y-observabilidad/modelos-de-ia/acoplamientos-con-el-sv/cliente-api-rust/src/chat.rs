@@ -101,8 +101,12 @@ impl Flujo {
                 }
                 if let Some(f)=c.get("finish_reason").filter(|v|!v.is_null()) {need(f=="stop","Terminación no completa")?;self.terminado=true;kinds.push("chat.completed".into());}
             } else {need(self.terminado && v.get("usage").is_some(),"Fragmento vacío inesperado")?;}
-            if let Some(u)=v.get("usage").filter(|v|!v.is_null()) {
-                need(self.terminado && self.usage.is_none(),"Uso repetido o prematuro")?;uso(u)?;self.usage=Some(u.clone());
+            let global=v.get("usage").filter(|v|!v.is_null());
+            let alternative=choices.first().and_then(|c|c.get("usage")).filter(|v|!v.is_null());
+            if let (Some(a),Some(b))=(global,alternative){need(a==b,"Dos representaciones de uso discordantes")?;}
+            if let Some(u)=global.or(alternative) {
+                need(self.terminado,"Uso prematuro")?;uso(u)?;
+                if let Some(previous)=&self.usage{need(previous==u,"Uso repetido discordante")?;}else{self.usage=Some(u.clone());}
             }
             self.eventos.push(v);
         }
@@ -132,6 +136,10 @@ impl Flujo {
     #[test]fn identidad_y_datos_posteriores(){let wire=stream().replacen("\"prueba\"","\"otra\"",1);assert!(Flujo::default().feed(wire.as_bytes()).is_err());let mut f=Flujo::default();f.feed(stream().as_bytes()).unwrap();assert!(f.feed(b"data: {}\n").is_err());}
     #[test]fn uso_no_inventado(){assert!(uso(&json!({"prompt_tokens":5,"completion_tokens":2,"total_tokens":8})).is_err());assert!(uso(&json!({"prompt_tokens":5,"completion_tokens":2,"total_tokens":7,"prompt_tokens_details":{"cached_tokens":6}})).is_err());let u=uso(&json!({"prompt_tokens":5,"completion_tokens":2,"total_tokens":7})).unwrap();assert!(u["reasoning_tokens"].is_null()&&u["coste_liquidado_usd"].is_null());}
     #[test]fn uso_final_separado_y_ausente(){let mut f=Flujo::default();let a=chunk(json!({"content":"ok"}),json!("stop"));f.feed(format!("data: {a}\n").as_bytes()).unwrap();let u=json!({"id":"prueba","model":"glm-5.3","choices":[],"usage":{"prompt_tokens":5,"completion_tokens":2,"total_tokens":7}});f.feed(format!("data: {u}\ndata: [DONE]\n").as_bytes()).unwrap();f.recibir("glm-5.3").unwrap();let mut f=Flujo::default();f.feed(format!("data: {a}\ndata: [DONE]\n").as_bytes()).unwrap();assert!(f.recibir("glm-5.3").is_err());}
+    #[test]fn uso_en_alternativa_con_concordancia(){let mut c=chunk(json!({"content":"ok"}),json!("stop"));let u=json!({"prompt_tokens":5,"completion_tokens":2,"total_tokens":7});c["choices"][0]["usage"]=u.clone();let mut f=Flujo::default();f.feed(format!("data: {c}\ndata: [DONE]\n").as_bytes()).unwrap();assert_eq!(f.recibir("glm-5.3").unwrap()["uso_proveedor"],u);c["usage"]=json!({"prompt_tokens":6,"completion_tokens":2,"total_tokens":8});assert!(Flujo::default().feed(format!("data: {c}\n").as_bytes()).is_err());}
+    #[test]fn uso_duplicado_entre_tramas_solo_si_identico(){let mut c=chunk(json!({"content":"ok"}),json!("stop"));let u=json!({"prompt_tokens":5,"completion_tokens":2,"total_tokens":7});c["choices"][0]["usage"]=u.clone();let mut final_chunk=json!({"id":"prueba","model":"glm-5.3","choices":[],"usage":u});let mut f=Flujo::default();f.feed(format!("data: {c}\ndata: {final_chunk}\ndata: [DONE]\n").as_bytes()).unwrap();assert_eq!(f.recibir("glm-5.3").unwrap()["uso_normalizado"]["total_tokens"],7);final_chunk["usage"]["total_tokens"]=json!(8);assert!(Flujo::default().feed(format!("data: {c}\ndata: {final_chunk}\n").as_bytes()).is_err());}
     #[test]fn perfil_cero_no_inicia_envio(){let p=crate::Perfil{proveedor:"Z.ai".into(),modelo:"glm-5.3".into(),endpoint:"https://api.z.ai/api/paas/v4/chat/completions".into(),presupuesto_ticks:0,exigir_zdr:false,entrada_ticks_por_token:14000,salida_ticks_por_token:44000,cuota_gratuita_tokens:None};let mut q=request();crate::proteger(&mut q,&p).unwrap();let error=crate::enviar(&p,"CREDENCIAL_SINTETICA_NO_VALIDA",&q,std::path::Path::new("NO_DEBE_EXISTIR"),1).unwrap_err();assert!(error.contains("preparación"));}
     #[test]fn historia_visible_integra_con_instrucciones_de_procedencia(){let mut q=request();q["input"]=json!([{"role":"user","content":"fuente"},{"role":"user","content":"instrucción histórica"},{"role":"assistant","content":"respuesta anterior íntegra"},{"role":"user","content":"verificación neutral"}]);let r=solicitud(&q,"glm-5.3").unwrap();validar(&r,"glm-5.3").unwrap();assert_eq!(&r["messages"].as_array().unwrap()[1..],q["input"].as_array().unwrap());}
 }
+
+// © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).

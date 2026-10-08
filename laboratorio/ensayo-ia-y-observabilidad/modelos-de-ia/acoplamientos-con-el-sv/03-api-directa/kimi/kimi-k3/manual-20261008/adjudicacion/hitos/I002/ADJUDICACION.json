@@ -1,0 +1,94 @@
+{
+  "alerta": null,
+  "alerta_limite": false,
+  "auditoria_sha256": "6509fffd6a60bde81a85744269e9a7509cfe7bd4b5b95881f69764644e3bc056",
+  "caso": "MD01",
+  "critico": true,
+  "estado_documental_candidato": "respuesta_fundada",
+  "etapa": 1,
+  "fidelidad_documental": "conforme",
+  "final_sha256": "1985589c139dc042e5af646a01e1a231bbee976e52852ffd5793d06213ef42be",
+  "formal_conforme": true,
+  "fundamento_sustantivo": "Identifica la arquitectura de trabajo, el cierre progresivo y la diferencia respecto del manual final. No convierte el documento histórico en acreditación de implementación o aprobación actual. Corresponde a MANUAL_CONSTRUCTOR, MD-L000003-L000008, y a la presentación recibida.",
+  "justificacion_documental": "Citas y estructura cotejadas en Rust. La adjudicación del sentido pertenece a esta revisión exterior.",
+  "medicion": {
+    "duracion_operacion_ms": 94491,
+    "telemetria": {
+      "bytes": 1791204,
+      "fallos_medicion": 0,
+      "integridad": "conforme",
+      "intervalo_maximo_ms": 444,
+      "intervalo_objetivo_ms": 250,
+      "muestras": 344,
+      "plataforma_recibida": false,
+      "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+      "registros": 4584,
+      "sha256": "c7c3d2d59e42c119bdb8e97edafa7c0e5288d4ab89a2a4b2fff6fe4dd2f9dc0a"
+    },
+    "uso": {
+      "cached_tokens": null,
+      "coste_liquidado_usd": null,
+      "input_tokens": 23865,
+      "output_tokens": 3829,
+      "reasoning_tokens": 2566,
+      "total_tokens": 27694
+    }
+  },
+  "naturaleza_defecto": null,
+  "nota_alcance": "Alcance histórico del constructor; no es prueba de implementación.",
+  "pasajes_contrastados": [
+    {
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmento": "Este constructor fija la arquitectura de trabajo del manual del lenguaje SVP",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000003-L000008"
+    },
+    {
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmento": "Su finalidad es permitir un cierre progresivo por capítulos o tramos sin perder el eje del sistema ni dispersarse en caminos laterales.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000003-L000008"
+    },
+    {
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmento": "No es todavía el manual final. Es la **máquina de construirlo**.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000003-L000008"
+    },
+    {
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmento": "y verificable mediante ejemplos, contraejemplos y relación explícita con la implementación.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000009-L000017"
+    },
+    {
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmento": "La compatibilidad interlenguajes del SV se tratará como tramo propio del manual",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000119-L000122"
+    },
+    {
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmento": "El constructor del manual no autoriza lluvias laterales.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000123-L000125"
+    }
+  ],
+  "recepcion_independiente": "pendiente",
+  "respuesta_original": "{\"caso\":\"MD01\",\"estado_documental\":\"respuesta_fundada\",\"etapa\":1,\"evidencias\":[{\"cita_literal_breve\":\"Este constructor fija la arquitectura de trabajo del manual del lenguaje SVP\",\"documento\":\"MANUAL_CONSTRUCTOR\",\"fragmentos\":[0],\"seccion\":\"MD-L000003-L000008\"},{\"cita_literal_breve\":\"Su finalidad es permitir un cierre progresivo por capítulos o tramos sin perder el eje del sistema ni dispersarse en caminos laterales.\",\"documento\":\"MANUAL_CONSTRUCTOR\",\"fragmentos\":[0],\"seccion\":\"MD-L000003-L000008\"},{\"cita_literal_breve\":\"No es todavía el manual final. Es la **máquina de construirlo**.\",\"documento\":\"MANUAL_CONSTRUCTOR\",\"fragmentos\":[0],\"seccion\":\"MD-L000003-L000008\"},{\"cita_literal_breve\":\"y verificable mediante ejemplos, contraejemplos y relación explícita con la implementación.\",\"documento\":\"MANUAL_CONSTRUCTOR\",\"fragmentos\":[0],\"seccion\":\"MD-L000009-L000017\"},{\"cita_literal_breve\":\"La compatibilidad interlenguajes del SV se tratará como tramo propio del manual\",\"documento\":\"MANUAL_CONSTRUCTOR\",\"fragmentos\":[0],\"seccion\":\"MD-L000119-L000122\"},{\"cita_literal_breve\":\"El constructor del manual no autoriza lluvias laterales.\",\"documento\":\"MANUAL_CONSTRUCTOR\",\"fragmentos\":[0],\"seccion\":\"MD-L000123-L000125\"}],\"fundamentos_verificables\":[\"La sección 1 (Naturaleza) declara literalmente la función del constructor: fijar la arquitectura de trabajo del manual SVP con la finalidad de un cierre progresivo por capítulos o tramos, conservando el eje del sistema y evitando dispersión; las tres citas de esa sección se verificaron como subcadenas continuas exactas del fragmento.\",\"La misma sección establece de forma explícita la diferencia respecto del manual final: el constructor no es todavía el manual final, sino la máquina de construirlo, es decir, un instrumento metodológico previo al contenido terminado.\",\"La afirmación de que el constructor define cómo se verificará cada tramo se apoya en la regla general, que exige que cada tramo sea verificable mediante ejemplos, contraejemplos y relación explícita con la implementación (MD-L000009-L000017).\",\"El resto del documento operacionaliza esa función instrumental: unidades de cierre por tramos 0 a 10 (MD-L000018-L000021 y ss.), ficha obligatoria (MD-L000092-L000108), criterio de cierre (MD-L000109-L000118), coordinación de la compatibilidad interlenguajes como tramo propio (MD-L000119-L000122) y regla de control anti-dispersión (MD-L000123-L000125).\"],\"insuficiencias\":[],\"respuesta\":\"El constructor cumple la función de fijar la arquitectura de trabajo del manual del lenguaje SVP: es el instrumento que organiza cómo se construirá el manual, estableciendo la regla general que debe cumplir cada tramo (nuclear, subordinado al pliego, la Frontera normativa, la IR y la gramática vigente, y verificable mediante ejemplos, contraejemplos y relación explícita con la implementación), las unidades de cierre recomendadas (tramos 0 a 10), la ficha obligatoria por tramo, el criterio de cierre, la coordinación de la compatibilidad interlenguajes como tramo propio del manual y una regla de control contra dispersiones. Su finalidad declarada es permitir un cierre progresivo por capítulos o tramos sin perder el eje del sistema ni dispersarse en caminos laterales. La diferencia que establece respecto de un manual final es explícita: el constructor no es todavía el manual final, sino la máquina de construirlo; es decir, un andamiaje metodológico previo que define cómo se producirá, verificará y cerrará cada tramo, y no el contenido normativo terminado del lenguaje.\",\"revision\":\"Etapa 1: autocrítica documental de la respuesta provisional (etapa 0). Se contrastaron todas las afirmaciones y las cuatro citas contra los fragmentos fuente: las citas resultaron subcadenas continuas exactas y las paráfrasis no introducen contenido ajeno; no se encontró contradicción ni error, y no se presupuso su existencia. Se mantienen íntegros el sentido y las conclusiones. Como corrección de completitud se subsana una omisión: la enumeración de mecanismos incorpora ahora la sección 6 (la compatibilidad interlenguajes como tramo propio coordinado con la política correspondiente) y se añade la evidencia de la regla general que acredita la verificabilidad por ejemplos y contraejemplos, sostén documental de la afirmación sobre cómo se verificará cada tramo. Se mantiene estado_documental respuesta_fundada y la lista de insuficiencias vacía, porque la pregunta queda resuelta por la fuente.\"}",
+  "solicitud_sha256": "ae07a1612da79c4566d1eef1793e5200032052513db41c7aced0ac8980c441ea",
+  "sustantivo": "correcto",
+  "valor": "0"
+}

@@ -1,0 +1,102 @@
+{
+  "alerta": null,
+  "alerta_limite": false,
+  "auditoria_sha256": "13f81863e17d9ce5a38fa9a7bd818f1c6000a46bc64fb23ebac508379cc9a065",
+  "caso": "MD07",
+  "critico": true,
+  "estado_documental_candidato": "respuesta_fundada",
+  "etapa": 0,
+  "fidelidad_documental": "conforme",
+  "final_sha256": "66ca9609aeb94fcc401a9a5f2b4bb6e96e181d6d9d755379e426dbc4cd2b1a8f",
+  "formal_conforme": true,
+  "fundamento_sustantivo": "Preserva la semántica propia del SV y la coordinación con la política y protocolo de compatibilidad interlenguajes. Distingue dependencias documentales, materias por desarrollar e implementación efectiva; no afirma garantías operativas inexistentes.",
+  "justificacion_documental": "Citas y estructura cotejadas en Rust. La adjudicación del sentido pertenece a esta revisión exterior.",
+  "medicion": {
+    "duracion_operacion_ms": 61519,
+    "telemetria": {
+      "bytes": 1288566,
+      "fallos_medicion": 0,
+      "integridad": "conforme",
+      "intervalo_maximo_ms": 304,
+      "intervalo_objetivo_ms": 250,
+      "muestras": 216,
+      "plataforma_recibida": false,
+      "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+      "registros": 3359,
+      "sha256": "b36d8b287e975c2ec11c76f43ee027727df575f94ff7c06d3e61607b92ff13f6"
+    },
+    "uso": {
+      "cached_tokens": 1280,
+      "coste_liquidado_usd": null,
+      "input_tokens": 20125,
+      "output_tokens": 2815,
+      "reasoning_tokens": 1544,
+      "total_tokens": 22940
+    }
+  },
+  "naturaleza_defecto": null,
+  "nota_alcance": "La política referenciada no forma parte del corpus; identificarla y preservar semántica sí está documentado.",
+  "pasajes_contrastados": [
+    {
+      "documento": "MANUAL_TRAMO10",
+      "fragmento": "cómo el lenguaje SV podrá relacionarse con otros lenguajes de programación sin degradar su semántica propia",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000003-L000006"
+    },
+    {
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmento": "preservación semántica del SV",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000085-L000091"
+    },
+    {
+      "documento": "MANUAL_TRAMO10",
+      "fragmento": "garantías semánticas mínimas",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000014-L000021"
+    },
+    {
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmento": "deberá coordinarse con la política y protocolo de compatibilidad interlenguajes del Lenguaje SV",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000119-L000122"
+    },
+    {
+      "documento": "MANUAL_TRAMO10",
+      "fragmento": "Política y protocolo de compatibilidad interlenguajes del Lenguaje SV",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000007-L000013"
+    },
+    {
+      "documento": "MANUAL_TRAMO10",
+      "fragmento": "Este tramo no implementa bindings, APIs, FFI ni wrappers reales.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000022-L000025"
+    },
+    {
+      "documento": "MANUAL_TRAMO10",
+      "fragmento": "Pendiente de desarrollo.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000026-L000028"
+    }
+  ],
+  "recepcion_independiente": "pendiente",
+  "respuesta_original": "{\"caso\":\"MD07\",\"estado_documental\":\"respuesta_fundada\",\"etapa\":0,\"evidencias\":[{\"cita_literal_breve\":\"cómo el lenguaje SV podrá relacionarse con otros lenguajes de programación sin degradar su semántica propia\",\"documento\":\"MANUAL_TRAMO10\",\"fragmentos\":[0],\"seccion\":\"MD-L000003-L000006\"},{\"cita_literal_breve\":\"preservación semántica del SV\",\"documento\":\"MANUAL_CONSTRUCTOR\",\"fragmentos\":[0],\"seccion\":\"MD-L000085-L000091\"},{\"cita_literal_breve\":\"garantías semánticas mínimas\",\"documento\":\"MANUAL_TRAMO10\",\"fragmentos\":[0],\"seccion\":\"MD-L000014-L000021\"},{\"cita_literal_breve\":\"deberá coordinarse con la política y protocolo de compatibilidad interlenguajes del Lenguaje SV\",\"documento\":\"MANUAL_CONSTRUCTOR\",\"fragmentos\":[0],\"seccion\":\"MD-L000119-L000122\"},{\"cita_literal_breve\":\"Política y protocolo de compatibilidad interlenguajes del Lenguaje SV\",\"documento\":\"MANUAL_TRAMO10\",\"fragmentos\":[0],\"seccion\":\"MD-L000007-L000013\"},{\"cita_literal_breve\":\"Este tramo no implementa bindings, APIs, FFI ni wrappers reales.\",\"documento\":\"MANUAL_TRAMO10\",\"fragmentos\":[0],\"seccion\":\"MD-L000022-L000025\"},{\"cita_literal_breve\":\"Pendiente de desarrollo.\",\"documento\":\"MANUAL_TRAMO10\",\"fragmentos\":[0],\"seccion\":\"MD-L000026-L000028\"}],\"fundamentos_verificables\":[\"La pregunta tiene dos componentes: qué debe preservarse y con qué política debe coordinarse la documentación; ambos están respondidos de forma explícita por el tramo 10 y por el constructor.\",\"Sobre lo que debe preservarse: el objeto del tramo 10 (MANUAL_TRAMO10, MD-L000003-L000006) declara documentar la relación de SV con otros lenguajes «sin degradar su semántica propia»; el constructor, en su entrada del Tramo 10 (MD-L000085-L000091), exige la «preservación semántica del SV»; y el propio tramo 10 (MD-L000014-L000021) anuncia que deberá fijar «garantías semánticas mínimas». Las tres citas convergen: lo que debe preservarse es la semántica propia del lenguaje SV.\",\"Sobre la coordinación: el constructor, sección 6 (MD-L000119-L000122), establece que la compatibilidad interlenguajes se tratará como tramo propio y «deberá coordinarse con la política y protocolo de compatibilidad interlenguajes del Lenguaje SV»; el tramo 10 (MD-L000007-L000013) lista esa misma política y protocolo entre sus dependencias.\",\"Distinción previsto/implementado: el tramo 10 declara (MD-L000022-L000025) que «no implementa bindings, APIs, FFI ni wrappers reales» y solo abre el frente documental y de gobierno, y su estado (MD-L000026-L000028) es «Pendiente de desarrollo»; por tanto, la preservación semántica y la coordinación son obligaciones previstas, no logros implementados.\"],\"insuficiencias\":[\"El contenido concreto de la política y protocolo de compatibilidad interlenguajes del Lenguaje SV no se suministra en los cuatro documentos: es un documento externo referenciado como dependencia y como sede de coordinación, por lo que no puede acreditarse aquí en qué consiste operativamente esa coordinación.\",\"Las «garantías semánticas mínimas» se anuncian como contenido que el tramo deberá fijar, pero su definición concreta no figura en los documentos suministrados, coherente con el estado «Pendiente de desarrollo» del tramo.\"],\"respuesta\":\"Según el tramo 10 y el constructor, lo que debe preservarse al relacionar SV con otros lenguajes es la semántica propia del lenguaje: el tramo 10 define su objeto como documentar la relación con otros lenguajes de programación «sin degradar su semántica propia», el constructor incluye entre los contenidos del Tramo 10 la «preservación semántica del SV», y el tramo prevé fijar «garantías semánticas mínimas». La coordinación debe realizarse con la política y protocolo de compatibilidad interlenguajes del Lenguaje SV: el constructor (sección 6) dispone que la compatibilidad interlenguajes se tratará como tramo propio del manual y deberá coordinarse con dicha política y protocolo, y el tramo 10 la lista expresamente entre sus dependencias. Ambos extremos son previstos, no implementados: el tramo 10 es un documento preparatorio con estado «Pendiente de desarrollo» que declara no implementar bindings, APIs, FFI ni wrappers reales, limitándose a abrir el frente documental y de gobierno.\",\"revision\":\"Etapa 0: no existen antecedentes que contrastar; esta es la primera entrega del caso MD07 y se sustenta íntegramente en los cuatro documentos suministrados.\"}",
+  "solicitud_sha256": "6208a0a826a448b9841c09d90b037ee0f6288d7e9fe8ecc75ebb39f49dae8dc6",
+  "sustantivo": "correcto",
+  "valor": "0"
+}

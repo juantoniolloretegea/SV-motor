@@ -1,0 +1,94 @@
+{
+  "alerta": null,
+  "alerta_limite": false,
+  "auditoria_sha256": "feba881c7638986c0e0470c104c3b2c1249bc23d6f2402e7543cce5259aa273d",
+  "caso": "MD03",
+  "critico": false,
+  "estado_documental_candidato": "respuesta_fundada",
+  "etapa": 0,
+  "fidelidad_documental": "conforme",
+  "final_sha256": "36db202f1cb485593f7dca01803105faeb7cbbbe9edbd7e9b9ef7d810f7b20a1",
+  "formal_conforme": true,
+  "fundamento_sustantivo": "Localiza correctamente evaluación de células en el tramo 3, resolución de U en el 5 y transición en el 6. Enumera las materias asociadas sin inventar definiciones. La pregunta solicita precisamente ubicación y materias; el carácter pendiente de otros capítulos no impide contestarla.",
+  "justificacion_documental": "Citas y estructura cotejadas en Rust. La adjudicación del sentido pertenece a esta revisión exterior.",
+  "medicion": {
+    "duracion_operacion_ms": 42370,
+    "telemetria": {
+      "bytes": 816753,
+      "fallos_medicion": 0,
+      "integridad": "conforme",
+      "intervalo_maximo_ms": 301,
+      "intervalo_objetivo_ms": 250,
+      "muestras": 155,
+      "plataforma_recibida": false,
+      "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+      "registros": 2099,
+      "sha256": "ada23e8ffd250aeddce17d85c2ba515df5d8f1df5ed631a15e5fff254fa47112"
+    },
+    "uso": {
+      "cached_tokens": 1280,
+      "coste_liquidado_usd": null,
+      "input_tokens": 20138,
+      "output_tokens": 1739,
+      "reasoning_tokens": 564,
+      "total_tokens": 21877
+    }
+  },
+  "naturaleza_defecto": null,
+  "nota_alcance": "El enunciado no exige definiciones ausentes: no hay pregunta insoluble.",
+  "pasajes_contrastados": [
+    {
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmento": "### Tramo 3 — Célula, evaluación y clasificación\n- `CellSpec`;\n- `CellState`;\n- `evaluate`;\n- umbral;\n- criticidad.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000041-L000047"
+    },
+    {
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmento": "### Tramo 5 — Resolución y régimen de la U\n- `resolve`;\n- `Context`;\n- `Mechanism`;\n- reapertura.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000054-L000059"
+    },
+    {
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmento": "### Tramo 6 — Trayectoria, frame y datos de transición\n- `Frame`;\n- `TransitionData`;\n- `Trajectory`;\n- regla append-only.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000060-L000065"
+    },
+    {
+      "documento": "MANUAL_INDICE",
+      "fragmento": "- [03 · Célula, evaluación y clasificación — pendiente]()",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000001-L000017"
+    },
+    {
+      "documento": "MANUAL_INDICE",
+      "fragmento": "- [05 · Resolución y régimen de U — pendiente]()",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000001-L000017"
+    },
+    {
+      "documento": "MANUAL_INDICE",
+      "fragmento": "- [06 · Frame, trayectoria y transición — pendiente]()",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000001-L000017"
+    }
+  ],
+  "recepcion_independiente": "pendiente",
+  "respuesta_original": "{\"caso\":\"MD03\",\"estado_documental\":\"respuesta_fundada\",\"etapa\":0,\"evidencias\":[{\"cita_literal_breve\":\"### Tramo 3 — Célula, evaluación y clasificación\\n- `CellSpec`;\\n- `CellState`;\\n- `evaluate`;\\n- umbral;\\n- criticidad.\",\"documento\":\"MANUAL_CONSTRUCTOR\",\"fragmentos\":[0],\"seccion\":\"MD-L000041-L000047\"},{\"cita_literal_breve\":\"### Tramo 5 — Resolución y régimen de la U\\n- `resolve`;\\n- `Context`;\\n- `Mechanism`;\\n- reapertura.\",\"documento\":\"MANUAL_CONSTRUCTOR\",\"fragmentos\":[0],\"seccion\":\"MD-L000054-L000059\"},{\"cita_literal_breve\":\"### Tramo 6 — Trayectoria, frame y datos de transición\\n- `Frame`;\\n- `TransitionData`;\\n- `Trajectory`;\\n- regla append-only.\",\"documento\":\"MANUAL_CONSTRUCTOR\",\"fragmentos\":[0],\"seccion\":\"MD-L000060-L000065\"},{\"cita_literal_breve\":\"- [03 · Célula, evaluación y clasificación — pendiente]()\",\"documento\":\"MANUAL_INDICE\",\"fragmentos\":[0],\"seccion\":\"MD-L000001-L000017\"},{\"cita_literal_breve\":\"- [05 · Resolución y régimen de U — pendiente]()\",\"documento\":\"MANUAL_INDICE\",\"fragmentos\":[0],\"seccion\":\"MD-L000001-L000017\"},{\"cita_literal_breve\":\"- [06 · Frame, trayectoria y transición — pendiente]()\",\"documento\":\"MANUAL_INDICE\",\"fragmentos\":[0],\"seccion\":\"MD-L000001-L000017\"}],\"fundamentos_verificables\":[\"El apartado 3 del constructor, «Unidades de cierre recomendadas», enumera los tramos 0 a 10 con sus materias; la ubicación de cada tema se lee directamente de los epígrafes y listas de ese apartado.\",\"La evaluación de células se sitúa en el Tramo 3, titulado «Célula, evaluación y clasificación», cuyas materias declaradas son `CellSpec`, `CellState`, `evaluate`, umbral y criticidad.\",\"La resolución de U se sitúa en el Tramo 5, titulado «Resolución y régimen de la U», cuyas materias declaradas son `resolve`, `Context`, `Mechanism` y reapertura.\",\"Los datos de transición se sitúan en el Tramo 6, titulado «Trayectoria, frame y datos de transición», cuyas materias declaradas son `Frame`, `TransitionData`, `Trajectory` y la regla append-only.\",\"El índice de la edición documental confirma que estos tres tramos figuran como entradas pendientes (03, 05 y 06), es decir, son plan previsto y no capítulos implementados en esta edición.\"],\"insuficiencias\":[\"Los documentos suministrados no contienen los capítulos 03, 05 ni 06 desarrollados: el índice los marca como «pendiente» y la presentación registra once tramos pendientes, por lo que no es posible dar las definiciones de `CellSpec`, `CellState`, `evaluate`, umbral, criticidad, `resolve`, `Context`, `Mechanism`, reapertura, `Frame`, `TransitionData`, `Trajectory` ni de la regla append-only; sólo están acreditadas sus denominaciones como materias previstas de cada tramo.\"],\"respuesta\":\"El constructor sitúa cada materia en un tramo nuclear distinto del manual. (1) Evaluación de células: Tramo 3 — «Célula, evaluación y clasificación», con las materias `CellSpec`, `CellState`, `evaluate`, umbral y criticidad. (2) Resolución de U: Tramo 5 — «Resolución y régimen de la U», con las materias `resolve`, `Context`, `Mechanism` y reapertura. (3) Datos de transición: Tramo 6 — «Trayectoria, frame y datos de transición», con las materias `Frame`, `TransitionData`, `Trajectory` y la regla append-only. Estas ubicaciones son plan previsto: el índice de la edición muestra los tramos 03, 05 y 06 como entradas pendientes, sin texto desarrollado, y los documentos aportados no definen ninguno de los términos enumerados, por lo que aquí sólo se identifican las materias asociadas tal como las declara el constructor.\",\"revision\":\"Etapa 0: no existen antecedentes que contrastar. La respuesta se construye directamente desde el apartado de unidades de cierre del constructor (Tramos 3, 5 y 6) y se contrasta con el índice de la edición, que confirma su estado pendiente; no se añaden definiciones ausentes de las fuentes.\"}",
+  "solicitud_sha256": "9922a6c585382917e76a5571e6eb1f8f2b6486804d54509c711744570d3e231d",
+  "sustantivo": "correcto",
+  "valor": "0"
+}

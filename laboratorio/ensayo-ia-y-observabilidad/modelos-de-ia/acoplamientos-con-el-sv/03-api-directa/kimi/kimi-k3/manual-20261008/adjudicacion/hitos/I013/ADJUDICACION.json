@@ -1,0 +1,86 @@
+{
+  "alerta": null,
+  "alerta_limite": false,
+  "auditoria_sha256": "6d6dc6f7d1892f50a627f52c61267a4329335224b813c1ea4eceb1ec42b12f11",
+  "caso": "MD05",
+  "critico": true,
+  "estado_documental_candidato": "respuesta_fundada",
+  "etapa": 0,
+  "fidelidad_documental": "conforme",
+  "final_sha256": "0c060f7af946da11f0271d729790381973f87ec72904553a4665692980e32433",
+  "formal_conforme": true,
+  "fundamento_sustantivo": "Niega justificadamente el cierre: faltan correspondencia con la IR o superficie vigente y delimitación de exclusiones. Las condiciones mínimas son acumulativas; la claridad y el ejemplo no compensan esas ausencias. La respuesta no necesita inventar el cumplimiento de la quinta condición para concluir que no es cerrable.",
+  "justificacion_documental": "Citas y estructura cotejadas en Rust. La adjudicación del sentido pertenece a esta revisión exterior.",
+  "medicion": {
+    "duracion_operacion_ms": 41059,
+    "telemetria": {
+      "bytes": 781613,
+      "fallos_medicion": 0,
+      "integridad": "conforme",
+      "intervalo_maximo_ms": 319,
+      "intervalo_objetivo_ms": 250,
+      "muestras": 145,
+      "plataforma_recibida": false,
+      "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+      "registros": 2014,
+      "sha256": "310cfb3c7873dd566d9758862eb5cf7576c5ddb023450be8b5353df2c8a220e1"
+    },
+    "uso": {
+      "cached_tokens": 1280,
+      "coste_liquidado_usd": null,
+      "input_tokens": 20150,
+      "output_tokens": 1646,
+      "reasoning_tokens": 738,
+      "total_tokens": 21796
+    }
+  },
+  "naturaleza_defecto": null,
+  "nota_alcance": "Caso hipotético suficientemente especificado para denegar el cierre.",
+  "pasajes_contrastados": [
+    {
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmento": "Un tramo se considerará cerrable cuando reúna, como mínimo:",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000109-L000118"
+    },
+    {
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmento": "- correspondencia visible con la IR o con la superficie vigente;",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000109-L000118"
+    },
+    {
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmento": "- delimitación expresa de lo que queda fuera;",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000109-L000118"
+    },
+    {
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmento": "- uno o más ejemplos `.svp` suficientemente nucleares;",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000109-L000118"
+    },
+    {
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmento": "Todo tramo del manual deberá declarar:",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000092-L000108"
+    }
+  ],
+  "recepcion_independiente": "pendiente",
+  "respuesta_original": "{\"caso\":\"MD05\",\"estado_documental\":\"respuesta_fundada\",\"etapa\":0,\"evidencias\":[{\"cita_literal_breve\":\"Un tramo se considerará cerrable cuando reúna, como mínimo:\",\"documento\":\"MANUAL_CONSTRUCTOR\",\"fragmentos\":[0],\"seccion\":\"MD-L000109-L000118\"},{\"cita_literal_breve\":\"- correspondencia visible con la IR o con la superficie vigente;\",\"documento\":\"MANUAL_CONSTRUCTOR\",\"fragmentos\":[0],\"seccion\":\"MD-L000109-L000118\"},{\"cita_literal_breve\":\"- delimitación expresa de lo que queda fuera;\",\"documento\":\"MANUAL_CONSTRUCTOR\",\"fragmentos\":[0],\"seccion\":\"MD-L000109-L000118\"},{\"cita_literal_breve\":\"- uno o más ejemplos `.svp` suficientemente nucleares;\",\"documento\":\"MANUAL_CONSTRUCTOR\",\"fragmentos\":[0],\"seccion\":\"MD-L000109-L000118\"},{\"cita_literal_breve\":\"Todo tramo del manual deberá declarar:\",\"documento\":\"MANUAL_CONSTRUCTOR\",\"fragmentos\":[0],\"seccion\":\"MD-L000092-L000108\"}],\"fundamentos_verificables\":[\"La sección «5. Criterio de cierre» del constructor establece una lista de condiciones mínimas introducida con «como mínimo», formulada como serie acumulativa de requisitos: exposición sobria, correspondencia visible con la IR o superficie vigente, ejemplos .svp nucleares, delimitación expresa de lo excluido y ausencia de contradicción con el pliego o la Frontera normativa.\",\"El tramo hipotético satisface dos de las cinco condiciones (exposición clara y ejemplo .svp), pero incumple explícitamente otras dos: la correspondencia visible con la IR o superficie vigente y la delimitación expresa de lo que queda fuera.\",\"Al tratarse de requisitos mínimos conjuntivos, el incumplimiento de cualquiera de ellos basta para que el tramo no sea cerrable; no se requiere evaluar la quinta condición (ausencia de contradicción con pliego o Frontera) para resolver el caso.\",\"La «4. Ficha obligatoria por tramo» refuerza la conclusión: todo tramo debe declarar «Qué no fija» y «Relación con IR y docs públicos», extremos que el tramo descrito tampoco acredita.\"],\"insuficiencias\":[],\"respuesta\":\"No. El tramo descrito no cumple los mínimos documentales para considerarse cerrable. El constructor del manual fija un criterio de cierre con condiciones mínimas acumulativas: «Un tramo se considerará cerrable cuando reúna, como mínimo» exposición sobria del objeto, «correspondencia visible con la IR o con la superficie vigente», «uno o más ejemplos `.svp` suficientemente nucleares», «delimitación expresa de lo que queda fuera» y ausencia de contradicción local con el pliego o la Frontera normativa. El tramo de la hipótesis aporta exposición clara y ejemplo .svp, es decir, dos de las cinco condiciones, pero carece de la correspondencia con la IR o superficie vigente y de la delimitación de lo excluido, dos requisitos expresos e igualmente mínimos. Además, la ficha obligatoria exige declarar «Qué no fija» y la «Relación con IR y docs públicos», lo que confirma que esos extremos no son opcionales. En consecuencia, el tramo permanece no cerrable hasta que incorpore ambos elementos.\",\"revision\":\"Etapa 0: no existen antecedentes que contrastar; esta es la primera entrega.\"}",
+  "solicitud_sha256": "535b7561c1439da45a62260c7bd4d31ae7dfdbceb05402866a62ffeafcc83378",
+  "sustantivo": "correcto",
+  "valor": "0"
+}

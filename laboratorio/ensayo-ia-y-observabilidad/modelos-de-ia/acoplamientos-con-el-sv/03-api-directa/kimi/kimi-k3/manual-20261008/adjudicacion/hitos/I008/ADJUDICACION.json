@@ -1,0 +1,102 @@
+{
+  "alerta": null,
+  "alerta_limite": false,
+  "auditoria_sha256": "746830112975c92c1545f6b38826daf408eb5cead784720376f7b32d1776504e",
+  "caso": "MD03",
+  "critico": false,
+  "estado_documental_candidato": "respuesta_fundada",
+  "etapa": 1,
+  "fidelidad_documental": "conforme",
+  "final_sha256": "e194bbd60d14e91925198927924d95c830143905ac086ea3bb824676bcc6f6a2",
+  "formal_conforme": true,
+  "fundamento_sustantivo": "Localiza correctamente evaluación de células en el tramo 3, resolución de U en el 5 y transición en el 6. Enumera las materias asociadas sin inventar definiciones. La pregunta solicita precisamente ubicación y materias; el carácter pendiente de otros capítulos no impide contestarla.",
+  "justificacion_documental": "Citas y estructura cotejadas en Rust. La adjudicación del sentido pertenece a esta revisión exterior.",
+  "medicion": {
+    "duracion_operacion_ms": 57881,
+    "telemetria": {
+      "bytes": 1227257,
+      "fallos_medicion": 0,
+      "integridad": "conforme",
+      "intervalo_maximo_ms": 375,
+      "intervalo_objetivo_ms": 250,
+      "muestras": 204,
+      "plataforma_recibida": false,
+      "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+      "registros": 3206,
+      "sha256": "b21e47b033bd7a4e1171718bd7516ea9d623799dca91af3271794672ac675ad3"
+    },
+    "uso": {
+      "cached_tokens": 1280,
+      "coste_liquidado_usd": null,
+      "input_tokens": 23445,
+      "output_tokens": 2602,
+      "reasoning_tokens": 1115,
+      "total_tokens": 26047
+    }
+  },
+  "naturaleza_defecto": null,
+  "nota_alcance": "El enunciado no exige definiciones ausentes: no hay pregunta insoluble.",
+  "pasajes_contrastados": [
+    {
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmento": "### Tramo 3 — Célula, evaluación y clasificación\n- `CellSpec`;\n- `CellState`;\n- `evaluate`;\n- umbral;\n- criticidad.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000041-L000047"
+    },
+    {
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmento": "### Tramo 5 — Resolución y régimen de la U\n- `resolve`;\n- `Context`;\n- `Mechanism`;\n- reapertura.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000054-L000059"
+    },
+    {
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmento": "### Tramo 6 — Trayectoria, frame y datos de transición\n- `Frame`;\n- `TransitionData`;\n- `Trajectory`;\n- regla append-only.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000060-L000065"
+    },
+    {
+      "documento": "MANUAL_INDICE",
+      "fragmento": "- [03 · Célula, evaluación y clasificación — pendiente]()",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000001-L000017"
+    },
+    {
+      "documento": "MANUAL_INDICE",
+      "fragmento": "- [05 · Resolución y régimen de U — pendiente]()",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000001-L000017"
+    },
+    {
+      "documento": "MANUAL_INDICE",
+      "fragmento": "- [06 · Frame, trayectoria y transición — pendiente]()",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000001-L000017"
+    },
+    {
+      "documento": "MANUAL_PRESENTACION",
+      "fragmento": "El índice original registra once tramos pendientes, SVP-MAN-00 a SVP-MAN-10.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000005-L000010"
+    }
+  ],
+  "recepcion_independiente": "pendiente",
+  "respuesta_original": "{\"caso\":\"MD03\",\"estado_documental\":\"respuesta_fundada\",\"etapa\":1,\"evidencias\":[{\"cita_literal_breve\":\"### Tramo 3 — Célula, evaluación y clasificación\\n- `CellSpec`;\\n- `CellState`;\\n- `evaluate`;\\n- umbral;\\n- criticidad.\",\"documento\":\"MANUAL_CONSTRUCTOR\",\"fragmentos\":[0],\"seccion\":\"MD-L000041-L000047\"},{\"cita_literal_breve\":\"### Tramo 5 — Resolución y régimen de la U\\n- `resolve`;\\n- `Context`;\\n- `Mechanism`;\\n- reapertura.\",\"documento\":\"MANUAL_CONSTRUCTOR\",\"fragmentos\":[0],\"seccion\":\"MD-L000054-L000059\"},{\"cita_literal_breve\":\"### Tramo 6 — Trayectoria, frame y datos de transición\\n- `Frame`;\\n- `TransitionData`;\\n- `Trajectory`;\\n- regla append-only.\",\"documento\":\"MANUAL_CONSTRUCTOR\",\"fragmentos\":[0],\"seccion\":\"MD-L000060-L000065\"},{\"cita_literal_breve\":\"- [03 · Célula, evaluación y clasificación — pendiente]()\",\"documento\":\"MANUAL_INDICE\",\"fragmentos\":[0],\"seccion\":\"MD-L000001-L000017\"},{\"cita_literal_breve\":\"- [05 · Resolución y régimen de U — pendiente]()\",\"documento\":\"MANUAL_INDICE\",\"fragmentos\":[0],\"seccion\":\"MD-L000001-L000017\"},{\"cita_literal_breve\":\"- [06 · Frame, trayectoria y transición — pendiente]()\",\"documento\":\"MANUAL_INDICE\",\"fragmentos\":[0],\"seccion\":\"MD-L000001-L000017\"},{\"cita_literal_breve\":\"El índice original registra once tramos pendientes, SVP-MAN-00 a SVP-MAN-10.\",\"documento\":\"MANUAL_PRESENTACION\",\"fragmentos\":[0],\"seccion\":\"MD-L000005-L000010\"}],\"fundamentos_verificables\":[\"El apartado 3 del constructor, «Unidades de cierre recomendadas», enumera los tramos 0 a 10 con sus materias; la ubicación de cada tema se lee directamente de los epígrafes y listas de ese apartado.\",\"La evaluación de células se sitúa en el Tramo 3, titulado «Célula, evaluación y clasificación», cuyas materias declaradas son `CellSpec`, `CellState`, `evaluate`, umbral y criticidad.\",\"La resolución de U se sitúa en el Tramo 5, titulado «Resolución y régimen de la U», cuyas materias declaradas son `resolve`, `Context`, `Mechanism` y reapertura.\",\"Los datos de transición se sitúan en el Tramo 6, titulado «Trayectoria, frame y datos de transición», cuyas materias declaradas son `Frame`, `TransitionData`, `Trajectory` y la regla append-only.\",\"El índice de la edición documental confirma que estos tres tramos figuran como entradas pendientes (03, 05 y 06), es decir, son plan previsto y no capítulos implementados en esta edición.\",\"La presentación de la edición registra que los once tramos, SVP-MAN-00 a SVP-MAN-10, están pendientes, lo que acredita que las materias enumeradas son previsiones del constructor y no contenido desarrollado.\"],\"insuficiencias\":[\"Los documentos suministrados no contienen los capítulos 03, 05 ni 06 desarrollados: el índice los marca como «pendiente» y la presentación registra once tramos pendientes, por lo que no es posible dar las definiciones de `CellSpec`, `CellState`, `evaluate`, umbral, criticidad, `resolve`, `Context`, `Mechanism`, reapertura, `Frame`, `TransitionData`, `Trajectory` ni de la regla append-only; sólo están acreditadas sus denominaciones como materias previstas de cada tramo.\"],\"respuesta\":\"El constructor sitúa cada materia en un tramo nuclear distinto del manual. (1) Evaluación de células: Tramo 3 — «Célula, evaluación y clasificación», con las materias `CellSpec`, `CellState`, `evaluate`, umbral y criticidad. (2) Resolución de U: Tramo 5 — «Resolución y régimen de la U», con las materias `resolve`, `Context`, `Mechanism` y reapertura. (3) Datos de transición: Tramo 6 — «Trayectoria, frame y datos de transición», con las materias `Frame`, `TransitionData`, `Trajectory` y la regla append-only. Estas ubicaciones son plan previsto: el índice de la edición muestra los tramos 03, 05 y 06 como entradas pendientes, sin texto desarrollado, y los documentos aportados no definen ninguno de los términos enumerados, por lo que aquí sólo se identifican las materias asociadas tal como las declara el constructor.\",\"revision\":\"Autocrítica de etapa 1 sobre la entrega de etapa 0. Contraste con la fuente: (a) las tres ubicaciones de tramo y sus materias coinciden literalmente con las secciones MD-L000041-L000047, MD-L000054-L000059 y MD-L000060-L000065 del constructor; (b) el estado pendiente de los tramos 03, 05 y 06 coincide con el índice; (c) las citas son cadenas continuas exactas, sin puntos suspensivos añadidos; (d) no se detectan afirmaciones sin apoyo ni omisiones de materias enumeradas en la fuente. Corrección menor de robustez probatoria: se añade la evidencia de MANUAL_PRESENTACION MD-L000005-L000010 («El índice original registra once tramos pendientes, SVP-MAN-00 a SVP-MAN-10.») que respalda la insuficiencia ya declarada, sin alterar el sentido. Se mantienen íntegras la respuesta y la insuficiencia; no se retira nada y no procede estado U, pues la fuente resuelve lo preguntado.\"}",
+  "solicitud_sha256": "461648ba95834fa62abb0ce3d8d9902637d41d4cd24789162df363383ba39721",
+  "sustantivo": "correcto",
+  "valor": "0"
+}

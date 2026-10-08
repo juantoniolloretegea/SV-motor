@@ -43,3 +43,5 @@ pub fn parse(b: &[u8]) -> Result<Value, serde_json::Error> {
     #[test] fn exterior() { assert!(parse(b"{} {}").is_err()); assert!(parse(b"```json\n{}\n```").is_err()); assert!(parse(b" \n{}\t").is_ok()); }
     #[test] fn conserva_tipos() { let s=br#"{"a":[null,true,-1,2,0.5,"x"]}"#; assert_eq!(parse(s).unwrap(),serde_json::from_slice::<Value>(s).unwrap()); }
 }
+
+// © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).

@@ -1,0 +1,1081 @@
+{
+  "aptitud_clinica": false,
+  "casos": [
+    {
+      "alerta": null,
+      "alerta_limite": false,
+      "auditoria_sha256": "6509fffd6a60bde81a85744269e9a7509cfe7bd4b5b95881f69764644e3bc056",
+      "caso": "MD01",
+      "critico": true,
+      "estado_documental_candidato": "respuesta_fundada",
+      "etapa": 1,
+      "fidelidad_documental": "conforme",
+      "final_sha256": "1985589c139dc042e5af646a01e1a231bbee976e52852ffd5793d06213ef42be",
+      "formal_conforme": true,
+      "fundamento_sustantivo": "Identifica la arquitectura de trabajo, el cierre progresivo y la diferencia respecto del manual final. No convierte el documento histórico en acreditación de implementación o aprobación actual. Corresponde a MANUAL_CONSTRUCTOR, MD-L000003-L000008, y a la presentación recibida.",
+      "justificacion_documental": "Citas y estructura cotejadas en Rust. La adjudicación del sentido pertenece a esta revisión exterior.",
+      "medicion": {
+        "duracion_operacion_ms": 94491,
+        "telemetria": {
+          "bytes": 1791204,
+          "fallos_medicion": 0,
+          "integridad": "conforme",
+          "intervalo_maximo_ms": 444,
+          "intervalo_objetivo_ms": 250,
+          "muestras": 344,
+          "plataforma_recibida": false,
+          "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+          "registros": 4584,
+          "sha256": "c7c3d2d59e42c119bdb8e97edafa7c0e5288d4ab89a2a4b2fff6fe4dd2f9dc0a"
+        },
+        "uso": {
+          "cached_tokens": null,
+          "coste_liquidado_usd": null,
+          "input_tokens": 23865,
+          "output_tokens": 3829,
+          "reasoning_tokens": 2566,
+          "total_tokens": 27694
+        }
+      },
+      "naturaleza_defecto": null,
+      "nota_alcance": "Alcance histórico del constructor; no es prueba de implementación.",
+      "pasajes_contrastados": [
+        {
+          "documento": "MANUAL_CONSTRUCTOR",
+          "fragmento": "Este constructor fija la arquitectura de trabajo del manual del lenguaje SVP",
+          "fragmentos": [
+            0
+          ],
+          "seccion": "MD-L000003-L000008"
+        },
+        {
+          "documento": "MANUAL_CONSTRUCTOR",
+          "fragmento": "Su finalidad es permitir un cierre progresivo por capítulos o tramos sin perder el eje del sistema ni dispersarse en caminos laterales.",
+          "fragmentos": [
+            0
+          ],
+          "seccion": "MD-L000003-L000008"
+        },
+        {
+          "documento": "MANUAL_CONSTRUCTOR",
+          "fragmento": "No es todavía el manual final. Es la **máquina de construirlo**.",
+          "fragmentos": [
+            0
+          ],
+          "seccion": "MD-L000003-L000008"
+        },
+        {
+          "documento": "MANUAL_CONSTRUCTOR",
+          "fragmento": "y verificable mediante ejemplos, contraejemplos y relación explícita con la implementación.",
+          "fragmentos": [
+            0
+          ],
+          "seccion": "MD-L000009-L000017"
+        },
+        {
+          "documento": "MANUAL_CONSTRUCTOR",
+          "fragmento": "La compatibilidad interlenguajes del SV se tratará como tramo propio del manual",
+          "fragmentos": [
+            0
+          ],
+          "seccion": "MD-L000119-L000122"
+        },
+        {
+          "documento": "MANUAL_CONSTRUCTOR",
+          "fragmento": "El constructor del manual no autoriza lluvias laterales.",
+          "fragmentos": [
+            0
+          ],
+          "seccion": "MD-L000123-L000125"
+        }
+      ],
+      "recepcion_independiente": "pendiente",
+      "respuesta_original": "{\"caso\":\"MD01\",\"estado_documental\":\"respuesta_fundada\",\"etapa\":1,\"evidencias\":[{\"cita_literal_breve\":\"Este constructor fija la arquitectura de trabajo del manual del lenguaje SVP\",\"documento\":\"MANUAL_CONSTRUCTOR\",\"fragmentos\":[0],\"seccion\":\"MD-L000003-L000008\"},{\"cita_literal_breve\":\"Su finalidad es permitir un cierre progresivo por capítulos o tramos sin perder el eje del sistema ni dispersarse en caminos laterales.\",\"documento\":\"MANUAL_CONSTRUCTOR\",\"fragmentos\":[0],\"seccion\":\"MD-L000003-L000008\"},{\"cita_literal_breve\":\"No es todavía el manual final. Es la **máquina de construirlo**.\",\"documento\":\"MANUAL_CONSTRUCTOR\",\"fragmentos\":[0],\"seccion\":\"MD-L000003-L000008\"},{\"cita_literal_breve\":\"y verificable mediante ejemplos, contraejemplos y relación explícita con la implementación.\",\"documento\":\"MANUAL_CONSTRUCTOR\",\"fragmentos\":[0],\"seccion\":\"MD-L000009-L000017\"},{\"cita_literal_breve\":\"La compatibilidad interlenguajes del SV se tratará como tramo propio del manual\",\"documento\":\"MANUAL_CONSTRUCTOR\",\"fragmentos\":[0],\"seccion\":\"MD-L000119-L000122\"},{\"cita_literal_breve\":\"El constructor del manual no autoriza lluvias laterales.\",\"documento\":\"MANUAL_CONSTRUCTOR\",\"fragmentos\":[0],\"seccion\":\"MD-L000123-L000125\"}],\"fundamentos_verificables\":[\"La sección 1 (Naturaleza) declara literalmente la función del constructor: fijar la arquitectura de trabajo del manual SVP con la finalidad de un cierre progresivo por capítulos o tramos, conservando el eje del sistema y evitando dispersión; las tres citas de esa sección se verificaron como subcadenas continuas exactas del fragmento.\",\"La misma sección establece de forma explícita la diferencia respecto del manual final: el constructor no es todavía el manual final, sino la máquina de construirlo, es decir, un instrumento metodológico previo al contenido terminado.\",\"La afirmación de que el constructor define cómo se verificará cada tramo se apoya en la regla general, que exige que cada tramo sea verificable mediante ejemplos, contraejemplos y relación explícita con la implementación (MD-L000009-L000017).\",\"El resto del documento operacionaliza esa función instrumental: unidades de cierre por tramos 0 a 10 (MD-L000018-L000021 y ss.), ficha obligatoria (MD-L000092-L000108), criterio de cierre (MD-L000109-L000118), coordinación de la compatibilidad interlenguajes como tramo propio (MD-L000119-L000122) y regla de control anti-dispersión (MD-L000123-L000125).\"],\"insuficiencias\":[],\"respuesta\":\"El constructor cumple la función de fijar la arquitectura de trabajo del manual del lenguaje SVP: es el instrumento que organiza cómo se construirá el manual, estableciendo la regla general que debe cumplir cada tramo (nuclear, subordinado al pliego, la Frontera normativa, la IR y la gramática vigente, y verificable mediante ejemplos, contraejemplos y relación explícita con la implementación), las unidades de cierre recomendadas (tramos 0 a 10), la ficha obligatoria por tramo, el criterio de cierre, la coordinación de la compatibilidad interlenguajes como tramo propio del manual y una regla de control contra dispersiones. Su finalidad declarada es permitir un cierre progresivo por capítulos o tramos sin perder el eje del sistema ni dispersarse en caminos laterales. La diferencia que establece respecto de un manual final es explícita: el constructor no es todavía el manual final, sino la máquina de construirlo; es decir, un andamiaje metodológico previo que define cómo se producirá, verificará y cerrará cada tramo, y no el contenido normativo terminado del lenguaje.\",\"revision\":\"Etapa 1: autocrítica documental de la respuesta provisional (etapa 0). Se contrastaron todas las afirmaciones y las cuatro citas contra los fragmentos fuente: las citas resultaron subcadenas continuas exactas y las paráfrasis no introducen contenido ajeno; no se encontró contradicción ni error, y no se presupuso su existencia. Se mantienen íntegros el sentido y las conclusiones. Como corrección de completitud se subsana una omisión: la enumeración de mecanismos incorpora ahora la sección 6 (la compatibilidad interlenguajes como tramo propio coordinado con la política correspondiente) y se añade la evidencia de la regla general que acredita la verificabilidad por ejemplos y contraejemplos, sostén documental de la afirmación sobre cómo se verificará cada tramo. Se mantiene estado_documental respuesta_fundada y la lista de insuficiencias vacía, porque la pregunta queda resuelta por la fuente.\"}",
+      "solicitud_sha256": "ae07a1612da79c4566d1eef1793e5200032052513db41c7aced0ac8980c441ea",
+      "sustantivo": "correcto",
+      "valor": "0"
+    },
+    {
+      "alerta": null,
+      "alerta_limite": false,
+      "auditoria_sha256": "00ccf5d9e3749f878992a1ae451b4eff9fc738053d49bc106aa8955af62156b1",
+      "caso": "MD02",
+      "critico": true,
+      "estado_documental_candidato": "respuesta_fundada",
+      "etapa": 1,
+      "fidelidad_documental": "conforme",
+      "final_sha256": "45a4880830159d822f4b47fa53b328cad7a41f7d990490f8d7931ca97c06feed",
+      "formal_conforme": true,
+      "fundamento_sustantivo": "Conserva los cuatro referentes: pliego, Frontera normativa, IR y gramática; exige ejemplos, contraejemplos y relación explícita con la implementación. La mención de IR v0.2 se atribuye al tramo 10 histórico, sin afirmar vigencia externa. No se añade un mecanismo operativo inexistente.",
+      "justificacion_documental": "Citas y estructura cotejadas en Rust. La adjudicación del sentido pertenece a esta revisión exterior.",
+      "medicion": {
+        "duracion_operacion_ms": 77087,
+        "telemetria": {
+          "bytes": 1643825,
+          "fallos_medicion": 0,
+          "integridad": "conforme",
+          "intervalo_maximo_ms": 377,
+          "intervalo_objetivo_ms": 250,
+          "muestras": 285,
+          "plataforma_recibida": false,
+          "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+          "registros": 4270,
+          "sha256": "a11e5ef63605c504010cb54854b0ead2ba4a0002b0fd9613faae04f821a0fb3f"
+        },
+        "uso": {
+          "cached_tokens": 1280,
+          "coste_liquidado_usd": null,
+          "input_tokens": 24048,
+          "output_tokens": 3510,
+          "reasoning_tokens": 1464,
+          "total_tokens": 27558
+        }
+      },
+      "naturaleza_defecto": null,
+      "nota_alcance": "Dependencias declaradas por el documento; no revisión en vivo de la IR.",
+      "pasajes_contrastados": [
+        {
+          "documento": "MANUAL_CONSTRUCTOR",
+          "fragmento": "subordinado al pliego, a la Frontera normativa, a la IR y a la gramática vigente",
+          "fragmentos": [
+            0
+          ],
+          "seccion": "MD-L000009-L000017"
+        },
+        {
+          "documento": "MANUAL_CONSTRUCTOR",
+          "fragmento": "y verificable mediante ejemplos, contraejemplos y relación explícita con la implementación",
+          "fragmentos": [
+            0
+          ],
+          "seccion": "MD-L000009-L000017"
+        },
+        {
+          "documento": "MANUAL_PRESENTACION",
+          "fragmento": "El manual permanece subordinado al pliego, la Frontera normativa, la representación intermedia y la gramática vigentes.",
+          "fragmentos": [
+            0
+          ],
+          "seccion": "MD-L000011-L000014"
+        },
+        {
+          "documento": "MANUAL_CONSTRUCTOR",
+          "fragmento": "10. Relación con IR y docs públicos",
+          "fragmentos": [
+            0
+          ],
+          "seccion": "MD-L000092-L000108"
+        },
+        {
+          "documento": "MANUAL_CONSTRUCTOR",
+          "fragmento": "correspondencia visible con la IR o con la superficie vigente",
+          "fragmentos": [
+            0
+          ],
+          "seccion": "MD-L000109-L000118"
+        },
+        {
+          "documento": "MANUAL_CONSTRUCTOR",
+          "fragmento": "ausencia de contradicción local suficiente con el pliego o con la Frontera normativa",
+          "fragmentos": [
+            0
+          ],
+          "seccion": "MD-L000109-L000118"
+        },
+        {
+          "documento": "MANUAL_TRAMO10",
+          "fragmento": "- Pliego de condiciones del Sistema Vectorial SV\n- Frontera normativa del lenguaje SV\n- IR canónica v0.2\n- Política y protocolo de compatibilidad interlenguajes del Lenguaje SV",
+          "fragmentos": [
+            0
+          ],
+          "seccion": "MD-L000007-L000013"
+        },
+        {
+          "documento": "MANUAL_CONSTRUCTOR",
+          "fragmento": "deberá coordinarse con la política y protocolo de compatibilidad interlenguajes del Lenguaje SV",
+          "fragmentos": [
+            0
+          ],
+          "seccion": "MD-L000119-L000122"
+        },
+        {
+          "documento": "MANUAL_TRAMO10",
+          "fragmento": "Este tramo no implementa bindings, APIs, FFI ni wrappers reales.",
+          "fragmentos": [
+            0
+          ],
+          "seccion": "MD-L000022-L000025"
+        },
+        {
+          "documento": "MANUAL_PRESENTACION",
+          "fragmento": "La consulta no ejecuta los ejemplos, no incorpora información de los enlaces externos y no realiza inferencia.",
+          "fragmentos": [
+            0
+          ],
+          "seccion": "MD-L000015-L000018"
+        }
+      ],
+      "recepcion_independiente": "pendiente",
+      "respuesta_original": "{\"caso\":\"MD02\",\"estado_documental\":\"respuesta_fundada\",\"etapa\":1,\"evidencias\":[{\"cita_literal_breve\":\"subordinado al pliego, a la Frontera normativa, a la IR y a la gramática vigente\",\"documento\":\"MANUAL_CONSTRUCTOR\",\"fragmentos\":[0],\"seccion\":\"MD-L000009-L000017\"},{\"cita_literal_breve\":\"y verificable mediante ejemplos, contraejemplos y relación explícita con la implementación\",\"documento\":\"MANUAL_CONSTRUCTOR\",\"fragmentos\":[0],\"seccion\":\"MD-L000009-L000017\"},{\"cita_literal_breve\":\"El manual permanece subordinado al pliego, la Frontera normativa, la representación intermedia y la gramática vigentes.\",\"documento\":\"MANUAL_PRESENTACION\",\"fragmentos\":[0],\"seccion\":\"MD-L000011-L000014\"},{\"cita_literal_breve\":\"10. Relación con IR y docs públicos\",\"documento\":\"MANUAL_CONSTRUCTOR\",\"fragmentos\":[0],\"seccion\":\"MD-L000092-L000108\"},{\"cita_literal_breve\":\"correspondencia visible con la IR o con la superficie vigente\",\"documento\":\"MANUAL_CONSTRUCTOR\",\"fragmentos\":[0],\"seccion\":\"MD-L000109-L000118\"},{\"cita_literal_breve\":\"ausencia de contradicción local suficiente con el pliego o con la Frontera normativa\",\"documento\":\"MANUAL_CONSTRUCTOR\",\"fragmentos\":[0],\"seccion\":\"MD-L000109-L000118\"},{\"cita_literal_breve\":\"- Pliego de condiciones del Sistema Vectorial SV\\n- Frontera normativa del lenguaje SV\\n- IR canónica v0.2\\n- Política y protocolo de compatibilidad interlenguajes del Lenguaje SV\",\"documento\":\"MANUAL_TRAMO10\",\"fragmentos\":[0],\"seccion\":\"MD-L000007-L000013\"},{\"cita_literal_breve\":\"deberá coordinarse con la política y protocolo de compatibilidad interlenguajes del Lenguaje SV\",\"documento\":\"MANUAL_CONSTRUCTOR\",\"fragmentos\":[0],\"seccion\":\"MD-L000119-L000122\"},{\"cita_literal_breve\":\"Este tramo no implementa bindings, APIs, FFI ni wrappers reales.\",\"documento\":\"MANUAL_TRAMO10\",\"fragmentos\":[0],\"seccion\":\"MD-L000022-L000025\"},{\"cita_literal_breve\":\"La consulta no ejecuta los ejemplos, no incorpora información de los enlaces externos y no realiza inferencia.\",\"documento\":\"MANUAL_PRESENTACION\",\"fragmentos\":[0],\"seccion\":\"MD-L000015-L000018\"}],\"fundamentos_verificables\":[\"La Regla general del constructor (sección 2) impone a cada tramo la subordinación al pliego, a la Frontera normativa, a la IR y a la gramática vigente, junto con la verificabilidad mediante ejemplos, contraejemplos y relación explícita con la implementación.\",\"La presentación confirma la subordinación del manual en su conjunto a los mismos referentes, denominando a la IR como representación intermedia, lo que permite tratar ambas denominaciones como equivalentes en este corpus.\",\"La ficha obligatoria por tramo (sección 4 del constructor) exige declarar en su punto 10 la relación con la IR y los documentos públicos, institucionalizando la trazabilidad documental de cada tramo.\",\"El criterio de cierre (sección 5 del constructor) exige correspondencia visible con la IR o con la superficie vigente, ejemplos .svp nucleares y ausencia de contradicción local suficiente con el pliego o con la Frontera normativa como condiciones mínimas de cerrabilidad.\",\"El tramo 10 particulariza las dependencias: Pliego de condiciones del Sistema Vectorial SV, Frontera normativa del lenguaje SV, IR canónica v0.2 y Política y protocolo de compatibilidad interlenguajes del Lenguaje SV; la sección 6 del constructor añade que ese tramo deberá coordinarse con dicha política y protocolo.\",\"La relación exigida con la implementación es de verificabilidad y correspondencia documentada, no de ejecución ni de implementación efectiva: la presentación declara que la consulta no ejecuta los ejemplos y el tramo 10 declara que no implementa bindings, APIs, FFI ni wrappers reales, abriendo sólo el frente documental y de gobierno.\",\"Autocrítica de etapa 1: se mantienen todas las afirmaciones de la etapa 0 por verificadas contra la fuente; se incorporan tres evidencias literales que en la etapa 0 respaldaban afirmaciones sin cita registrada (coordinación del tramo 10 con la política interlenguajes, no implementación de bindings/FFI/wrappers, y no ejecución de ejemplos por la consulta), sin alterar el sentido de la respuesta.\"],\"insuficiencias\":[\"Los documentos suministrados no especifican el procedimiento operativo ni las herramientas concretas con que se comprueba la relación explícita con la implementación o la correspondencia visible con la IR; fijan la exigencia, pero no su mecanismo de verificación. Este límite es propio de la fuente y no impide responder la pregunta formulada.\"],\"respuesta\":\"Cada tramo del manual debe subordinarse a cuatro referentes: el pliego (de condiciones del Sistema Vectorial SV), la Frontera normativa del lenguaje SV, la IR o representación intermedia y la gramática vigente. El tramo 10 particulariza estos referentes declarando como dependencias el Pliego de condiciones del Sistema Vectorial SV, la Frontera normativa del lenguaje SV, la IR canónica v0.2 y la Política y protocolo de compatibilidad interlenguajes del Lenguaje SV; además, el constructor exige que ese tramo se coordine con dicha política y protocolo. Respecto de la implementación, el constructor exige que cada tramo sea verificable mediante ejemplos, contraejemplos y relación explícita con la implementación; que su ficha obligatoria declare la relación con la IR y los documentos públicos; y que, para ser cerrable, muestre correspondencia visible con la IR o con la superficie vigente, con uno o más ejemplos .svp suficientemente nucleares y con ausencia de contradicción local suficiente con el pliego o con la Frontera normativa. Esta exigencia es de trazabilidad y verificabilidad documental, no de ejecución ni de implementación efectiva: la edición declara que la consulta no ejecuta los ejemplos ni realiza inferencia, y el tramo 10 declara expresamente que no implementa bindings, APIs, FFI ni wrappers reales, limitándose a abrir el frente documental y de gobierno. Por tanto, lo descrito corresponde a lo previsto en los documentos, no a una implementación ya realizada.\",\"revision\":\"Autocrítica de etapa 1 sobre la provisional de etapa 0. Se contrastaron todas las afirmaciones con los cuatro documentos: las cuatro subordinaciones (pliego, Frontera normativa, IR/representación intermedia, gramática vigente) figuran literalmente en la Regla general del constructor y en la sección Autoridad documental de la presentación; la relación con la implementación (verificabilidad con ejemplos y contraejemplos, ficha punto 10, correspondencia visible con la IR o superficie vigente en el criterio de cierre) figura literalmente en las secciones 2, 4 y 5 del constructor; las dependencias del tramo 10 figuran literalmente en su sección 2. Se mantiene íntegro el sentido de la etapa 0. Se corrige una carencia formal, no de fondo: tres afirmaciones ya presentes carecían de evidencia registrada y ahora se documentan con citas literales (coordinación del tramo 10 con la política y protocolo interlenguajes, sección 6 del constructor; no implementación de bindings, APIs, FFI ni wrappers, sección 4 del tramo 10; no ejecución de ejemplos por la consulta, sección Consulta para personas y modelos de la presentación). No se retira ninguna afirmación y no procede estado U, pues la fuente resuelve la pregunta; la única insuficiencia declarada es un límite explícito de la fuente (ausencia de mecanismo operativo de verificación), compatible con respuesta_fundada.\"}",
+      "solicitud_sha256": "f1da8013a9a04b6ad33b6c9623ac6469f4ca47d86f84e3a9e303a104b9debcea",
+      "sustantivo": "correcto",
+      "valor": "0"
+    },
+    {
+      "alerta": null,
+      "alerta_limite": false,
+      "auditoria_sha256": "746830112975c92c1545f6b38826daf408eb5cead784720376f7b32d1776504e",
+      "caso": "MD03",
+      "critico": false,
+      "estado_documental_candidato": "respuesta_fundada",
+      "etapa": 1,
+      "fidelidad_documental": "conforme",
+      "final_sha256": "e194bbd60d14e91925198927924d95c830143905ac086ea3bb824676bcc6f6a2",
+      "formal_conforme": true,
+      "fundamento_sustantivo": "Localiza correctamente evaluación de células en el tramo 3, resolución de U en el 5 y transición en el 6. Enumera las materias asociadas sin inventar definiciones. La pregunta solicita precisamente ubicación y materias; el carácter pendiente de otros capítulos no impide contestarla.",
+      "justificacion_documental": "Citas y estructura cotejadas en Rust. La adjudicación del sentido pertenece a esta revisión exterior.",
+      "medicion": {
+        "duracion_operacion_ms": 57881,
+        "telemetria": {
+          "bytes": 1227257,
+          "fallos_medicion": 0,
+          "integridad": "conforme",
+          "intervalo_maximo_ms": 375,
+          "intervalo_objetivo_ms": 250,
+          "muestras": 204,
+          "plataforma_recibida": false,
+          "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+          "registros": 3206,
+          "sha256": "b21e47b033bd7a4e1171718bd7516ea9d623799dca91af3271794672ac675ad3"
+        },
+        "uso": {
+          "cached_tokens": 1280,
+          "coste_liquidado_usd": null,
+          "input_tokens": 23445,
+          "output_tokens": 2602,
+          "reasoning_tokens": 1115,
+          "total_tokens": 26047
+        }
+      },
+      "naturaleza_defecto": null,
+      "nota_alcance": "El enunciado no exige definiciones ausentes: no hay pregunta insoluble.",
+      "pasajes_contrastados": [
+        {
+          "documento": "MANUAL_CONSTRUCTOR",
+          "fragmento": "### Tramo 3 — Célula, evaluación y clasificación\n- `CellSpec`;\n- `CellState`;\n- `evaluate`;\n- umbral;\n- criticidad.",
+          "fragmentos": [
+            0
+          ],
+          "seccion": "MD-L000041-L000047"
+        },
+        {
+          "documento": "MANUAL_CONSTRUCTOR",
+          "fragmento": "### Tramo 5 — Resolución y régimen de la U\n- `resolve`;\n- `Context`;\n- `Mechanism`;\n- reapertura.",
+          "fragmentos": [
+            0
+          ],
+          "seccion": "MD-L000054-L000059"
+        },
+        {
+          "documento": "MANUAL_CONSTRUCTOR",
+          "fragmento": "### Tramo 6 — Trayectoria, frame y datos de transición\n- `Frame`;\n- `TransitionData`;\n- `Trajectory`;\n- regla append-only.",
+          "fragmentos": [
+            0
+          ],
+          "seccion": "MD-L000060-L000065"
+        },
+        {
+          "documento": "MANUAL_INDICE",
+          "fragmento": "- [03 · Célula, evaluación y clasificación — pendiente]()",
+          "fragmentos": [
+            0
+          ],
+          "seccion": "MD-L000001-L000017"
+        },
+        {
+          "documento": "MANUAL_INDICE",
+          "fragmento": "- [05 · Resolución y régimen de U — pendiente]()",
+          "fragmentos": [
+            0
+          ],
+          "seccion": "MD-L000001-L000017"
+        },
+        {
+          "documento": "MANUAL_INDICE",
+          "fragmento": "- [06 · Frame, trayectoria y transición — pendiente]()",
+          "fragmentos": [
+            0
+          ],
+          "seccion": "MD-L000001-L000017"
+        },
+        {
+          "documento": "MANUAL_PRESENTACION",
+          "fragmento": "El índice original registra once tramos pendientes, SVP-MAN-00 a SVP-MAN-10.",
+          "fragmentos": [
+            0
+          ],
+          "seccion": "MD-L000005-L000010"
+        }
+      ],
+      "recepcion_independiente": "pendiente",
+      "respuesta_original": "{\"caso\":\"MD03\",\"estado_documental\":\"respuesta_fundada\",\"etapa\":1,\"evidencias\":[{\"cita_literal_breve\":\"### Tramo 3 — Célula, evaluación y clasificación\\n- `CellSpec`;\\n- `CellState`;\\n- `evaluate`;\\n- umbral;\\n- criticidad.\",\"documento\":\"MANUAL_CONSTRUCTOR\",\"fragmentos\":[0],\"seccion\":\"MD-L000041-L000047\"},{\"cita_literal_breve\":\"### Tramo 5 — Resolución y régimen de la U\\n- `resolve`;\\n- `Context`;\\n- `Mechanism`;\\n- reapertura.\",\"documento\":\"MANUAL_CONSTRUCTOR\",\"fragmentos\":[0],\"seccion\":\"MD-L000054-L000059\"},{\"cita_literal_breve\":\"### Tramo 6 — Trayectoria, frame y datos de transición\\n- `Frame`;\\n- `TransitionData`;\\n- `Trajectory`;\\n- regla append-only.\",\"documento\":\"MANUAL_CONSTRUCTOR\",\"fragmentos\":[0],\"seccion\":\"MD-L000060-L000065\"},{\"cita_literal_breve\":\"- [03 · Célula, evaluación y clasificación — pendiente]()\",\"documento\":\"MANUAL_INDICE\",\"fragmentos\":[0],\"seccion\":\"MD-L000001-L000017\"},{\"cita_literal_breve\":\"- [05 · Resolución y régimen de U — pendiente]()\",\"documento\":\"MANUAL_INDICE\",\"fragmentos\":[0],\"seccion\":\"MD-L000001-L000017\"},{\"cita_literal_breve\":\"- [06 · Frame, trayectoria y transición — pendiente]()\",\"documento\":\"MANUAL_INDICE\",\"fragmentos\":[0],\"seccion\":\"MD-L000001-L000017\"},{\"cita_literal_breve\":\"El índice original registra once tramos pendientes, SVP-MAN-00 a SVP-MAN-10.\",\"documento\":\"MANUAL_PRESENTACION\",\"fragmentos\":[0],\"seccion\":\"MD-L000005-L000010\"}],\"fundamentos_verificables\":[\"El apartado 3 del constructor, «Unidades de cierre recomendadas», enumera los tramos 0 a 10 con sus materias; la ubicación de cada tema se lee directamente de los epígrafes y listas de ese apartado.\",\"La evaluación de células se sitúa en el Tramo 3, titulado «Célula, evaluación y clasificación», cuyas materias declaradas son `CellSpec`, `CellState`, `evaluate`, umbral y criticidad.\",\"La resolución de U se sitúa en el Tramo 5, titulado «Resolución y régimen de la U», cuyas materias declaradas son `resolve`, `Context`, `Mechanism` y reapertura.\",\"Los datos de transición se sitúan en el Tramo 6, titulado «Trayectoria, frame y datos de transición», cuyas materias declaradas son `Frame`, `TransitionData`, `Trajectory` y la regla append-only.\",\"El índice de la edición documental confirma que estos tres tramos figuran como entradas pendientes (03, 05 y 06), es decir, son plan previsto y no capítulos implementados en esta edición.\",\"La presentación de la edición registra que los once tramos, SVP-MAN-00 a SVP-MAN-10, están pendientes, lo que acredita que las materias enumeradas son previsiones del constructor y no contenido desarrollado.\"],\"insuficiencias\":[\"Los documentos suministrados no contienen los capítulos 03, 05 ni 06 desarrollados: el índice los marca como «pendiente» y la presentación registra once tramos pendientes, por lo que no es posible dar las definiciones de `CellSpec`, `CellState`, `evaluate`, umbral, criticidad, `resolve`, `Context`, `Mechanism`, reapertura, `Frame`, `TransitionData`, `Trajectory` ni de la regla append-only; sólo están acreditadas sus denominaciones como materias previstas de cada tramo.\"],\"respuesta\":\"El constructor sitúa cada materia en un tramo nuclear distinto del manual. (1) Evaluación de células: Tramo 3 — «Célula, evaluación y clasificación», con las materias `CellSpec`, `CellState`, `evaluate`, umbral y criticidad. (2) Resolución de U: Tramo 5 — «Resolución y régimen de la U», con las materias `resolve`, `Context`, `Mechanism` y reapertura. (3) Datos de transición: Tramo 6 — «Trayectoria, frame y datos de transición», con las materias `Frame`, `TransitionData`, `Trajectory` y la regla append-only. Estas ubicaciones son plan previsto: el índice de la edición muestra los tramos 03, 05 y 06 como entradas pendientes, sin texto desarrollado, y los documentos aportados no definen ninguno de los términos enumerados, por lo que aquí sólo se identifican las materias asociadas tal como las declara el constructor.\",\"revision\":\"Autocrítica de etapa 1 sobre la entrega de etapa 0. Contraste con la fuente: (a) las tres ubicaciones de tramo y sus materias coinciden literalmente con las secciones MD-L000041-L000047, MD-L000054-L000059 y MD-L000060-L000065 del constructor; (b) el estado pendiente de los tramos 03, 05 y 06 coincide con el índice; (c) las citas son cadenas continuas exactas, sin puntos suspensivos añadidos; (d) no se detectan afirmaciones sin apoyo ni omisiones de materias enumeradas en la fuente. Corrección menor de robustez probatoria: se añade la evidencia de MANUAL_PRESENTACION MD-L000005-L000010 («El índice original registra once tramos pendientes, SVP-MAN-00 a SVP-MAN-10.») que respalda la insuficiencia ya declarada, sin alterar el sentido. Se mantienen íntegras la respuesta y la insuficiencia; no se retira nada y no procede estado U, pues la fuente resuelve lo preguntado.\"}",
+      "solicitud_sha256": "461648ba95834fa62abb0ce3d8d9902637d41d4cd24789162df363383ba39721",
+      "sustantivo": "correcto",
+      "valor": "0"
+    },
+    {
+      "alerta": null,
+      "alerta_limite": false,
+      "auditoria_sha256": "709d6687f9bec27b4006f72fee0b38315f45653436917c4baaa7044956eb2391",
+      "caso": "MD04",
+      "critico": false,
+      "estado_documental_candidato": "respuesta_fundada",
+      "etapa": 1,
+      "fidelidad_documental": "conforme",
+      "final_sha256": "87a839f10ea9dfb78876e3ec1a61ad941f695b2682e872ac1d344e7414cfaa7c",
+      "formal_conforme": true,
+      "fundamento_sustantivo": "La enumeración de los doce campos y la distinción entre contenido y exclusiones son correctas. Sin embargo, insuficiencias afirma que no se define contenido del Criterio de cierre más allá de su nombre. MANUAL_CONSTRUCTOR, MD-L000109-L000118, sí fija cinco mínimos explícitos y fue suministrado íntegro. La afirmación incorrecta se mantiene en las tres etapas. Se adjudica 1 por afirmación sustantiva errónea, según CRITERIOS.md; MD04 no es crítico. Las citas son literales: no confundir literalidad conforme con contenido plenamente correcto.",
+      "justificacion_documental": "Citas y estructura cotejadas en Rust. La adjudicación del sentido pertenece a esta revisión exterior.",
+      "medicion": {
+        "duracion_operacion_ms": 79277,
+        "telemetria": {
+          "bytes": 1613179,
+          "fallos_medicion": 0,
+          "integridad": "conforme",
+          "intervalo_maximo_ms": 348,
+          "intervalo_objetivo_ms": 250,
+          "muestras": 276,
+          "plataforma_recibida": false,
+          "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+          "registros": 4196,
+          "sha256": "050219d0d3a227088da81a3a9011eef837ffe639f20cafc90c114f074954a87d"
+        },
+        "uso": {
+          "cached_tokens": 1280,
+          "coste_liquidado_usd": null,
+          "input_tokens": 26345,
+          "output_tokens": 3515,
+          "reasoning_tokens": 1385,
+          "total_tokens": 29860
+        }
+      },
+      "naturaleza_defecto": "Negación inexacta del contenido suministrado sobre el criterio de cierre",
+      "nota_alcance": "Discrepancia sustantiva adicional del candidato, no defecto de la fuente ni del transporte.",
+      "pasajes_contrastados": [
+        {
+          "documento": "MANUAL_CONSTRUCTOR",
+          "fragmento": "Todo tramo del manual deberá declarar:",
+          "fragmentos": [
+            0
+          ],
+          "seccion": "MD-L000092-L000108"
+        },
+        {
+          "documento": "MANUAL_CONSTRUCTOR",
+          "fragmento": "1. ID del tramo\n2. Título\n3. Rango\n4. Objeto",
+          "fragmentos": [
+            0
+          ],
+          "seccion": "MD-L000092-L000108"
+        },
+        {
+          "documento": "MANUAL_CONSTRUCTOR",
+          "fragmento": "5. Dependencias\n6. Qué fija\n7. Qué no fija\n8. Ejemplos `.svp`",
+          "fragmentos": [
+            0
+          ],
+          "seccion": "MD-L000092-L000108"
+        },
+        {
+          "documento": "MANUAL_CONSTRUCTOR",
+          "fragmento": "9. Errores o contraejemplos\n10. Relación con IR y docs públicos\n11. Criterio de cierre\n12. Estado",
+          "fragmentos": [
+            0
+          ],
+          "seccion": "MD-L000092-L000108"
+        },
+        {
+          "documento": "MANUAL_TRAMO10",
+          "fragmento": "- tipos de compatibilidad admitidos;\n- prioridad por lenguajes anfitriones;\n- garantías semánticas mínimas;\n- criterio de activación por lenguaje;\n- y límites de fase.",
+          "fragmentos": [
+            0
+          ],
+          "seccion": "MD-L000014-L000021"
+        },
+        {
+          "documento": "MANUAL_TRAMO10",
+          "fragmento": "Este tramo no implementa bindings, APIs, FFI ni wrappers reales. Solo abre el frente documental y de gobierno.",
+          "fragmentos": [
+            0
+          ],
+          "seccion": "MD-L000022-L000025"
+        },
+        {
+          "documento": "MANUAL_TRAMO10",
+          "fragmento": "Pendiente de desarrollo.",
+          "fragmentos": [
+            0
+          ],
+          "seccion": "MD-L000026-L000028"
+        },
+        {
+          "documento": "MANUAL_CONSTRUCTOR",
+          "fragmento": "- delimitación expresa de lo que queda fuera;",
+          "fragmentos": [
+            0
+          ],
+          "seccion": "MD-L000109-L000118"
+        },
+        {
+          "documento": "MANUAL_PRESENTACION",
+          "fragmento": "El constructor y el tramo 10 se reproducen íntegramente, sin correcciones terminológicas ni ampliaciones.",
+          "fragmentos": [
+            0
+          ],
+          "seccion": "MD-L000005-L000010"
+        },
+        {
+          "documento": "MANUAL_PRESENTACION",
+          "fragmento": "El tramo 10 conserva el documento preparatorio existente, cuyo estado es «Pendiente de desarrollo».",
+          "fragmentos": [
+            0
+          ],
+          "seccion": "MD-L000005-L000010"
+        },
+        {
+          "documento": "MANUAL_PRESENTACION",
+          "fragmento": "La presentación de un documento en este libro no acredita una nueva aprobación.",
+          "fragmentos": [
+            0
+          ],
+          "seccion": "MD-L000011-L000014"
+        }
+      ],
+      "recepcion_independiente": "pendiente",
+      "respuesta_original": "{\"caso\":\"MD04\",\"estado_documental\":\"respuesta_fundada\",\"etapa\":1,\"evidencias\":[{\"cita_literal_breve\":\"Todo tramo del manual deberá declarar:\",\"documento\":\"MANUAL_CONSTRUCTOR\",\"fragmentos\":[0],\"seccion\":\"MD-L000092-L000108\"},{\"cita_literal_breve\":\"1. ID del tramo\\n2. Título\\n3. Rango\\n4. Objeto\",\"documento\":\"MANUAL_CONSTRUCTOR\",\"fragmentos\":[0],\"seccion\":\"MD-L000092-L000108\"},{\"cita_literal_breve\":\"5. Dependencias\\n6. Qué fija\\n7. Qué no fija\\n8. Ejemplos `.svp`\",\"documento\":\"MANUAL_CONSTRUCTOR\",\"fragmentos\":[0],\"seccion\":\"MD-L000092-L000108\"},{\"cita_literal_breve\":\"9. Errores o contraejemplos\\n10. Relación con IR y docs públicos\\n11. Criterio de cierre\\n12. Estado\",\"documento\":\"MANUAL_CONSTRUCTOR\",\"fragmentos\":[0],\"seccion\":\"MD-L000092-L000108\"},{\"cita_literal_breve\":\"- tipos de compatibilidad admitidos;\\n- prioridad por lenguajes anfitriones;\\n- garantías semánticas mínimas;\\n- criterio de activación por lenguaje;\\n- y límites de fase.\",\"documento\":\"MANUAL_TRAMO10\",\"fragmentos\":[0],\"seccion\":\"MD-L000014-L000021\"},{\"cita_literal_breve\":\"Este tramo no implementa bindings, APIs, FFI ni wrappers reales. Solo abre el frente documental y de gobierno.\",\"documento\":\"MANUAL_TRAMO10\",\"fragmentos\":[0],\"seccion\":\"MD-L000022-L000025\"},{\"cita_literal_breve\":\"Pendiente de desarrollo.\",\"documento\":\"MANUAL_TRAMO10\",\"fragmentos\":[0],\"seccion\":\"MD-L000026-L000028\"},{\"cita_literal_breve\":\"- delimitación expresa de lo que queda fuera;\",\"documento\":\"MANUAL_CONSTRUCTOR\",\"fragmentos\":[0],\"seccion\":\"MD-L000109-L000118\"},{\"cita_literal_breve\":\"El constructor y el tramo 10 se reproducen íntegramente, sin correcciones terminológicas ni ampliaciones.\",\"documento\":\"MANUAL_PRESENTACION\",\"fragmentos\":[0],\"seccion\":\"MD-L000005-L000010\"},{\"cita_literal_breve\":\"El tramo 10 conserva el documento preparatorio existente, cuyo estado es «Pendiente de desarrollo».\",\"documento\":\"MANUAL_PRESENTACION\",\"fragmentos\":[0],\"seccion\":\"MD-L000005-L000010\"},{\"cita_literal_breve\":\"La presentación de un documento en este libro no acredita una nueva aprobación.\",\"documento\":\"MANUAL_PRESENTACION\",\"fragmentos\":[0],\"seccion\":\"MD-L000011-L000014\"}],\"fundamentos_verificables\":[\"La sección 4 del constructor («Ficha obligatoria por tramo») impone que todo tramo declare una ficha y enumera exactamente doce campos, del «1. ID del tramo» al «12. Estado»; la autocrítica confirma que la transcripción de la etapa 0 coincide campo a campo con la fuente, sin omisiones ni adiciones.\",\"Los campos 6 y 7 son obligaciones distintas dentro de la ficha: «Qué fija» exige declarar el contenido que el tramo establece, mientras que «Qué no fija» exige declarar lo que el tramo deja expresamente fuera; la lectura se mantiene y es coherente con el criterio de cierre del constructor, que exige «delimitación expresa de lo que queda fuera».\",\"El tramo 10 ilustra ambas obligaciones en estado preparatorio: su sección 3 («Qué deberá fijar») enumera prospectivamente cinco contenidos a fijar (tipos de compatibilidad admitidos, prioridad por lenguajes anfitriones, garantías semánticas mínimas, criterio de activación por lenguaje y límites de fase), y su sección 4 («Qué no fija todavía») declara excluida la implementación de bindings, APIs, FFI y wrappers reales, limitándose al frente documental y de gobierno; el contraste confirma la fidelidad de ambas citas.\",\"Distinción entre lo previsto y lo implementado mantenida y reforzada: la obligación de la ficha procede del constructor, pero el estado declarado del tramo 10 es «Pendiente de desarrollo», confirmado tanto por el propio tramo como por la presentación («documento preparatorio existente»), por lo que su «qué fija» es programático («deberá fijar») y no contenido fijado; la presentación acredita además que constructor y tramo 10 se reproducen íntegramente desde la revisión f97173e07a9dfb8385ed1268d11de422b291507d y que su inclusión en este libro no acredita una nueva aprobación.\"],\"insuficiencias\":[\"Los fragmentos aportados no definen el formato ni el contenido esperado de cada campo de la ficha (por ejemplo, «Rango» o «Criterio de cierre») más allá de su denominación en la lista; tampoco se acredita en estos documentos ninguna ficha cumplimentada al completo, ya que los tramos 0–9 figuran como entradas pendientes en el índice y el tramo 10 declara el estado «Pendiente de desarrollo». Esta insuficiencia se mantiene tras el contraste y no impide responder lo preguntado.\"],\"respuesta\":\"La ficha obligatoria de un tramo, según la sección 4 del constructor del manual, debe contener doce campos: 1. ID del tramo; 2. Título; 3. Rango; 4. Objeto; 5. Dependencias; 6. Qué fija; 7. Qué no fija; 8. Ejemplos `.svp`; 9. Errores o contraejemplos; 10. Relación con IR y docs públicos; 11. Criterio de cierre; 12. Estado.\\n\\nDistinción entre las obligaciones «qué fija» y «qué no fija»: el campo 6 («Qué fija») obliga a declarar el contenido que el tramo establece (lo que queda fijado para el manual), mientras que el campo 7 («Qué no fija») obliga a declarar la delimitación expresa de lo que queda fuera del tramo, en coherencia con el criterio de cierre del constructor, que exige «delimitación expresa de lo que queda fuera».\\n\\nEl tramo 10 sirve de ejemplo documental de ambas obligaciones en estado preparatorio: en «Qué deberá fijar» anuncia cinco contenidos —tipos de compatibilidad admitidos, prioridad por lenguajes anfitriones, garantías semánticas mínimas, criterio de activación por lenguaje y límites de fase— y en «Qué no fija todavía» declara que no implementa bindings, APIs, FFI ni wrappers reales, abriendo sólo el frente documental y de gobierno. Se trata de lo previsto, no de lo implementado: el estado declarado del tramo 10 es «Pendiente de desarrollo» (calificado por la presentación como «documento preparatorio existente»), de modo que su «qué fija» está formulado prospectivamente y aún no constituye contenido fijado, ni su reproducción en esta edición acredita una nueva aprobación.\",\"revision\":\"Etapa 1: autocrítica documental completada. Se contrastaron una a una las afirmaciones de la etapa 0 contra los cuatro documentos: (a) la enumeración de los doce campos coincide exactamente con la lista de la sección 4 del constructor, sin omisiones ni adiciones; (b) la distinción entre los campos 6 («Qué fija») y 7 («Qué no fija») se mantiene, apoyada en el criterio de cierre que exige delimitación expresa de lo que queda fuera; (c) el ejemplo del tramo 10 (cinco contenidos por fijar y exclusión de bindings, APIs, FFI y wrappers) se verificó literalmente; (d) la distinción previsto/implementado se mantiene y se refuerza con dos citas añadidas de la presentación («documento preparatorio existente» y ausencia de nueva aprobación), que respaldan afirmaciones ya formuladas sin alterar su sentido. No se detectaron errores de transcripción, atribución ni alcance; no se corrige, retira ni declara U ningún extremo. La respuesta se mantiene íntegra.\"}",
+      "solicitud_sha256": "1aaad932eb2f20d1444f51c2fc469fe5fb97748fbfbb57a4e29303e6ecb70120",
+      "sustantivo": "afirmacion_adicional_erronea",
+      "valor": "1"
+    },
+    {
+      "alerta": null,
+      "alerta_limite": false,
+      "auditoria_sha256": "cc089c0f1b8a56f2995491bef267504148ab4c572a7d771f803224fce44b9c38",
+      "caso": "MD05",
+      "critico": true,
+      "estado_documental_candidato": "respuesta_fundada",
+      "etapa": 1,
+      "fidelidad_documental": "conforme",
+      "final_sha256": "a31440d7290776ace505827ff439550271ff8bd02a5f7efb6b81ee37a15d9c1d",
+      "formal_conforme": true,
+      "fundamento_sustantivo": "Niega justificadamente el cierre: faltan correspondencia con la IR o superficie vigente y delimitación de exclusiones. Las condiciones mínimas son acumulativas; la claridad y el ejemplo no compensan esas ausencias. La respuesta no necesita inventar el cumplimiento de la quinta condición para concluir que no es cerrable.",
+      "justificacion_documental": "Citas y estructura cotejadas en Rust. La adjudicación del sentido pertenece a esta revisión exterior.",
+      "medicion": {
+        "duracion_operacion_ms": 56725,
+        "telemetria": {
+          "bytes": 1190333,
+          "fallos_medicion": 0,
+          "integridad": "conforme",
+          "intervalo_maximo_ms": 372,
+          "intervalo_objetivo_ms": 250,
+          "muestras": 199,
+          "plataforma_recibida": false,
+          "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+          "registros": 3108,
+          "sha256": "24ed1d7bdbeb6097873286c6b420da770dc3b5e6b99e8b8cdea6173611da3436"
+        },
+        "uso": {
+          "cached_tokens": 1280,
+          "coste_liquidado_usd": null,
+          "input_tokens": 23364,
+          "output_tokens": 2601,
+          "reasoning_tokens": 894,
+          "total_tokens": 25965
+        }
+      },
+      "naturaleza_defecto": null,
+      "nota_alcance": "Caso hipotético suficientemente especificado para denegar el cierre.",
+      "pasajes_contrastados": [
+        {
+          "documento": "MANUAL_CONSTRUCTOR",
+          "fragmento": "Un tramo se considerará cerrable cuando reúna, como mínimo:",
+          "fragmentos": [
+            0
+          ],
+          "seccion": "MD-L000109-L000118"
+        },
+        {
+          "documento": "MANUAL_CONSTRUCTOR",
+          "fragmento": "- exposición sobria del objeto;",
+          "fragmentos": [
+            0
+          ],
+          "seccion": "MD-L000109-L000118"
+        },
+        {
+          "documento": "MANUAL_CONSTRUCTOR",
+          "fragmento": "- correspondencia visible con la IR o con la superficie vigente;",
+          "fragmentos": [
+            0
+          ],
+          "seccion": "MD-L000109-L000118"
+        },
+        {
+          "documento": "MANUAL_CONSTRUCTOR",
+          "fragmento": "- uno o más ejemplos `.svp` suficientemente nucleares;",
+          "fragmentos": [
+            0
+          ],
+          "seccion": "MD-L000109-L000118"
+        },
+        {
+          "documento": "MANUAL_CONSTRUCTOR",
+          "fragmento": "- delimitación expresa de lo que queda fuera;",
+          "fragmentos": [
+            0
+          ],
+          "seccion": "MD-L000109-L000118"
+        },
+        {
+          "documento": "MANUAL_CONSTRUCTOR",
+          "fragmento": "- y ausencia de contradicción local suficiente con el pliego o con la Frontera normativa.",
+          "fragmentos": [
+            0
+          ],
+          "seccion": "MD-L000109-L000118"
+        },
+        {
+          "documento": "MANUAL_CONSTRUCTOR",
+          "fragmento": "7. Qué no fija",
+          "fragmentos": [
+            0
+          ],
+          "seccion": "MD-L000092-L000108"
+        },
+        {
+          "documento": "MANUAL_CONSTRUCTOR",
+          "fragmento": "10. Relación con IR y docs públicos",
+          "fragmentos": [
+            0
+          ],
+          "seccion": "MD-L000092-L000108"
+        }
+      ],
+      "recepcion_independiente": "pendiente",
+      "respuesta_original": "{\"caso\":\"MD05\",\"estado_documental\":\"respuesta_fundada\",\"etapa\":1,\"evidencias\":[{\"cita_literal_breve\":\"Un tramo se considerará cerrable cuando reúna, como mínimo:\",\"documento\":\"MANUAL_CONSTRUCTOR\",\"fragmentos\":[0],\"seccion\":\"MD-L000109-L000118\"},{\"cita_literal_breve\":\"- exposición sobria del objeto;\",\"documento\":\"MANUAL_CONSTRUCTOR\",\"fragmentos\":[0],\"seccion\":\"MD-L000109-L000118\"},{\"cita_literal_breve\":\"- correspondencia visible con la IR o con la superficie vigente;\",\"documento\":\"MANUAL_CONSTRUCTOR\",\"fragmentos\":[0],\"seccion\":\"MD-L000109-L000118\"},{\"cita_literal_breve\":\"- uno o más ejemplos `.svp` suficientemente nucleares;\",\"documento\":\"MANUAL_CONSTRUCTOR\",\"fragmentos\":[0],\"seccion\":\"MD-L000109-L000118\"},{\"cita_literal_breve\":\"- delimitación expresa de lo que queda fuera;\",\"documento\":\"MANUAL_CONSTRUCTOR\",\"fragmentos\":[0],\"seccion\":\"MD-L000109-L000118\"},{\"cita_literal_breve\":\"- y ausencia de contradicción local suficiente con el pliego o con la Frontera normativa.\",\"documento\":\"MANUAL_CONSTRUCTOR\",\"fragmentos\":[0],\"seccion\":\"MD-L000109-L000118\"},{\"cita_literal_breve\":\"7. Qué no fija\",\"documento\":\"MANUAL_CONSTRUCTOR\",\"fragmentos\":[0],\"seccion\":\"MD-L000092-L000108\"},{\"cita_literal_breve\":\"10. Relación con IR y docs públicos\",\"documento\":\"MANUAL_CONSTRUCTOR\",\"fragmentos\":[0],\"seccion\":\"MD-L000092-L000108\"}],\"fundamentos_verificables\":[\"Verificación de citas de la etapa 0: las cinco citas literales («Un tramo se considerará cerrable cuando reúna, como mínimo:», «- correspondencia visible con la IR o con la superficie vigente;», «- delimitación expresa de lo que queda fuera;», «- uno o más ejemplos `.svp` suficientemente nucleares;» y «Todo tramo del manual deberá declarar:») coinciden carácter a carácter con los fragmentos MD-L000109-L000118 y MD-L000092-L000108 del MANUAL_CONSTRUCTOR; se mantienen.\",\"La lectura conjuntiva del criterio se confirma en la propia gramática de la fuente: la lista de condiciones mínimas se cierra con la conjunción «y» ante la última condición («- y ausencia de contradicción local suficiente con el pliego o con la Frontera normativa.»), de modo que todas las condiciones enumeradas son exigibles a la vez; basta el incumplimiento de una para no reunir el mínimo.\",\"Corrección por ampliación, no por error: en la etapa 0 se afirmó que la ficha obligatoria exige «Qué no fija» y «Relación con IR y docs públicos» citando sólo la fórmula introductoria; se añaden ahora como evidencias literales los propios ítems «7. Qué no fija» y «10. Relación con IR y docs públicos», que acreditan directamente la afirmación.\",\"Se añade la cita de la primera condición («- exposición sobria del objeto;») y de la quinta para que las cinco condiciones mínimas queden documentadas íntegramente, no sólo las dos incumplidas.\",\"Punto interpretativo declarado: la hipótesis habla de «exposición clara» y de «un ejemplo .svp»; se ha equiparado razonablemente a «exposición sobria del objeto» y a «uno o más ejemplos», pues «uno o más» admite un único ejemplo. Esta equiparación no afecta a la conclusión, que descansa en las dos condiciones expresamente ausentes (correspondencia con IR o superficie vigente y delimitación de lo excluido).\",\"Omisiones revisadas: no se omitió condición alguna del criterio de cierre; la quinta condición (ausencia de contradicción con pliego o Frontera) no necesita evaluarse porque el incumplimiento de dos mínimos ya determina la respuesta negativa.\",\"La respuesta no usa conocimiento externo ni el estado de otros repositorios: se apoya exclusivamente en MANUAL_CONSTRUCTOR, coherente con la presentación que subordina el manual al pliego, la Frontera normativa, la IR y la gramática vigentes.\"],\"insuficiencias\":[],\"respuesta\":\"No. El tramo descrito no cumple los mínimos documentales para considerarse cerrable. La sección «5. Criterio de cierre» del constructor del manual dispone que «Un tramo se considerará cerrable cuando reúna, como mínimo:» una lista conjuntiva de condiciones —«exposición sobria del objeto», «correspondencia visible con la IR o con la superficie vigente», «uno o más ejemplos `.svp` suficientemente nucleares», «delimitación expresa de lo que queda fuera» «y ausencia de contradicción local suficiente con el pliego o con la Frontera normativa»— cerrada con la conjunción «y», lo que confirma su carácter acumulativo. El tramo de la hipótesis satisface la exposición y el ejemplo (dos de las cinco), pero incumple dos requisitos expresos e igualmente mínimos: la correspondencia visible con la IR o superficie vigente y la delimitación expresa de lo excluido. La «4. Ficha obligatoria por tramo» lo refuerza al exigir declarar «7. Qué no fija» y «10. Relación con IR y docs públicos», extremos que el tramo descrito tampoco acredita. Basta el incumplimiento de uno solo de los mínimos para denegar el cierre; aquí faltan dos, por lo que el tramo permanece no cerrable hasta incorporarlos.\",\"revision\":\"Autocrítica de la etapa 0 contrastada con la fuente: se mantiene íntegramente la conclusión (no cerrable) y su razonamiento; las cinco citas originales se verificaron como exactas. Correcciones de forma, no de fondo: se añaden tres evidencias literales («- exposición sobria del objeto;», «- y ausencia de contradicción local suficiente con el pliego o con la Frontera normativa.», y los ítems «7. Qué no fija» y «10. Relación con IR y docs públicos») para que todas las afirmaciones queden apoyadas en citas directas, y se declara explícita la equiparación interpretativa entre «exposición clara»/«un ejemplo» de la hipótesis y «exposición sobria»/«uno o más ejemplos» del constructor, que no altera el resultado. No se detectaron errores, omisiones relevantes ni usos de conocimiento externo.\"}",
+      "solicitud_sha256": "085de13fb65fba060ed21d1b49c4988b26dde5f5146455cd98999f74c4c48ee6",
+      "sustantivo": "correcto",
+      "valor": "0"
+    },
+    {
+      "alerta": null,
+      "alerta_limite": false,
+      "auditoria_sha256": "c31776d724d9055be2838fc25ccfaa105fdc5a962a5bd39519e1397aeef5ec3f",
+      "caso": "MD06",
+      "critico": true,
+      "estado_documental_candidato": "respuesta_fundada",
+      "etapa": 1,
+      "fidelidad_documental": "conforme",
+      "final_sha256": "9fb1d4723cb39ad685ca2a0caa6efae53dae082e81a6d26043c53a7d768635c9",
+      "formal_conforme": true,
+      "fundamento_sustantivo": "Identifica el paso previo obligatorio por Wishlist IRQ para toda idea o capacidad nueva, conforme a la regla de control. No inventa su procedimiento interno ni extiende el documento histórico al estado actual de otros repositorios.",
+      "justificacion_documental": "Citas y estructura cotejadas en Rust. La adjudicación del sentido pertenece a esta revisión exterior.",
+      "medicion": {
+        "duracion_operacion_ms": 38778,
+        "telemetria": {
+          "bytes": 660683,
+          "fallos_medicion": 0,
+          "integridad": "conforme",
+          "intervalo_maximo_ms": 360,
+          "intervalo_objetivo_ms": 250,
+          "muestras": 137,
+          "plataforma_recibida": false,
+          "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+          "registros": 1676,
+          "sha256": "1c28f3229ba1580c52d7e773105f40b24621b24efac542581e914f715e0d6a9a"
+        },
+        "uso": {
+          "cached_tokens": 1280,
+          "coste_liquidado_usd": null,
+          "input_tokens": 22618,
+          "output_tokens": 1370,
+          "reasoning_tokens": 444,
+          "total_tokens": 23988
+        }
+      },
+      "naturaleza_defecto": null,
+      "nota_alcance": "Se pide identificar el paso previo, no ejecutar ni describir el procedimiento interno de Wishlist IRQ.",
+      "pasajes_contrastados": [
+        {
+          "documento": "MANUAL_CONSTRUCTOR",
+          "fragmento": "Toda idea nueva deberá pasar antes por el Wishlist IRQ del ecosistema SV.",
+          "fragmentos": [
+            0
+          ],
+          "seccion": "MD-L000123-L000125"
+        },
+        {
+          "documento": "MANUAL_CONSTRUCTOR",
+          "fragmento": "El constructor del manual no autoriza lluvias laterales.",
+          "fragmentos": [
+            0
+          ],
+          "seccion": "MD-L000123-L000125"
+        },
+        {
+          "documento": "MANUAL_CONSTRUCTOR",
+          "fragmento": "Su finalidad es permitir un cierre progresivo por capítulos o tramos sin perder el eje del sistema ni dispersarse en caminos laterales.",
+          "fragmentos": [
+            0
+          ],
+          "seccion": "MD-L000003-L000008"
+        }
+      ],
+      "recepcion_independiente": "pendiente",
+      "respuesta_original": "{\"caso\":\"MD06\",\"estado_documental\":\"respuesta_fundada\",\"etapa\":1,\"evidencias\":[{\"cita_literal_breve\":\"Toda idea nueva deberá pasar antes por el Wishlist IRQ del ecosistema SV.\",\"documento\":\"MANUAL_CONSTRUCTOR\",\"fragmentos\":[0],\"seccion\":\"MD-L000123-L000125\"},{\"cita_literal_breve\":\"El constructor del manual no autoriza lluvias laterales.\",\"documento\":\"MANUAL_CONSTRUCTOR\",\"fragmentos\":[0],\"seccion\":\"MD-L000123-L000125\"},{\"cita_literal_breve\":\"Su finalidad es permitir un cierre progresivo por capítulos o tramos sin perder el eje del sistema ni dispersarse en caminos laterales.\",\"documento\":\"MANUAL_CONSTRUCTOR\",\"fragmentos\":[0],\"seccion\":\"MD-L000003-L000008\"}],\"fundamentos_verificables\":[\"La sección 7 del constructor, titulada «Regla de control», contiene verbatim la exigencia de que toda idea nueva pase antes por el Wishlist IRQ del ecosistema SV; por tanto el paso previo ante una nueva capacidad propuesta está acreditado literalmente en la fuente.\",\"La afirmación de que el constructor no autoriza «lluvias laterales» reproduce textualmente la primera oración de la misma sección 7; no es una inferencia añadida.\",\"La coherencia con la finalidad declarada en la sección 1 se apoya en una cita exacta de esa sección (MD-L000003-L000008); la extensión de «toda idea nueva» a una «nueva capacidad» es una paráfrasis de alcance total que no añade contenido a la fuente.\",\"Los documentos suministrados no describen el procedimiento, la sede ni el responsable del Wishlist IRQ; la respuesta declara ese límite en insuficiencias en lugar de suplirlo.\"],\"insuficiencias\":[\"Los fragmentos no documentan el contenido, el funcionamiento ni la sede del Wishlist IRQ del ecosistema SV más allá de su mención como filtro previo obligatorio.\",\"La presentación de la edición indica que el constructor se reproduce sin correcciones desde la revisión f97173e07a9dfb8385ed1268d11de422b291507d; los documentos no acreditan si la regla de control mantiene idéntica redacción en el estado actual del repositorio origen.\"],\"respuesta\":\"La regla de control del constructor del manual (sección 7) establece como paso previo que toda idea nueva —incluida una nueva capacidad— pase antes por el Wishlist IRQ del ecosistema SV. El constructor no autoriza «lluvias laterales», de modo que ninguna capacidad puede incorporarse directamente al manual sin tramitarse previamente por ese cauce. Esta exigencia es coherente con la finalidad declarada del constructor: permitir un cierre progresivo por tramos sin perder el eje del sistema ni dispersarse en caminos laterales. Los documentos no precisan el procedimiento interno del Wishlist IRQ; solo acreditan su carácter de filtro previo obligatorio.\",\"revision\":\"Autocrítica de la etapa 0: se verificó que las tres citas son subcadenas exactas de las secciones citadas (MD-L000123-L000125 y MD-L000003-L000008), que la paráfrasis «incluida una nueva capacidad» está cubierta por el cuantificador «toda idea nueva» de la fuente, y que no se afirmó nada sobre el funcionamiento del Wishlist IRQ. No se detectaron omisiones relevantes para la pregunta ni sobreafirmaciones; se mantiene íntegra la respuesta provisional sin correcciones, añadiendo en insuficiencias la nota sobre el carácter histórico de la revisión documental reproducida.\"}",
+      "solicitud_sha256": "d6cf95b5c7b8772921ce50a7f19cd881368c369c1621e18c076a9273344ffc33",
+      "sustantivo": "correcto",
+      "valor": "0"
+    },
+    {
+      "alerta": null,
+      "alerta_limite": false,
+      "auditoria_sha256": "394a781230c7f35fc2a5cee2f5fe6025132f1ecc969cd10932663b485cacc648",
+      "caso": "MD07",
+      "critico": true,
+      "estado_documental_candidato": "respuesta_fundada",
+      "etapa": 1,
+      "fidelidad_documental": "conforme",
+      "final_sha256": "ab1bab9cc7550397014e36e4043f55ceefc6ccabb43b414216f651ae8b2942e9",
+      "formal_conforme": true,
+      "fundamento_sustantivo": "Preserva la semántica propia del SV y la coordinación con la política y protocolo de compatibilidad interlenguajes. Distingue dependencias documentales, materias por desarrollar e implementación efectiva; no afirma garantías operativas inexistentes.",
+      "justificacion_documental": "Citas y estructura cotejadas en Rust. La adjudicación del sentido pertenece a esta revisión exterior.",
+      "medicion": {
+        "duracion_operacion_ms": 64756,
+        "telemetria": {
+          "bytes": 1380967,
+          "fallos_medicion": 0,
+          "integridad": "conforme",
+          "intervalo_maximo_ms": 348,
+          "intervalo_objetivo_ms": 250,
+          "muestras": 227,
+          "plataforma_recibida": false,
+          "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+          "registros": 3612,
+          "sha256": "9d29a063688fa4d3a3479474ea240295e0482af5ac40d144c8de515adae6de3f"
+        },
+        "uso": {
+          "cached_tokens": 1280,
+          "coste_liquidado_usd": null,
+          "input_tokens": 24508,
+          "output_tokens": 3010,
+          "reasoning_tokens": 1126,
+          "total_tokens": 27518
+        }
+      },
+      "naturaleza_defecto": null,
+      "nota_alcance": "La política referenciada no forma parte del corpus; identificarla y preservar semántica sí está documentado.",
+      "pasajes_contrastados": [
+        {
+          "documento": "MANUAL_TRAMO10",
+          "fragmento": "cómo el lenguaje SV podrá relacionarse con otros lenguajes de programación sin degradar su semántica propia",
+          "fragmentos": [
+            0
+          ],
+          "seccion": "MD-L000003-L000006"
+        },
+        {
+          "documento": "MANUAL_CONSTRUCTOR",
+          "fragmento": "preservación semántica del SV",
+          "fragmentos": [
+            0
+          ],
+          "seccion": "MD-L000085-L000091"
+        },
+        {
+          "documento": "MANUAL_TRAMO10",
+          "fragmento": "garantías semánticas mínimas",
+          "fragmentos": [
+            0
+          ],
+          "seccion": "MD-L000014-L000021"
+        },
+        {
+          "documento": "MANUAL_CONSTRUCTOR",
+          "fragmento": "deberá coordinarse con la política y protocolo de compatibilidad interlenguajes del Lenguaje SV",
+          "fragmentos": [
+            0
+          ],
+          "seccion": "MD-L000119-L000122"
+        },
+        {
+          "documento": "MANUAL_TRAMO10",
+          "fragmento": "Política y protocolo de compatibilidad interlenguajes del Lenguaje SV",
+          "fragmentos": [
+            0
+          ],
+          "seccion": "MD-L000007-L000013"
+        },
+        {
+          "documento": "MANUAL_TRAMO10",
+          "fragmento": "Este tramo no implementa bindings, APIs, FFI ni wrappers reales.",
+          "fragmentos": [
+            0
+          ],
+          "seccion": "MD-L000022-L000025"
+        },
+        {
+          "documento": "MANUAL_TRAMO10",
+          "fragmento": "Pendiente de desarrollo.",
+          "fragmentos": [
+            0
+          ],
+          "seccion": "MD-L000026-L000028"
+        },
+        {
+          "documento": "MANUAL_PRESENTACION",
+          "fragmento": "El tramo 10 conserva el documento preparatorio existente, cuyo estado es «Pendiente de desarrollo».",
+          "fragmentos": [
+            0
+          ],
+          "seccion": "MD-L000005-L000010"
+        },
+        {
+          "documento": "MANUAL_INDICE",
+          "fragmento": "10 · Compatibilidad interlenguajes — documento preparatorio",
+          "fragmentos": [
+            0
+          ],
+          "seccion": "MD-L000001-L000017"
+        }
+      ],
+      "recepcion_independiente": "pendiente",
+      "respuesta_original": "{\"caso\":\"MD07\",\"estado_documental\":\"respuesta_fundada\",\"etapa\":1,\"evidencias\":[{\"cita_literal_breve\":\"cómo el lenguaje SV podrá relacionarse con otros lenguajes de programación sin degradar su semántica propia\",\"documento\":\"MANUAL_TRAMO10\",\"fragmentos\":[0],\"seccion\":\"MD-L000003-L000006\"},{\"cita_literal_breve\":\"preservación semántica del SV\",\"documento\":\"MANUAL_CONSTRUCTOR\",\"fragmentos\":[0],\"seccion\":\"MD-L000085-L000091\"},{\"cita_literal_breve\":\"garantías semánticas mínimas\",\"documento\":\"MANUAL_TRAMO10\",\"fragmentos\":[0],\"seccion\":\"MD-L000014-L000021\"},{\"cita_literal_breve\":\"deberá coordinarse con la política y protocolo de compatibilidad interlenguajes del Lenguaje SV\",\"documento\":\"MANUAL_CONSTRUCTOR\",\"fragmentos\":[0],\"seccion\":\"MD-L000119-L000122\"},{\"cita_literal_breve\":\"Política y protocolo de compatibilidad interlenguajes del Lenguaje SV\",\"documento\":\"MANUAL_TRAMO10\",\"fragmentos\":[0],\"seccion\":\"MD-L000007-L000013\"},{\"cita_literal_breve\":\"Este tramo no implementa bindings, APIs, FFI ni wrappers reales.\",\"documento\":\"MANUAL_TRAMO10\",\"fragmentos\":[0],\"seccion\":\"MD-L000022-L000025\"},{\"cita_literal_breve\":\"Pendiente de desarrollo.\",\"documento\":\"MANUAL_TRAMO10\",\"fragmentos\":[0],\"seccion\":\"MD-L000026-L000028\"},{\"cita_literal_breve\":\"El tramo 10 conserva el documento preparatorio existente, cuyo estado es «Pendiente de desarrollo».\",\"documento\":\"MANUAL_PRESENTACION\",\"fragmentos\":[0],\"seccion\":\"MD-L000005-L000010\"},{\"cita_literal_breve\":\"10 · Compatibilidad interlenguajes — documento preparatorio\",\"documento\":\"MANUAL_INDICE\",\"fragmentos\":[0],\"seccion\":\"MD-L000001-L000017\"}],\"fundamentos_verificables\":[\"La pregunta tiene dos componentes: qué debe preservarse y con qué política debe coordinarse la documentación; ambos quedan respondidos de forma explícita por el tramo 10 y por el constructor, sin necesidad de inferencia externa.\",\"Sobre lo que debe preservarse: el objeto del tramo 10 (MANUAL_TRAMO10, MD-L000003-L000006) declara documentar la relación de SV con otros lenguajes «sin degradar su semántica propia»; el constructor, en su entrada del Tramo 10 (MD-L000085-L000091), exige la «preservación semántica del SV»; y el propio tramo 10 (MD-L000014-L000021) anuncia que deberá fijar «garantías semánticas mínimas». Las tres citas convergen: lo que debe preservarse es la semántica propia del lenguaje SV.\",\"Sobre la coordinación: el constructor, sección 6 (MD-L000119-L000122), establece que la compatibilidad interlenguajes se tratará como tramo propio del manual y «deberá coordinarse con la política y protocolo de compatibilidad interlenguajes del Lenguaje SV»; el tramo 10 (MD-L000007-L000013) lista esa misma política y protocolo entre sus dependencias, lo que confirma la subordinación documental.\",\"Distinción previsto/implementado verificada: el tramo 10 declara (MD-L000022-L000025) que «no implementa bindings, APIs, FFI ni wrappers reales» y su estado (MD-L000026-L000028) es «Pendiente de desarrollo»; la presentación (MANUAL_PRESENTACION, MD-L000005-L000010) y el índice (MANUAL_INDICE, MD-L000001-L000017) lo confirman como documento preparatorio. Por tanto, la preservación semántica y la coordinación son obligaciones previstas, no logros implementados, y calificar el tramo de preparatorio está acreditado por dos fuentes adicionales.\",\"Autocrítica de la etapa 0: se verificó que las siete citas originales son subcadenas continuas exactas de los fragmentos suministrados, que los identificadores documento/seccion coinciden con los recibidos y que fragmentos [0] corresponde al campo pagina de todos los fragmentos. No se detectaron afirmaciones sin soporte ni errores de atribución; la única mejora introducida en esta etapa es añadir evidencia explícita (presentación e índice) para el calificativo «documento preparatorio», que en la etapa 0 se apoyaba sólo en el propio tramo 10.\"],\"insuficiencias\":[\"El contenido concreto de la política y protocolo de compatibilidad interlenguajes del Lenguaje SV no se suministra en los cuatro documentos: es un documento externo referenciado como dependencia y como sede de coordinación, por lo que no puede acreditarse aquí en qué consiste operativamente esa coordinación.\",\"Las «garantías semánticas mínimas» se anuncian como contenido que el tramo deberá fijar, pero su definición concreta no figura en los documentos suministrados, coherente con el estado «Pendiente de desarrollo» del tramo.\"],\"respuesta\":\"Según el tramo 10 y el constructor, lo que debe preservarse al relacionar SV con otros lenguajes es la semántica propia del lenguaje: el tramo 10 define su objeto como documentar la relación con otros lenguajes de programación «sin degradar su semántica propia», el constructor incluye entre los contenidos del Tramo 10 la «preservación semántica del SV», y el tramo prevé fijar «garantías semánticas mínimas». La coordinación debe realizarse con la política y protocolo de compatibilidad interlenguajes del Lenguaje SV: el constructor (sección 6) dispone que la compatibilidad interlenguajes se tratará como tramo propio del manual y deberá coordinarse con dicha política y protocolo, y el tramo 10 la lista expresamente entre sus dependencias. Ambos extremos son previstos, no implementados: el tramo 10 es un documento preparatorio —así lo califican el índice y la presentación— con estado «Pendiente de desarrollo», que declara no implementar bindings, APIs, FFI ni wrappers reales, limitándose a abrir el frente documental y de gobierno.\",\"revision\":\"Etapa 1: autocrítica documental de la entrega de etapa 0 completada. Se contrastaron una a una las siete citas y las afirmaciones derivadas contra los fragmentos suministrados: todas las citas son subcadenas continuas exactas, los identificadores documento/seccion son los recibidos y los índices de fragmento ([0]) corresponden al campo pagina. No se detectaron errores de sentido, atribución ni alcance, por lo que se mantiene íntegro el contenido de la respuesta. Única corrección de refuerzo: se añaden dos evidencias (MANUAL_PRESENTACION MD-L000005-L000010 y MANUAL_INDICE MD-L000001-L000017) que acreditan el calificativo «documento preparatorio», que en la etapa 0 se apoyaba sólo en el estado declarado del propio tramo 10; el sentido de la respuesta no cambia. Las insuficiencias declaradas se mantienen: el contenido de la política de coordinación y las garantías semánticas mínimas concretas no están en las fuentes suministradas, límite explícito de la fuente que no impide responder lo preguntado.\"}",
+      "solicitud_sha256": "450610ee34bfc677786262bcd8d955f59607bc6292e07a749ed8565fb719814a",
+      "sustantivo": "correcto",
+      "valor": "0"
+    },
+    {
+      "alerta": null,
+      "alerta_limite": false,
+      "auditoria_sha256": "d50c7a3beb7ccf56efd564be34685f4757bf81d584144d1ce9fa66ec1439a8e1",
+      "caso": "MD08",
+      "critico": false,
+      "estado_documental_candidato": "respuesta_fundada",
+      "etapa": 1,
+      "fidelidad_documental": "conforme",
+      "final_sha256": "c7d2892095a14fb1de5b934094b05ca69abc9d3795cba5f394c04d029697e94c",
+      "formal_conforme": true,
+      "fundamento_sustantivo": "Enumera las cinco cuestiones: tipos de compatibilidad, prioridad de lenguajes anfitriones, garantías mínimas, activación por lenguaje y límites de fase. Interpreta correctamente el carácter prospectivo de deberá fijar y el estado pendiente. Las precisiones de las revisiones acotan la correspondencia con la ficha como inferencia documental, sin cambiar el núcleo.",
+      "justificacion_documental": "Citas y estructura cotejadas en Rust. La adjudicación del sentido pertenece a esta revisión exterior.",
+      "medicion": {
+        "duracion_operacion_ms": 107753,
+        "telemetria": {
+          "bytes": 2416563,
+          "fallos_medicion": 0,
+          "integridad": "conforme",
+          "intervalo_maximo_ms": 425,
+          "intervalo_objetivo_ms": 250,
+          "muestras": 399,
+          "plataforma_recibida": false,
+          "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+          "registros": 6309,
+          "sha256": "8a655bf26d39e9714661fe8d93158bbac994c4428e9e761025661554beaead2b"
+        },
+        "uso": {
+          "cached_tokens": 1280,
+          "coste_liquidado_usd": null,
+          "input_tokens": 25979,
+          "output_tokens": 5214,
+          "reasoning_tokens": 2284,
+          "total_tokens": 31193
+        }
+      },
+      "naturaleza_defecto": null,
+      "nota_alcance": "Programa documental de desarrollo; no acredita mecanismos implementados.",
+      "pasajes_contrastados": [
+        {
+          "documento": "MANUAL_TRAMO10",
+          "fragmento": "tipos de compatibilidad admitidos;",
+          "fragmentos": [
+            0
+          ],
+          "seccion": "MD-L000014-L000021"
+        },
+        {
+          "documento": "MANUAL_TRAMO10",
+          "fragmento": "prioridad por lenguajes anfitriones;",
+          "fragmentos": [
+            0
+          ],
+          "seccion": "MD-L000014-L000021"
+        },
+        {
+          "documento": "MANUAL_TRAMO10",
+          "fragmento": "garantías semánticas mínimas;",
+          "fragmentos": [
+            0
+          ],
+          "seccion": "MD-L000014-L000021"
+        },
+        {
+          "documento": "MANUAL_TRAMO10",
+          "fragmento": "criterio de activación por lenguaje;",
+          "fragmentos": [
+            0
+          ],
+          "seccion": "MD-L000014-L000021"
+        },
+        {
+          "documento": "MANUAL_TRAMO10",
+          "fragmento": "y límites de fase.",
+          "fragmentos": [
+            0
+          ],
+          "seccion": "MD-L000014-L000021"
+        },
+        {
+          "documento": "MANUAL_TRAMO10",
+          "fragmento": "Qué deberá fijar",
+          "fragmentos": [
+            0
+          ],
+          "seccion": "MD-L000014-L000021"
+        },
+        {
+          "documento": "MANUAL_TRAMO10",
+          "fragmento": "Pendiente de desarrollo.",
+          "fragmentos": [
+            0
+          ],
+          "seccion": "MD-L000026-L000028"
+        },
+        {
+          "documento": "MANUAL_TRAMO10",
+          "fragmento": "Este tramo no implementa bindings, APIs, FFI ni wrappers reales. Solo abre el frente documental y de gobierno.",
+          "fragmentos": [
+            0
+          ],
+          "seccion": "MD-L000022-L000025"
+        },
+        {
+          "documento": "MANUAL_TRAMO10",
+          "fragmento": "Este tramo fija la estructura mínima de trabajo para documentar cómo el lenguaje SV podrá relacionarse con otros lenguajes de programación sin degradar su semántica propia.",
+          "fragmentos": [
+            0
+          ],
+          "seccion": "MD-L000003-L000006"
+        },
+        {
+          "documento": "MANUAL_TRAMO10",
+          "fragmento": "Política y protocolo de compatibilidad interlenguajes del Lenguaje SV",
+          "fragmentos": [
+            0
+          ],
+          "seccion": "MD-L000007-L000013"
+        },
+        {
+          "documento": "MANUAL_PRESENTACION",
+          "fragmento": "El tramo 10 conserva el documento preparatorio existente, cuyo estado es «Pendiente de desarrollo».",
+          "fragmentos": [
+            0
+          ],
+          "seccion": "MD-L000005-L000010"
+        },
+        {
+          "documento": "MANUAL_PRESENTACION",
+          "fragmento": "El constructor y el tramo 10 se reproducen íntegramente, sin correcciones terminológicas ni ampliaciones.",
+          "fragmentos": [
+            0
+          ],
+          "seccion": "MD-L000005-L000010"
+        },
+        {
+          "documento": "MANUAL_PRESENTACION",
+          "fragmento": "El manual permanece subordinado al pliego, la Frontera normativa, la representación intermedia y la gramática vigentes.",
+          "fragmentos": [
+            0
+          ],
+          "seccion": "MD-L000011-L000014"
+        },
+        {
+          "documento": "MANUAL_PRESENTACION",
+          "fragmento": "La presentación de un documento en este libro no acredita una nueva aprobación.",
+          "fragmentos": [
+            0
+          ],
+          "seccion": "MD-L000011-L000014"
+        },
+        {
+          "documento": "MANUAL_CONSTRUCTOR",
+          "fragmento": "Todo tramo del manual deberá declarar:",
+          "fragmentos": [
+            0
+          ],
+          "seccion": "MD-L000092-L000108"
+        },
+        {
+          "documento": "MANUAL_CONSTRUCTOR",
+          "fragmento": "6. Qué fija",
+          "fragmentos": [
+            0
+          ],
+          "seccion": "MD-L000092-L000108"
+        },
+        {
+          "documento": "MANUAL_CONSTRUCTOR",
+          "fragmento": "7. Qué no fija",
+          "fragmentos": [
+            0
+          ],
+          "seccion": "MD-L000092-L000108"
+        },
+        {
+          "documento": "MANUAL_CONSTRUCTOR",
+          "fragmento": "La compatibilidad interlenguajes del SV se tratará como tramo propio del manual y deberá coordinarse con la política y protocolo de compatibilidad interlenguajes del Lenguaje SV.",
+          "fragmentos": [
+            0
+          ],
+          "seccion": "MD-L000119-L000122"
+        }
+      ],
+      "recepcion_independiente": "pendiente",
+      "respuesta_original": "{\"caso\":\"MD08\",\"estado_documental\":\"respuesta_fundada\",\"etapa\":1,\"evidencias\":[{\"cita_literal_breve\":\"tipos de compatibilidad admitidos;\",\"documento\":\"MANUAL_TRAMO10\",\"fragmentos\":[0],\"seccion\":\"MD-L000014-L000021\"},{\"cita_literal_breve\":\"prioridad por lenguajes anfitriones;\",\"documento\":\"MANUAL_TRAMO10\",\"fragmentos\":[0],\"seccion\":\"MD-L000014-L000021\"},{\"cita_literal_breve\":\"garantías semánticas mínimas;\",\"documento\":\"MANUAL_TRAMO10\",\"fragmentos\":[0],\"seccion\":\"MD-L000014-L000021\"},{\"cita_literal_breve\":\"criterio de activación por lenguaje;\",\"documento\":\"MANUAL_TRAMO10\",\"fragmentos\":[0],\"seccion\":\"MD-L000014-L000021\"},{\"cita_literal_breve\":\"y límites de fase.\",\"documento\":\"MANUAL_TRAMO10\",\"fragmentos\":[0],\"seccion\":\"MD-L000014-L000021\"},{\"cita_literal_breve\":\"Qué deberá fijar\",\"documento\":\"MANUAL_TRAMO10\",\"fragmentos\":[0],\"seccion\":\"MD-L000014-L000021\"},{\"cita_literal_breve\":\"Pendiente de desarrollo.\",\"documento\":\"MANUAL_TRAMO10\",\"fragmentos\":[0],\"seccion\":\"MD-L000026-L000028\"},{\"cita_literal_breve\":\"Este tramo no implementa bindings, APIs, FFI ni wrappers reales. Solo abre el frente documental y de gobierno.\",\"documento\":\"MANUAL_TRAMO10\",\"fragmentos\":[0],\"seccion\":\"MD-L000022-L000025\"},{\"cita_literal_breve\":\"Este tramo fija la estructura mínima de trabajo para documentar cómo el lenguaje SV podrá relacionarse con otros lenguajes de programación sin degradar su semántica propia.\",\"documento\":\"MANUAL_TRAMO10\",\"fragmentos\":[0],\"seccion\":\"MD-L000003-L000006\"},{\"cita_literal_breve\":\"Política y protocolo de compatibilidad interlenguajes del Lenguaje SV\",\"documento\":\"MANUAL_TRAMO10\",\"fragmentos\":[0],\"seccion\":\"MD-L000007-L000013\"},{\"cita_literal_breve\":\"El tramo 10 conserva el documento preparatorio existente, cuyo estado es «Pendiente de desarrollo».\",\"documento\":\"MANUAL_PRESENTACION\",\"fragmentos\":[0],\"seccion\":\"MD-L000005-L000010\"},{\"cita_literal_breve\":\"El constructor y el tramo 10 se reproducen íntegramente, sin correcciones terminológicas ni ampliaciones.\",\"documento\":\"MANUAL_PRESENTACION\",\"fragmentos\":[0],\"seccion\":\"MD-L000005-L000010\"},{\"cita_literal_breve\":\"El manual permanece subordinado al pliego, la Frontera normativa, la representación intermedia y la gramática vigentes.\",\"documento\":\"MANUAL_PRESENTACION\",\"fragmentos\":[0],\"seccion\":\"MD-L000011-L000014\"},{\"cita_literal_breve\":\"La presentación de un documento en este libro no acredita una nueva aprobación.\",\"documento\":\"MANUAL_PRESENTACION\",\"fragmentos\":[0],\"seccion\":\"MD-L000011-L000014\"},{\"cita_literal_breve\":\"Todo tramo del manual deberá declarar:\",\"documento\":\"MANUAL_CONSTRUCTOR\",\"fragmentos\":[0],\"seccion\":\"MD-L000092-L000108\"},{\"cita_literal_breve\":\"6. Qué fija\",\"documento\":\"MANUAL_CONSTRUCTOR\",\"fragmentos\":[0],\"seccion\":\"MD-L000092-L000108\"},{\"cita_literal_breve\":\"7. Qué no fija\",\"documento\":\"MANUAL_CONSTRUCTOR\",\"fragmentos\":[0],\"seccion\":\"MD-L000092-L000108\"},{\"cita_literal_breve\":\"La compatibilidad interlenguajes del SV se tratará como tramo propio del manual y deberá coordinarse con la política y protocolo de compatibilidad interlenguajes del Lenguaje SV.\",\"documento\":\"MANUAL_CONSTRUCTOR\",\"fragmentos\":[0],\"seccion\":\"MD-L000119-L000122\"}],\"fundamentos_verificables\":[\"Autocrítica de las cinco cuestiones: contrastada una a una contra la sección «3. Qué deberá fijar» de MANUAL_TRAMO10 (MD-L000014-L000021), la lista de la etapa 0 reproduce exactamente los cinco epígrafes del documento, en su orden, sin añadir ni suprimir ninguno; las citas son subcadenas continuas exactas. Se mantiene.\",\"Autocrítica del carácter programático: el encabezado rector «Qué deberá fijar» expresa obligación futura; el estado del tramo es «Pendiente de desarrollo» (MD-L000026-L000028) y la sección «4. Qué no fija todavía» declara que no implementa bindings, APIs, FFI ni wrappers reales y que «Solo abre el frente documental y de gobierno» (MD-L000022-L000025). La caracterización de la enumeración como programa de fijación previsto y no implementado queda confirmada por la fuente. Se mantiene.\",\"Precisión añadida en la autocrítica: la correspondencia entre la sección «3. Qué deberá fijar» del tramo 10 y el punto 6 («Qué fija») de la ficha obligatoria del constructor (MD-L000092-L000108) es una deducción apoyada en el paralelismo visible entre «4. Qué no fija todavía» y el punto 7 («Qué no fija»); el tramo 10 no declara expresamente esa correspondencia, por lo que se formula ahora como inferencia documentada y no como afirmación directa del documento.\",\"Precisión añadida sobre el alcance normativo: el «deberá» de la enumeración tiene fuerza obligatoria interna respecto del desarrollo futuro del tramo, pero la presentación advierte que el manual permanece subordinado al pliego, la Frontera normativa, la representación intermedia y la gramática vigentes, y que la presentación del documento en este libro no acredita una nueva aprobación (MD-L000011-L000014); la enumeración no es, por tanto, norma aprobada del lenguaje, sino programa del tramo en sede documental.\",\"Refuerzo añadido del carácter documental y de gobierno: el constructor prevé que la compatibilidad interlenguajes se trate como tramo propio y coordinado con la política y protocolo de compatibilidad interlenguajes del Lenguaje SV (MD-L000119-L000122), y esa misma política figura entre las dependencias declaradas del tramo 10 (MD-L000007-L000013), lo que confirma que la enumeración pertenece al frente de gobierno y no a una especificación técnica implementada.\",\"Distinción temporal mantenida: los documentos reproducen íntegramente, sin correcciones ni ampliaciones, la revisión histórica f97173e07a9dfb8385ed1268d11de422b291507d (MD-L000005-L000010); nada en la fuente permite afirmar el estado actual del tramo 10 en otros repositorios.\",\"No se detectaron errores fácticos, citas inexactas ni omisiones que alteren la respuesta; no se retira ninguna afirmación de la etapa 0.\"],\"insuficiencias\":[\"El documento no desarrolla el contenido de ninguna de las cinco cuestiones: no constan definiciones, criterios, ejemplos ni contraejemplos para tipos de compatibilidad, prioridades, garantías, activación o límites de fase; sólo consta su enunciado.\",\"No consta en la fuente una jerarquía u orden de prioridad explícito entre las cinco cuestiones más allá de su orden de aparición en la lista.\",\"El tramo 10 no declara expresamente que su sección «3. Qué deberá fijar» constituya el punto 6 («Qué fija») de la ficha obligatoria; esa correspondencia se sostiene por paralelismo con «4. Qué no fija todavía» y el punto 7, no por afirmación directa del documento.\",\"El estado actual de otros repositorios (por ejemplo, si el tramo 10 ha sido desarrollado con posterioridad en SV-lenguaje-de-computacion) no queda acreditado por estos fragmentos, que sólo documentan la reproducción de la revisión histórica f97173e07a9dfb8385ed1268d11de422b291507d.\"],\"respuesta\":\"Según la sección «3. Qué deberá fijar» del Tramo 10 (MANUAL_TRAMO10), el tramo de compatibilidad deberá fijar exactamente cinco cuestiones: (1) los tipos de compatibilidad admitidos; (2) la prioridad por lenguajes anfitriones; (3) las garantías semánticas mínimas; (4) el criterio de activación por lenguaje; y (5) los límites de fase.\\n\\nCarácter de la enumeración: es una enumeración programática y prospectiva, no constatativa. El encabezado que la rige, «Qué deberá fijar», la formula como obligación futura: la lista delimita el alcance que el tramo está llamado a establecer, no decisiones ya adoptadas. Concuerda con el estado declarado del tramo, «Pendiente de desarrollo», y con la sección «4. Qué no fija todavía», que precisa que el tramo no implementa bindings, APIs, FFI ni wrappers reales y que «Solo abre el frente documental y de gobierno». Distinguiendo lo previsto de lo implementado: las cinco cuestiones están únicamente previstas como objeto de fijación; ninguna está desarrollada ni implementada en los documentos suministrados.\\n\\nDentro de la arquitectura del manual, la lista puede adscribirse —por inferencia documentada a partir del paralelismo con «4. Qué no fija todavía»— al punto 6 («Qué fija») de la ficha obligatoria que el constructor impone a todo tramo; su fuerza es la de un programa interno de trabajo, subordinado al pliego, la Frontera normativa, la representación intermedia y la gramática vigentes, y su presentación en este libro no acredita una nueva aprobación. Además, el constructor prevé que la compatibilidad interlenguajes se trate como tramo propio coordinado con la política y protocolo de compatibilidad interlenguajes del Lenguaje SV, política que figura entre las dependencias declaradas del tramo 10, lo que confirma su carácter documental y de gobierno. Los documentos reproducen íntegramente, sin correcciones ni ampliaciones, la revisión histórica f97173e07a9dfb8385ed1268d11de422b291507d; nada acredita el estado actual del tramo en otros repositorios.\",\"revision\":\"Autocrítica de la etapa 0: se contrastaron las cinco citas de la lista contra la sección «3. Qué deberá fijar» y son subcadenas continuas exactas; se verificaron los identificadores de documento y sección y el índice de fragmento (0). Se mantiene el núcleo: las cinco cuestiones y su carácter programático, previsto y no implementado. Se añaden tres precisiones sin cambiar el sentido: (a) la correspondencia con el punto 6 de la ficha se formula como inferencia documentada, no como declaración expresa del tramo 10; (b) la fuerza obligatoria del «deberá» se delimita como programa interno subordinado, sin acreditar aprobación nueva; (c) se incorpora la coordinación con la política de compatibilidad interlenguajes prevista por el constructor y declarada como dependencia del tramo. No se detectaron errores fácticos ni se retira ninguna afirmación; no se presupuso la existencia de error.\"}",
+      "solicitud_sha256": "3f336c6a7480f9c3b822d4659c36a7f1d081cdff95b6857262b2f502d84072db",
+      "sustantivo": "correcto",
+      "valor": "0"
+    },
+    {
+      "alerta": null,
+      "alerta_limite": false,
+      "auditoria_sha256": "2057ed6621ece3c9da852f52d0d20618fcb4a2d01ee91d61a91340685a166075",
+      "caso": "MD09",
+      "critico": true,
+      "estado_documental_candidato": "respuesta_fundada",
+      "etapa": 1,
+      "fidelidad_documental": "conforme",
+      "final_sha256": "9fc753f03a0f47e7b6d8bb30cc6548de59963ace331cc261ff823960ccca7724",
+      "formal_conforme": true,
+      "fundamento_sustantivo": "Limita la conclusión al tramo 10: este documento no implementa bindings, APIs, FFI ni wrappers, abre su sede documental y permanece pendiente de desarrollo. No concluye que esos mecanismos estén ausentes de todo el SV. El enunciado pide este límite y la fuente permite responderlo; no existe insuficiencia de suministro demostrada.",
+      "justificacion_documental": "Citas y estructura cotejadas en Rust. La adjudicación del sentido pertenece a esta revisión exterior.",
+      "medicion": {
+        "duracion_operacion_ms": 96016,
+        "telemetria": {
+          "bytes": 2122281,
+          "fallos_medicion": 0,
+          "integridad": "conforme",
+          "intervalo_maximo_ms": 277,
+          "intervalo_objetivo_ms": 250,
+          "muestras": 366,
+          "plataforma_recibida": false,
+          "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+          "registros": 5510,
+          "sha256": "f7a5a39a6e11ee5fe6acae84df940aefc82c9f70a101f55213e198821e3ec1ae"
+        },
+        "uso": {
+          "cached_tokens": 1280,
+          "coste_liquidado_usd": null,
+          "input_tokens": 26441,
+          "output_tokens": 4527,
+          "reasoning_tokens": 2797,
+          "total_tokens": 30968
+        }
+      },
+      "naturaleza_defecto": null,
+      "nota_alcance": "Límite documental explícitamente preguntado y comprobado; no equivale a inexistencia en todo el sistema.",
+      "pasajes_contrastados": [
+        {
+          "documento": "MANUAL_TRAMO10",
+          "fragmento": "Este tramo no implementa bindings, APIs, FFI ni wrappers reales. Solo abre el frente documental y de gobierno.",
+          "fragmentos": [
+            0
+          ],
+          "seccion": "MD-L000022-L000025"
+        },
+        {
+          "documento": "MANUAL_TRAMO10",
+          "fragmento": "Pendiente de desarrollo.",
+          "fragmentos": [
+            0
+          ],
+          "seccion": "MD-L000026-L000028"
+        },
+        {
+          "documento": "MANUAL_TRAMO10",
+          "fragmento": "Este tramo fija la estructura mínima de trabajo para documentar cómo el lenguaje SV podrá relacionarse con otros lenguajes de programación sin degradar su semántica propia.",
+          "fragmentos": [
+            0
+          ],
+          "seccion": "MD-L000003-L000006"
+        },
+        {
+          "documento": "MANUAL_TRAMO10",
+          "fragmento": "- tipos de compatibilidad admitidos;\n- prioridad por lenguajes anfitriones;\n- garantías semánticas mínimas;\n- criterio de activación por lenguaje;\n- y límites de fase.",
+          "fragmentos": [
+            0
+          ],
+          "seccion": "MD-L000014-L000021"
+        },
+        {
+          "documento": "MANUAL_TRAMO10",
+          "fragmento": "Política y protocolo de compatibilidad interlenguajes del Lenguaje SV",
+          "fragmentos": [
+            0
+          ],
+          "seccion": "MD-L000007-L000013"
+        }
+      ],
+      "recepcion_independiente": "pendiente",
+      "respuesta_original": "{\"caso\":\"MD09\",\"estado_documental\":\"respuesta_fundada\",\"etapa\":1,\"evidencias\":[{\"cita_literal_breve\":\"Este tramo no implementa bindings, APIs, FFI ni wrappers reales. Solo abre el frente documental y de gobierno.\",\"documento\":\"MANUAL_TRAMO10\",\"fragmentos\":[0],\"seccion\":\"MD-L000022-L000025\"},{\"cita_literal_breve\":\"Pendiente de desarrollo.\",\"documento\":\"MANUAL_TRAMO10\",\"fragmentos\":[0],\"seccion\":\"MD-L000026-L000028\"},{\"cita_literal_breve\":\"Este tramo fija la estructura mínima de trabajo para documentar cómo el lenguaje SV podrá relacionarse con otros lenguajes de programación sin degradar su semántica propia.\",\"documento\":\"MANUAL_TRAMO10\",\"fragmentos\":[0],\"seccion\":\"MD-L000003-L000006\"},{\"cita_literal_breve\":\"- tipos de compatibilidad admitidos;\\n- prioridad por lenguajes anfitriones;\\n- garantías semánticas mínimas;\\n- criterio de activación por lenguaje;\\n- y límites de fase.\",\"documento\":\"MANUAL_TRAMO10\",\"fragmentos\":[0],\"seccion\":\"MD-L000014-L000021\"},{\"cita_literal_breve\":\"Política y protocolo de compatibilidad interlenguajes del Lenguaje SV\",\"documento\":\"MANUAL_TRAMO10\",\"fragmentos\":[0],\"seccion\":\"MD-L000007-L000013\"}],\"fundamentos_verificables\":[\"La sección «4. Qué no fija todavía» del tramo 10 niega expresamente la implementación de bindings, APIs, FFI y wrappers reales, y acota el alcance efectivo del documento a abrir «el frente documental y de gobierno»: según el propio texto, la implementación técnica no forma parte de lo que este tramo realiza ni acredita.\",\"La sección «1. Objeto» define el tramo como «estructura mínima de trabajo» para documentar una relación futura del lenguaje SV con otros lenguajes «sin degradar su semántica propia», formulación que sitúa el contenido en lo previsto y no en lo implementado.\",\"La sección «3. Qué deberá fijar» emplea formulación prospectiva («deberá fijar») y enumera cinco materias pendientes (tipos de compatibilidad admitidos, prioridad por lenguajes anfitriones, garantías semánticas mínimas, criterio de activación por lenguaje y límites de fase); ninguna de ellas queda fijada en el texto suministrado.\",\"La sección «2. Dependencias» subordina el tramo al pliego, a la Frontera normativa, a la IR canónica v0.2 y a la política y protocolo de compatibilidad interlenguajes, lo que corrobora su carácter de pieza de gobierno documental y no de especificación técnica cerrada.\",\"La sección «5. Estado» declara «Pendiente de desarrollo», de modo que el documento no acredita especificación cerrada ni mecanismo alguno en funcionamiento; toda afirmación sobre APIs o FFI implementadas excedería lo que la fuente acredita.\",\"La conclusión distingue el documento histórico suministrado del estado actual de otros repositorios: la respuesta afirma únicamente lo que el tramo 10 declara y acredita, y no afirma ni niega la existencia de implementaciones fuera de este documento, extremo que el suministro no cubre.\"],\"insuficiencias\":[\"El tramo 10 no identifica lenguajes anfitriones concretos, ni plazos, ni responsables, ni detalles técnicos de los futuros mecanismos de compatibilidad; esos extremos quedan fuera de lo acreditado por el documento y no se han inferido.\",\"El suministro no incluye el estado actual de otros repositorios; por tanto no puede determinarse desde estas fuentes si existen bindings, APIs, FFI o wrappers implementados en otra sede. Esta insuficiencia es un límite del suministro y es coherente con la propia pregunta, que limita la conclusión a lo acreditado por el documento del tramo 10.\"],\"respuesta\":\"El tramo 10 declara expresamente que no implementa ninguno de esos mecanismos: «Este tramo no implementa bindings, APIs, FFI ni wrappers reales. Solo abre el frente documental y de gobierno». Su objeto declarado es fijar la estructura mínima de trabajo para documentar cómo el lenguaje SV podrá relacionarse con otros lenguajes de programación sin degradar su semántica propia, y se subordina a dependencias de gobierno (pliego, Frontera normativa, IR canónica v0.2 y la política y protocolo de compatibilidad interlenguajes del Lenguaje SV). Lo relativo a APIs, FFI, bindings y wrappers figura sólo como materia prevista: el tramo enumera lo que deberá fijar —tipos de compatibilidad admitidos, prioridad por lenguajes anfitriones, garantías semánticas mínimas, criterio de activación por lenguaje y límites de fase— sin fijarlo todavía. Su estado documental declarado es «Pendiente de desarrollo». Por tanto, limitándose a lo acreditado por ese documento: (i) el tramo 10 es un documento preparatorio, de carácter documental y de gobierno; (ii) no acredita especificación detallada ni implementación de APIs, FFI, bindings ni wrappers; (iii) la eventual existencia de tales implementaciones en otros repositorios no forma parte del suministro y no puede afirmarse ni negarse desde este documento.\",\"revision\":\"Autocrítica de la etapa 0 sin presuponer error: se contrastaron las cuatro citas contra los fragmentos suministrados y se verificó que son cadenas continuas exactas del texto de MANUAL_TRAMO10, sin puntos suspensivos añadidos, con los identificadores de documento y sección recibidos y fragmento 0 en todos los casos; las paráfrasis (objeto, lista de materias, estado) corresponden al texto fuente. Se mantiene íntegra la conclusión. Se introducen dos mejoras que no alteran el sentido: (1) se precisa la formulación para distinguir con claridad «el documento no acredita implementación» de la inexistencia absoluta, haciendo explícita la distinción entre el documento histórico y el estado actual de otros repositorios, que el suministro no cubre; (2) se añade la sección «2. Dependencias» como quinta evidencia corroborante del carácter de gobierno documental del tramo. No se detectaron omisiones que afecten a la respuesta ni errores que corregir o retirar; no se requiere U porque la fuente responde directamente a ambos extremos de la pregunta.\"}",
+      "solicitud_sha256": "c3a12cf6a359ba902aaf418a72a020cfd51d9e9cb283928a6999e9561e114bf5",
+      "sustantivo": "correcto",
+      "valor": "0"
+    }
+  ],
+  "clave_sha256": "e8f9e1cf7c65856106dab42b07ccc3348de5862ea877979d02dcdd1d7f3e81c7",
+  "cotejo_instrumental": true,
+  "encargo": "KIMI-K3-MANUAL-20261008",
+  "fase": "R1",
+  "licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+  "medidas": {
+    "admision": "Apto para el contrato documental",
+    "aptitud_clinica": false,
+    "correctos": 8,
+    "criticidades": [
+      true,
+      true,
+      false,
+      false,
+      true,
+      true,
+      true,
+      false,
+      true
+    ],
+    "errores": 1,
+    "errores_criticos": 0,
+    "errores_no_criticos": 1,
+    "impedimentos_documentales": 0,
+    "incidencias_documentales": 0,
+    "indeterminados": 0,
+    "kappa": "Apto",
+    "puntuacion": null,
+    "terna_completa": true,
+    "u_criticas": 0,
+    "umbral": 7
+  },
+  "no_adjudicados": 0,
+  "recepcion_independiente": "pendiente",
+  "revision_sustantiva_sha256": "4f597a7fb82379c0b316b0b0df9bb008f0ef0e854fbc9594218b50a89f017218",
+  "vector": [
+    "0",
+    "0",
+    "0",
+    "1",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0"
+  ]
+}

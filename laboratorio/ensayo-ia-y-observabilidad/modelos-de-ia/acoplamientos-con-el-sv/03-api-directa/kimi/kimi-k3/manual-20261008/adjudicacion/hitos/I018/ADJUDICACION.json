@@ -1,0 +1,70 @@
+{
+  "alerta": null,
+  "alerta_limite": false,
+  "auditoria_sha256": "c31776d724d9055be2838fc25ccfaa105fdc5a962a5bd39519e1397aeef5ec3f",
+  "caso": "MD06",
+  "critico": true,
+  "estado_documental_candidato": "respuesta_fundada",
+  "etapa": 2,
+  "fidelidad_documental": "conforme",
+  "final_sha256": "7f54460da5fc6d598bb0bf1d88080ab3c0a872ec6b8316cb36b4ceb1f9c5a7d6",
+  "formal_conforme": true,
+  "fundamento_sustantivo": "Identifica el paso previo obligatorio por Wishlist IRQ para toda idea o capacidad nueva, conforme a la regla de control. No inventa su procedimiento interno ni extiende el documento histórico al estado actual de otros repositorios.",
+  "justificacion_documental": "Citas y estructura cotejadas en Rust. La adjudicación del sentido pertenece a esta revisión exterior.",
+  "medicion": {
+    "duracion_operacion_ms": 36034,
+    "telemetria": {
+      "bytes": 639896,
+      "fallos_medicion": 0,
+      "integridad": "conforme",
+      "intervalo_maximo_ms": 307,
+      "intervalo_objetivo_ms": 250,
+      "muestras": 128,
+      "plataforma_recibida": false,
+      "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+      "registros": 1633,
+      "sha256": "01d0f4a5da312429ecf82c9e40c83aa994e73d6664be708aeb7b74889e31f2de"
+    },
+    "uso": {
+      "cached_tokens": 1280,
+      "coste_liquidado_usd": null,
+      "input_tokens": 25560,
+      "output_tokens": 1358,
+      "reasoning_tokens": 332,
+      "total_tokens": 26918
+    }
+  },
+  "naturaleza_defecto": null,
+  "nota_alcance": "Se pide identificar el paso previo, no ejecutar ni describir el procedimiento interno de Wishlist IRQ.",
+  "pasajes_contrastados": [
+    {
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmento": "Toda idea nueva deberá pasar antes por el Wishlist IRQ del ecosistema SV.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000123-L000125"
+    },
+    {
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmento": "El constructor del manual no autoriza lluvias laterales.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000123-L000125"
+    },
+    {
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmento": "Su finalidad es permitir un cierre progresivo por capítulos o tramos sin perder el eje del sistema ni dispersarse en caminos laterales.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000003-L000008"
+    }
+  ],
+  "recepcion_independiente": "pendiente",
+  "respuesta_original": "{\"caso\":\"MD06\",\"estado_documental\":\"respuesta_fundada\",\"etapa\":2,\"evidencias\":[{\"cita_literal_breve\":\"Toda idea nueva deberá pasar antes por el Wishlist IRQ del ecosistema SV.\",\"documento\":\"MANUAL_CONSTRUCTOR\",\"fragmentos\":[0],\"seccion\":\"MD-L000123-L000125\"},{\"cita_literal_breve\":\"El constructor del manual no autoriza lluvias laterales.\",\"documento\":\"MANUAL_CONSTRUCTOR\",\"fragmentos\":[0],\"seccion\":\"MD-L000123-L000125\"},{\"cita_literal_breve\":\"Su finalidad es permitir un cierre progresivo por capítulos o tramos sin perder el eje del sistema ni dispersarse en caminos laterales.\",\"documento\":\"MANUAL_CONSTRUCTOR\",\"fragmentos\":[0],\"seccion\":\"MD-L000003-L000008\"}],\"fundamentos_verificables\":[\"La pregunta se refiere a la «regla de control» del constructor; la sección 7 del MANUAL_CONSTRUCTOR lleva exactamente ese título y su texto íntegro es: «El constructor del manual no autoriza lluvias laterales. Toda idea nueva deberá pasar antes por el Wishlist IRQ del ecosistema SV.»; por tanto el paso previo queda acreditado literalmente.\",\"Las dos entregas anteriores identifican correctamente ese paso previo (pasar antes por el Wishlist IRQ del ecosistema SV) y la prohibición de «lluvias laterales», sin añadir contenido ausente de la fuente.\",\"La paráfrasis «incluida una nueva capacidad» está cubierta por el cuantificador universal «Toda idea nueva» del texto; no constituye extensión indebida.\",\"La cita de apoyo de la sección 1 (MD-L000003-L000008) es subcadena exacta del fragmento y sostiene únicamente la coherencia de la regla con la finalidad declarada del constructor, sin usarse para ampliar la respuesta.\",\"Ninguna de las entregas anteriores afirmó el funcionamiento, la sede o el responsable del Wishlist IRQ; ambas declararon ese límite en insuficiencias, lo que es conforme con la fuente.\"],\"insuficiencias\":[\"Los fragmentos no documentan el contenido, el funcionamiento ni la sede del Wishlist IRQ del ecosistema SV más allá de su mención como filtro previo obligatorio.\",\"La presentación de la edición indica que el constructor se reproduce desde la revisión f97173e07a9dfb8385ed1268d11de422b291507d del repositorio origen; los documentos suministrados no acreditan si la regla de control mantiene idéntica redacción en el estado actual de ese repositorio.\"],\"respuesta\":\"La regla de control del constructor del manual (sección 7, «Regla de control») establece como paso previo que toda idea nueva —lo que incluye una nueva capacidad— pase antes por el Wishlist IRQ del ecosistema SV. El constructor no autoriza «lluvias laterales», de modo que ninguna capacidad puede incorporarse directamente al manual sin tramitarse previamente por ese cauce. Esta exigencia es coherente con la finalidad declarada del constructor: permitir un cierre progresivo por tramos sin perder el eje del sistema ni dispersarse en caminos laterales. Los documentos no precisan el procedimiento interno del Wishlist IRQ; solo acreditan su carácter de filtro previo obligatorio.\",\"revision\":\"Verificación final neutral de las etapas 0 y 1: las tres citas fueron contrastadas carácter a carácter contra los fragmentos MD-L000123-L000125 y MD-L000003-L000008 y resultaron subcadenas exactas; las afirmaciones centrales (paso previo por el Wishlist IRQ y prohibición de lluvias laterales) coinciden con el texto íntegro de la sección 7; no se detectaron sobreafirmaciones, omisiones relevantes para la pregunta ni discrepancias entre ambas entregas. Se mantiene la respuesta sin correcciones de fondo, conservando las insuficiencias declaradas sobre el procedimiento del Wishlist IRQ y el carácter histórico de la revisión reproducida.\"}",
+  "solicitud_sha256": "71056e631a88ab622778e78e6ea5a58a8435ce7d3e569346f13788c7246438d8",
+  "sustantivo": "correcto",
+  "valor": "0"
+}

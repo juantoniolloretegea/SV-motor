@@ -39,3 +39,5 @@ pub fn cotejar(answer:&Value,request:&Value)->R<Value>{
  #[test]fn no_confunde_documentos_con_mismas_lineas(){let(mut a,q)=fixture();a["evidencias"][0]["documento"]=json!("OTRO");assert!(cotejar(&a,&q).is_err());}
  #[test]fn rechaza_fabricacion_duplicacion_y_salto(){let(a,q)=fixture();for(k,v)in[("cita_literal_breve",json!("abc def")),("fragmentos",json!([0,0])),("fragmentos",json!([1,0])),("fragmentos",json!([2]))]{let mut b=a.clone();b["evidencias"][0][k]=v;assert!(cotejar(&b,&q).is_err());}}
 }
+
+// © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).

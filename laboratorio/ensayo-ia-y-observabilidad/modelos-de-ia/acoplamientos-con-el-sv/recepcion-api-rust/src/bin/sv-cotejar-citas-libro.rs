@@ -9,3 +9,5 @@ fn main(){let r=(||->R<()>{let a=std::env::args().collect::<Vec<_>>();need(a.len
   rows.push(json!({"caso":h["caso"],"etapa":h["etapa"],"final_sha256":sha(&fs::read(dir.join("FINAL.txt")).map_err(|e|e.to_string())?),"citas":cites}));
  }save(&root.join("COTEJO-DETALLADO-CITAS.json"),&json!({"casos":rows,"licencia":sv_cliente_api::LICENCIA}))?;Ok(())})();if let Err(e)=r{eprintln!("{e}");std::process::exit(1)}}
 fn check_is_literal(c:&Value,s:&str)->bool{fn n(s:&str)->String{s.split_whitespace().collect::<Vec<_>>().join(" ")}n(s).contains(&n(c["cita_literal_breve"].as_str().unwrap_or("")))}
+
+// © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).

@@ -1,0 +1,78 @@
+{
+  "alerta": null,
+  "alerta_limite": false,
+  "auditoria_sha256": "8a72af511109c0249546dddf3fd02e598831468ccf0b275247721e8ea79e0028",
+  "caso": "MD09",
+  "critico": true,
+  "estado_documental_candidato": "respuesta_fundada",
+  "etapa": 0,
+  "fidelidad_documental": "conforme",
+  "final_sha256": "a10fa17fe33e27b1f9080f3c1d0df76b709c9ac6f5330d917120754983a217de",
+  "formal_conforme": true,
+  "fundamento_sustantivo": "Limita la conclusión al tramo 10: este documento no implementa bindings, APIs, FFI ni wrappers, abre su sede documental y permanece pendiente de desarrollo. No concluye que esos mecanismos estén ausentes de todo el SV. El enunciado pide este límite y la fuente permite responderlo; no existe insuficiencia de suministro demostrada.",
+  "justificacion_documental": "Citas y estructura cotejadas en Rust. La adjudicación del sentido pertenece a esta revisión exterior.",
+  "medicion": {
+    "duracion_operacion_ms": 111545,
+    "telemetria": {
+      "bytes": 2249154,
+      "fallos_medicion": 0,
+      "integridad": "conforme",
+      "intervalo_maximo_ms": 362,
+      "intervalo_objetivo_ms": 250,
+      "muestras": 424,
+      "plataforma_recibida": false,
+      "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+      "registros": 5762,
+      "sha256": "7c5e0b25a7255a19de5226a090352fa89b26a1b1a6c8c18b6d446249cfcf9393"
+    },
+    "uso": {
+      "cached_tokens": 1280,
+      "coste_liquidado_usd": null,
+      "input_tokens": 20140,
+      "output_tokens": 4733,
+      "reasoning_tokens": 3602,
+      "total_tokens": 24873
+    }
+  },
+  "naturaleza_defecto": null,
+  "nota_alcance": "Límite documental explícitamente preguntado y comprobado; no equivale a inexistencia en todo el sistema.",
+  "pasajes_contrastados": [
+    {
+      "documento": "MANUAL_TRAMO10",
+      "fragmento": "Este tramo no implementa bindings, APIs, FFI ni wrappers reales. Solo abre el frente documental y de gobierno.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000022-L000025"
+    },
+    {
+      "documento": "MANUAL_TRAMO10",
+      "fragmento": "Pendiente de desarrollo.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000026-L000028"
+    },
+    {
+      "documento": "MANUAL_TRAMO10",
+      "fragmento": "Este tramo fija la estructura mínima de trabajo para documentar cómo el lenguaje SV podrá relacionarse con otros lenguajes de programación sin degradar su semántica propia.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000003-L000006"
+    },
+    {
+      "documento": "MANUAL_TRAMO10",
+      "fragmento": "- tipos de compatibilidad admitidos;\n- prioridad por lenguajes anfitriones;\n- garantías semánticas mínimas;\n- criterio de activación por lenguaje;\n- y límites de fase.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000014-L000021"
+    }
+  ],
+  "recepcion_independiente": "pendiente",
+  "respuesta_original": "{\"caso\":\"MD09\",\"estado_documental\":\"respuesta_fundada\",\"etapa\":0,\"evidencias\":[{\"cita_literal_breve\":\"Este tramo no implementa bindings, APIs, FFI ni wrappers reales. Solo abre el frente documental y de gobierno.\",\"documento\":\"MANUAL_TRAMO10\",\"fragmentos\":[0],\"seccion\":\"MD-L000022-L000025\"},{\"cita_literal_breve\":\"Pendiente de desarrollo.\",\"documento\":\"MANUAL_TRAMO10\",\"fragmentos\":[0],\"seccion\":\"MD-L000026-L000028\"},{\"cita_literal_breve\":\"Este tramo fija la estructura mínima de trabajo para documentar cómo el lenguaje SV podrá relacionarse con otros lenguajes de programación sin degradar su semántica propia.\",\"documento\":\"MANUAL_TRAMO10\",\"fragmentos\":[0],\"seccion\":\"MD-L000003-L000006\"},{\"cita_literal_breve\":\"- tipos de compatibilidad admitidos;\\n- prioridad por lenguajes anfitriones;\\n- garantías semánticas mínimas;\\n- criterio de activación por lenguaje;\\n- y límites de fase.\",\"documento\":\"MANUAL_TRAMO10\",\"fragmentos\":[0],\"seccion\":\"MD-L000014-L000021\"}],\"fundamentos_verificables\":[\"La sección «4. Qué no fija todavía» del tramo 10 niega expresamente la implementación de bindings, APIs, FFI y wrappers reales, y acota el alcance efectivo del documento a abrir «el frente documental y de gobierno»: lo implementado es, por tanto, nulo en el plano técnico según el propio texto.\",\"La sección «1. Objeto» define el tramo como «estructura mínima de trabajo» para documentar una relación futura del lenguaje SV con otros lenguajes «sin degradar su semántica propia», formulación que sitúa el contenido en lo previsto y no en lo implementado.\",\"La sección «3. Qué deberá fijar» emplea formulación prospectiva y enumera cinco materias pendientes (tipos de compatibilidad admitidos, prioridad por lenguajes anfitriones, garantías semánticas mínimas, criterio de activación por lenguaje y límites de fase); ninguna de ellas queda fijada en el texto suministrado.\",\"La sección «5. Estado» declara «Pendiente de desarrollo», de modo que el documento no acredita especificación cerrada ni mecanismo alguno en funcionamiento; toda afirmación sobre APIs o FFI existentes excedería lo que la fuente acredita.\",\"Conforme a la consigna de limitar la conclusión al documento del tramo 10, las evidencias se toman exclusivamente de MANUAL_TRAMO10 y no se consultan otros repositorios ni fuentes externas.\"],\"insuficiencias\":[\"El tramo 10 no identifica lenguajes anfitriones concretos, ni plazos, ni responsables, ni detalles técnicos de los futuros mecanismos de compatibilidad; esos extremos quedan fuera de lo acreditado por el documento y no se han inferido.\"],\"respuesta\":\"Según el propio documento del tramo 10, no existe implementación alguna de APIs, FFI ni mecanismos equivalentes: el texto declara que «Este tramo no implementa bindings, APIs, FFI ni wrappers reales. Solo abre el frente documental y de gobierno». Su objeto es únicamente fijar la estructura mínima de trabajo para documentar cómo el lenguaje SV podrá relacionarse con otros lenguajes de programación sin degradar su semántica propia. Las APIs, la FFI y demás mecanismos aparecen sólo como materia prevista: el tramo anuncia lo que deberá fijar en el futuro (tipos de compatibilidad admitidos, prioridad por lenguajes anfitriones, garantías semánticas mínimas, criterio de activación por lenguaje y límites de fase), sin fijarlo todavía. Su estado documental declarado es «Pendiente de desarrollo». En consecuencia, limitándose a lo acreditado por ese documento, el tramo 10 es un documento preparatorio de carácter documental y de gobierno: no acredita ninguna API, FFI, binding ni wrapper implementado ni siquiera especificado en detalle.\",\"revision\":\"Etapa 0: no existen antecedentes; ésta es la primera entrega del caso MD09, por lo que no hay contenido previo que mantener, corregir o retirar.\"}",
+  "solicitud_sha256": "01d954330e4a4e92e0abc9e4df4e51a315ce0d7660f50a95f1a8460ae671c5df",
+  "sustantivo": "correcto",
+  "valor": "0"
+}

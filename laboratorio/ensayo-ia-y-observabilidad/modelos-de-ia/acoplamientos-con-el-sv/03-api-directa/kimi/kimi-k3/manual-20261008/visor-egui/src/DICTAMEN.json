@@ -1,0 +1,273 @@
+{
+  "admision": {
+    "causa": "Se exigen T(9)=7 correctas y los seis requisitos críticos correctos; se juzga la entrega final R2",
+    "cobertura": "9/9",
+    "dictamen": "Apto para el contrato documental",
+    "errores_criticos": 0,
+    "errores_no_criticos": 1,
+    "incidencia": "Tres etapas conservadas; antecedentes independientes",
+    "indeterminacion_semantica": "La criticidad es una propiedad prefijada; no se codifica como U",
+    "parametros_criticos": 6,
+    "puntuacion_sobre_100": null,
+    "recepcion_independiente": "Pendiente",
+    "regla_eliminatoria": "Un solo 1 crítico determina No apto; U crítica impide admisión",
+    "regla_puntuacion": "Sin ponderaciones de dificultad; vector, κ y veto crítico",
+    "u_criticas": 0
+  },
+  "alcance": "Ensayo documental del manual; no acredita implementación del Lenguaje ni aptitud clínica",
+  "alertas_limites": [],
+  "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+  "contrato": "SV-KIMI-K3-MANUAL-1.0",
+  "esquema": "sv-lectura-documental/1",
+  "fecha": "2026-10-08",
+  "frmat": {
+    "alfabeto": [
+      "0",
+      "1",
+      "U"
+    ],
+    "b": 3,
+    "cardinalidad": 19683,
+    "kappa": "Apto",
+    "n": 9,
+    "recuentos": {
+      "N0": 8,
+      "N1": 1,
+      "NU": 0
+    },
+    "regla": "T(n)=floor(7n/9); N1≥T: No apto; N0≥T: Apto; resto: Indeterminado",
+    "umbral": 7,
+    "vector": [
+      "0",
+      "0",
+      "0",
+      "1",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ]
+  },
+  "frvis": {
+    "colores": {
+      "0": "rojo",
+      "1": "verde",
+      "U": "azul"
+    },
+    "convencion": "Logo SV, adenda 12/09/2026 §5.1",
+    "formula": "theta_i=2*pi*(i-1)/9; V_i=(rho(v_i)*cos(theta_i),rho(v_i)*sin(theta_i)); cierre V9-V1",
+    "orientacion_matematica": "V1 sobre +x; giro antihorario",
+    "posiciones": [
+      {
+        "angulo_vueltas": {
+          "denominador": 9,
+          "numerador": 0
+        },
+        "caso": "MD01",
+        "color": "rojo",
+        "corpus": "Índice, presentación, constructor y tramo 10 íntegros; localizadores de líneas MD-L",
+        "criticidad": true,
+        "estado_criticidad": "Fijada antes de la inferencia en admisión manual-1.0.0",
+        "i": 1,
+        "pregunta": "¿Qué función cumple el constructor y qué diferencia establece respecto de un manual final?",
+        "radio": 1,
+        "respuesta_sha256": "d745302f074d8707925f7c77d86593abfc2639c7bdf1427294350de23923054b",
+        "rgb": [
+          181,
+          42,
+          45
+        ],
+        "titulo": "Naturaleza del constructor y del manual",
+        "valor": "0"
+      },
+      {
+        "angulo_vueltas": {
+          "denominador": 9,
+          "numerador": 1
+        },
+        "caso": "MD02",
+        "color": "rojo",
+        "corpus": "Índice, presentación, constructor y tramo 10 íntegros; localizadores de líneas MD-L",
+        "criticidad": true,
+        "estado_criticidad": "Fijada antes de la inferencia en admisión manual-1.0.0",
+        "i": 2,
+        "pregunta": "¿A qué documentos o representaciones debe subordinarse cada tramo y qué relación exige con la implementación?",
+        "radio": 1,
+        "respuesta_sha256": "e8e49ec523e2f45b189bae3bb2d5e8fd1c8dbc67d2ddc058654c2e664d06ffdb",
+        "rgb": [
+          181,
+          42,
+          45
+        ],
+        "titulo": "Subordinación documental e implementación",
+        "valor": "0"
+      },
+      {
+        "angulo_vueltas": {
+          "denominador": 9,
+          "numerador": 2
+        },
+        "caso": "MD03",
+        "color": "rojo",
+        "corpus": "Índice, presentación, constructor y tramo 10 íntegros; localizadores de líneas MD-L",
+        "criticidad": false,
+        "estado_criticidad": "Fijada antes de la inferencia en admisión manual-1.0.0",
+        "i": 3,
+        "pregunta": "¿En qué tramos sitúa el constructor la evaluación de células, la resolución de U y los datos de transición? Identifique las materias asociadas a cada uno, sin inventar sus definiciones.",
+        "radio": 1,
+        "respuesta_sha256": "207c3bc90c2773278d0eca34d93cfaaf32b3fd51c61a1548ada473fefda91ee3",
+        "rgb": [
+          181,
+          42,
+          45
+        ],
+        "titulo": "Células, U y transición: localización",
+        "valor": "0"
+      },
+      {
+        "angulo_vueltas": {
+          "denominador": 9,
+          "numerador": 3
+        },
+        "caso": "MD04",
+        "color": "verde",
+        "corpus": "Índice, presentación, constructor y tramo 10 íntegros; localizadores de líneas MD-L",
+        "criticidad": false,
+        "estado_criticidad": "Fijada antes de la inferencia en admisión manual-1.0.0",
+        "i": 4,
+        "pregunta": "¿Qué doce campos debe contener la ficha de un tramo? Distinga las obligaciones qué fija y qué no fija.",
+        "radio": 2,
+        "respuesta_sha256": "2681d777398202dcef41a9af5fc226350a4ee63ab56c1e489cdde7a211d19875",
+        "rgb": [
+          21,
+          119,
+          80
+        ],
+        "titulo": "Doce campos de la ficha obligatoria",
+        "valor": "1"
+      },
+      {
+        "angulo_vueltas": {
+          "denominador": 9,
+          "numerador": 4
+        },
+        "caso": "MD05",
+        "color": "rojo",
+        "corpus": "Índice, presentación, constructor y tramo 10 íntegros; localizadores de líneas MD-L",
+        "criticidad": true,
+        "estado_criticidad": "Fijada antes de la inferencia en admisión manual-1.0.0",
+        "i": 5,
+        "pregunta": "Un tramo contiene una exposición clara y un ejemplo .svp, pero no muestra correspondencia con la IR o la superficie vigente ni delimita lo excluido. ¿Cumple los mínimos documentales para considerarlo cerrable? Fundamente la respuesta.",
+        "radio": 1,
+        "respuesta_sha256": "70e3d31ce2b71b1be8297930ab6b0ec0d6871f088c12ef369b564cc3217c2ba0",
+        "rgb": [
+          181,
+          42,
+          45
+        ],
+        "titulo": "Condiciones acumulativas de cierre",
+        "valor": "0"
+      },
+      {
+        "angulo_vueltas": {
+          "denominador": 9,
+          "numerador": 5
+        },
+        "caso": "MD06",
+        "color": "rojo",
+        "corpus": "Índice, presentación, constructor y tramo 10 íntegros; localizadores de líneas MD-L",
+        "criticidad": true,
+        "estado_criticidad": "Fijada antes de la inferencia en admisión manual-1.0.0",
+        "i": 6,
+        "pregunta": "Se propone añadir una nueva capacidad al manual. ¿Qué paso previo establece su regla de control?",
+        "radio": 1,
+        "respuesta_sha256": "7f54460da5fc6d598bb0bf1d88080ab3c0a872ec6b8316cb36b4ceb1f9c5a7d6",
+        "rgb": [
+          181,
+          42,
+          45
+        ],
+        "titulo": "Control de incorporación de novedades",
+        "valor": "0"
+      },
+      {
+        "angulo_vueltas": {
+          "denominador": 9,
+          "numerador": 6
+        },
+        "caso": "MD07",
+        "color": "rojo",
+        "corpus": "Índice, presentación, constructor y tramo 10 íntegros; localizadores de líneas MD-L",
+        "criticidad": true,
+        "estado_criticidad": "Fijada antes de la inferencia en admisión manual-1.0.0",
+        "i": 7,
+        "pregunta": "Según el tramo 10 y el constructor, ¿qué debe preservarse al relacionar SV con otros lenguajes y con qué política debe coordinarse esa documentación?",
+        "radio": 1,
+        "respuesta_sha256": "e7ae2bfc26193ebf4e2b78bc74f5937c4c8313e5125cdf8a75ecf9247f28fc75",
+        "rgb": [
+          181,
+          42,
+          45
+        ],
+        "titulo": "Preservación semántica y coordinación",
+        "valor": "0"
+      },
+      {
+        "angulo_vueltas": {
+          "denominador": 9,
+          "numerador": 7
+        },
+        "caso": "MD08",
+        "color": "rojo",
+        "corpus": "Índice, presentación, constructor y tramo 10 íntegros; localizadores de líneas MD-L",
+        "criticidad": false,
+        "estado_criticidad": "Fijada antes de la inferencia en admisión manual-1.0.0",
+        "i": 8,
+        "pregunta": "¿Qué cinco cuestiones deberá fijar el tramo de compatibilidad y qué carácter tiene esa enumeración dentro del documento?",
+        "radio": 1,
+        "respuesta_sha256": "53686a6c383d3c5edce3f336957e064e9871a99018920be4e6b7b61a4db136b6",
+        "rgb": [
+          181,
+          42,
+          45
+        ],
+        "titulo": "Materias futuras de compatibilidad",
+        "valor": "0"
+      },
+      {
+        "angulo_vueltas": {
+          "denominador": 9,
+          "numerador": 8
+        },
+        "caso": "MD09",
+        "color": "rojo",
+        "corpus": "Índice, presentación, constructor y tramo 10 íntegros; localizadores de líneas MD-L",
+        "criticidad": true,
+        "estado_criticidad": "Fijada antes de la inferencia en admisión manual-1.0.0",
+        "i": 9,
+        "pregunta": "¿Qué declara el tramo 10 sobre la implementación de APIs, FFI y otros mecanismos de compatibilidad, y cuál es su estado documental? Limite la conclusión a lo acreditado por ese documento.",
+        "radio": 1,
+        "respuesta_sha256": "9c827d8abe9525b0cedfe68c7768f696a9de8feb4d12ea13683fb0f6af65c891",
+        "rgb": [
+          181,
+          42,
+          45
+        ],
+        "titulo": "Implementación acreditada y estado documental",
+        "valor": "0"
+      }
+    ],
+    "radios": {
+      "0": 1,
+      "1": 2,
+      "U": 3
+    },
+    "transformacion_pantalla": "(x_p,y_p)=(c_x+s*y,c_y-s*x); MD01 arriba, sentido horario; s>0"
+  },
+  "origen": {
+    "adjudicaciones_modificadas": false,
+    "banco_sha256": "f7da23f424186437c16f74d53416c997df02f974c782f7f69728e8952e01d843",
+    "capa_sha256": "dff7481ded075f6d607e2f627f4048824b9ee11d17beec3d62bfa43a5aef9b90"
+  }
+}

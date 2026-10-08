@@ -4,6 +4,7 @@ pub mod estricto;
 pub mod presupuesto;
 pub mod chat;
 pub mod responses;
+pub mod kimi;
 use serde::{Deserialize,Serialize};
 use serde_json::{json,Value};
 use std::{fs::{self,OpenOptions},io::{Read,Write},path::Path,time::{Duration,Instant}};
@@ -24,7 +25,7 @@ pub const AVISO:&str="Aviso de derechos: la licencia indicada corresponde al mat
 #[serde(deny_unknown_fields)]
 pub struct Perfil {pub proveedor:String,pub modelo:String,pub endpoint:String,pub presupuesto_ticks:u64,pub exigir_zdr:bool,pub entrada_ticks_por_token:u64,pub salida_ticks_por_token:u64,#[serde(default,skip_serializing_if="Option::is_none")]pub cuota_gratuita_tokens:Option<u64>}
 impl Perfil{pub fn comprobar(&self)->R<()>{
- let destino=match self.proveedor.as_str(){"Z.ai"=>self.endpoint=="https://api.z.ai/api/paas/v4/chat/completions"&&self.modelo=="glm-5.3","xAI"=>self.endpoint=="https://api.x.ai/v1/responses","OpenAI"=>self.endpoint=="https://api.openai.com/v1/responses","Alibaba Cloud"=>{
+ let destino=match self.proveedor.as_str(){"Moonshot AI"=>self.endpoint=="https://api.moonshot.ai/v1/chat/completions"&&self.modelo=="kimi-k3"&&self.presupuesto_ticks<=95_000_000_000&&self.entrada_ticks_por_token==30000&&self.salida_ticks_por_token==150000,"Z.ai"=>self.endpoint=="https://api.z.ai/api/paas/v4/chat/completions"&&self.modelo=="glm-5.3","xAI"=>self.endpoint=="https://api.x.ai/v1/responses","OpenAI"=>self.endpoint=="https://api.openai.com/v1/responses","Alibaba Cloud"=>{
   let u=reqwest::Url::parse(&self.endpoint).map_err(|_|"URL inválida")?;
   let workspace=u.host_str().and_then(|s|s.strip_suffix(".ap-southeast-1.maas.aliyuncs.com")).and_then(|s|s.strip_prefix("ws-"));
   u.scheme()=="https"&&u.username().is_empty()&&u.password().is_none()&&u.port().is_none()&&u.query().is_none()&&u.fragment().is_none()&&u.path()=="/compatible-mode/v1/responses"&&workspace.is_some_and(|s|!s.is_empty()&&s.len()<=64&&s.bytes().all(|b|b.is_ascii_lowercase()||b.is_ascii_digit()))
@@ -35,7 +36,7 @@ impl Perfil{pub fn comprobar(&self)->R<()>{
 
 pub fn proteger(q:&mut Value,p:&Perfil)->R<()> {
  p.comprobar()?;q["model"]=json!(p.modelo);q["tools"]=json!([]);q["tool_choice"]=json!("none");q["store"]=json!(false);q["stream"]=json!(true);
- q["instructions"]=json!(format!("{}\n{}\n{}",q["instructions"].as_str().ok_or("Faltan instrucciones")?,LICENCIA,AVISO));
+ q["instructions"]=json!(format!("{}\n{}\n{}",q["instructions"].as_str().ok_or("Faltan instrucciones")?,LICENCIA,if p.proveedor=="Moonshot AI"{kimi::AVISO}else{AVISO}));
  // Compatibilidad explícita de proveedor; el motor del ensayo no cambia.
  if p.proveedor=="xAI"{q["reasoning"]=json!({"effort":"medium"});q.as_object_mut().ok_or("Solicitud no es objeto")?.remove("tool_choice");}
  if p.proveedor=="Alibaba Cloud"{
@@ -48,13 +49,14 @@ pub fn proteger(q:&mut Value,p:&Perfil)->R<()> {
  }
  need(q.get("previous_response_id").is_none()&&q.get("conversation").is_none(),"Estado remoto no autorizado")?;
  if p.proveedor=="Z.ai"{*q=chat::solicitud(q,&p.modelo)?;}
+ if p.proveedor=="Moonshot AI"{*q=kimi::solicitud(q)?;}
  Ok(())
 }
 pub fn reserva(q:&Value,p:&Perfil)->R<u64>{
  let b=serde_json::to_vec(q).map_err(|e|e.to_string())?;
- need(b.len()<190000,"Contexto excluido del tramo corto de tarifa")?;
- let field=if p.proveedor=="Z.ai"{"max_tokens"}else{"max_output_tokens"};
- let cap=if p.proveedor=="Z.ai"{16384}else{8192}; let out=q[field].as_u64().filter(|x|*x<=cap&&*x>0).ok_or("Límite de salida no admitido")?;
+ need(b.len()<if p.proveedor=="Moonshot AI"{512000}else{190000},"Contexto excluido del tramo admitido de tarifa")?;
+ let field=match p.proveedor.as_str(){"Z.ai"=>"max_tokens","Moonshot AI"=>"max_completion_tokens",_=>"max_output_tokens"};
+ let cap=if matches!(p.proveedor.as_str(),"Z.ai"|"Moonshot AI"){16384}else{8192}; let out=q[field].as_u64().filter(|x|*x<=cap&&*x>0).ok_or("Límite de salida no admitido")?;
  // Cota deliberadamente conservadora: bytes UTF-8 de toda la petición más 4096
  // unidades de margen. No es una medición de tokens del proveedor.
  (b.len() as u64+4096).checked_mul(p.entrada_ticks_por_token).and_then(|x|out.checked_mul(p.salida_ticks_por_token).and_then(|y|x.checked_add(y))).ok_or("Desbordamiento de reserva".into())
@@ -111,7 +113,7 @@ pub fn enviar_chatgpt(p:&Perfil,token:&str,q:&Value,dest:&Path,timeout_ms:u64)->
 }
 fn enviar_interno(p:&Perfil,key:&str,q:&Value,dest:&Path,timeout_ms:u64)->R<Value>{
  p.comprobar()?;
- if p.proveedor=="Z.ai"{chat::validar(q,&p.modelo)?;need(p.presupuesto_ticks>0,"Perfil Z.ai limitado a preparación; envío impedido")?;}else{
+ if p.proveedor=="Moonshot AI"{kimi::validar(q)?;}else if p.proveedor=="Z.ai"{chat::validar(q,&p.modelo)?;need(p.presupuesto_ticks>0,"Perfil Z.ai limitado a preparación; envío impedido")?;}else{
  let choice=if p.proveedor=="xAI"{q.get("tool_choice").is_none()}else{q["tool_choice"]=="none"};need(q["model"]==p.modelo&&q["tools"]==json!([])&&choice&&q["store"]==false&&q["stream"]==true,"Solicitud fuera de perfil")?;
  let instructions=q["instructions"].as_str().ok_or("Sin instrucciones")?;need(instructions.contains(LICENCIA)&&instructions.contains(AVISO),"Licencia ausente: envío impedido")?;}
  guard(dest)?;need(!dest.exists(),"Directorio de entrega ya existe")?;fs::create_dir_all(dest).map_err(|e|e.to_string())?;let req=serde_json::to_vec_pretty(q).map_err(|e|e.to_string())?;put(&dest.join("SOLICITUD.json"),&req)?;
@@ -121,15 +123,15 @@ fn enviar_interno(p:&Perfil,key:&str,q:&Value,dest:&Path,timeout_ms:u64)->R<Valu
   save(&dest.join("ENVIO.json"),&json!({"utc_ms":sv_instrumentacion::utc_ms(),"proveedor":p.proveedor,"modelo":p.modelo,"endpoint":p.endpoint,"solicitud_sha256":sha(&req),"reintentos_transporte":0}))?;
   m.event("fase",json!({"fase":"durante","bytes":req.len()}))?;
   let mut res=http.post(&p.endpoint).bearer_auth(key).header("Content-Type","application/json").body(req).send().map_err(|_|"Transporte interrumpido; coste desconocido")?;
-  let status=res.status().as_u16();let mut headers=serde_json::Map::new();for n in ["content-type","x-request-id","x-zero-data-retention","x-ratelimit-limit-requests","x-ratelimit-remaining-requests","x-ratelimit-remaining-tokens","retry-after"]{if let Some(v)=res.headers().get(n).and_then(|v|v.to_str().ok()){headers.insert(n.into(),json!(v));}}
+  let status=res.status().as_u16();let mut headers=serde_json::Map::new();for n in ["content-type","x-request-id","x-zero-data-retention","x-ratelimit-limit-requests","x-ratelimit-remaining-requests","x-ratelimit-remaining-tokens","retry-after","msh-request-id","msh-usage-cache-write-tokens-5m","msh-usage-cache-write-tokens-1h","msh-request-timestamp","msh-request-signature"]{if let Some(v)=res.headers().get(n).and_then(|v|v.to_str().ok()){headers.insert(n.into(),json!(v));}}
   save(&dest.join("HTTP.json"),&json!({"status":status,"cabeceras":headers,"cabeceras_ms":t.elapsed().as_millis(),"remoto":res.remote_addr().map(|v|v.to_string()),"version":format!("{:?}",res.version())}))?;
   let mut raw=OpenOptions::new().create_new(true).write(true).open(dest.join("SALIDA-SSE.txt")).map_err(|e|e.to_string())?;
   let mut stream=Flujo::default();let mut chat_stream=chat::Flujo::default();let mut b=[0;8192];let mut total=0;let mut first=None;let mut first_text=None;
-  loop{let n=res.read(&mut b).map_err(|_|"Lectura interrumpida; original parcial conservado")?;if n==0{break;}raw.write_all(&b[..n]).and_then(|_|raw.sync_data()).map_err(|e|e.to_string())?;total+=n;need(total<=(if p.proveedor=="Z.ai"{16}else{4})*1024*1024,"Respuesta excede límite")?;m.healthy()?;m.event("lectura_https",json!({"bytes":n,"acumulados":total,"ms":t.elapsed().as_millis()}))?;
-   if status==200{let kinds=if p.proveedor=="Z.ai"{chat_stream.feed(&b[..n])?}else{stream.feed(&b[..n])?};for kind in kinds{first.get_or_insert(t.elapsed().as_millis());if kind=="response.output_text.delta"{first_text.get_or_insert(t.elapsed().as_millis());}m.event("evento_sse",json!({"tipo":kind,"ms":t.elapsed().as_millis()}))?;}}
+  loop{let n=res.read(&mut b).map_err(|_|"Lectura interrumpida; original parcial conservado")?;if n==0{break;}raw.write_all(&b[..n]).and_then(|_|raw.sync_data()).map_err(|e|e.to_string())?;total+=n;need(total<=(if matches!(p.proveedor.as_str(),"Z.ai"|"Moonshot AI"){16}else{4})*1024*1024,"Respuesta excede límite")?;m.healthy()?;m.event("lectura_https",json!({"bytes":n,"acumulados":total,"ms":t.elapsed().as_millis()}))?;
+   if status==200{let kinds=if matches!(p.proveedor.as_str(),"Z.ai"|"Moonshot AI"){chat_stream.feed(&b[..n])?}else{stream.feed(&b[..n])?};for kind in kinds{first.get_or_insert(t.elapsed().as_millis());if kind=="response.output_text.delta"{first_text.get_or_insert(t.elapsed().as_millis());}m.event("evento_sse",json!({"tipo":kind,"ms":t.elapsed().as_millis()}))?;}}
   }raw.sync_all().map_err(|e|e.to_string())?;
   need(status==200,"HTTP de error; argumento original conservado")?;
-  let mut received=if p.proveedor=="Z.ai"{save(&dest.join("EVENTOS.json"),&json!(chat_stream.eventos))?;chat_stream.recibir(&p.modelo)?}else{save(&dest.join("EVENTOS.json"),&json!(stream.eventos))?;stream.recibir(&p.modelo)?};
+  let mut received=if matches!(p.proveedor.as_str(),"Z.ai"|"Moonshot AI"){save(&dest.join("EVENTOS.json"),&json!(chat_stream.eventos))?;chat_stream.recibir(&p.modelo)?}else{save(&dest.join("EVENTOS.json"),&json!(stream.eventos))?;stream.recibir(&p.modelo)?};
   put(&dest.join("FINAL.txt"),received["texto_original"].as_str().unwrap().as_bytes())?;
   received["duracion_ms"]=json!(t.elapsed().as_millis());received["primer_evento_ms"]=json!(first);received["primer_texto_ms"]=json!(first_text);
   received["zdr_confirmado"]=json!(headers.get("x-zero-data-retention").and_then(Value::as_str)==Some("true"));save(&dest.join("ENTREGA-PROVEEDOR.json"),&received)?;

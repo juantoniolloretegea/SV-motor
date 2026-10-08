@@ -1,0 +1,118 @@
+{
+  "alerta": null,
+  "alerta_limite": false,
+  "auditoria_sha256": "b967d42f0b19e112d22a412aebac3cfb781f2f318f3f842c543ee22105cb1ab3",
+  "caso": "MD04",
+  "critico": false,
+  "estado_documental_candidato": "respuesta_fundada",
+  "etapa": 0,
+  "fidelidad_documental": "conforme",
+  "final_sha256": "65f241cea0ffcd89c73729bba1bc3848ba0e3b3e5c7034e396ba8c06a1ae7c79",
+  "formal_conforme": true,
+  "fundamento_sustantivo": "La enumeración de los doce campos y la distinción entre contenido y exclusiones son correctas. Sin embargo, insuficiencias afirma que no se define contenido del Criterio de cierre más allá de su nombre. MANUAL_CONSTRUCTOR, MD-L000109-L000118, sí fija cinco mínimos explícitos y fue suministrado íntegro. La afirmación incorrecta se mantiene en las tres etapas. Se adjudica 1 por afirmación sustantiva errónea, según CRITERIOS.md; MD04 no es crítico. Las citas son literales: no confundir literalidad conforme con contenido plenamente correcto.",
+  "justificacion_documental": "Citas y estructura cotejadas en Rust. La adjudicación del sentido pertenece a esta revisión exterior.",
+  "medicion": {
+    "duracion_operacion_ms": 115457,
+    "telemetria": {
+      "bytes": 2188996,
+      "fallos_medicion": 0,
+      "integridad": "conforme",
+      "intervalo_maximo_ms": 306,
+      "intervalo_objetivo_ms": 250,
+      "muestras": 404,
+      "plataforma_recibida": false,
+      "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+      "registros": 5620,
+      "sha256": "ace6d70846eafd802c33631791ce4e9d9f56ec6d06fe6ef93127007ead73505a"
+    },
+    "uso": {
+      "cached_tokens": 1280,
+      "coste_liquidado_usd": null,
+      "input_tokens": 20121,
+      "output_tokens": 4656,
+      "reasoning_tokens": 2973,
+      "total_tokens": 24777
+    }
+  },
+  "naturaleza_defecto": "Negación inexacta del contenido suministrado sobre el criterio de cierre",
+  "nota_alcance": "Discrepancia sustantiva adicional del candidato, no defecto de la fuente ni del transporte.",
+  "pasajes_contrastados": [
+    {
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmento": "Todo tramo del manual deberá declarar:",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000092-L000108"
+    },
+    {
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmento": "1. ID del tramo\n2. Título\n3. Rango\n4. Objeto",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000092-L000108"
+    },
+    {
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmento": "5. Dependencias\n6. Qué fija\n7. Qué no fija\n8. Ejemplos `.svp`",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000092-L000108"
+    },
+    {
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmento": "9. Errores o contraejemplos\n10. Relación con IR y docs públicos\n11. Criterio de cierre\n12. Estado",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000092-L000108"
+    },
+    {
+      "documento": "MANUAL_TRAMO10",
+      "fragmento": "- tipos de compatibilidad admitidos;\n- prioridad por lenguajes anfitriones;\n- garantías semánticas mínimas;\n- criterio de activación por lenguaje;\n- y límites de fase.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000014-L000021"
+    },
+    {
+      "documento": "MANUAL_TRAMO10",
+      "fragmento": "Este tramo no implementa bindings, APIs, FFI ni wrappers reales. Solo abre el frente documental y de gobierno.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000022-L000025"
+    },
+    {
+      "documento": "MANUAL_TRAMO10",
+      "fragmento": "Pendiente de desarrollo.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000026-L000028"
+    },
+    {
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmento": "- delimitación expresa de lo que queda fuera;",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000109-L000118"
+    },
+    {
+      "documento": "MANUAL_PRESENTACION",
+      "fragmento": "El constructor y el tramo 10 se reproducen íntegramente, sin correcciones terminológicas ni ampliaciones.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000005-L000010"
+    }
+  ],
+  "recepcion_independiente": "pendiente",
+  "respuesta_original": "{\"caso\":\"MD04\",\"estado_documental\":\"respuesta_fundada\",\"etapa\":0,\"evidencias\":[{\"cita_literal_breve\":\"Todo tramo del manual deberá declarar:\",\"documento\":\"MANUAL_CONSTRUCTOR\",\"fragmentos\":[0],\"seccion\":\"MD-L000092-L000108\"},{\"cita_literal_breve\":\"1. ID del tramo\\n2. Título\\n3. Rango\\n4. Objeto\",\"documento\":\"MANUAL_CONSTRUCTOR\",\"fragmentos\":[0],\"seccion\":\"MD-L000092-L000108\"},{\"cita_literal_breve\":\"5. Dependencias\\n6. Qué fija\\n7. Qué no fija\\n8. Ejemplos `.svp`\",\"documento\":\"MANUAL_CONSTRUCTOR\",\"fragmentos\":[0],\"seccion\":\"MD-L000092-L000108\"},{\"cita_literal_breve\":\"9. Errores o contraejemplos\\n10. Relación con IR y docs públicos\\n11. Criterio de cierre\\n12. Estado\",\"documento\":\"MANUAL_CONSTRUCTOR\",\"fragmentos\":[0],\"seccion\":\"MD-L000092-L000108\"},{\"cita_literal_breve\":\"- tipos de compatibilidad admitidos;\\n- prioridad por lenguajes anfitriones;\\n- garantías semánticas mínimas;\\n- criterio de activación por lenguaje;\\n- y límites de fase.\",\"documento\":\"MANUAL_TRAMO10\",\"fragmentos\":[0],\"seccion\":\"MD-L000014-L000021\"},{\"cita_literal_breve\":\"Este tramo no implementa bindings, APIs, FFI ni wrappers reales. Solo abre el frente documental y de gobierno.\",\"documento\":\"MANUAL_TRAMO10\",\"fragmentos\":[0],\"seccion\":\"MD-L000022-L000025\"},{\"cita_literal_breve\":\"Pendiente de desarrollo.\",\"documento\":\"MANUAL_TRAMO10\",\"fragmentos\":[0],\"seccion\":\"MD-L000026-L000028\"},{\"cita_literal_breve\":\"- delimitación expresa de lo que queda fuera;\",\"documento\":\"MANUAL_CONSTRUCTOR\",\"fragmentos\":[0],\"seccion\":\"MD-L000109-L000118\"},{\"cita_literal_breve\":\"El constructor y el tramo 10 se reproducen íntegramente, sin correcciones terminológicas ni ampliaciones.\",\"documento\":\"MANUAL_PRESENTACION\",\"fragmentos\":[0],\"seccion\":\"MD-L000005-L000010\"}],\"fundamentos_verificables\":[\"La sección 4 del constructor («Ficha obligatoria por tramo») impone que todo tramo declare una ficha y enumera exactamente doce campos, del «1. ID del tramo» al «12. Estado», de modo que la lista solicitada se obtiene por enumeración directa del texto.\",\"Los campos 6 y 7 son obligaciones distintas dentro de la ficha: «Qué fija» exige declarar el contenido que el tramo establece, mientras que «Qué no fija» exige declarar lo que el tramo deja expresamente fuera; esta distinción es coherente con el criterio de cierre del constructor, que exige «delimitación expresa de lo que queda fuera».\",\"El tramo 10 ilustra ambas obligaciones en estado preparatorio: su sección 3 («Qué deberá fijar») enumera prospectivamente cinco contenidos a fijar (tipos de compatibilidad, prioridad por lenguajes anfitriones, garantías semánticas mínimas, criterio de activación por lenguaje y límites de fase), y su sección 4 («Qué no fija todavía») declara excluida la implementación de bindings, APIs, FFI y wrappers reales, limitándose al frente documental y de gobierno.\",\"Distinción entre lo previsto y lo implementado: la obligación de la ficha procede del constructor (documento rector del plan), pero el estado declarado del tramo 10 es «Pendiente de desarrollo», por lo que su «qué fija» está formulado en futuro («deberá fijar») y no constituye contenido fijado ni implementación vigente; la presentación confirma que constructor y tramo 10 se reproducen íntegramente desde la revisión f97173e07a9dfb8385ed1268d11de422b291507d, sin que ello acredite nueva aprobación.\"],\"insuficiencias\":[\"Los fragmentos aportados no definen el formato ni el contenido esperado de cada campo de la ficha (por ejemplo, «Rango» o «Criterio de cierre») más allá de su denominación en la lista; tampoco se acredita en estos documentos ninguna ficha cumplimentada al completo, ya que los tramos 0–9 figuran como entradas pendientes en el índice y el tramo 10 declara el estado «Pendiente de desarrollo».\"],\"respuesta\":\"La ficha obligatoria de un tramo, según la sección 4 del constructor del manual, debe contener doce campos: 1. ID del tramo; 2. Título; 3. Rango; 4. Objeto; 5. Dependencias; 6. Qué fija; 7. Qué no fija; 8. Ejemplos `.svp`; 9. Errores o contraejemplos; 10. Relación con IR y docs públicos; 11. Criterio de cierre; 12. Estado.\\n\\nDistinción entre las obligaciones «qué fija» y «qué no fija»: el campo 6 («Qué fija») obliga a declarar el contenido que el tramo establece (lo que queda normativamente fijado para el manual), mientras que el campo 7 («Qué no fija») obliga a declarar la delimitación expresa de lo que queda fuera del tramo, en coherencia con el criterio de cierre del constructor, que exige «delimitación expresa de lo que queda fuera».\\n\\nEl tramo 10 sirve de ejemplo documental de ambas obligaciones en estado preparatorio: en «Qué deberá fijar» anuncia cinco contenidos —tipos de compatibilidad admitidos, prioridad por lenguajes anfitriones, garantías semánticas mínimas, criterio de activación por lenguaje y límites de fase— y en «Qué no fija todavía» declara que no implementa bindings, APIs, FFI ni wrappers reales, abriendo sólo el frente documental y de gobierno. Se trata de lo previsto, no de lo implementado: el estado declarado del tramo 10 es «Pendiente de desarrollo», de modo que su «qué fija» está formulado prospectivamente y aún no constituye contenido fijado.\",\"revision\":\"Etapa 0: no existen antecedentes ni entregas anteriores que contrastar; esta es la respuesta provisional completa, fundamentada exclusivamente en los cuatro documentos íntegros suministrados (índice, presentación, constructor y tramo 10).\"}",
+  "solicitud_sha256": "2dfc77b605db24d785a1aec4eead77838ce42a338a4a8e0024814149e0954450",
+  "sustantivo": "afirmacion_adicional_erronea",
+  "valor": "1"
+}
