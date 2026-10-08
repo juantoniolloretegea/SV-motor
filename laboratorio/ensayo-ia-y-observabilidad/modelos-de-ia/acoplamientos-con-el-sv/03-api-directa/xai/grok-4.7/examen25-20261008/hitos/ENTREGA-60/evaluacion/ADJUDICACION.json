@@ -1,0 +1,144 @@
+{
+  "alerta_limite": false,
+  "auditoria_sha256": "867bb1828247c49ddfa5cb4a0604d9b26eb5f4c59cd6672bf703c169509c1551",
+  "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+  "caso": "P20",
+  "critico": false,
+  "estado_documental_candidato": "respuesta_fundada",
+  "etapa": 2,
+  "final_sha256": "393924338b842ed3230c9f40e8432710da561c5988223fd0b1434495b5214878",
+  "formal_conforme": true,
+  "fundamento_sustantivo": "Conserva 37 pacientes y tasa de respuesta del 54 % en el estudio de ibrutinib. No confunde esa tasa con supervivencia; el seguimiento adicional de 42 meses pertenece a la misma evidencia.",
+  "limite_documental": null,
+  "medicion": {
+    "alcance": "Medición local del cliente; no recursos internos del proveedor. Contadores de caché y razonamiento incluidos, sin sumarlos dos veces.",
+    "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+    "bytes_sse": 151896,
+    "caso": "P20",
+    "completa": true,
+    "cpu_delta_ms": 1172,
+    "duracion_ms": 19051,
+    "duracion_operacion_ms": 20103,
+    "etapa": 2,
+    "eventos_sse": 501,
+    "fallos_medicion": 0,
+    "final_sha256": "393924338b842ed3230c9f40e8432710da561c5988223fd0b1434495b5214878",
+    "formal_conforme": true,
+    "intento": 60,
+    "intervalo_maximo_ms": 272,
+    "io_escritura_delta_bytes": 642804,
+    "io_lectura_delta_bytes": 0,
+    "memoria_virtual_maxima_bytes": 22986752,
+    "muestras": 80,
+    "observaciones_udp": 0,
+    "primer_texto_ms": 15039,
+    "resultado": {
+      "bytes": 20655,
+      "sha256": "4ff3ed3c7a9f7c0becb02b71f77c53aa8a26a950a6c090e48c63b065be8687e1"
+    },
+    "rss_maximo_bytes": 36229120,
+    "solicitud": {
+      "bytes": 69408,
+      "sha256": "93abe01a535eb3eb4a0190fbe5b2e450b1fe45429b1d86639db065a3f73512c0"
+    },
+    "sse_sha256": "a5dc74355fa160abeedbbfc81243b684c91e05e3330aba89c33f2c7fc09fecc5",
+    "tcp_estados": [
+      "Established",
+      "SynSent"
+    ],
+    "tcp_maximo_simultaneo": 1,
+    "telemetria_conforme": true,
+    "telemetria_sha256": "30b32c331ae915e38780353f42d4a478328358d816241c5cd15b97e5687a813b",
+    "tokens_cache": 1408,
+    "tokens_entrada": 21615,
+    "tokens_razonamiento": 1052,
+    "tokens_salida": 1489,
+    "tokens_totales": 23104,
+    "uso_proveedor": {
+      "context_details": {
+        "input_tokens": 21615,
+        "output_tokens": 1498
+      },
+      "input_tokens": 21615,
+      "input_tokens_details": {
+        "cached_tokens": 1408
+      },
+      "num_server_side_tools_used": 0,
+      "num_sources_used": 0,
+      "output_tokens": 1489,
+      "output_tokens_details": {
+        "reasoning_tokens": 1052
+      },
+      "total_tokens": 23104
+    }
+  },
+  "naturaleza_defecto": null,
+  "observaciones_revision": [
+    "R1 y R2 completan referencias sin cambiar las dos cifras solicitadas."
+  ],
+  "pasajes_contrastados": [
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "En un estudio de fase II, 37 pacientes con leucemia de células pilosas resistente al tratamiento recibieron ibrutinib.",
+      "pagina": 6,
+      "seccion": "_13"
+    },
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "La tasa de respuesta fue del 54 %.",
+      "pagina": 6,
+      "seccion": "_13"
+    },
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "La mediana de seguimiento fue de 42 meses.",
+      "pagina": 6,
+      "seccion": "_13"
+    }
+  ],
+  "recepcion_independiente": "pendiente",
+  "respuesta_original": "{\"caso\":\"P20\",\"estado_documental\":\"respuesta_fundada\",\"etapa\":2,\"evidencias\":[{\"cita_literal_breve\":\"En un estudio de fase II, 37 pacientes con leucemia de células pilosas resistente al tratamiento recibieron ibrutinib.\",\"documento\":\"pdq-nci-hcl-es\",\"fragmentos\":[6],\"seccion\":\"_13\"},{\"cita_literal_breve\":\"La tasa de respuesta fue del 54 %.\",\"documento\":\"pdq-nci-hcl-es\",\"fragmentos\":[6],\"seccion\":\"_13\"},{\"cita_literal_breve\":\"La mediana de seguimiento fue de 42 meses.\",\"documento\":\"pdq-nci-hcl-es\",\"fragmentos\":[6],\"seccion\":\"_13\"}],\"fundamentos_verificables\":[\"La evidencia sobre ibrutinib describe un único estudio de fase II para leucemia de células pilosas resistente al tratamiento.\",\"Ese pasaje indica que 37 pacientes recibieron ibrutinib y que la tasa de respuesta fue del 54 %.\",\"La mediana de seguimiento de 42 meses corresponde al mismo estudio, pero no cambia ninguna de las dos cifras solicitadas.\"],\"insuficiencias\":[\"La fuente no desglosa el 54 % en respuesta completa o parcial ni informa un intervalo de confianza.\",\"No presenta una comparación con otro tratamiento ni una indicación individual.\"],\"respuesta\":\"En el estudio de fase II de ibrutinib para leucemia de células pilosas resistente al tratamiento, 37 pacientes recibieron el fármaco. La tasa de respuesta informada fue del 54 %. La mediana de seguimiento fue de 42 meses. Este dato resume la evidencia documental y no constituye una prescripción individual.\",\"revision\":\"Se mantienen las cifras de ambas entregas: el fragmento 6 acredita 37 pacientes y una tasa de respuesta del 54 %. La precisión de R1 sobre que recibieron ibrutinib también queda respaldada; no procede corregir ni declarar U.\"}",
+  "revision_citas": {
+    "citas": [
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "En un estudio de fase II, 37 pacientes con leucemia de células pilosas resistente al tratamiento recibieron ibrutinib."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "La tasa de respuesta fue del 54 %."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "La mediana de seguimiento fue de 42 meses."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "solicitud_sha256": "93abe01a535eb3eb4a0190fbe5b2e450b1fe45429b1d86639db065a3f73512c0",
+  "sustantivo": "correcto",
+  "valor": "0"
+}

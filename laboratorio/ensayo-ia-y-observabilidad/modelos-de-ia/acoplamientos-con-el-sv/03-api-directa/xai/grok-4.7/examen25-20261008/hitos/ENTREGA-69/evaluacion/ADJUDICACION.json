@@ -1,0 +1,414 @@
+{
+  "alerta_limite": false,
+  "auditoria_sha256": "1877f41b102bd86500bbe9e4b0f9c4103bec5343e6ed3958f949d95f36fa775c",
+  "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+  "caso": "P23",
+  "critico": true,
+  "estado_documental_candidato": "respuesta_fundada",
+  "etapa": 2,
+  "final_sha256": "0c36eb623fe630c15e0a08761a0a02f86d7a99e3a187f798a27df1008a077f1b",
+  "formal_conforme": true,
+  "fundamento_sustantivo": "Concilia citopenias sintomáticas y complicaciones infecciosas como motivo para valorar tratamiento con la restricción de evitar análogos de purina ante infección activa. No selecciona una pauta individual y diferencia las adaptaciones pandémicas.",
+  "limite_documental": null,
+  "medicion": {
+    "alcance": "Medición local del cliente; no recursos internos del proveedor. Contadores de caché y razonamiento incluidos, sin sumarlos dos veces.",
+    "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+    "bytes_sse": 730423,
+    "caso": "P23",
+    "completa": true,
+    "cpu_delta_ms": 6422,
+    "duracion_ms": 117379,
+    "duracion_operacion_ms": 118557,
+    "etapa": 2,
+    "eventos_sse": 2294,
+    "fallos_medicion": 0,
+    "final_sha256": "0c36eb623fe630c15e0a08761a0a02f86d7a99e3a187f798a27df1008a077f1b",
+    "formal_conforme": true,
+    "intento": 69,
+    "intervalo_maximo_ms": 375,
+    "io_escritura_delta_bytes": 3161585,
+    "io_lectura_delta_bytes": 0,
+    "memoria_virtual_maxima_bytes": 25812992,
+    "muestras": 447,
+    "observaciones_udp": 0,
+    "primer_texto_ms": 105461,
+    "resultado": {
+      "bytes": 89602,
+      "sha256": "f941ec50d8307180ed9b148e7725e578f7031c29fc9887e4263e10ed9e44ca17"
+    },
+    "rss_maximo_bytes": 38461440,
+    "solicitud": {
+      "bytes": 76129,
+      "sha256": "3065f328e1675f9a5533e0fd11486f7d0704a21f7b503c27f24b99fabd9b581d"
+    },
+    "sse_sha256": "eb1ba9c90788f3ff53ce17f1de00705323f083d51f3d2df7ba54ae3f5844ac78",
+    "tcp_estados": [
+      "Established"
+    ],
+    "tcp_maximo_simultaneo": 1,
+    "telemetria_conforme": true,
+    "telemetria_sha256": "e2eef5b8e41c775b290915e5afe2ab659a6fc17cdf097276717c9cd31dd9e8c6",
+    "tokens_cache": 1408,
+    "tokens_entrada": 23417,
+    "tokens_razonamiento": 8889,
+    "tokens_salida": 10476,
+    "tokens_totales": 33893,
+    "uso_proveedor": {
+      "context_details": {
+        "input_tokens": 23417,
+        "output_tokens": 10485
+      },
+      "input_tokens": 23417,
+      "input_tokens_details": {
+        "cached_tokens": 1408
+      },
+      "num_server_side_tools_used": 0,
+      "num_sources_used": 0,
+      "output_tokens": 10476,
+      "output_tokens_details": {
+        "reasoning_tokens": 8889
+      },
+      "total_tokens": 33893
+    }
+  },
+  "naturaleza_defecto": null,
+  "observaciones_revision": [
+    "La lista adicional de alternativas no es necesaria para resolver el caso. En R0, la expresión «varios usos» es imprecisa; su fundamento sobre falta de aprobación se refiere a inhibidores de BRAF. No se atribuye a R0 una negación expresa sobre rituximab o ibrutinib que no formuló, aunque R1 la describa como corregida.",
+    "R2 restringe la asociación entre alternativas menos duraderas y la lista posterior de fármacos; se registra su precisión literal sin convertirla automáticamente en error clínico de las respuestas anteriores."
+  ],
+  "pasajes_contrastados": [
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "Citopenias (en especial, si son sintomáticas).",
+      "pagina": 0,
+      "seccion": "_13"
+    },
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "Presencia de otras complicaciones, a menudo infecciosas.",
+      "pagina": 0,
+      "seccion": "_13"
+    },
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "Si el paciente es asintomático y los recuentos sanguíneos se mantienen dentro de los límites",
+      "pagina": 0,
+      "seccion": "_13"
+    },
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "1. Observación cautelosa, cuando sea posible.",
+      "pagina": 0,
+      "seccion": "_13"
+    },
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "Los análogos de purina se deben evitar en casos",
+      "pagina": 5,
+      "seccion": "_13"
+    },
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "de infección activa y de deficiencia renal o hepática moderada a grave.",
+      "pagina": 5,
+      "seccion": "_13"
+    },
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "Evitar el uso de cladribina, con rituximab o sin este,[[4][26]] y pentostatina debido al riesgo",
+      "pagina": 1,
+      "seccion": "_13"
+    },
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "asintomáticos con grados de pancitopenia que no son graves.",
+      "pagina": 1,
+      "seccion": "_13"
+    },
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "por otras alternativas de menor toxicidad; no obstante, estas opciones",
+      "pagina": 1,
+      "seccion": "_13"
+    },
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "produjeron respuestas menos duraderas.",
+      "pagina": 1,
+      "seccion": "_13"
+    },
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "[[Nivel de evidencia C3][25]] Las directrices de tratamiento adaptadas se",
+      "pagina": 1,
+      "seccion": "_13"
+    },
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "este estado se debe comprobar mediante una citometría de",
+      "pagina": 1,
+      "seccion": "_13"
+    },
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "La FDA no ha aprobado el uso de los inhibidores de BRAF para el tratamiento de",
+      "pagina": 2,
+      "seccion": "_13"
+    },
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "pero se puede usar de manera extraoficial en la práctica",
+      "pagina": 2,
+      "seccion": "_13"
+    },
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "El interferón α no se encuentra disponible porque se detuvo su producción.",
+      "pagina": 2,
+      "seccion": "_13"
+    },
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "pero no cuenta con la aprobación de la FDA para el tratamiento de la leucemia de células pilosas.",
+      "pagina": 2,
+      "seccion": "_13"
+    },
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "Considerar la administración de rituximab intravenoso (IV) en monoterapia, por 4 a 8 semanas, o",
+      "pagina": 2,
+      "seccion": "_13"
+    },
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "además del ibrutinib (inhibidor de la tirosina–cinasa de",
+      "pagina": 2,
+      "seccion": "_13"
+    }
+  ],
+  "recepcion_independiente": "pendiente",
+  "respuesta_original": "{\"caso\":\"P23\",\"estado_documental\":\"respuesta_fundada\",\"etapa\":2,\"evidencias\":[{\"cita_literal_breve\":\"Citopenias (en especial, si son sintomáticas).\",\"documento\":\"pdq-nci-hcl-es\",\"fragmentos\":[0],\"seccion\":\"_13\"},{\"cita_literal_breve\":\"Presencia de otras complicaciones, a menudo infecciosas.\",\"documento\":\"pdq-nci-hcl-es\",\"fragmentos\":[0],\"seccion\":\"_13\"},{\"cita_literal_breve\":\"Si el paciente es asintomático y los recuentos sanguíneos se mantienen dentro de los límites\",\"documento\":\"pdq-nci-hcl-es\",\"fragmentos\":[0],\"seccion\":\"_13\"},{\"cita_literal_breve\":\"1. Observación cautelosa, cuando sea posible.\",\"documento\":\"pdq-nci-hcl-es\",\"fragmentos\":[0],\"seccion\":\"_13\"},{\"cita_literal_breve\":\"Los análogos de purina se deben evitar en casos\",\"documento\":\"pdq-nci-hcl-es\",\"fragmentos\":[5],\"seccion\":\"_13\"},{\"cita_literal_breve\":\"de infección activa y de deficiencia renal o hepática moderada a grave.\",\"documento\":\"pdq-nci-hcl-es\",\"fragmentos\":[5],\"seccion\":\"_13\"},{\"cita_literal_breve\":\"Evitar el uso de cladribina, con rituximab o sin este,[[4][26]] y pentostatina debido al riesgo\",\"documento\":\"pdq-nci-hcl-es\",\"fragmentos\":[1],\"seccion\":\"_13\"},{\"cita_literal_breve\":\"asintomáticos con grados de pancitopenia que no son graves.\",\"documento\":\"pdq-nci-hcl-es\",\"fragmentos\":[1],\"seccion\":\"_13\"},{\"cita_literal_breve\":\"por otras alternativas de menor toxicidad; no obstante, estas opciones\",\"documento\":\"pdq-nci-hcl-es\",\"fragmentos\":[1],\"seccion\":\"_13\"},{\"cita_literal_breve\":\"produjeron respuestas menos duraderas.\",\"documento\":\"pdq-nci-hcl-es\",\"fragmentos\":[1],\"seccion\":\"_13\"},{\"cita_literal_breve\":\"[[Nivel de evidencia C3][25]] Las directrices de tratamiento adaptadas se\",\"documento\":\"pdq-nci-hcl-es\",\"fragmentos\":[1],\"seccion\":\"_13\"},{\"cita_literal_breve\":\"este estado se debe comprobar mediante una citometría de\",\"documento\":\"pdq-nci-hcl-es\",\"fragmentos\":[1],\"seccion\":\"_13\"},{\"cita_literal_breve\":\"La FDA no ha aprobado el uso de los inhibidores de BRAF para el tratamiento de\",\"documento\":\"pdq-nci-hcl-es\",\"fragmentos\":[2],\"seccion\":\"_13\"},{\"cita_literal_breve\":\"pero se puede usar de manera extraoficial en la práctica\",\"documento\":\"pdq-nci-hcl-es\",\"fragmentos\":[2],\"seccion\":\"_13\"},{\"cita_literal_breve\":\"El interferón α no se encuentra disponible porque se detuvo su producción.\",\"documento\":\"pdq-nci-hcl-es\",\"fragmentos\":[2],\"seccion\":\"_13\"},{\"cita_literal_breve\":\"pero no cuenta con la aprobación de la FDA para el tratamiento de la leucemia de células pilosas.\",\"documento\":\"pdq-nci-hcl-es\",\"fragmentos\":[2],\"seccion\":\"_13\"},{\"cita_literal_breve\":\"Considerar la administración de rituximab intravenoso (IV) en monoterapia, por 4 a 8 semanas, o\",\"documento\":\"pdq-nci-hcl-es\",\"fragmentos\":[2],\"seccion\":\"_13\"},{\"cita_literal_breve\":\"además del ibrutinib (inhibidor de la tirosina–cinasa de\",\"documento\":\"pdq-nci-hcl-es\",\"fragmentos\":[2],\"seccion\":\"_13\"}],\"fundamentos_verificables\":[\"Las citopenias, especialmente sintomáticas, y las complicaciones a menudo infecciosas son signos en los que se fundamenta la decisión de tratar; la exención exige paciente asintomático y recuentos aceptables.\",\"La advertencia directa ordena evitar los análogos de purina si hay infección activa, y también ante deficiencia renal o hepática moderada o grave; es distinta de la recomendación pandémica de evitar cladribina y pentostatina por inmunodepresión.\",\"La observación cautelosa figura cuando sea posible; la vigilancia estrecha adaptada se formula para asintomáticos con pancitopenia no grave.\",\"Las alternativas de menor toxicidad que sustituyeron algunas opciones iniciales durante la pandemia produjeron respuestas menos duraderas, pero esa frase no las identifica.\",\"Las directrices de 2021, de experiencia anecdótica, opinión experta y nivel C3, solo consideran inhibidores de BRAF tras citometría de flujo, rituximab, interferón no disponible, ropeginterferón e ibrutinib; no seleccionan uno para este caso.\"],\"insuficiencias\":[\"No consta un algoritmo que elija un fármaco ante citopenias sintomáticas más infección activa.\",\"Faltan gravedad de las citopenias, control de la infección, resultado de BRAF, función renal o hepática y esplenomegalia.\",\"La fuente no acredita ni la aprobación ni la falta de aprobación de la FDA para rituximab o ibrutinib.\",\"El uso extraoficial de inhibidores de BRAF se afirma con carácter general, no como indicación de este caso.\"],\"respuesta\":\"Las citopenias sintomáticas y las complicaciones, a menudo infecciosas, fundamentan valorar tratamiento; no rige la exención de asintomático con recuentos aceptables. Esa valoración no autoriza análogos de purina, que se deben evitar con infección activa. La observación cautelosa procede cuando sea posible; la vigilancia estrecha de 2021 describe asintomáticos con pancitopenia no grave, no este caso. Alternativas pandémicas de menor toxicidad dieron respuestas menos duraderas, sin identificar el fármaco. Las directrices adaptadas, experiencia anecdótica, opinión experta y nivel C3, solo consideran inhibidores de BRAF tras citometría de flujo, no aprobados por la FDA, rituximab, interferón no disponible, ropeginterferón sin aprobación e ibrutinib. No fijan una pauta individual.\",\"revision\":\"Se mantiene la conciliación común: valorar tratamiento no convierte la indicación en análogos de purina si hay infección activa, y no hay pauta individual. Se mantiene la corrección de R1 sobre el alcance de la FDA y sobre la vigilancia estrecha. Se corrige la asociación implícita entre las alternativas menos duraderas y los fármacos después nombrados: la fuente no los identifica. Se restituye el límite expreso de que los inhibidores de BRAF no están aprobados por la FDA, aunque consta un uso extraoficial general.\"}",
+  "revision_citas": {
+    "citas": [
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "Citopenias (en especial, si son sintomáticas)."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "Presencia de otras complicaciones, a menudo infecciosas."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "Si el paciente es asintomático y los recuentos sanguíneos se mantienen dentro de los límites"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "1. Observación cautelosa, cuando sea posible."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "Los análogos de purina se deben evitar en casos"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "de infección activa y de deficiencia renal o hepática moderada a grave."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "Evitar el uso de cladribina, con rituximab o sin este,[[4][26]] y pentostatina debido al riesgo"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "asintomáticos con grados de pancitopenia que no son graves."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "por otras alternativas de menor toxicidad; no obstante, estas opciones"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "produjeron respuestas menos duraderas."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "[[Nivel de evidencia C3][25]] Las directrices de tratamiento adaptadas se"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "este estado se debe comprobar mediante una citometría de"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "La FDA no ha aprobado el uso de los inhibidores de BRAF para el tratamiento de"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "pero se puede usar de manera extraoficial en la práctica"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "El interferón α no se encuentra disponible porque se detuvo su producción."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "pero no cuenta con la aprobación de la FDA para el tratamiento de la leucemia de células pilosas."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "Considerar la administración de rituximab intravenoso (IV) en monoterapia, por 4 a 8 semanas, o"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "además del ibrutinib (inhibidor de la tirosina–cinasa de"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "solicitud_sha256": "3065f328e1675f9a5533e0fd11486f7d0704a21f7b503c27f24b99fabd9b581d",
+  "sustantivo": "correcto",
+  "valor": "0"
+}

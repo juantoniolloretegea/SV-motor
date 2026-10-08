@@ -1,0 +1,126 @@
+{
+  "alerta_limite": false,
+  "auditoria_sha256": "8785eb472ea39571ecfaa3d7d3771114c990617ffeea21fa5ad9fa690b5f327b",
+  "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+  "caso": "P13",
+  "critico": true,
+  "estado_documental_candidato": "respuesta_fundada",
+  "etapa": 0,
+  "final_sha256": "9a4c5f886d1d1ed4765906d9035bcc29ceee1e643b41c072611e6e27edeb404b",
+  "formal_conforme": true,
+  "fundamento_sustantivo": "Exige comprobar el estado mutacional individual de BRAF, sin sustituirlo por la frecuencia poblacional ni inventar una técnica de laboratorio. Distingue el tipo clásico y no formula una prescripción.",
+  "limite_documental": null,
+  "medicion": {
+    "alcance": "Medición local del cliente; no recursos internos del proveedor. Contadores de caché y razonamiento incluidos, sin sumarlos dos veces.",
+    "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+    "bytes_sse": 163260,
+    "caso": "P13",
+    "completa": true,
+    "cpu_delta_ms": 2438,
+    "duracion_ms": 29331,
+    "duracion_operacion_ms": 30409,
+    "etapa": 0,
+    "eventos_sse": 518,
+    "fallos_medicion": 0,
+    "final_sha256": "9a4c5f886d1d1ed4765906d9035bcc29ceee1e643b41c072611e6e27edeb404b",
+    "formal_conforme": true,
+    "intento": 37,
+    "intervalo_maximo_ms": 287,
+    "io_escritura_delta_bytes": 715411,
+    "io_lectura_delta_bytes": 0,
+    "memoria_virtual_maxima_bytes": 14843904,
+    "muestras": 113,
+    "observaciones_udp": 0,
+    "primer_texto_ms": 22994,
+    "resultado": {
+      "bytes": 23927,
+      "sha256": "2ef6fb3fbc3c69edbd21370208493580a0ad92fa700f1af95cafec23a93817c9"
+    },
+    "rss_maximo_bytes": 28561408,
+    "solicitud": {
+      "bytes": 58699,
+      "sha256": "4ae579e15c02b52166833c5be0dfb2f7f6b13a26ac5875a3d0d9c92960214917"
+    },
+    "sse_sha256": "fc6241adb7fea39ca59814745df92f8c4e567e629bce2e3c01765aff846a710c",
+    "tcp_estados": [
+      "Established",
+      "SynSent"
+    ],
+    "tcp_maximo_simultaneo": 1,
+    "telemetria_conforme": true,
+    "telemetria_sha256": "337da5ee82aa08134a90aa8817cd9d9479ddc81d9d807d93821971c6c987d979",
+    "tokens_cache": 1408,
+    "tokens_entrada": 19329,
+    "tokens_razonamiento": 1399,
+    "tokens_salida": 1838,
+    "tokens_totales": 21167,
+    "uso_proveedor": {
+      "context_details": {
+        "input_tokens": 19329,
+        "output_tokens": 1847
+      },
+      "input_tokens": 19329,
+      "input_tokens_details": {
+        "cached_tokens": 1408
+      },
+      "num_server_side_tools_used": 0,
+      "num_sources_used": 0,
+      "output_tokens": 1838,
+      "output_tokens_details": {
+        "reasoning_tokens": 1399
+      },
+      "total_tokens": 21167
+    }
+  },
+  "naturaleza_defecto": null,
+  "observaciones_revision": [
+    "R1 y R2 precisan una frase de insuficiencia de R0: la fuente sí menciona un método que el enunciado excluye de la respuesta. R0 no negó expresamente su existencia; la conclusión principal permanece correcta."
+  ],
+  "pasajes_contrastados": [
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "La mayoría de los pacientes con leucemia de células pilosas tienen una mutación en *BRAF*, sin embargo, este estado se debe comprobar",
+      "pagina": 1,
+      "seccion": "_13"
+    },
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "La mutación *BRAF*V600E se presenta en casi el 100 % de los pacientes con leucemia de células pilosas de tipo clásico",
+      "pagina": 2,
+      "seccion": "_13"
+    }
+  ],
+  "recepcion_independiente": "pendiente",
+  "respuesta_original": "{\"caso\":\"P13\",\"estado_documental\":\"respuesta_fundada\",\"etapa\":0,\"evidencias\":[{\"cita_literal_breve\":\"La mayoría de los pacientes con leucemia de células pilosas tienen una mutación en *BRAF*, sin embargo, este estado se debe comprobar\",\"documento\":\"pdq-nci-hcl-es\",\"fragmentos\":[1],\"seccion\":\"_13\"},{\"cita_literal_breve\":\"La mutación *BRAF*V600E se presenta en casi el 100 % de los pacientes con leucemia de células pilosas de tipo clásico\",\"documento\":\"pdq-nci-hcl-es\",\"fragmentos\":[2],\"seccion\":\"_13\"}],\"fundamentos_verificables\":[\"En las directrices adaptadas, la elevada frecuencia de mutación en BRAF no exime de comprobar ese estado antes de considerar un inhibidor de BRAF.\",\"La fuente distingue la frecuencia poblacional, incluida la casi universalidad en el tipo clásico, del estado individual, que debe verificarse.\",\"No se conoce ni consta en la fuente el resultado molecular de la persona sintética; por tanto, la frecuencia no acredita su estado.\"],\"insuficiencias\":[\"La fuente no aporta el resultado molecular individual ni autoriza iniciar el inhibidor solo por la frecuencia.\",\"No se indica la técnica solicitada de omitir: la pregunta prohíbe nombrarla y la conclusión no depende de identificarla.\",\"No queda acreditada una prescripción individual ni la consecuencia concreta de omitir la comprobación más allá de su exigencia documental.\"],\"respuesta\":\"La comprobación que no puede omitirse es la del estado mutacional de BRAF. Aunque la fuente indica que la mayoría de los pacientes, y casi todos los de tipo clásico, tienen la mutación, exige comprobar ese estado; su frecuencia no reemplaza el resultado individual desconocido. No se formula una indicación para la persona sintética.\",\"revision\":\"Etapa 0: no existen antecedentes. Respuesta provisional fundada solo en la sección _13.\"}",
+  "revision_citas": {
+    "citas": [
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "La mayoría de los pacientes con leucemia de células pilosas tienen una mutación en *BRAF*, sin embargo, este estado se debe comprobar"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "La mutación *BRAF*V600E se presenta en casi el 100 % de los pacientes con leucemia de células pilosas de tipo clásico"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "solicitud_sha256": "4ae579e15c02b52166833c5be0dfb2f7f6b13a26ac5875a3d0d9c92960214917",
+  "sustantivo": "correcto",
+  "valor": "0"
+}

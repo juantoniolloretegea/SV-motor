@@ -1,0 +1,162 @@
+{
+  "alerta_limite": false,
+  "auditoria_sha256": "3f51a2f177f8d2f233c94173a9c51d3cbbad8a657c0bbda1c4a2e0e6f0a92a38",
+  "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+  "caso": "P16",
+  "critico": true,
+  "estado_documental_candidato": "respuesta_fundada",
+  "etapa": 2,
+  "final_sha256": "19a68432db76e012502502113a74515a82afa7b4941c168bb94dc7d9ba67499e",
+  "formal_conforme": true,
+  "fundamento_sustantivo": "Distingue respuesta general del 100 %, remisión completa del 50 % y curación no acreditada en el estudio; conserva el tamaño de 12 pacientes y no presenta curación universal.",
+  "limite_documental": null,
+  "medicion": {
+    "alcance": "Medición local del cliente; no recursos internos del proveedor. Contadores de caché y razonamiento incluidos, sin sumarlos dos veces.",
+    "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+    "bytes_sse": 235743,
+    "caso": "P16",
+    "completa": true,
+    "cpu_delta_ms": 1687,
+    "duracion_ms": 29240,
+    "duracion_operacion_ms": 30301,
+    "etapa": 2,
+    "eventos_sse": 763,
+    "fallos_medicion": 0,
+    "final_sha256": "19a68432db76e012502502113a74515a82afa7b4941c168bb94dc7d9ba67499e",
+    "formal_conforme": true,
+    "intento": 48,
+    "intervalo_maximo_ms": 288,
+    "io_escritura_delta_bytes": 980032,
+    "io_lectura_delta_bytes": 0,
+    "memoria_virtual_maxima_bytes": 18673664,
+    "muestras": 118,
+    "observaciones_udp": 0,
+    "primer_texto_ms": 25499,
+    "resultado": {
+      "bytes": 30568,
+      "sha256": "a4272d900148a51ebcf69d9c7d705669ae37423612681241495cbca39b1cfa09"
+    },
+    "rss_maximo_bytes": 31539200,
+    "solicitud": {
+      "bytes": 70966,
+      "sha256": "886228c4a785307a4bae01b60dc05d2ab2ed1b5baef4e2855801fe7509c433b1"
+    },
+    "sse_sha256": "17b45b4fe2b867dc97df88f36ad6eb402401aba4fa5277b30c312bf9e9c29037",
+    "tcp_estados": [
+      "Established",
+      "SynSent"
+    ],
+    "tcp_maximo_simultaneo": 1,
+    "telemetria_conforme": true,
+    "telemetria_sha256": "d50e8ea4cca2692764517131ae776c99e692967333a44b210201529944b48871",
+    "tokens_cache": 1152,
+    "tokens_entrada": 22036,
+    "tokens_razonamiento": 2044,
+    "tokens_salida": 2654,
+    "tokens_totales": 24690,
+    "uso_proveedor": {
+      "context_details": {
+        "input_tokens": 22036,
+        "output_tokens": 2661
+      },
+      "input_tokens": 22036,
+      "input_tokens_details": {
+        "cached_tokens": 1152
+      },
+      "num_server_side_tools_used": 0,
+      "num_sources_used": 0,
+      "output_tokens": 2654,
+      "output_tokens_details": {
+        "reasoning_tokens": 2044
+      },
+      "total_tokens": 24690
+    }
+  },
+  "naturaleza_defecto": null,
+  "observaciones_revision": [
+    "R1 y R2 retiran «todos respondieron» por no ser literal, aunque es una deducción cuantitativa admisible de la tasa comunicada para ese grupo. Se registra una objeción literal injustificada; no se penaliza la deducción correcta de R0 ni se premia esa retirada como corrección sustantiva."
+  ],
+  "pasajes_contrastados": [
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "En un estudio de fase II se evaluaron 12 pacientes con enfermedad en recaída o resistente al",
+      "pagina": 6,
+      "seccion": "_13"
+    },
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "La tasa de respuesta general fue del 100 % y la tasa de remisión completa fue del",
+      "pagina": 6,
+      "seccion": "_13"
+    },
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "50 %.[[30][81]][[Nivel de evidencia C3][82]]",
+      "pagina": 6,
+      "seccion": "_13"
+    },
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "La leucemia de células pilosas responde muy bien al tratamiento, pero casi nunca se cura.",
+      "pagina": 0,
+      "seccion": "_13"
+    }
+  ],
+  "recepcion_independiente": "pendiente",
+  "respuesta_original": "{\"caso\":\"P16\",\"estado_documental\":\"respuesta_fundada\",\"etapa\":2,\"evidencias\":[{\"cita_literal_breve\":\"En un estudio de fase II se evaluaron 12 pacientes con enfermedad en recaída o resistente al\",\"documento\":\"pdq-nci-hcl-es\",\"fragmentos\":[6],\"seccion\":\"_13\"},{\"cita_literal_breve\":\"La tasa de respuesta general fue del 100 % y la tasa de remisión completa fue del\",\"documento\":\"pdq-nci-hcl-es\",\"fragmentos\":[6],\"seccion\":\"_13\"},{\"cita_literal_breve\":\"50 %.[[30][81]][[Nivel de evidencia C3][82]]\",\"documento\":\"pdq-nci-hcl-es\",\"fragmentos\":[6],\"seccion\":\"_13\"},{\"cita_literal_breve\":\"La leucemia de células pilosas responde muy bien al tratamiento, pero casi nunca se cura.\",\"documento\":\"pdq-nci-hcl-es\",\"fragmentos\":[0],\"seccion\":\"_13\"}],\"fundamentos_verificables\":[\"En 12 pacientes en recaída o resistentes, la fuente informa dos tasas distintas: respuesta general del 100 % y remisión completa del 50 %, con nivel de evidencia C3.\",\"La diferencia numérica impide identificar la respuesta general con la remisión completa de todos los pacientes.\",\"El pasaje no menciona curación ni duración de esa respuesta; el resumen afirma que esta leucemia casi nunca se cura, por lo que ninguna tasa acredita que todos quedaran curados.\"],\"insuficiencias\":[\"La sección no define los criterios de respuesta general, remisión completa ni curación, ni informa seguimiento o duración con bendamustina y rituximab. Ello impide precisar la persistencia, pero no impide rechazar la equivalencia con «todos quedaron curados».\"],\"respuesta\":\"No es correcto. En 12 pacientes en recaída o resistentes se informan dos resultados distintos: respuesta general del 100 % y remisión completa del 50 %, con evidencia C3. La primera no es remisión completa de todos, y esta solo alcanza la mitad. Ninguna es curación: el estudio no la informa y el resumen señala que la leucemia de células pilosas casi nunca se cura. «Todos quedaron curados» confunde los tres conceptos. No es una prescripción individual.\",\"revision\":\"Verificación neutral de R0 y R1: ambas rechazan correctamente el resumen. Mantengo la cautela de R1 y no recupero «todos respondieron» de R0, porque la fuente informa una tasa sin definir criterios ni formular esa conclusión. Siguen acreditados el contraste entre 100 % y 50 % y el límite explícito de que casi nunca se cura.\"}",
+  "revision_citas": {
+    "citas": [
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "En un estudio de fase II se evaluaron 12 pacientes con enfermedad en recaída o resistente al"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "La tasa de respuesta general fue del 100 % y la tasa de remisión completa fue del"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "50 %.[[30][81]][[Nivel de evidencia C3][82]]"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "La leucemia de células pilosas responde muy bien al tratamiento, pero casi nunca se cura."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "solicitud_sha256": "886228c4a785307a4bae01b60dc05d2ab2ed1b5baef4e2855801fe7509c433b1",
+  "sustantivo": "correcto",
+  "valor": "0"
+}

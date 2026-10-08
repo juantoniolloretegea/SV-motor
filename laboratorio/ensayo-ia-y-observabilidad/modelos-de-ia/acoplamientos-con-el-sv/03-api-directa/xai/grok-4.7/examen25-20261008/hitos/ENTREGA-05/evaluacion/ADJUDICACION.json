@@ -1,0 +1,161 @@
+{
+  "alerta_limite": false,
+  "auditoria_sha256": "193524f4a207885fbec403b59afc8f5514820c842b33d6b78d5e8cf91fe45467",
+  "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+  "caso": "P02",
+  "critico": true,
+  "estado_documental_candidato": "respuesta_fundada",
+  "etapa": 1,
+  "final_sha256": "0d37ed36e302e9453d86ba336f22fd48e784200441ca7316b064579319da789d",
+  "formal_conforme": true,
+  "fundamento_sustantivo": "Recupera tres manifestaciones y la posibilidad ocasional de leucocitosis. R0 introduce una relación incorrecta al situar la leucocitosis dentro del espectro de la leucopenia; R1 corrige expresamente esa relación y R2 conserva la distinción, sin excluir la enfermedad.",
+  "limite_documental": null,
+  "medicion": {
+    "alcance": "Medición local del cliente; no recursos internos del proveedor. Contadores de caché y razonamiento incluidos, sin sumarlos dos veces.",
+    "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+    "bytes_sse": 221044,
+    "caso": "P02",
+    "completa": true,
+    "cpu_delta_ms": 3468,
+    "duracion_ms": 40048,
+    "duracion_operacion_ms": 41158,
+    "etapa": 1,
+    "eventos_sse": 648,
+    "fallos_medicion": 0,
+    "final_sha256": "0d37ed36e302e9453d86ba336f22fd48e784200441ca7316b064579319da789d",
+    "formal_conforme": true,
+    "intento": 5,
+    "intervalo_maximo_ms": 288,
+    "io_escritura_delta_bytes": 1065724,
+    "io_lectura_delta_bytes": 0,
+    "memoria_virtual_maxima_bytes": 5836800,
+    "muestras": 151,
+    "observaciones_udp": 0,
+    "primer_texto_ms": 36467,
+    "resultado": {
+      "bytes": 34959,
+      "sha256": "1a88ca51db6e50eeb36987de913b8219f537b28b487296af7fd72d346d76d859"
+    },
+    "rss_maximo_bytes": 19742720,
+    "solicitud": {
+      "bytes": 21593,
+      "sha256": "75ff6273a8a89e6362629526527dd6968813094002016a8443b3109aefb49116"
+    },
+    "sse_sha256": "8013c503e87bd5503cddb1e2f3798e284b5f98d208108c4e88a2c9c8a0e91a60",
+    "tcp_estados": [
+      "Established"
+    ],
+    "tcp_maximo_simultaneo": 1,
+    "telemetria_conforme": true,
+    "telemetria_sha256": "cdb8ee2f4a4c704140bb098315451d8b2bf3699acc915b3b9e1dd5c3d28ccd13",
+    "tokens_cache": 1152,
+    "tokens_entrada": 6655,
+    "tokens_razonamiento": 2829,
+    "tokens_salida": 3297,
+    "tokens_totales": 9952,
+    "uso_proveedor": {
+      "context_details": {
+        "input_tokens": 6655,
+        "output_tokens": 3306
+      },
+      "input_tokens": 6655,
+      "input_tokens_details": {
+        "cached_tokens": 1152
+      },
+      "num_server_side_tools_used": 0,
+      "num_sources_used": 0,
+      "output_tokens": 3297,
+      "output_tokens_details": {
+        "reasoning_tokens": 2829
+      },
+      "total_tokens": 9952
+    }
+  },
+  "naturaleza_defecto": null,
+  "observaciones_revision": [
+    "Corrección espontánea en R1, mantenida en R2. El error inicial permanece en su vector y no se oculta por el resultado final."
+  ],
+  "pasajes_contrastados": [
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "La leucemia de células pilosas suele producir las siguientes manifestaciones:",
+      "pagina": 0,
+      "seccion": "_1"
+    },
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "Esplenomegalia.",
+      "pagina": 0,
+      "seccion": "_1"
+    },
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "Leucopenia de grados diferentes (en ocasiones leucocitosis).",
+      "pagina": 0,
+      "seccion": "_1"
+    },
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "Pancitopenia.",
+      "pagina": 0,
+      "seccion": "_1"
+    }
+  ],
+  "recepcion_independiente": "pendiente",
+  "respuesta_original": "{\"caso\":\"P02\",\"estado_documental\":\"respuesta_fundada\",\"etapa\":1,\"evidencias\":[{\"cita_literal_breve\":\"La leucemia de células pilosas suele producir las siguientes manifestaciones:\",\"documento\":\"pdq-nci-hcl-es\",\"fragmentos\":[0],\"seccion\":\"_1\"},{\"cita_literal_breve\":\"Esplenomegalia.\",\"documento\":\"pdq-nci-hcl-es\",\"fragmentos\":[0],\"seccion\":\"_1\"},{\"cita_literal_breve\":\"Leucopenia de grados diferentes (en ocasiones leucocitosis).\",\"documento\":\"pdq-nci-hcl-es\",\"fragmentos\":[0],\"seccion\":\"_1\"},{\"cita_literal_breve\":\"Pancitopenia.\",\"documento\":\"pdq-nci-hcl-es\",\"fragmentos\":[0],\"seccion\":\"_1\"}],\"fundamentos_verificables\":[\"El apartado de cuadro clínico inicial dice que la enfermedad «suele producir» las manifestaciones enumeradas; de ahí se toma «habituales».\",\"Esplenomegalia, leucopenia de grados diferentes y pancitopenia aparecen expresamente en esa enumeración.\",\"El paréntesis «en ocasiones leucocitosis» acredita que la leucocitosis puede presentarse, sin afirmar que sea constante ni un grado de la leucopenia.\"],\"insuficiencias\":[\"La fuente no cuantifica la leucocitosis más allá de «en ocasiones» ni ordena por frecuencia las manifestaciones de la lista.\"],\"respuesta\":\"Tres manifestaciones habituales son esplenomegalia, leucopenia de grados diferentes y pancitopenia. La leucocitosis puede presentarse, pero solo «en ocasiones», como alternativa señalada junto a la leucopenia, no como un grado de esta ni como manifestación constante.\",\"revision\":\"Se mantiene la selección y que la leucocitosis puede ocurrir «en ocasiones». Se corrige la idea de R0 que la situaba dentro del espectro de la leucopenia: el paréntesis la presenta como posibilidad ocasional distinta. Se retira la mención no exigida a otras manifestaciones.\"}",
+  "revision_citas": {
+    "citas": [
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "La leucemia de células pilosas suele producir las siguientes manifestaciones:"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "Esplenomegalia."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "Leucopenia de grados diferentes (en ocasiones leucocitosis)."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "Pancitopenia."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "solicitud_sha256": "75ff6273a8a89e6362629526527dd6968813094002016a8443b3109aefb49116",
+  "sustantivo": "correcto",
+  "valor": "0"
+}

@@ -1,0 +1,144 @@
+{
+  "alerta_limite": false,
+  "auditoria_sha256": "6a1725f93fb08b524b9a914895931550f86a35796d660f56298eb0dad1a9dfb0",
+  "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+  "caso": "P10",
+  "critico": false,
+  "estado_documental_candidato": "respuesta_fundada",
+  "etapa": 2,
+  "final_sha256": "a52b44df03e8ed4d61ac781c9ae1973d01759bbf7e30d84a52c17a5d4336a2a5",
+  "formal_conforme": true,
+  "fundamento_sustantivo": "Mantiene el 10 % de los pacientes con la enfermedad y el denominador correcto. No lo confunde con incidencia poblacional.",
+  "limite_documental": null,
+  "medicion": {
+    "alcance": "Medición local del cliente; no recursos internos del proveedor. Contadores de caché y razonamiento incluidos, sin sumarlos dos veces.",
+    "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+    "bytes_sse": 179510,
+    "caso": "P10",
+    "completa": true,
+    "cpu_delta_ms": 3110,
+    "duracion_ms": 36239,
+    "duracion_operacion_ms": 37347,
+    "etapa": 2,
+    "eventos_sse": 541,
+    "fallos_medicion": 0,
+    "final_sha256": "a52b44df03e8ed4d61ac781c9ae1973d01759bbf7e30d84a52c17a5d4336a2a5",
+    "formal_conforme": true,
+    "intento": 30,
+    "intervalo_maximo_ms": 287,
+    "io_escritura_delta_bytes": 787591,
+    "io_lectura_delta_bytes": 0,
+    "memoria_virtual_maxima_bytes": 11718656,
+    "muestras": 137,
+    "observaciones_udp": 0,
+    "primer_texto_ms": 31460,
+    "resultado": {
+      "bytes": 27981,
+      "sha256": "2522c1fab9ff74e627905f2b3f7ae5a3fbd7009376e1a03b92b1bfdd0ccb1aab"
+    },
+    "rss_maximo_bytes": 25616384,
+    "solicitud": {
+      "bytes": 26224,
+      "sha256": "878b5d4074661690d4ed7e421685fdfb6d716d6664f900c6834ce528b3925385"
+    },
+    "sse_sha256": "4ce0077ad3eba2d110c70b70f92a5ffd35cb1c5e8f5215f180eaaed8de12d119",
+    "tcp_estados": [
+      "Established",
+      "SynSent"
+    ],
+    "tcp_maximo_simultaneo": 1,
+    "telemetria_conforme": true,
+    "telemetria_sha256": "ce4430e3778bf9aa179fe123d157c6712b488f329c2651c79777d98fb6980e6e",
+    "tokens_cache": 1152,
+    "tokens_entrada": 7659,
+    "tokens_razonamiento": 2134,
+    "tokens_salida": 2552,
+    "tokens_totales": 10211,
+    "uso_proveedor": {
+      "context_details": {
+        "input_tokens": 7659,
+        "output_tokens": 2560
+      },
+      "input_tokens": 7659,
+      "input_tokens_details": {
+        "cached_tokens": 1152
+      },
+      "num_server_side_tools_used": 0,
+      "num_sources_used": 0,
+      "output_tokens": 2552,
+      "output_tokens_details": {
+        "reasoning_tokens": 2134
+      },
+      "total_tokens": 10211
+    }
+  },
+  "naturaleza_defecto": null,
+  "observaciones_revision": [
+    "R1 y R2 objetan el calificativo aproximada porque no figura literalmente en la fuente, aunque pertenece al enunciado y es admisible en la clave. Se registra esa objeción literal como precisión innecesaria, sin cambio del contenido cuantitativo evaluado."
+  ],
+  "pasajes_contrastados": [
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "variante de la leucemia de células pilosas (que se presenta en un 10 % de los pa",
+      "pagina": 0,
+      "seccion": "_1"
+    },
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "cientes con esta",
+      "pagina": 1,
+      "seccion": "_1"
+    },
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "enfermedad)",
+      "pagina": 1,
+      "seccion": "_1"
+    }
+  ],
+  "recepcion_independiente": "pendiente",
+  "respuesta_original": "{\"caso\":\"P10\",\"estado_documental\":\"respuesta_fundada\",\"etapa\":2,\"evidencias\":[{\"cita_literal_breve\":\"variante de la leucemia de células pilosas (que se presenta en un 10 % de los pa\",\"documento\":\"pdq-nci-hcl-es\",\"fragmentos\":[0],\"seccion\":\"_1\"},{\"cita_literal_breve\":\"cientes con esta\",\"documento\":\"pdq-nci-hcl-es\",\"fragmentos\":[1],\"seccion\":\"_1\"},{\"cita_literal_breve\":\"enfermedad)\",\"documento\":\"pdq-nci-hcl-es\",\"fragmentos\":[1],\"seccion\":\"_1\"}],\"fundamentos_verificables\":[\"La unión de los fragmentos 0 y 1 de la sección _1 forma «que se presenta en un 10 % de los pacientes con esta enfermedad», sin añadir caracteres.\",\"«pacientes» está partido como «pa» más «cientes»; «enfermedad)» continúa en el fragmento 1.\",\"En la misma oración, «esta enfermedad» designa la leucemia de células pilosas a la que pertenece la variante.\",\"La fuente fija un solo porcentaje, 10 %, y no lo llama aproximación ni indica un intervalo.\"],\"insuficiencias\":[\"La fuente no califica el 10 % como aproximado ni aporta otro porcentaje o rango para la variante.\"],\"respuesta\":\"La fuente atribuye a la variante de leucemia de células pilosas un 10 % de los pacientes con esta enfermedad. No la presenta como cifra aproximada ni indica un rango.\",\"revision\":\"Se contrastan R0 y R1 con la sección _1. Se mantiene el 10 % común a ambas. Se mantiene la corrección de R1: R0 incorporó «aproximada», término de la pregunta ausente en la fuente. Las citas separadas acreditan el denominador partido entre fragmentos.\"}",
+  "revision_citas": {
+    "citas": [
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "variante de la leucemia de células pilosas (que se presenta en un 10 % de los pa"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "cientes con esta"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "enfermedad)"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "solicitud_sha256": "878b5d4074661690d4ed7e421685fdfb6d716d6664f900c6834ce528b3925385",
+  "sustantivo": "correcto",
+  "valor": "0"
+}

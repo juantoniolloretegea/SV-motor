@@ -1,0 +1,141 @@
+{
+  "alerta_limite": false,
+  "auditoria_sha256": "2eb647b44d228498d83d8d2b6a450e555ad7c074404631ce98c340bc0d9bbae6",
+  "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+  "caso": "P06",
+  "critico": true,
+  "estado_documental_candidato": "respuesta_fundada",
+  "etapa": 2,
+  "final_sha256": "93377199005693012ce43c16ac73e89c311bc4a567957899a51c7c53846232ce",
+  "formal_conforme": true,
+  "fundamento_sustantivo": "Contrasta BRAF V600E en la caracterización general con ausencia de mutaciones BRAF en la variante, sin trasladar automáticamente la alteración. Admite la deducción documental sin exigir la etiqueta literal forma clásica.",
+  "limite_documental": null,
+  "medicion": {
+    "alcance": "Medición local del cliente; no recursos internos del proveedor. Contadores de caché y razonamiento incluidos, sin sumarlos dos veces.",
+    "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+    "bytes_sse": 218755,
+    "caso": "P06",
+    "completa": true,
+    "cpu_delta_ms": 2750,
+    "duracion_ms": 36038,
+    "duracion_operacion_ms": 37111,
+    "etapa": 2,
+    "eventos_sse": 684,
+    "fallos_medicion": 0,
+    "final_sha256": "93377199005693012ce43c16ac73e89c311bc4a567957899a51c7c53846232ce",
+    "formal_conforme": true,
+    "intento": 18,
+    "intervalo_maximo_ms": 284,
+    "io_escritura_delta_bytes": 934550,
+    "io_lectura_delta_bytes": 0,
+    "memoria_virtual_maxima_bytes": 9068544,
+    "muestras": 138,
+    "observaciones_udp": 0,
+    "primer_texto_ms": 31112,
+    "resultado": {
+      "bytes": 30713,
+      "sha256": "1b45e1547531e5aa743aa0a94d73853a1698f8037bb2376a1a705bf71cf75e92"
+    },
+    "rss_maximo_bytes": 22880256,
+    "solicitud": {
+      "bytes": 27578,
+      "sha256": "273025aa74ac35bb4cd84403276c08db92cfbee7c43b628c7544721c23bd644f"
+    },
+    "sse_sha256": "c263fbb4f207bd94c8a59ab44bf63917402b968ca969e6a96e7c95471c00fb6f",
+    "tcp_estados": [
+      "Established"
+    ],
+    "tcp_maximo_simultaneo": 1,
+    "telemetria_conforme": true,
+    "telemetria_sha256": "4cde7181839d454ff91c59c1af8a3a28fbd24195a7117c215e0b982c0765ae84",
+    "tokens_cache": 1152,
+    "tokens_entrada": 7940,
+    "tokens_razonamiento": 2136,
+    "tokens_salida": 2663,
+    "tokens_totales": 10603,
+    "uso_proveedor": {
+      "context_details": {
+        "input_tokens": 7940,
+        "output_tokens": 2671
+      },
+      "input_tokens": 7940,
+      "input_tokens_details": {
+        "cached_tokens": 1152
+      },
+      "num_server_side_tools_used": 0,
+      "num_sources_used": 0,
+      "output_tokens": 2663,
+      "output_tokens_details": {
+        "reasoning_tokens": 2136
+      },
+      "total_tokens": 10603
+    }
+  },
+  "naturaleza_defecto": null,
+  "observaciones_revision": [],
+  "pasajes_contrastados": [
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "La mutación *BRAF*V600E es una característica genética que",
+      "pagina": 0,
+      "seccion": "_1"
+    },
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "define la leucemia de células pilosas y que se puede usar para el diagnóstico.",
+      "pagina": 0,
+      "seccion": "_1"
+    },
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "leucemia de células pilosas también carecen de mutaciones en *BRAF*.",
+      "pagina": 1,
+      "seccion": "_1"
+    }
+  ],
+  "recepcion_independiente": "pendiente",
+  "respuesta_original": "{\"caso\":\"P06\",\"estado_documental\":\"respuesta_fundada\",\"etapa\":2,\"evidencias\":[{\"cita_literal_breve\":\"La mutación *BRAF*V600E es una característica genética que\",\"documento\":\"pdq-nci-hcl-es\",\"fragmentos\":[0],\"seccion\":\"_1\"},{\"cita_literal_breve\":\"define la leucemia de células pilosas y que se puede usar para el diagnóstico.\",\"documento\":\"pdq-nci-hcl-es\",\"fragmentos\":[0],\"seccion\":\"_1\"},{\"cita_literal_breve\":\"leucemia de células pilosas también carecen de mutaciones en *BRAF*.\",\"documento\":\"pdq-nci-hcl-es\",\"fragmentos\":[1],\"seccion\":\"_1\"}],\"fundamentos_verificables\":[\"En la evaluación diagnóstica general, la fuente presenta BRAFV600E como característica genética que define la leucemia de células pilosas y puede usarse para el diagnóstico.\",\"Al describir la variante, afirma que sus células carecen de mutaciones en BRAF; «también» se suma a los marcadores anómalos previos y no introduce una excepción a esa ausencia.\",\"Esas afirmaciones permiten concluir que no cabe atribuir automáticamente la misma alteración a ambas, aunque la fuente no use la expresión «forma clásica».\"],\"insuficiencias\":[\"La fuente no denomina «forma clásica» a la presentación general; la comparación se infiere de esa caracterización frente a la variante.\",\"No cuantifica la frecuencia de BRAFV600E. El 10 % indicado corresponde a la frecuencia de la variante, no a la mutación.\"],\"respuesta\":\"No. El documento presenta BRAFV600E como característica genética que define la leucemia de células pilosas y puede usarse para diagnosticarla. De la variante afirma que sus células carecen de mutaciones en BRAF. No emplea «forma clásica», pero contrapone esa alteración definitoria a su ausencia en la variante. Por tanto, no sería correcto atribuir automáticamente la misma alteración a ambas.\",\"revision\":\"Verificación neutral de R0 y R1 contra la sección _1: ambas mantienen el sentido correcto y el estado respuesta_fundada. Se conserva esa conclusión, sin preferir automáticamente la última versión. La precisión de R1 sobre el 10 % y sobre «también» es compatible con la fuente y no cambia el resultado.\"}",
+  "revision_citas": {
+    "citas": [
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "La mutación *BRAF*V600E es una característica genética que"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "define la leucemia de células pilosas y que se puede usar para el diagnóstico."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "leucemia de células pilosas también carecen de mutaciones en *BRAF*."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "solicitud_sha256": "273025aa74ac35bb4cd84403276c08db92cfbee7c43b628c7544721c23bd644f",
+  "sustantivo": "correcto",
+  "valor": "0"
+}

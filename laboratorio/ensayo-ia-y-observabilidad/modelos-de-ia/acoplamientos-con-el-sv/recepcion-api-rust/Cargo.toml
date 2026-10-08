@@ -1,0 +1,14 @@
+[package]
+name = "sv-recepcion-api"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[dependencies]
+sv-cliente-api = { path = "../cliente-api-rust" }
+sv-instrumentacion = { path = "../instrumentacion-rust" }
+serde_json = "=1.0.151"
+sha2 = "=0.10.9"
+
+[profile.dev]
+debug = 0

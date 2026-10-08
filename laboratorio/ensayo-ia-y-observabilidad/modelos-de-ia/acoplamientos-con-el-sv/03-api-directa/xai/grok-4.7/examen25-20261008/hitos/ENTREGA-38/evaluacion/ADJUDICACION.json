@@ -1,0 +1,162 @@
+{
+  "alerta_limite": false,
+  "auditoria_sha256": "d774389f3165e738a710314de4639b3738c89930a9570389807be82ad020e477",
+  "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+  "caso": "P13",
+  "critico": true,
+  "estado_documental_candidato": "respuesta_fundada",
+  "etapa": 1,
+  "final_sha256": "45368987770a13db0bee2f57eedbdd2ac921befdd2cfc93e75f4d3f4d593df4b",
+  "formal_conforme": true,
+  "fundamento_sustantivo": "Exige comprobar el estado mutacional individual de BRAF, sin sustituirlo por la frecuencia poblacional ni inventar una técnica de laboratorio. Distingue el tipo clásico y no formula una prescripción.",
+  "limite_documental": null,
+  "medicion": {
+    "alcance": "Medición local del cliente; no recursos internos del proveedor. Contadores de caché y razonamiento incluidos, sin sumarlos dos veces.",
+    "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+    "bytes_sse": 483848,
+    "caso": "P13",
+    "completa": true,
+    "cpu_delta_ms": 8516,
+    "duracion_ms": 143888,
+    "duracion_operacion_ms": 145014,
+    "etapa": 1,
+    "eventos_sse": 1271,
+    "fallos_medicion": 0,
+    "final_sha256": "45368987770a13db0bee2f57eedbdd2ac921befdd2cfc93e75f4d3f4d593df4b",
+    "formal_conforme": true,
+    "intento": 38,
+    "intervalo_maximo_ms": 287,
+    "io_escritura_delta_bytes": 2459121,
+    "io_lectura_delta_bytes": 0,
+    "memoria_virtual_maxima_bytes": 15937536,
+    "muestras": 541,
+    "observaciones_udp": 0,
+    "primer_texto_ms": 138393,
+    "resultado": {
+      "bytes": 81561,
+      "sha256": "04f84383035e9f710e01b62bd9dcd7da3e6c0d5626dd7f9f37d163479043af99"
+    },
+    "rss_maximo_bytes": 28971008,
+    "solicitud": {
+      "bytes": 64469,
+      "sha256": "6b522a36fac4bad4a314ab7fcd8d6506412f940817fff57defe757cd83df0626"
+    },
+    "sse_sha256": "03b5706accff33b68511711f345f07b29f2b2761e9ece4c009f68bcf06ce20cb",
+    "tcp_estados": [
+      "Established",
+      "FinWait1"
+    ],
+    "tcp_maximo_simultaneo": 1,
+    "telemetria_conforme": true,
+    "telemetria_sha256": "65f4488e2c9446007806f41a682920f978218affd60aa0ad70508cd652ed70d3",
+    "tokens_cache": 1152,
+    "tokens_entrada": 20557,
+    "tokens_razonamiento": 8762,
+    "tokens_salida": 9396,
+    "tokens_totales": 29953,
+    "uso_proveedor": {
+      "context_details": {
+        "input_tokens": 20557,
+        "output_tokens": 9404
+      },
+      "input_tokens": 20557,
+      "input_tokens_details": {
+        "cached_tokens": 1152
+      },
+      "num_server_side_tools_used": 0,
+      "num_sources_used": 0,
+      "output_tokens": 9396,
+      "output_tokens_details": {
+        "reasoning_tokens": 8762
+      },
+      "total_tokens": 29953
+    }
+  },
+  "naturaleza_defecto": null,
+  "observaciones_revision": [
+    "R1 y R2 precisan una frase de insuficiencia de R0: la fuente sí menciona un método que el enunciado excluye de la respuesta. R0 no negó expresamente su existencia; la conclusión principal permanece correcta."
+  ],
+  "pasajes_contrastados": [
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "La mayoría de los pacientes con leucemia de células pilosas tienen",
+      "pagina": 1,
+      "seccion": "_13"
+    },
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "una mutación en *BRAF*, sin embargo, este estado se debe comprobar",
+      "pagina": 1,
+      "seccion": "_13"
+    },
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "La mutación *BRAF*V600E se presenta en casi el 100 % de los pacientes con leucemia de células",
+      "pagina": 2,
+      "seccion": "_13"
+    },
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "pilosas de tipo clásico y casi nunca en pacientes con otros linfomas y leucemias de células B",
+      "pagina": 2,
+      "seccion": "_13"
+    }
+  ],
+  "recepcion_independiente": "pendiente",
+  "respuesta_original": "{\"caso\":\"P13\",\"estado_documental\":\"respuesta_fundada\",\"etapa\":1,\"evidencias\":[{\"cita_literal_breve\":\"La mayoría de los pacientes con leucemia de células pilosas tienen\",\"documento\":\"pdq-nci-hcl-es\",\"fragmentos\":[1],\"seccion\":\"_13\"},{\"cita_literal_breve\":\"una mutación en *BRAF*, sin embargo, este estado se debe comprobar\",\"documento\":\"pdq-nci-hcl-es\",\"fragmentos\":[1],\"seccion\":\"_13\"},{\"cita_literal_breve\":\"La mutación *BRAF*V600E se presenta en casi el 100 % de los pacientes con leucemia de células\",\"documento\":\"pdq-nci-hcl-es\",\"fragmentos\":[2],\"seccion\":\"_13\"},{\"cita_literal_breve\":\"pilosas de tipo clásico y casi nunca en pacientes con otros linfomas y leucemias de células B\",\"documento\":\"pdq-nci-hcl-es\",\"fragmentos\":[2],\"seccion\":\"_13\"}],\"fundamentos_verificables\":[\"En el punto sobre inhibidores de BRAF de las directrices adaptadas, la alta frecuencia de mutación en BRAF queda unida a una cláusula adversativa: ese estado se debe comprobar.\",\"La cifra de casi el 100 % corresponde a la mutación BRAF V600E en el tipo clásico y no se extiende en la fuente a cualquier persona ni a otras variantes.\",\"Como el resultado molecular individual no consta, la frecuencia poblacional no acredita el estado de la persona sintética ni autoriza omitir la comprobación.\"],\"insuficiencias\":[\"No consta el resultado molecular de la persona sintética ni una prescripción individual.\",\"La obligación explícita de comprobar el estado figura en las directrices adaptadas; el apartado posterior informa la frecuencia y el uso extraoficial, pero no repite esa obligación.\",\"La pregunta impide indicar la técnica de laboratorio; no se reproduce el método nombrado por la fuente, sin que ello deje indeterminada la comprobación exigida.\"],\"respuesta\":\"La fuente no permite omitir la comprobación del estado de mutación en BRAF. Aunque la mayoría de los pacientes la tienen, ese estado se debe comprobar; la frecuencia no sustituye el resultado individual desconocido. El casi 100 % se refiere al tipo clásico y casi nunca a otros linfomas o leucemias de células B, incluidas otras variantes. No se formula una prescripción para la persona sintética.\",\"revision\":\"Se mantiene la conclusión de R0: la comprobación no omitible es el estado mutacional de BRAF. Se corrige la insuficiencia que podía entenderse como ausencia de método en la fuente: la fuente lo nombra, pero la pregunta prohíbe indicar la técnica. Se separan citas que cruzaban saltos de línea y se precisa que casi el 100 % corresponde al tipo clásico.\"}",
+  "revision_citas": {
+    "citas": [
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "La mayoría de los pacientes con leucemia de células pilosas tienen"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "una mutación en *BRAF*, sin embargo, este estado se debe comprobar"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "La mutación *BRAF*V600E se presenta en casi el 100 % de los pacientes con leucemia de células"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "pilosas de tipo clásico y casi nunca en pacientes con otros linfomas y leucemias de células B"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "solicitud_sha256": "6b522a36fac4bad4a314ab7fcd8d6506412f940817fff57defe757cd83df0626",
+  "sustantivo": "correcto",
+  "valor": "0"
+}

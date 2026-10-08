@@ -1,0 +1,105 @@
+{
+  "alerta_limite": false,
+  "auditoria_sha256": "9dabb4a3731f80112a7a061ae1d893ab621ab4d4d10fde0bc3e0c493e7c12915",
+  "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+  "caso": "P05",
+  "critico": false,
+  "estado_documental_candidato": "respuesta_fundada",
+  "etapa": 1,
+  "final_sha256": "132425516ae30c1e5e53e0b87bd4514218fe00db9636b4c53d4c6e787bfe1198",
+  "formal_conforme": true,
+  "fundamento_sustantivo": "Conserva el intervalo de 1200 a 1300 casos nuevos, la periodicidad anual y el ámbito estadounidense.",
+  "limite_documental": null,
+  "medicion": {
+    "alcance": "Medición local del cliente; no recursos internos del proveedor. Contadores de caché y razonamiento incluidos, sin sumarlos dos veces.",
+    "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+    "bytes_sse": 131633,
+    "caso": "P05",
+    "completa": true,
+    "cpu_delta_ms": 1797,
+    "duracion_ms": 22768,
+    "duracion_operacion_ms": 23832,
+    "etapa": 1,
+    "eventos_sse": 389,
+    "fallos_medicion": 0,
+    "final_sha256": "132425516ae30c1e5e53e0b87bd4514218fe00db9636b4c53d4c6e787bfe1198",
+    "formal_conforme": true,
+    "intento": 14,
+    "intervalo_maximo_ms": 285,
+    "io_escritura_delta_bytes": 572648,
+    "io_lectura_delta_bytes": 0,
+    "memoria_virtual_maxima_bytes": 8384512,
+    "muestras": 90,
+    "observaciones_udp": 0,
+    "primer_texto_ms": 19876,
+    "resultado": {
+      "bytes": 21677,
+      "sha256": "5b1e14fe8ecac8e39b75a3ff37ecf9d35c66eaa9e84f8327b13717b52ebd3d17"
+    },
+    "rss_maximo_bytes": 21909504,
+    "solicitud": {
+      "bytes": 20795,
+      "sha256": "871dc07663e8d8029f39c050ccf9eaa796a5c97a4055b425ade5db5ab8e6787e"
+    },
+    "sse_sha256": "eee013762e046f9810f860d04514dc0008ae9528ae2f7a0e3a3cf4725976256c",
+    "tcp_estados": [
+      "Established"
+    ],
+    "tcp_maximo_simultaneo": 1,
+    "telemetria_conforme": true,
+    "telemetria_sha256": "c4ceb9f3e49773dcca0ef7fb24d4adc6430ce721991483312035fa9049205f94",
+    "tokens_cache": 1152,
+    "tokens_entrada": 6443,
+    "tokens_razonamiento": 1255,
+    "tokens_salida": 1552,
+    "tokens_totales": 7995,
+    "uso_proveedor": {
+      "context_details": {
+        "input_tokens": 6443,
+        "output_tokens": 1560
+      },
+      "input_tokens": 6443,
+      "input_tokens_details": {
+        "cached_tokens": 1152
+      },
+      "num_server_side_tools_used": 0,
+      "num_sources_used": 0,
+      "output_tokens": 1552,
+      "output_tokens_details": {
+        "reasoning_tokens": 1255
+      },
+      "total_tokens": 7995
+    }
+  },
+  "naturaleza_defecto": null,
+  "observaciones_revision": [],
+  "pasajes_contrastados": [
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "solo se presentan de 1200 a 1300 casos nuevos por año en los Estados Unidos.",
+      "pagina": 0,
+      "seccion": "_1"
+    }
+  ],
+  "recepcion_independiente": "pendiente",
+  "respuesta_original": "{\"caso\":\"P05\",\"estado_documental\":\"respuesta_fundada\",\"etapa\":1,\"evidencias\":[{\"cita_literal_breve\":\"solo se presentan de 1200 a 1300 casos nuevos por año en los Estados Unidos.\",\"documento\":\"pdq-nci-hcl-es\",\"fragmentos\":[0],\"seccion\":\"_1\"}],\"fundamentos_verificables\":[\"La sección _1, fragmento 0, atribuye a la leucemia de células pilosas un intervalo anual explícito de 1200 a 1300 casos nuevos en los Estados Unidos.\",\"El contraste con R0 confirma que la cifra, la periodicidad anual y el ámbito geográfico coinciden con esa frase; otras cifras del texto, como el 10 % de la variante, no responden a la incidencia anual estadounidense.\"],\"insuficiencias\":[\"La fuente no indica el año calendario concreto al que corresponde el intervalo ni lo desglosa por subtipo; esos extremos no fueron exigidos.\"],\"respuesta\":\"La fuente recoge de 1200 a 1300 casos nuevos por año en los Estados Unidos. El pasaje lo presenta como expresión de que la enfermedad es poco frecuente y no aporta otro intervalo anual de incidencia.\",\"revision\":\"Se mantiene R0: el intervalo solicitado está explícito en la sección _1, fragmento 0, y no procede corrección ni estado U.\"}",
+  "revision_citas": {
+    "citas": [
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "solo se presentan de 1200 a 1300 casos nuevos por año en los Estados Unidos."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "solicitud_sha256": "871dc07663e8d8029f39c050ccf9eaa796a5c97a4055b425ade5db5ab8e6787e",
+  "sustantivo": "correcto",
+  "valor": "0"
+}

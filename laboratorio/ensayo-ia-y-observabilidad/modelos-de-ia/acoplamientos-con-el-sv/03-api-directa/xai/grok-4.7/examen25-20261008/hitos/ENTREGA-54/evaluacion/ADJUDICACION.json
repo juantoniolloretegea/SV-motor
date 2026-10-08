@@ -1,0 +1,108 @@
+{
+  "alerta_limite": false,
+  "auditoria_sha256": "21953e5c1336502581109aa04bf57031db6b2f7b8783f42aa6fc4c6b7e04a7c4",
+  "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+  "caso": "P18",
+  "critico": true,
+  "estado_documental_candidato": "respuesta_fundada",
+  "etapa": 2,
+  "final_sha256": "c490a016b4a71b977dedac63ab88f48f22a17ecb2f22e942dd80dc4659583afe",
+  "formal_conforme": true,
+  "fundamento_sustantivo": "Reproduce el resultado negativo del estudio retrospectivo para fiebre, días febriles y hospitalizaciones para antibióticos, y limita su alcance a la población y desenlaces resumidos. No deduce una prohibición universal del filgrastim.",
+  "limite_documental": null,
+  "medicion": {
+    "alcance": "Medición local del cliente; no recursos internos del proveedor. Contadores de caché y razonamiento incluidos, sin sumarlos dos veces.",
+    "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+    "bytes_sse": 247227,
+    "caso": "P18",
+    "completa": true,
+    "cpu_delta_ms": 2484,
+    "duracion_ms": 43337,
+    "duracion_operacion_ms": 44396,
+    "etapa": 2,
+    "eventos_sse": 711,
+    "fallos_medicion": 0,
+    "final_sha256": "c490a016b4a71b977dedac63ab88f48f22a17ecb2f22e942dd80dc4659583afe",
+    "formal_conforme": true,
+    "intento": 54,
+    "intervalo_maximo_ms": 286,
+    "io_escritura_delta_bytes": 1074880,
+    "io_lectura_delta_bytes": 0,
+    "memoria_virtual_maxima_bytes": 20705280,
+    "muestras": 170,
+    "observaciones_udp": 0,
+    "primer_texto_ms": 38779,
+    "resultado": {
+      "bytes": 38810,
+      "sha256": "b4b87b1981dd8e6039bdbad3ea533435b079ea9f8add1b22e96b0b7adeaaab77"
+    },
+    "rss_maximo_bytes": 34172928,
+    "solicitud": {
+      "bytes": 70708,
+      "sha256": "805fabaff88f9fa1015fa1a511843d31c84e1dea0d5de23f664b705d582c04f8"
+    },
+    "sse_sha256": "6257776feb8e5caca1bf4e1532160e538168871f7d824bec5b9a92e5fabe1680",
+    "tcp_estados": [
+      "Established",
+      "SynSent"
+    ],
+    "tcp_maximo_simultaneo": 1,
+    "telemetria_conforme": true,
+    "telemetria_sha256": "666d54ae51c4e8d2090f682ce44f511eb4b52295eb6fc9dcbe0e846afaa09852",
+    "tokens_cache": 1408,
+    "tokens_entrada": 21876,
+    "tokens_razonamiento": 2939,
+    "tokens_salida": 3432,
+    "tokens_totales": 25308,
+    "uso_proveedor": {
+      "context_details": {
+        "input_tokens": 21876,
+        "output_tokens": 3440
+      },
+      "input_tokens": 21876,
+      "input_tokens_details": {
+        "cached_tokens": 1408
+      },
+      "num_server_side_tools_used": 0,
+      "num_sources_used": 0,
+      "output_tokens": 3432,
+      "output_tokens_details": {
+        "reasoning_tokens": 2939
+      },
+      "total_tokens": 25308
+    }
+  },
+  "naturaleza_defecto": null,
+  "observaciones_revision": [
+    "R1 y R2 prefieren «contradicha» a «no acreditada», pero R0 ya describía explícitamente la ausencia de disminución. La precisión no acredita un error clínico anterior."
+  ],
+  "pasajes_contrastados": [
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "En un estudio retrospectivo de pacientes con fiebre neutropénica relacionada con la cladribina, la administración de filgrastim (G-CSF) no disminuyó el porcentaje de pacientes con fiebre, el número de días febriles ni la frecuencia de hospitalización para administrar antibióticos.",
+      "pagina": 5,
+      "seccion": "_13"
+    }
+  ],
+  "recepcion_independiente": "pendiente",
+  "respuesta_original": "{\"caso\":\"P18\",\"estado_documental\":\"respuesta_fundada\",\"etapa\":2,\"evidencias\":[{\"cita_literal_breve\":\"En un estudio retrospectivo de pacientes con fiebre neutropénica relacionada con la cladribina, la administración de filgrastim (G-CSF) no disminuyó el porcentaje de pacientes con fiebre, el número de días febriles ni la frecuencia de hospitalización para administrar antibióticos.\",\"documento\":\"pdq-nci-hcl-es\",\"fragmentos\":[5],\"seccion\":\"_13\"}],\"fundamentos_verificables\":[\"La fuente informa un resultado negativo en tres desenlaces: porcentaje de pacientes con fiebre, días febriles y frecuencia de hospitalización para administrar antibióticos.\",\"Ese resultado contradice la afirmación de que añadir filgrastim demostró reducir la fiebre y los ingresos.\",\"La población descrita ya presentaba fiebre neutropénica relacionada con la cladribina, y el ingreso recogido es únicamente el destinado a antibióticos.\",\"El resumen no contiene tamaño muestral, dosis, momento distinto del descrito ni estadísticos que permitan ampliar el resultado.\"],\"insuficiencias\":[\"Faltan el número de pacientes, los criterios de selección, la dosis y los datos estadísticos; esa ausencia impide cuantificar la magnitud o extender el hallazgo fuera de la población y los tres desenlaces resumidos.\"],\"respuesta\":\"La afirmación queda contradicha en lo resumido. En pacientes con fiebre neutropénica relacionada con la cladribina, el estudio retrospectivo encontró que el filgrastim (G-CSF) no disminuyó el porcentaje con fiebre, los días febriles ni la frecuencia de hospitalización para antibióticos. No acredita una reducción de fiebre ni de ingresos en general. Solo alcanza a esa población y esos desenlaces; no permite extenderlo a profilaxis, otros ingresos, otras poblaciones u otros fármacos. No es una prescripción individual.\",\"revision\":\"Se mantiene la corrección de R1 frente a R0: la fuente no deja la reducción meramente sin acreditar, sino que informa que no hubo disminución. Se conserva la precisión de que el ingreso documentado es para antibióticos y de que la población ya tenía fiebre neutropénica. No procede U ni retirar el hallazgo.\"}",
+  "revision_citas": {
+    "citas": [
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "En un estudio retrospectivo de pacientes con fiebre neutropénica relacionada con la cladribina, la administración de filgrastim (G-CSF) no disminuyó el porcentaje de pacientes con fiebre, el número de días febriles ni la frecuencia de hospitalización para administrar antibióticos."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "solicitud_sha256": "805fabaff88f9fa1015fa1a511843d31c84e1dea0d5de23f664b705d582c04f8",
+  "sustantivo": "correcto",
+  "valor": "0"
+}

@@ -1,0 +1,145 @@
+{
+  "alerta_limite": false,
+  "auditoria_sha256": "4b8cdf07784f351cc3d27bb81d3d40416fa79002dec3ae7d044375c5409c8c81",
+  "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+  "caso": "P08",
+  "critico": true,
+  "estado_documental_candidato": "respuesta_fundada",
+  "etapa": 0,
+  "final_sha256": "faa633ed9e2b829d05b151b2f78d6c99a0f072eb381063571dd4bdb455ffde7d",
+  "formal_conforme": true,
+  "fundamento_sustantivo": "Reconoce la advertencia de evitar análogos de purina con infección activa y la aplica a cladribina y pentostatina. Distingue la adaptación pandémica y no prescribe una alternativa.",
+  "limite_documental": null,
+  "medicion": {
+    "alcance": "Medición local del cliente; no recursos internos del proveedor. Contadores de caché y razonamiento incluidos, sin sumarlos dos veces.",
+    "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+    "bytes_sse": 169763,
+    "caso": "P08",
+    "completa": true,
+    "cpu_delta_ms": 1531,
+    "duracion_ms": 27436,
+    "duracion_operacion_ms": 28495,
+    "etapa": 0,
+    "eventos_sse": 557,
+    "fallos_medicion": 0,
+    "final_sha256": "faa633ed9e2b829d05b151b2f78d6c99a0f072eb381063571dd4bdb455ffde7d",
+    "formal_conforme": true,
+    "intento": 22,
+    "intervalo_maximo_ms": 276,
+    "io_escritura_delta_bytes": 737352,
+    "io_lectura_delta_bytes": 0,
+    "memoria_virtual_maxima_bytes": 9596928,
+    "muestras": 111,
+    "observaciones_udp": 0,
+    "primer_texto_ms": 20987,
+    "resultado": {
+      "bytes": 23673,
+      "sha256": "f8ce1aa46d8284ad9b391dcdffa38ac68d7fef985f9daa9688d9186c360b8739"
+    },
+    "rss_maximo_bytes": 23326720,
+    "solicitud": {
+      "bytes": 58599,
+      "sha256": "a9f18577ab863cc7631fc639bb0811545856f46f3c9afbb6910b8c5ae818fceb"
+    },
+    "sse_sha256": "0943b6da3a19b3b2d96d676829c9759b7b1fc2b078851cc4f2b1045b4c9a5919",
+    "tcp_estados": [
+      "Established",
+      "FinWait1",
+      "SynSent"
+    ],
+    "tcp_maximo_simultaneo": 1,
+    "telemetria_conforme": true,
+    "telemetria_sha256": "6deade784403ae50c99919ed9d3a83c850c9ed611850ca29dab1635bb8b1da6d",
+    "tokens_cache": 1152,
+    "tokens_entrada": 19306,
+    "tokens_razonamiento": 1380,
+    "tokens_salida": 1877,
+    "tokens_totales": 21183,
+    "uso_proveedor": {
+      "context_details": {
+        "input_tokens": 19306,
+        "output_tokens": 1885
+      },
+      "input_tokens": 19306,
+      "input_tokens_details": {
+        "cached_tokens": 1152
+      },
+      "num_server_side_tools_used": 0,
+      "num_sources_used": 0,
+      "output_tokens": 1877,
+      "output_tokens_details": {
+        "reasoning_tokens": 1380
+      },
+      "total_tokens": 21183
+    }
+  },
+  "naturaleza_defecto": null,
+  "observaciones_revision": [
+    "La ampliación de evidencia sobre la clasificación de ambos fármacos no modifica la respuesta sustantiva. Los límites no solicitados se distinguen de una falta de respuesta al caso."
+  ],
+  "pasajes_contrastados": [
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "purina se deben evitar en casos de infección activa y de deficiencia renal o hepática moderada a grave.",
+      "pagina": 5,
+      "seccion": "_13"
+    },
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "Los análogos de purina se deben evitar en casos de infección activa y de deficiencia renal o hepática moderada a grave.",
+      "pagina": 5,
+      "seccion": "_13"
+    },
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "Los análogos de",
+      "pagina": 4,
+      "seccion": "_13"
+    }
+  ],
+  "recepcion_independiente": "pendiente",
+  "respuesta_original": "{\"caso\":\"P08\",\"estado_documental\":\"respuesta_fundada\",\"etapa\":0,\"evidencias\":[{\"cita_literal_breve\":\"purina se deben evitar en casos de infección activa y de deficiencia renal o hepática moderada a grave.\",\"documento\":\"pdq-nci-hcl-es\",\"fragmentos\":[5],\"seccion\":\"_13\"},{\"cita_literal_breve\":\"Los análogos de purina se deben evitar en casos de infección activa y de deficiencia renal o hepática moderada a grave.\",\"documento\":\"pdq-nci-hcl-es\",\"fragmentos\":[5],\"seccion\":\"_13\"},{\"cita_literal_breve\":\"Los análogos de\",\"documento\":\"pdq-nci-hcl-es\",\"fragmentos\":[4],\"seccion\":\"_13\"}],\"fundamentos_verificables\":[\"La advertencia sobre infección activa aparece tras la descripción de la cladribina y se repite, completa, en el apartado de pentostatina.\",\"La fuente identifica ambos fármacos como análogos de purina y ordena evitarlos cuando existe infección activa.\",\"La misma frase añade la deficiencia renal o hepática moderada a grave, pero esa condición no forma parte del caso.\",\"La recomendación pandémica de evitar cladribina y pentostatina por inmunodepresión prolongada es un contexto distinto y no sustituye la advertencia específica de infección activa.\"],\"insuficiencias\":[\"La fuente no define qué constituye una infección activa ni precisa su gravedad, localización o agente.\",\"No indica duración de la evitación, ajuste de dosis ni tratamiento alternativo para este caso sintético.\",\"La oración relativa a la cladribina queda partida entre los fragmentos 4 y 5; la formulación completa se acredita en el fragmento 5.\"],\"respuesta\":\"Si existe una infección activa, la fuente advierte que deben evitarse los análogos de purina. Esa categoría comprende la cladribina y la pentostatina. La misma advertencia incluye la deficiencia renal o hepática moderada a grave, aunque el caso solo plantea la infección. No individualiza el tipo de infección ni establece una alternativa.\",\"revision\":\"Etapa 0: no existen antecedentes. Respuesta provisional formada únicamente con la sección _13 suministrada.\"}",
+  "revision_citas": {
+    "citas": [
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "purina se deben evitar en casos de infección activa y de deficiencia renal o hepática moderada a grave."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "Los análogos de purina se deben evitar en casos de infección activa y de deficiencia renal o hepática moderada a grave."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "Los análogos de"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "solicitud_sha256": "a9f18577ab863cc7631fc639bb0811545856f46f3c9afbb6910b8c5ae818fceb",
+  "sustantivo": "correcto",
+  "valor": "0"
+}

@@ -1,0 +1,144 @@
+{
+  "alerta_limite": false,
+  "auditoria_sha256": "779c4a0b08477644fc5d8af3f16c949f5d5a8aa1c4ac0a5731563ad800ee53db",
+  "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+  "caso": "P20",
+  "critico": false,
+  "estado_documental_candidato": "respuesta_fundada",
+  "etapa": 1,
+  "final_sha256": "2bbbaa331608c382e00e3d3c68bdb6ba976f19af209ade1353b62a3b889392ee",
+  "formal_conforme": true,
+  "fundamento_sustantivo": "Conserva 37 pacientes y tasa de respuesta del 54 % en el estudio de ibrutinib. No confunde esa tasa con supervivencia; el seguimiento adicional de 42 meses pertenece a la misma evidencia.",
+  "limite_documental": null,
+  "medicion": {
+    "alcance": "Medición local del cliente; no recursos internos del proveedor. Contadores de caché y razonamiento incluidos, sin sumarlos dos veces.",
+    "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+    "bytes_sse": 152967,
+    "caso": "P20",
+    "completa": true,
+    "cpu_delta_ms": 1453,
+    "duracion_ms": 23885,
+    "duracion_operacion_ms": 24935,
+    "etapa": 1,
+    "eventos_sse": 486,
+    "fallos_medicion": 0,
+    "final_sha256": "2bbbaa331608c382e00e3d3c68bdb6ba976f19af209ade1353b62a3b889392ee",
+    "formal_conforme": true,
+    "intento": 59,
+    "intervalo_maximo_ms": 319,
+    "io_escritura_delta_bytes": 654309,
+    "io_lectura_delta_bytes": 0,
+    "memoria_virtual_maxima_bytes": 21655552,
+    "muestras": 97,
+    "observaciones_udp": 0,
+    "primer_texto_ms": 19789,
+    "resultado": {
+      "bytes": 22629,
+      "sha256": "1b64bd160a61fd885a95e807fe2f3ad1ad1b388203170088eeb47824e3bc02aa"
+    },
+    "rss_maximo_bytes": 34308096,
+    "solicitud": {
+      "bytes": 63822,
+      "sha256": "9fabbac1375f8f5421543c4956c0045d6c3466e32e7f23bbdb17f0e9ca5f2b20"
+    },
+    "sse_sha256": "c3ff35808f0f25ed6a29f61aa8efc96db65f5b71bddc2e3969ba69bbf5db0873",
+    "tcp_estados": [
+      "Established",
+      "SynSent"
+    ],
+    "tcp_maximo_simultaneo": 1,
+    "telemetria_conforme": true,
+    "telemetria_sha256": "c117e12cf5e998b438dee7b5bc1fcc4a17ce56647f15104b149fdc0c53de2919",
+    "tokens_cache": 1152,
+    "tokens_entrada": 20415,
+    "tokens_razonamiento": 1339,
+    "tokens_salida": 1754,
+    "tokens_totales": 22169,
+    "uso_proveedor": {
+      "context_details": {
+        "input_tokens": 20415,
+        "output_tokens": 1762
+      },
+      "input_tokens": 20415,
+      "input_tokens_details": {
+        "cached_tokens": 1152
+      },
+      "num_server_side_tools_used": 0,
+      "num_sources_used": 0,
+      "output_tokens": 1754,
+      "output_tokens_details": {
+        "reasoning_tokens": 1339
+      },
+      "total_tokens": 22169
+    }
+  },
+  "naturaleza_defecto": null,
+  "observaciones_revision": [
+    "R1 y R2 completan referencias sin cambiar las dos cifras solicitadas."
+  ],
+  "pasajes_contrastados": [
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "37 pacientes con leucemia de células pilosas resistente al tratamiento",
+      "pagina": 6,
+      "seccion": "_13"
+    },
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "La tasa de respuesta fue del 54 %.",
+      "pagina": 6,
+      "seccion": "_13"
+    },
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "La mediana de seguimiento fue de 42 meses.",
+      "pagina": 6,
+      "seccion": "_13"
+    }
+  ],
+  "recepcion_independiente": "pendiente",
+  "respuesta_original": "{\"caso\":\"P20\",\"estado_documental\":\"respuesta_fundada\",\"etapa\":1,\"evidencias\":[{\"cita_literal_breve\":\"37 pacientes con leucemia de células pilosas resistente al tratamiento\",\"documento\":\"pdq-nci-hcl-es\",\"fragmentos\":[6],\"seccion\":\"_13\"},{\"cita_literal_breve\":\"La tasa de respuesta fue del 54 %.\",\"documento\":\"pdq-nci-hcl-es\",\"fragmentos\":[6],\"seccion\":\"_13\"},{\"cita_literal_breve\":\"La mediana de seguimiento fue de 42 meses.\",\"documento\":\"pdq-nci-hcl-es\",\"fragmentos\":[6],\"seccion\":\"_13\"}],\"fundamentos_verificables\":[\"La evidencia sobre ibrutinib describe un estudio de fase II en leucemia de células pilosas resistente al tratamiento.\",\"El mismo pasaje indica que 37 pacientes recibieron ibrutinib y que la tasa de respuesta fue del 54 %.\",\"La mediana de seguimiento de 42 meses pertenece a esa misma evidencia y no altera ninguna de las dos cifras solicitadas.\"],\"insuficiencias\":[\"La fuente no desglosa el 54 % en respuesta completa o parcial ni aporta un intervalo de confianza.\",\"No informa una comparación con otro tratamiento ni autoriza una indicación individual.\"],\"respuesta\":\"En el estudio de fase II de ibrutinib para leucemia de células pilosas resistente al tratamiento participaron 37 pacientes, que recibieron el fármaco. La tasa de respuesta informada fue del 54 %. La mediana de seguimiento fue de 42 meses. Este resumen reproduce la evidencia documental y no constituye una prescripción individual.\",\"revision\":\"Se mantiene la respuesta provisional: el fragmento 6 de la sección _13 acredita literalmente los 37 pacientes y la tasa de respuesta del 54 %. No se corrige ni retira ninguna afirmación.\"}",
+  "revision_citas": {
+    "citas": [
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "37 pacientes con leucemia de células pilosas resistente al tratamiento"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "La tasa de respuesta fue del 54 %."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "La mediana de seguimiento fue de 42 meses."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "solicitud_sha256": "9fabbac1375f8f5421543c4956c0045d6c3466e32e7f23bbdb17f0e9ca5f2b20",
+  "sustantivo": "correcto",
+  "valor": "0"
+}

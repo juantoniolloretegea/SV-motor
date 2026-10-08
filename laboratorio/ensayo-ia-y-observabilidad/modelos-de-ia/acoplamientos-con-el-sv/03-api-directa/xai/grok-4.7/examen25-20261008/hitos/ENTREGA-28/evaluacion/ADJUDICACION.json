@@ -1,0 +1,125 @@
+{
+  "alerta_limite": false,
+  "auditoria_sha256": "2008bfe449d5079e0c56291dbb865dcdee2f990919ef38f6e2865fd5c8baa783",
+  "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+  "caso": "P10",
+  "critico": false,
+  "estado_documental_candidato": "respuesta_fundada",
+  "etapa": 0,
+  "final_sha256": "a09fb649750f4f9b2cd8e55525f641e9443e3820c947024ff7cc4cb0d8188c1a",
+  "formal_conforme": true,
+  "fundamento_sustantivo": "Mantiene el 10 % de los pacientes con la enfermedad y el denominador correcto. No lo confunde con incidencia poblacional.",
+  "limite_documental": null,
+  "medicion": {
+    "alcance": "Medición local del cliente; no recursos internos del proveedor. Contadores de caché y razonamiento incluidos, sin sumarlos dos veces.",
+    "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+    "bytes_sse": 114292,
+    "caso": "P10",
+    "completa": true,
+    "cpu_delta_ms": 2109,
+    "duracion_ms": 25553,
+    "duracion_operacion_ms": 26632,
+    "etapa": 0,
+    "eventos_sse": 326,
+    "fallos_medicion": 0,
+    "final_sha256": "a09fb649750f4f9b2cd8e55525f641e9443e3820c947024ff7cc4cb0d8188c1a",
+    "formal_conforme": true,
+    "intento": 28,
+    "intervalo_maximo_ms": 287,
+    "io_escritura_delta_bytes": 571843,
+    "io_lectura_delta_bytes": 0,
+    "memoria_virtual_maxima_bytes": 11714560,
+    "muestras": 100,
+    "observaciones_udp": 0,
+    "primer_texto_ms": 23202,
+    "resultado": {
+      "bytes": 21546,
+      "sha256": "af7cbc01e33c8bc08fa9bd9be8bf30e87c0cd776a4076206bff71f748a1b9b66"
+    },
+    "rss_maximo_bytes": 25149440,
+    "solicitud": {
+      "bytes": 15930,
+      "sha256": "d65c181b94a16c54a0dd9c4f8b143cfa1e09d9b40c3b415d20cf0b072d149264"
+    },
+    "sse_sha256": "421e41e5f0676a792c0faf70776a877231f2e30a06c1b32d6ab9e29f87e3ab73",
+    "tcp_estados": [
+      "Established"
+    ],
+    "tcp_maximo_simultaneo": 1,
+    "telemetria_conforme": true,
+    "telemetria_sha256": "8851a10c5066ccae37ae2419cff3b71503d9355f618df4de274c102677194cb4",
+    "tokens_cache": 1152,
+    "tokens_entrada": 5412,
+    "tokens_razonamiento": 1476,
+    "tokens_salida": 1753,
+    "tokens_totales": 7165,
+    "uso_proveedor": {
+      "context_details": {
+        "input_tokens": 5412,
+        "output_tokens": 1761
+      },
+      "input_tokens": 5412,
+      "input_tokens_details": {
+        "cached_tokens": 1152
+      },
+      "num_server_side_tools_used": 0,
+      "num_sources_used": 0,
+      "output_tokens": 1753,
+      "output_tokens_details": {
+        "reasoning_tokens": 1476
+      },
+      "total_tokens": 7165
+    }
+  },
+  "naturaleza_defecto": null,
+  "observaciones_revision": [
+    "R1 y R2 objetan el calificativo aproximada porque no figura literalmente en la fuente, aunque pertenece al enunciado y es admisible en la clave. Se registra esa objeción literal como precisión innecesaria, sin cambio del contenido cuantitativo evaluado."
+  ],
+  "pasajes_contrastados": [
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "variante de la leucemia de células pilosas (que se presenta en un 10 % de los pa",
+      "pagina": 0,
+      "seccion": "_1"
+    },
+    {
+      "documento": "pdq-nci-hcl-es",
+      "fragmento": "cientes con esta",
+      "pagina": 1,
+      "seccion": "_1"
+    }
+  ],
+  "recepcion_independiente": "pendiente",
+  "respuesta_original": "{\"caso\":\"P10\",\"estado_documental\":\"respuesta_fundada\",\"etapa\":0,\"evidencias\":[{\"cita_literal_breve\":\"variante de la leucemia de células pilosas (que se presenta en un 10 % de los pa\",\"documento\":\"pdq-nci-hcl-es\",\"fragmentos\":[0],\"seccion\":\"_1\"},{\"cita_literal_breve\":\"cientes con esta\",\"documento\":\"pdq-nci-hcl-es\",\"fragmentos\":[1],\"seccion\":\"_1\"}],\"fundamentos_verificables\":[\"En Evaluación diagnóstica, la sección _1 afirma que la variante se presenta en un 10 % de los pacientes con esta enfermedad.\",\"El corte entre los fragmentos 0 y 1 parte la palabra «pacientes», pero la unión literal recupera «10 % de los pacientes con esta» sin añadir texto.\"],\"insuficiencias\":[],\"respuesta\":\"La fuente atribuye a la variante de leucemia de células pilosas una proporción aproximada del 10 % de los pacientes con esta enfermedad.\",\"revision\":\"Etapa 0: no existen antecedentes ni entregas anteriores que contrastar. La proporción del 10 % se mantiene por la unión literal de los fragmentos 0 y 1.\"}",
+  "revision_citas": {
+    "citas": [
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "variante de la leucemia de células pilosas (que se presenta en un 10 % de los pa"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "citas": [
+          {
+            "conforme": true,
+            "segmentos": [
+              {
+                "texto": "cientes con esta"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "solicitud_sha256": "d65c181b94a16c54a0dd9c4f8b143cfa1e09d9b40c3b415d20cf0b072d149264",
+  "sustantivo": "correcto",
+  "valor": "0"
+}
