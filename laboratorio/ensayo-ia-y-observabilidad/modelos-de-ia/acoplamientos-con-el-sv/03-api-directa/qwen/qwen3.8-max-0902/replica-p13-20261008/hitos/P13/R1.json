@@ -1,0 +1,131 @@
+{
+  "caso": "P13",
+  "mediciones": {
+    "alcance": "Medición local del cliente; no recursos internos del proveedor. Contadores de caché y razonamiento incluidos, sin sumarlos dos veces.",
+    "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+    "bytes_sse": 291154,
+    "caso": "P13",
+    "completa": true,
+    "cpu_delta_ms": 5250,
+    "duracion_ms": 76555,
+    "duracion_operacion_ms": 77651,
+    "etapa": 1,
+    "eventos_sse": 920,
+    "fallos_medicion": 0,
+    "final_sha256": "e13f93054c45a56f1212be1f7cab370052151906c4dd892252b98c63e3c5a134",
+    "formal_conforme": true,
+    "intento": 2,
+    "intervalo_maximo_ms": 355,
+    "io_escritura_delta_bytes": 1500810,
+    "io_lectura_delta_bytes": 0,
+    "memoria_virtual_maxima_bytes": 5095424,
+    "muestras": 288,
+    "observaciones_udp": 0,
+    "primer_texto_ms": 60897,
+    "proveedor": "Alibaba Cloud",
+    "restricciones_declaradas": {
+      "alcance": "Campos ausentes no equivalen a cero ni a infraestructura inspeccionada.",
+      "num_server_side_tools_used": null,
+      "num_sources_used": null,
+      "store": false,
+      "tool_choice": "none",
+      "tools": [],
+      "zdr_confirmado": false
+    },
+    "resultado": {
+      "bytes": 26821,
+      "sha256": "8653a51318b4704baa235f10719ef4ba945c87984aaa3c10ca895296c983d163"
+    },
+    "rss_maximo_bytes": 18890752,
+    "solicitud": {
+      "bytes": 66713,
+      "sha256": "2c71d8d4c20e9fa1107519b5ec16e19aee21ce8ae9667f1cf0ca687bde0c6426"
+    },
+    "sse_sha256": "d0e80d1515733f3bbe206d9dc2ced38db6e9654fdfd621da263870fa8f409665",
+    "tcp_estados": [
+      "Established",
+      "FinWait1"
+    ],
+    "tcp_maximo_simultaneo": 1,
+    "telemetria_conforme": true,
+    "telemetria_sha256": "8a16c60fba574764fac5b07e02eca0ab44a2993118fddbc364759ab1d6360725",
+    "tokens_cache": 0,
+    "tokens_entrada": 21402,
+    "tokens_razonamiento": 2567,
+    "tokens_salida": 3288,
+    "tokens_totales": 24690,
+    "uso_proveedor": {
+      "input_tokens": 21402,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens": 3288,
+      "output_tokens_details": {
+        "reasoning_tokens": 2567
+      },
+      "total_tokens": 24690,
+      "x_details": [
+        {
+          "input_tokens": 21402,
+          "output_tokens": 3288,
+          "output_tokens_details": {
+            "reasoning_tokens": 2567
+          },
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "total_tokens": 24690,
+          "x_billing_type": "response_api"
+        }
+      ]
+    }
+  },
+  "etapa": 1,
+  "respuesta_original": {
+    "caso": "P13",
+    "estado_documental": "respuesta_fundada",
+    "etapa": 1,
+    "evidencias": [
+      {
+        "cita_literal_breve": "La mayoría de los pacientes con leucemia de células pilosas tienen una mutación en *BRAF*, sin embargo, este estado se debe comprobar",
+        "documento": "pdq-nci-hcl-es",
+        "fragmentos": [
+          1
+        ],
+        "seccion": "_13"
+      },
+      {
+        "cita_literal_breve": "La mutación *BRAF*V600E se presenta en casi el 100 % de los pacientes con leucemia de células pilosas de tipo clásico",
+        "documento": "pdq-nci-hcl-es",
+        "fragmentos": [
+          2
+        ],
+        "seccion": "_13"
+      }
+    ],
+    "fundamentos_verificables": [
+      "La fuente sitúa la comprobación obligatoria dentro del punto 3 de las directrices adaptadas: tras mencionar la alta prevalencia de la mutación, introduce con «sin embargo» la exigencia «este estado se debe comprobar», lo que convierte la verificación individual en requisito ineludible.",
+      "El adverbio «casi» en «casi el 100 %» y la mención de que la mutación aparece «casi nunca» en variantes y otros linfomas de células B refuerzan que la prevalencia elevada no garantiza universalidad y, por tanto, no sustituye la confirmación en cada caso.",
+      "La estructura adversativa del enunciado (prevalencia alta + «sin embargo» + obligación de comprobación) indica que la fuente anticipa precisamente el razonamiento de quien pretende omitir la verificación apoyándose en la frecuencia poblacional."
+    ],
+    "insuficiencias": [
+      "La fuente nombra el procedimiento concreto de comprobación, pero la restricción de la pregunta prohíbe designar cualquier técnica de laboratorio en todos los campos de la entrega; por ello, el detalle metodológico queda deliberadamente fuera de esta respuesta.",
+      "Los fragmentos no explicitan de forma directa la consecuencia terapéutica de un resultado negativo para la mutación, aunque la exigencia de comprobación previa implica que no debería iniciarse el inhibidor sin esa confirmación."
+    ],
+    "respuesta": "La fuente no permite omitir la comprobación individual del estado mutacional de BRAF. Aunque la mutación V600E está presente en casi el 100 % de los casos clásicos, el documento establece con carácter obligatorio que «este estado se debe comprobar». La conjunción adversativa «sin embargo» vincula explícitamente la alta prevalencia con la necesidad de verificación, de modo que la frecuencia poblacional no exime de confirmar la mutación en cada paciente antes de proponer un inhibidor de BRAF.",
+    "revision": "Se mantiene la respuesta de la etapa 0. Verificación realizada: (1) ambas citas son cadenas continuas exactas del texto fuente, sin supresión de palabras internas ni puntos suspensivos; (2) ninguna cita ni ningún otro campo menciona una técnica de laboratorio; (3) la interpretación del «sin embargo» como nexo que impide sustituir la comprobación por la prevalencia es una deducción directa de la estructura del enunciado en el fragmento 1; (4) la calificación de obligatoriedad se apoya en el verbo modal «se debe»; (5) no se detectan omisiones relevantes que la fuente permita resolver y que hayan quedado fuera. No se corrige ni se retira ningún elemento de la etapa anterior."
+  },
+  "adjudicacion": {
+    "caso": "P13",
+    "contenido": "0",
+    "diagnostico_conforme": true,
+    "etapa": 1,
+    "evidencia_suficiente": true,
+    "formal_conforme": true,
+    "fundamento": "Mantiene la comprobación individual y la no universalidad de la prevalencia; las citas y la restricción son conformes. La confirmación se interpreta como comprobación del estado mutacional, sin imponer una conducta ante un resultado negativo que la fuente no establece.",
+    "respuesta_sha256": "e13f93054c45a56f1212be1f7cab370052151906c4dd892252b98c63e3c5a134",
+    "restriccion_cumplida": true
+  },
+  "modelo": "qwen3.8-max-0902",
+  "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0)."
+}

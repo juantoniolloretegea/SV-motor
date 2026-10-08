@@ -7,7 +7,7 @@ use std::{fs,path::{Path,PathBuf},collections::BTreeSet};
 fn load(p:&Path)->R<Value>{guard(p)?;parse(&fs::read(p).map_err(|e|e.to_string())?)}
 fn ident(p:&Path)->R<Value>{guard(p)?;let b=fs::read(p).map_err(|e|e.to_string())?;Ok(json!({"bytes":b.len(),"sha256":sha(&b)}))}
 fn num(v:&Value)->R<u64>{v.as_u64().ok_or("Entero requerido".into())}
-fn metrics(p:&Path,model:&str)->R<Value>{
+pub(crate) fn metrics(p:&Path,model:&str)->R<Value>{
  let r=load(&p.join("RESULTADO.json"))?;let t=sv_instrumentacion::verify(&p.join("instrumentacion/telemetria.jsonl"))?;need(t==r["telemetria"],"Telemetría alterada")?;
  let raw=fs::read(p.join("SALIDA-SSE.txt")).map_err(|e|e.to_string())?;
  let mut received=Value::Null;

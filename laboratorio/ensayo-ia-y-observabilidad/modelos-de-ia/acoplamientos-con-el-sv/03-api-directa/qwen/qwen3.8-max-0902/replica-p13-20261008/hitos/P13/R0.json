@@ -1,0 +1,132 @@
+{
+  "caso": "P13",
+  "mediciones": {
+    "alcance": "Medición local del cliente; no recursos internos del proveedor. Contadores de caché y razonamiento incluidos, sin sumarlos dos veces.",
+    "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+    "bytes_sse": 300960,
+    "caso": "P13",
+    "completa": true,
+    "cpu_delta_ms": 4235,
+    "duracion_ms": 75595,
+    "duracion_operacion_ms": 76692,
+    "etapa": 0,
+    "eventos_sse": 959,
+    "fallos_medicion": 0,
+    "final_sha256": "d34053a57cb034e5550f6402e77069dc0497ccae3d8e9df938e012f69eef0ec2",
+    "formal_conforme": true,
+    "intento": 1,
+    "intervalo_maximo_ms": 550,
+    "io_escritura_delta_bytes": 1542873,
+    "io_lectura_delta_bytes": 0,
+    "memoria_virtual_maxima_bytes": 4612096,
+    "muestras": 287,
+    "observaciones_udp": 0,
+    "primer_texto_ms": 63774,
+    "proveedor": "Alibaba Cloud",
+    "restricciones_declaradas": {
+      "alcance": "Campos ausentes no equivalen a cero ni a infraestructura inspeccionada.",
+      "num_server_side_tools_used": null,
+      "num_sources_used": null,
+      "store": false,
+      "tool_choice": "none",
+      "tools": [],
+      "zdr_confirmado": false
+    },
+    "resultado": {
+      "bytes": 26599,
+      "sha256": "f3003d4a47fa473ffcb667b828ef56900025e2bfac370bc9897a27ad95c63c49"
+    },
+    "rss_maximo_bytes": 18341888,
+    "solicitud": {
+      "bytes": 58041,
+      "sha256": "d3f47a3979984cbffd8bfc1f8b2698b7ccdba2efafce591c357dcfdc23092346"
+    },
+    "sse_sha256": "72bbaa0b073c8de3a25d2140a720e9e1379c030dd897c4f792d4785ca21aadfd",
+    "tcp_estados": [
+      "Established",
+      "FinWait1",
+      "SynSent"
+    ],
+    "tcp_maximo_simultaneo": 1,
+    "telemetria_conforme": true,
+    "telemetria_sha256": "841e535cf642d5dcb6df4e985e6de0b77a1b603079452cf73058acbc28c1b23a",
+    "tokens_cache": 0,
+    "tokens_entrada": 19538,
+    "tokens_razonamiento": 2814,
+    "tokens_salida": 3392,
+    "tokens_totales": 22930,
+    "uso_proveedor": {
+      "input_tokens": 19538,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens": 3392,
+      "output_tokens_details": {
+        "reasoning_tokens": 2814
+      },
+      "total_tokens": 22930,
+      "x_details": [
+        {
+          "input_tokens": 19538,
+          "output_tokens": 3392,
+          "output_tokens_details": {
+            "reasoning_tokens": 2814
+          },
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "total_tokens": 22930,
+          "x_billing_type": "response_api"
+        }
+      ]
+    }
+  },
+  "etapa": 0,
+  "respuesta_original": {
+    "caso": "P13",
+    "estado_documental": "respuesta_fundada",
+    "etapa": 0,
+    "evidencias": [
+      {
+        "cita_literal_breve": "La mayoría de los pacientes con leucemia de células pilosas tienen una mutación en *BRAF*, sin embargo, este estado se debe comprobar",
+        "documento": "pdq-nci-hcl-es",
+        "fragmentos": [
+          1
+        ],
+        "seccion": "_13"
+      },
+      {
+        "cita_literal_breve": "La mutación *BRAF*V600E se presenta en casi el 100 % de los pacientes con leucemia de células pilosas de tipo clásico",
+        "documento": "pdq-nci-hcl-es",
+        "fragmentos": [
+          2
+        ],
+        "seccion": "_13"
+      }
+    ],
+    "fundamentos_verificables": [
+      "La fuente reconoce la alta prevalencia de la mutación BRAF V600E en la leucemia de células pilosas clásica (casi el 100 %), pero introduce con «sin embargo» una exigencia obligatoria de comprobación individual del estado mutacional antes de emplear inhibidores de BRAF.",
+      "El verbo modal «se debe comprobar» expresa obligatoriedad, no opcionalidad; por tanto, la frecuencia poblacional no sustituye la verificación en el paciente concreto.",
+      "La directriz adaptada durante la pandemia (punto 3 de la lista) mantiene esta exigencia al recomendar considerar inhibidores de BRAF solo tras confirmar el estado mutacional."
+    ],
+    "insuficiencias": [
+      "La fuente especifica el método concreto de comprobación, pero la restricción de la pregunta impide nombrar cualquier técnica de laboratorio en esta entrega, de modo que el detalle metodológico queda fuera del alcance de la respuesta.",
+      "No se describe en los fragmentos suministrados qué resultado molecular alternativo (p. ej., ausencia de la mutación) implicaría para la decisión terapéutica, más allá de la prohibición de omitir la verificación."
+    ],
+    "respuesta": "La fuente no permite omitir la comprobación individual del estado mutacional de BRAF antes de indicar un inhibidor de BRAF. Aunque la mutación V600E está presente en casi el 100 % de los casos clásicos, el documento establece que «este estado se debe comprobar». La conjunción adversativa «sin embargo» subraya que la alta prevalencia poblacional no exime de verificar la mutación en cada paciente. En consecuencia, no cabe asumir el resultado molecular por probabilidad estadística; la confirmación individual es un requisito que la fuente califica de obligatorio.",
+    "revision": "Etapa 0: no existen entregas anteriores que contrastar. La respuesta se construye exclusivamente a partir de los fragmentos 1 y 2 de la sección _13 del documento pdq-nci-hcl-es."
+  },
+  "adjudicacion": {
+    "caso": "P13",
+    "contenido": "0",
+    "diagnostico_conforme": true,
+    "etapa": 0,
+    "evidencia_suficiente": true,
+    "formal_conforme": true,
+    "fundamento": "Responde a la comprobación individual de BRAF, no la sustituye por prevalencia y respalda la conclusión con dos citas exactas de la sección suministrada. Ningún campo nombra una técnica. No prescribe una pauta ni afirma positividad individual.",
+    "respuesta_sha256": "d34053a57cb034e5550f6402e77069dc0497ccae3d8e9df938e012f69eef0ec2",
+    "restriccion_cumplida": true
+  },
+  "modelo": "qwen3.8-max-0902",
+  "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0)."
+}

@@ -49,3 +49,9 @@ La comprobación inicial, los 48 intentos y la preparación tienen expedientes a
 [Hitos por pregunta y etapa](hitos) · [Comparación R0/R1/R2](COMPARACION-RUST.json) · [Mediciones](MEDICIONES-PUBLICAS.json) · [Inventario](INVENTARIO-Y-LIMITES.md) · [Revisión sustantiva](REVISION-SUSTANTIVA.json).
 
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
+
+## Adenda de revisión y réplica · 08/10/2026
+
+Se revisó la atribución de las diferencias formales y la ambigüedad de P13. La [réplica diagnóstica separada](../replica-p13-20261008/INFORME.md) conserva sus tres etapas y mediciones. No sustituye ninguna posición ni modifica el vector o dictamen históricos. La reserva metodológica permanece y la aptitud global no se recalifica mediante esta adenda.
+
+© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
