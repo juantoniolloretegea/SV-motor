@@ -4,6 +4,8 @@
 
 **Banco completo: 27 entregas recibidas y adjudicadas. Resultado final: No apto para el contrato documental estricto, bajo reserva metodológica.** MD07 conserva el contenido nuclear correcto, pero añade una «s» a «vigente» en una cita requerida como literal. La regla crítica prefijada impide la admisión contractual; esta diferencia no demuestra incapacidad conceptual. La recepción científica independiente está pendiente.
 
+**Revisión posterior de MD07:** [diagnóstico causal y reserva metodológica](revision-md07/REVISION-METODOLOGICA.md). Confirma un defecto de literalidad en apoyo adicional, fuente y transporte conformes y respuesta nuclear correcta. El dictamen y el vector históricos se conservan, sin nueva inferencia.
+
 ## Lectura del resultado
 
 | Etapa | Vector MD01–MD09 | Correctas contractuales | Errores críticos | Admisión |
