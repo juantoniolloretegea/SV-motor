@@ -1,6 +1,6 @@
 # Código y reproducción
 
-Cliente y transporte comunes: ../../../../../../cliente-api-rust; receptor común: ../../../../../../recepcion-api-rust. Los enlaces funcionales están en el inventario Rust, con rutas completas del repositorio. MCP mdbook: modelos-de-ia/model-context-protocol/mdbook/0.1.0. Instrumentación: acoplamientos-con-el-sv/instrumentacion-rust.
+[Cliente y transporte comunes](../../../../cliente-api-rust/), [receptor](../../../../recepcion-api-rust/), [instrumentación](../../../../instrumentacion-rust/) y [MCP mdbook](../../../../../model-context-protocol/mdbook/0.1.0/). El inventario identifica los componentes efectivamente utilizados.
 
 La realización recibida utiliza un perímetro local fijado; la publicación sustituye sólo esa raíz por C:/SV. Las huellas de originales y proyección constan en IDENTIDAD-CODIGO.json. No se afirma identidad binaria de una recompilación ni portabilidad automática. Preparar un nuevo perfil, contrato de libro y fuentes en ese perímetro, compilar con Cargo.lock, ejecutar preparar, revisar PREVIA, y sólo bajo autorización de consumo ejecutar; recibir no envía inferencia. No se distribuyen claves, perfiles operativos privados ni clave reservada de adjudicación.
 
