@@ -1,6 +1,6 @@
 # Modelos de IA
 
-**Edición documental 15 · 8 de octubre de 2026.**
+**Edición documental 16 · 8 de octubre de 2026.**
 
 **Corte experimental conservado de la edición 10:** 03/10/2026, 09:37 UTC. Cada expediente conserva la fecha, configuración y alcance de sus propios resultados.
 
@@ -23,11 +23,14 @@ Los expedientes específicos de plataforma gestionada se organizan en el [nodo 0
 | Candidato y expediente | Resultado y alcance | Evidencia |
 |---|---|---|
 | [GPT-6 Astra · OpenAI](acoplamientos-con-el-sv/03-api-directa/openai/gpt-6-astra/readme.md) | **Apto para el contrato documental** P01–P25: 25 respuestas finales correctas, incluidas las 20 críticas; T(25)=19. Cierre del 07/10/2026. | [Informe y evidencias](acoplamientos-con-el-sv/03-api-directa/openai/gpt-6-astra/examen25-20261007/resultado/INFORME.md). |
+| [Grok 4.7 · xAI](acoplamientos-con-el-sv/03-api-directa/xai/grok-4.7/readme.md) | **Apto para el contrato documental** P01–P25: 25 respuestas finales R2 correctas, incluidas las 20 críticas; T(25)=19. Cierre del 08/10/2026. | [Informe y evidencias](acoplamientos-con-el-sv/03-api-directa/xai/grok-4.7/examen25-20261008/INFORME.md) · [TT-0022](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0022.md). |
 | [Qwen3.8-Max-0902 · Alibaba Cloud](acoplamientos-con-el-sv/03-api-directa/qwen/qwen3.8-max-0902/readme.md) | **Apto documental con reservas**, en el alcance de **16 preguntas**, tras revisión metodológica y réplica separada de P13. Alcance limitado por disponibilidad de recursos. | [Recepción del 08/10/2026 y límites](acoplamientos-con-el-sv/03-api-directa/qwen/qwen3.8-max-0902/RECEPCION-DOCUMENTAL-20261008.md); adjudicación contractual original conservada. |
 
 En el **nodo 03**, el proveedor ejecuta la inferencia mediante su API y el SV administra las fuentes, el Árbitro-Director y los controles propios en Rust. En el **nodo 01**, motor y pesos se ejecutan en infraestructura administrada por el proyecto. Las carpetas históricas de Qwen y GPT-OSS conservan sus ubicaciones; cada realización mediante API tiene su expediente propio.
 
-Los dos expedientes utilizan respuesta provisional, autocrítica y verificación final neutral (R0/R1/R2). Astra conserva la adjudicación final R2 de sus 25 casos; la recepción posterior de Qwen reúne revisión del instrumento y réplica diagnóstica, sin sustituir respuestas en el vector histórico ni crear una puntuación nueva. Las comparaciones se limitan a preguntas y condiciones comunes. La recepción documental no constituye aptitud clínica ni una prueba idéntica en instrumentación a las del nodo 01.
+Los tres expedientes utilizan respuesta provisional, autocrítica y verificación final neutral (R0/R1/R2). Astra y Grok conservan la adjudicación final R2 de sus respectivos 25 casos; la recepción posterior de Qwen reúne revisión del instrumento y réplica diagnóstica, sin sustituir respuestas en el vector histórico ni crear una puntuación nueva. Las comparaciones se limitan a preguntas y condiciones comunes. La recepción documental no constituye aptitud clínica ni una prueba idéntica en instrumentación a las del nodo 01.
+
+El [diagnóstico MD01 del manual con Grok](acoplamientos-con-el-sv/03-api-directa/xai/grok-4.7/md01-diagnostica-20261008/INFORME.md) recibió R0 y R1; R2 no se ejecutó. Es un resultado parcial independiente del examen de 25 preguntas. El [TT-0023 de Qwen](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0023.md) conserva su recepción posterior y sus reservas.
 
 ## Antecedente experimental de la edición 10 · 03/10/2026
 

@@ -1,8 +1,8 @@
 # Nodo 03 · Inferencia mediante API directa de proveedor
 
-**Versión documental 1.3 · 8 de octubre de 2026.**
+**Versión documental 1.4 · 8 de octubre de 2026.**
 
-**Estado:** modalidad con ejecución experimental acreditada. GPT-6 Astra dispone de cierre Apto para su contrato documental; Qwen3.8-Max-0902 recibe Apto documental con reservas para el alcance revisado de 16 preguntas. La integración general y las dependencias pendientes conservan su alcance propio.
+**Estado:** modalidad con ejecución experimental acreditada. GPT-6 Astra y Grok 4.7 disponen de cierre Apto para sus respectivos contratos documentales de 25 preguntas; Qwen3.8-Max-0902 recibe Apto documental con reservas para el alcance revisado de 16 preguntas. La integración general y las dependencias pendientes conservan su alcance propio.
 
 Este nodo desarrolla la tercera modalidad del [marco común de acoplamientos](../readme.md). Se refiere a servicios de inferencia de proveedores externos; una API que exponga un motor administrado por el proyecto se examina en el [nodo 01](../01-inferencia-bajo-control-propio/readme.md). Se conservan las mismas obligaciones del SV y una aceptación independiente para esta modalidad.
 
@@ -15,6 +15,7 @@ Los expedientes de API externa se organizan aquí por proveedor y modelo. La car
 | Candidato | Alcance y recepción | Evidencia |
 |---|---|---|
 | [GPT-6 Astra · OpenAI](openai/gpt-6-astra/readme.md) | **Apto** para el contrato P01–P25: 25 finales correctas, 20 críticas en 0; T(25)=19. | [Informe del 07/10/2026](openai/gpt-6-astra/examen25-20261007/resultado/INFORME.md). |
+| [Grok 4.7 · xAI](xai/grok-4.7/readme.md) | **Apto** para el contrato P01–P25: 25 finales R2 correctas, 20 críticas en 0; T(25)=19. | [Informe del 08/10/2026](xai/grok-4.7/examen25-20261008/INFORME.md) · [TT-0022](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0022.md). |
 | [Qwen3.8-Max-0902 · Alibaba Cloud](qwen/qwen3.8-max-0902/readme.md) | **Apto documental con reservas**, para 16 preguntas, tras revisión metodológica y réplica P13. | [Recepción del 08/10/2026](qwen/qwen3.8-max-0902/RECEPCION-DOCUMENTAL-20261008.md). |
 
 Cada recepción corresponde a su expediente y alcance. El proveedor ejecuta la inferencia; el Árbitro-Director y los componentes Rust del SV administran suministro, orden, recepción, adjudicación y medición propios. La recepción no se extiende a otros modelos, a uso clínico o a toda la modalidad. La dependencia criptográfica y la evaluación del servicio conservan su seguimiento específico.

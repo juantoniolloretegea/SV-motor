@@ -1,8 +1,8 @@
 # Ensayo de inteligencia artificial y observabilidad
 
-**Edición documental 2.28 · 8 de octubre de 2026.**
+**Edición documental 2.29 · 8 de octubre de 2026.**
 
-**Actualización de esta edición:** incorporación de Qwen3.8-Max-0902 al nodo 03, con recepción documental limitada a 16 preguntas tras revisión metodológica y réplica de P13. Se conservan el resultado contractual original, la organización de los tres nodos y la historia del ensayo.
+**Actualización de esta edición:** incorporación de Grok 4.7 a los índices generales, con su resultado documental ya publicado. Astra, Grok y Qwen quedan identificados en el nodo 03 con sus alcances propios; se conservan los resultados, las reservas y la historia del ensayo.
 
 <a id="objeto-y-criterio-experimental"></a>
 
@@ -38,6 +38,7 @@ La tabla distingue el resultado experimental, su alcance y la situación documen
 | Modelo o configuración | Resultado y alcance | Situación al corte |
 |---|---|---|
 | [GPT-6 Astra · OpenAI · Nodo 03](modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/openai/gpt-6-astra/readme.md) | Examen documental: **Apto**, 25/25 correctas, 20/20 críticas, T(25)=19; R2 es la respuesta final en los 25 casos. | Prueba documental cerrada el 07/10/2026. Inferencia en OpenAI; control del SV en Rust. [Resultado y límites](modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/openai/gpt-6-astra/examen25-20261007/resultado/INFORME.md). |
+| [Grok 4.7 · xAI · Nodo 03](modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/xai/grok-4.7/readme.md) | Examen documental: **Apto**, 25/25 respuestas finales correctas, 20/20 críticas; T(25)=19. R2 es la respuesta final en los 25 casos. | [Examen del 08/10/2026](modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/xai/grok-4.7/examen25-20261008/INFORME.md) · [TT-0022](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0022.md). Inferencia en xAI; control propio en Rust. El [diagnóstico posterior del manual](modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/xai/grok-4.7/md01-diagnostica-20261008/INFORME.md) es parcial y tiene alcance separado. |
 | [Qwen3.8-Max-0902 · Alibaba Cloud · Nodo 03](modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/qwen/qwen3.8-max-0902/readme.md) | **Apto documental con reservas**, en el alcance de **16 preguntas**, tras revisión metodológica y réplica separada de P13. | Alcance limitado por disponibilidad de recursos. [Recepción y fundamento](modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/qwen/qwen3.8-max-0902/RECEPCION-DOCUMENTAL-20261008.md); dictamen contractual y polígono originales conservados. Comparación limitada a preguntas y condiciones comunes. |
 | [Qwen3-0.6B · Q4_K_M](modelos-de-ia/qwen/qwen3-0.6b/README.md) | Inferencia nativa y controles parciales; cuatro consultas DOC-01 terminadas sin conformidad contractual completa. | Campaña cerrada con limitaciones. |
 | [GPT-OSS-20B · MXFP4](modelos-de-ia/openai/gpt-oss-20b/README.md) | Funcionamiento técnico y bancos documentales conservados; la evaluación médica no acreditó la función prevista. | Configuración excluida de esa selección; archivo conservado. |
@@ -158,7 +159,7 @@ La dirección ha autorizado crear **una instancia AMD MI300X** e iniciar una pru
 
 ## Versiones de los componentes
 
-La **edición documental 2.28**, las **aplicaciones 0.1.x/0.2.x**, el **MCP 0.1.x**, los **modelos** y los **archivos de recuperación v1** tienen identidades independientes. Una numeración no sustituye a las restantes. Los antecedentes identifican Rust 1.98.0; la preparación de retroalimentación identifica Rust 1.98.1. Cada expediente fija sus fuentes, dependencias, ejecutables y comprobaciones; una compilación no acredita utilización efectiva.
+La **edición documental 2.29**, las **aplicaciones 0.1.x/0.2.x**, el **MCP 0.1.x**, los **modelos** y los **archivos de recuperación v1** tienen identidades independientes. Una numeración no sustituye a las restantes. Los antecedentes identifican Rust 1.98.0; la preparación de retroalimentación identifica Rust 1.98.1. Cada expediente fija sus fuentes, dependencias, ejecutables y comprobaciones; una compilación no acredita utilización efectiva.
 
 <details>
 <summary><strong>EIO conversación · Qwen3-0.6B · 0.1.0 → 0.1.4</strong></summary>
@@ -332,6 +333,7 @@ Cada fila describe el corte de su publicación; los estados superados se mantien
 | 06/10/2026 | [Archivo Qwen3.5 Q8_0](https://github.com/juantoniolloretegea/SV-motor/releases/tag/qwen3.5-122b-a10b-q8-0-archivo-cierre-20261006-v1) · [Conservación cifrada](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/releases/tag/qwen35-122b-q8-imagen-cierre-20261006-v1) | Instalación y expedientes conservados sin duplicar pesos; recuperación, descifrado, inventario y contenido cotejados con Rust. Retirada administrativa pendiente; arranque restaurado no ensayado. |
 | 06/10/2026 | [Retirada de Qwen3.5 Q8_0](modelos-de-ia/qwen/qwen3.5-122b-a10b-q8-0/seguimiento/cierre-20261006/ACTA-RETIRADA.md) | Instancia y disco retirados después de conservación cotejada. Mantiene el resultado experimental, sus reservas y la ausencia de arranque restaurado ensayado. |
 | 07/10/2026 | [Examen de GPT-6 Astra · nodo 03](modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/openai/gpt-6-astra/examen25-20261007/resultado/INFORME.md) · [Expediente y evidencias](modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/openai/gpt-6-astra/readme.md) | Apto para el contrato documental P01–P25: 25 respuestas finales R2 correctas, incluidas las 20 críticas. Control e instrumentación propios en Rust; inferencia en OpenAI. |
+| 08/10/2026 | [Examen de Grok 4.7 · nodo 03](modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/xai/grok-4.7/examen25-20261008/INFORME.md) | Apto para el contrato documental en R2: 25 correctas, incluidas las 20 críticas. Se conserva el error crítico de R0 y su corrección posterior. [MD01 del manual](modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/xai/grok-4.7/md01-diagnostica-20261008/INFORME.md): diagnóstico parcial, distinto del examen. |
 | 08/10/2026 | [Recepción de Qwen3.8-Max-0902 · nodo 03](modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/qwen/qwen3.8-max-0902/RECEPCION-DOCUMENTAL-20261008.md) | Apto documental con reservas para 16 preguntas, tras revisión del instrumento y réplica P13. La adjudicación contractual original se conserva; no se declara equivalencia con un examen de 25 preguntas. |
 
 Los enlaces de SV-sala-de-maquinas mantienen el acceso restringido de los originales. Las síntesis públicas enlazan su procedencia; no sustituyen los paquetes, sus manifiestos ni la recepción independiente.
@@ -340,7 +342,7 @@ Los enlaces de SV-sala-de-maquinas mantienen el acceso restringido de los origin
 
 ## Historia completa de la edición documental
 
-La secuencia comienza en **0.1** y avanza hasta la presente **2.28**. Se conservan todas las ediciones anteriores y sus referencias inmutables. Cada desplegable conserva lo relevante de su corte y ofrece el texto íntegro; sus estados históricos no sustituyen al estado actual.
+La secuencia comienza en **0.1** y avanza hasta la presente **2.29**. Se conservan todas las ediciones anteriores y sus referencias inmutables. Cada desplegable conserva lo relevante de su corte y ofrece el texto íntegro; sus estados históricos no sustituyen al estado actual.
 
 El salto **0.2 → 2.0** se conserva tal como fue publicado; no se ha localizado una edición 1.x en el historial de este archivo. Cuando una edición reúne varios commits, se muestran todos en orden. Las fechas siguientes son las de esos commits en Europe/Madrid; una cabecera histórica puede conservar una fecha anterior.
 
@@ -649,7 +651,16 @@ Sitúa las tres modalidades enlazadas antes de los resultados y distingue los no
 
 Integra Qwen3.8-Max-0902 en la tabla de estado y en el catálogo, con enlace a la recepción del alcance de dieciséis preguntas. Distingue la admisión posterior con reservas del dictamen contractual original y de la réplica P13. Conserva diagramas, rutas y resultados anteriores; no acredita nuevas inferencias.
 
-[Recepción y evidencias](modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/qwen/qwen3.8-max-0902/RECEPCION-DOCUMENTAL-20261008.md). La revisión exacta de 2.28 corresponde al commit que contiene este documento y su registro de versiones.
+[Recepción y evidencias](modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/qwen/qwen3.8-max-0902/RECEPCION-DOCUMENTAL-20261008.md). [Texto íntegro de la edición 2.28](https://github.com/juantoniolloretegea/SV-motor/blob/e7093afc20dd042764ba88287e10dea09296227e/laboratorio/ensayo-ia-y-observabilidad/README.md).
+
+</details>
+
+<details>
+<summary><strong>2.29 · 08/10/2026 · Incorporación de Grok a los índices generales</strong></summary>
+
+Completa las tablas del ensayo, del catálogo y del nodo 03 con Grok 4.7, cuyo examen y registro de calidad ya estaban publicados. Distingue el examen documental Apto de 25 preguntas del diagnóstico parcial MD01. Conserva las recepciones de Astra y Qwen, las rutas, los resultados y los diagramas. No introduce una nueva evaluación ni inferencia.
+
+[Expediente de Grok](modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/xai/grok-4.7/readme.md) · [Tique técnico](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0022.md). La revisión exacta de 2.29 corresponde al commit que contiene este documento y su registro de versiones.
 
 </details>
 
