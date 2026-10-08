@@ -1,6 +1,31 @@
 # Resultados del SV y comparación de costes de modelos de IA
 
-**Versión 1.1 · Corte documental: 8 de octubre de 2026.** Esta edición presenta las ejecuciones del SV, sus datos cuantitativos publicables y las observaciones propias y una clasificación económica externa. Los resultados externos quedan identificados como tales. La calidad, la demora y el coste son magnitudes separadas.
+**Versión 1.2 · Corte documental: 8 de octubre de 2026.** Esta edición presenta una clasificación propia de calidad, los consumos y observaciones del SV y la referencia económica externa. Los resultados externos quedan identificados como tales. La calidad, la demora y el coste son magnitudes separadas.
+
+## Ranquin propio de calidad: MD01, respuesta inicial R0
+
+Dos comprobaciones comunes están documentadas: **contenido correcto y completo** y **estructura conforme**. Ambas forman parte del dictamen conjunto existente. Su resultado permite esta clasificación propia:
+
+| Puesto en conformidad MD01-R0 | Modelo | Contenido adjudicado | Estructura | Dictamen conjunto |
+|---:|---|---|---|---|
+| **1, compartido** | GPT-6 Astra | 0: correcto y completo | Conforme | 0 |
+| **1, compartido** | Grok 4.7 | 0: correcto y completo | Conforme | 0 |
+
+**El empate es un resultado, no una clasificación pendiente.** Se limita a esta pregunta y etapa, con corpus y criterios sustantivos comunes. Corrección y completitud no se cuentan como dos preguntas ni dos puntos independientes; las columnas tampoco se suman. Se conserva la revisión contextual conforme en ambos.
+
+Fuentes: [adjudicación de Astra](https://github.com/juantoniolloretegea/SV-motor/blob/0246a7df1e9436f4bff4f0d94ac6d36e1f29c1e0/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/openai/gpt-6-astra/manual-mdbook-20261008/replica-md01-20261008/hitos/INTENTO-001/ADJUDICACION.json) y [adjudicación de Grok](https://github.com/juantoniolloretegea/SV-motor/blob/091b50a884c893fd4322bbf211b0feb0132bb258/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/xai/grok-4.7/md01-diagnostica-20261008/adjudicacion/MD01-R0.json). [Clasificación propia descargable](RANQUIN-CALIDAD-SV.json).
+
+La precisión terminológica señalada en Grok permanece conservada, sin convertirla retrospectivamente en un error para romper el empate. La recepción científica independiente sigue pendiente. Esta clasificación no acredita igualdad general entre modelos ni admisión del contrato completo. Las diferencias de reloj afectan a la comparación temporal, no al valor de las adjudicaciones sustantivas conservadas.
+
+## Comparación Astra–GLM mediante CYB16
+
+La misma prueba de dieciséis preguntas permite una **clasificación propia de calidad para ese contrato**: mismas fuentes, preguntas, posiciones críticas, criterios y etapas R0/R1/R2. La comparación final utiliza R2 de ambos; R0 y R1 muestran por separado la calidad inicial y la evolución. Los intentos repetidos e interrupciones permanecen visibles.
+
+El resultado final podrá ser una diferencia o un empate. Si ambos alcanzan dieciséis respuestas correctas, sin errores críticos y con conformidad documental, compartirán puesto en calidad final. No se inventará un desempate. La fiabilidad de entrega y el tiempo necesario para completar el mismo encargo podrán generar clasificaciones separadas si sus definiciones y observaciones son comparables.
+
+No es necesario que ambos proveedores utilicen el mismo segmentador, infraestructura o formato de API. Sí deben conservarse los criterios de evaluación y declararse las adaptaciones, configuraciones y límites efectivos. Una interrupción sin respuesta completa no se transforma en error de contenido; tampoco se oculta al comparar entrega, tiempo o consumo.
+
+La clasificación de calidad no queda bloqueada por falta de costes monetarios. Para ordenar por coste deben existir importes atribuibles y comparables; una valoración mediante tarifas publicadas se identificaría como estimación, no como gasto liquidado. La información de una sola campaña permite describir ese ensayo, sin acreditar estabilidad general.
 
 ## Observaciones propias: demora registrada en MD01-R0
 

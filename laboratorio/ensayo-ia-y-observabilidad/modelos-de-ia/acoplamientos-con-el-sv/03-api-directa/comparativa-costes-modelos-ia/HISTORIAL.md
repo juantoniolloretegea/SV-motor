@@ -1,5 +1,11 @@
 # Historial de revisiones
 
+## 1.2 · 8 de octubre de 2026
+
+Se incorpora una clasificación propia limitada a la conformidad de MD01-R0: Astra y Grok comparten el primer puesto según sus adjudicaciones conjuntas 0. Se explicitan contenido y estructura, sin sumarlos ni introducir una rúbrica nueva. Las reservas temporales no se extienden indebidamente a la comparación de calidad.
+
+Se precisan las condiciones suficientes para comparar Astra y GLM en el mismo CYB16: calidad por etapa, errores críticos, conformidad documental y cobertura de entregas. La falta de coste monetario atribuible no bloquea una clasificación de calidad. Se conservan los resultados anteriores y no se anticipa el de la campaña en curso.
+
 ## 1.1 · 8 de octubre de 2026
 
 Se incorporan los resultados de ejecuciones del SV y sus datos cuantitativos depurados: 363 filas de consumo y el detalle de 48 solicitudes CYB16. Se documenta la cobertura de la comprobación y se proporciona un cálculo Rust reproducible con los datos públicos.

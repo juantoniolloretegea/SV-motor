@@ -1,6 +1,6 @@
 # Método y procedencia de las comparaciones
 
-Versión 1.1 · 08/10/2026.
+Versión 1.2 · 08/10/2026.
 
 ## Clases de evidencia
 
@@ -23,6 +23,16 @@ Los 363 registros proceden de un índice contrastado; pueden reunir varios inten
 El cotejo temporal utiliza MD01-R0: mismo corpus, pregunta y contrato sustantivo, una ejecución por candidato. Se conserva el tiempo hasta el primer evento de texto registrado. **El origen de los relojes y las solicitudes completas difieren**; por tanto, se muestran las observaciones sin puestos y no se presenta un ranquin propio de latencia. El [cotejo](COTEJO-MD01.md) conserva las diferencias y los enlaces al instrumento. No se descuentan duraciones desconocidas mediante supuestos.
 
 La selección del subconjunto es retrospectiva y no dispone de repeticiones ni intervalos de incertidumbre. R1 y R2 incorporan respuestas previas diferentes: se publican como complemento y no se agregan para fabricar un orden global. R2 de Grok no se envió. CYB16 y P13 no se incluyen en el orden MD01 porque son contratos distintos.
+
+## Clasificación propia de conformidad documental
+
+La [clasificación MD01-R0](RANQUIN-CALIDAD-SV.json) reproduce los dos dictámenes conjuntos 0: contenido correcto y completo, estructura conforme y revisión contextual correcta. Ambos comparten el primer puesto. Las comprobaciones se presentan sin sumarlas ni convertir corrección y completitud en puntos independientes. Es una clasificación retrospectiva de un caso y etapa, no una adjudicación nueva.
+
+Las diferencias instrumentales del reloj no invalidan esa coincidencia de calidad. Tampoco sirven para desempatarla. Las reservas de recepción científica independiente se mantienen.
+
+Para comparar CYB16 entre Astra y GLM se exige contenido, preguntas, criticidades y criterios comunes; comparación de la misma etapa final y antecedentes suministrados bajo el mismo régimen. La adecuación de las adaptaciones de API se documenta, sin exigir identidad de infraestructura o segmentación. Las interrupciones y repeticiones se registran como tales; la ausencia de respuesta no equivale a error sustantivo.
+
+La calidad final, la calidad inicial, la fiabilidad de entrega y el tiempo se presentan separadamente. Una coincidencia de conformidad final produce empate. El coste sólo interviene en una clasificación económica cuando las cantidades son atribuibles y comparables, sin bloquear las otras dimensiones.
 
 ## Condiciones para una clasificación económica propia
 
