@@ -234,7 +234,8 @@ impl Visor {
         ui.colored_label(
             color(val),
             egui::RichText::new(format!(
-                "Valor {val} · {}",
+                "Valor {val} · {} · núcleo documental: {}",
+                match val {"0"=>"conforme","1"=>"incumplimiento contractual",_=>"indeterminación"},
                 c["sustantivo"].as_str().unwrap_or("Adjudicado")
             ))
             .strong(),
