@@ -1,0 +1,89 @@
+{
+  "caso": "MD01",
+  "estado_documental": "respuesta_fundada",
+  "etapa": 1,
+  "evidencias": [
+    {
+      "cita_literal_breve": "Su finalidad es permitir un cierre progresivo por capítulos o tramos sin perder el eje del sistema ni dispersarse en caminos laterales.",
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmentos": [0],
+      "seccion": "MD-L000003-L000008"
+    },
+    {
+      "cita_literal_breve": "No es todavía el manual final. Es la **máquina de construirlo**.",
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmentos": [0],
+      "seccion": "MD-L000003-L000008"
+    },
+    {
+      "cita_literal_breve": "subordinado al pliego, a la Frontera normativa, a la IR y a la gramática vigente;",
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmentos": [0],
+      "seccion": "MD-L000009-L000017"
+    },
+    {
+      "cita_literal_breve": "y verificable mediante ejemplos, contraejemplos y relación explícita con la implementación.",
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmentos": [0],
+      "seccion": "MD-L000009-L000017"
+    },
+    {
+      "cita_literal_breve": "10. Relación con IR y docs públicos\n11. Criterio de cierre\n12. Estado",
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmentos": [0],
+      "seccion": "MD-L000092-L000108"
+    },
+    {
+      "cita_literal_breve": "Un tramo se considerará cerrable cuando reúna, como mínimo:",
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmentos": [0],
+      "seccion": "MD-L000109-L000118"
+    },
+    {
+      "cita_literal_breve": "deberá coordinarse con la política y protocolo de compatibilidad interlenguajes del Lenguaje SV.",
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmentos": [0],
+      "seccion": "MD-L000119-L000122"
+    },
+    {
+      "cita_literal_breve": "Toda idea nueva deberá pasar antes por el Wishlist IRQ del ecosistema SV.",
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmentos": [0],
+      "seccion": "MD-L000123-L000125"
+    },
+    {
+      "cita_literal_breve": "Es una demostración de publicación y consulta; no constituye un manual terminado ni modifica el estado de aprobación de sus contenidos.",
+      "documento": "MANUAL_PRESENTACION",
+      "fragmentos": [0],
+      "seccion": "MD-L000001-L000004"
+    },
+    {
+      "cita_literal_breve": "Las revisiones y los cierres se realizan en sus sedes competentes.",
+      "documento": "MANUAL_PRESENTACION",
+      "fragmentos": [0],
+      "seccion": "MD-L000011-L000014"
+    },
+    {
+      "cita_literal_breve": "Este tramo no implementa bindings, APIs, FFI ni wrappers reales. Solo abre el frente documental y de gobierno.",
+      "documento": "MANUAL_TRAMO10",
+      "fragmentos": [0],
+      "seccion": "MD-L000022-L000025"
+    },
+    {
+      "cita_literal_breve": "Pendiente de desarrollo.",
+      "documento": "MANUAL_TRAMO10",
+      "fragmentos": [0],
+      "seccion": "MD-L000026-L000028"
+    }
+  ],
+  "fundamentos_verificables": [
+    "La naturaleza del constructor establece expresamente su función organizadora y su diferencia respecto del manual final. La expresión «máquina de construirlo» describe esa función documental; no acredita un generador ejecutable.",
+    "Las secciones 2 a 5 del constructor desarrollan el método: equilibrio entre detalle y continuidad, subordinación normativa, verificabilidad, tramos nucleares, ficha de doce campos y requisitos mínimos para considerar cerrable cada tramo.",
+    "Las secciones 6 y 7 añaden coordinación con la política de compatibilidad interlenguajes y control de nuevas ideas mediante el Wishlist IRQ. Son reglas del proyecto documentado, no instrucciones ejecutadas en esta consulta.",
+    "Ser cerrable no equivale a estar cerrado o aprobado: el constructor formula requisitos mínimos, mientras la presentación reserva revisiones y cierres a las sedes competentes.",
+    "El índice mantiene los tramos 00–09 como pendientes y el 10 como documento preparatorio. La presentación y el propio tramo 10 confirman que la publicación conserva un trabajo no terminado y no acredita implementación ni nueva aprobación."
+  ],
+  "insuficiencias": [],
+  "respuesta": "El constructor fija la arquitectura de trabajo para elaborar el manual del lenguaje SVP, de extensión `.svp`. Su función es permitir un cierre progresivo por capítulos o tramos, manteniendo el eje del sistema y evitando la dispersión.\n\nConcreta esa función mediante:\n\n- Organización por tramos nucleares, con suficiente detalle sin romper el hilo general.\n- Subordinación al pliego, la Frontera normativa, la IR y la gramática vigente, y verificabilidad mediante ejemplos, contraejemplos y relación explícita con la implementación.\n- Una ficha obligatoria de doce campos: ID del tramo, título, rango, objeto, dependencias, qué fija, qué no fija, ejemplos `.svp`, errores o contraejemplos, relación con IR y documentos públicos, criterio de cierre y estado.\n- Condiciones mínimas para considerar un tramo cerrable: exposición sobria del objeto, correspondencia visible con la IR o la superficie vigente, ejemplos `.svp` nucleares, delimitación expresa de lo excluido y ausencia de contradicción local suficiente con el pliego o la Frontera normativa.\n- Coordinación del tramo de compatibilidad interlenguajes con su política y protocolo, y canalización previa de nuevas ideas por el Wishlist IRQ del ecosistema SV.\n\nLa diferencia esencial es entre el instrumento que organiza la construcción del manual y el manual final resultante. El constructor establece el método, la estructura y las condiciones de elaboración; no es todavía el manual terminado ni demuestra que sus tramos estén cerrados o aprobados. En particular, cumplir condiciones para ser cerrable no acredita un cierre efectivo: las revisiones y los cierres corresponden a sus sedes competentes.\n\nLa edición suministrada confirma ese carácter no final: es una demostración de publicación y consulta que no modifica la aprobación de los contenidos. El tramo 10 sigue pendiente de desarrollo y abre un frente documental y de gobierno, sin implementar bindings, APIs, FFI ni wrappers reales. Este límite corresponde al documento conservado; no demuestra la inexistencia actual de esas implementaciones en otros repositorios.",
+  "revision": "Se mantiene la conclusión central de la etapa 0 y sus enumeraciones, respaldadas por la fuente. Se completa la descripción funcional con la coordinación interlenguajes y el control de nuevas ideas, antes omitidos. Se precisa la distinción entre «cerrable» y cerrado o aprobado para no atribuir al constructor un cierre efectivo. Las citas anteriores eran literales y sus localizadores correctos; se amplían las evidencias de las precisiones incorporadas. El antecedente conserva su identificador histórico de etapa 0. No hay un extremo exigido que requiera U."
+}

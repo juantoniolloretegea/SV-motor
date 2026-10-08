@@ -1,3 +1,5 @@
+> **Réplica diagnóstica concluida (08/10/2026):** sólo MD01, tres etapas, conforme en las tres bajo contexto temporal corregido. [Informe y evidencia](replica-md01-20261008/INFORME.md). No sustituye el vector histórico ni demuestra causalidad exclusiva; se conserva la reserva metodológica.
+
 > **Adenda metodológica posterior (08/10/2026):** el dictamen histórico que sigue queda bajo reserva metodológica. Se ha confirmado una representación incompleta de los encargos anteriores y una delimitación insuficiente de su alcance temporal. La materia crítica de MD01 fue respondida correctamente; permanece la afirmación inexacta sobre etapas. No se sustituye el resultado por Apto ni se alteran los originales. Véase la [revisión y comprobación Rust](revision-metodologica-20261008/REVISION-METODOLOGICA.md).
 
 # Ensayo documental del manual SVP · GPT-6 Astra · nodo 03

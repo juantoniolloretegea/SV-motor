@@ -1,0 +1,54 @@
+   Compiling sv-comprobacion-acceso-openai v0.1.0 ([RAIZ_DE_TRABAJO]\desarrollo\acoplamientos-con-el-sv\03-api-directa\openai\gpt-6.1-sol\acceso)
+warning: function `identity` is never used
+  --> src\bin\sv-metricas-md01-replica.rs:25:4
+   |
+25 | fn identity(p:&Path)->R<Value>{let b=fs::read(p).map_err(e)?;Ok(json!({"ruta":p.strip_prefix(ROOT).map_err(e)?.to_string_lossy(),"by...
+   |    ^^^^^^^^
+   |
+   = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: function `files` is never used
+  --> src\bin\sv-metricas-md01-replica.rs:26:4
+   |
+26 | fn files(p:&Path)->R<Vec<Value>>{let mut a=vec![];for d in fs::read_dir(p).map_err(e)?{let p=d.map_err(e)?.path();if p.is_dir(){a.ex...
+   |    ^^^^^
+
+warning: constant `KEY` is never used
+  --> src\bin\sv-recibir-md01-replica.rs:11:7
+   |
+11 | const KEY:&str="e8f9e1cf7c65856106dab42b07ccc3348de5862ea877979d02dcdd1d7f3e81c7";
+   |       ^^^
+   |
+   = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: `sv-comprobacion-acceso-openai` (bin "sv-metricas-md01-replica" test) generated 2 warnings
+warning: `sv-comprobacion-acceso-openai` (bin "sv-recibir-md01-replica" test) generated 1 warning
+    Finished `test` profile [unoptimized] target(s) in 1.94s
+     Running unittests src\bin\sv-metricas-md01-replica.rs (compilacion/telemetria\debug\deps\sv_metricas_md01_replica-a9786cb322725f71.exe)
+
+running 3 tests
+test estricto::tests::exterior ... ok
+test estricto::tests::conserva_tipos ... ok
+test estricto::tests::repeticion_anidada ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src\bin\sv-recibir-md01-replica.rs (compilacion/telemetria\debug\deps\sv_recibir_md01_replica-0f39cef6b7e0169d.exe)
+
+running 13 tests
+test estricto::tests::conserva_tipos ... ok
+test estricto::tests::exterior ... ok
+test contrato::anterior::tests::rechaza_historia_incompleta_y_herramientas ... ok
+test contrato::tests::rechaza_ampliar_casos_y_antecedentes ... ok
+test estricto::tests::repeticion_anidada ... ok
+test contrato::anterior::tests::validacion_rechaza_campos_extra_y_tipos ... ok
+test localizadores::tests::cita_no_exige_literalidad_de_conclusion ... ok
+test localizadores::tests::no_confunde_documentos_con_mismas_lineas ... ok
+test localizadores::tests::impide_citas_fuera_de_seccion ... ok
+test localizadores::tests::rechaza_fabricacion_duplicacion_y_salto ... ok
+test contrato::anterior::tests::tres_etapas_y_fuente_inmutable ... ok
+test contrato::anterior::tests::u_no_es_un_relleno ... ok
+test contrato::tests::conserva_encargo_real_y_reglas_historicas ... ok
+
+test result: ok. 13 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

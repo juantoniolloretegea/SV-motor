@@ -1,0 +1,152 @@
+   Compiling sv-comprobacion-acceso-openai v0.1.0 ([RAIZ_DE_TRABAJO]\desarrollo\acoplamientos-con-el-sv\03-api-directa\openai\gpt-6.1-sol\acceso)
+warning: unused import: `num`
+ --> src\bin\astra-md01-replica\suministro.rs:4:40
+  |
+4 | use crate::suministro_pdf::{parse,need,num,sha,contenido,R};
+  |                                        ^^^
+  |
+  = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+warning: constant `RUN` is never used
+  --> src\bin\astra-md01-replica\..\..\catalogo\mod.rs:12:11
+   |
+12 | pub const RUN:&str="ejecucion/astra-catalogo-20261007";
+   |           ^^^
+   |
+   = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: constant `MCP` is never used
+  --> src\bin\astra-md01-replica\..\..\catalogo\mod.rs:13:7
+   |
+13 | const MCP:&str="compilacion/mcp-linux/debug/sv-mcp-documental";
+   |       ^^^
+
+warning: constant `AUDIT` is never used
+  --> src\bin\astra-md01-replica\..\..\catalogo\mod.rs:14:7
+   |
+14 | const AUDIT:&str="compilacion/mcp-linux/debug/verificar-diario";
+   |       ^^^^^
+
+warning: function `read` is never used
+  --> src\bin\astra-md01-replica\..\..\catalogo\mod.rs:19:8
+   |
+19 | pub fn read(p:&Path)->R<Value>{estricto::parse(&fs::read(p).map_err(e)?).map_err(e)}
+   |        ^^^^
+
+warning: function `linux` is never used
+  --> src\bin\astra-md01-replica\..\..\catalogo\mod.rs:38:4
+   |
+38 | fn linux(p:&Path)->R<String>{guard(p)?;Ok(p.to_string_lossy().replace("C:","/mnt/c").replace('\\',"/"))}
+   |    ^^^^^
+
+warning: function `command` is never used
+  --> src\bin\astra-md01-replica\..\..\catalogo\mod.rs:39:4
+   |
+39 | fn command(bin:&str,args:&[String])->Command{
+   |    ^^^^^^^
+
+warning: function `local` is never used
+  --> src\bin\astra-md01-replica\..\..\catalogo\mod.rs:45:4
+   |
+45 | fn local(mut cmd:Command,input:Vec<u8>,out:&Path,label:&str)->R<Vec<u8>>{
+   |    ^^^^^
+
+warning: function `preflight` is never used
+  --> src\bin\astra-md01-replica\..\..\catalogo\mod.rs:72:8
+   |
+72 | pub fn preflight()->R<Value>{
+   |        ^^^^^^^^^
+
+warning: function `prepare` is never used
+   --> src\bin\astra-md01-replica\..\..\catalogo\mod.rs:114:8
+    |
+114 | pub fn prepare()->R<()>{
+    |        ^^^^^^^
+
+warning: function `page` is never used
+   --> src\bin\astra-md01-replica\..\..\catalogo\mod.rs:120:8
+    |
+120 | pub fn page(v:&Value)->String{format!("<!doctype html><html lang='es'><meta charset='utf-8'><title>SV · Astra · Catálogo A0</title>...
+    |        ^^^^
+
+warning: function `start_page` is never used
+   --> src\bin\astra-md01-replica\..\..\catalogo\mod.rs:121:8
+    |
+121 | pub fn start_page()->String{"<!doctype html><html lang='es'><meta charset='utf-8'><h1>SV · Astra · Catálogo A0</h1><p>Nueve solicit...
+    |        ^^^^^^^^^^
+
+warning: function `one` is never used
+   --> src\bin\astra-md01-replica\..\..\catalogo\mod.rs:127:4
+    |
+127 | fn one(token:&str,out:&Path,case:&str)->R<Value>{
+    |    ^^^
+
+warning: function `infer` is never used
+   --> src\bin\astra-md01-replica\..\..\catalogo\mod.rs:181:8
+    |
+181 | pub fn infer(token:&str)->R<Value>{
+    |        ^^^^^
+
+warning: `sv-comprobacion-acceso-openai` (bin "astra-md01-replica" test) generated 14 warnings (run `cargo fix --bin "astra-md01-replica" -p sv-comprobacion-acceso-openai --tests` to apply 1 suggestion)
+    Finished `test` profile [unoptimized] target(s) in 1.95s
+     Running unittests src\bin\astra-md01-replica\main.rs (compilacion/telemetria\debug\deps\astra_md01_replica-efe699dae6aa3633.exe)
+
+running 55 tests
+test catalogo::estricto::tests::exterior ... ok
+test catalogo::estricto::tests::repeticion_anidada ... ok
+test catalogo::tests::no_admite_citas_externas_ni_recepcion_parcial ... ok
+test catalogo::tests::no_despacha_herramientas ... ok
+test catalogo::tests::rechaza_omision_y_desorden ... ok
+test catalogo::estricto::tests::conserva_tipos ... ok
+test contrato::anterior::tests::rechaza_historia_incompleta_y_herramientas ... ok
+test contrato::tests::rechaza_ampliar_casos_y_antecedentes ... ok
+test catalogo::tests::ambas_paginas_y_prohibicion ... ok
+test localizadores::tests::cita_no_exige_literalidad_de_conclusion ... ok
+test contrato::anterior::tests::validacion_rechaza_campos_extra_y_tipos ... ok
+test localizadores::tests::no_confunde_documentos_con_mismas_lineas ... ok
+test localizadores::tests::impide_citas_fuera_de_seccion ... ok
+test manual::tests::error_sin_cierre_no_es_respuesta ... ok
+test contrato::anterior::tests::u_no_es_un_relleno ... ok
+test localizadores::tests::rechaza_fabricacion_duplicacion_y_salto ... ok
+test manual::tests::mantenimiento_rechaza_contenido_saltos_y_poscierre ... ok
+test contrato::anterior::tests::tres_etapas_y_fuente_inmutable ... ok
+test manual::tests::sse_fragmentado_unicode ... ok
+test manual::tests::sse_no_truncado_ni_doble_cierre ... ok
+test manual::tests::sse_rechaza_herramientas_y_saltos ... ok
+test servicio::tests::limite_cinco_minutos ... ok
+test servicio::tests::orden_y_aplazamiento ... ok
+test servicio::tests::no_duplica - should panic ... ok
+test manual::tests::mantenimiento_observado_no_equivale_a_respuesta ... ok
+test suministro_pdf::estricto::tests::conserva_tipos ... ok
+test suministro::tests::completa_unicode_y_documento ... ok
+test suministro_pdf::estricto::tests::exterior ... ok
+test suministro::tests::clave_y_criticos_fuera_de_contexto ... ok
+test suministro_pdf::estricto::tests::repeticion_anidada ... ok
+test manual::tests::sobrecarga_conserva_error_y_cierre ... ok
+test suministro_pdf::tests::banco_es_inmutable ... ok
+test suministro_pdf::tests::director_no_compone_antes_de_admision ... ok
+test suministro_pdf::tests::diez_paginas_y_extraccion_se_cotejan ... ok
+test suministro_pdf::tests::director_rechaza_telemetria_y_clave_alteradas ... ok
+test suministro_pdf::tests::rechaza_cursor_final_y_offset_falsos ... ok
+test suministro_pdf::tests::rechaza_fuente_huella_y_pagina_ajenas ... ok
+test suministro_pdf::tests::direccion_rechaza_sin_aislamiento_o_diario_distinto ... ok
+test suministro_pdf::tests::rechaza_perdida_duplicacion_y_desorden ... ok
+test suministro_pdf::tests::direccion_impide_recorrido_parcial_y_recepcion_repetida ... ok
+test suministro_pdf::tests::representaciones_rpc_deben_coincidir ... ok
+test suministro_pdf::tests::unicode_integro ... ok
+test contrato::tests::conserva_encargo_real_y_reglas_historicas ... ok
+test tests::cliente_emitido_obligatorio ... ok
+test tests::cliente_previo_no_sustituible ... ok
+test tests::rechazo_denegado ... ok
+test suministro_pdf::tests::direccion_rechaza_inyeccion_de_herramientas_clave_historial_o_cambio_de_modelo ... ok
+test tests::rechazo_estado ... ok
+test tests::rechazo_duplicado ... ok
+test tests::retorno_valido ... ok
+test tests::rechazo_token_sin_firma ... ok
+test suministro_pdf::tests::nueve_solicitudes_solo_contienen_paginas_admitidas ... ok
+test catalogo::tests::preserva_recepcion_sse_y_rechaza_alteracion ... ok
+test manual::tests::mantenimiento_conserva_texto_y_uso ... ok
+test tests::firmas_identidad_y_contexto ... ok
+
+test result: ok. 55 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 2.27s
+

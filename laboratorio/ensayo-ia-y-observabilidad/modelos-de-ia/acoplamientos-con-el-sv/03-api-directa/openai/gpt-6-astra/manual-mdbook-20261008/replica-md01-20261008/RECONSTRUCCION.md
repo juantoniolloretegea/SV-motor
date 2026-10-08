@@ -1,0 +1,15 @@
+# Dependencias y reconstrucción de la réplica MD01
+
+El controlador se incorpora al cliente de acceso existente, con su Cargo.toml y Cargo.lock fijados en PREVIA.json. Las fuentes de controlador/src/bin se colocan en src/bin del cliente. No son un proyecto Cargo independiente. El ejecutable utilizado queda identificado por SHA-256, junto con las fuentes fijadas antes del ensayo.
+
+Se conservan también los módulos contrato y localizadores de astra-manual de los que depende la réplica; no se modificaron sus originales. El receptor utiliza md01-dictamen/mod.rs y deriva una decisión a partir de una revisión sustantiva exterior identificada. No ejecuta inferencia ni pretende demostrar por sí mismo la semántica. Comprobaciones finales: controlador 55, receptor con dictamen 15 y métricas 3; comparten módulos, no se suman como cobertura independiente.
+
+Dependencias generales: [inventario transversal](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/tree/5e2088d475f235af85d1fae0b5de52170c0aa131/docs/calidad/tuberias-ia/continuacion-15-09-2026/mapa/inventario-transversal-de-codigo-mantenido-versiones-y-dependencias). MCP: [edición conservada](https://github.com/juantoniolloretegea/SV-motor/tree/b4f6fed400e8d9e6c7bccaa8023ca40a8de83d74/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/model-context-protocol/mdbook/0.1.0). El [ensayo anterior](../RECONSTRUCCION.md) conserva sus dependencias y resultados propios. La excepción criptográfica permanece pendiente.
+
+INVENTARIO-PUBLICACION identifica huellas originales y publicadas. Las fuentes reciben el pie de atribución; las raíces privadas, cuando aparecen, se sustituyen por marcadores. No se promete reproducibilidad binaria de esa proyección sin configurar las rutas equivalentes. Las respuestas y resultados científicos conservan sus bytes.
+
+La presentación HTML autónoma, generada por Rust, incorpora las tres respuestas como texto escapado y no tiene JavaScript. Los valores se refieren a tres etapas de MD01, no a un nuevo polígono de nueve preguntas. Los hitos instrumentales originales quedan en el archivo privado, junto con solicitudes, SSE, suministro y telemetría completa. Las adjudicaciones públicas son posteriores a la recepción; no se reescribe el estado inicial.
+
+El archivo privado ZIP se conserva codificado en base64, con tamaño y SHA-256 del ZIP y de cada entrada. Se excluyen credenciales, registro de autorización y clave reservada. La conciliación monetaria sigue pendiente. La publicación y la recuperación se cotejan por bytes y SHA-256 en Rust.
+
+© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).

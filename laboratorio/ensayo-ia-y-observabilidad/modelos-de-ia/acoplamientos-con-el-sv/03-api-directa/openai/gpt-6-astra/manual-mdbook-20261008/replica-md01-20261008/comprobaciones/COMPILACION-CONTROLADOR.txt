@@ -1,0 +1,257 @@
+   Compiling sv-comprobacion-acceso-openai v0.1.0 ([RAIZ_DE_TRABAJO]\desarrollo\acoplamientos-con-el-sv\03-api-directa\openai\gpt-6.1-sol\acceso)
+warning: unused import: `num`
+ --> src\bin\astra-md01-replica\suministro.rs:4:40
+  |
+4 | use crate::suministro_pdf::{parse,need,num,sha,contenido,R};
+  |                                        ^^^
+  |
+  = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+warning: type alias `E` is never used
+  --> src\bin\astra-md01-replica\main.rs:10:6
+   |
+10 | type E=Box<dyn std::error::Error+Send+Sync>;
+   |      ^
+   |
+   = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: constant `PREP` is never used
+  --> src\bin\astra-md01-replica\..\..\catalogo\mod.rs:11:11
+   |
+11 | pub const PREP:&str="ejecucion/astra-catalogo-20261006";
+   |           ^^^^
+
+warning: constant `RUN` is never used
+  --> src\bin\astra-md01-replica\..\..\catalogo\mod.rs:12:11
+   |
+12 | pub const RUN:&str="ejecucion/astra-catalogo-20261007";
+   |           ^^^
+
+warning: constant `MCP` is never used
+  --> src\bin\astra-md01-replica\..\..\catalogo\mod.rs:13:7
+   |
+13 | const MCP:&str="compilacion/mcp-linux/debug/sv-mcp-documental";
+   |       ^^^
+
+warning: constant `AUDIT` is never used
+  --> src\bin\astra-md01-replica\..\..\catalogo\mod.rs:14:7
+   |
+14 | const AUDIT:&str="compilacion/mcp-linux/debug/verificar-diario";
+   |       ^^^^^
+
+warning: constant `POLICY` is never used
+  --> src\bin\astra-md01-replica\..\..\catalogo\mod.rs:15:7
+   |
+15 | const POLICY:&str="5063d058df015017355e0fd836389c0791f128911d6da07e7e4a631f8f42716a";
+   |       ^^^^^^
+
+warning: function `sha` is never used
+  --> src\bin\astra-md01-replica\..\..\catalogo\mod.rs:17:8
+   |
+17 | pub fn sha(b:&[u8])->String{format!("{:x}",Sha256::digest(b))}
+   |        ^^^
+
+warning: function `read` is never used
+  --> src\bin\astra-md01-replica\..\..\catalogo\mod.rs:19:8
+   |
+19 | pub fn read(p:&Path)->R<Value>{estricto::parse(&fs::read(p).map_err(e)?).map_err(e)}
+   |        ^^^^
+
+warning: function `check` is never used
+  --> src\bin\astra-md01-replica\..\..\catalogo\mod.rs:36:4
+   |
+36 | fn check(b:bool,s:&str)->R<()>{if b{Ok(())}else{Err(s.into())}}
+   |    ^^^^^
+
+warning: function `fixed` is never used
+  --> src\bin\astra-md01-replica\..\..\catalogo\mod.rs:37:4
+   |
+37 | fn fixed(p:&Path,h:&str)->R<Vec<u8>>{guard(p)?;let b=fs::read(p).map_err(e)?;check(sha(&b)==h,"Fuente fijada alterada")?;Ok(b)}
+   |    ^^^^^
+
+warning: function `linux` is never used
+  --> src\bin\astra-md01-replica\..\..\catalogo\mod.rs:38:4
+   |
+38 | fn linux(p:&Path)->R<String>{guard(p)?;Ok(p.to_string_lossy().replace("C:","/mnt/c").replace('\\',"/"))}
+   |    ^^^^^
+
+warning: function `command` is never used
+  --> src\bin\astra-md01-replica\..\..\catalogo\mod.rs:39:4
+   |
+39 | fn command(bin:&str,args:&[String])->Command{
+   |    ^^^^^^^
+
+warning: function `local` is never used
+  --> src\bin\astra-md01-replica\..\..\catalogo\mod.rs:45:4
+   |
+45 | fn local(mut cmd:Command,input:Vec<u8>,out:&Path,label:&str)->R<Vec<u8>>{
+   |    ^^^^^
+
+warning: function `source_policy` is never used
+  --> src\bin\astra-md01-replica\..\..\catalogo\mod.rs:63:4
+   |
+63 | fn source_policy()->R<String>{String::from_utf8(fixed(&path(&format!("{PREP}/servidor-pruebas/control/POLITICA.txt")),POLICY)?).map_...
+   |    ^^^^^^^^^^^^^
+
+warning: function `request` is never used
+  --> src\bin\astra-md01-replica\..\..\catalogo\mod.rs:64:8
+   |
+64 | pub fn request(case:&Value,pages:&[Value],policy:&str)->R<Value>{
+   |        ^^^^^^^
+
+warning: function `preflight` is never used
+  --> src\bin\astra-md01-replica\..\..\catalogo\mod.rs:72:8
+   |
+72 | pub fn preflight()->R<Value>{
+   |        ^^^^^^^^^
+
+warning: function `prepare` is never used
+   --> src\bin\astra-md01-replica\..\..\catalogo\mod.rs:114:8
+    |
+114 | pub fn prepare()->R<()>{
+    |        ^^^^^^^
+
+warning: function `page` is never used
+   --> src\bin\astra-md01-replica\..\..\catalogo\mod.rs:120:8
+    |
+120 | pub fn page(v:&Value)->String{format!("<!doctype html><html lang='es'><meta charset='utf-8'><title>SV · Astra · Catálogo A0</title>...
+    |        ^^^^
+
+warning: function `start_page` is never used
+   --> src\bin\astra-md01-replica\..\..\catalogo\mod.rs:121:8
+    |
+121 | pub fn start_page()->String{"<!doctype html><html lang='es'><meta charset='utf-8'><h1>SV · Astra · Catálogo A0</h1><p>Nueve solicit...
+    |        ^^^^^^^^^^
+
+warning: function `allowed_event` is never used
+   --> src\bin\astra-md01-replica\..\..\catalogo\mod.rs:123:4
+    |
+123 | fn allowed_event(v:&Value)->R<()>{
+    |    ^^^^^^^^^^^^^
+
+warning: function `one` is never used
+   --> src\bin\astra-md01-replica\..\..\catalogo\mod.rs:127:4
+    |
+127 | fn one(token:&str,out:&Path,case:&str)->R<Value>{
+    |    ^^^
+
+warning: function `infer` is never used
+   --> src\bin\astra-md01-replica\..\..\catalogo\mod.rs:181:8
+    |
+181 | pub fn infer(token:&str)->R<Value>{
+    |        ^^^^^
+
+warning: function `text` is never used
+ --> src\bin\astra-md01-replica\..\..\catalogo\contrato.rs:3:4
+  |
+3 | fn text<'a>(v:&'a Value,k:&str)->Result<&'a str,E>{v[k].as_str().filter(|s|!s.trim().is_empty()).ok_or_else(||format!("Campo textual ...
+  |    ^^^^
+
+warning: function `check` is never used
+ --> src\bin\astra-md01-replica\..\..\catalogo\contrato.rs:6:8
+  |
+6 | pub fn check(v:&Value,doc:&str,section:&str,pages:&[String],case:&str,layer:u64)->Result<(),E>{
+  |        ^^^^^
+
+warning: struct `Unico` is never constructed
+ --> src\bin\astra-md01-replica\..\..\catalogo\estricto.rs:5:8
+  |
+5 | struct Unico(Value);
+  |        ^^^^^
+
+warning: function `parse` is never used
+  --> src\bin\astra-md01-replica\..\..\catalogo\estricto.rs:36:8
+   |
+36 | pub fn parse(b: &[u8]) -> Result<Value, serde_json::Error> {
+   |        ^^^^^
+
+warning: constant `PDF` is never used
+ --> src\bin\astra-md01-replica\..\..\..\..\..\gpt-6-astra\anexo-pdf-20261007\instrumento\src\lib.rs:8:11
+  |
+8 | pub const PDF: &str = "21322ed388c999bd0713ba5ec5c7ab34402d4bb4cd6100903aa5ea6d8bf35d9c";
+  |           ^^^
+
+warning: constant `BANCO` is never used
+ --> src\bin\astra-md01-replica\..\..\..\..\..\gpt-6-astra\anexo-pdf-20261007\instrumento\src\lib.rs:9:11
+  |
+9 | pub const BANCO: &str = "256fbc2d86918def88290ef9f28dbd4036b32619d4912245d7c1a9859aa72056";
+  |           ^^^^^
+
+warning: constant `CLAVE` is never used
+  --> src\bin\astra-md01-replica\..\..\..\..\..\gpt-6-astra\anexo-pdf-20261007\instrumento\src\lib.rs:10:11
+   |
+10 | pub const CLAVE: &str = "9e9f31008fcdcf6bb1a05db2286c5bdda88f4cf43d45a7e74dd46757c6dcdbe0";
+   |           ^^^^^
+
+warning: constant `DOC` is never used
+  --> src\bin\astra-md01-replica\..\..\..\..\..\gpt-6-astra\anexo-pdf-20261007\instrumento\src\lib.rs:11:11
+   |
+11 | pub const DOC: &str = "LLS-HCL-2018";
+   |           ^^^
+
+warning: constant `URL` is never used
+  --> src\bin\astra-md01-replica\..\..\..\..\..\gpt-6-astra\anexo-pdf-20261007\instrumento\src\lib.rs:12:11
+   |
+12 | pub const URL: &str = "https://raw.githubusercontent.com/juantoniolloretegea/SVperitus-dataset/488d597fa1999a1fc2eb6538fd610a36046f6...
+   |           ^^^
+
+warning: constant `PAGINAS` is never used
+  --> src\bin\astra-md01-replica\..\..\..\..\..\gpt-6-astra\anexo-pdf-20261007\instrumento\src\lib.rs:13:11
+   |
+13 | pub const PAGINAS: [&[usize]; 9] = [&[1], &[2], &[3], &[4], &[5], &[5,8], &[5], &[6,7], &[7]];
+   |           ^^^^^^^
+
+warning: function `banco` is never used
+  --> src\bin\astra-md01-replica\..\..\..\..\..\gpt-6-astra\anexo-pdf-20261007\instrumento\src\lib.rs:18:8
+   |
+18 | pub fn banco(bytes: &[u8]) -> R<Value> {
+   |        ^^^^^
+
+warning: function `catalogo` is never used
+  --> src\bin\astra-md01-replica\..\..\..\..\..\gpt-6-astra\anexo-pdf-20261007\instrumento\src\lib.rs:33:8
+   |
+33 | pub fn catalogo(v: &Value, extraction: &Value, sources: &Value) -> R<()> {
+   |        ^^^^^^^^
+
+warning: struct `Pagina` is never constructed
+  --> src\bin\astra-md01-replica\..\..\..\..\..\gpt-6-astra\anexo-pdf-20261007\instrumento\src\lib.rs:61:12
+   |
+61 | pub struct Pagina { pub ordinal: usize, pub fragmentos: Vec<Value> }
+   |            ^^^^^^
+
+warning: method `comprobar` is never used
+  --> src\bin\astra-md01-replica\..\..\..\..\..\gpt-6-astra\anexo-pdf-20261007\instrumento\src\lib.rs:63:12
+   |
+62 | impl Pagina {
+   | ----------- method in this implementation
+63 |     pub fn comprobar(&self, section: &Value) -> R<()> {
+   |            ^^^^^^^^^
+
+warning: struct `DireccionPdf` is never constructed
+  --> src\bin\astra-md01-replica\..\..\..\..\..\gpt-6-astra\anexo-pdf-20261007\instrumento\src\lib.rs:87:12
+   |
+87 | pub struct DireccionPdf { banco: Value, catalogo: Value, fase: u8, paginas: Vec<Pagina> }
+   |            ^^^^^^^^^^^^
+
+warning: associated items `nueva`, `recibir`, `admitir`, `solicitud`, and `cotejar_solicitud` are never used
+   --> src\bin\astra-md01-replica\..\..\..\..\..\gpt-6-astra\anexo-pdf-20261007\instrumento\src\lib.rs:89:12
+    |
+ 88 | impl DireccionPdf {
+    | ----------------- associated items in this implementation
+ 89 |     pub fn nueva(bank: &[u8], catalog: Value, extraction: &Value, sources: &Value) -> R<Self> {
+    |            ^^^^^
+...
+ 93 |     pub fn recibir(&mut self, pages: Vec<Pagina>, isolation: &Value, replay: &Value, journal_hash: &str) -> R<()> {
+    |            ^^^^^^^
+...
+101 |     pub fn admitir(&mut self, monitor: &Value, clave_hash: &str) -> R<()> {
+    |            ^^^^^^^
+...
+107 |     pub fn solicitud(&self, n: usize) -> R<Value> {
+    |            ^^^^^^^^^
+...
+117 |     pub fn cotejar_solicitud(&self, n: usize, actual: &Value) -> R<()> {
+    |            ^^^^^^^^^^^^^^^^^
+
+warning: `sv-comprobacion-acceso-openai` (bin "astra-md01-replica") generated 39 warnings (run `cargo fix --bin "astra-md01-replica" -p sv-comprobacion-acceso-openai` to apply 1 suggestion)
+    Finished `dev` profile [unoptimized] target(s) in 2.30s

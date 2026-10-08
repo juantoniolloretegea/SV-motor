@@ -1,0 +1,58 @@
+{
+  "caso": "MD01",
+  "estado_documental": "respuesta_fundada",
+  "etapa": 0,
+  "evidencias": [
+    {
+      "cita_literal_breve": "Este constructor fija la arquitectura de trabajo del manual del lenguaje SVP (extensión `.svp`).",
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmentos": [0],
+      "seccion": "MD-L000003-L000008"
+    },
+    {
+      "cita_literal_breve": "No es todavía el manual final. Es la **máquina de construirlo**.",
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmentos": [0],
+      "seccion": "MD-L000003-L000008"
+    },
+    {
+      "cita_literal_breve": "subordinado al pliego, a la Frontera normativa, a la IR y a la gramática vigente;",
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmentos": [0],
+      "seccion": "MD-L000009-L000017"
+    },
+    {
+      "cita_literal_breve": "Todo tramo del manual deberá declarar:",
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmentos": [0],
+      "seccion": "MD-L000092-L000108"
+    },
+    {
+      "cita_literal_breve": "Un tramo se considerará cerrable cuando reúna, como mínimo:",
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmentos": [0],
+      "seccion": "MD-L000109-L000118"
+    },
+    {
+      "cita_literal_breve": "La presentación de un documento en este libro no acredita una nueva aprobación.",
+      "documento": "MANUAL_PRESENTACION",
+      "fragmentos": [0],
+      "seccion": "MD-L000011-L000014"
+    },
+    {
+      "cita_literal_breve": "Este tramo no implementa bindings, APIs, FFI ni wrappers reales.",
+      "documento": "MANUAL_TRAMO10",
+      "fragmentos": [0],
+      "seccion": "MD-L000022-L000025"
+    }
+  ],
+  "fundamentos_verificables": [
+    "La sección de naturaleza define una arquitectura de trabajo destinada al cierre progresivo por capítulos o tramos, conservando el eje del sistema y evitando la dispersión.",
+    "Las secciones 2 a 5 concretan esa función mediante reglas de subordinación y verificabilidad, organización por tramos nucleares, ficha obligatoria y condiciones mínimas para considerar cerrable un tramo.",
+    "La distinción entre instrumento de construcción y manual terminado es explícita; la presentación añade que la publicación documental no acredita una nueva aprobación.",
+    "El tramo 10 confirma la diferencia entre planificación e implementación: abre el frente documental y de gobierno, pero no implementa los mecanismos de interoperabilidad mencionados."
+  ],
+  "insuficiencias": [],
+  "respuesta": "El constructor cumple una función de arquitectura y organización del trabajo: establece cómo elaborar el manual del lenguaje SVP y avanzar hacia su cierre progresivo por capítulos o tramos, sin perder la coherencia del sistema ni dispersarse en asuntos laterales.\n\nPara ello organiza el contenido en tramos nucleares, exige que sean verificables mediante ejemplos, contraejemplos y relación explícita con la implementación, y los subordina al pliego, la Frontera normativa, la IR y la gramática vigente. Además, prescribe una ficha de doce campos: ID, título, rango, objeto, dependencias, qué fija, qué no fija, ejemplos `.svp`, errores o contraejemplos, relación con IR y documentos públicos, criterio de cierre y estado. Define también condiciones mínimas de cierre: exposición del objeto, correspondencia con la IR o superficie vigente, ejemplos nucleares, delimitación de lo excluido y ausencia de contradicción local suficiente con el pliego o la Frontera normativa.\n\nLa diferencia respecto de un manual final es, por tanto, entre el instrumento que organiza su construcción y el contenido ya desarrollado y cerrado: el constructor establece el plan y las condiciones de elaboración, pero no acredita por sí mismo que los capítulos estén terminados, aprobados o implementados. La edición suministrada es una demostración documental, no un manual terminado; el tramo 10 ilustra ese límite al conservar un documento preparatorio que no implementa bindings, APIs, FFI ni wrappers reales. Estas conclusiones corresponden a la documentación conservada, no a una comprobación del estado actual de otros repositorios.",
+  "revision": "Respuesta provisional de etapa 0. No existen antecedentes ni entregas anteriores. La distinción expuesta se apoya en la definición expresa del constructor y en sus reglas de elaboración y cierre."
+}
