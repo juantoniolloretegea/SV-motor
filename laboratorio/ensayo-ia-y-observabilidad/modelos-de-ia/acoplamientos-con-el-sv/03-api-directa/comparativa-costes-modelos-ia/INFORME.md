@@ -1,89 +1,87 @@
-# Informe comparativo de costes, capacidad y respuesta
+# Informe comparativo de los cuatro proveedores de IA
 
-Versión 1.1 · 08/10/2026 · Cuatro modelos del nodo 03.
+**Edición 1.4 · 8 de octubre de 2026.** Comparación de OpenAI/GPT-6 Astra, xAI/Grok 4.7, Alibaba Cloud/Qwen3.8-Max-0902 y Z.ai/GLM-5.3 mediante los ensayos realizados por el SV. Se presentan calidad documental, tokens, duración y coste, conservando sus unidades y procedencia.
 
-Este informe separa las observaciones del SV, los contadores e importes comunicados por proveedores sobre nuestras ejecuciones, los cálculos derivados, las tarifas comerciales y las evaluaciones de terceros. El [resumen general](readme.md) presenta las observaciones propias y el ranquin externo con su alcance.
+## Clasificación propia: mismas preguntas y misma etapa
 
-## Evidencia propia del SV
+R0 es la respuesta inicial; R1, la autocrítica; R2, la entrega final. Se reproduce la conformidad adjudicada en los ensayos del SV. Los puestos se ordenan por número de respuestas conformes dentro de cada prueba; los empates se conservan. Los errores críticos y las reservas se presentan aparte y prevalecen para la admisión.
 
-Se publican [363 filas de consumo](evidencia-sv/CONSUMOS-POR-REGISTRO.csv), [agregados por modelo](evidencia-sv/CONSUMOS-POR-MODELO.json) y [48 solicitudes CYB16](evidencia-sv/CYB16-POR-SOLICITUD.csv). La [procedencia y reproducción](evidencia-sv/PROCEDENCIA.md) permiten recalcularlos sin consultar documentación privada. La verificación de 363 filas se refiere al índice; la recuperación y cotejo de expedientes individuales cubre las 48 solicitudes CYB16.
+| Prueba común | Modelo | Conformes R0 → R1 → R2 | Incumplimientos críticos R0 → R1 → R2 | Puesto inicial | Puesto final |
+|---|---|---|---|---:|---:|
+| PDQ, 25 preguntas | GPT-6 Astra | 25 → 25 → 25 | 0 → 0 → 0 | **1** | **1, compartido** |
+| PDQ, 25 preguntas | Grok 4.7 | 24 → 25 → 25 | 1 → 0 → 0 | **2** | **1, compartido** |
+| PDQ, primeras 16¹ | GPT-6 Astra | 16 → 16 → 16 | 0 → 0 → 0 | **1** | **1, compartido** |
+| PDQ, primeras 16¹ | Grok 4.7 | 15 → 16 → 16 | 1 → 0 → 0 | **2** | **1, compartido** |
+| PDQ, primeras 16¹ | Qwen3.8-Max-0902 | 13 → 12 → 12 | 2 → 3 → 3 | **3¹** | **3¹** |
+| CYB16, 16 preguntas | GPT-6 Astra | 16 → 16 → 16 | 0 → 0 → 0 | **1** | **1, compartido** |
+| CYB16, 16 preguntas | GLM-5.3 | 11 → 15 → 16 | 5 → 1 → 0 | **2** | **1, compartido** |
 
-El [informe de resultados propios](RESULTADOS-SV.md) resume los resultados, tiempos y alcance por ensayo: Astra MD01 en tres etapas; Grok MD01 en dos; Qwen P13 en tres; GLM CYB16 en 48 solicitudes. No son cuatro exámenes de idéntica composición.
+¹ El tramo PDQ de dieciséis preguntas extrae P01–P16 de Astra y Grok y utiliza el examen efectivo de Qwen. Es un subconjunto de los ensayos anteriores, no otras ejecuciones. **La posición de Qwen es de conformidad contractual y está bajo reserva metodológica:** sus incumplimientos incluyen marcación literal y la interpretación de P13; no equivalen a cuatro falsedades médicas ni acreditan inferioridad clínica. Su réplica posterior de P13 no sustituye el vector histórico.
 
-| Modelo en MD01-R0 | Primer evento de texto registrado |
-|---|---:|
-| GPT-6 Astra | 5,579 s |
-| Grok 4.7 | 64,239 s |
+**Lectura del ranquin:** Astra obtiene la mejor respuesta inicial en las pruebas comunes disponibles. Grok iguala a Astra en la entrega final del examen PDQ; GLM lo iguala en la entrega final de CYB16. Qwen conserva el dictamen contractual desfavorable con la reserva indicada. No se construye un puesto global entre los cuatro mezclando pruebas de temas diferentes.
 
-Ambas respuestas R0 son correctas y completas. Hay una ejecución por modelo, solicitudes adaptadas y un origen del reloj diferente: Grok incluye preparación local adicional. El primer evento puede llevar texto vacío. Se publican ambas cifras sin puestos: **no constituyen una comparación controlada de la latencia intrínseca**. El [cotejo](COTEJO-MD01.md) explicita estas diferencias y publica las fuentes.
+Fuentes de adjudicación: [Astra PDQ](https://github.com/juantoniolloretegea/SV-motor/blob/3370da26c1d19ebab9e742c4a0f085910c5b1bd4/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/openai/gpt-6-astra/examen25-20261007/resultado/INFORME.md), [Grok PDQ](https://github.com/juantoniolloretegea/SV-motor/blob/3370da26c1d19ebab9e742c4a0f085910c5b1bd4/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/xai/grok-4.7/examen25-20261008/INFORME.md), [Qwen PDQ](https://github.com/juantoniolloretegea/SV-motor/blob/3370da26c1d19ebab9e742c4a0f085910c5b1bd4/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/qwen/qwen3.8-max-0902/examen25-20261008/INFORME.md), [Astra CYB16](https://github.com/juantoniolloretegea/SV-motor/blob/3370da26c1d19ebab9e742c4a0f085910c5b1bd4/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/openai/gpt-6-astra/cyb16-20261008/INFORME.md) y [GLM CYB16](https://github.com/juantoniolloretegea/SV-motor/blob/3370da26c1d19ebab9e742c4a0f085910c5b1bd4/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/zai/glm-5.3/cyb16-20261008/INFORME.md). [Vectores y clasificación descargables](RANQUIN-CALIDAD-SV.json).
 
-**No hay un ranquin económico propio conjunto de cuatro modelos acreditado.** Se conocen 3,59913 USD comunicados en 78 registros de Grok, con conciliación parcial, y 2,35145108 USD estimados para CYB16 de GLM; son trabajos distintos. Los importes no comunicados de Astra y Qwen no se convierten en cero ni se rellenan con una tarifa ajena a su modalidad de acceso.
+## Tokens, tiempos e importes de los exámenes
 
-## Referencias comerciales y evaluaciones externas
+Se contabilizan las tres etapas y todos los intentos científicos identificados. Entrada y salida son contadores comunicados por el proveedor. Los tiempos son mediciones del cliente del SV.
 
-Los apartados siguientes conservan el corte externo de la edición 1.0. No sustituyen las ejecuciones propias ni afirman una actualización de las páginas del proveedor.
+| Proveedor · modelo | Examen | Entregas / intentos | Entrada | Salida | Total conocido | Suma de operaciones² | Importe del examen, USD |
+|---|---|---:|---:|---:|---:|---:|---|
+| OpenAI · GPT-6 Astra | PDQ25 | 75 / 77 | 807.043 | 35.655 | **842.698** | **1.804,348 s** | No comunicado |
+| xAI · Grok 4.7 | PDQ25 | 75 / 75 | 1.030.606 | 243.081 | **1.273.687** | **3.712,666 s** | **3,386642**, comunicado |
+| Alibaba Cloud · Qwen3.8-Max-0902 | PDQ16 | 48 / 48 | 608.113 | 79.805 | **687.918** | **2.140,166 s** | No comunicado |
+| OpenAI · GPT-6 Astra | CYB16 | 48 / 49 | 1.056.285 | 83.315 | **1.139.600** | **2.595,289 s** | No comunicado |
+| Z.ai · GLM-5.3 | CYB16 | 48 / 48 | 1.226.311 | 157.944 | **1.384.255** | **2.392,304 s** | **2,35145108**, estimado |
 
-## 1. Precio de entrada, salida y caché
+² Suma de la duración observada de las operaciones, incluidos los intentos incompletos. No es tiempo de calendario ni velocidad interna de generación. Para Astra PDQ se usa `duracion_observada_ms`, más las dos interrupciones; para los otros ensayos, `duracion_operacion_ms`. La preparación y cierre incluidos difieren entre instrumentos: el orden temporal es descriptivo de estas ejecuciones, no una comparación controlada de latencia.
 
-USD por millón de tokens nativos, servicio ordinario de texto en tiempo real y tramo corto de contexto. No se incluyen impuestos, promociones, procesamiento por lotes, herramientas o escritura y conservación explícitas de caché.
+Los dos intentos incompletos de Astra PDQ y el de Astra CYB16 carecen de contadores completos: el total conocido no incorpora una estimación de ellos. Caché y razonamiento ya están incluidos en entrada y salida. **No comunicado significa desconocido, no cero.**
 
-| Proveedor / modelo | Entrada ordinaria | Lectura de caché | Salida | Fuente oficial |
-|---|---:|---:|---:|---|
-| Z.ai / GLM-5.3 | 1,40 | 0,26 | 4,40 | [Z.ai](https://docs.z.ai/guides/overview/pricing) |
-| xAI / Grok 4.7 | 2,00 | 0,50 | 6,00 | [xAI](https://docs.x.ai/developers/models/grok-4.7) |
-| Alibaba Cloud / Qwen3.8-Max-0902 | 2,00 | Tarifa específica pendiente de confirmar | 6,00 | [Alibaba Cloud](https://www.alibabacloud.com/help/en/model-studio/model-pricing) |
-| OpenAI / GPT-6 Astra | 10,00 | 1,00 | 50,00 | [OpenAI](https://developers.openai.com/api/docs/models/gpt-6-astra) |
+En PDQ25, Astra registró menor duración acumulada que Grok. En CYB16, GLM registró menor duración acumulada que Astra: 2.392,304 frente a 2.595,289 segundos, incluyendo la interrupción de Astra. Sobre las 48 entregas completas, las medianas inferiores fueron 41,468 s para GLM y 48,682 s para Astra; el percentil 95 fue 112,952 y 77,727 s, respectivamente. Una mediana menor no implica una cola de demoras mejor.
 
-La entrada desde caché es un subconjunto de la entrada; el razonamiento facturable incluido en la salida no se suma otra vez. Las tarifas de contexto extenso y otras modalidades requieren un cálculo distinto.
+El importe de Grok procede de los costes de sus 75 solicitudes científicas; no se confunde con los 3,59913 USD de todos sus registros. La estimación de GLM aplica las tarifas documentadas del 08/10/2026 a las 48 solicitudes. No se dispone de un gasto monetario comparable de los cuatro para la misma prueba, por lo que no se atribuye un ganador económico experimental conjunto.
 
-### Precio ponderado con una mezcla idéntica
+[Detalle de 297 intentos por modelo, prueba, pregunta y etapa](evidencia-sv/ENSAYOS-POR-SOLICITUD.json) · [Resumen reproducible](evidencia-sv/ENSAYOS-RESUMEN.json). Cada fila conserva la fuente científica y los datos desconocidos.
 
-La definición actual de precio ponderado de Artificial Analysis utiliza **7 partes de entrada desde caché, 2 de entrada ordinaria y 1 de salida**. Con precios por millón, `P = (7 × Pc + 2 × Pi + Po) / 10`. Es una mezcla convencional para comparar tarifas; no afirma que una carga real consiga un 70 % de tokens servidos desde caché. [Definición](https://artificialanalysis.ai/methodology).
+## Clasificación comercial: igual volumen de tokens
 
-| Orden por precio ponderado | Modelo | USD por millón combinado, referencia AA |
-|---:|---|---:|
-| 1 | GLM-5.3 | 0,902 |
-| 2 | Qwen3.8-Max-0902 | 1,175 |
-| 3 | Grok 4.7 | 1,350 |
-| 4 | GPT-6 Astra | 7,700 |
+Este cálculo aplica las tarifas documentadas el 08/10/2026 a **1.000.000 de tokens de entrada ordinaria y 100.000 de salida, sin caché**. Es una referencia tarifaria calculada; no un gasto medido ni un encargo resuelto por los modelos.
 
-Qwen utiliza aquí **0,25 USD/M de lectura de caché publicado por Artificial Analysis**, sin confirmación en la fuente tarifaria oficial para este modelo. Alibaba excluye este modelo de su regla genérica de descuento y remite al precio específico; esa reserva continúa abierta. Por ello, el cálculo con tarifa oficial de caché queda `null` para Qwen en el fichero de resultados. [Comparación externa](https://artificialanalysis.ai/models/comparisons/gpt-6-astra-vs-qwen3-8-max) · [Condiciones oficiales de caché](https://www.alibabacloud.com/help/en/model-studio/context-cache).
+| Puesto por menor precio | Proveedor · modelo | Entrada, USD/M | Salida, USD/M | Coste del volumen convencional |
+|---:|---|---:|---:|---:|
+| **1** | Z.ai · GLM-5.3 | 1,40 | 4,40 | **1,84 USD** |
+| **2, compartido** | xAI · Grok 4.7 | 2,00 | 6,00 | **2,60 USD** |
+| **2, compartido** | Alibaba Cloud · Qwen3.8-Max-0902 | 2,00 | 6,00 | **2,60 USD** |
+| **4** | OpenAI · GPT-6 Astra | 10,00 | 50,00 | **15,00 USD** |
 
-El ejemplo anterior de 1.000.000 tokens de entrada ordinaria y 100.000 de salida sigue dando 1,84 USD para GLM; 2,60 para Grok y Qwen; 15,00 para Astra. Es otro reparto de volumen, sin caché, y no se confunde con la mezcla 7:2:1.
+Fórmula: entrada × precio de entrada / 1.000.000 + salida × precio de salida / 1.000.000. Los segmentadores difieren: un volumen idéntico de tokens no garantiza idéntico contenido. Se conserva el supuesto de servicio de texto ordinario y contexto corto, sin impuestos, herramientas ni otras modalidades.
 
-## 2. Por qué el coste por tarea cambia el orden
+Fuentes tarifarias: [Z.ai](https://docs.z.ai/guides/overview/pricing), [xAI](https://docs.x.ai/developers/models/grok-4.7), [Alibaba Cloud](https://www.alibabacloud.com/help/en/model-studio/model-pricing) y [OpenAI](https://developers.openai.com/api/docs/models/gpt-6-astra). Son las referencias fechadas del informe; no se presentan como nuevas lecturas en tiempo real.
 
-Artificial Analysis publica costes medios ponderados de 2,01 USD para GLM, 3,26 para Astra, 3,74 para Grok y 5,41 para Qwen en su índice v4.3.2. Este es exclusivamente el orden económico externo de esta edición. Su cálculo incorpora el consumo que la fuente atribuye al conjunto de evaluaciones y sus precios; no se obtiene aplicando una cantidad idéntica de tokens a todos. [GLM/Grok](https://artificialanalysis.ai/models/comparisons/grok-4-7-vs-glm-5-3) · [Astra/Qwen](https://artificialanalysis.ai/models/comparisons/gpt-6-astra-vs-qwen3-8-max).
+## Referencia externa: Artificial Analysis
 
-La fuente también publica magnitudes aproximadas de salida por tarea: Astra 27.000, GLM 71.000, Grok 81.000 y Qwen 108.000 tokens. El razonamiento comunicado forma parte de esas salidas. No se puede reconstruir el coste completo multiplicando sólo estas cifras redondeadas por la tarifa de salida: faltan entrada, caché y ponderaciones. El precio de una unidad y la cantidad consumida explican por qué pueden invertirse posiciones.
+Estos resultados proceden de **Artificial Analysis Intelligence Index v4.3.2**, corte documental del 08/10/2026. Se mantienen separados de las mediciones del SV.
 
-**Una tarea evaluada puede haberse resuelto incorrectamente.** Por tanto, estas cantidades no son «dólares por respuesta correcta». Tampoco se divide el coste por 0,53, 0,46 o 0,45: el Intelligence Index es un índice compuesto, no esas tasas de acierto.
+| Puesto económico externo | Modelo | Configuración de la fuente | USD por tarea evaluada | Índice AA |
+|---:|---|---|---:|---:|
+| 1 | GLM-5.3 | max | 2,01 | 45 |
+| 2 | GPT-6 Astra | max | 3,26 | 53 |
+| 3 | Grok 4.7 | xhigh | 3,74 | 46 |
+| 4 | Qwen3.8-Max-0902 | 0902 con razonamiento | 5,41 | 45 |
 
-## 3. Capacidad y tiempo de respuesta publicados por Artificial Analysis
+Es coste por tarea evaluada, no por respuesta correcta. El índice AA no es una tasa de acierto ni una puntuación del SV. Las configuraciones externas no equivalen a las de nuestros ensayos.
 
-Se conserva la entrada principal de cada ficha: Astra `max`, Grok `xhigh`, GLM `max` y Qwen 0902 con razonamiento, sin etiqueta de esfuerzo en la ficha. El protocolo externo es común; las configuraciones y recursos de cómputo no son idénticos. Los nombres de los ajustes no prueban equivalencia con los usados en un examen SV.
+Fuentes: [GLM](https://artificialanalysis.ai/models/glm-5-3), [Astra](https://artificialanalysis.ai/models/gpt-6-astra), [Grok](https://artificialanalysis.ai/models/grok-4-7), [Qwen](https://artificialanalysis.ai/models/qwen3-8-max) y [método](https://artificialanalysis.ai/methodology). [Datos externos conservados](DATOS.json).
 
-| Modelo | Índice AA v4.3.2 | Generación, tokens/s¹ | Primer token, s | Primera respuesta, s |
-|---|---:|---:|---:|---:|
-| GLM-5.3 | 45 | 82,5 | 2,74 | 26,98 |
-| GPT-6 Astra | 53 | 44,5 | 410,56 | 410,56 |
-| Grok 4.7 | 46 | 68,1 | 91,39 | 91,39 |
-| Qwen3.8-Max-0902 | 45 | 35,4 | 2,90 | 59,38 |
+![Coste e índice de Artificial Analysis, referencia externa](COSTE-Y-CAPACIDAD.svg)
 
-¹ Artificial Analysis normaliza la velocidad con un segmentador común; sus precios y costes utilizan los tokens propios comunicados por cada API. La velocidad se mide durante la generación y no incluye la espera inicial. El primer token puede ser de razonamiento; el tiempo hasta la primera respuesta es más pertinente para interpretar lo que espera una persona. Estas mediciones de servicio proceden de un conjunto distinto del índice de capacidad. [Método de rendimiento](https://artificialanalysis.ai/methodology/performance-benchmarking).
+## Alcance de las conclusiones
 
-Las lecturas de fichas abiertas utilizadas son las fechadas en [DATOS.json](DATOS.json); durante la consulta se observaron fragmentos de buscador con otras cifras de velocidad y demora. No se mezclan con este corte ni se presenta una garantía de latencia. En particular, la demora externa publicada para Astra `max` no predice la demora de un cliente SV con otra configuración.
+Los resultados describen las ejecuciones conservadas. La evaluación documental es exterior al candidato y asistida por IA; la recepción científica independiente continúa pendiente. No hay repeticiones suficientes para inferir estabilidad estadística o superioridad general. El coste y la duración no compensan incumplimientos críticos.
 
-Por velocidad de generación: GLM, Grok, Astra, Qwen. Por menor demora hasta la primera respuesta: GLM, Qwen, Grok, Astra. Por índice de capacidad: Astra, Grok, GLM y Qwen empatados a la precisión publicada. Ninguno de estos órdenes sustituye al otro.
+La comparación PDQ16 conserva la identidad de banco, catálogo, fuente y suministros de P01–P16; expresa por separado la reserva de aplicación formal en Qwen. CYB16 conserva identidad de preguntas, corpus y criterios entre Astra y GLM. MD01 y las réplicas diagnósticas siguen disponibles como antecedentes en [resultados complementarios](RESULTADOS-SV.md).
 
-## 4. Interpretación para el laboratorio
-
-La documentación de mercado permite una preferencia económica por GLM y una preferencia por el índice de capacidad de Astra en las configuraciones observadas. Para relacionar ambas, el gráfico muestra directamente coste y capacidad; no crea una puntuación combinada con pesos arbitrarios. Un índice alto tampoco garantiza fidelidad documental, seguridad o idoneidad médica en un caso concreto.
-
-La decisión de uso del SV requiere primero la conformidad con el contrato pertinente, sus parámetros críticos, privacidad, licencia y límites operativos. Después pueden compararse coste y tiempo entre candidatos admisibles. **Un error crítico no se compensa con una ventaja económica.**
-
-El importe atribuible de Astra permanece no determinado. Las tarifas publicadas no se presentan como cargo de las ejecuciones.
-
-La comparación propia comienza por cotejar los ensayos conservados. MD01 permite publicar las observaciones con las reservas expuestas arriba; no permite un coste por resultado conforme común a los cuatro modelos. Una ampliación posterior requeriría condiciones y relojes homogéneos, cobertura de todos los intentos y costes atribuibles. No se prescribe repetir pruebas existentes ni se autoriza nuevo consumo con esta publicación. El [método](METODO.md) conserva estas condiciones.
+[Resumen y clasificaciones](readme.md) · [Método](METODO.md) · [Datos por solicitud y reproducción](evidencia-sv/PROCEDENCIA.md).
 
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).

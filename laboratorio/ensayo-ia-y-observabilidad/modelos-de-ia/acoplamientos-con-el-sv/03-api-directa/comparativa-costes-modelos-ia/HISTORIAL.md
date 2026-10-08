@@ -1,4 +1,8 @@
-# Historial de revisiones
+# Historial de la comparación
+
+## 1.4 · 08/10/2026
+
+Comparación propia de PDQ25, subconjunto PDQ16 y CYB16. Se incorporan los cuatro proveedores, los 297 intentos científicos identificados, la actualización a 412 registros de consumo y el coste comunicado del examen Grok separado de otros ensayos. Se conservan los dictámenes originales, reservas metodológicas, réplicas y referencias externas. Las clasificaciones distinguen prueba, etapa y naturaleza del coste.
 
 ## 1.3 · 8 de octubre de 2026
 

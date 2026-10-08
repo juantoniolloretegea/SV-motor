@@ -29,7 +29,7 @@ fn main(){
  let args:Vec<_>=env::args().collect();
  let root=Path::new(args.get(1).map(String::as_str).unwrap_or("."));
  let rows=table(&root.join("CONSUMOS-POR-REGISTRO.csv"));
- assert_eq!(rows.len(),363);
+ assert_eq!(rows.len(),412);
  let mut ids=BTreeSet::new();
  let mut models:BTreeMap<String,Vec<&Row>>=BTreeMap::new();
  for r in &rows{
@@ -54,7 +54,7 @@ fn main(){
    "registros_con_tokens_completos":complete,"registros_sin_desglose_completo":rs.len()-complete,
    "entrada_conocida":sum("entrada_tokens"),"salida_conocida":sum("salida_tokens"),"total_conocido":sum("total_tokens"),
    "registros_con_importe_comunicado":charges.len(),"suma_importes_comunicados_usd":money_sum,
-   "alcance_importes":"Suma parcial de importes del proveedor; no factura ni gasto completo de la cuenta."}));
+   "alcance_importes":"Suma de importes comunicados; no equivale a factura."}));
  }
  write(&root.join("CONSUMOS-POR-MODELO.json"),&json!({"edicion":"2026-10-08","naturaleza":"Agregación de registros de ensayos heterogéneos; no clasificación de eficiencia.","registros":rows.len(),"modelos":totals}));
  let cyb=table(&root.join("CYB16-POR-SOLICITUD.csv"));
@@ -95,11 +95,11 @@ fn main(){
  "tarifas_usd_por_millon":{"entrada_sin_cache":"1.40","lectura_cache":"0.26","salida":"4.40"},
  "fecha_tarifas":"2026-10-08","fuente_tarifas":"https://docs.z.ai/guides/overview/pricing","etapas":per_stage,
  "alcance":"Coste estimado de las 48 solicitudes, no coste por tarea de una evaluación externa ni factura."}));
- write(&root.join("VERIFICACION.json"),&json!({"resultado":"CONFORME","registros_publicos":363,
+ write(&root.join("VERIFICACION.json"),&json!({"resultado":"CONFORME","registros_publicos":412,
  "detalle_cyb16":48,"pares_pregunta_etapa":48,"sumas_tokens":"CONFORME","aritmetica_monetaria":"enteros en unidades de 10^-10 USD",
  "desconocidos":"conservados; vacios CSV y null JSON","alcance":"Reproducción de las tablas públicas; no audita los sistemas del proveedor, facturas ni resultados de calidad.",
  "entradas":[{"archivo":"CONSUMOS-POR-REGISTRO.csv","sha256":sha(&root.join("CONSUMOS-POR-REGISTRO.csv"))},
  {"archivo":"CYB16-POR-SOLICITUD.csv","sha256":sha(&root.join("CYB16-POR-SOLICITUD.csv"))}]}));
- println!("CONFORME: 363 registros; 48 solicitudes CYB16; estimacion {} USD.",money(cost));
+ println!("CONFORME: 412 registros; 48 solicitudes CYB16; estimacion {} USD.",money(cost));
 }
 

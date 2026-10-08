@@ -1,8 +1,19 @@
-# Resultados documentados de las ejecuciones del SV
+# Resultados por ensayo y consumo observado
 
-**Versión 1.1 · 08/10/2026.** Se presentan cuatro ensayos conservados. Sus preguntas, etapas y cobertura son diferentes; esta tabla no constituye una competición común.
+**Edición 1.4 · 08/10/2026.** Los exámenes completos y los subconjuntos comparables se presentan en el [informe](INFORME.md). Esta página conserva las réplicas diagnósticas y el inventario de consumo, sin mezclar sus resultados.
 
-## Resultados científicos y volumen observado
+## Inventario de los cuatro modelos
+
+| Modelo | Registros | Con contadores completos | Entrada conocida | Salida conocida | Total conocido |
+|---|---:|---:|---:|---:|---:|
+| gpt-6-astra | 205 | 202 | 2.630.861 | 187.199 | **2.818.060** |
+| grok-4.7 | 79 | 78 | 1.078.935 | 263.250 | **1.342.185** |
+| qwen3.8-max-0902 | 52 | 52 | 672.829 | 90.540 | **763.369** |
+| glm-5.3 | 76 | 76 | 1.868.420 | 220.432 | **2.088.852** |
+
+**412 registros y 7.012.466 tokens conocidos.** Cuatro registros carecen de contadores completos. Son pruebas heterogéneas; el total no establece eficiencia ni coste por tarea. Los cinco exámenes de la comparativa ya están incluidos y no se suman de nuevo. [Filas](evidencia-sv/CONSUMOS-POR-REGISTRO.csv) · [Agregados](evidencia-sv/CONSUMOS-POR-MODELO.json).
+
+## Réplicas y observaciones complementarias
 
 | Modelo y fuente pública fija | Ensayo y cobertura | Resultado documentado | Tokens de entrada / salida / total |
 |---|---|---|---|
@@ -31,32 +42,11 @@ Las duraciones totales incluyen operaciones del instrumento. Los intervalos de m
 
 La pregunta y el corpus coinciden. Las solicitudes completas y el punto inicial del reloj no son idénticos. Se conservan ambas cifras sin asignar puestos: **no constituyen una comparación controlada de latencia intrínseca**. Una sola ejecución por candidato no permite afirmar significación estadística. Véanse [cotejo](COTEJO-MD01.md), [datos](DATOS-SV.json) y [tabla reproducible](OBSERVACIONES-MD01.json).
 
-## Evidencia económica publicable
 
-| Conjunto | Dato disponible | Naturaleza y límite |
-|---|---|---|
-| Grok, 78 de sus 79 registros publicados | 3,5991300000 USD | Importe comunicado; conciliación parcial. No equivale a factura ni sólo a MD01. |
-| GLM, CYB16: 48 solicitudes | 2,35145108 USD | Estimación mediante contadores y tarifas; liquidación individual desconocida. |
-| Astra, ensayos publicados | Importe atribuible no comunicado | No se dispone de importe atribuible; no se sustituye por una tarifa hipotética. |
-| Qwen, ensayos publicados | Importe atribuible no comunicado | La ausencia de importe no acredita coste cero. |
+## Consumo monetario
 
-El cálculo de CYB16 resta de la entrada total los tokens de caché antes de aplicar el precio ordinario; la caché se valora separadamente. El razonamiento está incluido en la salida y no se suma por segunda vez. [Desglose y fórmula reproducible](evidencia-sv/PROCEDENCIA.md).
+Grok comunica 3,5991300000 USD en 78 registros: el subconjunto de 75 solicitudes del examen PDQ25 suma 3,3866420000 USD. GLM CYB16 tiene una estimación de 2,35145108 USD. Los importes no comunicados de Astra y Qwen siguen desconocidos. Los exámenes, réplicas y comprobaciones no se ordenan conjuntamente como una única tarea.
 
-## Inventario de contadores por modelo
-
-| Modelo | Registros publicados | Con contadores completos | Entrada conocida | Salida conocida | Total conocido |
-|---|---:|---:|---:|---:|---:|
-| GPT-6 Astra | 156 | 154 | 1.574.576 | 103.884 | 1.678.460 |
-| Grok 4.7 | 79 | 78 | 1.078.935 | 263.250 | 1.342.185 |
-| Qwen3.8-Max-0902 | 52 | 52 | 672.829 | 90.540 | 763.369 |
-| GLM-5.3 | 76 | 76 | 1.868.420 | 220.432 | 2.088.852 |
-
-Los cuatro ensayos anteriores están contenidos en este inventario: **no se suman nuevamente**. No se interpreta el número de registros como tareas equivalentes, ni el volumen agregado como eficiencia. Las diferencias de segmentación impiden tratar tokens de modelos distintos como unidades lingüísticas uniformes.
-
-Se cotejaron las 363 filas contra el índice de origen. Para CYB16 también se recuperaron y cotejaron los 48 registros individuales. No se atribuye a esa comprobación el alcance de una auditoría integral de los 363 expedientes. El lector dispone de [todas las filas depuradas](evidencia-sv/CONSUMOS-POR-REGISTRO.csv), [agregados](evidencia-sv/CONSUMOS-POR-MODELO.json), [CYB16 por solicitud](evidencia-sv/CYB16-POR-SOLICITUD.csv) y [comprobador Rust](evidencia-sv/calculo-consumos-rust/src/main.rs).
-
-**Conclusión de alcance:** existen mediciones y resultados propios del SV. Su evidencia permite la exposición de las observaciones MD01-R0 y los cálculos publicados; todavía no permite un ranquin monetario conjunto de cuatro candidatos bajo un mismo encargo.
-
-[Comparación general](readme.md) · [Método](METODO.md).
+[Volver a la comparación](readme.md).
 
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).

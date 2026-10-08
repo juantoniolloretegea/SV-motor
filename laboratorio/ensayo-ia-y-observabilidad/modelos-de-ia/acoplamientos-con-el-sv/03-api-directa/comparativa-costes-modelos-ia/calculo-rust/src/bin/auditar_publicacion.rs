@@ -7,7 +7,7 @@ use sha2::{Digest, Sha256};
 use std::{collections::BTreeSet, env, fs, io::Read, path::Path};
 
 type R<T> = Result<T, String>;
-const VERSION: &str = "1.3.0";
+const VERSION: &str = "1.4";
 const FECHA: &str = "2026-10-08";
 const LICENCIA: &str = "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).";
 const MANIFIESTO: &str = "MANIFIESTO.json";

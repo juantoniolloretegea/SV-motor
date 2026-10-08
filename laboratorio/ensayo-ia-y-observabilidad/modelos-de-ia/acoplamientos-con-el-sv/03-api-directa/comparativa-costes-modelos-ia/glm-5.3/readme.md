@@ -1,12 +1,16 @@
 # Z.ai · GLM-5.3
 
-Ficha justificativa · Versión 1.1 · 08/10/2026.
+**Edición 1.4 · 08/10/2026.**
 
-## Evidencia de las ejecuciones del SV
+## Resultados medidos por el SV
 
-CYB16 conserva 48 solicitudes y 1.384.255 tokens. R2 obtiene 16 respuestas correctas y cero errores críticos dentro de ese contrato; la recepción científica independiente seguía pendiente en el corte. El coste calculado es 2,35145108 USD estimados, sin liquidación individual acreditada.
+CYB16: 11/16 conformes en R0, 15/16 en R1 y 16/16 en R2; los incumplimientos críticos pasan de 5 a 1 y a 0. Segundo puesto inicial y empate final con Astra.
 
-[Informe científico público fijado](https://github.com/juantoniolloretegea/SV-motor/blob/76dea7a3b6279e3bd3da62680059c860776a13fa/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/zai/glm-5.3/cyb16-20261008/INFORME.md) · [Resultados propios](../RESULTADOS-SV.md) · [Datos de consumo](../evidencia-sv/CONSUMOS-POR-REGISTRO.csv) · [Cotejo MD01](../COTEJO-MD01.md).
+1.384.255 tokens; 48 entregas en 48 solicitudes; 2.392,304 s de operaciones observadas. **Coste estimado: 2,35145108 USD**, mediante contadores y tarifas documentadas; importe liquidado no comunicado.
+
+[Fuente CYB16](https://github.com/juantoniolloretegea/SV-motor/blob/3370da26c1d19ebab9e742c4a0f085910c5b1bd4/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/zai/glm-5.3/cyb16-20261008/INFORME.md).
+
+La duración corresponde a operaciones del cliente; sus límites instrumentales se explican en el [método común](../METODO.md). La recepción científica independiente permanece pendiente. Los puestos describen las pruebas indicadas.
 
 ## Posición en la evaluación externa de Artificial Analysis
 
@@ -24,8 +28,7 @@ CYB16 conserva 48 solicitudes y 1.384.255 tokens. R2 obtiene 16 respuestas corre
 
 [Fuente externa del modelo](https://artificialanalysis.ai/models/glm-5-3) · [Tarifa del proveedor](https://docs.z.ai/guides/overview/pricing). Las cifras externas no son mediciones del SV, una factura, una probabilidad de acierto ni una garantía de servicio. Caché y razonamiento se contabilizan según su condición de subconjuntos, sin sumarlos otra vez a la entrada o salida total.
 
-El [expediente del modelo en el nodo 03](../../zai/glm-5.3) conserva sus propias pruebas y límites. El ranquin no los sustituye ni los recalifica. Para admitir un uso, el cumplimiento de parámetros críticos prevalece sobre la economía.
 
-[Volver al ranquin](../readme.md) · [Método común](../METODO.md) · [Datos y reservas](../DATOS.json).
+[Comparación completa de los cuatro proveedores](../INFORME.md) · [Datos por solicitud](../evidencia-sv/ENSAYOS-POR-SOLICITUD.json) · [Resultados complementarios](../RESULTADOS-SV.md).
 
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
