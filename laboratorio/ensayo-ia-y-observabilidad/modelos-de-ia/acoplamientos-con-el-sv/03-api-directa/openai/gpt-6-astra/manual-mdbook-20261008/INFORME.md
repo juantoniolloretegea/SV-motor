@@ -1,3 +1,5 @@
+> **Adenda metodológica posterior (08/10/2026):** el dictamen histórico que sigue queda bajo reserva metodológica. Se ha confirmado una representación incompleta de los encargos anteriores y una delimitación insuficiente de su alcance temporal. La materia crítica de MD01 fue respondida correctamente; permanece la afirmación inexacta sobre etapas. No se sustituye el resultado por Apto ni se alteran los originales. Véase la [revisión y comprobación Rust](revision-metodologica-20261008/REVISION-METODOLOGICA.md).
+
 # Ensayo documental del manual SVP · GPT-6 Astra · nodo 03
 
 Edición 1.0.0 · 08/10/2026 · MD01–MD09, tres etapas universales.
