@@ -1,0 +1,100 @@
+{
+  "alerta": {
+    "caso": "MD09",
+    "cita_cotejada_en_rust": true,
+    "motivo": "La ausencia de implementación está declarada en la fuente y es el objeto de la pregunta. El 0 no acredita que el SV carezca globalmente de esas capacidades ni un estado actual externo.",
+    "pasaje": {
+      "documento": "MANUAL_TRAMO10",
+      "fragmento": "Este tramo no implementa bindings, APIs, FFI ni wrappers reales.",
+      "origen": "cotejo adicional del evaluador",
+      "seccion": "MD-L000022-L000025"
+    },
+    "posicion": 9
+  },
+  "alerta_limite": true,
+  "auditoria_sha256": "c6bc25e0b9824b7f92667011acb69ccf49748ee72de6815206b4c7b227aac44d",
+  "caso": "MD09",
+  "critico": true,
+  "estado_documental_candidato": "respuesta_fundada",
+  "etapa": 0,
+  "final_sha256": "bb0f321f780d175a0f9033a8043b224419846abb023e8541e4275a4551e47c27",
+  "formal_conforme": true,
+  "fundamento_sustantivo": "Distingue correctamente proyecto documental e implementación, limitado al tramo y revisión suministrados. Observación accesoria: llama subjuntivo a deberá fijar; es futuro de indicativo. Esa imprecisión gramatical no cambia el núcleo solicitado.",
+  "medicion": {
+    "duracion_operacion_ms": 23695,
+    "telemetria": {
+      "bytes": 691529,
+      "fallos_medicion": 0,
+      "integridad": "conforme",
+      "intervalo_maximo_ms": 286,
+      "intervalo_objetivo_ms": 250,
+      "muestras": 92,
+      "plataforma_recibida": false,
+      "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+      "registros": 1859,
+      "sha256": "617cee5c9bd68d9caea3de54d0a6a246ec8bd6c79d5e14d92c8992bfd097c2db"
+    },
+    "uso": {
+      "cached_tokens": 1216,
+      "coste_liquidado_usd": null,
+      "input_tokens": 20210,
+      "output_tokens": 1640,
+      "reasoning_tokens": 504,
+      "total_tokens": 21850
+    }
+  },
+  "naturaleza_defecto": null,
+  "pasajes_contrastados": [
+    {
+      "documento": "MANUAL_TRAMO10",
+      "fragmento": "Este tramo fija la estructura mínima de trabajo para documentar cómo el lenguaje SV podrá relacionarse con otros lenguajes de programación sin degradar su semántica propia.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000003-L000006"
+    },
+    {
+      "documento": "MANUAL_TRAMO10",
+      "fragmento": "- tipos de compatibilidad admitidos;\n- prioridad por lenguajes anfitriones;\n- garantías semánticas mínimas;\n- criterio de activación por lenguaje;\n- y límites de fase.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000014-L000021"
+    },
+    {
+      "documento": "MANUAL_TRAMO10",
+      "fragmento": "Este tramo no implementa bindings, APIs, FFI ni wrappers reales. Solo abre el frente documental y de gobierno.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000022-L000025"
+    },
+    {
+      "documento": "MANUAL_TRAMO10",
+      "fragmento": "## 5. Estado\n\nPendiente de desarrollo.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000026-L000028"
+    },
+    {
+      "documento": "MANUAL_TRAMO10",
+      "fragmento": "- Pliego de condiciones del Sistema Vectorial SV\n- Frontera normativa del lenguaje SV\n- IR canónica v0.2\n- Política y protocolo de compatibilidad interlenguajes del Lenguaje SV",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000007-L000013"
+    },
+    {
+      "documento": "MANUAL_TRAMO10",
+      "fragmento": "Este tramo no implementa bindings, APIs, FFI ni wrappers reales.",
+      "origen": "cotejo adicional del evaluador",
+      "seccion": "MD-L000022-L000025"
+    }
+  ],
+  "recepcion_independiente": "pendiente",
+  "respuesta_original": "\n{\n  \"caso\": \"MD09\",\n  \"estado_documental\": \"respuesta_fundada\",\n  \"etapa\": 0,\n  \"evidencias\": [\n    {\n      \"cita_literal_breve\": \"Este tramo fija la estructura mínima de trabajo para documentar cómo el lenguaje SV podrá relacionarse con otros lenguajes de programación sin degradar su semántica propia.\",\n      \"documento\": \"MANUAL_TRAMO10\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000003-L000006\"\n    },\n    {\n      \"cita_literal_breve\": \"- tipos de compatibilidad admitidos;\\n- prioridad por lenguajes anfitriones;\\n- garantías semánticas mínimas;\\n- criterio de activación por lenguaje;\\n- y límites de fase.\",\n      \"documento\": \"MANUAL_TRAMO10\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000014-L000021\"\n    },\n    {\n      \"cita_literal_breve\": \"Este tramo no implementa bindings, APIs, FFI ni wrappers reales. Solo abre el frente documental y de gobierno.\",\n      \"documento\": \"MANUAL_TRAMO10\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000022-L000025\"\n    },\n    {\n      \"cita_literal_breve\": \"## 5. Estado\\n\\nPendiente de desarrollo.\",\n      \"documento\": \"MANUAL_TRAMO10\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000026-L000028\"\n    },\n    {\n      \"cita_literal_breve\": \"- Pliego de condiciones del Sistema Vectorial SV\\n- Frontera normativa del lenguaje SV\\n- IR canónica v0.2\\n- Política y protocolo de compatibilidad interlenguajes del Lenguaje SV\",\n      \"documento\": \"MANUAL_TRAMO10\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000007-L000013\"\n    }\n  ],\n  \"fundamentos_verificables\": [\n    \"La sección «4. Qué no fija todavía» del documento del tramo 10 declara expresamente que no existen implementaciones: no implementa bindings, APIs, FFI ni wrappers reales; su alcance actual es solo documental y de gobierno.\",\n    \"La sección «3. Qué deberá fijar» enuncia lo previsto (tipos de compatibilidad admitidos, prioridad por lenguajes anfitriones, garantías semánticas mínimas, criterio de activación por lenguaje y límites de fase), que es planificación futura, no implementación.\",\n    \"La sección «5. Estado» declara el estado documental como «Pendiente de desarrollo», lo que concuerda con la ausencia de implementación declarada.\",\n    \"La sección «1. Objeto» limita el propósito del tramo a fijar una estructura mínima de trabajo para documentar la relación del lenguaje SV con otros lenguajes sin degradar su semántica propia, es decir, un frente documental, no una realización técnica.\",\n    \"La distinción previsto/implementado es interna al propio documento: lo previsto se formula en subjuntivo («deberá fijar») y lo implementado se niega de forma expresa («no implementa»), por lo que la conclusión queda acreditada por el propio texto sin necesidad de fuentes externas.\"\n  ],\n  \"insuficiencias\": [],\n  \"respuesta\": \"El tramo 10 («Compatibilidad interlenguajes y adopción del Lenguaje SV») declara que no implementa ningún mecanismo real de compatibilidad: según su sección «4. Qué no fija todavía», «Este tramo no implementa bindings, APIs, FFI ni wrappers reales. Solo abre el frente documental y de gobierno.». Es decir, lo implementado se reduce a un frente documental y de gobierno, mientras que lo previsto —lo que «deberá fijar»— abarca los tipos de compatibilidad admitidos, la prioridad por lenguajes anfitriones, las garantías semánticas mínimas, el criterio de activación por lenguaje y los límites de fase. Su objeto declarado es únicamente fijar la estructura mínima de trabajo para documentar cómo el lenguaje SV podrá relacionarse con otros lenguajes sin degradar su semántica propia, con dependencias en el pliego, la Frontera normativa, la IR canónica v0.2 y la política y protocolo de compatibilidad interlenguajes del Lenguaje SV. Su estado documental, declarado en la sección «5. Estado», es «Pendiente de desarrollo». En consecuencia, acreditado por este documento: ningún binding, API, FFI o wrapper existe como implementación del tramo 10; todo mecanismo de compatibilidad queda como materia futura de desarrollo, y el tramo se encuentra pendiente de desarrollo.\",\n  \"revision\": \"Etapa 0: no existen entregas anteriores ni antecedentes que contrastar; se produce la respuesta provisional autosuficiente basada exclusivamente en los fragmentos MCP suministrados del documento del tramo 10.\"\n}\n",
+  "solicitud_sha256": "a67ecff9c26eaa6c7f4fca2ea435dd907ac5431a9053664a00b3c76d34b14e9e",
+  "sustantivo": "correcto",
+  "valor": "0"
+}

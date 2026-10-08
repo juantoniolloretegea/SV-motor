@@ -1,0 +1,67 @@
+{
+  "alerta": null,
+  "alerta_limite": false,
+  "auditoria_sha256": "0b0e9c78c5f5c2ec818bd8fab7d8062bec8238f48be03502884ac75da19aae01",
+  "caso": "MD06",
+  "critico": true,
+  "estado_documental_candidato": "respuesta_fundada",
+  "etapa": 1,
+  "final_sha256": "e30c7f69c891b74dc26e7e615bde7a5059d7fb1ea46dea34d4c43a27f9d96d58",
+  "formal_conforme": false,
+  "fundamento_sustantivo": "La regla sustantiva y las citas son correctas, pero falta revision, requerido en las instrucciones y en el esquema efectivamente enviado. Se conserva como 1 contractual; no se atribuye un error sobre el manual.",
+  "medicion": {
+    "duracion_operacion_ms": 14595,
+    "telemetria": {
+      "bytes": 440030,
+      "fallos_medicion": 0,
+      "integridad": "conforme",
+      "intervalo_maximo_ms": 280,
+      "intervalo_objetivo_ms": 250,
+      "muestras": 59,
+      "plataforma_recibida": false,
+      "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+      "registros": 1187,
+      "sha256": "85028a6294ccb2bfd2ea73b59dd9fac7a3b503e96cb4ac718b302b301a077add"
+    },
+    "uso": {
+      "cached_tokens": 1280,
+      "coste_liquidado_usd": null,
+      "input_tokens": 22135,
+      "output_tokens": 1045,
+      "reasoning_tokens": 191,
+      "total_tokens": 23180
+    }
+  },
+  "naturaleza_defecto": "incumplimiento formal: ausencia del campo obligatorio revision",
+  "pasajes_contrastados": [
+    {
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmento": "El constructor del manual no autoriza lluvias laterales. Toda idea nueva deberá pasar antes por el Wishlist IRQ del ecosistema SV.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000123-L000125"
+    },
+    {
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmento": "Se recomienda cerrar el manual por **tramos nucleares** y no por lluvia de ideas.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000018-L000021"
+    },
+    {
+      "documento": "MANUAL_PRESENTACION",
+      "fragmento": "Las revisiones y los cierres se realizan en sus sedes competentes.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000011-L000014"
+    }
+  ],
+  "recepcion_independiente": "pendiente",
+  "respuesta_original": "{\n  \"caso\": \"MD06\",\n  \"estado_documental\": \"respuesta_fundada\",\n  \"etapa\": 1,\n  \"evidencias\": [\n    {\n      \"cita_literal_breve\": \"El constructor del manual no autoriza lluvias laterales. Toda idea nueva deberá pasar antes por el Wishlist IRQ del ecosistema SV.\",\n      \"documento\": \"MANUAL_CONSTRUCTOR\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000123-L000125\"\n    },\n    {\n      \"cita_literal_breve\": \"Se recomienda cerrar el manual por **tramos nucleares** y no por lluvia de ideas.\",\n      \"documento\": \"MANUAL_CONSTRUCTOR\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000018-L000021\"\n    },\n    {\n      \"cita_literal_breve\": \"Las revisiones y los cierres se realizan en sus sedes competentes.\",\n      \"documento\": \"MANUAL_PRESENTACION\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000011-L000014\"\n    }\n  ],\n  \"fundamentos_verificables\": [\n    \"La pregunta exige identificar el paso previo que establece la regla de control del constructor para añadir una nueva capacidad al manual. La sección 7 del constructor, «Regla de control» (MD-L000123-L000125), lo dispone literalmente: toda idea nueva deberá pasar antes por el Wishlist IRQ del ecosistema SV, y el constructor no autoriza lluvias laterales. Ese es el paso previo exigido.\",\n    \"La cita de la sección 7 es una cadena continua y exacta del texto del fragmento recibido (pagina 0), verificable contra el campo texto del documento MANUAL_CONSTRUCTOR.\",\n    \"La referencia a la sección 3 del constructor («Unidades de cierre recomendadas») es apoyo contextual correcto: recomienda cerrar el manual por tramos nucleares y no por lluvia de ideas, lo que concuerda con la regla de control. En la etapa 0 se usó como evidencia; se mantiene por ser literal y pertinente, aunque la respuesta central se sostiene por sí sola con la sección 7.\",\n    \"En la etapa 0 se afirmó que la presentación del libro refuerza el marco de gobierno indicando que las revisiones y los cierres «se realizan en sus sedes competentes», pero no se aportó la cita literal correspondiente. En esta autocrítica se subsana incorporándola como evidencia (MANUAL_PRESENTACION, MD-L000011-L000014, pagina 0), donde el texto reza exactamente así.\",\n    \"No hay otros pasajes en los cuatro documentos que regulen el paso previo para ideas nuevas: la mención del Wishlist IRQ aparece únicamente en la sección 7 del constructor; el tramo 10 y el índice no contienen disposiciones sobre ideas nuevas, por lo que no existe omisión relevante de la fuente.\"\n  ],\n  \"insuficiencias\": [],\n  \"respuesta\": \"El paso previo que establece la regla de control del constructor del manual del lenguaje SVP es que toda idea nueva —incluida la nueva capacidad que se propone añadir al manual— debe pasar antes por el Wishlist IRQ del ecosistema SV. La sección 7 («Regla de control», MANUAL_CONSTRUCTOR, MD-L000123-L000125) lo dispone expresamente: el constructor no autoriza lluvias laterales y toda idea nueva deberá pasar antes por ese Wishlist. Este requisito es coherente con la recomendación de la sección 3 de cerrar el manual por tramos nucleares y no por lluvia de ideas, y con el marco de gobierno de la presentación, según el cual las revisiones y los cierres se realizan en sus sedes competentes, de modo que una nueva capacidad no se incorpora directamente por la vía de esta edición documental de prueba.\"\n}",
+  "solicitud_sha256": "46d333947f8be53521ebbaac416dc5a1d763728c486833d1e665fb31022813aa",
+  "sustantivo": "correcto",
+  "valor": "1"
+}

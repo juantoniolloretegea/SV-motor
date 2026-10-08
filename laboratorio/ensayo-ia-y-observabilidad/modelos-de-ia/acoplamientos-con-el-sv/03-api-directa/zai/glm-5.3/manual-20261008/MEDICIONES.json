@@ -1,0 +1,3678 @@
+{
+  "conforme": true,
+  "entregas_completas": 27,
+  "duracion_ms": 740803,
+  "tokens_entrada": 621932,
+  "tokens_salida": 54296,
+  "tokens_totales": 676228,
+  "muestras": 2733,
+  "intervalo_maximo_ms": 467,
+  "suministro": {
+    "aislamiento": {
+      "alcance": "rechazo de creación/conexión de sockets en este proceso; no inspecciona otros recursos",
+      "catalogo_legible": true,
+      "red_externa_error": 1,
+      "red_local_error": 1
+    },
+    "banco_sha256": "f7da23f424186437c16f74d53416c997df02f974c782f7f69728e8952e01d843",
+    "casos": [
+      {
+        "caso": "MD01",
+        "clave_en_contexto": false,
+        "sha256": "b48096e9f3bbeb87e4fc374a65ae2d55dfe84e21e18cee0ee193ceef337cc2b4"
+      },
+      {
+        "caso": "MD02",
+        "clave_en_contexto": false,
+        "sha256": "52cf6b40d669ce651999622921767c84f2284cad5278a9e71f557feba898925f"
+      },
+      {
+        "caso": "MD03",
+        "clave_en_contexto": false,
+        "sha256": "cd9106303d4a2ad90bfec44b88c35bca4a72dc02217dfa4b68946606820852fb"
+      },
+      {
+        "caso": "MD04",
+        "clave_en_contexto": false,
+        "sha256": "a718d9a128f110da39142f239c753e5b8c6f25715048fed49b45994e4d3aadd9"
+      },
+      {
+        "caso": "MD05",
+        "clave_en_contexto": false,
+        "sha256": "8d8222c5e252364cb0a4421fbe7a4936b950c4cc205802d892c285f9b9236773"
+      },
+      {
+        "caso": "MD06",
+        "clave_en_contexto": false,
+        "sha256": "e24c4458845182e4af8fffb86ac04ecdfa93a8e6f9ed314f01dab9777c2c1402"
+      },
+      {
+        "caso": "MD07",
+        "clave_en_contexto": false,
+        "sha256": "b770c5505eee464f98a58b411e1e7688b49b96f0d997f9bf169e40a0c3e9773e"
+      },
+      {
+        "caso": "MD08",
+        "clave_en_contexto": false,
+        "sha256": "a8199eeef6a76853f3de3211a13038063eb019d0a0e3fb3ac806430232dc0c9d"
+      },
+      {
+        "caso": "MD09",
+        "clave_en_contexto": false,
+        "sha256": "856f0602c66b441d221329ea9fb52c26bcca37c8ef855039f1d5cde9601deef5"
+      }
+    ],
+    "catalogo_sha256": "96944f3142ddd4e153a5efa4099944e46a121494bdb2c171deb8cea19aa013c9",
+    "clave_en_candidato": false,
+    "clave_sha256": "e8f9e1cf7c65856106dab42b07ccc3348de5862ea877979d02dcdd1d7f3e81c7",
+    "conforme": true,
+    "diario": {
+      "alcance": "recorrido documental MCP reconstruido; no evalúa el modelo",
+      "diario_sha256": "0d349f5cc7636820dc43819ba6fb623a288fef89f0c3b5d96223bba99a3eb312",
+      "estado": "conforme",
+      "eventos": 104,
+      "tramas": 34,
+      "ultima_huella": "465c6d7e9d68596c1d134bd332803dc6001efbe4c1763189b794aa08b9793648"
+    },
+    "documentos": 4,
+    "fragmentos": 31,
+    "fuentes_sha256": "0d1628111f672ba7a6512b0c49ec615f53614a2509f434248b02528b19d0daa6",
+    "inferencias": 0,
+    "lectura_candidato": "corpus íntegro preentregado por el Árbitro; sin herramientas del candidato",
+    "limite_aislamiento": "MCP sin sockets; no inspecciona la infraestructura del proveedor",
+    "mcp_sha256": "6522785d2170257077bbe84ba64ccd8b07f904f26a0417ef500aa3372e15e8b4",
+    "secciones": 31,
+    "telemetria": {
+      "bytes": 40465,
+      "fallos_medicion": 0,
+      "integridad": "conforme",
+      "intervalo_maximo_ms": 296,
+      "intervalo_objetivo_ms": 250,
+      "muestras": 29,
+      "plataforma_recibida": false,
+      "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+      "registros": 64,
+      "sha256": "4dc1abcb6e863e06f8bc0e695c960b64f9c8e3c91ae5ed0db98d476e62b4d6dc"
+    }
+  },
+  "original_recepcion_sha256": "c045ad4e6c2c40574ce8f8ce50ef7a3ab6d29b69c303c2cc0a725599219641d5",
+  "licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+  "casos": [
+    {
+      "caso": "MD01",
+      "etapa": 0,
+      "intento": 1,
+      "completa": true,
+      "duracion_operacion_ms": 24904,
+      "primer_texto_ms": 4476,
+      "uso": {
+        "cached_tokens": 0,
+        "coste_liquidado_usd": null,
+        "input_tokens": 20177,
+        "output_tokens": 1828,
+        "reasoning_tokens": 142,
+        "total_tokens": 22005
+      },
+      "telemetria": {
+        "bytes": 760707,
+        "fallos_medicion": 0,
+        "integridad": "conforme",
+        "intervalo_maximo_ms": 279,
+        "intervalo_objetivo_ms": 250,
+        "muestras": 97,
+        "plataforma_recibida": false,
+        "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+        "registros": 2057,
+        "sha256": "29785622fdfcc09b5fba265d69affb9eec9d42a9ab10c9acbd2a6ea8ab6651ec"
+      },
+      "final_sha256": "753f806752ea3dcc7f6dba9c4faec197dee8bd66c285bde9d37c6e38af9d2259",
+      "auditoria_formal": {
+        "adjudicacion_cientifica": false,
+        "alcance": "estructura y pertenencia literal; no prueba suficiencia ni fidelidad sustantiva",
+        "citas": [
+          {
+            "cita_sha256": "b62ecfc0387fc0d2c24c1d3f959624ce0c6bb76a7339f825ef55621d16764d8b",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 318,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000003-L000008"
+          },
+          {
+            "cita_sha256": "1790562bd4496b9807f2015e6e6bbea1d59a3a3e2b0c4f8acd3e0e302b68c329",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 318,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000003-L000008"
+          },
+          {
+            "cita_sha256": "4a58032f75318ba9dde3b76942b58ffad5a093004da5725cf3bae9f98a72de4b",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 334,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000009-L000017"
+          },
+          {
+            "cita_sha256": "82ea6977c29c03e31e80ddf9173023cb4da9157eb879a32962cf81b46418e1fd",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 334,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000009-L000017"
+          },
+          {
+            "cita_sha256": "554f482a160076857f19dbc04098f88b402a6b860ffdd9e0ec903b336fddfe44",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 122,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000018-L000021"
+          },
+          {
+            "cita_sha256": "7689bc415771d69e2cac0bd1719d6c89133018ba474ef8f5b206d8b4c1716698",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 281,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000092-L000108"
+          },
+          {
+            "cita_sha256": "652f60de7b8bb9b32beacbc16188feee47376a0f04db8280cc0b0a4b2f14ebc9",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 376,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000109-L000118"
+          },
+          {
+            "cita_sha256": "d4b3b2f975b62569bf0378137b5a5c92d4df0f7c2a54d7a92091573f0543c4dc",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 155,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000123-L000125"
+          },
+          {
+            "cita_sha256": "91a59c955e26c48c63452a8a39e513bbf9c09a5d08ae026bae106aafa9d2a937",
+            "documento": "MANUAL_PRESENTACION",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 293,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000011-L000014"
+          }
+        ],
+        "conforme": true,
+        "esquema_conforme": true,
+        "version_comprobador": "0.2.0",
+        "version_contrato": "manual-md01-replica-1.1.0"
+      }
+    },
+    {
+      "caso": "MD01",
+      "etapa": 1,
+      "intento": 2,
+      "completa": true,
+      "duracion_operacion_ms": 38375,
+      "primer_texto_ms": 13185,
+      "uso": {
+        "cached_tokens": 0,
+        "coste_liquidado_usd": null,
+        "input_tokens": 23248,
+        "output_tokens": 2972,
+        "reasoning_tokens": 566,
+        "total_tokens": 26220
+      },
+      "telemetria": {
+        "bytes": 1180514,
+        "fallos_medicion": 0,
+        "integridad": "conforme",
+        "intervalo_maximo_ms": 467,
+        "intervalo_objetivo_ms": 250,
+        "muestras": 146,
+        "plataforma_recibida": false,
+        "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+        "registros": 3191,
+        "sha256": "19571492e88ada2e2eecbbc737e89e35fef842cdd58476b8a043bb561d7a762b"
+      },
+      "final_sha256": "3c03f192736b40db0e90e172338b135e1ab9da4eb03500f9a5688f9f90276e18",
+      "auditoria_formal": {
+        "adjudicacion_cientifica": false,
+        "alcance": "estructura y pertenencia literal; no prueba suficiencia ni fidelidad sustantiva",
+        "citas": [
+          {
+            "cita_sha256": "b62ecfc0387fc0d2c24c1d3f959624ce0c6bb76a7339f825ef55621d16764d8b",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 318,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000003-L000008"
+          },
+          {
+            "cita_sha256": "1790562bd4496b9807f2015e6e6bbea1d59a3a3e2b0c4f8acd3e0e302b68c329",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 318,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000003-L000008"
+          },
+          {
+            "cita_sha256": "43b5250f936e54887d3d23e520774ec3c2cc0ab64540fff5bde574cfac2ae61f",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 334,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000009-L000017"
+          },
+          {
+            "cita_sha256": "82ea6977c29c03e31e80ddf9173023cb4da9157eb879a32962cf81b46418e1fd",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 334,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000009-L000017"
+          },
+          {
+            "cita_sha256": "538fd7451e6470ff92ee77855fe43d55805e3f355fa8aed07f629af521ec57c5",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 334,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000009-L000017"
+          },
+          {
+            "cita_sha256": "554f482a160076857f19dbc04098f88b402a6b860ffdd9e0ec903b336fddfe44",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 122,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000018-L000021"
+          },
+          {
+            "cita_sha256": "7689bc415771d69e2cac0bd1719d6c89133018ba474ef8f5b206d8b4c1716698",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 281,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000092-L000108"
+          },
+          {
+            "cita_sha256": "652f60de7b8bb9b32beacbc16188feee47376a0f04db8280cc0b0a4b2f14ebc9",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 376,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000109-L000118"
+          },
+          {
+            "cita_sha256": "d4b3b2f975b62569bf0378137b5a5c92d4df0f7c2a54d7a92091573f0543c4dc",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 155,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000123-L000125"
+          },
+          {
+            "cita_sha256": "432fcdb759f35d08727a507e48dcab35613a15505a70dc2c44d355830099237d",
+            "documento": "MANUAL_PRESENTACION",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 488,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000005-L000010"
+          },
+          {
+            "cita_sha256": "91a59c955e26c48c63452a8a39e513bbf9c09a5d08ae026bae106aafa9d2a937",
+            "documento": "MANUAL_PRESENTACION",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 293,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000011-L000014"
+          },
+          {
+            "cita_sha256": "86502bbce664a4e461f061b96f9a220a07bccfe45dab49f7ddf764661e522691",
+            "documento": "MANUAL_TRAMO10",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 139,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000022-L000025"
+          },
+          {
+            "cita_sha256": "8e08435135c76ccdf1e0c3ea55e92c35936f555b10c36c02cb055e6f0872b03a",
+            "documento": "MANUAL_TRAMO10",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 39,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000026-L000028"
+          }
+        ],
+        "conforme": true,
+        "esquema_conforme": true,
+        "version_comprobador": "0.2.0",
+        "version_contrato": "manual-md01-replica-1.1.0"
+      }
+    },
+    {
+      "caso": "MD01",
+      "etapa": 2,
+      "intento": 3,
+      "completa": true,
+      "duracion_operacion_ms": 21863,
+      "primer_texto_ms": 3904,
+      "uso": {
+        "cached_tokens": 64,
+        "coste_liquidado_usd": null,
+        "input_tokens": 27037,
+        "output_tokens": 2443,
+        "reasoning_tokens": 94,
+        "total_tokens": 29480
+      },
+      "telemetria": {
+        "bytes": 991817,
+        "fallos_medicion": 0,
+        "integridad": "conforme",
+        "intervalo_maximo_ms": 285,
+        "intervalo_objetivo_ms": 250,
+        "muestras": 86,
+        "plataforma_recibida": false,
+        "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+        "registros": 2761,
+        "sha256": "4006e2f85c0b9f578981f141acff88f26b08208c40813f308a430b8bfc297b0c"
+      },
+      "final_sha256": "6824659c4ca66e227a1aeceb1f9ff78973f2c6e3acfc4be63b3f53614cab7161",
+      "auditoria_formal": {
+        "adjudicacion_cientifica": false,
+        "alcance": "estructura y pertenencia literal; no prueba suficiencia ni fidelidad sustantiva",
+        "citas": [
+          {
+            "cita_sha256": "b62ecfc0387fc0d2c24c1d3f959624ce0c6bb76a7339f825ef55621d16764d8b",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 318,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000003-L000008"
+          },
+          {
+            "cita_sha256": "1790562bd4496b9807f2015e6e6bbea1d59a3a3e2b0c4f8acd3e0e302b68c329",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 318,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000003-L000008"
+          },
+          {
+            "cita_sha256": "43b5250f936e54887d3d23e520774ec3c2cc0ab64540fff5bde574cfac2ae61f",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 334,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000009-L000017"
+          },
+          {
+            "cita_sha256": "82ea6977c29c03e31e80ddf9173023cb4da9157eb879a32962cf81b46418e1fd",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 334,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000009-L000017"
+          },
+          {
+            "cita_sha256": "538fd7451e6470ff92ee77855fe43d55805e3f355fa8aed07f629af521ec57c5",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 334,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000009-L000017"
+          },
+          {
+            "cita_sha256": "554f482a160076857f19dbc04098f88b402a6b860ffdd9e0ec903b336fddfe44",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 122,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000018-L000021"
+          },
+          {
+            "cita_sha256": "7689bc415771d69e2cac0bd1719d6c89133018ba474ef8f5b206d8b4c1716698",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 281,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000092-L000108"
+          },
+          {
+            "cita_sha256": "652f60de7b8bb9b32beacbc16188feee47376a0f04db8280cc0b0a4b2f14ebc9",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 376,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000109-L000118"
+          },
+          {
+            "cita_sha256": "d4b3b2f975b62569bf0378137b5a5c92d4df0f7c2a54d7a92091573f0543c4dc",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 155,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000123-L000125"
+          },
+          {
+            "cita_sha256": "432fcdb759f35d08727a507e48dcab35613a15505a70dc2c44d355830099237d",
+            "documento": "MANUAL_PRESENTACION",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 488,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000005-L000010"
+          },
+          {
+            "cita_sha256": "91a59c955e26c48c63452a8a39e513bbf9c09a5d08ae026bae106aafa9d2a937",
+            "documento": "MANUAL_PRESENTACION",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 293,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000011-L000014"
+          },
+          {
+            "cita_sha256": "86502bbce664a4e461f061b96f9a220a07bccfe45dab49f7ddf764661e522691",
+            "documento": "MANUAL_TRAMO10",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 139,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000022-L000025"
+          },
+          {
+            "cita_sha256": "5b843bbcc685b018fb40435274683b624e9f7559338816b93bf4355a3d64a975",
+            "documento": "MANUAL_TRAMO10",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 39,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000026-L000028"
+          }
+        ],
+        "conforme": true,
+        "esquema_conforme": true,
+        "version_comprobador": "0.2.0",
+        "version_contrato": "manual-md01-replica-1.1.0"
+      }
+    },
+    {
+      "caso": "MD02",
+      "etapa": 0,
+      "intento": 4,
+      "completa": true,
+      "duracion_operacion_ms": 19700,
+      "primer_texto_ms": 2947,
+      "uso": {
+        "cached_tokens": 1216,
+        "coste_liquidado_usd": null,
+        "input_tokens": 20183,
+        "output_tokens": 1404,
+        "reasoning_tokens": 0,
+        "total_tokens": 21587
+      },
+      "telemetria": {
+        "bytes": 587563,
+        "fallos_medicion": 0,
+        "integridad": "conforme",
+        "intervalo_maximo_ms": 274,
+        "intervalo_objetivo_ms": 250,
+        "muestras": 78,
+        "plataforma_recibida": false,
+        "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+        "registros": 1586,
+        "sha256": "6c6dfef75342216462116836dfc464bd9bdc97d2b6e46944a7ec448591dd0fef"
+      },
+      "final_sha256": "6d41d53e8ddebeac4828fc857b5cacba6cc770040e1029ba335d0672d8428d78",
+      "auditoria_formal": {
+        "adjudicacion_cientifica": false,
+        "alcance": "estructura y pertenencia literal; no prueba suficiencia ni fidelidad sustantiva",
+        "citas": [
+          {
+            "cita_sha256": "82ea6977c29c03e31e80ddf9173023cb4da9157eb879a32962cf81b46418e1fd",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 334,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000009-L000017"
+          },
+          {
+            "cita_sha256": "538fd7451e6470ff92ee77855fe43d55805e3f355fa8aed07f629af521ec57c5",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 334,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000009-L000017"
+          },
+          {
+            "cita_sha256": "c1fbc7133cda02f1944294ff149482b7507ce3d81475175b345d86dbfe93ec07",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 281,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000092-L000108"
+          },
+          {
+            "cita_sha256": "aebc18f87e9ad5ea6509626978ed962b29ec6cf2de2accf9ee1bcb5e846559f2",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 376,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000109-L000118"
+          },
+          {
+            "cita_sha256": "dfb305cbfd3facb8c1097be5f3f7a258c31e71a9c85b453f1211352d7872c282",
+            "documento": "MANUAL_PRESENTACION",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 293,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000011-L000014"
+          },
+          {
+            "cita_sha256": "80119a6e3b84cf743960b283daf33372d67573c064d77d3a1c2121d58662b131",
+            "documento": "MANUAL_TRAMO10",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 198,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000007-L000013"
+          }
+        ],
+        "conforme": true,
+        "esquema_conforme": true,
+        "version_comprobador": "0.2.0",
+        "version_contrato": "manual-md01-replica-1.1.0"
+      }
+    },
+    {
+      "caso": "MD02",
+      "etapa": 1,
+      "intento": 5,
+      "completa": true,
+      "duracion_operacion_ms": 36088,
+      "primer_texto_ms": 14779,
+      "uso": {
+        "cached_tokens": 0,
+        "coste_liquidado_usd": null,
+        "input_tokens": 22972,
+        "output_tokens": 3321,
+        "reasoning_tokens": 961,
+        "total_tokens": 26293
+      },
+      "telemetria": {
+        "bytes": 1381445,
+        "fallos_medicion": 0,
+        "integridad": "conforme",
+        "intervalo_maximo_ms": 277,
+        "intervalo_objetivo_ms": 250,
+        "muestras": 139,
+        "plataforma_recibida": false,
+        "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+        "registros": 3795,
+        "sha256": "2bed04af05ea8aeed8bd2c587d66026a8f2e724bd3931d86cbad571835c5a6c8"
+      },
+      "final_sha256": "05e979617fe4b213980b9b33d8b0c189265b52be8d043e339148e0672153cb34",
+      "auditoria_formal": {
+        "adjudicacion_cientifica": false,
+        "alcance": "estructura y pertenencia literal; no prueba suficiencia ni fidelidad sustantiva",
+        "citas": [
+          {
+            "cita_sha256": "4a58032f75318ba9dde3b76942b58ffad5a093004da5725cf3bae9f98a72de4b",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 334,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000009-L000017"
+          },
+          {
+            "cita_sha256": "82ea6977c29c03e31e80ddf9173023cb4da9157eb879a32962cf81b46418e1fd",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 334,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000009-L000017"
+          },
+          {
+            "cita_sha256": "538fd7451e6470ff92ee77855fe43d55805e3f355fa8aed07f629af521ec57c5",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 334,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000009-L000017"
+          },
+          {
+            "cita_sha256": "d24b1e3dfb140efad8e50aa6ca9ccff9171f756aa21f9d9c950b1fbf4e319113",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 281,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000092-L000108"
+          },
+          {
+            "cita_sha256": "c1fbc7133cda02f1944294ff149482b7507ce3d81475175b345d86dbfe93ec07",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 281,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000092-L000108"
+          },
+          {
+            "cita_sha256": "aebc18f87e9ad5ea6509626978ed962b29ec6cf2de2accf9ee1bcb5e846559f2",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 376,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000109-L000118"
+          },
+          {
+            "cita_sha256": "d0b27bda9ef7a5e1dd3e81f0b3f15b79dd8be74964434fa7eb07f79e0e98db64",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 376,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000109-L000118"
+          },
+          {
+            "cita_sha256": "dfb305cbfd3facb8c1097be5f3f7a258c31e71a9c85b453f1211352d7872c282",
+            "documento": "MANUAL_PRESENTACION",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 293,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000011-L000014"
+          },
+          {
+            "cita_sha256": "80119a6e3b84cf743960b283daf33372d67573c064d77d3a1c2121d58662b131",
+            "documento": "MANUAL_TRAMO10",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 198,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000007-L000013"
+          },
+          {
+            "cita_sha256": "86502bbce664a4e461f061b96f9a220a07bccfe45dab49f7ddf764661e522691",
+            "documento": "MANUAL_TRAMO10",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 139,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000022-L000025"
+          }
+        ],
+        "conforme": true,
+        "esquema_conforme": true,
+        "version_comprobador": "0.2.0",
+        "version_contrato": "manual-md01-replica-1.1.0"
+      }
+    },
+    {
+      "caso": "MD02",
+      "etapa": 2,
+      "intento": 6,
+      "completa": true,
+      "duracion_operacion_ms": 25907,
+      "primer_texto_ms": 2540,
+      "uso": {
+        "cached_tokens": 1280,
+        "coste_liquidado_usd": null,
+        "input_tokens": 26719,
+        "output_tokens": 2785,
+        "reasoning_tokens": 16,
+        "total_tokens": 29504
+      },
+      "telemetria": {
+        "bytes": 1112970,
+        "fallos_medicion": 0,
+        "integridad": "conforme",
+        "intervalo_maximo_ms": 284,
+        "intervalo_objetivo_ms": 250,
+        "muestras": 101,
+        "plataforma_recibida": false,
+        "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+        "registros": 3088,
+        "sha256": "f7828ae0a3fb70abe8530baa784c4f8f4b656fb5d12e6a5aa41fc90093351ce8"
+      },
+      "final_sha256": "54ad3ac63556585e41a013d1d34c606f550be5d1c1d8969c2a34910c3f420ecb",
+      "auditoria_formal": {
+        "adjudicacion_cientifica": false,
+        "alcance": "estructura y pertenencia literal; no prueba suficiencia ni fidelidad sustantiva",
+        "citas": [
+          {
+            "cita_sha256": "4a58032f75318ba9dde3b76942b58ffad5a093004da5725cf3bae9f98a72de4b",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 334,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000009-L000017"
+          },
+          {
+            "cita_sha256": "82ea6977c29c03e31e80ddf9173023cb4da9157eb879a32962cf81b46418e1fd",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 334,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000009-L000017"
+          },
+          {
+            "cita_sha256": "538fd7451e6470ff92ee77855fe43d55805e3f355fa8aed07f629af521ec57c5",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 334,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000009-L000017"
+          },
+          {
+            "cita_sha256": "d24b1e3dfb140efad8e50aa6ca9ccff9171f756aa21f9d9c950b1fbf4e319113",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 281,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000092-L000108"
+          },
+          {
+            "cita_sha256": "c1fbc7133cda02f1944294ff149482b7507ce3d81475175b345d86dbfe93ec07",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 281,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000092-L000108"
+          },
+          {
+            "cita_sha256": "aebc18f87e9ad5ea6509626978ed962b29ec6cf2de2accf9ee1bcb5e846559f2",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 376,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000109-L000118"
+          },
+          {
+            "cita_sha256": "d0b27bda9ef7a5e1dd3e81f0b3f15b79dd8be74964434fa7eb07f79e0e98db64",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 376,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000109-L000118"
+          },
+          {
+            "cita_sha256": "75c10a356e19e2af31cf8a14aac0130900531d80670f6bf44142e649327b81b8",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 376,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000109-L000118"
+          },
+          {
+            "cita_sha256": "5c93adb9e4da0455245ad3755ac21d4dcc0d1518ab02694ae5e653790a4b7ffc",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 233,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000119-L000122"
+          },
+          {
+            "cita_sha256": "dfb305cbfd3facb8c1097be5f3f7a258c31e71a9c85b453f1211352d7872c282",
+            "documento": "MANUAL_PRESENTACION",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 293,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000011-L000014"
+          },
+          {
+            "cita_sha256": "80119a6e3b84cf743960b283daf33372d67573c064d77d3a1c2121d58662b131",
+            "documento": "MANUAL_TRAMO10",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 198,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000007-L000013"
+          },
+          {
+            "cita_sha256": "86502bbce664a4e461f061b96f9a220a07bccfe45dab49f7ddf764661e522691",
+            "documento": "MANUAL_TRAMO10",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 139,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000022-L000025"
+          },
+          {
+            "cita_sha256": "5b843bbcc685b018fb40435274683b624e9f7559338816b93bf4355a3d64a975",
+            "documento": "MANUAL_TRAMO10",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 39,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000026-L000028"
+          }
+        ],
+        "conforme": true,
+        "esquema_conforme": true,
+        "version_comprobador": "0.2.0",
+        "version_contrato": "manual-md01-replica-1.1.0"
+      }
+    },
+    {
+      "caso": "MD03",
+      "etapa": 0,
+      "intento": 7,
+      "completa": true,
+      "duracion_operacion_ms": 15375,
+      "primer_texto_ms": 4037,
+      "uso": {
+        "cached_tokens": 1216,
+        "coste_liquidado_usd": null,
+        "input_tokens": 20203,
+        "output_tokens": 1051,
+        "reasoning_tokens": 133,
+        "total_tokens": 21254
+      },
+      "telemetria": {
+        "bytes": 446125,
+        "fallos_medicion": 0,
+        "integridad": "conforme",
+        "intervalo_maximo_ms": 271,
+        "intervalo_objetivo_ms": 250,
+        "muestras": 62,
+        "plataforma_recibida": false,
+        "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+        "registros": 1200,
+        "sha256": "a7681065f41b10122e664ab6bb182ba8cdd6dbbdc4674dcd2a6267a0ebc20f38"
+      },
+      "final_sha256": "1e6be4d32208a166d487727a2716db2e1451fcac1ba779c32a31385054dda53c",
+      "auditoria_formal": {
+        "adjudicacion_cientifica": false,
+        "alcance": "estructura y pertenencia literal; no prueba suficiencia ni fidelidad sustantiva",
+        "citas": [
+          {
+            "cita_sha256": "53814d30292f19b092be4ddb6c4d0ec38601f0f00b439d431cc0281bc72cbf6e",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 117,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000041-L000047"
+          },
+          {
+            "cita_sha256": "d4d0d224009608cbac83dd0397d470ffebd6187fa344f2b63041dc5dcc4b9e98",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 99,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000054-L000059"
+          },
+          {
+            "cita_sha256": "b6b12a5641bcb32ecd73f79f17234d04d131eac1e178157eec1a91145630f9d5",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 124,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000060-L000065"
+          }
+        ],
+        "conforme": true,
+        "esquema_conforme": true,
+        "version_comprobador": "0.2.0",
+        "version_contrato": "manual-md01-replica-1.1.0"
+      }
+    },
+    {
+      "caso": "MD03",
+      "etapa": 1,
+      "intento": 8,
+      "completa": true,
+      "duracion_operacion_ms": 52607,
+      "primer_texto_ms": 15155,
+      "uso": {
+        "cached_tokens": 64,
+        "coste_liquidado_usd": null,
+        "input_tokens": 22506,
+        "output_tokens": 1974,
+        "reasoning_tokens": 343,
+        "total_tokens": 24480
+      },
+      "telemetria": {
+        "bytes": 921122,
+        "fallos_medicion": 0,
+        "integridad": "conforme",
+        "intervalo_maximo_ms": 402,
+        "intervalo_objetivo_ms": 250,
+        "muestras": 200,
+        "plataforma_recibida": false,
+        "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+        "registros": 2321,
+        "sha256": "657bcd92a3ca2492ba85c161ab6d209224208cf926b6bba37ed672e882cf7d07"
+      },
+      "final_sha256": "2557aa57977abe99cd71b9bf21150927714fb0151abcafa95b19a96c0f73a778",
+      "auditoria_formal": {
+        "adjudicacion_cientifica": false,
+        "alcance": "estructura y pertenencia literal; no prueba suficiencia ni fidelidad sustantiva",
+        "citas": [
+          {
+            "cita_sha256": "53814d30292f19b092be4ddb6c4d0ec38601f0f00b439d431cc0281bc72cbf6e",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 117,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000041-L000047"
+          },
+          {
+            "cita_sha256": "d4d0d224009608cbac83dd0397d470ffebd6187fa344f2b63041dc5dcc4b9e98",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 99,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000054-L000059"
+          },
+          {
+            "cita_sha256": "b6b12a5641bcb32ecd73f79f17234d04d131eac1e178157eec1a91145630f9d5",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 124,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000060-L000065"
+          },
+          {
+            "cita_sha256": "4d893f5bcb8dec0b9ef4344f300ffd6334da8b32fd7b637e232f00aea5ea3dd0",
+            "documento": "MANUAL_INDICE",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 680,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000001-L000017"
+          },
+          {
+            "cita_sha256": "390e9e74a8bddf70e013d53ef587564fa6bdc3d33e257a0d46f7997de85baea7",
+            "documento": "MANUAL_INDICE",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 680,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000001-L000017"
+          },
+          {
+            "cita_sha256": "231f2625d8d94cf6dd5dfb6b19b3cac7dfcc81457827927d7d6db49d8adf0bc4",
+            "documento": "MANUAL_INDICE",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 680,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000001-L000017"
+          },
+          {
+            "cita_sha256": "3cfcc6840f54330cb634f74d620e40d99c9415de78071e5ac8c6c471c5b114f6",
+            "documento": "MANUAL_PRESENTACION",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 488,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000005-L000010"
+          }
+        ],
+        "conforme": true,
+        "esquema_conforme": true,
+        "version_comprobador": "0.2.0",
+        "version_contrato": "manual-md01-replica-1.1.0"
+      }
+    },
+    {
+      "caso": "MD03",
+      "etapa": 2,
+      "intento": 9,
+      "completa": true,
+      "duracion_operacion_ms": 15846,
+      "primer_texto_ms": 2768,
+      "uso": {
+        "cached_tokens": 1280,
+        "coste_liquidado_usd": null,
+        "input_tokens": 25520,
+        "output_tokens": 1539,
+        "reasoning_tokens": 20,
+        "total_tokens": 27059
+      },
+      "telemetria": {
+        "bytes": 635908,
+        "fallos_medicion": 0,
+        "integridad": "conforme",
+        "intervalo_maximo_ms": 273,
+        "intervalo_objetivo_ms": 250,
+        "muestras": 63,
+        "plataforma_recibida": false,
+        "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+        "registros": 1758,
+        "sha256": "83d96d1ca893d56e8756033876f3e4521255a608f862182dad98bf5f0d1c5ab8"
+      },
+      "final_sha256": "86983bb7bbb1a4b835ea8e2f5b7eb103ab690565055ef30b0d88b7e7eb69ed21",
+      "auditoria_formal": {
+        "adjudicacion_cientifica": false,
+        "alcance": "estructura y pertenencia literal; no prueba suficiencia ni fidelidad sustantiva",
+        "citas": [
+          {
+            "cita_sha256": "53814d30292f19b092be4ddb6c4d0ec38601f0f00b439d431cc0281bc72cbf6e",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 117,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000041-L000047"
+          },
+          {
+            "cita_sha256": "d4d0d224009608cbac83dd0397d470ffebd6187fa344f2b63041dc5dcc4b9e98",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 99,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000054-L000059"
+          },
+          {
+            "cita_sha256": "b6b12a5641bcb32ecd73f79f17234d04d131eac1e178157eec1a91145630f9d5",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 124,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000060-L000065"
+          },
+          {
+            "cita_sha256": "4d893f5bcb8dec0b9ef4344f300ffd6334da8b32fd7b637e232f00aea5ea3dd0",
+            "documento": "MANUAL_INDICE",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 680,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000001-L000017"
+          },
+          {
+            "cita_sha256": "390e9e74a8bddf70e013d53ef587564fa6bdc3d33e257a0d46f7997de85baea7",
+            "documento": "MANUAL_INDICE",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 680,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000001-L000017"
+          },
+          {
+            "cita_sha256": "231f2625d8d94cf6dd5dfb6b19b3cac7dfcc81457827927d7d6db49d8adf0bc4",
+            "documento": "MANUAL_INDICE",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 680,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000001-L000017"
+          },
+          {
+            "cita_sha256": "3cfcc6840f54330cb634f74d620e40d99c9415de78071e5ac8c6c471c5b114f6",
+            "documento": "MANUAL_PRESENTACION",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 488,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000005-L000010"
+          }
+        ],
+        "conforme": true,
+        "esquema_conforme": true,
+        "version_comprobador": "0.2.0",
+        "version_contrato": "manual-md01-replica-1.1.0"
+      }
+    },
+    {
+      "caso": "MD04",
+      "etapa": 0,
+      "intento": 10,
+      "completa": true,
+      "duracion_operacion_ms": 28387,
+      "primer_texto_ms": 11409,
+      "uso": {
+        "cached_tokens": 1216,
+        "coste_liquidado_usd": null,
+        "input_tokens": 20190,
+        "output_tokens": 1939,
+        "reasoning_tokens": 484,
+        "total_tokens": 22129
+      },
+      "telemetria": {
+        "bytes": 816312,
+        "fallos_medicion": 0,
+        "integridad": "conforme",
+        "intervalo_maximo_ms": 295,
+        "intervalo_objetivo_ms": 250,
+        "muestras": 110,
+        "plataforma_recibida": false,
+        "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+        "registros": 2190,
+        "sha256": "d07a90af3b742399814e254d8657eed3117bf874fd56a5e0a530f9d5d9733a0a"
+      },
+      "final_sha256": "7f540babb6d88d78f5065f278d4477eea130f657dd36001ca403a83a902f2fcc",
+      "auditoria_formal": {
+        "adjudicacion_cientifica": false,
+        "alcance": "estructura y pertenencia literal; no prueba suficiencia ni fidelidad sustantiva",
+        "citas": [
+          {
+            "cita_sha256": "a85640ff282f36e1ad6a9677541b76d5df36a7481b0a69b93bfab289a5fe1c83",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 281,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000092-L000108"
+          },
+          {
+            "cita_sha256": "21184ffae745810e533989e5f13d63cc234c3350cf572410c2b53d9b84c370db",
+            "documento": "MANUAL_TRAMO10",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 193,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000014-L000021"
+          },
+          {
+            "cita_sha256": "86502bbce664a4e461f061b96f9a220a07bccfe45dab49f7ddf764661e522691",
+            "documento": "MANUAL_TRAMO10",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 139,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000022-L000025"
+          },
+          {
+            "cita_sha256": "fb4f4d379ac5f28fbc3f91cdce2617ef1f9fe3e7190cefffb99bb08b14971fb7",
+            "documento": "MANUAL_TRAMO10",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 188,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000003-L000006"
+          },
+          {
+            "cita_sha256": "5b843bbcc685b018fb40435274683b624e9f7559338816b93bf4355a3d64a975",
+            "documento": "MANUAL_TRAMO10",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 39,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000026-L000028"
+          }
+        ],
+        "conforme": true,
+        "esquema_conforme": true,
+        "version_comprobador": "0.2.0",
+        "version_contrato": "manual-md01-replica-1.1.0"
+      }
+    },
+    {
+      "caso": "MD04",
+      "etapa": 1,
+      "intento": 11,
+      "completa": true,
+      "duracion_operacion_ms": 26859,
+      "primer_texto_ms": 8516,
+      "uso": {
+        "cached_tokens": 64,
+        "coste_liquidado_usd": null,
+        "input_tokens": 23030,
+        "output_tokens": 2574,
+        "reasoning_tokens": 435,
+        "total_tokens": 25604
+      },
+      "telemetria": {
+        "bytes": 1060094,
+        "fallos_medicion": 0,
+        "integridad": "conforme",
+        "intervalo_maximo_ms": 280,
+        "intervalo_objetivo_ms": 250,
+        "muestras": 105,
+        "plataforma_recibida": false,
+        "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+        "registros": 2920,
+        "sha256": "c590955a8a3446f5a883287fd950fe83170db1ea00fafaf97b4ed78dcaa01225"
+      },
+      "final_sha256": "b1245ee88de504df948b6ca2efc9c4faa3ba2854255619a72acdaa892c727dc3",
+      "auditoria_formal": {
+        "adjudicacion_cientifica": false,
+        "alcance": "estructura y pertenencia literal; no prueba suficiencia ni fidelidad sustantiva",
+        "citas": [
+          {
+            "cita_sha256": "a85640ff282f36e1ad6a9677541b76d5df36a7481b0a69b93bfab289a5fe1c83",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 281,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000092-L000108"
+          },
+          {
+            "cita_sha256": "21184ffae745810e533989e5f13d63cc234c3350cf572410c2b53d9b84c370db",
+            "documento": "MANUAL_TRAMO10",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 193,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000014-L000021"
+          },
+          {
+            "cita_sha256": "86502bbce664a4e461f061b96f9a220a07bccfe45dab49f7ddf764661e522691",
+            "documento": "MANUAL_TRAMO10",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 139,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000022-L000025"
+          },
+          {
+            "cita_sha256": "fb4f4d379ac5f28fbc3f91cdce2617ef1f9fe3e7190cefffb99bb08b14971fb7",
+            "documento": "MANUAL_TRAMO10",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 188,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000003-L000006"
+          },
+          {
+            "cita_sha256": "5b843bbcc685b018fb40435274683b624e9f7559338816b93bf4355a3d64a975",
+            "documento": "MANUAL_TRAMO10",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 39,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000026-L000028"
+          },
+          {
+            "cita_sha256": "432fcdb759f35d08727a507e48dcab35613a15505a70dc2c44d355830099237d",
+            "documento": "MANUAL_PRESENTACION",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 488,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000005-L000010"
+          },
+          {
+            "cita_sha256": "e49a29966610a0e1ad95337bd920d62e2a981ca38baca8e4331e5269b9788488",
+            "documento": "MANUAL_PRESENTACION",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 488,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000005-L000010"
+          }
+        ],
+        "conforme": true,
+        "esquema_conforme": true,
+        "version_comprobador": "0.2.0",
+        "version_contrato": "manual-md01-replica-1.1.0"
+      }
+    },
+    {
+      "caso": "MD04",
+      "etapa": 2,
+      "intento": 12,
+      "completa": true,
+      "duracion_operacion_ms": 20372,
+      "primer_texto_ms": 2923,
+      "uso": {
+        "cached_tokens": 1280,
+        "coste_liquidado_usd": null,
+        "input_tokens": 26556,
+        "output_tokens": 2260,
+        "reasoning_tokens": 15,
+        "total_tokens": 28816
+      },
+      "telemetria": {
+        "bytes": 902642,
+        "fallos_medicion": 0,
+        "integridad": "conforme",
+        "intervalo_maximo_ms": 273,
+        "intervalo_objetivo_ms": 250,
+        "muestras": 80,
+        "plataforma_recibida": false,
+        "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+        "registros": 2509,
+        "sha256": "1880f43904e17deb1f322dd5ca07a6987c485ebb43529160665786134f2ce8fb"
+      },
+      "final_sha256": "124f0fc34fca88e043d5b41a97cf6b72bbf8e4e83ab5eed32f9faf9ab2976930",
+      "auditoria_formal": {
+        "adjudicacion_cientifica": false,
+        "alcance": "estructura y pertenencia literal; no prueba suficiencia ni fidelidad sustantiva",
+        "citas": [
+          {
+            "cita_sha256": "a85640ff282f36e1ad6a9677541b76d5df36a7481b0a69b93bfab289a5fe1c83",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 281,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000092-L000108"
+          },
+          {
+            "cita_sha256": "21184ffae745810e533989e5f13d63cc234c3350cf572410c2b53d9b84c370db",
+            "documento": "MANUAL_TRAMO10",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 193,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000014-L000021"
+          },
+          {
+            "cita_sha256": "86502bbce664a4e461f061b96f9a220a07bccfe45dab49f7ddf764661e522691",
+            "documento": "MANUAL_TRAMO10",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 139,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000022-L000025"
+          },
+          {
+            "cita_sha256": "fb4f4d379ac5f28fbc3f91cdce2617ef1f9fe3e7190cefffb99bb08b14971fb7",
+            "documento": "MANUAL_TRAMO10",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 188,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000003-L000006"
+          },
+          {
+            "cita_sha256": "5b843bbcc685b018fb40435274683b624e9f7559338816b93bf4355a3d64a975",
+            "documento": "MANUAL_TRAMO10",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 39,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000026-L000028"
+          },
+          {
+            "cita_sha256": "432fcdb759f35d08727a507e48dcab35613a15505a70dc2c44d355830099237d",
+            "documento": "MANUAL_PRESENTACION",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 488,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000005-L000010"
+          },
+          {
+            "cita_sha256": "e49a29966610a0e1ad95337bd920d62e2a981ca38baca8e4331e5269b9788488",
+            "documento": "MANUAL_PRESENTACION",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 488,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000005-L000010"
+          },
+          {
+            "cita_sha256": "3e316986707c7a412c53326258635e7de7adca9df480774bf3276ef2032355be",
+            "documento": "MANUAL_PRESENTACION",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 293,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000011-L000014"
+          }
+        ],
+        "conforme": true,
+        "esquema_conforme": true,
+        "version_comprobador": "0.2.0",
+        "version_contrato": "manual-md01-replica-1.1.0"
+      }
+    },
+    {
+      "caso": "MD05",
+      "etapa": 0,
+      "intento": 13,
+      "completa": true,
+      "duracion_operacion_ms": 23633,
+      "primer_texto_ms": 6914,
+      "uso": {
+        "cached_tokens": 1216,
+        "coste_liquidado_usd": null,
+        "input_tokens": 20212,
+        "output_tokens": 1640,
+        "reasoning_tokens": 255,
+        "total_tokens": 21852
+      },
+      "telemetria": {
+        "bytes": 688080,
+        "fallos_medicion": 0,
+        "integridad": "conforme",
+        "intervalo_maximo_ms": 277,
+        "intervalo_objetivo_ms": 250,
+        "muestras": 93,
+        "plataforma_recibida": false,
+        "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+        "registros": 1850,
+        "sha256": "f63d95843d6fa8a554ccf4d0c6049feda275555a0b72d4703b32cfd418700e9d"
+      },
+      "final_sha256": "9e46d1db167a5e4f58511a8bc8524cb1927a1e472bbaf4730b2ff81df0a89821",
+      "auditoria_formal": {
+        "adjudicacion_cientifica": false,
+        "alcance": "estructura y pertenencia literal; no prueba suficiencia ni fidelidad sustantiva",
+        "citas": [
+          {
+            "cita_sha256": "652f60de7b8bb9b32beacbc16188feee47376a0f04db8280cc0b0a4b2f14ebc9",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 376,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000109-L000118"
+          },
+          {
+            "cita_sha256": "2b3f61d269835ab89bf7b16cf9188a3c27ec86cf09cdb76aca7229956e38d724",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 376,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000109-L000118"
+          },
+          {
+            "cita_sha256": "075828e8cbd38cb3c701b0edd9b6b5b3a31eec7b3f6c93ac1f667ae5d3f389ae",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 376,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000109-L000118"
+          },
+          {
+            "cita_sha256": "8ca8c722eef1e29b9d39e9e73493ecee637e790870a913aef92cf859582e9501",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 334,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000009-L000017"
+          },
+          {
+            "cita_sha256": "e1d8b0ccf2120d9376af9b5e64e7a9641adc37f76fa57c3346967539d44860d0",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 334,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000009-L000017"
+          },
+          {
+            "cita_sha256": "c1fbc7133cda02f1944294ff149482b7507ce3d81475175b345d86dbfe93ec07",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 281,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000092-L000108"
+          },
+          {
+            "cita_sha256": "20f4798ca788b7cf11e0ba7175125bb879e9db1c0b91360b544460c967489db2",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 281,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000092-L000108"
+          },
+          {
+            "cita_sha256": "b59e59ea95611add531632699dfee047b844b1c50720ceb392f7bdf8c9274b83",
+            "documento": "MANUAL_TRAMO10",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 139,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000022-L000025"
+          }
+        ],
+        "conforme": true,
+        "esquema_conforme": true,
+        "version_comprobador": "0.2.0",
+        "version_contrato": "manual-md01-replica-1.1.0"
+      }
+    },
+    {
+      "caso": "MD05",
+      "etapa": 1,
+      "intento": 14,
+      "completa": true,
+      "duracion_operacion_ms": 41212,
+      "primer_texto_ms": 14245,
+      "uso": {
+        "cached_tokens": 1280,
+        "coste_liquidado_usd": null,
+        "input_tokens": 22982,
+        "output_tokens": 2852,
+        "reasoning_tokens": 719,
+        "total_tokens": 25834
+      },
+      "telemetria": {
+        "bytes": 1200780,
+        "fallos_medicion": 0,
+        "integridad": "conforme",
+        "intervalo_maximo_ms": 362,
+        "intervalo_objetivo_ms": 250,
+        "muestras": 158,
+        "plataforma_recibida": false,
+        "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+        "registros": 3226,
+        "sha256": "6dd23bc03fcac142a0a0f333bae691c93522882aff7ca53dc29ae7204dda24d1"
+      },
+      "final_sha256": "c98d2985c79b2f3c8b8109b9812f86c3ec6dc81b24cd4f1bb7ea97e0a18047bc",
+      "auditoria_formal": {
+        "adjudicacion_cientifica": false,
+        "alcance": "estructura y pertenencia literal; no prueba suficiencia ni fidelidad sustantiva",
+        "citas": [
+          {
+            "cita_sha256": "652f60de7b8bb9b32beacbc16188feee47376a0f04db8280cc0b0a4b2f14ebc9",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 376,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000109-L000118"
+          },
+          {
+            "cita_sha256": "7937d16f4d9122b3bbefa32d1cd4c36dce26ac08244cc57c9ced00fe29eb79fa",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 376,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000109-L000118"
+          },
+          {
+            "cita_sha256": "2b3f61d269835ab89bf7b16cf9188a3c27ec86cf09cdb76aca7229956e38d724",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 376,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000109-L000118"
+          },
+          {
+            "cita_sha256": "075828e8cbd38cb3c701b0edd9b6b5b3a31eec7b3f6c93ac1f667ae5d3f389ae",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 376,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000109-L000118"
+          },
+          {
+            "cita_sha256": "5be6d2b095ea8717c1dd107869c10a26d57d7b106b926c80d2a7906512d5eafd",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 376,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000109-L000118"
+          },
+          {
+            "cita_sha256": "8ca8c722eef1e29b9d39e9e73493ecee637e790870a913aef92cf859582e9501",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 334,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000009-L000017"
+          },
+          {
+            "cita_sha256": "e1d8b0ccf2120d9376af9b5e64e7a9641adc37f76fa57c3346967539d44860d0",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 334,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000009-L000017"
+          },
+          {
+            "cita_sha256": "7689bc415771d69e2cac0bd1719d6c89133018ba474ef8f5b206d8b4c1716698",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 281,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000092-L000108"
+          },
+          {
+            "cita_sha256": "20f4798ca788b7cf11e0ba7175125bb879e9db1c0b91360b544460c967489db2",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 281,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000092-L000108"
+          },
+          {
+            "cita_sha256": "c1fbc7133cda02f1944294ff149482b7507ce3d81475175b345d86dbfe93ec07",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 281,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000092-L000108"
+          },
+          {
+            "cita_sha256": "b59e59ea95611add531632699dfee047b844b1c50720ceb392f7bdf8c9274b83",
+            "documento": "MANUAL_TRAMO10",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 139,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000022-L000025"
+          },
+          {
+            "cita_sha256": "5b843bbcc685b018fb40435274683b624e9f7559338816b93bf4355a3d64a975",
+            "documento": "MANUAL_TRAMO10",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 39,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000026-L000028"
+          }
+        ],
+        "conforme": true,
+        "esquema_conforme": true,
+        "version_comprobador": "0.2.0",
+        "version_contrato": "manual-md01-replica-1.1.0"
+      }
+    },
+    {
+      "caso": "MD05",
+      "etapa": 2,
+      "intento": 15,
+      "completa": true,
+      "duracion_operacion_ms": 28306,
+      "primer_texto_ms": 3252,
+      "uso": {
+        "cached_tokens": 0,
+        "coste_liquidado_usd": null,
+        "input_tokens": 26498,
+        "output_tokens": 2241,
+        "reasoning_tokens": 14,
+        "total_tokens": 28739
+      },
+      "telemetria": {
+        "bytes": 926920,
+        "fallos_medicion": 0,
+        "integridad": "conforme",
+        "intervalo_maximo_ms": 377,
+        "intervalo_objetivo_ms": 250,
+        "muestras": 109,
+        "plataforma_recibida": false,
+        "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+        "registros": 2523,
+        "sha256": "3247f8fc3e6d7663196dd876a79812ee91ce56552814d9580723580249ad64c4"
+      },
+      "final_sha256": "81dec6d1d38093fc792b63af9d4b5c5d5b4bd84ce4d899b325bf990ae71f3d4e",
+      "auditoria_formal": {
+        "adjudicacion_cientifica": false,
+        "alcance": "estructura y pertenencia literal; no prueba suficiencia ni fidelidad sustantiva",
+        "citas": [
+          {
+            "cita_sha256": "652f60de7b8bb9b32beacbc16188feee47376a0f04db8280cc0b0a4b2f14ebc9",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 376,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000109-L000118"
+          },
+          {
+            "cita_sha256": "7937d16f4d9122b3bbefa32d1cd4c36dce26ac08244cc57c9ced00fe29eb79fa",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 376,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000109-L000118"
+          },
+          {
+            "cita_sha256": "2b3f61d269835ab89bf7b16cf9188a3c27ec86cf09cdb76aca7229956e38d724",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 376,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000109-L000118"
+          },
+          {
+            "cita_sha256": "075828e8cbd38cb3c701b0edd9b6b5b3a31eec7b3f6c93ac1f667ae5d3f389ae",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 376,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000109-L000118"
+          },
+          {
+            "cita_sha256": "5be6d2b095ea8717c1dd107869c10a26d57d7b106b926c80d2a7906512d5eafd",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 376,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000109-L000118"
+          },
+          {
+            "cita_sha256": "e1d8b0ccf2120d9376af9b5e64e7a9641adc37f76fa57c3346967539d44860d0",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 334,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000009-L000017"
+          },
+          {
+            "cita_sha256": "8ca8c722eef1e29b9d39e9e73493ecee637e790870a913aef92cf859582e9501",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 334,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000009-L000017"
+          },
+          {
+            "cita_sha256": "7689bc415771d69e2cac0bd1719d6c89133018ba474ef8f5b206d8b4c1716698",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 281,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000092-L000108"
+          },
+          {
+            "cita_sha256": "20f4798ca788b7cf11e0ba7175125bb879e9db1c0b91360b544460c967489db2",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 281,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000092-L000108"
+          },
+          {
+            "cita_sha256": "c1fbc7133cda02f1944294ff149482b7507ce3d81475175b345d86dbfe93ec07",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 281,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000092-L000108"
+          },
+          {
+            "cita_sha256": "b59e59ea95611add531632699dfee047b844b1c50720ceb392f7bdf8c9274b83",
+            "documento": "MANUAL_TRAMO10",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 139,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000022-L000025"
+          },
+          {
+            "cita_sha256": "5b843bbcc685b018fb40435274683b624e9f7559338816b93bf4355a3d64a975",
+            "documento": "MANUAL_TRAMO10",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 39,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000026-L000028"
+          },
+          {
+            "cita_sha256": "4f757a2e4a7f560f546296fe6af242905282f24737b9148537d15588d74b3715",
+            "documento": "MANUAL_PRESENTACION",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 293,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000011-L000014"
+          }
+        ],
+        "conforme": true,
+        "esquema_conforme": true,
+        "version_comprobador": "0.2.0",
+        "version_contrato": "manual-md01-replica-1.1.0"
+      }
+    },
+    {
+      "caso": "MD06",
+      "etapa": 0,
+      "intento": 16,
+      "completa": true,
+      "duracion_operacion_ms": 10515,
+      "primer_texto_ms": 2788,
+      "uso": {
+        "cached_tokens": 1216,
+        "coste_liquidado_usd": null,
+        "input_tokens": 20183,
+        "output_tokens": 605,
+        "reasoning_tokens": 38,
+        "total_tokens": 20788
+      },
+      "telemetria": {
+        "bytes": 268680,
+        "fallos_medicion": 0,
+        "integridad": "conforme",
+        "intervalo_maximo_ms": 283,
+        "intervalo_objetivo_ms": 250,
+        "muestras": 43,
+        "plataforma_recibida": false,
+        "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+        "registros": 714,
+        "sha256": "a8062f5383536463c8b741cb68222a912c353c3d249701a688bf3cb6772a6f83"
+      },
+      "final_sha256": "92dda17bb47dc4376bab345bbea15fe5e5c3f8a8396c7e4c0886c01e2124de03",
+      "auditoria_formal": {
+        "adjudicacion_cientifica": false,
+        "alcance": "estructura y pertenencia literal; no prueba suficiencia ni fidelidad sustantiva",
+        "citas": [
+          {
+            "cita_sha256": "d4b3b2f975b62569bf0378137b5a5c92d4df0f7c2a54d7a92091573f0543c4dc",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 155,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000123-L000125"
+          },
+          {
+            "cita_sha256": "554f482a160076857f19dbc04098f88b402a6b860ffdd9e0ec903b336fddfe44",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 122,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000018-L000021"
+          }
+        ],
+        "conforme": true,
+        "esquema_conforme": true,
+        "version_comprobador": "0.2.0",
+        "version_contrato": "manual-md01-replica-1.1.0"
+      }
+    },
+    {
+      "caso": "MD06",
+      "etapa": 1,
+      "intento": 17,
+      "completa": true,
+      "duracion_operacion_ms": 14595,
+      "primer_texto_ms": 5589,
+      "uso": {
+        "cached_tokens": 1280,
+        "coste_liquidado_usd": null,
+        "input_tokens": 22135,
+        "output_tokens": 1045,
+        "reasoning_tokens": 191,
+        "total_tokens": 23180
+      },
+      "telemetria": {
+        "bytes": 440030,
+        "fallos_medicion": 0,
+        "integridad": "conforme",
+        "intervalo_maximo_ms": 280,
+        "intervalo_objetivo_ms": 250,
+        "muestras": 59,
+        "plataforma_recibida": false,
+        "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+        "registros": 1187,
+        "sha256": "85028a6294ccb2bfd2ea73b59dd9fac7a3b503e96cb4ac718b302b301a077add"
+      },
+      "final_sha256": "e30c7f69c891b74dc26e7e615bde7a5059d7fb1ea46dea34d4c43a27f9d96d58",
+      "auditoria_formal": {
+        "conforme": false,
+        "defecto": "Campos ausentes o adicionales"
+      }
+    },
+    {
+      "caso": "MD06",
+      "etapa": 2,
+      "intento": 18,
+      "completa": true,
+      "duracion_operacion_ms": 20739,
+      "primer_texto_ms": 5979,
+      "uso": {
+        "cached_tokens": 1280,
+        "coste_liquidado_usd": null,
+        "input_tokens": 24376,
+        "output_tokens": 1025,
+        "reasoning_tokens": 12,
+        "total_tokens": 25401
+      },
+      "telemetria": {
+        "bytes": 456423,
+        "fallos_medicion": 0,
+        "integridad": "conforme",
+        "intervalo_maximo_ms": 441,
+        "intervalo_objetivo_ms": 250,
+        "muestras": 81,
+        "plataforma_recibida": false,
+        "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+        "registros": 1191,
+        "sha256": "efa31b90469d0e96e9f69ad83cadfa041953cc5c67d82c7c1fecddae6eb6303a"
+      },
+      "final_sha256": "2c61f8d9607f3d0f92061fe93388b47c417e3dbb36ad71de5822ed9dd169fcae",
+      "auditoria_formal": {
+        "adjudicacion_cientifica": false,
+        "alcance": "estructura y pertenencia literal; no prueba suficiencia ni fidelidad sustantiva",
+        "citas": [
+          {
+            "cita_sha256": "d4b3b2f975b62569bf0378137b5a5c92d4df0f7c2a54d7a92091573f0543c4dc",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 155,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000123-L000125"
+          },
+          {
+            "cita_sha256": "554f482a160076857f19dbc04098f88b402a6b860ffdd9e0ec903b336fddfe44",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 122,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000018-L000021"
+          },
+          {
+            "cita_sha256": "24ad90383be945eda5b96a86a957fec129a9f4e680f10ba06372bd3c01ba0080",
+            "documento": "MANUAL_PRESENTACION",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 293,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000011-L000014"
+          }
+        ],
+        "conforme": true,
+        "esquema_conforme": true,
+        "version_comprobador": "0.2.0",
+        "version_contrato": "manual-md01-replica-1.1.0"
+      }
+    },
+    {
+      "caso": "MD07",
+      "etapa": 0,
+      "intento": 19,
+      "completa": true,
+      "duracion_operacion_ms": 23058,
+      "primer_texto_ms": 8350,
+      "uso": {
+        "cached_tokens": 1216,
+        "coste_liquidado_usd": null,
+        "input_tokens": 20196,
+        "output_tokens": 1428,
+        "reasoning_tokens": 124,
+        "total_tokens": 21624
+      },
+      "telemetria": {
+        "bytes": 608681,
+        "fallos_medicion": 0,
+        "integridad": "conforme",
+        "intervalo_maximo_ms": 361,
+        "intervalo_objetivo_ms": 250,
+        "muestras": 89,
+        "plataforma_recibida": false,
+        "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+        "registros": 1623,
+        "sha256": "dc12e221447bb21f73c25641770b574729f5344562b38144908455efefef4d5a"
+      },
+      "final_sha256": "914ef42cb6605838d8d4cfbc4e095c5b671cc937018c82bb24ab55f3494058f8",
+      "auditoria_formal": {
+        "adjudicacion_cientifica": false,
+        "alcance": "estructura y pertenencia literal; no prueba suficiencia ni fidelidad sustantiva",
+        "citas": [
+          {
+            "cita_sha256": "fb4f4d379ac5f28fbc3f91cdce2617ef1f9fe3e7190cefffb99bb08b14971fb7",
+            "documento": "MANUAL_TRAMO10",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 188,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000003-L000006"
+          },
+          {
+            "cita_sha256": "e01813857ff21629c0c0befccd81b3704b8a358ebdc5db9d256a5969d5be9831",
+            "documento": "MANUAL_TRAMO10",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 193,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000014-L000021"
+          },
+          {
+            "cita_sha256": "86502bbce664a4e461f061b96f9a220a07bccfe45dab49f7ddf764661e522691",
+            "documento": "MANUAL_TRAMO10",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 139,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000022-L000025"
+          },
+          {
+            "cita_sha256": "c2692b54ffbad067b5ae71f5ccca95e0abb3e053c162e81eab38fcf9bf46832c",
+            "documento": "MANUAL_TRAMO10",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 198,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000007-L000013"
+          },
+          {
+            "cita_sha256": "db87e0ce00a58048472d735e11ae41b559b2c81f700b852f6eeab70240a5b575",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 215,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000085-L000091"
+          },
+          {
+            "cita_sha256": "5c93adb9e4da0455245ad3755ac21d4dcc0d1518ab02694ae5e653790a4b7ffc",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 233,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000119-L000122"
+          },
+          {
+            "cita_sha256": "5b843bbcc685b018fb40435274683b624e9f7559338816b93bf4355a3d64a975",
+            "documento": "MANUAL_TRAMO10",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 39,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000026-L000028"
+          }
+        ],
+        "conforme": true,
+        "esquema_conforme": true,
+        "version_comprobador": "0.2.0",
+        "version_contrato": "manual-md01-replica-1.1.0"
+      }
+    },
+    {
+      "caso": "MD07",
+      "etapa": 1,
+      "intento": 20,
+      "completa": true,
+      "duracion_operacion_ms": 33567,
+      "primer_texto_ms": 13795,
+      "uso": {
+        "cached_tokens": 1280,
+        "coste_liquidado_usd": null,
+        "input_tokens": 22885,
+        "output_tokens": 2770,
+        "reasoning_tokens": 744,
+        "total_tokens": 25655
+      },
+      "telemetria": {
+        "bytes": 1166429,
+        "fallos_medicion": 0,
+        "integridad": "conforme",
+        "intervalo_maximo_ms": 312,
+        "intervalo_objetivo_ms": 250,
+        "muestras": 129,
+        "plataforma_recibida": false,
+        "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+        "registros": 3182,
+        "sha256": "aa399146ed57f2347655dbab3257fd50c625d8c933790833adb8fa16676ec500"
+      },
+      "final_sha256": "a4aa3ed1c3c5629bbc0abdc45f553b5dc73a59cf6bff825d98ccabad7c8c2f1e",
+      "auditoria_formal": {
+        "adjudicacion_cientifica": false,
+        "alcance": "estructura y pertenencia literal; no prueba suficiencia ni fidelidad sustantiva",
+        "citas": [
+          {
+            "cita_sha256": "fb4f4d379ac5f28fbc3f91cdce2617ef1f9fe3e7190cefffb99bb08b14971fb7",
+            "documento": "MANUAL_TRAMO10",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 188,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000003-L000006"
+          },
+          {
+            "cita_sha256": "6903665e05a2bc1969625426bcb89de7571894455889e0445f74621f4e9f7112",
+            "documento": "MANUAL_TRAMO10",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 193,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000014-L000021"
+          },
+          {
+            "cita_sha256": "86502bbce664a4e461f061b96f9a220a07bccfe45dab49f7ddf764661e522691",
+            "documento": "MANUAL_TRAMO10",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 139,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000022-L000025"
+          },
+          {
+            "cita_sha256": "80119a6e3b84cf743960b283daf33372d67573c064d77d3a1c2121d58662b131",
+            "documento": "MANUAL_TRAMO10",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 198,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000007-L000013"
+          },
+          {
+            "cita_sha256": "db87e0ce00a58048472d735e11ae41b559b2c81f700b852f6eeab70240a5b575",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 215,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000085-L000091"
+          },
+          {
+            "cita_sha256": "5c93adb9e4da0455245ad3755ac21d4dcc0d1518ab02694ae5e653790a4b7ffc",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 233,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000119-L000122"
+          },
+          {
+            "cita_sha256": "5b843bbcc685b018fb40435274683b624e9f7559338816b93bf4355a3d64a975",
+            "documento": "MANUAL_TRAMO10",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 39,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000026-L000028"
+          },
+          {
+            "cita_sha256": "0832fdd095c66d294327fafed7f8aaae98194e18c0bb3a8979140e62e34fc290",
+            "documento": "MANUAL_PRESENTACION",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 488,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000005-L000010"
+          }
+        ],
+        "conforme": true,
+        "esquema_conforme": true,
+        "version_comprobador": "0.2.0",
+        "version_contrato": "manual-md01-replica-1.1.0"
+      }
+    },
+    {
+      "caso": "MD07",
+      "etapa": 2,
+      "intento": 21,
+      "completa": true,
+      "duracion_operacion_ms": 30804,
+      "primer_texto_ms": 4860,
+      "uso": {
+        "cached_tokens": 1280,
+        "coste_liquidado_usd": null,
+        "input_tokens": 26298,
+        "output_tokens": 2444,
+        "reasoning_tokens": 101,
+        "total_tokens": 28742
+      },
+      "telemetria": {
+        "bytes": 1011228,
+        "fallos_medicion": 0,
+        "integridad": "conforme",
+        "intervalo_maximo_ms": 283,
+        "intervalo_objetivo_ms": 250,
+        "muestras": 119,
+        "plataforma_recibida": false,
+        "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+        "registros": 2750,
+        "sha256": "447d4309d73c5e73aff85dfdd0321c9a48398ceb481f1497a121e671c6b68615"
+      },
+      "final_sha256": "6f94b4ff65491b196f7d8940c09594288fbe80ab9bb2c63c0d62e3f855365cbb",
+      "auditoria_formal": {
+        "conforme": false,
+        "defecto": "Cita no literal en fragmentos identificados"
+      }
+    },
+    {
+      "caso": "MD08",
+      "etapa": 0,
+      "intento": 22,
+      "completa": true,
+      "duracion_operacion_ms": 25206,
+      "primer_texto_ms": 10635,
+      "uso": {
+        "cached_tokens": 1216,
+        "coste_liquidado_usd": null,
+        "input_tokens": 20185,
+        "output_tokens": 1864,
+        "reasoning_tokens": 561,
+        "total_tokens": 22049
+      },
+      "telemetria": {
+        "bytes": 778148,
+        "fallos_medicion": 0,
+        "integridad": "conforme",
+        "intervalo_maximo_ms": 278,
+        "intervalo_objetivo_ms": 250,
+        "muestras": 98,
+        "plataforma_recibida": false,
+        "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+        "registros": 2102,
+        "sha256": "5ac6f51eb0b4b7202541e6a0379421ee154c6cb498efab0fc4248ae6d0d619a6"
+      },
+      "final_sha256": "bcb10a4aac20f7251b27ed05ebe43a16906551e991a53275d85c1239e6b1ff4d",
+      "auditoria_formal": {
+        "adjudicacion_cientifica": false,
+        "alcance": "estructura y pertenencia literal; no prueba suficiencia ni fidelidad sustantiva",
+        "citas": [
+          {
+            "cita_sha256": "21184ffae745810e533989e5f13d63cc234c3350cf572410c2b53d9b84c370db",
+            "documento": "MANUAL_TRAMO10",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 193,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000014-L000021"
+          },
+          {
+            "cita_sha256": "fb4f4d379ac5f28fbc3f91cdce2617ef1f9fe3e7190cefffb99bb08b14971fb7",
+            "documento": "MANUAL_TRAMO10",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 188,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000003-L000006"
+          },
+          {
+            "cita_sha256": "86502bbce664a4e461f061b96f9a220a07bccfe45dab49f7ddf764661e522691",
+            "documento": "MANUAL_TRAMO10",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 139,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000022-L000025"
+          },
+          {
+            "cita_sha256": "8e08435135c76ccdf1e0c3ea55e92c35936f555b10c36c02cb055e6f0872b03a",
+            "documento": "MANUAL_TRAMO10",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 39,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000026-L000028"
+          },
+          {
+            "cita_sha256": "85597c2368d4f0cb38c77dc6713e170c8434b518d398fe4f289f126966c1895c",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 281,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000092-L000108"
+          },
+          {
+            "cita_sha256": "d07fc5fbdc1fbce5ef68d555b3c54e0eb508f35c9f0ff1034ecc6e7ac0776123",
+            "documento": "MANUAL_INDICE",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 680,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000001-L000017"
+          },
+          {
+            "cita_sha256": "0832fdd095c66d294327fafed7f8aaae98194e18c0bb3a8979140e62e34fc290",
+            "documento": "MANUAL_PRESENTACION",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 488,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000005-L000010"
+          }
+        ],
+        "conforme": true,
+        "esquema_conforme": true,
+        "version_comprobador": "0.2.0",
+        "version_contrato": "manual-md01-replica-1.1.0"
+      }
+    },
+    {
+      "caso": "MD08",
+      "etapa": 1,
+      "intento": 23,
+      "completa": true,
+      "duracion_operacion_ms": 29711,
+      "primer_texto_ms": 13447,
+      "uso": {
+        "cached_tokens": 0,
+        "coste_liquidado_usd": null,
+        "input_tokens": 22873,
+        "output_tokens": 2637,
+        "reasoning_tokens": 779,
+        "total_tokens": 25510
+      },
+      "telemetria": {
+        "bytes": 1079298,
+        "fallos_medicion": 0,
+        "integridad": "conforme",
+        "intervalo_maximo_ms": 279,
+        "intervalo_objetivo_ms": 250,
+        "muestras": 115,
+        "plataforma_recibida": false,
+        "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+        "registros": 2952,
+        "sha256": "39760704c5bdf71db4f31c6ce2e0f4be0c7120aa7972403220cadcb7327d433e"
+      },
+      "final_sha256": "87192cf619584a8f8c93481848134058fc801016b2e9d92f06d7a65d48911e5a",
+      "auditoria_formal": {
+        "adjudicacion_cientifica": false,
+        "alcance": "estructura y pertenencia literal; no prueba suficiencia ni fidelidad sustantiva",
+        "citas": [
+          {
+            "cita_sha256": "21184ffae745810e533989e5f13d63cc234c3350cf572410c2b53d9b84c370db",
+            "documento": "MANUAL_TRAMO10",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 193,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000014-L000021"
+          },
+          {
+            "cita_sha256": "fb4f4d379ac5f28fbc3f91cdce2617ef1f9fe3e7190cefffb99bb08b14971fb7",
+            "documento": "MANUAL_TRAMO10",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 188,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000003-L000006"
+          },
+          {
+            "cita_sha256": "86502bbce664a4e461f061b96f9a220a07bccfe45dab49f7ddf764661e522691",
+            "documento": "MANUAL_TRAMO10",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 139,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000022-L000025"
+          },
+          {
+            "cita_sha256": "8e08435135c76ccdf1e0c3ea55e92c35936f555b10c36c02cb055e6f0872b03a",
+            "documento": "MANUAL_TRAMO10",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 39,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000026-L000028"
+          },
+          {
+            "cita_sha256": "85597c2368d4f0cb38c77dc6713e170c8434b518d398fe4f289f126966c1895c",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 281,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000092-L000108"
+          },
+          {
+            "cita_sha256": "5c93adb9e4da0455245ad3755ac21d4dcc0d1518ab02694ae5e653790a4b7ffc",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 233,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000119-L000122"
+          },
+          {
+            "cita_sha256": "d07fc5fbdc1fbce5ef68d555b3c54e0eb508f35c9f0ff1034ecc6e7ac0776123",
+            "documento": "MANUAL_INDICE",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 680,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000001-L000017"
+          },
+          {
+            "cita_sha256": "0832fdd095c66d294327fafed7f8aaae98194e18c0bb3a8979140e62e34fc290",
+            "documento": "MANUAL_PRESENTACION",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 488,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000005-L000010"
+          }
+        ],
+        "conforme": true,
+        "esquema_conforme": true,
+        "version_comprobador": "0.2.0",
+        "version_contrato": "manual-md01-replica-1.1.0"
+      }
+    },
+    {
+      "caso": "MD08",
+      "etapa": 2,
+      "intento": 24,
+      "completa": true,
+      "duracion_operacion_ms": 20567,
+      "primer_texto_ms": 3692,
+      "uso": {
+        "cached_tokens": 1280,
+        "coste_liquidado_usd": null,
+        "input_tokens": 26118,
+        "output_tokens": 1854,
+        "reasoning_tokens": 68,
+        "total_tokens": 27972
+      },
+      "telemetria": {
+        "bytes": 755867,
+        "fallos_medicion": 0,
+        "integridad": "conforme",
+        "intervalo_maximo_ms": 318,
+        "intervalo_objetivo_ms": 250,
+        "muestras": 81,
+        "plataforma_recibida": false,
+        "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+        "registros": 2076,
+        "sha256": "a3220c31d0ccb7fffc35f4d4447cfa692dca499acc96d9ef07d0d8a7eb67603b"
+      },
+      "final_sha256": "78e5f5fc7ac728ad50835f52c87bc43a6af48a041e36f5b72c602980a81cbb3b",
+      "auditoria_formal": {
+        "adjudicacion_cientifica": false,
+        "alcance": "estructura y pertenencia literal; no prueba suficiencia ni fidelidad sustantiva",
+        "citas": [
+          {
+            "cita_sha256": "21184ffae745810e533989e5f13d63cc234c3350cf572410c2b53d9b84c370db",
+            "documento": "MANUAL_TRAMO10",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 193,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000014-L000021"
+          },
+          {
+            "cita_sha256": "fb4f4d379ac5f28fbc3f91cdce2617ef1f9fe3e7190cefffb99bb08b14971fb7",
+            "documento": "MANUAL_TRAMO10",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 188,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000003-L000006"
+          },
+          {
+            "cita_sha256": "86502bbce664a4e461f061b96f9a220a07bccfe45dab49f7ddf764661e522691",
+            "documento": "MANUAL_TRAMO10",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 139,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000022-L000025"
+          },
+          {
+            "cita_sha256": "8e08435135c76ccdf1e0c3ea55e92c35936f555b10c36c02cb055e6f0872b03a",
+            "documento": "MANUAL_TRAMO10",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 39,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000026-L000028"
+          },
+          {
+            "cita_sha256": "85597c2368d4f0cb38c77dc6713e170c8434b518d398fe4f289f126966c1895c",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 281,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000092-L000108"
+          },
+          {
+            "cita_sha256": "5c93adb9e4da0455245ad3755ac21d4dcc0d1518ab02694ae5e653790a4b7ffc",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 233,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000119-L000122"
+          },
+          {
+            "cita_sha256": "d07fc5fbdc1fbce5ef68d555b3c54e0eb508f35c9f0ff1034ecc6e7ac0776123",
+            "documento": "MANUAL_INDICE",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 680,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000001-L000017"
+          },
+          {
+            "cita_sha256": "0832fdd095c66d294327fafed7f8aaae98194e18c0bb3a8979140e62e34fc290",
+            "documento": "MANUAL_PRESENTACION",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 488,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000005-L000010"
+          }
+        ],
+        "conforme": true,
+        "esquema_conforme": true,
+        "version_comprobador": "0.2.0",
+        "version_contrato": "manual-md01-replica-1.1.0"
+      }
+    },
+    {
+      "caso": "MD09",
+      "etapa": 0,
+      "intento": 25,
+      "completa": true,
+      "duracion_operacion_ms": 23695,
+      "primer_texto_ms": 9664,
+      "uso": {
+        "cached_tokens": 1216,
+        "coste_liquidado_usd": null,
+        "input_tokens": 20210,
+        "output_tokens": 1640,
+        "reasoning_tokens": 504,
+        "total_tokens": 21850
+      },
+      "telemetria": {
+        "bytes": 691529,
+        "fallos_medicion": 0,
+        "integridad": "conforme",
+        "intervalo_maximo_ms": 286,
+        "intervalo_objetivo_ms": 250,
+        "muestras": 92,
+        "plataforma_recibida": false,
+        "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+        "registros": 1859,
+        "sha256": "617cee5c9bd68d9caea3de54d0a6a246ec8bd6c79d5e14d92c8992bfd097c2db"
+      },
+      "final_sha256": "bb0f321f780d175a0f9033a8043b224419846abb023e8541e4275a4551e47c27",
+      "auditoria_formal": {
+        "adjudicacion_cientifica": false,
+        "alcance": "estructura y pertenencia literal; no prueba suficiencia ni fidelidad sustantiva",
+        "citas": [
+          {
+            "cita_sha256": "fb4f4d379ac5f28fbc3f91cdce2617ef1f9fe3e7190cefffb99bb08b14971fb7",
+            "documento": "MANUAL_TRAMO10",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 188,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000003-L000006"
+          },
+          {
+            "cita_sha256": "6903665e05a2bc1969625426bcb89de7571894455889e0445f74621f4e9f7112",
+            "documento": "MANUAL_TRAMO10",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 193,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000014-L000021"
+          },
+          {
+            "cita_sha256": "86502bbce664a4e461f061b96f9a220a07bccfe45dab49f7ddf764661e522691",
+            "documento": "MANUAL_TRAMO10",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 139,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000022-L000025"
+          },
+          {
+            "cita_sha256": "8e08435135c76ccdf1e0c3ea55e92c35936f555b10c36c02cb055e6f0872b03a",
+            "documento": "MANUAL_TRAMO10",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 39,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000026-L000028"
+          },
+          {
+            "cita_sha256": "80119a6e3b84cf743960b283daf33372d67573c064d77d3a1c2121d58662b131",
+            "documento": "MANUAL_TRAMO10",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 198,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000007-L000013"
+          }
+        ],
+        "conforme": true,
+        "esquema_conforme": true,
+        "version_comprobador": "0.2.0",
+        "version_contrato": "manual-md01-replica-1.1.0"
+      }
+    },
+    {
+      "caso": "MD09",
+      "etapa": 1,
+      "intento": 26,
+      "completa": true,
+      "duracion_operacion_ms": 20471,
+      "primer_texto_ms": 5833,
+      "uso": {
+        "cached_tokens": 1280,
+        "coste_liquidado_usd": null,
+        "input_tokens": 22731,
+        "output_tokens": 1782,
+        "reasoning_tokens": 191,
+        "total_tokens": 24513
+      },
+      "telemetria": {
+        "bytes": 746757,
+        "fallos_medicion": 0,
+        "integridad": "conforme",
+        "intervalo_maximo_ms": 277,
+        "intervalo_objetivo_ms": 250,
+        "muestras": 81,
+        "plataforma_recibida": false,
+        "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+        "registros": 2048,
+        "sha256": "ef6fc455220049069270b75471e5882ace6f76f498c588c4ac6d24ff3f3be670"
+      },
+      "final_sha256": "58d1c9c16d68e9d5e4c2bd860267ece7f5af9068b3ba43db61c981dbdebcafd1",
+      "auditoria_formal": {
+        "adjudicacion_cientifica": false,
+        "alcance": "estructura y pertenencia literal; no prueba suficiencia ni fidelidad sustantiva",
+        "citas": [
+          {
+            "cita_sha256": "fb4f4d379ac5f28fbc3f91cdce2617ef1f9fe3e7190cefffb99bb08b14971fb7",
+            "documento": "MANUAL_TRAMO10",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 188,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000003-L000006"
+          },
+          {
+            "cita_sha256": "6903665e05a2bc1969625426bcb89de7571894455889e0445f74621f4e9f7112",
+            "documento": "MANUAL_TRAMO10",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 193,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000014-L000021"
+          },
+          {
+            "cita_sha256": "86502bbce664a4e461f061b96f9a220a07bccfe45dab49f7ddf764661e522691",
+            "documento": "MANUAL_TRAMO10",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 139,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000022-L000025"
+          },
+          {
+            "cita_sha256": "8e08435135c76ccdf1e0c3ea55e92c35936f555b10c36c02cb055e6f0872b03a",
+            "documento": "MANUAL_TRAMO10",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 39,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000026-L000028"
+          },
+          {
+            "cita_sha256": "80119a6e3b84cf743960b283daf33372d67573c064d77d3a1c2121d58662b131",
+            "documento": "MANUAL_TRAMO10",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 198,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000007-L000013"
+          },
+          {
+            "cita_sha256": "0832fdd095c66d294327fafed7f8aaae98194e18c0bb3a8979140e62e34fc290",
+            "documento": "MANUAL_PRESENTACION",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 488,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000005-L000010"
+          }
+        ],
+        "conforme": true,
+        "esquema_conforme": true,
+        "version_comprobador": "0.2.0",
+        "version_contrato": "manual-md01-replica-1.1.0"
+      }
+    },
+    {
+      "caso": "MD09",
+      "etapa": 2,
+      "intento": 27,
+      "completa": true,
+      "duracion_operacion_ms": 30771,
+      "primer_texto_ms": 8794,
+      "uso": {
+        "cached_tokens": 1280,
+        "coste_liquidado_usd": null,
+        "input_tokens": 25709,
+        "output_tokens": 2379,
+        "reasoning_tokens": 371,
+        "total_tokens": 28088
+      },
+      "telemetria": {
+        "bytes": 1002996,
+        "fallos_medicion": 0,
+        "integridad": "conforme",
+        "intervalo_maximo_ms": 291,
+        "intervalo_objetivo_ms": 250,
+        "muestras": 119,
+        "plataforma_recibida": false,
+        "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+        "registros": 2722,
+        "sha256": "3a1bb550e59ac2e242d6664201ab623f226f3c339400678f4d0c5d57e90737cd"
+      },
+      "final_sha256": "7e1cc499fa440347d1e1485c88756ce68ea954d71ec1ee892ae98429ff0487c3",
+      "auditoria_formal": {
+        "adjudicacion_cientifica": false,
+        "alcance": "estructura y pertenencia literal; no prueba suficiencia ni fidelidad sustantiva",
+        "citas": [
+          {
+            "cita_sha256": "fb4f4d379ac5f28fbc3f91cdce2617ef1f9fe3e7190cefffb99bb08b14971fb7",
+            "documento": "MANUAL_TRAMO10",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 188,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000003-L000006"
+          },
+          {
+            "cita_sha256": "6903665e05a2bc1969625426bcb89de7571894455889e0445f74621f4e9f7112",
+            "documento": "MANUAL_TRAMO10",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 193,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000014-L000021"
+          },
+          {
+            "cita_sha256": "86502bbce664a4e461f061b96f9a220a07bccfe45dab49f7ddf764661e522691",
+            "documento": "MANUAL_TRAMO10",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 139,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000022-L000025"
+          },
+          {
+            "cita_sha256": "8e08435135c76ccdf1e0c3ea55e92c35936f555b10c36c02cb055e6f0872b03a",
+            "documento": "MANUAL_TRAMO10",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 39,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000026-L000028"
+          },
+          {
+            "cita_sha256": "80119a6e3b84cf743960b283daf33372d67573c064d77d3a1c2121d58662b131",
+            "documento": "MANUAL_TRAMO10",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 198,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000007-L000013"
+          },
+          {
+            "cita_sha256": "0832fdd095c66d294327fafed7f8aaae98194e18c0bb3a8979140e62e34fc290",
+            "documento": "MANUAL_PRESENTACION",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 488,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000005-L000010"
+          },
+          {
+            "cita_sha256": "5c93adb9e4da0455245ad3755ac21d4dcc0d1518ab02694ae5e653790a4b7ffc",
+            "documento": "MANUAL_CONSTRUCTOR",
+            "fragmentos": [
+              {
+                "fin_caracter_exclusivo": 233,
+                "indice": 0,
+                "inicio_caracter": 0
+              }
+            ],
+            "literal_con_espacios_normalizados": true,
+            "seccion": "MD-L000119-L000122"
+          }
+        ],
+        "conforme": true,
+        "esquema_conforme": true,
+        "version_comprobador": "0.2.0",
+        "version_contrato": "manual-md01-replica-1.1.0"
+      }
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "alerta": null,
+  "alerta_limite": false,
+  "auditoria_sha256": "6d4fed86d33d78851dcd3ba306901292fc7cd01760a6b6cbd218075f9c88e83e",
+  "caso": "MD07",
+  "critico": true,
+  "estado_documental_candidato": "respuesta_fundada",
+  "etapa": 0,
+  "final_sha256": "914ef42cb6605838d8d4cfbc4e095c5b671cc937018c82bb24ab55f3494058f8",
+  "formal_conforme": true,
+  "fundamento_sustantivo": "Identifica preservación de la semántica propia del SV y coordinación con la política y protocolo correspondientes; no atribuye implementación.",
+  "medicion": {
+    "duracion_operacion_ms": 23058,
+    "telemetria": {
+      "bytes": 608681,
+      "fallos_medicion": 0,
+      "integridad": "conforme",
+      "intervalo_maximo_ms": 361,
+      "intervalo_objetivo_ms": 250,
+      "muestras": 89,
+      "plataforma_recibida": false,
+      "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+      "registros": 1623,
+      "sha256": "dc12e221447bb21f73c25641770b574729f5344562b38144908455efefef4d5a"
+    },
+    "uso": {
+      "cached_tokens": 1216,
+      "coste_liquidado_usd": null,
+      "input_tokens": 20196,
+      "output_tokens": 1428,
+      "reasoning_tokens": 124,
+      "total_tokens": 21624
+    }
+  },
+  "naturaleza_defecto": null,
+  "pasajes_contrastados": [
+    {
+      "documento": "MANUAL_TRAMO10",
+      "fragmento": "Este tramo fija la estructura mínima de trabajo para documentar cómo el lenguaje SV podrá relacionarse con otros lenguajes de programación sin degradar su semántica propia.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000003-L000006"
+    },
+    {
+      "documento": "MANUAL_TRAMO10",
+      "fragmento": "- tipos de compatibilidad admitidos;\n- prioridad por lenguajes anfitriones;\n- garantías semánticas mínimas;",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000014-L000021"
+    },
+    {
+      "documento": "MANUAL_TRAMO10",
+      "fragmento": "Este tramo no implementa bindings, APIs, FFI ni wrappers reales. Solo abre el frente documental y de gobierno.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000022-L000025"
+    },
+    {
+      "documento": "MANUAL_TRAMO10",
+      "fragmento": "- Política y protocolo de compatibilidad interlenguajes del Lenguaje SV",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000007-L000013"
+    },
+    {
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmento": "- preservación semántica del SV.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000085-L000091"
+    },
+    {
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmento": "La compatibilidad interlenguajes del SV se tratará como tramo propio del manual y deberá coordinarse con la política y protocolo de compatibilidad interlenguajes del Lenguaje SV.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000119-L000122"
+    },
+    {
+      "documento": "MANUAL_TRAMO10",
+      "fragmento": "Pendiente de desarrollo.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000026-L000028"
+    }
+  ],
+  "recepcion_independiente": "pendiente",
+  "respuesta_original": "\n{\n  \"caso\": \"MD07\",\n  \"estado_documental\": \"respuesta_fundada\",\n  \"etapa\": 0,\n  \"evidencias\": [\n    {\n      \"cita_literal_breve\": \"Este tramo fija la estructura mínima de trabajo para documentar cómo el lenguaje SV podrá relacionarse con otros lenguajes de programación sin degradar su semántica propia.\",\n      \"documento\": \"MANUAL_TRAMO10\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000003-L000006\"\n    },\n    {\n      \"cita_literal_breve\": \"- tipos de compatibilidad admitidos;\\n- prioridad por lenguajes anfitriones;\\n- garantías semánticas mínimas;\",\n      \"documento\": \"MANUAL_TRAMO10\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000014-L000021\"\n    },\n    {\n      \"cita_literal_breve\": \"Este tramo no implementa bindings, APIs, FFI ni wrappers reales. Solo abre el frente documental y de gobierno.\",\n      \"documento\": \"MANUAL_TRAMO10\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000022-L000025\"\n    },\n    {\n      \"cita_literal_breve\": \"- Política y protocolo de compatibilidad interlenguajes del Lenguaje SV\",\n      \"documento\": \"MANUAL_TRAMO10\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000007-L000013\"\n    },\n    {\n      \"cita_literal_breve\": \"- preservación semántica del SV.\",\n      \"documento\": \"MANUAL_CONSTRUCTOR\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000085-L000091\"\n    },\n    {\n      \"cita_literal_breve\": \"La compatibilidad interlenguajes del SV se tratará como tramo propio del manual y deberá coordinarse con la política y protocolo de compatibilidad interlenguajes del Lenguaje SV.\",\n      \"documento\": \"MANUAL_CONSTRUCTOR\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000119-L000122\"\n    },\n    {\n      \"cita_literal_breve\": \"Pendiente de desarrollo.\",\n      \"documento\": \"MANUAL_TRAMO10\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000026-L000028\"\n    }\n  ],\n  \"fundamentos_verificables\": [\n    \"El objeto del tramo 10 declara expresamente que la relación con otros lenguajes debe hacerse «sin degradar su semántica propia», lo que identifica la semántica del SV como lo que debe preservarse.\",\n    \"El constructor, en su listado del tramo 10, confirma esa exigencia con la viñeta «preservación semántica del SV», coincidente con el tramo 10 mismo.\",\n    \"El tramo 10, dentro de lo que deberá fijar, incluye «garantías semánticas mínimas», es decir, una exigencia de preservación formulada como mínimo exigible en cualquier compatibilidad admitida.\",\n    \"La coordinación exigida queda fijada por el constructor, sección 6: la compatibilidad interlenguajes se tratará como tramo propio del manual y «deberá coordinarse con la política y protocolo de compatibilidad interlenguajes del Lenguaje SV»; el propio tramo 10 lista esa política y protocolo entre sus dependencias.\",\n    \"Lo previsto y lo implementado se distinguen en la fuente: el tramo 10 prevé fijar tipos de compatibilidad, prioridad por lenguajes anfitriones, garantías semánticas mínimas, criterio de activación por lenguaje y límites de fase, pero declara que «no implementa bindings, APIs, FFI ni wrappers reales» y su estado es «Pendiente de desarrollo»; solo abre el frente documental y de gobierno.\"\n  ],\n  \"insuficiencias\": [\n    \"El contenido concreto de la «política y protocolo de compatibilidad interlenguajes del Lenguaje SV» no está incluido en los cuatro documentos suministrados, por lo que no puede describirse su articulado interno; solo consta su existencia como dependencia declarada y como instancia con la que debe coordinarse el tramo 10.\"\n  ],\n  \"respuesta\": \"Según el tramo 10 y el constructor del manual, al relacionar el Lenguaje SV con otros lenguajes de programación debe preservarse la semántica propia del SV: el tramo 10 define su objeto como documentar esa relación «sin degradar su semántica propia», el constructor lo recoge como «preservación semántica del SV», y el propio tramo 10 exige fijar «garantías semánticas mínimas» entre sus contenidos obligatorios, junto con los tipos de compatibilidad admitidos, la prioridad por lenguajes anfitriones, el criterio de activación por lenguaje y los límites de fase. Esa documentación debe coordinarse con la política y protocolo de compatibilidad interlenguajes del Lenguaje SV, exigencia que el constructor formula en su sección 6 («deberá coordinarse con la política y protocolo de compatibilidad interlenguajes del Lenguaje SV») y que el tramo 10 refleja listando dicha política entre sus dependencias. Cabe distinguir lo previsto de lo implementado: todo lo anterior es lo previsto, pues el tramo 10 declara que «no implementa bindings, APIs, FFI ni wrappers reales» y que solo «abre el frente documental y de gobierno», con estado «Pendiente de desarrollo».\",\n  \"revision\": \"Etapa 0: no existen entregas anteriores ni antecedentes que contrastar; se produce la respuesta provisional íntegra a partir de los cuatro documentos suministrados, sin usar fuentes externas.\"\n}\n",
+  "solicitud_sha256": "b248583275d84ae5417261e5ceaaccd5197aa5d2f5f03e776990666fa4809a25",
+  "sustantivo": "correcto",
+  "valor": "0"
+}

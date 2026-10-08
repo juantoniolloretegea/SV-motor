@@ -1,0 +1,11 @@
+#![forbid(unsafe_code)]
+use sv_cliente_api::{parse,need,save,sha,R};use serde_json::{json,Value};use std::{fs,path::Path};
+mod suministro_pdf{pub use sv_cliente_api::{parse,need,sha,R};pub fn num(v:&serde_json::Value)->R<usize>{v.as_u64().and_then(|n|usize::try_from(n).ok()).ok_or("Entero".into())}}
+#[path="../../../cliente-api-rust/src/manual/localizadores.rs"]mod localizadores;
+fn load(p:&Path)->R<Value>{sv_cliente_api::guard(p)?;parse(&fs::read(p).map_err(|e|e.to_string())?)}
+fn main(){let r=(||->R<()>{let a=std::env::args().collect::<Vec<_>>();need(a.len()==2,"Raíz")?;let root=Path::new(&a[1]);let mut paths=fs::read_dir(root.join("hitos")).map_err(|e|e.to_string())?.map(|x|x.unwrap().path()).collect::<Vec<_>>();paths.sort();let mut rows=vec![];
+ for p in paths{let h=load(&p)?;let dir=root.join(h["directorio"].as_str().ok_or("Directorio")?);let answer=load(&dir.join("FINAL.txt"))?;let req=load(&dir.join("SOLICITUD.json"))?;let src=parse(req["messages"][1]["content"].as_str().ok_or("Texto")?.as_bytes())?;let canonical=json!({"input":[{"content":src.to_string()}]});let mut cites=vec![];
+  for(i,c)in answer["evidencias"].as_array().ok_or("Evidencias")?.iter().enumerate(){let mut one=answer.clone();one["evidencias"]=json!([c]);let check=localizadores::cotejar(&one,&canonical);let source=src["fragmentos_documentales_completos"].as_array().unwrap().iter().filter(|f|f["documento"]==c["documento"]&&f["seccion"]==c["seccion"]).map(|f|f["texto"].as_str().unwrap()).collect::<Vec<_>>().concat();cites.push(json!({"indice":i,"conforme":check.is_ok(),"error":check.err(),"cita":c,"fuente_si_discrepante":if check_is_literal(c,&source){Value::Null}else{json!(source)}}));}
+  rows.push(json!({"caso":h["caso"],"etapa":h["etapa"],"final_sha256":sha(&fs::read(dir.join("FINAL.txt")).map_err(|e|e.to_string())?),"citas":cites}));
+ }save(&root.join("COTEJO-DETALLADO-CITAS.json"),&json!({"casos":rows,"licencia":sv_cliente_api::LICENCIA}))?;Ok(())})();if let Err(e)=r{eprintln!("{e}");std::process::exit(1)}}
+fn check_is_literal(c:&Value,s:&str)->bool{fn n(s:&str)->String{s.split_whitespace().collect::<Vec<_>>().join(" ")}n(s).contains(&n(c["cita_literal_breve"].as_str().unwrap_or("")))}

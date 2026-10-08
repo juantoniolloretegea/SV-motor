@@ -1,0 +1,67 @@
+{
+  "alerta": null,
+  "alerta_limite": false,
+  "auditoria_sha256": "8ec61623aa596da93cad6f5c3db49eaedca5413a3261c8665fe83c71c5b2e3ff",
+  "caso": "MD06",
+  "critico": true,
+  "estado_documental_candidato": "respuesta_fundada",
+  "etapa": 2,
+  "final_sha256": "2c61f8d9607f3d0f92061fe93388b47c417e3dbb36ad71de5822ed9dd169fcae",
+  "formal_conforme": true,
+  "fundamento_sustantivo": "Respuesta completa y correcta; vuelve a incluir revision y conserva el paso previo. Su conformidad declarada se refiere a la fuente, no al esquema de R1. No reconoce expresamente la omisión formal anterior: se conserva esta observación, sin convertirla en falsedad de la respuesta final.",
+  "medicion": {
+    "duracion_operacion_ms": 20739,
+    "telemetria": {
+      "bytes": 456423,
+      "fallos_medicion": 0,
+      "integridad": "conforme",
+      "intervalo_maximo_ms": 441,
+      "intervalo_objetivo_ms": 250,
+      "muestras": 81,
+      "plataforma_recibida": false,
+      "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+      "registros": 1191,
+      "sha256": "efa31b90469d0e96e9f69ad83cadfa041953cc5c67d82c7c1fecddae6eb6303a"
+    },
+    "uso": {
+      "cached_tokens": 1280,
+      "coste_liquidado_usd": null,
+      "input_tokens": 24376,
+      "output_tokens": 1025,
+      "reasoning_tokens": 12,
+      "total_tokens": 25401
+    }
+  },
+  "naturaleza_defecto": null,
+  "pasajes_contrastados": [
+    {
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmento": "El constructor del manual no autoriza lluvias laterales. Toda idea nueva deberá pasar antes por el Wishlist IRQ del ecosistema SV.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000123-L000125"
+    },
+    {
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmento": "Se recomienda cerrar el manual por **tramos nucleares** y no por lluvia de ideas.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000018-L000021"
+    },
+    {
+      "documento": "MANUAL_PRESENTACION",
+      "fragmento": "Las revisiones y los cierres se realizan en sus sedes competentes.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000011-L000014"
+    }
+  ],
+  "recepcion_independiente": "pendiente",
+  "respuesta_original": "{\n  \"caso\": \"MD06\",\n  \"estado_documental\": \"respuesta_fundada\",\n  \"etapa\": 2,\n  \"evidencias\": [\n    {\n      \"cita_literal_breve\": \"El constructor del manual no autoriza lluvias laterales. Toda idea nueva deberá pasar antes por el Wishlist IRQ del ecosistema SV.\",\n      \"documento\": \"MANUAL_CONSTRUCTOR\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000123-L000125\"\n    },\n    {\n      \"cita_literal_breve\": \"Se recomienda cerrar el manual por **tramos nucleares** y no por lluvia de ideas.\",\n      \"documento\": \"MANUAL_CONSTRUCTOR\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000018-L000021\"\n    },\n    {\n      \"cita_literal_breve\": \"Las revisiones y los cierres se realizan en sus sedes competentes.\",\n      \"documento\": \"MANUAL_PRESENTACION\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000011-L000014\"\n    }\n  ],\n  \"fundamentos_verificables\": [\n    \"Verificación final: la respuesta central de ambas entregas anteriores coincide con la fuente y se mantiene. La sección 7 del constructor, «Regla de control» (MANUAL_CONSTRUCTOR, MD-L000123-L000125, pagina 0), es el único pasaje de los cuatro documentos que regula el paso previo para ideas nuevas, y establece literalmente que toda idea nueva deberá pasar antes por el Wishlist IRQ del ecosistema SV, prohibiendo las lluvias laterales.\",\n    \"Las tres citas usadas como evidencia se han contrastado carácter a carácter contra el campo texto de los fragmentos recibidos y son cadenas continuas exactas, sin puntos suspensivos añadidos.\",\n    \"La cita de la sección 3 («Unidades de cierre recomendadas») es contextual y correcta: corrobora el espíritu de la regla de control al recomendar cerrar el manual por tramos nucleares y no por lluvia de ideas. Se mantiene como apoyo, no como fundamento principal.\",\n    \"La cita de la presentación (MANUAL_PRESENTACION, MD-L000011-L000014) es exacta y pertinente: sitúa el cambio del manual en sus sedes competentes, lo que refuerza que una nueva capacidad no puede incorporarse directamente por esta edición documental de prueba. En la etapa 1 se corrigió la omisión de su cita literal respecto a la etapa 0; esa corrección se mantiene.\",\n    \"Se ha revisado el resto de la base documental (MANUAL_INDICE, MANUAL_TRAMO10 y las demás secciones de MANUAL_CONSTRUCTOR y MANUAL_PRESENTACION) y no existe ningún otro pasaje que regule el paso previo para ideas nuevas ni que contradiga la respuesta: el índice solo registra estados pendientes y el tramo 10 declara «Pendiente de desarrollo» y que no implementa bindings, APIs, FFI ni wrappers reales, sin disposiciones sobre el procedimiento de incorporación de ideas. No hay omisiones que corregir.\"\n  ],\n  \"insuficiencias\": [],\n  \"respuesta\": \"El paso previo que establece la regla de control del constructor del manual del lenguaje SVP, aplicable a la propuesta de añadir una nueva capacidad, es que toda idea nueva deberá pasar antes por el Wishlist IRQ del ecosistema SV. Así lo dispone literalmente la sección 7 («Regla de control») del constructor, que además declara que el constructor del manual no autoriza lluvias laterales. Este requisito es coherente con la recomendación de la sección 3 de cerrar el manual por tramos nucleares y no por lluvia de ideas, y con el marco de gobierno de la presentación del libro, según el cual las revisiones y los cierres se realizan en sus sedes competentes; por tanto, la nueva capacidad no puede incorporarse directamente mediante esta edición documental de prueba.\",\n  \"revision\": \"Verificación final neutral: se contrastaron todas las afirmaciones, citas y omisiones de las etapas 0 y 1 contra la fuente. Se mantiene íntegramente la respuesta de la etapa 1, que ya subsanó la única deficiencia detectada (falta de cita literal de la presentación en la etapa 0). Todas las citas son literales y verificables en los fragmentos indicados; no se encuentra error, contradicción ni omisión que corregir, ni extremo que requiera estado U. La respuesta de la etapa 1 resulta conforme a la fuente y se confirma.\"\n}",
+  "solicitud_sha256": "80fdecb59468b8926fa527e84652093e425f94ad3b9a36ff29e07c67fb72de01",
+  "sustantivo": "correcto",
+  "valor": "0"
+}

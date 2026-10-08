@@ -1,0 +1,107 @@
+{
+  "alerta": null,
+  "alerta_limite": false,
+  "auditoria_sha256": "ba6ad8754cf46c54b6b64295b8f24919eb4b9ebe65088aea44e5fe071846e54a",
+  "caso": "MD05",
+  "critico": true,
+  "estado_documental_candidato": "respuesta_fundada",
+  "etapa": 0,
+  "final_sha256": "9e46d1db167a5e4f58511a8bc8524cb1927a1e472bbaf4730b2ff81df0a89821",
+  "formal_conforme": true,
+  "fundamento_sustantivo": "Niega correctamente la cerrabilidad: faltan correspondencia y delimitación de exclusiones; las condiciones son acumulativas.",
+  "medicion": {
+    "duracion_operacion_ms": 23633,
+    "telemetria": {
+      "bytes": 688080,
+      "fallos_medicion": 0,
+      "integridad": "conforme",
+      "intervalo_maximo_ms": 277,
+      "intervalo_objetivo_ms": 250,
+      "muestras": 93,
+      "plataforma_recibida": false,
+      "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+      "registros": 1850,
+      "sha256": "f63d95843d6fa8a554ccf4d0c6049feda275555a0b72d4703b32cfd418700e9d"
+    },
+    "uso": {
+      "cached_tokens": 1216,
+      "coste_liquidado_usd": null,
+      "input_tokens": 20212,
+      "output_tokens": 1640,
+      "reasoning_tokens": 255,
+      "total_tokens": 21852
+    }
+  },
+  "naturaleza_defecto": null,
+  "pasajes_contrastados": [
+    {
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmento": "Un tramo se considerará cerrable cuando reúna, como mínimo:",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000109-L000118"
+    },
+    {
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmento": "correspondencia visible con la IR o con la superficie vigente;",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000109-L000118"
+    },
+    {
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmento": "delimitación expresa de lo que queda fuera;",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000109-L000118"
+    },
+    {
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmento": "y verificable mediante ejemplos, contraejemplos y relación explícita con la implementación.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000009-L000017"
+    },
+    {
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmento": "subordinado al pliego, a la Frontera normativa, a la IR y a la gramática vigente;",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000009-L000017"
+    },
+    {
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmento": "10. Relación con IR y docs públicos",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000092-L000108"
+    },
+    {
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmento": "7. Qué no fija",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000092-L000108"
+    },
+    {
+      "documento": "MANUAL_TRAMO10",
+      "fragmento": "Este tramo no implementa bindings, APIs, FFI ni wrappers reales.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000022-L000025"
+    }
+  ],
+  "recepcion_independiente": "pendiente",
+  "respuesta_original": "\n{\n  \"caso\": \"MD05\",\n  \"estado_documental\": \"respuesta_fundada\",\n  \"etapa\": 0,\n  \"evidencias\": [\n    {\n      \"cita_literal_breve\": \"Un tramo se considerará cerrable cuando reúna, como mínimo:\",\n      \"documento\": \"MANUAL_CONSTRUCTOR\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000109-L000118\"\n    },\n    {\n      \"cita_literal_breve\": \"correspondencia visible con la IR o con la superficie vigente;\",\n      \"documento\": \"MANUAL_CONSTRUCTOR\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000109-L000118\"\n    },\n    {\n      \"cita_literal_breve\": \"delimitación expresa de lo que queda fuera;\",\n      \"documento\": \"MANUAL_CONSTRUCTOR\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000109-L000118\"\n    },\n    {\n      \"cita_literal_breve\": \"y verificable mediante ejemplos, contraejemplos y relación explícita con la implementación.\",\n      \"documento\": \"MANUAL_CONSTRUCTOR\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000009-L000017\"\n    },\n    {\n      \"cita_literal_breve\": \"subordinado al pliego, a la Frontera normativa, a la IR y a la gramática vigente;\",\n      \"documento\": \"MANUAL_CONSTRUCTOR\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000009-L000017\"\n    },\n    {\n      \"cita_literal_breve\": \"10. Relación con IR y docs públicos\",\n      \"documento\": \"MANUAL_CONSTRUCTOR\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000092-L000108\"\n    },\n    {\n      \"cita_literal_breve\": \"7. Qué no fija\",\n      \"documento\": \"MANUAL_CONSTRUCTOR\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000092-L000108\"\n    },\n    {\n      \"cita_literal_breve\": \"Este tramo no implementa bindings, APIs, FFI ni wrappers reales.\",\n      \"documento\": \"MANUAL_TRAMO10\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000022-L000025\"\n    }\n  ],\n  \"fundamentos_verificables\": [\n    \"El constructor define el criterio de cierre como un conjunto de mínimos conjuntivos: la frase «cuando reúna, como mínimo» introduce cinco condiciones, de modo que la ausencia de cualquiera de ellas impide considerar el tramo cerrable.\",\n    \"El tramo hipotético cumple dos condiciones (exposición clara del objeto y ejemplo .svp), pero incumple dos mínimos expresos: la «correspondencia visible con la IR o con la superficie vigente» y la «delimitación expresa de lo que queda fuera».\",\n    \"La ficha obligatoria por tramo refuerza esta exigencia con los campos «7. Qué no fija» y «10. Relación con IR y docs públicos», ambos declarados como obligatorios («Todo tramo del manual deberá declarar»), lo que confirma que la omisión descrita no es accidental sino contraria a la norma del constructor.\",\n    \"La regla general del constructor exige que cada tramo sea «subordinado al pliego, a la Frontera normativa, a la IR y a la gramática vigente» y «verificable mediante ejemplos, contraejemplos y relación explícita con la implementación», por lo que un tramo sin correspondencia con la IR o la superficie vigente carece además de la verificabilidad exigida.\",\n    \"El tramo 10, único tramo con documento preparatorio, ilustra el patrón normativo previsto: aunque está «Pendiente de desarrollo», declara dependencias y delimita lo excluido («Este tramo no implementa bindings, APIs, FFI ni wrappers reales»), mostrando que incluso el estado preparatorio contempla la delimitación que el tramo hipotético omite.\",\n    \"La quinta condición del criterio de cierre (ausencia de contradicción local con el pliego o la Frontera normativa) es la única que el tramo hipotético podría presumir como indeterminada, pues no se aporta información sobre ella; pero su incumplimiento no es necesario para la conclusión, porque ya fallan dos mínimos exigidos.\"\n  ],\n  \"insuficiencias\": [],\n  \"respuesta\": \"No, el tramo no cumple los mínimos documentales para considerarse cerrable. El constructor establece en su sección 5 que un tramo será cerrable «cuando reúna, como mínimo» cinco condiciones: exposición sobria del objeto; correspondencia visible con la IR o con la superficie vigente; uno o más ejemplos .svp suficientemente nucleares; delimitación expresa de lo que queda fuera; y ausencia de contradicción local suficiente con el pliego o con la Frontera normativa. El tramo descrito sólo acredita dos de ellas (exposición clara y ejemplo .svp) y omite expresamente otras dos: la correspondencia con la IR o la superficie vigente y la delimitación de lo excluido. Como el constructor formula estas condiciones como mínimos conjuntivos —todas deben reunirse—, la omisión de cualquiera basta para negar el cierre. La conclusión se refuerza con la regla general (subordinación al pliego, la Frontera normativa, la IR y la gramática vigente, y verificabilidad mediante relación explícita con la implementación) y con la ficha obligatoria por tramo, que exige declarar «Qué no fija» y la «Relación con IR y docs públicos». En consecuencia, el tramo es incompleto según la norma documental del constructor y no puede considerarse cerrable; debería incorporar la correspondencia con la IR o superficie vigente y la delimitación expresa de lo excluido antes de evaluarse su cierre.\",\n  \"revision\": \"Etapa 0: no existen entregas anteriores ni antecedentes que contrastar; la respuesta se produce íntegramente a partir de los fragmentos suministrados, sin correcciones sobre versiones previas.\"\n}\n",
+  "solicitud_sha256": "f3a5ae1b961cfd3ce402b747eb8423d35171caaeaef73adbfccaf2cee88a8df7",
+  "sustantivo": "correcto",
+  "valor": "0"
+}

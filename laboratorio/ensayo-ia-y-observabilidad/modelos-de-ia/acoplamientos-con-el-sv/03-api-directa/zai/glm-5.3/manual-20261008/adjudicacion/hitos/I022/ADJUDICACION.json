@@ -1,0 +1,116 @@
+{
+  "alerta": {
+    "caso": "MD08",
+    "cita_cotejada_en_rust": true,
+    "motivo": "La pregunta pide enumerar cinco materias futuras, que el texto aporta íntegramente. El 0 no acredita que estén implementadas ni que la ficha completa esté desarrollada.",
+    "pasaje": {
+      "documento": "MANUAL_TRAMO10",
+      "fragmento": "Pendiente de desarrollo.",
+      "origen": "cotejo adicional del evaluador",
+      "seccion": "MD-L000026-L000028"
+    },
+    "posicion": 8
+  },
+  "alerta_limite": true,
+  "auditoria_sha256": "0df609051f9dce2281b89ea22f36e317d39c70aecaa18c09e60ae1a93e6e7ce9",
+  "caso": "MD08",
+  "critico": false,
+  "estado_documental_candidato": "respuesta_fundada",
+  "etapa": 0,
+  "final_sha256": "bcb10a4aac20f7251b27ed05ebe43a16906551e991a53275d85c1239e6b1ff4d",
+  "formal_conforme": true,
+  "fundamento_sustantivo": "Enumera las cinco materias y las sitúa en un documento preparatorio; la correspondencia con la ficha se entiende como deducción, no como realización acreditada.",
+  "medicion": {
+    "duracion_operacion_ms": 25206,
+    "telemetria": {
+      "bytes": 778148,
+      "fallos_medicion": 0,
+      "integridad": "conforme",
+      "intervalo_maximo_ms": 278,
+      "intervalo_objetivo_ms": 250,
+      "muestras": 98,
+      "plataforma_recibida": false,
+      "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+      "registros": 2102,
+      "sha256": "5ac6f51eb0b4b7202541e6a0379421ee154c6cb498efab0fc4248ae6d0d619a6"
+    },
+    "uso": {
+      "cached_tokens": 1216,
+      "coste_liquidado_usd": null,
+      "input_tokens": 20185,
+      "output_tokens": 1864,
+      "reasoning_tokens": 561,
+      "total_tokens": 22049
+    }
+  },
+  "naturaleza_defecto": null,
+  "pasajes_contrastados": [
+    {
+      "documento": "MANUAL_TRAMO10",
+      "fragmento": "## 3. Qué deberá fijar\n\n- tipos de compatibilidad admitidos;\n- prioridad por lenguajes anfitriones;\n- garantías semánticas mínimas;\n- criterio de activación por lenguaje;\n- y límites de fase.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000014-L000021"
+    },
+    {
+      "documento": "MANUAL_TRAMO10",
+      "fragmento": "Este tramo fija la estructura mínima de trabajo para documentar cómo el lenguaje SV podrá relacionarse con otros lenguajes de programación sin degradar su semántica propia.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000003-L000006"
+    },
+    {
+      "documento": "MANUAL_TRAMO10",
+      "fragmento": "Este tramo no implementa bindings, APIs, FFI ni wrappers reales. Solo abre el frente documental y de gobierno.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000022-L000025"
+    },
+    {
+      "documento": "MANUAL_TRAMO10",
+      "fragmento": "## 5. Estado\n\nPendiente de desarrollo.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000026-L000028"
+    },
+    {
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmento": "Todo tramo del manual deberá declarar:\n\n1. ID del tramo\n2. Título\n3. Rango\n4. Objeto\n5. Dependencias\n6. Qué fija\n7. Qué no fija",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000092-L000108"
+    },
+    {
+      "documento": "MANUAL_INDICE",
+      "fragmento": "- [10 · Compatibilidad interlenguajes — documento preparatorio](tramo-10.md)",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000001-L000017"
+    },
+    {
+      "documento": "MANUAL_PRESENTACION",
+      "fragmento": "El tramo 10 conserva el documento preparatorio existente, cuyo estado es «Pendiente de desarrollo».",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000005-L000010"
+    },
+    {
+      "documento": "MANUAL_TRAMO10",
+      "fragmento": "Pendiente de desarrollo.",
+      "origen": "cotejo adicional del evaluador",
+      "seccion": "MD-L000026-L000028"
+    }
+  ],
+  "recepcion_independiente": "pendiente",
+  "respuesta_original": "\n{\n  \"caso\": \"MD08\",\n  \"estado_documental\": \"respuesta_fundada\",\n  \"etapa\": 0,\n  \"evidencias\": [\n    {\n      \"cita_literal_breve\": \"## 3. Qué deberá fijar\\n\\n- tipos de compatibilidad admitidos;\\n- prioridad por lenguajes anfitriones;\\n- garantías semánticas mínimas;\\n- criterio de activación por lenguaje;\\n- y límites de fase.\",\n      \"documento\": \"MANUAL_TRAMO10\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000014-L000021\"\n    },\n    {\n      \"cita_literal_breve\": \"Este tramo fija la estructura mínima de trabajo para documentar cómo el lenguaje SV podrá relacionarse con otros lenguajes de programación sin degradar su semántica propia.\",\n      \"documento\": \"MANUAL_TRAMO10\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000003-L000006\"\n    },\n    {\n      \"cita_literal_breve\": \"Este tramo no implementa bindings, APIs, FFI ni wrappers reales. Solo abre el frente documental y de gobierno.\",\n      \"documento\": \"MANUAL_TRAMO10\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000022-L000025\"\n    },\n    {\n      \"cita_literal_breve\": \"## 5. Estado\\n\\nPendiente de desarrollo.\",\n      \"documento\": \"MANUAL_TRAMO10\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000026-L000028\"\n    },\n    {\n      \"cita_literal_breve\": \"Todo tramo del manual deberá declarar:\\n\\n1. ID del tramo\\n2. Título\\n3. Rango\\n4. Objeto\\n5. Dependencias\\n6. Qué fija\\n7. Qué no fija\",\n      \"documento\": \"MANUAL_CONSTRUCTOR\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000092-L000108\"\n    },\n    {\n      \"cita_literal_breve\": \"- [10 · Compatibilidad interlenguajes — documento preparatorio](tramo-10.md)\",\n      \"documento\": \"MANUAL_INDICE\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000001-L000017\"\n    },\n    {\n      \"cita_literal_breve\": \"El tramo 10 conserva el documento preparatorio existente, cuyo estado es «Pendiente de desarrollo».\",\n      \"documento\": \"MANUAL_PRESENTACION\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000005-L000010\"\n    }\n  ],\n  \"fundamentos_verificables\": [\n    \"La sección 3 del documento del tramo 10, titulada «Qué deberá fijar», enumera exactamente cinco cuestiones: tipos de compatibilidad admitidos; prioridad por lenguajes anfitriones; garantías semánticas mínimas; criterio de activación por lenguaje; y límites de fase.\",\n    \"El carácter de la enumeración es prospectivo y normativo-interno, no descriptivo de algo ya hecho: el encabezado usa el futuro de obligación «deberá fijar», coherente con el objeto del tramo, que declara fijar «la estructura mínima de trabajo» para documentar la relación futura del SV con otros lenguajes.\",\n    \"Lo previsto se distingue de lo implementado expresamente en la propia sección 4: el tramo «no implementa bindings, APIs, FFI ni wrappers reales» y «solo abre el frente documental y de gobierno»; su sección 5 declara estado «Pendiente de desarrollo».\",\n    \"Dentro de la arquitectura del constructor, la enumeración corresponde al campo obligatorio «6. Qué fija» de la ficha por tramo exigida por el constructor (sección 4, «Ficha obligatoria por tramo»), por lo que la lista es una declaración requerida por la metodología de cierre del manual, no contenido técnico cerrado.\",\n    \"El índice y la presentación califican el documento del tramo 10 como «documento preparatorio», lo que confirma el carácter preparatorio y pendiente de la enumeración frente a un tramo desarrollado; además, el constructor dispone que la compatibilidad interlenguajes «se tratará como tramo propio del manual», situando la enumeración dentro de ese marco de gobierno.\"\n  ],\n  \"insuficiencias\": [],\n  \"respuesta\": \"Las cinco cuestiones que el tramo 10 — Compatibilidad interlenguajes y adopción del Lenguaje SV deberá fijar son: (1) tipos de compatibilidad admitidos; (2) prioridad por lenguajes anfitriones; (3) garantías semánticas mínimas; (4) criterio de activación por lenguaje; y (5) límites de fase. En cuanto a su carácter dentro del documento: es una enumeración prospectiva y de obligación metodológica, no una descripción de contenido ya fijado. Se encuentra bajo el encabezado «Qué deberá fijar», cumple el campo «6. Qué fija» de la ficha obligatoria por tramo que exige el constructor del manual, y forma parte de un documento preparatorio cuyo estado es «Pendiente de desarrollo»: lo previsto (la estructura de trabajo y las cinco cuestiones a fijar) queda explícitamente separado de lo implementado, pues el propio tramo declara que «no implementa bindings, APIs, FFI ni wrappers reales» y que solo abre el frente documental y de gobierno.\",\n  \"revision\": \"Etapa 0: no existen entregas anteriores para este caso, por lo que no hay antecedentes que contrastar ni correcciones que aplicar; la respuesta se produce íntegramente a partir de los cuatro documentos suministrados.\"\n}\n",
+  "solicitud_sha256": "7cd3fc840dbb54d02fc06b8b83aa53ecbcc6e9410f0dac6fe95e5e278e7c9169",
+  "sustantivo": "correcto",
+  "valor": "0"
+}

@@ -1,0 +1,91 @@
+{
+  "alerta": null,
+  "alerta_limite": false,
+  "auditoria_sha256": "6d8ad5502e385d309de90da173eb2f487a2a20202e865bde9e73f2a40030a40d",
+  "caso": "MD02",
+  "critico": true,
+  "estado_documental_candidato": "respuesta_fundada",
+  "etapa": 0,
+  "final_sha256": "6d41d53e8ddebeac4828fc857b5cacba6cc770040e1029ba335d0672d8428d78",
+  "formal_conforme": true,
+  "fundamento_sustantivo": "Identifica las cuatro autoridades y la verificabilidad mediante ejemplos, contraejemplos y relación explícita con la implementación. La mención a IR v0.2 se sitúa en el tramo suministrado.",
+  "medicion": {
+    "duracion_operacion_ms": 19700,
+    "telemetria": {
+      "bytes": 587563,
+      "fallos_medicion": 0,
+      "integridad": "conforme",
+      "intervalo_maximo_ms": 274,
+      "intervalo_objetivo_ms": 250,
+      "muestras": 78,
+      "plataforma_recibida": false,
+      "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+      "registros": 1586,
+      "sha256": "6c6dfef75342216462116836dfc464bd9bdc97d2b6e46944a7ec448591dd0fef"
+    },
+    "uso": {
+      "cached_tokens": 1216,
+      "coste_liquidado_usd": null,
+      "input_tokens": 20183,
+      "output_tokens": 1404,
+      "reasoning_tokens": 0,
+      "total_tokens": 21587
+    }
+  },
+  "naturaleza_defecto": null,
+  "pasajes_contrastados": [
+    {
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmento": "- subordinado al pliego, a la Frontera normativa, a la IR y a la gramática vigente;",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000009-L000017"
+    },
+    {
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmento": "- y verificable mediante ejemplos, contraejemplos y relación explícita con la implementación.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000009-L000017"
+    },
+    {
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmento": "10. Relación con IR y docs públicos",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000092-L000108"
+    },
+    {
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmento": "- correspondencia visible con la IR o con la superficie vigente;",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000109-L000118"
+    },
+    {
+      "documento": "MANUAL_PRESENTACION",
+      "fragmento": "El manual permanece subordinado al pliego, la Frontera normativa, la representación intermedia y la gramática vigentes.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000011-L000014"
+    },
+    {
+      "documento": "MANUAL_TRAMO10",
+      "fragmento": "- Pliego de condiciones del Sistema Vectorial SV\n- Frontera normativa del lenguaje SV\n- IR canónica v0.2\n- Política y protocolo de compatibilidad interlenguajes del Lenguaje SV",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000007-L000013"
+    }
+  ],
+  "recepcion_independiente": "pendiente",
+  "respuesta_original": "\n{\n  \"caso\": \"MD02\",\n  \"estado_documental\": \"respuesta_fundada\",\n  \"etapa\": 0,\n  \"evidencias\": [\n    {\n      \"cita_literal_breve\": \"- subordinado al pliego, a la Frontera normativa, a la IR y a la gramática vigente;\",\n      \"documento\": \"MANUAL_CONSTRUCTOR\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000009-L000017\"\n    },\n    {\n      \"cita_literal_breve\": \"- y verificable mediante ejemplos, contraejemplos y relación explícita con la implementación.\",\n      \"documento\": \"MANUAL_CONSTRUCTOR\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000009-L000017\"\n    },\n    {\n      \"cita_literal_breve\": \"10. Relación con IR y docs públicos\",\n      \"documento\": \"MANUAL_CONSTRUCTOR\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000092-L000108\"\n    },\n    {\n      \"cita_literal_breve\": \"- correspondencia visible con la IR o con la superficie vigente;\",\n      \"documento\": \"MANUAL_CONSTRUCTOR\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000109-L000118\"\n    },\n    {\n      \"cita_literal_breve\": \"El manual permanece subordinado al pliego, la Frontera normativa, la representación intermedia y la gramática vigentes.\",\n      \"documento\": \"MANUAL_PRESENTACION\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000011-L000014\"\n    },\n    {\n      \"cita_literal_breve\": \"- Pliego de condiciones del Sistema Vectorial SV\\n- Frontera normativa del lenguaje SV\\n- IR canónica v0.2\\n- Política y protocolo de compatibilidad interlenguajes del Lenguaje SV\",\n      \"documento\": \"MANUAL_TRAMO10\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000007-L000013\"\n    }\n  ],\n  \"fundamentos_verificables\": [\n    \"La regla general del constructor (sección 2) establece que cada tramo debe ser 'subordinado al pliego, a la Frontera normativa, a la IR y a la gramática vigente' (MANUAL_CONSTRUCTOR, MD-L000009-L000017).\",\n    \"La misma regla general exige como condición de verificabilidad que cada tramo sea 'verificable mediante ejemplos, contraejemplos y relación explícita con la implementación' (MANUAL_CONSTRUCTOR, MD-L000009-L000017).\",\n    \"La ficha obligatoria por tramo (sección 4) refuerza la subordinación documental al exigir declarar la 'Relación con IR y docs públicos' (punto 10 de la ficha, MANUAL_CONSTRUCTOR, MD-L000092-L000108).\",\n    \"El criterio de cierre (sección 5) exige como mínimo 'correspondencia visible con la IR o con la superficie vigente' y 'ejemplos .svp suficientemente nucleares' para considerar un tramo cerrable (MANUAL_CONSTRUCTOR, MD-L000109-L000118).\",\n    \"La presentación del manual confirma la subordinación global: 'El manual permanece subordinado al pliego, la Frontera normativa, la representación intermedia y la gramática vigentes' (MANUAL_PRESENTACION, MD-L000011-L000014), lo que corrobora que la regla general del constructor se aplica al manual en su conjunto, incluidos todos los tramos.\",\n    \"Para el tramo 10 en particular, sus dependencias declaradas son: 'Pliego de condiciones del Sistema Vectorial SV', 'Frontera normativa del lenguaje SV', 'IR canónica v0.2' y 'Política y protocolo de compatibilidad interlenguajes del Lenguaje SV' (MANUAL_TRAMO10, MD-L000007-L000013), lo que constituye una especificación concreta de la subordinación general.\",\n    \"La IR se identifica con la 'representación intermedia' en la presentación del manual, y en el tramo 10 se especifica como 'IR canónica v0.2', confirmando que se trata de la misma entidad normativa bajo denominaciones compatibles.\"\n  ],\n  \"insuficiencias\": [],\n  \"respuesta\": \"Cada tramo del manual SVP debe subordinarse a cuatro documentos o representaciones normativas: (1) el pliego (de condiciones del Sistema Vectorial SV), (2) la Frontera normativa (del lenguaje SV), (3) la IR —es decir, la representación intermedia, especificada en el tramo 10 como IR canónica v0.2— y (4) la gramática vigente. Esta exigencia procede de la regla general del constructor (sección 2), que aplica a todo tramo, y se reitera en la ficha obligatoria por tramo (que exige declarar la 'Relación con IR y docs públicos') y en la presentación del manual, que declara la subordinación global del manual a esas mismas cuatro autoridades. El tramo 10 añade como dependencia específica la 'Política y protocolo de compatibilidad interlenguajes del Lenguaje SV', conforme a su objeto particular. En cuanto a la relación con la implementación, el constructor exige que cada tramo sea 'verificable mediante ejemplos, contraejemplos y relación explícita con la implementación'; el criterio de cierre concreta esa exigencia al demandar 'correspondencia visible con la IR o con la superficie vigente' y al menos 'ejemplos .svp suficientemente nucleares' para considerar cerrable un tramo. Por tanto, la relación exigida con la implementación es doble: una relación explícita y verificable declarada por cada tramo, y una correspondencia visible con la representación intermedia o con la superficie vigente del lenguaje como condición de cierre.\",\n  \"revision\": \"Etapa 0: no existen entregas anteriores para este caso; la respuesta se produce con carácter provisional conforme al contrato de revisión universal. Todas las afirmaciones se sostienen exclusivamente en los cuatro documentos íntegros suministrados mediante el MCP del SV, sin recurso a fuentes externas.\"\n}\n",
+  "solicitud_sha256": "84d03ec37a5b8a0008c377f50bae9ed6d6096b38dc58b196bf5d55eefec61af0",
+  "sustantivo": "correcto",
+  "valor": "0"
+}

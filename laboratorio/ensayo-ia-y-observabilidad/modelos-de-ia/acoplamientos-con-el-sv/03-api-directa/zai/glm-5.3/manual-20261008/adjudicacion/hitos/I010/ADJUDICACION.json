@@ -1,0 +1,83 @@
+{
+  "alerta": null,
+  "alerta_limite": false,
+  "auditoria_sha256": "3c213138cc27602fc91efd40af1b15e1c239341139a447069e4994dc52a2a82b",
+  "caso": "MD04",
+  "critico": false,
+  "estado_documental_candidato": "respuesta_fundada",
+  "etapa": 0,
+  "final_sha256": "7f540babb6d88d78f5065f278d4477eea130f657dd36001ca403a83a902f2fcc",
+  "formal_conforme": true,
+  "fundamento_sustantivo": "Enumera los doce campos y distingue fijación y exclusiones mediante el tramo 10, sin convertir materias previstas en implementación.",
+  "medicion": {
+    "duracion_operacion_ms": 28387,
+    "telemetria": {
+      "bytes": 816312,
+      "fallos_medicion": 0,
+      "integridad": "conforme",
+      "intervalo_maximo_ms": 295,
+      "intervalo_objetivo_ms": 250,
+      "muestras": 110,
+      "plataforma_recibida": false,
+      "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+      "registros": 2190,
+      "sha256": "d07a90af3b742399814e254d8657eed3117bf874fd56a5e0a530f9d5d9733a0a"
+    },
+    "uso": {
+      "cached_tokens": 1216,
+      "coste_liquidado_usd": null,
+      "input_tokens": 20190,
+      "output_tokens": 1939,
+      "reasoning_tokens": 484,
+      "total_tokens": 22129
+    }
+  },
+  "naturaleza_defecto": null,
+  "pasajes_contrastados": [
+    {
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmento": "Todo tramo del manual deberá declarar:\n\n1. ID del tramo\n2. Título\n3. Rango\n4. Objeto\n5. Dependencias\n6. Qué fija\n7. Qué no fija\n8. Ejemplos `.svp`\n9. Errores o contraejemplos\n10. Relación con IR y docs públicos\n11. Criterio de cierre\n12. Estado",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000092-L000108"
+    },
+    {
+      "documento": "MANUAL_TRAMO10",
+      "fragmento": "## 3. Qué deberá fijar\n\n- tipos de compatibilidad admitidos;\n- prioridad por lenguajes anfitriones;\n- garantías semánticas mínimas;\n- criterio de activación por lenguaje;\n- y límites de fase.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000014-L000021"
+    },
+    {
+      "documento": "MANUAL_TRAMO10",
+      "fragmento": "Este tramo no implementa bindings, APIs, FFI ni wrappers reales. Solo abre el frente documental y de gobierno.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000022-L000025"
+    },
+    {
+      "documento": "MANUAL_TRAMO10",
+      "fragmento": "Este tramo fija la estructura mínima de trabajo para documentar cómo el lenguaje SV podrá relacionarse con otros lenguajes de programación sin degradar su semántica propia.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000003-L000006"
+    },
+    {
+      "documento": "MANUAL_TRAMO10",
+      "fragmento": "Pendiente de desarrollo.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000026-L000028"
+    }
+  ],
+  "recepcion_independiente": "pendiente",
+  "respuesta_original": "\n{\n  \"caso\": \"MD04\",\n  \"estado_documental\": \"respuesta_fundada\",\n  \"etapa\": 0,\n  \"evidencias\": [\n    {\n      \"cita_literal_breve\": \"Todo tramo del manual deberá declarar:\\n\\n1. ID del tramo\\n2. Título\\n3. Rango\\n4. Objeto\\n5. Dependencias\\n6. Qué fija\\n7. Qué no fija\\n8. Ejemplos `.svp`\\n9. Errores o contraejemplos\\n10. Relación con IR y docs públicos\\n11. Criterio de cierre\\n12. Estado\",\n      \"documento\": \"MANUAL_CONSTRUCTOR\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000092-L000108\"\n    },\n    {\n      \"cita_literal_breve\": \"## 3. Qué deberá fijar\\n\\n- tipos de compatibilidad admitidos;\\n- prioridad por lenguajes anfitriones;\\n- garantías semánticas mínimas;\\n- criterio de activación por lenguaje;\\n- y límites de fase.\",\n      \"documento\": \"MANUAL_TRAMO10\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000014-L000021\"\n    },\n    {\n      \"cita_literal_breve\": \"Este tramo no implementa bindings, APIs, FFI ni wrappers reales. Solo abre el frente documental y de gobierno.\",\n      \"documento\": \"MANUAL_TRAMO10\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000022-L000025\"\n    },\n    {\n      \"cita_literal_breve\": \"Este tramo fija la estructura mínima de trabajo para documentar cómo el lenguaje SV podrá relacionarse con otros lenguajes de programación sin degradar su semántica propia.\",\n      \"documento\": \"MANUAL_TRAMO10\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000003-L000006\"\n    },\n    {\n      \"cita_literal_breve\": \"Pendiente de desarrollo.\",\n      \"documento\": \"MANUAL_TRAMO10\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000026-L000028\"\n    }\n  ],\n  \"fundamentos_verificables\": [\n    \"La sección 4 del constructor, «Ficha obligatoria por tramo», enumera exactamente doce campos numerados que todo tramo deberá declarar: ID del tramo, Título, Rango, Objeto, Dependencias, Qué fija, Qué no fija, Ejemplos `.svp`, Errores o contraejemplos, Relación con IR y docs públicos, Criterio de cierre y Estado.\",\n    \"Los campos 6 y 7 de la ficha imponen como obligación diferenciar expresamente lo que el tramo fija de lo que no fija; no basta con exponer el objeto, hay que delimitar su alcance y sus exclusiones.\",\n    \"El único tramo con documento disponible es el 10, cuya ficha satisface esa doble obligación: la sección «Qué deberá fijar» prevé tipos de compatibilidad admitidos, prioridad por lenguajes anfitriones, garantías semánticas mínimas, criterio de activación por lenguaje y límites de fase; la sección «Qué no fija todavía» declara que no implementa bindings, APIs, FFI ni wrappers reales, sino que solo abre el frente documental y de gobierno.\",\n    \"El objeto del tramo 10 se limita a la estructura mínima de trabajo para documentar la relación del SV con otros lenguajes sin degradar su semántica propia; su estado documental es «Pendiente de desarrollo», por lo que lo previsto (fijar estructura y gobierno) se distingue de lo implementado (nada técnico: ni bindings, APIs, FFI ni wrappers reales).\",\n    \"El índice de la edición de prueba marca los capítulos 00 a 09 como pendientes sin texto y conserva el tramo 10 como documento preparatorio; la presentación confirma que el constructor y el tramo 10 se reproducen íntegramente desde la revisión f97173e07a9dfb8385ed1268d11de422b291507d del repositorio SV-lenguaje-de-computacion, de modo que estos textos son documentos históricos de esa revisión y su reproducción en el mdbook no acredita nueva aprobación.\"\n  ],\n  \"insuficiencias\": [],\n  \"respuesta\": \"La ficha obligatoria por tramo, según la sección 4 del constructor del manual SVP, debe contener doce campos: (1) ID del tramo, (2) Título, (3) Rango, (4) Objeto, (5) Dependencias, (6) Qué fija, (7) Qué no fija, (8) Ejemplos `.svp`, (9) Errores o contraejemplos, (10) Relación con IR y docs públicos, (11) Criterio de cierre y (12) Estado. Entre ellos, los campos 6 y 7 imponen distinguir expresamente las obligaciones de fijar y de no fijar. Del único tramo con documento suministrado, el 10 (compatibilidad interlenguajes y adopción), cabe distinguir: QUÉ DEBERÁ FIJAR (previsto): tipos de compatibilidad admitidos, prioridad por lenguajes anfitriones, garantías semánticas mínimas, criterio de activación por lenguaje y límites de fase; su objeto es únicamente la estructura mínima de trabajo para documentar cómo el SV podrá relacionarse con otros lenguajes sin degradar su semántica propia. QUÉ NO FIJA TODAVÍA: no implementa bindings, APIs, FFI ni wrappers reales; solo abre el frente documental y de gobierno. Su estado es «Pendiente de desarrollo». Ambos documentos proceden íntegros de la revisión f97173e07a9dfb8385ed1268d11de422b291507d del repositorio SV-lenguaje-de-computacion y su presentación en la edición de prueba no acredita nueva aprobación ni modifica el estado de los tramos 0 a 9, que permanecen pendientes sin texto.\",\n  \"revision\": \"Etapa 0: no existen entregas anteriores ni antecedentes que contrastar; esta es la respuesta provisional fundada exclusivamente en los cuatro documentos íntegros suministrados mediante el MCP del SV.\"\n}\n",
+  "solicitud_sha256": "70d57f49dcef638858dd6c692063d7e3bf2f50833c574993e7f097f0adc82ecf",
+  "sustantivo": "correcto",
+  "valor": "0"
+}

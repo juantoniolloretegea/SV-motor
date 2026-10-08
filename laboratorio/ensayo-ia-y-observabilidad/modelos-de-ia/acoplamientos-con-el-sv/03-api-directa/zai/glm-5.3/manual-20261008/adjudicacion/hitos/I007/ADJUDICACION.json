@@ -1,0 +1,84 @@
+{
+  "alerta": {
+    "caso": "MD03",
+    "cita_cotejada_en_rust": true,
+    "motivo": "Se evalúa localización y enumeración documental, no dominio de definiciones que estos documentos no desarrollan. La pregunta es resoluble; el 0 no acredita implementación ni conocimiento ausente.",
+    "pasaje": {
+      "documento": "MANUAL_PRESENTACION",
+      "fragmento": "Los tramos sin texto aparecen como entradas pendientes",
+      "origen": "cotejo adicional del evaluador",
+      "seccion": "MD-L000005-L000010"
+    },
+    "posicion": 3
+  },
+  "alerta_limite": true,
+  "auditoria_sha256": "e0cf333dc95e2d74292e803c97969ebd835c6749290e1e9c5dbcb4cfc8bc1f3b",
+  "caso": "MD03",
+  "critico": false,
+  "estado_documental_candidato": "respuesta_fundada",
+  "etapa": 0,
+  "final_sha256": "1e6be4d32208a166d487727a2716db2e1451fcac1ba779c32a31385054dda53c",
+  "formal_conforme": true,
+  "fundamento_sustantivo": "Asigna correctamente evaluación al tramo 3, resolución de U al 5 y transición al 6; enumera todas las materias y no inventa sus definiciones.",
+  "medicion": {
+    "duracion_operacion_ms": 15375,
+    "telemetria": {
+      "bytes": 446125,
+      "fallos_medicion": 0,
+      "integridad": "conforme",
+      "intervalo_maximo_ms": 271,
+      "intervalo_objetivo_ms": 250,
+      "muestras": 62,
+      "plataforma_recibida": false,
+      "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+      "registros": 1200,
+      "sha256": "a7681065f41b10122e664ab6bb182ba8cdd6dbbdc4674dcd2a6267a0ebc20f38"
+    },
+    "uso": {
+      "cached_tokens": 1216,
+      "coste_liquidado_usd": null,
+      "input_tokens": 20203,
+      "output_tokens": 1051,
+      "reasoning_tokens": 133,
+      "total_tokens": 21254
+    }
+  },
+  "naturaleza_defecto": null,
+  "pasajes_contrastados": [
+    {
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmento": "### Tramo 3 — Célula, evaluación y clasificación\n- `CellSpec`;\n- `CellState`;\n- `evaluate`;\n- umbral;\n- criticidad.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000041-L000047"
+    },
+    {
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmento": "### Tramo 5 — Resolución y régimen de la U\n- `resolve`;\n- `Context`;\n- `Mechanism`;\n- reapertura.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000054-L000059"
+    },
+    {
+      "documento": "MANUAL_CONSTRUCTOR",
+      "fragmento": "### Tramo 6 — Trayectoria, frame y datos de transición\n- `Frame`;\n- `TransitionData`;\n- `Trajectory`;\n- regla append-only.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000060-L000065"
+    },
+    {
+      "documento": "MANUAL_PRESENTACION",
+      "fragmento": "Los tramos sin texto aparecen como entradas pendientes",
+      "origen": "cotejo adicional del evaluador",
+      "seccion": "MD-L000005-L000010"
+    }
+  ],
+  "recepcion_independiente": "pendiente",
+  "respuesta_original": "\n{\n  \"caso\": \"MD03\",\n  \"estado_documental\": \"respuesta_fundada\",\n  \"etapa\": 0,\n  \"evidencias\": [\n    {\n      \"cita_literal_breve\": \"### Tramo 3 — Célula, evaluación y clasificación\\n- `CellSpec`;\\n- `CellState`;\\n- `evaluate`;\\n- umbral;\\n- criticidad.\",\n      \"documento\": \"MANUAL_CONSTRUCTOR\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000041-L000047\"\n    },\n    {\n      \"cita_literal_breve\": \"### Tramo 5 — Resolución y régimen de la U\\n- `resolve`;\\n- `Context`;\\n- `Mechanism`;\\n- reapertura.\",\n      \"documento\": \"MANUAL_CONSTRUCTOR\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000054-L000059\"\n    },\n    {\n      \"cita_literal_breve\": \"### Tramo 6 — Trayectoria, frame y datos de transición\\n- `Frame`;\\n- `TransitionData`;\\n- `Trajectory`;\\n- regla append-only.\",\n      \"documento\": \"MANUAL_CONSTRUCTOR\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000060-L000065\"\n    }\n  ],\n  \"fundamentos_verificables\": [\n    \"El constructor del manual asigna la evaluación de células al Tramo 3, titulado «Célula, evaluación y clasificación», con las materias enumeradas: `CellSpec`, `CellState`, `evaluate`, umbral y criticidad.\",\n    \"El constructor asigna la resolución de la U al Tramo 5, titulado «Resolución y régimen de la U», con las materias: `resolve`, `Context`, `Mechanism` y reapertura.\",\n    \"El constructor asigna los datos de transición al Tramo 6, titulado «Trayectoria, frame y datos de transición», con las materias: `Frame`, `TransitionData`, `Trajectory` y regla append-only.\",\n    \"El índice del manual corrobora la correspondencia temática de los tramos 3, 5 y 6 («03 · Célula, evaluación y clasificación — pendiente», «05 · Resolución y régimen de U — pendiente», «06 · Frame, trayectoria y transición — pendiente»).\",\n    \"Las secciones del constructor solo enumeran materias sin desarrollarlas; la presentación declara que los tramos sin texto aparecen como entradas pendientes, por lo que no procede definir los términos más allá de la lista documental.\"\n  ],\n  \"insuficiencias\": [],\n  \"respuesta\": \"Según el constructor del manual del lenguaje SVP, las tres materias se sitúan así: (1) La evaluación de células corresponde al Tramo 3 «Célula, evaluación y clasificación», cuyas materias asociadas son `CellSpec`, `CellState`, `evaluate`, umbral y criticidad. (2) La resolución de la U corresponde al Tramo 5 «Resolución y régimen de la U», cuyas materias asociadas son `resolve`, `Context`, `Mechanism` y reapertura. (3) Los datos de transición corresponden al Tramo 6 «Trayectoria, frame y datos de transición», cuyas materias asociadas son `Frame`, `TransitionData`, `Trajectory` y la regla append-only. El índice del manual refleja los mismos títulos (con variantes de orden en la redacción para los tramos 5 y 6) y marca los tres tramos como pendientes. El constructor solo enumera estas materias como unidades de cierre recomendadas; no aporta definiciones de los términos, y conforme al mandato de no inventar definiciones, la respuesta se limita a la asignación y enumeración documentadas.\",\n  \"revision\": \"Etapa 0: no existen entregas anteriores; esta es la respuesta provisional inicial, elaborada exclusivamente a partir de los fragmentos MCP suministrados.\"\n}\n",
+  "solicitud_sha256": "09ffc61c9e027c78717fa340d097865f90b54730f7ae57fbe73fb9fa4a7c4500",
+  "sustantivo": "correcto",
+  "valor": "0"
+}

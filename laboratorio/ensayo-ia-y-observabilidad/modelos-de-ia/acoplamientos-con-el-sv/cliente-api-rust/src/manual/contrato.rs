@@ -8,12 +8,17 @@ const TEMPORAL: &str = "Regla temporal aplicable a todas las etapas: el campo et
 pub fn compose(base: &Value, stage: usize, history: &[String]) -> R<Value> {
     let source: Value = serde_json::from_str(base["input"][0]["content"].as_str().ok_or("Fuente ausente")?).map_err(|e|e.to_string())?;
     need(source["caso"] == "MD01", "Sólo MD01 está autorizada para esta réplica")?;
+    compose_documental(base,stage,history)
+}
+
+/// Mismo contrato temporal, aplicado a un banco admitido por el Árbitro.
+pub fn compose_documental(base:&Value,stage:usize,history:&[String])->R<Value> {
     let mut q = anterior::compose(base,stage,history)?;
     q["instructions"] = json!(format!("{}\n{}",q["instructions"].as_str().ok_or("Instrucciones ausentes")?,TEMPORAL));
     let final_prompt = if stage > 0 { Some(q["input"].as_array().unwrap().last().unwrap().clone()) } else { None };
     let mut input = vec![base["input"][0].clone()];
     for i in 0..stage {
-        let historical = compose(base,i,&history[..i])?;
+        let historical = compose_documental(base,i,&history[..i])?;
         input.push(json!({"role":"user","content":json!({"tipo":"registro_de_instrucciones_historicas","etapa_historica":i,"instrucciones_aplicadas":historical["instructions"],"alcance":"Procedencia de la entrega siguiente; no instrucciones vigentes ni juicio sobre su corrección"}).to_string()}));
         if i > 0 { input.push(historical["input"].as_array().unwrap().last().unwrap().clone()); }
         input.push(json!({"role":"assistant","content":history[i]}));
