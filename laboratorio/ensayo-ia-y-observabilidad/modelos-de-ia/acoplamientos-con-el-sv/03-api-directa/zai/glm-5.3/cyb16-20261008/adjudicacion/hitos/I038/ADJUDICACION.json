@@ -1,0 +1,174 @@
+{
+  "alerta": {
+    "caso": "C13",
+    "cita_cotejada_en_rust": true,
+    "motivo": "El0 acredita cálculos horarios y el intervalo mensual solicitado, no una fecha civil no suministrada ni la ausencia de demora indebida. Esta limitación estaba delimitada en el enunciado, no es una carencia imprevista de fuentes.",
+    "pasaje": {
+      "documento": "CYB-03",
+      "fragmento": "El texto dice un mes; no establece una equivalencia universal con treinta días.",
+      "origen": "cotejo adicional del evaluador",
+      "seccion": "MD-L000033-L000044"
+    },
+    "posicion": 13
+  },
+  "alerta_limite": true,
+  "auditoria_sha256": "4ceb4fb8e0eba8b448aeb1ce6002d99016d943da2afe64d861c403be4b6a2a86",
+  "caso": "C13",
+  "critico": true,
+  "estado_documental_candidato": "respuesta_fundada",
+  "etapa": 1,
+  "fidelidad_documental": "conforme",
+  "final_sha256": "56f4ead39e01d23b1dbba51bfb3e384849f67e25b75cf632eaf531e5423f0214",
+  "formal_conforme": true,
+  "fundamento_sustantivo": "Calcula24h desde08/10/2026 10:00UTC como09/10/2026 10:00UTC y72h como11/10/2026 10:00UTC. Sitúa el mes del informe final desde la notificación efectiva del09/10 a09:00, no desde la alerta ni como30días. Conserva contenidos y sin demora indebida, sin afirmar cumplimiento por el mero máximo. La fecha civil final no se exige en el enunciado. R1/R2 corrigen la cita y expresan24–48h al distinguir la recomendación de parcheo.",
+  "justificacion_documental": "Las evidencias literales se cotejan en Rust; la relación entre premisas y conclusión se revisa exteriormente.",
+  "medicion": {
+    "duracion_operacion_ms": 108723,
+    "telemetria": {
+      "bytes": 2371770,
+      "fallos_medicion": 0,
+      "integridad": "conforme",
+      "intervalo_maximo_ms": 385,
+      "intervalo_objetivo_ms": 250,
+      "muestras": 412,
+      "plataforma_recibida": false,
+      "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+      "registros": 6156,
+      "sha256": "4b7c5cd350fc7b62ba2e66880f0fc1518d0daec6aaa4f9ecd061aa091d7f5fb5"
+    },
+    "uso": {
+      "cached_tokens": 1344,
+      "coste_liquidado_usd": null,
+      "input_tokens": 25973,
+      "output_tokens": 5327,
+      "reasoning_tokens": 1902,
+      "total_tokens": 31300
+    }
+  },
+  "naturaleza_defecto": "ninguno sustantivo identificado",
+  "pasajes_contrastados": [
+    {
+      "documento": "CYB-03",
+      "fragmento": "La alerta temprana se presenta sin demora indebida y, como máximo, en veinticuatro horas desde que se tiene constancia del incidente significativo.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000033-L000044"
+    },
+    {
+      "documento": "CYB-03",
+      "fragmento": "La notificación del incidente ordinaria se presenta sin demora indebida y, como máximo, en setenta y dos horas desde esa constancia.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000033-L000044"
+    },
+    {
+      "documento": "CYB-03",
+      "fragmento": "La alerta no desplaza el hecho inicial de este segundo reloj.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000033-L000044"
+    },
+    {
+      "documento": "CYB-03",
+      "fragmento": "Actualiza la alerta cuando proceda e incluye evaluación inicial de gravedad e impacto e indicadores de compromiso disponibles.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000033-L000044"
+    },
+    {
+      "documento": "CYB-03",
+      "fragmento": "Hay una excepción para prestadores de servicios de confianza respecto de los incidentes significativos que afectan a sus servicios de confianza: la notificación del apartado b tiene un máximo de veinticuatro horas desde constancia, igualmente sin demora indebida.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000033-L000044"
+    },
+    {
+      "documento": "CYB-03",
+      "fragmento": "El informe intermedio se presenta a petición del CSIRT o autoridad competente.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000033-L000044"
+    },
+    {
+      "documento": "CYB-03",
+      "fragmento": "El informe final ordinario debe presentarse a más tardar un mes después de la notificación del apartado b.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000033-L000044"
+    },
+    {
+      "documento": "CYB-03",
+      "fragmento": "Recoge descripción, gravedad e impacto, amenaza o causa probable, medidas paliativas y, cuando proceda, repercusiones transfronterizas.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000033-L000044"
+    },
+    {
+      "documento": "CYB-03",
+      "fragmento": "Si el incidente sigue en curso en ese momento, procede un informe de situación, seguido de informe final dentro de un mes desde que se haya gestionado el incidente.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000033-L000044"
+    },
+    {
+      "documento": "CYB-03",
+      "fragmento": "El texto dice un mes; no establece una equivalencia universal con treinta días.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000033-L000044"
+    },
+    {
+      "documento": "CYB-03",
+      "fragmento": "Los máximos temporales no eliminan la exigencia de actuar sin demora indebida.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000033-L000044"
+    },
+    {
+      "documento": "CYB-03",
+      "fragmento": "La síntesis permite examinar el contenido del texto original y razonar sobre casos cuyos hechos y ámbito estén estipulados.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000045-L000053"
+    },
+    {
+      "documento": "CYB-03",
+      "fragmento": "No determina la inclusión jurídica actual de una entidad real ni la totalidad de sus obligaciones nacionales o sectoriales.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000045-L000053"
+    },
+    {
+      "documento": "CYB-02",
+      "fragmento": "Es una recomendación de gestión de vulnerabilidades; no equivale a un plazo general de notificación jurídica de incidentes.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000019-L000024"
+    },
+    {
+      "documento": "CYB-03",
+      "fragmento": "El texto dice un mes; no establece una equivalencia universal con treinta días.",
+      "origen": "cotejo adicional del evaluador",
+      "seccion": "MD-L000033-L000044"
+    }
+  ],
+  "recepcion_independiente": "pendiente",
+  "respuesta_original": "{\n  \"caso\": \"C13\",\n  \"estado_documental\": \"respuesta_fundada\",\n  \"etapa\": 1,\n  \"evidencias\": [\n    {\n      \"cita_literal_breve\": \"La alerta temprana se presenta sin demora indebida y, como máximo, en veinticuatro horas desde que se tiene constancia del incidente significativo.\",\n      \"documento\": \"CYB-03\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000033-L000044\"\n    },\n    {\n      \"cita_literal_breve\": \"La notificación del incidente ordinaria se presenta sin demora indebida y, como máximo, en setenta y dos horas desde esa constancia.\",\n      \"documento\": \"CYB-03\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000033-L000044\"\n    },\n    {\n      \"cita_literal_breve\": \"La alerta no desplaza el hecho inicial de este segundo reloj.\",\n      \"documento\": \"CYB-03\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000033-L000044\"\n    },\n    {\n      \"cita_literal_breve\": \"Actualiza la alerta cuando proceda e incluye evaluación inicial de gravedad e impacto e indicadores de compromiso disponibles.\",\n      \"documento\": \"CYB-03\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000033-L000044\"\n    },\n    {\n      \"cita_literal_breve\": \"Hay una excepción para prestadores de servicios de confianza respecto de los incidentes significativos que afectan a sus servicios de confianza: la notificación del apartado b tiene un máximo de veinticuatro horas desde constancia, igualmente sin demora indebida.\",\n      \"documento\": \"CYB-03\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000033-L000044\"\n    },\n    {\n      \"cita_literal_breve\": \"El informe intermedio se presenta a petición del CSIRT o autoridad competente.\",\n      \"documento\": \"CYB-03\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000033-L000044\"\n    },\n    {\n      \"cita_literal_breve\": \"El informe final ordinario debe presentarse a más tardar un mes después de la notificación del apartado b.\",\n      \"documento\": \"CYB-03\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000033-L000044\"\n    },\n    {\n      \"cita_literal_breve\": \"Recoge descripción, gravedad e impacto, amenaza o causa probable, medidas paliativas y, cuando proceda, repercusiones transfronterizas.\",\n      \"documento\": \"CYB-03\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000033-L000044\"\n    },\n    {\n      \"cita_literal_breve\": \"Si el incidente sigue en curso en ese momento, procede un informe de situación, seguido de informe final dentro de un mes desde que se haya gestionado el incidente.\",\n      \"documento\": \"CYB-03\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000033-L000044\"\n    },\n    {\n      \"cita_literal_breve\": \"El texto dice un mes; no establece una equivalencia universal con treinta días.\",\n      \"documento\": \"CYB-03\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000033-L000044\"\n    },\n    {\n      \"cita_literal_breve\": \"Los máximos temporales no eliminan la exigencia de actuar sin demora indebida.\",\n      \"documento\": \"CYB-03\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000033-L000044\"\n    },\n    {\n      \"cita_literal_breve\": \"La síntesis permite examinar el contenido del texto original y razonar sobre casos cuyos hechos y ámbito estén estipulados.\",\n      \"documento\": \"CYB-03\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000045-L000053\"\n    },\n    {\n      \"cita_literal_breve\": \"No determina la inclusión jurídica actual de una entidad real ni la totalidad de sus obligaciones nacionales o sectoriales.\",\n      \"documento\": \"CYB-03\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000045-L000053\"\n    },\n    {\n      \"cita_literal_breve\": \"Es una recomendación de gestión de vulnerabilidades; no equivale a un plazo general de notificación jurídica de incidentes.\",\n      \"documento\": \"CYB-02\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000019-L000024\"\n    }\n  ],\n  \"fundamentos_verificables\": [\n    \"Ámbito del razonamiento: el caso estipula hechos dentro del texto original (entidad comprendida, incidente significativo con constancia el 08/10/2026 10:00 UTC, no prestadora de servicios de confianza), y la síntesis de CYB-03 permite razonar sobre casos con hechos y ámbito estipulados, sin determinar el Derecho vigente de una entidad real.\",\n    \"Aplicación de la secuencia ordinaria y exclusión de la excepción: la excepción de máximo de veinticuatro horas para la notificación 4.b está reservada por la fuente a prestadores de servicios de confianza respecto de incidentes que afectan a sus servicios de confianza; el caso estipula que la entidad no lo es, por lo que rige el máximo ordinario de setenta y dos horas.\",\n    \"Hechos iniciales de los relojes: la alerta temprana y la notificación ordinaria comparten el mismo hecho inicial, la constancia del incidente significativo (08/10/2026 10:00 UTC). La fuente advierte que la alerta no desplaza ese hecho inicial para el segundo reloj. El informe final ordinario tiene un hecho inicial distinto: la presentación de la notificación del apartado 4.b (09/10/2026 09:00 UTC).\",\n    \"Cálculo de máximos: 24 horas desde la constancia vencen el 09/10/2026 10:00 UTC; 72 horas vencen el 11/10/2026 10:00 UTC. La presentación real de la notificación 4.b el 09/10/2026 09:00 UTC equivale a 23 horas tras la constancia, dentro del máximo de 72 horas.\",\n    \"Contenido principal de las entregas según la fuente: alerta temprana (sin demora indebida, máximo 24 horas; cuando proceda, sospecha de acción ilícita o malintencionada y posibles repercusiones transfronterizas); notificación ordinaria 4.b (sin demora indebida, máximo 72 horas; actualiza la alerta cuando proceda e incluye evaluación inicial de gravedad e impacto e indicadores de compromiso disponibles); informe intermedio (solo a petición del CSIRT o autoridad competente); informe final (descripción, gravedad e impacto, amenaza o causa probable, medidas paliativas y, cuando proceda, repercusiones transfronterizas).\",\n    \"Informe final: dado que el caso estipula que el incidente ya está gestionado, no se activa el supuesto del informe de situación, que la fuente condiciona a que el incidente siga en curso en ese momento; aplica el informe final ordinario, con plazo de un mes posterior a la notificación 4.b del 09/10/2026 09:00 UTC. La fuente dice un mes y niega la equivalencia universal con treinta días; el enunciado confirma que no se pide convertir el intervalo a fecha y hora civiles porque el régimen de cómputo no se ha suministrado.\",\n    \"Sin demora indebida: la exigencia acompaña expresamente a la alerta temprana y a la notificación ordinaria junto a sus máximos, y la fuente formula con carácter general que los máximos temporales no eliminan esa exigencia; por tanto, cumplir el máximo de 72 horas no acredita por sí solo la ausencia de demora indebida.\",\n    \"Distinción de regímenes exigida por el encargo: los plazos aquí aplicados proceden del texto original NIS2 sintetizado en CYB-03; el plazo de 24–48 horas de la guía de INCIBE para actualización de activos críticos es una recomendación de gestión de vulnerabilidades y la fuente niega expresamente que equivalga a un plazo general de notificación jurídica de incidentes; las reglas del SV sobre evidencia y límites (CYB-01) no modifican los plazos del texto jurídico.\",\n    \"Procedencia documental: todas las citas provienen del libro recibido (CYB-03 y CYB-02), con pagina 0 en todos los fragmentos recibidos; las síntesis no se atribuyen como citas del original jurídico, según el encargo.\"\n  ],\n  \"insuficiencias\": [\n    \"No puede expresarse el vencimiento del informe final como fecha y hora civiles exactas: la fuente aporta el plazo 'un mes' pero no el régimen de cómputo civil, y niega la equivalencia universal con treinta días. Información faltante: la regla de cómputo del mes; evidencia disponible: CYB-03, MD-L000033-L000044 y MD-L000045-L000053.\",\n    \"La síntesis de NIS2 es paráfrasis identificada, no versión consolidada ni dictamen jurídico: no acredita el Derecho nacional, los actos de ejecución ni la situación jurídica vigente de una entidad real al 08/10/2026; la respuesta vale solo para los hechos estipulados del caso.\",\n    \"No consta la hora de presentación de la alerta temprana en los hechos del caso ni en las fuentes: no puede valorarse si esa entrega cumplió su máximo de 24 horas (09/10/2026 10:00 UTC) ni su ausencia de demora indebida.\",\n    \"No consta petición de informe intermedio por el CSIRT o autoridad competente: su contenido y oportunidad quedan condicionados a esa petición y no pueden determinarse con las fuentes.\",\n    \"La fuente no describe contenido adicional del informe de situación más allá de su procedencia cuando el incidente sigue en curso; ese extremo no es necesario en este caso porque el incidente ya está gestionado.\"\n  ],\n  \"respuesta\": \"Bajo la secuencia ordinaria del artículo 23.4 del texto original sintetizado en CYB-03, aplicable porque la entidad no es prestadora de servicios de confianza (la excepción de 24 horas para la notificación 4.b está reservada a esos prestadores): (1) Alerta temprana: hecho inicial, la constancia del incidente significativo (08/10/2026 10:00 UTC); máximo de 24 horas, es decir 09/10/2026 10:00 UTC; presentación sin demora indebida y, cuando proceda, indicación de sospecha de acción ilícita o malintencionada y de posibles repercusiones transfronterizas. (2) Notificación ordinaria 4.b: mismo hecho inicial (constancia del 08/10/2026 10:00 UTC); máximo de 72 horas, es decir 11/10/2026 10:00 UTC; la presentación real el 09/10/2026 09:00 UTC, 23 horas después de la constancia, está dentro del máximo, computado desde la constancia y no desde la alerta; contenido: sin demora indebida, actualiza la alerta cuando proceda e incluye evaluación inicial de gravedad e impacto e indicadores de compromiso disponibles. (3) Informe intermedio: solo a petición del CSIRT o autoridad competente; no consta petición en el caso. (4) Informe final ordinario: hecho inicial distinto, la presentación de la notificación 4.b (09/10/2026 09:00 UTC); intervalo de un mes posterior a esa notificación; como el incidente ya está gestionado, no procede informe de situación (supuesto condicionado a que el incidente siga en curso) ni se inventa un cierre; contenido: descripción, gravedad e impacto, amenaza o causa probable, medidas paliativas y, cuando proceda, repercusiones transfronterizas. El vencimiento civil exacto del informe final no se determina porque el régimen de cómputo del mes no se ha suministrado y la fuente niega la equivalencia universal con treinta días. En todas las entregas los máximos temporales no eliminan la exigencia de actuar sin demora indebida. Distinción de regímenes: estos plazos son del texto original NIS2; la ventana de 24–48 horas de INCIBE para parcheo es una recomendación de gestión de vulnerabilidades, no un plazo de notificación jurídica; las reglas del SV sobre evidencia y límites no alteran los plazos.\",\n  \"revision\": \"Autocrítica documental de la entrega de etapa 0 contrastada contra la fuente: (a) corregido: la cita de CYB-03 MD-L000045-L000053 se transcribía con inicial minúscula ('la síntesis permite...'), alterando la literalidad; se sustituye por la cadena exacta con mayúscula inicial. (b) corregido/ampliado: la cita de la excepción se truncaba en 'desde constancia', omitiendo 'igualmente sin demora indebida' dentro de la misma frase; se usa ahora la cadena continua completa, que además refuerza la exigencia transversal de actuar sin demora indebida. (c) añadidos como evidencias: 'La alerta no desplaza el hecho inicial de este segundo reloj', que sustenta el cómputo de las 72 horas desde la constancia y no desde la alerta; 'Si el incidente sigue en curso en ese momento, procede un informe de situación...', que sustenta la exclusión del informe de situación dado que el incidente ya está gestionado; y la cita de CYB-02 que distingue la recomendación de parcheo del plazo de notificación jurídica. (d) mantenido: los cálculos (24 h → 09/10/2026 10:00 UTC; 72 h → 11/10/2026 10:00 UTC; presentación 4.b a las 23 horas), los hechos iniciales de cada reloj, el contenido de las entregas, el plazo de un mes del informe final desde la notificación 4.b, la negativa a convertirlo a fecha civil y las cuatro insuficiencias ya declaradas; todo se ha verificado como fiel a la fuente y a los hechos estipulados. (e) verificado: todas las citas son cadenas continuas presentes literalmente en los fragmentos recibidos, con documento, seccion y pagina exactos; los identificadores de sección coinciden con los recibidos.\"\n}",
+  "solicitud_sha256": "a2d3da50780a69d08a3247c8bb2e82bf98cedbd84d6a79edf785b4a983ffcaee",
+  "sustantivo": "correcto",
+  "valor": "0"
+}

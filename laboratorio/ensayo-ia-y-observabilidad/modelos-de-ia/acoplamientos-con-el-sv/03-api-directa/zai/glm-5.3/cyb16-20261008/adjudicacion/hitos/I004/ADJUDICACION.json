@@ -1,0 +1,93 @@
+{
+  "alerta": null,
+  "alerta_limite": false,
+  "auditoria_sha256": "69c4f5021dbd20f0eafd63290abea842e08b24e8f7301220fbba9fc6f8fe802d",
+  "caso": "C02",
+  "critico": true,
+  "estado_documental_candidato": "respuesta_fundada",
+  "etapa": 0,
+  "fidelidad_documental": "conforme",
+  "final_sha256": "7dc9a4e3fa151ad0d29fe0b134660d6d0b2340036a0c804c382625ea3b0c8539",
+  "formal_conforme": true,
+  "fundamento_sustantivo": "Distingue el alcance insuficiente del primer informe y el fallo instrumental del segundo; ninguno acredita la corrección buscada. Conserva cobertura, error y originales sin convertir el fallo en resultado normal del dominio. La validez del primer informe se limita al supuesto y ámbito observado, no sustituye los restantes requisitos de procedencia e integridad. El apoyo accesorio de CYB02 sobre puesta en funcionamiento pertenece a la síntesis, no se acredita como cita del original INCIBE.",
+  "justificacion_documental": "Las evidencias literales se cotejan en Rust; la relación entre premisas y conclusión se revisa exteriormente.",
+  "medicion": {
+    "duracion_operacion_ms": 41908,
+    "telemetria": {
+      "bytes": 1252909,
+      "fallos_medicion": 0,
+      "integridad": "conforme",
+      "intervalo_maximo_ms": 303,
+      "intervalo_objetivo_ms": 250,
+      "muestras": 161,
+      "plataforma_recibida": false,
+      "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+      "registros": 3374,
+      "sha256": "e12e505cdeb2a67c063dc19fab3b210c9f8d43ca0414c14a0d97b5aeac96d4b7"
+    },
+    "uso": {
+      "cached_tokens": 1280,
+      "coste_liquidado_usd": null,
+      "input_tokens": 21798,
+      "output_tokens": 2929,
+      "reasoning_tokens": 896,
+      "total_tokens": 24727
+    }
+  },
+  "naturaleza_defecto": "ninguno sustantivo identificado",
+  "pasajes_contrastados": [
+    {
+      "documento": "CYB-01",
+      "fragmento": "Un estado observado es evidencia sobre aquello que efectivamente se observó, en su ámbito y momento.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000025-L000030"
+    },
+    {
+      "documento": "CYB-01",
+      "fragmento": "La cobertura se refiere a las instancias, permisos y flujos realmente examinados. Una comprobación parcial no acredita un conjunto completo.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000037-L000044"
+    },
+    {
+      "documento": "CYB-01",
+      "fragmento": "Una respuesta truncada, una negativa recibida, una falta de evidencia y un fallo de transporte tienen causas distintas; no generan automáticamente el valor U.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000007-L000018"
+    },
+    {
+      "documento": "CYB-01",
+      "fragmento": "Un error del extractor o de una medición no produce un resultado alternativo válido del dominio.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000045-L000050"
+    },
+    {
+      "documento": "CYB-01",
+      "fragmento": "Debe quedar un registro técnico conservado, con causa y alcance, sin rellenar por ese motivo la semántica del episodio.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000045-L000050"
+    },
+    {
+      "documento": "CYB-01",
+      "fragmento": "Las reevaluaciones deben tratar esos efectos con los datos disponibles y la autoridad vigente.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000045-L000050"
+    }
+  ],
+  "recepcion_independiente": "pendiente",
+  "respuesta_original": "\n{\n  \"caso\": \"C02\",\n  \"estado_documental\": \"respuesta_fundada\",\n  \"etapa\": 0,\n  \"evidencias\": [\n    {\n      \"cita_literal_breve\": \"Un estado observado es evidencia sobre aquello que efectivamente se observó, en su ámbito y momento.\",\n      \"documento\": \"CYB-01\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000025-L000030\"\n    },\n    {\n      \"cita_literal_breve\": \"La cobertura se refiere a las instancias, permisos y flujos realmente examinados. Una comprobación parcial no acredita un conjunto completo.\",\n      \"documento\": \"CYB-01\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000037-L000044\"\n    },\n    {\n      \"cita_literal_breve\": \"Una respuesta truncada, una negativa recibida, una falta de evidencia y un fallo de transporte tienen causas distintas; no generan automáticamente el valor U.\",\n      \"documento\": \"CYB-01\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000007-L000018\"\n    },\n    {\n      \"cita_literal_breve\": \"Un error del extractor o de una medición no produce un resultado alternativo válido del dominio.\",\n      \"documento\": \"CYB-01\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000045-L000050\"\n    },\n    {\n      \"cita_literal_breve\": \"Debe quedar un registro técnico conservado, con causa y alcance, sin rellenar por ese motivo la semántica del episodio.\",\n      \"documento\": \"CYB-01\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000045-L000050\"\n    },\n    {\n      \"cita_literal_breve\": \"Las reevaluaciones deben tratar esos efectos con los datos disponibles y la autoridad vigente.\",\n      \"documento\": \"CYB-01\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000045-L000050\"\n    }\n  ],\n  \"fundamentos_verificables\": [\n    \"Primer informe: el ensayo terminó sin fallo instrumental conocido, pero su alcance no incluye la vulnerabilidad cuya corrección se evalúa. Según la regla del SV, un estado observado solo acredita lo efectivamente observado en su ámbito y momento; y la cobertura son las instancias, permisos y flujos realmente examinados, de modo que una comprobación parcial no acredita el conjunto completo. Por tanto, el «sin hallazgos» es evidencia válida y utilizable sobre el ámbito efectivamente ensayado, pero no acredita la ausencia de la vulnerabilidad objetivo ni el estado del recurso cuya corrección se desea.\",\n    \"El primer informe corresponde a insuficiencia de cobertura, no a fallo técnico: la fuente distingue admisión, aplicabilidad, insuficiencia y fallo instrumental, y este caso se sitúa en la insuficiencia de cobertura, no en el error instrumental. La consecuencia es que no se puede derivar del informe una conclusión sobre la vulnerabilidad no cubierta, y que esa limitación debe declararse en el expediente, no rellenarse con suposiciones.\",\n    \"Registro a conservar en el primer caso: el registro de cobertura, es decir, qué instancias, recursos y flujos fueron realmente examinados y qué quedó fuera del ensayo (en particular, la vulnerabilidad objetivo). La fuente exige que la cobertura pueda detectar lo omitido y que la ausencia de elementos en un conjunto también requiera justificación; no se inventa un conjunto vacío para dar por satisfecha la obligación.\",\n    \"Segundo informe: el extractor terminó con error y el informe «sin hallazgos» fue generado igualmente. La regla del SV es que un error del extractor o de una medición no produce un resultado alternativo válido del dominio. Por tanto, ese «sin hallazgos» no es evidencia de ausencia de vulnerabilidades: es el producto de un fallo instrumental y carece de valor como resultado del dominio.\",\n    \"El segundo informe corresponde a fallo técnico, no a insuficiencia de cobertura: no es que el examen se realizara parcialmente sobre un ámbito delimitado, sino que la observación misma quedó viciada por el error del extractor. La adenda recuerda que una respuesta truncada, una negativa, una falta de evidencia y un fallo de transporte tienen causas distintas y no generan automáticamente el valor U: aquí la causa está identificada como error del extractor, y esa distinción causal debe conservarse.\",\n    \"Registro a conservar en el segundo caso: el registro técnico del fallo, conservado con causa (error del extractor) y alcance, sin rellenar por ese motivo la semántica del episodio. El informe generado pese al error se documenta como producto de fallo instrumental, no como observación válida; no se le atribuye contenido sobre el estado del activo.\",\n    \"Síntesis diferencial (deducida de las premisas anteriores, no atribuida como cita del original): el primer informe aporta evidencia real pero de cobertura limitada (útil para lo examinado, mudo sobre la vulnerabilidad objetivo); el segundo no aporta evidencia de dominio porque su «sin hallazgos» procede de un fallo instrumental. Ambos casos exigen conservar el fundamento: registro de cobertura en el primero, registro técnico de fallo con causa y alcance en el segundo.\"\n  ],\n  \"insuficiencias\": [\n    \"Las fuentes no especifican el formato, campos ni plantilla concreta del registro técnico ni del registro de cobertura; solo establecen qué debe acreditar cada uno (ámbito examinado en el caso de cobertura; causa y alcance en el caso de fallo). Cualquier formato más detallado requeriría información ausente de las cinco fuentes recibidas.\",\n    \"Las fuentes no contienen los hechos internos de los dos informes citados (qué ensayo concreto se ejecutó, qué extractor falló, ni el contenido íntegro de los informes); el análisis se limita a los hechos estipulados en la pregunta y a las reglas del SV aplicables.\",\n    \"No se evalúan criticidad, puntuaciones, telemetría ni decisiones del Árbitro, que quedan fuera del alcance declarado; ninguna de las fuentes recibidas permitiría acreditar esos extremos.\"\n  ],\n  \"respuesta\": \"Los dos informes «sin hallazgos» aportan clases de evidencia distintas y no deben confundirse.\\n\\n1) Primer informe (el ensayo no cubre la vulnerabilidad que se desea corregir): se trata de insuficiencia de cobertura, no de fallo técnico. El informe es evidencia válida sobre lo que efectivamente se observó, en su ámbito y momento: acredita ausencia de hallazgos dentro del conjunto de instancias y flujos realmente examinados. Pero una comprobación parcial no acredita el conjunto completo, de modo que no dice nada sobre la vulnerabilidad objetivo ni sobre el estado del recurso que se desea corregir. El informe no es inválido: es válido pero de alcance limitado. Registro a conservar: el registro de cobertura, que identifique qué se examinó realmente y qué quedó fuera (en particular, la vulnerabilidad no cubierta), justificando la ausencia de elementos en lugar de presumir un conjunto completo o vacío. La limitación se declara; no se rellena con supuestos sobre lo no examinado.\\n\\n2) Segundo informe (el extractor terminó con error y el informe se generó igualmente): se trata de fallo técnico o instrumental, no de insuficiencia de cobertura. Un error del extractor no produce un resultado alternativo válido del dominio, por lo que el «sin hallazgos» no constituye evidencia de ausencia de vulnerabilidades: es la salida de un instrumento fallido. Registro a conservar: el registro técnico del fallo, conservado con su causa (error del extractor) y su alcance, sin rellenar por ese motivo la semántica del episodio, es decir, sin atribuir al informe generado ningún contenido sobre el estado del activo.\\n\\n3) Distinción causal complementaria: la adenda del SV exige distinguir causas (respuesta truncada, negativa recibida, falta de evidencia, fallo de transporte) y no convertirlas automáticamente en valor U. Aquí ambas causas están identificadas por los hechos estipulados —cobertura insuficiente en el primer caso, error del extractor en el segundo— y esa distinción debe permanecer en el expediente verificable: el primer informe aporta evidencia parcial admisible; el segundo no aporta evidencia de dominio y exige registro de fallo y, en su caso, reevaluación con los datos disponibles y la autoridad vigente.\",\n  \"revision\": \"Etapa 0: no existen entregas anteriores ni antecedentes que contrastar; esta es la primera respuesta provisional, construida exclusivamente sobre las cinco fuentes recibidas (CYB-00 a CYB-04). No se ha mantenido ni corregido material previo.\"\n}\n",
+  "solicitud_sha256": "c3fcea80e5057f3c4d27536097d6fd9e6261a3030b59f78919862f6350fbd120",
+  "sustantivo": "correcto",
+  "valor": "0"
+}

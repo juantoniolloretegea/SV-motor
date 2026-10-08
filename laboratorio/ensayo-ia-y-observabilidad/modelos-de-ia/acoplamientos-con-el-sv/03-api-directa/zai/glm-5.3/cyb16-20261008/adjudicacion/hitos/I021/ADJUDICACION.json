@@ -1,0 +1,142 @@
+{
+  "alerta": {
+    "caso": "C07",
+    "cita_cotejada_en_rust": true,
+    "motivo": "La prelación provisional se deduce de los hechos estipulados; no acredita una clasificación exhaustiva de activos reales ni un plazo específico para A.",
+    "pasaje": {
+      "documento": "CYB-02",
+      "fragmento": "La valoración contextual no permite inventar datos ni un criterio universal que la guía no establece.",
+      "origen": "cotejo adicional del evaluador",
+      "seccion": "MD-L000007-L000012"
+    },
+    "posicion": 7
+  },
+  "alerta_limite": true,
+  "auditoria_sha256": "92be162d93aadbc0bfc5403e1169cc9ffc6d417b54a75c7c56eec0fcf854fa69",
+  "caso": "C07",
+  "critico": false,
+  "estado_documental_candidato": "respuesta_fundada",
+  "etapa": 2,
+  "fidelidad_documental": "conforme",
+  "final_sha256": "c6d7a0dc65fb29ea50401a343119aea2fc2c25111ee2ead399cf1deca6e4eafa",
+  "formal_conforme": true,
+  "fundamento_sustantivo": "Prioriza provisionalmente B por exposición, criticidad, explotación declarada y combinación de debilidades, sin ordenar sólo por puntuación ni inventar una política universal. No ignora A ni inventa su plazo. Distingue recomendación de parcheo y notificación; identifica la síntesis recibida y la provisionalidad de los hechos.",
+  "justificacion_documental": "Las evidencias literales se cotejan en Rust; la relación entre premisas y conclusión se revisa exteriormente.",
+  "medicion": {
+    "duracion_operacion_ms": 32421,
+    "telemetria": {
+      "bytes": 1052438,
+      "fallos_medicion": 0,
+      "integridad": "conforme",
+      "intervalo_maximo_ms": 288,
+      "intervalo_objetivo_ms": 250,
+      "muestras": 121,
+      "plataforma_recibida": false,
+      "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+      "registros": 2866,
+      "sha256": "0d1a007c423785ebecfcb5b103728307f4539ae40ad24c058388f59e6dc9efb0"
+    },
+    "uso": {
+      "cached_tokens": 1344,
+      "coste_liquidado_usd": null,
+      "input_tokens": 29569,
+      "output_tokens": 2560,
+      "reasoning_tokens": 26,
+      "total_tokens": 32129
+    }
+  },
+  "naturaleza_defecto": "ninguno sustantivo identificado",
+  "pasajes_contrastados": [
+    {
+      "documento": "CYB-02",
+      "fragmento": "La prioridad no se decide exclusivamente por una puntuación individual. Deben considerarse exposición, criticidad del activo, explotación conocida, dependencias y combinaciones de debilidades.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000007-L000012"
+    },
+    {
+      "documento": "CYB-02",
+      "fragmento": "Vulnerabilidades que separadamente parecen menos graves pueden producir un impacto mayor cuando se encadenan.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000007-L000012"
+    },
+    {
+      "documento": "CYB-02",
+      "fragmento": "La valoración contextual no permite inventar datos ni un criterio universal que la guía no establece.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000007-L000012"
+    },
+    {
+      "documento": "CYB-02",
+      "fragmento": "Para activos críticos expuestos a Internet, la guía recomienda plazos muy rápidos de actualización, expresados como 24–48 horas",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000019-L000024"
+    },
+    {
+      "documento": "CYB-02",
+      "fragmento": "Entre ellas considera restricciones mediante cortafuegos, protección de aplicaciones, mecanismos de detección y respuesta o aislamiento del servicio.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000019-L000024"
+    },
+    {
+      "documento": "CYB-02",
+      "fragmento": "La elección depende de la exposición, el riesgo y la continuidad.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000019-L000024"
+    },
+    {
+      "documento": "CYB-02",
+      "fragmento": "Es una recomendación de gestión de vulnerabilidades; no equivale a un plazo general de notificación jurídica de incidentes.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000019-L000024"
+    },
+    {
+      "documento": "CYB-02",
+      "fragmento": "Segmentar y reducir privilegios limita el alcance de una intrusión.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000013-L000018"
+    },
+    {
+      "documento": "CYB-03",
+      "fragmento": "Se consideran situación, normas pertinentes y coste de aplicación; al evaluar proporcionalidad, exposición, tamaño y probabilidad y gravedad de los incidentes",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000019-L000026"
+    },
+    {
+      "documento": "CYB-03",
+      "fragmento": "No determina la inclusión jurídica actual de una entidad real ni la totalidad de sus obligaciones nacionales o sectoriales. Ante fuentes ausentes, debe describirse qué dato o disposición falta.",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000045-L000053"
+    },
+    {
+      "documento": "CYB-02",
+      "fragmento": "La valoración contextual no permite inventar datos ni un criterio universal que la guía no establece.",
+      "origen": "cotejo adicional del evaluador",
+      "seccion": "MD-L000007-L000012"
+    }
+  ],
+  "recepcion_independiente": "pendiente",
+  "respuesta_original": "{\n  \"caso\": \"C07\",\n  \"estado_documental\": \"respuesta_fundada\",\n  \"etapa\": 2,\n  \"evidencias\": [\n    {\n      \"cita_literal_breve\": \"La prioridad no se decide exclusivamente por una puntuación individual. Deben considerarse exposición, criticidad del activo, explotación conocida, dependencias y combinaciones de debilidades.\",\n      \"documento\": \"CYB-02\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000007-L000012\"\n    },\n    {\n      \"cita_literal_breve\": \"Vulnerabilidades que separadamente parecen menos graves pueden producir un impacto mayor cuando se encadenan.\",\n      \"documento\": \"CYB-02\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000007-L000012\"\n    },\n    {\n      \"cita_literal_breve\": \"La valoración contextual no permite inventar datos ni un criterio universal que la guía no establece.\",\n      \"documento\": \"CYB-02\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000007-L000012\"\n    },\n    {\n      \"cita_literal_breve\": \"Para activos críticos expuestos a Internet, la guía recomienda plazos muy rápidos de actualización, expresados como 24–48 horas\",\n      \"documento\": \"CYB-02\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000019-L000024\"\n    },\n    {\n      \"cita_literal_breve\": \"Entre ellas considera restricciones mediante cortafuegos, protección de aplicaciones, mecanismos de detección y respuesta o aislamiento del servicio.\",\n      \"documento\": \"CYB-02\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000019-L000024\"\n    },\n    {\n      \"cita_literal_breve\": \"La elección depende de la exposición, el riesgo y la continuidad.\",\n      \"documento\": \"CYB-02\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000019-L000024\"\n    },\n    {\n      \"cita_literal_breve\": \"Es una recomendación de gestión de vulnerabilidades; no equivale a un plazo general de notificación jurídica de incidentes.\",\n      \"documento\": \"CYB-02\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000019-L000024\"\n    },\n    {\n      \"cita_literal_breve\": \"Segmentar y reducir privilegios limita el alcance de una intrusión.\",\n      \"documento\": \"CYB-02\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000013-L000018\"\n    },\n    {\n      \"cita_literal_breve\": \"Se consideran situación, normas pertinentes y coste de aplicación; al evaluar proporcionalidad, exposición, tamaño y probabilidad y gravedad de los incidentes\",\n      \"documento\": \"CYB-03\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000019-L000026\"\n    },\n    {\n      \"cita_literal_breve\": \"No determina la inclusión jurídica actual de una entidad real ni la totalidad de sus obligaciones nacionales o sectoriales. Ante fuentes ausentes, debe describirse qué dato o disposición falta.\",\n      \"documento\": \"CYB-03\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000045-L000053\"\n    }\n  ],\n  \"fundamentos_verificables\": [\n    \"Verificación neutral de citas: las diez evidencias se han cotejado carácter a carácter contra los fragmentos recibidos; todas son cadenas continuas y literales, sin puntos suspensivos añadidos, localizables en las secciones MD-L indicadas. No se retira ninguna.\",\n    \"La respuesta a la pregunta formulada está directamente sustentada: la fuente niega que la prioridad se decida exclusivamente por la puntuación individual y enumera los factores a considerar, que coinciden con los hechos estipulados del caso (exposición a Internet, criticidad del activo, explotación conocida declarada, combinación de debilidades).\",\n    \"La prelación B-antes-que-A se mantiene como inferencia con premisas explícitas: la puntuación técnica no es el criterio exclusivo y B acumula los agravantes contextuales que la fuente menciona, mientras que el caso no atribuye a A exposición externa ni explotación conocida. No se trata de una ordenanza literal de la guía, sino de la aplicación de su criterio a los hechos del caso, tal como el encargo permite razonar.\",\n    \"El plazo de 24–48 horas se mantiene atribuido exactamente al perfil de B, porque la fuente lo circunscribe a «activos críticos expuestos a Internet», condición que el caso estipula para B y no para A.\",\n    \"Las medidas temporales para B se mantienen con su condicionante expreso: su elección depende de exposición, riesgo y continuidad, por lo que la respuesta no prescribe una medida concreta sino el repertorio documentado y su condición de elección.\",\n    \"Se mantiene la atribución correcta del estatuto de las fuentes: CYB-02 es paráfrasis académica identificada de la guía de INCIBE (no transcripción); CYB-03 es síntesis del texto original de la Directiva (UE) 2022/2555 y no acredita Derecho vigente ni sujeción de entidad real alguna; ninguna recomendación se convierte en obligación jurídica universal.\",\n    \"Se mantiene la distinción entre recomendación de parcheo y plazo de notificación jurídica, tal como la propia fuente la formula; la respuesta no mezcla ambos objetos.\",\n    \"No procede U: la pregunta (si basta ordenar por puntuación individual, priorización provisional y límites) es íntegramente resoluble con las fuentes y los hechos estipulados. Las carencias detectadas se declaran como límites dentro de una respuesta fundada, conforme al contrato, sin inventar el inventario completo, la naturaleza de la segunda debilidad, la confirmación de la explotación ni los criterios del Árbitro.\"\n  ],\n  \"insuficiencias\": [\n    \"No consta el inventario completo de activos ni el mapa de dependencias entre A, B y la segunda debilidad; el orden ofrecido es una prelación provisional entre los elementos descritos, no una priorización exhaustiva del entorno.\",\n    \"La naturaleza técnica de la debilidad encadenada con B no está descrita en el caso; solo se declara que incrementa el impacto, sin datos para priorizarla individualmente o verificar el encadenamiento.\",\n    \"La explotación activa de B consta únicamente como declaración del caso; las fuentes recibidas no contienen telemetría, indicadores de compromiso ni confirmación independiente, y este examen no conoce criticidades, puntuaciones oficiales, criterios reservados ni decisiones del Árbitro.\",\n    \"La fuente no establece plazo específico para A (activo interno segmentado sin explotación conocida declarada); su tratamiento queda como valoración contextual pendiente, no como dato documental.\",\n    \"Las recomendaciones de INCIBE se conocen solo a través de la síntesis recibida (paráfrasis, no el original de 9 páginas); la precisión de plazos y medidas se limita a lo declarado en esa síntesis, y no se ha acreditado que la entidad del supuesto esté sujeta a NIS2 ni a otro marco normativo vigente.\"\n  ],\n  \"respuesta\": \"No, no basta ordenar la actuación por la puntuación individual. La síntesis recibida de la guía de INCIBE lo niega expresamente: «La prioridad no se decide exclusivamente por una puntuación individual. Deben considerarse exposición, criticidad del activo, explotación conocida, dependencias y combinaciones de debilidades», y precisa que «Vulnerabilidades que separadamente parecen menos graves pueden producir un impacto mayor cuando se encadenan». Priorización provisional: (1) B primero: activo crítico, expuesto a Internet, con explotación activa declarada y encadenamiento con otra debilidad que incrementa el impacto. Para ese perfil exacto, la fuente recomienda «plazos muy rápidos de actualización, expresados como 24–48 horas» y, si la corrección no puede aplicarse de inmediato, medidas temporales («restricciones mediante cortafuegos, protección de aplicaciones, mecanismos de detección y respuesta o aislamiento del servicio»), cuya «elección depende de la exposición, el riesgo y la continuidad». La debilidad encadenada se trata dentro de esta prioridad, sin prioridad individual acreditada. (2) A después, sin ignorarla: la puntuación 9,8 es grave, pero el caso no declara exposición externa ni explotación conocida, y su condición de activo interno segmentado se corresponde con el efecto que la fuente atribuye a la segmentación («limita el alcance de una intrusión»), aunque la guía no ordena prioridades por segmentación; su plazo y tratamiento quedan como valoración contextual con los datos disponibles. Límites documentales: es una recomendación de gestión de vulnerabilidades que «no equivale a un plazo general de notificación jurídica de incidentes» (objeto y hecho inicial distintos de los plazos del Art. 23 de NIS2); CYB-02 es paráfrasis académica identificada, no transcripción de la guía; CYB-03 es síntesis del texto original de la Directiva y «No determina la inclusión jurídica actual de una entidad real»; la valoración contextual «no permite inventar datos ni un criterio universal que la guía no establece»; y este examen no conoce criticidades, telemetría, criterios reservados ni decisiones del Árbitro, por lo que la prelación B-antes-que-A es provisional y condicionada a la acreditación de los hechos declarados en el caso.\",\n  \"revision\": \"Verificación final neutral de las etapas 0 y 1 contra la fuente. Mantenido: la conclusión central (no basta la puntuación individual; B antes que A por exposición, criticidad, explotación declarada y encadenamiento; plazo 24–48 h y medidas temporales para el perfil de B; A en valoración contextual posterior; distinción entre recomendación de parcheo y plazos de notificación; límites de las síntesis). Se confirman como literales las diez evidencias de la etapa 1, incluida la corrección introducida entonces (cita del plazo desde «Para activos críticos expuestos a Internet», que ancla el plazo al perfil exacto de B) y las dos evidencias añadidas (segmentación y condicionante de elección de medidas). No se detectan afirmaciones sin sustento, citas inexactas ni omisiones resolubles con la fuente; las insuficiencias declaradas corresponden a datos genuinamente ausentes, no eludibles. No procede U porque la pregunta es resoluble y las carencias se declaran como límites conforme al contrato. La presente versión coincide sustancialmente con la etapa 1, cuya corrección respecto de la etapa 0 se verificó como pertinente, no por preferencia por la última versión.\"\n}",
+  "solicitud_sha256": "f72820148b3310f5ba59e2891731d48de3a125d14eae005906d492eff9a97c70",
+  "sustantivo": "correcto",
+  "valor": "0"
+}

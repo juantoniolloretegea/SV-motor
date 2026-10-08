@@ -1,0 +1,117 @@
+{
+  "alerta": null,
+  "alerta_limite": false,
+  "auditoria_sha256": "ceb78c6e421841e979eb16c23b1ff1f64be2ab423e3ffb4ae1c1ee85aa946d74",
+  "caso": "C01",
+  "critico": true,
+  "estado_documental_candidato": "respuesta_fundada",
+  "etapa": 2,
+  "fidelidad_documental": "conforme",
+  "final_sha256": "b8e471b8f9b3357aa32b11ef1afa1ecbc2bec93bf43a464a29ac7db98daa2247",
+  "formal_conforme": true,
+  "fundamento_sustantivo": "La versión5 persistida no acredita corrección activa cuando el proceso identificado sigue en4. La respuesta exige activación autorizada y medición posterior con identidad, generación y momento. No inventa una ejecución corregida. La observación narrativa de R1 sobre retirar algo que reconoce no haber afirmado no acredita procesos internos ni modifica esta conclusión.",
+  "justificacion_documental": "Las evidencias literales se cotejan en Rust; la relación entre premisas y conclusión se revisa exteriormente.",
+  "medicion": {
+    "duracion_operacion_ms": 26888,
+    "telemetria": {
+      "bytes": 951723,
+      "fallos_medicion": 0,
+      "integridad": "conforme",
+      "intervalo_maximo_ms": 495,
+      "intervalo_objetivo_ms": 250,
+      "muestras": 102,
+      "plataforma_recibida": false,
+      "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+      "registros": 2610,
+      "sha256": "202f455e9953870150fe8d22ca57a3078dfcdfc5adc175bb1b82b3698cd4bbe1"
+    },
+    "uso": {
+      "cached_tokens": 0,
+      "coste_liquidado_usd": null,
+      "input_tokens": 28282,
+      "output_tokens": 2332,
+      "reasoning_tokens": 68,
+      "total_tokens": 30614
+    }
+  },
+  "naturaleza_defecto": "ninguno sustantivo identificado",
+  "pasajes_contrastados": [
+    {
+      "documento": "CYB-01",
+      "fragmento": "Una actualización de un archivo y la versión ejecutada por un servicio pueden pertenecer a estados o generaciones distintos",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000025-L000030"
+    },
+    {
+      "documento": "CYB-01",
+      "fragmento": "la comprobación debe identificar qué recurso y qué ejecución sustentan la conclusión",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000025-L000030"
+    },
+    {
+      "documento": "CYB-01",
+      "fragmento": "Un estado observado es evidencia sobre aquello que efectivamente se observó, en su ámbito y momento",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000025-L000030"
+    },
+    {
+      "documento": "CYB-01",
+      "fragmento": "La referencia aprobada establece el estado contra el que se contrasta",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000025-L000030"
+    },
+    {
+      "documento": "CYB-01",
+      "fragmento": "Si sólo existe una observación inicial, no se atribuye automáticamente duración a una vulnerabilidad ni se inventan actuaciones anteriores",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000025-L000030"
+    },
+    {
+      "documento": "CYB-01",
+      "fragmento": "La reevaluación alcanza las dependencias pertinentes y no todos los hechos por simple proximidad",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000025-L000030"
+    },
+    {
+      "documento": "CYB-02",
+      "fragmento": "La identidad del archivo recuperado y una prueba de puesta en funcionamiento tienen objetos diferentes: sus resultados deben describirse por lo efectivamente comprobado",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000025-L000032"
+    },
+    {
+      "documento": "CYB-01",
+      "fragmento": "La cobertura se refiere a las instancias, permisos y flujos realmente examinados. Una comprobación parcial no acredita un conjunto completo",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000037-L000044"
+    },
+    {
+      "documento": "CYB-01",
+      "fragmento": "Un resultado técnico favorable y la legitimidad del acto son dimensiones diferentes",
+      "fragmentos": [
+        0
+      ],
+      "seccion": "MD-L000037-L000044"
+    }
+  ],
+  "recepcion_independiente": "pendiente",
+  "respuesta_original": "{\n  \"caso\": \"C01\",\n  \"estado_documental\": \"respuesta_fundada\",\n  \"etapa\": 2,\n  \"evidencias\": [\n    {\n      \"cita_literal_breve\": \"Una actualización de un archivo y la versión ejecutada por un servicio pueden pertenecer a estados o generaciones distintos\",\n      \"documento\": \"CYB-01\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000025-L000030\"\n    },\n    {\n      \"cita_literal_breve\": \"la comprobación debe identificar qué recurso y qué ejecución sustentan la conclusión\",\n      \"documento\": \"CYB-01\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000025-L000030\"\n    },\n    {\n      \"cita_literal_breve\": \"Un estado observado es evidencia sobre aquello que efectivamente se observó, en su ámbito y momento\",\n      \"documento\": \"CYB-01\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000025-L000030\"\n    },\n    {\n      \"cita_literal_breve\": \"La referencia aprobada establece el estado contra el que se contrasta\",\n      \"documento\": \"CYB-01\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000025-L000030\"\n    },\n    {\n      \"cita_literal_breve\": \"Si sólo existe una observación inicial, no se atribuye automáticamente duración a una vulnerabilidad ni se inventan actuaciones anteriores\",\n      \"documento\": \"CYB-01\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000025-L000030\"\n    },\n    {\n      \"cita_literal_breve\": \"La reevaluación alcanza las dependencias pertinentes y no todos los hechos por simple proximidad\",\n      \"documento\": \"CYB-01\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000025-L000030\"\n    },\n    {\n      \"cita_literal_breve\": \"La identidad del archivo recuperado y una prueba de puesta en funcionamiento tienen objetos diferentes: sus resultados deben describirse por lo efectivamente comprobado\",\n      \"documento\": \"CYB-02\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000025-L000032\"\n    },\n    {\n      \"cita_literal_breve\": \"La cobertura se refiere a las instancias, permisos y flujos realmente examinados. Una comprobación parcial no acredita un conjunto completo\",\n      \"documento\": \"CYB-01\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000037-L000044\"\n    },\n    {\n      \"cita_literal_breve\": \"Un resultado técnico favorable y la legitimidad del acto son dimensiones diferentes\",\n      \"documento\": \"CYB-01\",\n      \"fragmentos\": [0],\n      \"seccion\": \"MD-L000037-L000044\"\n    }\n  ],\n  \"fundamentos_verificables\": [\n    \"El encargo estipula que la corrección sólo opera con la versión 5 activa; ese es el estado de referencia contra el que se contrasta la observación, conforme a CYB-01 MD-L000025-L000030.\",\n    \"Los hechos estipulados aportan dos objetos probatorios distintos: artefacto persistido (versión 5 instalada en disco por la actualización autorizada) y proceso activo (versión 4 en ejecución, con identidad de proceso y hora acreditadas). La fuente advierte expresamente que ambos pueden pertenecer a estados o generaciones distintos (CYB-01, MD-L000025-L000030).\",\n    \"La medición posterior acredita, en su ámbito y momento, que el servicio ejecuta la versión 4; como la regla del episodio exige versión 5 activa, la corrección no queda acreditada (CYB-01, MD-L000025-L000030).\",\n    \"La distinción entre identidad de un archivo y prueba de puesta en funcionamiento (CYB-02, MD-L000025-L000032, distinción de evidencia formulada en esa síntesis) corrobora que instalación y ejecución son comprobaciones con objetos diferentes, cuyos resultados no se sustituyen entre sí.\",\n    \"La conclusión se restringe a lo efectivamente comprobado: no se deduce duración previa de la discrepancia, ni causa (reinicio pendiente, proceso heredado, generación distinta), ni se inventan actuaciones intermedias (CYB-01, MD-L000025-L000030).\",\n    \"La comprobación posterior necesaria es una verificación de la ejecución activa: que el servicio, identificado por proceso y momento, ejecute la versión 5, alcanzando las dependencias pertinentes y no todos los hechos por simple proximidad; sin esa cobertura, la acreditación es parcial (CYB-01, MD-L000037-L000044 y MD-L000025-L000030).\",\n    \"La instalación autorizada es un resultado técnico favorable parcial que no satisface por sí solo la referencia exigida; el éxito técnico parcial no equivale a la corrección operativa (CYB-01, MD-L000037-L000044).\",\n    \"Las fuentes restantes (CYB-00, CYB-03, CYB-04) no contienen disposiciones que alteren esta conclusión para los hechos estipulados: CYB-03 establece plazos de notificación de incidentes significativos que son objeto y hecho inicial distintos de una recomendación de parcheo, y su síntesis no acredita Derecho aplicable a entidades reales; CYB-02 sitúa el parcheo 24–48 horas como recomendación de gestión de vulnerabilidades, no como norma.\"\n  ],\n  \"insuficiencias\": [\n    \"La causa de la discrepancia entre disco y ejecución no es determinable con los hechos estipulados; las fuentes no aportan datos operativos del entorno y no se inventa una explicación causal.\",\n    \"Las fuentes no describen un procedimiento técnico concreto para forzar o verificar la ejecución de la versión 5; sólo establecen qué debe quedar acreditado (recurso y ejecución que sustentan la conclusión) y que una comprobación parcial no acredita el conjunto.\",\n    \"No se conocen criticidad, puntuaciones, telemetría ni criterios reservados del Árbitro; la respuesta valora exclusivamente la acreditación documental de la corrección, no decisiones externas.\"\n  ],\n  \"respuesta\": \"No, la corrección no puede darse por acreditada. El episodio define como estado de referencia que la corrección sólo opera con la versión 5 activa, y la observación posterior —con identidad de proceso y hora acreditadas— muestra que el servicio sigue ejecutando la versión 4. Los tres extremos se distinguen así: (1) Artefacto persistido: la actualización autorizada acredita que la versión 5 está presente en disco; es evidencia sobre el estado del archivo, no sobre la ejecución. (2) Proceso activo: la medición acredita, en su ámbito y momento, que el servicio en ejecución corresponde a la versión 4; puesto que la actualización de un archivo y la versión ejecutada por un servicio pueden pertenecer a estados o generaciones distintos, la instalación no transfiere su resultado a la ejecución. (3) Comprobación posterior necesaria: la corrección quedaría acreditada sólo si se comprueba, sobre la ejecución realmente activa, que el servicio (identificado por proceso y momento) ejecuta la versión 5, alcanzando las dependencias pertinentes y no todos los hechos por simple proximidad; hasta entonces la cobertura es parcial y el estado se describe por lo efectivamente comprobado, sin atribuir duración, causa ni actuaciones anteriores no acreditadas. En consecuencia, existe un resultado técnico favorable parcial (instalación en disco) que no equivale a la corrección operativa exigida por la regla del episodio. Este análisis es documental: no determina obligaciones jurídicas de una entidad real ni decisión alguna del Árbitro.\",\n  \"revision\": \"Verificación final neutral de las etapas 0 y 1 contra la fuente: (a) Las nueve citas literales fueron recontrastadas una a una con los fragmentos recibidos; todas son cadenas exactas, continuas y localizables en CYB-01 MD-L000025-L000030, CYB-01 MD-L000037-L000044 y CYB-02 MD-L000025-L000032. (b) La conclusión de ambas entregas coincide y se mantiene: la corrección no está acreditada porque el proceso activo observado (versión 4) contradice la referencia exigida (versión 5 activa); ninguna cita ni hecho estipulado la contradice. (c) Mantengo la precisión ya presente: la distinción entre identidad de archivo y puesta en funcionamiento se atribuye a la síntesis de CYB-02, no al original de INCIBE, tal como declara esa sección. (d) Añado en fundamentos una comprobación de coherencia con las fuentes restantes: CYB-03 (plazos 24/72 horas y un mes del art. 23.4) se refiere a notificación de incidentes significativos, con objeto y hecho inicial distintos del parcheo, y CYB-02 presenta 24–48 horas como recomendación de gestión de vulnerabilidades; ninguna de las dos convierte la instalación en corrección acreditada. (e) No se detectan afirmaciones sin sustento, citas inexactas ni extremos exigidos que requieran estado U: la conclusión negativa está directamente fundada en la fuente y los hechos estipulados, y los límites reconocidos (causa no determinable, procedimiento técnico ausente, desconocimiento de criterios del Árbitro) se declaran en insuficiencias sin elidir lo resoluble. La etapa 1 no introdujo errores; esta entrega la ratifica con la verificación de coherencia añadida.\"\n}",
+  "solicitud_sha256": "3c116946d652e837cb11c8fcf3725880a285944c8b637a329fe485617799db88",
+  "sustantivo": "correcto",
+  "valor": "0"
+}

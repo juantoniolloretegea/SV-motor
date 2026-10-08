@@ -1,0 +1,9 @@
+# Código y reproducción
+
+Cliente y transporte comunes: [cliente-api-rust](../../../../cliente-api-rust). Recepción: [recepcion-api-rust](../../../../recepcion-api-rust). Controlador específico de contrato: sv-banco-cyb16-api; no es un cliente independiente por proveedor. Adjudicador: sv-adjudicar-cyb16-api, recibe la revisión exterior y aplica criticidades, terna y fidelidad. Código del visor: [visor-egui](visor-egui).
+
+La publicación del cliente sustituye únicamente la raíz privada de trabajo por C:/SV; IDENTIDAD-CODIGO.json conserva las huellas del original y su proyección. Requiere recompilación y perfil propio; no se afirma identidad binaria ni portabilidad automática. No se distribuyen credenciales, perfil operativo ni la clave reservada. Cargo.lock fija dependencias. El controlador recibió14 pruebas; el adjudicador,2. Los controles del visor y su recepción funcional constan en el informe de verificación. La fase recibir no realiza inferencia; ejecutar requiere autorización económica propia y no admite reiniciar una campaña ya iniciada.
+
+El visor deriva DICTAMEN.json de CAPA/BANCO en Rust, coteja identidades y correspondencia matemática/visual, y se compila para wasm32-unknown-unknown. wasm-bindgen0.2.129 genera la adaptación mínima al navegador. El empaquetador Rust incluye módulos y datos en un HTML autónomo; CSP impide conexiones de datos. No es una imagen estática ni un nuevo adjudicador. El servidor local opcional sólo presenta el HTML y caduca, sin manejar credenciales o ejecutar inferencias.
+
+© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
