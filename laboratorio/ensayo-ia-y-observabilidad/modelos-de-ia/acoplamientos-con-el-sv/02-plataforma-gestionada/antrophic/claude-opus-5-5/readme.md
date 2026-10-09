@@ -1,6 +1,6 @@
 # Claude Opus 5.5 · Kaggle Benchmarks · nodo 02
 
-Edición documental 1.0 · 09/10/2026. Estado: acceso comprobado; transporte Rust y pruebas documentales en preparación. Sin dictamen científico del candidato.
+Edición documental 1.1 · 09/10/2026. Estado: acceso comprobado; transporte Rust comprobado en Windows y Linux; admisión en Kaggle y pruebas documentales pendientes. Sin dictamen científico del candidato.
 
 ## Identidad y características
 
@@ -24,6 +24,19 @@ Se solicita información operativa accesible y una explicación pública verific
 
 Sólo se utiliza la cuota existente, sin adquisiciones ni ampliaciones. Las cotas efectivas de salida, razonamiento, tiempo, reintentos y reserva de cuota se documentarán en la admisión técnica antes del primer caso científico. No se presume que una etiqueta de esfuerzo equivalga al mismo cómputo interno en otros proveedores.
 
+## Preparación y puesta en servicio del transporte
+
+El [adaptador Rust 0.1.0](instrumentacion-rust/0.1.0/) conserva código, dependencias fijadas, binario Linux y comprobaciones. El modelo sigue desplegado por la plataforma gestionada; este ejecutable es transporte y control experimental, no sus pesos ni un motor de inferencia local.
+
+1. Obtener el banco y las secciones mediante el MCP mdBook de Rust. Cotejar corpus, aislamiento, diario y bytes; separar claves y criticidades del contexto del candidato. El [paquete de ensayo](ensayo-md09-cyb16-20261009/admision/PAQUETE-CANDIDATO.json) contiene sólo el suministro admitido para los mensajes.
+2. Usar el binario Linux conservado o compilar su código con Rust compatible, Cargo.lock y `cargo build --locked --bin ejecutar`. La versión entregada se construye con Rust 1.98.1 y requiere glibc 2.34 o posterior. No se presupone compatibilidad por la etiqueta Linux.
+3. Situar el binario y el paquete en el cuaderno autorizado de Kaggle Benchmarks. La plataforma aporta su acceso temporal; no se copia a archivos, documentos ni al equipo. Un auxiliar de arranque puede descargar y lanzar el ejecutable; la composición, secuencia, controles y mediciones pertenecen a Rust.
+4. Ejecutar `./ejecutar PAQUETE-CANDIDATO.json SHA256 --comprobar`. Debe concluir sin solicitudes a modelos, con 75 composiciones y medición remota conformes. El inicio posterior coteja identidad de binario y paquete contra esa admisión.
+5. Ejecutar `./ejecutar PAQUETE-CANDIDATO.json SHA256` únicamente para el ensayo autorizado. Se envían primero MD01–MD09 y luego CYB16, con R0/R1/R2 por pregunta. Ante recepción incompleta, pérdida de medición, coste desconocido, margen insuficiente o vencimiento de la cota, se detiene la secuencia y conserva lo recibido.
+
+Kaggle ModelProxy desactiva el flujo en su biblioteca oficial. La adaptación usa JSON completo, formato estructurado, esfuerzo high y cota de salida 16384 tokens. Se conserva el cuerpo HTTP original y la separación reversible del razonamiento emitido dentro de etiquetas, además de los demás canales que comunique el servicio. No se mide primer token; sí la recepción externa, CPU, memoria, E/S y conexiones del proceso Rust. Estas medidas no describen la infraestructura interna de Anthropic.
+
+Las [condiciones y límites de admisión](ensayo-md09-cyb16-20261009/admision/FRONTERA-KAGGLE.md) fijan la reserva antes de cada envío, cuota existente y ausencia de reintentos automáticos. Son comprobaciones instrumentales; la admisión real en el cuaderno y el resultado científico se registrarán separadamente. No se atribuye a Claude navegación autónoma del MCP: recibe el corpus íntegro preentregado por el control del SV.
 ## Comprobación de acceso y límites
 
 Una solicitud breve al identificador de Opus fue aceptada y registró 24 tokens de entrada y 40 de salida. Terminó por longitud y no entregó mensaje textual. Acredita aceptación de la solicitud, no respuesta utilizable, observabilidad íntegra ni competencia documental. No se confunde con las futuras pruebas del manual o de ciberseguridad. El incidente de la plantilla del cuaderno permanece separado en el archivo administrativo.
