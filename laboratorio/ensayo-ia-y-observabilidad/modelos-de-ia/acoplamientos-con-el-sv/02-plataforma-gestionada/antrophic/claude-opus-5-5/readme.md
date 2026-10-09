@@ -6,7 +6,7 @@ Edición documental 1.5 · 09/10/2026. **Nueve preguntas del manual completadas 
 
 Claude Opus 5.5 es un modelo de Anthropic presentado el 22/09/2026. Sus capacidades anunciadas son declaraciones del fabricante: [anuncio oficial](https://www.anthropic.com/claude-opus-5-5), [fichas del fabricante](https://www.anthropic.com/system-cards). El identificador recibido en las respuestas fue `anthropic/claude-opus-5-5@default`; default no fija una revisión inmutable de pesos. Parámetros, precisión, región y hardware interno no se han acreditado.
 
-Se sirve por Kaggle Benchmarks/Model Proxy: los pesos permanecen remotos. El cuaderno Linux ejecuta el transporte, composición, controles y observación Rust del SV, sin acelerador asignado a ese soporte. Las credenciales temporales de Kaggle se utilizan sólo en el entorno autorizado, sin publicación. Véase la [biblioteca oficial de Kaggle](https://github.com/Kaggle/kaggle-benchmarks/blob/01183088103937114b723b82b8d5ea0c7a87ccce/quick_start.md). No se acredita concesión adicional, asignación de GPU/TPU ni disponibilidad comprobada de todos los modelos.
+Se sirve por Kaggle Benchmarks/Model Proxy: los pesos permanecen remotos. El cuaderno Linux ejecuta el transporte, composición, controles y observación Rust del SV, sin acelerador asignado a ese soporte. Las credenciales temporales de Kaggle se utilizan sólo en el entorno autorizado, sin publicación. Véase la [biblioteca oficial de Kaggle](https://github.com/Kaggle/kaggle-benchmarks/blob/01183088103937114b723b82b8d5ea0c7a87ccce/quick_start.md).
 
 ## Condiciones de realización
 
