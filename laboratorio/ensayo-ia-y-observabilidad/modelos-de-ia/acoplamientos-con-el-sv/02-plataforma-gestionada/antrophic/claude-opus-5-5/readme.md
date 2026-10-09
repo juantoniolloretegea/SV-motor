@@ -1,6 +1,6 @@
 # Claude Opus 5.5 · Kaggle Benchmarks · nodo 02
 
-Edición documental 1.3 · 09/10/2026. Estado: acceso restablecido; transporte Rust comprobado en Windows, Linux y el cuaderno real de Kaggle; MD01-R0 recibido; interpretación instrumental de refusal vacío corregida y original recuperado sin nueva inferencia; continuación de R1 pendiente de admisión de la revisión r2. Sin dictamen científico del candidato.
+Edición documental 1.4 · 09/10/2026. Estado: acceso restablecido; transporte Rust comprobado en Windows, Linux y el cuaderno real de Kaggle; MD01-R0 recibido; interpretación instrumental de refusal vacío corregida y original recuperado sin nueva inferencia; revisión instrumental r2 recibida en Kaggle y continuación de R1 en ejecución. Sin dictamen científico del candidato.
 
 ## Identidad y características
 
@@ -37,6 +37,8 @@ El [adaptador Rust 0.1.0, revisión r2](instrumentacion-rust/0.1.0-r2/) conserva
 Kaggle ModelProxy desactiva el flujo en su biblioteca oficial. La adaptación usa JSON completo, esquema íntegro en las instrucciones y validación local estricta, esfuerzo high y cota de salida 16384 tokens. Se conserva el cuerpo HTTP original y la separación reversible del razonamiento emitido dentro de etiquetas, además de los demás canales que comunique el servicio. No se mide primer token; sí la recepción externa, CPU, memoria, E/S y conexiones del proceso Rust. Estas medidas no describen la infraestructura interna de Anthropic.
 
 Las [condiciones y límites de admisión](ensayo-md09-cyb16-20261009/admision/FRONTERA-KAGGLE.md) fijan la reserva antes de cada envío, cuota existente y ausencia de reintentos automáticos. La comprobación en el cuaderno real concluyó con 75 composiciones, cero solicitudes a modelos y cinco muestras propias sin fallos, intervalo máximo de 259 ms, Linux x86_64 y glibc 2.41. Se recuperaron los originales y se cotejaron en Rust las huellas, el diario y la identidad del proceso. Véase [recepción técnica](ensayo-md09-cyb16-20261009/admision-remota/RECEPCION-RUST.json). Esta admisión técnica no acredita todavía recepción de una respuesta científica del servicio ni aptitud del candidato. No se atribuye a Claude navegación autónoma del MCP: recibe el corpus íntegro preentregado por el control del SV.
+La [recepción remota r2](ensayo-md09-cyb16-20261009/admision-remota-r2/RECEPCION-RUST.json) acredita cinco muestras sin fallos y la presencia efectiva de hilos, descriptores y espacio de red Linux del proceso propio. Sus originales se recuperaron y cotejaron en Rust antes de continuar. Se distingue de la recepción científica independiente, que permanece pendiente.
+
 ## Primera entrega y recuperación instrumental
 
 MD01-R0 recibió HTTP 200, terminación stop y el identificador autorizado. El servicio comunicó 30330 tokens de entrada, 6713 de salida, 37043 en total y 1695 de razonamiento incluidos en la salida; coste comunicado 0,25558 USD. El campo refusal era una cadena vacía y la guarda anterior la clasificó erróneamente como negativa. La revisión r2 distingue vacío de negativa real y recupera el mismo original sin solicitar otra generación. El formato y 19 citas se cotejaron en Rust; ello no constituye puntuación científica ni recepción independiente.
