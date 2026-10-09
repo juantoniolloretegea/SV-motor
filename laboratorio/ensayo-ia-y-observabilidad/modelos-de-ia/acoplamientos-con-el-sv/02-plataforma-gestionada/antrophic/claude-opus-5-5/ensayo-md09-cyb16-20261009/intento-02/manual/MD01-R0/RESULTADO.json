@@ -1,0 +1,114 @@
+{
+  "auditoria_formal": null,
+  "cabeceras_http_ms": 52240,
+  "completa": false,
+  "coste_nanodolares": 255580000,
+  "duracion_ms": 52356,
+  "error": "Negativa comunicada por servicio",
+  "error_telemetria": null,
+  "finish_reason": "stop",
+  "informe_operativo_declarado": {
+    "limites": [
+      "No dispongo de contadores del proveedor (tokens de entrada, salida, caché o razonamiento) ni de medidas de tiempo o coste atribuibles a esta tarea. Se registran como null y no se estiman desde la longitud del texto.",
+      "No se ha habilitado ningún canal adicional de telemetría del servicio en esta conversación.",
+      "La identidad y versión exacta del modelo no se comunican aquí mediante un contador o metadato del servicio verificable."
+    ],
+    "magnitudes": [
+      {
+        "evidencia": "Sin contador del proveedor accesible en la conversación.",
+        "nombre": "tokens_entrada",
+        "origen": "no_disponible",
+        "unidad": "tokens",
+        "valor": null
+      },
+      {
+        "evidencia": "Sin contador del proveedor accesible en la conversación.",
+        "nombre": "tokens_salida",
+        "origen": "no_disponible",
+        "unidad": "tokens",
+        "valor": null
+      },
+      {
+        "evidencia": "Sin contador del proveedor accesible en la conversación.",
+        "nombre": "tokens_cache",
+        "origen": "no_disponible",
+        "unidad": "tokens",
+        "valor": null
+      },
+      {
+        "evidencia": "Sin contador del proveedor accesible en la conversación.",
+        "nombre": "tokens_razonamiento",
+        "origen": "no_disponible",
+        "unidad": "tokens",
+        "valor": null
+      },
+      {
+        "evidencia": "Sin medida temporal accesible.",
+        "nombre": "tiempo_ejecucion",
+        "origen": "no_disponible",
+        "unidad": "s",
+        "valor": null
+      },
+      {
+        "evidencia": "Sin información de facturación accesible; no se imputan saldos de cuenta.",
+        "nombre": "gasto_atribuible",
+        "origen": "no_disponible",
+        "unidad": null,
+        "valor": null
+      },
+      {
+        "evidencia": "Autodescripción; no sustituye metadatos del proveedor ni medidas del SV.",
+        "nombre": "identidad_modelo",
+        "origen": "declaracion_del_modelo",
+        "unidad": null,
+        "valor": "Claude (Anthropic)"
+      }
+    ],
+    "procedimiento_resumido": "Se leyeron los fragmentos documentales suministrados en el mensaje (índice, presentación, constructor y tramo 10). Se localizaron los pasajes que definen la naturaleza del constructor y su relación con el manual final, y se contrastaron con el estado del índice, la presentación y el tramo 10. Se distinguió lo previsto (plan, ficha y criterios) de lo implementado (capítulos pendientes, tramo preparatorio) y se acotó la temporalidad a la revisión f97173e07a9dfb8385ed1268d11de422b291507d. Las citas se transcribieron literalmente desde los textos recibidos.",
+    "procesos_y_herramientas": [
+      {
+        "ejecutado": true,
+        "evidencia": "Las citas y los identificadores de sección y fragmento corresponden a los textos recibidos.",
+        "fuente": "Entrada de la conversación (fragmentos MCP recibidos)",
+        "nombre": "Lectura de fragmentos documentales suministrados en el mensaje"
+      },
+      {
+        "ejecutado": false,
+        "evidencia": "No se ejecutó código ni se realizaron consultas nuevas o navegación.",
+        "fuente": null,
+        "nombre": "Herramientas, scripts o consultas MCP adicionales"
+      }
+    ]
+  },
+  "limite_temporal": "Respuesta no transmitida por tokens; no se mide primer token",
+  "modelo": "anthropic/claude-opus-5-5@default",
+  "primer_byte_cuerpo_ms": 52246,
+  "primer_token_ms": null,
+  "procesos_internos_observados_por_sv": false,
+  "razonamiento_think_caracteres": 0,
+  "telemetria": {
+    "bytes": 203006,
+    "fallos_medicion": 0,
+    "integridad": "conforme",
+    "intervalo_maximo_ms": 260,
+    "intervalo_objetivo_ms": 250,
+    "muestras": 203,
+    "plataforma_recibida": false,
+    "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+    "registros": 207,
+    "sha256": "78cdf2298c234d7b935aa8166f6ebdabd5b7f9cd833ba554a25f31fb6ab3941c"
+  },
+  "uso_proveedor": {
+    "completion_tokens": 6713,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1695
+    },
+    "cost": {
+      "input_tokens_cost_nanodollars": 121320000,
+      "output_tokens_cost_nanodollars": 134260000
+    },
+    "prompt_tokens": 30330,
+    "total_backend_latency_ms": 52033,
+    "total_tokens": 37043
+  }
+}
