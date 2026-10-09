@@ -1,0 +1,15 @@
+# Adenda de recepción visual · 09/10/2026
+
+La entrega gráfica inicial está conservada en SV-motor@05f5017b1bf94f06d0fdcc8ec5688ca5b233c9c0: 18 productos, 5.299.190 bytes recuperados e idénticos mediante Rust. La realización se reconstruyó desde el archivo remoto: 13 fuentes, 417.272 bytes idénticos. La captura fue reconstruida y cotejada con su SHA-256.
+
+La recepción humana señaló conexión rechazada en la dirección temporal inicial. Esa vista dejó de servir cuando se actualizó el documento y se creó otra dirección, sin actualizar la pestaña que se había ofrecido inicialmente. Es un defecto de entrega; no afecta a las adjudicaciones. La interacción del HTML sí fue comprobada en otra pestaña, pero ello no acredita que la dirección ofrecida funcionase en la pantalla receptora. El control automático del navegador rechazó operar sobre la pestaña con error. La solicitud de mostrar en Codex la pestaña ya comprobada quedó pendiente; no se declara recepción visual humana conforme.
+
+Se consultó la corrección documental del 07/10/2026 y su precisión posterior: sólo se representa un vector completo y adjudicado; egui debe dibujar un polígono real, con consulta efectiva de posiciones, fundamentos, pasajes y huellas. Un HTML con una captura no sustituye esa realización. El HTML autónomo aquí conservado incorpora el programa WebAssembly y los datos, sin conexiones de red. La captura incluida se identifica exclusivamente como evidencia visual.
+
+Para conservar una entrega independiente de la vista temporal, descargue [POLIGONO-EGUI.html](POLIGONO-EGUI.html) desde GitHub y ábralo en Microsoft Edge. Requiere WebAssembly y WebGL. La comprobación automatizada fue realizada mediante HTTP local; no acredita por sí misma la apertura directa del archivo descargado ni la recepción en cada navegador. El archivo autónomo es el producto conservado; la dirección temporal no es su sede documental.
+
+Las notas de alcance y advertencias de revisión permanecen separadas de una alarma por insuficiencia efectiva. Una conclusión fundada puede ser deducida de premisas documentales; no se exige que aparezca literalmente como frase completa. La comprobación literal corresponde a las citas, y la adjudicación sustantiva sigue siendo exterior al candidato. No se han cambiado adjudicaciones al preparar la representación.
+
+R2 conserva nueve correctas, cero errores y cero indeterminadas, con seis críticos correctos. El dictamen asistido y la recepción científica independiente pendiente permanecen separados. La campaña continúa detenida: cero nuevas solicitudes al candidato y ninguna continuación de ciberseguridad.
+
+© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
