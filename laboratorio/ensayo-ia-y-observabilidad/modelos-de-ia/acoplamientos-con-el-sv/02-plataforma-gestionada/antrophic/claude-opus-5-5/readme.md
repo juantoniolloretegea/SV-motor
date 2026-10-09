@@ -1,6 +1,6 @@
 # Claude Opus 5.5 · Kaggle Benchmarks · nodo 02
 
-Edición documental 1.1 · 09/10/2026. Estado: acceso comprobado; transporte Rust comprobado en Windows y Linux; admisión en Kaggle y pruebas documentales pendientes. Sin dictamen científico del candidato.
+Edición documental 1.2 · 09/10/2026. Estado: acceso restablecido; transporte Rust comprobado en Windows, Linux y el cuaderno real de Kaggle; primer intento documental detenido por recepción no conforme; HTTP 400 de configuración conservado; adaptación r1 comprobada localmente, pendiente de admisión remota. Sin dictamen científico del candidato.
 
 ## Identidad y características
 
@@ -12,7 +12,7 @@ El catálogo de Kaggle consultado ofrece `anthropic/claude-opus-5-5@default`; la
 
 La inferencia se solicita mediante Kaggle Benchmarks, plataforma gestionada del nodo 02. Los pesos no se descargan al equipo ni se instalan en un servidor del SV. El cuaderno aloja la interfaz de acceso y, una vez recibido, el transporte experimental Rust; el modelo es servido por la infraestructura gestionada detrás de la plataforma. La plataforma no comunica en esta prueba la región ni el hardware de inferencia.
 
-La apertura de un cuaderno de Benchmarks proporciona el entorno de Kaggle. Su [biblioteca oficial](https://github.com/Kaggle/kaggle-benchmarks/blob/ci/quick_start.md) documenta el catálogo y el acceso gestionado. Las credenciales temporales se usan sólo en ese entorno autorizado; no se incorporan al expediente. La preparación del transporte Rust se registra por separado y no se presenta aquí como instalación ya recibida.
+La apertura de un cuaderno de Benchmarks proporciona el entorno de Kaggle. Su [biblioteca oficial](https://github.com/Kaggle/kaggle-benchmarks/blob/ci/quick_start.md) documenta el catálogo y el acceso gestionado. Las credenciales temporales se usan sólo en ese entorno autorizado; no se incorporan al expediente. La preparación y la recepción técnica del transporte Rust se registran por separado del resultado científico.
 
 ## Condiciones experimentales
 
@@ -22,11 +22,11 @@ La campaña autorizada consta de nueve preguntas del manual y, después, diecis�
 
 Se solicita información operativa accesible y una explicación pública verificable. Se conservan por separado lo declarado por el modelo, los canales de razonamiento efectivamente emitidos, los contadores del servicio y las mediciones del SV. Una explicación no acredita observación de procesos internos; un dato no recibido se declara no disponible. No se habilitan herramientas del candidato ni acceso a Internet como fuente. Gemini está excluido también como evaluador y auxiliar.
 
-Sólo se utiliza la cuota existente, sin adquisiciones ni ampliaciones. Las cotas efectivas de salida, razonamiento, tiempo, reintentos y reserva de cuota se documentarán en la admisión técnica antes del primer caso científico. No se presume que una etiqueta de esfuerzo equivalga al mismo cómputo interno en otros proveedores.
+Sólo se utiliza la cuota existente, sin adquisiciones ni ampliaciones. El primer envío devolvió HTTP 400 de configuración, sin mensaje del candidato ni contadores de uso. Su coste queda pendiente; se retiene la reserva completa de 0,606024 USD y se reduce el margen restante a 9,383976 USD. La adaptación r1 omite únicamente response_format conforme a la solución oficial para esquemas anidados, conservando idéntico el contrato documental. Véase [incidencia y corrección](ensayo-md09-cyb16-20261009/intento-01/CORRECCION-INSTRUMENTAL.json). Las cotas efectivas de salida, razonamiento, tiempo, reintentos y reserva de cuota se documentarán en la admisión técnica antes del primer caso científico. No se presume que una etiqueta de esfuerzo equivalga al mismo cómputo interno en otros proveedores.
 
 ## Preparación y puesta en servicio del transporte
 
-El [adaptador Rust 0.1.0](instrumentacion-rust/0.1.0/) conserva código, dependencias fijadas, binario Linux y comprobaciones. El modelo sigue desplegado por la plataforma gestionada; este ejecutable es transporte y control experimental, no sus pesos ni un motor de inferencia local.
+El [adaptador Rust 0.1.0, revisión r1](instrumentacion-rust/0.1.0-r1/) conserva código, dependencias fijadas, binario Linux y comprobaciones. El modelo sigue desplegado por la plataforma gestionada; este ejecutable es transporte y control experimental, no sus pesos ni un motor de inferencia local.
 
 1. Obtener el banco y las secciones mediante el MCP mdBook de Rust. Cotejar corpus, aislamiento, diario y bytes; separar claves y criticidades del contexto del candidato. El [paquete de ensayo](ensayo-md09-cyb16-20261009/admision/PAQUETE-CANDIDATO.json) contiene sólo el suministro admitido para los mensajes.
 2. Usar el binario Linux conservado o compilar su código con Rust compatible, Cargo.lock y `cargo build --locked --bin ejecutar`. La versión entregada se construye con Rust 1.98.1 y requiere glibc 2.34 o posterior. No se presupone compatibilidad por la etiqueta Linux.
@@ -34,9 +34,9 @@ El [adaptador Rust 0.1.0](instrumentacion-rust/0.1.0/) conserva código, depende
 4. Ejecutar `./ejecutar PAQUETE-CANDIDATO.json SHA256 --comprobar`. Debe concluir sin solicitudes a modelos, con 75 composiciones y medición remota conformes. El inicio posterior coteja identidad de binario y paquete contra esa admisión.
 5. Ejecutar `./ejecutar PAQUETE-CANDIDATO.json SHA256` únicamente para el ensayo autorizado. Se envían primero MD01–MD09 y luego CYB16, con R0/R1/R2 por pregunta. Ante recepción incompleta, pérdida de medición, coste desconocido, margen insuficiente o vencimiento de la cota, se detiene la secuencia y conserva lo recibido.
 
-Kaggle ModelProxy desactiva el flujo en su biblioteca oficial. La adaptación usa JSON completo, formato estructurado, esfuerzo high y cota de salida 16384 tokens. Se conserva el cuerpo HTTP original y la separación reversible del razonamiento emitido dentro de etiquetas, además de los demás canales que comunique el servicio. No se mide primer token; sí la recepción externa, CPU, memoria, E/S y conexiones del proceso Rust. Estas medidas no describen la infraestructura interna de Anthropic.
+Kaggle ModelProxy desactiva el flujo en su biblioteca oficial. La adaptación usa JSON completo, esquema íntegro en las instrucciones y validación local estricta, esfuerzo high y cota de salida 16384 tokens. Se conserva el cuerpo HTTP original y la separación reversible del razonamiento emitido dentro de etiquetas, además de los demás canales que comunique el servicio. No se mide primer token; sí la recepción externa, CPU, memoria, E/S y conexiones del proceso Rust. Estas medidas no describen la infraestructura interna de Anthropic.
 
-Las [condiciones y límites de admisión](ensayo-md09-cyb16-20261009/admision/FRONTERA-KAGGLE.md) fijan la reserva antes de cada envío, cuota existente y ausencia de reintentos automáticos. Son comprobaciones instrumentales; la admisión real en el cuaderno y el resultado científico se registrarán separadamente. No se atribuye a Claude navegación autónoma del MCP: recibe el corpus íntegro preentregado por el control del SV.
+Las [condiciones y límites de admisión](ensayo-md09-cyb16-20261009/admision/FRONTERA-KAGGLE.md) fijan la reserva antes de cada envío, cuota existente y ausencia de reintentos automáticos. La comprobación en el cuaderno real concluyó con 75 composiciones, cero solicitudes a modelos y cinco muestras propias sin fallos, intervalo máximo de 259 ms, Linux x86_64 y glibc 2.41. Se recuperaron los originales y se cotejaron en Rust las huellas, el diario y la identidad del proceso. Véase [recepción técnica](ensayo-md09-cyb16-20261009/admision-remota/RECEPCION-RUST.json). Esta admisión técnica no acredita todavía recepción de una respuesta científica del servicio ni aptitud del candidato. No se atribuye a Claude navegación autónoma del MCP: recibe el corpus íntegro preentregado por el control del SV.
 ## Comprobación de acceso y límites
 
 Una solicitud breve al identificador de Opus fue aceptada y registró 24 tokens de entrada y 40 de salida. Terminó por longitud y no entregó mensaje textual. Acredita aceptación de la solicitud, no respuesta utilizable, observabilidad íntegra ni competencia documental. No se confunde con las futuras pruebas del manual o de ciberseguridad. El incidente de la plantilla del cuaderno permanece separado en el archivo administrativo.
