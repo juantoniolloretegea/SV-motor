@@ -29,3 +29,9 @@ Se conservan respuestas, explicaciones públicas, informe operativo, canales rec
 GitHub es la sede documental central. La custodia se declara tras recuperación de la revisión publicada, cotejo SHA-256 en Rust y reconstrucción del archivo. Las fuentes de terceros mantienen sus derechos; los originales históricos no se reescriben.
 
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
+
+## Complemento gráfico · 09/10/2026
+
+Se completa la omisión del polígono en la entrega inicial: [entrega Rust/egui](ensayo-md09-cyb16-20261009/corte-01/poligono-egui/ENTREGA-POLIGONO.md) y [HTML autónomo](ensayo-md09-cyb16-20261009/corte-01/poligono-egui/POLIGONO-EGUI.html), con las nueve posiciones R2, terna 9/0/0, seis críticos correctos, citas, advertencias y comparación de etapas. Dictamen asistido y recepción independiente pendiente permanecen separados. Ninguna nueva generación ni cambio de resultado; la campaña sigue detenida. Antecedente íntegro bajo la revisión c57f2a191a02571cc13b8319ccec60cf630732fe.
+
+© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).

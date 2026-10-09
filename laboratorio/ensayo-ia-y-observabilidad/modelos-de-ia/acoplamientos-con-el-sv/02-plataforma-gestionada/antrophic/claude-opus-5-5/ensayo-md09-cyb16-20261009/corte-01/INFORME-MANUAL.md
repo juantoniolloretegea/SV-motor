@@ -58,3 +58,9 @@ El coste comunicado de las 31 respuestas es **8,698073 USD**. El HTTP 400 inicia
 El dictamen favorable se limita a estas nueve preguntas sobre este corpus histórico y esta configuración de suministro. No acredita aptitud clínica, rendimiento general, uso autónomo del MCP, vigencia actual de los documentos ni identidad inmutable de los pesos bajo el alias default. Los antecedentes del nodo 03 se conservan; no son un ensayo simultáneo ni se homogeneizan diferencias de contrato o instrumentación. Recepción independiente pendiente, con acceso a los originales y criterios para confirmar o rectificar la valoración asistida.
 
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
+
+## Complemento gráfico · 09/10/2026
+
+Se completa la omisión del polígono en la entrega inicial: [entrega Rust/egui](poligono-egui/ENTREGA-POLIGONO.md) y [HTML autónomo](poligono-egui/POLIGONO-EGUI.html), con las nueve posiciones R2, terna 9/0/0, seis críticos correctos, citas, advertencias y comparación de etapas. Dictamen asistido y recepción independiente pendiente permanecen separados. Ninguna nueva generación ni cambio de resultado; la campaña sigue detenida. Antecedente íntegro bajo la revisión c57f2a191a02571cc13b8319ccec60cf630732fe.
+
+© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
