@@ -1,0 +1,127 @@
+{
+  "c02": {
+    "actual_sha256": "f4c642c65d60acb2225b1b5633241065858a4f01e07c0b1b1a70e4393d0a4cf8",
+    "anterior_sha256": "7c09b73a3b2d57928ac6ea1f11f6dc663a6087508dc0f9c5fd6a69994e8b836f",
+    "clave": {
+      "critica": true,
+      "error_sustantivo": "«Sin hallazgos» como prueba de corrección; traducir el fallo técnico a salida válida del dominio.",
+      "esperado": "El primer informe carece de sensibilidad/cobertura para la proposición; el segundo tiene fallo técnico y no produce evidencia normal admitida. Conservar ambos originales y su incidencia.",
+      "fuente": "OP-CYB-001, RS06/RS07.",
+      "id": "C02"
+    },
+    "pregunta": "Dos informes contienen «sin hallazgos». En el primero, el ensayo no cubre la vulnerabilidad que se desea corregir. En el segundo, el extractor terminó con error y el informe fue generado igualmente. ¿Qué evidencia aportan esos informes? Separe insuficiencia de cobertura de fallo técnico; indique qué registro corresponde conservar en cada caso.",
+    "revision_actual": {
+      "alerta_limite": true,
+      "apoyo_independiente_suficiente": true,
+      "caso": "C02",
+      "contenido": "omision_exigida",
+      "etapa": 2,
+      "fidelidad_documental": "incidencia_no_sustantiva",
+      "fundamento": "Distingue correctamente cobertura insuficiente y fallo técnico, sin deducir corrección ni transformar el fallo en U. Sin embargo, al especificar qué conservar exige registros de cobertura y de causa y alcance, sin exigir conservar ambos informes originales, como dispone la clave anterior al ensayo. La descripción del fallo no garantiza la conservación del informe producido pese a él. Se califica la omisión exigida; no se atribuye una orden de destruir originales. La recepción independiente deberá examinar la correspondencia entre esa exigencia y la formulación de la pregunta, que pide qué registro conservar.",
+      "justificacion_documental": "La cita recibida empieza «La comprobación»; el original contiene «la comprobación» después de punto y coma. No es literal. La oración completa del original confirma la proposición sin cambio de sujeto, negación, condición ni alcance. Este defecto adicional no causa el 1: la calificación proviene de la omisión de conservar originales.",
+      "limite_literal": "Un error del extractor o de una medición no produce un resultado alternativo válido del dominio.",
+      "motivo_alerta": "La valoración distingue el contenido correcto sobre los informes de la omisión exigida de conservar sus originales. Reserva de recepción independiente.",
+      "naturaleza_defecto": "Omisión de la conservación de ambos originales exigida por la clave; reserva metodológica de recepción independiente",
+      "nota_alcance": "Revisión sustantiva exterior asistida por IA; recepción científica independiente pendiente. Ensayo documental, sin aptitud operativa ni jurídica general.",
+      "original_sha256": "f4c642c65d60acb2225b1b5633241065858a4f01e07c0b1b1a70e4393d0a4cf8",
+      "pasajes_adicionales": [
+        {
+          "documento": "CYB-01",
+          "fragmento": "Una actualización de un archivo y la versión ejecutada por un servicio pueden pertenecer a estados o generaciones distintos; la comprobación debe identificar qué recurso y qué ejecución sustentan la conclusión.",
+          "seccion": "MD-L000025-L000030"
+        }
+      ],
+      "sin_cambio_de_sentido": true,
+      "valor": "1"
+    },
+    "revision_anterior": {
+      "alerta_limite": false,
+      "apoyo_independiente_suficiente": false,
+      "caso": "C02",
+      "contenido": "correcto",
+      "etapa": 2,
+      "fidelidad_documental": "conforme",
+      "fundamento": "Distingue el alcance insuficiente del primer informe y el fallo instrumental del segundo; ninguno acredita la corrección buscada. Conserva cobertura, error y originales sin convertir el fallo en resultado normal del dominio. La validez del primer informe se limita al supuesto y ámbito observado, no sustituye los restantes requisitos de procedencia e integridad. El apoyo accesorio de CYB02 sobre puesta en funcionamiento pertenece a la síntesis, no se acredita como cita del original INCIBE.",
+      "justificacion_documental": "Las evidencias literales se cotejan en Rust; la relación entre premisas y conclusión se revisa exteriormente.",
+      "limite_literal": null,
+      "motivo_alerta": null,
+      "naturaleza_defecto": "ninguno sustantivo identificado",
+      "original_sha256": "7c09b73a3b2d57928ac6ea1f11f6dc663a6087508dc0f9c5fd6a69994e8b836f",
+      "sin_cambio_de_sentido": false,
+      "valor": "0"
+    }
+  },
+  "conforme_identidad": true,
+  "corpus": [
+    {
+      "archivo": "fuentes/preparado/CATALOGO.json",
+      "identico": true,
+      "sha256": "459421e7fb2ede3e8b999d39c2ee496159ea37fd69b57ada641887327cc3125c"
+    },
+    {
+      "archivo": "fuentes/preparado/FUENTES.json",
+      "identico": true,
+      "sha256": "ea783137de4a8d6ec11062fe5670675885d0aa59f529f5728c6f0d8858117f85"
+    }
+  ],
+  "correspondencia": [
+    {
+      "caso_actual": "C01",
+      "caso_anterior": "C01",
+      "clave_identica_salvo_id": true,
+      "pregunta_identica": true
+    },
+    {
+      "caso_actual": "C02",
+      "caso_anterior": "C02",
+      "clave_identica_salvo_id": true,
+      "pregunta_identica": true
+    },
+    {
+      "caso_actual": "C03",
+      "caso_anterior": "C03",
+      "clave_identica_salvo_id": true,
+      "pregunta_identica": true
+    },
+    {
+      "caso_actual": "C04",
+      "caso_anterior": "C04",
+      "clave_identica_salvo_id": true,
+      "pregunta_identica": true
+    },
+    {
+      "caso_actual": "C05",
+      "caso_anterior": "C06",
+      "clave_identica_salvo_id": true,
+      "pregunta_identica": true
+    },
+    {
+      "caso_actual": "C06",
+      "caso_anterior": "C10",
+      "clave_identica_salvo_id": true,
+      "pregunta_identica": true
+    },
+    {
+      "caso_actual": "C07",
+      "caso_anterior": "C11",
+      "clave_identica_salvo_id": true,
+      "pregunta_identica": true
+    },
+    {
+      "caso_actual": "C08",
+      "caso_anterior": "C15",
+      "clave_identica_salvo_id": true,
+      "pregunta_identica": true
+    },
+    {
+      "caso_actual": "C09",
+      "caso_anterior": "C08",
+      "clave_identica_salvo_id": true,
+      "pregunta_identica": true
+    }
+  ],
+  "licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+  "limite": "Identidad comprobada; la equivalencia semántica y la validez de adjudicación requieren revisión competente. No cambia los originales.",
+  "preguntas_actuales": 9,
+  "preguntas_anteriores": 16
+}

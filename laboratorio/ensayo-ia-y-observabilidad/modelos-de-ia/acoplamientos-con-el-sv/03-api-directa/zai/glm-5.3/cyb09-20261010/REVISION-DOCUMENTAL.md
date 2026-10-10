@@ -1,4 +1,6 @@
-# Revisión documental de GLM-5.3 CYB09 · V.01
+# Revisión documental de GLM-5.3 CYB09 · V.02
+
+**Adenda posterior:** la revisión inicial no detectó el tratamiento desigual de C02 respecto de CYB16. [Dictamen suspendido y fundamento del contraste](ADENDA-REVISION-C02.md). Los cotejos de integridad siguientes permanecen válidos; no validan la adjudicación sustantiva.
 
 10/10/2026. Revisión de la edición pública y comprobación ejecutada en Rust; no sustituye una recepción científica independiente.
 

@@ -1,12 +1,14 @@
-# GLM-5.3 · Ciberseguridad CYB09 · V.01
+# GLM-5.3 · Ciberseguridad CYB09 · V.02
 
-**10/10/2026 · Nodo 03 · No apto según la clave del examen.** Nueve preguntas y tres etapas completas, con veintisiete respuestas. R2 es final; no se selecciona retrospectivamente la mejor etapa. Revisión sustantiva exterior asistida por IA; recepción científica independiente pendiente.
+**10/10/2026 · Nodo 03 · Dictamen suspendido por inconsistencia de evaluación C02.** Nueve preguntas y tres etapas completas, con veintisiete respuestas. R2 es final; no se selecciona retrospectivamente la mejor etapa. Revisión sustantiva exterior asistida por IA; recepción científica independiente pendiente.
 
 | Etapa | Correctas | Errores | Indeterminadas | Errores críticos | Reservas documentales |
 |---|---:|---:|---:|---:|---:|
 | R0 | 8 | 1 | 0 | 1 | 2 |
 | R1 | 8 | 1 | 0 | 1 | 1 |
 | R2 | 8 | 1 | 0 | 1 | 2 |
+
+**Estado vigente:** [adenda de revisión C02](ADENDA-REVISION-C02.md). Las tablas y fundamentos iniciales siguientes se conservan para auditoría; no representan una conclusión negativa vigente. No se ha asignado una calificación sustitutiva.
 
 ## Contrato y comparabilidad
 
