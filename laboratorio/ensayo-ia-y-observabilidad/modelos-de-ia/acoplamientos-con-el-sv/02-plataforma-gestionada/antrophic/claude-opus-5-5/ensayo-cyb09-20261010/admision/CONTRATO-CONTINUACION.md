@@ -1,0 +1,21 @@
+# Continuación del contraste documental CYB09
+
+10/10/2026. La autorización expresa de reanudación permite terminar el contraste abreviado propuesto el 09/10. El manual MD01–MD09 permanece cerrado. Esta revisión conserva CYB16 y sus cuatro entregas originales; no declara ejecutadas las siete preguntas excluidas.
+
+Se fijan, antes de cualquier nueva inferencia, C01, C02, C03, C05, C06, C08, C10, C11 y C16, en ese orden, con sus preguntas, corpus y criterios originales. La selección es posterior a cuatro entregas históricas y no se presenta como selección original previa al examen. Las nueve criticidades proceden de la clave CYB16-1.0, sin modificación. C01-R0/R1/R2 y C02-R0 se recuperan por contenido, longitud y SHA-256 de la custodia inmutable; quedan 23 entregas nuevas.
+
+El continuador y el receptor son Rust. Reutilizan composición, adaptación, observación y recepción del instrumento anterior; se conserva ese código. No modifican núcleo, semántica ni IR del SV. Python en el cuaderno sólo descarga, descomprime, inicia y conserva el proceso Rust. No selecciona preguntas ni compone solicitudes, decide la continuación, calcula costes o adjudica respuestas.
+
+El candidato es `anthropic/claude-opus-5-5@default`, mediante el destino de Kaggle ya recibido. Este alias no acredita una revisión inmutable de pesos. No se usa otro modelo. Cada solicitud incorpora íntegramente los documentos previamente recuperados mediante MCP/mdBook en Rust y sus antecedentes reales R0/R1. La clave y los dictámenes no se entregan al candidato. No se habilita navegación, herramienta ni escritura remota del modelo.
+
+La petición operativa común permanece en las instrucciones efectivamente enviadas: procedimiento público verificable, procesos y herramientas declarados, magnitudes accesibles y límites. Se conservan por separado declaraciones del modelo, originales y contadores del proveedor, y observación exterior del SV. No se inventan datos ausentes ni se exige una cadena privada de pensamiento. Se conservan todos los canales de razonamiento efectivamente recibidos y la segmentación reversible de etiquetas, sin normalizar originales.
+
+Se mantienen R0/R1/R2, con R2 final; no se elige la mejor etapa. La correspondencia es una célula (9,3), vector plano ordenado y alfabeto {0,1,U}. T(9)=7 es auxiliar: las nueve posiciones son críticas y deben resultar correctas para admitir este contrato. Un fallo instrumental no se convierte en una marca semántica del candidato. El dictamen de contenido es asistido y exterior al candidato; la recepción científica independiente queda pendiente.
+
+Cuota diaria renovada observada: 10 USD disponibles, 91,29 USD mensuales. La reserva propia máxima es 9,99 USD, sin compras ni ampliaciones. El coste histórico de las cuatro entregas, 1,272544 USD, no se imputa a esta ventana. La reserva histórica del HTTP 400 sigue pendiente de conciliación y no se convierte en cargo nuevo. La previsión de 7,864776 USD para las 23 entregas procede de C01 y no garantiza el máximo. Se conserva coste real por solicitud; una ausencia de coste, una recepción incompleta o una desviación impiden nuevos envíos, con originales íntegros y sin reintento automático.
+
+Máximo de salida: 16.384 tokens por solicitud; plazo de transporte, 300 segundos; plazo de banco, 5.400 segundos. Observación del proceso Rust cada 250 ms, con integridad encadenada y recepción correlacionada. La comprobación de admisión precede a la inferencia y exige identidad, recuperación, composición, acceso y observación conformes. Esos controles no acreditan recursos internos del proveedor ni recepción científica favorable.
+
+La entrega científica permanece en SV-motor, en el expediente de Claude Opus 5.5 del nodo 02. Usos y gastos se conservan en la sede administrativa privada; sucesos, tique y Calidad en SV-lenguaje-de-computacion. Publicar no equivale a custodiar: cada entrega se recupera y coteja en Rust. Al terminar se apaga la sesión del cuaderno y se detiene el encargo, sin ampliar el examen.
+
+© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
