@@ -2,7 +2,7 @@
 
 Se conserva la revisión exacta del componente de biblioteca y de su MCP Rust, junto con las fuentes del cliente común y de su instrumentación utilizadas para este recorrido. Son fuentes de revisión de esta prueba, no una instalación nueva ni una sustitución automática de las versiones anteriores.
 
-La biblioteca depende de ../mcp-mdbook-20261007; ambas carpetas y sus Cargo.lock se conservan con esa relación. El cliente y su dependencia vecina instrumentacion-rust se conservan íntegros en sus fuentes y Cargo.lock, con la disposición de carpetas utilizada. Las dependencias externas quedan fijadas en los archivos de resolución. No se incluyen credenciales, ejecutables ni salidas de otros ensayos. Las rutas locales fijadas en el programa identifican el ensayo: no son una interfaz de despliegue general.
+La biblioteca depende de ../mcp-mdbook-20261007; ambas carpetas y sus Cargo.lock se conservan con esa relación. El cliente y su dependencia vecina instrumentacion-rust se conservan íntegros en sus fuentes y Cargo.lock, con la disposición de carpetas utilizada. Las dependencias externas quedan fijadas en los archivos de resolución. No se incluyen credenciales, ejecutables ni salidas de otros ensayos. La edición pública representa la raíz de trabajo mediante un localizador genérico; no se le atribuye identidad binaria con el ejecutable histórico. La reproducción requiere configurar esa raíz.
 
 El cotejo posterior reconstruye los SSE, compara texto y uso, comprueba la cadena de instrumentación, los historiales sucesivos, las lecturas admitidas y las citas. No hace peticiones de inferencia. Las fuentes admitidas y ejecutables se cotejan contra la admisión original antes del cálculo.
 

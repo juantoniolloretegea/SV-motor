@@ -6,7 +6,7 @@ use serde_json::{json,Value};
 use sha2::{Digest,Sha256};
 use std::{fs::{self,OpenOptions},io::Write,path::{Path,PathBuf},collections::BTreeSet};
 type R<T>=Result<T,String>;
-const ROOT:&str="C:/laboratorio/watson-local/lenguaje-computacion-sv";
+const ROOT:&str="C:/SV-LABORATORIO";
 const PDF:&str="ejecucion/astra-pdf-banco-20261007-r2";
 const PIE:&str="© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).";
 fn e(x:impl std::fmt::Display)->String{x.to_string()}

@@ -8,7 +8,7 @@ Se utiliza el cliente Rust previamente registrado mediante Sign in with ChatGPT.
 
 La primera solicitud alcanza HTTP 200 y recibe tres eventos, terminando con `error` y código `subscription_sharing_usage_limit_exceeded`, a los 1601 ms. No contiene texto generado ni uso de tokens. El HTTP satisfactorio no se clasifica como inferencia completada.
 
-La consulta de la configuración oficial permite identificar que el uso de créditos por aplicaciones estaba desactivado. Conforme a la autorización expresa de consumir créditos existentes, se habilita temporalmente esa opción para la única aplicación conectada que muestra la lista. La recarga automática permanece desactivada. Se conserva el primer intento y se abre una continuación separada; no se ejecuta un reintento automático.
+El primer intento queda conservado como rechazo de servicio. Tras resolver su condición de acceso se abre una continuación separada y autorizada, sin reintento automático. Los detalles administrativos se conservan en el registro privado competente.
 
 La segunda solicitud utiliza el mismo texto y parámetros. OpenAI declara `gpt-6-astra`, concluye con `response.completed` y entrega exactamente:
 
@@ -34,9 +34,9 @@ Petición de 324 bytes: modelo `gpt-6-astra`, `store=false`, `stream=true`, esfu
 | Tokens de razonamiento comunicados | 0 |
 | Lectura y escritura de caché comunicadas | 0 |
 
-Los tiempos proceden del reloj monotónico del cliente Rust y describen la recepción local; no se atribuyen a tiempos internos del modelo. No se reciben cabeceras adicionales de identificación o procesamiento de las seleccionadas para el registro. Se conserva el identificador de respuesta en el expediente local, sin incluir identificadores personales en esta publicación.
+Los tiempos proceden del reloj monotónico del cliente Rust y describen la recepción local; no se atribuyen a tiempos internos del modelo. No se reciben cabeceras adicionales de identificación o procesamiento de las seleccionadas para el registro. Se conserva el identificador de respuesta en el expediente técnico, sin incluir identificadores personales en esta publicación.
 
-Los tokens son uso comunicado por OpenAI. Créditos efectivamente descontados y coste liquidado permanecen no disponibles por solicitud. Las variaciones del saldo general no son atribuibles de forma exclusiva a esta prueba porque coexiste otro consumo. No se equiparan estos tokens con una factura ni se declara coste cero.
+Los tokens son uso comunicado por OpenAI. Créditos efectivamente descontados y coste liquidado permanecen no disponibles por solicitud. Las variaciones del saldo general no son atribuibles de forma exclusiva a esta prueba. No se equiparan estos tokens con una factura ni se declara coste cero.
 
 ## Incidencia del lector y cotejo posterior
 
@@ -54,7 +54,7 @@ El resultado corregido se conserva en `COTEJO-RUST.json`; no se sobrescriben `re
 | Primer flujo, rechazo | 3109 | `d2f0303d1e9614368acb1e1fc977a916e97c9766c0962ab62f6d2a4b11aa5390` |
 | Segundo flujo, generación concluida | 8483 | `f297453b49892c9c6b17694b7f93ff3ccdd4b601d6634a89852b84f065fcdba8` |
 
-Los cuerpos íntegros permanecen en el expediente local protegido: incluyen metadatos seudónimos del proveedor y no se publican sin minimización. Esta publicación conserva resultados, método y huellas, no afirma custodia pública íntegra de esos cuerpos. No se conservan credenciales de sesión en el expediente.
+Los cuerpos íntegros permanecen en el expediente protegido: incluyen metadatos seudónimos del proveedor y no se publican sin minimización. Esta publicación conserva resultados, método y huellas, no afirma custodia pública íntegra de esos cuerpos. No se conservan credenciales de sesión en el expediente.
 
 ## Condiciones pendientes y retorno
 

@@ -3,7 +3,7 @@
 #[path="../catalogo/estricto.rs"]mod estricto;
 use serde_json::{json,Value};use sha2::{Digest,Sha256};use std::{fs::{self,OpenOptions},io::Write,path::Path};
 type R<T>=Result<T,String>;
-const ROOT:&str="C:/laboratorio/watson-local/lenguaje-computacion-sv/ejecucion/astra-pdf-banco-20261007-r2";
+const ROOT:&str="C:/SV-LABORATORIO/ejecucion/astra-pdf-banco-20261007-r2";
 fn e(v:impl std::fmt::Display)->String{v.to_string()}
 fn check(b:bool,s:&str)->R<()>{if b{Ok(())}else{Err(s.into())}}
 fn parse(b:&[u8])->R<Value>{estricto::parse(b).map_err(e)}

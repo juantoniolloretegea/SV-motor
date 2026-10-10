@@ -12,7 +12,7 @@ mod suministro_pdf {
  pub fn num(v:&Value)->R<usize>{v.as_u64().and_then(|x|usize::try_from(x).ok()).ok_or("Entero requerido".into())}
  pub fn contenido(v:&Value,id:usize)->R<Value>{need(v["jsonrpc"]=="2.0"&&v["id"]==id&&v.get("error").is_none(),"Identidad RPC discordante")?;let r=&v["result"];need(r["isError"]==false&&r["content"].as_array().map(Vec::len)==Some(1)&&r["content"][0]["type"]=="text","Recepción MCP inválida")?;let text=parse(r["content"][0]["text"].as_str().ok_or("Texto ausente")?.as_bytes())?;need(text==r["structuredContent"],"Representaciones RPC discordantes")?;Ok(text)}
 }
-const ROOT:&str="C:/laboratorio/watson-local/lenguaje-computacion-sv";
+const ROOT:&str="C:/SV-LABORATORIO";
 const LIMIT:u64=3_000_000_000;
 fn path(p:&Path)->R<PathBuf>{let p=if p.is_absolute(){p.to_path_buf()}else{Path::new(ROOT).join(p)};api::guard(&p)?;need(p.exists(),"Fuente ausente")?;Ok(p)}
 fn read(p:&Path)->R<Value>{parse(&fs::read(path(p)?).map_err(|e|e.to_string())?)}

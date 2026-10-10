@@ -16,7 +16,7 @@ pub fn need(b:bool,s:&str)->R<()>{if b{Ok(())}else{Err(s.into())}}
 pub fn parse(b:&[u8])->R<Value>{estricto::parse(b).map_err(|e|e.to_string())}
 pub fn sha(b:&[u8])->String{sv_instrumentacion::sha(b)}
 pub fn guard(p:&Path)->R<()>{
- let root=Path::new("C:/laboratorio/watson-local/lenguaje-computacion-sv");let rel=p.strip_prefix(root).map_err(|_|"Destino fuera del perímetro")?;let mut cur=root.to_path_buf();
+ let root=Path::new("C:/SV-LABORATORIO");let rel=p.strip_prefix(root).map_err(|_|"Destino fuera del perímetro")?;let mut cur=root.to_path_buf();
  for c in rel.components(){need(matches!(c,std::path::Component::Normal(_)),"Ruta no normal")?;cur.push(c);if cur.exists(){let m=fs::symlink_metadata(&cur).map_err(|e|e.to_string())?;need(!m.file_type().is_symlink(),"Enlace no permitido")?;#[cfg(windows)]{use std::os::windows::fs::MetadataExt;need(m.file_attributes()&0x400==0,"Reanálisis no permitido")?;}}}Ok(())
 }
 pub fn put(p:&Path,b:&[u8])->R<()>{guard(p)?;fs::create_dir_all(p.parent().ok_or("Sin directorio")?).map_err(|e|e.to_string())?;let mut f=OpenOptions::new().create_new(true).write(true).open(p).map_err(|e|e.to_string())?;f.write_all(b).and_then(|_|f.sync_all()).map_err(|e|e.to_string())}

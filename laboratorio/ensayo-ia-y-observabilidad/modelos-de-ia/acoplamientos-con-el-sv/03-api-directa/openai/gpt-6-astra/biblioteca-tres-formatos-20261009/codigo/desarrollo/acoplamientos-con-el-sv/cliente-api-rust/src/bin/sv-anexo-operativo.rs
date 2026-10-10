@@ -14,7 +14,7 @@ fn main(){let r=(||->R<Value>{
  let reserve=api::reserva(&q,&p)?;let tr=serde_json::to_vec(&q).map_err(|e|e.to_string())?.len() as u64+4096+4096;
  need(spent.checked_add(reserve).is_some_and(|v|v<=p.presupuesto_ticks)&&tokens.checked_add(tr).is_some_and(|v|v<=1_500_000),"Anexo no cabe en los recursos ya autorizados")?;
  save(&dest.join("ADMISION.json"),&json!({"autorizacion":"Petición humana expresa de solicitar al modelo sus datos operativos y comprobar qué entrega","preguntas_examen_modificadas":0,"nuevas_solicitudes_maximas":1,"reserva_ticks":reserve,"consumo_previo_ticks":spent,"tokens_previos":tokens,"antecedente_sha256":sha(&fs::read(root.join("RESULTADO-BANCO.json")).map_err(|e|e.to_string())?),"licencia":api::LICENCIA}))?;
- let key=PathBuf::from(std::env::var("SV_API_KEY_FILE").map_err(|_|"Ruta privada ausente")?);api::guard(&key)?;need(key.starts_with(Path::new("C:/laboratorio/watson-local/lenguaje-computacion-sv/privado")),"Ruta no privada")?;let secret=Zeroizing::new(fs::read_to_string(key).map_err(|_|"Credencial no accesible")?);
+ let key=PathBuf::from(std::env::var("SV_API_KEY_FILE").map_err(|_|"Ruta privada ausente")?);api::guard(&key)?;need(key.starts_with(Path::new("C:/SV-LABORATORIO/privado")),"Ruta no privada")?;let secret=Zeroizing::new(fs::read_to_string(key).map_err(|_|"Credencial no accesible")?);
  let r=api::enviar(&p,&secret,&q,&dest.join("intento"),300000)?;let est=if r["completa"]==true{api::kimi::estimacion(&r["entrega"]["uso_proveedor"])?}else{Value::Null};
  let cost=est["estimacion_con_cache_ticks"].as_u64().or(est["estimacion_sin_descuento_ticks"].as_u64()).unwrap_or(reserve);let tok=est["uso_normalizado"]["total_tokens"].as_u64().unwrap_or(tr);
  save(&dest.join("ESTIMACION-TARIFARIA.json"),&est)?;

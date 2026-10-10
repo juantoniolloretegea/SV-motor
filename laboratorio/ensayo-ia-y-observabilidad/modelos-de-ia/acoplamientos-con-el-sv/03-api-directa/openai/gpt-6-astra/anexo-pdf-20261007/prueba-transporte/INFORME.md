@@ -56,7 +56,7 @@ El saldo agregado comunicado antes y después fue 49.905,8723330000 créditos; e
 
 ## Custodia y continuación
 
-La publicación técnica contiene este informe, métricas y recibos sin datos de cuenta ni direcciones de red, y las fuentes Rust pertinentes. Los originales operativos completos, el texto enviado y recibido, la clave y los diarios permanecen conservados localmente; sus huellas se declaran en los recibos. No se afirma custodia remota íntegra de esos originales ni se redistribuye aquí el texto médico. El informe económico excluye el contenido documental y clínico.
+La publicación técnica contiene este informe, métricas y recibos sin datos de cuenta ni direcciones de red, y las fuentes Rust pertinentes. Los originales operativos completos, el texto enviado y recibido, la clave y los diarios permanecen bajo conservación controlada; sus huellas se declaran en los recibos. No se afirma custodia remota íntegra de esos originales ni se redistribuye aquí el texto médico. El informe económico excluye el contenido documental y clínico.
 
 El transporte usa el cliente de acceso existente cuya ruta histórica conserva gpt-6.1-sol; el candidato de esta prueba y su expediente son gpt-6-astra. La compilación de referencia es cargo con --locked --offline; el ejecutable de inferencia y el verificador posterior tienen huellas distintas y funciones distintas. No se alteraron la clave, el banco ni el suministro después del envío.
 

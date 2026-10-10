@@ -9,7 +9,7 @@ fn candidato(s:&str)->bool{let Some((a,b))=s.split_once('.')else{return false};a
 fn run()->R<()> {
  let a:Vec<String>=std::env::args().collect();need(a.len()==4,"Uso: FUENTE_PRIVADA ID_MENSAJE DESTINO_PRIVADO")?;
  let dest=Path::new(&a[3]);guard(dest)?;
- need(dest.starts_with("C:/laboratorio/watson-local/lenguaje-computacion-sv/privado")&&dest.extension().is_some_and(|s|s=="key")&&!dest.exists(),"Destino no recibido")?;
+ need(dest.starts_with("C:/SV-LABORATORIO/privado")&&dest.extension().is_some_and(|s|s=="key")&&!dest.exists(),"Destino no recibido")?;
  let parent=dest.parent().ok_or("Directorio ausente")?;need(parent.is_dir(),"Prepare previamente el directorio privado y sus permisos")?;
  let mut options=OpenOptions::new();options.read(true);
  #[cfg(windows)]{use std::os::windows::fs::OpenOptionsExt;options.share_mode(7);}

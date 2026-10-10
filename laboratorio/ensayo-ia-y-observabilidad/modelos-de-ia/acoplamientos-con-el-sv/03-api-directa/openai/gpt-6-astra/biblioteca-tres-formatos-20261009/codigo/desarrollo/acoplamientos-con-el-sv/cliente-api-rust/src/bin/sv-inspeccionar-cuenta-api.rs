@@ -7,7 +7,7 @@ use zeroize::Zeroizing;
 fn main(){if let Err(e)=run(){eprintln!("{e}");std::process::exit(1)}}
 fn run()->R<()>{
  let a=std::env::args().collect::<Vec<_>>();need(a.len()==2,"Uso: DESTINO_NUEVO")?;let out=PathBuf::from(&a[1]);guard(&out)?;need(!out.exists(),"Destino existente")?;
- let path=PathBuf::from(std::env::var("SV_API_KEY_FILE").map_err(|_|"Ruta de clave ausente")?);guard(&path)?;need(path.starts_with("C:/laboratorio/watson-local/lenguaje-computacion-sv/privado"),"Sede de credencial no privada")?;
+ let path=PathBuf::from(std::env::var("SV_API_KEY_FILE").map_err(|_|"Ruta de clave ausente")?);guard(&path)?;need(path.starts_with("C:/SV-LABORATORIO/privado"),"Sede de credencial no privada")?;
  let key=Zeroizing::new(fs::read_to_string(path).map_err(|_|"Credencial no accesible")?);need(key.len()>24&&!key.chars().any(char::is_whitespace),"Credencial no recibida")?;
  fs::create_dir_all(&out).map_err(|e|e.to_string())?;
  let monitor=sv_instrumentacion::Monitor::start_bounded(&out.join("instrumentacion"),90)?;

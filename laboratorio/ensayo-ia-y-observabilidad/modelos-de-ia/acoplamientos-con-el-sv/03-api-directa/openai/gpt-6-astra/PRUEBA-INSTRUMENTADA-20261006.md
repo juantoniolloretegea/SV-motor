@@ -73,7 +73,7 @@ Huella del flujo recibido: `486467a83cfa700c842c7f412605b4d29de418f23d8f70b6c025
 
 Huella del registro de telemetría: `b0214b6f6dcf6007882dcc0c860a1170f65c540c5785a8246614eb01577e388e`.
 
-La evidencia completa se conserva localmente: contiene identificadores seudónimos y topología de red del anfitrión. Este informe público omite esos datos y no acredita custodia remota del expediente íntegro. El cuadro en el navegador representa la ejecución concluida, con series temporales, conexiones y estados, fases, eventos y límites; no simula actividad en directo. El receptor de autorización de la prueba se cierra y se verifica su ausencia; sólo queda un visor local temporal sin credenciales y sin inferencia.
+La evidencia completa se conserva con acceso controlado: contiene identificadores seudónimos y topología de red del anfitrión. Este informe público omite esos datos y no acredita custodia remota del expediente íntegro. El cuadro en el navegador representa la ejecución concluida, con series temporales, conexiones y estados, fases, eventos y límites; no simula actividad en directo. La presentación del resultado no realiza inferencia ni modifica la evidencia.
 
 ## 6. Límites y retorno
 

@@ -1,8 +1,8 @@
 # Código y reproducción · Astra CYB16
 
-El [cliente API común](../../../../../cliente-api-rust) mantiene el transporte HTTP, la recepción y la instrumentación compartidos. El ejecutable `sv-cyb16-chatgpt` reutiliza la sesión OAuth ya comprobada de Astra y el suministro MCP común; `src/responses.rs` recibe Responses y `src/bin/sv-recuperar-responses.rs` permite la recuperación local conservada, sin red ni nueva inferencia.
+El [cliente API común](../../../../cliente-api-rust) mantiene el transporte HTTP, la recepción y la instrumentación compartidos. El ejecutable `sv-cyb16-chatgpt` reutiliza la sesión OAuth ya comprobada de Astra y el suministro MCP común; `src/responses.rs` recibe Responses y `src/bin/sv-recuperar-responses.rs` permite la recuperación local conservada, sin red ni nueva inferencia.
 
-La [recepción común](../../../../../recepcion-api-rust) admite el formato de solicitud Responses y Chat Completion sin cambiar la clave del contrato. `sv-adjudicar-cyb16-api` recibe la revisión exterior identificada y aplica las reglas de criticidad y fidelidad; `sv-cotejar-citas-libro` contrasta cada cita; `sv-comparar-cyb16` recibe las dos campañas completas y calcula magnitudes descriptivas homogéneas. Ninguno de estos procesos de recepción llama al candidato.
+La [recepción común](../../../../recepcion-api-rust) admite el formato de solicitud Responses y Chat Completion sin cambiar la clave del contrato. `sv-adjudicar-cyb16-api` recibe la revisión exterior identificada y aplica las reglas de criticidad y fidelidad; `sv-cotejar-citas-libro` contrasta cada cita; `sv-comparar-cyb16` recibe las dos campañas completas y calcula magnitudes descriptivas homogéneas. Ninguno de estos procesos de recepción llama al candidato.
 
 Las pruebas del cliente y del controlador corregido suman 47 comprobaciones favorables, incluidas las modalidades válidas e inválidas de cierre SSE. El adjudicador y el cotejo de citas tienen siete comprobaciones favorables. Cargo.lock fija las dependencias; la excepción experimental de componentes criptográficos en C/ensamblador permanece pendiente.
 

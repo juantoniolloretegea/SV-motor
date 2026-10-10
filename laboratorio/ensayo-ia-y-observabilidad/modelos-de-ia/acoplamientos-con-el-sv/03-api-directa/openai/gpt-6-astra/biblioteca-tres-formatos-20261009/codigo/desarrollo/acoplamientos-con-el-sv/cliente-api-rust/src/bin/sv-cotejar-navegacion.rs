@@ -8,7 +8,7 @@ fn n(v: &Value) -> R<u64> { v.as_u64().ok_or("Contador ausente".into()) }
 fn run() -> R<()> {
  let args: Vec<_> = std::env::args().collect();
  need(args.len()==3,"Uso: sv-cotejar-navegacion DIRECTORIO RESULTADO")?;
- let root=Path::new(&args[1]); let work=Path::new("C:/laboratorio/watson-local/lenguaje-computacion-sv");
+ let root=Path::new(&args[1]); let work=Path::new("C:/SV-LABORATORIO");
  let admission=load(&root.join("ADMISION-NAVEGACION.json"))?;
  for f in admission["archivos"].as_array().ok_or("Sin admisión")? {
   need(sha(&read(&work.join(f["ruta"].as_str().ok_or("Sin ruta")?))?)==f["sha256"],"Fuente o ejecutable modificado")?;

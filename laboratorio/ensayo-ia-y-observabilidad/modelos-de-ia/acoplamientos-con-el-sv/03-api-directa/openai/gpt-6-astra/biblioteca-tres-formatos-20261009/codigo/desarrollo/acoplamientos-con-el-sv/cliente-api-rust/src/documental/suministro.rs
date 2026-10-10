@@ -2,7 +2,7 @@
 use serde_json::{json,Value};
 use std::{fs::{self,OpenOptions,File},io::{Read,Write,BufRead,BufReader},path::{Path,PathBuf,Component},process::{Command,Stdio,Child,ChildStdin},sync::mpsc,thread,time::{Instant,Duration}};
 use crate::suministro_pdf::{parse,need,sha,contenido,R};
-const ROOT:&str="C:/laboratorio/watson-local/lenguaje-computacion-sv";
+const ROOT:&str="C:/SV-LABORATORIO";
 const BIN:&str="compilacion/mcp-pdf-linux/debug";
 fn err(e:impl std::fmt::Display)->String{e.to_string()}
 fn guard(p:&Path)->R<()> {

@@ -113,7 +113,7 @@ fn run()->R<Value>{
         &&hash(&dest.join("SOLICITUD-PREPARADA.json"))?==ad["solicitud_sha256"],"Preparación alterada")?;
     let q=load(&dest.join("SOLICITUD-PREPARADA.json"))?;need(api::reserva(&q,&p)?<=p.presupuesto_ticks,"Reserva excedida")?;
     let key=PathBuf::from(std::env::var("SV_API_KEY_FILE").map_err(|_|"Falta ruta de credencial")?);api::guard(&key)?;
-    need(key.starts_with(Path::new("C:/laboratorio/watson-local/lenguaje-computacion-sv/privado")),"Credencial fuera del área privada")?;
+    need(key.starts_with(Path::new("C:/SV-LABORATORIO/privado")),"Credencial fuera del área privada")?;
     let secret=Zeroizing::new(fs::read_to_string(key).map_err(|_|"No se puede leer credencial")?);
     save(&dest.join("INICIO.json"),&json!({"utc_ms":sv_instrumentacion::utc_ms(),"intentos_maximos":1,"admision_sha256":a[5]}))?;
     let r=api::enviar(&p,secret.trim(),&q,&dest.join("intento-01"),300000)?;

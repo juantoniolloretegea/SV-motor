@@ -2,7 +2,7 @@
 use serde_json::{json,Value};
 use std::{fs::{self,OpenOptions,File},io::{Read,Write,BufRead,BufReader},path::{Path,PathBuf,Component},process::{Command,Stdio,Child,ChildStdin},sync::mpsc,thread,time::{Instant,Duration}};
 use sv_suministro_pdf_astra::{*,DireccionPdf};
-const ROOT:&str="C:/laboratorio/watson-local/lenguaje-computacion-sv";
+const ROOT:&str="C:/SV-LABORATORIO";
 const ANNEX:&str="desarrollo/acoplamientos-con-el-sv/03-api-directa/openai/gpt-6-astra/anexo-pdf-20261007";
 const PDF_PATH:&str="desarrollo/mcp-pdf-preparacion-20261003/lector/tests/fixtures/hairy-cell-leukemia.pdf";
 const BIN:&str="compilacion/mcp-pdf-linux/debug";

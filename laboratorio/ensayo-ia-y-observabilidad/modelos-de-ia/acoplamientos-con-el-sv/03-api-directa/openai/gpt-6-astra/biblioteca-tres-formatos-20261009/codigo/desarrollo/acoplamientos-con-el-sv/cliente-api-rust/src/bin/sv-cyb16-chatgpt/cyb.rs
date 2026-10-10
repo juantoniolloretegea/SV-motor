@@ -3,7 +3,7 @@ use sv_cliente_api::{self as api,need,parse,save,sha,Perfil,R};
 use serde_json::{json,Value};
 use std::{fs,path::{Path,PathBuf},time::{Instant,Duration}};
 use crate::{contrato,suministro};
-const WORK:&str="C:/laboratorio/watson-local/lenguaje-computacion-sv";
+const WORK:&str="C:/SV-LABORATORIO";
 const RUN:&str="ejecucion/astra-cyb16-20261008-r2";
 const REFERENCE:&str="ejecucion/zai-cyb16-20261008";
 pub fn root()->PathBuf{Path::new(WORK).join(RUN)}

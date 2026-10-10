@@ -12,7 +12,7 @@ mod suministro_pdf {
  pub fn num(v:&Value)->R<usize>{v.as_u64().and_then(|x|usize::try_from(x).ok()).ok_or("Entero requerido".into())}
  pub fn contenido(v:&Value,id:usize)->R<Value>{need(v["jsonrpc"]=="2.0"&&v["id"]==id&&v.get("error").is_none(),"Identidad RPC discordante")?;let r=&v["result"];need(r["isError"]==false&&r["content"].as_array().map(Vec::len)==Some(1)&&r["content"][0]["type"]=="text","Recepción MCP inválida")?;let text=parse(r["content"][0]["text"].as_str().ok_or("Texto ausente")?.as_bytes())?;need(text==r["structuredContent"],"Representaciones RPC discordantes")?;Ok(text)}
 }
-const ROOT:&str="C:/laboratorio/watson-local/lenguaje-computacion-sv";
+const ROOT:&str="C:/SV-LABORATORIO";
 const OLD:&str="ejecucion/qwen38-examen25-20261008";
 const PRECISION:&str="La prohibición de indicar una técnica significa que no debe nombrar ninguna técnica de laboratorio en ningún campo de su entrega, incluidas las citas, los fundamentos, las insuficiencias y la revisión. Seleccione citas breves continuas de la fuente que cumplan esta restricción. No suprima palabras internas ni altere el texto de una cita.";
 fn read(p:&Path)->R<Value>{api::guard(p)?;parse(&fs::read(p).map_err(|e|e.to_string())?)}

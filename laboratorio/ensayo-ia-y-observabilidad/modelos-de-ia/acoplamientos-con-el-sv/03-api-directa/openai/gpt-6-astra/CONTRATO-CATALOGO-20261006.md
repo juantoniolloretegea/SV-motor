@@ -5,7 +5,7 @@
 
 ## 1. Decisión, objeto y pertenencia
 
-Se conserva el protocolo científico empleado en el nodo 01, incluidos los antecedentes GPT-OSS y Qwen. La diferencia autorizada es técnica: Astra ejecuta la inferencia mediante la API de OpenAI; la caché, el control del ensayo, la conservación, la telemetría propia y la evaluación permanecen en el SV, sobre un equipo propio que actúa como servidor de pruebas. Esta precisión rige también para el examen y sustituye la interpretación de que Astra debiera disponer de pesos alojados localmente.
+Se conserva el protocolo científico empleado en el nodo 01, incluidos los antecedentes GPT-OSS y Qwen. La diferencia autorizada es técnica: Astra ejecuta la inferencia mediante la API de OpenAI; la caché, el control del ensayo, la conservación, la telemetría propia y la evaluación permanecen en el SV. Esta precisión rige también para el examen y sustituye la interpretación de que Astra debiera disponer de pesos alojados localmente.
 
 El objeto es evaluar al candidato bajo el gobierno existente. No se vuelve a demostrar desde cero el funcionamiento del Árbitro, ni se reemplaza por otro modelo. Sí debe recibirse el nuevo acoplamiento y comprobarse que mantiene la correspondencia documental y la separación de responsabilidades. La evidencia del nodo 01 no acredita por sí sola la realización de este transporte remoto.
 
@@ -30,7 +30,7 @@ La respuesta influye legítimamente en el resultado científico porque es el obj
 
 Un JSON inválido, una cita no literal o una afirmación no fundada se distinguen de errores de transporte o de comprobación. Las correcciones de un comprobador quedan documentadas, conservan el original y no se atribuyen retrospectivamente al candidato.
 
-## 3. Fuentes y carpeta local
+## 3. Fuentes y conservación documental
 
 Se fija el [banco original A/B, política y referencia sellada](https://github.com/juantoniolloretegea/SV-motor/tree/db1395ef883da403fcec86f8b002d0ce86bf42ed/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/openai/gpt-oss-safeguard-120b/ensayos-reiterados-adversariales-y-aprendizaje/protocolo), revisión `db1395ef883da403fcec86f8b002d0ce86bf42ed). Se conserva la política de presentación recibida para Qwen, sin modificar definiciones, criterios D1–D5, seis ejemplos didácticos ni formato final completo.
 
@@ -40,7 +40,7 @@ Se fija el [banco original A/B, política y referencia sellada](https://github.c
 | PLAN-GENERAL.json | 3259 | `0e3cf186f23a19195166d80a6585fb8e989e87a2c65b0a889e941432023c0a5d` |
 | Política de presentación recibida | 6174 | `5063d058df015017355e0fd836389c0791f128911d6da07e7e4a631f8f42716a` |
 
-El expediente local `ejecucion/astra-catalogo-20261006/servidor-pruebas`, dentro del perímetro de trabajo autorizado, distingue:
+El expediente técnico `ejecucion/astra-catalogo-20261006/servidor-pruebas`, dentro del perímetro de trabajo autorizado, distingue:
 
 - `control/`: política y esquema científico; sólo el instrumento los utiliza para el gobierno.
 - `cache/A/A01…A09/` y `cache/B/B01…B09/`: fuentes artificiales completas y páginas previstas, por caso. Preparar B en disco no autoriza incorporarlo al contexto de A.

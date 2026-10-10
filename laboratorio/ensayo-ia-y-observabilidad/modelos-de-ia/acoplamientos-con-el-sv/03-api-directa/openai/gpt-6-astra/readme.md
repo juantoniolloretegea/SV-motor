@@ -1,8 +1,10 @@
 # GPT-6 Astra · OpenAI · Nodo 03
 
-**Versión documental 1.0 · 7 de octubre de 2026.**
+**Versión documental 2.0 · 10 de octubre de 2026.**
 
-**Prueba cerrada: Apto para el contrato documental del examen P01–P25.** Se conservan 25 respuestas finales correctas, incluidas las 20 críticas. Este dictamen se limita a la edición y a las condiciones documentadas; no acredita aptitud clínica general.
+**Nuevo cierre: [CYB09, nueve preguntas y tres etapas](cyb09-20261010/INFORME.md), Apto para el contrato documental.** R0, R1 y R2 contienen nueve respuestas correctas, sin errores ni indeterminaciones. El [alcance del sistema documental](cyb09-20261010/ALCANCE-SISTEMA.md) distingue las comprobaciones de GitHub y Workers del examen. [Polígono CYB09](cyb09-20261010/poligono/POLIGONO-EGUI.html) · [Revisión documental](REVISION-DOCUMENTAL-20261010.md).
+
+**Antecedente cerrado: Apto para el contrato documental del examen P01–P25.** Se conservan 25 respuestas finales correctas, incluidas las 20 críticas. Este dictamen se limita a la edición y a las condiciones documentadas; no acredita aptitud clínica general.
 
 ## Modalidad y responsabilidad
 

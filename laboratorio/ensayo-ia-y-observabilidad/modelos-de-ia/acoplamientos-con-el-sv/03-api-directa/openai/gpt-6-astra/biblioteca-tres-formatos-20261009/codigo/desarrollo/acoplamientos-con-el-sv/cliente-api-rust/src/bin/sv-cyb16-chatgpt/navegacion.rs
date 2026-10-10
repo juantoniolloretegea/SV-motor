@@ -2,8 +2,8 @@
 use serde_json::{json, Value};
 use std::{fs, path::{Path,PathBuf},process::{Command,Stdio}, time::{Duration,Instant}};
 use sv_cliente_api::{self as api,need,parse,save,sha,Perfil,R};
-const WORK:&str="C:/laboratorio/watson-local/lenguaje-computacion-sv";
-const LINUX:&str="/mnt/c/laboratorio/watson-local/lenguaje-computacion-sv";
+const WORK:&str="C:/SV-LABORATORIO";
+const LINUX:&str="/sv/ensayo";
 const RUN:&str="ejecucion/astra-biblioteca-tres-formatos-20261009";
 const MAX_TURNS:usize=12;
 pub fn root()->PathBuf{Path::new(WORK).join(RUN)}

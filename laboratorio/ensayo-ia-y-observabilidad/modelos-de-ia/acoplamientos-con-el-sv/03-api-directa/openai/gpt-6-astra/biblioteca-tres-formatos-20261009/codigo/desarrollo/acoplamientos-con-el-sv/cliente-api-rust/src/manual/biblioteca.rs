@@ -4,7 +4,7 @@ use crate::{guard,need,parse,save,sha,R};
 use serde::Deserialize;
 use serde_json::{json,Value};
 use std::{fs::{self,File,OpenOptions},io::Read,path::{Path,PathBuf},process::{Child,Command,Stdio},time::{Duration,Instant}};
-const ROOT:&str="C:/laboratorio/watson-local/lenguaje-computacion-sv";
+const ROOT:&str="C:/SV-LABORATORIO";
 const BIN:&str="compilacion/mcp-mdbook/debug";
 fn err(e:impl std::fmt::Display)->String {e.to_string()}
 #[derive(Deserialize)]
