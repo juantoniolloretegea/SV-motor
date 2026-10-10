@@ -57,3 +57,9 @@ La selección posterior a cuatro entregas, el corpus acotado, el suministro docu
 El alcance de inferencia queda terminado. Conservar el resultado, apagar la sesión después de recuperar íntegramente sus originales y detener nuevos envíos. La siguiente actuación requiere la decisión humana sobre recepción y continuidad; no se amplía a las siete preguntas omitidas.
 
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
+
+## Entrega documental final
+
+[Resumen de sedes y recepción documental](ENTREGA-Y-RECEPCION-DOCUMENTAL.md) · [Captura del polígono R2](poligono-egui/RESULTADO-R2.png) · [Antecedente gráfico R1](poligono-egui/RESULTADO-R1.png). La edición 2.31 del ensayo y el nodo 02 incorporan la prueba sin cambiar su arquitectura. Se conserva el dictamen asistido y la recepción científica independiente pendiente.
+
+© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).

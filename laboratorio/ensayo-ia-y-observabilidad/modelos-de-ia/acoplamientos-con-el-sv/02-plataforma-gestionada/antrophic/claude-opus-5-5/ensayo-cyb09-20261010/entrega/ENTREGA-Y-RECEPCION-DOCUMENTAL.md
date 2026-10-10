@@ -1,0 +1,21 @@
+# Entrega y recepción documental · Claude Opus 5.5 · Nodo 02
+
+10/10/2026. La prueba y su documentación se incorporan al ensayo en el orden y la arquitectura existentes. El nodo 02 conserva su primera realización ejecutada mediante Kaggle. No se crean otras modalidades ni se trasladan antecedentes. El Núcleo, la semántica V0.2 y la IR 0.3 permanecen intactos.
+
+| Objeto | Sede y evidencia | Estado |
+|---|---|---|
+| Configuración | [Expediente de Claude](../../readme.md) y [nodo 02](../../../../readme.md) | Identificador efectivo `anthropic/claude-opus-5-5@default`; frontera y límites declarados. |
+| Manual MD09 | [Informe histórico](../../ensayo-md09-cyb16-20261009/corte-01/INFORME-MANUAL.md) | 27 entregas, 9/9 final asistido, seis críticas correctas. No repetido ni recalificado. |
+| CYB09 | [Informe](INFORME.md), [adjudicación](ADJUDICACION-ASISTIDA.json) y [cálculo Rust](PUNTUACION-RUST.json) | 27 entregas, cuatro históricas recuperadas y 23 nuevas. R2 8/9, **88,89/100; No apto asistido por C02 crítico**. R1 9/9 no sustituye la etapa final. |
+| Integridad y custodia | [Originales nuevos](ORIGINALES.tar.gz), [manifiesto](MANIFIESTO-ORIGINALES.json), [control](CONTROL-CUSTODIA.json) y [recibo de incorporación](custodia/RECIBO-INTEGRACION.json) | Recuperación, igualdad de bytes y SHA-256, reconstrucción de 334 archivos y recepción documental Rust conformes. |
+| Observabilidad y gestión del nodo | [Matriz de recepción](MATRIZ-RECEPCION-NODO02.md), [registro operativo](OBSERVABILIDAD-NODO02.json) y [límites](OBSERVABILIDAD-NODO02.md) | Declaración del candidato, metadatos del servicio y observación exterior separados. Datos internos inaccesibles permanecen desconocidos; el razonamiento textual interno no fue emitido. |
+| Representación | [Visor Rust/egui](poligono-egui/POLIGONO-EGUI.html), [R2 final](poligono-egui/RESULTADO-R2.png) y [R1 histórico](poligono-egui/RESULTADO-R1.png) | Datos ligados a las 27 respuestas y juicios; fuente inmutable y prueba de interacción conservadas. Representación asistida, pendiente de recepción científica. |
+| Seguimiento competente | [TT-0026](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/a201e592a304abd982e070399038d861981aa036/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0026.md), [Acta 005](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/a201e592a304abd982e070399038d861981aa036/docs/calidad/tuberias-ia/continuacion-15-09-2026/ACTA_005_CLAUDE_OPUS_5_5_NODO02_2026_10_09.md), S39 r80 y RETP-2026-319 | Registros publicados, recuperados y cotejados; recepción científica independiente pendiente. S39 general conserva sus otros trabajos. |
+| Consumo administrativo | Registro específico SV-GASTO-20261010-010, repositorio privado de usos, gastos, créditos y tokens, revisión a84b093debcd49c37abd7b8f258502e189b8b3c9 | 8,21776 USD y 1.153.912 tokens nuevos comunicados. Costes históricos excluidos; liquidación pendiente de conciliación. |
+| Terminación | [Sesión apagada](SESION-APAGADA.json) | Alcance de inferencia terminado, sin ampliación ni reintentos. |
+
+El [ensayo, edición 2.31](../../../../../../../README.md), el catálogo y el marco común permiten localizar esta entrega. Se cotejaron 64 enlaces relativos añadidos y 4.035 objetos ajenos conservados por identidad Git. La documentación de otros modelos y los diagramas históricos permanecen intactos. La incorporación documental no añade inferencias.
+
+La recepción de custodia y de representación no constituye recepción científica independiente ni habilitación general del nodo. El reparo C02 queda abierto a revisión competente del alcance previsto por la clave y el corpus, con todos los originales disponibles. Cualquier continuación experimental requiere decisión propia; las siete preguntas omitidas no se ejecutan por este cierre.
+
+© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
