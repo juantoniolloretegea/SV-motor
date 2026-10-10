@@ -1,8 +1,8 @@
 # Ensayo de inteligencia artificial y observabilidad
 
-**Edición documental 2.30 · 8 de octubre de 2026.**
+**Edición documental 2.31 · 10 de octubre de 2026.**
 
-**Actualización de esta edición:** GLM-5.3 se incorpora al nodo 03 con el examen documental de ciberseguridad CYB16 concluido. Se distinguen su resultado Apto, la reserva anterior del manual y el estudio independiente de inferencia bajo control propio. Astra, Grok y Qwen conservan sus resultados y emplazamientos.
+**Actualización de esta edición:** se incorpora el primer expediente ejecutado del nodo 02, Claude Opus 5.5 mediante Kaggle. Manual MD09 y contraste CYB09 conservan resultados asistidos separados y recepción científica independiente pendiente. Se mantienen los tres nodos, su arquitectura, los diagramas y los resultados y emplazamientos anteriores.
 
 <a id="objeto-y-criterio-experimental"></a>
 
@@ -21,7 +21,7 @@ El [marco común](modelos-de-ia/acoplamientos-con-el-sv/readme.md) distingue tre
 | Nodo y acceso a su documentación | Modalidad | Alcance documentado |
 |---|---|---|
 | [01 · Inferencia bajo control propio](modelos-de-ia/acoplamientos-con-el-sv/01-inferencia-bajo-control-propio/readme.md) | El proyecto administra el motor, los pesos y el entorno de inferencia. | Reúne las remisiones a los expedientes de instalación, evaluación y viabilidad. Cada modelo conserva su resultado y sus condiciones. |
-| [02 · Plataforma gestionada](modelos-de-ia/acoplamientos-con-el-sv/02-plataforma-gestionada/readme.md) | Una plataforma organiza la evaluación y el acceso gestionado a modelos; Kaggle es el caso considerado. | Especificación preparatoria. No acredita integración recibida, recursos concedidos ni ejecución de modelos en esta modalidad. |
+| [02 · Plataforma gestionada](modelos-de-ia/acoplamientos-con-el-sv/02-plataforma-gestionada/readme.md) | Una plataforma organiza la evaluación y el acceso gestionado a modelos; Kaggle es el caso ejecutado. | Primer modelo ensayado: [Claude Opus 5.5](modelos-de-ia/acoplamientos-con-el-sv/02-plataforma-gestionada/antrophic/claude-opus-5-5/readme.md). Manual MD09 y contraste CYB09 conservados por separado; recepción científica independiente pendiente. La ejecución no acredita aceptación general del nodo ni prestaciones futuras. |
 | [03 · API directa de proveedor](modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/readme.md) | El SV prepara solicitudes y recibe respuestas de un servicio externo de inferencia. | Los expedientes enlazados en la tabla de estado distinguen proveedor, versión y alcance de cada resultado. Pesos e inferencia permanecen en el proveedor; suministro, controles y mediciones propios se realizan en Rust. |
 
 La modalidad depende del control efectivo de la inferencia y de la relación de servicio. Un motor administrado por el proyecto puede exponer una API y seguir perteneciendo al nodo 01. Los expedientes históricos conservan sus ubicaciones, enlazadas desde ese nodo; no se trasladan ni se atribuyen resultados por la sola pertenencia a una familia.
@@ -49,6 +49,7 @@ La tabla distingue el resultado experimental, su alcance y la situación documen
 | [Qwen3-Next-80B-A3B-Thinking](modelos-de-ia/qwen/qwen3-next-80b-a3b-thinking) | Examen cerrado: **No apto en las condiciones evaluadas por demoras operativas excesivas y falta de finalización fiable**. Nueve finales pendientes de adjudicación de contenido, cuatro impedimentos, P14 incompleta y once no ejecutadas; sin puntuación global. | [Cierre público](https://github.com/juantoniolloretegea/SV-motor/releases/tag/qwen3-next-80b-a3b-thinking-archivo-cierre-20261005-v1) y [conservación privada cotejada](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/releases/tag/thinking-imagen-cierre-20261005-v1). [Instancia y almacenamiento retirados](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/2ddf814bb039b0c7876745023ea165baf38ed6f9/respuestas-ejecucion/QWEN80-THINKING-Q4K-ONECLOUD-20260930/entrega-03/retirada-20261005/ACTA-RETIRADA.md); no hay arranque restaurado ensayado. [TT-0017](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0017.md). |
 | [GPT-OSS-Safeguard-120B](modelos-de-ia/openai/gpt-oss-safeguard-120b/ensayos-reiterados-adversariales-y-aprendizaje/readme.md) | Contrastes anteriores separados: **87,5/100**, **66,67/100** y **50/100**, con **No apto** en sus respectivos alcances. El diagnóstico D01 reprodujo el error crítico del último contraste. | Preevaluación terminada: A0–A3 sin mejora, −88,89/100 según la rúbrica completa y **No apto para acceder al examen**. Diagnósticos e incidencias separados en el [cierre](modelos-de-ia/openai/gpt-oss-safeguard-120b/ensayos-reiterados-adversariales-y-aprendizaje/resultados/cierre-20261004/INFORME-FINAL.md). Sin aptitud clínica acreditada. [Expediente v3](modelos-de-ia/openai/gpt-oss-safeguard-120b/tests-y-pruebas-efectuadas/ARBITRO-SV-SAFEGUARD-V3-20261002.md) · [TT-0018](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0018.md). |
 | [Qwen3.5-122B-A10B · Q8_0](modelos-de-ia/qwen/qwen3.5-122b-a10b-q8-0/readme.md) | Realización CPU en UpCloud: 48 CPU y 256 GB nominales de RAM, sin GPU. Fase A0 concluida: seis 0, un 1 crítico en A06 y dos casos no ejecutados. | [Admisión no acreditada por impedimento temporal](https://github.com/juantoniolloretegea/SV-motor/blob/0b5104c4658bc98a9612fd2a97d7b8a5214b63cc/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/qwen/qwen3.5-122b-a10b-q8-0/preevaluacion-20261004/resultados/cierre-r1/INFORME-FINAL.md); sin revisiones, B ni examen. Custodia de fase y [imagen de instalación cotejadas](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/releases/tag/qwen35-122b-q8-imagen-cierre-20261006-v1); [archivo público](https://github.com/juantoniolloretegea/SV-motor/releases/tag/qwen3.5-122b-a10b-q8-0-archivo-cierre-20261006-v1). [Instancia y disco retirados el 06/10/2026](modelos-de-ia/qwen/qwen3.5-122b-a10b-q8-0/seguimiento/cierre-20261006/ACTA-RETIRADA.md); arranque restaurado no ensayado. Recepción independiente de A04–A07 y fase pendiente. [TT-0019](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0019.md). |
+| [Claude Opus 5.5 · Anthropic · Nodo 02](modelos-de-ia/acoplamientos-con-el-sv/02-plataforma-gestionada/antrophic/claude-opus-5-5/readme.md) | **CYB09: 88,89/100; No apto según el dictamen asistido**, R2 8/9 y un error crítico C02. R1 9/9 permanece como etapa histórica. Manual MD09: 9/9 finales, seis críticas correctas, resultado asistido separado. | [Informe y evidencias](modelos-de-ia/acoplamientos-con-el-sv/02-plataforma-gestionada/antrophic/claude-opus-5-5/ensayo-cyb09-20261010/entrega/INFORME.md). 27 entregas CYB09, cuatro recuperadas y 23 nuevas; sesión apagada. Recepción científica independiente pendiente. Primer expediente ejecutado del nodo 02, sin habilitación operativa general. |
 
 ### Familias en estudio de viabilidad
 
@@ -78,6 +79,8 @@ Thinking mantiene tratamiento independiente de plantilla, razonamiento emitido, 
 ## Evaluación documental y resultado
 
 El examen [CYB16 de GLM-5.3](modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/zai/glm-5.3/cyb16-20261008/INFORME.md) utiliza un libro documental de ciberseguridad suministrado por MCP: dieciséis preguntas, catorce críticas y tres etapas completas. Su contrato y sus fuentes son distintos del banco de inmunología descrito a continuación; los resultados no constituyen una clasificación global entre modelos.
+
+El [contraste CYB09 de Claude Opus 5.5](modelos-de-ia/acoplamientos-con-el-sv/02-plataforma-gestionada/antrophic/claude-opus-5-5/ensayo-cyb09-20261010/entrega/INFORME.md) fija nueve preguntas críticas y tres etapas. Su clave, configuración y selección se conservan por identidad; cuatro entregas históricas y 23 nuevas completan 27 originales. Resultado asistido R2: 88,89/100 y No apto por C02 crítico. El manual MD09 mantiene su resultado independiente. La recepción científica competente sigue pendiente; no se declara comparabilidad íntegra con bancos de 16 o 25 posiciones.
 
 La pregunta experimental es si una configuración puede **responder con fundamento verificable dentro de una biblioteca delimitada**. La primera ronda utiliza una captura identificada del [PDQ profesional del NCI sobre leucemia de células pilosas](https://www.cancer.gov/espanol/tipos/leucemia/pro/tratamiento-celulas-pilosas-pdq), consultada desde el catálogo local. La página pública identifica la procedencia; no sustituye los bytes congelados del ensayo.
 
@@ -162,7 +165,7 @@ La dirección ha autorizado crear **una instancia AMD MI300X** e iniciar una pru
 
 ## Versiones de los componentes
 
-La **edición documental 2.30**, las **aplicaciones 0.1.x/0.2.x**, el **MCP 0.1.x**, los **modelos** y los **archivos de recuperación v1** tienen identidades independientes. Una numeración no sustituye a las restantes. Los antecedentes identifican Rust 1.98.0; la preparación de retroalimentación identifica Rust 1.98.1. Cada expediente fija sus fuentes, dependencias, ejecutables y comprobaciones; una compilación no acredita utilización efectiva.
+La **edición documental 2.31**, las **aplicaciones 0.1.x/0.2.x**, el **MCP 0.1.x**, los **modelos** y los **archivos de recuperación v1** tienen identidades independientes. Una numeración no sustituye a las restantes. Los antecedentes identifican Rust 1.98.0; la preparación de retroalimentación identifica Rust 1.98.1. Cada expediente fija sus fuentes, dependencias, ejecutables y comprobaciones; una compilación no acredita utilización efectiva.
 
 <details>
 <summary><strong>EIO conversación · Qwen3-0.6B · 0.1.0 → 0.1.4</strong></summary>
@@ -259,6 +262,12 @@ El identificador del candidato es `gpt-6-astra`; no es la versión del cliente n
 
 </details>
 
+<details>
+<summary><strong>Claude Opus 5.5 · nodo 02 · controlador Rust y visor egui 0.6.0</strong></summary>
+
+El identificador efectivo es `anthropic/claude-opus-5-5@default`. La inferencia pertenece al servicio gestionado por Kaggle; el cuaderno ejecuta composición, transporte, límites y observación propios en Rust. El auxiliar del cuaderno descarga, inicia y conserva. El [expediente](modelos-de-ia/acoplamientos-con-el-sv/02-plataforma-gestionada/antrophic/claude-opus-5-5/readme.md) identifica fuentes, ejecutables y frontera; el [visor](modelos-de-ia/acoplamientos-con-el-sv/02-plataforma-gestionada/antrophic/claude-opus-5-5/ensayo-cyb09-20261010/entrega/poligono-egui/POLIGONO-EGUI.html) presenta las tres etapas y sus fundamentos. Es representación de adjudicaciones asistidas, pendiente de recepción independiente; no constituye un frame recibido para operación del dominio. No se atribuye a otros modelos ni modifica los componentes históricos.
+
+</details>
 ## Publicaciones en orden cronológico
 
 La primera secuencia conserva **cinco publicaciones preliminares: dos distribuciones y tres archivos de recuperación o cierre**. Las entregas posteriores se relacionan a continuación de esa secuencia. Cada desplegable conduce a la publicación completa, sus activos y la documentación de alcance. Las revisiones v1 corresponden a paquetes fechados distintos.
@@ -339,6 +348,7 @@ Cada fila describe el corte de su publicación; los estados superados se mantien
 | 08/10/2026 | [Examen de Grok 4.7 · nodo 03](modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/xai/grok-4.7/examen25-20261008/INFORME.md) | Apto para el contrato documental en R2: 25 correctas, incluidas las 20 críticas. Se conserva el error crítico de R0 y su corrección posterior. [MD01 del manual](modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/xai/grok-4.7/md01-diagnostica-20261008/INFORME.md): diagnóstico parcial, distinto del examen. |
 | 08/10/2026 | [Recepción de Qwen3.8-Max-0902 · nodo 03](modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/qwen/qwen3.8-max-0902/RECEPCION-DOCUMENTAL-20261008.md) | Apto documental con reservas para 16 preguntas, tras revisión del instrumento y réplica P13. La adjudicación contractual original se conserva; no se declara equivalencia con un examen de 25 preguntas. |
 | 08/10/2026 | [GLM-5.3 · CYB16 · Nodo 03](modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/zai/glm-5.3/cyb16-20261008/INFORME.md) | Apto documental en R2: 16 correctas, 14 críticas correctas. R0 y R1 conservan sus errores; MD07 sigue bajo reserva. [Aclaración de las marcas documentales](modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/zai/glm-5.3/cyb16-20261008/ACLARACION-ALERTAS-20261008.md). |
+| 09–10/10/2026 | [Claude Opus 5.5 · primer expediente del nodo 02](modelos-de-ia/acoplamientos-con-el-sv/02-plataforma-gestionada/antrophic/claude-opus-5-5/readme.md) · [Manual MD09](modelos-de-ia/acoplamientos-con-el-sv/02-plataforma-gestionada/antrophic/claude-opus-5-5/ensayo-md09-cyb16-20261009/corte-01/INFORME-MANUAL.md) · [CYB09](modelos-de-ia/acoplamientos-con-el-sv/02-plataforma-gestionada/antrophic/claude-opus-5-5/ensayo-cyb09-20261010/entrega/INFORME.md) | Manual histórico: 9/9 asistido. CYB09: R2 8/9, 88,89/100 y No apto asistido por C02 crítico; R1 no sustituye R2. Originales, polígono, observabilidad y custodia cotejados. Recepción científica independiente pendiente; sesión apagada. |
 
 Los enlaces de SV-sala-de-maquinas mantienen el acceso restringido de los originales. Las síntesis públicas enlazan su procedencia; no sustituyen los paquetes, sus manifiestos ni la recepción independiente.
 
@@ -346,7 +356,7 @@ Los enlaces de SV-sala-de-maquinas mantienen el acceso restringido de los origin
 
 ## Historia completa de la edición documental
 
-La secuencia comienza en **0.1** y avanza hasta la presente **2.30**. Se conservan todas las ediciones anteriores y sus referencias inmutables. Cada desplegable conserva lo relevante de su corte y ofrece el texto íntegro; sus estados históricos no sustituyen al estado actual.
+La secuencia comienza en **0.1** y avanza hasta la presente **2.31**. Se conservan todas las ediciones anteriores y sus referencias inmutables. Cada desplegable conserva lo relevante de su corte y ofrece el texto íntegro; sus estados históricos no sustituyen al estado actual.
 
 El salto **0.2 → 2.0** se conserva tal como fue publicado; no se ha localizado una edición 1.x en el historial de este archivo. Cuando una edición reúne varios commits, se muestran todos en orden. Las fechas siguientes son las de esos commits en Europe/Madrid; una cabecera histórica puede conservar una fecha anterior.
 
@@ -677,6 +687,15 @@ Incorpora GLM-5.3 a las tablas del ensayo, catálogo y nodo 03; actualiza las fi
 
 </details>
 
+<details>
+<summary><strong>2.31 · 10/10/2026 · Primer expediente ejecutado del nodo 02</strong></summary>
+
+Incorpora Claude Opus 5.5 en las tablas y referencias existentes del ensayo, catálogo y nodo 02. Mantiene el orden 01–02–03, los diagramas, rutas y resultados anteriores. Separa el manual MD09, el antecedente parcial CYB16 y CYB09 terminado, cuyo dictamen asistido final es No apto por C02 crítico. La recepción independiente permanece pendiente. Documenta las tres procedencias de observabilidad y los límites del servicio, sin nuevas inferencias por esta incorporación.
+
+[Edición precedente 2.30 íntegra](https://github.com/juantoniolloretegea/SV-motor/blob/759ad8dd1b1916b0bc690b7c45aebd4598d9f4b7/laboratorio/ensayo-ia-y-observabilidad/README.md) · [Entrega y conservación](modelos-de-ia/acoplamientos-con-el-sv/02-plataforma-gestionada/antrophic/claude-opus-5-5/ensayo-cyb09-20261010/entrega/CONTROL-CUSTODIA.json).
+
+</details>
+
 <a id="dos-vías-de-ejecución"></a>
 
 ## Vías de ejecución y diagramas
@@ -793,6 +812,7 @@ La secuencia de identificación es **configuración → campaña → resultado �
 | Continuidad y dictámenes | [S39](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/sucesos/SUCESOS_SV.md#s39) y [Acta 004](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/continuacion-15-09-2026/ACTA_004_FINALIDAD_ALCANCE_Y_CONTINUIDAD_EIO_2026_09_22.md). |
 | Cálculo Rust para AMD y candidatos asociados | [TT-0020](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0020.md), S39 revisión 39, Acta 004 §33, RETP-2026-278 y [encargo instrumental](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/main/encargos-ejecucion/AMD-CUBECL-MFMA-20261005/v1/ENCARGO.md). La autorización posterior se distingue de la recepción aún pendiente. |
 | GPT-6 Astra y acoplamiento del nodo 03 | [TT-0021](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0021.md), S39 revisión 58, Acta 004 §52 y RETP-2026-297. Examen documental cerrado como Apto; las dependencias generales y la recepción independiente conservan su alcance propio. |
+| Claude Opus 5.5 y acoplamiento del nodo 02 | [TT-0026](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/a201e592a304abd982e070399038d861981aa036/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0026.md), S39 revisión 80, [Acta 005](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/a201e592a304abd982e070399038d861981aa036/docs/calidad/tuberias-ia/continuacion-15-09-2026/ACTA_005_CLAUDE_OPUS_5_5_NODO02_2026_10_09.md), RETP-2026-319 y [matriz de evidencias](modelos-de-ia/acoplamientos-con-el-sv/02-plataforma-gestionada/antrophic/claude-opus-5-5/ensayo-cyb09-20261010/entrega/MATRIZ-RECEPCION-NODO02.md). Manual y CYB09 tienen resultados asistidos separados; recepción independiente pendiente. |
 | Alcances de los tiques | [TT-0013: cierre GPT-OSS-20B](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0013.md), [TT-0014: MCP](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0014.md) y [TT-0015: viabilidad GPT-OSS-120B](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0015.md). |
 
 El seguimiento vigente se completa con [TT-0016: banco y evaluación de Instruct](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0016.md) y [TT-0017: prueba y cierre Thinking](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0017.md). TT-0013 conserva su cierre acotado; TT-0014 mantiene su recepción propia pendiente; TT-0015 dispone de un estudio preliminar adverso para la configuración considerada, sin inferencia. Safeguard conserva su seguimiento en [TT-0018](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0018.md), con recepciones anteriores pendientes. La preevaluación Qwen3.5 tiene protocolo y seguimiento propios en [TT-0019](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0019.md). TT-0017 y TT-0018 finalizan su alcance experimental y documental, con reservas y situación de infraestructura separadas. S39 continúa en ejecución y TT-0014 conserva su recepción integral pendiente. El retorno al Lenguaje y al Núcleo sigue la [guía del sistema conjunto](../sistema-conjunto-lenguaje-computacion-ia-gobernada/README.md).

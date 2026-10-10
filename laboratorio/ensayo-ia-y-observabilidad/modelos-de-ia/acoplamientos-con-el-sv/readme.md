@@ -1,8 +1,8 @@
 # Acoplamientos de modelos de inteligencia artificial con el Sistema Vectorial SV
 
-**Versión documental 1.2 · 7 de octubre de 2026.**
+**Versión documental 1.3 · 10 de octubre de 2026.**
 
-**Estado:** organización y requisitos del trabajo experimental. El [expediente de GPT-6 Astra, nodo 03](03-api-directa/openai/gpt-6-astra/readme.md), acredita su examen cerrado como Apto para el contrato documental del 07/10/2026. Esa recepción no constituye aceptación general de los tres nodos ni de otros modelos.
+**Estado:** organización y requisitos del trabajo experimental. El [expediente de GPT-6 Astra, nodo 03](03-api-directa/openai/gpt-6-astra/readme.md), conserva su examen cerrado como Apto para el contrato documental del 07/10/2026. El [primer expediente ejecutado del nodo 02, Claude Opus 5.5](02-plataforma-gestionada/antrophic/claude-opus-5-5/readme.md), distingue manual MD09 y CYB09, con dictámenes asistidos y recepción independiente pendiente. Ninguno constituye aceptación general de los tres nodos ni de otros modelos.
 
 ## 1. Finalidad y pertenencia al sistema
 

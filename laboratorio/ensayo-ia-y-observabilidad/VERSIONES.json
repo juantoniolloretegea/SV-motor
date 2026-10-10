@@ -1,18 +1,18 @@
 {
   "esquema": "sv.eio.registro-versiones/1",
-  "edicion_documental": "2.30",
-  "fecha_corte": "2026-10-08",
-  "commit_base_consultado": "76dea7a3b6279e3bd3da62680059c860776a13fa",
+  "edicion_documental": "2.31",
+  "fecha_corte": "2026-10-10",
+  "commit_base_consultado": "759ad8dd1b1916b0bc690b7c45aebd4598d9f4b7",
   "criterio": "Identidad separada para modelo, aplicacion, componente MCP, archivo de conservacion y edicion documental",
   "revision_actual": {
-    "version": "2.30",
-    "naturaleza": "incorporacion_glm53_y_aclaracion_documental",
+    "version": "2.31",
+    "naturaleza": "incorporacion_primer_expediente_ejecutado_nodo02",
     "commit": "El que contiene este archivo; sin autorreferencia circular",
     "cambios": [
-      "GLM-5.3 API en las tablas del ensayo, catálogo y nodo 03",
-      "CYB16 Apto diferenciado de MD07 bajo reserva y del estudio nodo 01",
-      "Aclaración de diez marcas documentales sin cambiar vector ni visor",
-      "Portadas conciliadas con S39 y TT-0024; sin nuevas inferencias"
+      "Claude Opus 5.5 enlazado en ensayo, catálogo, marco común y nodo 02 sin cambiar la arquitectura",
+      "Manual MD09 y CYB09 separados; R2 8/9, 88,89/100 y No apto asistido por C02 crítico",
+      "Observabilidad con tres procedencias, custodia cotejada y recepción científica independiente pendiente",
+      "Antecedentes, diagramas, rutas y otros modelos preservados; sin nuevas inferencias"
     ]
   },
   "componentes": [
@@ -103,6 +103,15 @@
         "revision_examinada": "c49441a4c472098f5b221984f5bea1dbf866ad10",
         "estado": "compatibilidad_dispositivo_pendiente"
       }
+    },
+    {
+      "id": "claude-opus-5-5/visor-cyb09",
+      "version": "0.6.0",
+      "estado": "compilado_y_comprobado_en_navegador",
+      "nodo": "02",
+      "fuente": "laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/02-plataforma-gestionada/antrophic/claude-opus-5-5/ensayo-cyb09-20261010/entrega/poligono-egui/fuentes/Cargo.toml",
+      "resultado": "representación de adjudicaciones asistidas, recepción independiente pendiente",
+      "licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0)."
     }
   ],
   "candidatos": [
@@ -288,6 +297,34 @@
       "informe": "laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/openai/gpt-6-astra/examen25-20261007/resultado/INFORME.md",
       "revision_evidencia": "a8cd2319c004f76a1159cb382f7ed93b2d648bf3",
       "alcance": "Cierre de esta prueba; no cierre de S39 general, de TT-0021 ni aceptación general del nodo 03."
+    },
+    {
+      "modelo": "anthropic/claude-opus-5-5@default",
+      "proveedor": "Anthropic",
+      "plataforma": "Kaggle Benchmarks Model Proxy",
+      "nodo": "02",
+      "fecha": "2026-10-10",
+      "estado": "contraste_CYB09_terminado",
+      "dictamen": "No apto según adjudicación asistida",
+      "preguntas": 9,
+      "criticas": 9,
+      "correctas_finales": 8,
+      "errores_criticos": 1,
+      "puntuacion_sobre_100": 88.88888888888889,
+      "fase_final": "R2",
+      "entregas_completas": 27,
+      "generaciones_nuevas": 23,
+      "originales_historicos_reutilizados": 4,
+      "manual": "MD09 histórico: 9/9 final asistido, seis críticas correctas, separado",
+      "recepcion_cientifica_independiente": "pendiente",
+      "aceptacion_general_nodo": false,
+      "aptitud_operativa_acreditada": false,
+      "expediente": "laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/02-plataforma-gestionada/antrophic/claude-opus-5-5/readme.md",
+      "informe": "laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/02-plataforma-gestionada/antrophic/claude-opus-5-5/ensayo-cyb09-20261010/entrega/INFORME.md",
+      "observabilidad": "laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/02-plataforma-gestionada/antrophic/claude-opus-5-5/ensayo-cyb09-20261010/entrega/OBSERVABILIDAD-NODO02.json",
+      "revision_evidencia": "759ad8dd1b1916b0bc690b7c45aebd4598d9f4b7",
+      "custodia": "recuperación, cotejo Rust y reconstrucción conformes",
+      "sesion": "apagada"
     }
   ],
   "publicaciones": [
@@ -1491,5 +1528,45 @@
     "recepcion_cientifica_independiente": "pendiente",
     "aptitud_operativa_acreditada": false,
     "inferencias_nuevas": 0
-  }
+  },
+  "revision_2_30_conservada": {
+    "version": "2.30",
+    "naturaleza": "incorporacion_glm53_y_aclaracion_documental",
+    "commit": "El que contiene este archivo; sin autorreferencia circular",
+    "cambios": [
+      "GLM-5.3 API en las tablas del ensayo, catálogo y nodo 03",
+      "CYB16 Apto diferenciado de MD07 bajo reserva y del estudio nodo 01",
+      "Aclaración de diez marcas documentales sin cambiar vector ni visor",
+      "Portadas conciliadas con S39 y TT-0024; sin nuevas inferencias"
+    ]
+  },
+  "incorporacion_claude_nodo02_20261010": {
+    "modelo": "anthropic/claude-opus-5-5@default",
+    "proveedor": "Anthropic",
+    "plataforma": "Kaggle Benchmarks Model Proxy",
+    "nodo": "02",
+    "fecha": "2026-10-10",
+    "estado": "contraste_CYB09_terminado",
+    "dictamen": "No apto según adjudicación asistida",
+    "preguntas": 9,
+    "criticas": 9,
+    "correctas_finales": 8,
+    "errores_criticos": 1,
+    "puntuacion_sobre_100": 88.88888888888889,
+    "fase_final": "R2",
+    "entregas_completas": 27,
+    "generaciones_nuevas": 23,
+    "originales_historicos_reutilizados": 4,
+    "manual": "MD09 histórico: 9/9 final asistido, seis críticas correctas, separado",
+    "recepcion_cientifica_independiente": "pendiente",
+    "aceptacion_general_nodo": false,
+    "aptitud_operativa_acreditada": false,
+    "expediente": "laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/02-plataforma-gestionada/antrophic/claude-opus-5-5/readme.md",
+    "informe": "laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/02-plataforma-gestionada/antrophic/claude-opus-5-5/ensayo-cyb09-20261010/entrega/INFORME.md",
+    "observabilidad": "laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/02-plataforma-gestionada/antrophic/claude-opus-5-5/ensayo-cyb09-20261010/entrega/OBSERVABILIDAD-NODO02.json",
+    "revision_evidencia": "759ad8dd1b1916b0bc690b7c45aebd4598d9f4b7",
+    "custodia": "recuperación, cotejo Rust y reconstrucción conformes",
+    "sesion": "apagada"
+  },
+  "licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0)."
 }

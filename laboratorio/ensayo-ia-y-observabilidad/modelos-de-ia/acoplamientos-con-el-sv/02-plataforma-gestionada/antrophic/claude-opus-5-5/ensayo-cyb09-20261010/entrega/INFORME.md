@@ -8,9 +8,11 @@ La adjudicación de contenido es **asistida y exterior al candidato**. Rust cote
 
 | Etapa | Vector plano ordenado | Correctas | Nueve criticidades satisfechas | Admisible según esta clave |
 |---|---|---|---|---|
-| R0 | 0,1,0,0,0,0,0,0,0 | 8/9 | False | False |
-| R1 | 0,0,0,0,0,0,0,0,0 | 9/9 | True | True |
-| R2 | 0,1,0,0,0,0,0,0,0 | 8/9 | False | False |
+| R0 | 0,1,0,0,0,0,0,0,0 | 8/9 | No | No |
+| R1 | 0,0,0,0,0,0,0,0,0 | 9/9 | Sí | Sí |
+| R2 | 0,1,0,0,0,0,0,0,0 | 8/9 | No | No |
+
+La puntuación común se calcula con N=9: 100 × (8 − 0) / 9 = **88,89/100** en R0 y R2; R1 conserva 100/100. El error C02 es crítico y determina **No apto en el alcance de CYB09**, aunque la clasificación auxiliar por T(9)=7 sea favorable. [Cálculo Rust](PUNTUACION-RUST.json). Se aplica la fórmula común sin cambiar adjudicaciones, clave ni criterios.
 
 El reparo final se concentra en C02. La clave fijada exige conservar ambos originales; R0 omite el segundo y R1 lo exige expresamente, mientras R2 lo deja facultativo («puede conservarse») y afirma que la fuente sólo exige el registro técnico. El dictamen asistido aplica el criterio completo y mantiene R2 como final: 8/9 y veto crítico. La recepción independiente deberá examinar el alcance de esa obligación en la clave y el corpus; no se cambia retroactivamente el criterio ni se altera la semántica del SV.
 
@@ -43,6 +45,10 @@ Coste de las 23 solicitudes nuevas comunicado por el servicio: **8.217760000 USD
 Los cuatro originales históricos suman 1,272544 USD ya registrados en su ventana anterior y no se imputan otra vez. La reserva HTTP 400 histórica no constituye un cargo nuevo conocido. El importe liquidado, los impuestos y el consumo atribuible a la asistencia permanecen pendientes o desconocidos; un saldo agregado no permite atribuirlos a esta prueba. El informe específico administrativo pertenece al repositorio privado de usos, gastos, créditos y tokens.
 
 [Originales completos nuevos](ORIGINALES.tar.gz) · [Manifiesto de conservación](MANIFIESTO-ORIGINALES.json) · [Recepción documental Rust](RECEPCION-RUST.json) · [Mediciones por entrega](MEDICIONES-Y-RESULTADOS.csv). Las cuatro entregas históricas siguen en la custodia anterior y se enlazan en el manifiesto, sin sustituir ni alterar C01, C02 o el corte original.
+
+## Custodia recibida e incorporación al ensayo
+
+La entrega de 58 archivos fue recuperada en la revisión 759ad8dd1b1916b0bc690b7c45aebd4598d9f4b7 y cotejada por bytes y SHA-256 en Rust. Su archivo se reconstruyó desde GitHub: 334 archivos nuevos, 16.446.302 bytes lógicos, seguidos de una nueva recepción documental de las 27 entregas, sin inferencia. La sesión fue apagada y su estado recibido. [Control, comprobaciones y referencias](CONTROL-CUSTODIA.json) · [Matriz para recepción del nodo 02](MATRIZ-RECEPCION-NODO02.md) · [Índice general del ensayo](../../../../../../../README.md). La recepción de custodia es distinta de la recepción científica independiente, pendiente.
 
 ## Límites y retorno
 

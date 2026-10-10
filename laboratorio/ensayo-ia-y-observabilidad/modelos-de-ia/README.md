@@ -1,6 +1,6 @@
 # Modelos de IA
 
-**Edición documental 17 · 8 de octubre de 2026.**
+**Edición documental 18 · 10 de octubre de 2026.**
 
 **Corte experimental conservado de la edición 10:** 03/10/2026, 09:37 UTC. Cada expediente conserva la fecha, configuración y alcance de sus propios resultados.
 
@@ -18,6 +18,13 @@ Los expedientes específicos de plataforma gestionada se organizan en el [nodo 0
 
 <a id="gpt-6-astra--nodo-03--cierre-del-07102026"></a>
 
+## Primer expediente ejecutado · Nodo 02
+
+| Candidato y expediente | Resultado y alcance | Evidencia |
+|---|---|---|
+| [Claude Opus 5.5 · Anthropic](acoplamientos-con-el-sv/02-plataforma-gestionada/antrophic/claude-opus-5-5/readme.md) | Manual MD09: 9/9 finales, seis críticas correctas, juicio asistido. CYB09: **88,89/100; No apto asistido**, R2 8/9 y C02 crítico. | [Informe CYB09](acoplamientos-con-el-sv/02-plataforma-gestionada/antrophic/claude-opus-5-5/ensayo-cyb09-20261010/entrega/INFORME.md), [polígono Rust/egui](acoplamientos-con-el-sv/02-plataforma-gestionada/antrophic/claude-opus-5-5/ensayo-cyb09-20261010/entrega/poligono-egui/POLIGONO-EGUI.html) y [recepción del nodo 02](acoplamientos-con-el-sv/02-plataforma-gestionada/antrophic/claude-opus-5-5/ensayo-cyb09-20261010/entrega/MATRIZ-RECEPCION-NODO02.md). Recepción científica independiente pendiente. |
+
+Kaggle gestiona el acceso al servicio de inferencia; el SV conserva en Rust el suministro, los límites, la observación exterior y el cotejo. Es el primer modelo efectivamente ensayado de esta modalidad. El resultado no acredita integración general del nodo, hardware del proveedor ni equivalencia con una API directa o una instalación propia.
 ## Recepciones documentales · Nodo 03
 
 | Candidato y expediente | Resultado y alcance | Evidencia |

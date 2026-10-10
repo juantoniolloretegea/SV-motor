@@ -1,5 +1,9 @@
 # Claude Opus 5.5 · Plataforma gestionada · Nodo 02
 
+Edición documental 1.6 · 10/10/2026. **Estado vigente:** manual MD09 cerrado, resultado asistido 9/9; CYB09 terminado, R2 88,89/100 y No apto asistido por C02 crítico. Custodia cotejada y sesión apagada; recepción científica independiente pendiente. Véanse la [matriz de recepción](ensayo-cyb09-20261010/entrega/MATRIZ-RECEPCION-NODO02.md) y los límites de cada campaña.
+
+## Antecedente fechado del manual · edición 1.5
+
 Edición documental 1.5 · 09/10/2026. **Nueve preguntas del manual completadas en R0/R1/R2; resultado asistido final 9/9, seis críticos correctos. Recepción independiente pendiente. Ejecución detenida tras el manual por instrucción humana.**
 
 ## Modelo y despliegue
@@ -36,6 +40,10 @@ Se completa la omisión del polígono en la entrega inicial: [entrega Rust/egui]
 
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
 
+
+## Custodia y referencias competentes · 10/10/2026
+
+[Control de conservación](ensayo-cyb09-20261010/entrega/CONTROL-CUSTODIA.json), [puntuación cotejada en Rust](ensayo-cyb09-20261010/entrega/PUNTUACION-RUST.json), [tique TT-0026](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/a201e592a304abd982e070399038d861981aa036/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0026.md) y [Acta 005](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/a201e592a304abd982e070399038d861981aa036/docs/calidad/tuberias-ia/continuacion-15-09-2026/ACTA_005_CLAUDE_OPUS_5_5_NODO02_2026_10_09.md). El informe administrativo específico es SV-GASTO-20261010-010 en su sede privada; una reserva o un contador de uso no acreditan liquidación. El manual y sus originales permanecen íntegros en su corte histórico.
 
 ## Contraste CYB09 terminado · 10/10/2026
 
