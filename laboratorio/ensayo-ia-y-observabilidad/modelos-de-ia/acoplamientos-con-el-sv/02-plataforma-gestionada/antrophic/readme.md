@@ -9,3 +9,10 @@ El nodo 02 corresponde a experimentación en una plataforma gestionada. Sus perm
 Las versiones históricas y los resultados de otros candidatos permanecen separados. Una prueba documental no acredita aptitud clínica ni un sistema operativo de ciberseguridad.
 
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
+
+
+## Continuación documental del primer modelo · 10/10/2026
+
+[Claude Opus 5.5: contraste CYB09, terna y evidencias](claude-opus-5-5/ensayo-cyb09-20261010/entrega/INFORME.md). Se mantiene separado el manual histórico, el nuevo dictamen asistido y la recepción científica independiente pendiente. El despliegue sigue gestionado mediante Kaggle, con frontera Rust, sin instalación local de pesos ni acreditación de aptitud general. [Datos operativos para el nodo 02](claude-opus-5-5/ensayo-cyb09-20261010/entrega/OBSERVABILIDAD-NODO02.md).
+
+© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).

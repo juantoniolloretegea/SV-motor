@@ -1,0 +1,26 @@
+warn: could not canonicalize path C:\laboratorio\watson-local\lenguaje-computacion-sv
+warn: could not canonicalize path C:\laboratorio\watson-local
+warn: could not canonicalize path C:\laboratorio
+warn: could not canonicalize path C:\
+   Compiling sv-visor-pdf v0.6.0 (C:\laboratorio\watson-local\lenguaje-computacion-sv\desarrollo\acoplamientos-con-el-sv\visor-claude-cyb09-egui)
+warning: hard linking files in the incremental compilation cache failed. copying files instead. consider moving the cache directory to a file system which supports hard linking in session dir `C:\laboratorio\watson-local\lenguaje-computacion-sv\compilacion\visor-claude\debug\incremental\sv_visor_pdf-3mr1xi5512v4c\s-hn35ge3mny-18oo6cn-working`
+
+warning: unused imports: `Value` and `json`
+ --> src\contrato.rs:1:18
+  |
+1 | use serde_json::{json,Value};
+  |                  ^^^^ ^^^^^
+  |
+  = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+warning: `sv-visor-pdf` (lib test) generated 2 warnings (run `cargo fix --lib -p sv-visor-pdf --tests` to apply 1 suggestion)
+    Finished `test` profile [unoptimized] target(s) in 6.80s
+     Running unittests src\lib.rs (compilacion/visor-claude\debug\deps\sv_visor_pdf-5e1bcdd21ff1f88f.exe)
+
+running 3 tests
+test tests::no_se_representan_posiciones_o_ternas_incompletas ... ok
+test tests::escala_y_clasificacion_exhaustiva ... ok
+test tests::vertices_botones_y_etapas_conservan_fuente ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.09s
+

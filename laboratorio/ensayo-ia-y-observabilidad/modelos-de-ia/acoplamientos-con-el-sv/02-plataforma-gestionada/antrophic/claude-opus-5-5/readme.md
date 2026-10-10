@@ -35,3 +35,16 @@ GitHub es la sede documental central. La custodia se declara tras recuperación 
 Se completa la omisión del polígono en la entrega inicial: [entrega Rust/egui](ensayo-md09-cyb16-20261009/corte-01/poligono-egui/ENTREGA-POLIGONO.md) y [HTML autónomo](ensayo-md09-cyb16-20261009/corte-01/poligono-egui/POLIGONO-EGUI.html), con las nueve posiciones R2, terna 9/0/0, seis críticos correctos, citas, advertencias y comparación de etapas. Dictamen asistido y recepción independiente pendiente permanecen separados. Ninguna nueva generación ni cambio de resultado; la campaña sigue detenida. Antecedente íntegro bajo la revisión c57f2a191a02571cc13b8319ccec60cf630732fe.
 
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
+
+
+## Contraste CYB09 terminado · 10/10/2026
+
+El nodo 02 conserva su primer modelo, anthropic/claude-opus-5-5@default, mediante Kaggle Benchmarks Model Proxy. El [contraste abreviado](ensayo-cyb09-20261010/entrega/INFORME.md) contiene nueve preguntas críticas y 27 entregas: cuatro originales recuperados y 23 generaciones nuevas, sin repetir el manual. Dictamen asistido R2: 8/9, no admisible según la clave por el requisito de conservación de C02; R1 9/9 se conserva como etapa histórica y no sustituye R2. Recepción científica independiente pendiente.
+
+El despliegue es gestionado por el proveedor a través de Kaggle; no se instalan pesos de Claude en el nodo. Composición, adaptación, observación, continuidad y cotejo se realizan en Rust. El auxiliar del cuaderno sólo descarga, inicia y conserva el ejecutable. En la frontera efectivamente usada: suministro íntegro del corpus mdBook fijado, JSON completo sin flujo, sin herramientas autónomas del candidato, reasoning_effort high, salida máxima de 16.384 tokens y límite de transporte de 300 segundos. No se acredita revisión inmutable de pesos, hardware interno del proveedor ni primer token.
+
+Se conserva la [petición operativa del nodo 02](ensayo-cyb09-20261010/entrega/OBSERVABILIDAD-NODO02.md), con declaraciones del candidato, contadores del proveedor y observación exterior separados. El servicio contabiliza razón pero no devuelve su texto en un canal separado; se conservan respuesta, fundamentos públicos, informe operativo y originales, sin inventar pensamiento interno. El coste nuevo comunicado fue 8,21776 USD, distinto de liquidación. La sesión quedó apagada y no se amplía el examen.
+
+[Polígono interactivo Rust/egui](ensayo-cyb09-20261010/entrega/poligono-egui/POLIGONO-EGUI.html) · [Originales y manifiesto](ensayo-cyb09-20261010/entrega/MANIFIESTO-ORIGINALES.json). El HTML autónomo se descarga y abre en un navegador compatible con WebAssembly y WebGL; GitHub muestra su fuente. Los resultados históricos y sus límites permanecen íntegros.
+
+© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
