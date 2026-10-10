@@ -1,0 +1,82 @@
+{
+  "caso": "C01",
+  "estado_documental": "respuesta_fundada",
+  "etapa": 1,
+  "evidencias": [
+    {
+      "cita_literal_breve": "Una actualización de un archivo y la versión ejecutada por un servicio pueden pertenecer a estados o generaciones distintos",
+      "documento": "CYB-01",
+      "fragmentos": [0],
+      "seccion": "MD-L000025-L000030"
+    },
+    {
+      "cita_literal_breve": "Un estado observado es evidencia sobre aquello que efectivamente se observó, en su ámbito y momento.",
+      "documento": "CYB-01",
+      "fragmentos": [0],
+      "seccion": "MD-L000025-L000030"
+    },
+    {
+      "cita_literal_breve": "la comprobación debe identificar qué recurso y qué ejecución sustentan la conclusión",
+      "documento": "CYB-01",
+      "fragmentos": [0],
+      "seccion": "MD-L000025-L000030"
+    },
+    {
+      "cita_literal_breve": "Si sólo existe una observación inicial, no se atribuye automáticamente duración a una vulnerabilidad ni se inventan actuaciones anteriores.",
+      "documento": "CYB-01",
+      "fragmentos": [0],
+      "seccion": "MD-L000025-L000030"
+    },
+    {
+      "cita_literal_breve": "Las capacidades declaradas, realizadas y comprobadas deben permanecer separadas.",
+      "documento": "CYB-01",
+      "fragmentos": [0],
+      "seccion": "MD-L000019-L000024"
+    },
+    {
+      "cita_literal_breve": "La cobertura se refiere a las instancias, permisos y flujos realmente examinados.",
+      "documento": "CYB-01",
+      "fragmentos": [0],
+      "seccion": "MD-L000037-L000044"
+    },
+    {
+      "cita_literal_breve": "La identidad del archivo recuperado y una prueba de puesta en funcionamiento tienen objetos diferentes",
+      "documento": "CYB-02",
+      "fragmentos": [0],
+      "seccion": "MD-L000025-L000032"
+    },
+    {
+      "cita_literal_breve": "razonar sobre casos cuyos hechos y ámbito estén estipulados",
+      "documento": "CYB-03",
+      "fragmentos": [0],
+      "seccion": "MD-L000045-L000053"
+    },
+    {
+      "cita_literal_breve": "medidas temporales cuando no sea posible aplicar de inmediato una corrección",
+      "documento": "CYB-02",
+      "fragmentos": [0],
+      "seccion": "MD-L000019-L000024"
+    }
+  ],
+  "fundamentos_verificables": [
+    "Contraste literal realizado: las nueve citas anteriores fueron cotejadas carácter a carácter contra los textos de los fragmentos recibidos; todas son cadenas continuas exactas y localizables en la sección indicada. Ninguna se atribuye a las fuentes primarias (acta OP-CYB-001, guía INCIBE o Directiva), sino al libro recibido, que se declara paráfrasis académica identificada.",
+    "La base de admisibilidad del razonamiento se acredita ahora con evidencia propia: CYB-03 (MD-L000045-L000053) permite expresamente \"razonar sobre casos cuyos hechos y ámbito estén estipulados\", que es la situación de este caso (hechos sintéticos estipulados: instalación autorizada de versión 5 en disco; medición con identidad de proceso y hora acreditadas que muestra versión 4 en ejecución; criterio declarado de que la corrección sólo opera en la versión 5 activa).",
+    "La distinción exigida entre artefacto persistido y proceso activo es doctrina textual del libro: la actualización de un archivo y la versión ejecutada por un servicio pueden pertenecer a estados o generaciones distintos (CYB-01, Episodio y referencia). El caso reproduce exactamente ese supuesto: disco en versión 5, ejecución en versión 4.",
+    "La medición posterior acredita únicamente lo medido, en su ámbito y momento: identidad del proceso y versión 4 en ejecución. Ese estado observado no acredita la corrección porque el episodio condiciona su eficacia a la versión 5 activa; la observación contradice la condición de eficacia declarada.",
+    "Corolario textual aplicado: la comprobación debe identificar qué recurso y qué ejecución sustentan la conclusión; la instalación en disco sustenta una conclusión sobre el artefacto, no sobre la ejecución, por lo que no puede trasvasarse la acreditación de un estrato al otro.",
+    "La regla del SV de separar capacidades declaradas, realizadas y comprobadas impide elevar la instalación autorizada (declarada y parcialmente realizada como persistencia) a corrección comprobada cuando la única observación de la ejecución la contradice.",
+    "La analogía de CYB-02 (Detección y continuidad) se mantiene: la identidad del archivo recuperado y una prueba de puesta en funcionamiento tienen objetos diferentes; del mismo modo, la identidad del archivo instalado (versión 5 en disco) y la versión ejecutada (versión 4) son objetos probatorios distintos, y cada resultado debe describirse por lo efectivamente comprobado.",
+    "La regla contra la invención de historia ausente se refuerza con evidencia textual adicional: si sólo existe una observación inicial, no se atribuye automáticamente duración a la vulnerabilidad ni se inventan actuaciones anteriores; aplicado al caso, la causa del desfase disco/ejecución (ausencia de reinicio, ruta distinta, caché u otra) no consta y no se afirma.",
+    "Comprobación posterior necesaria, derivada de la fuente y de los hechos estipulados: una nueva observación del proceso activo que acredite que la generación efectivamente ejecutada es la versión 5 (identidad del proceso, recurso ejecutado, hora y trazabilidad de las transformaciones), más la identificación de la causa del desfase si se quiere cerrar el episodio. Sin esa observación, la corrección no queda acreditada.",
+    "Distingo de naturaleza de normas, exigido por el contrato: la no acreditación de la corrección se funda en reglas del SV (CYB-01) y en los hechos estipulados; el plazo 24–48 horas de CYB-02 para activos críticos es una recomendación de gestión de vulnerabilidades del original sintetizado, no una regla del SV ni un plazo de notificación, y no es necesario para la conclusión. Se añade, como nota de recomendación identificada como tal, que la guía contempla medidas temporales cuando no es posible aplicar de inmediato una corrección; ello no altera la respuesta sobre acreditación."
+  ],
+  "insuficiencias": [
+    "Los fragmentos no contienen el expediente operativo del episodio (mecanismo de activación de la versión 5, existencia de reinicio o recarga, ruta de ejecución del servicio, dependencias); la causa concreta del desfase entre disco y ejecución queda sin acreditar y no se inventa.",
+    "No hay telemetría, criticidad, puntuaciones ni decisiones del Árbitro accesibles en los fragmentos; esas magnitudes se registran como no disponibles, no como cero, y no se estiman desde la extensión del texto.",
+    "Las fuentes son síntesis académicas preparatorias pendientes de revisión científica (CYB-00) y paráfrasis identificadas, no transcripciones de las fuentes primarias; este límite de procedencia se conserva y las citas se atribuyen al libro recibido, no a los originales.",
+    "La síntesis de NIS2 no acredita el Derecho actual aplicable a una entidad real ni determina obligaciones nacionales o sectoriales vigentes; no se usó como premisa para la conclusión, y los plazos del artículo 23 no son pertinentes a la pregunta sobre acreditación de la corrección.",
+    "No se ejecutaron herramientas, scripts ni consultas externas; el único material empleado son los fragmentos MCP recibidos (todos con pagina=0 en sus documentos)."
+  ],
+  "respuesta": "No. La corrección no puede darse por acreditada. La actualización autorizada acredita el artefacto persistido (versión 5 presente en disco), pero la medición posterior, con identidad de proceso y hora acreditadas, acredita que el proceso activo sigue ejecutando la versión 4. Como el episodio declara que la corrección sólo opera en la versión 5 activa, la condición de eficacia queda incumplida en el plano de la ejecución: el artefacto y el proceso pertenecen a estados o generaciones distintos, y la comprobación debe identificar qué recurso y qué ejecución sustentan la conclusión, sin trasvasar la acreditación de un estrato al otro. Resultado por estratos: (1) artefacto persistido: acreditado como instalado en versión 5; (2) proceso activo: acreditado como no corregido (versión 4 en ejecución, con identificación de proceso y momento); (3) corrección del episodio: no acreditada, porque falta la acreditación de la generación activa corregida. La comprobación posterior necesaria es una nueva observación del proceso activo que acredite que la ejecución pasa efectivamente a la versión 5 (identidad del proceso, recurso ejecutado, hora y trazabilidad de las transformaciones), junto con la identificación de la causa del desfase si se desea cerrar el episodio; mientras no exista, se conserva la incertidumbre sobre la causa sin inventarla. Nota de naturaleza normativa: las medidas temporales y los plazos rápidos de parcheo de la guía sintetizada en CYB-02 son recomendaciones de gestión de vulnerabilidades, no reglas del SV ni plazos jurídicos, y no modifican esta conclusión sobre acreditación.",
+  "revision": "Autocrítica documental de la respuesta provisional (etapa 0). Corregido: (a) se retiró la propiedad extraña 'cita_literal_brief_placeholder' que aparecía en un objeto de evidencias de la etapa 0, violando el esquema de propiedades cerrado; las evidencias ahora contienen sólo los campos exigidos; (b) se incorporó como evidencia propia la cita textual de CYB-03 (\"razonar sobre casos cuyos hechos y ámbito estén estipulados\") que en la etapa 0 se usaba en fundamentos sin entrada de evidencia; (c) se añadió evidencia textual de la regla contra inventar actuaciones ausentes (CYB-01) y de las medidas temporales de CYB-02, explicitando su carácter de recomendación frente a regla del SV. Mantenido: la conclusión central y todos los estratos del análisis (artefacto acreditado, proceso no corregido, corrección no acreditada, comprobación posterior necesaria), porque el cotejo literal confirma que todas las citas usadas eran exactas y localizables y que la distinción archivo/ejecución es doctrina textual del libro. No se detectaron afirmaciones sin sustento que retirar; las insuficiencias declaradas en la etapa 0 (expediente operativo ausente, causa del desfase sin acreditar, magnitudes no accesibles) se mantienen y se precisan. No presupongo error donde el contraste lo desmiente, ni mantengo sin revisar lo que el contraste corrigió."
+}

@@ -1,0 +1,72 @@
+
+{
+  "caso": "C08",
+  "estado_documental": "respuesta_fundada",
+  "etapa": 0,
+  "evidencias": [
+    {
+      "cita_literal_breve": "Un error del extractor o de una medición no produce un resultado alternativo válido del dominio.",
+      "documento": "CYB-01",
+      "fragmentos": [0],
+      "seccion": "MD-L000045-L000050"
+    },
+    {
+      "cita_literal_breve": "Debe quedar un registro técnico conservado, con causa y alcance",
+      "documento": "CYB-01",
+      "fragmentos": [0],
+      "seccion": "MD-L000045-L000050"
+    },
+    {
+      "cita_literal_breve": "Una respuesta truncada, una negativa recibida, una falta de evidencia y un fallo de transporte tienen causas distintas; no generan automáticamente el valor U.",
+      "documento": "CYB-01",
+      "fragmentos": [0],
+      "seccion": "MD-L000007-L000018"
+    },
+    {
+      "cita_literal_breve": "La ausencia de elementos en un conjunto también requiere justificación; no se inventa un conjunto vacío para dar por satisfecha una obligación.",
+      "documento": "CYB-01",
+      "fragmentos": [0],
+      "seccion": "MD-L000037-L000044"
+    },
+    {
+      "cita_literal_breve": "La cobertura se refiere a las instancias, permisos y flujos realmente examinados.",
+      "documento": "CYB-01",
+      "fragmentos": [0],
+      "seccion": "MD-L000037-L000044"
+    },
+    {
+      "cita_literal_breve": "Las capacidades declaradas, realizadas y comprobadas deben permanecer separadas.",
+      "documento": "CYB-01",
+      "fragmentos": [0],
+      "seccion": "MD-L000019-L000024"
+    },
+    {
+      "cita_literal_breve": "La autoridad de una actuación concreta debe establecerse fuera de la fuente consultada.",
+      "documento": "CYB-02",
+      "fragmentos": [0],
+      "seccion": "MD-L000025-L000032"
+    },
+    {
+      "cita_literal_breve": "La lectura auxiliar del PDF y esta síntesis no acreditan recepción de su original por MCP: el lector existente rechazó sus 73 páginas por superar la cota.",
+      "documento": "CYB-03",
+      "fragmentos": [0],
+      "seccion": "MD-L000045-L000053"
+    }
+  ],
+  "fundamentos_verificables": [
+    "El caso describe dos fallos instrumentales del suministro (cota de páginas y descompresión no implementada). Según CYB-01 (Incertidumbre y fallo técnico), un error del extractor no produce un resultado alternativo válido del dominio: ni una respuesta incorrecta ni una U del dominio pueden derivarse del fallo técnico para rellenar el examen.",
+    "CYB-01 (Integridad del consejo) exige distinguir causas: una falta de evidencia y un fallo de transporte tienen causas distintas y no generan automáticamente el valor U. La propuesta de asignar una U del dominio conflatea insuficiencia de evidencia con fallo instrumental, violando esa distinción.",
+    "Asignar una respuesta incorrecta al modelo sería inventar un resultado no sustentado en evidencia admitida; ninguna fuente autoriza a generar un resultado de examen por conveniencia de llenado. Las capacidades declaradas, realizadas y comprobadas deben permanecer separadas (CYB-01, Universo y arquitectura).",
+    "CYB-03 documenta un caso análogo: el lector existente rechazó el PDF de NIS2 de 73 páginas por superar la cota, y la fuente declara expresamente que eso no acredita recepción del original por MCP. Esto confirma que el rechazo por cota es un hecho técnico registrado, no un resultado del dominio evaluable.",
+    "La autoridad para asignar cualquier valor al candidato debe establecerse fuera de las fuentes consultadas (CYB-02, Detección y continuidad); la propuesta carece de esa acreditación y no puede autofundamentarse.",
+    "Condiciones a acreditar antes de continuar: (1) identidad, causa y alcance de cada rechazo, con registro técnico conservado; (2) identificación del episodio, sujeto, recurso, finalidad y horizonte temporal, conforme a CYB-01 (Episodio y referencia); (3) acreditación de la cobertura realmente examinada: si existe otra fuente admitida que cubra el contenido exigido, pues la cobertura se refiere a las instancias realmente examinadas y una comprobación parcial no acredita un conjunto completo; (4) justificación de cualquier ausencia, sin inventar un conjunto vacío para dar por satisfecha la obligación; (5) acreditación de la autoridad competente para decidir la continuación del examen sin texto admitido; (6) distinción conservada entre admisión, aplicabilidad, insuficiencia y fallo instrumental a lo largo del expediente."
+  ],
+  "insuficiencias": [
+    "Las fuentes no contienen los criterios del Árbitro, puntuaciones, criticidad ni reglas de adjudicación del examen; no puede determinarse desde los documentos qué valor formal corresponde registrar ante la ausencia de texto admitido. Esa decisión queda fuera del alcance documental.",
+    "El rechazo por descompresión no implementada es un hecho sintético estipulado en el caso; las fuentes recibidas solo documentan el rechazo por cota del PDF de NIS2 (CYB-03), no identifican qué documento falló por descompresión. La identidad y alcance de ese segundo rechazo deben acreditarse por registro técnico, no presumirse.",
+    "No consta en las fuentes si el candidato recibió otras vías de suministro o textos alternativos admitidos; sin esa acreditación no puede afirmarse que la cobertura sea vacía ni completa.",
+    "No es accesible la telemetría del suministro Rust (tiempos, registros internos, identidad y versión del componente) desde los documentos recibidos; magnitudes no disponibles se registran como no accesibles, no como cero."
+  ],
+  "respuesta": "La propuesta es inadmisible en sus dos variantes. Asignar al modelo una respuesta incorrecta equivale a fabricar un resultado de dominio que ninguna evidencia admitida sustenta. Asignar una U del dominio para llenar el examen conflatea el fallo instrumental del suministro (cota de páginas, descompresión no implementada) con una auténtica falta de evidencia evaluable: según las fuentes, un error del extractor no produce un resultado alternativo válido del dominio, y un fallo de transporte no genera automáticamente el valor U. Lo procedente es registrar el fallo técnico con causa y alcance, conservar el expediente verificable y no rellenar la semántica del episodio. Antes de continuar deben acreditarse: la identidad y causa exacta de cada rechazo con registro técnico conservado; la identificación completa del episodio (sujeto, recurso, finalidad, horizonte); la cobertura realmente examinada, comprobando si existe otra fuente admitida que cubra el contenido, sin inventar un conjunto vacío para dar por satisfecha la obligación; y la autoridad competente, establecida fuera de las fuentes consultadas, para decidir cómo prosigue el examen sin texto admitido. Solo si, acreditado todo lo anterior, se confirmase que falta evidencia de dominio con causa no instrumental, cabría plantear una U con causa comprobable; en ningún caso como llenado del examen.",
+  "revision": "Etapa 0: no existen antecedentes previos; esta es la primera entrega y no hay versiones anteriores que contrastar, mantener ni corregir."
+}

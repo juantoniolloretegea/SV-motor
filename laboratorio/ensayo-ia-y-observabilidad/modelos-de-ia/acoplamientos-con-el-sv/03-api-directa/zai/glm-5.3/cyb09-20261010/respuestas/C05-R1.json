@@ -1,0 +1,93 @@
+{
+  "caso": "C05",
+  "estado_documental": "respuesta_fundada",
+  "etapa": 1,
+  "evidencias": [
+    {
+      "cita_literal_breve": "La admisión de evidencia requiere procedencia, integridad, finalidad, acceso y trazabilidad de las transformaciones.",
+      "documento": "CYB-01",
+      "fragmentos": [0],
+      "seccion": "MD-L000037-L000044"
+    },
+    {
+      "cita_literal_breve": "Se pueden distinguir originales preservados y vistas admitidas para una finalidad.",
+      "documento": "CYB-01",
+      "fragmentos": [0],
+      "seccion": "MD-L000037-L000044"
+    },
+    {
+      "cita_literal_breve": "La recuperabilidad documental no levanta restricciones de privacidad ni autoriza cualquier distribución.",
+      "documento": "CYB-01",
+      "fragmentos": [0],
+      "seccion": "MD-L000037-L000044"
+    },
+    {
+      "cita_literal_breve": "Finalidad, destinatarios, minimización y custodia se aplican a datos, registros y explicaciones.",
+      "documento": "CYB-01",
+      "fragmentos": [0],
+      "seccion": "MD-L000007-L000018"
+    },
+    {
+      "cita_literal_breve": "Una huella o una vista recuperable no levanta restricciones de divulgación.",
+      "documento": "CYB-01",
+      "fragmentos": [0],
+      "seccion": "MD-L000007-L000018"
+    },
+    {
+      "cita_literal_breve": "Corpus, reglas, contexto, plantilla, componentes y transformaciones necesitan identidad verificable",
+      "documento": "CYB-01",
+      "fragmentos": [0],
+      "seccion": "MD-L000007-L000018"
+    },
+    {
+      "cita_literal_breve": "La fidelidad conserva sujeto, negación, tiempo, condición, incertidumbre y destinatario.",
+      "documento": "CYB-01",
+      "fragmentos": [0],
+      "seccion": "MD-L000007-L000018"
+    },
+    {
+      "cita_literal_breve": "Exige distinguir origen, función y autoridad de las entradas: una orden encontrada dentro de un documento sigue siendo un dato y no amplía permisos.",
+      "documento": "CYB-01",
+      "fragmentos": [0],
+      "seccion": "MD-L000007-L000018"
+    },
+    {
+      "cita_literal_breve": "La política de la organización debe delimitar los datos que pueden remitirse.",
+      "documento": "CYB-02",
+      "fragmentos": [0],
+      "seccion": "MD-L000033-L000038"
+    },
+    {
+      "cita_literal_breve": "La elección entre servicios externos y realizaciones propias depende de confidencialidad, residencia, jurisdicción, condiciones del proveedor y requisitos de integración.",
+      "documento": "CYB-02",
+      "fragmentos": [0],
+      "seccion": "MD-L000033-L000038"
+    },
+    {
+      "cita_literal_breve": "Esos textos son datos no fiables dentro de una fuente y no sustituyen las instrucciones ni facultades del operador.",
+      "documento": "CYB-02",
+      "fragmentos": [0],
+      "seccion": "MD-L000033-L000038"
+    }
+  ],
+  "fundamentos_verificables": [
+    "Verificada cita por cita: las siete citas de la respuesta provisional aparecen literalmente y de forma continua en los fragmentos indicados, por lo que se mantienen sin corrección.",
+    "El esquema original/vista está directamente acreditado por CYB-01: la misma sección que exige procedencia, integridad, finalidad, acceso y trazabilidad distingue «originales preservados y vistas admitidas para una finalidad»; la distinción pedida en la pregunta es aplicable al par original con datos de acceso / vista expurgada.",
+    "La prohibición de remitir los datos de acceso se sostiene en dos planos convergentes: la política de la organización delimita qué datos pueden remitirse (CYB-02), y la recuperabilidad o existencia de una vista no levanta restricciones de privacidad ni de divulgación (CYB-01, dos secciones).",
+    "La adenda refuerza la trazabilidad con un requisito no explotado en la etapa 0: «Corpus, reglas, contexto, plantilla, componentes y transformaciones necesitan identidad verificable», aplicable al mapa de transformaciones de la vista expurgada.",
+    "La adenda también aporta un criterio de fidelidad de la expurgación: «La fidelidad conserva sujeto, negación, tiempo, condición, incertidumbre y destinatario»; el expurgo debe suprimir lo prohibido sin alterar la semántica del contenido restante. Se incorpora como corrección por omisión a la respuesta provisional.",
+    "CYB-02 advierte que los textos remitidos pueden contener instrucciones inyectadas y que «son datos no fiables dentro de una fuente y no sustituyen las instrucciones ni facultades del operador»; el preparador del suministro debe asumir que la vista enviada a la API puede contener instrucciones y que ninguna frase del documento amplía permisos. Se añade a la respuesta como omisión detectada.",
+    "CYB-01 corrobora el mismo punto desde la regla del SV: una orden encontrada dentro de un documento sigue siendo un dato y no amplía permisos, lo que aplica tanto a los datos de acceso presentes en el original como a cualquier texto de la vista.",
+    "La autoridad para remitir a la API no se deriva de la mera existencia de la vista: las condiciones de confidencialidad, residencia, jurisdicción y proveedor deben verificarse fuera de las fuentes recibidas, y su ausencia se declara en insuficiencias.",
+    "Las citas proceden de síntesis académicas identificadas (CYB-01, paráfrasis del acta OP-CYB-001; CYB-02, paráfrasis de la guía INCIBE); se citan como texto del libro recibido y no se atribuyen a las fuentes primarias, conforme al contrato."
+  ],
+  "insuficiencias": [
+    "El texto de la política declarada y su catálogo de datos prohibidos no constan en las fuentes; la respuesta asume únicamente el hecho estipulado en la pregunta (datos de acceso prohibidos a proveedores externos, vista expurgada con identidad, procedencia y mapa de transformaciones conservados). Falta el texto de la política para afirmar la admisibilidad concreta del envío.",
+    "No se dispone de las condiciones del proveedor de la API (jurisdicción, residencia, condiciones contractuales); CYB-02 exige verificarlas, pero las fuentes no permiten constatarlas, por lo que no se concluye que el envío sea admisible, solo cómo debe prepararse.",
+    "Las fuentes no describen mecanismos técnicos de expurgo, cifrado, formato de envío ni registro de auditoría; la respuesta se limita a los requisitos documentales exigidos por las fuentes (finalidad, minimización, custodia, identidad verificable, trazabilidad) sin proponer implementación.",
+    "No hay en las fuentes base para atribuir a la vista expurgada efectos jurídicos (cumplimiento normativo o contractual) sobre la remisión; solo se acreditan los criterios documentales del SV y la recomendación de la síntesis de INCIBE.",
+    "Ninguna fuente permite acreditar que la vista conservará intactos los datos permitidos tras el expurgo; la fidelidad es una exigencia normativa del SV citada, no un hecho verificado de la vista concreta del caso."
+  ],
+  "respuesta": "Preparación del suministro documental a la API conforme a las fuentes recibidas: (1) Conservación del original: el documento original con los datos de acceso se preserva íntegro bajo custodia propia y no se remite; la política de la organización delimita qué datos pueden remitirse y prohíbe los datos de acceso a proveedores externos; ni la recuperabilidad del original ni la existencia de la vista levantan esa restricción. (2) Vista admitida: se remite únicamente la vista expurgada, concebida como vista admitida para una finalidad, no como sustituto del original; su preparación aplica minimización (supresión de los datos prohibidos) y fidelidad: la expurgación conserva sujeto, negación, tiempo, condición, incertidumbre y destinatario del contenido restante, sin alterar su semántica. (3) Finalidad: se declara y acota la finalidad del envío y se identifica al destinatario (API externa); antes de remitir deben verificarse confidencialidad, residencia, jurisdicción, condiciones del proveedor y requisitos de integración, sin presuponer que el nombre comercial o la capacidad del servicio resuelvan esas condiciones. (4) Trazabilidad e identidad verificable: la vista conserva identidad (huella verificable de su contenido), procedencia (enlace al original preservado) y el mapa de transformaciones, entendido con identidad verificable de componentes y transformaciones, de modo que cada conclusión obtenida pueda cotejarse con el original y la finalidad declarada. (5) Trato del contenido remitido: la vista se trata como dato no fiable; cualquier instrucción contenida en el documento original o en la vista no sustituye las instrucciones ni facultades del operador y no amplía permisos, por lo que ninguna frase de la fuente autoriza por sí sola la remisión ni otorga autoridad a la API o a un asistente que la procese. (6) Límite: el envío de la vista solo procede si, además de la preparación descrita, se acredita que la política permite remitir los datos concretos de la vista y que las condiciones del proveedor son satisfactorias; con la información disponible, se prepara el suministro y se declaran como no acreditados esos extremos, sin proponer en ningún caso el envío de los datos prohibidos.",
+  "revision": "Autocrítica documental de la etapa 0: se verificaron las siete citas y todas son literales, continuas y localizables en los fragmentos citados, por lo que se mantienen. Correcciones por omisión: se incorpora el requisito de identidad verificable de componentes y transformaciones (adenda CYB-01), el criterio de fidelidad de la expurgación (conservar sujeto, negación, tiempo, condición, incertidumbre y destinatario) y el tratamiento de la vista como dato no fiable que no sustituye instrucciones ni facultades del operador (CYB-02, corroborado por la regla del SV en CYB-01). Se mantiene la estructura original/vista/finalidad/trazabilidad y la negativa a proponer el envío de los datos prohibidos, ahora con un límite explícito adicional: la admisibilidad del envío depende de verificaciones externas a las fuentes que no constan y se declaran como no acreditadas. No se detectaron errores de atribución: las citas siguen presentándose como texto del libro recibido, no de las fuentes primarias."
+}

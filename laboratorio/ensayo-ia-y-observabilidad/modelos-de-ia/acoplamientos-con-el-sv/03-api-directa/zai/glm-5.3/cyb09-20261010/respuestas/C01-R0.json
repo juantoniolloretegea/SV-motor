@@ -1,0 +1,63 @@
+
+{
+  "caso": "C01",
+  "estado_documental": "respuesta_fundada",
+  "etapa": 0,
+  "evidencias": [
+    {
+      "cita_literal_breve": "Una actualización de un archivo y la versión ejecutada por un servicio pueden pertenecer a estados o generaciones distintos",
+      "documento": "CYB-01",
+      "fragmentos": [0],
+      "seccion": "MD-L000025-L000030"
+    },
+    {
+      "cita_literal_breve": "Un estado observado es evidencia sobre aquello que efectivamente se observó, en su ámbito y momento.",
+      "documento": "CYB-01",
+      "fragmentos": [0],
+      "seccion": "MD-L000025-L000030"
+    },
+    {
+      "cita_literal_breve": "la comprobación debe identificar qué recurso y qué ejecución sustentan la conclusión",
+      "documento": "CYB-01",
+      "fragmentos": [0],
+      "seccion": "MD-L000025-L000030"
+    },
+    {
+      "cita_literal_brief_placeholder": null,
+      "cita_literal_breve": "Las capacidades declaradas, realizadas y comprobadas deben permanecer separadas.",
+      "documento": "CYB-01",
+      "fragmentos": [0],
+      "seccion": "MD-L000019-L000024"
+    },
+    {
+      "cita_literal_breve": "La identidad del archivo recuperado y una prueba de puesta en funcionamiento tienen objetos diferentes",
+      "documento": "CYB-02",
+      "fragmentos": [0],
+      "seccion": "MD-L000025-L000032"
+    },
+    {
+      "cita_literal_breve": "La cobertura se refiere a las instancias, permisos y flujos realmente examinados.",
+      "documento": "CYB-01",
+      "fragmentos": [0],
+      "seccion": "MD-L000037-L000044"
+    }
+  ],
+  "fundamentos_verificables": [
+    "Los hechos están estipulados en el caso y la fuente permite razonar sobre hechos estipulados: CYB-03 (MD-L000045-L000053) declara que la síntesis permite \"razonar sobre casos cuyos hechos y ámbito estén estipulados\".",
+    "La distinción exigida entre artefacto persistido y proceso activo es doctrina textual del libro: la actualización de un archivo y la versión ejecutada por un servicio pueden pertenecer a estados o generaciones distintos (CYB-01, Episodio y referencia), exactamente la situación descrita: versión 5 en disco y versión 4 en ejecución.",
+    "La medición posterior acredita únicamente lo medido: identidad del proceso y versión 4 en ejecución en su momento y ámbito. No acredita la corrección, porque el propio episodio declara que la corrección \"sólo opera en la versión 5 activa\"; una entidad de ese tipo funcional condiciona el efecto a la generación activa, y la observación contradice esa condición.",
+    "Corolario del libro aplicable: si la versión ejecutada sigue siendo la 4, la instalación de la versión 5 en disco acredita el artefacto persistido (la actualización del archivo), pero no la ejecución corregida; la comprobación debe identificar qué recurso y qué ejecución sustentan la conclusión.",
+    "La analogía con la distinción de CYB-02 (Detección y continuidad) refuerza el resultado: la identidad del archivo instalado/recuperado y la prueba de puesta en funcionamiento de una versión tienen objetos diferentes, y sus resultados deben describirse por lo efectivamente comprobado, sin trasvasar la acreditación de uno al otro.",
+    "La regla del SV de separar capacidades declaradas, realizadas y comprobadas (CYB-01, Universo y arquitectura) impide elevar la instalación autorizada (capacidad declarada/realizada parcialmente) a corrección comprobada cuando la medición la contradice.",
+    "Comprobación posterior necesaria, derivada de la fuente: reidentificar la ejecución del servicio (identidad del proceso, hora y recurso) y acreditar que la generación efectivamente ejecutada es la versión 5, con la trazabilidad de las transformaciones exigida para la admisión de evidencia (CYB-01, Evidencia y cobertura). Sólo esa observación en el proceso activo, no la mera presencia del artefacto en disco, podría acreditar la corrección según el criterio declarado del episodio.",
+    "No se generan hechos ausentes: la fuente no permite afirmar causa del desfase (falta de reinicio, ruta de ejecución distinta, caché, etc.), y ese dato no debe inventarse; la conclusión se limita a la no acreditación de la corrección, no a una causa."
+  ],
+  "insuficiencias": [
+    "Las fuentes no contienen el expediente operativo del episodio (órdenes citadas, ruta de ejecución del servicio, mecanismo de activación de la versión 5, existencia de reinicio o recarga); por ello la causa concreta del desfase entre disco y ejecución queda sin acreditar y no se afirma.",
+    "No hay telemetría, criticidad ni decisiones del Árbitro accesibles en los fragmentos recibidos; magnitudes no accesibles se registran como no disponibles y no se estiman.",
+    "El libro es una síntesis académica preparatoria pendiente de revisión (CYB-00, índice): sus paráfrasis son paráfrasis identificadas, no transcripciones de las fuentes primarias; este límite se conserva y no afecta a la distinción aquí aplicada, que es textual del libro recibido.",
+    "No se ejecutaron herramientas ni consultas externas; el único material empleado son los fragmentos MCP recibidos (todos con pagina=0 en sus respectivos documentos)."
+  ],
+  "respuesta": "No. La corrección no puede darse por acreditada. La instalación autorizada acredita el artefacto persistido (versión 5 presente en disco), pero la medición posterior con identidad de proceso y hora acreditadas acredita que el proceso activo sigue ejecutando la versión 4. Dado que el episodio declara que la corrección sólo opera en la versión 5 activa, la condición de eficacia queda incumplida en el plano de la ejecución: el artefacto y el proceso pertenecen a estados o generaciones distintos y la comprobación debe distinguir qué recurso y qué ejecución sustentan la conclusión. Resultado por estratos: (1) artefacto persistido: acreditado como actualizado a versión 5; (2) proceso activo: acreditado como no corregido (versión 4 en ejecución, con identificación de proceso y momento); (3) corrección del episodio: no acreditada, porque falta la acreditación de la generación activa corregida. La comprobación posterior necesaria es una nueva observación del proceso activo que acredite que la ejecución pasa a la versión 5 (identidad del proceso, recurso ejecutado, hora y trazabilidad de la transformación), más la identificación de la causa del desfase si se desea cerrar el episodio; mientras no exista, se conserva la incertidumbre sobre la causa sin inventarla, y no se convierte la presencia del artefacto en disco en prueba de ejecución corregida.",
+  "revision": "Etapa 0: no existen entregas anteriores ni antecedentes que contrastar; esta es la respuesta provisional inicial, autosuficiente y fundada exclusivamente en los fragmentos recibidos. Se aplicó la distinción textual del libro entre actualización de archivo y versión ejecutada, y no se usaron fuentes externas."
+}

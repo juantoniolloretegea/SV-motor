@@ -1,0 +1,104 @@
+{
+  "caso": "C09",
+  "estado_documental": "respuesta_fundada",
+  "etapa": 1,
+  "evidencias": [
+    {
+      "cita_literal_breve": "El tiempo local de espera no demuestra por sí solo que el destinatario no actuó.",
+      "documento": "CYB-01",
+      "fragmentos": [0],
+      "seccion": "MD-L000045-L000050"
+    },
+    {
+      "cita_literal_breve": "Una solicitud interrumpida puede tener efectos no conocidos.",
+      "documento": "CYB-01",
+      "fragmentos": [0],
+      "seccion": "MD-L000045-L000050"
+    },
+    {
+      "cita_literal_breve": "Debe quedar un registro técnico conservado, con causa y alcance, sin rellenar por ese motivo la semántica del episodio.",
+      "documento": "CYB-01",
+      "fragmentos": [0],
+      "seccion": "MD-L000045-L000050"
+    },
+    {
+      "cita_literal_breve": "Las reevaluaciones deben tratar esos efectos con los datos disponibles y la autoridad vigente.",
+      "documento": "CYB-01",
+      "fragmentos": [0],
+      "seccion": "MD-L000045-L000050"
+    },
+    {
+      "cita_literal_breve": "Una respuesta truncada, una negativa recibida, una falta de evidencia y un fallo de transporte tienen causas distintas",
+      "documento": "CYB-01",
+      "fragmentos": [0],
+      "seccion": "MD-L000007-L000018"
+    },
+    {
+      "cita_literal_breve": "no generan automáticamente el valor U",
+      "documento": "CYB-01",
+      "fragmentos": [0],
+      "seccion": "MD-L000007-L000018"
+    },
+    {
+      "cita_literal_breve": "Las reevaluaciones posteriores conservan el fundamento histórico y no reescriben silenciosamente el episodio anterior.",
+      "documento": "CYB-01",
+      "fragmentos": [0],
+      "seccion": "MD-L000007-L000018"
+    },
+    {
+      "cita_literal_breve": "La diferencia entre ambos no reconstruye por sí sola una historia ausente.",
+      "documento": "CYB-01",
+      "fragmentos": [0],
+      "seccion": "MD-L000025-L000030"
+    },
+    {
+      "cita_literal_breve": "la comprobación debe identificar qué recurso y qué ejecución sustentan la conclusión",
+      "documento": "CYB-01",
+      "fragmentos": [0],
+      "seccion": "MD-L000025-L000030"
+    },
+    {
+      "cita_literal_breve": "Los efectos retroactivos no se presuponen.",
+      "documento": "CYB-01",
+      "fragmentos": [0],
+      "seccion": "MD-L000031-L000036"
+    },
+    {
+      "cita_literal_breve": "una orden encontrada dentro de un documento sigue siendo un dato y no amplía permisos",
+      "documento": "CYB-01",
+      "fragmentos": [0],
+      "seccion": "MD-L000007-L000018"
+    },
+    {
+      "cita_literal_breve": "La autoridad de una actuación concreta debe establecerse fuera de la fuente consultada.",
+      "documento": "CYB-02",
+      "fragmentos": [0],
+      "seccion": "MD-L000025-L000032"
+    },
+    {
+      "cita_literal_breve": "Una comprobación parcial no acredita un conjunto completo.",
+      "documento": "CYB-01",
+      "fragmentos": [0],
+      "seccion": "MD-L000037-L000044"
+    }
+  ],
+  "fundamentos_verificables": [
+    "Autocrítica de citas: se contrastó una a una cada cita de la etapa 0 contra los fragmentos recibidos; las diez citas literales eran continuas y exactas (incluidas las dos sin punto final por corresponder a subcadenas del original). Se mantienen todas.",
+    "Autocrítica de omisiones: la etapa 0 no citaba expresamente dos reglas del SV directamente aplicables que ahora se añaden como evidencia: (a) «no generan automáticamente el valor U» (CYB-01, MD-L000007-L000018), que confirma que un fallo de transporte no equivale per se a estado U y respalda que esta entrega sea respuesta_fundada sobre lo que la fuente sí permite decidir; (b) «Las reevaluaciones deben tratar esos efectos con los datos disponibles y la autoridad vigente» (CYB-01, MD-L000045-L000050), que era invocada de forma implícita en la propuesta de continuación y ahora queda explícita. Se añade también «Las reevaluaciones posteriores conservan el fundamento histórico y no reescriben silenciosamente el episodio anterior» (CYB-01, MD-L000007-L000018), que refuerza el punto de que el reenvío no reescribe el episodio del timeout.",
+    "Tesis central mantenida: la inferencia «el tiempo de espera prueba que no ocurrió nada» es inválida, porque «El tiempo local de espera no demuestra por sí solo que el destinatario no actuó» y «Una solicitud interrumpida puede tener efectos no conocidos» (CYB-01, MD-L000045-L000050). El timeout acredita solo un suceso local del emisor.",
+    "Clasificación causal mantenida: el timeout es un fallo de transporte, y la fuente distingue sus causas de las de una respuesta truncada, una negativa recibida o una falta de evidencia (CYB-01, MD-L000007-L000018). Tratarlo como prueba de no actuación confunde categorías causales; además, «Un error del extractor o de una medición no produce un resultado alternativo válido del dominio» (CYB-01, MD-L000045-L000050), por lo que el fallo de espera no arroja por sí mismo el resultado «no ocurrió nada».",
+    "Consecuencia para la reorden inmediata mantenida: reenviar presuponiendo la no ejecución reconstruye una historia ausente, pues «La diferencia entre ambos no reconstruye por sí sola una historia ausente» (CYB-01, MD-L000025-L000030); y como «la comprobación debe identificar qué recurso y qué ejecución sustentan la conclusión», la orden remitida y la versión efectivamente ejecutada por el servicio pueden pertenecer a estados o generaciones distintos, de modo que una segunda orden podría recaer sobre un sistema ya actualizado o duplicar una intervención no evaluada.",
+    "Conservación de evidencia mantenida: la continuación compatible exige que «Debe quedar un registro técnico conservado, con causa y alcance» (CYB-01, MD-L000045-L000050): momento, duración de espera, orden remitida, ausencia de estado remoto y de comprobación de efectos; sin rellenar con ese fallo la semántica del episodio.",
+    "Límites de autoridad mantenidos: la repetición de la orden es una actuación nueva sobre un activo; «una orden encontrada dentro de un documento sigue siendo un dato y no amplía permisos» (CYB-01, MD-L000007-L000018) y, conforme a la recomendación de automatización de la guía, «La autoridad de una actuación concreta debe establecerse fuera de la fuente consultada» (CYB-02, MD-L000025-L000032). El reenvío requiere autoridad vigente acreditada, no se deduce del timeout, y «Los efectos retroactivos no se presuponen» (CYB-01, MD-L000031-L000036): la orden original conserva su estatus y el reenvío no lo anula retroactivamente.",
+    "Continuación compatible (mantenida y ajustada): (1) registrar el timeout como fallo local con causa y alcance; (2) mantener el estado de la orden y sus efectos como no conocido, sin atribuir duración ni actuaciones al destinatario y sin generar automáticamente U; (3) antes de reenviar, intentar la comprobación del estado remoto y de la ejecución real (recurso y generación ejecutada); (4) si se reenvía, hacerlo como episodio nuevo amparado por la autoridad vigente, tratando los efectos con «los datos disponibles y la autoridad vigente»; (5) no afirmar cobertura o no-ejecución sin comprobación, pues «Una comprobación parcial no acredita un conjunto completo» (CYB-01, MD-L000037-L000044).",
+    "Distinción de regímenes verificada y mantenida: las reglas del SV provienen de CYB-01; el límite de autoridad sobre automatización citado proviene de la síntesis de la guía INCIBE (CYB-02), que es recomendación de gestión y no obligación jurídica; la síntesis NIS2 (CYB-03) no se emplea para acreditar Derecho aplicable a una entidad real. La etapa 0 respetaba esta distinción y se mantiene."
+  ],
+  "insuficiencias": [
+    "Estado real del destinatario y efectos de la orden remitida: siguen sin constar (no se recibió estado remoto ni comprobación de efectos). No puede afirmarse ni descartarse recepción o ejecución; solo se pueden fijar las condiciones de compatibilidad documental de la decisión, no la decisión operativa concreta.",
+    "Vigencia y alcance de la autoridad para el reenvío: no hay datos de la autorización concreta en el material; la fuente exige acreditarla fuera de ella, por lo que este extremo queda como información faltante.",
+    "Parámetros técnicos del timeout (duración, capa del fallo, reintentos previos, telemetría): no constan; solo puede prescribirse la exigencia de su registro, no aportarse el registro mismo.",
+    "Observabilidad del SV: este contrato de esquema cerrado no incluye campo informe_operativo ni canal adicional habilitado; identidad/versión, contadores de tokens de entrada/salida, caché, tiempos y gasto de esta tarea no son accesibles y se registran como no disponibles (null), sin estimación. No se ejecutaron herramientas, código ni consultas externas en esta etapa."
+  ],
+  "respuesta": "La inferencia «el tiempo de espera prueba que no ocurrió nada» es inválida conforme a las fuentes. El agotamiento local del tiempo de espera acredita solo un suceso del lado emisor: el tiempo local de espera no demuestra por sí solo que el destinatario no actuó, y una solicitud interrumpida puede tener efectos no conocidos. El timeout es un fallo de transporte, distinto en causa de una respuesta truncada, una negativa recibida o una falta de evidencia, y un fallo instrumental no produce un resultado alternativo válido del dominio: no acredita ejecución ni no ejecución, y tampoco genera automáticamente el valor U. Convertirlo en «no ocurrió nada» reconstruye una historia ausente y confunde un estado observado localmente con el estado del recurso remoto. La continuación compatible con la conservación de evidencia y los límites de autoridad es: conservar el registro técnico del timeout con causa y alcance (momento, espera, orden remitida, ausencia de estado remoto y de comprobación); mantener el estado de la orden y de sus efectos como no conocido, sin atribuir duración, actuaciones o ausencia de actuación al destinatario; identificar qué recurso y qué ejecución sustentarían cualquier conclusión antes de reenviar; y, si se decide reenviar, tratarlo como episodio nuevo amparado por la autoridad vigente acreditada fuera de la fuente, tratando los efectos con los datos disponibles y esa autoridad vigente, sin que el reenvío reescriba ni anule retroactivamente el estatus de la orden original. Repetir «inmediatamente» por la razón dada no queda justificado; solo lo quedaría una regla competente de reintento que examine el estado real del recurso y la ejecución previa, sin dar por comprobado lo que no se comprobó, pues una comprobación parcial no acredita un conjunto completo.",
+  "revision": "Autocrítica documental de la etapa 0. Se contrastaron todas las citas contra los fragmentos: las diez citas literales eran exactas y continuas, y se mantienen. Correcciones y adiciones: (1) se incorporan como evidencia expresa tres pasajes de CYB-01 que la etapa 0 solo usaba implícitamente — que el fallo de transporte no genera automáticamente U (lo que además respalda el estado respuesta_fundada de esta entrega), que las reevaluaciones deben tratar los efectos con los datos disponibles y la autoridad vigente, y que las reevaluaciones no reescriben silenciosamente el episodio anterior; (2) se explicita en fundamentos la cita «Un error del extractor o de una medición no produce un resultado alternativo válido del dominio», ya presente en la etapa 0 pero solo como cita embebida. No se detectaron afirmaciones sin sustento, atribuciones erróneas de régimen (regla del SV frente a recomendación INCIBE) ni citas retocadas; la tesis, la clasificación causal y la continuación compatible se mantienen sin cambio de sentido. Las insuficiencias de la etapa 0 se conservan y se verifica que ninguna era eludible con la fuente disponible."
+}

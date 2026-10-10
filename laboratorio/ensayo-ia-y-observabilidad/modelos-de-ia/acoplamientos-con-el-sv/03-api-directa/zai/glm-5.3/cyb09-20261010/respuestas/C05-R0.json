@@ -1,0 +1,67 @@
+
+{
+  "caso": "C05",
+  "estado_documental": "respuesta_fundada",
+  "etapa": 0,
+  "evidencias": [
+    {
+      "cita_literal_breve": "La admisión de evidencia requiere procedencia, integridad, finalidad, acceso y trazabilidad de las transformaciones.",
+      "documento": "CYB-01",
+      "fragmentos": [0],
+      "seccion": "MD-L000037-L000044"
+    },
+    {
+      "cita_literal_breve": "Se pueden distinguir originales preservados y vistas admitidas para una finalidad.",
+      "documento": "CYB-01",
+      "fragmentos": [0],
+      "seccion": "MD-L000037-L000044"
+    },
+    {
+      "cita_literal_breve": "La recuperabilidad documental no levanta restricciones de privacidad ni autoriza cualquier distribución.",
+      "documento": "CYB-01",
+      "fragmentos": [0],
+      "seccion": "MD-L000037-L000044"
+    },
+    {
+      "cita_literal_breve": "Finalidad, destinatarios, minimización y custodia se aplican a datos, registros y explicaciones.",
+      "documento": "CYB-01",
+      "fragmentos": [0],
+      "seccion": "MD-L000007-L000018"
+    },
+    {
+      "cita_literal_breve": "Una huella o una vista recuperable no levanta restricciones de divulgación.",
+      "documento": "CYB-01",
+      "fragmentos": [0],
+      "seccion": "MD-L000007-L000018"
+    },
+    {
+      "cita_literal_breve": "La política de la organización debe delimitar los datos que pueden remitirse.",
+      "documento": "CYB-02",
+      "fragmentos": [0],
+      "seccion": "MD-L000033-L000038"
+    },
+    {
+      "cita_literal_breve": "La elección entre servicios externos y realizaciones propias depende de confidencialidad, residencia, jurisdicción, condiciones del proveedor y requisitos de integración.",
+      "documento": "CYB-02",
+      "fragmentos": [0],
+      "seccion": "MD-L000033-L000038"
+    }
+  ],
+  "fundamentos_verificables": [
+    "El capítulo CYB-01 establece que la admisión de evidencia exige procedencia, integridad, finalidad, acceso y trazabilidad de las transformaciones, lo que se aplica directamente a la preparación de una vista expurgada para envío.",
+    "La misma sección distingue explícitamente entre originales preservados y vistas admitidas para una finalidad, que es exactamente la distinción pedida entre el original con datos de acceso y la vista expurgada.",
+    "CYB-01 (adenda) subordina datos, registros y explicaciones a finalidad, destinatarios, minimización y custodia; por tanto el original con datos de acceso debe permanecer bajo custodia sin remisión, aplicando minimización al material que sale.",
+    "La adenda también advierte que una huella o vista recuperable no levanta restricciones de divulgación: la existencia de la vista expurgada no autoriza por sí sola el envío, que debe ajustarse a la política declarada y a la finalidad acreditada.",
+    "CYB-02 (síntesis INCIBE) exige que la política de la organización delimite los datos que pueden remitirse, y que la elección de un servicio externo dependa de confidencialidad, residencia, jurisdicción, condiciones del proveedor y requisitos de integración; estas condiciones deben verificarse antes de cualquier envío a la API.",
+    "La trazabilidad exigida (identidad, procedencia y mapa de transformaciones conservados en la vista) permite cotejar el resultado obtenido de la API con el original preservado, sin que la vista sustituya al original.",
+    "El documento original no es una instrucción: si contuviera órdenes, seguiría siendo dato y no ampliaría permisos, conforme a la distinción de origen, función y autoridad del capítulo CYB-01."
+  ],
+  "insuficiencias": [
+    "Las fuentes no contienen el texto de la política declarada ni el detalle de qué categorías concretas de datos prohíbe; se responde asumiendo únicamente el hecho estipulado en la pregunta (existen datos de acceso prohibidos y una vista expurgada).",
+    "No se dispone de las condiciones contractuales, jurisdicción o residencia del proveedor de la API concreto, por lo que no puede afirmarse que el envío de la vista expurgada sea admisible; solo pueden enumerarse las condiciones que CYB-02 exige verificar.",
+    "Las fuentes no describen mecanismos técnicos de expurgo, cifrado o formato de envío; la respuesta se limita a los requisitos documentales (finalidad, minimización, custodia, trazabilidad) y no propone implementación técnica específica.",
+    "Las citas provienen de síntesis académicas identificadas (CYB-01 paráfrasis del acta OP-CYB-001; CYB-02 paráfrasis de la guía INCIBE), no de las fuentes primarias; no acreditan el Derecho aplicable ni condiciones vigentes de un proveedor real."
+  ],
+  "respuesta": "Conforme a las fuentes recibidas, el suministro documental a la API debe prepararse del siguiente modo: (1) Conservación del original: el documento original con los datos de acceso se preserva íntegro bajo custodia propia, sin remitirlo; la política declarada que prohíbe su envío a proveedores externos delimita qué datos pueden remitirse, y ni la recuperabilidad del documento ni la existencia de una vista levantan esa restricción. (2) Vista admitida: se remite exclusivamente la vista expurgada, tratada como vista admitida para una finalidad específica, no como sustituto del original; su preparación aplica minimización, eliminando los datos prohibidos y dejando descrito en el mapa de transformaciones qué se suprimió y con qué método. (3) Finalidad: se declara y acota la finalidad del envío (por ejemplo, análisis documental de la vista), identificando al destinatario (la API externa) y verificando previamente que la elección del servicio externo satisface confidencialidad, residencia, jurisdicción, condiciones del proveedor y requisitos de integración; si esas condiciones no constan, no se presupone que el nombre del servicio o su capacidad resuelvan el problema. (4) Trazabilidad: la vista conserva identidad (huella verificable de su contenido), procedencia (enlace al original preservado y a su cadena de custodia) y el mapa de transformaciones, de modo que cada afirmación obtenida pueda cotejarse con el original y con la finalidad declarada. En ningún caso se envían los datos de acceso prohibidos; el original permanece preservado y solo la vista expurgada, con sus metadatos de identidad, procedencia y transformación, se incorpora al suministro documental a la API, siempre que la política lo permita para esos datos concretos.",
+  "revision": "Etapa 0: no existen entregas anteriores ni antecedentes que contrastar; esta es la respuesta provisional inicial, autosuficiente y basada exclusivamente en los fragmentos recibidos."
+}

@@ -1,0 +1,81 @@
+{
+  "caso": "C02",
+  "estado_documental": "respuesta_fundada",
+  "etapa": 2,
+  "evidencias": [
+    {
+      "cita_literal_breve": "Admisión, aplicabilidad, insuficiencia y fallo instrumental deben distinguirse.",
+      "documento": "CYB-01",
+      "fragmentos": [0],
+      "seccion": "MD-L000045-L000050"
+    },
+    {
+      "cita_literal_breve": "Un error del extractor o de una medición no produce un resultado alternativo válido del dominio.",
+      "documento": "CYB-01",
+      "fragmentos": [0],
+      "seccion": "MD-L000045-L000050"
+    },
+    {
+      "cita_literal_breve": "Debe quedar un registro técnico conservado, con causa y alcance, sin rellenar por ese motivo la semántica del episodio.",
+      "documento": "CYB-01",
+      "fragmentos": [0],
+      "seccion": "MD-L000045-L000050"
+    },
+    {
+      "cita_literal_breve": "La cobertura se refiere a las instancias, permisos y flujos realmente examinados.",
+      "documento": "CYB-01",
+      "fragmentos": [0],
+      "seccion": "MD-L000037-L000044"
+    },
+    {
+      "cita_literal_breve": "Una comprobación parcial no acredita un conjunto completo.",
+      "documento": "CYB-01",
+      "fragmentos": [0],
+      "seccion": "MD-L000037-L000044"
+    },
+    {
+      "cita_literal_breve": "La ausencia de elementos en un conjunto también requiere justificación; no se inventa un conjunto vacío para dar por satisfecha una obligación.",
+      "documento": "CYB-01",
+      "fragmentos": [0],
+      "seccion": "MD-L000037-L000044"
+    },
+    {
+      "cita_literal_breve": "Un estado observado es evidencia sobre aquello que efectivamente se observó, en su ámbito y momento.",
+      "documento": "CYB-01",
+      "fragmentos": [0],
+      "seccion": "MD-L000025-L000030"
+    },
+    {
+      "cita_literal_breve": "La comprobación debe identificar qué recurso y qué ejecución sustentan la conclusión.",
+      "documento": "CYB-01",
+      "fragmentos": [0],
+      "seccion": "MD-L000025-L000030"
+    },
+    {
+      "cita_literal_breve": "Una respuesta truncada, una negativa recibida, una falta de evidencia y un fallo de transporte tienen causas distintas; no generan automáticamente el valor U.",
+      "documento": "CYB-01",
+      "fragmentos": [0],
+      "seccion": "MD-L000007-L000018"
+    }
+  ],
+  "fundamentos_verificables": [
+    "La fuente establece la distinción estructural de la pregunta —admisión, aplicabilidad, insuficiencia y fallo instrumental— que clasifica el primer informe como insuficiencia de cobertura y el segundo como fallo instrumental; las dos entregas anteriores ya usaban esta distinción y se confirma con apoyo literal directo.",
+    "Primer informe: el «sin hallazgos» solo es evidencia de lo que el ensayo efectivamente examinó, en su ámbito y momento; al no cubrir la vulnerabilidad objetivo, es una comprobación parcial que no acredita el conjunto completo.",
+    "La fuente exige justificar la ausencia de elementos en un conjunto y prohíbe inventar un conjunto vacío para dar por satisfecha una obligación: la etiqueta «sin hallazgos» no sustituye la comprobación pendiente sobre la vulnerabilidad que se desea corregir.",
+    "Registro exigible en el primer caso: el de cobertura —instancias, permisos y flujos realmente examinados, alcance del ensayo y constancia de que la vulnerabilidad objetivo quedó fuera— complementado con la regla de identificar qué recurso y qué ejecución sustentan la conclusión.",
+    "Segundo informe: el error del extractor convierte el informe generado igualmente en fallo instrumental; su contenido no es un resultado alternativo válido del dominio ni evidencia sobre la presencia o ausencia de la vulnerabilidad, y la generación del informe pese al fallo no corrige esa invalidez.",
+    "Registro exigible en el segundo caso: el registro técnico del fallo, con causa y alcance, sin rellenar por ese motivo la semántica del episodio, es decir, sin concluir que la vulnerabilidad exista o no a partir del fallo.",
+    "Las causas distintas —cobertura insuficiente y fallo instrumental— no colapsan automáticamente en el valor U: cada informe sustenta una conclusión fundamentada sobre su propio objeto (alcance examinado en el primero; descripción del fallo en el segundo).",
+    "Los hechos de ambos informes provienen exclusivamente de la estipulación del caso; las fuentes no contienen los informes, de modo que la valoración se limita a lo estipulado y a las reglas documentales recibidas."
+  ],
+  "insuficiencias": [
+    "Los dos informes y sus circunstancias son hechos estipulados en el caso, no documentos recibidos: no puede valorarse su redacción exacta, alcance operativo real ni datos adicionales más allá de lo estipulado.",
+    "Las fuentes no permiten atribuir criticidad, puntuaciones, telemetría, criterios reservados ni decisiones del Árbitro a estas situaciones; permanecen sin acreditación y no se han supuesto.",
+    "CYB-01 es una paráfrasis académica del acta OP-CYB-001, no una transcripción literal; las citas son literales de la síntesis recibida, no del acta original, que no fue suministrada por MCP.",
+    "El acta, su adenda íntegra y los originales de INCIBE y NIS2 no fueron recibidos; cualquier extremo que dependa de esos textos queda sin sustento en este examen.",
+    "Las fuentes no describen un formato obligatorio del «registro técnico» ni del «registro de cobertura»; se identifica su contenido exigible conforme a las reglas citadas, pero no una plantilla determinada.",
+    "Las fuentes no definen un valor umbral o de criticidad que decida si la cobertura insuficiente exige repetir el ensayo o adoptar medidas temporales; esa decisión operativa queda fuera de lo acreditado (la recomendación de INCIBE sobre medidas temporales, en CYB-02 MD-L000019-L000024, es una recomendación de gestión, no una regla del SV ni una determinación de este caso)."
+  ],
+  "respuesta": "Ambos informes dicen «sin hallazgos», pero aportan evidencia de naturaleza distinta y ninguno acredita la ausencia de la vulnerabilidad que se desea corregir. (1) Primer informe —insuficiencia de cobertura: el «sin hallazgos» solo es evidencia de lo que el ensayo efectivamente examinó, en su ámbito y momento. Como no cubre la vulnerabilidad objetivo, es una comprobación parcial que no acredita el conjunto completo; la ausencia de hallazgos en un ámbito no examinado no puede convertirse en un conjunto vacío que dé por satisfecha la obligación de comprobar esa vulnerabilidad. Es un resultado válido pero de alcance limitado: no concluye ni sobre la presencia ni sobre la ausencia de la vulnerabilidad que se desea corregir. El registro que corresponde conservar es el de cobertura: instancias, permisos y flujos realmente examinados, alcance del ensayo, constancia expresa de que la vulnerabilidad objetivo quedó fuera del examen e identificación de qué recurso y qué ejecución sustentan cualquier conclusión que se extraiga. (2) Segundo informe —fallo técnico: el error del extractor impide tratar el «sin hallazgos» como resultado del dominio; un error instrumental no produce un resultado alternativo válido, y el hecho de que el informe se generara igualmente no corrige esa invalidez. Su contenido carece de valor probatorio sobre la vulnerabilidad. El registro que corresponde conservar es el registro técnico del fallo: causa del error, alcance de lo procesado y constancia de que el informe se generó pese al fallo, sin rellenar con ello la semántica del episodio, es decir, sin concluir que la vulnerabilidad exista o no a partir del fallo. (3) Distinción y estado documental: insuficiencia de cobertura y fallo instrumental son causas distintas que no generan automáticamente el valor U. El primer informe sustenta una respuesta fundamentada sobre su propio alcance (cobertura insuficiente respecto de la vulnerabilidad objetivo); el segundo sustenta la descripción del fallo y la invalidez de su contenido como evidencia de dominio. Síntesis final: el primer informe es evidencia válida de cobertura insuficiente, con registro de lo examinado y lo excluido; el segundo es evidencia de un fallo instrumental, con registro técnico de causa y alcance, y su «sin hallazgos» no prueba nada sobre la vulnerabilidad.",
+  "revision": "Verificación final neutral de las entregas de etapas 0 y 1 contra la fuente. Citas: las ocho citas de la etapa 1 se recontrastaron carácter a carácter con los fragmentos recibidos y resultaron literales y localizables; se mantienen todas y se añade una novena («La comprobación debe identificar qué recurso y qué ejecución sustentan la conclusión», CYB-01 MD-L000025-L000030) que refuerza el contenido exigible del registro de cobertura del primer caso. Clasificación: se confirma contra la fuente la distinción entre insuficiencia de cobertura (primer informe) y fallo instrumental (segundo informe), la invalidez del contenido del segundo como resultado del dominio, los registros exigibles en cada caso y la regla de que ninguna causa genera automáticamente el valor U; todo ello con apoyo literal directo, por lo que se mantiene el sentido de ambas entregas. Ajustes: se añade en insuficiencias un límite detectado en esta verificación —las fuentes no acreditan un umbral de decisión sobre repetir el ensayo o adoptar medidas temporales, y la recomendación de INCIBE al respecto es recomendación de gestión, no regla del SV—, delimitando lo que la respuesta no decide. No se presupuso que la última versión fuera mejor ni que debiera reafirmarse: cada extremo se verificó independientemente y solo se mantuvo lo confirmado por la fuente."
+}

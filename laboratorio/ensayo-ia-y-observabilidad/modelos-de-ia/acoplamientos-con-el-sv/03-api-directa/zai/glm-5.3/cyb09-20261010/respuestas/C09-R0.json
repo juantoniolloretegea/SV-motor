@@ -1,0 +1,86 @@
+
+{
+  "caso": "C09",
+  "estado_documental": "respuesta_fundada",
+  "etapa": 0,
+  "evidencias": [
+    {
+      "cita_literal_breve": "El tiempo local de espera no demuestra por sí solo que el destinatario no actuó.",
+      "documento": "CYB-01",
+      "fragmentos": [0],
+      "seccion": "MD-L000045-L000050"
+    },
+    {
+      "cita_literal_breve": "Una solicitud interrumpida puede tener efectos no conocidos.",
+      "documento": "CYB-01",
+      "fragmentos": [0],
+      "seccion": "MD-L000045-L000050"
+    },
+    {
+      "cita_literal_breve": "Debe quedar un registro técnico conservado, con causa y alcance, sin rellenar por ese motivo la semántica del episodio.",
+      "documento": "CYB-01",
+      "fragmentos": [0],
+      "seccion": "MD-L000045-L000050"
+    },
+    {
+      "cita_literal_breve": "Una respuesta truncada, una negativa recibida, una falta de evidencia y un fallo de transporte tienen causas distintas",
+      "documento": "CYB-01",
+      "fragmentos": [0],
+      "seccion": "MD-L000007-L000018"
+    },
+    {
+      "cita_literal_breve": "La diferencia entre ambos no reconstruye por sí sola una historia ausente.",
+      "documento": "CYB-01",
+      "fragmentos": [0],
+      "seccion": "MD-L000025-L000030"
+    },
+    {
+      "cita_literal_breve": "la comprobación debe identificar qué recurso y qué ejecución sustentan la conclusión",
+      "documento": "CYB-01",
+      "fragmentos": [0],
+      "seccion": "MD-L000025-L000030"
+    },
+    {
+      "cita_literal_breve": "Los efectos retroactivos no se presuponen.",
+      "documento": "CYB-01",
+      "fragmentos": [0],
+      "seccion": "MD-L000031-L000036"
+    },
+    {
+      "cita_literal_breve": "una orden encontrada dentro de un documento sigue siendo un dato y no amplía permisos",
+      "documento": "CYB-01",
+      "fragmentos": [0],
+      "seccion": "MD-L000007-L000018"
+    },
+    {
+      "cita_literal_breve": "La autoridad de una actuación concreta debe establecerse fuera de la fuente consultada.",
+      "documento": "CYB-02",
+      "fragmentos": [0],
+      "seccion": "MD-L000025-L000032"
+    },
+    {
+      "cita_literal_breve": "Una comprobación parcial no acredita un conjunto completo.",
+      "documento": "CYB-01",
+      "fragmentos": [0],
+      "seccion": "MD-L000037-L000044"
+    }
+  ],
+  "fundamentos_verificables": [
+    "El agotamiento local del tiempo de espera es un hecho del lado emisor: según CYB-01 (MD-L000045-L000050), «El tiempo local de espera no demuestra por sí solo que el destinatario no actuó». Por tanto, la premisa «el tiempo de espera prueba que no ocurrió nada» no es válida: convierte un suceso local en una conclusión sobre el estado remoto.",
+    "La misma sección indica que «Una solicitud interrumpida puede tener efectos no conocidos», de modo que el estado de la orden remitida tras el timeout es indeterminado con los datos disponibles: pudo no recibirse, recibirse sin ejecutarse o haberse ejecutado con o sin efectos. Ninguna de esas hipótesis queda acreditada por el solo timeout.",
+    "CYB-01 (MD-L000007-L000018) exige clasificar la causa: «Una respuesta truncada, una negativa recibida, una falta de evidencia y un fallo de transporte tienen causas distintas». El timeout es un fallo de transporte/espera, no una respuesta negativa del destinatario ni una comprobación de no efecto; tratarlo como prueba de no actuación confunde categorías causales.",
+    "Consecuencia para la reorden inmediata: repetir la orden sobre la base de que «no ocurrió nada» presupone una historia no reconstruida; CYB-01 (MD-L000025-L000030) advierte que «La diferencia entre ambos no reconstruye por sí sola una historia ausente». La repetición solo sería compatible con la evidencia si se identifica el estado real del recurso y de la ejecución previa, porque «la comprobación debe identificar qué recurso y qué ejecución sustentan la conclusión»: una orden remitida y la versión efectivamente ejecutada por el servicio pueden pertenecer a estados o generaciones distintos, y una segunda orden podría, p. ej., recaer sobre un sistema ya actualizado o generar una duplicación no evaluada.",
+    "Conservación de evidencia: CYB-01 (MD-L000045-L000050) exige que «Debe quedar un registro técnico conservado, con causa y alcance». La continuación compatible incluye conservar el registro del timeout (momento, duración de espera, orden remitida, ausencia de estado remoto y de comprobación de efectos) y no rellenar con ello la semántica del episodio, es decir, no convertir el fallo instrumental en un resultado del dominio («Un error del extractor o de una medición no produce un resultado alternativo válido del dominio», misma sección).",
+    "Límites de autoridad: repetir una orden es una actuación nueva sobre un activo. CYB-01 (MD-L000007-L000018) recuerda que «una orden encontrada dentro de un documento sigue siendo un dato y no amplía permisos», y CYB-02 (MD-L000025-L000032) que la automatización de respuestas «no concede por sí misma permiso», pues «La autoridad de una actuación concreta debe establecerse fuera de la fuente consultada». Además, «Los efectos retroactivos no se presuponen» (CYB-01, MD-L000031-L000036): la orden original sigue con su propio estatus y la repetición no lo reescribe ni lo anula retroactivamente.",
+    "Continuación compatible propuesta: (1) clasificar el hecho como fallo local de transporte/espera con registro conservado y alcance declarado; (2) declarar el estado de la orden y de sus efectos como no conocido, sin atribuir duración ni actuaciones al destinatario; (3) antes de reenviar, intentar o esperar la comprobación del estado remoto y de la ejecución real (recurso y generación efectivamente ejecutada); (4) si se decide reenviar, hacerlo bajo la autoridad vigente que ampare la actuación concreta, tratándola como episodio nuevo con su propia evidencia, y no como consecuencia automática del timeout; (5) cualquier afirmación de que «el conjunto está actualizado» o «no pasó nada» requiere comprobación, pues «Una comprobación parcial no acredita un conjunto completo» (CYB-01, MD-L000037-L000044).",
+    "Distinción de regímenes aplicada: las reglas del SV (clasificación de causas, conservación de registro, límites de U) proceden de CYB-01; la recomendación sobre automatización contenida y su límite de autoridad proceden de la síntesis de la guía INCIBE (CYB-02), que es recomendación de gestión, no obligación jurídica; y la síntesis NIS2 (CYB-03) no se usa aquí para acreditación de Derecho aplicable a una entidad real."
+  ],
+  "insuficiencias": [
+    "Estado real del destinatario y efectos de la orden remitida: no constan en las fuentes ni en los hechos estipulados (no se recibió estado remoto ni comprobación de efectos). Por ello no puede afirmarse ni descartarse que la orden fuera recibida o ejecutada; cualquier decisión operativa concreta (reenviar, esperar, escalar) no es determinable documentalmente, solo sus condiciones de compatibilidad.",
+    "Vigencia y alcance de la autoridad bajo la cual se remitió la orden original y bajo la cual se reenviaría: las fuentes no aportan datos de la autorización concreta; solo establecen que debe acreditarse fuera de la fuente y que no se presuponen efectos retroactivos.",
+    "Parámetros técnicos del timeout (duración de espera, capa del fallo, reintentos previos, telemetría): no constan en el material recibido; el registro técnico que la fuente exige como conservado no está disponible aquí, solo se puede prescribir su exigencia.",
+    "Observabilidad del SV: no hay campo informe_operativo en este esquema cerrado ni canal adicional habilitado; identidad/versión, contadores de tokens, caché, tiempos y gasto de esta tarea no son accesibles y se registran como no disponibles (null), sin estimación. No se ejecutaron herramientas, código ni consultas externas."
+  ],
+  "respuesta": "La inferencia propuesta es inválida. El agotamiento local del tiempo de espera es un suceso del lado emisor que, según las fuentes, no demuestra por sí solo que el destinatario no actuara ni que la orden no surtiera efectos; una solicitud interrumpida puede tener efectos no conocidos. El timeout es un fallo de transporte con causa distinta de una respuesta negativa o de una falta de evidencia, y no produce un resultado del dominio: no acredita ni ejecución ni no ejecución. Convertirlo en «no ocurrió nada» reconstruye una historia ausente y confunde un estado observado localmente con el estado del recurso remoto. La continuación compatible con la conservación de evidencia y los límites de autoridad es: conservar el registro técnico del timeout con causa y alcance; mantener el estado de la orden y sus efectos como no conocido, sin atribuir duración, actuaciones o ausencia de actuación al destinatario; identificar qué recurso y qué ejecución sustentarían cualquier conclusión antes de reenviar; y, si se reenvía, tratarlo como actuación nueva amparada por la autoridad vigente acreditada fuera de la fuente, no como consecuencia automática del timeout, sabiendo que la orden original conserva su propio estatus y que sus efectos no se presumen retroactivos. Repetir «inmediatamente» por la razón dada no queda justificado por la evidencia disponible; solo quedaría justificado por una regla competente de reintento que examine el estado real del recurso y la ejecución previa, sin dar por comprobado lo que no se comprobó.",
+  "revision": "Etapa 0: no existen entregas anteriores ni antecedentes que contrastar; se produce la respuesta provisional autosuficiente sobre la base exclusiva de los fragmentos recibidos."
+}

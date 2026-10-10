@@ -1,0 +1,81 @@
+{
+  "caso": "C01",
+  "estado_documental": "respuesta_fundada",
+  "etapa": 2,
+  "evidencias": [
+    {
+      "cita_literal_breve": "Una actualización de un archivo y la versión ejecutada por un servicio pueden pertenecer a estados o generaciones distintos",
+      "documento": "CYB-01",
+      "fragmentos": [0],
+      "seccion": "MD-L000025-L000030"
+    },
+    {
+      "cita_literal_breve": "Un estado observado es evidencia sobre aquello que efectivamente se observó, en su ámbito y momento.",
+      "documento": "CYB-01",
+      "fragmentos": [0],
+      "seccion": "MD-L000025-L000030"
+    },
+    {
+      "cita_literal_breve": "la comprobación debe identificar qué recurso y qué ejecución sustentan la conclusión",
+      "documento": "CYB-01",
+      "fragmentos": [0],
+      "seccion": "MD-L000025-L000030"
+    },
+    {
+      "cita_literal_breve": "Si sólo existe una observación inicial, no se atribuye automáticamente duración a una vulnerabilidad ni se inventan actuaciones anteriores.",
+      "documento": "CYB-01",
+      "fragmentos": [0],
+      "seccion": "MD-L000025-L000030"
+    },
+    {
+      "cita_literal_breve": "Las capacidades declaradas, realizadas y comprobadas deben permanecer separadas.",
+      "documento": "CYB-01",
+      "fragmentos": [0],
+      "seccion": "MD-L000019-L000024"
+    },
+    {
+      "cita_literal_breve": "La cobertura se refiere a las instancias, permisos y flujos realmente examinados.",
+      "documento": "CYB-01",
+      "fragmentos": [0],
+      "seccion": "MD-L000037-L000044"
+    },
+    {
+      "cita_literal_breve": "La identidad del archivo recuperado y una prueba de puesta en funcionamiento tienen objetos diferentes",
+      "documento": "CYB-02",
+      "fragmentos": [0],
+      "seccion": "MD-L000025-L000032"
+    },
+    {
+      "cita_literal_breve": "razonar sobre casos cuyos hechos y ámbito estén estipulados",
+      "documento": "CYB-03",
+      "fragmentos": [0],
+      "seccion": "MD-L000045-L000053"
+    },
+    {
+      "cita_literal_breve": "medidas temporales cuando no sea posible aplicar de inmediato una corrección",
+      "documento": "CYB-02",
+      "fragmentos": [0],
+      "seccion": "MD-L000019-L000024"
+    }
+  ],
+  "fundamentos_verificables": [
+    "Verificación final literal: las nueve citas del bloque de evidencias fueron cotejadas de nuevo, carácter a carácter, contra los textos de los fragmentos MCP recibidos; todas son cadenas continuas exactas y localizables en la sección y documento indicados (todos los fragmentos tienen pagina=0). Ninguna se atribuye a las fuentes primarias sintetizadas (acta OP-CYB-001, guía INCIBE, Directiva NIS2), sino al libro recibido, que se declara síntesis académica preparatoria pendiente de revisión.",
+    "Admisibilidad del razonamiento: CYB-03 (MD-L000045-L000053) permite expresamente razonar sobre casos cuyos hechos y ámbito estén estipulados; este caso es de esa clase (instalación autorizada de versión 5 en disco; medición posterior con identidad de proceso y hora acreditadas que muestra versión 4 en ejecución; criterio del episodio de que la corrección sólo opera en la versión 5 activa).",
+    "Distinción artefacto persistido / proceso activo: es doctrina textual del libro que la actualización de un archivo y la versión ejecutada por un servicio pueden pertenecer a estados o generaciones distintos; el caso reproduce ese supuesto exacto (disco en 5, ejecución en 4).",
+    "Alcance de la medición: un estado observado es evidencia sobre aquello que efectivamente se observó, en su ámbito y momento; la medición acredita identidad del proceso y versión 4 en ejecución, y nada más. No acredita la corrección porque la condición de eficacia declarada (versión 5 activa) queda contradicha por lo observado.",
+    "Prohibición de trasvase probatorio: la comprobación debe identificar qué recurso y qué ejecución sustentan la conclusión; la instalación en disco sustenta una conclusión sobre el artefacto y no sobre la ejecución. La analogía de CYB-02 (identidad del archivo frente a prueba de puesta en funcionamiento, objetos diferentes) confirma que cada resultado debe describirse por lo efectivamente comprobado.",
+    "Regla del SV aplicada: las capacidades declaradas, realizadas y comprobadas deben permanecer separadas; la instalación autorizada es una capacidad declarada y parcialmente realizada como persistencia, no una corrección comprobada, y no puede elevarse a tal contra la observación disponible.",
+    "Comprobación posterior necesaria, derivada de la fuente y de los hechos estipulados: una nueva observación del proceso activo que acredite que la generación efectivamente ejecutada es la versión 5 (identidad del proceso, recurso ejecutado, hora y trazabilidad de las transformaciones), junto con la identificación de la causa del desfase si se desea cerrar el episodio. Sin ella, la corrección no queda acreditada.",
+    "Regla contra la invención: si sólo existe una observación inicial, no se inventan actuaciones anteriores ni causas; la razón del desfase disco/ejecución (reinicio pendiente, ruta distinta, caché u otra) no consta en los hechos estipulados ni en los fragmentos, y no se afirma.",
+    "Distingo de naturaleza de normas, exigido por el contrato: la no acreditación de la corrección se funda en reglas del SV (CYB-01) y en los hechos estipulados. Las medidas temporales y los plazos de parcheo 24–48 horas de CYB-02 son recomendaciones de gestión de vulnerabilidades del original sintetizado, no reglas del SV ni plazos jurídicos de notificación; se mencionan sólo como contexto de recomendación identificado como tal y no alteran la conclusión. La síntesis de NIS2 no se usó como premisa y no acredita Derecho actual aplicable a entidad real."
+  ],
+  "insuficiencias": [
+    "Los fragmentos no contienen el expediente operativo del episodio (mecanismo de activación de la versión 5, reinicio o recarga, ruta de ejecución, dependencias); la causa concreta del desfase entre disco y ejecución queda sin acreditar y no se inventa. Este límite no impide responder lo preguntado, pues la pregunta es sobre acreditación de la corrección, no sobre la causa.",
+    "No hay telemetría, criticidad, puntuaciones, criterios reservados ni decisiones del Árbitro accesibles en los fragmentos; esas magnitudes se registran como no disponibles, no como cero, y no se estiman desde la extensión del texto ni se imputan a esta tarea.",
+    "Las fuentes son síntesis académicas preparatorias 0.1–0.3 pendientes de revisión científica y recepción por MCP (CYB-00); las citas se atribuyen al libro recibido y no a las fuentes primarias, cuyas versiones consolidadas o vigentes no quedan acreditadas por estas síntesis.",
+    "La vía de suministro del original NIS2 presenta un límite declarado en la propia fuente (el lector existente rechazó sus 73 páginas por superar la cota); ello no afecta al razonamiento de este caso, que no depende de CYB-03, pero se registra como límite reconocido.",
+    "No se ejecutaron herramientas, scripts, navegación ni consultas externas en ninguna etapa; el único material empleado son los fragmentos MCP recibidos."
+  ],
+  "respuesta": "No. La corrección no puede darse por acreditada. La actualización autorizada acredita el artefacto persistido (versión 5 presente en disco), pero la medición posterior, con identidad de proceso y hora acreditadas, acredita que el proceso activo sigue ejecutando la versión 4. Como el episodio declara que la corrección sólo opera en la versión 5 activa, la condición de eficacia queda incumplida en el plano de la ejecución: el artefacto y el proceso pertenecen a estados o generaciones distintos, y la comprobación debe identificar qué recurso y qué ejecución sustentan la conclusión, sin trasvasar la acreditación de un estrato al otro. Resultado por estratos: (1) artefacto persistido: acreditado como instalado en versión 5; (2) proceso activo: acreditado como no corregido (versión 4 en ejecución, con identificación de proceso y momento); (3) corrección del episodio: no acreditada, porque falta la acreditación de la generación activa corregida. La comprobación posterior necesaria es una nueva observación del proceso activo que acredite que la ejecución pasa efectivamente a la versión 5 (identidad del proceso, recurso ejecutado, hora y trazabilidad de las transformaciones), junto con la identificación de la causa del desfase si se desea cerrar el episodio; mientras no exista, se conserva la incertidumbre sobre la causa sin inventarla. Nota de naturaleza normativa: las medidas temporales y los plazos rápidos de parcheo de la guía sintetizada en CYB-02 son recomendaciones de gestión de vulnerabilidades, no reglas del SV ni plazos jurídicos, y no modifican esta conclusión sobre acreditación.",
+  "revision": "Verificación final neutral de las dos entregas anteriores contra la fuente. (1) Sobre la etapa 0: se confirma que su contenido sustantivo (no acreditación de la corrección, distinción artefacto/proceso, comprobación posterior necesaria) era correcto y está sostenido por citas exactas; se mantiene. Se confirma que contenía un defecto formal: una propiedad extraña ('cita_literal_brief_placeholder') en un objeto de evidencias, violando el esquema de propiedades cerrado; ese defecto fue ya corregido en la etapa 1 y esta entrega no lo reproduce. (2) Sobre la etapa 1: se cotejaron de nuevo sus nueve citas, todas exactas y localizables; sus fundamentos no contienen afirmaciones sin sustento en la fuente o en los hechos estipulados; se mantiene íntegramente. (3) Correcciones en esta etapa: ninguna de fondo. Se añadió en insuficiencias el límite declarado por la propia fuente sobre la vía de suministro del PDF de NIS2, por completitud del registro de límites. (4) No se declaró U en ningún extremo porque la fuente y los hechos estipulados permiten responder lo preguntado; las únicas zonas sin acreditar (causa del desfase, expediente operativo, magnitudes del Árbitro) se declaran expresamente como límites y no como U global, pues no son el extremo exigido. No presupuse que la última versión fuera mejor: el contraste independiente confirma que la conclusión y su fundamento son los mismos en las tres etapas y que las mejoras fueron de forma y de registro de límites, no de sentido."
+}
