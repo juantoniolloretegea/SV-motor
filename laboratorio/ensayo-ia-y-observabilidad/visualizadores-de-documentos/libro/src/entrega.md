@@ -1,59 +1,44 @@
 # Autorización y entrega efectiva a la IA
 
-La autorización determina qué documentación puede utilizarse, para qué finalidad y con qué destinatario. La entrega determina qué contenido concreto salió del control documental en una consulta. Ambos aspectos deben conservarse por separado.
+## Qué se entrega actualmente
 
-## Autoridad y vigencia
+El recorrido descrito prepara **fragmentos de texto de representaciones Markdown autorizadas**, junto con la pregunta y sus referencias documentales. Conserva el contenido exacto preparado y el resultado del envío.
 
-Sólo el administrador y el Proveedor de documentos para la IA pueden autorizar o retirar el suministro dentro de su ámbito de competencia. Disponer de una cuenta, consultar un documento, editar una ficha o ejecutar una conversión no confiere esa potestad.
+El modelo no recibe automáticamente la página mdBook del revisor, el PDF completo ni sus imágenes. La entrega directa de PDF o HTML está admitida por la regla documental, pero todavía no está acreditada en este recorrido. No debe darse por realizada.
 
-Antes de suministrar contenido se comprueban la autorización vigente, la edición, el dominio, el destinatario, el alcance de la licencia y la situación documental. La retirada impide nuevas entregas, incluso de consultas preparadas previamente. No borra las consultas anteriores ni demuestra que un proveedor externo haya eliminado contenido ya recibido.
+## Qué se comprueba antes de entregar
 
-## Forma de entrega actualmente comprobada
+El Árbitro-Director comprueba la autorización vigente, el dominio, la edición, el destinatario, la licencia y la situación del documento. Un derivado necesita, además, el cotejo favorable exigido. Sólo el administrador y el Proveedor de documentos para la IA pueden autorizar o retirar el suministro dentro de su competencia.
 
-En el recorrido documental de referencia, los originales se vinculan a una representación Markdown identificada. Se seleccionan secciones autorizadas y se prepara un conjunto de **fragmentos de texto**, con la pregunta, sus referencias y las condiciones documentales aplicables. Ese contenido se remite mediante el mecanismo previsto para el modelo.
+La retirada impide nuevas entregas, incluidas las preparadas con anterioridad. Conserva las consultas pasadas; no demuestra que un proveedor externo haya eliminado contenido que ya recibió.
 
-El modelo no recibe por ello la página de mdBook que ve el revisor, el archivo PDF completo ni las imágenes que falten en la extracción. Tampoco recibe acceso general a una biblioteca por el hecho de recibir fragmentos de ella.
+## Dónde consultar la evidencia
 
-La entrega directa de un PDF o una caché HTML **es una posibilidad admitida por la regla documental, pero aún no está acreditada en este recorrido**. Su incorporación deberá verificar qué admite realmente el receptor, qué se remite, si existen transformaciones adicionales y cómo se registra el resultado. No se impondrá una conversión no autorizada para suplir una incompatibilidad.
+**Consultas y entregas** permite filtrar por documento, nodo y estado del transporte. Cada expediente reúne:
 
-## Lo que acredita cada estado
+1. **Contenido preparado:** pregunta, fragmentos, documentos y ediciones, destinatario, autorización y licencia aplicadas. El paquete descargable conserva el contenido exacto preparado.
+2. **Transporte documentado:** intento de envío, resultado y confirmaciones disponibles.
+3. **Respuesta y revisión:** respuesta conservada, citas, mediciones y evaluaciones registradas.
 
-| Estado o evidencia | Qué acredita | Qué no acredita |
-| --- | --- | --- |
-| Contenido preparado | Existe una selección identificada y un contenido dispuesto para una consulta | Que haya salido del sistema o llegado al proveedor |
-| Intento registrado | Se inició una actuación de envío | Que haya terminado correctamente |
-| Entregado al transporte | El mecanismo de envío confirmó la recepción de los datos que se le entregaron | La recepción final por el proveedor, salvo evidencia específica adicional |
-| Resultado incierto | No existe confirmación suficiente para resolver el resultado | Que el contenido no haya salido; no debe confundirse con un rechazo seguro |
-| Respuesta recibida | Se conserva una respuesta asociada a la consulta | Que el modelo haya utilizado correctamente todos los documentos |
-| Citas cotejadas | Las referencias pueden contrastarse con las fuentes conservadas | Corrección semántica, exhaustividad ni validez científica de la respuesta |
+Los enlaces al historial permiten seguir las fuentes utilizadas. Consultar una referencia compartida exige los mismos permisos que abrirla desde el listado.
 
-El acuse del proveedor, cuando exista, deberá identificarse como evidencia propia. No se sustituirá por el resultado de una función de envío ni por una afirmación del modelo. El procesamiento interno del proveedor puede no ser observable.
+## Cómo interpretar el resultado
 
-## Qué debe conservarse por consulta
+| Situación | Significado |
+| --- | --- |
+| Preparado | El contenido está dispuesto; todavía no acredita un envío |
+| Entregado al transporte | El mecanismo de envío recibió los datos; la recepción final exige su propia evidencia |
+| Resultado incierto | Falta confirmación suficiente; no equivale a un rechazo seguro |
+| Respuesta recibida | Existe una respuesta asociada; todavía debe revisarse su adecuación documental |
+| Citas cotejadas | Las referencias se pueden contrastar; no certifica por sí solo la corrección científica |
 
-La administración reúne estas evidencias en **Consultas y entregas**. El listado puede limitarse a un documento, un nodo y un estado del transporte. Desde el historial documental puede abrirse la consulta relacionada; el expediente permite regresar al historial de cada fuente.
+Los consumos conocidos se conservan con su fuente y unidad. Un dato no comunicado permanece desconocido, en lugar de registrarse como cero. La vigencia actual de un permiso se distingue de la autorización aplicada a una consulta anterior.
 
-La presentación se organiza en tres apartados:
+## Ejemplo
 
-1. **Contenido preparado:** pregunta, fragmentos literales, edición, autorización aplicada, licencia conservada, destinatario y huellas. La descarga del paquete conserva exactamente los bytes preparados, sin reconstruirlos a partir de la página presentada.
-2. **Transporte documentado:** intento, resultado y perfil declarado cuando consta. Los antecedentes que carecen de perfil permanecen identificados como tales. No se deduce recepción final de una entrega al mecanismo de transporte.
-3. **Respuesta y revisión:** texto original conservado, modelo comunicado, citas, mediciones disponibles, impedimentos y evaluaciones registradas. Un cotejo formal favorable no sustituye la revisión del contenido.
+Un PDF tiene 120 páginas. Se extrae texto de las páginas 65 a 80 y una consulta utiliza dos secciones de ese resultado. La entrega corresponde a esas dos secciones; no al libro completo ni a sus figuras.
 
-La vista y sus descargas requieren identificación y función de revisión vigentes en el dominio. Una referencia compartida no concede acceso. El paquete descargado y el expediente pueden contener documentación reservada: conservan sus condiciones particulares y no deben difundirse fuera de su alcance autorizado.
-
-La vigencia se muestra en el momento de la consulta del registro, por separado de lo sucedido. Un documento retirado puede seguir figurando en expedientes anteriores. La interfaz permite examinar esos antecedentes, pero no inicia nuevos suministros ni restablece permisos. Una lista vacía significa que no constan consultas con esa selección en el registro consultado; no demuestra ausencia de actividad en otros sistemas.
-
-Se deben poder relacionar la consulta y el destinatario con la autorización aplicada, la edición de cada documento, la representación utilizada, las páginas o secciones seleccionadas, sus huellas y el contenido remitido. La respuesta, sus citas y la evaluación posterior constituyen evidencias diferenciadas.
-
-Si se conoce el consumo, se registrará con su fuente y unidad: tokens de entrada, salida y coste. Un dato no comunicado permanece desconocido; no se sustituye por cero. Una huella identifica un contenido: no acredita que el modelo lo haya comprendido.
-
-Los nodos 1, 2 y 3 conservan la misma autoridad documental. El nodo 2 se reserva a ensayos. Las diferencias entre ejecución propia, plataforma de ensayo y proveedor externo afectan al transporte y a la evidencia disponible; no amplían los permisos del modelo.
-
-## Ejemplo de interpretación correcta
-
-Si el original es un PDF de 120 páginas, el revisor puede estar viendo una representación textual de las páginas físicas 65 a 80. Si una consulta selecciona sólo dos secciones de esa representación, la entrega corresponde a esas dos secciones. Ninguna de estas circunstancias permite afirmar que el modelo recibió las 120 páginas o sus figuras.
-
-Restringir el suministro es un control verificable sobre los datos proporcionados. No permite observar ni borrar el conocimiento previo del modelo. La adecuación de la respuesta al material autorizado requiere su propia evaluación.
+Los tres nodos aplican la misma autoridad documental; el nodo 2 se reserva a ensayos. Controlar el contenido suministrado no elimina el conocimiento previo de un modelo ni permite observar todos sus procesos internos. La respuesta requiere una evaluación propia.
 
 ---
 

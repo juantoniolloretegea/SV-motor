@@ -1,66 +1,44 @@
 # Comprobaciones, estado y fuentes
 
-**Edición documental V.04 · Corte de información: 11 de octubre de 2026.**
+**Referencia de esta edición: 11 de octubre de 2026.**
 
-## Estado que explica esta edición
+## Capacidades y límites
 
-La referencia es el lector documental con presentación Markdown mediante mdBook, consulta de representaciones vinculadas a originales HTML y PDF, descarga de originales y separación entre revisión y suministro. La inspección del recorrido de entrega confirma que prepara fragmentos textuales, sin acreditar envío directo de los originales PDF o HTML.
+El sistema dispone de lectura Markdown mediante mdBook, representación gráfica de páginas PDF, conversión textual autorizada, índice y cobertura por intervalos, historial documental y consulta de los expedientes de entrega.
 
-Se conservan resultados anteriores de 65 comprobaciones Rust: 33 de módulos y 32 del recorrido documental de los tres nodos; además, 23 controles HTTPS. Verifican comportamientos delimitados, no tres inferencias nuevas ni una certificación de seguridad. La consulta de la interfaz comprobó índice, procedencia, contenido, tabla sencilla, tildes, retorno de navegación y bloqueo de una conversión no autorizada. La edición de este libro no convierte esas pruebas anteriores en una ejecución nueva.
+Las comprobaciones abarcan conservación de originales, identidad de las representaciones, intervalos parciales, controles de acceso y licencia, retirada de autorizaciones y mantenimiento de los antecedentes. Incluyen resultados favorables e impedimentos. No constituyen una certificación general de seguridad ni de exactitud científica.
 
-La preparación y publicación del libro tienen verificaciones propias de construcción, correspondencia, enlaces y consulta. Sus resultados se conservan en el registro de esta edición, separado de las comprobaciones funcionales del lector.
+Se han comprobado libros sintéticos de 130 y 1.025 páginas mediante intervalos. Esas pruebas verifican enumeración y recuperación del texto previsto; no demuestran que cualquier tratado complejo pueda convertirse íntegramente. La revisión gráfica y textual de originales reales tiene un alcance limitado a los documentos y páginas examinados.
 
-La V.02 incorpora la representación gráfica de páginas PDF. El conjunto delimitado comprende nueve PDF sintéticos y dos originales de nueve y cuatro páginas: 44 imágenes a dos escalas, once repeticiones idénticas y 55 ejecuciones de rechazo pertenecientes a cinco clases. Dieciocho imágenes sintéticas conservan identidad exacta con la comprobación anterior. El cotejo visual de los originales reales se limita a siete páginas; no acredita fidelidad universal. La corrección de la información contextual se comprueba por separado, conservando los resultados anteriores. Las pruebas de módulos de esta edición suman 45 resultados conformes.
+Permanecen sin acreditar la fidelidad universal de los PDF, la reconstrucción íntegra de tablas y diagramas complejos y la entrega directa de PDF o HTML a los modelos en este recorrido. El extractor no realiza reconocimiento óptico de caracteres.
 
-La V.03 añade el índice físico y la cobertura conjunta del mismo original. Se comprobaron 52 pruebas de módulos, 32 del recorrido documental y 17 del extractor y su aislamiento. Los controles incluyen intervalos faltantes, solapamientos, huellas discordantes, índices parciales, páginas repetidas, cuentas incorrectas, ciclos y páginas sin texto recuperable. La revisión final vuelve a comprobar los módulos tras completar los controles de permisos y registro. Los resultados repetidos no se suman como casos nuevos.
+## Función de los componentes
 
-Dos libros sintéticos de 130 y 1.025 páginas permiten comprobar la enumeración completa y el texto previsto de cada página: se reciben tres y diecisiete intervalos, respectivamente. Sus páginas permanecen pendientes de cotejo; la cobertura completa no equivale a una aprobación documental. Un original real de 76 páginas permite recuperar texto de 73. Las páginas físicas 2, 3 y 8 quedan identificadas como lagunas, sin declararlas vacías ni reconstruir su contenido. La extracción se divide para conservar los intervalos recuperables; se registran también los intentos fallidos. Este resultado no acredita fidelidad científica del texto recuperado.
+| Componente | Función |
+| --- | --- |
+| mdBook 0.5.4 | Organizar y presentar la lectura |
+| html-to-markdown-rs 3.17.2 | Convertir HTML conservado a Markdown |
+| pulldown-cmark 0.13.0 | Interpretar la estructura Markdown para su presentación |
+| Extractor documental PDF del SV | Recuperar texto por páginas e informar de su cobertura |
+| Hayro 0.8.0 | Representar páginas PDF como imágenes; requiere cotejo cuando la fidelidad sea decisiva |
 
-La comprobación detectó que los mensajes de error del extractor indicaban un índice desde cero. La corrección identifica expresamente la página física desde uno, de modo que la incidencia pueda localizarse en el visor. Se conservan los resultados anteriores y se cotejan los derivados recibidos tras la corrección.
-
-La inspección gráfica de las tres páginas sin texto recuperado muestra páginas en blanco tanto en el visor Rust como en una representación independiente con Poppler. No se observaron allí texto o figuras omitidos. Esta observación delimitada se conserva por separado: no modifica automáticamente el estado documental ni convierte la ausencia de texto en una aprobación del contenido.
-
-## Componentes y función efectiva
-
-La V.04 reúne la consulta protegida del contenido preparado, el resultado del transporte y la respuesta conservada. Sus comprobaciones distinguen los tres nodos, verifican la identidad de los bytes, la conservación del expediente tras una retirada y el rechazo de accesos sin función vigente. La presentación no añade suministros ni modifica decisiones. Los resultados detallados se conservan en la comprobación de entrega visible de esta edición.
-
-El ejemplo positivo de presentación utiliza datos sintéticos identificados y no representa una inferencia. Los registros operativos pueden carecer de consultas: ese estado vacío se mantiene, sin incorporar retrospectivamente pruebas ajenas al registro ni habilitar documentación reservada para completar una demostración. La comprobación no acredita nuevos envíos a proveedores ni observación de sus procesos internos. Véanse los [resultados y límites de la entrega visible](https://github.com/juantoniolloretegea/SV-motor/blob/main/laboratorio/ensayo-ia-y-observabilidad/visualizadores-de-documentos/comprobaciones/2026-10-11-entrega-visible/RESULTADO-PUBLICO.md).
-
-| Componente de referencia | Función en el recorrido descrito | Límite de la afirmación |
-| --- | --- | --- |
-| mdBook 0.5.4 | Organización y generación del libro | No extrae PDF ni autoriza contenido |
-| html-to-markdown-rs 3.17.2 | Conversión de HTML conservado a Markdown | No interpreta científicamente figuras ni garantiza fidelidad de todo HTML |
-| pulldown-cmark 0.13.0 | Lectura de la estructura Markdown para su presentación controlada | No resuelve omisiones del original ni reconstruye figuras |
-| Extractor documental PDF del SV | Recuperación de texto por páginas e informe de extracción | No acredita OCR, representación gráfica íntegra ni recuperación de tablas complejas |
-| Hayro 0.8.0 | Representación gráfica de páginas PDF completas; imagen protegida dentro de mdBook | Componente experimental; sus resultados requieren cotejo. No identifica ni interpreta científicamente figuras |
-
-Las versiones identifican la edición examinada. La existencia de una versión posterior de una biblioteca no implica su incorporación al SV.
-
-## Pendientes identificados
-
-Permanecen pendientes la entrega directa de PDF y HTML en el recorrido descrito, la presentación reunida del expediente de entrega junto al visor y la fidelidad integral de libros complejos, más allá del índice y la cobertura física comprobados. La incorporación gráfica no acredita estos otros recorridos ni el envío de imágenes a modelos.
-
-Para cada ampliación se deberán revisar tanto resultados favorables como rechazos: autorización ausente o retirada, formato no compatible, extracción parcial, codificación defectuosa, figura no recuperada e incertidumbre de envío. Los fallos se registrarán sin sustituirlos por resultados supuestos.
-
-No se acredita aquí compatibilidad universal entre navegadores, corrección de todo PDF, comprensión del modelo ni cumplimiento íntegro de normas sanitarias o de ciberseguridad.
+Estas versiones identifican los componentes de referencia. Que exista una versión posterior no significa que esté incorporada. Ninguno de estos componentes autoriza por sí mismo una entrega documental.
 
 ## Fuentes primarias
 
-- [mdBook: finalidad y documentación oficial](https://rust-lang.github.io/mdBook/).
-- [mdBook: organización del índice](https://rust-lang.github.io/mdBook/format/summary.html).
-- [mdBook: Markdown, tablas e imágenes](https://rust-lang.github.io/mdBook/format/markdown.html).
+- [mdBook: documentación oficial](https://rust-lang.github.io/mdBook/).
 - [html-to-markdown: proyecto del conversor](https://github.com/xberg-io/html-to-markdown).
-- [pulldown-cmark: proyecto del analizador Markdown](https://github.com/pulldown-cmark/pulldown-cmark).
-- [pdf-extract: biblioteca de extracción de contenido PDF](https://github.com/jrmuizel/pdf-extract).
-- [Hayro: representación PDF y limitaciones declaradas](https://github.com/LaurenzV/hayro).
+- [pulldown-cmark: proyecto del analizador](https://github.com/pulldown-cmark/pulldown-cmark).
+- [pdf-extract: biblioteca de extracción](https://github.com/jrmuizel/pdf-extract).
+- [Hayro: representación PDF y limitaciones](https://github.com/LaurenzV/hayro).
 
-Las fuentes de terceros describen sus propios componentes. Sus capacidades no se atribuyen al SV hasta verificar su integración. La referencia pública de este libro se conserva en [Visualizadores de documentos, SV-motor](https://github.com/juantoniolloretegea/SV-motor/tree/main/laboratorio/ensayo-ia-y-observabilidad/visualizadores-de-documentos); la Biblioteca del SV ofrece la lectura y las fuentes de la edición.
+Los resultados detallados se conservan en el [registro público de comprobaciones de los visualizadores](https://github.com/juantoniolloretegea/SV-motor/tree/main/laboratorio/ensayo-ia-y-observabilidad/visualizadores-de-documentos/comprobaciones). Las ediciones anteriores permanecen en el historial de publicación. Esta guía explica el funcionamiento vigente sin reproducir la secuencia de desarrollo.
 
-## Ediciones y derechos
+## Derechos y alcance de la explicación
 
-Las correcciones posteriores deberán identificar versión, fecha y alcance, conservando las referencias a la edición anterior. Los textos propios mantienen el aviso de autoría y licencia. Los documentos consultados y los componentes de terceros conservan sus derechos y condiciones particulares.
+Cada documento y componente de terceros conserva su propia licencia. La visualización, traducción o transformación no amplía los derechos de uso. El permiso de suministro a IA debe examinarse separadamente.
 
-La presentación y traducción de lectura no amplían la licencia de los documentos ni autorizan su suministro. Este libro es una explicación pública del funcionamiento y sus límites, sin contenidos reservados ni configuraciones de acceso.
+Este libro no acredita cumplimiento íntegro de normas sanitarias o de ciberseguridad ni sustituye la revisión profesional del contenido.
 
 ---
 

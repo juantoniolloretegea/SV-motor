@@ -1,51 +1,40 @@
 # Información disponible para la revisión
 
-El revisor trabaja desde la administración documental. El acceso a este libro debe estar disponible desde ese entorno y desde la lectura del documento, sin trasladar contenidos reservados a la biblioteca pública.
+## Leer sin perder la referencia
 
-## Libro general e información particular
+El documento ocupa el centro de la lectura. **Procedencia y alcance** y **Ficha, permisos e historial** permiten consultar su identificación, derechos, transformaciones y seguimiento. **Reglas de lectura y entrega** abre este libro en otra pestaña.
 
-Este libro explica los métodos y las reglas comunes. La ficha y el expediente de cada consulta deben mostrar los valores particulares que permitan aplicarlas. Un enlace al libro no sustituye esa información ni prueba que se hayan realizado todas las comprobaciones descritas.
+El informe particular identifica lo que se está viendo. Una explicación general no sustituye la cobertura ni el estado de revisión del documento elegido.
 
-El acceso general se denomina **«Reglas de lectura y entrega»**. Abre la edición pública en otra pestaña, conservando la revisión en curso. La navegación pública ofrece un retorno a la administración; recuperar un documento concreto continúa sujeto a la sesión y permisos correspondientes. El enlace no incorpora identificadores privados, preguntas ni datos de una consulta.
+## Qué revisar
 
-## Información junto al documento
+| Aspecto | Qué debe comprobarse |
+| --- | --- |
+| Identidad | Título, edición, procedencia y correspondencia con el original |
+| Cobertura | Páginas o secciones incluidas y partes pendientes |
+| Fidelidad | Caracteres, orden de lectura, tablas, figuras y omisiones relevantes |
+| Licencia | Operaciones permitidas, pendientes o excluidas y su vigencia |
+| Suministro | Autorización específica, destinatario y selección documental |
 
-| Apartado | Información que debe poder consultarse | Situación de referencia |
-| --- | --- | --- |
-| Identificación | Título, edición, formato del original y huella | La ficha y la procedencia ya identifican el recurso y la representación |
-| Forma de lectura | Si se ve el original o un derivado; método y versión utilizados | La lectura mdBook y la conversión están identificadas; la explicación se desarrolla en este libro |
-| Cobertura | Páginas o secciones incluidas; partes no disponibles | El índice reúne intervalos, pendientes, solapamientos y discordancias del mismo original; la fidelidad integral continúa sujeta a cotejo |
-| Fidelidad | Estado del cotejo y sus observaciones | Se conserva la revisión del derivado; no equivale a una certificación científica |
-| Derechos y suministro | Usos permitidos, pendientes o excluidos; autorización vigente | La ficha y el control documental separan estos permisos |
-| Entrega particular | Qué representación y contenido se preparó y remitió, y con qué resultado | El expediente conserva evidencia; su presentación reunida junto al visor permanece pendiente |
+Un depósito para revisión no acredita todos los usos de la licencia. Si una operación no está habilitada, consulte la ficha y la evidencia del permiso antes de solicitar su autorización.
 
-Esta tabla distingue la información existente de la ampliación prevista. No declara implementado un panel completo de entrega dentro del visor.
+## Historial del documento
 
-## Avisos comprensibles y accionables
+El historial relaciona las actuaciones con su responsable, fecha, objeto y resultado. **Actuación registrada** abre la actuación particular asociada a una vista. No es un enlace para repetirla.
 
-En la consulta gráfica de PDF, «Actuación registrada» abre la referencia individual del historial. «Descargar informe de esta vista» conserva los datos particulares de representación. El Calificador de actividades documentales asigna automáticamente TRA-02, «Preparación gráfica de una página PDF», dentro de Transformación. Esta denominación no puede ser elegida libremente por un usuario ni por una IA y no equivale a cotejo favorable.
+El **Calificador de actividades documentales** clasifica automáticamente los acontecimientos mediante reglas deterministas en Rust. Ni el usuario ni una IA eligen libremente esa clasificación. Preparar una representación registra una transformación; no registra una aprobación.
 
-Los mensajes deben indicar la situación, su consecuencia y cómo continuar. Por ejemplo:
+Los antecedentes permanecen cuando se retira una autorización. Esto permite revisar qué edición y qué permiso intervinieron en una consulta pasada, aunque ya no pueda realizarse una nueva entrega.
 
-- **«Representación parcial: páginas físicas 65–80 de 120».** Permite conocer la cobertura sin confundirla con el documento íntegro.
-- **«Figura no disponible en esta representación».** Evita presentar una indicación textual como sustituto de la imagen.
-- **«Conversión pendiente de autorización».** La consulta o el depósito no conceden ese permiso.
-- **«Suministro retirado».** Impide una nueva entrega; los antecedentes permanecen en el expediente.
-- **«Resultado del envío desconocido».** Exige revisar la evidencia antes de decidir una nueva actuación.
+## Ante una representación incompleta
 
-Son criterios para la información contextual; no un inventario de mensajes ya implantados. Se emplearán denominaciones funcionales, como «Revisión», «Autorizar suministro» y «Retirar autorización».
+Compare con el original. Identifique las páginas o elementos afectados y registre el resultado del cotejo. Puede ser necesario corregir la conversión, completar otro intervalo o descartar esa representación para la finalidad prevista. Una página sin texto recuperado debe revisarse; no se presume vacía.
 
-La preparación del índice y la cobertura se registra como TRA-03, «Preparación del índice y la cobertura de un PDF», dentro de Transformación. La clasificación es automática. Conserva el estado observado, sin conceder autorización documental ni afirmar que se haya leído el libro completo.
+## Ante una respuesta de la IA
 
-## Secuencia de revisión
+Abra el expediente de la consulta y compare la respuesta y sus citas con los fragmentos realmente preparados. Distinga la confirmación del envío de la evaluación del contenido. Si el envío es incierto, examine la evidencia antes de repetirlo.
 
-1. Identificar el original y la representación que se consulta.
-2. Comprobar cobertura, transformaciones y advertencias relevantes.
-3. Cotejar el resultado dentro del alcance de la revisión.
-4. Consultar licencia y autorización antes de decidir un suministro.
-5. Si existe una consulta, contrastar la selección preparada y la entrega registrada con la respuesta y sus citas.
-
-La revisión puede concluir que el material es insuficiente, que necesita corrección o que no debe suministrarse. El sistema debe conservar ese resultado sin convertir automáticamente una visualización satisfactoria en autorización.
+Una revisión puede concluir que el material es insuficiente o inadecuado. Que el documento se visualice correctamente no obliga a autorizar su suministro.
 
 ---
 
