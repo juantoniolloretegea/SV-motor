@@ -1,0 +1,184 @@
+{
+  "fecha_consulta": "2026-10-10",
+  "alcance": "Estado del arte; lectura de fuentes primarias y antecedentes. Sin instalación, nueva compilación ni prueba de las bibliotecas comparadas.",
+  "restriccion": "Toda asistencia de IA queda excluida de la aplicación propuesta.",
+  "version_local": {
+    "componente": "Xberg",
+    "version": "1.3.6",
+    "fuente": "Manifiesto del conversor documental examinado; versión fijada y funciones reproducidas en este registro.",
+    "funciones": [
+      "tokio-runtime",
+      "html",
+      "office",
+      "pdf"
+    ],
+    "funciones_predeterminadas": false,
+    "comparacion_diff": "No habilitada ni comprobada en esta actuación. La documentación actual no acredita la versión fijada."
+  },
+  "repositorios": [
+    {
+      "repositorio": "xberg-io/xberg",
+      "revision": "675147af49882314b758715238d6495e9c48657a",
+      "fecha_revision": "2026-10-10T18:11:16Z",
+      "licencia": "MIT",
+      "estrellas_observadas": 9400,
+      "fuentes": [
+        "https://github.com/xberg-io/xberg",
+        "https://docs.xberg.io/guides/rust-core-api/"
+      ],
+      "uso": "Reutilizar el perfil ya incorporado; comparación actual pendiente de comprobar en versión fijada."
+    },
+    {
+      "repositorio": "quickwit-oss/tantivy",
+      "revision": "6783439906636ad99d1afce07b229f4c26b9e219",
+      "fecha_revision": "2026-10-09T21:20:45Z",
+      "licencia": "MIT",
+      "estrellas_observadas": 16202,
+      "fuentes": [
+        "https://github.com/quickwit-oss/tantivy",
+        "https://docs.rs/tantivy/latest/tantivy/"
+      ],
+      "uso": "Candidato para búsqueda textual; no determina contradicción."
+    },
+    {
+      "repositorio": "pulldown-cmark/pulldown-cmark",
+      "revision": "953e44a496238eb5a4e5ec2d82dc37e54c970cbb",
+      "fecha_revision": "2026-10-09T19:26:11Z",
+      "licencia": "MIT",
+      "fuentes": [
+        "https://github.com/pulldown-cmark/pulldown-cmark",
+        "https://docs.rs/pulldown-cmark/latest/pulldown_cmark/struct.Parser.html"
+      ],
+      "uso": "Reutilizar lector Markdown; la versión local fijada es 0.13.0."
+    },
+    {
+      "repositorio": "rust-scraper/scraper",
+      "revision": "5407860b04337a17b45defeb02ca6f0d39df37e3",
+      "fecha_revision": "2026-09-21T07:33:14Z",
+      "licencia": "ISC",
+      "fuentes": [
+        "https://github.com/rust-scraper/scraper",
+        "https://docs.rs/scraper/latest/scraper/"
+      ],
+      "uso": "Reserva si falta extracción de estructura HTML."
+    },
+    {
+      "repositorio": "jrmuizel/pdf-extract",
+      "revision": "47b792ba04c5f3b6e478072b2efb8e1a2a06ec7e",
+      "fecha_revision": "2026-09-16T15:11:59Z",
+      "licencia": "MIT según manifiesto; el metadato de licencia de GitHub consultado fue nulo.",
+      "fuentes": [
+        "https://github.com/jrmuizel/pdf-extract",
+        "https://docs.rs/pdf-extract/latest/pdf_extract/"
+      ],
+      "uso": "Conservar lector local corregido 0.12.1-sv.2; no sustituirlo por esta revisión."
+    },
+    {
+      "repositorio": "mitsuhiko/similar",
+      "revision": "96993d92851eff9a484ea157614de30f80dfdc73",
+      "fecha_revision": "2026-09-28T21:11:17Z",
+      "licencia": "Apache-2.0",
+      "fuentes": [
+        "https://github.com/mitsuhiko/similar"
+      ],
+      "uso": "Alternativa si la comparación de Xberg no basta."
+    },
+    {
+      "repositorio": "pascalkuthe/imara-diff",
+      "revision": "f02e46a737c43c0d9c65a42e5e08046bd10fd739",
+      "fecha_revision": "2026-06-21T16:10:29Z",
+      "licencia": "Apache-2.0",
+      "fuentes": [
+        "https://github.com/pascalkuthe/imara-diff"
+      ],
+      "uso": "Alternativa a Similar, no incorporación adicional propuesta."
+    },
+    {
+      "repositorio": "laurenzv/hayro",
+      "revision": "14410d75ec7e38bba85a210a68c4fdd6bbefaeaa",
+      "fecha_revision": "2026-10-10T12:09:31Z",
+      "licencia": "Apache-2.0",
+      "fuentes": [
+        "https://github.com/laurenzv/hayro"
+      ],
+      "uso": "Reserva para visualización PDF; no recibido para el corpus."
+    },
+    {
+      "repositorio": "guilhermecariru/GroundLineOSS",
+      "revision": "f39c4a37e34803eb9770d7f572f44f7239e96f47",
+      "fecha_revision": "2026-07-26T01:00:41Z",
+      "licencia": "AGPL-3.0",
+      "fuentes": [
+        "https://github.com/guilhermecariru/GroundLineOSS",
+        "https://www.usegroundline.com/",
+        "https://github.com/guilhermecariru/GroundLineOSS/blob/f39c4a37e34803eb9770d7f572f44f7239e96f47/apps/analysis-service/requirements.txt"
+      ],
+      "uso": "Referencia funcional; excluido por análisis Python y aplicación TypeScript."
+    },
+    {
+      "repositorio": "Prashanth1998-18/raglint",
+      "revision": "e2df6af7ec0ee96af78309f91d7da0ecba1600eb",
+      "fecha_revision": "2026-03-30T03:12:01Z",
+      "licencia": "MIT",
+      "fuentes": [
+        "https://github.com/Prashanth1998-18/raglint"
+      ],
+      "uso": "Excluido por Python y asistencia de IA."
+    },
+    {
+      "repositorio": "pari-28/FactLens",
+      "revision": "7337449504e038bfa06fa933360739716f7d570c",
+      "fecha_revision": "2026-09-09T05:52:59Z",
+      "licencia": "No determinada por el metadato consultado.",
+      "fuentes": [
+        "https://github.com/pari-28/FactLens"
+      ],
+      "uso": "Referencia de presentación; excluido por TypeScript y extracción mediante Gemini."
+    },
+    {
+      "repositorio": "crodorg/falsify",
+      "revision": "81163bb8f4262a87cefe23f50d86d2b6ba86cdf3",
+      "fecha_revision": "2026-07-10T22:01:35Z",
+      "licencia": "MIT",
+      "fuentes": [
+        "https://github.com/crodorg/falsify"
+      ],
+      "uso": "Excluido: la verificación Rust no sustituye el descubrimiento confiado a agentes de IA."
+    }
+  ],
+  "fuentes_complementarias": [
+    {
+      "url": "https://api.draftable.com/introduction",
+      "uso": "Referencia de comparación visual; servicio propietario no adoptado."
+    },
+    {
+      "url": "https://aclanthology.org/2024.naacl-long.362/",
+      "uso": "Investigación sobre contradicciones internas en documentos largos; no es una aplicación ni una propuesta de asistencia de IA."
+    },
+    {
+      "url": "https://arxiv.org/html/2504.00180v1",
+      "uso": "Distinción de conflictos dentro de un documento, entre pares y condicionados por terceros; no acredita eficacia del recorrido propuesto."
+    }
+  ],
+  "notas": [
+    "Las revisiones son las consultadas, no una recomendación de actualización automática.",
+    "Estrellas y fechas de actividad son indicadores, no comprobaciones de corrección.",
+    "Este archivo no acredita publicación ni custodia remota."
+  ],
+  "atribucion": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+  "antecedentes_documentales": [
+    "Estudio de conversores Markdown del 09/10/2026",
+    "Condiciones Rust y gobierno documental del 09/10/2026",
+    "Contraste documental en tres formatos del 09/10/2026",
+    "Evaluación de extracción de PDF de ciberseguridad del 09/10/2026",
+    "Manifiesto del lector Markdown examinado",
+    "Manifiesto del lector PDF corregido examinado"
+  ],
+  "precision_posterior": "Registro histórico del 10/10/2026. El 11/10 se acepta traducción automática Google como instrumento externo; no se incorpora IA como detector o juez de contradicciones.",
+  "edicion_publica": {
+    "fecha": "2026-10-11",
+    "original_sha256": "9255226c5aa902f07c4b7ed67f0dba288b4c0167b0c1eb2acee5bcf31538ba74",
+    "tratamiento": "Conservación de observaciones, fuentes y límites; supresión de rutas de trabajo.",
+    "alcance": "Estudio; no acredita detector integrado ni evaluación de un modelo."
+  }
+}
