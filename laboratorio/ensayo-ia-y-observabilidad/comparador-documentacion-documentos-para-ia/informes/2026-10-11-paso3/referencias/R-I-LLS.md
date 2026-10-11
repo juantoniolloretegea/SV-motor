@@ -1,7 +1,0 @@
-# R-I-LLS
-
-• La leucemia de células peludas (HCL, por sus siglas en inglés) es una leucemia infrecuente, de proliferación lenta, que se inicia en una célula B (también denominada linfocito B), un tipo de glóbulo blanco. La enfermedad también se denomina leucemia de células pilosas y tricoleucemia.
-
-La leucemia de células peludas suele ser de progresión lenta y no todos los pacientes necesitan empezar el tratamiento de inmediato tras el diagnóstico inicial. En el caso de aproximadamente el 10 por ciento de los pacientes (que tienen conteos estables de células sanguíneas y no presentan síntomas al momento del diagnóstico), el enfoque de tratamiento podría ser el de la “espera vigilante”. La espera vigilante es un enfoque médico adecuado que implica posponer el tratamiento hasta la aparición o progresión de signos y síntomas de la enfermedad. Algunos pacientes con leucemia de células peludas viven por muchos años sin ningún síntoma y sin recibir ningún tratamiento. Es necesario realizar un seguimiento frecuente del paciente, incluyendo análisis de sangre, para que pueda iniciarse el tratamiento si la enfermedad empieza a avanzar.
-
-Los pacientes deberían iniciar el tratamiento si tienen conteos bajos de células sanguíneas (deficiencia de glóbulos rojos, plaquetas o glóbulos blancos). También deberían iniciar el tratamiento si presentan síntomas, entre ellos, pérdida de peso sin explicación, infecciones recurrentes o molestias físicas debido al agrandamiento del bazo e/o hígado.

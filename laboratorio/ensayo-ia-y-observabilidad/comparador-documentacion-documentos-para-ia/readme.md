@@ -1,97 +1,37 @@
-# Buscador-Semántico - Diferencial
+# Buscador-Semántico - Diferencial: resultado del ensayo y retirada
 
-**Edición documental 13 · 11 de octubre de 2026.**
+**Estado: retirado · 11 de octubre de 2026.**
 
-Esta carpeta reúne los estudios, revisiones y evidencias del **Buscador-Semántico - Diferencial** del Sistema Vectorial SV. Su finalidad es proporcionar una ayuda de consulta voluntaria para comprobar si un documento propuesto para la IA contiene afirmaciones en conflicto con los documentos ya incorporados al conjunto documental correspondiente. El revisor podrá utilizarla cuando le resulte útil, consultar algunas sugerencias o continuar sin utilizarla. La herramienta no impone la resolución de sus avisos ni determina el suministro documental.
+El ensayo examinó una ayuda opcional para identificar contradicciones entre un documento propuesto y otros documentos del mismo dominio, con realización en Rust y sin IA en su funcionamiento. La contradicción debía consistir en afirmaciones incompatibles sobre el mismo objeto, sentido y condiciones de aplicación. La menor precisión, la falta de detalle y la información complementaria no constituían por sí solas una contradicción.
 
-El ámbito comprende **Medicina y Ciberseguridad**, con documentos PDF, HTML y Markdown, manteniendo la separación de sus dominios. El recorrido previsto es **documento propuesto y dominio → elección de un documento, un grupo o todos los documentos accesibles del mismo dominio → filtros en Rust → Buscador-Semántico - Diferencial → sugerencias con ambos pasajes y referencias**. No se compara inmunología con ciberseguridad. Se buscan **incompatibilidades de significado**, atendiendo a sujetos, condiciones, versiones, cantidades, unidades, fechas y excepciones. Una diferencia de redacción no basta para declarar contradicción.
+**Las alternativas examinadas no acreditaron la utilidad necesaria para ese objetivo. Se retira la herramienta y se da por terminado su desarrollo e integración.** La conclusión se refiere a los recursos y procedimientos examinados; no demuestra que una solución futura sin IA sea imposible.
 
-## Estado comprobado
+## Resultados que fundamentan la retirada
 
-**El objetivo vigente es una ayuda opcional con sugerencias fundamentadas; todavía no está incorporada a la interfaz de administración.** La [precisión del alcance y reconsideración de las evidencias](informes/2026-10-11-ayuda-opcional/ALCANCE-Y-RECONSIDERACION.md) sustituye para actuaciones futuras la exigencia de detección completa como condición de utilidad. Se valorarán el interés de las sugerencias, los errores y el esfuerzo de consulta. No se exige un resultado perfecto ni se altera el resultado histórico de las pruebas. Se han examinado componentes, fuentes y límites. La primera comprobación Rust de speccheck-core 0.4.1 no supera el criterio previo: alertas en 6 de 12 incompatibilidades y en 5 de 8 casos compatibles; cuatro casos de contexto insuficiente se contabilizan aparte. El conjunto es sintético y diagnóstico. La comprobación posterior de admisión de Logicaffeine 0.10.1 no justifica su integración: admite ocho de doce enunciados especializados, pero al menos cuatro de los admitidos omiten condiciones o complementos esenciales. El diagnóstico posterior localiza pérdidas durante la construcción de la oración y distingue varios mecanismos; no se ha identificado un ajuste de configuración suficiente. El Buscador-Semántico - Diferencial permanece en estudio.
+| Comprobación | Contradicciones detectadas | Falsos avisos en casos compatibles |
+|---|---:|---:|
+| Perfil restrictivo, controles sintéticos iniciales | 4 de 6 | 1 de 8 |
+| Doce casos documentales, traducciones inglesas conservadas | 1 de 6 | 0 de 4 |
+| Mismos casos documentales en español, ensayo de segmentación | 0 de 6 | 0 de 4 |
+| Controles adicionales: lector inicial o párrafos completos | 2 de 5 | 1 de 7 |
+| Mismos controles adicionales: separación por oraciones | 3 de 5 | 3 de 7 |
 
-| Función | Situación al corte |
-| --- | --- |
-| Administración y presentación | Axum, redb y mdBook ya utilizados. mdBook es el lector común; su presentación no determina por sí sola el permiso ni el formato de suministro a modelos. |
-| Preparación documental | Xberg y los lectores Rust existentes conservan sus usos y límites. html-to-markdown-rs y pulldown-cmark también están incorporados. La extracción PDF no acredita recuperación universal de tablas, figuras o lectura íntegra. |
-| Búsqueda de pasajes | Tantivy es candidato. Su código es Rust; queda por comprobar el perfil de dependencias que excluya la compresión Zstandard implementada en C. |
-| Idioma de comparación | Traducción Google al inglés aceptada como instrumento externo, conservando original y traducción. Se han obtenido y conservado veinte textos ingleses mediante la interfaz oficial de Google. Su correspondencia con las entradas españolas se comprobó en Rust; no acredita equivalencia semántica ni traducción integrada en la aplicación. |
-| Sugerencias sobre posibles contradicciones | Las reglas examinadas ofrecen indicios parciales con aciertos y errores documentados. Su utilidad como ayuda opcional debe comprobarse en textos representativos; no hay detector general acreditado. La búsqueda textual conserva su función de recuperación. |
-| Decisión sobre documentos | La decisión y sus efectos sobre el suministro se conservan en el expediente; las alertas no constituyen una autorización. |
+En los controles sintéticos iniciales también se emitió un aviso en uno de los dos casos de contexto insuficiente. Los doce casos documentales incluían seis incompatibilidades, cuatro compatibilidades y dos relaciones de contexto insuficiente. Son los mismos casos en español e inglés, no veinticuatro observaciones independientes. La comparación de lectores, párrafos y oraciones mantuvo los resultados documentales: ninguna detección española y una inglesa, correspondiente a una obligación de verificación de acceso frente a su negación.
 
-La propuesta inicial basada en vocabularios preparados por personas está retirada: trasladaba al revisor parte esencial del hallazgo solicitado. No haber encontrado una solución completa tampoco demuestra imposibilidad técnica. El desarrollo propio sólo se considerará cuando se justifique su necesidad mediante su comparación con los recursos existentes.
+La separación por oraciones recuperó una oposición artificial adicional, pero añadió dos falsos avisos al separar las afirmaciones de una condición temporal o de la aclaración de que un ejemplo carecía de vigencia. Conservar el contexto completo no bastó para que la regla de comparación interpretase su alcance. Una diferencia de redacción no podía utilizarse como sustituto de una contradicción de significado.
 
-**Paso 3 / 8 preparado.** Se han fijado doce casos nuevos en español, seis por dominio, con ocho pasajes y cuatro documentos parciales de referencia. Se distinguen seis incompatibilidades controladas, cuatro casos compatibles y dos de contexto insuficiente. También se conservan doce solicitudes previstas para comprobar selección y separación por dominio. Este conjunto se ha utilizado posteriormente en el contraste de pasajes traducidos; la preparación histórica y sus referencias permanecen intactas. La preparación y sus límites constan en el [protocolo del paso 3](informes/2026-10-11-paso3/PROTOCOLO-Y-ESTADO.md).
+Las muestras fueron pequeñas, deliberadas y conocidas durante el desarrollo; las referencias documentales eran preliminares. Los recuentos no estiman una fiabilidad general. La ausencia de aviso tampoco acredita compatibilidad. Las comprobaciones instrumentales favorables no compensan estas limitaciones de detección. El tiempo de revisión no determinó la decisión.
 
-**Pasos 4 y 5 / 8: perfil contrastado.** La función entre documentos SC-XF-002 de speccheck-core 0.4.1 no señaló ninguna de las seis incompatibilidades de partida en los doce casos traducidos literalmente por Google. Un control instrumental positivo produjo el aviso previsto. Las doce comprobaciones experimentales de selección fueron conformes. Este perfil no se selecciona para integración; el resultado no se convierte en una declaración de coherencia ni en imposibilidad general de una ayuda parcial. [Resultado, evidencias y límites](comprobaciones/2026-10-11-pasajes-traducidos/RESULTADO-Y-ALCANCE.md).
+## Alcance del cierre
 
-**Pasos 4 y 5 / 8: adaptación delimitada.** La variante experimental que añade should y conserva el resto de la afirmación señaló cuatro de seis incompatibilidades sintéticas, con un aviso en ocho casos compatibles; en doce casos documentales conocidos señaló una de seis incompatibilidades. Conserva errores de contexto y omisiones. La ampliación should sin restricción generó seis avisos en ocho compatibles y se descarta para presentación. Un aviso por caso no acredita fundamento correcto. [Resultados, análisis adversarial y cambio exacto](comprobaciones/2026-10-11-oposiciones-explicitas/RESULTADO-Y-ALCANCE.md). La función conservadora permanece experimental, sin integración ni cambios posteriores para acomodarla a estas referencias.
+La carpeta vigente del ensayo conserva únicamente este documento. Se retiran sus informes separados, programas, demostraciones y propuestas de integración. Los antecedentes permanecen identificables en el historial de Git, sin constituir una herramienta disponible o una propuesta pendiente de incorporación.
 
-**Paso 6 / 8: correspondencia y consulta comprobadas.** Se han conservado 28 pares, veinte traducciones y siete localizaciones directamente declaradas, con doce controles de integridad y cotejo de texto en las 28 páginas de casos. La muestra mdBook presenta originales, traducciones y encabezamientos. Persiste una sola localización directa por aviso; la localización bilateral y la integración permanecen pendientes. No se repitió el detector. [Resultado y alcance](comprobaciones/2026-10-11-correspondencias/RESULTADO-Y-ALCANCE.md) · [Consulta de casos](comprobaciones/2026-10-11-correspondencias/consulta-mdbook/src/indice.md).
+La comprobación del libro **Reglas, usos y descripciones documentales de documentos para el conocimiento de la IA**, realizada el 11 de octubre de 2026 sobre sus fuentes y sus páginas publicadas, no encontró incorporaciones de esta herramienta. El cierre no añade contenido al libro.
 
-**Paso 7 / 8: integración funcional experimental.** La función Rust reutiliza el registro administrativo y ha superado 21 controles sintéticos de selección, permisos, concurrencia, identidad y localización. Los nuevos avisos conservan directamente ambos pasajes, sin cambiar el criterio de detección. Se realizaron ocho llamadas instrumentales al comparador, separadas del contraste científico anterior. No está incorporada a las pantallas ni desplegada en los servicios. [Resultado y límites](comprobaciones/2026-10-11-integracion-opcional/RESULTADO-Y-ALCANCE.md) · [Conexión con la administración](comprobaciones/2026-10-11-integracion-opcional/INTEGRACION.md).
+## Referencias de trazabilidad
 
-**Paso 8 / 8: conexión administrativa experimental, todavía abierta.** Se han preparado la selección opcional por dominio, las comprobaciones de acceso, la comparación aislada en Linux y la presentación de ambos contextos en mdBook. La ejecución final superó 35 controles conjuntos; las pruebas de módulos reúnen 57 controles distintos conformes. Se conservan y explican los defectos de presentación anteriores. Faltan la integración con la revisión administrativa vigente, el recorrido autenticado completo y la conexión de traducciones conservadas para español. No se declara desplegada la función. La incorporación al libro requiere autorización expresa posterior. [Resultado y límites](comprobaciones/2026-10-11-conexion-administrativa/RESULTADO-Y-ALCANCE.md) · [Funcionamiento preparado](comprobaciones/2026-10-11-conexion-administrativa/ALCANCE-DEL-PASO.md).
+- [Resultados del contraste de oposiciones explícitas](https://github.com/juantoniolloretegea/SV-motor/blob/df38b107882e999c6b85de0582751a5ff3366a1a/laboratorio/ensayo-ia-y-observabilidad/comparador-documentacion-documentos-para-ia/comprobaciones/2026-10-11-oposiciones-explicitas/RESULTADO-Y-ALCANCE.md).
+- [Estado documental anterior a la retirada](https://github.com/juantoniolloretegea/SV-motor/tree/df38b107882e999c6b85de0582751a5ff3366a1a/laboratorio/ensayo-ia-y-observabilidad/comparador-documentacion-documentos-para-ia).
+- Ensayo complementario de segmentación del 11 de octubre de 2026: resultados cotejados antes del cierre; archivo de evidencias identificado por SHA-256 `69d4c8209a77e6391f81f9d2914422a947cf4b7fb5a68117b6c50f30196fe0f0`.
 
-**Medición de utilidad preparada.** Doce revisiones experimentales, seis ordinarias y seis con las sugerencias conservadas del Buscador-Semántico - Diferencial, con separación de dominios. El instrumento Rust de registro y cálculo ha superado dieciocho controles; las sesiones todavía no se han realizado. La evaluación prioriza contradicciones de significado correctamente fundamentadas, omisiones y falsas incompatibilidades; la falta de precisión o detalle no constituye por sí sola una contradicción. El tiempo queda como dato descriptivo secundario. La participación del revisor externo de IA se limita al ensayo y no se incorpora al funcionamiento del SV. [Protocolo](comprobaciones/2026-10-11-medicion-utilidad/PROTOCOLO.md) · [Encargo](comprobaciones/2026-10-11-medicion-utilidad/ENCARGO-REVISION.md) · [Preparación y estado](comprobaciones/2026-10-11-medicion-utilidad/PREPARACION-Y-ESTADO.md).
-
-## Informes y fuentes
-
-| Documento | Función y estado |
-| --- | --- |
-| [Oposiciones explícitas: adaptación delimitada](comprobaciones/2026-10-11-oposiciones-explicitas/RESULTADO-Y-ALCANCE.md) | Tres perfiles, dieciséis controles nuevos y regresión sobre doce casos conocidos; mejora parcial y límites de contexto, sin integración. |
-| [Contraste de pasajes traducidos](comprobaciones/2026-10-11-pasajes-traducidos/RESULTADO-Y-ALCANCE.md) | Veinte textos conservados, doce casos, seis omisiones y comprobaciones de selección; perfil no seleccionado para integración. |
-| [Paso 3 / 8: fuentes y casos](informes/2026-10-11-paso3/PROTOCOLO-Y-ESTADO.md) | Conjunto fijado antes de ejecutar: originales, pasajes, documentos propuestos, referencias separadas y selecciones previstas. |
-| [Alcance auxiliar y reconsideración de las evidencias](informes/2026-10-11-ayuda-opcional/ALCANCE-Y-RECONSIDERACION.md) | Criterio vigente: uso voluntario, sugerencias examinables y evaluación de utilidad. Reconsideración documental de las salidas existentes, sin nueva ejecución de candidatos. |
-| [Diagnóstico de las pérdidas de significado](informes/2026-10-11-diagnostico/RESULTADO-DIAGNOSTICO.md) | Localización por etapas y fuente; 14 resultados anteriores reproducidos. No acredita una corrección suficiente ni una nueva validación. |
-| [Revisión de alternativas y avance por pasos](informes/2026-10-11-paso4/REVISION-ALTERNATIVAS.md) | Antecedente del paso 4; recursos examinados, procedencia y límites. Su criterio de continuación se actualiza mediante la precisión del alcance auxiliar. |
-| [Admisión y conservación del significado: Logicaffeine 0.10.1](informes/2026-10-11-paso4/RESULTADO-ADMISION.md) | Comprobación nueva, separada del ensayo anterior. Resultado insuficiente para integración. |
-| [Comprobación preliminar de speccheck-core 0.4.1](comprobaciones/2026-10-11-speccheck-0.4.1/RESULTADO.md) | Resultado histórico conforme a su criterio previo: candidato no apto para aquella incorporación. Se conservan protocolo, casos, salidas y contraste Rust. No resuelve por sí solo su utilidad como ayuda opcional. |
-| [Estructura lógica y componentes Rust](informes/2026-10-11/ESTRUCTURA-LOGICA-RUST-MDBOOK.md) | Estudio vigente: funciones conjuntas, comunidades, mantenimiento, mdBook, traducción y revisión de lenguajes y dependencias. Distingue lo existente de lo propuesto. |
-| [Revisión de aptitud y contraste adversarial](informes/2026-10-11/REVISION-DE-APTITUD.md) | Conserva el rechazo de la propuesta inicial, la corrección de una desestimación excesiva y la reconsideración bilingüe anterior a la precisión sobre traducción. |
-| [Estado del arte inicial](informes/2026-10-11/ESTADO-DEL-ARTE.md) | Antecedente del 10/10/2026, con propuesta retirada expresamente identificada. |
-| [Fuentes y componentes del 11/10/2026](informes/2026-10-11/COMPONENTES-RUST-MDBOOK-FUENTES.json) | Referencias, versiones, actividad observada, objetos Git y límites de las comprobaciones. |
-| [Fuentes del estudio inicial](informes/2026-10-11/FUENTES.json) | Registro histórico del 10/10/2026, con precisión sobre las instrucciones posteriores. |
-| [Manifiesto de esta edición](informes/2026-10-11-paso3/MANIFIESTO.json) | Identidad, tamaño y SHA-256 de la entrada y de la preparación del paso 3. Los informes anteriores conservan sus propios manifiestos. |
-
-Las copias públicas conservan las conclusiones, adendas y fuentes. Se han retirado las rutas de trabajo y añadido indicaciones de estado para evitar que una propuesta histórica se lea como vigente. El manifiesto distingue la huella original de la edición pública; no afirma igualdad entre contenidos editados.
-
-## Recorrido previsto para la revisión
-
-1. Identificar el documento propuesto y su dominio. Al solicitar la ayuda, el responsable elegirá un documento, un grupo o todos los documentos accesibles ya incorporados en ese mismo dominio. Rust aplicará la selección, comprobará dominio y permisos e identificará el conjunto y sus versiones antes de entregarlos al comparador. Se declarará el contenido recuperado y las partes fuera de cobertura.
-2. Preparar las representaciones y, cuando corresponda, la traducción inglesa, manteniendo correspondencia con los pasajes originales.
-3. Cuando el revisor lo solicite, comparar el documento propuesto con los documentos ya incorporados y presentar posibles contradicciones con ambos pasajes originales, contexto y fundamento. Se declararán las funciones y partes efectivamente examinadas.
-4. Consultar las sugerencias que resulten pertinentes, contrastarlas, descartarlas o dejarlas sin examinar. Cerrar la ayuda o no utilizarla permite continuar el procedimiento documental; no existe una obligación de responder a todos los avisos.
-5. Conservar las decisiones documentales efectivamente adoptadas y qué versión se entrega a la IA mediante el **Árbitro - Director**, conforme a sus funciones existentes. Una sugerencia no modifica documentos ni permisos.
-
-Los pasos 3 y 4 son opcionales. La detección completa de contradicciones no es una condición para utilizar las funciones de ayuda que demuestren utilidad. Las acciones elegidas se articulan con la administración y la trazabilidad existentes; no se añade un procedimiento obligatorio de aprobación del comparador.
-
-La propia solicitud de comparación es opcional. «Todos» no comprende documentos de otros dominios. Rust rechazará una referencia ajena al dominio incluso si se envía directamente; el filtro no se limita a la interfaz. Una selección vacía no se ampliará al conjunto completo, y la presentación identificará los documentos efectivamente comparados.
-
-El recorrido reutiliza la administración y la trazabilidad existentes. El revisor no debe preparar previamente los conceptos o conflictos que la herramienta tiene que descubrir. El comparador propuesto no incorpora una IA como analizador o juez; Google se circunscribe a la traducción aceptada.
-
-## Relación con la evaluación del modelo y los pilares del SV
-
-La revisión del corpus prepara y documenta las condiciones del examen; **no constituye el examen ni su dictamen**. Los resultados del modelo se expresan, en el alcance constituido para cada prueba, como **Apto (0), No apto (1) o Indeterminado (U)**, conforme al contrato, los parámetros y criticidades establecidos por el procedimiento de evaluación y las reglas canónicas aplicables.
-
-La aplicación de los [pilares y restricciones de diseño del Lenguaje SV](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/f10aac725676997adc3840a1bd1a41e1579589ea/docs/calidad/PILARES_Y_RESTRICCIONES_DE_DISENO_DEL_LENGUAJE_DE_COMPUTACION_SV_2026_09_05.md) exige preservar identidad, orden, procedencia y autoridad. Esta documentación no introduce una nueva semántica, no elige células ni parámetros, y no modifica el Núcleo ni su representación intermedia. En particular:
-
-- **U conserva su significado de indeterminación honesta.** Una extracción fallida, un documento ausente o una prueba no ejecutada se registran como incidencias o pendientes; no se convierten automáticamente en U.
-- **La ausencia de alertas no demuestra ausencia de contradicciones.** Deben declararse cobertura, omisiones y límites.
-- **Ninguna corrección será silenciosa.** Una nueva edición, traducción o resolución conserva el antecedente y obliga a identificar qué conclusiones quedan afectadas.
-- **Las funciones se mantienen diferenciadas.** La comparación aporta evidencias; la constitución del dominio, la evaluación del modelo y la autorización documental conservan sus procedimientos.
-
-El [ensayo de inteligencia artificial y observabilidad](https://github.com/juantoniolloretegea/SV-motor/blob/94a3cda79dc3cadbf820c23e62946276fc32f45d/laboratorio/ensayo-ia-y-observabilidad/README.md#evaluación-documental-y-resultado) distingue adjudicaciones por posición, puntuación, criticidad, dictamen y recepción independiente. Cada examen mantiene su expediente en el nodo correspondiente; esta carpeta conserva los estudios del comparador y sus comprobaciones propias, sin duplicar ni sustituir aquellos resultados.
-
-## Continuidad de los informes
-
-Los informes posteriores se incorporarán con fecha, objeto, fuentes, método, resultados, límites y estado de revisión. Una corrección se explicará y conservará el antecedente. Esta entrada señalará siempre cuál es la conclusión vigente; los registros científicos y de Calidad conservarán sus ubicaciones establecidas.
-
-La comprobación algorítmica posterior no consultó modelos de IA ni modificó la instalación del SV. Las revisiones históricas se conservan.
-
-## Relación con el libro de la Biblioteca del SV
-
-El libro publicado [«Reglas, usos y descripciones documentales de documentos para el conocimiento de la IA»](https://documentos-sv.itvia.online/documentacion/reglas-usos-descripciones-documentales/index.html) conserva su estructura y sus cinco capítulos. La [aportación editorial vigente, edición 4](informes/2026-10-11-ayuda-opcional/APORTACION-AL-LIBRO-V4.md) describe objetivos, uso voluntario, funcionamiento, evidencias y límites, para los capítulos de información de revisión y comprobaciones. Sustituye editorialmente la propuesta anterior, que se conserva como antecedente. La [nota posterior de comprobaciones](comprobaciones/2026-10-11-oposiciones-explicitas/NOTA-PARA-EL-LIBRO.md) prepara la actualización de evidencias para V.02 sin modificar la estructura. La [nota sobre correspondencia y consulta](comprobaciones/2026-10-11-correspondencias/NOTA-PARA-EL-LIBRO.md) prepara las explicaciones y los límites del paso 6 para los mismos capítulos. La [nota de integración opcional](comprobaciones/2026-10-11-integracion-opcional/NOTA-PARA-EL-LIBRO.md) complementa estos capítulos con selección y localización bilateral comprobadas en el ensayo. La aportación permanece separada y requiere autorización expresa antes de incorporarse; no se declara ya incorporada ni constituye otro libro. Las evidencias técnicas permanecen en esta carpeta.
-
-© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
-
+Las atribuciones y licencias de los documentos y componentes originales se conservan en sus antecedentes. Este resumen no modifica sus condiciones.
