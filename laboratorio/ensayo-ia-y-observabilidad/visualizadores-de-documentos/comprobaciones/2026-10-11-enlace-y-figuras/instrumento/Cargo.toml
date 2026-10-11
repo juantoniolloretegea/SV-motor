@@ -1,0 +1,19 @@
+[package]
+name = "sv-prueba-figuras-pdf"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.93"
+publish = false
+
+[dependencies]
+hayro = { version = "=0.8.0", default-features = false, features = ["embed-fonts", "embed-cmaps"] }
+lopdf = { version = "=0.45.0", default-features = false }
+serde_json = "=1.0.149"
+sha2 = "=0.10.9"
+image = { version = "=0.25.9", default-features = false, features = ["png"] }
+
+[profile.dev]
+debug = 0
+incremental = false
+
+[workspace]
