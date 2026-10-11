@@ -1,6 +1,6 @@
 # Buscador-Semántico - Diferencial
 
-**Edición documental 6 · 11 de octubre de 2026.**
+**Edición documental 7 · 11 de octubre de 2026.**
 
 Esta carpeta reúne los estudios, revisiones y evidencias del **Buscador-Semántico - Diferencial** del Sistema Vectorial SV. Su finalidad es proporcionar una ayuda de consulta voluntaria para comprobar si un documento propuesto para la IA contiene afirmaciones en conflicto con los documentos ya incorporados al conjunto documental correspondiente. El revisor podrá utilizarla cuando le resulte útil, consultar algunas sugerencias o continuar sin utilizarla. La herramienta no impone la resolución de sus avisos ni determina el suministro documental.
 
@@ -15,18 +15,21 @@ El ámbito comprende **Medicina y Ciberseguridad**, con documentos PDF, HTML y M
 | Administración y presentación | Axum, redb y mdBook ya utilizados. mdBook es el lector común; su presentación no determina por sí sola el permiso ni el formato de suministro a modelos. |
 | Preparación documental | Xberg y los lectores Rust existentes conservan sus usos y límites. html-to-markdown-rs y pulldown-cmark también están incorporados. La extracción PDF no acredita recuperación universal de tablas, figuras o lectura íntegra. |
 | Búsqueda de pasajes | Tantivy es candidato. Su código es Rust; queda por comprobar el perfil de dependencias que excluya la compresión Zstandard implementada en C. |
-| Idioma de comparación | Traducción Google al inglés aceptada como instrumento externo, conservando original y traducción. La recepción de un texto inglés estable para el análisis sigue pendiente de adaptación y comprobación. |
+| Idioma de comparación | Traducción Google al inglés aceptada como instrumento externo, conservando original y traducción. Se han obtenido y conservado veinte textos ingleses mediante la interfaz oficial de Google. Su correspondencia con las entradas españolas se comprobó en Rust; no acredita equivalencia semántica ni traducción integrada en la aplicación. |
 | Sugerencias sobre posibles contradicciones | Las reglas examinadas ofrecen indicios parciales con aciertos y errores documentados. Su utilidad como ayuda opcional debe comprobarse en textos representativos; no hay detector general acreditado. La búsqueda textual conserva su función de recuperación. |
 | Decisión sobre documentos | La decisión y sus efectos sobre el suministro se conservan en el expediente; las alertas no constituyen una autorización. |
 
 La propuesta inicial basada en vocabularios preparados por personas está retirada: trasladaba al revisor parte esencial del hallazgo solicitado. No haber encontrado una solución completa tampoco demuestra imposibilidad técnica. El desarrollo propio sólo se considerará cuando se justifique su necesidad mediante su comparación con los recursos existentes.
 
-**Paso 3 / 8 preparado.** Se han fijado doce casos nuevos en español, seis por dominio, con ocho pasajes y cuatro documentos parciales de referencia. Se distinguen seis incompatibilidades controladas, cuatro casos compatibles y dos de contexto insuficiente. También se conservan doce solicitudes previstas para comprobar selección y separación por dominio. No se ha ejecutado el candidato con estas entradas. La preparación y sus límites constan en el [protocolo del paso 3](informes/2026-10-11-paso3/PROTOCOLO-Y-ESTADO.md).
+**Paso 3 / 8 preparado.** Se han fijado doce casos nuevos en español, seis por dominio, con ocho pasajes y cuatro documentos parciales de referencia. Se distinguen seis incompatibilidades controladas, cuatro casos compatibles y dos de contexto insuficiente. También se conservan doce solicitudes previstas para comprobar selección y separación por dominio. Este conjunto se ha utilizado posteriormente en el contraste de pasajes traducidos; la preparación histórica y sus referencias permanecen intactas. La preparación y sus límites constan en el [protocolo del paso 3](informes/2026-10-11-paso3/PROTOCOLO-Y-ESTADO.md).
+
+**Pasos 4 y 5 / 8: perfil contrastado.** La función entre documentos SC-XF-002 de speccheck-core 0.4.1 no señaló ninguna de las seis incompatibilidades de partida en los doce casos traducidos literalmente por Google. Un control instrumental positivo produjo el aviso previsto. Las doce comprobaciones experimentales de selección fueron conformes. Este perfil no se selecciona para integración; el resultado no se convierte en una declaración de coherencia ni en imposibilidad general de una ayuda parcial. [Resultado, evidencias y límites](comprobaciones/2026-10-11-pasajes-traducidos/RESULTADO-Y-ALCANCE.md).
 
 ## Informes y fuentes
 
 | Documento | Función y estado |
 | --- | --- |
+| [Contraste de pasajes traducidos](comprobaciones/2026-10-11-pasajes-traducidos/RESULTADO-Y-ALCANCE.md) | Veinte textos conservados, doce casos, seis omisiones y comprobaciones de selección; perfil no seleccionado para integración. |
 | [Paso 3 / 8: fuentes y casos](informes/2026-10-11-paso3/PROTOCOLO-Y-ESTADO.md) | Conjunto fijado antes de ejecutar: originales, pasajes, documentos propuestos, referencias separadas y selecciones previstas. |
 | [Alcance auxiliar y reconsideración de las evidencias](informes/2026-10-11-ayuda-opcional/ALCANCE-Y-RECONSIDERACION.md) | Criterio vigente: uso voluntario, sugerencias examinables y evaluación de utilidad. Reconsideración documental de las salidas existentes, sin nueva ejecución de candidatos. |
 | [Diagnóstico de las pérdidas de significado](informes/2026-10-11-diagnostico/RESULTADO-DIAGNOSTICO.md) | Localización por etapas y fuente; 14 resultados anteriores reproducidos. No acredita una corrección suficiente ni una nueva validación. |
