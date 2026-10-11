@@ -1,6 +1,6 @@
 # Reglas, usos y descripciones documentales de documentos para el conocimiento de la IA
 
-**V.05 · 11 de octubre de 2026 · Original en español.**
+**V.06 · 12 de octubre de 2026 · Original en español.**
 
 El Sistema Vectorial SV permite conservar documentos, leerlos, preparar otras representaciones y autorizar el contenido que puede suministrarse a una IA. Este libro explica esas operaciones, sus requisitos y sus límites. Es una guía de consulta; los datos de cada documento se encuentran en su ficha y su historial.
 
@@ -30,7 +30,7 @@ Consultar, convertir y suministrar son operaciones distintas. Cada una debe resp
 
 mdBook organiza la presentación del texto y del índice; no extrae por sí mismo un PDF ni determina su fidelidad. El español es el original de referencia de este libro. La traducción automática facilita su consulta, pero no incorpora automáticamente una traducción al material autorizado para una IA.
 
-Los siguientes capítulos describen los [formatos](formatos.md), la [entrega a la IA](entrega.md), la [revisión](revision.md) y las [capacidades comprobadas y sus límites](verificacion.md).
+Los siguientes capítulos describen los [formatos](formatos.md), las [prioridades documentales y los Universos relacionados](prioridades.md), la [entrega a la IA](entrega.md), la [revisión](revision.md) y las [capacidades comprobadas y sus límites](verificacion.md).
 
 ---
 

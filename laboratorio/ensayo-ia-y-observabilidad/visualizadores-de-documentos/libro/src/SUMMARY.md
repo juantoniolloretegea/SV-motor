@@ -2,6 +2,7 @@
 
 - [Finalidad y reglas de lectura](finalidad.md)
 - [Formatos, representaciones y límites](formatos.md)
+- [Prioridades documentales y Universos relacionados](prioridades.md)
 - [Autorización y entrega efectiva a la IA](entrega.md)
 - [Información disponible para la revisión](revision.md)
 - [Comprobaciones, estado y fuentes](verificacion.md)
