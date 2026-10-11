@@ -1,0 +1,272 @@
+{
+  "candidato": "logicaffeine-language 0.10.1",
+  "funcion": "compile",
+  "resultados": [
+    {
+      "analisis": {
+        "duracion_ns": 1735100,
+        "resultado": {
+          "estado": "admitido",
+          "salida": "∀x((Man(x) → Mortal(x)))"
+        }
+      },
+      "codigo": 0,
+      "duracion_proceso_ns": 50632200,
+      "entrada": {
+        "dominio": "control",
+        "id": "T01",
+        "texto": "Every man is mortal."
+      },
+      "limite_agotado": false,
+      "stderr": "",
+      "stdout": "{\"duracion_ns\":1735100,\"resultado\":{\"estado\":\"admitido\",\"salida\":\"∀x((Man(x) → Mortal(x)))\"}}\n"
+    },
+    {
+      "analisis": {
+        "duracion_ns": 1442200,
+        "resultado": {
+          "estado": "admitido",
+          "salida": "Man(Socrates)"
+        }
+      },
+      "codigo": 0,
+      "duracion_proceso_ns": 35885900,
+      "entrada": {
+        "dominio": "control",
+        "id": "T02",
+        "texto": "Socrates is a man."
+      },
+      "limite_agotado": false,
+      "stderr": "",
+      "stdout": "{\"duracion_ns\":1442200,\"resultado\":{\"estado\":\"admitido\",\"salida\":\"Man(Socrates)\"}}\n"
+    },
+    {
+      "analisis": {
+        "duracion_ns": 2111300,
+        "resultado": {
+          "estado": "admitido",
+          "salida": "(□_{1.0} ¬∃e(Receive(e) ∧ Agent(e, Patients) ∧ Theme(e, Cladribine)) U Control(Infection))"
+        }
+      },
+      "codigo": 0,
+      "duracion_proceso_ns": 45919400,
+      "entrada": {
+        "dominio": "medicina",
+        "id": "M01",
+        "texto": "Patients with an active infection must not receive cladribine until the infection is controlled."
+      },
+      "limite_agotado": false,
+      "stderr": "",
+      "stdout": "{\"duracion_ns\":2111300,\"resultado\":{\"estado\":\"admitido\",\"salida\":\"(□_{1.0} ¬∃e(Receive(e) ∧ Agent(e, Patients) ∧ Theme(e, Cladribine)) U Control(Infection))\"}}\n"
+    },
+    {
+      "analisis": {
+        "duracion_ns": 2079000,
+        "resultado": {
+          "estado": "admitido",
+          "salida": "P_{0.5} ∃e(Receive(e) ∧ Agent(e, Patients) ∧ Theme(e, Cladribine))"
+        }
+      },
+      "codigo": 0,
+      "duracion_proceso_ns": 35238000,
+      "entrada": {
+        "dominio": "medicina",
+        "id": "M02",
+        "texto": "Patients without an active infection may receive cladribine."
+      },
+      "limite_agotado": false,
+      "stderr": "",
+      "stdout": "{\"duracion_ns\":2079000,\"resultado\":{\"estado\":\"admitido\",\"salida\":\"P_{0.5} ∃e(Receive(e) ∧ Agent(e, Patients) ∧ Theme(e, Cladribine))\"}}\n"
+    },
+    {
+      "analisis": {
+        "duracion_ns": 1768100,
+        "resultado": {
+          "estado": "admitido",
+          "salida": "∀x((Patient(x) → □_{1.0} (∃e(Be(e) ∧ Agent(e, x) ∧ Theme(e, Assess)) ∧ Within(e, 24 hours))))"
+        }
+      },
+      "codigo": 0,
+      "duracion_proceso_ns": 34766300,
+      "entrada": {
+        "dominio": "medicina",
+        "id": "M03",
+        "texto": "Every patient must be assessed within 24 hours."
+      },
+      "limite_agotado": false,
+      "stderr": "",
+      "stdout": "{\"duracion_ns\":1768100,\"resultado\":{\"estado\":\"admitido\",\"salida\":\"∀x((Patient(x) → □_{1.0} (∃e(Be(e) ∧ Agent(e, x) ∧ Theme(e, Assess)) ∧ Within(e, 24 hours))))\"}}\n"
+    },
+    {
+      "analisis": {
+        "duracion_ns": 1800900,
+        "resultado": {
+          "error": "ParseError { kind: TrailingTokens { found: CalendarUnit(Day) }, span: Span { start: 42, end: 45 } }",
+          "estado": "rechazado"
+        }
+      },
+      "codigo": 0,
+      "duracion_proceso_ns": 32690000,
+      "entrada": {
+        "dominio": "medicina",
+        "id": "M04",
+        "texto": "Every patient must be assessed within one day."
+      },
+      "limite_agotado": false,
+      "stderr": "",
+      "stdout": "{\"duracion_ns\":1800900,\"resultado\":{\"error\":\"ParseError { kind: TrailingTokens { found: CalendarUnit(Day) }, span: Span { start: 42, end: 45 } }\",\"estado\":\"rechazado\"}}\n"
+    },
+    {
+      "analisis": {
+        "duracion_ns": 2325200,
+        "resultado": {
+          "estado": "admitido",
+          "salida": "1) Contraindicat(Treatment)\n2) In(Treatment, Patients)"
+        }
+      },
+      "codigo": 0,
+      "duracion_proceso_ns": 34153700,
+      "entrada": {
+        "dominio": "medicina",
+        "id": "M05",
+        "texto": "Treatment is contraindicated in patients with severe renal impairment."
+      },
+      "limite_agotado": false,
+      "stderr": "",
+      "stdout": "{\"duracion_ns\":2325200,\"resultado\":{\"estado\":\"admitido\",\"salida\":\"1) Contraindicat(Treatment)\\n2) In(Treatment, Patients)\"}}\n"
+    },
+    {
+      "analisis": {
+        "duracion_ns": 1894500,
+        "resultado": {
+          "estado": "admitido",
+          "salida": "B-cell_malignancy(Hairy_cell_leukemia)"
+        }
+      },
+      "codigo": 0,
+      "duracion_proceso_ns": 46034200,
+      "entrada": {
+        "dominio": "medicina",
+        "id": "M06",
+        "texto": "Hairy cell leukemia is a B-cell malignancy."
+      },
+      "limite_agotado": false,
+      "stderr": "",
+      "stdout": "{\"duracion_ns\":1894500,\"resultado\":{\"estado\":\"admitido\",\"salida\":\"B-cell_malignancy(Hairy_cell_leukemia)\"}}\n"
+    },
+    {
+      "analisis": {
+        "duracion_ns": 2083300,
+        "resultado": {
+          "estado": "admitido",
+          "salida": "□_{1.0} ∃e(Enable(e) ∧ Agent(e, Administrators) ∧ Theme(e, Multifactor_authentication))"
+        }
+      },
+      "codigo": 0,
+      "duracion_proceso_ns": 34411800,
+      "entrada": {
+        "dominio": "ciberseguridad",
+        "id": "C01",
+        "texto": "Administrators must enable multifactor authentication."
+      },
+      "limite_agotado": false,
+      "stderr": "",
+      "stdout": "{\"duracion_ns\":2083300,\"resultado\":{\"estado\":\"admitido\",\"salida\":\"□_{1.0} ∃e(Enable(e) ∧ Agent(e, Administrators) ∧ Theme(e, Multifactor_authentication))\"}}\n"
+    },
+    {
+      "analisis": {
+        "duracion_ns": 2238100,
+        "resultado": {
+          "estado": "admitido",
+          "salida": "□_{1.0} ¬∃e(Enable(e) ∧ Agent(e, Administrators) ∧ Theme(e, Multifactor_authentication))"
+        }
+      },
+      "codigo": 0,
+      "duracion_proceso_ns": 47553500,
+      "entrada": {
+        "dominio": "ciberseguridad",
+        "id": "C02",
+        "texto": "Administrators must not enable multifactor authentication."
+      },
+      "limite_agotado": false,
+      "stderr": "",
+      "stdout": "{\"duracion_ns\":2238100,\"resultado\":{\"estado\":\"admitido\",\"salida\":\"□_{1.0} ¬∃e(Enable(e) ∧ Agent(e, Administrators) ∧ Theme(e, Multifactor_authentication))\"}}\n"
+    },
+    {
+      "analisis": {
+        "duracion_ns": 2110200,
+        "resultado": {
+          "estado": "admitido",
+          "salida": "¬Require(Guests)"
+        }
+      },
+      "codigo": 0,
+      "duracion_proceso_ns": 34189800,
+      "entrada": {
+        "dominio": "ciberseguridad",
+        "id": "C03",
+        "texto": "Guests are not required to enable multifactor authentication."
+      },
+      "limite_agotado": false,
+      "stderr": "",
+      "stdout": "{\"duracion_ns\":2110200,\"resultado\":{\"estado\":\"admitido\",\"salida\":\"¬Require(Guests)\"}}\n"
+    },
+    {
+      "analisis": {
+        "duracion_ns": 2668200,
+        "resultado": {
+          "error": "ParseError { kind: TrailingTokens { found: Must }, span: Span { start: 11, end: 15 } }",
+          "estado": "rechazado"
+        }
+      },
+      "codigo": 0,
+      "duracion_proceso_ns": 44056000,
+      "entrada": {
+        "dominio": "ciberseguridad",
+        "id": "C04",
+        "texto": "Audit logs must be retained for at least 90 days."
+      },
+      "limite_agotado": false,
+      "stderr": "",
+      "stdout": "{\"duracion_ns\":2668200,\"resultado\":{\"error\":\"ParseError { kind: TrailingTokens { found: Must }, span: Span { start: 11, end: 15 } }\",\"estado\":\"rechazado\"}}\n"
+    },
+    {
+      "analisis": {
+        "duracion_ns": 1955900,
+        "resultado": {
+          "error": "ParseError { kind: TrailingTokens { found: Must }, span: Span { start: 11, end: 15 } }",
+          "estado": "rechazado"
+        }
+      },
+      "codigo": 0,
+      "duracion_proceso_ns": 37107100,
+      "entrada": {
+        "dominio": "ciberseguridad",
+        "id": "C05",
+        "texto": "Audit logs must be deleted within 30 days."
+      },
+      "limite_agotado": false,
+      "stderr": "",
+      "stdout": "{\"duracion_ns\":1955900,\"resultado\":{\"error\":\"ParseError { kind: TrailingTokens { found: Must }, span: Span { start: 11, end: 15 } }\",\"estado\":\"rechazado\"}}\n"
+    },
+    {
+      "analisis": {
+        "duracion_ns": 2440900,
+        "resultado": {
+          "error": "ParseError { kind: TrailingTokens { found: Noun(Symbol(8)) }, span: Span { start: 28, end: 35 } }",
+          "estado": "rechazado"
+        }
+      },
+      "codigo": 0,
+      "duracion_proceso_ns": 34159100,
+      "entrada": {
+        "dominio": "ciberseguridad",
+        "id": "C06",
+        "texto": "Version 1 requires TLS 1.2, whereas version 2 requires TLS 1.3."
+      },
+      "limite_agotado": false,
+      "stderr": "",
+      "stdout": "{\"duracion_ns\":2440900,\"resultado\":{\"error\":\"ParseError { kind: TrailingTokens { found: Noun(Symbol(8)) }, span: Span { start: 28, end: 35 } }\",\"estado\":\"rechazado\"}}\n"
+    }
+  ]
+}
