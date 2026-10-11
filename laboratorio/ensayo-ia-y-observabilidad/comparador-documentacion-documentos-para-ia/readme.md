@@ -1,6 +1,6 @@
 # Buscador-Semántico - Diferencial
 
-**Edición documental 11 · 11 de octubre de 2026.**
+**Edición documental 12 · 11 de octubre de 2026.**
 
 Esta carpeta reúne los estudios, revisiones y evidencias del **Buscador-Semántico - Diferencial** del Sistema Vectorial SV. Su finalidad es proporcionar una ayuda de consulta voluntaria para comprobar si un documento propuesto para la IA contiene afirmaciones en conflicto con los documentos ya incorporados al conjunto documental correspondiente. El revisor podrá utilizarla cuando le resulte útil, consultar algunas sugerencias o continuar sin utilizarla. La herramienta no impone la resolución de sus avisos ni determina el suministro documental.
 
@@ -32,6 +32,8 @@ La propuesta inicial basada en vocabularios preparados por personas está retira
 **Paso 7 / 8: integración funcional experimental.** La función Rust reutiliza el registro administrativo y ha superado 21 controles sintéticos de selección, permisos, concurrencia, identidad y localización. Los nuevos avisos conservan directamente ambos pasajes, sin cambiar el criterio de detección. Se realizaron ocho llamadas instrumentales al comparador, separadas del contraste científico anterior. No está incorporada a las pantallas ni desplegada en los servicios. [Resultado y límites](comprobaciones/2026-10-11-integracion-opcional/RESULTADO-Y-ALCANCE.md) · [Conexión con la administración](comprobaciones/2026-10-11-integracion-opcional/INTEGRACION.md).
 
 **Paso 8 / 8: conexión administrativa experimental, todavía abierta.** Se han preparado la selección opcional por dominio, las comprobaciones de acceso, la comparación aislada en Linux y la presentación de ambos contextos en mdBook. La ejecución final superó 35 controles conjuntos; las pruebas de módulos reúnen 57 controles distintos conformes. Se conservan y explican los defectos de presentación anteriores. Faltan la integración con la revisión administrativa vigente, el recorrido autenticado completo y la conexión de traducciones conservadas para español. No se declara desplegada la función. La incorporación al libro requiere autorización expresa posterior. [Resultado y límites](comprobaciones/2026-10-11-conexion-administrativa/RESULTADO-Y-ALCANCE.md) · [Funcionamiento preparado](comprobaciones/2026-10-11-conexion-administrativa/ALCANCE-DEL-PASO.md).
+
+**Medición de utilidad preparada.** Doce revisiones experimentales, seis ordinarias y seis con las sugerencias conservadas del Buscador-Semántico - Diferencial, con separación de dominios. El instrumento Rust de registro y cálculo ha superado dieciocho controles; las sesiones todavía no se han realizado. Se medirán tiempo, resultados fundados, omisiones y falsos avisos. La participación del revisor externo de IA se limita al ensayo y no se incorpora al funcionamiento del SV. [Protocolo](comprobaciones/2026-10-11-medicion-utilidad/PROTOCOLO.md) · [Encargo](comprobaciones/2026-10-11-medicion-utilidad/ENCARGO-REVISION.md) · [Preparación y estado](comprobaciones/2026-10-11-medicion-utilidad/PREPARACION-Y-ESTADO.md).
 
 ## Informes y fuentes
 
