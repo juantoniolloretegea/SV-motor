@@ -12,7 +12,7 @@ El formato del original y la forma en que se presenta deben permanecer identific
 
 El original permanece descargable para quienes tengan permiso. La consulta de PDF y HTML muestra las representaciones disponibles vinculadas a ese original; si no existe una representación accesible, lo indica. Abrir el visor no inicia por sí solo una conversión.
 
-Las referencias a imágenes incluidas en Markdown siguen mostrándose como una indicación textual: **la figura no está disponible en esa representación textual**. En un PDF habilitado, «Ver páginas y figuras en mdBook» abre la representación gráfica de una página completa. Las dos formas de consulta se identifican por separado y no se completan entre sí mediante inferencia.
+Las referencias a imágenes incluidas en Markdown siguen mostrándose como una indicación textual: **la figura no está disponible en esa representación textual**. En un PDF habilitado, «Ver páginas del PDF» abre la representación gráfica de una página completa. Las dos formas de consulta se identifican por separado y no se completan entre sí mediante inferencia.
 
 ## Consulta gráfica de PDF
 
@@ -22,7 +22,7 @@ Cada preparación identifica el método y su versión, la huella del original, l
 
 La imagen es temporal; su informe y la actuación permanecen en el historial del documento. Se registra quién solicitó la preparación y cuándo, sin inferir que haya leído o aprobado la página. Cada página y cada imagen requieren permisos vigentes. Una vista caducada debe abrirse de nuevo desde la ficha.
 
-La consulta gráfica exige consulta personal y uso Markdown acreditados, además del acceso al dominio y de un PDF recibido. El depósito reservado por sí solo no habilita esta representación. Tampoco se concede autorización de suministro a IA.
+La consulta gráfica aplica el mismo acceso que la revisión del original: exige admisión en el dominio, un PDF recibido y una autorización vigente de depósito para revisión o de consulta. La imagen temporal se presenta mediante mdBook, pero no constituye una conversión textual a Markdown ni necesita ese permiso de transformación. El depósito no acredita derechos editoriales ni habilita extracción, conversión textual, elaboración de índices o suministro a IA. La caducidad, la retirada y la situación del documento siguen comprobándose en cada acceso.
 
 ## Texto y codificación
 
