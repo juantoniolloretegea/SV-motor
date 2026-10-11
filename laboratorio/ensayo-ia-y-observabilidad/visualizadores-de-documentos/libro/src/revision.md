@@ -14,7 +14,7 @@ El acceso general se denomina **«Reglas de lectura y entrega»**. Abre la edici
 | --- | --- | --- |
 | Identificación | Título, edición, formato del original y huella | La ficha y la procedencia ya identifican el recurso y la representación |
 | Forma de lectura | Si se ve el original o un derivado; método y versión utilizados | La lectura mdBook y la conversión están identificadas; la explicación se desarrolla en este libro |
-| Cobertura | Páginas o secciones incluidas; partes no disponibles | Los intervalos PDF están identificados; falta una evaluación integral de libros complejos |
+| Cobertura | Páginas o secciones incluidas; partes no disponibles | El índice reúne intervalos, pendientes, solapamientos y discordancias del mismo original; la fidelidad integral continúa sujeta a cotejo |
 | Fidelidad | Estado del cotejo y sus observaciones | Se conserva la revisión del derivado; no equivale a una certificación científica |
 | Derechos y suministro | Usos permitidos, pendientes o excluidos; autorización vigente | La ficha y el control documental separan estos permisos |
 | Entrega particular | Qué representación y contenido se preparó y remitió, y con qué resultado | El expediente conserva evidencia; su presentación reunida junto al visor permanece pendiente |
@@ -34,6 +34,8 @@ Los mensajes deben indicar la situación, su consecuencia y cómo continuar. Por
 - **«Resultado del envío desconocido».** Exige revisar la evidencia antes de decidir una nueva actuación.
 
 Son criterios para la información contextual; no un inventario de mensajes ya implantados. Se emplearán denominaciones funcionales, como «Revisión», «Autorizar suministro» y «Retirar autorización».
+
+La preparación del índice y la cobertura se registra como TRA-03, «Preparación del índice y la cobertura de un PDF», dentro de Transformación. La clasificación es automática. Conserva el estado observado, sin conceder autorización documental ni afirmar que se haya leído el libro completo.
 
 ## Secuencia de revisión
 

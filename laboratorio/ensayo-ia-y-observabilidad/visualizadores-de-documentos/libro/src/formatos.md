@@ -40,13 +40,22 @@ La edición comprobada mantiene los siguientes límites de operación:
 | Páginas físicas del PDF | 4.096 | Cota del extractor vigente |
 | Intervalo de extracción | Hasta 64 páginas | Se aplica a una operación, no al tamaño máximo conceptual de un libro |
 | Texto resultante | 1 MiB por operación | Cota del resultado procesado |
+| Derivados reunidos en el índice | Hasta 256 por original | La vista rechaza un conjunto superior; no lo presenta truncado como completo |
 | Representación gráfica | Una página por operación; escala normal o doble | No se representa todo el libro de una vez |
 | Dimensiones gráficas | Hasta 4.096 píxeles por lado y ocho millones de píxeles | La ampliación puede superar la cota aunque la vista normal sea admisible |
 | Imagen resultante | Hasta 8 MiB en PNG | Una imagen rechazada no se presenta como resultado válido |
 
 Cada intervalo debe identificar primera página, última página y total de páginas. La numeración física puede diferir de la impresa en el libro. Extraer todas las páginas no demuestra haber recuperado todas sus figuras, notas o relaciones estructurales.
 
-Un libro extenso requiere controlar intervalos, omisiones, solapamientos, índice, capítulos y referencias. La prueba instrumental de un PDF de 65 páginas permite comprobar intervalos; no acredita por sí sola el tratamiento integral de un tratado médico.
+«Índice y cobertura del libro» reúne las extracciones recibidas del mismo original. Distingue páginas extraídas, páginas con cotejo favorable registrado, páginas pendientes, solapamientos y páginas cuyas huellas textuales difieren. Una página presente en varios intervalos cuenta una sola vez. Una discordancia impide atribuirle cotejo favorable en la vista de conjunto. Los informes incompletos o ligados a otro original no acreditan cobertura.
+
+Recibir el último intervalo no acredita la recepción de los anteriores. La opción «Preparar el siguiente intervalo pendiente» propone hasta 64 páginas y requiere confirmar la conversión. Puede reducirse ese intervalo. La preparación no convierte automáticamente todo el libro ni habilita su suministro.
+
+El índice utiliza los marcadores incorporados al PDF, cuando existen. Recupera títulos y destinos internos explícitos, con un máximo de 128 entradas y 32 niveles. Los destinos nominales o externos no se resuelven; se declaran pendientes. No se deducen capítulos a partir del texto ni se siguen enlaces externos. La ausencia de marcadores no impide consultar las páginas y preparar intervalos. La numeración utilizada es física, desde 1; no se presupone correspondencia con la numeración impresa.
+
+Antes de describir o extraer se comprueba la estructura de páginas. Las cuentas discordantes, páginas repetidas y ciclos impiden aceptar un total aparente. Si una página carece de texto recuperable o presenta un error de extracción, el intervalo no se recibe parcialmente: debe reducirse y conservarse identificada la laguna. Esta política puede rechazar PDF defectuosos que otros lectores reparan de forma implícita.
+
+El índice y su informe requieren permisos vigentes; sus enlaces no eluden la comprobación de acceso. El informe distingue cobertura física y cotejo, sin atribuir fidelidad universal a ninguno. Las cotas indicadas son límites operativos de esta edición: no autorizan a afirmar que todo tratado extenso pueda procesarse íntegramente.
 
 ## Tablas, figuras y fórmulas
 

@@ -1,6 +1,6 @@
 # Reglas, usos y descripciones documentales de documentos para el conocimiento de la IA
 
-**V.02 · 11 de octubre de 2026 · Original en español.**
+**V.03 · 11 de octubre de 2026 · Original en español.**
 
 Este libro explica cómo se conserva, transforma, visualiza y suministra documentación en el Sistema Vectorial SV. Está dirigido a quienes revisan documentos desde la administración documental y a quienes necesitan conocer el alcance de sus representaciones. Su finalidad es facilitar una revisión fundada y reproducible.
 

@@ -1,6 +1,6 @@
 # Comprobaciones, estado y fuentes
 
-**Edición documental V.02 · Corte de información: 11 de octubre de 2026.**
+**Edición documental V.03 · Corte de información: 11 de octubre de 2026.**
 
 ## Estado que explica esta edición
 
@@ -11,6 +11,14 @@ Se conservan resultados anteriores de 65 comprobaciones Rust: 33 de módulos y 3
 La preparación y publicación del libro tienen verificaciones propias de construcción, correspondencia, enlaces y consulta. Sus resultados se conservan en el registro de esta edición, separado de las comprobaciones funcionales del lector.
 
 La V.02 incorpora la representación gráfica de páginas PDF. El conjunto delimitado comprende nueve PDF sintéticos y dos originales de nueve y cuatro páginas: 44 imágenes a dos escalas, once repeticiones idénticas y 55 ejecuciones de rechazo pertenecientes a cinco clases. Dieciocho imágenes sintéticas conservan identidad exacta con la comprobación anterior. El cotejo visual de los originales reales se limita a siete páginas; no acredita fidelidad universal. La corrección de la información contextual se comprueba por separado, conservando los resultados anteriores. Las pruebas de módulos de esta edición suman 45 resultados conformes.
+
+La V.03 añade el índice físico y la cobertura conjunta del mismo original. Se comprobaron 52 pruebas de módulos, 32 del recorrido documental y 17 del extractor y su aislamiento. Los controles incluyen intervalos faltantes, solapamientos, huellas discordantes, índices parciales, páginas repetidas, cuentas incorrectas, ciclos y páginas sin texto recuperable. La revisión final vuelve a comprobar los módulos tras completar los controles de permisos y registro. Los resultados repetidos no se suman como casos nuevos.
+
+Dos libros sintéticos de 130 y 1.025 páginas permiten comprobar la enumeración completa y el texto previsto de cada página: se reciben tres y diecisiete intervalos, respectivamente. Sus páginas permanecen pendientes de cotejo; la cobertura completa no equivale a una aprobación documental. Un original real de 76 páginas permite recuperar texto de 73. Las páginas físicas 2, 3 y 8 quedan identificadas como lagunas, sin declararlas vacías ni reconstruir su contenido. La extracción se divide para conservar los intervalos recuperables; se registran también los intentos fallidos. Este resultado no acredita fidelidad científica del texto recuperado.
+
+La comprobación detectó que los mensajes de error del extractor indicaban un índice desde cero. La corrección identifica expresamente la página física desde uno, de modo que la incidencia pueda localizarse en el visor. Se conservan los resultados anteriores y se cotejan los derivados recibidos tras la corrección.
+
+La inspección gráfica de las tres páginas sin texto recuperado muestra páginas en blanco tanto en el visor Rust como en una representación independiente con Poppler. No se observaron allí texto o figuras omitidos. Esta observación delimitada se conserva por separado: no modifica automáticamente el estado documental ni convierte la ausencia de texto en una aprobación del contenido.
 
 ## Componentes y función efectiva
 
@@ -26,7 +34,7 @@ Las versiones identifican la edición examinada. La existencia de una versión p
 
 ## Pendientes identificados
 
-Permanecen pendientes la entrega directa de PDF y HTML en el recorrido descrito, la presentación reunida del expediente de entrega junto al visor y el tratamiento integral de libros extensos. La incorporación gráfica no acredita estos otros recorridos ni el envío de imágenes a modelos.
+Permanecen pendientes la entrega directa de PDF y HTML en el recorrido descrito, la presentación reunida del expediente de entrega junto al visor y la fidelidad integral de libros complejos, más allá del índice y la cobertura física comprobados. La incorporación gráfica no acredita estos otros recorridos ni el envío de imágenes a modelos.
 
 Para cada ampliación se deberán revisar tanto resultados favorables como rechazos: autorización ausente o retirada, formato no compatible, extracción parcial, codificación defectuosa, figura no recuperada e incertidumbre de envío. Los fallos se registrarán sin sustituirlos por resultados supuestos.
 
