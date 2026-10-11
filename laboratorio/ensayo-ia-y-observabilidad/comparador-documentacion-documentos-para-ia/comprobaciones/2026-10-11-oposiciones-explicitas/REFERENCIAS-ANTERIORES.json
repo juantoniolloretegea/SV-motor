@@ -1,0 +1,142 @@
+{
+  "uso": "no suministrar al candidato; referencias para el contraste",
+  "fijadas_antes_de_ejecucion": true,
+  "validacion_independiente": false,
+  "casos": [
+    {
+      "id": "I01",
+      "dominio": "inmunologia",
+      "referencia": "incompatibilidad",
+      "fundamento": "Sustitución controlada del linaje B por T para la misma entidad descrita.",
+      "clase_de_entrada": "sustitucion",
+      "pasaje_de_origen": "P-I01",
+      "transformacion": {
+        "antes": "células B",
+        "despues": "células T"
+      },
+      "compatibilidad_limitada_a": "pasajes y contexto del caso; no totalidad de los originales"
+    },
+    {
+      "id": "I02",
+      "dominio": "inmunologia",
+      "referencia": "compatibilidad",
+      "fundamento": "Las dos descripciones caracterizan la misma enfermedad como de células B y de evolución lenta; denominaciones equivalentes.",
+      "clase_de_entrada": "literal",
+      "pasaje_de_origen": "P-I02",
+      "transformacion": null,
+      "compatibilidad_limitada_a": "pasajes y contexto del caso; no totalidad de los originales"
+    },
+    {
+      "id": "I03",
+      "dominio": "inmunologia",
+      "referencia": "incompatibilidad",
+      "fundamento": "La afirmación universal de necesidad inmediata contradice la negación de esa universalidad, para la misma población.",
+      "clase_de_entrada": "sustitucion",
+      "pasaje_de_origen": "P-I03",
+      "transformacion": {
+        "antes": "no todos",
+        "despues": "todos"
+      },
+      "compatibilidad_limitada_a": "pasajes y contexto del caso; no totalidad de los originales"
+    },
+    {
+      "id": "I04",
+      "dominio": "inmunologia",
+      "referencia": "compatibilidad",
+      "fundamento": "Las indicaciones para pacientes con citopenias o síntomas no contradicen la espera descrita para pacientes asintomáticos con conteos estables.",
+      "clase_de_entrada": "literal",
+      "pasaje_de_origen": "P-I04",
+      "transformacion": null,
+      "compatibilidad_limitada_a": "pasajes y contexto del caso; no totalidad de los originales"
+    },
+    {
+      "id": "I05",
+      "dominio": "inmunologia",
+      "referencia": "incompatibilidad",
+      "fundamento": "Se niega la necesidad de seguimiento que el mismo contexto afirma.",
+      "clase_de_entrada": "sustitucion",
+      "pasaje_de_origen": "P-I03",
+      "transformacion": {
+        "antes": "Es necesario realizar",
+        "despues": "No es necesario realizar"
+      },
+      "compatibilidad_limitada_a": "pasajes y contexto del caso; no totalidad de los originales"
+    },
+    {
+      "id": "I06",
+      "dominio": "inmunologia",
+      "referencia": "contexto_insuficiente",
+      "fundamento": "No se identifica el conjunto de casos ni el tratamiento; no puede establecerse correspondencia con las condiciones de la referencia.",
+      "clase_de_entrada": "control_propio",
+      "pasaje_de_origen": "P-I04",
+      "transformacion": null,
+      "compatibilidad_limitada_a": "pasajes y contexto del caso; no totalidad de los originales"
+    },
+    {
+      "id": "C01",
+      "dominio": "ciberseguridad",
+      "referencia": "incompatibilidad",
+      "fundamento": "La prohibición y la obligatoriedad recaen sobre la misma medida y el mismo ámbito de accesos fijado para el caso.",
+      "clase_de_entrada": "control_propio",
+      "pasaje_de_origen": "P-C01",
+      "transformacion": null,
+      "compatibilidad_limitada_a": "pasajes y contexto del caso; no totalidad de los originales"
+    },
+    {
+      "id": "C02",
+      "dominio": "ciberseguridad",
+      "referencia": "compatibilidad",
+      "fundamento": "Repetición literal del pasaje; no hay cambio de significado.",
+      "clase_de_entrada": "literal",
+      "pasaje_de_origen": "P-C01",
+      "transformacion": null,
+      "compatibilidad_limitada_a": "pasajes y contexto del caso; no totalidad de los originales"
+    },
+    {
+      "id": "C03",
+      "dominio": "ciberseguridad",
+      "referencia": "incompatibilidad",
+      "fundamento": "Obligación y prohibición de verificación continua de las mismas solicitudes en el mismo ámbito.",
+      "clase_de_entrada": "sustitucion",
+      "pasaje_de_origen": "P-C02",
+      "transformacion": {
+        "antes": "debe ser verificada continuamente",
+        "despues": "no debe ser verificada continuamente"
+      },
+      "compatibilidad_limitada_a": "pasajes y contexto del caso; no totalidad de los originales"
+    },
+    {
+      "id": "C04",
+      "dominio": "ciberseguridad",
+      "referencia": "incompatibilidad",
+      "fundamento": "Se afirma y se niega la misma facultad del actor respecto del mismo recurso en el episodio ficticio C04.",
+      "clase_de_entrada": "sustitucion",
+      "pasaje_de_origen": "P-C04",
+      "transformacion": {
+        "antes": "El permiso del actor autorizaba exclusivamente la lectura; no permitía actualizar ese recurso.",
+        "despues": "El permiso del actor autorizaba la lectura y la actualización de ese recurso."
+      },
+      "compatibilidad_limitada_a": "pasajes y contexto del caso; no totalidad de los originales"
+    },
+    {
+      "id": "C05",
+      "dominio": "ciberseguridad",
+      "referencia": "compatibilidad",
+      "fundamento": "La función complementaria de las medidas y la indicación concreta de autenticación se refieren a relaciones distintas y compatibles.",
+      "clase_de_entrada": "literal",
+      "pasaje_de_origen": "P-C03",
+      "transformacion": null,
+      "compatibilidad_limitada_a": "pasajes y contexto del caso; no totalidad de los originales"
+    },
+    {
+      "id": "C06",
+      "dominio": "ciberseguridad",
+      "referencia": "contexto_insuficiente",
+      "fundamento": "No consta que el entorno ni el acceso pertenezcan al ámbito al que se refiere la referencia; no se establece contradicción.",
+      "clase_de_entrada": "control_propio",
+      "pasaje_de_origen": "P-C02",
+      "transformacion": null,
+      "compatibilidad_limitada_a": "pasajes y contexto del caso; no totalidad de los originales"
+    }
+  ]
+}

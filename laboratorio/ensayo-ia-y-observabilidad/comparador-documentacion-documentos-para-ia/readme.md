@@ -1,6 +1,6 @@
 # Buscador-Semántico - Diferencial
 
-**Edición documental 7 · 11 de octubre de 2026.**
+**Edición documental 8 · 11 de octubre de 2026.**
 
 Esta carpeta reúne los estudios, revisiones y evidencias del **Buscador-Semántico - Diferencial** del Sistema Vectorial SV. Su finalidad es proporcionar una ayuda de consulta voluntaria para comprobar si un documento propuesto para la IA contiene afirmaciones en conflicto con los documentos ya incorporados al conjunto documental correspondiente. El revisor podrá utilizarla cuando le resulte útil, consultar algunas sugerencias o continuar sin utilizarla. La herramienta no impone la resolución de sus avisos ni determina el suministro documental.
 
@@ -25,10 +25,13 @@ La propuesta inicial basada en vocabularios preparados por personas está retira
 
 **Pasos 4 y 5 / 8: perfil contrastado.** La función entre documentos SC-XF-002 de speccheck-core 0.4.1 no señaló ninguna de las seis incompatibilidades de partida en los doce casos traducidos literalmente por Google. Un control instrumental positivo produjo el aviso previsto. Las doce comprobaciones experimentales de selección fueron conformes. Este perfil no se selecciona para integración; el resultado no se convierte en una declaración de coherencia ni en imposibilidad general de una ayuda parcial. [Resultado, evidencias y límites](comprobaciones/2026-10-11-pasajes-traducidos/RESULTADO-Y-ALCANCE.md).
 
+**Pasos 4 y 5 / 8: adaptación delimitada.** La variante experimental que añade should y conserva el resto de la afirmación señaló cuatro de seis incompatibilidades sintéticas, con un aviso en ocho casos compatibles; en doce casos documentales conocidos señaló una de seis incompatibilidades. Conserva errores de contexto y omisiones. La ampliación should sin restricción generó seis avisos en ocho compatibles y se descarta para presentación. Un aviso por caso no acredita fundamento correcto. [Resultados, análisis adversarial y cambio exacto](comprobaciones/2026-10-11-oposiciones-explicitas/RESULTADO-Y-ALCANCE.md). La función conservadora permanece experimental, sin integración ni cambios posteriores para acomodarla a estas referencias.
+
 ## Informes y fuentes
 
 | Documento | Función y estado |
 | --- | --- |
+| [Oposiciones explícitas: adaptación delimitada](comprobaciones/2026-10-11-oposiciones-explicitas/RESULTADO-Y-ALCANCE.md) | Tres perfiles, dieciséis controles nuevos y regresión sobre doce casos conocidos; mejora parcial y límites de contexto, sin integración. |
 | [Contraste de pasajes traducidos](comprobaciones/2026-10-11-pasajes-traducidos/RESULTADO-Y-ALCANCE.md) | Veinte textos conservados, doce casos, seis omisiones y comprobaciones de selección; perfil no seleccionado para integración. |
 | [Paso 3 / 8: fuentes y casos](informes/2026-10-11-paso3/PROTOCOLO-Y-ESTADO.md) | Conjunto fijado antes de ejecutar: originales, pasajes, documentos propuestos, referencias separadas y selecciones previstas. |
 | [Alcance auxiliar y reconsideración de las evidencias](informes/2026-10-11-ayuda-opcional/ALCANCE-Y-RECONSIDERACION.md) | Criterio vigente: uso voluntario, sugerencias examinables y evaluación de utilidad. Reconsideración documental de las salidas existentes, sin nueva ejecución de candidatos. |
@@ -80,6 +83,7 @@ La comprobación algorítmica posterior no consultó modelos de IA ni modificó 
 
 ## Relación con el libro de la Biblioteca del SV
 
-El libro publicado [«Reglas, usos y descripciones documentales de documentos para el conocimiento de la IA»](https://documentos-sv.itvia.online/documentacion/reglas-usos-descripciones-documentales/index.html) conserva su estructura y sus cinco capítulos. La [aportación editorial vigente, edición 4](informes/2026-10-11-ayuda-opcional/APORTACION-AL-LIBRO-V4.md) describe objetivos, uso voluntario, funcionamiento, evidencias y límites, para los capítulos de información de revisión y comprobaciones. Sustituye editorialmente la propuesta anterior, que se conserva como antecedente. La aportación está preparada para incorporación coordinada; no se declara ya incorporada ni constituye otro libro. Las evidencias técnicas permanecen en esta carpeta.
+El libro publicado [«Reglas, usos y descripciones documentales de documentos para el conocimiento de la IA»](https://documentos-sv.itvia.online/documentacion/reglas-usos-descripciones-documentales/index.html) conserva su estructura y sus cinco capítulos. La [aportación editorial vigente, edición 4](informes/2026-10-11-ayuda-opcional/APORTACION-AL-LIBRO-V4.md) describe objetivos, uso voluntario, funcionamiento, evidencias y límites, para los capítulos de información de revisión y comprobaciones. Sustituye editorialmente la propuesta anterior, que se conserva como antecedente. La [nota posterior de comprobaciones](comprobaciones/2026-10-11-oposiciones-explicitas/NOTA-PARA-EL-LIBRO.md) prepara la actualización de evidencias para V.02 sin modificar la estructura. La aportación está preparada para incorporación coordinada; no se declara ya incorporada ni constituye otro libro. Las evidencias técnicas permanecen en esta carpeta.
 
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
+

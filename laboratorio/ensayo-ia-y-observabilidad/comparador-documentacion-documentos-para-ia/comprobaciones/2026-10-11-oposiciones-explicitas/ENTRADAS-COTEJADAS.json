@@ -1,0 +1,482 @@
+{
+  "casos": [
+    {
+      "conjunto": "adversarial",
+      "documentos": [
+        {
+          "ruta": "A01-a.md",
+          "sha256": "8251738c9a37b5e8cef9a3bd17cff181621bfe704c67a9111f54ba2cb47a53d1",
+          "texto": "# Same assay record\n\nThe immunology report should include the assay date.\n"
+        },
+        {
+          "ruta": "A01-b.md",
+          "sha256": "aa2ecad1b16c5bba27e3cee059200819e16555440c8e7c5ac3fd5f62198ddaa3",
+          "texto": "# Same assay record\n\nThe immunology report should not include the assay date.\n"
+        }
+      ],
+      "dominio": "inmunologia",
+      "id": "A01"
+    },
+    {
+      "conjunto": "adversarial",
+      "documentos": [
+        {
+          "ruta": "A02-a.md",
+          "sha256": "b011948e2d8220cd519b7501a50aa4174e8afc5db2a28b72b8978fd3dd52d248",
+          "texto": "# Same access policy\n\nThe gateway should record failed authentication attempts.\n"
+        },
+        {
+          "ruta": "A02-b.md",
+          "sha256": "71f0f1e1bc7ab3a42e7249c6c89e092c6b4dc20d34a38467f59b6e5cca2885de",
+          "texto": "# Same access policy\n\nThe gateway should not record failed authentication attempts.\n"
+        }
+      ],
+      "dominio": "ciberseguridad",
+      "id": "A02"
+    },
+    {
+      "conjunto": "adversarial",
+      "documentos": [
+        {
+          "ruta": "A03-a.md",
+          "sha256": "b75fc590ee39989f4b30ac998332c7bd848e1af35a336bcfc82639f8f371b953",
+          "texto": "# Policy of unspecified authority\n\nThe gateway must retain access logs.\n"
+        },
+        {
+          "ruta": "A03-b.md",
+          "sha256": "f49f6ac2a8828464807be746959875ed5530d897a2406bca3170d1b50639cdde",
+          "texto": "# Recommendation of unspecified authority\n\nThe gateway should not retain access logs.\n"
+        }
+      ],
+      "dominio": "ciberseguridad",
+      "id": "A03"
+    },
+    {
+      "conjunto": "adversarial",
+      "documentos": [
+        {
+          "ruta": "A04-a.md",
+          "sha256": "3b3fd5f0537feada9a72f06fd04bbf6ed38457a0456bdf5c149168cc2bc4c2fc",
+          "texto": "# Same scheduled report\n\nThe scheduled report will contain the assay date.\n"
+        },
+        {
+          "ruta": "A04-b.md",
+          "sha256": "a6b6d3a91fcb2ecf21d21a53d205b19c5b6f16ad4fe990b2b2c4e1f7368df218",
+          "texto": "# Same scheduled report\n\nThe scheduled report will not contain the assay date.\n"
+        }
+      ],
+      "dominio": "inmunologia",
+      "id": "A04"
+    },
+    {
+      "conjunto": "adversarial",
+      "documentos": [
+        {
+          "ruta": "A05-a.md",
+          "sha256": "dc5199d9336fac60276e6929084f60d350bfcb3db76d13775e68de2ad5ae3733",
+          "texto": "# Distinct records\n\nThe adult report should include the assay date.\n"
+        },
+        {
+          "ruta": "A05-b.md",
+          "sha256": "ea05326ed787f6c90230c53056d5ac29d89e77abc9862d4c54cf902f9db12286",
+          "texto": "# Distinct records\n\nThe pediatric report should not include the assay date.\n"
+        }
+      ],
+      "dominio": "inmunologia",
+      "id": "A05"
+    },
+    {
+      "conjunto": "adversarial",
+      "documentos": [
+        {
+          "ruta": "A06-a.md",
+          "sha256": "db7c791603a40f6a44c9b1bb8758bcdd5aaded552dbfd471b089d9c6f91ca883",
+          "texto": "# Explicit consent condition\n\nWhen consent has been recorded, the report should include the identifier.\n"
+        },
+        {
+          "ruta": "A06-b.md",
+          "sha256": "6275b56a56539f7031a77f632c4138c8f51a83ab37c82dc03a762bf607eb784f",
+          "texto": "# Explicit consent condition\n\nWhen consent has not been recorded, the report should not include the identifier.\n"
+        }
+      ],
+      "dominio": "inmunologia",
+      "id": "A06"
+    },
+    {
+      "conjunto": "adversarial",
+      "documentos": [
+        {
+          "ruta": "A07-a.md",
+          "sha256": "0c183691917d9ac9198a4b76a0e83f8c9ec1d14c942dd92e988e68327017232e",
+          "texto": "# Different moments\n\nBefore key rotation, the service should accept the previous key.\n"
+        },
+        {
+          "ruta": "A07-b.md",
+          "sha256": "25fba3df4072161f9f867516521d0992d3212e7bfd68d8c9f5d1342287c18f86",
+          "texto": "# Different moments\n\nAfter key rotation, the service should not accept the previous key.\n"
+        }
+      ],
+      "dominio": "ciberseguridad",
+      "id": "A07"
+    },
+    {
+      "conjunto": "adversarial",
+      "documentos": [
+        {
+          "ruta": "A08-a.md",
+          "sha256": "9151ebc0a5a450ae1b8d7693e4ee395e18e6747e10ed6bba5ccfa39f183cd29d",
+          "texto": "# Current policy\n\nThe gateway should retain access logs.\n"
+        },
+        {
+          "ruta": "A08-b.md",
+          "sha256": "2fec432c04f1466f87bf64bc00abb0d230da02be450d5c025a0034a0ff4d663e",
+          "texto": "# Historical policy, no longer applicable\n\nThe gateway should not retain access logs.\n"
+        }
+      ],
+      "dominio": "ciberseguridad",
+      "id": "A08"
+    },
+    {
+      "conjunto": "adversarial",
+      "documentos": [
+        {
+          "ruta": "A09-a.md",
+          "sha256": "71e25f7fd2b45c322987e491079417a444749e2b47bdab420d0de86e86050d0e",
+          "texto": "# Same record\n\nThe immunology report should include the assay date.\n"
+        },
+        {
+          "ruta": "A09-b.md",
+          "sha256": "71e25f7fd2b45c322987e491079417a444749e2b47bdab420d0de86e86050d0e",
+          "texto": "# Same record\n\nThe immunology report should include the assay date.\n"
+        }
+      ],
+      "dominio": "inmunologia",
+      "id": "A09"
+    },
+    {
+      "conjunto": "adversarial",
+      "documentos": [
+        {
+          "ruta": "A10-a.md",
+          "sha256": "c973378c2ad05640b52206538275a77a5de8bc977486b7945e7b8ca982f3f6c9",
+          "texto": "# Same access policy\n\nThe gateway should not record secret authentication values.\n"
+        },
+        {
+          "ruta": "A10-b.md",
+          "sha256": "c973378c2ad05640b52206538275a77a5de8bc977486b7945e7b8ca982f3f6c9",
+          "texto": "# Same access policy\n\nThe gateway should not record secret authentication values.\n"
+        }
+      ],
+      "dominio": "ciberseguridad",
+      "id": "A10"
+    },
+    {
+      "conjunto": "adversarial",
+      "documentos": [
+        {
+          "ruta": "A11-a.md",
+          "sha256": "f70acf29f968f2d56bf888154e21886ddf494d5074bdf62c8b4d303a1fd4c516",
+          "texto": "# Same collection of reports\n\nAll reports should include the assay date.\n"
+        },
+        {
+          "ruta": "A11-b.md",
+          "sha256": "8f3e53e0cbeb745d482f5800e2554b8bf3c5fc2f777befb6cc5edfa211858e59",
+          "texto": "# Same collection of reports\n\nAt least one report should not include the assay date.\n"
+        }
+      ],
+      "dominio": "inmunologia",
+      "id": "A11"
+    },
+    {
+      "conjunto": "adversarial",
+      "documentos": [
+        {
+          "ruta": "A12-a.md",
+          "sha256": "156efac8371c1d3f66ec08de6d24b002f62e9c05ba9f2be1e4747eb96deddef0",
+          "texto": "# Distinct environments\n\nThe production service should retain access logs.\n"
+        },
+        {
+          "ruta": "A12-b.md",
+          "sha256": "88d2a7a323d4c1dbc768d56290494cdce5629dce2a02cc0cd4c71cc625722cb9",
+          "texto": "# Distinct environments\n\nThe training service should not retain access logs.\n"
+        }
+      ],
+      "dominio": "ciberseguridad",
+      "id": "A12"
+    },
+    {
+      "conjunto": "adversarial",
+      "documentos": [
+        {
+          "ruta": "A13-a.md",
+          "sha256": "77b6dcb0cbb685d0255e179969dc0ea8660c624236c9ee4443bb74615f95c41c",
+          "texto": "# Unresolved reference\n\nThis should be retained in the record.\n"
+        },
+        {
+          "ruta": "A13-b.md",
+          "sha256": "9872feab456c6abc1f7f40d1c1b0f005d14c1f19c37de842c908a73a47ee62df",
+          "texto": "# Unresolved reference\n\nThat should not be retained in the record.\n"
+        }
+      ],
+      "dominio": "inmunologia",
+      "id": "A13"
+    },
+    {
+      "conjunto": "adversarial",
+      "documentos": [
+        {
+          "ruta": "A14-a.md",
+          "sha256": "cbbf385dfdaae61f213be83dfcffe56b67b99a9e71ba80d8584ee16949d99d30",
+          "texto": "# Same set of reports\n\nThe reports should remain confidential.\n"
+        },
+        {
+          "ruta": "A14-b.md",
+          "sha256": "842c821d0d415d6b2bf1b4a4f3ad34d6bc1e62af8b646c57126d0817b16dd991",
+          "texto": "# Same set of reports\n\nThe reports should be publicly disclosed.\n"
+        }
+      ],
+      "dominio": "inmunologia",
+      "id": "A14"
+    },
+    {
+      "conjunto": "adversarial",
+      "documentos": [
+        {
+          "ruta": "A15-a.md",
+          "sha256": "93826e61401ad3e70e62aa1e73bde24e6d111c356dfa77cf876d74a220337500",
+          "texto": "# Distinct fields\n\nThe report should include the collection date.\n"
+        },
+        {
+          "ruta": "A15-b.md",
+          "sha256": "5fb3d5f1adfded3f6a158d63c23325da0bf40b3cc14e75a31a529e1921c97729",
+          "texto": "# Distinct fields\n\nThe report should not include the publication date.\n"
+        }
+      ],
+      "dominio": "inmunologia",
+      "id": "A15"
+    },
+    {
+      "conjunto": "adversarial",
+      "documentos": [
+        {
+          "ruta": "A16-a.md",
+          "sha256": "4965e87bc7cb61631ac932515b604ebd16bf1c1486a704a77bf884f6e2ceda8c",
+          "texto": "# Same backups\n\nThe encrypted backups should be retained for ten years.\n"
+        },
+        {
+          "ruta": "A16-b.md",
+          "sha256": "625b06d0623e8ba298f30046a56feb92ffd99efc2e287ec3f38bab5bf4e5ef7c",
+          "texto": "# Same backups\n\nThe encrypted backups should not be retained for ten years.\n"
+        }
+      ],
+      "dominio": "ciberseguridad",
+      "id": "A16"
+    },
+    {
+      "conjunto": "documental_conocido",
+      "documentos": [
+        {
+          "ruta": "I01.md",
+          "sha256": "11688c95b35f27a8f850b41bbba592de444ad0f16cb3fff5ec99c37fff03e3bb",
+          "texto": "# I01\n\nHairy cell leukemia is a low-grade, slow-growing T-cell lymphoid malignancy.\n"
+        },
+        {
+          "ruta": "R-I-NCI.md",
+          "sha256": "85d27909f46bb0f5984b0e0e81f24affe98e170fc692411e0406b5d0c4d22a35",
+          "texto": "# R-I-NCI\n\n## P-I01\n\nHairy cell leukemia is a low-grade, slow-growing B-cell lymphoid malignancy. It is a rare disease; only 1,200 to 1,300 new cases occur each year in the United States.[[1][5]]\n\n"
+        }
+      ],
+      "dominio": "inmunologia",
+      "id": "I01"
+    },
+    {
+      "conjunto": "documental_conocido",
+      "documentos": [
+        {
+          "ruta": "I02.md",
+          "sha256": "f07df99bd5459550a1025c05d9fb90258006d8c6456b4248cb03dd3e5ff104e0",
+          "texto": "# I02\n\nHairy cell leukemia (HCL) is a rare, slow-growing leukemia that begins in a B cell (also called a B lymphocyte), a type of white blood cell. The disease is also called hairy cell leukemia and hairy cell leukemia.\n"
+        },
+        {
+          "ruta": "R-I-NCI.md",
+          "sha256": "85d27909f46bb0f5984b0e0e81f24affe98e170fc692411e0406b5d0c4d22a35",
+          "texto": "# R-I-NCI\n\n## P-I01\n\nHairy cell leukemia is a low-grade, slow-growing B-cell lymphoid malignancy. It is a rare disease; only 1,200 to 1,300 new cases occur each year in the United States.[[1][5]]\n\n"
+        }
+      ],
+      "dominio": "inmunologia",
+      "id": "I02"
+    },
+    {
+      "conjunto": "documental_conocido",
+      "documentos": [
+        {
+          "ruta": "I03.md",
+          "sha256": "293c4647432f94380c63f5628a84aa1b2b805611a521ff69e3f8ac1447e79303",
+          "texto": "# I03\n\nHairy cell leukemia is usually slow-progressing, and all patients need to start treatment immediately after initial diagnosis.\n"
+        },
+        {
+          "ruta": "R-I-LLS.md",
+          "sha256": "d6198e1b91eca857d74d09a9790356f213b592cf0552d76ac323b9badd470362",
+          "texto": "# R-I-LLS\n\n## P-I02\n\n• Hairy cell leukemia (HCL) is a rare, slow-growing leukemia that begins in a B cell (also called a B lymphocyte), a type of white blood cell. The disease is also called hairy cell leukemia and hairy cell leukemia.\n\n## P-I03\n\nHairy cell leukemia is usually slow-growing, and not all patients need to begin treatment immediately after initial diagnosis. In approximately 10 percent of patients (who have stable blood cell counts and no symptoms at diagnosis), the treatment approach may be watchful waiting. Watchful waiting is an appropriate medical approach that involves delaying treatment until signs and symptoms of the disease appear or progress. Some patients with hairy cell leukemia live for many years without any symptoms and without receiving any treatment. Frequent monitoring of the patient, including blood tests, is necessary so that treatment can be initiated if the disease begins to progress.\n\n## P-I04\n\nPatients should begin treatment if they have low blood cell counts (deficiency of red blood cells, platelets, or white blood cells). They should also begin treatment if they experience symptoms, including unexplained weight loss, recurrent infections, or physical discomfort due to an enlarged spleen and/or liver.\n\n"
+        }
+      ],
+      "dominio": "inmunologia",
+      "id": "I03"
+    },
+    {
+      "conjunto": "documental_conocido",
+      "documentos": [
+        {
+          "ruta": "I04.md",
+          "sha256": "d8e9d25a3d4a2b4d45a0a08109f093c355dcbb437215d1f54110893af98306f7",
+          "texto": "# I04\n\nPatients should start treatment if they have low blood cell counts (deficiency of red blood cells, platelets, or white blood cells). They should also start treatment if they have symptoms, including unexplained weight loss, recurrent infections, or physical discomfort due to an enlarged spleen and/or liver.\n"
+        },
+        {
+          "ruta": "R-I-LLS.md",
+          "sha256": "d6198e1b91eca857d74d09a9790356f213b592cf0552d76ac323b9badd470362",
+          "texto": "# R-I-LLS\n\n## P-I02\n\n• Hairy cell leukemia (HCL) is a rare, slow-growing leukemia that begins in a B cell (also called a B lymphocyte), a type of white blood cell. The disease is also called hairy cell leukemia and hairy cell leukemia.\n\n## P-I03\n\nHairy cell leukemia is usually slow-growing, and not all patients need to begin treatment immediately after initial diagnosis. In approximately 10 percent of patients (who have stable blood cell counts and no symptoms at diagnosis), the treatment approach may be watchful waiting. Watchful waiting is an appropriate medical approach that involves delaying treatment until signs and symptoms of the disease appear or progress. Some patients with hairy cell leukemia live for many years without any symptoms and without receiving any treatment. Frequent monitoring of the patient, including blood tests, is necessary so that treatment can be initiated if the disease begins to progress.\n\n## P-I04\n\nPatients should begin treatment if they have low blood cell counts (deficiency of red blood cells, platelets, or white blood cells). They should also begin treatment if they experience symptoms, including unexplained weight loss, recurrent infections, or physical discomfort due to an enlarged spleen and/or liver.\n\n"
+        }
+      ],
+      "dominio": "inmunologia",
+      "id": "I04"
+    },
+    {
+      "conjunto": "documental_conocido",
+      "documentos": [
+        {
+          "ruta": "I05.md",
+          "sha256": "9aaaf34c359919d2eb77252b029e909a6640beff02cae149b437b3b17305aa78",
+          "texto": "# I05\n\nHairy cell leukemia is usually slow-progressing, and not all patients need to start treatment immediately after initial diagnosis. In approximately 10 percent of patients (who have stable blood cell counts and no symptoms at diagnosis), the treatment approach may be watchful waiting. Watchful waiting is an appropriate medical approach that involves delaying treatment until signs and symptoms of the disease appear or progress. Some patients with hairy cell leukemia live for many years without any symptoms and without receiving any treatment. Frequent monitoring of the patient, including blood tests, is not necessary so that treatment can be started if the disease begins to progress.\n"
+        },
+        {
+          "ruta": "R-I-LLS.md",
+          "sha256": "d6198e1b91eca857d74d09a9790356f213b592cf0552d76ac323b9badd470362",
+          "texto": "# R-I-LLS\n\n## P-I02\n\n• Hairy cell leukemia (HCL) is a rare, slow-growing leukemia that begins in a B cell (also called a B lymphocyte), a type of white blood cell. The disease is also called hairy cell leukemia and hairy cell leukemia.\n\n## P-I03\n\nHairy cell leukemia is usually slow-growing, and not all patients need to begin treatment immediately after initial diagnosis. In approximately 10 percent of patients (who have stable blood cell counts and no symptoms at diagnosis), the treatment approach may be watchful waiting. Watchful waiting is an appropriate medical approach that involves delaying treatment until signs and symptoms of the disease appear or progress. Some patients with hairy cell leukemia live for many years without any symptoms and without receiving any treatment. Frequent monitoring of the patient, including blood tests, is necessary so that treatment can be initiated if the disease begins to progress.\n\n## P-I04\n\nPatients should begin treatment if they have low blood cell counts (deficiency of red blood cells, platelets, or white blood cells). They should also begin treatment if they experience symptoms, including unexplained weight loss, recurrent infections, or physical discomfort due to an enlarged spleen and/or liver.\n\n"
+        }
+      ],
+      "dominio": "inmunologia",
+      "id": "I05"
+    },
+    {
+      "conjunto": "documental_conocido",
+      "documentos": [
+        {
+          "ruta": "I06.md",
+          "sha256": "32b9823c617b7674ec7430490b421bff04a7cc99db3c2aac0de4dcc0f85c4c5a",
+          "texto": "# I06\n\nThis treatment should not be used in these cases.\n"
+        },
+        {
+          "ruta": "R-I-LLS.md",
+          "sha256": "d6198e1b91eca857d74d09a9790356f213b592cf0552d76ac323b9badd470362",
+          "texto": "# R-I-LLS\n\n## P-I02\n\n• Hairy cell leukemia (HCL) is a rare, slow-growing leukemia that begins in a B cell (also called a B lymphocyte), a type of white blood cell. The disease is also called hairy cell leukemia and hairy cell leukemia.\n\n## P-I03\n\nHairy cell leukemia is usually slow-growing, and not all patients need to begin treatment immediately after initial diagnosis. In approximately 10 percent of patients (who have stable blood cell counts and no symptoms at diagnosis), the treatment approach may be watchful waiting. Watchful waiting is an appropriate medical approach that involves delaying treatment until signs and symptoms of the disease appear or progress. Some patients with hairy cell leukemia live for many years without any symptoms and without receiving any treatment. Frequent monitoring of the patient, including blood tests, is necessary so that treatment can be initiated if the disease begins to progress.\n\n## P-I04\n\nPatients should begin treatment if they have low blood cell counts (deficiency of red blood cells, platelets, or white blood cells). They should also begin treatment if they experience symptoms, including unexplained weight loss, recurrent infections, or physical discomfort due to an enlarged spleen and/or liver.\n\n"
+        }
+      ],
+      "dominio": "inmunologia",
+      "id": "I06"
+    },
+    {
+      "conjunto": "documental_conocido",
+      "documentos": [
+        {
+          "ruta": "C01.md",
+          "sha256": "7202fe5f2a346bc7bbf2de59d59513454c6586d5f883e029640b1c363fc46ab2",
+          "texto": "# C01\n\nMulti-factor authentication (MFA/2FA) should not be implemented for any access points, including remote and third-party access.\n"
+        },
+        {
+          "ruta": "R-C-INCIBE.md",
+          "sha256": "b819f59ee8034be11b74d63474558c862cecc344330d9fed287b70c56cc5cfc6",
+          "texto": "# R-C-INCIBE\n\n## P-C01\n\n■ Adaptive Authentication and Robust MFA. Implement mandatory multi-factor authentication (MFA/2FA) for all access points (especially remote and third-party access).\nPhishing-resistant methods (such as physical keys or FIDO2) should be prioritized over SMS or traditional codes, which can be intercepted or bypassed through automated man-in-the-middle attacks.\n\n## P-C02\n\n■ Zero Trust Architecture. Eliminate implicit trust within the network. Each access request must be continuously verified based on context (device, location, behavior), limiting the movements of potential autonomous AI agents that could breach the perimeter.\n\n## P-C03\n\nIn any case, these measures and recommendations do not replace the best practices that have been implemented by this entity, such as authentication of internal and external users, software security, perimeter defense, backup systems, etc., but rather reinforce and/or complement them.\n\n"
+        }
+      ],
+      "dominio": "ciberseguridad",
+      "id": "C01"
+    },
+    {
+      "conjunto": "documental_conocido",
+      "documentos": [
+        {
+          "ruta": "C02.md",
+          "sha256": "a52d56eeb50e282a0f207bc05e8fccf4e9204e5d85c510b613085fb15aaa0091",
+          "texto": "# C02\n\n■ Adaptive Authentication and Robust MFA. Implement mandatory multi-factor authentication (MFA/2FA) for all access points (especially remote and third-party access).\nPhishing-resistant methods (such as physical keys or FIDO2) should be prioritized over SMS or traditional codes, which can be intercepted or bypassed through automated man-in-the-middle attacks.\n"
+        },
+        {
+          "ruta": "R-C-INCIBE.md",
+          "sha256": "b819f59ee8034be11b74d63474558c862cecc344330d9fed287b70c56cc5cfc6",
+          "texto": "# R-C-INCIBE\n\n## P-C01\n\n■ Adaptive Authentication and Robust MFA. Implement mandatory multi-factor authentication (MFA/2FA) for all access points (especially remote and third-party access).\nPhishing-resistant methods (such as physical keys or FIDO2) should be prioritized over SMS or traditional codes, which can be intercepted or bypassed through automated man-in-the-middle attacks.\n\n## P-C02\n\n■ Zero Trust Architecture. Eliminate implicit trust within the network. Each access request must be continuously verified based on context (device, location, behavior), limiting the movements of potential autonomous AI agents that could breach the perimeter.\n\n## P-C03\n\nIn any case, these measures and recommendations do not replace the best practices that have been implemented by this entity, such as authentication of internal and external users, software security, perimeter defense, backup systems, etc., but rather reinforce and/or complement them.\n\n"
+        }
+      ],
+      "dominio": "ciberseguridad",
+      "id": "C02"
+    },
+    {
+      "conjunto": "documental_conocido",
+      "documentos": [
+        {
+          "ruta": "C03.md",
+          "sha256": "8ad3dbf75a8e022a6b6ff297a3e3d0f7853e5901ece1f8ecb9826310c48eaecd",
+          "texto": "# C03\n\n■ Zero Trust Architecture. Eliminate implicit trust within the network. Each access request should not be continuously verified based on context (device, location, behavior), limiting the movements of potential autonomous AI agents that could breach the perimeter.\n"
+        },
+        {
+          "ruta": "R-C-INCIBE.md",
+          "sha256": "b819f59ee8034be11b74d63474558c862cecc344330d9fed287b70c56cc5cfc6",
+          "texto": "# R-C-INCIBE\n\n## P-C01\n\n■ Adaptive Authentication and Robust MFA. Implement mandatory multi-factor authentication (MFA/2FA) for all access points (especially remote and third-party access).\nPhishing-resistant methods (such as physical keys or FIDO2) should be prioritized over SMS or traditional codes, which can be intercepted or bypassed through automated man-in-the-middle attacks.\n\n## P-C02\n\n■ Zero Trust Architecture. Eliminate implicit trust within the network. Each access request must be continuously verified based on context (device, location, behavior), limiting the movements of potential autonomous AI agents that could breach the perimeter.\n\n## P-C03\n\nIn any case, these measures and recommendations do not replace the best practices that have been implemented by this entity, such as authentication of internal and external users, software security, perimeter defense, backup systems, etc., but rather reinforce and/or complement them.\n\n"
+        }
+      ],
+      "dominio": "ciberseguridad",
+      "id": "C03"
+    },
+    {
+      "conjunto": "documental_conocido",
+      "documentos": [
+        {
+          "ruta": "C04.md",
+          "sha256": "44592a0f3a2a0cea72cc8337373fc41f54b3110ed8eff9caf6c1928f737a3624",
+          "texto": "# C04\n\nValid measurements confirm that an updated component meets the technical specifications. The actor's permission authorized the reading and updating of this resource. No exceptional authorization is provided. What can be concluded regarding the technical outcome and the legitimacy of the action? Does all evidence of the outcome automatically lose its value due to this lack of authority?\n"
+        },
+        {
+          "ruta": "R-C-CYB25.md",
+          "sha256": "7dbdd3f6ef00129ef7fe08301f3edc5feb3c18e883426bec5c2bf108328a9dcb",
+          "texto": "# R-C-CYB25\n\n## P-C04\n\nValid measurements demonstrate that an updated component meets the technical specifications. The actor's permission authorized only the reading; it did not permit updating that resource. No exceptional authorization is provided. What can be concluded regarding the technical outcome and the legitimacy of the action? Does all evidence of the outcome automatically lose its value due to this lack of authorization?\n\n"
+        }
+      ],
+      "dominio": "ciberseguridad",
+      "id": "C04"
+    },
+    {
+      "conjunto": "documental_conocido",
+      "documentos": [
+        {
+          "ruta": "C05.md",
+          "sha256": "a47684e848a8c6144470172b0655a06ef36547f5fd3ef5a66cf4a25cf1be92c6",
+          "texto": "# C05\n\nIn any case, these measures and recommendations do not replace the best practices that have been promoted by this entity, such as authentication of internal and external users, software security, perimeter defense, backup systems, etc., but rather reinforce and/or complement them.\n"
+        },
+        {
+          "ruta": "R-C-INCIBE.md",
+          "sha256": "b819f59ee8034be11b74d63474558c862cecc344330d9fed287b70c56cc5cfc6",
+          "texto": "# R-C-INCIBE\n\n## P-C01\n\n■ Adaptive Authentication and Robust MFA. Implement mandatory multi-factor authentication (MFA/2FA) for all access points (especially remote and third-party access).\nPhishing-resistant methods (such as physical keys or FIDO2) should be prioritized over SMS or traditional codes, which can be intercepted or bypassed through automated man-in-the-middle attacks.\n\n## P-C02\n\n■ Zero Trust Architecture. Eliminate implicit trust within the network. Each access request must be continuously verified based on context (device, location, behavior), limiting the movements of potential autonomous AI agents that could breach the perimeter.\n\n## P-C03\n\nIn any case, these measures and recommendations do not replace the best practices that have been implemented by this entity, such as authentication of internal and external users, software security, perimeter defense, backup systems, etc., but rather reinforce and/or complement them.\n\n"
+        }
+      ],
+      "dominio": "ciberseguridad",
+      "id": "C05"
+    },
+    {
+      "conjunto": "documental_conocido",
+      "documentos": [
+        {
+          "ruta": "C06.md",
+          "sha256": "b001f6bbd258368c0b7434652568df96c1c27fb562da01d89722c2045317e27e",
+          "texto": "# C06\n\nIn another environment, the scope of which is not specified, the indicated access does not require continuous verification.\n"
+        },
+        {
+          "ruta": "R-C-INCIBE.md",
+          "sha256": "b819f59ee8034be11b74d63474558c862cecc344330d9fed287b70c56cc5cfc6",
+          "texto": "# R-C-INCIBE\n\n## P-C01\n\n■ Adaptive Authentication and Robust MFA. Implement mandatory multi-factor authentication (MFA/2FA) for all access points (especially remote and third-party access).\nPhishing-resistant methods (such as physical keys or FIDO2) should be prioritized over SMS or traditional codes, which can be intercepted or bypassed through automated man-in-the-middle attacks.\n\n## P-C02\n\n■ Zero Trust Architecture. Eliminate implicit trust within the network. Each access request must be continuously verified based on context (device, location, behavior), limiting the movements of potential autonomous AI agents that could breach the perimeter.\n\n## P-C03\n\nIn any case, these measures and recommendations do not replace the best practices that have been implemented by this entity, such as authentication of internal and external users, software security, perimeter defense, backup systems, etc., but rather reinforce and/or complement them.\n\n"
+        }
+      ],
+      "dominio": "ciberseguridad",
+      "id": "C06"
+    }
+  ],
+  "controles_sha256": "14984c10a22f59384e827248272ae184c70c9ee2f6605aa6c444808d1814ff49",
+  "entradas_anteriores_sha256": "0f06f28cc100d06db5e98eae5216b27e95bd0970947d0ffda4ac4df08a68e9c2"
+}
