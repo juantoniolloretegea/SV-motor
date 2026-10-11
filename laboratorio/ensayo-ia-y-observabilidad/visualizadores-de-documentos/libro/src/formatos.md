@@ -2,9 +2,9 @@
 
 ## PDF: leer las páginas
 
-**Ver páginas del PDF** abre el visor del SV. El selector de página, los enlaces **Anterior** y **Siguiente** y la ampliación **Normal** o **Doble** permiten recorrer el documento. La numeración cuenta las páginas del archivo desde uno; puede diferir de la numeración impresa.
+**Ver documento** abre directamente las páginas del PDF. El selector de página y los enlaces **Anterior** y **Siguiente** permiten recorrerlo. La opción inicial **Lectura ampliada** genera una imagen con el doble de resolución y tamaño lineal que **Vista reducida**. El zoom del navegador sólo agranda la imagen recibida; no añade detalle al original. La numeración cuenta las páginas del archivo desde uno; puede diferir de la numeración impresa.
 
-El visor representa cada página como una imagen y la presenta mediante mdBook. Así puede mostrar texto, tablas, figuras y diagramas en su disposición original. La representación puede tener diferencias tipográficas u omisiones: no constituye una interpretación científica ni una transcripción accesible. Los avisos y el informe están en **Detalles y límites de esta vista**.
+El visor representa cada página como una imagen y utiliza una presentación preparada mediante mdBook. Reutiliza temporalmente el original y las imágenes ya preparadas para evitar repetir trabajo. Cada respuesta vuelve a comprobar el acceso y muestra los permisos vigentes. La memoria utilizada está acotada: no se preparan ni se cargan a la vez todas las páginas de un libro. Así puede mostrar texto, tablas, figuras y diagramas en su disposición original. La representación puede tener diferencias tipográficas u omisiones: no constituye una interpretación científica ni una transcripción accesible. Los avisos y el informe están en **Detalles y límites de esta vista**.
 
 La revisión de un PDF depositado exige admisión y permiso vigente de consulta o depósito para revisión. No requiere autorizar una conversión textual a Markdown. Este acceso no habilita extracción, conversión textual, elaboración de índices ni suministro a la IA.
 

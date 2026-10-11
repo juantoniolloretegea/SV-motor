@@ -15,7 +15,7 @@ El **contenido entregado a la IA** es la selección efectivamente preparada para
 ## Cómo trabajar con un documento
 
 1. Registre su referencia, procedencia y licencia, y deposite el original cuando disponga del permiso correspondiente.
-2. Abra la lectura disponible. Para un PDF, utilice **Ver páginas del PDF**; puede recorrer sus páginas y ampliar la vista.
+2. Abra la lectura disponible. Al abrir un PDF, el visor muestra sus páginas; puede recorrerlas y ampliar la vista. La ficha queda disponible por separado.
 3. Si necesita texto, solicite la conversión autorizada y revise el resultado frente al original.
 4. Compruebe la licencia y la autorización de suministro antes de utilizarlo en una consulta a la IA.
 5. Consulte el historial para conocer las actuaciones, sus responsables y sus fechas; abra el expediente de la consulta para comprobar la entrega.
