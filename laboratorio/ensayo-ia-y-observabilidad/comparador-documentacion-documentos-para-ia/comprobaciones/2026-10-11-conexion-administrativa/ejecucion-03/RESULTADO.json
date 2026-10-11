@@ -1,0 +1,544 @@
+{
+  "controles": [
+    {
+      "conforme": true,
+      "detalle": {
+        "abi": 7,
+        "archivos_denegados": true,
+        "ejecucion_denegada": true,
+        "no_new_privs": 1,
+        "red_denegada": true,
+        "seccomp": 2
+      },
+      "id": "perfil_linux"
+    },
+    {
+      "conforme": true,
+      "detalle": {
+        "aislamiento": [
+          7,
+          1,
+          2
+        ],
+        "consulta": {
+          "documentos": [
+            {
+              "derivacion": null,
+              "dominio": "ciberseguridad",
+              "id": "propuesto",
+              "ingles": "# Control propuesto\n\nThe gateway should log all events.\n\n<script>contenido inactivo</script>\n",
+              "ingles_sha256": "5b1a8ae91f1189a8afcc583b35300872b3372494e587ba2af57ae0e8dd940fc7",
+              "original": "# Control propuesto\n\nThe gateway should log all events.\n\n<script>contenido inactivo</script>\n",
+              "original_sha256": "5b1a8ae91f1189a8afcc583b35300872b3372494e587ba2af57ae0e8dd940fc7",
+              "revision_git": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "titulo": "Control propuesto <script>inactivo</script>",
+              "traduccion": null
+            },
+            {
+              "derivacion": null,
+              "dominio": "ciberseguridad",
+              "id": "referencia",
+              "ingles": "# Control de oposición\n\nThe gateway should not log all events.\n",
+              "ingles_sha256": "d2980d7ee921078d534ffd8df318d3eb8bfa26beeaac49e016b26fcdb7817479",
+              "original": "# Control de oposición\n\nThe gateway should not log all events.\n",
+              "original_sha256": "d2980d7ee921078d534ffd8df318d3eb8bfa26beeaac49e016b26fcdb7817479",
+              "revision_git": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "titulo": "Control referencia <script>inactivo</script>",
+              "traduccion": null
+            },
+            {
+              "derivacion": null,
+              "dominio": "ciberseguridad",
+              "id": "compatible",
+              "ingles": "# Control compatible\n\nThe gateway should log all events.\n",
+              "ingles_sha256": "31d29b3f8d44dbdfb1d3b126cedbb80fd4add076a1d380c0f02ff6ee72dfaa30",
+              "original": "# Control compatible\n\nThe gateway should log all events.\n",
+              "original_sha256": "31d29b3f8d44dbdfb1d3b126cedbb80fd4add076a1d380c0f02ff6ee72dfaa30",
+              "revision_git": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "titulo": "Control compatible <script>inactivo</script>",
+              "traduccion": null
+            }
+          ],
+          "dominio": "ciberseguridad",
+          "estado": "consulta_experimental",
+          "revision_registro": 25,
+          "seleccionados": [
+            "referencia",
+            "compatible"
+          ],
+          "sugerencias": [
+            {
+              "negativo": {
+                "documento": "referencia",
+                "localizacion": {
+                  "byte_end": 64,
+                  "byte_start": 25,
+                  "end_col": 1,
+                  "end_line": 4,
+                  "file": "referencia.md",
+                  "start_col": 1,
+                  "start_line": 3
+                },
+                "texto": "The gateway should not log all events.\n"
+              },
+              "positivo": {
+                "documento": "propuesto",
+                "localizacion": {
+                  "byte_end": 56,
+                  "byte_start": 21,
+                  "end_col": 1,
+                  "end_line": 4,
+                  "file": "propuesto.md",
+                  "start_col": 1,
+                  "start_line": 3
+                },
+                "texto": "The gateway should log all events.\n"
+              },
+              "propuesto": "propuesto",
+              "referencia": "referencia"
+            }
+          ]
+        },
+        "medicion": {
+          "lecturas": 3,
+          "llamadas_comparador": 2,
+          "microsegundos": 69119
+        }
+      },
+      "id": "ciberseguridad_grupo"
+    },
+    {
+      "conforme": true,
+      "detalle": {
+        "html_sha256": "29b6aa3f4f02a70bb4de1d03e6d8d32aba902ab6cfa895e132c411204826db65"
+      },
+      "id": "ciberseguridad_grupo_texto_inerte"
+    },
+    {
+      "conforme": true,
+      "detalle": {
+        "originales_intactos_despues_de_mdbook": true,
+        "paginas": 3,
+        "sha256": "01bde5ad95dfb5128dd4f61c1647cb8020ecd3b3146c21283c6df3b3c17a9eb4"
+      },
+      "id": "ciberseguridad_grupo_mdbook"
+    },
+    {
+      "conforme": true,
+      "detalle": {
+        "aislamiento": [
+          7,
+          1,
+          2
+        ],
+        "consulta": {
+          "documentos": [
+            {
+              "derivacion": null,
+              "dominio": "ciberseguridad",
+              "id": "propuesto",
+              "ingles": "# Control propuesto\n\nThe gateway should log all events.\n\n<script>contenido inactivo</script>\n",
+              "ingles_sha256": "5b1a8ae91f1189a8afcc583b35300872b3372494e587ba2af57ae0e8dd940fc7",
+              "original": "# Control propuesto\n\nThe gateway should log all events.\n\n<script>contenido inactivo</script>\n",
+              "original_sha256": "5b1a8ae91f1189a8afcc583b35300872b3372494e587ba2af57ae0e8dd940fc7",
+              "revision_git": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "titulo": "Control propuesto <script>inactivo</script>",
+              "traduccion": null
+            },
+            {
+              "derivacion": null,
+              "dominio": "ciberseguridad",
+              "id": "compatible",
+              "ingles": "# Control compatible\n\nThe gateway should log all events.\n",
+              "ingles_sha256": "31d29b3f8d44dbdfb1d3b126cedbb80fd4add076a1d380c0f02ff6ee72dfaa30",
+              "original": "# Control compatible\n\nThe gateway should log all events.\n",
+              "original_sha256": "31d29b3f8d44dbdfb1d3b126cedbb80fd4add076a1d380c0f02ff6ee72dfaa30",
+              "revision_git": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "titulo": "Control compatible <script>inactivo</script>",
+              "traduccion": null
+            }
+          ],
+          "dominio": "ciberseguridad",
+          "estado": "consulta_experimental",
+          "revision_registro": 25,
+          "seleccionados": [
+            "compatible"
+          ],
+          "sugerencias": []
+        },
+        "medicion": {
+          "lecturas": 2,
+          "llamadas_comparador": 1,
+          "microsegundos": 22361
+        }
+      },
+      "id": "ciberseguridad_sin_aviso"
+    },
+    {
+      "conforme": true,
+      "detalle": {
+        "html_sha256": "bd9be7ec4bc91a6b29cbe479cca77b16d11c3c2a4ecb66cbee6f10c38e5d304b"
+      },
+      "id": "ciberseguridad_sin_aviso_texto_inerte"
+    },
+    {
+      "conforme": true,
+      "detalle": {
+        "originales_intactos_despues_de_mdbook": true,
+        "paginas": 3,
+        "sha256": "e9d1c32c6efacbd5907fe79d0e2ac799182ed9171988976b223e31e33b5d4a73"
+      },
+      "id": "ciberseguridad_sin_aviso_mdbook"
+    },
+    {
+      "conforme": true,
+      "detalle": {
+        "error": "COMPARADOR_LIMITE_SUPERADO"
+      },
+      "id": "ciberseguridad_plazo_y_cierre"
+    },
+    {
+      "conforme": true,
+      "detalle": {
+        "error": "RECURSO_NO_VIGENTE"
+      },
+      "id": "ciberseguridad_caducidad_sin_cambio"
+    },
+    {
+      "conforme": true,
+      "detalle": {
+        "error": "ADMISION_EXPRESA_REQUERIDA"
+      },
+      "id": "ciberseguridad_identidad_ajena"
+    },
+    {
+      "conforme": true,
+      "detalle": {
+        "error": "DOMINIO_DISCORDANTE"
+      },
+      "id": "ciberseguridad_dominio_ajeno"
+    },
+    {
+      "conforme": true,
+      "detalle": {
+        "estado": "seleccion_vacia",
+        "lecturas": 0
+      },
+      "id": "ciberseguridad_vacio"
+    },
+    {
+      "conforme": true,
+      "detalle": {
+        "error": "ORIGINAL_DISCORDANTE",
+        "lecturas": 1
+      },
+      "id": "ciberseguridad_original_alterado"
+    },
+    {
+      "conforme": true,
+      "detalle": {
+        "error": "TEXTO_FUERA_DE_COTA",
+        "lecturas": 0
+      },
+      "id": "ciberseguridad_tamaño_excesivo"
+    },
+    {
+      "conforme": true,
+      "detalle": {
+        "error": "ORIGINAL_NO_UTF8",
+        "lecturas": 2
+      },
+      "id": "ciberseguridad_texto_no_utf8"
+    },
+    {
+      "conforme": true,
+      "detalle": {
+        "error": "CARGA_AUSENTE",
+        "lecturas": 0
+      },
+      "id": "ciberseguridad_referencia_ausente"
+    },
+    {
+      "conforme": true,
+      "detalle": {
+        "revision": 25
+      },
+      "id": "ciberseguridad_registro_intacto"
+    },
+    {
+      "conforme": true,
+      "detalle": {
+        "error": "RECURSO_NO_VIGENTE"
+      },
+      "id": "ciberseguridad_retirada"
+    },
+    {
+      "conforme": true,
+      "detalle": {
+        "aislamiento": [
+          7,
+          1,
+          2
+        ],
+        "consulta": {
+          "documentos": [
+            {
+              "derivacion": null,
+              "dominio": "inmunologia",
+              "id": "propuesto",
+              "ingles": "# Control propuesto\n\nThe laboratory should preserve labelled samples.\n\n<script>contenido inactivo</script>\n",
+              "ingles_sha256": "6b1fb8557b3b8593f4f95db71b0e0adef9bf088faf91da9dcb56041e7b88e3cd",
+              "original": "# Control propuesto\n\nThe laboratory should preserve labelled samples.\n\n<script>contenido inactivo</script>\n",
+              "original_sha256": "6b1fb8557b3b8593f4f95db71b0e0adef9bf088faf91da9dcb56041e7b88e3cd",
+              "revision_git": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "titulo": "Control propuesto <script>inactivo</script>",
+              "traduccion": null
+            },
+            {
+              "derivacion": null,
+              "dominio": "inmunologia",
+              "id": "referencia",
+              "ingles": "# Control de oposición\n\nThe laboratory should not preserve labelled samples.\n",
+              "ingles_sha256": "c16e0b1b3f490bf563950423bc4d9670f82fd7d83e8abc02e587c7bb39a4b7b0",
+              "original": "# Control de oposición\n\nThe laboratory should not preserve labelled samples.\n",
+              "original_sha256": "c16e0b1b3f490bf563950423bc4d9670f82fd7d83e8abc02e587c7bb39a4b7b0",
+              "revision_git": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "titulo": "Control referencia <script>inactivo</script>",
+              "traduccion": null
+            },
+            {
+              "derivacion": null,
+              "dominio": "inmunologia",
+              "id": "compatible",
+              "ingles": "# Control compatible\n\nThe laboratory should preserve labelled samples.\n",
+              "ingles_sha256": "6ae83be20de145eb597beaed1e965d888cb86a8adfb9ad7df01ae01f1c5d5db0",
+              "original": "# Control compatible\n\nThe laboratory should preserve labelled samples.\n",
+              "original_sha256": "6ae83be20de145eb597beaed1e965d888cb86a8adfb9ad7df01ae01f1c5d5db0",
+              "revision_git": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "titulo": "Control compatible <script>inactivo</script>",
+              "traduccion": null
+            }
+          ],
+          "dominio": "inmunologia",
+          "estado": "consulta_experimental",
+          "revision_registro": 30,
+          "seleccionados": [
+            "referencia",
+            "compatible"
+          ],
+          "sugerencias": [
+            {
+              "negativo": {
+                "documento": "referencia",
+                "localizacion": {
+                  "byte_end": 78,
+                  "byte_start": 25,
+                  "end_col": 1,
+                  "end_line": 4,
+                  "file": "referencia.md",
+                  "start_col": 1,
+                  "start_line": 3
+                },
+                "texto": "The laboratory should not preserve labelled samples.\n"
+              },
+              "positivo": {
+                "documento": "propuesto",
+                "localizacion": {
+                  "byte_end": 70,
+                  "byte_start": 21,
+                  "end_col": 1,
+                  "end_line": 4,
+                  "file": "propuesto.md",
+                  "start_col": 1,
+                  "start_line": 3
+                },
+                "texto": "The laboratory should preserve labelled samples.\n"
+              },
+              "propuesto": "propuesto",
+              "referencia": "referencia"
+            }
+          ]
+        },
+        "medicion": {
+          "lecturas": 3,
+          "llamadas_comparador": 2,
+          "microsegundos": 31003
+        }
+      },
+      "id": "inmunologia_grupo"
+    },
+    {
+      "conforme": true,
+      "detalle": {
+        "html_sha256": "e9cae721515f7176571d4b3c1d722c81acee0a1f94be2fe983b02a384d493b41"
+      },
+      "id": "inmunologia_grupo_texto_inerte"
+    },
+    {
+      "conforme": true,
+      "detalle": {
+        "originales_intactos_despues_de_mdbook": true,
+        "paginas": 3,
+        "sha256": "1be18e5708ef3b5b9d1d48fa21d3e217e04534899e4e1d7f65b04f2f690658b8"
+      },
+      "id": "inmunologia_grupo_mdbook"
+    },
+    {
+      "conforme": true,
+      "detalle": {
+        "aislamiento": [
+          7,
+          1,
+          2
+        ],
+        "consulta": {
+          "documentos": [
+            {
+              "derivacion": null,
+              "dominio": "inmunologia",
+              "id": "propuesto",
+              "ingles": "# Control propuesto\n\nThe laboratory should preserve labelled samples.\n\n<script>contenido inactivo</script>\n",
+              "ingles_sha256": "6b1fb8557b3b8593f4f95db71b0e0adef9bf088faf91da9dcb56041e7b88e3cd",
+              "original": "# Control propuesto\n\nThe laboratory should preserve labelled samples.\n\n<script>contenido inactivo</script>\n",
+              "original_sha256": "6b1fb8557b3b8593f4f95db71b0e0adef9bf088faf91da9dcb56041e7b88e3cd",
+              "revision_git": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "titulo": "Control propuesto <script>inactivo</script>",
+              "traduccion": null
+            },
+            {
+              "derivacion": null,
+              "dominio": "inmunologia",
+              "id": "compatible",
+              "ingles": "# Control compatible\n\nThe laboratory should preserve labelled samples.\n",
+              "ingles_sha256": "6ae83be20de145eb597beaed1e965d888cb86a8adfb9ad7df01ae01f1c5d5db0",
+              "original": "# Control compatible\n\nThe laboratory should preserve labelled samples.\n",
+              "original_sha256": "6ae83be20de145eb597beaed1e965d888cb86a8adfb9ad7df01ae01f1c5d5db0",
+              "revision_git": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "titulo": "Control compatible <script>inactivo</script>",
+              "traduccion": null
+            }
+          ],
+          "dominio": "inmunologia",
+          "estado": "consulta_experimental",
+          "revision_registro": 30,
+          "seleccionados": [
+            "compatible"
+          ],
+          "sugerencias": []
+        },
+        "medicion": {
+          "lecturas": 2,
+          "llamadas_comparador": 1,
+          "microsegundos": 23532
+        }
+      },
+      "id": "inmunologia_sin_aviso"
+    },
+    {
+      "conforme": true,
+      "detalle": {
+        "html_sha256": "76446c165fef9d9a85b36955fa45a2bef346ee1edb9716079f22c439d6bda4b2"
+      },
+      "id": "inmunologia_sin_aviso_texto_inerte"
+    },
+    {
+      "conforme": true,
+      "detalle": {
+        "originales_intactos_despues_de_mdbook": true,
+        "paginas": 3,
+        "sha256": "54c22e343dd07177e0008d8613311b5ce5c7545c5e32a61e91d60294e1713fd0"
+      },
+      "id": "inmunologia_sin_aviso_mdbook"
+    },
+    {
+      "conforme": true,
+      "detalle": {
+        "error": "COMPARADOR_LIMITE_SUPERADO"
+      },
+      "id": "inmunologia_plazo_y_cierre"
+    },
+    {
+      "conforme": true,
+      "detalle": {
+        "error": "RECURSO_NO_VIGENTE"
+      },
+      "id": "inmunologia_caducidad_sin_cambio"
+    },
+    {
+      "conforme": true,
+      "detalle": {
+        "error": "ADMISION_EXPRESA_REQUERIDA"
+      },
+      "id": "inmunologia_identidad_ajena"
+    },
+    {
+      "conforme": true,
+      "detalle": {
+        "error": "DOMINIO_DISCORDANTE"
+      },
+      "id": "inmunologia_dominio_ajeno"
+    },
+    {
+      "conforme": true,
+      "detalle": {
+        "estado": "seleccion_vacia",
+        "lecturas": 0
+      },
+      "id": "inmunologia_vacio"
+    },
+    {
+      "conforme": true,
+      "detalle": {
+        "error": "ORIGINAL_DISCORDANTE",
+        "lecturas": 1
+      },
+      "id": "inmunologia_original_alterado"
+    },
+    {
+      "conforme": true,
+      "detalle": {
+        "error": "TEXTO_FUERA_DE_COTA",
+        "lecturas": 0
+      },
+      "id": "inmunologia_tamaño_excesivo"
+    },
+    {
+      "conforme": true,
+      "detalle": {
+        "error": "ORIGINAL_NO_UTF8",
+        "lecturas": 2
+      },
+      "id": "inmunologia_texto_no_utf8"
+    },
+    {
+      "conforme": true,
+      "detalle": {
+        "error": "CARGA_AUSENTE",
+        "lecturas": 0
+      },
+      "id": "inmunologia_referencia_ausente"
+    },
+    {
+      "conforme": true,
+      "detalle": {
+        "revision": 30
+      },
+      "id": "inmunologia_registro_intacto"
+    },
+    {
+      "conforme": true,
+      "detalle": {
+        "error": "RECURSO_NO_VIGENTE"
+      },
+      "id": "inmunologia_retirada"
+    }
+  ],
+  "desplegado": false,
+  "ejecutable_sha256": "fdd0baeb6106e50f2cb50d48aeea447e9348ab7ad2701a6116deb4143a337fea",
+  "elemento": "Buscador-Semántico - Diferencial",
+  "inferencias": 0,
+  "libro_modificado": false,
+  "paso": "8 / 8",
+  "todos_conformes": true,
+  "traducciones_nuevas": 0
+}
