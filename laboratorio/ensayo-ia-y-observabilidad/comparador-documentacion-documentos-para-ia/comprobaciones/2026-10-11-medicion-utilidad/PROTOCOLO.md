@@ -1,10 +1,12 @@
 # Medición experimental de la utilidad del Buscador-Semántico - Diferencial
 
-**Edición 1 · 11 de octubre de 2026 · Preparación; sesiones todavía no realizadas.**
+**Edición 2 · 11 de octubre de 2026 · Criterio fijado antes del envío para ejecución.**
 
 ## Objetivo y diseño
 
-Medir si las sugerencias del Buscador-Semántico - Diferencial facilitan la revisión de un documento propuesto frente a documentos del mismo dominio. El estudio utiliza doce casos documentales ya conservados, seis de inmunología y seis de ciberseguridad. Cada caso se examina una sola vez. No se incorporan documentos ni se modifican estados administrativos.
+Medir si las sugerencias del Buscador-Semántico - Diferencial permiten identificar contradicciones reales entre un documento propuesto y documentos del mismo dominio, sin confundirlas con falta de precisión o detalle. El estudio utiliza doce casos documentales ya conservados, seis de inmunología y seis de ciberseguridad. Cada caso se examina una sola vez. No se incorporan documentos ni se modifican estados administrativos.
+
+La contradicción requiere afirmaciones incompatibles bajo el mismo sentido y condiciones de aplicación. La paráfrasis, una formulación menos precisa, el resumen y la información complementaria pueden ser compatibles. Si el contexto permite conciliarlos, no se penaliza su diferencia de detalle. Si falta información esencial para establecer la relación, se conserva contexto insuficiente. El juicio debe apoyarse en ambos pasajes y explicar por qué pueden o no coexistir.
 
 Se comparan dos modalidades: revisión ordinaria de los documentos y revisión con las sugerencias conservadas del comparador. Cada modalidad incluye seis casos: tres incompatibles, dos compatibles y uno con contexto insuficiente, según las referencias preliminares fijadas. Ambas incluyen tres casos de cada dominio. El orden alterna dominios y modalidades; queda fijado en `materiales/PLAN.json`.
 
@@ -41,11 +43,13 @@ Las seis incompatibilidades se consideran relevantes para este ensayo: todas mod
 
 ## Interpretación de la utilidad
 
-Se describirá una mejora experimental si la modalidad asistida reduce el tiempo observado, conserva o aumenta los resultados fundados y no añade omisiones relevantes ni falsas incompatibilidades. Una aceleración acompañada de peor revisión no demuestra utilidad. Si los indicadores discrepan, hay datos ausentes o el único aviso resulta infundado, se explica la discrepancia sin imponer una conclusión favorable.
+La valoración principal corresponde a las contradicciones correctamente identificadas y fundamentadas, las omisiones y las falsas incompatibilidades. Se analizará expresamente si un aviso confunde incompatibilidad con menor precisión o detalle. Un aviso útil debe orientar hacia una oposición real, sustentada por los documentos; no necesita demostrar ahorro temporal. Los resultados se presentan por caso y dominio, sin compensar omisiones relevantes con rapidez.
+
+El tiempo queda como dato descriptivo secundario. Una aceleración no acredita por sí misma utilidad y una lectura más lenta no la refuta. Si hay datos ausentes, indicadores discordantes o avisos infundados, se conserva esa información sin imponer una conclusión favorable. Esta edición sustituye el requisito temporal de mejora formulado en la edición 1; no modifica casos, asignación, referencias, reglas del comparador o fórmulas del instrumento.
 
 Los grupos tienen casos distintos y una dificultad que no está calibrada; la proporción de clases coincide en el conjunto, pero no dentro de cada dominio. También puede influir la familiaridad adquirida con los documentos. Por ello, la diferencia medida será descriptiva de esta prueba, no una estimación causal ni una promesa de ahorro en la actividad ordinaria. Esto no impide utilizarla para decidir si merece la pena continuar con la herramienta.
 
-No se realizan inferencias en la preparación, ni se integra una IA en el SV. Tampoco se modifica el libro. La ejecución se iniciará mediante el encargo autorizado, con los materiales ya fijados.
+No se realizaron inferencias en la preparación, ni se integra una IA en el SV. Tampoco se modifica el libro. La ejecución de las doce revisiones está autorizada y se realizará conforme al encargo de edición 2, con los materiales ya fijados.
 
 ## Antecedentes y derechos
 
