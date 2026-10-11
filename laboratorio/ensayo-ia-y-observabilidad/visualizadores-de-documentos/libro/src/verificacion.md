@@ -1,6 +1,6 @@
 # Comprobaciones, estado y fuentes
 
-**Edición documental V.03 · Corte de información: 11 de octubre de 2026.**
+**Edición documental V.04 · Corte de información: 11 de octubre de 2026.**
 
 ## Estado que explica esta edición
 
@@ -21,6 +21,10 @@ La comprobación detectó que los mensajes de error del extractor indicaban un �
 La inspección gráfica de las tres páginas sin texto recuperado muestra páginas en blanco tanto en el visor Rust como en una representación independiente con Poppler. No se observaron allí texto o figuras omitidos. Esta observación delimitada se conserva por separado: no modifica automáticamente el estado documental ni convierte la ausencia de texto en una aprobación del contenido.
 
 ## Componentes y función efectiva
+
+La V.04 reúne la consulta protegida del contenido preparado, el resultado del transporte y la respuesta conservada. Sus comprobaciones distinguen los tres nodos, verifican la identidad de los bytes, la conservación del expediente tras una retirada y el rechazo de accesos sin función vigente. La presentación no añade suministros ni modifica decisiones. Los resultados detallados se conservan en la comprobación de entrega visible de esta edición.
+
+El ejemplo positivo de presentación utiliza datos sintéticos identificados y no representa una inferencia. Los registros operativos pueden carecer de consultas: ese estado vacío se mantiene, sin incorporar retrospectivamente pruebas ajenas al registro ni habilitar documentación reservada para completar una demostración. La comprobación no acredita nuevos envíos a proveedores ni observación de sus procesos internos. Véanse los [resultados y límites de la entrega visible](https://github.com/juantoniolloretegea/SV-motor/blob/main/laboratorio/ensayo-ia-y-observabilidad/visualizadores-de-documentos/comprobaciones/2026-10-11-entrega-visible/RESULTADO-PUBLICO.md).
 
 | Componente de referencia | Función en el recorrido descrito | Límite de la afirmación |
 | --- | --- | --- |

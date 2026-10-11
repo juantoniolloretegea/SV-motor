@@ -31,6 +31,18 @@ El acuse del proveedor, cuando exista, deberá identificarse como evidencia prop
 
 ## Qué debe conservarse por consulta
 
+La administración reúne estas evidencias en **Consultas y entregas**. El listado puede limitarse a un documento, un nodo y un estado del transporte. Desde el historial documental puede abrirse la consulta relacionada; el expediente permite regresar al historial de cada fuente.
+
+La presentación se organiza en tres apartados:
+
+1. **Contenido preparado:** pregunta, fragmentos literales, edición, autorización aplicada, licencia conservada, destinatario y huellas. La descarga del paquete conserva exactamente los bytes preparados, sin reconstruirlos a partir de la página presentada.
+2. **Transporte documentado:** intento, resultado y perfil declarado cuando consta. Los antecedentes que carecen de perfil permanecen identificados como tales. No se deduce recepción final de una entrega al mecanismo de transporte.
+3. **Respuesta y revisión:** texto original conservado, modelo comunicado, citas, mediciones disponibles, impedimentos y evaluaciones registradas. Un cotejo formal favorable no sustituye la revisión del contenido.
+
+La vista y sus descargas requieren identificación y función de revisión vigentes en el dominio. Una referencia compartida no concede acceso. El paquete descargado y el expediente pueden contener documentación reservada: conservan sus condiciones particulares y no deben difundirse fuera de su alcance autorizado.
+
+La vigencia se muestra en el momento de la consulta del registro, por separado de lo sucedido. Un documento retirado puede seguir figurando en expedientes anteriores. La interfaz permite examinar esos antecedentes, pero no inicia nuevos suministros ni restablece permisos. Una lista vacía significa que no constan consultas con esa selección en el registro consultado; no demuestra ausencia de actividad en otros sistemas.
+
 Se deben poder relacionar la consulta y el destinatario con la autorización aplicada, la edición de cada documento, la representación utilizada, las páginas o secciones seleccionadas, sus huellas y el contenido remitido. La respuesta, sus citas y la evaluación posterior constituyen evidencias diferenciadas.
 
 Si se conoce el consumo, se registrará con su fuente y unidad: tokens de entrada, salida y coste. Un dato no comunicado permanece desconocido; no se sustituye por cero. Una huella identifica un contenido: no acredita que el modelo lo haya comprendido.
