@@ -1,14 +1,14 @@
 # Buscador-Semántico - Diferencial
 
-**Edición documental 4 · 11 de octubre de 2026.**
+**Edición documental 5 · 11 de octubre de 2026.**
 
-Esta carpeta reúne los estudios, revisiones y evidencias del **Buscador-Semántico - Diferencial** del Sistema Vectorial SV. Su finalidad es permitir que los revisores conozcan cómo se examinan los documentos destinados a una IA, qué contradicciones se han localizado, qué cobertura tiene el examen y qué decisiones han autorizado su suministro.
+Esta carpeta reúne los estudios, revisiones y evidencias del **Buscador-Semántico - Diferencial** del Sistema Vectorial SV. Su finalidad es proporcionar una ayuda de consulta voluntaria para comprobar si un documento propuesto para la IA contiene afirmaciones en conflicto con los documentos ya incorporados al conjunto documental correspondiente. El revisor podrá utilizarla cuando le resulte útil, consultar algunas sugerencias o continuar sin utilizarla. La herramienta no impone la resolución de sus avisos ni determina el suministro documental.
 
-El ámbito comprende **Medicina y Ciberseguridad**, con documentos PDF, HTML y Markdown. Se buscan **incompatibilidades de significado**, tanto dentro de un documento como entre documentos, atendiendo a sujetos, condiciones, versiones, cantidades, unidades, fechas y excepciones. Una diferencia de redacción no basta para declarar contradicción.
+El ámbito comprende **Medicina y Ciberseguridad**, con documentos PDF, HTML y Markdown, manteniendo la separación de sus dominios. El recorrido previsto es **documento propuesto y dominio → elección de un documento, un grupo o todos los documentos accesibles del mismo dominio → filtros en Rust → Buscador-Semántico - Diferencial → sugerencias con ambos pasajes y referencias**. No se compara inmunología con ciberseguridad. Se buscan **incompatibilidades de significado**, atendiendo a sujetos, condiciones, versiones, cantidades, unidades, fechas y excepciones. Una diferencia de redacción no basta para declarar contradicción.
 
 ## Estado comprobado
 
-**Todavía no se ha acreditado una aplicación que detecte las contradicciones complejas requeridas.** Se han examinado componentes, fuentes y límites. La primera comprobación Rust de speccheck-core 0.4.1 no supera el criterio previo: alertas en 6 de 12 incompatibilidades y en 5 de 8 casos compatibles; cuatro casos de contexto insuficiente se contabilizan aparte. El conjunto es sintético y diagnóstico. La comprobación posterior de admisión de Logicaffeine 0.10.1 tampoco permite avanzar a la integración: admite ocho de doce enunciados especializados, pero al menos cuatro de los admitidos omiten condiciones o complementos esenciales. El diagnóstico posterior localiza pérdidas durante la construcción de la oración y distingue varios mecanismos; no se ha identificado un ajuste de configuración suficiente. El Buscador-Semántico - Diferencial permanece en estudio.
+**El objetivo vigente es una ayuda opcional con sugerencias fundamentadas; todavía no está integrada.** La [precisión del alcance y reconsideración de las evidencias](informes/2026-10-11-ayuda-opcional/ALCANCE-Y-RECONSIDERACION.md) sustituye para actuaciones futuras la exigencia de detección completa como condición de utilidad. Se valorarán el interés de las sugerencias, los errores y el esfuerzo de consulta. No se exige un resultado perfecto ni se altera el resultado histórico de las pruebas. Se han examinado componentes, fuentes y límites. La primera comprobación Rust de speccheck-core 0.4.1 no supera el criterio previo: alertas en 6 de 12 incompatibilidades y en 5 de 8 casos compatibles; cuatro casos de contexto insuficiente se contabilizan aparte. El conjunto es sintético y diagnóstico. La comprobación posterior de admisión de Logicaffeine 0.10.1 no justifica su integración: admite ocho de doce enunciados especializados, pero al menos cuatro de los admitidos omiten condiciones o complementos esenciales. El diagnóstico posterior localiza pérdidas durante la construcción de la oración y distingue varios mecanismos; no se ha identificado un ajuste de configuración suficiente. El Buscador-Semántico - Diferencial permanece en estudio.
 
 | Función | Situación al corte |
 | --- | --- |
@@ -16,7 +16,7 @@ El ámbito comprende **Medicina y Ciberseguridad**, con documentos PDF, HTML y M
 | Preparación documental | Xberg y los lectores Rust existentes conservan sus usos y límites. html-to-markdown-rs y pulldown-cmark también están incorporados. La extracción PDF no acredita recuperación universal de tablas, figuras o lectura íntegra. |
 | Búsqueda de pasajes | Tantivy es candidato. Su código es Rust; queda por comprobar el perfil de dependencias que excluya la compresión Zstandard implementada en C. |
 | Idioma de comparación | Traducción Google al inglés aceptada como instrumento externo, conservando original y traducción. La recepción de un texto inglés estable para el análisis sigue pendiente de adaptación y comprobación. |
-| Contradicciones de significado | Capacidad pendiente de acreditación. La búsqueda textual, las reglas parciales y la comparación de ediciones no la sustituyen. |
+| Sugerencias sobre posibles contradicciones | Las reglas examinadas ofrecen indicios parciales con aciertos y errores documentados. Su utilidad como ayuda opcional debe comprobarse en textos representativos; no hay detector general acreditado. La búsqueda textual conserva su función de recuperación. |
 | Decisión sobre documentos | La decisión y sus efectos sobre el suministro se conservan en el expediente; las alertas no constituyen una autorización. |
 
 La propuesta inicial basada en vocabularios preparados por personas está retirada: trasladaba al revisor parte esencial del hallazgo solicitado. No haber encontrado una solución completa tampoco demuestra imposibilidad técnica. El desarrollo propio sólo se considerará cuando se justifique su necesidad mediante su comparación con los recursos existentes.
@@ -25,26 +25,31 @@ La propuesta inicial basada en vocabularios preparados por personas está retira
 
 | Documento | Función y estado |
 | --- | --- |
+| [Alcance auxiliar y reconsideración de las evidencias](informes/2026-10-11-ayuda-opcional/ALCANCE-Y-RECONSIDERACION.md) | Criterio vigente: uso voluntario, sugerencias examinables y evaluación de utilidad. Reconsideración documental de las salidas existentes, sin nueva ejecución de candidatos. |
 | [Diagnóstico de las pérdidas de significado](informes/2026-10-11-diagnostico/RESULTADO-DIAGNOSTICO.md) | Localización por etapas y fuente; 14 resultados anteriores reproducidos. No acredita una corrección suficiente ni una nueva validación. |
-| [Revisión de alternativas y avance por pasos](informes/2026-10-11-paso4/REVISION-ALTERNATIVAS.md) | Revisión vigente del paso 4; recursos examinados, procedencia y límites. |
+| [Revisión de alternativas y avance por pasos](informes/2026-10-11-paso4/REVISION-ALTERNATIVAS.md) | Antecedente del paso 4; recursos examinados, procedencia y límites. Su criterio de continuación se actualiza mediante la precisión del alcance auxiliar. |
 | [Admisión y conservación del significado: Logicaffeine 0.10.1](informes/2026-10-11-paso4/RESULTADO-ADMISION.md) | Comprobación nueva, separada del ensayo anterior. Resultado insuficiente para integración. |
-| [Comprobación preliminar de speccheck-core 0.4.1](comprobaciones/2026-10-11-speccheck-0.4.1/RESULTADO.md) | Resultado vigente: candidato no apto para incorporación, con protocolo, casos, salidas, contraste Rust y límites. No demuestra inviabilidad general. |
+| [Comprobación preliminar de speccheck-core 0.4.1](comprobaciones/2026-10-11-speccheck-0.4.1/RESULTADO.md) | Resultado histórico conforme a su criterio previo: candidato no apto para aquella incorporación. Se conservan protocolo, casos, salidas y contraste Rust. No resuelve por sí solo su utilidad como ayuda opcional. |
 | [Estructura lógica y componentes Rust](informes/2026-10-11/ESTRUCTURA-LOGICA-RUST-MDBOOK.md) | Estudio vigente: funciones conjuntas, comunidades, mantenimiento, mdBook, traducción y revisión de lenguajes y dependencias. Distingue lo existente de lo propuesto. |
 | [Revisión de aptitud y contraste adversarial](informes/2026-10-11/REVISION-DE-APTITUD.md) | Conserva el rechazo de la propuesta inicial, la corrección de una desestimación excesiva y la reconsideración bilingüe anterior a la precisión sobre traducción. |
 | [Estado del arte inicial](informes/2026-10-11/ESTADO-DEL-ARTE.md) | Antecedente del 10/10/2026, con propuesta retirada expresamente identificada. |
 | [Fuentes y componentes del 11/10/2026](informes/2026-10-11/COMPONENTES-RUST-MDBOOK-FUENTES.json) | Referencias, versiones, actividad observada, objetos Git y límites de las comprobaciones. |
 | [Fuentes del estudio inicial](informes/2026-10-11/FUENTES.json) | Registro histórico del 10/10/2026, con precisión sobre las instrucciones posteriores. |
-| [Manifiesto de esta edición](informes/2026-10-11/MANIFIESTO.json) | Identidad, tamaño y SHA-256 de los documentos publicados; correspondencia con los informes originales. |
+| [Manifiesto de esta edición](informes/2026-10-11-ayuda-opcional/MANIFIESTO.json) | Identidad, tamaño y SHA-256 de la entrada y los dos documentos de esta actualización. Los informes anteriores conservan sus propios manifiestos. |
 
 Las copias públicas conservan las conclusiones, adendas y fuentes. Se han retirado las rutas de trabajo y añadido indicaciones de estado para evitar que una propuesta histórica se lea como vigente. El manifiesto distingue la huella original de la edición pública; no afirma igualdad entre contenidos editados.
 
 ## Recorrido previsto para la revisión
 
-1. Identificar los documentos, ediciones, procedencias y permisos; declarar qué contenido se ha recuperado y qué contenido permanece fuera de cobertura.
+1. Identificar el documento propuesto y su dominio. Al solicitar la ayuda, el responsable elegirá un documento, un grupo o todos los documentos accesibles ya incorporados en ese mismo dominio. Rust aplicará la selección, comprobará dominio y permisos e identificará el conjunto y sus versiones antes de entregarlos al comparador. Se declarará el contenido recuperado y las partes fuera de cobertura.
 2. Preparar las representaciones y, cuando corresponda, la traducción inglesa, manteniendo correspondencia con los pasajes originales.
-3. Localizar posibles contradicciones y presentar los pasajes comparados con contexto y condiciones. Esta capacidad principal está pendiente de demostración.
-4. Revisar cada hallazgo: confirmar el conflicto, explicar una diferencia compatible o mantener el asunto pendiente.
-5. Aplicar la decisión autorizada sobre el corpus y conservar qué versión se entrega efectivamente a la IA mediante el **Árbitro - Director**.
+3. Cuando el revisor lo solicite, comparar el documento propuesto con los documentos ya incorporados y presentar posibles contradicciones con ambos pasajes originales, contexto y fundamento. Se declararán las funciones y partes efectivamente examinadas.
+4. Consultar las sugerencias que resulten pertinentes, contrastarlas, descartarlas o dejarlas sin examinar. Cerrar la ayuda o no utilizarla permite continuar el procedimiento documental; no existe una obligación de responder a todos los avisos.
+5. Conservar las decisiones documentales efectivamente adoptadas y qué versión se entrega a la IA mediante el **Árbitro - Director**, conforme a sus funciones existentes. Una sugerencia no modifica documentos ni permisos.
+
+Los pasos 3 y 4 son opcionales. La detección completa de contradicciones no es una condición para utilizar las funciones de ayuda que demuestren utilidad. Las acciones elegidas se articulan con la administración y la trazabilidad existentes; no se añade un procedimiento obligatorio de aprobación del comparador.
+
+La propia solicitud de comparación es opcional. «Todos» no comprende documentos de otros dominios. Rust rechazará una referencia ajena al dominio incluso si se envía directamente; el filtro no se limita a la interfaz. Una selección vacía no se ampliará al conjunto completo, y la presentación identificará los documentos efectivamente comparados.
 
 El recorrido reutiliza la administración y la trazabilidad existentes. El revisor no debe preparar previamente los conceptos o conflictos que la herramienta tiene que descubrir. El comparador propuesto no incorpora una IA como analizador o juez; Google se circunscribe a la traducción aceptada.
 
@@ -69,6 +74,6 @@ La comprobación algorítmica posterior no consultó modelos de IA ni modificó 
 
 ## Relación con el libro de la Biblioteca del SV
 
-El libro publicado [«Reglas, usos y descripciones documentales de documentos para el conocimiento de la IA»](https://documentos-sv.itvia.online/documentacion/reglas-usos-descripciones-documentales/index.html) conserva su estructura y sus cinco capítulos. La [aportación editorial vigente, edición 3](informes/2026-10-11-diagnostico/APORTACION-AL-LIBRO-V3.md) describe objetivos, alcance, funcionamiento y límites, para los capítulos de información de revisión y comprobaciones. Sustituye editorialmente la propuesta anterior, que se conserva como antecedente. La aportación está preparada para incorporación coordinada; no se declara ya incorporada ni constituye otro libro. Las evidencias técnicas permanecen en esta carpeta.
+El libro publicado [«Reglas, usos y descripciones documentales de documentos para el conocimiento de la IA»](https://documentos-sv.itvia.online/documentacion/reglas-usos-descripciones-documentales/index.html) conserva su estructura y sus cinco capítulos. La [aportación editorial vigente, edición 4](informes/2026-10-11-ayuda-opcional/APORTACION-AL-LIBRO-V4.md) describe objetivos, uso voluntario, funcionamiento, evidencias y límites, para los capítulos de información de revisión y comprobaciones. Sustituye editorialmente la propuesta anterior, que se conserva como antecedente. La aportación está preparada para incorporación coordinada; no se declara ya incorporada ni constituye otro libro. Las evidencias técnicas permanecen en esta carpeta.
 
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
