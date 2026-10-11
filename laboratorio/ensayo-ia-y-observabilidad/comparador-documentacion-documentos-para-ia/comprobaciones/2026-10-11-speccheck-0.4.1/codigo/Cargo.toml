@@ -1,0 +1,25 @@
+[package]
+name = "comprobacion-buscador-semantico-diferencial"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[dependencies]
+speccheck-core = { version = "=0.4.1", default-features = false }
+serde_json = "=1.0.149"
+sha2 = { version = "=0.10.9", features = ["force-soft"] }
+# Ediciones fijadas por el Cargo.lock publicado del candidato. Evitan
+# introducir la vía nativa stacker/psm de la resolución posterior 2.9.3.
+pest = "=2.8.6"
+pest_derive = "=2.8.6"
+pest_generator = "=2.8.6"
+pest_meta = "=2.8.6"
+
+[profile.dev]
+debug = 0
+incremental = false
+
+[profile.release]
+debug = 0
+incremental = false
+

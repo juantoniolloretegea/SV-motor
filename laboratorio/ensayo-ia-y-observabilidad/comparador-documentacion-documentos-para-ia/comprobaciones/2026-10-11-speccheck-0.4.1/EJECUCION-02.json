@@ -1,0 +1,785 @@
+{
+  "autorizacion_corpus": false,
+  "candidato": "speccheck-core 0.4.1",
+  "casos": [
+    {
+      "alerta": true,
+      "archivos": [
+        {
+          "bytes": 167,
+          "requisitos_reconocidos": 2,
+          "ruta": "casos/M01/a.md",
+          "sha256": "37419fb3dceaee1d78787499955ac12eedd06c7ea0705e9ac69d1eff61cec8cd"
+        }
+      ],
+      "duracion_microsegundos": 193852,
+      "hallazgos": [
+        {
+          "confianza_declarada_no_calibrada": 0.7,
+          "gravedad_original": "Warning",
+          "localizacion": {
+            "byte_end": 167,
+            "byte_start": 89,
+            "end_col": 1,
+            "end_line": 6,
+            "file": "casos/M01/a.md",
+            "start_col": 1,
+            "start_line": 5
+          },
+          "mensaje_original": "Contradicting requirements: 'For patient P at visit V, the laboratory must report mark...' says \"shall report marker x as present\" but 'For patient P at visit V, the laboratory must not report ...' says \"shall not report marker x as present\". Resolve the conflict.",
+          "regla": "SC-CON-001",
+          "sugerencia_original": null
+        },
+        {
+          "confianza_declarada_no_calibrada": 0.7,
+          "gravedad_original": "Info",
+          "localizacion": {
+            "byte_end": 167,
+            "byte_start": 89,
+            "end_col": 1,
+            "end_line": 6,
+            "file": "casos/M01/a.md",
+            "start_col": 1,
+            "start_line": 5
+          },
+          "mensaje_original": "Potential tension between requirements: 'For patient P at visit V, the laboratory must report mark...' and 'For patient P at visit V, the laboratory must not report ...' share 100% keywords but contain opposing qualifiers. Verify they are not contradictory.",
+          "regla": "SC-CON-004",
+          "sugerencia_original": null
+        }
+      ],
+      "id": "M01"
+    },
+    {
+      "alerta": false,
+      "archivos": [
+        {
+          "bytes": 167,
+          "requisitos_reconocidos": 0,
+          "ruta": "casos/M02/a.md",
+          "sha256": "b1931eebfe889595d2005b2390ffab2972b9b4e87ccfb1a50eb73a3c7690f01f"
+        }
+      ],
+      "duracion_microsegundos": 3080,
+      "hallazgos": [],
+      "id": "M02"
+    },
+    {
+      "alerta": true,
+      "archivos": [
+        {
+          "bytes": 157,
+          "requisitos_reconocidos": 2,
+          "ruta": "casos/M03/a.md",
+          "sha256": "52e6cc2de62155007b7d32abe8d68b824c7170f24f9c0ed81365938bd598f629"
+        }
+      ],
+      "duracion_microsegundos": 197176,
+      "hallazgos": [
+        {
+          "confianza_declarada_no_calibrada": 0.7,
+          "gravedad_original": "Warning",
+          "localizacion": {
+            "byte_end": 157,
+            "byte_start": 84,
+            "end_col": 1,
+            "end_line": 6,
+            "file": "casos/M03/a.md",
+            "start_col": 1,
+            "start_line": 5
+          },
+          "mensaje_original": "Contradicting requirements: 'If test X is positive, the laboratory must record a posit...' says \"shall record a positive result\" but 'If test X is negative, the laboratory must not record a p...' says \"shall not record a positive result\". Resolve the conflict.",
+          "regla": "SC-CON-001",
+          "sugerencia_original": null
+        },
+        {
+          "confianza_declarada_no_calibrada": 0.7,
+          "gravedad_original": "Info",
+          "localizacion": {
+            "byte_end": 157,
+            "byte_start": 84,
+            "end_col": 1,
+            "end_line": 6,
+            "file": "casos/M03/a.md",
+            "start_col": 1,
+            "start_line": 5
+          },
+          "mensaje_original": "Potential tension between requirements: 'If test X is positive, the laboratory must record a posit...' and 'If test X is negative, the laboratory must not record a p...' share 100% keywords but contain opposing qualifiers. Verify they are not contradictory.",
+          "regla": "SC-CON-004",
+          "sugerencia_original": null
+        }
+      ],
+      "id": "M03"
+    },
+    {
+      "alerta": true,
+      "archivos": [
+        {
+          "bytes": 149,
+          "requisitos_reconocidos": 2,
+          "ruta": "casos/M04/a.md",
+          "sha256": "f59439e9d0be062aa53769d400cadc47a03e301a3044b96af4290076680eaec8"
+        }
+      ],
+      "duracion_microsegundos": 242719,
+      "hallazgos": [
+        {
+          "confianza_declarada_no_calibrada": 0.7,
+          "gravedad_original": "Warning",
+          "localizacion": {
+            "byte_end": 149,
+            "byte_start": 109,
+            "end_col": 1,
+            "end_line": 8,
+            "file": "casos/M04/a.md",
+            "start_col": 1,
+            "start_line": 7
+          },
+          "mensaje_original": "Numeric conflict: 'The observation interval must be 24 hours.' constrains 'the observation interval' to 24 (Exact) but 'The observation interval must be 1 day.' constrains it to 1 (Exact). Resolve the conflicting values.",
+          "regla": "SC-CON-002",
+          "sugerencia_original": null
+        },
+        {
+          "confianza_declarada_no_calibrada": 0.7,
+          "gravedad_original": "Warning",
+          "localizacion": {
+            "byte_end": 149,
+            "byte_start": 109,
+            "end_col": 1,
+            "end_line": 8,
+            "file": "casos/M04/a.md",
+            "start_col": 1,
+            "start_line": 7
+          },
+          "mensaje_original": "Constraint contradiction (SAT): 'The observation interval must be 24 hours.' and 'The observation interval must be 1 day.' have unsatisfiable numeric constraints. Unsatisfiable: 'observation interval' == 24 conflicts with 'observation interval' == 1 (no valid value exists)",
+          "regla": "SC-CON-006",
+          "sugerencia_original": null
+        }
+      ],
+      "id": "M04"
+    },
+    {
+      "alerta": false,
+      "archivos": [
+        {
+          "bytes": 132,
+          "requisitos_reconocidos": 0,
+          "ruta": "casos/M05/a.md",
+          "sha256": "d06a8facda15c145e2b80f2ad4d33811ae94a5d77d647d3ddeb4dd23572291c2"
+        }
+      ],
+      "duracion_microsegundos": 3441,
+      "hallazgos": [],
+      "id": "M05"
+    },
+    {
+      "alerta": false,
+      "archivos": [
+        {
+          "bytes": 155,
+          "requisitos_reconocidos": 0,
+          "ruta": "casos/M06/a.md",
+          "sha256": "161ee93ef2480a32004951f605391e95c0931565e2a5f7b91ecdb001283c1e50"
+        }
+      ],
+      "duracion_microsegundos": 3437,
+      "hallazgos": [],
+      "id": "M06"
+    },
+    {
+      "alerta": true,
+      "archivos": [
+        {
+          "bytes": 153,
+          "requisitos_reconocidos": 2,
+          "ruta": "casos/M07/a.md",
+          "sha256": "42e298d0766f11ee363aeafb7a89e3cd07a002c5970fa87a82e3fe99f99e8871"
+        }
+      ],
+      "duracion_microsegundos": 191149,
+      "hallazgos": [
+        {
+          "confianza_declarada_no_calibrada": 0.7,
+          "gravedad_original": "Warning",
+          "localizacion": {
+            "byte_end": 153,
+            "byte_start": 82,
+            "end_col": 1,
+            "end_line": 6,
+            "file": "casos/M07/a.md",
+            "start_col": 1,
+            "start_line": 5
+          },
+          "mensaje_original": "Contradicting requirements: 'Under protocol A, the selected patients must receive asse...' says \"shall receive assessment x\" but 'Under protocol B, the selected patients must not receive ...' says \"shall not receive assessment x\". Resolve the conflict.",
+          "regla": "SC-CON-001",
+          "sugerencia_original": null
+        },
+        {
+          "confianza_declarada_no_calibrada": 0.7,
+          "gravedad_original": "Info",
+          "localizacion": {
+            "byte_end": 153,
+            "byte_start": 82,
+            "end_col": 1,
+            "end_line": 6,
+            "file": "casos/M07/a.md",
+            "start_col": 1,
+            "start_line": 5
+          },
+          "mensaje_original": "Potential tension between requirements: 'Under protocol A, the selected patients must receive asse...' and 'Under protocol B, the selected patients must not receive ...' share 100% keywords but contain opposing qualifiers. Verify they are not contradictory.",
+          "regla": "SC-CON-004",
+          "sugerencia_original": null
+        }
+      ],
+      "id": "M07"
+    },
+    {
+      "alerta": true,
+      "archivos": [
+        {
+          "bytes": 186,
+          "requisitos_reconocidos": 2,
+          "ruta": "casos/M08/a.md",
+          "sha256": "2a5d1ab618fd9e062e9fc92abfab0bd1ddc16220bd1daaedca58ce3b7e3b9e01"
+        }
+      ],
+      "duracion_microsegundos": 181715,
+      "hallazgos": [
+        {
+          "confianza_declarada_no_calibrada": 0.7,
+          "gravedad_original": "Warning",
+          "localizacion": {
+            "byte_end": 186,
+            "byte_start": 98,
+            "end_col": 1,
+            "end_line": 6,
+            "file": "casos/M08/a.md",
+            "start_col": 1,
+            "start_line": 5
+          },
+          "mensaje_original": "Contradicting requirements: 'For the historical protocol valid only in 2018, clinician...' says \"shall record variable x\" but 'For the replacement protocol valid only in 2026, clinicia...' says \"shall not record variable x\". Resolve the conflict.",
+          "regla": "SC-CON-001",
+          "sugerencia_original": null
+        },
+        {
+          "confianza_declarada_no_calibrada": 0.7,
+          "gravedad_original": "Info",
+          "localizacion": {
+            "byte_end": 186,
+            "byte_start": 98,
+            "end_col": 1,
+            "end_line": 6,
+            "file": "casos/M08/a.md",
+            "start_col": 1,
+            "start_line": 5
+          },
+          "mensaje_original": "Potential tension between requirements: 'For the historical protocol valid only in 2018, clinician...' and 'For the replacement protocol valid only in 2026, clinicia...' share 83% keywords but contain opposing qualifiers. Verify they are not contradictory.",
+          "regla": "SC-CON-004",
+          "sugerencia_original": null
+        }
+      ],
+      "id": "M08"
+    },
+    {
+      "alerta": true,
+      "archivos": [
+        {
+          "bytes": 184,
+          "requisitos_reconocidos": 2,
+          "ruta": "casos/M09/a.md",
+          "sha256": "5b68ff9df259503c568b914ddc409d7750ae7e904356c3d59df17e2aa0a2fa02"
+        }
+      ],
+      "duracion_microsegundos": 220150,
+      "hallazgos": [
+        {
+          "confianza_declarada_no_calibrada": 0.7,
+          "gravedad_original": "Warning",
+          "localizacion": {
+            "byte_end": 184,
+            "byte_start": 100,
+            "end_col": 1,
+            "end_line": 6,
+            "file": "casos/M09/a.md",
+            "start_col": 1,
+            "start_line": 5
+          },
+          "mensaje_original": "Temporal conflict: 'During visit V, the single validation must occur before t...' requires action \"before the single blood collection\" but 'During visit V, the single validation must occur after th...' requires the same action \"after the single blood collection\". Clarify the ordering.",
+          "regla": "SC-CON-003",
+          "sugerencia_original": null
+        }
+      ],
+      "id": "M09"
+    },
+    {
+      "alerta": true,
+      "archivos": [
+        {
+          "bytes": 94,
+          "requisitos_reconocidos": 1,
+          "ruta": "casos/M10/a.md",
+          "sha256": "e4630b1213355041ed37b129510b75b25bd72e0c8f0c1382c678eb643df20ea8"
+        },
+        {
+          "bytes": 98,
+          "requisitos_reconocidos": 1,
+          "ruta": "casos/M10/b.md",
+          "sha256": "cb08705aab05f49613132ae9489a56867c94ca91f8ed1cbd869d9e0e6c4270ad"
+        }
+      ],
+      "duracion_microsegundos": 140529,
+      "hallazgos": [
+        {
+          "confianza_declarada_no_calibrada": 0.75,
+          "gravedad_original": "Error",
+          "localizacion": {
+            "byte_end": 98,
+            "byte_start": 14,
+            "end_col": 1,
+            "end_line": 4,
+            "file": "casos/M10/b.md",
+            "start_col": 1,
+            "start_line": 3
+          },
+          "mensaje_original": "Potential contradiction across files: \"For specimen S at assessment A, the laboratory must repor...\" in casos/M10/a.md vs \"For specimen S at assessment A, the laboratory must not r...\" in casos/M10/b.md",
+          "regla": "SC-XF-002",
+          "sugerencia_original": null
+        }
+      ],
+      "id": "M10"
+    },
+    {
+      "alerta": true,
+      "archivos": [
+        {
+          "bytes": 71,
+          "requisitos_reconocidos": 2,
+          "ruta": "casos/M11/a.md",
+          "sha256": "13c2342353ba6275608d1dbda5395423bda5210efe9d425444e86e9b4b06d1f2"
+        }
+      ],
+      "duracion_microsegundos": 186130,
+      "hallazgos": [
+        {
+          "confianza_declarada_no_calibrada": 0.7,
+          "gravedad_original": "Warning",
+          "localizacion": {
+            "byte_end": 71,
+            "byte_start": 43,
+            "end_col": 1,
+            "end_line": 6,
+            "file": "casos/M11/a.md",
+            "start_col": 1,
+            "start_line": 5
+          },
+          "mensaje_original": "Numeric conflict: 'The threshold must be 1000.' constrains 'the threshold' to 1000 (Exact) but 'The threshold must be 1500.' constrains it to 1500 (Exact). Resolve the conflicting values.",
+          "regla": "SC-CON-002",
+          "sugerencia_original": null
+        },
+        {
+          "confianza_declarada_no_calibrada": 0.7,
+          "gravedad_original": "Warning",
+          "localizacion": {
+            "byte_end": 71,
+            "byte_start": 43,
+            "end_col": 1,
+            "end_line": 6,
+            "file": "casos/M11/a.md",
+            "start_col": 1,
+            "start_line": 5
+          },
+          "mensaje_original": "Constraint contradiction (SAT): 'The threshold must be 1000.' and 'The threshold must be 1500.' have unsatisfiable numeric constraints. Unsatisfiable: 'threshold' == 1000 conflicts with 'threshold' == 1500 (no valid value exists)",
+          "regla": "SC-CON-006",
+          "sugerencia_original": null
+        }
+      ],
+      "id": "M11"
+    },
+    {
+      "alerta": false,
+      "archivos": [
+        {
+          "bytes": 100,
+          "requisitos_reconocidos": 0,
+          "ruta": "casos/M12/a.md",
+          "sha256": "6e0edb782e331b46c227c8ee9abe3e50dcb4efd56a85b83cc2ac2540d67017eb"
+        }
+      ],
+      "duracion_microsegundos": 3396,
+      "hallazgos": [],
+      "id": "M12"
+    },
+    {
+      "alerta": true,
+      "archivos": [
+        {
+          "bytes": 175,
+          "requisitos_reconocidos": 2,
+          "ruta": "casos/C01/a.md",
+          "sha256": "7980469e27e10640c51ff79109364a9cf5e79d384008da5b2b7faa25f2c1e717"
+        }
+      ],
+      "duracion_microsegundos": 192546,
+      "hallazgos": [
+        {
+          "confianza_declarada_no_calibrada": 0.7,
+          "gravedad_original": "Warning",
+          "localizacion": {
+            "byte_end": 175,
+            "byte_start": 93,
+            "end_col": 1,
+            "end_line": 6,
+            "file": "casos/C01/a.md",
+            "start_col": 1,
+            "start_line": 5
+          },
+          "mensaje_original": "Contradicting requirements: 'For session S, the service must grant user U permission t...' says \"shall grant user u permission to update\" but 'For session S, the service must not grant user U permissi...' says \"shall not grant user u permission to update\". Resolve the conflict.",
+          "regla": "SC-CON-001",
+          "sugerencia_original": null
+        },
+        {
+          "confianza_declarada_no_calibrada": 0.7,
+          "gravedad_original": "Info",
+          "localizacion": {
+            "byte_end": 175,
+            "byte_start": 93,
+            "end_col": 1,
+            "end_line": 6,
+            "file": "casos/C01/a.md",
+            "start_col": 1,
+            "start_line": 5
+          },
+          "mensaje_original": "Potential tension between requirements: 'For session S, the service must grant user U permission t...' and 'For session S, the service must not grant user U permissi...' share 100% keywords but contain opposing qualifiers. Verify they are not contradictory.",
+          "regla": "SC-CON-004",
+          "sugerencia_original": null
+        }
+      ],
+      "id": "C01"
+    },
+    {
+      "alerta": false,
+      "archivos": [
+        {
+          "bytes": 116,
+          "requisitos_reconocidos": 0,
+          "ruta": "casos/C02/a.md",
+          "sha256": "adb072684ce914a60ed9fafc467ba55f02f4cd90790ac6aa8ee5a7d003bb9648"
+        }
+      ],
+      "duracion_microsegundos": 4918,
+      "hallazgos": [],
+      "id": "C02"
+    },
+    {
+      "alerta": false,
+      "archivos": [
+        {
+          "bytes": 105,
+          "requisitos_reconocidos": 0,
+          "ruta": "casos/C03/a.md",
+          "sha256": "a57b49a6404681501c9f1ecbd2c763fead58e803000282ee16b6d0a02be9f95f"
+        }
+      ],
+      "duracion_microsegundos": 3432,
+      "hallazgos": [],
+      "id": "C03"
+    },
+    {
+      "alerta": true,
+      "archivos": [
+        {
+          "bytes": 93,
+          "requisitos_reconocidos": 2,
+          "ruta": "casos/C04/a.md",
+          "sha256": "9f2d3df6ae83787764e9a58b94b9af827d8ae0f95dc9071e31ad9761607491a0"
+        }
+      ],
+      "duracion_microsegundos": 238144,
+      "hallazgos": [
+        {
+          "confianza_declarada_no_calibrada": 0.7,
+          "gravedad_original": "Warning",
+          "localizacion": {
+            "byte_end": 93,
+            "byte_start": 55,
+            "end_col": 1,
+            "end_line": 6,
+            "file": "casos/C04/a.md",
+            "start_col": 1,
+            "start_line": 5
+          },
+          "mensaje_original": "Numeric conflict: 'The session timeout must be 60 seconds.' constrains 'the session timeout' to 60 (Exact) but 'The session timeout must be 1 minute.' constrains it to 1 (Exact). Resolve the conflicting values.",
+          "regla": "SC-CON-002",
+          "sugerencia_original": null
+        },
+        {
+          "confianza_declarada_no_calibrada": 0.7,
+          "gravedad_original": "Warning",
+          "localizacion": {
+            "byte_end": 93,
+            "byte_start": 55,
+            "end_col": 1,
+            "end_line": 6,
+            "file": "casos/C04/a.md",
+            "start_col": 1,
+            "start_line": 5
+          },
+          "mensaje_original": "Constraint contradiction (SAT): 'The session timeout must be 60 seconds.' and 'The session timeout must be 1 minute.' have unsatisfiable numeric constraints. Unsatisfiable: 'session timeout' == 60 conflicts with 'session timeout' == 1 (no valid value exists)",
+          "regla": "SC-CON-006",
+          "sugerencia_original": null
+        }
+      ],
+      "id": "C04"
+    },
+    {
+      "alerta": true,
+      "archivos": [
+        {
+          "bytes": 196,
+          "requisitos_reconocidos": 2,
+          "ruta": "casos/C05/a.md",
+          "sha256": "fe7209ccdd9b3f97e019b2fb8daab06d1f6a4f771e82d8a3b3cb87a7ccf2d8b7"
+        }
+      ],
+      "duracion_microsegundos": 216304,
+      "hallazgos": [
+        {
+          "confianza_declarada_no_calibrada": 0.7,
+          "gravedad_original": "Warning",
+          "localizacion": {
+            "byte_end": 196,
+            "byte_start": 106,
+            "end_col": 1,
+            "end_line": 6,
+            "file": "casos/C05/a.md",
+            "start_col": 1,
+            "start_line": 5
+          },
+          "mensaje_original": "Temporal conflict: 'For session S, the single access grant must occur before ...' requires action \"before the single identity verification\" but 'For session S, the single access grant must occur after t...' requires the same action \"after the single identity verification\". Clarify the ordering.",
+          "regla": "SC-CON-003",
+          "sugerencia_original": null
+        }
+      ],
+      "id": "C05"
+    },
+    {
+      "alerta": true,
+      "archivos": [
+        {
+          "bytes": 173,
+          "requisitos_reconocidos": 2,
+          "ruta": "casos/C06/a.md",
+          "sha256": "4cd1492fe30e822fb39f571c8aa428ea0ee96de5db97ff0364e715db03125f1e"
+        }
+      ],
+      "duracion_microsegundos": 177738,
+      "hallazgos": [
+        {
+          "confianza_declarada_no_calibrada": 0.7,
+          "gravedad_original": "Warning",
+          "localizacion": {
+            "byte_end": 173,
+            "byte_start": 92,
+            "end_col": 1,
+            "end_line": 6,
+            "file": "casos/C06/a.md",
+            "start_col": 1,
+            "start_line": 5
+          },
+          "mensaje_original": "Contradicting requirements: 'For session S, the service must grant actor A permission ...' says \"shall grant actor a permission to read\" but 'For session S, the service must not grant actor B permiss...' says \"shall not grant actor b permission to read\". Resolve the conflict.",
+          "regla": "SC-CON-001",
+          "sugerencia_original": null
+        },
+        {
+          "confianza_declarada_no_calibrada": 0.7,
+          "gravedad_original": "Info",
+          "localizacion": {
+            "byte_end": 173,
+            "byte_start": 92,
+            "end_col": 1,
+            "end_line": 6,
+            "file": "casos/C06/a.md",
+            "start_col": 1,
+            "start_line": 5
+          },
+          "mensaje_original": "Potential tension between requirements: 'For session S, the service must grant actor A permission ...' and 'For session S, the service must not grant actor B permiss...' share 100% keywords but contain opposing qualifiers. Verify they are not contradictory.",
+          "regla": "SC-CON-004",
+          "sugerencia_original": null
+        }
+      ],
+      "id": "C06"
+    },
+    {
+      "alerta": true,
+      "archivos": [
+        {
+          "bytes": 133,
+          "requisitos_reconocidos": 2,
+          "ruta": "casos/C07/a.md",
+          "sha256": "3ec255d8a18917f3a6a843e982cfa90792c4e7af71d47b8ae066d3fe17da2ec6"
+        }
+      ],
+      "duracion_microsegundos": 179117,
+      "hallazgos": [
+        {
+          "confianza_declarada_no_calibrada": 0.7,
+          "gravedad_original": "Warning",
+          "localizacion": {
+            "byte_end": 133,
+            "byte_start": 72,
+            "end_col": 1,
+            "end_line": 6,
+            "file": "casos/C07/a.md",
+            "start_col": 1,
+            "start_line": 5
+          },
+          "mensaje_original": "Contradicting requirements: 'Policy A states that the service must allow operation X.' says \"shall allow operation x\" but 'Policy B states that the service must not allow operation X.' says \"shall not allow operation x\". Resolve the conflict.",
+          "regla": "SC-CON-001",
+          "sugerencia_original": null
+        },
+        {
+          "confianza_declarada_no_calibrada": 0.7,
+          "gravedad_original": "Info",
+          "localizacion": {
+            "byte_end": 133,
+            "byte_start": 72,
+            "end_col": 1,
+            "end_line": 6,
+            "file": "casos/C07/a.md",
+            "start_col": 1,
+            "start_line": 5
+          },
+          "mensaje_original": "Potential tension between requirements: 'Policy A states that the service must allow operation X.' and 'Policy B states that the service must not allow operation X.' share 100% keywords but contain opposing qualifiers. Verify they are not contradictory.",
+          "regla": "SC-CON-004",
+          "sugerencia_original": null
+        }
+      ],
+      "id": "C07"
+    },
+    {
+      "alerta": false,
+      "archivos": [
+        {
+          "bytes": 109,
+          "requisitos_reconocidos": 0,
+          "ruta": "casos/C08/a.md",
+          "sha256": "07e89fb9c858c30109bde95970efc9dd330856a06f125056867f1e1895a31408"
+        }
+      ],
+      "duracion_microsegundos": 3366,
+      "hallazgos": [],
+      "id": "C08"
+    },
+    {
+      "alerta": true,
+      "archivos": [
+        {
+          "bytes": 133,
+          "requisitos_reconocidos": 2,
+          "ruta": "casos/C09/a.md",
+          "sha256": "a2d8f04cb98b6bb6b7c7a0a6d58d14b22d0761839a7ebd4723d0ad38f769bb9b"
+        }
+      ],
+      "duracion_microsegundos": 222579,
+      "hallazgos": [
+        {
+          "confianza_declarada_no_calibrada": 0.7,
+          "gravedad_original": "Warning",
+          "localizacion": {
+            "byte_end": 133,
+            "byte_start": 74,
+            "end_col": 1,
+            "end_line": 6,
+            "file": "casos/C09/a.md",
+            "start_col": 1,
+            "start_line": 5
+          },
+          "mensaje_original": "Numeric conflict: 'For configuration A, the request limit must be 2 requests.' constrains 'the request limit' to 2 (Exact) but 'For configuration A, the request limit must be 5 requests.' constrains it to 5 (Exact). Resolve the conflicting values.",
+          "regla": "SC-CON-002",
+          "sugerencia_original": null
+        },
+        {
+          "confianza_declarada_no_calibrada": 0.7,
+          "gravedad_original": "Warning",
+          "localizacion": {
+            "byte_end": 133,
+            "byte_start": 74,
+            "end_col": 1,
+            "end_line": 6,
+            "file": "casos/C09/a.md",
+            "start_col": 1,
+            "start_line": 5
+          },
+          "mensaje_original": "Constraint contradiction (SAT): 'For configuration A, the request limit must be 2 requests.' and 'For configuration A, the request limit must be 5 requests.' have unsatisfiable numeric constraints. Unsatisfiable: 'request limit' == 2 conflicts with 'request limit' == 5 (no valid value exists)",
+          "regla": "SC-CON-006",
+          "sugerencia_original": null
+        }
+      ],
+      "id": "C09"
+    },
+    {
+      "alerta": false,
+      "archivos": [
+        {
+          "bytes": 151,
+          "requisitos_reconocidos": 2,
+          "ruta": "casos/C10/a.md",
+          "sha256": "56ea0052926b25d0229088a78c236ad4a209c2f6d59f1c6a2035e4aa97011c45"
+        }
+      ],
+      "duracion_microsegundos": 138687,
+      "hallazgos": [],
+      "id": "C10"
+    },
+    {
+      "alerta": false,
+      "archivos": [
+        {
+          "bytes": 76,
+          "requisitos_reconocidos": 1,
+          "ruta": "casos/C11/a.md",
+          "sha256": "f3d24cb7e09e614a16caf196d17f2703ee338b84769e23051b3025a5affa8352"
+        },
+        {
+          "bytes": 75,
+          "requisitos_reconocidos": 1,
+          "ruta": "casos/C11/b.md",
+          "sha256": "3742c19afca3f9c74a1ba28860f51ca22564c36c248cf8bbf72b14bb9c0e7e3b"
+        }
+      ],
+      "duracion_microsegundos": 170404,
+      "hallazgos": [],
+      "id": "C11"
+    },
+    {
+      "alerta": false,
+      "archivos": [
+        {
+          "bytes": 202,
+          "requisitos_reconocidos": 2,
+          "ruta": "casos/C12/a.md",
+          "sha256": "c01425db1a156792f94c7b4479a6b17b3f760c5c6cf4e5d6d35d0e520792142c"
+        }
+      ],
+      "duracion_microsegundos": 167429,
+      "hallazgos": [],
+      "id": "C12"
+    }
+  ],
+  "correcciones_aplicadas": false,
+  "duracion_microsegundos": 3450061,
+  "ejecutable_sha256": "b7bd3cba8c360a655195d7c6e90c4603c05958e1027d2d2c928ba39671800bb6",
+  "elemento": "Buscador-Semántico - Diferencial",
+  "entradas_sha256": "ae95d7ebdb8802fe7dc222754b5646ce4728ea9c58cc4fb1f73d9e20900ce48e",
+  "estado": "comprobacion_aislada_de_candidato",
+  "ia_activada": false,
+  "inicio_unix_ms": 1791697629013,
+  "referencias_recibidas": false,
+  "reglas": [
+    "SC-CON-001",
+    "SC-CON-002",
+    "SC-CON-003",
+    "SC-CON-004",
+    "SC-CON-006",
+    "SC-XF-002"
+  ]
+}

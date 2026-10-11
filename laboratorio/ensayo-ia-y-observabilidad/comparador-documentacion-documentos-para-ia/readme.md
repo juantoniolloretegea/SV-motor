@@ -1,14 +1,14 @@
-# Comparador de documentación destinada a inteligencia artificial
+# Buscador-Semántico - Diferencial
 
-**Edición documental 1 · 11 de octubre de 2026.**
+**Edición documental 2 · 11 de octubre de 2026.**
 
-Esta sede reúne los estudios, revisiones y evidencias del comparador documental del Sistema Vectorial SV. Su finalidad es permitir que los revisores conozcan cómo se examinan los documentos destinados a una IA, qué contradicciones se han localizado, qué cobertura tiene el examen y qué decisiones han autorizado su suministro.
+Esta sede reúne los estudios, revisiones y evidencias del **Buscador-Semántico - Diferencial** del Sistema Vectorial SV. Su finalidad es permitir que los revisores conozcan cómo se examinan los documentos destinados a una IA, qué contradicciones se han localizado, qué cobertura tiene el examen y qué decisiones han autorizado su suministro.
 
 El ámbito comprende **Medicina y Ciberseguridad**, con documentos PDF, HTML y Markdown. Se buscan **incompatibilidades de significado**, tanto dentro de un documento como entre documentos, atendiendo a sujetos, condiciones, versiones, cantidades, unidades, fechas y excepciones. Una diferencia de redacción no basta para declarar contradicción.
 
 ## Estado acreditado
 
-**Todavía no se ha acreditado una aplicación que detecte las contradicciones complejas requeridas.** Se han examinado componentes, fuentes y límites; no se presenta el comparador como instalado, validado o recibido.
+**Todavía no se ha acreditado una aplicación que detecte las contradicciones complejas requeridas.** Se han examinado componentes, fuentes y límites. La primera comprobación Rust de speccheck-core 0.4.1 no supera el criterio previo: alertas en 6 de 12 incompatibilidades y en 5 de 8 casos compatibles; cuatro casos de contexto insuficiente se contabilizan aparte. El conjunto es sintético y diagnóstico. El Buscador-Semántico - Diferencial no se presenta como instalado, validado o recibido.
 
 | Función | Situación al corte |
 | --- | --- |
@@ -25,6 +25,7 @@ La propuesta inicial basada en vocabularios preparados por personas está retira
 
 | Documento | Función y estado |
 | --- | --- |
+| [Comprobación preliminar de speccheck-core 0.4.1](comprobaciones/2026-10-11-speccheck-0.4.1/RESULTADO.md) | Resultado vigente: candidato no apto para incorporación, con protocolo, casos, salidas, contraste Rust y límites. No demuestra inviabilidad general. |
 | [Estructura lógica y componentes Rust](informes/2026-10-11/ESTRUCTURA-LOGICA-RUST-MDBOOK.md) | Estudio vigente: funciones conjuntas, comunidades, mantenimiento, mdBook, traducción y revisión de lenguajes y dependencias. Distingue lo existente de lo propuesto. |
 | [Revisión de aptitud y contraste adversarial](informes/2026-10-11/REVISION-DE-APTITUD.md) | Conserva el rechazo de la propuesta inicial, la corrección de una desestimación excesiva y la reconsideración bilingüe anterior a la precisión sobre traducción. |
 | [Estado del arte inicial](informes/2026-10-11/ESTADO-DEL-ARTE.md) | Antecedente del 10/10/2026, con propuesta retirada expresamente identificada. |
@@ -40,7 +41,7 @@ Las copias públicas conservan las conclusiones, adendas y fuentes. Se han retir
 2. Preparar las representaciones y, cuando corresponda, la traducción inglesa, manteniendo correspondencia con los pasajes originales.
 3. Localizar posibles contradicciones y presentar evidencia enfrentada con contexto y condiciones. Esta capacidad principal está pendiente de demostración.
 4. Someter cada hallazgo a revisión humana: confirmar el conflicto, explicar una diferencia compatible o mantener el asunto pendiente.
-5. Aplicar la decisión autorizada sobre el corpus y conservar qué versión se entrega efectivamente a la IA mediante el Árbitro-Director.
+5. Aplicar la decisión autorizada sobre el corpus y conservar qué versión se entrega efectivamente a la IA mediante el **Árbitro - Director**.
 
 El recorrido reutiliza la administración y la trazabilidad existentes. El revisor no debe preparar previamente los conceptos o conflictos que la herramienta tiene que descubrir. El comparador propuesto no incorpora una IA como analizador o juez; Google se circunscribe a la traducción aceptada.
 
@@ -61,6 +62,10 @@ El [ensayo de inteligencia artificial y observabilidad](https://github.com/juant
 
 Los informes posteriores se incorporarán con fecha, objeto, fuentes, método, resultados, límites y estado de revisión. Una corrección se explicará y conservará el antecedente. Esta entrada señalará siempre cuál es la conclusión vigente; los registros científicos y de Calidad conservarán sus sedes competentes.
 
-La publicación inicial es documental: no añade una inferencia ni declara conformidad funcional del comparador.
+La comprobación algorítmica posterior no consultó modelos de IA ni modificó la instalación del SV. Las revisiones históricas se conservan.
+
+## Relación con el libro de la Biblioteca del SV
+
+El libro publicado [«Reglas, usos y descripciones documentales de documentos para el conocimiento de la IA»](https://documentos-sv.itvia.online/documentacion/reglas-usos-descripciones-documentales/index.html) conserva su estructura y sus cinco capítulos. Se ha leído su edición V.01 antes de preparar la [aportación sobre el Buscador-Semántico - Diferencial](comprobaciones/2026-10-11-speccheck-0.4.1/APORTACION-AL-LIBRO.md), destinada al apartado de información para la revisión. La aportación está preparada para incorporación coordinada; no se declara ya incorporada ni constituye otro libro. Las evidencias técnicas permanecen en esta carpeta.
 
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
