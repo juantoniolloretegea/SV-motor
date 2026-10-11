@@ -1,6 +1,6 @@
 # Buscador-Semántico - Diferencial
 
-**Edición documental 5 · 11 de octubre de 2026.**
+**Edición documental 6 · 11 de octubre de 2026.**
 
 Esta carpeta reúne los estudios, revisiones y evidencias del **Buscador-Semántico - Diferencial** del Sistema Vectorial SV. Su finalidad es proporcionar una ayuda de consulta voluntaria para comprobar si un documento propuesto para la IA contiene afirmaciones en conflicto con los documentos ya incorporados al conjunto documental correspondiente. El revisor podrá utilizarla cuando le resulte útil, consultar algunas sugerencias o continuar sin utilizarla. La herramienta no impone la resolución de sus avisos ni determina el suministro documental.
 
@@ -21,10 +21,13 @@ El ámbito comprende **Medicina y Ciberseguridad**, con documentos PDF, HTML y M
 
 La propuesta inicial basada en vocabularios preparados por personas está retirada: trasladaba al revisor parte esencial del hallazgo solicitado. No haber encontrado una solución completa tampoco demuestra imposibilidad técnica. El desarrollo propio sólo se considerará cuando se justifique su necesidad mediante su comparación con los recursos existentes.
 
+**Paso 3 / 8 preparado.** Se han fijado doce casos nuevos en español, seis por dominio, con ocho pasajes y cuatro documentos parciales de referencia. Se distinguen seis incompatibilidades controladas, cuatro casos compatibles y dos de contexto insuficiente. También se conservan doce solicitudes previstas para comprobar selección y separación por dominio. No se ha ejecutado el candidato con estas entradas. La preparación y sus límites constan en el [protocolo del paso 3](informes/2026-10-11-paso3/PROTOCOLO-Y-ESTADO.md).
+
 ## Informes y fuentes
 
 | Documento | Función y estado |
 | --- | --- |
+| [Paso 3 / 8: fuentes y casos](informes/2026-10-11-paso3/PROTOCOLO-Y-ESTADO.md) | Conjunto fijado antes de ejecutar: originales, pasajes, documentos propuestos, referencias separadas y selecciones previstas. |
 | [Alcance auxiliar y reconsideración de las evidencias](informes/2026-10-11-ayuda-opcional/ALCANCE-Y-RECONSIDERACION.md) | Criterio vigente: uso voluntario, sugerencias examinables y evaluación de utilidad. Reconsideración documental de las salidas existentes, sin nueva ejecución de candidatos. |
 | [Diagnóstico de las pérdidas de significado](informes/2026-10-11-diagnostico/RESULTADO-DIAGNOSTICO.md) | Localización por etapas y fuente; 14 resultados anteriores reproducidos. No acredita una corrección suficiente ni una nueva validación. |
 | [Revisión de alternativas y avance por pasos](informes/2026-10-11-paso4/REVISION-ALTERNATIVAS.md) | Antecedente del paso 4; recursos examinados, procedencia y límites. Su criterio de continuación se actualiza mediante la precisión del alcance auxiliar. |
@@ -35,7 +38,7 @@ La propuesta inicial basada en vocabularios preparados por personas está retira
 | [Estado del arte inicial](informes/2026-10-11/ESTADO-DEL-ARTE.md) | Antecedente del 10/10/2026, con propuesta retirada expresamente identificada. |
 | [Fuentes y componentes del 11/10/2026](informes/2026-10-11/COMPONENTES-RUST-MDBOOK-FUENTES.json) | Referencias, versiones, actividad observada, objetos Git y límites de las comprobaciones. |
 | [Fuentes del estudio inicial](informes/2026-10-11/FUENTES.json) | Registro histórico del 10/10/2026, con precisión sobre las instrucciones posteriores. |
-| [Manifiesto de esta edición](informes/2026-10-11-ayuda-opcional/MANIFIESTO.json) | Identidad, tamaño y SHA-256 de la entrada y los dos documentos de esta actualización. Los informes anteriores conservan sus propios manifiestos. |
+| [Manifiesto de esta edición](informes/2026-10-11-paso3/MANIFIESTO.json) | Identidad, tamaño y SHA-256 de la entrada y de la preparación del paso 3. Los informes anteriores conservan sus propios manifiestos. |
 
 Las copias públicas conservan las conclusiones, adendas y fuentes. Se han retirado las rutas de trabajo y añadido indicaciones de estado para evitar que una propuesta histórica se lea como vigente. El manifiesto distingue la huella original de la edición pública; no afirma igualdad entre contenidos editados.
 

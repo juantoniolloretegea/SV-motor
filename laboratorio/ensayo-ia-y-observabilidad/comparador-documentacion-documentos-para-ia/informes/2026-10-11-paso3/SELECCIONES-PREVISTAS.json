@@ -1,0 +1,161 @@
+{
+  "estado": "casos previstos para comprobar en Rust; no ejecutados",
+  "casos": [
+    {
+      "id": "S01",
+      "dominio": "inmunologia",
+      "modo": "documento",
+      "ids": [
+        "R-I-NCI"
+      ],
+      "accesibles": [
+        "R-I-NCI",
+        "R-I-LLS"
+      ],
+      "esperado": [
+        "R-I-NCI"
+      ]
+    },
+    {
+      "id": "S02",
+      "dominio": "inmunologia",
+      "modo": "grupo",
+      "grupo": "G-I",
+      "accesibles": [
+        "R-I-NCI",
+        "R-I-LLS"
+      ],
+      "esperado": [
+        "R-I-NCI",
+        "R-I-LLS"
+      ]
+    },
+    {
+      "id": "S03",
+      "dominio": "inmunologia",
+      "modo": "todos",
+      "accesibles": [
+        "R-I-NCI",
+        "R-I-LLS",
+        "R-C-INCIBE",
+        "R-C-CYB25"
+      ],
+      "esperado": [
+        "R-I-NCI",
+        "R-I-LLS"
+      ]
+    },
+    {
+      "id": "S04",
+      "dominio": "inmunologia",
+      "modo": "documento",
+      "ids": [
+        "R-C-INCIBE"
+      ],
+      "accesibles": [
+        "R-I-NCI",
+        "R-C-INCIBE"
+      ],
+      "rechazo": "dominio_ajeno",
+      "llamadas_comparador": 0
+    },
+    {
+      "id": "S05",
+      "dominio": "inmunologia",
+      "modo": "grupo",
+      "grupo_experimental": [
+        "R-I-NCI",
+        "R-C-INCIBE"
+      ],
+      "accesibles": [
+        "R-I-NCI",
+        "R-C-INCIBE"
+      ],
+      "rechazo": "grupo_con_referencia_ajena",
+      "llamadas_comparador": 0
+    },
+    {
+      "id": "S06",
+      "dominio": "inmunologia",
+      "modo": "documento",
+      "ids": [],
+      "accesibles": [
+        "R-I-NCI",
+        "R-I-LLS"
+      ],
+      "esperado": [],
+      "llamadas_comparador": 0
+    },
+    {
+      "id": "S07",
+      "dominio": "inmunologia",
+      "ayuda_solicitada": false,
+      "accesibles": [
+        "R-I-NCI",
+        "R-I-LLS"
+      ],
+      "esperado": [],
+      "llamadas_comparador": 0
+    },
+    {
+      "id": "S08",
+      "dominio": "inmunologia",
+      "modo": "todos",
+      "accesibles": [
+        "R-I-NCI"
+      ],
+      "esperado": [
+        "R-I-NCI"
+      ]
+    },
+    {
+      "id": "S09",
+      "dominio": "inmunologia",
+      "modo": "documento",
+      "ids": [
+        "R-I-LLS"
+      ],
+      "accesibles": [
+        "R-I-NCI"
+      ],
+      "rechazo": "sin_permiso",
+      "llamadas_comparador": 0
+    },
+    {
+      "id": "S10",
+      "dominio": "ciberseguridad",
+      "modo": "todos",
+      "accesibles": [
+        "R-I-NCI",
+        "R-C-INCIBE",
+        "R-C-CYB25"
+      ],
+      "esperado": [
+        "R-C-INCIBE",
+        "R-C-CYB25"
+      ]
+    },
+    {
+      "id": "S11",
+      "dominio": "inmunologia",
+      "modo": "grupo",
+      "grupo": "G-INEXISTENTE",
+      "accesibles": [
+        "R-I-NCI"
+      ],
+      "rechazo": "grupo_inexistente",
+      "llamadas_comparador": 0
+    },
+    {
+      "id": "S12",
+      "dominio": "ciberseguridad",
+      "dominio_propuesto": "inmunologia",
+      "modo": "todos",
+      "accesibles": [
+        "R-C-INCIBE"
+      ],
+      "rechazo": "dominio_propuesto_distinto",
+      "llamadas_comparador": 0
+    }
+  ]
+}
