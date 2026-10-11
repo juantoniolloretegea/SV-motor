@@ -1,0 +1,1853 @@
+{
+  "limite": "Diagnóstico sobre casos ya conocidos; no constituye una nueva validación independiente.",
+  "resultados": [
+    {
+      "analisis_nominal_separado": null,
+      "duracion_ns": 3280300,
+      "entrada": {
+        "dominio": "control",
+        "id": "T01",
+        "texto": "Every man is mortal."
+      },
+      "identico_al_antecedente": true,
+      "publico": {
+        "estado": "admitido",
+        "salida": "∀x((Man(x) → Mortal(x)))"
+      },
+      "reproduccion_por_etapas": true,
+      "traza": {
+        "analisis": {
+          "estructura": "Quantifier {\n    kind: Universal,\n    variable: Symbol(\n        33,\n    ),\n    body: BinaryOp {\n        left: Predicate {\n            name: Symbol(\n                2,\n            ),\n            args: [\n                Variable(\n                    Symbol(\n                        33,\n                    ),\n                ),\n            ],\n            world: None,\n        },\n        op: Implies,\n        right: Predicate {\n            name: Symbol(\n                4,\n            ),\n            args: [\n                Variable(\n                    Symbol(\n                        33,\n                    ),\n                ),\n            ],\n            world: None,\n        },\n    },\n    island_id: 0,\n}",
+          "formula": "∀x((Man(x) → Mortal(x)))"
+        },
+        "axiomas": {
+          "estructura": "Quantifier {\n    kind: Universal,\n    variable: Symbol(\n        33,\n    ),\n    body: BinaryOp {\n        left: Predicate {\n            name: Symbol(\n                2,\n            ),\n            args: [\n                Variable(\n                    Symbol(\n                        33,\n                    ),\n                ),\n            ],\n            world: None,\n        },\n        op: Implies,\n        right: Predicate {\n            name: Symbol(\n                4,\n            ),\n            args: [\n                Variable(\n                    Symbol(\n                        33,\n                    ),\n                ),\n            ],\n            world: None,\n        },\n    },\n    island_id: 0,\n}",
+          "formula": "∀x((Man(x) → Mortal(x)))"
+        },
+        "expresiones_compuestas": [
+          {
+            "posicion": "Span { start: 0, end: 5 }",
+            "texto": "Every",
+            "tipo": "All"
+          },
+          {
+            "posicion": "Span { start: 6, end: 9 }",
+            "texto": "man",
+            "tipo": "Noun(Symbol(2))"
+          },
+          {
+            "posicion": "Span { start: 10, end: 12 }",
+            "texto": "is",
+            "tipo": "Is"
+          },
+          {
+            "posicion": "Span { start: 13, end: 19 }",
+            "texto": "mortal",
+            "tipo": "Noun(Symbol(4))"
+          },
+          {
+            "posicion": "Span { start: 19, end: 20 }",
+            "texto": ".",
+            "tipo": "Period"
+          },
+          {
+            "posicion": "Span { start: 20, end: 20 }",
+            "texto": "",
+            "tipo": "EOF"
+          }
+        ],
+        "formula_completa": "∀x((Man(x) → Mortal(x)))",
+        "lexico": [
+          {
+            "posicion": "Span { start: 0, end: 5 }",
+            "texto": "Every",
+            "tipo": "All"
+          },
+          {
+            "posicion": "Span { start: 6, end: 9 }",
+            "texto": "man",
+            "tipo": "Noun(Symbol(2))"
+          },
+          {
+            "posicion": "Span { start: 10, end: 12 }",
+            "texto": "is",
+            "tipo": "Is"
+          },
+          {
+            "posicion": "Span { start: 13, end: 19 }",
+            "texto": "mortal",
+            "tipo": "Noun(Symbol(4))"
+          },
+          {
+            "posicion": "Span { start: 19, end: 20 }",
+            "texto": ".",
+            "tipo": "Period"
+          },
+          {
+            "posicion": "Span { start: 20, end: 20 }",
+            "texto": "",
+            "tipo": "EOF"
+          }
+        ],
+        "pragmatica": {
+          "estructura": "Quantifier {\n    kind: Universal,\n    variable: Symbol(\n        33,\n    ),\n    body: BinaryOp {\n        left: Predicate {\n            name: Symbol(\n                2,\n            ),\n            args: [\n                Variable(\n                    Symbol(\n                        33,\n                    ),\n                ),\n            ],\n            world: None,\n        },\n        op: Implies,\n        right: Predicate {\n            name: Symbol(\n                4,\n            ),\n            args: [\n                Variable(\n                    Symbol(\n                        33,\n                    ),\n                ),\n            ],\n            world: None,\n        },\n    },\n    island_id: 0,\n}",
+          "formula": "∀x((Man(x) → Mortal(x)))"
+        },
+        "restricciones_temporales": []
+      }
+    },
+    {
+      "analisis_nominal_separado": null,
+      "duracion_ns": 1404200,
+      "entrada": {
+        "dominio": "control",
+        "id": "T02",
+        "texto": "Socrates is a man."
+      },
+      "identico_al_antecedente": true,
+      "publico": {
+        "estado": "admitido",
+        "salida": "Man(Socrates)"
+      },
+      "reproduccion_por_etapas": true,
+      "traza": {
+        "analisis": {
+          "estructura": "Predicate {\n    name: Symbol(\n        4,\n    ),\n    args: [\n        Constant(\n            Symbol(\n                1,\n            ),\n        ),\n    ],\n    world: None,\n}",
+          "formula": "Man(Socrates)"
+        },
+        "axiomas": {
+          "estructura": "Predicate {\n    name: Symbol(\n        4,\n    ),\n    args: [\n        Constant(\n            Symbol(\n                1,\n            ),\n        ),\n    ],\n    world: None,\n}",
+          "formula": "Man(Socrates)"
+        },
+        "expresiones_compuestas": [
+          {
+            "posicion": "Span { start: 0, end: 8 }",
+            "texto": "Socrates",
+            "tipo": "ProperName(Symbol(1))"
+          },
+          {
+            "posicion": "Span { start: 9, end: 11 }",
+            "texto": "is",
+            "tipo": "Is"
+          },
+          {
+            "posicion": "Span { start: 12, end: 13 }",
+            "texto": "a",
+            "tipo": "Article(Indefinite)"
+          },
+          {
+            "posicion": "Span { start: 14, end: 17 }",
+            "texto": "man",
+            "tipo": "Noun(Symbol(4))"
+          },
+          {
+            "posicion": "Span { start: 17, end: 18 }",
+            "texto": ".",
+            "tipo": "Period"
+          },
+          {
+            "posicion": "Span { start: 18, end: 18 }",
+            "texto": "",
+            "tipo": "EOF"
+          }
+        ],
+        "formula_completa": "Man(Socrates)",
+        "lexico": [
+          {
+            "posicion": "Span { start: 0, end: 8 }",
+            "texto": "Socrates",
+            "tipo": "ProperName(Symbol(1))"
+          },
+          {
+            "posicion": "Span { start: 9, end: 11 }",
+            "texto": "is",
+            "tipo": "Is"
+          },
+          {
+            "posicion": "Span { start: 12, end: 13 }",
+            "texto": "a",
+            "tipo": "Article(Indefinite)"
+          },
+          {
+            "posicion": "Span { start: 14, end: 17 }",
+            "texto": "man",
+            "tipo": "Noun(Symbol(4))"
+          },
+          {
+            "posicion": "Span { start: 17, end: 18 }",
+            "texto": ".",
+            "tipo": "Period"
+          },
+          {
+            "posicion": "Span { start: 18, end: 18 }",
+            "texto": "",
+            "tipo": "EOF"
+          }
+        ],
+        "pragmatica": {
+          "estructura": "Predicate {\n    name: Symbol(\n        4,\n    ),\n    args: [\n        Constant(\n            Symbol(\n                1,\n            ),\n        ),\n    ],\n    world: None,\n}",
+          "formula": "Man(Socrates)"
+        },
+        "restricciones_temporales": []
+      }
+    },
+    {
+      "analisis_nominal_separado": {
+        "adjetivos": [],
+        "complementos": [
+          {
+            "estructura": "Predicate {\n    name: Symbol(\n        2,\n    ),\n    args: [\n        Variable(\n            Symbol(\n                44,\n            ),\n        ),\n        Constant(\n            Symbol(\n                45,\n            ),\n        ),\n    ],\n    world: None,\n}",
+            "formula": "With(_PP_SELF_, Active_infection)"
+          }
+        ],
+        "determinacion": "None",
+        "sustantivo": "Patients"
+      },
+      "duracion_ns": 2983000,
+      "entrada": {
+        "dominio": "medicina",
+        "id": "M01",
+        "texto": "Patients with an active infection must not receive cladribine until the infection is controlled."
+      },
+      "identico_al_antecedente": true,
+      "publico": {
+        "estado": "admitido",
+        "salida": "(□_{1.0} ¬∃e(Receive(e) ∧ Agent(e, Patients) ∧ Theme(e, Cladribine)) U Control(Infection))"
+      },
+      "reproduccion_por_etapas": true,
+      "traza": {
+        "analisis": {
+          "estructura": "TemporalBinary {\n    operator: Until,\n    left: Modal {\n        vector: ModalVector {\n            domain: Alethic,\n            force: 1.0,\n            flavor: Root,\n            modal_base: None,\n            ordering_source: None,\n        },\n        operand: UnaryOp {\n            op: Not,\n            operand: NeoEvent(\n                NeoEventData {\n                    event_var: Symbol(\n                        46,\n                    ),\n                    verb: Symbol(\n                        8,\n                    ),\n                    roles: [\n                        (\n                            Agent,\n                            Constant(\n                                Symbol(\n                                    1,\n                                ),\n                            ),\n                        ),\n                        (\n                            Theme,\n                            Constant(\n                                Symbol(\n                                    10,\n                                ),\n                            ),\n                        ),\n                    ],\n                    modifiers: [],\n                    suppress_existential: false,\n                    world: None,\n                },\n            ),\n        },\n    },\n    right: Predicate {\n        name: Symbol(\n            14,\n        ),\n        args: [\n            Constant(\n                Symbol(\n                    5,\n                ),\n            ),\n        ],\n        world: None,\n    },\n}",
+          "formula": "(□_{1.0} ¬∃e(Receive(e) ∧ Agent(e, Patients) ∧ Theme(e, Cladribine)) U Control(Infection))"
+        },
+        "axiomas": {
+          "estructura": "TemporalBinary {\n    operator: Until,\n    left: Modal {\n        vector: ModalVector {\n            domain: Alethic,\n            force: 1.0,\n            flavor: Root,\n            modal_base: None,\n            ordering_source: None,\n        },\n        operand: UnaryOp {\n            op: Not,\n            operand: NeoEvent(\n                NeoEventData {\n                    event_var: Symbol(\n                        46,\n                    ),\n                    verb: Symbol(\n                        8,\n                    ),\n                    roles: [\n                        (\n                            Agent,\n                            Constant(\n                                Symbol(\n                                    1,\n                                ),\n                            ),\n                        ),\n                        (\n                            Theme,\n                            Constant(\n                                Symbol(\n                                    10,\n                                ),\n                            ),\n                        ),\n                    ],\n                    modifiers: [],\n                    suppress_existential: false,\n                    world: None,\n                },\n            ),\n        },\n    },\n    right: Predicate {\n        name: Symbol(\n            14,\n        ),\n        args: [\n            Constant(\n                Symbol(\n                    5,\n                ),\n            ),\n        ],\n        world: None,\n    },\n}",
+          "formula": "(□_{1.0} ¬∃e(Receive(e) ∧ Agent(e, Patients) ∧ Theme(e, Cladribine)) U Control(Infection))"
+        },
+        "expresiones_compuestas": [
+          {
+            "posicion": "Span { start: 0, end: 8 }",
+            "texto": "Patients",
+            "tipo": "ProperName(Symbol(1))"
+          },
+          {
+            "posicion": "Span { start: 9, end: 13 }",
+            "texto": "with",
+            "tipo": "Preposition(Symbol(2))"
+          },
+          {
+            "posicion": "Span { start: 14, end: 16 }",
+            "texto": "an",
+            "tipo": "Article(Indefinite)"
+          },
+          {
+            "posicion": "Span { start: 17, end: 23 }",
+            "texto": "active",
+            "tipo": "Noun(Symbol(4))"
+          },
+          {
+            "posicion": "Span { start: 24, end: 33 }",
+            "texto": "infection",
+            "tipo": "Noun(Symbol(5))"
+          },
+          {
+            "posicion": "Span { start: 34, end: 38 }",
+            "texto": "must",
+            "tipo": "Must"
+          },
+          {
+            "posicion": "Span { start: 39, end: 42 }",
+            "texto": "not",
+            "tipo": "Not"
+          },
+          {
+            "posicion": "Span { start: 43, end: 50 }",
+            "texto": "receive",
+            "tipo": "Verb { lemma: Symbol(8), time: Present, aspect: Simple, class: Achievement }"
+          },
+          {
+            "posicion": "Span { start: 51, end: 61 }",
+            "texto": "cladribine",
+            "tipo": "Noun(Symbol(10))"
+          },
+          {
+            "posicion": "Span { start: 62, end: 67 }",
+            "texto": "until",
+            "tipo": "Until"
+          },
+          {
+            "posicion": "Span { start: 68, end: 71 }",
+            "texto": "the",
+            "tipo": "Article(Definite)"
+          },
+          {
+            "posicion": "Span { start: 72, end: 81 }",
+            "texto": "infection",
+            "tipo": "Noun(Symbol(5))"
+          },
+          {
+            "posicion": "Span { start: 82, end: 84 }",
+            "texto": "is",
+            "tipo": "Is"
+          },
+          {
+            "posicion": "Span { start: 85, end: 95 }",
+            "texto": "controlled",
+            "tipo": "Verb { lemma: Symbol(14), time: Past, aspect: Simple, class: Activity }"
+          },
+          {
+            "posicion": "Span { start: 95, end: 96 }",
+            "texto": ".",
+            "tipo": "Period"
+          },
+          {
+            "posicion": "Span { start: 96, end: 96 }",
+            "texto": "",
+            "tipo": "EOF"
+          }
+        ],
+        "formula_completa": "(□_{1.0} ¬∃e(Receive(e) ∧ Agent(e, Patients) ∧ Theme(e, Cladribine)) U Control(Infection))",
+        "lexico": [
+          {
+            "posicion": "Span { start: 0, end: 8 }",
+            "texto": "Patients",
+            "tipo": "ProperName(Symbol(1))"
+          },
+          {
+            "posicion": "Span { start: 9, end: 13 }",
+            "texto": "with",
+            "tipo": "Preposition(Symbol(2))"
+          },
+          {
+            "posicion": "Span { start: 14, end: 16 }",
+            "texto": "an",
+            "tipo": "Article(Indefinite)"
+          },
+          {
+            "posicion": "Span { start: 17, end: 23 }",
+            "texto": "active",
+            "tipo": "Noun(Symbol(4))"
+          },
+          {
+            "posicion": "Span { start: 24, end: 33 }",
+            "texto": "infection",
+            "tipo": "Noun(Symbol(5))"
+          },
+          {
+            "posicion": "Span { start: 34, end: 38 }",
+            "texto": "must",
+            "tipo": "Must"
+          },
+          {
+            "posicion": "Span { start: 39, end: 42 }",
+            "texto": "not",
+            "tipo": "Not"
+          },
+          {
+            "posicion": "Span { start: 43, end: 50 }",
+            "texto": "receive",
+            "tipo": "Verb { lemma: Symbol(8), time: Present, aspect: Simple, class: Achievement }"
+          },
+          {
+            "posicion": "Span { start: 51, end: 61 }",
+            "texto": "cladribine",
+            "tipo": "Noun(Symbol(10))"
+          },
+          {
+            "posicion": "Span { start: 62, end: 67 }",
+            "texto": "until",
+            "tipo": "Until"
+          },
+          {
+            "posicion": "Span { start: 68, end: 71 }",
+            "texto": "the",
+            "tipo": "Article(Definite)"
+          },
+          {
+            "posicion": "Span { start: 72, end: 81 }",
+            "texto": "infection",
+            "tipo": "Noun(Symbol(5))"
+          },
+          {
+            "posicion": "Span { start: 82, end: 84 }",
+            "texto": "is",
+            "tipo": "Is"
+          },
+          {
+            "posicion": "Span { start: 85, end: 95 }",
+            "texto": "controlled",
+            "tipo": "Verb { lemma: Symbol(14), time: Past, aspect: Simple, class: Activity }"
+          },
+          {
+            "posicion": "Span { start: 95, end: 96 }",
+            "texto": ".",
+            "tipo": "Period"
+          },
+          {
+            "posicion": "Span { start: 96, end: 96 }",
+            "texto": "",
+            "tipo": "EOF"
+          }
+        ],
+        "pragmatica": {
+          "estructura": "TemporalBinary {\n    operator: Until,\n    left: Modal {\n        vector: ModalVector {\n            domain: Alethic,\n            force: 1.0,\n            flavor: Root,\n            modal_base: None,\n            ordering_source: None,\n        },\n        operand: UnaryOp {\n            op: Not,\n            operand: NeoEvent(\n                NeoEventData {\n                    event_var: Symbol(\n                        46,\n                    ),\n                    verb: Symbol(\n                        8,\n                    ),\n                    roles: [\n                        (\n                            Agent,\n                            Constant(\n                                Symbol(\n                                    1,\n                                ),\n                            ),\n                        ),\n                        (\n                            Theme,\n                            Constant(\n                                Symbol(\n                                    10,\n                                ),\n                            ),\n                        ),\n                    ],\n                    modifiers: [],\n                    suppress_existential: false,\n                    world: None,\n                },\n            ),\n        },\n    },\n    right: Predicate {\n        name: Symbol(\n            14,\n        ),\n        args: [\n            Constant(\n                Symbol(\n                    5,\n                ),\n            ),\n        ],\n        world: None,\n    },\n}",
+          "formula": "(□_{1.0} ¬∃e(Receive(e) ∧ Agent(e, Patients) ∧ Theme(e, Cladribine)) U Control(Infection))"
+        },
+        "restricciones_temporales": []
+      }
+    },
+    {
+      "analisis_nominal_separado": {
+        "adjetivos": [],
+        "complementos": [
+          {
+            "estructura": "Predicate {\n    name: Symbol(\n        2,\n    ),\n    args: [\n        Variable(\n            Symbol(\n                38,\n            ),\n        ),\n        Constant(\n            Symbol(\n                39,\n            ),\n        ),\n    ],\n    world: None,\n}",
+            "formula": "Without(_PP_SELF_, Active_infection)"
+          }
+        ],
+        "determinacion": "None",
+        "sustantivo": "Patients"
+      },
+      "duracion_ns": 1920700,
+      "entrada": {
+        "dominio": "medicina",
+        "id": "M02",
+        "texto": "Patients without an active infection may receive cladribine."
+      },
+      "identico_al_antecedente": true,
+      "publico": {
+        "estado": "admitido",
+        "salida": "P_{0.5} ∃e(Receive(e) ∧ Agent(e, Patients) ∧ Theme(e, Cladribine))"
+      },
+      "reproduccion_por_etapas": true,
+      "traza": {
+        "analisis": {
+          "estructura": "Modal {\n    vector: ModalVector {\n        domain: Deontic,\n        force: 0.5,\n        flavor: Root,\n        modal_base: None,\n        ordering_source: None,\n    },\n    operand: NeoEvent(\n        NeoEventData {\n            event_var: Symbol(\n                40,\n            ),\n            verb: Symbol(\n                7,\n            ),\n            roles: [\n                (\n                    Agent,\n                    Constant(\n                        Symbol(\n                            1,\n                        ),\n                    ),\n                ),\n                (\n                    Theme,\n                    Constant(\n                        Symbol(\n                            9,\n                        ),\n                    ),\n                ),\n            ],\n            modifiers: [],\n            suppress_existential: false,\n            world: None,\n        },\n    ),\n}",
+          "formula": "P_{0.5} ∃e(Receive(e) ∧ Agent(e, Patients) ∧ Theme(e, Cladribine))"
+        },
+        "axiomas": {
+          "estructura": "Modal {\n    vector: ModalVector {\n        domain: Deontic,\n        force: 0.5,\n        flavor: Root,\n        modal_base: None,\n        ordering_source: None,\n    },\n    operand: NeoEvent(\n        NeoEventData {\n            event_var: Symbol(\n                40,\n            ),\n            verb: Symbol(\n                7,\n            ),\n            roles: [\n                (\n                    Agent,\n                    Constant(\n                        Symbol(\n                            1,\n                        ),\n                    ),\n                ),\n                (\n                    Theme,\n                    Constant(\n                        Symbol(\n                            9,\n                        ),\n                    ),\n                ),\n            ],\n            modifiers: [],\n            suppress_existential: false,\n            world: None,\n        },\n    ),\n}",
+          "formula": "P_{0.5} ∃e(Receive(e) ∧ Agent(e, Patients) ∧ Theme(e, Cladribine))"
+        },
+        "expresiones_compuestas": [
+          {
+            "posicion": "Span { start: 0, end: 8 }",
+            "texto": "Patients",
+            "tipo": "ProperName(Symbol(1))"
+          },
+          {
+            "posicion": "Span { start: 9, end: 16 }",
+            "texto": "without",
+            "tipo": "Preposition(Symbol(2))"
+          },
+          {
+            "posicion": "Span { start: 17, end: 19 }",
+            "texto": "an",
+            "tipo": "Article(Indefinite)"
+          },
+          {
+            "posicion": "Span { start: 20, end: 26 }",
+            "texto": "active",
+            "tipo": "Noun(Symbol(4))"
+          },
+          {
+            "posicion": "Span { start: 27, end: 36 }",
+            "texto": "infection",
+            "tipo": "Noun(Symbol(5))"
+          },
+          {
+            "posicion": "Span { start: 37, end: 40 }",
+            "texto": "may",
+            "tipo": "May"
+          },
+          {
+            "posicion": "Span { start: 41, end: 48 }",
+            "texto": "receive",
+            "tipo": "Verb { lemma: Symbol(7), time: Present, aspect: Simple, class: Achievement }"
+          },
+          {
+            "posicion": "Span { start: 49, end: 59 }",
+            "texto": "cladribine",
+            "tipo": "Noun(Symbol(9))"
+          },
+          {
+            "posicion": "Span { start: 59, end: 60 }",
+            "texto": ".",
+            "tipo": "Period"
+          },
+          {
+            "posicion": "Span { start: 60, end: 60 }",
+            "texto": "",
+            "tipo": "EOF"
+          }
+        ],
+        "formula_completa": "P_{0.5} ∃e(Receive(e) ∧ Agent(e, Patients) ∧ Theme(e, Cladribine))",
+        "lexico": [
+          {
+            "posicion": "Span { start: 0, end: 8 }",
+            "texto": "Patients",
+            "tipo": "ProperName(Symbol(1))"
+          },
+          {
+            "posicion": "Span { start: 9, end: 16 }",
+            "texto": "without",
+            "tipo": "Preposition(Symbol(2))"
+          },
+          {
+            "posicion": "Span { start: 17, end: 19 }",
+            "texto": "an",
+            "tipo": "Article(Indefinite)"
+          },
+          {
+            "posicion": "Span { start: 20, end: 26 }",
+            "texto": "active",
+            "tipo": "Noun(Symbol(4))"
+          },
+          {
+            "posicion": "Span { start: 27, end: 36 }",
+            "texto": "infection",
+            "tipo": "Noun(Symbol(5))"
+          },
+          {
+            "posicion": "Span { start: 37, end: 40 }",
+            "texto": "may",
+            "tipo": "May"
+          },
+          {
+            "posicion": "Span { start: 41, end: 48 }",
+            "texto": "receive",
+            "tipo": "Verb { lemma: Symbol(7), time: Present, aspect: Simple, class: Achievement }"
+          },
+          {
+            "posicion": "Span { start: 49, end: 59 }",
+            "texto": "cladribine",
+            "tipo": "Noun(Symbol(9))"
+          },
+          {
+            "posicion": "Span { start: 59, end: 60 }",
+            "texto": ".",
+            "tipo": "Period"
+          },
+          {
+            "posicion": "Span { start: 60, end: 60 }",
+            "texto": "",
+            "tipo": "EOF"
+          }
+        ],
+        "pragmatica": {
+          "estructura": "Modal {\n    vector: ModalVector {\n        domain: Deontic,\n        force: 0.5,\n        flavor: Root,\n        modal_base: None,\n        ordering_source: None,\n    },\n    operand: NeoEvent(\n        NeoEventData {\n            event_var: Symbol(\n                40,\n            ),\n            verb: Symbol(\n                7,\n            ),\n            roles: [\n                (\n                    Agent,\n                    Constant(\n                        Symbol(\n                            1,\n                        ),\n                    ),\n                ),\n                (\n                    Theme,\n                    Constant(\n                        Symbol(\n                            9,\n                        ),\n                    ),\n                ),\n            ],\n            modifiers: [],\n            suppress_existential: false,\n            world: None,\n        },\n    ),\n}",
+          "formula": "P_{0.5} ∃e(Receive(e) ∧ Agent(e, Patients) ∧ Theme(e, Cladribine))"
+        },
+        "restricciones_temporales": []
+      }
+    },
+    {
+      "analisis_nominal_separado": null,
+      "duracion_ns": 2137900,
+      "entrada": {
+        "dominio": "medicina",
+        "id": "M03",
+        "texto": "Every patient must be assessed within 24 hours."
+      },
+      "identico_al_antecedente": true,
+      "publico": {
+        "estado": "admitido",
+        "salida": "∀x((Patient(x) → □_{1.0} (∃e(Be(e) ∧ Agent(e, x) ∧ Theme(e, Assess)) ∧ Within(e, 24 hours))))"
+      },
+      "reproduccion_por_etapas": true,
+      "traza": {
+        "analisis": {
+          "estructura": "Quantifier {\n    kind: Universal,\n    variable: Symbol(\n        39,\n    ),\n    body: BinaryOp {\n        left: Predicate {\n            name: Symbol(\n                2,\n            ),\n            args: [\n                Variable(\n                    Symbol(\n                        39,\n                    ),\n                ),\n            ],\n            world: None,\n        },\n        op: Implies,\n        right: Modal {\n            vector: ModalVector {\n                domain: Alethic,\n                force: 1.0,\n                flavor: Root,\n                modal_base: None,\n                ordering_source: None,\n            },\n            operand: BinaryOp {\n                left: NeoEvent(\n                    NeoEventData {\n                        event_var: Symbol(\n                            40,\n                        ),\n                        verb: Symbol(\n                            4,\n                        ),\n                        roles: [\n                            (\n                                Agent,\n                                Variable(\n                                    Symbol(\n                                        39,\n                                    ),\n                                ),\n                            ),\n                            (\n                                Theme,\n                                Constant(\n                                    Symbol(\n                                        6,\n                                    ),\n                                ),\n                            ),\n                        ],\n                        modifiers: [],\n                        suppress_existential: false,\n                        world: None,\n                    },\n                ),\n                op: And,\n                right: Predicate {\n                    name: Symbol(\n                        8,\n                    ),\n                    args: [\n                        Variable(\n                            Symbol(\n                                40,\n                            ),\n                        ),\n                        Value {\n                            kind: Integer(\n                                24,\n                            ),\n                            unit: Some(\n                                Symbol(\n                                    10,\n                                ),\n                            ),\n                            dimension: None,\n                        },\n                    ],\n                    world: None,\n                },\n            },\n        },\n    },\n    island_id: 0,\n}",
+          "formula": "∀x((Patient(x) → □_{1.0} (∃e(Be(e) ∧ Agent(e, x) ∧ Theme(e, Assess)) ∧ Within(e, 24 hours))))"
+        },
+        "axiomas": {
+          "estructura": "Quantifier {\n    kind: Universal,\n    variable: Symbol(\n        39,\n    ),\n    body: BinaryOp {\n        left: Predicate {\n            name: Symbol(\n                2,\n            ),\n            args: [\n                Variable(\n                    Symbol(\n                        39,\n                    ),\n                ),\n            ],\n            world: None,\n        },\n        op: Implies,\n        right: Modal {\n            vector: ModalVector {\n                domain: Alethic,\n                force: 1.0,\n                flavor: Root,\n                modal_base: None,\n                ordering_source: None,\n            },\n            operand: BinaryOp {\n                left: NeoEvent(\n                    NeoEventData {\n                        event_var: Symbol(\n                            40,\n                        ),\n                        verb: Symbol(\n                            4,\n                        ),\n                        roles: [\n                            (\n                                Agent,\n                                Variable(\n                                    Symbol(\n                                        39,\n                                    ),\n                                ),\n                            ),\n                            (\n                                Theme,\n                                Constant(\n                                    Symbol(\n                                        6,\n                                    ),\n                                ),\n                            ),\n                        ],\n                        modifiers: [],\n                        suppress_existential: false,\n                        world: None,\n                    },\n                ),\n                op: And,\n                right: Predicate {\n                    name: Symbol(\n                        8,\n                    ),\n                    args: [\n                        Variable(\n                            Symbol(\n                                40,\n                            ),\n                        ),\n                        Value {\n                            kind: Integer(\n                                24,\n                            ),\n                            unit: Some(\n                                Symbol(\n                                    10,\n                                ),\n                            ),\n                            dimension: None,\n                        },\n                    ],\n                    world: None,\n                },\n            },\n        },\n    },\n    island_id: 0,\n}",
+          "formula": "∀x((Patient(x) → □_{1.0} (∃e(Be(e) ∧ Agent(e, x) ∧ Theme(e, Assess)) ∧ Within(e, 24 hours))))"
+        },
+        "expresiones_compuestas": [
+          {
+            "posicion": "Span { start: 0, end: 5 }",
+            "texto": "Every",
+            "tipo": "All"
+          },
+          {
+            "posicion": "Span { start: 6, end: 13 }",
+            "texto": "patient",
+            "tipo": "Noun(Symbol(2))"
+          },
+          {
+            "posicion": "Span { start: 14, end: 18 }",
+            "texto": "must",
+            "tipo": "Must"
+          },
+          {
+            "posicion": "Span { start: 19, end: 21 }",
+            "texto": "be",
+            "tipo": "Verb { lemma: Symbol(4), time: Present, aspect: Simple, class: State }"
+          },
+          {
+            "posicion": "Span { start: 22, end: 30 }",
+            "texto": "assessed",
+            "tipo": "Ambiguous { primary: Verb { lemma: Symbol(6), time: Past, aspect: Simple, class: Activity }, alternatives: [Noun(Symbol(7))] }"
+          },
+          {
+            "posicion": "Span { start: 31, end: 37 }",
+            "texto": "within",
+            "tipo": "Preposition(Symbol(8))"
+          },
+          {
+            "posicion": "Span { start: 38, end: 40 }",
+            "texto": "24",
+            "tipo": "Number(Symbol(9))"
+          },
+          {
+            "posicion": "Span { start: 41, end: 46 }",
+            "texto": "hours",
+            "tipo": "CalendarUnit(Hour)"
+          },
+          {
+            "posicion": "Span { start: 46, end: 47 }",
+            "texto": ".",
+            "tipo": "Period"
+          },
+          {
+            "posicion": "Span { start: 47, end: 47 }",
+            "texto": "",
+            "tipo": "EOF"
+          }
+        ],
+        "formula_completa": "∀x((Patient(x) → □_{1.0} (∃e(Be(e) ∧ Agent(e, x) ∧ Theme(e, Assess)) ∧ Within(e, 24 hours))))",
+        "lexico": [
+          {
+            "posicion": "Span { start: 0, end: 5 }",
+            "texto": "Every",
+            "tipo": "All"
+          },
+          {
+            "posicion": "Span { start: 6, end: 13 }",
+            "texto": "patient",
+            "tipo": "Noun(Symbol(2))"
+          },
+          {
+            "posicion": "Span { start: 14, end: 18 }",
+            "texto": "must",
+            "tipo": "Must"
+          },
+          {
+            "posicion": "Span { start: 19, end: 21 }",
+            "texto": "be",
+            "tipo": "Verb { lemma: Symbol(4), time: Present, aspect: Simple, class: State }"
+          },
+          {
+            "posicion": "Span { start: 22, end: 30 }",
+            "texto": "assessed",
+            "tipo": "Ambiguous { primary: Verb { lemma: Symbol(6), time: Past, aspect: Simple, class: Activity }, alternatives: [Noun(Symbol(7))] }"
+          },
+          {
+            "posicion": "Span { start: 31, end: 37 }",
+            "texto": "within",
+            "tipo": "Preposition(Symbol(8))"
+          },
+          {
+            "posicion": "Span { start: 38, end: 40 }",
+            "texto": "24",
+            "tipo": "Number(Symbol(9))"
+          },
+          {
+            "posicion": "Span { start: 41, end: 46 }",
+            "texto": "hours",
+            "tipo": "CalendarUnit(Hour)"
+          },
+          {
+            "posicion": "Span { start: 46, end: 47 }",
+            "texto": ".",
+            "tipo": "Period"
+          },
+          {
+            "posicion": "Span { start: 47, end: 47 }",
+            "texto": "",
+            "tipo": "EOF"
+          }
+        ],
+        "pragmatica": {
+          "estructura": "Quantifier {\n    kind: Universal,\n    variable: Symbol(\n        39,\n    ),\n    body: BinaryOp {\n        left: Predicate {\n            name: Symbol(\n                2,\n            ),\n            args: [\n                Variable(\n                    Symbol(\n                        39,\n                    ),\n                ),\n            ],\n            world: None,\n        },\n        op: Implies,\n        right: Modal {\n            vector: ModalVector {\n                domain: Alethic,\n                force: 1.0,\n                flavor: Root,\n                modal_base: None,\n                ordering_source: None,\n            },\n            operand: BinaryOp {\n                left: NeoEvent(\n                    NeoEventData {\n                        event_var: Symbol(\n                            40,\n                        ),\n                        verb: Symbol(\n                            4,\n                        ),\n                        roles: [\n                            (\n                                Agent,\n                                Variable(\n                                    Symbol(\n                                        39,\n                                    ),\n                                ),\n                            ),\n                            (\n                                Theme,\n                                Constant(\n                                    Symbol(\n                                        6,\n                                    ),\n                                ),\n                            ),\n                        ],\n                        modifiers: [],\n                        suppress_existential: false,\n                        world: None,\n                    },\n                ),\n                op: And,\n                right: Predicate {\n                    name: Symbol(\n                        8,\n                    ),\n                    args: [\n                        Variable(\n                            Symbol(\n                                40,\n                            ),\n                        ),\n                        Value {\n                            kind: Integer(\n                                24,\n                            ),\n                            unit: Some(\n                                Symbol(\n                                    10,\n                                ),\n                            ),\n                            dimension: None,\n                        },\n                    ],\n                    world: None,\n                },\n            },\n        },\n    },\n    island_id: 0,\n}",
+          "formula": "∀x((Patient(x) → □_{1.0} (∃e(Be(e) ∧ Agent(e, x) ∧ Theme(e, Assess)) ∧ Within(e, 24 hours))))"
+        },
+        "restricciones_temporales": []
+      }
+    },
+    {
+      "analisis_nominal_separado": null,
+      "duracion_ns": 1562500,
+      "entrada": {
+        "dominio": "medicina",
+        "id": "M04",
+        "texto": "Every patient must be assessed within one day."
+      },
+      "identico_al_antecedente": true,
+      "publico": {
+        "error": "ParseError { kind: TrailingTokens { found: CalendarUnit(Day) }, span: Span { start: 42, end: 45 } }",
+        "estado": "rechazado"
+      },
+      "reproduccion_por_etapas": true,
+      "traza": {
+        "error_analisis": "ParseError { kind: TrailingTokens { found: CalendarUnit(Day) }, span: Span { start: 42, end: 45 } }",
+        "expresiones_compuestas": [
+          {
+            "posicion": "Span { start: 0, end: 5 }",
+            "texto": "Every",
+            "tipo": "All"
+          },
+          {
+            "posicion": "Span { start: 6, end: 13 }",
+            "texto": "patient",
+            "tipo": "Noun(Symbol(2))"
+          },
+          {
+            "posicion": "Span { start: 14, end: 18 }",
+            "texto": "must",
+            "tipo": "Must"
+          },
+          {
+            "posicion": "Span { start: 19, end: 21 }",
+            "texto": "be",
+            "tipo": "Verb { lemma: Symbol(4), time: Present, aspect: Simple, class: State }"
+          },
+          {
+            "posicion": "Span { start: 22, end: 30 }",
+            "texto": "assessed",
+            "tipo": "Ambiguous { primary: Verb { lemma: Symbol(6), time: Past, aspect: Simple, class: Activity }, alternatives: [Noun(Symbol(7))] }"
+          },
+          {
+            "posicion": "Span { start: 31, end: 37 }",
+            "texto": "within",
+            "tipo": "Preposition(Symbol(8))"
+          },
+          {
+            "posicion": "Span { start: 38, end: 41 }",
+            "texto": "one",
+            "tipo": "Cardinal(1)"
+          },
+          {
+            "posicion": "Span { start: 42, end: 45 }",
+            "texto": "day",
+            "tipo": "CalendarUnit(Day)"
+          },
+          {
+            "posicion": "Span { start: 45, end: 46 }",
+            "texto": ".",
+            "tipo": "Period"
+          },
+          {
+            "posicion": "Span { start: 46, end: 46 }",
+            "texto": "",
+            "tipo": "EOF"
+          }
+        ],
+        "lexico": [
+          {
+            "posicion": "Span { start: 0, end: 5 }",
+            "texto": "Every",
+            "tipo": "All"
+          },
+          {
+            "posicion": "Span { start: 6, end: 13 }",
+            "texto": "patient",
+            "tipo": "Noun(Symbol(2))"
+          },
+          {
+            "posicion": "Span { start: 14, end: 18 }",
+            "texto": "must",
+            "tipo": "Must"
+          },
+          {
+            "posicion": "Span { start: 19, end: 21 }",
+            "texto": "be",
+            "tipo": "Verb { lemma: Symbol(4), time: Present, aspect: Simple, class: State }"
+          },
+          {
+            "posicion": "Span { start: 22, end: 30 }",
+            "texto": "assessed",
+            "tipo": "Ambiguous { primary: Verb { lemma: Symbol(6), time: Past, aspect: Simple, class: Activity }, alternatives: [Noun(Symbol(7))] }"
+          },
+          {
+            "posicion": "Span { start: 31, end: 37 }",
+            "texto": "within",
+            "tipo": "Preposition(Symbol(8))"
+          },
+          {
+            "posicion": "Span { start: 38, end: 41 }",
+            "texto": "one",
+            "tipo": "Cardinal(1)"
+          },
+          {
+            "posicion": "Span { start: 42, end: 45 }",
+            "texto": "day",
+            "tipo": "CalendarUnit(Day)"
+          },
+          {
+            "posicion": "Span { start: 45, end: 46 }",
+            "texto": ".",
+            "tipo": "Period"
+          },
+          {
+            "posicion": "Span { start: 46, end: 46 }",
+            "texto": "",
+            "tipo": "EOF"
+          }
+        ]
+      }
+    },
+    {
+      "analisis_nominal_separado": null,
+      "duracion_ns": 2440700,
+      "entrada": {
+        "dominio": "medicina",
+        "id": "M05",
+        "texto": "Treatment is contraindicated in patients with severe renal impairment."
+      },
+      "identico_al_antecedente": true,
+      "publico": {
+        "estado": "admitido",
+        "salida": "1) Contraindicat(Treatment)\n2) In(Treatment, Patients)"
+      },
+      "reproduccion_por_etapas": true,
+      "traza": {
+        "analisis": {
+          "estructura": "BinaryOp {\n    left: Predicate {\n        name: Symbol(\n            3,\n        ),\n        args: [\n            Constant(\n                Symbol(\n                    1,\n                ),\n            ),\n        ],\n        world: None,\n    },\n    op: And,\n    right: Predicate {\n        name: Symbol(\n            5,\n        ),\n        args: [\n            Constant(\n                Symbol(\n                    1,\n                ),\n            ),\n            Constant(\n                Symbol(\n                    6,\n                ),\n            ),\n        ],\n        world: None,\n    },\n}",
+          "formula": "1) Contraindicat(Treatment)\n2) In(Treatment, Patients)"
+        },
+        "axiomas": {
+          "estructura": "BinaryOp {\n    left: Predicate {\n        name: Symbol(\n            3,\n        ),\n        args: [\n            Constant(\n                Symbol(\n                    1,\n                ),\n            ),\n        ],\n        world: None,\n    },\n    op: And,\n    right: Predicate {\n        name: Symbol(\n            5,\n        ),\n        args: [\n            Constant(\n                Symbol(\n                    1,\n                ),\n            ),\n            Constant(\n                Symbol(\n                    6,\n                ),\n            ),\n        ],\n        world: None,\n    },\n}",
+          "formula": "1) Contraindicat(Treatment)\n2) In(Treatment, Patients)"
+        },
+        "expresiones_compuestas": [
+          {
+            "posicion": "Span { start: 0, end: 9 }",
+            "texto": "Treatment",
+            "tipo": "ProperName(Symbol(1))"
+          },
+          {
+            "posicion": "Span { start: 10, end: 12 }",
+            "texto": "is",
+            "tipo": "Is"
+          },
+          {
+            "posicion": "Span { start: 13, end: 28 }",
+            "texto": "contraindicated",
+            "tipo": "Ambiguous { primary: Verb { lemma: Symbol(3), time: Past, aspect: Simple, class: Activity }, alternatives: [Noun(Symbol(4))] }"
+          },
+          {
+            "posicion": "Span { start: 29, end: 31 }",
+            "texto": "in",
+            "tipo": "Preposition(Symbol(5))"
+          },
+          {
+            "posicion": "Span { start: 32, end: 40 }",
+            "texto": "patients",
+            "tipo": "Noun(Symbol(6))"
+          },
+          {
+            "posicion": "Span { start: 41, end: 45 }",
+            "texto": "with",
+            "tipo": "Preposition(Symbol(7))"
+          },
+          {
+            "posicion": "Span { start: 46, end: 52 }",
+            "texto": "severe",
+            "tipo": "Adjective(Symbol(8))"
+          },
+          {
+            "posicion": "Span { start: 53, end: 58 }",
+            "texto": "renal",
+            "tipo": "Noun(Symbol(9))"
+          },
+          {
+            "posicion": "Span { start: 59, end: 69 }",
+            "texto": "impairment",
+            "tipo": "Noun(Symbol(10))"
+          },
+          {
+            "posicion": "Span { start: 69, end: 70 }",
+            "texto": ".",
+            "tipo": "Period"
+          },
+          {
+            "posicion": "Span { start: 70, end: 70 }",
+            "texto": "",
+            "tipo": "EOF"
+          }
+        ],
+        "formula_completa": "1) Contraindicat(Treatment)\n2) In(Treatment, Patients)",
+        "lexico": [
+          {
+            "posicion": "Span { start: 0, end: 9 }",
+            "texto": "Treatment",
+            "tipo": "ProperName(Symbol(1))"
+          },
+          {
+            "posicion": "Span { start: 10, end: 12 }",
+            "texto": "is",
+            "tipo": "Is"
+          },
+          {
+            "posicion": "Span { start: 13, end: 28 }",
+            "texto": "contraindicated",
+            "tipo": "Ambiguous { primary: Verb { lemma: Symbol(3), time: Past, aspect: Simple, class: Activity }, alternatives: [Noun(Symbol(4))] }"
+          },
+          {
+            "posicion": "Span { start: 29, end: 31 }",
+            "texto": "in",
+            "tipo": "Preposition(Symbol(5))"
+          },
+          {
+            "posicion": "Span { start: 32, end: 40 }",
+            "texto": "patients",
+            "tipo": "Noun(Symbol(6))"
+          },
+          {
+            "posicion": "Span { start: 41, end: 45 }",
+            "texto": "with",
+            "tipo": "Preposition(Symbol(7))"
+          },
+          {
+            "posicion": "Span { start: 46, end: 52 }",
+            "texto": "severe",
+            "tipo": "Adjective(Symbol(8))"
+          },
+          {
+            "posicion": "Span { start: 53, end: 58 }",
+            "texto": "renal",
+            "tipo": "Noun(Symbol(9))"
+          },
+          {
+            "posicion": "Span { start: 59, end: 69 }",
+            "texto": "impairment",
+            "tipo": "Noun(Symbol(10))"
+          },
+          {
+            "posicion": "Span { start: 69, end: 70 }",
+            "texto": ".",
+            "tipo": "Period"
+          },
+          {
+            "posicion": "Span { start: 70, end: 70 }",
+            "texto": "",
+            "tipo": "EOF"
+          }
+        ],
+        "pragmatica": {
+          "estructura": "BinaryOp {\n    left: Predicate {\n        name: Symbol(\n            3,\n        ),\n        args: [\n            Constant(\n                Symbol(\n                    1,\n                ),\n            ),\n        ],\n        world: None,\n    },\n    op: And,\n    right: Predicate {\n        name: Symbol(\n            5,\n        ),\n        args: [\n            Constant(\n                Symbol(\n                    1,\n                ),\n            ),\n            Constant(\n                Symbol(\n                    6,\n                ),\n            ),\n        ],\n        world: None,\n    },\n}",
+          "formula": "1) Contraindicat(Treatment)\n2) In(Treatment, Patients)"
+        },
+        "restricciones_temporales": []
+      }
+    },
+    {
+      "analisis_nominal_separado": null,
+      "duracion_ns": 1921200,
+      "entrada": {
+        "dominio": "medicina",
+        "id": "M06",
+        "texto": "Hairy cell leukemia is a B-cell malignancy."
+      },
+      "identico_al_antecedente": true,
+      "publico": {
+        "estado": "admitido",
+        "salida": "B-cell_malignancy(Hairy_cell_leukemia)"
+      },
+      "reproduccion_por_etapas": true,
+      "traza": {
+        "analisis": {
+          "estructura": "Predicate {\n    name: Symbol(\n        38,\n    ),\n    args: [\n        Constant(\n            Symbol(\n                37,\n            ),\n        ),\n    ],\n    world: None,\n}",
+          "formula": "B-cell_malignancy(Hairy_cell_leukemia)"
+        },
+        "axiomas": {
+          "estructura": "Predicate {\n    name: Symbol(\n        38,\n    ),\n    args: [\n        Constant(\n            Symbol(\n                37,\n            ),\n        ),\n    ],\n    world: None,\n}",
+          "formula": "B-cell_malignancy(Hairy_cell_leukemia)"
+        },
+        "expresiones_compuestas": [
+          {
+            "posicion": "Span { start: 0, end: 5 }",
+            "texto": "Hairy",
+            "tipo": "ProperName(Symbol(1))"
+          },
+          {
+            "posicion": "Span { start: 6, end: 10 }",
+            "texto": "cell",
+            "tipo": "Noun(Symbol(2))"
+          },
+          {
+            "posicion": "Span { start: 11, end: 19 }",
+            "texto": "leukemia",
+            "tipo": "Noun(Symbol(3))"
+          },
+          {
+            "posicion": "Span { start: 20, end: 22 }",
+            "texto": "is",
+            "tipo": "Is"
+          },
+          {
+            "posicion": "Span { start: 23, end: 24 }",
+            "texto": "a",
+            "tipo": "Article(Indefinite)"
+          },
+          {
+            "posicion": "Span { start: 25, end: 31 }",
+            "texto": "B-cell",
+            "tipo": "ProperName(Symbol(6))"
+          },
+          {
+            "posicion": "Span { start: 32, end: 42 }",
+            "texto": "malignancy",
+            "tipo": "Noun(Symbol(7))"
+          },
+          {
+            "posicion": "Span { start: 42, end: 43 }",
+            "texto": ".",
+            "tipo": "Period"
+          },
+          {
+            "posicion": "Span { start: 43, end: 43 }",
+            "texto": "",
+            "tipo": "EOF"
+          }
+        ],
+        "formula_completa": "B-cell_malignancy(Hairy_cell_leukemia)",
+        "lexico": [
+          {
+            "posicion": "Span { start: 0, end: 5 }",
+            "texto": "Hairy",
+            "tipo": "ProperName(Symbol(1))"
+          },
+          {
+            "posicion": "Span { start: 6, end: 10 }",
+            "texto": "cell",
+            "tipo": "Noun(Symbol(2))"
+          },
+          {
+            "posicion": "Span { start: 11, end: 19 }",
+            "texto": "leukemia",
+            "tipo": "Noun(Symbol(3))"
+          },
+          {
+            "posicion": "Span { start: 20, end: 22 }",
+            "texto": "is",
+            "tipo": "Is"
+          },
+          {
+            "posicion": "Span { start: 23, end: 24 }",
+            "texto": "a",
+            "tipo": "Article(Indefinite)"
+          },
+          {
+            "posicion": "Span { start: 25, end: 31 }",
+            "texto": "B-cell",
+            "tipo": "ProperName(Symbol(6))"
+          },
+          {
+            "posicion": "Span { start: 32, end: 42 }",
+            "texto": "malignancy",
+            "tipo": "Noun(Symbol(7))"
+          },
+          {
+            "posicion": "Span { start: 42, end: 43 }",
+            "texto": ".",
+            "tipo": "Period"
+          },
+          {
+            "posicion": "Span { start: 43, end: 43 }",
+            "texto": "",
+            "tipo": "EOF"
+          }
+        ],
+        "pragmatica": {
+          "estructura": "Predicate {\n    name: Symbol(\n        38,\n    ),\n    args: [\n        Constant(\n            Symbol(\n                37,\n            ),\n        ),\n    ],\n    world: None,\n}",
+          "formula": "B-cell_malignancy(Hairy_cell_leukemia)"
+        },
+        "restricciones_temporales": []
+      }
+    },
+    {
+      "analisis_nominal_separado": null,
+      "duracion_ns": 1417000,
+      "entrada": {
+        "dominio": "ciberseguridad",
+        "id": "C01",
+        "texto": "Administrators must enable multifactor authentication."
+      },
+      "identico_al_antecedente": true,
+      "publico": {
+        "estado": "admitido",
+        "salida": "□_{1.0} ∃e(Enable(e) ∧ Agent(e, Administrators) ∧ Theme(e, Multifactor_authentication))"
+      },
+      "reproduccion_por_etapas": true,
+      "traza": {
+        "analisis": {
+          "estructura": "Modal {\n    vector: ModalVector {\n        domain: Alethic,\n        force: 1.0,\n        flavor: Root,\n        modal_base: None,\n        ordering_source: None,\n    },\n    operand: NeoEvent(\n        NeoEventData {\n            event_var: Symbol(\n                36,\n            ),\n            verb: Symbol(\n                3,\n            ),\n            roles: [\n                (\n                    Agent,\n                    Constant(\n                        Symbol(\n                            1,\n                        ),\n                    ),\n                ),\n                (\n                    Theme,\n                    Constant(\n                        Symbol(\n                            35,\n                        ),\n                    ),\n                ),\n            ],\n            modifiers: [],\n            suppress_existential: false,\n            world: None,\n        },\n    ),\n}",
+          "formula": "□_{1.0} ∃e(Enable(e) ∧ Agent(e, Administrators) ∧ Theme(e, Multifactor_authentication))"
+        },
+        "axiomas": {
+          "estructura": "Modal {\n    vector: ModalVector {\n        domain: Alethic,\n        force: 1.0,\n        flavor: Root,\n        modal_base: None,\n        ordering_source: None,\n    },\n    operand: NeoEvent(\n        NeoEventData {\n            event_var: Symbol(\n                36,\n            ),\n            verb: Symbol(\n                3,\n            ),\n            roles: [\n                (\n                    Agent,\n                    Constant(\n                        Symbol(\n                            1,\n                        ),\n                    ),\n                ),\n                (\n                    Theme,\n                    Constant(\n                        Symbol(\n                            35,\n                        ),\n                    ),\n                ),\n            ],\n            modifiers: [],\n            suppress_existential: false,\n            world: None,\n        },\n    ),\n}",
+          "formula": "□_{1.0} ∃e(Enable(e) ∧ Agent(e, Administrators) ∧ Theme(e, Multifactor_authentication))"
+        },
+        "expresiones_compuestas": [
+          {
+            "posicion": "Span { start: 0, end: 14 }",
+            "texto": "Administrators",
+            "tipo": "ProperName(Symbol(1))"
+          },
+          {
+            "posicion": "Span { start: 15, end: 19 }",
+            "texto": "must",
+            "tipo": "Must"
+          },
+          {
+            "posicion": "Span { start: 20, end: 26 }",
+            "texto": "enable",
+            "tipo": "Verb { lemma: Symbol(3), time: Present, aspect: Simple, class: Achievement }"
+          },
+          {
+            "posicion": "Span { start: 27, end: 38 }",
+            "texto": "multifactor",
+            "tipo": "Noun(Symbol(5))"
+          },
+          {
+            "posicion": "Span { start: 39, end: 53 }",
+            "texto": "authentication",
+            "tipo": "Noun(Symbol(6))"
+          },
+          {
+            "posicion": "Span { start: 53, end: 54 }",
+            "texto": ".",
+            "tipo": "Period"
+          },
+          {
+            "posicion": "Span { start: 54, end: 54 }",
+            "texto": "",
+            "tipo": "EOF"
+          }
+        ],
+        "formula_completa": "□_{1.0} ∃e(Enable(e) ∧ Agent(e, Administrators) ∧ Theme(e, Multifactor_authentication))",
+        "lexico": [
+          {
+            "posicion": "Span { start: 0, end: 14 }",
+            "texto": "Administrators",
+            "tipo": "ProperName(Symbol(1))"
+          },
+          {
+            "posicion": "Span { start: 15, end: 19 }",
+            "texto": "must",
+            "tipo": "Must"
+          },
+          {
+            "posicion": "Span { start: 20, end: 26 }",
+            "texto": "enable",
+            "tipo": "Verb { lemma: Symbol(3), time: Present, aspect: Simple, class: Achievement }"
+          },
+          {
+            "posicion": "Span { start: 27, end: 38 }",
+            "texto": "multifactor",
+            "tipo": "Noun(Symbol(5))"
+          },
+          {
+            "posicion": "Span { start: 39, end: 53 }",
+            "texto": "authentication",
+            "tipo": "Noun(Symbol(6))"
+          },
+          {
+            "posicion": "Span { start: 53, end: 54 }",
+            "texto": ".",
+            "tipo": "Period"
+          },
+          {
+            "posicion": "Span { start: 54, end: 54 }",
+            "texto": "",
+            "tipo": "EOF"
+          }
+        ],
+        "pragmatica": {
+          "estructura": "Modal {\n    vector: ModalVector {\n        domain: Alethic,\n        force: 1.0,\n        flavor: Root,\n        modal_base: None,\n        ordering_source: None,\n    },\n    operand: NeoEvent(\n        NeoEventData {\n            event_var: Symbol(\n                36,\n            ),\n            verb: Symbol(\n                3,\n            ),\n            roles: [\n                (\n                    Agent,\n                    Constant(\n                        Symbol(\n                            1,\n                        ),\n                    ),\n                ),\n                (\n                    Theme,\n                    Constant(\n                        Symbol(\n                            35,\n                        ),\n                    ),\n                ),\n            ],\n            modifiers: [],\n            suppress_existential: false,\n            world: None,\n        },\n    ),\n}",
+          "formula": "□_{1.0} ∃e(Enable(e) ∧ Agent(e, Administrators) ∧ Theme(e, Multifactor_authentication))"
+        },
+        "restricciones_temporales": []
+      }
+    },
+    {
+      "analisis_nominal_separado": null,
+      "duracion_ns": 1469100,
+      "entrada": {
+        "dominio": "ciberseguridad",
+        "id": "C02",
+        "texto": "Administrators must not enable multifactor authentication."
+      },
+      "identico_al_antecedente": true,
+      "publico": {
+        "estado": "admitido",
+        "salida": "□_{1.0} ¬∃e(Enable(e) ∧ Agent(e, Administrators) ∧ Theme(e, Multifactor_authentication))"
+      },
+      "reproduccion_por_etapas": true,
+      "traza": {
+        "analisis": {
+          "estructura": "Modal {\n    vector: ModalVector {\n        domain: Alethic,\n        force: 1.0,\n        flavor: Root,\n        modal_base: None,\n        ordering_source: None,\n    },\n    operand: UnaryOp {\n        op: Not,\n        operand: NeoEvent(\n            NeoEventData {\n                event_var: Symbol(\n                    37,\n                ),\n                verb: Symbol(\n                    4,\n                ),\n                roles: [\n                    (\n                        Agent,\n                        Constant(\n                            Symbol(\n                                1,\n                            ),\n                        ),\n                    ),\n                    (\n                        Theme,\n                        Constant(\n                            Symbol(\n                                36,\n                            ),\n                        ),\n                    ),\n                ],\n                modifiers: [],\n                suppress_existential: false,\n                world: None,\n            },\n        ),\n    },\n}",
+          "formula": "□_{1.0} ¬∃e(Enable(e) ∧ Agent(e, Administrators) ∧ Theme(e, Multifactor_authentication))"
+        },
+        "axiomas": {
+          "estructura": "Modal {\n    vector: ModalVector {\n        domain: Alethic,\n        force: 1.0,\n        flavor: Root,\n        modal_base: None,\n        ordering_source: None,\n    },\n    operand: UnaryOp {\n        op: Not,\n        operand: NeoEvent(\n            NeoEventData {\n                event_var: Symbol(\n                    37,\n                ),\n                verb: Symbol(\n                    4,\n                ),\n                roles: [\n                    (\n                        Agent,\n                        Constant(\n                            Symbol(\n                                1,\n                            ),\n                        ),\n                    ),\n                    (\n                        Theme,\n                        Constant(\n                            Symbol(\n                                36,\n                            ),\n                        ),\n                    ),\n                ],\n                modifiers: [],\n                suppress_existential: false,\n                world: None,\n            },\n        ),\n    },\n}",
+          "formula": "□_{1.0} ¬∃e(Enable(e) ∧ Agent(e, Administrators) ∧ Theme(e, Multifactor_authentication))"
+        },
+        "expresiones_compuestas": [
+          {
+            "posicion": "Span { start: 0, end: 14 }",
+            "texto": "Administrators",
+            "tipo": "ProperName(Symbol(1))"
+          },
+          {
+            "posicion": "Span { start: 15, end: 19 }",
+            "texto": "must",
+            "tipo": "Must"
+          },
+          {
+            "posicion": "Span { start: 20, end: 23 }",
+            "texto": "not",
+            "tipo": "Not"
+          },
+          {
+            "posicion": "Span { start: 24, end: 30 }",
+            "texto": "enable",
+            "tipo": "Verb { lemma: Symbol(4), time: Present, aspect: Simple, class: Achievement }"
+          },
+          {
+            "posicion": "Span { start: 31, end: 42 }",
+            "texto": "multifactor",
+            "tipo": "Noun(Symbol(6))"
+          },
+          {
+            "posicion": "Span { start: 43, end: 57 }",
+            "texto": "authentication",
+            "tipo": "Noun(Symbol(7))"
+          },
+          {
+            "posicion": "Span { start: 57, end: 58 }",
+            "texto": ".",
+            "tipo": "Period"
+          },
+          {
+            "posicion": "Span { start: 58, end: 58 }",
+            "texto": "",
+            "tipo": "EOF"
+          }
+        ],
+        "formula_completa": "□_{1.0} ¬∃e(Enable(e) ∧ Agent(e, Administrators) ∧ Theme(e, Multifactor_authentication))",
+        "lexico": [
+          {
+            "posicion": "Span { start: 0, end: 14 }",
+            "texto": "Administrators",
+            "tipo": "ProperName(Symbol(1))"
+          },
+          {
+            "posicion": "Span { start: 15, end: 19 }",
+            "texto": "must",
+            "tipo": "Must"
+          },
+          {
+            "posicion": "Span { start: 20, end: 23 }",
+            "texto": "not",
+            "tipo": "Not"
+          },
+          {
+            "posicion": "Span { start: 24, end: 30 }",
+            "texto": "enable",
+            "tipo": "Verb { lemma: Symbol(4), time: Present, aspect: Simple, class: Achievement }"
+          },
+          {
+            "posicion": "Span { start: 31, end: 42 }",
+            "texto": "multifactor",
+            "tipo": "Noun(Symbol(6))"
+          },
+          {
+            "posicion": "Span { start: 43, end: 57 }",
+            "texto": "authentication",
+            "tipo": "Noun(Symbol(7))"
+          },
+          {
+            "posicion": "Span { start: 57, end: 58 }",
+            "texto": ".",
+            "tipo": "Period"
+          },
+          {
+            "posicion": "Span { start: 58, end: 58 }",
+            "texto": "",
+            "tipo": "EOF"
+          }
+        ],
+        "pragmatica": {
+          "estructura": "Modal {\n    vector: ModalVector {\n        domain: Alethic,\n        force: 1.0,\n        flavor: Root,\n        modal_base: None,\n        ordering_source: None,\n    },\n    operand: UnaryOp {\n        op: Not,\n        operand: NeoEvent(\n            NeoEventData {\n                event_var: Symbol(\n                    37,\n                ),\n                verb: Symbol(\n                    4,\n                ),\n                roles: [\n                    (\n                        Agent,\n                        Constant(\n                            Symbol(\n                                1,\n                            ),\n                        ),\n                    ),\n                    (\n                        Theme,\n                        Constant(\n                            Symbol(\n                                36,\n                            ),\n                        ),\n                    ),\n                ],\n                modifiers: [],\n                suppress_existential: false,\n                world: None,\n            },\n        ),\n    },\n}",
+          "formula": "□_{1.0} ¬∃e(Enable(e) ∧ Agent(e, Administrators) ∧ Theme(e, Multifactor_authentication))"
+        },
+        "restricciones_temporales": []
+      }
+    },
+    {
+      "analisis_nominal_separado": null,
+      "duracion_ns": 1822300,
+      "entrada": {
+        "dominio": "ciberseguridad",
+        "id": "C03",
+        "texto": "Guests are not required to enable multifactor authentication."
+      },
+      "identico_al_antecedente": true,
+      "publico": {
+        "estado": "admitido",
+        "salida": "¬Require(Guests)"
+      },
+      "reproduccion_por_etapas": true,
+      "traza": {
+        "analisis": {
+          "estructura": "UnaryOp {\n    op: Not,\n    operand: Predicate {\n        name: Symbol(\n            5,\n        ),\n        args: [\n            Constant(\n                Symbol(\n                    1,\n                ),\n            ),\n        ],\n        world: None,\n    },\n}",
+          "formula": "¬Require(Guests)"
+        },
+        "axiomas": {
+          "estructura": "UnaryOp {\n    op: Not,\n    operand: Predicate {\n        name: Symbol(\n            5,\n        ),\n        args: [\n            Constant(\n                Symbol(\n                    1,\n                ),\n            ),\n        ],\n        world: None,\n    },\n}",
+          "formula": "¬Require(Guests)"
+        },
+        "expresiones_compuestas": [
+          {
+            "posicion": "Span { start: 0, end: 6 }",
+            "texto": "Guests",
+            "tipo": "Noun(Symbol(1))"
+          },
+          {
+            "posicion": "Span { start: 7, end: 10 }",
+            "texto": "are",
+            "tipo": "Are"
+          },
+          {
+            "posicion": "Span { start: 11, end: 14 }",
+            "texto": "not",
+            "tipo": "Not"
+          },
+          {
+            "posicion": "Span { start: 15, end: 23 }",
+            "texto": "required",
+            "tipo": "Verb { lemma: Symbol(5), time: Past, aspect: Simple, class: State }"
+          },
+          {
+            "posicion": "Span { start: 24, end: 26 }",
+            "texto": "to",
+            "tipo": "To"
+          },
+          {
+            "posicion": "Span { start: 27, end: 33 }",
+            "texto": "enable",
+            "tipo": "Verb { lemma: Symbol(8), time: Present, aspect: Simple, class: Achievement }"
+          },
+          {
+            "posicion": "Span { start: 34, end: 45 }",
+            "texto": "multifactor",
+            "tipo": "Noun(Symbol(10))"
+          },
+          {
+            "posicion": "Span { start: 46, end: 60 }",
+            "texto": "authentication",
+            "tipo": "Noun(Symbol(11))"
+          },
+          {
+            "posicion": "Span { start: 60, end: 61 }",
+            "texto": ".",
+            "tipo": "Period"
+          },
+          {
+            "posicion": "Span { start: 61, end: 61 }",
+            "texto": "",
+            "tipo": "EOF"
+          }
+        ],
+        "formula_completa": "¬Require(Guests)",
+        "lexico": [
+          {
+            "posicion": "Span { start: 0, end: 6 }",
+            "texto": "Guests",
+            "tipo": "Noun(Symbol(1))"
+          },
+          {
+            "posicion": "Span { start: 7, end: 10 }",
+            "texto": "are",
+            "tipo": "Are"
+          },
+          {
+            "posicion": "Span { start: 11, end: 14 }",
+            "texto": "not",
+            "tipo": "Not"
+          },
+          {
+            "posicion": "Span { start: 15, end: 23 }",
+            "texto": "required",
+            "tipo": "Verb { lemma: Symbol(5), time: Past, aspect: Simple, class: State }"
+          },
+          {
+            "posicion": "Span { start: 24, end: 26 }",
+            "texto": "to",
+            "tipo": "To"
+          },
+          {
+            "posicion": "Span { start: 27, end: 33 }",
+            "texto": "enable",
+            "tipo": "Verb { lemma: Symbol(8), time: Present, aspect: Simple, class: Achievement }"
+          },
+          {
+            "posicion": "Span { start: 34, end: 45 }",
+            "texto": "multifactor",
+            "tipo": "Noun(Symbol(10))"
+          },
+          {
+            "posicion": "Span { start: 46, end: 60 }",
+            "texto": "authentication",
+            "tipo": "Noun(Symbol(11))"
+          },
+          {
+            "posicion": "Span { start: 60, end: 61 }",
+            "texto": ".",
+            "tipo": "Period"
+          },
+          {
+            "posicion": "Span { start: 61, end: 61 }",
+            "texto": "",
+            "tipo": "EOF"
+          }
+        ],
+        "pragmatica": {
+          "estructura": "UnaryOp {\n    op: Not,\n    operand: Predicate {\n        name: Symbol(\n            5,\n        ),\n        args: [\n            Constant(\n                Symbol(\n                    1,\n                ),\n            ),\n        ],\n        world: None,\n    },\n}",
+          "formula": "¬Require(Guests)"
+        },
+        "restricciones_temporales": []
+      }
+    },
+    {
+      "analisis_nominal_separado": null,
+      "duracion_ns": 2018300,
+      "entrada": {
+        "dominio": "ciberseguridad",
+        "id": "C04",
+        "texto": "Audit logs must be retained for at least 90 days."
+      },
+      "identico_al_antecedente": true,
+      "publico": {
+        "error": "ParseError { kind: TrailingTokens { found: Must }, span: Span { start: 11, end: 15 } }",
+        "estado": "rechazado"
+      },
+      "reproduccion_por_etapas": true,
+      "traza": {
+        "error_analisis": "ParseError { kind: TrailingTokens { found: Must }, span: Span { start: 11, end: 15 } }",
+        "expresiones_compuestas": [
+          {
+            "posicion": "Span { start: 0, end: 5 }",
+            "texto": "Audit",
+            "tipo": "ProperName(Symbol(1))"
+          },
+          {
+            "posicion": "Span { start: 6, end: 10 }",
+            "texto": "logs",
+            "tipo": "Verb { lemma: Symbol(2), time: Present, aspect: Simple, class: Activity }"
+          },
+          {
+            "posicion": "Span { start: 11, end: 15 }",
+            "texto": "must",
+            "tipo": "Must"
+          },
+          {
+            "posicion": "Span { start: 16, end: 18 }",
+            "texto": "be",
+            "tipo": "Verb { lemma: Symbol(5), time: Present, aspect: Simple, class: State }"
+          },
+          {
+            "posicion": "Span { start: 19, end: 27 }",
+            "texto": "retained",
+            "tipo": "Verb { lemma: Symbol(7), time: Past, aspect: Simple, class: State }"
+          },
+          {
+            "posicion": "Span { start: 28, end: 31 }",
+            "texto": "for",
+            "tipo": "Preposition(Symbol(9))"
+          },
+          {
+            "posicion": "Span { start: 32, end: 34 }",
+            "texto": "at",
+            "tipo": "Preposition(Symbol(10))"
+          },
+          {
+            "posicion": "Span { start: 35, end: 40 }",
+            "texto": "least",
+            "tipo": "Noun(Symbol(11))"
+          },
+          {
+            "posicion": "Span { start: 41, end: 43 }",
+            "texto": "90",
+            "tipo": "Number(Symbol(12))"
+          },
+          {
+            "posicion": "Span { start: 44, end: 48 }",
+            "texto": "days",
+            "tipo": "CalendarUnit(Day)"
+          },
+          {
+            "posicion": "Span { start: 48, end: 49 }",
+            "texto": ".",
+            "tipo": "Period"
+          },
+          {
+            "posicion": "Span { start: 49, end: 49 }",
+            "texto": "",
+            "tipo": "EOF"
+          }
+        ],
+        "lexico": [
+          {
+            "posicion": "Span { start: 0, end: 5 }",
+            "texto": "Audit",
+            "tipo": "ProperName(Symbol(1))"
+          },
+          {
+            "posicion": "Span { start: 6, end: 10 }",
+            "texto": "logs",
+            "tipo": "Verb { lemma: Symbol(2), time: Present, aspect: Simple, class: Activity }"
+          },
+          {
+            "posicion": "Span { start: 11, end: 15 }",
+            "texto": "must",
+            "tipo": "Must"
+          },
+          {
+            "posicion": "Span { start: 16, end: 18 }",
+            "texto": "be",
+            "tipo": "Verb { lemma: Symbol(5), time: Present, aspect: Simple, class: State }"
+          },
+          {
+            "posicion": "Span { start: 19, end: 27 }",
+            "texto": "retained",
+            "tipo": "Verb { lemma: Symbol(7), time: Past, aspect: Simple, class: State }"
+          },
+          {
+            "posicion": "Span { start: 28, end: 31 }",
+            "texto": "for",
+            "tipo": "Preposition(Symbol(9))"
+          },
+          {
+            "posicion": "Span { start: 32, end: 34 }",
+            "texto": "at",
+            "tipo": "Preposition(Symbol(10))"
+          },
+          {
+            "posicion": "Span { start: 35, end: 40 }",
+            "texto": "least",
+            "tipo": "Noun(Symbol(11))"
+          },
+          {
+            "posicion": "Span { start: 41, end: 43 }",
+            "texto": "90",
+            "tipo": "Number(Symbol(12))"
+          },
+          {
+            "posicion": "Span { start: 44, end: 48 }",
+            "texto": "days",
+            "tipo": "CalendarUnit(Day)"
+          },
+          {
+            "posicion": "Span { start: 48, end: 49 }",
+            "texto": ".",
+            "tipo": "Period"
+          },
+          {
+            "posicion": "Span { start: 49, end: 49 }",
+            "texto": "",
+            "tipo": "EOF"
+          }
+        ]
+      }
+    },
+    {
+      "analisis_nominal_separado": null,
+      "duracion_ns": 1375800,
+      "entrada": {
+        "dominio": "ciberseguridad",
+        "id": "C05",
+        "texto": "Audit logs must be deleted within 30 days."
+      },
+      "identico_al_antecedente": true,
+      "publico": {
+        "error": "ParseError { kind: TrailingTokens { found: Must }, span: Span { start: 11, end: 15 } }",
+        "estado": "rechazado"
+      },
+      "reproduccion_por_etapas": true,
+      "traza": {
+        "error_analisis": "ParseError { kind: TrailingTokens { found: Must }, span: Span { start: 11, end: 15 } }",
+        "expresiones_compuestas": [
+          {
+            "posicion": "Span { start: 0, end: 5 }",
+            "texto": "Audit",
+            "tipo": "ProperName(Symbol(1))"
+          },
+          {
+            "posicion": "Span { start: 6, end: 10 }",
+            "texto": "logs",
+            "tipo": "Verb { lemma: Symbol(2), time: Present, aspect: Simple, class: Activity }"
+          },
+          {
+            "posicion": "Span { start: 11, end: 15 }",
+            "texto": "must",
+            "tipo": "Must"
+          },
+          {
+            "posicion": "Span { start: 16, end: 18 }",
+            "texto": "be",
+            "tipo": "Verb { lemma: Symbol(5), time: Present, aspect: Simple, class: State }"
+          },
+          {
+            "posicion": "Span { start: 19, end: 26 }",
+            "texto": "deleted",
+            "tipo": "Verb { lemma: Symbol(7), time: Past, aspect: Simple, class: Achievement }"
+          },
+          {
+            "posicion": "Span { start: 27, end: 33 }",
+            "texto": "within",
+            "tipo": "Preposition(Symbol(9))"
+          },
+          {
+            "posicion": "Span { start: 34, end: 36 }",
+            "texto": "30",
+            "tipo": "Number(Symbol(10))"
+          },
+          {
+            "posicion": "Span { start: 37, end: 41 }",
+            "texto": "days",
+            "tipo": "CalendarUnit(Day)"
+          },
+          {
+            "posicion": "Span { start: 41, end: 42 }",
+            "texto": ".",
+            "tipo": "Period"
+          },
+          {
+            "posicion": "Span { start: 42, end: 42 }",
+            "texto": "",
+            "tipo": "EOF"
+          }
+        ],
+        "lexico": [
+          {
+            "posicion": "Span { start: 0, end: 5 }",
+            "texto": "Audit",
+            "tipo": "ProperName(Symbol(1))"
+          },
+          {
+            "posicion": "Span { start: 6, end: 10 }",
+            "texto": "logs",
+            "tipo": "Verb { lemma: Symbol(2), time: Present, aspect: Simple, class: Activity }"
+          },
+          {
+            "posicion": "Span { start: 11, end: 15 }",
+            "texto": "must",
+            "tipo": "Must"
+          },
+          {
+            "posicion": "Span { start: 16, end: 18 }",
+            "texto": "be",
+            "tipo": "Verb { lemma: Symbol(5), time: Present, aspect: Simple, class: State }"
+          },
+          {
+            "posicion": "Span { start: 19, end: 26 }",
+            "texto": "deleted",
+            "tipo": "Verb { lemma: Symbol(7), time: Past, aspect: Simple, class: Achievement }"
+          },
+          {
+            "posicion": "Span { start: 27, end: 33 }",
+            "texto": "within",
+            "tipo": "Preposition(Symbol(9))"
+          },
+          {
+            "posicion": "Span { start: 34, end: 36 }",
+            "texto": "30",
+            "tipo": "Number(Symbol(10))"
+          },
+          {
+            "posicion": "Span { start: 37, end: 41 }",
+            "texto": "days",
+            "tipo": "CalendarUnit(Day)"
+          },
+          {
+            "posicion": "Span { start: 41, end: 42 }",
+            "texto": ".",
+            "tipo": "Period"
+          },
+          {
+            "posicion": "Span { start: 42, end: 42 }",
+            "texto": "",
+            "tipo": "EOF"
+          }
+        ]
+      }
+    },
+    {
+      "analisis_nominal_separado": null,
+      "duracion_ns": 2373500,
+      "entrada": {
+        "dominio": "ciberseguridad",
+        "id": "C06",
+        "texto": "Version 1 requires TLS 1.2, whereas version 2 requires TLS 1.3."
+      },
+      "identico_al_antecedente": true,
+      "publico": {
+        "error": "ParseError { kind: TrailingTokens { found: Noun(Symbol(8)) }, span: Span { start: 28, end: 35 } }",
+        "estado": "rechazado"
+      },
+      "reproduccion_por_etapas": true,
+      "traza": {
+        "error_analisis": "ParseError { kind: TrailingTokens { found: Noun(Symbol(8)) }, span: Span { start: 28, end: 35 } }",
+        "expresiones_compuestas": [
+          {
+            "posicion": "Span { start: 0, end: 7 }",
+            "texto": "Version",
+            "tipo": "ProperName(Symbol(1))"
+          },
+          {
+            "posicion": "Span { start: 8, end: 9 }",
+            "texto": "1",
+            "tipo": "Number(Symbol(2))"
+          },
+          {
+            "posicion": "Span { start: 10, end: 18 }",
+            "texto": "requires",
+            "tipo": "Verb { lemma: Symbol(3), time: Present, aspect: Simple, class: State }"
+          },
+          {
+            "posicion": "Span { start: 19, end: 22 }",
+            "texto": "TLS",
+            "tipo": "ProperName(Symbol(5))"
+          },
+          {
+            "posicion": "Span { start: 23, end: 26 }",
+            "texto": "1.2",
+            "tipo": "Number(Symbol(6))"
+          },
+          {
+            "posicion": "Span { start: 26, end: 27 }",
+            "texto": ",",
+            "tipo": "Comma"
+          },
+          {
+            "posicion": "Span { start: 28, end: 35 }",
+            "texto": "whereas",
+            "tipo": "Noun(Symbol(8))"
+          },
+          {
+            "posicion": "Span { start: 36, end: 43 }",
+            "texto": "version",
+            "tipo": "Noun(Symbol(9))"
+          },
+          {
+            "posicion": "Span { start: 44, end: 45 }",
+            "texto": "2",
+            "tipo": "Number(Symbol(10))"
+          },
+          {
+            "posicion": "Span { start: 46, end: 54 }",
+            "texto": "requires",
+            "tipo": "Verb { lemma: Symbol(3), time: Present, aspect: Simple, class: State }"
+          },
+          {
+            "posicion": "Span { start: 55, end: 58 }",
+            "texto": "TLS",
+            "tipo": "ProperName(Symbol(5))"
+          },
+          {
+            "posicion": "Span { start: 59, end: 62 }",
+            "texto": "1.3",
+            "tipo": "Number(Symbol(11))"
+          },
+          {
+            "posicion": "Span { start: 62, end: 63 }",
+            "texto": ".",
+            "tipo": "Period"
+          },
+          {
+            "posicion": "Span { start: 63, end: 63 }",
+            "texto": "",
+            "tipo": "EOF"
+          }
+        ],
+        "lexico": [
+          {
+            "posicion": "Span { start: 0, end: 7 }",
+            "texto": "Version",
+            "tipo": "ProperName(Symbol(1))"
+          },
+          {
+            "posicion": "Span { start: 8, end: 9 }",
+            "texto": "1",
+            "tipo": "Number(Symbol(2))"
+          },
+          {
+            "posicion": "Span { start: 10, end: 18 }",
+            "texto": "requires",
+            "tipo": "Verb { lemma: Symbol(3), time: Present, aspect: Simple, class: State }"
+          },
+          {
+            "posicion": "Span { start: 19, end: 22 }",
+            "texto": "TLS",
+            "tipo": "ProperName(Symbol(5))"
+          },
+          {
+            "posicion": "Span { start: 23, end: 26 }",
+            "texto": "1.2",
+            "tipo": "Number(Symbol(6))"
+          },
+          {
+            "posicion": "Span { start: 26, end: 27 }",
+            "texto": ",",
+            "tipo": "Comma"
+          },
+          {
+            "posicion": "Span { start: 28, end: 35 }",
+            "texto": "whereas",
+            "tipo": "Noun(Symbol(8))"
+          },
+          {
+            "posicion": "Span { start: 36, end: 43 }",
+            "texto": "version",
+            "tipo": "Noun(Symbol(9))"
+          },
+          {
+            "posicion": "Span { start: 44, end: 45 }",
+            "texto": "2",
+            "tipo": "Number(Symbol(10))"
+          },
+          {
+            "posicion": "Span { start: 46, end: 54 }",
+            "texto": "requires",
+            "tipo": "Verb { lemma: Symbol(3), time: Present, aspect: Simple, class: State }"
+          },
+          {
+            "posicion": "Span { start: 55, end: 58 }",
+            "texto": "TLS",
+            "tipo": "ProperName(Symbol(5))"
+          },
+          {
+            "posicion": "Span { start: 59, end: 62 }",
+            "texto": "1.3",
+            "tipo": "Number(Symbol(11))"
+          },
+          {
+            "posicion": "Span { start: 62, end: 63 }",
+            "texto": ".",
+            "tipo": "Period"
+          },
+          {
+            "posicion": "Span { start: 63, end: 63 }",
+            "texto": "",
+            "tipo": "EOF"
+          }
+        ]
+      }
+    }
+  ]
+}

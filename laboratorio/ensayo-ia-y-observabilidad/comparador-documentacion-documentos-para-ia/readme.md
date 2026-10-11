@@ -1,14 +1,14 @@
 # Buscador-Semántico - Diferencial
 
-**Edición documental 3 · 11 de octubre de 2026.**
+**Edición documental 4 · 11 de octubre de 2026.**
 
-Esta sede reúne los estudios, revisiones y evidencias del **Buscador-Semántico - Diferencial** del Sistema Vectorial SV. Su finalidad es permitir que los revisores conozcan cómo se examinan los documentos destinados a una IA, qué contradicciones se han localizado, qué cobertura tiene el examen y qué decisiones han autorizado su suministro.
+Esta carpeta reúne los estudios, revisiones y evidencias del **Buscador-Semántico - Diferencial** del Sistema Vectorial SV. Su finalidad es permitir que los revisores conozcan cómo se examinan los documentos destinados a una IA, qué contradicciones se han localizado, qué cobertura tiene el examen y qué decisiones han autorizado su suministro.
 
 El ámbito comprende **Medicina y Ciberseguridad**, con documentos PDF, HTML y Markdown. Se buscan **incompatibilidades de significado**, tanto dentro de un documento como entre documentos, atendiendo a sujetos, condiciones, versiones, cantidades, unidades, fechas y excepciones. Una diferencia de redacción no basta para declarar contradicción.
 
 ## Estado comprobado
 
-**Todavía no se ha acreditado una aplicación que detecte las contradicciones complejas requeridas.** Se han examinado componentes, fuentes y límites. La primera comprobación Rust de speccheck-core 0.4.1 no supera el criterio previo: alertas en 6 de 12 incompatibilidades y en 5 de 8 casos compatibles; cuatro casos de contexto insuficiente se contabilizan aparte. El conjunto es sintético y diagnóstico. La comprobación posterior de admisión de Logicaffeine 0.10.1 tampoco permite avanzar a la integración: admite ocho de doce enunciados especializados, pero al menos cuatro de los admitidos omiten condiciones o complementos esenciales. El Buscador-Semántico - Diferencial permanece en estudio.
+**Todavía no se ha acreditado una aplicación que detecte las contradicciones complejas requeridas.** Se han examinado componentes, fuentes y límites. La primera comprobación Rust de speccheck-core 0.4.1 no supera el criterio previo: alertas en 6 de 12 incompatibilidades y en 5 de 8 casos compatibles; cuatro casos de contexto insuficiente se contabilizan aparte. El conjunto es sintético y diagnóstico. La comprobación posterior de admisión de Logicaffeine 0.10.1 tampoco permite avanzar a la integración: admite ocho de doce enunciados especializados, pero al menos cuatro de los admitidos omiten condiciones o complementos esenciales. El diagnóstico posterior localiza pérdidas durante la construcción de la oración y distingue varios mecanismos; no se ha identificado un ajuste de configuración suficiente. El Buscador-Semántico - Diferencial permanece en estudio.
 
 | Función | Situación al corte |
 | --- | --- |
@@ -19,12 +19,13 @@ El ámbito comprende **Medicina y Ciberseguridad**, con documentos PDF, HTML y M
 | Contradicciones de significado | Capacidad pendiente de acreditación. La búsqueda textual, las reglas parciales y la comparación de ediciones no la sustituyen. |
 | Decisión sobre documentos | La decisión y sus efectos sobre el suministro se conservan en el expediente; las alertas no constituyen una autorización. |
 
-La propuesta inicial basada en vocabularios preparados por personas está retirada: trasladaba al revisor parte esencial del hallazgo solicitado. No haber encontrado una solución completa tampoco demuestra imposibilidad técnica. El desarrollo propio sólo se considerará cuando se justifique su necesidad frente a los recursos existentes.
+La propuesta inicial basada en vocabularios preparados por personas está retirada: trasladaba al revisor parte esencial del hallazgo solicitado. No haber encontrado una solución completa tampoco demuestra imposibilidad técnica. El desarrollo propio sólo se considerará cuando se justifique su necesidad mediante su comparación con los recursos existentes.
 
 ## Informes y fuentes
 
 | Documento | Función y estado |
 | --- | --- |
+| [Diagnóstico de las pérdidas de significado](informes/2026-10-11-diagnostico/RESULTADO-DIAGNOSTICO.md) | Localización por etapas y fuente; 14 resultados anteriores reproducidos. No acredita una corrección suficiente ni una nueva validación. |
 | [Revisión de alternativas y avance por pasos](informes/2026-10-11-paso4/REVISION-ALTERNATIVAS.md) | Revisión vigente del paso 4; recursos examinados, procedencia y límites. |
 | [Admisión y conservación del significado: Logicaffeine 0.10.1](informes/2026-10-11-paso4/RESULTADO-ADMISION.md) | Comprobación nueva, separada del ensayo anterior. Resultado insuficiente para integración. |
 | [Comprobación preliminar de speccheck-core 0.4.1](comprobaciones/2026-10-11-speccheck-0.4.1/RESULTADO.md) | Resultado vigente: candidato no apto para incorporación, con protocolo, casos, salidas, contraste Rust y límites. No demuestra inviabilidad general. |
@@ -41,7 +42,7 @@ Las copias públicas conservan las conclusiones, adendas y fuentes. Se han retir
 
 1. Identificar los documentos, ediciones, procedencias y permisos; declarar qué contenido se ha recuperado y qué contenido permanece fuera de cobertura.
 2. Preparar las representaciones y, cuando corresponda, la traducción inglesa, manteniendo correspondencia con los pasajes originales.
-3. Localizar posibles contradicciones y presentar evidencia enfrentada con contexto y condiciones. Esta capacidad principal está pendiente de demostración.
+3. Localizar posibles contradicciones y presentar los pasajes comparados con contexto y condiciones. Esta capacidad principal está pendiente de demostración.
 4. Revisar cada hallazgo: confirmar el conflicto, explicar una diferencia compatible o mantener el asunto pendiente.
 5. Aplicar la decisión autorizada sobre el corpus y conservar qué versión se entrega efectivamente a la IA mediante el **Árbitro - Director**.
 
@@ -49,7 +50,7 @@ El recorrido reutiliza la administración y la trazabilidad existentes. El revis
 
 ## Relación con la evaluación del modelo y los pilares del SV
 
-La revisión del corpus prepara y documenta las condiciones del examen; **no constituye el examen ni su dictamen**. Los resultados del modelo se expresan, en el alcance constituido para cada prueba, como **Apto (0), No apto (1) o Indeterminado (U)**, conforme al contrato, los parámetros y criticidades establecidos por la sede competente y las reglas canónicas aplicables.
+La revisión del corpus prepara y documenta las condiciones del examen; **no constituye el examen ni su dictamen**. Los resultados del modelo se expresan, en el alcance constituido para cada prueba, como **Apto (0), No apto (1) o Indeterminado (U)**, conforme al contrato, los parámetros y criticidades establecidos por el procedimiento de evaluación y las reglas canónicas aplicables.
 
 La aplicación de los [pilares y restricciones de diseño del Lenguaje SV](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/f10aac725676997adc3840a1bd1a41e1579589ea/docs/calidad/PILARES_Y_RESTRICCIONES_DE_DISENO_DEL_LENGUAJE_DE_COMPUTACION_SV_2026_09_05.md) exige preservar identidad, orden, procedencia y autoridad. Esta documentación no introduce una nueva semántica, no elige células ni parámetros, y no modifica el Núcleo ni su representación intermedia. En particular:
 
@@ -62,12 +63,12 @@ El [ensayo de inteligencia artificial y observabilidad](https://github.com/juant
 
 ## Continuidad de los informes
 
-Los informes posteriores se incorporarán con fecha, objeto, fuentes, método, resultados, límites y estado de revisión. Una corrección se explicará y conservará el antecedente. Esta entrada señalará siempre cuál es la conclusión vigente; los registros científicos y de Calidad conservarán sus sedes competentes.
+Los informes posteriores se incorporarán con fecha, objeto, fuentes, método, resultados, límites y estado de revisión. Una corrección se explicará y conservará el antecedente. Esta entrada señalará siempre cuál es la conclusión vigente; los registros científicos y de Calidad conservarán sus ubicaciones establecidas.
 
 La comprobación algorítmica posterior no consultó modelos de IA ni modificó la instalación del SV. Las revisiones históricas se conservan.
 
 ## Relación con el libro de la Biblioteca del SV
 
-El libro publicado [«Reglas, usos y descripciones documentales de documentos para el conocimiento de la IA»](https://documentos-sv.itvia.online/documentacion/reglas-usos-descripciones-documentales/index.html) conserva su estructura y sus cinco capítulos. La [aportación editorial vigente, edición 2](informes/2026-10-11-paso4/APORTACION-AL-LIBRO-V2.md) describe objetivos, alcance, funcionamiento y límites, para los capítulos de información de revisión y comprobaciones. Sustituye editorialmente la propuesta anterior, que se conserva como antecedente. La aportación está preparada para incorporación coordinada; no se declara ya incorporada ni constituye otro libro. Las evidencias técnicas permanecen en esta carpeta.
+El libro publicado [«Reglas, usos y descripciones documentales de documentos para el conocimiento de la IA»](https://documentos-sv.itvia.online/documentacion/reglas-usos-descripciones-documentales/index.html) conserva su estructura y sus cinco capítulos. La [aportación editorial vigente, edición 3](informes/2026-10-11-diagnostico/APORTACION-AL-LIBRO-V3.md) describe objetivos, alcance, funcionamiento y límites, para los capítulos de información de revisión y comprobaciones. Sustituye editorialmente la propuesta anterior, que se conserva como antecedente. La aportación está preparada para incorporación coordinada; no se declara ya incorporada ni constituye otro libro. Las evidencias técnicas permanecen en esta carpeta.
 
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
