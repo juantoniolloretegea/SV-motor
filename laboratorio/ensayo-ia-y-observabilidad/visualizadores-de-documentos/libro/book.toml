@@ -1,0 +1,22 @@
+[book]
+title = "Reglas, usos y descripciones documentales de documentos para el conocimiento de la IA"
+language = "es"
+src = "src"
+[build]
+build-dir = "book"
+create-missing = false
+use-default-preprocessors = false
+[output.html]
+theme = "theme"
+additional-css = ["biblioteca.css"]
+additional-js = ["presentacion.js"]
+mathjax-support = false
+no-section-label = true
+smart-punctuation = false
+git-repository-url = "https://github.com/IA-en/biblioteca-documental"
+[output.html.playground]
+runnable = false
+editable = false
+copy-js = false
+[output.html.search]
+enable = false
