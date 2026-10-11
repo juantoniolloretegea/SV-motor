@@ -1,0 +1,749 @@
+{
+  "controles": [
+    {
+      "cambio_externo_simulado": false,
+      "conforme": true,
+      "dos_localizaciones_cotejadas": true,
+      "error_esperado": null,
+      "error_obtenido": null,
+      "id": "omitida",
+      "medicion": {
+        "lecturas": 0,
+        "llamadas_comparador": 0,
+        "microsegundos": 9
+      },
+      "registro_final_sha256": "f160475e45c59d4d04ee8a32b8234bbf39f1ae1097dbd714833697386c3918da",
+      "registro_inicial_sha256": "f160475e45c59d4d04ee8a32b8234bbf39f1ae1097dbd714833697386c3918da",
+      "resultado": {
+        "documentos": [],
+        "dominio": "ciberseguridad",
+        "estado": "no_solicitada",
+        "revision_registro": null,
+        "seleccionados": [],
+        "sugerencias": []
+      }
+    },
+    {
+      "cambio_externo_simulado": false,
+      "conforme": true,
+      "dos_localizaciones_cotejadas": true,
+      "error_esperado": null,
+      "error_obtenido": null,
+      "id": "individual",
+      "medicion": {
+        "lecturas": 2,
+        "llamadas_comparador": 1,
+        "microsegundos": 16193
+      },
+      "registro_final_sha256": "f160475e45c59d4d04ee8a32b8234bbf39f1ae1097dbd714833697386c3918da",
+      "registro_inicial_sha256": "f160475e45c59d4d04ee8a32b8234bbf39f1ae1097dbd714833697386c3918da",
+      "resultado": {
+        "documentos": [
+          {
+            "derivacion": null,
+            "dominio": "ciberseguridad",
+            "id": "propuesto",
+            "ingles": "# Current policy\n\nThe gateway should log all events.\n",
+            "ingles_sha256": "1c158e3af9161a960998c3867177a04ab273bba02c31e8e88fafce2f8a3847e5",
+            "original": "# Current policy\n\nThe gateway should log all events.\n",
+            "original_sha256": "1c158e3af9161a960998c3867177a04ab273bba02c31e8e88fafce2f8a3847e5",
+            "revision_git": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "titulo": "Control propuesto",
+            "traduccion": null
+          },
+          {
+            "derivacion": null,
+            "dominio": "ciberseguridad",
+            "id": "r1",
+            "ingles": "# Reference one\n\nThe gateway should not log all events.\n",
+            "ingles_sha256": "730cde3e01cb7d11ce790ab2c03739a08c44d86d0f522042e59f448b9d3852e5",
+            "original": "# Reference one\n\nThe gateway should not log all events.\n",
+            "original_sha256": "730cde3e01cb7d11ce790ab2c03739a08c44d86d0f522042e59f448b9d3852e5",
+            "revision_git": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "titulo": "Control r1",
+            "traduccion": null
+          }
+        ],
+        "dominio": "ciberseguridad",
+        "estado": "consulta_experimental",
+        "revision_registro": 24,
+        "seleccionados": [
+          "r1"
+        ],
+        "sugerencias": [
+          {
+            "negativo": {
+              "documento": "r1",
+              "localizacion": {
+                "byte_end": 56,
+                "byte_start": 17,
+                "end_col": 1,
+                "end_line": 4,
+                "file": "r1.md",
+                "start_col": 1,
+                "start_line": 3
+              },
+              "texto": "The gateway should not log all events.\n"
+            },
+            "positivo": {
+              "documento": "propuesto",
+              "localizacion": {
+                "byte_end": 53,
+                "byte_start": 18,
+                "end_col": 1,
+                "end_line": 4,
+                "file": "propuesto.md",
+                "start_col": 1,
+                "start_line": 3
+              },
+              "texto": "The gateway should log all events.\n"
+            },
+            "propuesto": "propuesto",
+            "referencia": "r1"
+          }
+        ]
+      }
+    },
+    {
+      "cambio_externo_simulado": false,
+      "conforme": true,
+      "dos_localizaciones_cotejadas": true,
+      "error_esperado": null,
+      "error_obtenido": null,
+      "id": "grupo",
+      "medicion": {
+        "lecturas": 3,
+        "llamadas_comparador": 2,
+        "microsegundos": 14672
+      },
+      "registro_final_sha256": "f160475e45c59d4d04ee8a32b8234bbf39f1ae1097dbd714833697386c3918da",
+      "registro_inicial_sha256": "f160475e45c59d4d04ee8a32b8234bbf39f1ae1097dbd714833697386c3918da",
+      "resultado": {
+        "documentos": [
+          {
+            "derivacion": null,
+            "dominio": "ciberseguridad",
+            "id": "propuesto",
+            "ingles": "# Current policy\n\nThe gateway should log all events.\n",
+            "ingles_sha256": "1c158e3af9161a960998c3867177a04ab273bba02c31e8e88fafce2f8a3847e5",
+            "original": "# Current policy\n\nThe gateway should log all events.\n",
+            "original_sha256": "1c158e3af9161a960998c3867177a04ab273bba02c31e8e88fafce2f8a3847e5",
+            "revision_git": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "titulo": "Control propuesto",
+            "traduccion": null
+          },
+          {
+            "derivacion": null,
+            "dominio": "ciberseguridad",
+            "id": "r2",
+            "ingles": "# Reference two\n\nThe gateway should log all events.\n",
+            "ingles_sha256": "01b8a4daf036a99fa79f5b4b36cc9e1659ea450959312a4a7a0540868d0681ba",
+            "original": "# Reference two\n\nThe gateway should log all events.\n",
+            "original_sha256": "01b8a4daf036a99fa79f5b4b36cc9e1659ea450959312a4a7a0540868d0681ba",
+            "revision_git": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "titulo": "Control r2",
+            "traduccion": null
+          },
+          {
+            "derivacion": null,
+            "dominio": "ciberseguridad",
+            "id": "r1",
+            "ingles": "# Reference one\n\nThe gateway should not log all events.\n",
+            "ingles_sha256": "730cde3e01cb7d11ce790ab2c03739a08c44d86d0f522042e59f448b9d3852e5",
+            "original": "# Reference one\n\nThe gateway should not log all events.\n",
+            "original_sha256": "730cde3e01cb7d11ce790ab2c03739a08c44d86d0f522042e59f448b9d3852e5",
+            "revision_git": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "titulo": "Control r1",
+            "traduccion": null
+          }
+        ],
+        "dominio": "ciberseguridad",
+        "estado": "consulta_experimental",
+        "revision_registro": 24,
+        "seleccionados": [
+          "r2",
+          "r1"
+        ],
+        "sugerencias": [
+          {
+            "negativo": {
+              "documento": "r1",
+              "localizacion": {
+                "byte_end": 56,
+                "byte_start": 17,
+                "end_col": 1,
+                "end_line": 4,
+                "file": "r1.md",
+                "start_col": 1,
+                "start_line": 3
+              },
+              "texto": "The gateway should not log all events.\n"
+            },
+            "positivo": {
+              "documento": "propuesto",
+              "localizacion": {
+                "byte_end": 53,
+                "byte_start": 18,
+                "end_col": 1,
+                "end_line": 4,
+                "file": "propuesto.md",
+                "start_col": 1,
+                "start_line": 3
+              },
+              "texto": "The gateway should log all events.\n"
+            },
+            "propuesto": "propuesto",
+            "referencia": "r1"
+          }
+        ]
+      }
+    },
+    {
+      "cambio_externo_simulado": false,
+      "conforme": true,
+      "dos_localizaciones_cotejadas": true,
+      "error_esperado": null,
+      "error_obtenido": null,
+      "id": "todos",
+      "medicion": {
+        "lecturas": 3,
+        "llamadas_comparador": 2,
+        "microsegundos": 14646
+      },
+      "registro_final_sha256": "f160475e45c59d4d04ee8a32b8234bbf39f1ae1097dbd714833697386c3918da",
+      "registro_inicial_sha256": "f160475e45c59d4d04ee8a32b8234bbf39f1ae1097dbd714833697386c3918da",
+      "resultado": {
+        "documentos": [
+          {
+            "derivacion": null,
+            "dominio": "ciberseguridad",
+            "id": "propuesto",
+            "ingles": "# Current policy\n\nThe gateway should log all events.\n",
+            "ingles_sha256": "1c158e3af9161a960998c3867177a04ab273bba02c31e8e88fafce2f8a3847e5",
+            "original": "# Current policy\n\nThe gateway should log all events.\n",
+            "original_sha256": "1c158e3af9161a960998c3867177a04ab273bba02c31e8e88fafce2f8a3847e5",
+            "revision_git": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "titulo": "Control propuesto",
+            "traduccion": null
+          },
+          {
+            "derivacion": null,
+            "dominio": "ciberseguridad",
+            "id": "r1",
+            "ingles": "# Reference one\n\nThe gateway should not log all events.\n",
+            "ingles_sha256": "730cde3e01cb7d11ce790ab2c03739a08c44d86d0f522042e59f448b9d3852e5",
+            "original": "# Reference one\n\nThe gateway should not log all events.\n",
+            "original_sha256": "730cde3e01cb7d11ce790ab2c03739a08c44d86d0f522042e59f448b9d3852e5",
+            "revision_git": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "titulo": "Control r1",
+            "traduccion": null
+          },
+          {
+            "derivacion": null,
+            "dominio": "ciberseguridad",
+            "id": "r2",
+            "ingles": "# Reference two\n\nThe gateway should log all events.\n",
+            "ingles_sha256": "01b8a4daf036a99fa79f5b4b36cc9e1659ea450959312a4a7a0540868d0681ba",
+            "original": "# Reference two\n\nThe gateway should log all events.\n",
+            "original_sha256": "01b8a4daf036a99fa79f5b4b36cc9e1659ea450959312a4a7a0540868d0681ba",
+            "revision_git": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "titulo": "Control r2",
+            "traduccion": null
+          }
+        ],
+        "dominio": "ciberseguridad",
+        "estado": "consulta_experimental",
+        "revision_registro": 24,
+        "seleccionados": [
+          "r1",
+          "r2"
+        ],
+        "sugerencias": [
+          {
+            "negativo": {
+              "documento": "r1",
+              "localizacion": {
+                "byte_end": 56,
+                "byte_start": 17,
+                "end_col": 1,
+                "end_line": 4,
+                "file": "r1.md",
+                "start_col": 1,
+                "start_line": 3
+              },
+              "texto": "The gateway should not log all events.\n"
+            },
+            "positivo": {
+              "documento": "propuesto",
+              "localizacion": {
+                "byte_end": 53,
+                "byte_start": 18,
+                "end_col": 1,
+                "end_line": 4,
+                "file": "propuesto.md",
+                "start_col": 1,
+                "start_line": 3
+              },
+              "texto": "The gateway should log all events.\n"
+            },
+            "propuesto": "propuesto",
+            "referencia": "r1"
+          }
+        ]
+      }
+    },
+    {
+      "cambio_externo_simulado": false,
+      "conforme": true,
+      "dos_localizaciones_cotejadas": true,
+      "error_esperado": null,
+      "error_obtenido": null,
+      "id": "vacio",
+      "medicion": {
+        "lecturas": 0,
+        "llamadas_comparador": 0,
+        "microsegundos": 930
+      },
+      "registro_final_sha256": "f160475e45c59d4d04ee8a32b8234bbf39f1ae1097dbd714833697386c3918da",
+      "registro_inicial_sha256": "f160475e45c59d4d04ee8a32b8234bbf39f1ae1097dbd714833697386c3918da",
+      "resultado": {
+        "documentos": [],
+        "dominio": "ciberseguridad",
+        "estado": "seleccion_vacia",
+        "revision_registro": 24,
+        "seleccionados": [],
+        "sugerencias": []
+      }
+    },
+    {
+      "cambio_externo_simulado": false,
+      "conforme": true,
+      "dos_localizaciones_cotejadas": true,
+      "error_esperado": "SELECCION_DUPLICADA_O_PROPIA",
+      "error_obtenido": "SELECCION_DUPLICADA_O_PROPIA",
+      "id": "duplicado",
+      "medicion": {
+        "lecturas": 0,
+        "llamadas_comparador": 0,
+        "microsegundos": 560
+      },
+      "registro_final_sha256": "f160475e45c59d4d04ee8a32b8234bbf39f1ae1097dbd714833697386c3918da",
+      "registro_inicial_sha256": "f160475e45c59d4d04ee8a32b8234bbf39f1ae1097dbd714833697386c3918da",
+      "resultado": null
+    },
+    {
+      "cambio_externo_simulado": false,
+      "conforme": true,
+      "dos_localizaciones_cotejadas": true,
+      "error_esperado": "SELECCION_DUPLICADA_O_PROPIA",
+      "error_obtenido": "SELECCION_DUPLICADA_O_PROPIA",
+      "id": "propio",
+      "medicion": {
+        "lecturas": 0,
+        "llamadas_comparador": 0,
+        "microsegundos": 454
+      },
+      "registro_final_sha256": "f160475e45c59d4d04ee8a32b8234bbf39f1ae1097dbd714833697386c3918da",
+      "registro_inicial_sha256": "f160475e45c59d4d04ee8a32b8234bbf39f1ae1097dbd714833697386c3918da",
+      "resultado": null
+    },
+    {
+      "cambio_externo_simulado": false,
+      "conforme": true,
+      "dos_localizaciones_cotejadas": true,
+      "error_esperado": "CARGA_AUSENTE",
+      "error_obtenido": "CARGA_AUSENTE",
+      "id": "ausente",
+      "medicion": {
+        "lecturas": 0,
+        "llamadas_comparador": 0,
+        "microsegundos": 458
+      },
+      "registro_final_sha256": "f160475e45c59d4d04ee8a32b8234bbf39f1ae1097dbd714833697386c3918da",
+      "registro_inicial_sha256": "f160475e45c59d4d04ee8a32b8234bbf39f1ae1097dbd714833697386c3918da",
+      "resultado": null
+    },
+    {
+      "cambio_externo_simulado": false,
+      "conforme": true,
+      "dos_localizaciones_cotejadas": true,
+      "error_esperado": "DOMINIO_DISCORDANTE",
+      "error_obtenido": "DOMINIO_DISCORDANTE",
+      "id": "dominio",
+      "medicion": {
+        "lecturas": 0,
+        "llamadas_comparador": 0,
+        "microsegundos": 3
+      },
+      "registro_final_sha256": "f160475e45c59d4d04ee8a32b8234bbf39f1ae1097dbd714833697386c3918da",
+      "registro_inicial_sha256": "f160475e45c59d4d04ee8a32b8234bbf39f1ae1097dbd714833697386c3918da",
+      "resultado": null
+    },
+    {
+      "cambio_externo_simulado": false,
+      "conforme": true,
+      "dos_localizaciones_cotejadas": true,
+      "error_esperado": "USO_COMPARACION_NO_ACREDITADO",
+      "error_obtenido": "USO_COMPARACION_NO_ACREDITADO",
+      "id": "sin_permiso",
+      "medicion": {
+        "lecturas": 0,
+        "llamadas_comparador": 0,
+        "microsegundos": 743
+      },
+      "registro_final_sha256": "f160475e45c59d4d04ee8a32b8234bbf39f1ae1097dbd714833697386c3918da",
+      "registro_inicial_sha256": "f160475e45c59d4d04ee8a32b8234bbf39f1ae1097dbd714833697386c3918da",
+      "resultado": null
+    },
+    {
+      "cambio_externo_simulado": false,
+      "conforme": true,
+      "dos_localizaciones_cotejadas": true,
+      "error_esperado": "ADMISION_EXPRESA_REQUERIDA",
+      "error_obtenido": "ADMISION_EXPRESA_REQUERIDA",
+      "id": "sesion_vencida",
+      "medicion": {
+        "lecturas": 0,
+        "llamadas_comparador": 0,
+        "microsegundos": 29
+      },
+      "registro_final_sha256": "f160475e45c59d4d04ee8a32b8234bbf39f1ae1097dbd714833697386c3918da",
+      "registro_inicial_sha256": "f160475e45c59d4d04ee8a32b8234bbf39f1ae1097dbd714833697386c3918da",
+      "resultado": null
+    },
+    {
+      "cambio_externo_simulado": false,
+      "conforme": true,
+      "dos_localizaciones_cotejadas": true,
+      "error_esperado": "ADMISION_EXPRESA_REQUERIDA",
+      "error_obtenido": "ADMISION_EXPRESA_REQUERIDA",
+      "id": "sin_admision",
+      "medicion": {
+        "lecturas": 0,
+        "llamadas_comparador": 0,
+        "microsegundos": 9
+      },
+      "registro_final_sha256": "f160475e45c59d4d04ee8a32b8234bbf39f1ae1097dbd714833697386c3918da",
+      "registro_inicial_sha256": "f160475e45c59d4d04ee8a32b8234bbf39f1ae1097dbd714833697386c3918da",
+      "resultado": null
+    },
+    {
+      "cambio_externo_simulado": false,
+      "conforme": true,
+      "dos_localizaciones_cotejadas": true,
+      "error_esperado": "ORIGINAL_DISCORDANTE",
+      "error_obtenido": "ORIGINAL_DISCORDANTE",
+      "id": "original_alterado",
+      "medicion": {
+        "lecturas": 1,
+        "llamadas_comparador": 0,
+        "microsegundos": 1624
+      },
+      "registro_final_sha256": "f160475e45c59d4d04ee8a32b8234bbf39f1ae1097dbd714833697386c3918da",
+      "registro_inicial_sha256": "f160475e45c59d4d04ee8a32b8234bbf39f1ae1097dbd714833697386c3918da",
+      "resultado": null
+    },
+    {
+      "cambio_externo_simulado": false,
+      "conforme": true,
+      "dos_localizaciones_cotejadas": true,
+      "error_esperado": "TRADUCCION_DISCORDANTE",
+      "error_obtenido": "TRADUCCION_DISCORDANTE",
+      "id": "traduccion_alterada",
+      "medicion": {
+        "lecturas": 1,
+        "llamadas_comparador": 0,
+        "microsegundos": 662
+      },
+      "registro_final_sha256": "0246da4afa47d1149f909d321926f4e325f0ea38fcd1d1861f2ec02e138f2dba",
+      "registro_inicial_sha256": "0246da4afa47d1149f909d321926f4e325f0ea38fcd1d1861f2ec02e138f2dba",
+      "resultado": null
+    },
+    {
+      "cambio_externo_simulado": true,
+      "conforme": true,
+      "dos_localizaciones_cotejadas": true,
+      "error_esperado": "REGISTRO_CAMBIADO",
+      "error_obtenido": "REGISTRO_CAMBIADO",
+      "id": "cambio_concurrente",
+      "medicion": {
+        "lecturas": 2,
+        "llamadas_comparador": 0,
+        "microsegundos": 2839
+      },
+      "registro_final_sha256": "76d29e8aaf2739657589ccbe568c131205d91e1a46527f65089176f06055c434",
+      "registro_inicial_sha256": "f160475e45c59d4d04ee8a32b8234bbf39f1ae1097dbd714833697386c3918da",
+      "resultado": null
+    },
+    {
+      "cambio_externo_simulado": false,
+      "conforme": true,
+      "dos_localizaciones_cotejadas": true,
+      "error_esperado": "REPRESENTACION_MARKDOWN_REQUERIDA",
+      "error_obtenido": "REPRESENTACION_MARKDOWN_REQUERIDA",
+      "id": "formato",
+      "medicion": {
+        "lecturas": 0,
+        "llamadas_comparador": 0,
+        "microsegundos": 471
+      },
+      "registro_final_sha256": "0a1e4e3cae40cd265b1ea0d14865b678bca47ddcbf573bfdaabac92e9baa15e2",
+      "registro_inicial_sha256": "0a1e4e3cae40cd265b1ea0d14865b678bca47ddcbf573bfdaabac92e9baa15e2",
+      "resultado": null
+    },
+    {
+      "cambio_externo_simulado": false,
+      "conforme": true,
+      "dos_localizaciones_cotejadas": true,
+      "error_esperado": null,
+      "error_obtenido": null,
+      "id": "traduccion_valida",
+      "medicion": {
+        "lecturas": 2,
+        "llamadas_comparador": 1,
+        "microsegundos": 13653
+      },
+      "registro_final_sha256": "0246da4afa47d1149f909d321926f4e325f0ea38fcd1d1861f2ec02e138f2dba",
+      "registro_inicial_sha256": "0246da4afa47d1149f909d321926f4e325f0ea38fcd1d1861f2ec02e138f2dba",
+      "resultado": {
+        "documentos": [
+          {
+            "derivacion": null,
+            "dominio": "ciberseguridad",
+            "id": "propuesto",
+            "ingles": "# Current policy\n\nThe gateway should log all events.\n",
+            "ingles_sha256": "1c158e3af9161a960998c3867177a04ab273bba02c31e8e88fafce2f8a3847e5",
+            "original": "# Política actual\n\nLa pasarela debería registrar todos los eventos.\n",
+            "original_sha256": "64ef7143db6bb49388155540a5c0677eead7e1e05287eccf6c4a058da058fbe8",
+            "revision_git": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "titulo": "Control propuesto",
+            "traduccion": "Traducción sintética de control; no nueva consulta a Google"
+          },
+          {
+            "derivacion": null,
+            "dominio": "ciberseguridad",
+            "id": "r1",
+            "ingles": "# Reference one\n\nThe gateway should not log all events.\n",
+            "ingles_sha256": "730cde3e01cb7d11ce790ab2c03739a08c44d86d0f522042e59f448b9d3852e5",
+            "original": "# Reference one\n\nThe gateway should not log all events.\n",
+            "original_sha256": "730cde3e01cb7d11ce790ab2c03739a08c44d86d0f522042e59f448b9d3852e5",
+            "revision_git": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "titulo": "Control r1",
+            "traduccion": null
+          }
+        ],
+        "dominio": "ciberseguridad",
+        "estado": "consulta_experimental",
+        "revision_registro": 24,
+        "seleccionados": [
+          "r1"
+        ],
+        "sugerencias": [
+          {
+            "negativo": {
+              "documento": "r1",
+              "localizacion": {
+                "byte_end": 56,
+                "byte_start": 17,
+                "end_col": 1,
+                "end_line": 4,
+                "file": "r1.md",
+                "start_col": 1,
+                "start_line": 3
+              },
+              "texto": "The gateway should not log all events.\n"
+            },
+            "positivo": {
+              "documento": "propuesto",
+              "localizacion": {
+                "byte_end": 53,
+                "byte_start": 18,
+                "end_col": 1,
+                "end_line": 4,
+                "file": "propuesto.md",
+                "start_col": 1,
+                "start_line": 3
+              },
+              "texto": "The gateway should log all events.\n"
+            },
+            "propuesto": "propuesto",
+            "referencia": "r1"
+          }
+        ]
+      }
+    },
+    {
+      "cambio_externo_simulado": false,
+      "conforme": true,
+      "dos_localizaciones_cotejadas": true,
+      "error_esperado": "TRADUCCION_NO_ACREDITADA",
+      "error_obtenido": "TRADUCCION_NO_ACREDITADA",
+      "id": "traduccion_sin_permiso",
+      "medicion": {
+        "lecturas": 1,
+        "llamadas_comparador": 0,
+        "microsegundos": 559
+      },
+      "registro_final_sha256": "658a938b5d17a803c4a47ee90b49e3b2205c5d565adb8340b5b6b26018dc6c03",
+      "registro_inicial_sha256": "658a938b5d17a803c4a47ee90b49e3b2205c5d565adb8340b5b6b26018dc6c03",
+      "resultado": null
+    },
+    {
+      "cambio_externo_simulado": false,
+      "conforme": true,
+      "dos_localizaciones_cotejadas": true,
+      "error_esperado": null,
+      "error_obtenido": null,
+      "id": "unicode",
+      "medicion": {
+        "lecturas": 2,
+        "llamadas_comparador": 1,
+        "microsegundos": 14471
+      },
+      "registro_final_sha256": "f4c7160baac87193f46565b364af4bf5a94ed4908ae45d77e6122ddeba23c7b8",
+      "registro_inicial_sha256": "f4c7160baac87193f46565b364af4bf5a94ed4908ae45d77e6122ddeba23c7b8",
+      "resultado": {
+        "documentos": [
+          {
+            "derivacion": null,
+            "dominio": "ciberseguridad",
+            "id": "propuesto",
+            "ingles": "# Actual\n\nThe gateway should preserve logs about áááááááááááááááááááááááááááááá.\n",
+            "ingles_sha256": "a245d7c1d9ac19ad556655f5e19caf3843bd98ddd644aa77a101313817ceeb2a",
+            "original": "# Actual\n\nThe gateway should preserve logs about áááááááááááááááááááááááááááááá.\n",
+            "original_sha256": "a245d7c1d9ac19ad556655f5e19caf3843bd98ddd644aa77a101313817ceeb2a",
+            "revision_git": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "titulo": "Control propuesto",
+            "traduccion": null
+          },
+          {
+            "derivacion": null,
+            "dominio": "ciberseguridad",
+            "id": "r1",
+            "ingles": "# Reference\n\nThe gateway should not preserve logs about áááááááááááááááááááááááááááááá.\n",
+            "ingles_sha256": "e5fe7dea73edca8765071d05a57e106152cb7ebd91c18089b146c2636f00c2c7",
+            "original": "# Reference\n\nThe gateway should not preserve logs about áááááááááááááááááááááááááááááá.\n",
+            "original_sha256": "e5fe7dea73edca8765071d05a57e106152cb7ebd91c18089b146c2636f00c2c7",
+            "revision_git": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "titulo": "Control r1",
+            "traduccion": null
+          }
+        ],
+        "dominio": "ciberseguridad",
+        "estado": "consulta_experimental",
+        "revision_registro": 24,
+        "seleccionados": [
+          "r1"
+        ],
+        "sugerencias": [
+          {
+            "negativo": {
+              "documento": "r1",
+              "localizacion": {
+                "byte_end": 118,
+                "byte_start": 13,
+                "end_col": 1,
+                "end_line": 4,
+                "file": "r1.md",
+                "start_col": 1,
+                "start_line": 3
+              },
+              "texto": "The gateway should not preserve logs about áááááááááááááááááááááááááááááá.\n"
+            },
+            "positivo": {
+              "documento": "propuesto",
+              "localizacion": {
+                "byte_end": 111,
+                "byte_start": 10,
+                "end_col": 1,
+                "end_line": 4,
+                "file": "propuesto.md",
+                "start_col": 1,
+                "start_line": 3
+              },
+              "texto": "The gateway should preserve logs about áááááááááááááááááááááááááááááá.\n"
+            },
+            "propuesto": "propuesto",
+            "referencia": "r1"
+          }
+        ]
+      }
+    },
+    {
+      "cambio_externo_simulado": false,
+      "conforme": true,
+      "dos_localizaciones_cotejadas": true,
+      "error_esperado": "SELECCION_SUPERA_COTA",
+      "error_obtenido": "SELECCION_SUPERA_COTA",
+      "id": "cota_grupo",
+      "medicion": {
+        "lecturas": 0,
+        "llamadas_comparador": 0,
+        "microsegundos": 474
+      },
+      "registro_final_sha256": "f160475e45c59d4d04ee8a32b8234bbf39f1ae1097dbd714833697386c3918da",
+      "registro_inicial_sha256": "f160475e45c59d4d04ee8a32b8234bbf39f1ae1097dbd714833697386c3918da",
+      "resultado": null
+    },
+    {
+      "cambio_externo_simulado": false,
+      "conforme": true,
+      "dos_localizaciones_cotejadas": true,
+      "error_esperado": null,
+      "error_obtenido": null,
+      "id": "sin_aviso",
+      "medicion": {
+        "lecturas": 2,
+        "llamadas_comparador": 1,
+        "microsegundos": 13203
+      },
+      "registro_final_sha256": "f160475e45c59d4d04ee8a32b8234bbf39f1ae1097dbd714833697386c3918da",
+      "registro_inicial_sha256": "f160475e45c59d4d04ee8a32b8234bbf39f1ae1097dbd714833697386c3918da",
+      "resultado": {
+        "documentos": [
+          {
+            "derivacion": null,
+            "dominio": "ciberseguridad",
+            "id": "propuesto",
+            "ingles": "# Current policy\n\nThe gateway should log all events.\n",
+            "ingles_sha256": "1c158e3af9161a960998c3867177a04ab273bba02c31e8e88fafce2f8a3847e5",
+            "original": "# Current policy\n\nThe gateway should log all events.\n",
+            "original_sha256": "1c158e3af9161a960998c3867177a04ab273bba02c31e8e88fafce2f8a3847e5",
+            "revision_git": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "titulo": "Control propuesto",
+            "traduccion": null
+          },
+          {
+            "derivacion": null,
+            "dominio": "ciberseguridad",
+            "id": "r2",
+            "ingles": "# Reference two\n\nThe gateway should log all events.\n",
+            "ingles_sha256": "01b8a4daf036a99fa79f5b4b36cc9e1659ea450959312a4a7a0540868d0681ba",
+            "original": "# Reference two\n\nThe gateway should log all events.\n",
+            "original_sha256": "01b8a4daf036a99fa79f5b4b36cc9e1659ea450959312a4a7a0540868d0681ba",
+            "revision_git": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "titulo": "Control r2",
+            "traduccion": null
+          }
+        ],
+        "dominio": "ciberseguridad",
+        "estado": "consulta_experimental",
+        "revision_registro": 24,
+        "seleccionados": [
+          "r2"
+        ],
+        "sugerencias": []
+      }
+    }
+  ],
+  "desplegado": false,
+  "ejecutable_sha256": "d12bf47d01d56ac40df572cbce18a790613eca5c9de2731f510d83c880773653",
+  "elemento": "Buscador-Semántico - Diferencial",
+  "identidades": "sintéticas; no autenticación de navegador",
+  "inferencias": 0,
+  "lecturas": 19,
+  "llamadas_comparador": 8,
+  "paso": "7 / 8",
+  "solicitudes_traduccion": 0,
+  "todos_conformes": true
+}

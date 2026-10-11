@@ -1,0 +1,111 @@
+diff --git a/speccheck-core-0.4.1/src/rules/cross_file.rs b/speccheck-core-0.4.1/src/rules/cross_file.rs
+index f27e7cb..8dc5a9e 100644
+--- a/speccheck-core-0.4.1/src/rules/cross_file.rs
++++ b/speccheck-core-0.4.1/src/rules/cross_file.rs
+@@ -60,7 +60,7 @@ fn req_label(req: &Requirement) -> String {
+     } else if req.text.len() <= 60 {
+         req.text.clone()
+     } else {
+-        format!("{}...", &req.text[..57])
++        format!("{}...", &req.text[..req.text.floor_char_boundary(57)])
+     }
+ }
+ 
+@@ -279,37 +279,15 @@ impl CrossFileContradiction {
+     }
+ }
+ 
+-impl Default for CrossFileContradiction {
+-    fn default() -> Self {
+-        Self::new()
+-    }
+-}
+-
+-impl Rule for CrossFileContradiction {
+-    fn id(&self) -> RuleId {
+-        RuleId {
+-            category: Category::CrossFile,
+-            number: 2,
+-        }
+-    }
+-
+-    fn name(&self) -> &str {
+-        "cross-file-contradiction"
+-    }
+-
+-    fn category(&self) -> Category {
+-        Category::CrossFile
+-    }
+-
+-    fn default_severity(&self) -> Severity {
+-        Severity::Error
+-    }
+-
+-    fn check_requirement(&self, _req: &Requirement, _ctx: &AnalysisContext) -> Vec<Diagnostic> {
+-        Vec::new()
+-    }
+-
+-    fn check_corpus(&self, docs: &[&SpecDocument]) -> Vec<Diagnostic> {
++impl CrossFileContradiction {
++    /// Retains the two actual spans at the existing diagnostic emission point.
++    /// The observer does not participate in comparison or alter the IR.
++    pub fn check_corpus_with_locations(&self, docs: &[&SpecDocument]) -> Vec<(Diagnostic, SourceSpan)> {
++        let mut positive = Vec::new();
++        let diagnostics = self.check_corpus_observed(docs, &mut |span| positive.push(span.clone()));
++        diagnostics.into_iter().zip(positive).collect()
++    }
++    fn check_corpus_observed(&self, docs: &[&SpecDocument], observer: &mut dyn FnMut(&SourceSpan)) -> Vec<Diagnostic> {
+         if docs.len() < 2 {
+             return Vec::new();
+         }
+@@ -372,6 +350,7 @@ impl Rule for CrossFileContradiction {
+                 let overlap = keyword_overlap_ratio(&kw_pos, &kw_neg);
+ 
+                 if overlap >= 0.5 {
++                    observer(&pos_req.span);
+                     diagnostics.push(Diagnostic {
+                         rule_id: self.id(),
+                         severity: self.default_severity(),
+@@ -393,6 +372,42 @@ impl Rule for CrossFileContradiction {
+         diagnostics
+     }
+ 
++}
++
++impl Default for CrossFileContradiction {
++    fn default() -> Self {
++        Self::new()
++    }
++}
++
++impl Rule for CrossFileContradiction {
++    fn id(&self) -> RuleId {
++        RuleId {
++            category: Category::CrossFile,
++            number: 2,
++        }
++    }
++
++    fn name(&self) -> &str {
++        "cross-file-contradiction"
++    }
++
++    fn category(&self) -> Category {
++        Category::CrossFile
++    }
++
++    fn default_severity(&self) -> Severity {
++        Severity::Error
++    }
++
++    fn check_requirement(&self, _req: &Requirement, _ctx: &AnalysisContext) -> Vec<Diagnostic> {
++        Vec::new()
++    }
++
++    fn check_corpus(&self, docs: &[&SpecDocument]) -> Vec<Diagnostic> {
++        self.check_corpus_observed(docs, &mut |_| {})
++    }
++
+     fn explanation(&self) -> &str {
+         "Detects contradicting requirements across different specification files. \
+          For example, one file says 'The system shall log all events' while \
