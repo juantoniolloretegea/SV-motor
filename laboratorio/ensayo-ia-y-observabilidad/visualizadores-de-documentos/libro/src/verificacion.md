@@ -1,6 +1,6 @@
 # Comprobaciones, estado y fuentes
 
-**Edición documental V.01 · Corte de información: 11 de octubre de 2026.**
+**Edición documental V.02 · Corte de información: 11 de octubre de 2026.**
 
 ## Estado que explica esta edición
 
@@ -10,6 +10,8 @@ Se conservan resultados anteriores de 65 comprobaciones Rust: 33 de módulos y 3
 
 La preparación y publicación del libro tienen verificaciones propias de construcción, correspondencia, enlaces y consulta. Sus resultados se conservan en el registro de esta edición, separado de las comprobaciones funcionales del lector.
 
+La V.02 incorpora la representación gráfica de páginas PDF. El conjunto delimitado comprende nueve PDF sintéticos y dos originales de nueve y cuatro páginas: 44 imágenes a dos escalas, once repeticiones idénticas y 55 ejecuciones de rechazo pertenecientes a cinco clases. Dieciocho imágenes sintéticas conservan identidad exacta con la comprobación anterior. El cotejo visual de los originales reales se limita a siete páginas; no acredita fidelidad universal. La corrección de la información contextual se comprueba por separado, conservando los resultados anteriores. Las pruebas de módulos de esta edición suman 45 resultados conformes.
+
 ## Componentes y función efectiva
 
 | Componente de referencia | Función en el recorrido descrito | Límite de la afirmación |
@@ -18,12 +20,13 @@ La preparación y publicación del libro tienen verificaciones propias de constr
 | html-to-markdown-rs 3.17.2 | Conversión de HTML conservado a Markdown | No interpreta científicamente figuras ni garantiza fidelidad de todo HTML |
 | pulldown-cmark 0.13.0 | Lectura de la estructura Markdown para su presentación controlada | No resuelve omisiones del original ni reconstruye figuras |
 | Extractor documental PDF del SV | Recuperación de texto por páginas e informe de extracción | No acredita OCR, representación gráfica íntegra ni recuperación de tablas complejas |
+| Hayro 0.8.0 | Representación gráfica de páginas PDF completas; imagen protegida dentro de mdBook | Componente experimental; sus resultados requieren cotejo. No identifica ni interpreta científicamente figuras |
 
 Las versiones identifican la edición examinada. La existencia de una versión posterior de una biblioteca no implica su incorporación al SV.
 
 ## Pendientes identificados
 
-Permanecen pendientes la entrega directa de PDF y HTML en el recorrido descrito, la presentación reunida del expediente de entrega junto al visor, la representación gráfica de PDF, los recursos visuales autenticados y el tratamiento integral de libros extensos. Deben comprobarse antes de presentarlos como funciones disponibles.
+Permanecen pendientes la entrega directa de PDF y HTML en el recorrido descrito, la presentación reunida del expediente de entrega junto al visor y el tratamiento integral de libros extensos. La incorporación gráfica no acredita estos otros recorridos ni el envío de imágenes a modelos.
 
 Para cada ampliación se deberán revisar tanto resultados favorables como rechazos: autorización ausente o retirada, formato no compatible, extracción parcial, codificación defectuosa, figura no recuperada e incertidumbre de envío. Los fallos se registrarán sin sustituirlos por resultados supuestos.
 
@@ -37,6 +40,7 @@ No se acredita aquí compatibilidad universal entre navegadores, corrección de 
 - [html-to-markdown: proyecto del conversor](https://github.com/xberg-io/html-to-markdown).
 - [pulldown-cmark: proyecto del analizador Markdown](https://github.com/pulldown-cmark/pulldown-cmark).
 - [pdf-extract: biblioteca de extracción de contenido PDF](https://github.com/jrmuizel/pdf-extract).
+- [Hayro: representación PDF y limitaciones declaradas](https://github.com/LaurenzV/hayro).
 
 Las fuentes de terceros describen sus propios componentes. Sus capacidades no se atribuyen al SV hasta verificar su integración. La referencia pública de este libro se conserva en [Visualizadores de documentos, SV-motor](https://github.com/juantoniolloretegea/SV-motor/tree/main/laboratorio/ensayo-ia-y-observabilidad/visualizadores-de-documentos); la Biblioteca del SV ofrece la lectura y las fuentes de la edición.
 

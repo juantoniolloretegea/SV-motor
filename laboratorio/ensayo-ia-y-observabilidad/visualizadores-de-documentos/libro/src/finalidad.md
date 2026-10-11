@@ -1,6 +1,6 @@
 # Reglas, usos y descripciones documentales de documentos para el conocimiento de la IA
 
-**V.01 · 11 de octubre de 2026 · Original en español.**
+**V.02 · 11 de octubre de 2026 · Original en español.**
 
 Este libro explica cómo se conserva, transforma, visualiza y suministra documentación en el Sistema Vectorial SV. Está dirigido a quienes revisan documentos desde la administración documental y a quienes necesitan conocer el alcance de sus representaciones. Su finalidad es facilitar una revisión fundada y reproducible.
 
@@ -11,7 +11,7 @@ La explicación general es pública. Los documentos reservados, sus permisos y l
 | Elemento | Qué representa | Qué permite comprobar |
 | --- | --- | --- |
 | Original conservado | El archivo recibido y su edición identificada | Procedencia, licencia, formato, extensión e identidad mediante una huella digital |
-| Representación visible | El resultado que presenta el visor: texto, libro organizado o, cuando se incorpore, representación gráfica | Método de transformación, cobertura, omisiones y correspondencia con el original |
+| Representación visible | El resultado que presenta el visor: texto, libro organizado o representación gráfica de una página autorizada | Método de transformación, cobertura, omisiones y correspondencia con el original |
 | Contenido suministrado | El contenido concreto preparado y remitido en una consulta autorizada | Documentos y secciones utilizados, representación elegida y resultado registrado del envío |
 
 **Ver un documento no demuestra que ese mismo contenido se haya entregado a la IA.** Descargar un original tampoco equivale a suministrarlo al modelo. Cada operación tiene su finalidad, sus permisos y su constancia documental.

@@ -23,6 +23,8 @@ Esta tabla distingue la información existente de la ampliación prevista. No de
 
 ## Avisos comprensibles y accionables
 
+En la consulta gráfica de PDF, «Actuación registrada» abre la referencia individual del historial. «Descargar informe de esta vista» conserva los datos particulares de representación. El Calificador de actividades documentales asigna automáticamente TRA-02, «Preparación gráfica de una página PDF», dentro de Transformación. Esta denominación no puede ser elegida libremente por un usuario ni por una IA y no equivale a cotejo favorable.
+
 Los mensajes deben indicar la situación, su consecuencia y cómo continuar. Por ejemplo:
 
 - **«Representación parcial: páginas físicas 65–80 de 120».** Permite conocer la cobertura sin confundirla con el documento íntegro.
