@@ -1,6 +1,6 @@
 # Parámetros, rutas y trazabilidad: necesidades del sistema conjunto
 
-**Versión 0.6 · 13 de octubre de 2026 · Conceptos de diseño y requisitos de integración.**
+**Versión 0.7 · 13 de octubre de 2026 · Conceptos de diseño y requisitos de integración.**
 
 Este documento recoge las necesidades de representación y ejecución que vinculan la gestión documental, los Universos y el Lenguaje de Computación SV. No constituye nuevas rutas profesionales, sintaxis, tipos de la representación intermedia ni capacidades de ejecución recibidas. La propuesta de valoración ternaria de pertenencia a rutas se distingue expresamente de los requisitos ya establecidos.
 
@@ -70,7 +70,19 @@ El [par SV(36,6) y SV(9,3) publicado](https://www.itvia.online/pub/de-svcustos-e
 
 La propuesta de pertenencia no decide si esa valoración requiere una célula propia, una relación externa o una ampliación de representación. Esta decisión exige demostrar qué preserva el contrato vigente y qué información perdería. No se cambia la célula por analogía con un grafo.
 
-Las relaciones documentales y las composiciones intercelulares son estructuras distintas. Una fuente tiene un único Universo propietario y puede relacionarse con otros mediante selecciones autorizadas. Compartir una fuente no crea un puente ni determina una arquitectura celular.
+Las relaciones documentales, las relaciones entre Universos y las rutas críticas son estructuras distintas. Una fuente tiene un único Universo propietario y puede relacionarse documentalmente con otros mediante selecciones autorizadas. Compartir esa fuente no establece una relación lógica entre Universos, no crea un puente ni determina una arquitectura celular. Una relación lógica declarada tampoco constituye, por sí sola, una ruta crítica.
+
+| Estructura | Objeto y alcance | Regla de separación |
+|---|---|---|
+| Vínculo documental | Documento, edición, Universo y selección autorizada. | La coincidencia de fuentes o pasajes no crea relaciones lógicas entre Universos. |
+| Relación entre Universos | Relación conceptual, lógica o funcional definida, con condiciones y versiones propias. | Su existencia no impone un paso obligatorio en todo procedimiento. |
+| Ruta crítica | Pasos exigidos para una tarea, alcance y procedimiento determinados, con fundamento de obligatoriedad y consecuencias de omisión. | No equivale al conjunto de relaciones entre Universos ni obliga a consumir íntegramente todos sus documentos. |
+
+**Ejemplo hipotético de separación conceptual.** Un documento D contiene suma, multiplicación, división y raíz cuadrada. U1 utiliza el apartado de suma; U2, el de multiplicación; U3, el de división. El cuarto apartado puede quedar sin seleccionar. La unión de las selecciones no tiene que cubrir D y las selecciones no tienen que ser disjuntas. Su propiedad única y sus permisos se conservan con independencia de esta distribución.
+
+Si un procedimiento hipotético exigiera pasar por multiplicación para llegar de suma a división, esa obligación pertenecería a la ruta específicamente definida. Una relación conceptual entre suma y raíz cuadrada no impondría por sí sola ese mismo recorrido dentro de un algoritmo de cálculo de raíces. Se distinguen así la perspectiva conceptual y la del procedimiento concreto. El ejemplo no afirma una necesidad universal de los algoritmos aritméticos ni constituye un proceso real del SV.
+
+Los procesos reales y sus rutas están pendientes de definición. La ausencia de una ruta constituida no demuestra que un conocimiento sea prescindible. La futura definición deberá identificar tarea, alcance, procedimiento, condiciones de aplicación, ruta y versión, pasos obligatorios, fundamento y consecuencias de omisión. Ninguna de estas decisiones se inferirá automáticamente de compartir documentos, propietarios o selecciones. La IA consume las definiciones autorizadas; no las constituye ni las modifica.
 
 La apertura documental distingue dos estados: **Universo en preparación**, que puede registrarse sin documentos, y **Universo habilitado para uso documental**, que requiere un maestro utilizable y ordenación válida del conjunto. La disponibilidad se calcula para el uso previsto y sus permisos vigentes. Revocar el último maestro utilizable devuelve el conjunto a preparación sin borrar antecedentes ni obstaculizar la revocación. No se crea un documento administrativo para simular el maestro ausente, ni se asigna al primer Universo la propiedad de las aperturas posteriores. Este estado no constituye una célula, no valida científicamente un dominio y no sustituye las comprobaciones particulares de cada entrega.
 
@@ -127,9 +139,11 @@ Los tensores internos de un LLM pertenecen a su propia ejecución. Entregarle un
 
 Se requieren tres vistas relacionadas:
 
-- **Composición:** documentos y objetos, selecciones, Universos propietarios y relacionados, parámetros y dependencias declaradas.
+- **Composición:** documentos y objetos, selecciones y propiedad; en una capa diferenciada, relaciones declaradas entre Universos y parámetros. Las leyendas y los tipos de enlace impiden confundir un vínculo documental con una relación lógica.
 - **Rutas:** recorrido previsto y condiciones; rutas críticas sólo cuando su definición y consecuencias estén constituidas. La criticidad no determinada se muestra como tal, nunca como ausencia de riesgo.
 - **Actuación:** recorrido efectivamente registrado, elementos suministrados, consultas registradas, referencias de la respuesta, comprobaciones y decisión posterior del experto.
+
+La vista de rutas identifica la tarea, el alcance y el procedimiento. No transforma todas las relaciones de la vista de composición en pasos obligatorios. Los ejemplos siguientes son hipótesis didácticas con condiciones expresas; los procesos reales y sus rutas no quedan definidos por estas figuras.
 
 La selección de un elemento debe mostrar de qué depende, qué depende de él, versiones, alcance, responsable de la decisión y evidencia. Debe permitir ampliar desde una visión general hasta un pasaje exacto, filtrar por Universo y ruta, distinguir referencias compartidas sin duplicarlas y comparar el recorrido previsto con el registrado. Una dependencia crítica omitida debe resultar visible con su causa y tratamiento, no desaparecer del dibujo.
 
@@ -235,6 +249,7 @@ Estas condiciones constituyen un programa de verificación pendiente, no resulta
 | Separación de significados | Rechazar la sustitución de una valoración de pertenencia por una decisional aunque ambas contengan 0, 1 o U. |
 | Identidad y propiedad | Rechazar propietario ausente o múltiple; permitir una transferencia completa y trazada; no vaciar un Universo constituido. |
 | Compartición | Conservar identidad de referencia y versiones, sin copiar estados de casos ni ampliar acceso. |
+| Separación de estructuras | No derivar relaciones lógicas de documentos compartidos ni rutas críticas de la mera existencia de relaciones entre Universos; identificar tarea, alcance, procedimiento y fundamento de obligatoriedad. |
 | Selección documental | Resolver cada página o pasaje contra la edición exacta; rechazar selecciones sin correspondencia tras una transformación. |
 | Dependencias | Aplicar una ruta constituida; impedir que la ausencia o indeterminación de una dependencia obligatoria se trate como permiso para omitirla. |
 | Estado y figura | Detectar discordancia de instancia, revisión, posición o valor entre registro matemático y frame. |
