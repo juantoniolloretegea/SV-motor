@@ -1,6 +1,6 @@
 # Parámetros, rutas y trazabilidad: necesidades del sistema conjunto
 
-**Versión 0.3 · 12 de octubre de 2026 · Conceptos de diseño y requisitos de integración.**
+**Versión 0.4 · 13 de octubre de 2026 · Conceptos de diseño y requisitos de integración.**
 
 Este documento recoge las necesidades de representación y ejecución que vinculan la gestión documental, los Universos y el Lenguaje de Computación SV. No constituye nuevas rutas profesionales, sintaxis, tipos de la representación intermedia ni capacidades de ejecución recibidas. La propuesta de valoración ternaria de pertenencia a rutas se distingue expresamente de los requisitos ya establecidos.
 
@@ -55,6 +55,18 @@ El esquema es conceptual y no acredita una ruta constituida ni una capacidad imp
 Los [pilares del Lenguaje](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/f10aac725676997adc3840a1bd1a41e1579589ea/docs/calidad/PILARES_Y_RESTRICCIONES_DE_DISENO_DEL_LENGUAJE_DE_COMPUTACION_SV_2026_09_05.md) y el [documento de paridad](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/f10aac725676997adc3840a1bd1a41e1579589ea/docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/CELULA_IMAGEN_Y_AGENTES_EN_EL_SV_P1_P3_BIS_2026_09_13_V2.md) gobiernan el encaje celular. Deben distinguirse la familia matemática, las dimensiones admitidas por una versión y la dimensión fija de una instancia.
 
 Un inventario de 27 parámetros no autoriza automáticamente tres células de nueve ni una de 36 con posiciones de relleno. Una posición debe corresponder a un parámetro constituido. U conserva indeterminación en una posición válida; no rellena un hueco, un error técnico o una definición inexistente.
+
+### Correspondencia celular pendiente y selección documental
+
+Los inventarios documentales actuales OP-IMM-001 y OP-CYB-001 conservan, respectivamente, 27 y 32 referencias de parámetros. **Ninguno tiene todavía una correspondencia aprobada con una célula oficial del SV.** Esa correspondencia se determinará tras completar y revisar su dominio, con los reajustes que procedan. La ficha debe expresar esta restricción y evitar cualquier apariencia de constitución celular definitiva.
+
+El catálogo de selección documental incluye las células (9,3), (16,4), (25,5), (36,6) y (49,7), junto con una opción expresa: **Pendiente de asignar célula del SV**. Esta última permite conservar un inventario sin forzar su dimensión. El sistema debe rechazar denominaciones ajenas al catálogo y atribuciones incompatibles con la restricción vigente; no basta con advertir al usuario después de guardar.
+
+La coincidencia del número de parámetros con una dimensión admitida es necesaria, pero no suficiente. Deben acreditarse además identidad, orden, significado de las posiciones, contrato y versión de la constitución. Elegir una referencia documental no habilita su ejecución ni modifica el núcleo, la semántica o la representación intermedia. Una tipología futura requiere incorporación expresa y documentada; no puede deducirse de un campo de texto libre.
+
+El [par SV(36,6) y SV(9,3) publicado](https://www.itvia.online/pub/de-svcustos-el-marco-de-intrusion-hasta-svperitus-celulas-sv-en-par-n--36--9--45/release/1) mantiene dos células independientes y compone sus resultados en paralelo. Las 45 posiciones del conjunto no constituyen una célula de dimensión 45. Un puente entre células y una composición paralela son relaciones diferentes, sujetas a contratos propios. La regla de composición del ejemplo publicado no se transfiere por analogía a todos los Universos.
+
+### Contratos de valoración y representación
 
 La propuesta de pertenencia no decide si esa valoración requiere una célula propia, una relación externa o una ampliación de representación. Esta decisión exige demostrar qué preserva el contrato vigente y qué información perdería. No se cambia la célula por analogía con un grafo.
 
