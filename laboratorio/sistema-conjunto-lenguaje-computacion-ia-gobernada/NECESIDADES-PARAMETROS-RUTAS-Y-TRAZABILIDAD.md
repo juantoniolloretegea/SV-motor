@@ -1,6 +1,6 @@
 # Parámetros, rutas y trazabilidad: necesidades del sistema conjunto
 
-**Versión 0.1 · 12 de octubre de 2026 · Especificación en evaluación.**
+**Versión 0.2 · 12 de octubre de 2026 · Conceptos de diseño y requisitos de integración.**
 
 Este documento recoge las necesidades de representación y ejecución que vinculan la gestión documental, los Universos y el Lenguaje de Computación SV. No constituye nuevas rutas profesionales, sintaxis, tipos de la representación intermedia ni capacidades de ejecución recibidas. La propuesta de valoración ternaria de pertenencia a rutas se distingue expresamente de los requisitos ya establecidos.
 
@@ -62,6 +62,47 @@ Un código CIE-11, o la clasificación pertinente de otro dominio, identifica un
 
 El frame gráfico deberá corresponder a la misma instancia, revisión, posiciones y valores que su estado matemático. Egui presenta esa correspondencia; no decide pertenencias, reglas o consecuencias. El mapa de dependencias y el polígono decisional son vistas diferentes y enlazables.
 
+### Realización celular de un Universo
+
+El Universo constituido debe disponer de una realización computable mediante células SV. La cadena de diseño relaciona **Universo y parámetros → células constituidas → organización matricial → representación tensorial → operaciones autorizadas**. Cada transformación conserva las identidades y el significado; no convierte esos niveles en objetos semánticamente intercambiables.
+
+La correspondencia entre parámetros y posiciones, las dimensiones y las relaciones celulares deben constituirse expresamente. La presencia de un concepto de conocimiento no autoriza a asignarle automáticamente 0, 1 o U para completar un estado. Su estructura y su eventual valoración conservan contratos diferenciados. Las referencias compartidas tampoco duplican por sí mismas un estado.
+
+![Del Universo a la ejecución tensorial](universo-celulas-tensores.svg)
+
+La organización de cálculo preserva cada célula y su vínculo con el frame. Cambiar la disposición de almacenamiento no permite reordenar posiciones, fusionar instancias ni transformar la prioridad documental en orden celular. Esta es la condición para estudiar la aceleración conservando el objeto del SV.
+
+### Vector, frame y representación tensorial
+
+El documento de paridad, apartado 2.2, expresa el vínculo contractual como **Frame_C = (frmat, frvis)**: estado matemático y representación visual de la misma instancia bajo un contrato C. No basta con disponer de un vector válido y una imagen legible si proceden de revisiones o constituciones distintas. La imagen puede materializarse cuando proceda; conservar el vínculo no obliga a mantener todos sus píxeles en memoria.
+
+Una célula exacta es un vector plano, ordenado y posicional de estados de Σ = {0, 1, U}. Es un producto cartesiano finito, no un espacio vectorial sobre un cuerpo. La atomización proporciona unidades semánticas; constituir y valorar sus posiciones proporciona el estado celular. Un parámetro de conocimiento sin valoración no se convierte en un estado ternario por almacenarlo en un array.
+
+Se plantea estudiar una representación tensorial computacional —datos ordenados en uno o varios ejes— para ejecutar por lotes operaciones compatibles. Por ejemplo, varias células de la misma dimensión y contrato podrían almacenarse con un eje de instancia y otro de posición. Ese almacenamiento no crea una nueva célula, no fusiona instancias y no autoriza sumas, productos matriciales, promedios o composiciones que el contrato del SV no haya definido. La codificación de U no será una aproximación numérica que pueda perderse en una conversión.
+
+### Ejemplo: los 19.683 estados de SV(9,3)
+
+SV(9,3) admite **3⁹ = 19.683 vectores de estado posibles**, cada uno de nueve posiciones. Una enumeración completa podría ocupar una tabla de 19.683 filas y nueve columnas. La tabla representa el espacio de estados; no convierte la célula en una matriz de 3 × 3 ni cambia su dimensión. Tampoco es necesario materializar todos los estados para evaluar uno. Para dimensiones mayores, el crecimiento de 3ⁿ exige justificar el almacenamiento y los recursos.
+
+Un ejemplo de representación tensorial auxiliar consiste en separar tres indicadores: presencia de 0, presencia de 1 y presencia de U. Para cada instancia y posición, exactamente uno de los tres indicadores vale uno. **Ese uno es una marca de presencia, no el estado semántico 1 del SV.**
+
+En un lote de m células compatibles de n posiciones, esos indicadores pueden organizarse en tres matrices de m × n. Multiplicar cada matriz por una columna de n unos permite contar, por instancia, N₀, N₁ y Nᵤ. Es una operación matricial con significado explícito: cuenta estados; no multiplica decisiones ni promedia U. Debe conservarse el vector original porque los recuentos no preservan el orden de las posiciones.
+
+
+Por ejemplo, el estado ordenado (0, 0, U, 1, 0, U, 0, 1, 0) produce N₀ = 5, N₁ = 2 y Nᵤ = 2. La suma es nueve. El cálculo conserva U como categoría y no como cero, valor medio o ausencia. Otro orden con esos mismos recuentos seguiría siendo otro vector: por eso deben conservarse las posiciones y su frame.
+
+La terminología general de vectores, matrices, tensores y producto matricial se apoya en Goodfellow, Bengio y Courville, *Deep Learning* (MIT Press, 2016), [capítulo 2, apartados 2.1 y 2.2](https://www.deeplearningbook.org/contents/linear_algebra.html). El ejemplo de indicadores es una aplicación explicativa propia; esa bibliografía no define ni valida la semántica del SV.
+
+La evaluación posterior aplica exclusivamente la regla constituida. Cualquier otra multiplicación, relación entre matrices o composición de células necesita justificar entradas, operación y significado de la salida. Codificar U mediante un número no autoriza a tratarla como una magnitud ordinaria.
+
+Rust debe custodiar dimensiones, identidades, tipos de valoración, contratos y correspondencia con los frames antes y después de cualquier ejecución acelerada. El cálculo paralelo es una posible realización de operaciones ya definidas, no una fuente de autoridad semántica. El soporte concreto de una GPU o TPU depende de su entorno de ejecución, representación admitida y operaciones disponibles; no se obtiene automáticamente por escribir Rust ni por contratar un modelo que utilice esos dispositivos.
+
+La documentación de [wgpu sobre cómputo](https://wgpu.rs/doc/wgpu/struct.ComputePipeline.html) acredita la existencia de una interfaz de ejecución GPU utilizable desde Rust, no una integración recibida en el SV. La [arquitectura TPU de Google](https://docs.cloud.google.com/tpu/docs/system-architecture-tpu-vm) describe aceleración especializada de operaciones matriciales; no convierte cualquier relación o recorrido en una multiplicación de matrices. Los [límites de la aritmética en coma flotante](https://docs.nvidia.com/cuda/floating-point/index.html) justifican comprobar explícitamente la conservación del resultado al cambiar orden de ejecución o dispositivo.
+
+Antes de adoptar esta vía se exige comparar una realización de referencia y la candidata acelerada: mismas entradas admitidas, posiciones, estados ternarios y resultados; rechazo equivalente de entradas inválidas; trazabilidad de transformaciones; y tiempos completos, incluidas preparación, transferencia, sincronización y recuperación. Una carga pequeña puede no compensar esos costes. No se declara una ganancia de rendimiento sin medirla ni se selecciona ahora una biblioteca, un dispositivo o un algoritmo.
+
+Los tensores internos de un LLM pertenecen a su propia ejecución. Entregarle un texto con un vector del SV no acredita que haya ejecutado el contrato de ese vector en sus aceleradores. La prueba deberá identificar qué operación realiza el SV, qué recibe el modelo y qué resultado vuelve a comprobarse. El determinismo exigido a los controles no convierte automáticamente la inferencia del LLM en determinista.
+
 ## 5. Visualización requerida
 
 Se requieren tres vistas relacionadas:
@@ -110,6 +151,7 @@ Estas condiciones constituyen un programa de verificación pendiente, no resulta
 | Selección documental | Resolver cada página o pasaje contra la edición exacta; rechazar selecciones sin correspondencia tras una transformación. |
 | Dependencias | Aplicar una ruta constituida; impedir que la ausencia o indeterminación de una dependencia obligatoria se trate como permiso para omitirla. |
 | Estado y figura | Detectar discordancia de instancia, revisión, posición o valor entre registro matemático y frame. |
+| Ejecución acelerada | Conservar resultados y rechazos de la referencia, identidad por instancia y trazabilidad; medir el recorrido completo antes de afirmar una mejora. |
 | Revocación e historial | Denegar nuevas entregas revocadas conservando el soporte histórico de las anteriores. |
 | Frontera entre nodos | Preservar las mismas identidades, alcance, permisos y evidencia en los nodos 1, 2 y 3; rechazar información obligatoria perdida en la adaptación. |
 
