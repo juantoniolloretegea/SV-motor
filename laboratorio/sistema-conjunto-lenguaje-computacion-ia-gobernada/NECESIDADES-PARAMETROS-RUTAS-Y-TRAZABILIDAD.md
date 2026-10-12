@@ -1,6 +1,6 @@
 # Parámetros, rutas y trazabilidad: necesidades del sistema conjunto
 
-**Versión 0.5 · 13 de octubre de 2026 · Conceptos de diseño y requisitos de integración.**
+**Versión 0.6 · 13 de octubre de 2026 · Conceptos de diseño y requisitos de integración.**
 
 Este documento recoge las necesidades de representación y ejecución que vinculan la gestión documental, los Universos y el Lenguaje de Computación SV. No constituye nuevas rutas profesionales, sintaxis, tipos de la representación intermedia ni capacidades de ejecución recibidas. La propuesta de valoración ternaria de pertenencia a rutas se distingue expresamente de los requisitos ya establecidos.
 
@@ -70,7 +70,9 @@ El [par SV(36,6) y SV(9,3) publicado](https://www.itvia.online/pub/de-svcustos-e
 
 La propuesta de pertenencia no decide si esa valoración requiere una célula propia, una relación externa o una ampliación de representación. Esta decisión exige demostrar qué preserva el contrato vigente y qué información perdería. No se cambia la célula por analogía con un grafo.
 
-Las relaciones documentales y las composiciones intercelulares son estructuras distintas. Una fuente tiene un único Universo propietario y puede relacionarse con otros mediante selecciones autorizadas. Un Universo constituido conserva documentación y al menos un maestro utilizable; el registro preparatorio de una definición no satisface todavía esa condición. Compartir una fuente no crea un puente ni determina una arquitectura celular.
+Las relaciones documentales y las composiciones intercelulares son estructuras distintas. Una fuente tiene un único Universo propietario y puede relacionarse con otros mediante selecciones autorizadas. Compartir una fuente no crea un puente ni determina una arquitectura celular.
+
+La apertura documental distingue dos estados: **Universo en preparación**, que puede registrarse sin documentos, y **Universo habilitado para uso documental**, que requiere un maestro utilizable y ordenación válida del conjunto. La disponibilidad se calcula para el uso previsto y sus permisos vigentes. Revocar el último maestro utilizable devuelve el conjunto a preparación sin borrar antecedentes ni obstaculizar la revocación. No se crea un documento administrativo para simular el maestro ausente, ni se asigna al primer Universo la propiedad de las aperturas posteriores. Este estado no constituye una célula, no valida científicamente un dominio y no sustituye las comprobaciones particulares de cada entrega.
 
 La composición debe remitirse a la [Gramática general oficial, primera edición, §§ 4–11](https://www.itvia.online/pub/algebra-de-composicion-intercelular-del-marco-sv--ii-gramatica-general-de-composicion/release/1), que distingue relación, patrón, operador y constructor. Su declaración requiere identidad y versión de las células, contratos de entrada y salida, orden de evaluación y condiciones aplicables. Una referencia celular del gestor no incorpora por sí misma esos contratos al Lenguaje.
 
