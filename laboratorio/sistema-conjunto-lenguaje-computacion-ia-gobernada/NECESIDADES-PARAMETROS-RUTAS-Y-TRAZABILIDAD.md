@@ -1,6 +1,6 @@
 # Parámetros, rutas y trazabilidad: necesidades del sistema conjunto
 
-**Versión 0.2 · 12 de octubre de 2026 · Conceptos de diseño y requisitos de integración.**
+**Versión 0.3 · 12 de octubre de 2026 · Conceptos de diseño y requisitos de integración.**
 
 Este documento recoge las necesidades de representación y ejecución que vinculan la gestión documental, los Universos y el Lenguaje de Computación SV. No constituye nuevas rutas profesionales, sintaxis, tipos de la representación intermedia ni capacidades de ejecución recibidas. La propuesta de valoración ternaria de pertenencia a rutas se distingue expresamente de los requisitos ya establecidos.
 
@@ -44,7 +44,7 @@ Ejemplo conceptual, sin finalidad profesional: la unidad de conocimiento K expli
 
 La valoración no afirma si el contenido de K es verdadero. Tampoco responde a la cuestión singular «¿queda acreditada la procedencia del dato de este caso?». K puede pertenecer a R y esa cuestión singular permanecer en U. Ambas salidas deben verse con su pregunta y evidencia respectivas.
 
-![Distinción entre conocimiento, pertenencia y decisión](parametros-rutas.svg)
+![Distinción entre conocimiento, pertenencia y decisión](imagenes/parametros-rutas.svg)
 
 El esquema es conceptual y no acredita una ruta constituida ni una capacidad implementada.
 
@@ -68,7 +68,7 @@ El Universo constituido debe disponer de una realización computable mediante c�
 
 La correspondencia entre parámetros y posiciones, las dimensiones y las relaciones celulares deben constituirse expresamente. La presencia de un concepto de conocimiento no autoriza a asignarle automáticamente 0, 1 o U para completar un estado. Su estructura y su eventual valoración conservan contratos diferenciados. Las referencias compartidas tampoco duplican por sí mismas un estado.
 
-![Del Universo a la ejecución tensorial](universo-celulas-tensores.svg)
+![Del Universo a la ejecución tensorial](imagenes/universo-celulas-tensores.svg)
 
 La organización de cálculo preserva cada célula y su vínculo con el frame. Cambiar la disposición de almacenamiento no permite reordenar posiciones, fusionar instancias ni transformar la prioridad documental en orden celular. Esta es la condición para estudiar la aceleración conservando el objeto del SV.
 
@@ -116,6 +116,73 @@ La selección de un elemento debe mostrar de qué depende, qué depende de él, 
 La documentación de Microsoft Project sobre [relaciones entre tareas](https://support.microsoft.com/es-es/project/highlight-how-tasks-link-to-other-tasks) ofrece una referencia de interacción: seleccionar un elemento y destacar sus antecedentes y sucesores. Su [ruta crítica](https://support.microsoft.com/es-es/project/manage-your-project-s-critical-path) se vincula al calendario del proyecto. El SV necesita fundamentar la obligatoriedad por consecuencias de omisión; no adopta de esa analogía duraciones, holguras ni un algoritmo clínico.
 
 Las ayudas explicarán «qué significa», «de dónde procede» y «qué permite concluir» cada valor. El color se acompañará de texto o símbolos. La terna decisional no compartirá una leyenda ambigua con pertenencia, estado documental o fallos técnicos. La visualización respetará los permisos de cada recurso, incluidos títulos y metadatos reservados.
+
+### Ejemplo: cinco elementos y una ruta crítica
+
+Sean A, B, C, D y E cinco elementos de conocimiento delimitados. Cada uno puede representar un Universo completo o una parte identificada de éste; la leyenda de la ruta debe declarar el alcance de cada elemento y sus documentos y parámetros asociados.
+
+En este ejemplo se establecen dos reglas: los cinco elementos son obligatorios y cada uno requiere el cumplimiento del anterior. La ruta crítica es **A → B → C → D → E**. Es la única secuencia que satisface ambas reglas; su unicidad procede de estas condiciones expresas, no de una propiedad general de cualquier conjunto de cinco elementos.
+
+![Ruta crítica declarada, variaciones y recorrido registrado](imagenes/rutas-criticas.svg)
+
+| Recorrido propuesto | Comprobación frente a las reglas del ejemplo |
+|---|---|
+| A → B → C → D → E | Conserva los cinco elementos y respeta todas las dependencias. |
+| A → B → D → E | Omite C, que es obligatorio. |
+| A → C → B → D → E | Contiene todos los elementos, pero sitúa C antes de su requisito B. |
+| A → B → C → E → D | Adelanta E respecto de su requisito D. |
+
+Cinco elementos distintos admiten 5! = 120 permutaciones si no se fija ninguna posición. Si A debe ser el inicio y E el final, quedan 3! = 6 órdenes de los tres elementos intermedios. Esas posibilidades combinatorias no son autorizaciones: las dependencias del ejemplo sólo admiten una. Los recorridos que omiten elementos son variaciones adicionales y también deben confrontarse con las obligaciones declaradas.
+
+**Ruta exigida y recorrido acreditado son objetos distintos.** Si únicamente constan cumplidos A y B, dibujar la ruta completa no permite dar por cumplido C. El acceso al siguiente paso dependiente debe conservar la condición pendiente y su evidencia. Esto tampoco impide consultar otras fuentes ya autorizadas que no dependan de ese paso.
+
+Al seleccionar un elemento, la visualización deberá mostrar su Universo, los parámetros implicados, la edición documental, las páginas o pasajes utilizados, las condiciones de acceso y la evidencia de la actuación. Una figura no sustituye esos registros. Las flechas expresan dependencias de conocimiento; no duraciones ni costes. Los estados de seguimiento de este ejemplo no son valores de la terna decisional.
+
+El diseño no atribuye todavía consecuencias profesionales concretas a una omisión ni establece el algoritmo que constituirá las rutas. Esa definición requiere reglas, fuentes y validación propias del dominio. La representación permite explicar y comprobar una ruta una vez constituida; no la inventa.
+
+
+### Analogía: la coordinación de una escala aeroportuaria
+
+En la gestión aeroportuaria, la preparación de una salida reúne actividades dependientes, algunas simultáneas. EUROCONTROL describe el seguimiento de la escala y la preparación de la salida mediante hitos que permiten actualizar previsiones y avisos. Esta referencia aporta una analogía de coordinación y seguimiento; no prescribe las rutas del SV. [EUROCONTROL: especificación A-CDM, edición 1.0](https://www.eurocontrol.int/publication/eurocontrol-specification-airport-collaborative-decision-making-cdm).
+
+Supóngase la siguiente planificación simplificada. Las actividades y sus duraciones son **hipotéticas**; agrupan operaciones únicamente para explicar el diagrama y no representan un procedimiento de aeropuerto.
+
+| Elemento | Bloque del ejemplo | Duración supuesta | Requisito previo |
+|---|---|---|---|
+| A | Coordinación inicial de la escala | 5 minutos | Inicio |
+| B | Preparación de cabina | 12 minutos | A terminado |
+| C | Preparación de equipaje | 7 minutos | A terminado |
+| D | Comprobación conjunta de ambos bloques | 4 minutos | B y C terminados |
+| E | Cierre del proceso considerado | 3 minutos | D terminado |
+
+![Dependencias y ruta crítica temporal en una hipótesis aeroportuaria](imagenes/aeropuerto-dependencias.svg)
+
+B y C pueden desarrollarse simultáneamente. Bajo estas hipótesis, la duración resulta **5 + máximo(12, 7) + 4 + 3 = 24 minutos**. La ruta A → B → D → E fija la terminación y es la única ruta crítica temporal de este ejemplo. La secuencia A → C → D → E suma 19 minutos: C dispone de cinco minutos de margen, pero **continúa siendo obligatoria**. Elegir la secuencia más corta y prescindir de B incumpliría el requisito de D. Una demora de tres minutos en B llevaría la terminación a 27 minutos; si el coste adicional supuesto fuera de 100 unidades monetarias por minuto de demora final, añadiría 300 unidades. Son cifras didácticas, no estimaciones de un aeropuerto.
+
+Microsoft Project representa este tipo de dependencias y distingue las tareas con margen de las que condicionan la fecha de terminación. Ese significado temporal explica la analogía y debe conservarse al citar la aplicación. [Microsoft: administración de la ruta crítica](https://support.microsoft.com/es-es/project/manage-your-project-s-critical-path).
+
+En el SV se conserva la idea de **dependencias explícitas, condiciones de avance y seguimiento comprobable**, mientras que la criticidad se fundamenta en el conocimiento requerido y las consecuencias de omitirlo. Un parámetro no se vuelve prescindible porque su consulta sea breve ni porque ocupe pocos documentos. Del mismo modo, una dependencia no desaparece por pertenecer a un Universo compartido. El cálculo temporal anterior no es el algoritmo de rutas del SV; permite comprender gráficamente por qué cada obligación debe estar definida y acreditada.
+
+
+### Analogía: un reparto con nueve destinos
+
+Un repartidor debe atender nueve destinos. Omitir uno incumple el encargo aunque reduzca el tiempo o el combustible. Visitar los nueve, por otra parte, no determina automáticamente el orden: hacen falta distancias, tiempos de viaje, consumo, punto de partida y llegada, y las restricciones que correspondan. Esta clase de problema se estudia en planificación de recorridos; una formulación básica es el problema del viajante, documentado en [Google OR-Tools](https://developers.google.com/optimization/routing/tsp).
+
+![Cobertura de nueve destinos y criterios necesarios para organizar el recorrido](imagenes/reparto-nueve-destinos.svg)
+
+La secuencia **1 → 4 → 2 → 8 → 5 → 7 → 3 → 9 → 6** del diagrama sólo ilustra cobertura completa. No se afirma que ahorre más combustible ni tiempo: no se han proporcionado datos que permitan calcularlo. Ambos criterios pueden favorecer recorridos diferentes y necesitan una regla de comparación declarada. Con nueve destinos distintos hay 9! = 362.880 órdenes posibles antes de imponer restricciones o identificar recorridos equivalentes.
+
+El ejemplo explica por qué la planificación no debe confiarse a una secuencia aparentemente razonable. En el SV, una propuesta debe someterse a comprobaciones de cobertura, dependencias, permisos y evidencia. Una respuesta convincente de un LLM no acredita por sí misma que se haya consumido todo el conocimiento exigido. Se conserva exclusivamente la denominación **ruta crítica** para el concepto del SV; las analogías logísticas no fijan su algoritmo ni convierten el número de destinos en una dimensión celular.
+
+
+### Matrices, restricciones y aceleración
+
+La investigación operativa ofrece antecedentes útiles. Un problema de transporte puede expresar cantidades mediante una matriz X y costes unitarios mediante otra matriz C; el coste total se escribe como la suma de Cᵢⱼ·Xᵢⱼ, sometida a restricciones de oferta, demanda y capacidad. Su formulación lineal admite métodos como el símplex. Ordenar visitas añade restricciones diferentes: una asignación de cantidades no constituye por sí sola un recorrido que visite todos los destinos. Véanse los ejemplos oficiales de [flujo de coste mínimo](https://developers.google.com/optimization/flow/mincostflow) y [programación lineal](https://developers.google.com/optimization/lp/lp_example).
+
+El objetivo de diseño del SV es llevar las operaciones computables a representaciones vectoriales, matriciales y tensoriales que permitan aprovechar la aceleración disponible, bajo control de Rust. Cada matriz debe declarar qué significan sus filas, columnas, valores y operaciones. **La forma numérica conserva el significado; no lo sustituye.** Las restricciones, autorizaciones y evidencias deben acompañar la representación.
+
+Una representación tensorial puede facilitar cálculos en paralelo; no convierte automáticamente la búsqueda de una ruta en una multiplicación de matrices ni elimina su dificultad combinatoria. La elección del algoritmo, su equivalencia con las reglas del SV y su rendimiento completo requieren comprobación. La aceleración es un objetivo verificable, no una velocidad insuperable acreditada por emplear Rust, GPU o tensores.
+
 
 ## 6. Evidencia de una actuación
 
