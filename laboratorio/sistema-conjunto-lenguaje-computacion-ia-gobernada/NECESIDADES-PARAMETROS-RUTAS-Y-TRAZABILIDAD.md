@@ -1,6 +1,6 @@
 # Parámetros, rutas y trazabilidad: necesidades del sistema conjunto
 
-**Versión 0.9 · 13 de octubre de 2026 · Conceptos de diseño y requisitos de integración.**
+**Versión 0.10 · 13 de octubre de 2026 · Conceptos de diseño y requisitos de integración.**
 
 Este documento recoge las necesidades de representación y ejecución que vinculan la gestión documental, los Universos y el Lenguaje de Computación SV. No constituye nuevas rutas profesionales, sintaxis, tipos de la representación intermedia ni capacidades de ejecución recibidas. La propuesta de valoración ternaria de pertenencia a rutas se distingue expresamente de los requisitos ya establecidos.
 
@@ -280,6 +280,8 @@ Las referencias fijadas a revisiones identifican los antecedentes utilizados. La
 Cada Universo debe conservar la bibliografía que fundamenta su definición y sus parámetros. El apartado «Bibliografía de constitución del Universo» reunirá una tabla de referencias y un estudio individual de disponibilidad, pertinencia y condiciones de uso. La inclusión bibliográfica no acredita por sí sola calidad científica, vigencia, acceso al texto íntegro ni autorización para incorporarlo como documento consumible.
 
 Cada referencia identificará autoría o entidad responsable, título completo, edición, fecha, idioma, identificadores y fuentes competentes. Se distinguirán las páginas descriptivas, los resúmenes, los textos íntegros, las versiones aceptadas y las ediciones editoriales. Podrán constar varias vías de obtención: editorial, repositorio institucional, organismo autor, biblioteca o convenio. Cada vía conservará la edición accesible, el formato, la fecha de comprobación y su resultado.
+
+La bibliografía visible de cada Universo contendrá una sola entrada por obra y edición identificada. Las referencias repetidas se reunirán en ella, conservando sus localizadores, usos fundamentados y vías de obtención. Los identificadores históricos quedarán como procedencia, sin duplicar filas. La depuración comprobará DOI, ISBN y edición, identificadores institucionales, autoría, título y versión. Una dirección diferente no demuestra una obra diferente, y un título parecido no acredita identidad. Las ediciones con contenido distinto permanecerán separadas y relacionadas; una identidad dudosa exigirá contraste antes de cualquier fusión.
 
 El estudio separará acceso gratuito, acceso de pago, acceso institucional, licencia reutilizable y autorización particular. Una vía de convenio pendiente no será un permiso vigente. La condición de acceso se examinará independientemente de la pertinencia académica. Los usos de consulta, conservación, copia, extracción, reconocimiento óptico, conversión, traducción para lectura y suministro a IA conservarán su comprobación específica. Las figuras podrán tener condiciones distintas de las del texto.
 
