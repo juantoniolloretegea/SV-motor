@@ -1,6 +1,6 @@
 # Parámetros, rutas y trazabilidad: necesidades del sistema conjunto
 
-**Versión 0.8 · 13 de octubre de 2026 · Conceptos de diseño y requisitos de integración.**
+**Versión 0.9 · 13 de octubre de 2026 · Conceptos de diseño y requisitos de integración.**
 
 Este documento recoge las necesidades de representación y ejecución que vinculan la gestión documental, los Universos y el Lenguaje de Computación SV. No constituye nuevas rutas profesionales, sintaxis, tipos de la representación intermedia ni capacidades de ejecución recibidas. La propuesta de valoración ternaria de pertenencia a rutas se distingue expresamente de los requisitos ya establecidos.
 
@@ -274,6 +274,20 @@ La gestión documental y de usuarios conserva sus reglas de autorización. La IA
 - [Manual del Lenguaje: requisitos de integración](https://documentos-sv.itvia.online/dominios/lenguaje-de-computacion/manual/parametros-rutas.html).
 
 Las referencias fijadas a revisiones identifican los antecedentes utilizados. La distinción y la propuesta de este documento no se atribuyen retrospectivamente como formulaciones literales de esos antecedentes.
+
+## 9. Bibliografía de constitución del Universo
+
+Cada Universo debe conservar la bibliografía que fundamenta su definición y sus parámetros. El apartado «Bibliografía de constitución del Universo» reunirá una tabla de referencias y un estudio individual de disponibilidad, pertinencia y condiciones de uso. La inclusión bibliográfica no acredita por sí sola calidad científica, vigencia, acceso al texto íntegro ni autorización para incorporarlo como documento consumible.
+
+Cada referencia identificará autoría o entidad responsable, título completo, edición, fecha, idioma, identificadores y fuentes competentes. Se distinguirán las páginas descriptivas, los resúmenes, los textos íntegros, las versiones aceptadas y las ediciones editoriales. Podrán constar varias vías de obtención: editorial, repositorio institucional, organismo autor, biblioteca o convenio. Cada vía conservará la edición accesible, el formato, la fecha de comprobación y su resultado.
+
+El estudio separará acceso gratuito, acceso de pago, acceso institucional, licencia reutilizable y autorización particular. Una vía de convenio pendiente no será un permiso vigente. La condición de acceso se examinará independientemente de la pertinencia académica. Los usos de consulta, conservación, copia, extracción, reconocimiento óptico, conversión, traducción para lectura y suministro a IA conservarán su comprobación específica. Las figuras podrán tener condiciones distintas de las del texto.
+
+Desde una referencia estudiada podrá prepararse la ficha documental con su identidad, procedencia y evidencia de condiciones. Sólo las operaciones acreditadas permitirán obtener y conservar el original o producir representaciones PDF, caché HTML o Markdown. Otros formatos requerirán una evaluación expresa. Se conservarán la edición, la huella, la fecha y la vía efectiva de obtención; un acceso de pago no autoriza una compra ni una suscripción.
+
+La referencia bibliográfica y el documento recibido mantendrán una vinculación identificable, sin duplicar propietarios ni confundir sus estados. La falta de un archivo utilizable no eliminará la referencia: la ficha explicará qué falta y qué alternativas están acreditadas. Los cambios de condiciones obligarán a revisar los usos afectados, conservando sus antecedentes.
+
+Los hipervínculos no habilitan a la IA en examen o consejo para consultar Internet. Esos recorridos consumirán exclusivamente originales conservados en su idioma nativo y dentro del alcance autorizado. La traducción para lectura humana seguirá excluida del material decisional.
 
 ---
 
