@@ -1,9 +1,12 @@
 # Parámetros, rutas y trazabilidad: necesidades del sistema conjunto
 
-**Versión 0.7 · 13 de octubre de 2026 · Conceptos de diseño y requisitos de integración.**
+**Versión 0.8 · 13 de octubre de 2026 · Conceptos de diseño y requisitos de integración.**
 
 Este documento recoge las necesidades de representación y ejecución que vinculan la gestión documental, los Universos y el Lenguaje de Computación SV. No constituye nuevas rutas profesionales, sintaxis, tipos de la representación intermedia ni capacidades de ejecución recibidas. La propuesta de valoración ternaria de pertenencia a rutas se distingue expresamente de los requisitos ya establecidos.
 
+La constitución completa del dominio es una condición previa obligatoria para definir relaciones entre Universos y rutas críticas reales. Hasta completarla faltan los fundamentos necesarios para su creación. La incorporación documental puede avanzar, pero no permite anticipar esas estructuras ni deducirlas de ejemplos didácticos.
+
+Cada referencia de Universo puede vincular un DOI —identificador sin hipervínculo— con su URL de resolución, y una referencia de GitHub —repositorio y revisión completa— con la URL del documento en esa revisión. Los campos DOI son opcionales. Los dos datos de GitHub deben corresponder a la misma revisión identificada; las fuentes particulares de cada parámetro permanecen individualizadas. La presencia de estos vínculos no certifica la existencia del DOI, no constituye una célula ni autoriza usos documentales. Una edición posterior de GitHub no sustituye automáticamente la versión conservada ni implica su incorporación al DOI.
 ## 1. Identidad, función y alcance del parámetro
 
 El parámetro es una unidad de significado delimitada dentro de un Universo. La analogía con un átomo expresa su separación semántica respecto de otras unidades; no demuestra por sí sola atomicidad ni asigna una posición celular. El nombre no basta: cada definición identifica objeto, dominio, alcance, fuentes, versión y condiciones de aplicación.
