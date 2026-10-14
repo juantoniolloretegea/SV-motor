@@ -1,0 +1,31 @@
+[package]
+name = "sv-contraste-qwen-cpu-gpu"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[workspace]
+
+[dependencies]
+realizar = { package = "aprender-serve", path = "../dependencias/aprender-d0a59c1882ddf43656d1067cc6d5c1943aba22d3/crates/aprender-serve", default-features = false, features = ["cuda", "gpu", "server"] }
+trueno-gpu = { package = "aprender-gpu", path = "../dependencias/aprender-d0a59c1882ddf43656d1067cc6d5c1943aba22d3/crates/aprender-gpu", default-features = false, features = ["cuda"] }
+selector = { package = "selector-arbitro-director-cpu-gpu-tpu-npu", path = ".." }
+serde = { version = "=1.0.228", features = ["derive"] }
+serde_json = "=1.0.151"
+sha2 = "=0.10.9"
+sysinfo = { version = "=0.39.6", default-features = false, features = ["system"] }
+nvml-wrapper = "=0.12.1"
+libloading = "0.8"
+flate2 = "=1.1.10"
+tar = "=0.4.46"
+ureq = { version = "2.12", default-features = false, features = ["tls"] }
+
+[profile.dev]
+debug = 0
+
+[profile.release]
+debug = 0
+opt-level = 2
+lto = false
+codegen-units = 256
+strip = true

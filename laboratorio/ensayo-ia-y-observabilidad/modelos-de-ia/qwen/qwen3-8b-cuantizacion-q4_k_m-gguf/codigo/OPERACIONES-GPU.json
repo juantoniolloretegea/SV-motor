@@ -1,0 +1,62 @@
+[
+  {
+    "funcion": "flash_decoding_chunk",
+    "fuente_rust": "codigo/operaciones-gpu/crates/aprender-gpu/src/kernels/attention/paged/flash_decoding/chunk_kernel.rs",
+    "sha256": "f54f9c1c6a067bbe00eb45492f6a2e97aa49dd28f2c22f56cf79a55a0b54fbdf"
+  },
+  {
+    "funcion": "flash_decoding_reduce",
+    "fuente_rust": "codigo/operaciones-gpu/crates/aprender-gpu/src/kernels/attention/paged/flash_decoding/reduce_kernel.rs",
+    "sha256": "a9c2bc39fbf656a36c392ac3f24512c6d16c1bc01b4b1b455d4525d0daf9f1dc"
+  },
+  {
+    "funcion": "fused_swiglu",
+    "fuente_rust": "codigo/operaciones-gpu/crates/aprender-gpu/src/kernels/elementwise/swiglu.rs",
+    "sha256": "90ace94ae95cebf8248f4f7461e1603c842eeb1cc6cb259075a07924db0f155a"
+  },
+  {
+    "funcion": "hw_dp4a_q6k_gemv",
+    "fuente_rust": "codigo/operaciones-gpu/crates/aprender-gpu/src/kernels/quantize/q6k/hw_dp4a.rs",
+    "sha256": "a22529208c483a54f9578c477024b131937ce75c11652f69de6324a581aeea91"
+  },
+  {
+    "funcion": "kv_cache_scatter",
+    "fuente_rust": "codigo/operaciones-gpu/crates/aprender-gpu/src/kernels/elementwise/kv_cache.rs",
+    "sha256": "7f03aa759bfe278d9908c0c7e68e78eee9cd5ad0587f221cdf40e77e43247955"
+  },
+  {
+    "funcion": "mwv_q4k_gemv",
+    "fuente_rust": "codigo/operaciones-gpu/crates/aprender-gpu/src/kernels/quantize/q4k/coalesced/multi_warp_vectorized.rs",
+    "sha256": "cb4fc7bb6aa4adcbe89846f4e7c5da436af32861e84d19051ce9294c14cdb2cf"
+  },
+  {
+    "funcion": "per_head_rmsnorm",
+    "fuente_rust": "codigo/operaciones-gpu/crates/aprender-gpu/src/kernels/layernorm/per_head_rmsnorm.rs",
+    "sha256": "964cbee28e5ed2c448a239bd9c8ccaf0a491b6dda9f75d8f1c98b3a0ae5c373a"
+  },
+  {
+    "funcion": "q8_quantize",
+    "fuente_rust": "codigo/operaciones-gpu/crates/aprender-gpu/src/kernels/quantize/q8.rs",
+    "sha256": "a93d74d882d906f86bf70cd8e2e6d2d5c125f10a6d0d7cef1c843ed32fa068c5"
+  },
+  {
+    "funcion": "residual_add",
+    "fuente_rust": "codigo/operaciones-gpu/crates/aprender-gpu/src/kernels/elementwise/residual.rs",
+    "sha256": "584f45eb1a5d603c9aca94487776bf28b9ba9b9a3e7dba00d699dd8944632f67"
+  },
+  {
+    "funcion": "rmsnorm",
+    "fuente_rust": "codigo/operaciones-gpu/crates/aprender-gpu/src/kernels/layernorm/rmsnorm.rs",
+    "sha256": "6022f38d2a3ea34cd04befcadf405423a83682c05df0168dbf168980817af28c"
+  },
+  {
+    "funcion": "rmsnorm_vectorized",
+    "fuente_rust": "codigo/operaciones-gpu/crates/aprender-gpu/src/kernels/layernorm/rmsnorm.rs",
+    "sha256": "6022f38d2a3ea34cd04befcadf405423a83682c05df0168dbf168980817af28c"
+  },
+  {
+    "funcion": "rope_neox",
+    "fuente_rust": "codigo/operaciones-gpu/crates/aprender-gpu/src/kernels/elementwise/rope/neox.rs",
+    "sha256": "16315a413bd2a35db7f42d0397ce25fabd970a9bcd37378ac9fb1d35b1d51e57"
+  }
+]
