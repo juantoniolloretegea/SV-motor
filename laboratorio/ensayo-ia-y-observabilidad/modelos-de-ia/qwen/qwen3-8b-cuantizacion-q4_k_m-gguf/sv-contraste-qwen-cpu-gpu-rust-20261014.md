@@ -1,8 +1,10 @@
-# Qwen3-8B Q4_K_M: ejecución CPU/GPU mediante SV-Aprender y conexión con el Selector
+# Qwen3-8B Q4_K_M: SV-Aprender, Árbitro - Director y selección CPU/GPU
 
 **Ensayo del 14 de octubre de 2026 · Kaggle · CPU Intel Xeon y GPU NVIDIA Tesla T4.**
 
-## Resultado y finalidad
+**Actualización:** [generación real con ocho solicitudes gobernadas por el Árbitro - Director](#generación-gobernada-por-el-árbitro---director-ampliación-del-14-de-octubre). Los resultados de la conexión inicial se conservan a continuación con su alcance propio.
+
+## Conexión inicial: resultado y finalidad
 
 El ensayo acredita que una decisión del **Selector del Árbitro - Director CPU/GPU/TPU/NPU** puede determinar el dispositivo que ejecuta una solicitud delimitada de inferencia de Qwen3-8B. La selección automática eligió la GPU a partir de medidas previas; una segunda solicitud, cuya política exigía CPU, se ejecutó en CPU con cero lanzamientos GPU durante su cálculo. Ambas decisiones se reconstruyeron posteriormente en Rust y sus resultados numéricos cumplieron los criterios fijados.
 
@@ -134,5 +136,67 @@ El ejecutable de la conexión mide 6 824 104 bytes y tiene SHA-256 `4b8685fce79c
 La comprobación física aquí documentada se limita a CPU y NVIDIA T4. Google Cloud CPU/TPU y AMD CPU/GPU/NPU conservan sus pruebas y estados propios; este resultado no los anticipa. La selección futura debe comprobar compatibilidad, disponibilidad y rendimiento del recorrido completo para cada operación, sin preferencia automática por un tipo de acelerador ni reparto parcial silencioso.
 
 Una síntesis general sobre gestión de dispositivos podrá elaborarse cuando se hayan completado las pruebas correspondientes. Qwen3-8B permanecerá identificado como modelo utilizado en este ensayo. El núcleo del SV, su semántica y su representación intermedia no se modificaron.
+
+## Generación gobernada por el Árbitro - Director: ampliación del 14 de octubre
+
+**Resultado: ocho solicitudes ejecutadas conforme a su decisión CPU/GPU.** Esta ampliación utiliza generación autoregresiva real: cada token emitido se incorpora a la siguiente posición. Las pruebas históricas descritas anteriormente conservan sus resultados y su alcance de secuencia impuesta.
+
+Se ha realizado un **perfil experimental del Árbitro - Director**, subordinando a él el Selector ya comprobado. Reutiliza las funciones públicas `compile_svp` y `validate_bindings` del núcleo documental, revisión `1c6b84238e62e867c4d5c5ab8069c9ae8f67dccc`, sin alterar núcleo, semántica, representación intermedia ni Selector. El perfil fija entrada y política, comprueba sus ligaduras LIG/0.1, consume una identidad de solicitud una sola vez, pide la selección, revalida el recurso y conserva la devolución. No constituye autoridad productiva R1, una célula SV ni la realización general de todos los servicios del Árbitro.
+
+```mermaid
+flowchart LR
+  A[Entrada y política fijadas por el Árbitro - Director] --> B[Admisión y ligaduras LIG/0.1]
+  B --> C[Selector CPU/GPU/TPU/NPU]
+  C --> D[Revalidación de identidad, disponibilidad y vigencia]
+  D --> E[SV-Aprender: generación en CPU o NVIDIA T4]
+  E --> F[Devolución, registros encadenados y comprobación posterior]
+```
+
+El [protocolo fijado antes de inferir](evidencias/gobierno-20261014/PROTOCOLO.md) establece una entrada de nueve tokens, «El resultado de sumar dos y dos es», contexto de 64 posiciones, selección determinista del máximo y hasta dieciséis tokens de salida. No se aplicó plantilla de conversación. Las catorce generaciones —seis de calibración y ocho solicitudes— produjeron idéntica secuencia de dieciséis tokens:
+
+> cuatro, pero si sumamos dos y dos y dos, ¿cuánto
+
+La secuencia terminó por la cota de salida, no por fin de respuesta. Se conserva íntegra y no se califica su aptitud científica, clínica o documental. Las solicitudes proceden del controlador del ensayo de una instancia Qwen administrada; no representan llamadas de una IA externa ni la decisión autónoma del modelo sobre el hardware.
+
+### Medidas y cumplimiento de las políticas
+
+La sesión dispuso de cuatro procesadores lógicos Intel Xeon a 2 GHz y dos Tesla T4. El cálculo utilizó la tarjeta de índice 0, identificada por UUID en las evidencias; la otra se observó separadamente. La preparación de pesos y comprobación inicial ocupó 9,212797 s. Las medianas de tres generaciones completas por dispositivo fueron **11,835012 s en CPU** y **1,907238 s en GPU**: relación aproximada de **6,21** para esta carga y con los pesos preparados. Los tiempos incluyen conservación y observación; la preparación se informa aparte.
+
+| Solicitud | Política | Dispositivo ejecutado | Servicio, s | Desde solicitud hasta devolución, s | Lanzamientos GPU |
+|---|---|---|---:|---:|---:|
+| QAD-01 | Automática | GPU | 1,876858 | 1,920945 | 18 216 |
+| QAD-02 | CPU obligatoria | CPU | 11,774004 | 11,819916 | 0 |
+| QAD-03 | GPU obligatoria | GPU | 1,951030 | 1,994695 | 18 216 |
+| QAD-04 | CPU obligatoria | CPU | 11,660557 | 11,707272 | 0 |
+| QAD-05 | GPU obligatoria | GPU | 1,996966 | 2,041724 | 18 216 |
+| QAD-06 | Automática | GPU | 1,909238 | 1,954262 | 18 216 |
+| QAD-07 | CPU obligatoria | CPU | 11,749921 | 11,795705 | 0 |
+| QAD-08 | GPU obligatoria | GPU | 2,006005 | 2,054111 | 18 216 |
+
+Las dos selecciones automáticas utilizaron las medidas de calibración, sin prioridad automática de GPU. Las tres solicitudes CPU acreditan cumplimiento de la política, aunque esa opción fuese más lenta para esta carga. No hubo sustitución silenciosa de dispositivo. Cada decisión y su revalidación se reconstruyeron posteriormente con el mismo Selector inalterado.
+
+Las solicitudes CPU acumularon respectivamente 43,640, 43,000 y 43,290 s de CPU entre sus hilos. Las solicitudes GPU acumularon entre 1,900 y 2,050 s de CPU: el control y las transferencias siguen necesitando CPU. Esos tiempos acumulados no son tiempos de reloj ni mediciones exclusivas de energía.
+
+### Concordancia, observación y comprobaciones adversariales
+
+Se conservaron 224 vectores de salida de 151 936 valores cada uno, más dos vectores de paridad inicial. El verificador recalculó las 224 comparaciones, incluidas dieciséis de la referencia consigo misma. La secuencia emitida coincidió en las catorce generaciones. El coseno mínimo fue **0,9996407932** y el error relativo L2 máximo **0,0278590295**, dentro de los umbrales fijados de 0,99 y 0,05. No se corrigieron salidas ni se repitió la inferencia para obtener concordancia.
+
+La auditoría registra **146 487 lanzamientos**: 759 de paridad inicial, 54 648 de calibración y 91 080 de las cinco solicitudes GPU. Los tres cálculos CPU gobernados produjeron cero lanzamientos GPU. Doce funciones se relacionaron con el PTX conservado, sin errores de correspondencia ni de retorno. Las operaciones matemáticas GPU se definen en Rust y se emiten como PTX; se sigue utilizando CUDA Driver API, el controlador NVIDIA y NVML. No se utilizó cuBLAS/cuBLASLt ni se delegó el cálculo en CUDA C++. Esto no describe todo el controlador como código Rust ni acredita independencia de CUDA.
+
+La telemetría conserva **473 muestras**, **346 con el proceso identificado en GPU**, cero fallos de medición y un intervalo máximo de **304 ms**, frente al objetivo de 250 ms. Se conservan medidas de ambas tarjetas y del proceso. Potencia y energía son medidas globales del dispositivo; no se imputan íntegramente al modelo. El proceso supervisado duró **128,578 s**; la celda, incluido archivo final, informó 138,048 s. La descarga previa de pesos duró 48,912 s.
+
+Se superaron 24 comprobaciones Rust anteriores a la ejecución. En la sesión física se rechazaron tres solicitudes: entrada alterada, GPU obligatoria marcada como no disponible e identidad repetida. La indisponibilidad se introdujo en el inventario lógico para comprobar la política; no fue una desconexión física. Las pruebas locales comprobaron además vencimiento, devolución incompatible, fallo de conservación y cierre irreversible. No se produjeron inferencias en los controles negativos.
+
+El lector posterior se corrigió para recuperar exactamente los valores decimales antes de recalcular las huellas encadenadas, mediante `serde_json/float_roundtrip`. La corrección no altera el núcleo, el Selector, el ejecutable ensayado ni los archivos originales. El cotejo final verificó **376 archivos**, la cadena de registros y el orden admisión → selección → ejecución → devolución. La sesión quedó apagada después de recuperar y cotejar la identidad del archivo.
+
+### Código y evidencias de esta ampliación
+
+La copia exacta del código utilizado se encuentra en [codigo/gobierno-20261014](codigo/gobierno-20261014), con [identidades](codigo/gobierno-20261014/IDENTIDAD.json), [fuentes del Árbitro](codigo/gobierno-20261014/selector/ensayo-qwen/src/gobierno.rs), [generación](codigo/gobierno-20261014/selector/ensayo-qwen/src/generacion.rs), núcleo documental conservado y [reproducción](codigo/gobierno-20261014/REPRODUCCION.md). Reutiliza las mismas diez modificaciones de Aprender identificadas anteriormente. El ejecutable mide 7 577 528 bytes y su SHA-256 es `fee0d966aace23f7262d7ca21d58a7ee8f8d4660c7fd2871adae4d7c31126738`.
+
+El archivo íntegro mide **124 890 719 bytes** y tiene SHA-256 `e7ef5213898a87928b3ce5c58d8dfcb39cd41009e7bbf170510e6d69e24289cf`. Se conserva en [parte 00](evidencias/gobierno-20261014/qwen-arbitro-director-20261014.tar.gz.parte-00) y [parte 01](evidencias/gobierno-20261014/qwen-arbitro-director-20261014.tar.gz.parte-01), como división binaria reversible compatible con el tamaño admitido por GitHub. [ARCHIVO.json](evidencias/gobierno-20261014/ARCHIVO.json) fija orden, tamaños y huellas. El verificador admite directamente la primera parte y reúne ambas antes del cotejo.
+
+Se conservan la [verificación Rust](evidencias/gobierno-20261014/VERIFICACION-RUST.json), la [auditoría GPU](evidencias/gobierno-20261014/AUDITORIA-GPU.json) y el [manifiesto de esta ampliación](MANIFIESTO-GOBIERNO.json). El manifiesto histórico corresponde a la revisión anterior y no identifica el contenido ampliado de este informe.
+
+El resultado acredita el recorrido experimental completo para este perfil. Ocho solicitudes de la misma entrada no son ocho casos científicos independientes ni una prueba de estrés prolongada. No se han probado concurrencia, migración de contexto, fallo físico, todas las cargas posibles, TPU o NPU. El nodo 1 y la instalación productiva general del Árbitro siguen sin validación por este ensayo. El libro de bases no se modifica con esta ampliación.
 
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
