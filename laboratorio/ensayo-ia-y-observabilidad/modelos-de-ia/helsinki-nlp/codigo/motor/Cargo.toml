@@ -1,0 +1,21 @@
+[package]
+name = "sv-traduccion-documental"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.93"
+publish = false
+
+[dependencies]
+anyhow = "=1.0.102"
+candle = { package = "candle-core", version = "=0.11.0", default-features = false }
+candle-nn = { version = "=0.11.0", default-features = false }
+candle-transformers = { version = "=0.11.0", default-features = false }
+tokenizers = { version = "=0.23.2", default-features = false, features = ["fancy-regex"] }
+serde = { version = "=1.0.228", features = ["derive"] }
+serde_json = "=1.0.149"
+sha2 = "=0.10.9"
+
+[profile.release]
+strip = true
+
+[workspace]
