@@ -1,87 +1,79 @@
-# Helsinki-NLP/opus-mt-en-es: traducción en Rust y preparación del contraste CPU/TPU
+# Helsinki-NLP/opus-mt-en-es: contraste del Selector CPU/TPU
 
 14 de octubre de 2026.
 
-## Objeto y estado
+## Resultado y alcance
 
-Este expediente identifica el motor de traducción inglés–español que ya funciona en el Sistema Vectorial SV y prepara su contraste mediante el **Selector del Árbitro - Director CPU/GPU/TPU/NPU**. Se reutiliza la implementación existente; no se sustituye el modelo ni se modifica el procedimiento de generación para mejorar artificialmente sus resultados.
+El **Selector del Árbitro - Director CPU/GPU/TPU/NPU** ha dirigido la ejecución del traductor Helsinki-NLP/opus-mt-en-es a CPU o TPU conforme a la solicitud. La serie final comprende **22 traducciones, seis decisiones ejecutadas y dos rechazos lógicos por TPU declarada no disponible**. El cotejo numérico y la atribución de las trazas son conformes para los dos casos fijados.
 
-**Estado de esta edición:** funcionamiento CPU e integración documental comprobados en las actuaciones anteriores; fuentes canónicas recuperadas y cotejadas; conexión del modelo con el Selector y ejecución del modelo en TPU pendientes. No se han realizado nuevas inferencias en esta preparación. La comprobación del servicio encontró el gestor activo y el mismo ejecutable identificado en los resultados conservados.
+La TPU reduce el tiempo de generación, pero la conservación completa de sus trazas aumenta el tiempo total de la solicitud. Al medir ese recorrido completo, el Selector elige **CPU en ambos casos**. No existe prioridad automática de un acelerador sobre la CPU.
 
-La ejecución de traducción pertenece a la infraestructura administrada por el SV. Esta función puede requerir selección de dispositivo aunque otras consultas se dirijan a modelos externos. El ensayo estudia esa capacidad para entornos administrados por el sistema; no declara validado el nodo 1 ni modifica la arquitectura de los tres nodos.
+El ensayo demuestra esta capacidad en el perfil descrito. No valida el nodo 1, no incorpora todavía el adaptador al servicio documental activo y no acredita calidad general de las traducciones. La función de traducción pertenece a la infraestructura administrada por el SV y puede requerir selección de dispositivo aunque otras consultas se dirijan a modelos externos.
 
-## Identidad y funcionamiento existente
+## Modelo y equipo
 
-| Elemento | Identificación |
+| Elemento | Identificación comprobada |
 |---|---|
 | Modelo | [Helsinki-NLP/opus-mt-en-es](https://huggingface.co/Helsinki-NLP/opus-mt-en-es) |
-| Revisión de los archivos | `fdaddf76f50fcc1583ba42f95965862a7ab30f97` |
-| Arquitectura | Marian, codificador y decodificador de seis capas cada uno |
-| Inferencia | Rust, Candle 0.11.0, CPU, precisión F32 |
-| Pesos | Safetensors, 312 062 468 bytes |
-| SHA-256 de los pesos | `b3ecbf954573c2fd95d05d3ad4618baf961793db0da07c2add2e8a3a6cd78d0b` |
-| SHA-256 del ejecutable utilizado | `9d1e430db85541190fb86607834042627b493079ce5174563746b87f522e6447` |
-| Procedimiento vigente | Selección de la continuación más probable; sin muestreo |
-| Preparación documental | `lectura-estructurada-2`, delimitación por oraciones y conservación de contenido protegido |
-| Sistema | Linux x86_64; procesos con red denegada y lectura restringida mediante seccomp y Landlock |
+| Revisión | `fdaddf76f50fcc1583ba42f95965862a7ab30f97` |
+| Arquitectura | Marian: seis capas de codificación y seis de decodificación; dimensión 512; ocho cabezas |
+| Pesos | Safetensors, 312 062 468 bytes; SHA-256 `b3ecbf954573c2fd95d05d3ad4618baf961793db0da07c2add2e8a3a6cd78d0b` |
+| Referencia CPU | Rust, Candle 0.11.0, F32 y generación voraz |
+| Infraestructura del contraste | Google Cloud, `us-central1-a`, una TPU v5e, tipo `v5litepod-1` |
+| CPU | AMD EPYC 7B13, 24 procesadores lógicos; cuatro trabajadores de Rayon |
+| Memoria principal | 50 499 756 032 bytes |
+| Memoria TPU comunicada por PJRT | 16 909 336 064 bytes; dispositivo 0 |
+| Sistema y compilación | Ubuntu 22.04, glibc 2.35, Rust 1.98.1; dependencias Cargo fijadas |
+| Biblioteca del fabricante | libtpu 0.0.50; SHA-256 `eb7cbd2bc7c7283c9f6e89a8d23dfbd2b275a3215b121c8f9bc3face842fc7c7` |
+| Ejecutable de la serie final | SHA-256 `3355a85d4d1272a51c9a75a5baa1d07b49c34e9aa95d45470d0a987dba6a27d4` |
 
-El gestor prepara los fragmentos, solicita la traducción al proceso Rust, comprueba correspondencia e integridad y recompone la presentación conservando los elementos protegidos. El motor admite hasta 384 tokens de entrada antes del final de secuencia y hasta 480 pasos de generación; rechaza excesos y salidas incompletas, sin truncamiento silencioso. El proceso de traducción dispone de un límite de 60 segundos por fragmento; el gestor aplica además 45 segundos al conjunto de su petición. Son límites distintos que debe conservar y medir cualquier ensayo posterior.
+El modelo ya funcionaba en el servicio documental. Se conserva [el motor original](codigo/motor), [su integración](codigo/integracion/traduccion.rs) y [su procedencia](codigo/PROCEDENCIA.json). El servicio utiliza aislamiento seccomp y Landlock; ese aislamiento no se atribuye al proceso experimental que accede a libtpu. Tampoco se trasladan al ensayo todos los límites temporales y de longitud del servicio.
 
-Las traducciones facilitan la lectura de personas. Los modelos examinados o consultados reciben los documentos originales, completos y en su idioma nativo. Esta función no modifica esa regla.
+## Realización en Rust y dependencias
 
-## Código vinculado al modelo
+El adaptador expresa el codificador y el decodificador completos de Marian en StableHLO. Rust construye las operaciones, controla la generación, invoca el Selector y conserva la observación propia. La TPU calcula ambos programas; la CPU conserva tokenización, selección del siguiente token, control, recuperación y composición del texto. No se presenta toda la solicitud como ejecución exclusiva en TPU.
 
-La carpeta [codigo](codigo) contiene:
+PJRT y la biblioteca nativa de Google realizan compilación y ejecución en TPU. Por tanto, **esta vía no constituye una infraestructura íntegramente escrita en Rust**. Las cabeceras C/C++ se utilizan para generar la interfaz de enlace durante la compilación. StableHLO pertenece al adaptador del modelo; no sustituye ni modifica la representación intermedia del SV.
 
-- [Motor completo](codigo/motor): manifiestos Cargo, código Rust de inferencia, tokenización y aislamiento, con su licencia conservada.
-- [Integración documental](codigo/integracion/traduccion.rs): copia exacta del módulo del gestor. Es una referencia de integración, no una aplicación autónoma.
-- [Selector](codigo/selector): copia exacta del componente de selección. Su presencia en esta carpeta no implica que el motor de traducción ya lo invoque.
-- [Comprobación en Rust](codigo/comprobacion): verificación de huellas, correspondencia entre entradas y salidas y recuperación de los archivos publicados.
+El [código completo del contraste](codigo/contraste-cpu-tpu) incluye Selector, adaptador, observación y dependencias locales. Su [descripción de compilación y ejecución](codigo/contraste-cpu-tpu/LEAME-SV.md) identifica cada elemento. El Selector conserva SHA-256 `2b6cd91da365f15ab314ea69ef6eeec1b12826ddf0de01fcca58191ef5afff05`.
 
-[PROCEDENCIA.json](codigo/PROCEDENCIA.json) identifica cada archivo y su origen. Las siete fuentes del motor y de su integración proceden de la revisión `c60f5ab9d017715045ea7e3b189bc5943651b750` de [gestion-usuarios-y-documentacion-sv](https://github.com/IA-en/gestion-usuarios-y-documentacion-sv/tree/c60f5ab9d017715045ea7e3b189bc5943651b750/codigo/desarrollo/traduccion-documental-rust-20261012) y coinciden byte por byte con las copias locales examinadas. No se modifican el núcleo, la semántica ni la representación intermedia del SV.
+## Protocolo y resultados medidos
 
-## Resultados anteriores que se reutilizan
+El [protocolo](evidencias/contraste-cpu-tpu-20261014/PROTOCOLO.md) fija dos fragmentos anteriores: `NCI_4-0` y `NCI_178-3`. Se conserva su contenido, sus pesos y tokenizadores; no se modifica la indicación para mejorar resultados. La ejecución experimental calcula el prefijo causal completo, con 64 posiciones, frente a la memoria incremental de la referencia CPU. Una salida que no termine dentro del límite se rechaza.
 
-Se conservan [las trece entradas](evidencias/ENTRADAS-CPU-ANTERIORES.jsonl), [sus salidas](evidencias/SALIDAS-CPU-ANTERIORES.jsonl) y [las mediciones](evidencias/MEDICIONES-ANTERIORES.json). Son antecedentes identificados, no una nueva prueba CPU/TPU.
+Se comprobaron los codificadores y las puntuaciones de los 54 pasos de generación. Se exigieron valores finitos, mismos tokens y traducciones, diferencia absoluta máxima de 0,005 y error cuadrático medio normalizado máximo de 0,0001. El cotejo independiente recalculó **56 comparaciones vectoriales** a partir de los archivos originales: diferencia absoluta máxima **2,28881836E-05** y error normalizado máximo **3,09781649E-06**.
 
-| Medida de la ejecución CPU anterior | Valor |
-|---|---:|
-| Fragmentos traducidos | 13 |
-| Tokens de entrada / salida | 239 / 270 |
-| Generación acumulada | 10 127 ms |
-| Carga del modelo, separada | 2 179 ms |
-| Memoria máxima del proceso | 676 488 KiB |
+| Caso | Generación CPU, ms | Generación TPU, ms | Solicitud completa CPU, ms | Solicitud completa TPU, ms | Selección automática |
+|---|---:|---:|---:|---:|---|
+| NCI_4-0 | 281,263 | 106,164 | 327,797 | 1.238,158 | CPU |
+| NCI_178-3 | 541,283 | 195,340 | 588,563 | 2.013,101 | CPU |
 
-Una comparación posterior conservó las trece salidas del procedimiento vigente y estudió cuatro secuencias alternativas. La duración pasó de 8,324 a 44,672 segundos; se observaron dos correcciones gramaticales, sin mejora semántica material. Se mantuvo el motor vigente. Estas duraciones pertenecen a otra ejecución y no deben mezclarse con la tabla anterior. [Resultado de aquella comparación](https://github.com/IA-en/gestion-usuarios-y-documentacion-sv/blob/c60f5ab9d017715045ea7e3b189bc5943651b750/verificaciones/traduccion-cuatro-alternativas-20261014/RESULTADO.md).
+Son medianas de tres mediciones por dispositivo y caso, con pesos y programas ya disponibles. La generación incluye tokenización, inferencia, transferencias, elección de tokens, composición del texto y conservación de puntuaciones. La solicitud completa añade inicio y cierre del observador, recuperación, análisis y conservación de sus trazas. Carga del modelo y compilación iniciales se miden por separado. La escritura del propio registro temporal queda fuera del intervalo que declara. No se extrapolan estas medidas a un servicio sin esa instrumentación ni a otras longitudes o cargas simultáneas.
 
-Persisten errores de concordancia y terminología. Funcionamiento técnico y aceleración no acreditan por sí mismos calidad científica general de las traducciones. Los trece fragmentos proceden de pasajes médicos y de información normativa; no representan la cobertura completa de inmunología ni ciberseguridad.
+La serie final ejecutó **12 traducciones CPU y 10 TPU**. Las solicitudes obligatorias respetaron su destino; las automáticas utilizaron las medianas completas. La indisponibilidad se comprobó mediante dos cambios explícitos del inventario presentado al Selector, sin nuevas inferencias ni desconexión física del dispositivo.
 
-## Procedimiento del contraste de dispositivos
+## Observación, correcciones y conservación
 
-Se sigue la secuencia empleada con Qwen: identidad y compatibilidad, conexión del Selector, calibración, solicitudes con destino obligatorio y selección por rendimiento, observación del dispositivo efectivo y conservación verificable. Los pesos, tokenizadores y generación del traductor vigente constituyen la referencia.
+Se conservan puntuaciones F32, textos, tokens, decisiones, medidas CPU, fases, programas StableHLO, trazas originales XSpace y su interpretación. Las trazas identifican los programas del modelo y sus operaciones en TPU 0; las ejecuciones CPU carecen de actividad TPU. Los eventos de transferencia se distinguen de una medida física del tráfico del dispositivo. No se midieron energía ni tráfico físico del bus.
 
-1. Fijar la implementación existente y conservar sus entradas y salidas. **Realizado en esta edición.**
-2. Preparar la conexión del motor con el Selector y la realización TPU. Debe conservarse la topología Marian, los límites y el aislamiento; el servicio activo permanece separado del ensayo.
-3. Cotejar la realización adaptada con la referencia CPU, fijando antes de inferir precisión, tolerancias numéricas y reglas de comparación de las secuencias.
-4. Medir CPU y TPU con la misma carga: inicialización y compilación por separado, después peticiones comparables. No se presupone ventaja de TPU.
-5. Ejecutar CPU obligatoria, TPU obligatoria y selección por rendimiento. Una TPU incompatible o no disponible debe impedir su uso; no cabe sustituirla silenciosamente por CPU.
-6. Conservar entradas, salidas, decisiones, tiempos completos, memoria, transferencias y trazas originales. Recuperar y cotejar los resultados antes de retirar los recursos utilizados.
+El muestreo CPU de la serie final contiene 322 observaciones; su intervalo máximo fue 149,023 ms y el máximo de memoria residente observado fue 6412808192 bytes. El muestreo periódico no sustituye los contadores por fase ni la traza del acelerador.
 
-La telemetría distinguirá preparación y control en CPU, cálculo del modelo, transferencias, espera y recuperación. Si algunas operaciones permanecen en CPU durante una solicitud TPU, se identificarán expresamente; no se declarará ejecución íntegra del modelo en TPU basándose únicamente en productos matriciales aislados.
+Se conservaron las incidencias de compatibilidad con glibc y de preparación de la compilación. El primer programa TPU se rechazó por una sintaxis de reducción incorrecta; se corrigió conforme a [los ejemplos oficiales de StableHLO](https://github.com/openxla/stablehlo/blob/main/stablehlo/tests/transforms/stablehlo_aggressive_folder.mlir), sin cambiar las operaciones ni tolerancias. El aviso del cargador sobre alineación de páginas grandes permanece en el registro; no impidió la ejecución ni produjo errores en las trazas cotejadas.
 
-## Compatibilidad pendiente
+La primera serie completa midió sólo la generación y seleccionó TPU. Su resultado permanece [identificado como medición parcial](evidencias/contraste-cpu-tpu-20261014/resultado-previo-medicion-parcial.json). La [adenda previa a la repetición](evidencias/contraste-cpu-tpu-20261014/ADENDA-MEDICION-COMPLETA.md) amplió la medida al recorrido completo. **La conclusión temporal de esta edición corresponde a la serie 04.** Se realizaron 44 traducciones entre ambas series completas; no deben confundirse con las 22 de la serie final ni con las comprobaciones numéricas CPU anteriores.
 
-El motor conservado fija `Device::Cpu`. La interfaz de dispositivos de [Candle](https://github.com/huggingface/candle/blob/main/candle-core/src/device.rs) contempla CPU, CUDA y Metal; no ofrece una selección TPU directa. Su aislamiento actual permite acceder a los archivos del modelo y a las métricas propias, no a un dispositivo TPU.
+- [Resultado final](evidencias/contraste-cpu-tpu-20261014/RESULTADO.json), [cotejo independiente en Rust](evidencias/contraste-cpu-tpu-20261014/COTEJO-INDEPENDIENTE.json) y [código del cotejo](codigo/comprobacion-ensayo).
+- [Inventario de archivos de entrega y SHA-256](evidencias/contraste-cpu-tpu-20261014/ARCHIVOS-ENTREGA.json).
+- [Descarga de originales, ejecutables y fuentes fijadas](https://github.com/juantoniolloretegea/SV-motor/releases/tag/helsinki-cpu-tpu-20261014).
 
-El adaptador Rust/PJRT del contraste previo de Google Cloud ya ejecutó y observó productos matriciales en CPU/TPU. Ese resultado es reutilizable para la comunicación y la instrumentación, pero todavía no acredita la ejecución del codificador y decodificador Marian. La conexión pendiente pertenece al recorrido del modelo hacia TPU; no supone que falten un traductor Rust o su integración documental.
+Los archivos se recuperaron y cotejaron antes de retirar el recurso temporal y su solicitud. La ausencia de ambos se comprobó mediante la API de Google. El importe atribuible sigue pendiente de conciliación; tiempo observado y tiempo facturado son magnitudes distintas.
 
-La vía TPU examinada utiliza además la biblioteca oficial nativa `libtpu`, que incorpora servicios y compilación del fabricante. No se presenta toda esa infraestructura como código Rust. La identificación del dispositivo, por sí sola, tampoco acredita ejecución del modelo.
+## Antecedentes y límites de interpretación
 
-[ESTADO.json](evidencias/ESTADO.json) separa lo comprobado de lo pendiente. Esta edición no atribuye rendimiento TPU al traductor, no declara concluido ese ensayo y no comunica nuevos consumos de Google Cloud. Energía e importe monetario atribuible permanecen desconocidos cuando no hay una medición propia.
+Las [trece entradas](evidencias/ENTRADAS-CPU-ANTERIORES.jsonl), [sus salidas](evidencias/SALIDAS-CPU-ANTERIORES.jsonl) y [sus mediciones](evidencias/MEDICIONES-ANTERIORES.json) permanecen intactas: 239 tokens de entrada, 270 de salida, 10 127 ms de generación, 2 179 ms de carga y 676 488 KiB de memoria máxima. Pertenecen a otra ejecución y no se suman a los tiempos del contraste CPU/TPU.
 
-## Integridad y licencias
+Persisten las limitaciones lingüísticas del modelo. El contraste acredita selección y ejecución del perfil experimental, no aptitud clínica, cobertura documental general ni disponibilidad productiva del nodo 1. El gestor y el libro de bases no se modifican. Las traducciones documentales facilitan la lectura; los modelos evaluados reciben los originales conforme a las reglas del sistema.
 
-[MANIFIESTO.json](MANIFIESTO.json) identifica los archivos de esta edición, salvo el propio manifiesto. Los pesos se identifican mediante [su manifiesto](evidencias/IDENTIDAD-MODELO.json), sin duplicar su distribución. El código de terceros y el modelo conservan sus licencias; el archivo Apache 2.0 se incluye en el motor. El [procedimiento de comprobación](codigo/LEAME.md) permite recuperar y verificar los contenidos.
+[MANIFIESTO.json](MANIFIESTO.json) identifica esta edición. Modelo, código y dependencias conservan sus licencias respectivas; la licencia documental no reemplaza las de terceros.
 
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
-

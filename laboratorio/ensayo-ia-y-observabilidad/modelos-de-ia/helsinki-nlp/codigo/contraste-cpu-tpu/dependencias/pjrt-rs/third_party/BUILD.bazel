@@ -1,0 +1,91 @@
+load("@xla//xla/tsl:tsl.bzl", "transitive_hdrs")
+load(":proto_export.bzl", "transitive_proto_sources")
+
+transitive_hdrs(
+  name = "pjrt_c_api_hdrs",
+  deps = [
+    "@xla//xla/pjrt/c:pjrt_c_api_hdrs",
+    "@xla//xla/pjrt/c:pjrt_c_api_ffi_extension_hdrs",
+    "@xla//xla/pjrt/c:pjrt_c_api_gpu_extension_hdrs",
+    "@xla//xla/pjrt/c:pjrt_c_api_profiler_extension_hdrs",
+    "@xla//xla/pjrt/c:pjrt_c_api_stream_extension_hdrs",
+    "@xla//xla/pjrt/c:pjrt_c_api_layouts_extension_hdrs",
+    "@xla//xla/pjrt/c:pjrt_c_api_raw_buffer_extension_hdrs",
+    "@xla//xla/pjrt/c:pjrt_c_api_custom_partitioner_extension_hdrs",
+    "@xla//xla/pjrt/c:pjrt_c_api_triton_extension_hdrs",
+    "@xla//xla/pjrt/c:pjrt_c_api_callback_extension_hdrs",
+    "@xla//xla/pjrt/c:pjrt_c_api_memory_descriptions_extension_hdrs",
+    "@xla//xla/pjrt/c:pjrt_c_api_phase_compile_extension_hdrs",
+    "@xla//xla/pjrt/c:pjrt_c_api_megascale_extension_hdrs",
+    "@xla//xla/pjrt/c:pjrt_c_api_tpu_executable_extension_hdrs",
+    "@xla//xla/pjrt/c:pjrt_c_api_tpu_topology_extension_hdrs",
+  ]
+)
+
+# Extension headers from xla/pjrt/extensions/ — referenced as source files
+# to avoid pulling in transitive C++ dependencies (like MLIR) that would
+# come from using transitive_hdrs on the full cc_library targets.
+filegroup(
+  name = "pjrt_extension_extra_hdrs",
+  srcs = [
+    "@xla//xla/pjrt/extensions/example:example_extension.h",
+    "@xla//xla/pjrt/extensions/host_allocator:host_allocator_extension.h",
+  ]
+)
+
+genrule(
+  name = "pjrt_headers",
+  srcs = [
+    ":pjrt_c_api_hdrs",
+    ":pjrt_extension_extra_hdrs",
+  ],
+  outs = ["pjrt_include.tar"],
+  cmd = """
+    TMP_DIR=$$(mktemp -d)
+    for f in $(SRCS); do
+      d="$${f%/*}"
+      if [[ $${d} == external* ]]; then
+        extname="$${d#*external/}"
+        extname="$${extname%%/*}"
+        d="$${d#*external/$${extname}/}"
+      fi      
+      mkdir -p "$${TMP_DIR}/$${d}"
+      cp "$${f}" "$${TMP_DIR}/$${d}/"
+    done
+    tar -C "$${TMP_DIR}" -cf $@ .
+    """,
+)
+
+transitive_proto_sources(
+    name = "pjrt_c_api_protos",
+    deps = [
+        "@xla//xla/pjrt/proto:compile_options_proto",
+    ],
+    exclude = [
+      "../com_google_protobuf/",
+    ]
+)
+
+genrule(
+  name = "pjrt_protos",
+  # Use the new target which contains all transitive sources.
+  srcs = [":pjrt_c_api_protos"],
+  outs = ["pjrt_protos.tar"],
+  cmd = """
+    TMP_DIR=$$(mktemp -d)
+    for f in $(SRCS); do
+      # This cmd script should now work correctly as it receives all needed files.
+      d=$$(dirname "$${f}")
+      rel_path=""
+      if [[ "$${d}" == *external/* ]]; then
+        rel_path="$${d#*external/}"
+        rel_path="$${rel_path#*/}"
+      else
+        rel_path="$${d}"
+      fi
+      mkdir -p "$${TMP_DIR}/$${rel_path}"
+      cp "$${f}" "$${TMP_DIR}/$${rel_path}/"
+    done
+    tar -C "$${TMP_DIR}" -cf $@ .
+  """,
+)

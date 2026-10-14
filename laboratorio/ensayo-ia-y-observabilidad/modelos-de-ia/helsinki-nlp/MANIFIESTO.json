@@ -1,116 +1,1036 @@
 {
-  "naturaleza": "preparacion; ensayo de modelo CPU/TPU pendiente",
+  "alcance": "Expediente de OPUS-MT: antecedentes CPU y contraste experimental CPU/TPU; originales extensos identificados por separado",
+  "fecha": "2026-10-14",
   "archivos": [
     {
-      "ruta": "codigo/comprobacion/Cargo.lock",
+      "bytes": 4875,
+      "ruta": "codigo/comprobacion-ensayo/Cargo.lock",
+      "sha256": "89260744e1ec7df4f64da646dd94d39faf0f03e31bfc862e0c54a1f29c254916"
+    },
+    {
+      "bytes": 192,
+      "ruta": "codigo/comprobacion-ensayo/Cargo.toml",
+      "sha256": "9507268d4acd82ad4aa6d0c4d4625c31dc62438fb0071af554ffb1e6c3212b7a"
+    },
+    {
+      "bytes": 9680,
+      "ruta": "codigo/comprobacion-ensayo/src/main.rs",
+      "sha256": "e86f80600280ac11cf524d73be6b3be07cc92762b62774717540fd11b9480d9c"
+    },
+    {
       "bytes": 4868,
+      "ruta": "codigo/comprobacion/Cargo.lock",
       "sha256": "ae194caefb2d7139e460a824a389bd55d69e0254ea96058acee7a4081b3dbe8d"
     },
     {
-      "ruta": "codigo/comprobacion/Cargo.toml",
       "bytes": 185,
+      "ruta": "codigo/comprobacion/Cargo.toml",
       "sha256": "3b14b5defc8c5e9913e64ee80b583484ec024eb4f42a9aba500440731560cf03"
     },
     {
-      "ruta": "codigo/comprobacion/src/main.rs",
       "bytes": 3324,
+      "ruta": "codigo/comprobacion/src/main.rs",
       "sha256": "4c087ad48b3c17f92be309e4f4d4da06da926137c238e793a063f142eb2574a1"
     },
     {
-      "ruta": "codigo/integracion/traduccion.rs",
-      "bytes": 13122,
-      "sha256": "a435cfeda2bdd250516b75d6c66eba27881ded2948a980dfd4488d59ed3aaaab"
+      "bytes": 474,
+      "ruta": "codigo/contraste-cpu-tpu/adaptador-helsinki/build.rs",
+      "sha256": "8169ce1883987de228bc092489e2c74fb1c76bdca2dc5dd85826c29c2104069f"
     },
     {
-      "ruta": "codigo/LEAME.md",
-      "bytes": 2010,
-      "sha256": "37ac530e7e9dddaaf554da59b4c4077fb30113206112e042674966ddf8214e3e"
+      "bytes": 51532,
+      "ruta": "codigo/contraste-cpu-tpu/adaptador-helsinki/Cargo.lock",
+      "sha256": "9ff6171c665533faff7a9233c93c6fbdea330dcd64dcee12013f6a4dfeb85d0d"
     },
     {
-      "ruta": "codigo/motor/Cargo.lock",
-      "bytes": 39645,
-      "sha256": "5ebdaaf15f3947af93cdfd9506dca963c71c87ce27de5c8a4a40a0f6c6c86be4"
+      "bytes": 879,
+      "ruta": "codigo/contraste-cpu-tpu/adaptador-helsinki/Cargo.toml",
+      "sha256": "1e8335eca6047e87198da22a91573ccc31876d1bac502f3b8a312f43534310f2"
     },
     {
-      "ruta": "codigo/motor/Cargo.toml",
-      "bytes": 604,
-      "sha256": "f5d82e76ebfa1c4b750c4b55b64aafe553ff87df123a7290a5a0b2fd5e817c22"
-    },
-    {
-      "ruta": "codigo/motor/LICENSE-APACHE.txt",
       "bytes": 11357,
+      "ruta": "codigo/contraste-cpu-tpu/adaptador-helsinki/LICENSE-APACHE.txt",
       "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
     },
     {
-      "ruta": "codigo/motor/src/aislamiento.rs",
-      "bytes": 3470,
-      "sha256": "ea79318a67d32bd19902f56a32ea88589625c654a55c8537e7b8c3901c22486c"
+      "bytes": 13054,
+      "ruta": "codigo/contraste-cpu-tpu/adaptador-helsinki/src/grafo.rs",
+      "sha256": "dbb2ee8aefdcd886398f6269c6905fd5b09a99cbaab808e97b9446ac0a7ee6fb"
     },
     {
-      "ruta": "codigo/motor/src/main.rs",
-      "bytes": 5293,
-      "sha256": "29f5575e89d540844218f4d87d00bb7b68038fe21966bacf8793e543bcc2ee9f"
+      "bytes": 9836,
+      "ruta": "codigo/contraste-cpu-tpu/adaptador-helsinki/src/main.rs",
+      "sha256": "10a7aa318b2088eae8dfde41dadbd54f2efd3cd5bd0e9c30f04f3352911cd3d7"
     },
     {
-      "ruta": "codigo/motor/src/spm.rs",
+      "bytes": 12955,
+      "ruta": "codigo/contraste-cpu-tpu/adaptador-helsinki/src/serie.rs",
+      "sha256": "7c255a77e04e2dc13a7754b78001f0c88e92e81e6dd5e32232d32d8ea6b43b7b"
+    },
+    {
       "bytes": 8944,
+      "ruta": "codigo/contraste-cpu-tpu/adaptador-helsinki/src/spm.rs",
       "sha256": "6815d0ba3d893e4223b70b33a9bb369b36d48eef9f636eebabb7be3d96295a42"
     },
     {
-      "ruta": "codigo/PROCEDENCIA.json",
-      "bytes": 4055,
-      "sha256": "459b839f4a711657a018533bf79719541a27c2904b29129f5fd159e0c70bde17"
+      "bytes": 9975,
+      "ruta": "codigo/contraste-cpu-tpu/adaptador-helsinki/src/tpu.rs",
+      "sha256": "4793ac01fe54c10d9d30147713a691f19a96a12f6fc7989a2ec4a4caf4ea4768"
     },
     {
-      "ruta": "codigo/selector/Cargo.lock",
       "bytes": 185,
+      "ruta": "codigo/contraste-cpu-tpu/Cargo.lock",
       "sha256": "ac26b830aa585cb8ba70b2dd96a229f95273e38af84ced64c670764b3ef1a36f"
     },
     {
-      "ruta": "codigo/selector/Cargo.toml",
       "bytes": 296,
+      "ruta": "codigo/contraste-cpu-tpu/Cargo.toml",
       "sha256": "01b222717d4291df5a57046753d1c9c24f212121c853128c9fbef8b58ba67fd6"
     },
     {
-      "ruta": "codigo/selector/src/lib.rs",
+      "bytes": 731,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/.github/FUNDING.yml",
+      "sha256": "e38ebc6a92d227c5698414d03c1809c8e6c5a4bbb8fd989ee3dab8f9ba9b37dc"
+    },
+    {
+      "bytes": 1511,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/.github/instructions/ask-question.instructions.md",
+      "sha256": "290bf33d4da3c7873740ddc1260ff9b388258cf1dd2fdd43719444a71a60e71b"
+    },
+    {
+      "bytes": 1556,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/.github/workflows/rust.yml",
+      "sha256": "7db9c20d18aa2d971c210e29ccebc2ec80d5ba7fba26927fe6f5fc0a0b5b1dea"
+    },
+    {
+      "bytes": 43,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/.gitignore",
+      "sha256": "bddfe7f55de2965f03ef2d67523090a09678319fd2ac8dafca2050f376dbf8ae"
+    },
+    {
+      "bytes": 596,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/.vscode/settings.json",
+      "sha256": "fa4f175346bf20a7a0b9d5dde432866e62698c245ef656c9c4fd8f015c7d19e5"
+    },
+    {
+      "bytes": 7261,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/AGENTS.md",
+      "sha256": "600e2fc345e00cd21e8dd1d0164b77f699bbf253e8314b70012d6449f717fcde"
+    },
+    {
+      "bytes": 17780,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/Cargo.lock",
+      "sha256": "948ab73101d4a502fefd801751f20ecee5f4f8f0d0f21c0db5dae20cba4a085a"
+    },
+    {
+      "bytes": 573,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/Cargo.toml",
+      "sha256": "43e22cbed5eaad3a0cc5d28290a7f616a12d12faa07fd2f0c7726b5ec5ea889d"
+    },
+    {
+      "bytes": 36947,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/docs/api_review.md",
+      "sha256": "564fc434405caf3cbb47bc8a5b5a6f3e398df3e0e6dbe282b51d9c44169f6dea"
+    },
+    {
+      "bytes": 32096,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/docs/capi_coverage.md",
+      "sha256": "2ef82726107297f15bfdc849280c68bf8111eb9b5852c0229da05a5f83f1f12c"
+    },
+    {
+      "bytes": 16175,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/docs/pjrt.png",
+      "sha256": "f6c24ca27d6c0f2a80bb9483dcad9f998454d969932352ae7f248b1bb67639b5"
+    },
+    {
+      "bytes": 11036,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/docs/review_v2.md",
+      "sha256": "e16c20d3899e7b3bd30138af4a5d12e4f59fd1fcdb5ff113a5384ccf9a7e54d7"
+    },
+    {
+      "bytes": 11339,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/LICENSE-APACHE",
+      "sha256": "071a9cd59776e26dc43d23cf08ce10a365c2db1e67d5d49edda527cad43d86b7"
+    },
+    {
+      "bytes": 1048,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/LICENSE-MIT",
+      "sha256": "991b01eab9ff9338e65ce2d08c8a521313ec43f5e593b6d136e4324c62d16c0b"
+    },
+    {
+      "bytes": 1190,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt-sys/build.rs",
+      "sha256": "ff6eb7dcc22d5460e1290fd05e3c0195e1a388a3875b51a64b564605ca771215"
+    },
+    {
+      "bytes": 574,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt-sys/Cargo.toml",
+      "sha256": "cd0ebc865bcd05272b9006af547f25c74e6aead2ad404e90578285b9fabc7471"
+    },
+    {
+      "bytes": 4904,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt-sys/include/xla/backends/profiler/plugin/profiler_c_api.h",
+      "sha256": "ad15b638c6d7820b52ae1aa8ff71f64f692c118ef7e7debe6a9f4aa9e7727732"
+    },
+    {
+      "bytes": 4938,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt-sys/include/xla/pjrt/c/pjrt_c_api_callback_extension.h",
+      "sha256": "a7f97057f597c5bcd53de2e23bd0ce90becdc995d1a4563fb4309cb8665c48c8"
+    },
+    {
+      "bytes": 5307,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt-sys/include/xla/pjrt/c/pjrt_c_api_custom_partitioner_extension.h",
+      "sha256": "64e611704f9c43f00457fb8b56f37e6c7e9f76b3544427015d4d1e401d241856"
+    },
+    {
+      "bytes": 3587,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt-sys/include/xla/pjrt/c/pjrt_c_api_ffi_extension.h",
+      "sha256": "2e7d1ced9764e06dff50c8c6a2b2c3b1024614f1a44d3405007992bab8ede6cd"
+    },
+    {
+      "bytes": 1661,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt-sys/include/xla/pjrt/c/pjrt_c_api_gpu_extension.h",
+      "sha256": "b9d73255cc297e0be60f350c03a5c4b96ed40e17c49fdfb404be8c055922a960"
+    },
+    {
+      "bytes": 6349,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt-sys/include/xla/pjrt/c/pjrt_c_api_layouts_extension.h",
+      "sha256": "b4d83e1d7ccab32a539aff598a8b097168ecbde5639931a451644a87b9e2b27e"
+    },
+    {
+      "bytes": 9006,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt-sys/include/xla/pjrt/c/pjrt_c_api_megascale_extension.h",
+      "sha256": "e14c5291efef24b0c111d22c2870250c74d7154050b947a61cf66c3d3d7378e6"
+    },
+    {
+      "bytes": 3205,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt-sys/include/xla/pjrt/c/pjrt_c_api_memory_descriptions_extension.h",
+      "sha256": "104fd1fb954b116fbcbc257c1270813503c0589a93ef3b39e3860940e51ef362"
+    },
+    {
+      "bytes": 7257,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt-sys/include/xla/pjrt/c/pjrt_c_api_phase_compile_extension.h",
+      "sha256": "5df42aa12668ad668f65a177edd97de80c6025d491e7b630c01ab651281944bc"
+    },
+    {
+      "bytes": 1415,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt-sys/include/xla/pjrt/c/pjrt_c_api_profiler_extension.h",
+      "sha256": "9ae899234c03c1a117ef88481f8a242bdfa6adf0014c88c1485aee3ffd26c70b"
+    },
+    {
+      "bytes": 4844,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt-sys/include/xla/pjrt/c/pjrt_c_api_raw_buffer_extension.h",
+      "sha256": "7d555e411ec00beb345b8b77ce44fce03ad705b68823e4077a0feaa7255326b4"
+    },
+    {
+      "bytes": 2125,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt-sys/include/xla/pjrt/c/pjrt_c_api_stream_extension.h",
+      "sha256": "a9716b89708d76aadcbd0f8e4bf2cba3d2d01055d070a89774b969e6ad7af294"
+    },
+    {
+      "bytes": 3969,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt-sys/include/xla/pjrt/c/pjrt_c_api_tpu_executable_extension.h",
+      "sha256": "c9674e06e37cfb23416d3f4d054a795b98f1d5a80f4775405fd1624787f3453b"
+    },
+    {
+      "bytes": 21752,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt-sys/include/xla/pjrt/c/pjrt_c_api_tpu_topology_extension.h",
+      "sha256": "dcdac0379ebf8dcdd35047609cfcf0927376544761cb5c32c684f30e05874a0e"
+    },
+    {
+      "bytes": 1687,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt-sys/include/xla/pjrt/c/pjrt_c_api_triton_extension.h",
+      "sha256": "ee0402ec1739c6c809b54c8269c4c1a5768741c41dc8931b5de331b7679f251d"
+    },
+    {
+      "bytes": 114311,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt-sys/include/xla/pjrt/c/pjrt_c_api.h",
+      "sha256": "b5cdbd8289178466b9e695985fe065fe57c9b57f816c8e02b5f6bcf61c7aec4b"
+    },
+    {
+      "bytes": 3254,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt-sys/include/xla/pjrt/extensions/example/example_extension.h",
+      "sha256": "cd670490f316a8b4e32d2b81008e1ce92014a98913fa6d931fdba6d0bcaf6170"
+    },
+    {
+      "bytes": 3000,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt-sys/include/xla/pjrt/extensions/host_allocator/host_allocator_extension.h",
+      "sha256": "a15bc601b15a72da464d71c68b616b4b75b7b4d30278f2b81d4d1c746a855d00"
+    },
+    {
+      "bytes": 1616,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt-sys/protos/xla/autotune_results.proto",
+      "sha256": "1a8aa45907816ad60353b889b6e7dd43a0702f656c8a574ef80995c4c75cb071"
+    },
+    {
+      "bytes": 3582,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt-sys/protos/xla/autotuning.proto",
+      "sha256": "85c3639ba2a135b1c476621914792816c9aef219183806328ccd85fc2ffaafd6"
+    },
+    {
+      "bytes": 8166,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt-sys/protos/xla/pjrt/proto/compile_options.proto",
+      "sha256": "1bde4e04acb8dffc7cf7ee747c11564ff5370676cda67c0c53da7a125ac601a4"
+    },
+    {
+      "bytes": 29396,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt-sys/protos/xla/service/hlo.proto",
+      "sha256": "d70d5692ae5b7bd3f6c92bc7b478333fe137dbff6b0ee6323b775ec4464d9615"
+    },
+    {
+      "bytes": 3076,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt-sys/protos/xla/service/metrics.proto",
+      "sha256": "491cbca2917fba732cda2c8034a4cb8b4ab198c337c47cd29b6e5499b6d89163"
+    },
+    {
+      "bytes": 1146,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt-sys/protos/xla/stream_executor/cuda/cuda_compute_capability.proto",
+      "sha256": "684f2cf569572ed5d686aa62002c0a97f8b09edc1f11efd525035bb9002ab602"
+    },
+    {
+      "bytes": 3046,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt-sys/protos/xla/stream_executor/device_description.proto",
+      "sha256": "6d2ae61a08a877492a76b9a61174b9a5799de6b6f4dba1afb1cd2a8f271e1633"
+    },
+    {
+      "bytes": 875,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt-sys/protos/xla/stream_executor/sycl/oneapi_compute_capability.proto",
+      "sha256": "f62dbb51c70904b7bbbdf0b42e6e22a4a0085ebf213c5f3aa0e7412e1a9fad88"
+    },
+    {
+      "bytes": 6266,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt-sys/protos/xla/tsl/protobuf/dnn.proto",
+      "sha256": "12f56e78196d1c150ad16f6463f917abb7afb14afa735b9302e1e65ac4a48974"
+    },
+    {
+      "bytes": 54527,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt-sys/protos/xla/xla_data.proto",
+      "sha256": "20c10f266099ddeeca768fafd39894a06c4f5158b65ffb5180d9e88fb0358083"
+    },
+    {
+      "bytes": 78427,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt-sys/protos/xla/xla.proto",
+      "sha256": "6d7af88760ac3a5a37c33a409a01b4b1e9422d6217306136b949dab29224c394"
+    },
+    {
+      "bytes": 639,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt-sys/README.md",
+      "sha256": "988774b979a945349f8f9b515d4af357bb3c298c6d1a2d2db9b03205b41b7c0f"
+    },
+    {
+      "bytes": 332,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt-sys/src/lib.rs",
+      "sha256": "01c9a92e978ea43411064b0fbf3eb0a68853a058191340c4c40eeff1d38450d8"
+    },
+    {
+      "bytes": 50,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt-sys/src/protos.rs",
+      "sha256": "bd41aa4048909bbe97192a643037dd08dd8c6fc0cc5a149c61f471e631289399"
+    },
+    {
+      "bytes": 16261,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt-sys/src/structs.rs",
+      "sha256": "4afe96faa7b091402f742ba443fc0f414531c5769d3bedba8077d7043be20d52"
+    },
+    {
+      "bytes": 964,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt-sys/wrapper.h",
+      "sha256": "ab660744d03d7625755e8048479f71c26acd5967bea2a77d16d770321bdf6404"
+    },
+    {
+      "bytes": 675,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt/Cargo.toml",
+      "sha256": "d421b19619b43dce681e0ef6d1e7bcd19ba27fdd55355347370853809492c93f"
+    },
+    {
+      "bytes": 4345,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt/examples/async_transfer.rs",
+      "sha256": "e10ac9468d48fc29083e8994cc52033e26f246beeab449df389659ad6816e120"
+    },
+    {
+      "bytes": 1018,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt/examples/basic_bf16.rs",
+      "sha256": "2dae86ffff5f24bdb40fb9ecba27f2bbc55052cdde32ff7854765c7074addf3a"
+    },
+    {
+      "bytes": 1030,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt/examples/basic_c64.rs",
+      "sha256": "2dd3e496d993e2fbbef0f6c282af5acdf9c1878082f652fbb049397b871c919f"
+    },
+    {
+      "bytes": 1016,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt/examples/basic_f16.rs",
+      "sha256": "fb3738d8ee9217d3e818e128b97082ae53fbe5fe6b1263c580784d9651778943"
+    },
+    {
+      "bytes": 1482,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt/examples/basic.rs",
+      "sha256": "b040c863356e3b600bb602a5e4e6313232d4281207996b0dc219c089311e3beb"
+    },
+    {
+      "bytes": 3896,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt/examples/buffer_reference_count.rs",
+      "sha256": "2ff7bbe048baac0d7615e474c703d28f7ac8355d57598ae033afce31dafa03cd"
+    },
+    {
+      "bytes": 1753,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt/examples/buffer.rs",
+      "sha256": "9d6ab12baeb1a2cabee6a0d076488299287a4ace4689ffa7e0d4b2c3032014df"
+    },
+    {
+      "bytes": 6107,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt/examples/callback_extension.rs",
+      "sha256": "3c20c802cbf308d8be7123741e491fc7cc1540f4fe306c2e521ab0a2d5f0eff8"
+    },
+    {
+      "bytes": 6647,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt/examples/compile_options.rs",
+      "sha256": "e4a69bbe055a1ab28f009e816f4a6817ceabf77e6f1843deab682e40bf686104"
+    },
+    {
+      "bytes": 3485,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt/examples/custom_partitioner_extension.rs",
+      "sha256": "5992f776abad0c7e32032cf90ee6772327e9d8a67e23052863608b97c0ebac3a"
+    },
+    {
+      "bytes": 7846,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt/examples/device_assignment.rs",
+      "sha256": "b45e9e8e8bdeea8b7536b7251cae58adb039a29868c4686afe0f2f3522275324"
+    },
+    {
+      "bytes": 3289,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt/examples/event.rs",
+      "sha256": "a88537b929bc958eb93b8413a03dc9105be4ee89f4ea2645df14cd597180912c"
+    },
+    {
+      "bytes": 7249,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt/examples/execution_context.rs",
+      "sha256": "55fb85b5f1f4c6e2e4355e85527c725ed07504540cd89a201665e50aaad2f64c"
+    },
+    {
+      "bytes": 2586,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt/examples/extension_discovery.rs",
+      "sha256": "989ba6989febf204398502ac15faf0678bd25620723cdb8ab79b6e0a114c7f57"
+    },
+    {
+      "bytes": 3560,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt/examples/ffi_extension.rs",
+      "sha256": "85c634bfaf84652dc98a2209933b82d86d2ffd17e965b99e2908d5303f91e772"
+    },
+    {
+      "bytes": 3895,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt/examples/gpu_extension.rs",
+      "sha256": "fa965449ed1228b42654659986be6a635df438dc1e1dcad087bf75aa37d6f838"
+    },
+    {
+      "bytes": 7879,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt/examples/kv_store.rs",
+      "sha256": "bd9a404a4a68617c251a407ca699e518ab28672abd3df11e3eb298d6528371c4"
+    },
+    {
+      "bytes": 5048,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt/examples/layouts_extension.rs",
+      "sha256": "31cbdc7ce3e3a627806a0276983ca873723046085c0a64b45aada0012df7af1e"
+    },
+    {
+      "bytes": 3550,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt/examples/memory_descriptions_extension.rs",
+      "sha256": "764c6f2d78d9a840e7f9b093f1c53fa7f36fa00cc2a14324434e6cbadc21684f"
+    },
+    {
+      "bytes": 8891,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt/examples/memory_layout.rs",
+      "sha256": "f820ce341eff894312fa4dddb5c3ffe74b4c67a058daf4a77b2a15ae24edfdc9"
+    },
+    {
+      "bytes": 7810,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt/examples/memory.rs",
+      "sha256": "7aad34d5ec5cd4fc60a2fd208f38cbe45b6fe95a0f80dbd87f2e16fbf9690acb"
+    },
+    {
+      "bytes": 9751,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt/examples/multi_device.rs",
+      "sha256": "72c3a085b51c5d921d4cf017a072b28171462e402efef829030c4aa955ec8269"
+    },
+    {
+      "bytes": 4428,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt/examples/phase_compile_extension.rs",
+      "sha256": "58c6baab0e0c3de14930a20440c1001398ef036253f5603473bc71cc684a7786"
+    },
+    {
+      "bytes": 3608,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt/examples/profiler_extension.rs",
+      "sha256": "834d99dcd987df57b91d361c04143c325296376368ffcd0dbaef5e6a518efa4f"
+    },
+    {
+      "bytes": 286,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt/examples/prog_bf16.mlir",
+      "sha256": "cb4383e24d86efce2943c77afe78626d94aa6bb55f0a15c6740bfda8b0af98e0"
+    },
+    {
+      "bytes": 358,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt/examples/prog_c64.mlir",
+      "sha256": "3d4556e4d91551cea1bc5b69e426281eca9e8122186dba79c1648424f8e5dc64"
+    },
+    {
+      "bytes": 279,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt/examples/prog_f16.mlir",
+      "sha256": "d232582cb44d317afcabec00607450df7f6e08980defecbb04f7806cec54dcfe"
+    },
+    {
+      "bytes": 279,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt/examples/prog_f32.mlir",
+      "sha256": "a9635c9c8e80c0e60872654f45e79a8e78094d82c94c0f3f4d29f78a88ecdbe6"
+    },
+    {
+      "bytes": 4705,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt/examples/raw_buffer_extension.rs",
+      "sha256": "a04819a40e47e231f2453522e446ce8d313e00af1e6e9040c0745233c45c9d75"
+    },
+    {
+      "bytes": 3295,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt/examples/stream_extension.rs",
+      "sha256": "3cca50f211c79f19bee7606bb1f41704492a3a501ed36f00115432622538a31e"
+    },
+    {
+      "bytes": 14072,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt/examples/stub_extensions.rs",
+      "sha256": "b03c4cd2ff4aa42d1936e62322537269ab5eae7b90720600265a885624069018"
+    },
+    {
+      "bytes": 3794,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt/examples/triton_extension.rs",
+      "sha256": "adb2f22c72dc03b59f22e867f7e9600dc60082c6c410140b907801b71945d984"
+    },
+    {
+      "bytes": 1506,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt/README.md",
+      "sha256": "071a3d762d2804d90e2ede2547e2a92060f4342914fffa31e91b6bc64fbb58a9"
+    },
+    {
+      "bytes": 27501,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt/src/api.rs",
+      "sha256": "f07e7f3c77bfc11f569db9cca8398474705fcd464ffe274bd4651e8b3c5b0539"
+    },
+    {
+      "bytes": 42892,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt/src/async_transfer.rs",
+      "sha256": "c334f970d16b63c2cc50cbb0fa18b832953f8168e11d7a2a1515a3c4cdd413b6"
+    },
+    {
+      "bytes": 39901,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt/src/buffer.rs",
+      "sha256": "1e6eb26824a5f490d69ce250aab5a5d123d0c91717ff7d3a7b28dedcef029801"
+    },
+    {
+      "bytes": 10520,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt/src/callback_ext.rs",
+      "sha256": "6fdbf9e3ec0848e9b356f65731658a7b525d93691f67bc6ceccef071f89d3e7b"
+    },
+    {
+      "bytes": 2799,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt/src/chunk.rs",
+      "sha256": "b149b866b14db6061d4de8a7538bb6e72d3aad53f510f223c6da2253dfd059fc"
+    },
+    {
+      "bytes": 41138,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt/src/client.rs",
+      "sha256": "11d2d6a6d909d4617b1f20a25c8d0293f77ef6ebb192bbd4db25202172635ed3"
+    },
+    {
+      "bytes": 20431,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt/src/compile.rs",
+      "sha256": "6481798d24ad57139a32460418a7aed1afc5c2acdc54d42d4d422de04b0c3a84"
+    },
+    {
+      "bytes": 5193,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt/src/cross_host_transfers_ext.rs",
+      "sha256": "5e69bf0c5c0c1206a56fb9ec11fec64b68254bdc76274bc04716543932205930"
+    },
+    {
+      "bytes": 9365,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt/src/custom_partitioner_ext.rs",
+      "sha256": "378da9fd27ae368f21efda0531f85df77434f125a2a0e3e58ab47f736293eca9"
+    },
+    {
+      "bytes": 9883,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt/src/device_assignment.rs",
+      "sha256": "596378e810f579aff2a39d0ab9158cc62d317a7727ccf88521e2679f57eababf"
+    },
+    {
+      "bytes": 3386,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt/src/device_description.rs",
+      "sha256": "2b3ed1c764fd6e758a52868df6fabb7e5f1d75ea368621618463150b457faa33"
+    },
+    {
+      "bytes": 2759,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt/src/device_stream.rs",
+      "sha256": "8fc63163eef133971a892f66fdf2a21a24722be6121076e763644d65ee49be47"
+    },
+    {
+      "bytes": 10584,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt/src/device.rs",
+      "sha256": "aafc97575dcae04e95c1a94000ec396f205d556f46e2f0f8580aa170ff0e690b"
+    },
+    {
+      "bytes": 14610,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt/src/error.rs",
+      "sha256": "7d4df106db4cfa113f08a65212a0b9ed8c117cf4b56c11e2f2f49ad0bfa0ac21"
+    },
+    {
+      "bytes": 7862,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt/src/event.rs",
+      "sha256": "4db8a9a01fa79d39236994461d4e9b7e1e58a3d8f26576b19be23237c3463d80"
+    },
+    {
+      "bytes": 11997,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt/src/example_ext.rs",
+      "sha256": "774bd6103f61d8503f51b1a6169d87a48d3d70032e4b49bdcd7464498abf0a46"
+    },
+    {
+      "bytes": 4975,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt/src/executable_metadata_ext.rs",
+      "sha256": "0334d4b3620b6c8afdfc1e6052d3c206d58e8961bca01d899fff33ab1ac68472"
+    },
+    {
+      "bytes": 16054,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt/src/executable.rs",
+      "sha256": "aa81e4986eddae81bcfa7eaad6f3feef8abd97482c4bc9cdcf5131791451c39e"
+    },
+    {
+      "bytes": 25959,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt/src/execute.rs",
+      "sha256": "c858c9fe47b569d5ac8ffcc516b0302ee511d1d44a9ddb074fae4a07debe3a4c"
+    },
+    {
+      "bytes": 12501,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt/src/extension.rs",
+      "sha256": "69b0415164440253b804051209c6ae716c415551e074b90dbe1cabe12041a098"
+    },
+    {
+      "bytes": 13958,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt/src/ffi_ext.rs",
+      "sha256": "9aee817cc445884e377df0b33c0d2375a23d7944d39c294f44e85ee2245e3f35"
+    },
+    {
+      "bytes": 7477,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt/src/gpu_ext.rs",
+      "sha256": "d632c04a992a6a405c2f0cceded31673499565a3a80681d9f4394860cc460db4"
+    },
+    {
+      "bytes": 8933,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt/src/host_allocator_ext.rs",
+      "sha256": "0538b1d08b6152d1475331455cb5c1f73ad83c4ceced79a5bd32573865a84799"
+    },
+    {
+      "bytes": 40013,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt/src/host_buffer.rs",
+      "sha256": "a05b2e0d974e674ddecbaa90e7a0c90898d749b01352e34045e01e9eb03f7994"
+    },
+    {
+      "bytes": 9503,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt/src/kv_store.rs",
+      "sha256": "6e8fbe3a22d35d20ded7ab3a9002e74f7af5231a935c15a1808d540ac366d9a9"
+    },
+    {
+      "bytes": 14644,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt/src/layouts_ext.rs",
+      "sha256": "73661d793e133b2dc8ed817219a6226b49bc58f52f5ed8aa384b4472da355eca"
+    },
+    {
+      "bytes": 7693,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt/src/lib.rs",
+      "sha256": "62a3c15cf256669490c3b9d62be36010294799c47c36a712298722301d268654"
+    },
+    {
+      "bytes": 8714,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt/src/loaded_executable.rs",
+      "sha256": "4692e086f45385a6af416e035529643d16d9e893916f0903d40ada5935cda631"
+    },
+    {
+      "bytes": 21207,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt/src/megascale_ext.rs",
+      "sha256": "536e3848905463f6b232d19bcd6359fc41ee07330721dc3946ecf383016bc031"
+    },
+    {
+      "bytes": 9541,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt/src/memory_descriptions_ext.rs",
+      "sha256": "59325377d0d99d2a77520aafdb5b08fefd04ae90d54b2e7e97cc55b3b175da24"
+    },
+    {
+      "bytes": 14277,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt/src/memory_layout.rs",
+      "sha256": "1c5054a01248c7405920b7fc368eda15be2b830164d3f9d1d2773056fff917d5"
+    },
+    {
+      "bytes": 4966,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt/src/memory.rs",
+      "sha256": "c6e4c702cb35253d1f86594c2ae5565e9c78cec966d37039b84ac7a273e22e76"
+    },
+    {
+      "bytes": 13390,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt/src/named_value.rs",
+      "sha256": "51e62f9e1e0c0d93825c131a717b4ee233a3881228e86e254f7f9e4e62d3a9e4"
+    },
+    {
+      "bytes": 14875,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt/src/phase_compile_ext.rs",
+      "sha256": "1f81c583dcd4af3bb64fb36d79e68bf01b8383489c4218385965cc8904b54973"
+    },
+    {
+      "bytes": 2435,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt/src/plugin.rs",
+      "sha256": "ace27b9c12851a3a6a509a02c308312e6bf03a0eecbfc2c9c2d7712ce5a3657d"
+    },
+    {
+      "bytes": 25020,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt/src/profiler_ext.rs",
+      "sha256": "5f43e8f3aaa17f173386720906b4c95d38edc214411870928f600ba96ff21130"
+    },
+    {
+      "bytes": 7988,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt/src/program.rs",
+      "sha256": "4bd30edd7fbffda91987b5a8b80f9456a538b69c635b4636af6949b16874b720"
+    },
+    {
+      "bytes": 12229,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt/src/raw_buffer_ext.rs",
+      "sha256": "431092bc393bd0f3b8cd7d0df90ebf5aa6cd531d8e6042052a89c5996021ed99"
+    },
+    {
+      "bytes": 7746,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt/src/stream_ext.rs",
+      "sha256": "078ab125d4291eac1eeefde206155b468370105a9afedb7f10c786a519913d88"
+    },
+    {
+      "bytes": 7094,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt/src/tests/async_transfer_tests.rs",
+      "sha256": "0d1c21d860e39726944766a6f713e96517dd849f98f7914fc4d6da335285e1c1"
+    },
+    {
+      "bytes": 3714,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt/src/tests/buffer_ref_count.rs",
+      "sha256": "09b0db4c9ee924c4db3a4ee52b4b09611e1b373e7de759f07f750a7c225fec9c"
+    },
+    {
+      "bytes": 41812,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt/src/tests/core_types_tests.rs",
+      "sha256": "0afee7099f9fe0ef65ed96ac5747dfc15b8b971ef6d6177a89d72d80c18039a4"
+    },
+    {
+      "bytes": 4368,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt/src/tests/event_tests.rs",
+      "sha256": "c0397c8e5e636d3d25f9566ccb9d717e5905682bdaf996021243c778d3be60d7"
+    },
+    {
+      "bytes": 9775,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt/src/tests/executable_tests.rs",
+      "sha256": "540618ca073113da39e07db8981f1ae387358d0d64bd2030e9f3b33b16aec81b"
+    },
+    {
+      "bytes": 20987,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt/src/tests/execute_tests.rs",
+      "sha256": "3a30f604d0987c13337441d49243b6ce0c93d331fc925611808c5766d517c2be"
+    },
+    {
+      "bytes": 2780,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt/src/tests/extension_tests.rs",
+      "sha256": "22088bb7315a6ea0a5091cfd0e2da60f7b41037181a9c8cbc41a0aaf23e04877"
+    },
+    {
+      "bytes": 227,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt/src/tests/memory_tests.rs",
+      "sha256": "519f9219b190f58842b5083b178ccc087fb1c5f7f845bc39e4379fd647787455"
+    },
+    {
+      "bytes": 873,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt/src/tests/mod.rs",
+      "sha256": "c1813ba22dcad1cc3daaf02040b4e629ea29000d6095c04a538bcd9e5e44bcee"
+    },
+    {
+      "bytes": 5866,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt/src/topology_description.rs",
+      "sha256": "25c8f1d6eed12b2198b71bed027ff60fe8228589beb73fe63f5db5b3eede5e00"
+    },
+    {
+      "bytes": 14217,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt/src/tpu_executable_ext.rs",
+      "sha256": "d1f8a9c1515638bce68b3a6b1c6f70ea33fa448dbfd460447f2d023e3ee1b03b"
+    },
+    {
+      "bytes": 38437,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt/src/tpu_topology_ext.rs",
+      "sha256": "1a86a982e0c937c355f28a5d6f52ef3e474fabb9a579d65d1918a5334380b2d8"
+    },
+    {
+      "bytes": 7487,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt/src/triton_ext.rs",
+      "sha256": "c64bc65d4bd7d843cd8d7957bcd597f866c4eecef879e26c6743441d15e880ae"
+    },
+    {
+      "bytes": 30311,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt/src/ty.rs",
+      "sha256": "12a5d958f0388a56ceaea98516b3517307e11779f997ed1e1a7e81d5f906de25"
+    },
+    {
+      "bytes": 3966,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/pjrt/src/utils.rs",
+      "sha256": "a92332998019dee9abb71b384016e12095edd7d0a4a4f242d7ac341ce3270f07"
+    },
+    {
+      "bytes": 4117,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/README.md",
+      "sha256": "a4c505c37eae2e023a3caef1d7c9604283a69719a6f7216f5990457d8a49f5ea"
+    },
+    {
+      "bytes": 262,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/rustfmt.toml",
+      "sha256": "3a4dc72289ee2437c843538abb383b474a61ec62b3fc794d826bf1062ad5ad17"
+    },
+    {
+      "bytes": 178,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/third_party/.bazelrc",
+      "sha256": "3543352c609dbf69e87e0cffa8d22d6cce83ee9fa32816642ea295256c36c32d"
+    },
+    {
+      "bytes": 5,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/third_party/.bazelversion",
+      "sha256": "475c2ccaebf82353b2e7c16de13e8d3b93d08e605365f36430e6a4f2239ca58b"
+    },
+    {
+      "bytes": 2828,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/third_party/BUILD.bazel",
+      "sha256": "35e3110241f3a95f8fe87148ff76263f6d22bec3f02327d296a922c9a2c6401d"
+    },
+    {
+      "bytes": 0,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/third_party/MODULE.bazel",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 1526,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/third_party/proto_export.bzl",
+      "sha256": "3a564d9917e017bf1feed561dfbcfddbb53a5903b95e9aa52438cf2f89ce3830"
+    },
+    {
+      "bytes": 3287,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/third_party/WORKSPACE",
+      "sha256": "08d2a328ccfcf602243bd266be39ad7b373c08a5418c3367927101aec5d4e5f4"
+    },
+    {
+      "bytes": 239,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/pjrt-rs/vendor_pjrt.sh",
+      "sha256": "bfcad36bf9ba626b0ef5603c04785f3e1e241f9c6e972b8d8b61f0f935170733"
+    },
+    {
+      "bytes": 5354,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/xla-protos/profiler_options.proto",
+      "sha256": "96aa3d987c30ec88452265edec1edb2294e6c6c8b9806deb5cda81ba73a6360c"
+    },
+    {
+      "bytes": 40,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/xla-protos/REVISION.txt",
+      "sha256": "7e0b65ce3d9525190e9f3acaa1d92bdf5d0637bfa23d96e52771148fb1893a56"
+    },
+    {
+      "bytes": 5246,
+      "ruta": "codigo/contraste-cpu-tpu/dependencias/xla-protos/xplane.proto",
+      "sha256": "1491efbb71b645598bda8f7af7d9d1d483eb2be31bdd9465b76ff0ac983c5919"
+    },
+    {
+      "bytes": 3741,
+      "ruta": "codigo/contraste-cpu-tpu/LEAME-SV.md",
+      "sha256": "1fc3efb8056039516efd9e760ead874373cb120f2ea3a2bee18b1d2a229565b4"
+    },
+    {
       "bytes": 9027,
+      "ruta": "codigo/contraste-cpu-tpu/src/lib.rs",
       "sha256": "2b6cd91da365f15ab314ea69ef6eeec1b12826ddf0de01fcca58191ef5afff05"
     },
     {
-      "ruta": "evidencias/COTEJO-ANTERIOR.json",
+      "bytes": 8453,
+      "ruta": "codigo/contraste-cpu-tpu/src/tests.rs",
+      "sha256": "3d334537ddd3cc33b45ee69d25f2f96ff907eec6cc3b56044c99af800feb4c12"
+    },
+    {
+      "bytes": 412,
+      "ruta": "codigo/contraste-cpu-tpu/telemetria/Cargo.toml",
+      "sha256": "5dfdc258e3bed98ca336006ace147ca39d250f03fe8188580ea18649c3dd173e"
+    },
+    {
+      "bytes": 11807,
+      "ruta": "codigo/contraste-cpu-tpu/telemetria/src/lib.rs",
+      "sha256": "6e5033bf0c0b77494c2f3ca81e821a60bd41d48e096f32355fe7752e178cfbe9"
+    },
+    {
+      "bytes": 4245,
+      "ruta": "codigo/contraste-cpu-tpu/telemetria/src/main.rs",
+      "sha256": "eda60b5a87394f40bb3c28ce19cbb5c562b6d995851866e85eeb561a65b8d463"
+    },
+    {
+      "bytes": 5228,
+      "ruta": "codigo/contraste-cpu-tpu/telemetria/src/tests.rs",
+      "sha256": "8093c08e9fc74ddd125343d2e12697622fdf504d1201895b0f2aaea03b4f4231"
+    },
+    {
+      "bytes": 13122,
+      "ruta": "codigo/integracion/traduccion.rs",
+      "sha256": "a435cfeda2bdd250516b75d6c66eba27881ded2948a980dfd4488d59ed3aaaab"
+    },
+    {
+      "bytes": 2010,
+      "ruta": "codigo/LEAME.md",
+      "sha256": "37ac530e7e9dddaaf554da59b4c4077fb30113206112e042674966ddf8214e3e"
+    },
+    {
+      "bytes": 39645,
+      "ruta": "codigo/motor/Cargo.lock",
+      "sha256": "5ebdaaf15f3947af93cdfd9506dca963c71c87ce27de5c8a4a40a0f6c6c86be4"
+    },
+    {
+      "bytes": 604,
+      "ruta": "codigo/motor/Cargo.toml",
+      "sha256": "f5d82e76ebfa1c4b750c4b55b64aafe553ff87df123a7290a5a0b2fd5e817c22"
+    },
+    {
+      "bytes": 11357,
+      "ruta": "codigo/motor/LICENSE-APACHE.txt",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "bytes": 3470,
+      "ruta": "codigo/motor/src/aislamiento.rs",
+      "sha256": "ea79318a67d32bd19902f56a32ea88589625c654a55c8537e7b8c3901c22486c"
+    },
+    {
+      "bytes": 5293,
+      "ruta": "codigo/motor/src/main.rs",
+      "sha256": "29f5575e89d540844218f4d87d00bb7b68038fe21966bacf8793e543bcc2ee9f"
+    },
+    {
+      "bytes": 8944,
+      "ruta": "codigo/motor/src/spm.rs",
+      "sha256": "6815d0ba3d893e4223b70b33a9bb369b36d48eef9f636eebabb7be3d96295a42"
+    },
+    {
+      "bytes": 4055,
+      "ruta": "codigo/PROCEDENCIA.json",
+      "sha256": "459b839f4a711657a018533bf79719541a27c2904b29129f5fd159e0c70bde17"
+    },
+    {
+      "bytes": 185,
+      "ruta": "codigo/selector/Cargo.lock",
+      "sha256": "ac26b830aa585cb8ba70b2dd96a229f95273e38af84ced64c670764b3ef1a36f"
+    },
+    {
+      "bytes": 296,
+      "ruta": "codigo/selector/Cargo.toml",
+      "sha256": "01b222717d4291df5a57046753d1c9c24f212121c853128c9fbef8b58ba67fd6"
+    },
+    {
+      "bytes": 9027,
+      "ruta": "codigo/selector/src/lib.rs",
+      "sha256": "2b6cd91da365f15ab314ea69ef6eeec1b12826ddf0de01fcca58191ef5afff05"
+    },
+    {
+      "bytes": 1939,
+      "ruta": "evidencias/contraste-cpu-tpu-20261014/ADENDA-MEDICION-COMPLETA.md",
+      "sha256": "2860965687043a6b6a7d6d6835af369e33e94b7eae05f1a817abee8e3e1056d4"
+    },
+    {
+      "bytes": 1303,
+      "ruta": "evidencias/contraste-cpu-tpu-20261014/ARCHIVOS-ENTREGA.json",
+      "sha256": "5a6362dcf60fa58bc0ead550723b83869400ce0926fbcec6f41aac10ced9b5d8"
+    },
+    {
+      "bytes": 30,
+      "ruta": "evidencias/contraste-cpu-tpu-20261014/CARGA-CPU.json",
+      "sha256": "d7b9c156fbb0ed7430b37bd92f40c1f458577ee37f099a244e9c0b449951bc2f"
+    },
+    {
+      "bytes": 12067,
+      "ruta": "evidencias/contraste-cpu-tpu-20261014/COTEJO-INDEPENDIENTE.json",
+      "sha256": "3e83ca8fa0c557faefc80d276573a9491529c49ec2e5872a61ddb17155343a3d"
+    },
+    {
+      "bytes": 507,
+      "ruta": "evidencias/contraste-cpu-tpu-20261014/DISPOSITIVO.json",
+      "sha256": "7e0688bc32e5aa0eb1abd4b37981b3ee34317042de1b68b6e402fe1ad69e58f8"
+    },
+    {
+      "bytes": 562,
+      "ruta": "evidencias/contraste-cpu-tpu-20261014/INICIO.json",
+      "sha256": "a7c638460a66d585750a36f3a5d57d482d0a0c6307f11854b9e43520fffad48b"
+    },
+    {
+      "bytes": 871,
+      "ruta": "evidencias/contraste-cpu-tpu-20261014/NCI_178-3/decoder/COMPILACION.json",
+      "sha256": "8d9a574f9047dad1041bc2d53b47e0de4dd558819ff56cd1e4cf0b75e1172ef4"
+    },
+    {
+      "bytes": 861,
+      "ruta": "evidencias/contraste-cpu-tpu-20261014/NCI_178-3/encoder/COMPILACION.json",
+      "sha256": "88ea751a252160e242927f41d4ef005b14887513ef13468c528eb17cdc919c91"
+    },
+    {
+      "bytes": 870,
+      "ruta": "evidencias/contraste-cpu-tpu-20261014/NCI_4-0/decoder/COMPILACION.json",
+      "sha256": "ffa2a57a4c7b5c60dce996eef3cf97e3470acd869bebe99ea6221dc31f590ffb"
+    },
+    {
+      "bytes": 859,
+      "ruta": "evidencias/contraste-cpu-tpu-20261014/NCI_4-0/encoder/COMPILACION.json",
+      "sha256": "8e242953e04b59c5f4e3a8226d60b1316ad17b3036a4dc92f5ee979288c27864"
+    },
+    {
+      "bytes": 3999,
+      "ruta": "evidencias/contraste-cpu-tpu-20261014/PROTOCOLO.md",
+      "sha256": "b37125e866420835cd3f6093f249b999639a05b2e51099b6e975d7343c8e2e06"
+    },
+    {
+      "bytes": 19174,
+      "ruta": "evidencias/contraste-cpu-tpu-20261014/resultado-previo-medicion-parcial.json",
+      "sha256": "d1715645360abf48ba2d6747e28d798e3037fddcd3eaf9cf39c5ca36038a992c"
+    },
+    {
+      "bytes": 19190,
+      "ruta": "evidencias/contraste-cpu-tpu-20261014/RESULTADO.json",
+      "sha256": "70bb2853acac3d3dc56375c5fa7121267327f897a1901dcc3c348947cb45a298"
+    },
+    {
       "bytes": 192,
+      "ruta": "evidencias/COTEJO-ANTERIOR.json",
       "sha256": "54e9129c4c1e6d009716b354988a84361f075e860c7015c9ae93df6ef13fb2b6"
     },
     {
-      "ruta": "evidencias/ENTRADAS-CPU-ANTERIORES.jsonl",
       "bytes": 1483,
+      "ruta": "evidencias/ENTRADAS-CPU-ANTERIORES.jsonl",
       "sha256": "fcd46ea69f32f895e879a15acd55dafff92e23dedf5110bd34106d24415eb604"
     },
     {
+      "bytes": 819,
       "ruta": "evidencias/ESTADO.json",
-      "bytes": 766,
-      "sha256": "d8e2258820a74316a2cdd41e99a1947601cedce689c98bc3537de56e292bb926"
+      "sha256": "b5322fb18354df12743ee39787d09c0c49134f9b5a861f29d8736dc56ae9148a"
     },
     {
-      "ruta": "evidencias/IDENTIDAD-MODELO.json",
       "bytes": 1274,
+      "ruta": "evidencias/IDENTIDAD-MODELO.json",
       "sha256": "7227ec61065e2c1467a0747709e57fe2b1263df93cf95154435528d153a6349e"
     },
     {
-      "ruta": "evidencias/MEDICIONES-ANTERIORES.json",
       "bytes": 673,
+      "ruta": "evidencias/MEDICIONES-ANTERIORES.json",
       "sha256": "1a23fea6452a1af50939bc0faac3ea7bea035c1843b8be4c120268e5b8ea3931"
     },
     {
-      "ruta": "evidencias/SALIDAS-CPU-ANTERIORES.jsonl",
       "bytes": 5796,
+      "ruta": "evidencias/SALIDAS-CPU-ANTERIORES.jsonl",
       "sha256": "3a6eba92337c2549e8a39c7551897a704c868c5efc11514feccb094e696c9385"
     },
     {
+      "bytes": 9962,
       "ruta": "opus-mt-en-es.md",
-      "bytes": 9535,
-      "sha256": "2cd3fa94cbbc8fb1eda3751a30363d179bcdd26d8dc6387df5f28a90dc203bd7"
+      "sha256": "8f33e595bf769e14e8f388b0d158f194f4d7d750fab6c875ede5834ff9c00553"
     }
-  ],
-  "edicion": "2026-10-14-identificacion-y-reutilizacion"
+  ]
 }
