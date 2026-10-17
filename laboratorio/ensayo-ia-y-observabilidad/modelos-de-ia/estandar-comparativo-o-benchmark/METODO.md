@@ -28,6 +28,16 @@ La comparación actual se limita a GPT-6 Astra, Grok 4.7, Qwen3.8-Max-0902, GLM-
 
 La [Clasificación del SV](https://administracion.itvia.online/benchmark) aparece en la primera pantalla pública del Gestor. Presenta el estado, el método y los límites en prosa, junto con datos estructurados. Mientras no haya resultados recibidos y comparables, no muestra posiciones ni ganador. El orden y los desempates deben quedar fijados antes de los exámenes; los tokens de distintos modelos no constituyen unidades lingüísticas idénticas. No se califica por el área del polígono.
 
+## Ordenación fijada antes de los exámenes
+
+El criterio **SV-CLASIFICACION-EET-CYB16-1** admite a recomendación sólo Aptos (0) y compara sucesivamente más aciertos, menos errores, menor tiempo total de petición y recepción completa y menor coste general comparable. Ninguna ventaja posterior compensa una calidad inferior. Los tokens son informativos; el área del polígono no puntúa.
+
+El coste abarca todo el examen, antes de impuestos, con moneda, fecha común de referencia, tarifa general, fuente y cálculo documentados. Créditos, descuentos particulares y recursos aportados no mejoran posiciones. La administración recibe y, en su caso, rectifica el cálculo con trazabilidad, sin modificar los originales.
+
+Una duración necesaria ausente impide saltar al coste. Si un coste falta o no es comparable dentro de un grupo empatado, no se ordenan parcialmente los demás por sus importes. Las ausencias no valen cero. El empate completo se conserva, sin ganador por nombre, proveedor u orden de llegada. Se recomienda un único primer apto cuando la comparación está completa y ese primer puesto es inequívoco. Pendientes, incidencias, evidencias discordantes o varios intentos sin resolución mantienen el carácter provisional.
+
+El Gestor calcula y explica desde la misma evidencia la presentación privada y su descarga estructurada. Comprueba los originales, las condiciones y el criterio registrado antes del envío. La recepción científica y publicación de resultados reales son posteriores y expresas; no se publican datos de prueba como resultados de modelos ni se activa producción. Una única ejecución no demuestra superioridad universal ni significación estadística.
+
 ## Peticiones de proveedores
 
 Los representantes pueden presentar una solicitud en [español](https://administracion.itvia.online/benchmark/proveedores?idioma=es) o [inglés](https://administracion.itvia.online/benchmark/proveedores?idioma=en), indicando identidad, representación, modelo, motivo y recursos ofrecidos. La copia completa se envía después de confirmar el correo. Confirmar correo no acredita representación legal ni acepta la evaluación.
