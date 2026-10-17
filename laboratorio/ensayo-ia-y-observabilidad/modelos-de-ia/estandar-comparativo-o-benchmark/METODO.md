@@ -1,8 +1,8 @@
 # Estándar comparativo de modelos de IA
 
-Edición metodológica: 14 de octubre de 2026. Ámbito administrativo: Exámenes – Ensayos – Tests IA (EET-IA).
+Edición metodológica inicial: 14 de octubre de 2026. Precisión de selección, solicitudes y estado: 17 de octubre de 2026. Ámbito administrativo: Exámenes – Ensayos – Tests IA (EET-IA).
 
-El método completo se desarrolla en el libro [Validación, autorización y puesta en Producción de modelos de Inteligencia Artificial](https://documentos-sv.itvia.online/evaluacion/validacion-autorizacion-modelos/), con [versión inglesa](https://documentos-sv.itvia.online/evaluacion/validacion-autorizacion-modelos/en/finalidad.html). Esta sede conserva las ediciones, comparaciones y referencias de sus resultados; no duplica los capítulos del libro.
+El método completo se desarrolla en el libro [Validación, autorización y puesta en Producción de modelos de Inteligencia Artificial](https://documentos-sv.itvia.online/evaluacion/validacion-autorizacion-modelos/). Esta sede conserva las ediciones, comparaciones y referencias de sus resultados; no duplica los capítulos del libro.
 
 La edición inicial contiene dieciséis enunciados: ocho afirmativos y ocho negativos. Su orden se permuta y se conserva. La fuente se entrega íntegra, en su idioma original, sin resúmenes, traducciones ni selección de pasajes. La plantilla y las posiciones críticas se fijan antes de las ejecuciones y quedan fuera del paquete del candidato.
 
@@ -12,7 +12,7 @@ El polígono representa las dieciséis calificaciones en orden canónico, confor
 
 ## Estado
 
-Preparación anterior al primer examen. No hay respuestas nuevas, dictámenes emitidos ni modelos activados. El servicio mantiene bloqueadas la ejecución y la puesta en producción. Los exámenes históricos conservan su propia edición y no se recalifican ni se incorporan como resultados de ésta.
+Preparación anterior al primer examen. No hay respuestas nuevas, dictámenes emitidos ni modelos activados. La ejecución exige recepción técnica y documental, saldo vigente y autorización propia; no se ha lanzado ningún examen de esta edición. La puesta en producción permanece bloqueada. Los exámenes históricos conservan su propia edición y no se recalifican ni se incorporan como resultados de ésta.
 
 La lista [CANDIDATOS.csv](CANDIDATOS.csv) identifica la secuencia documental prevista. El orden de esa tabla no constituye clasificación ni preferencia. La configuración efectiva, capacidad de contexto, permisos para el destinatario, adaptación de transporte y límite de consumo deben recibirse antes de cualquier ejecución expresamente autorizada. La reserva de claves y expedientes corresponde al repositorio privado de gestión documental.
 
@@ -20,8 +20,21 @@ La lista [CANDIDATOS.csv](CANDIDATOS.csv) identifica la secuencia documental pre
 
 La tabla [COMPARACION.csv](COMPARACION.csv) mantiene el dictamen vacío hasta que exista uno. No ejecutado no equivale a U. Las magnitudes ausentes conservan su ausencia y no se sustituyen por cero. Los gráficos comparativos se incorporarán con resultados reales; no se generan barras, posiciones o polígonos ficticios.
 
-La aptitud para esta edición no acredita competencia general, autorización institucional ni selección para producción. Son decisiones distintas. Sólo una configuración apta podrá proponerse para autorización; la elección de un único modelo por ámbito institucional requiere un acto propio de una persona facultada. No conlleva contratación automática.
+La aptitud para esta edición no acredita competencia general, autorización institucional ni selección para producción. Son decisiones distintas. La clasificación recomendará un único primer modelo apto cuando existan evidencia comparable y un protocolo de ordenación fijado antes de ejecutar. La institución conserva la elección de un único modelo de producción, incluida una elección expresa de modelo no evaluado, No Apto o con aptitud revocada, con advertencia diferenciada y trazabilidad. Esa elección no convierte su modelo en recomendación del SV ni activa producción automáticamente.
 
+## Selección y acceso público
+
+La comparación actual se limita a GPT-6 Astra, Grok 4.7, Qwen3.8-Max-0902, GLM-5.3, Kimi K3 y Claude Opus 5.5. Los antecedentes sirven para seleccionar; no sustituyen los resultados de la nueva edición. Las mediciones instrumentales de otros modelos se conservan como tales. No se evalúa automáticamente todo el catálogo comercial de cada proveedor.
+
+La [Clasificación del SV](https://administracion.itvia.online/benchmark) aparece en la primera pantalla pública del Gestor. Presenta el estado, el método y los límites en prosa, junto con datos estructurados. Mientras no haya resultados recibidos y comparables, no muestra posiciones ni ganador. El orden y los desempates deben quedar fijados antes de los exámenes; los tokens de distintos modelos no constituyen unidades lingüísticas idénticas. No se califica por el área del polígono.
+
+## Peticiones de proveedores
+
+Los representantes pueden presentar una solicitud en [español](https://administracion.itvia.online/benchmark/proveedores?idioma=es) o [inglés](https://administracion.itvia.online/benchmark/proveedores?idioma=en), indicando identidad, representación, modelo, motivo y recursos ofrecidos. La copia completa se envía después de confirmar el correo. Confirmar correo no acredita representación legal ni acepta la evaluación.
+
+La administración de la instalación y la función **Responsable de evaluar peticiones de Proveedores** gestionan la propuesta y sus comunicaciones en un registro privado. Se conservan decisiones motivadas, revisiones, autoría y estado de los mensajes. Esta función puede acumularse con la de experto y no concede permisos de examen, documentos, credenciales o producción.
+
+Presentar una petición o aportar recursos no compra posiciones ni garantiza aceptación o un resultado favorable. Antes de una nueva evaluación se requiere un acuerdo transparente sin coste para el SV, con recursos, financiación y posibles conflictos identificados. La solicitud no acepta recursos, contrata servicios ni inicia pruebas.
 ---
 
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
