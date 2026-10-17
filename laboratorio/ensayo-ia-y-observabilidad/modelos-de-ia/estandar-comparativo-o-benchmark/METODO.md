@@ -6,9 +6,9 @@ El método completo se desarrolla en el libro [Validación, autorización y pues
 
 La edición inicial contiene dieciséis enunciados: ocho afirmativos y ocho negativos. Su orden se permuta y se conserva. La fuente se entrega íntegra, en su idioma original, sin resúmenes, traducciones ni selección de pasajes. La plantilla y las posiciones críticas se fijan antes de las ejecuciones y quedan fuera del paquete del candidato.
 
-El corrector recibe la respuesta y la clave, sin identidad comercial del modelo. La calificación y el dictamen pertenecen a la terna 0, 1, U. La regla 16/12-v1 es propia de esta edición: un error crítico o la imposibilidad de alcanzar doce aciertos conduce a 1; doce aciertos y todas las posiciones críticas correctas conducen a 0; los casos restantes conservan U. No se presenta esta regla como definición general de la función κ del SV.
+El corrector recibe la respuesta y la clave, sin identidad comercial del modelo. La calificación y el dictamen pertenecen a la terna 0, 1, U. La clasificación κ aplica la regla fundacional T(n)=⌊7n/9⌋: para n=16, doce valores 1 determinan No apto, doce valores 0 determinan Apto y las demás combinaciones permanecen Indeterminadas. El contrato añade el veto de un error crítico y la reserva de U crítica, sin cambiar κ. La realización SV-FUNDAMENTOS-T7N9-CRITICIDAD-1 corrige la desviación anterior 16/12-v1; los resultados históricos conservan su identidad. Su recepción con la edición es previa al lanzamiento.
 
-El polígono representa las dieciséis calificaciones en orden canónico, conforme a la convención gráfica recibida: 0 rojo, radio nominal 1; 1 verde, radio nominal 2; U azul, radio nominal 3. No se interpreta el área como puntuación. Una respuesta formalmente inadmisible recibe la consecuencia previa de su contrato, sin inventar un vector científico.
+El polígono y el vector forman la pareja matemática y visual del mismo contrato; permiten inspeccionar las dieciséis calificaciones que sustentan κ y el dictamen, en orden canónico, conforme a la convención gráfica recibida: 0 rojo, radio nominal 1; 1 verde, radio nominal 2; U azul, radio nominal 3. No se interpreta el área como puntuación. Una respuesta formalmente inadmisible recibe la consecuencia previa de su contrato, sin inventar un vector científico.
 
 ## Estado
 
