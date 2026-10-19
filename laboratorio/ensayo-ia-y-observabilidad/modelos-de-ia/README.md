@@ -1,6 +1,6 @@
 # Modelos de IA
 
-**Edición documental 19 · 19 de octubre de 2026.**
+**Edición documental 20 · 19 de octubre de 2026.**
 
 Este catálogo identifica los modelos estudiados, las configuraciones efectivamente ensayadas y los candidatos de la próxima comparación. Cada resultado conserva su banco documental, modalidad de inferencia, fecha, condiciones y reservas. Una familia comercial no recibe por extensión el resultado de una versión concreta.
 
@@ -11,6 +11,8 @@ El [ensayo de inteligencia artificial y observabilidad](../README.md) presenta e
 ## Organización de los expedientes y modalidades de acoplamiento
 
 El [nodo 01](acoplamientos-con-el-sv/01-inferencia-bajo-control-propio/readme.md) exige inferencia dentro del entorno del SV y auditabilidad de extremo a extremo; el [nodo 02](acoplamientos-con-el-sv/02-plataforma-gestionada/readme.md) corresponde al acceso organizado por una plataforma gestionada; el [nodo 03](acoplamientos-con-el-sv/03-api-directa/readme.md), al servicio externo del proveedor. La ubicación física de un servidor o la presencia de una API no bastan para acreditar las condiciones del nodo 01. El [diagrama y las definiciones del ensayo](../README.md#tres-nodos-de-acoplamiento) precisan el control y la observabilidad de cada modalidad.
+
+La modalidad de ejecución se consulta en las [rutas y el diagrama del ensayo](../README.md#vías-de-ejecución-y-diagramas): **A**, inferencia en navegador probada con interrupción antes del primer token; **B**, inferencia nativa en el servidor; **servicio externo**, inferencia gobernada por la plataforma o el proveedor. El visor Rust/egui en WebAssembly presenta resultados y no ejecuta el modelo evaluado. La selección de siete candidatos corresponde a la preparación por API del nodo 03; conserva por separado el antecedente de Opus en el nodo 02.
 
 Los expedientes conservan sus carpetas y referencias. Un estudio de viabilidad, una ejecución técnica y un examen de respuestas son objetos distintos. Un resultado previo no habilita una nueva entrega de documentos ni el uso en producción.
 
@@ -251,6 +253,15 @@ Sincronización con el ensayo 2.32: siete candidatos y antecedentes diferenciado
 
 </details>
 
+
+<details>
+<summary>Edición documental 20 · 19/10/2026</summary>
+
+Sincroniza las modalidades de ejecución con el ensayo 2.33: navegador, proceso nativo y servicio externo, con visualización independiente. Los siete candidatos, sus identidades, resultados y reservas permanecen sin cambios. Helsinki-NLP y Qwen3-8B conservan su condición auxiliar e instrumental, respectivamente.
+
+[Edición 19 íntegra](https://github.com/juantoniolloretegea/SV-motor/blob/9c6390848d6305d76667d07c16e0bf0389772b60/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/README.md).
+
+</details>
 
 [Índice Qwen](qwen/README.md) · [Índice OpenAI](openai/README.md) · [Contrato experimental histórico](../contrato/README.md).
 

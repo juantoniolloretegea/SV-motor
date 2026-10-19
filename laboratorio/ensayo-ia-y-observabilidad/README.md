@@ -1,6 +1,6 @@
 # Ensayo de inteligencia artificial y observabilidad
 
-**Edición documental 2.32 · 19 de octubre de 2026.**
+**Edición documental 2.33 · 19 de octubre de 2026.**
 
 <a id="objeto-y-criterio-experimental"></a>
 
@@ -28,7 +28,7 @@ El nodo describe **quién ejecuta y controla la inferencia y hasta dónde puede 
 
 [Ampliar el diagrama](diagramas/nodos-y-observacion-20261019.svg). La figura expresa funciones y exigencias de cada modalidad; no certifica una integración general ya recibida. Los expedientes indican qué se implementó, ejecutó y comprobó en cada configuración. El [marco de acoplamientos](modelos-de-ia/acoplamientos-con-el-sv/readme.md) conserva sus antecedentes fechados.
 
-Las [vías A/B](#vías-de-ejecución-y-diagramas) distinguen ejecución en navegador y proceso nativo dentro de los diseños históricos. No son nodos adicionales. Las herramientas auxiliares y las pruebas de aceleración se documentan [por su función](modelos-de-ia/README.md#herramientas-auxiliares-y-ensayos-instrumentales), sin incorporarlas a la inferencia experta.
+Las [rutas de ejecución](#vías-de-ejecución-y-diagramas) identifican dónde se calcula la respuesta: navegador, proceso nativo bajo control institucional o servicio externo. Las denominaciones A y B corresponden a las dos primeras; el nodo expresa el control y la auditabilidad de la configuración, no su interfaz. Las herramientas auxiliares y las pruebas de aceleración se documentan [por su función](modelos-de-ia/README.md#herramientas-auxiliares-y-ensayos-instrumentales), sin incorporarlas a la inferencia experta.
 
 ## Qué se observa y qué no
 
@@ -203,28 +203,67 @@ El estudio del 05/10/2026 documenta una prueba instrumental delimitada en AMD MI
 
 ## Vías de ejecución y diagramas
 
-| Vía | Lugar de la inferencia | Función del navegador | Alcance |
-|---|---|---|---|
-| **A · navegador** | Trabajador del navegador, mediante Rust compilado a WebAssembly. | Interfaz y alojamiento del trabajador. | Compatibilidad y recursos determinados para cada modelo, motor y navegador. |
-| **B · nativa** | Proceso nativo en el anfitrión, separado de la interfaz. | Presentación y transporte de solicitudes. | Fronteras del servicio, supervisión, custodia y terminación sujetas a comprobación. |
+El lugar de ejecución del modelo y la presentación de sus resultados se identifican por separado. El ensayo comprende una prueba en navegador, ejecuciones nativas en servidores administrados para el ensayo y consultas a servicios externos. Los visores Rust/egui presentan las adjudicaciones y sus evidencias mediante WebAssembly en el navegador.
 
-Una página que consulta un modelo nativo corresponde a la vía B, aunque incorpore WebAssembly en otro componente. HTML y CSS resuelven la presentación; JavaScript se limita al transporte y la interacción necesarios. JavaScript no decide directrices, adjudicaciones, permisos ni controles del SV; las entradas relevantes se validan y autorizan en Rust. En la aplicación nativa, Rust ejecuta la inferencia y los controles propios del ensayo.
+| Recorrido | Dónde se ejecuta el modelo | Realización documentada |
+|---|---|---|
+| **A · Navegador** | Trabajador del navegador: Rust compilado a WebAssembly, con Candle y los recursos del modelo. | NAV-02: controles sintéticos y carga del modelo completados; interrupción por memoria antes del primer token. |
+| **B · Nativo** | Proceso nativo en el servidor administrado para el ensayo, con motor y pesos identificados. | Conversación Qwen3-0.6B y ejecuciones posteriores de GPT-OSS-20B, Qwen80 y Safeguard, con resultados y límites propios. |
+| **Servicio externo** | Infraestructura de la plataforma o del proveedor. | Opus mediante Kaggle, nodo 02; expedientes API del nodo 03. Rust realiza el control y la observación exteriores del SV. |
+| **Presentación de resultados** | El visor no ejecuta el modelo evaluado. | Rust/egui compilado a WebAssembly representa el polígono, las etapas y sus fundamentos a partir de datos identificados. |
 
-La elección de una vía responde a la factibilidad y al resultado buscado. No exige ensayar todas las combinaciones de modelos y soportes. Una vía no realizada puede retomarse si surge una pregunta concreta. Comparar modelos distintos en vías distintas permite valorar ambas configuraciones, pero no atribuir sus diferencias exclusivamente a WebAssembly.
+![Lugares de ejecución del modelo y recorrido independiente del visor de resultados](diagramas/rutas-ejecucion-20261019.svg)
+
+[Ampliar el diagrama](diagramas/rutas-ejecucion-20261019.svg) · [Fuente Mermaid](diagramas/rutas-ejecucion-20261019.mmd).
+
+Las flechas muestran los recorridos documentados de esas configuraciones. Cada expediente acredita sus propios controles, resultados y límites; el esquema no atribuye una implementación común íntegra a todos los modelos. Una interfaz web puede acompañar a la vía B o a un servicio externo: el uso de WebAssembly en el visor no traslada la inferencia al navegador. Las comparaciones conservan la identidad del modelo, motor, recursos y condiciones utilizados.
 
 ### Vía A: campaña de navegador
 
-![Vía A: inferencia Rust y WebAssembly en un trabajador del navegador, con supervisión y custodia exteriores](diagramas/via-a.svg)
+La [campaña NAV-02](resultados/navegador-02/README.md), del 20/09/2026, ejecutó los controles sintéticos y cargó los recursos de Qwen con Candle en un trabajador Rust/WebAssembly. El supervisor exterior detuvo la prueba al superar el umbral de memoria de 4 GiB. Se recibió la marca previa a la primera operación del modelo; no se recibió un primer token ni una respuesta completa. La medición corresponde al navegador del ejecutor remoto de esa campaña, no a una instalación local en un PC.
 
-**Alcance de la figura:** secuencia de la campaña NAV-02 documentada en septiembre de 2026. Representa el navegador del ejecutor remoto de aquella campaña y la carga de Qwen con Candle; no una instalación de gpt-oss en navegador. Se conserva la figura original. [Ampliar](diagramas/via-a.svg) · [Fuente Mermaid](diagramas/via-a.mmd) · [Documentación de aquel corte](README_2_3_2026_09_20.md).
+<details>
+<summary>Campaña NAV-02 · secuencia y diagrama conservados</summary>
 
-Los controles sintéticos iniciales se completaron. La prueba con el modelo se interrumpió al superar el umbral autorizado de memoria, antes del primer token. El resultado no acredita inferencia completa ni inviabilidad general de WebAssembly.
+![Secuencia de NAV-02: controles, carga y terminación por memoria](diagramas/via-a.svg)
 
-### Vía B: arquitectura nativa de referencia
+[Ampliar](diagramas/via-a.svg) · [Fuente Mermaid](diagramas/via-a.mmd) · [Resultados y mediciones](resultados/navegador-02/README.md) · [Edición de septiembre](README_2_3_2026_09_20.md).
 
-![Vía B: interfaz web, servicio Rust, supervisión, custodia, inferencia y guarda exterior](diagramas/via-b.svg)
+</details>
 
-**Alcance de la figura:** diseño EIO-NAT-PREP-02 del corte del 20 de septiembre de 2026. Sus indicaciones de preparación y pruebas pendientes pertenecen a ese diseño y a esa fecha. La figura no certifica que todos sus componentes estén integrados en la aplicación de conversación. [Ampliar](diagramas/via-b.svg) · [Fuente Mermaid](diagramas/via-b.mmd) · [Diseño NAT02](resultados/preparacion-nativa-02/DISENO.md) · [Desarrollo NAT03](resultados/preparacion-nativa-03/README.md).
+<a id="vía-b-arquitectura-nativa-de-referencia"></a>
+
+### Vía B: inferencia nativa en el servidor
+
+La aplicación de conversación utiliza una interfaz web y un servicio Rust. El modelo se carga en un proceso nativo del servidor, separado de la interfaz. La [verificación de la versión 0.1.3](conversacion-nativa/verificacion-0.1.3/INFORME.md) acredita una inferencia sintética de Qwen3-0.6B en CPU, su relación con las trazas y las muestras del observador Linux. Las instalaciones posteriores de [Qwen80](#recorrido-qwen-consulta-evaluación-y-retorno--30092026) y [Safeguard](#preevaluación-safeguard-recorrido-acotado-de-la-configuración-actual) conservan sus propios ensayos y cierres. El [catálogo](modelos-de-ia/README.md#configuraciones-anteriores) reúne los resultados de cada configuración.
+
+HTML y CSS presentan la interfaz; JavaScript transporta entradas y muestra respuestas. Los controles de admisión y ejecución de la aplicación pertenecen a Rust. La comunicación local mediante HTTP entre componentes del ensayo no equivale a delegar la inferencia en un proveedor. La condición de nodo 01 exige además acreditar la auditabilidad de extremo a extremo; no se obtiene por el mero despliegue de un modelo en un servidor administrado.
+
+<details>
+<summary>Diseño nativo NAT02/NAT03 · arquitectura preparada el 20/09/2026</summary>
+
+![Diseño nativo preparado: servicio, supervisor, custodio, inferencia y guarda exterior](diagramas/via-b.svg)
+
+El [diseño NAT02](resultados/preparacion-nativa-02/DISENO.md) y la [revisión NAT03](resultados/preparacion-nativa-03/README.md) conservan una preparación en fuentes, sin compilación ni ejecución acreditadas en esos expedientes. Sus controles previstos no se atribuyen por extensión a la aplicación de conversación ni a las instalaciones posteriores.
+
+[Ampliar](diagramas/via-b.svg) · [Fuente Mermaid](diagramas/via-b.mmd).
+
+</details>
+
+### Servicios externos y visores de resultados
+
+En los nodos 02 y 03, el controlador Rust del SV compone las solicitudes admitidas, aplica los límites y conserva las respuestas y sus mediciones exteriores. El servicio gestionado ejecuta el modelo. El [antecedente de Opus en Kaggle](modelos-de-ia/README.md#claude-opus-55) pertenece al nodo 02; los [expedientes API](modelos-de-ia/README.md#siete-candidatos-de-la-proxima-comparacion) identifican los antecedentes y la preparación del nodo 03. El cálculo interno del proveedor queda fuera de la instrumentación del SV.
+
+El [visor Rust/egui de dieciséis posiciones](modelos-de-ia/acoplamientos-con-el-sv/visor-examen16-egui/src/lib.rs) incorpora datos identificados y los representa en el navegador mediante WebAssembly. El visor permite examinar el polígono, sus posiciones y los fundamentos de la adjudicación; no genera respuestas del candidato ni convierte la visualización en una inferencia de la vía A. Los visores de cada expediente conservan su versión y sus datos.
+
+<details>
+<summary>Ejecución local en PC · posibilidad de estudio</summary>
+
+Una ejecución nativa en PC requiere un programa compilado para su sistema y recursos compatibles; no exige WASI ni Wasmtime. Para ejecutar una aplicación WebAssembly fuera del navegador puede estudiarse un entorno como [Wasmtime](https://docs.wasmtime.dev/), con las interfaces [WASI](https://wasi.dev/) que requiera el programa. WASI define interfaces con el entorno anfitrión; Wasmtime es uno de los entornos que pueden ejecutarlas. La adaptación, los permisos y la compatibilidad deben comprobarse para la aplicación concreta.
+
+Esta extensión del ensayo a WebAssembly autónomo en PC **no está implementada ni ensayada**. Los resultados de NAV-02, de los visores y de los servidores nativos conservan su alcance propio.
+
+</details>
 
 <a id="continuación-de-la-vía-b--gpt-oss-120b"></a>
 
@@ -439,6 +478,7 @@ El identificador del candidato es `gpt-6-astra`; no es la versión del cliente n
 El identificador efectivo es `anthropic/claude-opus-5-5@default`. La inferencia pertenece al servicio gestionado por Kaggle; el cuaderno ejecuta composición, transporte, límites y observación propios en Rust. El auxiliar del cuaderno descarga, inicia y conserva. El [expediente](modelos-de-ia/acoplamientos-con-el-sv/02-plataforma-gestionada/antrophic/claude-opus-5-5/readme.md) identifica fuentes, ejecutables y frontera; el [visor](modelos-de-ia/acoplamientos-con-el-sv/02-plataforma-gestionada/antrophic/claude-opus-5-5/ensayo-cyb09-20261010/entrega/poligono-egui/POLIGONO-EGUI.html) presenta las tres etapas y sus fundamentos. Es representación de adjudicaciones asistidas, pendiente de recepción independiente; no constituye un frame recibido para operación del dominio. No se atribuye a otros modelos ni modifica los componentes históricos.
 
 </details>
+
 ## Publicaciones en orden cronológico
 
 La primera secuencia conserva **cinco publicaciones preliminares: dos distribuciones y tres archivos de recuperación o cierre**. Las entregas posteriores se relacionan a continuación de esa secuencia. Cada fila describe el hito en su fecha: una retirada o recepción posterior no altera el estado que constaba al publicarlo. Cada desplegable conduce a la publicación completa, sus activos y la documentación de alcance. Las revisiones v1 corresponden a paquetes fechados distintos.
@@ -873,6 +913,15 @@ Incorpora Claude Opus 5.5 en las tablas y referencias existentes del ensayo, cat
 Ordena el método antes de los resultados y sincroniza los siete candidatos con sus fichas. Incorpora los antecedentes CYB16 de Astra y MD09 de Kimi, preserva Kaggle para Opus y las reservas de Qwen. Las herramientas auxiliares y las pruebas de hardware tienen un apartado separado. Actualiza los diagramas de situación y mantiene los originales históricos, desplegables, fuentes y resultados.
 
 [Edición 2.31 íntegra](https://github.com/juantoniolloretegea/SV-motor/blob/0d01e72302e9006eb747c4a1fe7da8c7a4822156/laboratorio/ensayo-ia-y-observabilidad/README.md) · [Catálogo sincronizado](modelos-de-ia/README.md). Esta edición es documental; no ejecuta exámenes ni modifica sus dictámenes.
+
+</details>
+
+<details>
+<summary><strong>2.33 · 19/10/2026 · Rutas de ejecución y presentación de resultados</strong></summary>
+
+Identifica la prueba en navegador, las ejecuciones nativas y los servicios externos, con un diagrama de los recorridos documentados. Separa el visor Rust/egui de la inferencia y sitúa WebAssembly autónomo en PC como posibilidad de estudio. Conserva las secuencias A/B y los resultados anteriores; corrige la presentación de los encabezados y sincroniza el catálogo 20.
+
+[Edición 2.32 íntegra](https://github.com/juantoniolloretegea/SV-motor/blob/9c6390848d6305d76667d07c16e0bf0389772b60/laboratorio/ensayo-ia-y-observabilidad/README.md).
 
 </details>
 

@@ -1,0 +1,24 @@
+flowchart TB
+  subgraph A["A · Prueba de inferencia en el navegador"]
+    direction LR
+    AP["Interfaz web · JavaScript: transporte"] --> AW["Trabajador Rust / Wasm · Candle y Qwen"]
+    AW -. "Marcas y registros" .-> AS["Supervisión exterior · memoria"]
+    AS --> AC["NAV-02: controles y carga completados; interrupción antes del primer token"]
+  end
+  subgraph B["B · Inferencia nativa en el servidor"]
+    direction LR
+    BP["Interfaz web · presentación y transporte"] <--> BS["Servicio Rust · control y registros"]
+    BS <--> BI["Proceso nativo · motor y pesos en el servidor"]
+    BI -.-> BE["Qwen3-0.6B 0.1.3: inferencia, trazas y observador Linux comprobados"]
+  end
+  subgraph E["Servicios externos · inferencia gestionada"]
+    direction LR
+    EC["Controlador SV en Rust · solicitudes admitidas, límites y medidas"] <-->|"Solicitud / respuesta"| EI["Inferencia externa · nodo 02 plataforma / nodo 03 proveedor"]
+    EC --> ED["Evidencias conservadas · respuestas, medidas y adjudicaciones"]
+    ED -->|"Lectura de resultados"| EV["Visor Rust / egui → Wasm · polígono y fundamentos; sin inferencia del modelo"]
+  end
+  classDef componente fill:#ffffff,stroke:#7193a6,color:#15394c;
+  class AP,AW,AS,AC,BP,BS,BI,BE,EC,EI,ED,EV componente;
+  style A fill:#f1f7fa,stroke:#7193a6,color:#15394c
+  style B fill:#f1f7fa,stroke:#7193a6,color:#15394c
+  style E fill:#f1f7fa,stroke:#7193a6,color:#15394c
