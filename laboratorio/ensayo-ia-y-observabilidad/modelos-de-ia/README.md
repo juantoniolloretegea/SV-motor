@@ -1,44 +1,210 @@
 # Modelos de IA
 
-**Edición documental 18 · 10 de octubre de 2026.**
+**Edición documental 19 · 19 de octubre de 2026.**
 
-**Corte experimental conservado de la edición 10:** 03/10/2026, 09:37 UTC. Cada expediente conserva la fecha, configuración y alcance de sus propios resultados.
+Este catálogo identifica los modelos estudiados, las configuraciones efectivamente ensayadas y los candidatos de la próxima comparación. Cada resultado conserva su banco documental, modalidad de inferencia, fecha, condiciones y reservas. Una familia comercial no recibe por extensión el resultado de una versión concreta.
 
-La edición 11 incorpora los candidatos Kimi K3 y GLM de zai-org, el componente de cálculo y su trazabilidad. La tabla y descripción experimental de la edición 10 se conservan como antecedente fechado, sin reactivar sus instrucciones de continuación. El [índice general, con corte posterior](../README.md), y cada expediente reúnen sus sucesores. [Qwen3.5-122B-A10B Q8_0](qwen/qwen3.5-122b-a10b-q8-0/readme.md) conserva su realización CPU y su fase cerrada, con [archivo de cierre](https://github.com/juantoniolloretegea/SV-motor/releases/tag/qwen3.5-122b-a10b-q8-0-archivo-cierre-20261006-v1) y [custodia cifrada cotejada](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/releases/tag/qwen35-122b-q8-imagen-cierre-20261006-v1), sin duplicar pesos. Retirada administrativa pendiente; arranque restaurado no ensayado. No se atribuye a CubeCL.
+El [ensayo de inteligencia artificial y observabilidad](../README.md) presenta el método, la arquitectura y sus límites. Este catálogo desarrolla las fichas de los modelos; las herramientas auxiliares y las pruebas instrumentales se reúnen en un apartado propio.
 
-El [índice general del ensayo](../README.md) reúne el estado, la cronología de publicaciones, las versiones de los componentes y sus diagramas. Este catálogo relaciona los expedientes por modelo y separa las demostraciones públicas, las realizaciones nativas y los acoplamientos con servicios externos.
+**Consulta:** [organización](#organización-de-los-expedientes-y-modalidades-de-acoplamiento) · [siete candidatos](#siete-candidatos-de-la-proxima-comparacion) · [configuraciones anteriores](#configuraciones-anteriores) · [criterio](#puntuación-terna-y-acceso-al-examen) · [herramientas y pruebas instrumentales](#herramientas-auxiliares-y-ensayos-instrumentales) · [antecedentes fechados](#antecedentes-fechados).
 
 ## Organización de los expedientes y modalidades de acoplamiento
 
-La organización distingue los expedientes por modelo y las [tres modalidades de acoplamiento](acoplamientos-con-el-sv/readme.md#2-tres-nodos-experimentales). Las carpetas existentes conservan su ubicación y los enlaces ya publicados.
+El [nodo 01](acoplamientos-con-el-sv/01-inferencia-bajo-control-propio/readme.md) exige inferencia dentro del entorno del SV y auditabilidad de extremo a extremo; el [nodo 02](acoplamientos-con-el-sv/02-plataforma-gestionada/readme.md) corresponde al acceso organizado por una plataforma gestionada; el [nodo 03](acoplamientos-con-el-sv/03-api-directa/readme.md), al servicio externo del proveedor. La ubicación física de un servidor o la presencia de una API no bastan para acreditar las condiciones del nodo 01. El [diagrama y las definiciones del ensayo](../README.md#tres-nodos-de-acoplamiento) precisan el control y la observabilidad de cada modalidad.
 
-El [nodo 01](acoplamientos-con-el-sv/01-inferencia-bajo-control-propio/readme.md#expedientes-en-su-ubicación-de-origen) reúne la especificación de inferencia bajo control propio y remite a los expedientes de [Qwen](qwen/README.md) y [GPT-OSS/OpenAI](openai/README.md), así como a los estudios de [Kimi](kimi/kimi-k3/ESTUDIO-VIABILIDAD-20261005.md) y [Z.ai](zai-org/glm-5.3/ESTUDIO-VIABILIDAD-20261005.md). Estos documentos permanecen en sus carpetas de origen. Los estudios de Kimi y Z.ai en el nodo 01 permanecen pendientes de disponibilidad de recursos; el examen API de GLM-5.3 se identifica separadamente en el nodo 03. La pertenencia a una familia no determina la modalidad: cada realización, estudio o demostración conserva su alcance y estado.
+Los expedientes conservan sus carpetas y referencias. Un estudio de viabilidad, una ejecución técnica y un examen de respuestas son objetos distintos. Un resultado previo no habilita una nueva entrega de documentos ni el uso en producción.
 
-Los expedientes específicos de plataforma gestionada se organizan en el [nodo 02](acoplamientos-con-el-sv/02-plataforma-gestionada/readme.md) y los de API de proveedor en el [nodo 03](acoplamientos-con-el-sv/03-api-directa/readme.md), por modelo. Los antecedentes se enlazan desde allí sin trasladarlos ni duplicar sus resultados.
+<a id="siete-candidatos-de-la-proxima-comparacion"></a>
 
+## Siete candidatos de la próxima comparación
+
+Selección ordenada alfabéticamente, sin preferencia ni clasificación implícitas. **La nueva ronda EET-CYB16 no se ha iniciado.** Todos requieren condiciones propias vigentes, un paquete común identificado y permiso de entrega y lanzamiento. La tabla expresa requisitos de preparación, no resultados de esa ronda ni una autorización para ejecutarla.
+
+| Candidato | Identidad de la nueva conexión | Preparación pendiente |
+|---|---|---|
+| [Claude Opus 5.5](#claude-opus-55) | `claude-opus-5-5` | Recibir las condiciones propias de Opus para la API; las de Sonnet no son transferibles. |
+| [Gemini 4 Argon](#gemini-4-argon) | `gemini-4-argon` | Renovar la recepción y comprobar capacidad, configuración y correspondencia de moneda y cota. |
+| [GLM-5.3](#glm-53) | `glm-5.3` | Recibir capacidad, adaptación, permiso y cota de la edición común. |
+| [GPT-6 Astra](#gpt-6-astra) | `gpt-6-astra` | Comprobar la conexión exacta y recibir condiciones propias; las de Sol no son transferibles. |
+| [Grok 4.7](#grok-47) | `grok-4.7` | Recibir capacidad, tratamiento del razonamiento, adaptación, permiso y cota. |
+| [Kimi K3](#kimi-k3) | `kimi-k3` | Renovar la recepción y comprobar capacidad, recursos, permiso y cota vigentes. |
+| [Qwen3.8-Max-0902](#qwen38-max-0902) | `qwen3.8-max-0902` | Fijar la revisión tras el alias, conciliar el orden común y comprobar capacidad, cuota, permiso y cota. |
+
+La capacidad y la configuración deben corresponder a la edición exacta: longitud de entrada, salida y razonamiento, tiempos, adaptación del protocolo y cotas. Cuota gratuita, saldo monetario y límite administrativo son conceptos distintos. Las fichas siguientes conservan los antecedentes y sus diferencias respecto de esta preparación.
+
+<a id="claude-opus-55"></a>
+
+<details>
+<summary><strong>Claude Opus 5.5 · Anthropic</strong></summary>
+
+[Expediente y fuentes](acoplamientos-con-el-sv/02-plataforma-gestionada/antrophic/claude-opus-5-5/readme.md).
+
+El antecedente se ejecutó mediante **Kaggle Benchmarks Model Proxy**, nodo 02, con el identificador `anthropic/claude-opus-5-5@default`. El sufijo del servicio no identifica por sí solo unos pesos inmutables. El manual MD09 obtuvo nueve respuestas finales correctas, incluidas las seis críticas, según adjudicación asistida. El contraste CYB09 terminó con **8/9 en R2, 88,89/100 y No apto asistido por C02 crítico**; R1 9/9 permanece como etapa previa y no reemplaza la final. La recepción científica independiente sigue pendiente.
+
+La siguiente comparación prepara **Opus por API directa, nodo 03**. El cambio de servicio y condiciones queda identificado; ni el resultado de Kaggle ni las condiciones de Claude Sonnet acreditan la recepción de esta nueva configuración.
+
+[Informe CYB09](acoplamientos-con-el-sv/02-plataforma-gestionada/antrophic/claude-opus-5-5/ensayo-cyb09-20261010/entrega/INFORME.md) · [Polígono Rust/egui](acoplamientos-con-el-sv/02-plataforma-gestionada/antrophic/claude-opus-5-5/ensayo-cyb09-20261010/entrega/poligono-egui/POLIGONO-EGUI.html) · [Recepción del nodo 02](acoplamientos-con-el-sv/02-plataforma-gestionada/antrophic/claude-opus-5-5/ensayo-cyb09-20261010/entrega/MATRIZ-RECEPCION-NODO02.md).
+
+</details>
+
+<a id="gemini-4-argon"></a>
+
+<details>
+<summary><strong>Gemini 4 Argon · Google</strong></summary>
+
+Se incorpora a la selección por su conexión y preparación de condiciones, **sin atribuirle un examen ya realizado ni un dictamen de aptitud**. Su configuración pertenece al nodo 03. La preparación no equivale a recepción vigente: deben comprobarse la edición exacta, la capacidad para el paquete íntegro, el tratamiento conjunto de salida y razonamiento, las cotas y el permiso de entrega.
+
+El expediente de resultados se incorporará cuando exista una ejecución autorizada y una entrega verificable. Hasta entonces, esta ficha identifica al candidato y sus requisitos de preparación; no remite a un informe experimental inexistente.
+
+</details>
+
+<a id="glm-53"></a>
+
+<details>
+<summary><strong>GLM-5.3 · Z.ai</strong></summary>
+
+[Expediente y fuentes](acoplamientos-con-el-sv/03-api-directa/zai/glm-5.3/readme.md).
+
+La realización por API pertenece al nodo 03. El **CYB16 del 08/10/2026** obtuvo 16/16 respuestas finales R2 correctas, incluidas las catorce críticas, y **Apto para el contrato documental**. La recepción científica independiente permanece pendiente; el resultado no acredita un agente operativo.
+
+El manual MD07 conserva **No apto contractual bajo reserva metodológica**, sin recalificación silenciosa. Los estudios de GLM-5.3 y GLM-5.3-Flash para infraestructura propia tienen otro alcance: no son ejecuciones de esta API ni reciben sus resultados.
+
+[Informe CYB16](acoplamientos-con-el-sv/03-api-directa/zai/glm-5.3/cyb16-20261008/INFORME.md) · [Reserva MD07](acoplamientos-con-el-sv/03-api-directa/zai/glm-5.3/manual-20261008/revision-md07/REVISION-METODOLOGICA.md) · [TT-0024](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0024.md).
+
+</details>
+
+<a id="gpt-6-astra"></a>
 <a id="gpt-6-astra--nodo-03--cierre-del-07102026"></a>
 
-## Primer expediente ejecutado · Nodo 02
+<details>
+<summary><strong>GPT-6 Astra · OpenAI</strong></summary>
 
-| Candidato y expediente | Resultado y alcance | Evidencia |
+[Expediente y fuentes](acoplamientos-con-el-sv/03-api-directa/openai/gpt-6-astra/readme.md).
+
+El expediente comprende distintos bancos, conservados por separado. **PDQ25, 07/10/2026:** 25 respuestas finales R2 correctas, incluidas las veinte críticas, y Apto para su contrato documental. **CYB16, 08/10/2026:** 16/16 correctas en R0, R1 y R2, catorce críticas correctas y Apto para el contrato documental de ciberseguridad. El CYB16 conserva una interrupción instrumental y su resolución; no se convierte en error del candidato. El manual MD09, su reserva temporal MD01 y la réplica diagnóstica tienen identidades propias; la ficha enlaza también el contraste posterior CYB09.
+
+El antecedente CYB16 usó Responses mediante autorización ChatGPT. La nueva conexión API de Astra requiere recepción propia: conservar el modelo no hace idénticos el servicio, la instrumentación o las condiciones. **GPT-6.1 Sol es un modelo distinto, ajeno a esta selección** y sus condiciones no sustituyen a las de Astra. El proveedor conserva la ejecución interna; los canales y contadores recibidos no acreditan observación de su razonamiento interno.
+
+[Informe PDQ25](acoplamientos-con-el-sv/03-api-directa/openai/gpt-6-astra/examen25-20261007/resultado/INFORME.md) · [Informe CYB16](acoplamientos-con-el-sv/03-api-directa/openai/gpt-6-astra/cyb16-20261008/INFORME.md) · [TT-0021](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0021.md).
+
+</details>
+
+<a id="grok-47"></a>
+
+<details>
+<summary><strong>Grok 4.7 · xAI</strong></summary>
+
+[Expediente y fuentes](acoplamientos-con-el-sv/03-api-directa/xai/grok-4.7/readme.md).
+
+El examen **PDQ25 del 08/10/2026** terminó con 25 respuestas finales R2 correctas, incluidas las veinte críticas, y **Apto para el contrato documental**. Se conservan el error crítico P02 de R0 y su corrección en las etapas posteriores; no se elige retrospectivamente una respuesta de otra etapa.
+
+El diagnóstico MD01 del manual es independiente: recibió R0 y R1, pero **R2 no se ejecutó**. Es un resultado parcial, no una indeterminación del modelo ni un examen completo. La nueva edición requiere comprobar sus límites de salida y razonamiento y su recepción específica.
+
+[Informe PDQ25](acoplamientos-con-el-sv/03-api-directa/xai/grok-4.7/examen25-20261008/INFORME.md) · [Diagnóstico MD01](acoplamientos-con-el-sv/03-api-directa/xai/grok-4.7/md01-diagnostica-20261008/INFORME.md) · [TT-0022](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0022.md).
+
+</details>
+
+<a id="kimi-k3"></a>
+
+<details>
+<summary><strong>Kimi K3 · Moonshot AI</strong></summary>
+
+[Expediente y fuentes](acoplamientos-con-el-sv/03-api-directa/kimi/kimi-k3/manual-20261008/INFORME.md).
+
+El catálogo **MD09 del 08/10/2026**, ejecutado por API en el nodo 03, terminó con **8/9 respuestas correctas, seis críticas correctas y Apto para el contrato documental**. MD04 contiene un error no crítico que permanece en R0, R1 y R2. El diagnóstico posterior descartó un defecto de suministro o reconstrucción que explicase ese error; no recalificó el vector ni repitió la inferencia. La revisión del sentido fue exterior y asistida por IA.
+
+**CYB16 sigue sin iniciar.** La configuración histórica del manual, la recepción preparada para la nueva ronda y el estudio de viabilidad de Kimi bajo control propio son objetos distintos. El examen API acredita únicamente el contrato documental ensayado; la instalación bajo control propio conserva sus requisitos de arquitectura y recursos.
+
+[Informe MD09](acoplamientos-con-el-sv/03-api-directa/kimi/kimi-k3/manual-20261008/INFORME.md) · [Diagnóstico de MD04](acoplamientos-con-el-sv/03-api-directa/kimi/kimi-k3/manual-20261008/adendas/revision-md04-20261009/INFORME.md) · [Estudio de instalación propia](kimi/kimi-k3/ESTUDIO-VIABILIDAD-20261005.md).
+
+</details>
+
+<a id="qwen38-max-0902"></a>
+
+<details>
+<summary><strong>Qwen3.8-Max-0902 · Alibaba Cloud / QwenCloud</strong></summary>
+
+[Expediente y fuentes](acoplamientos-con-el-sv/03-api-directa/qwen/qwen3.8-max-0902/readme.md).
+
+La recepción del **08/10/2026** establece **Apto documental con reservas en un alcance de dieciséis preguntas** del banco de inmunología. Conserva el **No apto contractual original bajo reserva metodológica**, el vector histórico y la réplica separada de P13. La recepción posterior no sustituye respuestas ni crea una puntuación nueva. Las reservas P02, P11 y P16 siguen documentadas. Este alcance no es el nuevo EET-CYB16 ni equivale al examen completo de veinticinco preguntas.
+
+La conexión abreviada `qwen3.8-max` y la revisión `qwen3.8-max-0902` deben conservar su correspondencia fechada. La diferencia de nombre no prueba por sí sola que sean modelos distintos; tampoco permite aceptar futuras revisiones del alias como si fueran la misma. La admisión debe fijar la revisión efectiva y sus condiciones, incluidas las cuotas aplicables, antes de cualquier entrega.
+
+[Recepción y reservas](acoplamientos-con-el-sv/03-api-directa/qwen/qwen3.8-max-0902/RECEPCION-DOCUMENTAL-20261008.md) · [TT-0023](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0023.md).
+
+</details>
+
+<a id="primer-expediente-ejecutado--nodo-02"></a>
+<a id="recepciones-documentales--nodo-03"></a>
+
+Los antecedentes del nodo 02 y las recepciones del nodo 03 están integrados en sus fichas, conservando su procedencia. Las etapas R0/R1/R2 de respuesta no designan las fases de desarrollo nuclear. La comparación sólo procede entre contratos y condiciones comparables; las revisiones diagnósticas permanecen separadas de las respuestas originales.
+
+## Configuraciones anteriores
+
+<details>
+<summary>Consultar resultados, cierres y fuentes de las configuraciones anteriores</summary>
+
+| Modelo o configuración | Resultado y alcance | Situación documental |
 |---|---|---|
-| [Claude Opus 5.5 · Anthropic](acoplamientos-con-el-sv/02-plataforma-gestionada/antrophic/claude-opus-5-5/readme.md) | Manual MD09: 9/9 finales, seis críticas correctas, juicio asistido. CYB09: **88,89/100; No apto asistido**, R2 8/9 y C02 crítico. | [Informe CYB09](acoplamientos-con-el-sv/02-plataforma-gestionada/antrophic/claude-opus-5-5/ensayo-cyb09-20261010/entrega/INFORME.md), [polígono Rust/egui](acoplamientos-con-el-sv/02-plataforma-gestionada/antrophic/claude-opus-5-5/ensayo-cyb09-20261010/entrega/poligono-egui/POLIGONO-EGUI.html) y [recepción del nodo 02](acoplamientos-con-el-sv/02-plataforma-gestionada/antrophic/claude-opus-5-5/ensayo-cyb09-20261010/entrega/MATRIZ-RECEPCION-NODO02.md). Recepción científica independiente pendiente. |
+| [Qwen3-0.6B · Q4_K_M](qwen/qwen3-0.6b/README.md) | Inferencia nativa y controles parciales; cuatro consultas DOC-01 terminadas sin conformidad contractual completa. | Campaña cerrada con limitaciones. |
+| [GPT-OSS-20B · MXFP4](openai/gpt-oss-20b/README.md) | Funcionamiento técnico y bancos documentales conservados; la evaluación médica no acreditó la función prevista. | Configuración excluida de esa selección; archivo conservado. |
+| [Qwen3.8-27B](qwen/qwen3.8-27b/README.md) | Respuesta completa en la selección mínima, con omisión material y deficiencias de citas y localización. | **No apto** en la selección examinada. |
+| [GPT-OSS-120B](openai/gpt-oss-120b/README.md) | El estudio preliminar no llegó a inferencia: los pesos superaban la cota de la configuración considerada. La [demostración pública posterior](openai/gpt-oss-120b/prueba-playground/readme.md) obtuvo −100/100 en tres respuestas relacionadas; no constituye un examen completo ni mide recursos de una instalación propia. | Viabilidad nativa pendiente; [TT-0015](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0015.md). Ensayo 1 público abierto, con impedimentos de servicio conservados. |
+| [Qwen3-Next-80B-A3B-Instruct](qwen/qwen3-next-80b-a3B-instruct/REGISTRO-INSTALACION-20260929.md) | Dos consultas MCP recibidas. Examen posterior: **28/100; No apto**. Diecinueve finales: siete aciertos, dos errores críticos y diez U; seis impedimentos técnicos. | Examen y diagnóstico terminados; [puntuación](qwen/qwen3-next-80b-a3B-instruct/tests-y-pruebas-efectuadas/PUNTUACION-FINAL-20261001.md), [archivo y retirada](qwen/qwen3-next-80b-a3B-instruct/tests-y-pruebas-efectuadas/ARCHIVO-Y-RETIRADA-20261001.md). Recepción científica independiente pendiente; [TT-0016](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0016.md). |
+| [Qwen3-Next-80B-A3B-Thinking](qwen/qwen3-next-80b-a3b-thinking) | Examen cerrado: **No apto en las condiciones evaluadas por demoras operativas excesivas y falta de finalización fiable**. Nueve finales pendientes de adjudicación de contenido, cuatro impedimentos, P14 incompleta y once no ejecutadas; sin puntuación global. | [Cierre público](https://github.com/juantoniolloretegea/SV-motor/releases/tag/qwen3-next-80b-a3b-thinking-archivo-cierre-20261005-v1) y [conservación privada cotejada](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/releases/tag/thinking-imagen-cierre-20261005-v1). [Instancia y almacenamiento retirados](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/2ddf814bb039b0c7876745023ea165baf38ed6f9/respuestas-ejecucion/QWEN80-THINKING-Q4K-ONECLOUD-20260930/entrega-03/retirada-20261005/ACTA-RETIRADA.md); no hay arranque restaurado ensayado. [TT-0017](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0017.md). |
+| [GPT-OSS-Safeguard-120B](openai/gpt-oss-safeguard-120b/ensayos-reiterados-adversariales-y-aprendizaje/readme.md) | Contrastes anteriores separados: **87,5/100**, **66,67/100** y **50/100**, con **No apto** en sus respectivos alcances. El diagnóstico D01 reprodujo el error crítico del último contraste. | Preevaluación terminada: A0–A3 sin mejora, −88,89/100 según la rúbrica completa y **No apto para acceder al examen**. Diagnósticos e incidencias separados en el [cierre](openai/gpt-oss-safeguard-120b/ensayos-reiterados-adversariales-y-aprendizaje/resultados/cierre-20261004/INFORME-FINAL.md). Sin aptitud clínica acreditada. [Expediente v3](openai/gpt-oss-safeguard-120b/tests-y-pruebas-efectuadas/ARBITRO-SV-SAFEGUARD-V3-20261002.md) · [TT-0018](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0018.md). |
+| [Qwen3.5-122B-A10B · Q8_0](qwen/qwen3.5-122b-a10b-q8-0/readme.md) | Realización CPU en UpCloud: 48 CPU y 256 GB nominales de RAM, sin GPU. Fase A0 concluida: seis 0, un 1 crítico en A06 y dos casos no ejecutados. | [Admisión no acreditada por impedimento temporal](https://github.com/juantoniolloretegea/SV-motor/blob/0b5104c4658bc98a9612fd2a97d7b8a5214b63cc/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/qwen/qwen3.5-122b-a10b-q8-0/preevaluacion-20261004/resultados/cierre-r1/INFORME-FINAL.md); sin revisiones, B ni examen. Custodia de fase y [imagen de instalación cotejadas](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/releases/tag/qwen35-122b-q8-imagen-cierre-20261006-v1); [archivo público](https://github.com/juantoniolloretegea/SV-motor/releases/tag/qwen3.5-122b-a10b-q8-0-archivo-cierre-20261006-v1). [Instancia y disco retirados el 06/10/2026](qwen/qwen3.5-122b-a10b-q8-0/seguimiento/cierre-20261006/ACTA-RETIRADA.md); arranque restaurado no ensayado. Recepción independiente de A04–A07 y fase pendiente. [TT-0019](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0019.md). |
 
-Kaggle gestiona el acceso al servicio de inferencia; el SV conserva en Rust el suministro, los límites, la observación exterior y el cotejo. Es el primer modelo efectivamente ensayado de esta modalidad. El resultado no acredita integración general del nodo, hardware del proveedor ni equivalencia con una API directa o una instalación propia.
-## Recepciones documentales · Nodo 03
+</details>
 
-| Candidato y expediente | Resultado y alcance | Evidencia |
-|---|---|---|
-| [GPT-6 Astra · OpenAI](acoplamientos-con-el-sv/03-api-directa/openai/gpt-6-astra/readme.md) | **Apto para el contrato documental** P01–P25: 25 respuestas finales correctas, incluidas las 20 críticas; T(25)=19. Cierre del 07/10/2026. | [Informe y evidencias](acoplamientos-con-el-sv/03-api-directa/openai/gpt-6-astra/examen25-20261007/resultado/INFORME.md). |
-| [Grok 4.7 · xAI](acoplamientos-con-el-sv/03-api-directa/xai/grok-4.7/readme.md) | **Apto para el contrato documental** P01–P25: 25 respuestas finales R2 correctas, incluidas las 20 críticas; T(25)=19. Cierre del 08/10/2026. | [Informe y evidencias](acoplamientos-con-el-sv/03-api-directa/xai/grok-4.7/examen25-20261008/INFORME.md) · [TT-0022](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0022.md). |
-| [Qwen3.8-Max-0902 · Alibaba Cloud](acoplamientos-con-el-sv/03-api-directa/qwen/qwen3.8-max-0902/readme.md) | **Apto documental con reservas**, en el alcance de **16 preguntas**, tras revisión metodológica y réplica separada de P13. Alcance limitado por disponibilidad de recursos. | [Recepción del 08/10/2026 y límites](acoplamientos-con-el-sv/03-api-directa/qwen/qwen3.8-max-0902/RECEPCION-DOCUMENTAL-20261008.md); adjudicación contractual original conservada. |
-| [GLM-5.3 · Z.ai](acoplamientos-con-el-sv/03-api-directa/zai/glm-5.3/readme.md) | **Apto para el contrato documental CYB16** de ciberseguridad: 16/16 finales R2 correctas, incluidas las 14 críticas; T(16)=12, célula (16,4). | [Informe y evidencias](acoplamientos-con-el-sv/03-api-directa/zai/glm-5.3/cyb16-20261008/INFORME.md) · [TT-0024](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0024.md). Manual MD07: resultado contractual bajo reserva, conservado por separado. |
 
-En el **nodo 03**, el proveedor ejecuta la inferencia mediante su API y el SV administra las fuentes, el Árbitro-Director y los controles propios en Rust. En el **nodo 01**, motor y pesos se ejecutan en infraestructura administrada por el proyecto. Las carpetas históricas de Qwen y GPT-OSS conservan sus ubicaciones; cada realización mediante API tiene su expediente propio.
+<details>
+<summary>Estudios de viabilidad bajo control propio</summary>
 
-Los cuatro expedientes utilizan respuesta provisional, autocrítica y verificación final neutral (R0/R1/R2). Astra y Grok conservan la adjudicación final R2 de sus respectivos 25 casos; la recepción posterior de Qwen reúne revisión del instrumento y réplica diagnóstica, sin sustituir respuestas en el vector histórico ni crear una puntuación nueva. GLM-5.3 conserva R2 de CYB16 como entrega final; su libro de ciberseguridad y su contrato no son el examen de inmunología de los otros candidatos. Las comparaciones se limitan a preguntas y condiciones comunes. La recepción documental no constituye aptitud clínica ni una prueba idéntica en instrumentación a las del nodo 01.
+[Kimi K3](kimi/kimi-k3/ESTUDIO-VIABILIDAD-20261005.md), [GLM-5.3 y GLM-5.3-Flash](zai-org/glm-5.3/ESTUDIO-VIABILIDAD-20261005.md) conservan estudios de arquitectura, memoria y realización Rust/AMD del 05/10/2026. Sus impedimentos de instalación no anulan los ensayos API posteriores ni equivalen a un dictamen sobre respuestas. El [derivado comunitario GPT-OSS de 4,8B](openai/comunidad/gpt-oss-4.8b-5-expertos/README.md) conserva un estudio documental de empaquetado, sin instalación ni inferencia acreditadas; no es una publicación oficial de OpenAI.
 
-El [diagnóstico MD01 del manual con Grok](acoplamientos-con-el-sv/03-api-directa/xai/grok-4.7/md01-diagnostica-20261008/INFORME.md) recibió R0 y R1; R2 no se ejecutó. Es un resultado parcial independiente del examen de 25 preguntas. El [TT-0023 de Qwen](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0023.md) conserva su recepción posterior y sus reservas.
+</details>
+
+
+## Puntuación, terna y acceso al examen
+
+El [criterio común](CRITERIO-PUNTUACION-MODELOS-20261001.md) fija la terna vigente **0: correcto; 1: error; U: indeterminación**, la criticidad y el umbral **T(n)=⌊7n/9⌋**. El [ensayo](../README.md#evaluación-documental-y-resultado) explica su aplicación al vector completo y su **único polígono SV**, de dimensión correspondiente al suceso. La puntuación descriptiva sobre 100 y el área de la figura no sustituyen al dictamen. Los fallos técnicos y las posiciones pendientes se registran fuera de la terna; no se completan con 1 o U.
+
+La preevaluación histórica de Safeguard terminó sin admisión al examen; el [cierre](openai/gpt-oss-safeguard-120b/ensayos-reiterados-adversariales-y-aprendizaje/resultados/cierre-20261004/INFORME-FINAL.md) y su [recorrido](../README.md#preevaluación-safeguard-recorrido-histórico-acotado) conservan la preparación y el resultado efectivo. Los estados de preparación anteriores se conservan con su fecha y no reactivan la campaña cerrada.
+
+## Herramientas auxiliares y ensayos instrumentales
+
+Estas contribuciones tienen finalidad propia y **no pertenecen a la selección de siete candidatos ni a su clasificación de aptitud**.
+
+<details>
+<summary><strong>Helsinki-NLP · traducción auxiliar del Gestor Documental</strong></summary>
+
+[OPUS-MT en–es](helsinki-nlp/opus-mt-en-es.md) es una herramienta auxiliar de traducción. **No pertenece a ningún nodo de inferencia experta**: no proporciona el consejo que se somete al experto del dominio. Su configuración, activación y calidad de traducción tienen controles propios. Una traducción no sustituye al original ni acredita fidelidad jurídica, aptitud clínica o conformidad del Núcleo. Las pruebas técnicas documentadas no convierten esta herramienta en un candidato a los exámenes.
+
+</details>
+
+<details>
+<summary><strong>Qwen3-8B · contraste instrumental CPU/GPU</strong></summary>
+
+La [prueba de Qwen3-8B Q4_K_M en CPU y GPU](qwen/qwen3-8b-cuantizacion-q4_k_m-gguf/sv-contraste-qwen-cpu-gpu-rust-20261014.md) utiliza el modelo como carga instrumental para comprobar la ejecución y la selección de recursos. Su objeto es el recorrido de cálculo y las mediciones, no la aptitud para aconsejar al experto. El uso de Kaggle como infraestructura de esta prueba no la convierte en el expediente de acceso gestionado de Opus ni la incorpora a un nodo de inferencia experta. Tampoco se identifica con Qwen3.8-Max-0902 ni recibe sus resultados.
+
+</details>
+
+
+## Componentes y estudios separados
+
+- [Servicio documental MCP](model-context-protocol/README.md) y [versión 0.1.3](model-context-protocol/0.1.3/LEAME.md): suministro y comprobaciones documentales con identidad propia.
+- [Árbitro-Director](model-context-protocol/controlador-pictograma-algoritmo/DISENO.md): control del recorrido y conservación de evidencias en Rust; el cotejo semántico conserva su autoridad y procedencia.
+- [CubeCL y rust-gpu](../inferencia/cubecl-evaluacion-20261005/ESTUDIO.md): estudios de cálculo para AMD, distintos de los modelos y de la recepción de un motor completo; [TT-0020](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0020.md).
+- [Funciones del conjunto](../README.md#componentes-y-funciones-del-conjunto) y [registro de versiones](../VERSIONES.json): función, identidad y cobertura de los componentes, sin atribuir su presencia a todas las configuraciones.
+- [Sistema conjunto](../../sistema-conjunto-lenguaje-computacion-ia-gobernada/README.md) y [secuencia de continuidad](../README.md#preparación-examen-y-continuidad): relación con el Lenguaje y condiciones del retorno al desarrollo.
+
+## Antecedentes fechados
+
+Los desplegables conservan los estados publicados en su fecha. Sus instrucciones de continuación y expresiones de trabajo en curso pertenecen a ese momento; el resultado posterior se consulta en las fichas y cierres anteriores.
+
+<details>
+<summary>Corte experimental conservado · edición 10, 03/10/2026</summary>
 
 ## Antecedente experimental de la edición 10 · 03/10/2026
 
@@ -55,6 +221,11 @@ La tabla y el estado de ejecución que siguen se conservan con su fecha históri
 
 Las vías de ejecución pertenecen a configuraciones concretas. La vía A requiere inferencia en el navegador mediante WebAssembly; una interfaz web conectada a un proceso nativo corresponde a B. La fase en curso utiliza Safeguard en vía B. Thinking conserva su realización independiente. A queda diferida hasta Apto experimental nativo y autorización específica. La demostración pública del GPT-OSS-120B ordinario no acredita recursos ni funcionamiento de una instalación propia, y sus resultados no se atribuyen a Safeguard.
 
+</details>
+
+<details>
+<summary>Estudios de viabilidad · 05/10/2026</summary>
+
 ## Candidatos adicionales en estudio de viabilidad · 05/10/2026
 
 | Familia o candidato | Estado documental | Estado experimental |
@@ -64,37 +235,27 @@ Las vías de ejecución pertenecen a configuraciones concretas. La vía A requie
 
 El cierre de una búsqueda delimitada sin vía admisible inmediata no descarta definitivamente estos candidatos. Su evaluación documental se separa de las pruebas de respuestas. Qwen permanece como línea independiente en UpCloud. CubeCL y rust-gpu son medios de cálculo posibles; no reemplazan a estas familias.
 
-## Puntuación, terna y acceso al examen
-
-El [criterio común](CRITERIO-PUNTUACION-MODELOS-20261001.md) separa la **puntuación 100 × (aciertos − errores no críticos) / N** del dictamen SV. U y blanco no suman ni restan; un error crítico determina No apto en el alcance fijado. No se reduce N por incidencias ni se recortan puntuaciones negativas.
-
-La regla SV utiliza **T(n)=⌊7n/9⌋** sobre un vector completo: N₁ ≥ T(n) determina No apto; en otro caso, N₀ ≥ T(n) determina Apto; los restantes casos son Indeterminados. Los requisitos de criticidad se aplican además. En la [ronda de 25 posiciones](https://github.com/juantoniolloretegea/SVperitus-dataset/blob/6f1118a323bcefac9400d01274e4f8d1db3636ff/dominios/inmunologia/tes-examenes-conocimientos/ronda-01-pdq-tricoleucemia-20260929/PROTOCOLO.md), T(25)=19 y las veinte preguntas críticas deben estar en 0. Las incidencias técnicas y las preguntas pendientes quedan fuera de la terna; no se sustituyen por U ni permiten construir artificialmente el vector y su frame. Un error crítico acreditado conserva su efecto eliminatorio aunque otras posiciones estén impedidas.
-
-La **Preevaluación de examen de 25 preguntas de tricoleucemia** tiene nueve casos de desarrollo y nueve casos nuevos de admisión, con respuesta inicial y un máximo de tres revisiones adversariales por caso. El **Árbitro-Director del Sistema Vectorial SV** asegura el suministro documental y organiza el **Aprendizaje por Retroalimentación del Sistema Vectorial SV** con antecedentes propios completos. No se ajustan pesos. Se decide sobre la capa 3; el bloque nuevo sólo se abre si el anterior cumple. Cada bloque requiere T(9)=7, todas las críticas en 0, nueve respuestas evaluables y controles conformes.
-
-Al corte sólo A0 está en ejecución. El [protocolo, estado y conservación](openai/gpt-oss-safeguard-120b/ensayos-reiterados-adversariales-y-aprendizaje/readme.md) distinguen preparación, ejecución y evaluación. Los dictámenes No apto anteriores permanecen intactos; no se ha acreditado acceso al examen ni aptitud clínica.
-
-## Componentes y estudios separados
-
-- [CubeCL y rust-gpu: cálculo Rust para AMD](../inferencia/cubecl-evaluacion-20261005/ESTUDIO.md): nueva incorporación documental AMD-CALCULO-RUST-20261005. CubeCL recibe prioridad provisional de estudio; rust-gpu es alternativa. No son modelos ni motores completos recibidos. Limitación MFMA/LLVM en MI300X y necesidades N-C01–N-C05 pendientes; [TT-0020](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0020.md).
+</details>
 
 
-- [Servicio documental MCP](model-context-protocol/README.md): versiones 0.1.0, 0.1.1, 0.1.2 y [0.1.3](model-context-protocol/0.1.3/LEAME.md); acceso documental y comprobaciones propias, sin transferencia automática de conformidad al modelo.
-- [Árbitro-Director del Sistema Vectorial SV](model-context-protocol/controlador-pictograma-algoritmo/DISENO.md): control del recorrido y conservación de evidencias; realización y comprobaciones en Rust. La corrección semántica requiere cotejo externo.
-- [Sistema conjunto](../../sistema-conjunto-lenguaje-computacion-ia-gobernada/README.md): funciones y retorno al Lenguaje. Núcleo, semántica V0.2 e IR 0.3 permanecen intactos en esta preevaluación; las necesidades de adaptación se documentan para recepción competente.
-- [Derivado comunitario de 4,8B](openai/comunidad/gpt-oss-4.8b-5-expertos/README.md): estudio documental del empaquetado; sin instalación ni inferencia acreditadas. No es una publicación oficial de OpenAI.
-- [Registro de versiones](../VERSIONES.json): etiquetas, commits, versiones declaradas e identidades de las distribuciones históricas; las campañas posteriores conservan además sus manifiestos propios.
+## Constancia posterior de retirada · 06/10/2026
 
-La capacidad de generar texto, la fidelidad documental, la conformidad contractual y la aptitud para cada dominio se evalúan por separado. Los resultados no se transfieren entre modelos ni se convierten en una tasa global.
+La instancia y el disco exclusivo de Qwen3.5-122B-A10B Q8_0 están retirados. La [constancia posterior](qwen/qwen3.5-122b-a10b-q8-0/seguimiento/cierre-20261006/ACTA-RETIRADA.md) conserva la comprobación y la custodia; no acredita un arranque restaurado. Los cortes anteriores mantienen su fecha y alcance.
 
-[Índice Qwen](qwen/README.md) · [Índice OpenAI](openai/README.md) · [Contrato experimental](../contrato/README.md).
+<details>
+<summary>Edición documental 19 · 19/10/2026</summary>
+
+Sincronización con el ensayo 2.32: siete candidatos y antecedentes diferenciados, inclusión de CYB16 de Astra y MD09 de Kimi, conservación de Kaggle y de las reservas de Qwen, y separación de Helsinki-NLP y la prueba CPU/GPU. Los resultados originales no se recalifican.
+
+[Edición 18 íntegra](https://github.com/juantoniolloretegea/SV-motor/blob/0d01e72302e9006eb747c4a1fe7da8c7a4822156/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/README.md).
+
+</details>
+
+
+[Índice Qwen](qwen/README.md) · [Índice OpenAI](openai/README.md) · [Contrato experimental histórico](../contrato/README.md).
 
 ---
 
 [Texto de la licencia CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/deed.es). Las licencias de terceros se identifican en las fichas y distribuciones correspondientes.
-
-## Constancia posterior de retirada · 06/10/2026
-
-La instancia y su disco exclusivo están retirados, con desaparición cotejada. Conservación estructural conforme; arranque restaurado no ensayado. Véase el [acta posterior](https://github.com/juantoniolloretegea/SV-motor/blob/main/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/qwen/qwen3.5-122b-a10b-q8-0/seguimiento/cierre-20261006/ACTA-RETIRADA.md). Los cortes anteriores conservan su fecha y alcance.
 
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
