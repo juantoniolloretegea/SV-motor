@@ -1,36 +1,38 @@
 # Modelos de IA
 
-**Edición documental 20 · 19 de octubre de 2026.**
+**Edición documental 21 · 20 de octubre de 2026.**
 
 Este catálogo identifica los modelos estudiados, las configuraciones efectivamente ensayadas y los candidatos de la próxima comparación. Cada resultado conserva su banco documental, modalidad de inferencia, fecha, condiciones y reservas. Una familia comercial no recibe por extensión el resultado de una versión concreta.
 
 El [ensayo de inteligencia artificial y observabilidad](../README.md) presenta el método, la arquitectura y sus límites. Este catálogo desarrolla las fichas de los modelos; las herramientas auxiliares y las pruebas instrumentales se reúnen en un apartado propio.
 
-**Consulta:** [organización](#organización-de-los-expedientes-y-modalidades-de-acoplamiento) · [siete candidatos](#siete-candidatos-de-la-proxima-comparacion) · [configuraciones anteriores](#configuraciones-anteriores) · [criterio](#puntuación-terna-y-acceso-al-examen) · [herramientas y pruebas instrumentales](#herramientas-auxiliares-y-ensayos-instrumentales) · [antecedentes fechados](#antecedentes-fechados).
+**Consulta:** [organización](#organización-de-los-expedientes-y-modalidades-de-acoplamiento) · [ocho candidatos](#ocho-candidatos-de-la-proxima-comparacion) · [configuraciones anteriores](#configuraciones-anteriores) · [criterio](#puntuación-terna-y-acceso-al-examen) · [herramientas y pruebas instrumentales](#herramientas-auxiliares-y-ensayos-instrumentales) · [antecedentes fechados](#antecedentes-fechados).
 
 ## Organización de los expedientes y modalidades de acoplamiento
 
 El [nodo 01](acoplamientos-con-el-sv/01-inferencia-bajo-control-propio/readme.md) exige inferencia dentro del entorno del SV y auditabilidad de extremo a extremo; el [nodo 02](acoplamientos-con-el-sv/02-plataforma-gestionada/readme.md) corresponde al acceso organizado por una plataforma gestionada; el [nodo 03](acoplamientos-con-el-sv/03-api-directa/readme.md), al servicio externo del proveedor. La ubicación física de un servidor o la presencia de una API no bastan para acreditar las condiciones del nodo 01. El [diagrama y las definiciones del ensayo](../README.md#tres-nodos-de-acoplamiento) precisan el control y la observabilidad de cada modalidad.
 
-La modalidad de ejecución se consulta en las [rutas y el diagrama del ensayo](../README.md#vías-de-ejecución-y-diagramas): **A**, inferencia en navegador probada con interrupción antes del primer token; **B**, inferencia nativa en el servidor; **servicio externo**, inferencia gobernada por la plataforma o el proveedor. El visor Rust/egui en WebAssembly presenta resultados y no ejecuta el modelo evaluado. La selección de siete candidatos corresponde a la preparación por API del nodo 03; conserva por separado el antecedente de Opus en el nodo 02.
+La modalidad de ejecución se consulta en las [rutas y el diagrama del ensayo](../README.md#vías-de-ejecución-y-diagramas): **A**, inferencia en navegador probada con interrupción antes del primer token; **B**, inferencia nativa en el servidor; **servicio externo**, inferencia gobernada por la plataforma o el proveedor. El visor Rust/egui en WebAssembly presenta resultados y no ejecuta el modelo evaluado. La selección de ocho candidatos corresponde a la preparación por API del nodo 03; conserva por separado el antecedente de Opus en el nodo 02.
 
 Los expedientes conservan sus carpetas y referencias. Un estudio de viabilidad, una ejecución técnica y un examen de respuestas son objetos distintos. Un resultado previo no habilita una nueva entrega de documentos ni el uso en producción.
 
 <a id="siete-candidatos-de-la-proxima-comparacion"></a>
+<a id="ocho-candidatos-de-la-proxima-comparacion"></a>
 
-## Siete candidatos de la próxima comparación
+## Ocho candidatos de la próxima comparación
 
 Selección ordenada alfabéticamente, sin preferencia ni clasificación implícitas. **La nueva ronda EET-CYB16 no se ha iniciado.** Todos requieren condiciones propias vigentes, un paquete común identificado y permiso de entrega y lanzamiento. La tabla expresa requisitos de preparación, no resultados de esa ronda ni una autorización para ejecutarla.
 
 | Candidato | Identidad de la nueva conexión | Preparación pendiente |
 |---|---|---|
 | [Claude Opus 5.5](#claude-opus-55) | `claude-opus-5-5` | Recibir las condiciones propias de Opus para la API; las de Sonnet no son transferibles. |
+| [DeepSeek-V4.1-Flash-1017](#deepseek-v41-flash-1017) | `deepseek-flash`; revisión declarada `DeepSeek-V4.1-Flash-1017` | Compatibilidad documental pendiente; examen bloqueado, sin dictamen. |
 | [Gemini 4 Argon](#gemini-4-argon) | `gemini-4-argon` | Renovar la recepción y comprobar capacidad, configuración y correspondencia de moneda y cota. |
 | [GLM-5.3](#glm-53) | `glm-5.3` | Recibir capacidad, adaptación, permiso y cota de la edición común. |
 | [GPT-6 Astra](#gpt-6-astra) | `gpt-6-astra` | Comprobar la conexión exacta y recibir condiciones propias; las de Sol no son transferibles. |
 | [Grok 4.7](#grok-47) | `grok-4.7` | Recibir capacidad, tratamiento del razonamiento, adaptación, permiso y cota. |
 | [Kimi K3](#kimi-k3) | `kimi-k3` | Renovar la recepción y comprobar capacidad, recursos, permiso y cota vigentes. |
-| [Qwen3.8-Max-0902](#qwen38-max-0902) | `qwen3.8-max-0902` | Fijar la revisión tras el alias, conciliar el orden común y comprobar capacidad, cuota, permiso y cota. |
+| [Qwen3.8-Max-0902](#qwen38-max-0902) | `qwen3.8-max`; revisión declarada `qwen3.8-max-0902` | Correspondencia declarada del alias conservada; recibir capacidad documental efectiva, contexto, configuración, permiso y cota. |
 
 La capacidad y la configuración deben corresponder a la edición exacta: longitud de entrada, salida y razonamiento, tiempos, adaptación del protocolo y cotas. Cuota gratuita, saldo monetario y límite administrativo son conceptos distintos. Las fichas siguientes conservan los antecedentes y sus diferencias respecto de esta preparación.
 
@@ -46,6 +48,19 @@ El antecedente se ejecutó mediante **Kaggle Benchmarks Model Proxy**, nodo 02, 
 La siguiente comparación prepara **Opus por API directa, nodo 03**. El cambio de servicio y condiciones queda identificado; ni el resultado de Kaggle ni las condiciones de Claude Sonnet acreditan la recepción de esta nueva configuración.
 
 [Informe CYB09](acoplamientos-con-el-sv/02-plataforma-gestionada/antrophic/claude-opus-5-5/ensayo-cyb09-20261010/entrega/INFORME.md) · [Polígono Rust/egui](acoplamientos-con-el-sv/02-plataforma-gestionada/antrophic/claude-opus-5-5/ensayo-cyb09-20261010/entrega/poligono-egui/POLIGONO-EGUI.html) · [Recepción del nodo 02](acoplamientos-con-el-sv/02-plataforma-gestionada/antrophic/claude-opus-5-5/ensayo-cyb09-20261010/entrega/MATRIZ-RECEPCION-NODO02.md).
+
+</details>
+
+<a id="deepseek-v41-flash-1017"></a>
+
+<details>
+<summary><strong>DeepSeek-V4.1-Flash-1017 · DeepSeek</strong></summary>
+
+La conexión utiliza `deepseek-flash`, correspondiente por declaración del proveedor a `DeepSeek-V4.1-Flash-1017`. La correspondencia identifica la preparación; no demuestra ejecución interna ni conserva automáticamente esa identidad ante futuras revisiones del alias.
+
+Participa como octavo candidato, situado segundo por orden alfabético. La recepción directa de PDF no está acreditada para esta configuración: el examen permanece bloqueado por compatibilidad documental pendiente, sin dictamen. La ausencia de examen no equivale a U ni a No apto.
+
+La [edición común](estandar-comparativo-o-benchmark/readme.md) conserva las dieciséis preguntas, sus soluciones y los originales. La inclusión no autoriza contenido, exámenes ni decisiones económicas.
 
 </details>
 
@@ -176,7 +191,7 @@ La preevaluación histórica de Safeguard terminó sin admisión al examen; el [
 
 ## Herramientas auxiliares y ensayos instrumentales
 
-Estas contribuciones tienen finalidad propia y **no pertenecen a la selección de siete candidatos ni a su clasificación de aptitud**.
+Estas contribuciones tienen finalidad propia y **no pertenecen a la selección de ocho candidatos ni a su clasificación de aptitud**.
 
 <details>
 <summary><strong>Helsinki-NLP · traducción auxiliar del Gestor Documental</strong></summary>
@@ -247,7 +262,7 @@ La instancia y el disco exclusivo de Qwen3.5-122B-A10B Q8_0 están retirados. La
 <details>
 <summary>Edición documental 19 · 19/10/2026</summary>
 
-Sincronización con el ensayo 2.32: siete candidatos y antecedentes diferenciados, inclusión de CYB16 de Astra y MD09 de Kimi, conservación de Kaggle y de las reservas de Qwen, y separación de Helsinki-NLP y la prueba CPU/GPU. Los resultados originales no se recalifican.
+Sincronización con el ensayo 2.32: ocho candidatos y antecedentes diferenciados, inclusión de CYB16 de Astra y MD09 de Kimi, conservación de Kaggle y de las reservas de Qwen, y separación de Helsinki-NLP y la prueba CPU/GPU. Los resultados originales no se recalifican.
 
 [Edición 18 íntegra](https://github.com/juantoniolloretegea/SV-motor/blob/0d01e72302e9006eb747c4a1fe7da8c7a4822156/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/README.md).
 
@@ -257,7 +272,7 @@ Sincronización con el ensayo 2.32: siete candidatos y antecedentes diferenciado
 <details>
 <summary>Edición documental 20 · 19/10/2026</summary>
 
-Sincroniza las modalidades de ejecución con el ensayo 2.33: navegador, proceso nativo y servicio externo, con visualización independiente. Los siete candidatos, sus identidades, resultados y reservas permanecen sin cambios. Helsinki-NLP y Qwen3-8B conservan su condición auxiliar e instrumental, respectivamente.
+Sincroniza las modalidades de ejecución con el ensayo 2.33: navegador, proceso nativo y servicio externo, con visualización independiente. Los ocho candidatos, sus identidades, resultados y reservas permanecen sin cambios. Helsinki-NLP y Qwen3-8B conservan su condición auxiliar e instrumental, respectivamente.
 
 [Edición 19 íntegra](https://github.com/juantoniolloretegea/SV-motor/blob/9c6390848d6305d76667d07c16e0bf0389772b60/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/README.md).
 

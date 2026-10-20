@@ -1,6 +1,6 @@
 # Ensayo de inteligencia artificial y observabilidad
 
-**Edición documental 2.33 · 19 de octubre de 2026.**
+**Edición documental 2.34 · 20 de octubre de 2026.**
 
 <a id="objeto-y-criterio-experimental"></a>
 
@@ -74,11 +74,12 @@ En estos expedientes, R0, R1 y R2 designan etapas de respuesta del candidato. No
 
 ## Estado actual
 
-La próxima comparación comprende **siete candidatos**, ordenados alfabéticamente, no por preferencia. Todos están pendientes de examen en la nueva edición EET-CYB16. La tabla resume los antecedentes; cada ficha del catálogo distingue el resultado histórico de la preparación actual.
+La próxima comparación comprende **ocho candidatos**, ordenados alfabéticamente, no por preferencia. Todos están pendientes de examen en la nueva edición EET-CYB16. La tabla resume los antecedentes; cada ficha del catálogo distingue el resultado histórico de la preparación actual. Las [preguntas, soluciones y evidencias comparativas](modelos-de-ia/estandar-comparativo-o-benchmark/readme.md) corresponden a la edición fijada de 20 de octubre de 2026.
 
 | Candidato | Antecedentes y alcance |
 |---|---|
 | [Claude Opus 5.5](modelos-de-ia/README.md#claude-opus-55) | Kaggle, nodo 02: MD09 favorable; CYB09 No apto asistido por un error crítico. |
+| [DeepSeek-V4.1-Flash-1017](modelos-de-ia/README.md#deepseek-v41-flash-1017) | Candidato incorporado; compatibilidad documental pendiente, sin examen ni dictamen. |
 | [Gemini 4 Argon](modelos-de-ia/README.md#gemini-4-argon) | Conexión y preparación de condiciones; sin resultado de examen en este catálogo. |
 | [GLM-5.3](modelos-de-ia/README.md#glm-53) | CYB16: Apto documental, 16/16 finales y 14 críticas correctas. MD07 conserva su reserva. |
 | [GPT-6 Astra](modelos-de-ia/README.md#gpt-6-astra) | PDQ25: 25/25 finales. CYB16: 16/16 en las tres etapas; Apto documental en cada contrato. |
@@ -86,7 +87,7 @@ La próxima comparación comprende **siete candidatos**, ordenados alfabéticame
 | [Kimi K3](modelos-de-ia/README.md#kimi-k3) | MD09: Apto documental, 8/9; MD04 no crítico incorrecto, seis críticas correctas. CYB16 sin iniciar. |
 | [Qwen3.8-Max-0902](modelos-de-ia/README.md#qwen38-max-0902) | Recepción Apto documental con reservas en 16 preguntas; dictamen original y réplica P13 separados. |
 
-La [preparación de la nueva ronda](modelos-de-ia/README.md#siete-candidatos-de-la-proxima-comparacion) requiere condiciones propias y vigentes. Una conexión registrada, un resultado anterior o la inclusión en el catálogo no autorizan el envío de documentos ni el lanzamiento. Las conexiones de otros modelos no amplían esta selección.
+La [preparación de la nueva ronda](modelos-de-ia/README.md#ocho-candidatos-de-la-proxima-comparacion) requiere condiciones propias y vigentes. Una conexión registrada, un resultado anterior o la inclusión en el catálogo no autorizan el envío de documentos ni el lanzamiento. Las conexiones de otros modelos no amplían esta selección.
 
 <details>
 <summary>Resultados y cierres de las configuraciones anteriores</summary>
@@ -252,7 +253,7 @@ El [diseño NAT02](resultados/preparacion-nativa-02/DISENO.md) y la [revisión N
 
 ### Servicios externos y visores de resultados
 
-En los nodos 02 y 03, el controlador Rust del SV compone las solicitudes admitidas, aplica los límites y conserva las respuestas y sus mediciones exteriores. El servicio gestionado ejecuta el modelo. El [antecedente de Opus en Kaggle](modelos-de-ia/README.md#claude-opus-55) pertenece al nodo 02; los [expedientes API](modelos-de-ia/README.md#siete-candidatos-de-la-proxima-comparacion) identifican los antecedentes y la preparación del nodo 03. El cálculo interno del proveedor queda fuera de la instrumentación del SV.
+En los nodos 02 y 03, el controlador Rust del SV compone las solicitudes admitidas, aplica los límites y conserva las respuestas y sus mediciones exteriores. El servicio gestionado ejecuta el modelo. El [antecedente de Opus en Kaggle](modelos-de-ia/README.md#claude-opus-55) pertenece al nodo 02; los [expedientes API](modelos-de-ia/README.md#ocho-candidatos-de-la-proxima-comparacion) identifican los antecedentes y la preparación del nodo 03. El cálculo interno del proveedor queda fuera de la instrumentación del SV.
 
 El [visor Rust/egui de dieciséis posiciones](modelos-de-ia/acoplamientos-con-el-sv/visor-examen16-egui/src/lib.rs) incorpora datos identificados y los representa en el navegador mediante WebAssembly. El visor permite examinar el polígono, sus posiciones y los fundamentos de la adjudicación; no genera respuestas del candidato ni convierte la visualización en una inferencia de la vía A. Los visores de cada expediente conservan su versión y sus datos.
 

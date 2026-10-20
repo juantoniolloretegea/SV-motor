@@ -1,21 +1,20 @@
 {
   "esquema": "sv.eio.registro-versiones/1",
-  "edicion_documental": "2.33",
-  "fecha_corte": "2026-10-19",
-  "commit_base_consultado": "9c6390848d6305d76667d07c16e0bf0389772b60",
+  "edicion_documental": "2.34",
+  "fecha_corte": "2026-10-20",
+  "commit_base_consultado": "5ba9cbef4b679f4c0878f914c142dfce5d830a94",
   "criterio": "Identidad separada para modelo, aplicacion, componente MCP, archivo de conservacion y edicion documental",
   "revision_actual": {
-    "version": "2.33",
-    "naturaleza": "precision_rutas_ejecucion_y_presentacion",
+    "version": "2.34",
+    "inferencias_nuevas": 0,
+    "naturaleza": "publicacion_edicion_y_conciliacion_candidatos",
     "commit": "El que contiene este archivo; sin autorreferencia circular",
-    "cambios": [
-      "Rutas documentadas: navegador, proceso nativo y servicio externo",
-      "Visor Rust/egui separado de la inferencia; WebAssembly autónomo en PC como estudio pendiente",
-      "Secuencias históricas A/B conservadas y encabezados corregidos",
-      "Catálogo de modelos sincronizado en edición 20"
-    ],
     "resultados_modificados": false,
-    "inferencias_nuevas": 0
+    "cambios": [
+      "Ocho candidatos en ensayo y catálogo; DeepSeek pendiente y sin dictamen",
+      "Edición multiformato, preguntas, soluciones y evidencias enlazadas",
+      "Correspondencia de Qwen conservada; antecedentes, desplegables y diagramas intactos"
+    ]
   },
   "componentes": [
     {
@@ -1653,6 +1652,77 @@
       "Siete candidatos con identidades, antecedentes y preparación diferenciados",
       "CYB16 de Astra y MD09 de Kimi incorporados; Kaggle de Opus y reservas de Qwen preservados",
       "Helsinki-NLP y Qwen3-8B separados como herramienta auxiliar y ensayo instrumental"
+    ],
+    "resultados_modificados": false,
+    "inferencias_nuevas": 0
+  },
+  "preparacion_comparacion_20261020": {
+    "candidatos": [
+      {
+        "estado": "pendiente_sin_examen",
+        "nombre": "Claude Opus 5.5",
+        "dictamen": null,
+        "orden": 1
+      },
+      {
+        "estado": "compatibilidad_documental_pendiente",
+        "nombre": "DeepSeek-V4.1-Flash-1017",
+        "dictamen": null,
+        "orden": 2
+      },
+      {
+        "estado": "pendiente_sin_examen",
+        "nombre": "Gemini 4 Argon",
+        "dictamen": null,
+        "orden": 3
+      },
+      {
+        "estado": "compatibilidad_documental_pendiente",
+        "nombre": "GLM-5.3",
+        "dictamen": null,
+        "orden": 4
+      },
+      {
+        "estado": "pendiente_sin_examen",
+        "nombre": "GPT-6 Astra",
+        "dictamen": null,
+        "orden": 5
+      },
+      {
+        "estado": "recorrido_documental_pendiente",
+        "nombre": "Grok 4.7",
+        "dictamen": null,
+        "orden": 6
+      },
+      {
+        "estado": "recorrido_documental_pendiente",
+        "nombre": "Kimi K3",
+        "dictamen": null,
+        "orden": 7
+      },
+      {
+        "estado": "pendiente_sin_examen",
+        "nombre": "Qwen3.8-Max-0902",
+        "dictamen": null,
+        "orden": 8
+      }
+    ],
+    "catalogo_edicion": 21,
+    "entrega_autorizada_por_este_registro": false,
+    "estado": "fijada_sin_examen",
+    "sede": "modelos-de-ia/estandar-comparativo-o-benchmark/readme.md",
+    "edicion": "eet-cyb16-multiformato-20261020-v1",
+    "lanzamiento_autorizado_por_este_registro": false
+  },
+  "revision_2_33_conservada": {
+    "version": "2.33",
+    "naturaleza": "precision_rutas_ejecucion_y_presentacion",
+    "commit": "El que contiene este archivo; sin autorreferencia circular",
+    "cambios": [
+      "Rutas documentadas: navegador, proceso nativo y servicio externo",
+      "Visor Rust/egui separado de la inferencia; WebAssembly autónomo en PC como estudio pendiente",
+      "Secuencias históricas A/B conservadas y encabezados corregidos",
+      "Catálogo de modelos sincronizado en edición 20"
     ],
     "resultados_modificados": false,
     "inferencias_nuevas": 0
