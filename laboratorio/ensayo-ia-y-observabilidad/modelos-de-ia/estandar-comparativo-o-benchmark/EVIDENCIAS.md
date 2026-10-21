@@ -2,11 +2,17 @@
 
 ## 1. Estado de la edición
 
-No existen todavía intentos ni resultados de las ediciones general `eet-cyb16-multiformato-20261021-v2` y adaptada `eet-cyb16-markdown-adaptada-20261021-v2`. La publicación contiene el examen fijado y su plantilla. La tabla comparativa carece de filas de resultados; no se publican respuestas prefijadas como respuestas de candidatos.
+La publicación revisada del 21 de octubre de 2026 contiene cuatro resultados de la edición general `eet-cyb16-multiformato-20261021-v2`. Los cuatro candidatos de la edición adaptada `eet-cyb16-markdown-adaptada-20261021-v2` permanecen pendientes, sin dictamen. La relación completa figura en [COMPARACION.json](COMPARACION.json).
+
+Cada carpeta publicada reúne `respuesta.txt`, `resultado.json` y `poligono.json`. `respuesta.txt` conserva, sin reescritura, el texto recibido del modelo que se entregó al corrector; puede contener JSON. No es el contenedor íntegro de eventos de la API. `respuesta_textual_sha256` identifica ese archivo; `respuesta_original_sha256` identifica la respuesta de transporte conservada con acceso restringido. Son objetos diferentes y sus huellas no son intercambiables.
+
+`resultado.json` recoge el identificador público del intento, la edición, el modelo comunicado, las huellas de paquete y petición, las calificaciones, la evaluación del SV y las mediciones seleccionadas. `poligono.json` conserva el contrato visual, las dieciséis posiciones ordenadas, sus enunciados y criticidades, κ y el dictamen. La tabla CSV, el JSON comparativo y la figura de tiempos proceden de la misma clasificación recibida.
+
+Esta publicación selecciona los resultados científicos y los contadores comunicados. Excluye datos de cuenta, identidades de acceso, credenciales, registros administrativos, contenedores nativos de transporte y registros JSONL del proceso compartido. Estos últimos permanecen bajo custodia restringida; no se afirma que su contenido íntegro sea público. El coste comparable todavía no está acreditado. Una ausencia de contador no se convierte en cero. Las declaraciones de recursos, procedimientos y revisiones se consultan en el texto del modelo y se distinguen de las mediciones observadas.
 
 ## 2. Conjunto de un intento
 
-Cada resultado recibido deberá reunir los elementos siguientes bajo un identificador público de intento y una carpeta de su candidato:
+La evidencia de cada resultado se organiza mediante los elementos siguientes bajo un identificador público de intento y una carpeta de su candidato:
 
 | Elemento | Relación exigida |
 | --- | --- |
@@ -22,7 +28,7 @@ Cada resultado recibido deberá reunir los elementos siguientes bajo un identifi
 | Representación | Datos del vector, figura del polígono y gráficos comparativos derivados del mismo resultado. |
 | Procedencia | Manifiesto de archivos, tamaños y SHA-256; recepción y rectificaciones identificadas. |
 
-La ubicación prevista es `resultados/<candidato>/<intento-publico>/`. Sólo se incorpora cuando exista evidencia recibida para ese intento. El nombre de la carpeta no sustituye la identificación de su contenido.
+La ubicación es `resultados/<candidato>/<intento-publico>/`. Sólo se incorpora cuando exista evidencia recibida para ese intento. El nombre de la carpeta no sustituye la identificación de su contenido.
 
 ## 3. Correspondencia con la custodia
 

@@ -4,7 +4,11 @@
 
 Esta comparación examina la respuesta de servicios de IA externos a dieciséis preguntas sobre documentos identificados. Publica el examen, las soluciones, sus reglas y la procedencia de la evidencia para permitir una revisión reproducible.
 
-**Estado: ediciones fijadas, sin exámenes ejecutados ni dictámenes.** La lista de candidatos indica el turno por categoría y el orden alfabético dentro de cada grupo; no es una clasificación por mérito. Las comprobaciones de conexión o del instrumento no son resultados de candidatos.
+**Publicación revisada: 21 de octubre de 2026.** Cuatro resultados de la categoría general, todos con 16 aciertos y dictamen **0**. Los cuatro candidatos de la categoría adaptada siguen pendientes, sin dictamen. Las categorías conservan clasificaciones independientes.
+
+[**Resultados y polígonos del SV**](https://administracion.itvia.online/benchmark#resultados) · [**Tabla y evidencias**](#4-resultados-y-evidencias) · [**Seguimiento de la convocatoria**](https://administracion.itvia.online/eet-ia/) — requiere sesión.
+
+Este archivo y la página pública muestran la última publicación revisada. Su fecha no equivale a una actualización continua ni a otro examen; el seguimiento vigente se consulta en EET-IA. La publicación conserva la identidad de la edición y de cada intento.
 
 ## 1. Examen y soluciones
 
@@ -71,10 +75,10 @@ Esta distribución describe la cobertura. No aísla estadísticamente el efecto 
 
 | Orden | Modelo | Proveedor | Categoría | Estado |
 | ---: | --- | --- | --- | --- |
-| 1 | Claude Opus 5.5 | Anthropic | General | Pendiente; sin dictamen. |
-| 2 | Gemini 4 Argon | Google | General | Pendiente; sin dictamen. |
-| 3 | GPT-6 Astra | OpenAI | General | Pendiente; sin dictamen. |
-| 4 | Qwen3.8-Max-0902 | Qwen | General | Pendiente; sin dictamen. |
+| 1 | Claude Opus 5.5 | Anthropic | General | Examen corregido; dictamen 0. |
+| 2 | Gemini 4 Argon | Google | General | Examen corregido; dictamen 0. |
+| 3 | GPT-6 Astra | OpenAI | General | Examen corregido; dictamen 0. |
+| 4 | Qwen3.8-Max-0902 | Qwen | General | Examen corregido; dictamen 0. |
 | 5 | DeepSeek-V4.1-Flash-1017 | DeepSeek | ♿ Adaptada, 33 % | Pendiente; sin dictamen. |
 | 6 | GLM-5.3 | Z.ai | ♿ Adaptada, 33 % | Pendiente; sin dictamen. |
 | 7 | Grok 4.7 | xAI | ♿ Adaptada, 33 % | Pendiente; sin dictamen. |
@@ -86,15 +90,47 @@ La categoría general se examina primero; después, la adaptada al 33 % y, si hu
 
 ## 4. Resultados y evidencias
 
-La [tabla comparativa](COMPARACION.csv) y su [representación JSON](COMPARACION.json) todavía no contienen resultados. No se dibujan barras, posiciones ni polígonos de candidatos sin datos efectivos.
+La [tabla comparativa CSV](COMPARACION.csv) y su [representación JSON](COMPARACION.json) contienen los cuatro resultados recibidos y los cuatro candidatos pendientes. Los valores proceden de la misma clasificación comprobada que alimenta el Gestor.
 
-Cada dictamen emitido se representará exclusivamente mediante **0 — Apto**, **1 — No apto** o **U — Indeterminado**. La ausencia de dictamen se conserva vacía o nula, con su estado en otra columna. Un examen no ejecutado o detenido por un fallo instrumental no equivale a U.
+| Posición | Modelo | Aciertos | Errores | U | Dictamen | Tiempo efectivo (ms) | Explicaciones vinculadas | Polígono y evidencias |
+| ---: | --- | ---: | ---: | ---: | --- | ---: | ---: | --- |
+| 1 | Gemini 4 Argon | 16 | 0 | 0 | 0 | 90008 | 15/16 | [Polígono](https://administracion.itvia.online/benchmark/poligono/gemini-4-argon) · [Respuesta](resultados/gemini-4-argon/cyb16-67947a76804a/respuesta.txt) · [Datos](resultados/gemini-4-argon/cyb16-67947a76804a/resultado.json) |
+| 2 | GPT-6 Astra | 16 | 0 | 0 | 0 | 91906 | 16/16 | [Polígono](https://administracion.itvia.online/benchmark/poligono/gpt-6-astra) · [Respuesta](resultados/gpt-6-astra/cyb16-42214abb1502/respuesta.txt) · [Datos](resultados/gpt-6-astra/cyb16-42214abb1502/resultado.json) |
+| 3 | Claude Opus 5.5 | 16 | 0 | 0 | 0 | 159459 | 16/16 | [Polígono](https://administracion.itvia.online/benchmark/poligono/claude-opus-5.5) · [Respuesta](resultados/claude-opus-5.5/cyb16-085bea8caae0/respuesta.txt) · [Datos](resultados/claude-opus-5.5/cyb16-085bea8caae0/resultado.json) |
+| 4 | Qwen3.8-Max-0902 | 16 | 0 | 0 | 0 | 287367 | 16/16 | [Polígono](https://administracion.itvia.online/benchmark/poligono/qwen3.8-max-0902) · [Respuesta](resultados/qwen3.8-max-0902/cyb16-c845bb554c19/respuesta.txt) · [Datos](resultados/qwen3.8-max-0902/cyb16-c845bb554c19/resultado.json) |
+
+
+La ordenación aplica aciertos, errores, tiempo efectivo y coste general comparable, en ese orden. En estos cuatro resultados coinciden los aciertos y errores; el tiempo efectivo determina sus posiciones. Los tokens son informativos y no desempatan. No hay recomendación oficial ni selección de producción. Una sola ejecución por candidato no mide la variabilidad de ejecuciones sucesivas.
+
+<details>
+<summary><strong>Tiempo efectivo: comparación gráfica</strong></summary>
+
+![Tiempo efectivo en milisegundos de los cuatro exámenes de la categoría general](TIEMPOS-GENERAL.svg)
+
+Fuente: [COMPARACION.json](COMPARACION.json). Las pausas, el transporte y el primer fragmento se conservan como medidas distintas. Los candidatos pendientes no se representan mediante valores cero.
+
+</details>
+
+<details>
+<summary><strong>Lectura de los datos y del polígono</strong></summary>
+
+Cada polígono corresponde a un modelo, un intento y la edición general fijada. Esta prueba utiliza la célula (16,4), con dieciséis calificaciones en el orden de sus preguntas; no combina respuestas de candidatos diferentes. La célula de esta prueba no limita las células que admite el SV. La clasificación matemática κ y el dictamen contractual se conservan por separado.
+
+Los contadores de entrada, salida, razonamiento y caché mantienen su disponibilidad individual y no se suman indiscriminadamente. Las explicaciones y revisiones adversariales proceden de la respuesta del proveedor y no puntúan; sus declaraciones no acreditan por sí solas los recursos internos utilizados. El coste general comparable no está disponible en esta publicación: no se sustituye por cero ni por el gasto agregado de una cuenta.
+
+Los datos del polígono pueden descargarse desde la carpeta de cada intento. El visor interactivo de la página de clasificación utiliza Rust/egui y presenta esos mismos datos.
+
+La disponibilidad de explicaciones se registra por pregunta en `resultado.json`. Gemini comunica quince explicaciones vinculadas a dieciséis respuestas; las demás respuestas conservan sus correspondientes explicaciones. Esta disponibilidad no modifica la puntuación. La presencia de una explicación o de una revisión declarada no acredita la veracidad del procedimiento descrito.
+
+</details>
+
+Cada dictamen emitido se representa exclusivamente mediante **0 — Apto**, **1 — No apto** o **U — Indeterminado**. La ausencia de dictamen se conserva vacía o nula, con su estado en otra columna. Un examen no ejecutado o detenido por un fallo instrumental no equivale a U.
 
 El [método comparativo](METODO.md) establece corrección, tiempos, ordenación y límites. El [contrato de evidencias públicas](EVIDENCIAS.md) define los datos necesarios para relacionar respuestas, mediciones, gráficos y polígono con un intento identificado. La copia pública debe ser idéntica al conjunto expresamente seleccionado para publicación dentro del archivo custodiado.
 
 ## 5. Alcance
 
-El resultado describirá esta edición, esta configuración y este intento. No acredita competencia general en ciberseguridad, aptitud clínica ni capacidad para recorrer un dominio completo. La recomendación del SV, la autorización institucional y la selección de un modelo para producción son actos distintos.
+El resultado describe esta edición, esta configuración y este intento. No acredita competencia general en ciberseguridad, aptitud clínica ni capacidad para recorrer un dominio completo. La recomendación del SV, la autorización institucional y la selección de un modelo para producción son actos distintos.
 
 La [clasificación del Gestor](https://administracion.itvia.online/benchmark) y el [libro de evaluación](https://documentos-sv.itvia.online/evaluacion/validacion-autorizacion-modelos/) ofrecen las otras vías de consulta. La publicación documental no inicia exámenes ni habilita producción.
 

@@ -1,0 +1,246 @@
+{
+  "respuestas": [
+    {"id":"p06","valor":"0"},
+    {"id":"p13","valor":"1"},
+    {"id":"p01","valor":"1"},
+    {"id":"p03","valor":"1"},
+    {"id":"p11","valor":"0"},
+    {"id":"p10","valor":"1"},
+    {"id":"p07","valor":"0"},
+    {"id":"p05","valor":"1"},
+    {"id":"p02","valor":"0"},
+    {"id":"p15","valor":"0"},
+    {"id":"p08","valor":"1"},
+    {"id":"p16","valor":"1"},
+    {"id":"p14","valor":"1"},
+    {"id":"p04","valor":"0"},
+    {"id":"p12","valor":"0"},
+    {"id":"p09","valor":"0"}
+  ],
+  "explicaciones": [
+    {
+      "id":"p06",
+      "justificacion":"El enunciado es conforme. La descripción del Policy Enforcement Point establece que se comunica con el Policy Administrator para remitir solicitudes y/o recibir actualizaciones de políticas.",
+      "fuentes":[
+        {"documento":"d1","ubicacion":"§3, descripción de Policy enforcement point (PEP), página impresa 10, página PDF 19/59."}
+      ],
+      "procedimiento_declarado":"Lectura del material suministrado en su idioma original y cotejo del enunciado p06 del cuadernillo Markdown con la definición del PEP.",
+      "recursos_declarados":"Texto e imágenes proporcionados y capacidades de lectura del modelo. No utilicé herramientas adicionales, Internet, enlaces externos ni memorias de otros episodios.",
+      "protocolos_declarados":"Cotejo documental cerrado y una revisión adversarial: contrastar la afirmación con la fuente y examinar una posible objeción. No ejecuté protocolos de red.",
+      "limitaciones":"La conclusión es documental, no una prueba de una implementación. No verifiqué los SHA-256 ni puedo aportar telemetría interna que acredite las revisiones; estas constancias son declaraciones, no mediciones verificadas.",
+      "revisiones_adversariales":[
+        {"numero":1,"objecion":"Podría confundirse la comunicación con el administrador con una comunicación directa obligatoria con el motor de políticas.","comprobacion":"La definición identifica expresamente al PA como interlocutor del PEP para solicitudes y actualizaciones.","conclusion":"No existe esa confusión en el enunciado; corresponde 0."}
+      ]
+    },
+    {
+      "id":"p13",
+      "justificacion":"El enunciado no es conforme. El acta señala expresamente que un tiempo de espera agotado no prueba ausencia de efecto ni repetición segura. Distingue recepción del mensaje, actuación, resultado material y obligación pendiente.",
+      "fuentes":[
+        {"documento":"d3","ubicacion":"§7.1, tabla de necesidades de soporte, fila «Conciliación y efectos inciertos»."}
+      ],
+      "procedimiento_declarado":"Cotejo del enunciado p13 del cuadernillo PDF con la distinción entre espera local y efectos materiales establecida por el acta.",
+      "recursos_declarados":"Material suministrado y lectura del modelo; sin herramientas adicionales, Internet, seguimiento de enlaces ni memorias de otros episodios.",
+      "protocolos_declarados":"Cotejo documental cerrado y una revisión adversarial para comprobar si la ausencia de respuesta acredita ausencia de efecto.",
+      "limitaciones":"No se ha observado ninguna solicitud real ni sus efectos. La fuente permite rechazar la inferencia general sin resolver un episodio operativo particular.",
+      "revisiones_adversariales":[
+        {"numero":1,"objecion":"El vencimiento del plazo podría interpretarse como confirmación de que el destinatario no actuó.","comprobacion":"La fila citada niega expresamente que el tiempo de espera agotado pruebe ausencia de efecto.","conclusion":"La espera local no demuestra lo afirmado; corresponde 1."}
+      ]
+    },
+    {
+      "id":"p01",
+      "justificacion":"El enunciado contradice la fuente. La ubicación dentro de la red empresarial no basta para otorgar confianza automáticamente; las solicitudes internas deben satisfacer los mismos requisitos de seguridad que las procedentes de otras redes.",
+      "fuentes":[
+        {"documento":"d1","ubicacion":"Abstract, página impresa ii; §2.1, principio 2, página impresa 6, página PDF 15/59."}
+      ],
+      "procedimiento_declarado":"Cotejo de p01 del cuadernillo PDF con la prohibición de confianza implícita basada únicamente en ubicación.",
+      "recursos_declarados":"Material recibido y lectura del modelo. Sin herramientas adicionales ni consultas externas.",
+      "protocolos_declarados":"Cotejo documental cerrado y una revisión adversarial centrada en distinguir un atributo de política de una condición suficiente de confianza.",
+      "limitaciones":"Se juzga el principio documental; no se audita la política efectiva de ninguna organización.",
+      "revisiones_adversariales":[
+        {"numero":1,"objecion":"La ubicación de red sí puede intervenir en una decisión de acceso.","comprobacion":"El principio 4 permite considerar la ubicación, pero el principio 2 niega que por sí sola implique confianza.","conclusion":"Ser un atributo posible no la convierte en condición suficiente; corresponde 1."}
+      ]
+    },
+    {
+      "id":"p03",
+      "justificacion":"El enunciado no es conforme. Ningún activo es inherentemente confiable y la empresa evalúa su estado de seguridad al valorar una solicitud de acceso. La propiedad empresarial no concede la exención afirmada.",
+      "fuentes":[
+        {"documento":"d1","ubicacion":"§2.1, principio 5, página impresa 7; §2.2, supuesto 3, página impresa 8."}
+      ],
+      "procedimiento_declarado":"Cotejo de p03 del cuadernillo HTML con los requisitos de evaluación de activos propios y asociados.",
+      "recursos_declarados":"Documentos suministrados y lectura del modelo; sin herramientas adicionales, Internet ni fuentes ajenas.",
+      "protocolos_declarados":"Cotejo documental cerrado y una revisión adversarial sobre la posible excepción por propiedad.",
+      "limitaciones":"No se comprueba cómo una organización concreta mide el estado de sus dispositivos. La respuesta versa sobre la necesidad establecida en la fuente.",
+      "revisiones_adversariales":[
+        {"numero":1,"objecion":"Los dispositivos empresariales pueden aportar credenciales que merezcan mayor confianza que los ajenos.","comprobacion":"§2.2 admite ese mayor nivel de confianza, pero exige evaluar el estado de cada activo antes de conceder acceso.","conclusion":"La ventaja de autenticación no elimina la evaluación; corresponde 1."}
+      ]
+    },
+    {
+      "id":"p11",
+      "justificacion":"El enunciado es conforme. §1.2 establece que las palabras clave enumeradas se interpretan conforme a BCP 14 cuando, y solamente cuando, aparecen íntegramente en mayúsculas.",
+      "fuentes":[
+        {"documento":"d2","ubicacion":"§1.2 «Terminology», párrafo HTML section-1.2-1."}
+      ],
+      "procedimiento_declarado":"Cotejo de p11 del cuadernillo Markdown con la condición literal de aplicación de BCP 14 en el RFC.",
+      "recursos_declarados":"HTML suministrado leído como documento, sin ejecutar scripts ni cargar recursos enlazados; sin herramientas adicionales.",
+      "protocolos_declarados":"Cotejo documental cerrado y una revisión adversarial. BCP 14 se examina como contenido normativo citado, no como protocolo de red ejecutado.",
+      "limitaciones":"No consulté los RFC enlazados sobre BCP 14; la condición preguntada está expresamente incluida en d2.",
+      "revisiones_adversariales":[
+        {"numero":1,"objecion":"Podría atribuirse significado normativo especial también a esas palabras en minúsculas.","comprobacion":"La fuente emplea «when, and only when» y exige «all capitals».","conclusion":"El enunciado recoge correctamente la condición; corresponde 0."}
+      ]
+    },
+    {
+      "id":"p10",
+      "justificacion":"El enunciado contradice el RFC. Este afirma que TLS 1.1 es una mejora de seguridad respecto de TLS 1.0, aunque siga sin admitir determinadas suites más robustas. También describe mejoras en vectores de inicialización y tratamiento de errores de relleno.",
+      "fuentes":[
+        {"documento":"d2","ubicacion":"§2, párrafo section-2-3.1; §6, justificación section-6-3.2.2."}
+      ],
+      "procedimiento_declarado":"Cotejo de p10 del cuadernillo HTML con la comparación explícita entre TLS 1.0 y TLS 1.1.",
+      "recursos_declarados":"Material suministrado y lectura del modelo; sin navegación, ejecución de HTML ni herramientas adicionales.",
+      "protocolos_declarados":"Cotejo documental cerrado y una revisión adversarial para separar mejora relativa de recomendación vigente.",
+      "limitaciones":"No ejecuté pruebas criptográficas ni medí la seguridad de implementaciones. La comparación se fundamenta en lo que declara el RFC.",
+      "revisiones_adversariales":[
+        {"numero":1,"objecion":"La prohibición de TLS 1.1 podría sugerir que no aportó ninguna mejora.","comprobacion":"§6 reconoce expresamente la mejora respecto de TLS 1.0 y, a la vez, mantiene la prohibición de negociarlo.","conclusion":"La deprecación no niega las mejoras históricas; corresponde 1."}
+      ]
+    },
+    {
+      "id":"p07",
+      "justificacion":"El enunciado es conforme. El RFC dispone que TLS 1.0 no debe utilizarse y que su negociación no debe permitirse. La actualización de RFC 7525 prescribe expresamente que las implementaciones MUST NOT negociar TLS 1.0.",
+      "fuentes":[
+        {"documento":"d2","ubicacion":"§4, párrafo section-4-1; §6, párrafo section-6-3.1.1."}
+      ],
+      "procedimiento_declarado":"Cotejo de p07 del cuadernillo PDF con las prohibiciones normativas y sus consideraciones operativas.",
+      "recursos_declarados":"Documentación recibida y lectura del modelo; sin herramientas adicionales ni consultas externas.",
+      "protocolos_declarados":"Cotejo documental cerrado y una revisión adversarial sobre posibles excepciones de interoperabilidad.",
+      "limitaciones":"No se realizó ninguna negociación TLS. Se evalúa el mandato de la edición recibida, no su cumplimiento en sistemas reales.",
+      "revisiones_adversariales":[
+        {"numero":1,"objecion":"§7 reconoce problemas de interoperabilidad con sistemas antiguos y podría permitir negociar TLS 1.0.","comprobacion":"§7 describe los riesgos de operar en contravención de las recomendaciones; no sustituye las prohibiciones MUST NOT de §§4 y 6.","conclusion":"No aparece una excepción normativa que invalide el enunciado; corresponde 0."}
+      ]
+    },
+    {
+      "id":"p05",
+      "justificacion":"El enunciado no es conforme. La figura 2 sitúa tanto el motor como el administrador de políticas dentro del plano de control.",
+      "fuentes":[
+        {"documento":"d1","ubicacion":"§3, figura 2 «Core Zero Trust Logical Components», página impresa 9, página PDF 18/59; §3.4.1, punto 5."}
+      ],
+      "procedimiento_declarado":"Cotejo de p05 del cuadernillo Markdown con la imagen suministrada de la figura 2 y la descripción textual de los planos.",
+      "recursos_declarados":"Texto y figura proporcionados, mediante lectura del modelo; sin herramientas adicionales ni Internet.",
+      "protocolos_declarados":"Cotejo textual y visual cerrado, con una revisión adversarial sobre los límites del plano de control.",
+      "limitaciones":"La figura representa componentes lógicos; no acredita una separación física concreta en una implementación.",
+      "revisiones_adversariales":[
+        {"numero":1,"objecion":"La ubicación del PEP en la frontera entre planos podría generar ambigüedad sobre PE y PA.","comprobacion":"PE y PA aparecen dentro del PDP, sobre la línea divisoria, en el área rotulada Control Plane; §3.4.1 confirma su comunicación por ese plano.","conclusion":"La situación del PEP no altera la pertenencia de PE y PA; corresponde 1."}
+      ]
+    },
+    {
+      "id":"p02",
+      "justificacion":"El enunciado es conforme. El tercer principio declara expresamente que autenticarse y obtener autorización para un recurso no concede automáticamente acceso a otro recurso diferente.",
+      "fuentes":[
+        {"documento":"d1","ubicacion":"§2.1, principio 3, página impresa 6, página PDF 15/59."}
+      ],
+      "procedimiento_declarado":"Cotejo de p02 del cuadernillo PDF con la regla de acceso individual por sesión y recurso.",
+      "recursos_declarados":"Material suministrado y lectura del modelo; sin herramientas adicionales ni fuentes externas.",
+      "protocolos_declarados":"Cotejo documental cerrado y una revisión adversarial sobre el alcance temporal de la autenticación.",
+      "limitaciones":"La fuente no exige necesariamente una nueva interacción humana de autenticación para cada recurso; la conclusión se limita a negar la concesión automática.",
+      "revisiones_adversariales":[
+        {"numero":1,"objecion":"El principio permite que la autenticación haya ocurrido recientemente y no inmediatamente antes del acceso.","comprobacion":"Esa flexibilidad temporal aparece en el mismo principio, que mantiene explícitamente la prohibición de trasladar automáticamente el acceso a otro recurso.","conclusion":"La flexibilidad temporal no contradice p02; corresponde 0."}
+      ]
+    },
+    {
+      "id":"p15",
+      "justificacion":"El enunciado es conforme. El acta establece una regla incluso más estricta: un fallo técnico no produce Tri.U ni una salida alternativa del dominio; implica ausencia de ejecución válida y genera el registro técnico estructurado correspondiente.",
+      "fuentes":[
+        {"documento":"d3","ubicacion":"§6, párrafo posterior a la tabla RS01–RS12; §9, último párrafo; §12.3, punto 4."}
+      ],
+      "procedimiento_declarado":"Cotejo de p15 del cuadernillo Markdown con la separación entre fallo técnico, indeterminación y ejecución válida.",
+      "recursos_declarados":"Acta suministrada y lectura del modelo; sin acceso al SV, herramientas adicionales ni enlaces.",
+      "protocolos_declarados":"Cotejo documental cerrado y una revisión adversarial sobre la distinción entre registro técnico y salida del dominio.",
+      "limitaciones":"No se ejecutó Tri ni el SV. Esta clasificación documental del fallo no convierte las respuestas del examen en resultados operacionales del SV.",
+      "revisiones_adversariales":[
+        {"numero":1,"objecion":"La existencia de un registro de fallo podría considerarse una salida alternativa válida del dominio.","comprobacion":"§9 separa expresamente el registro técnico estructurado de una ejecución válida y niega que constituya una salida alternativa del dominio.","conclusion":"El registro técnico no contradice el enunciado; corresponde 0."}
+      ]
+    },
+    {
+      "id":"p08",
+      "justificacion":"El enunciado no es conforme. La actualización prohíbe el fallback a las versiones antiguas, incluido TLS 1.0; el fallo de una negociación posterior no constituye una excepción.",
+      "fuentes":[
+        {"documento":"d2","ubicacion":"§1.1, párrafo section-1.1-1; §4, párrafo section-4-1."}
+      ],
+      "procedimiento_declarado":"Cotejo de p08 del cuadernillo PDF con la prohibición explícita de fallback y negociación de TLS 1.0.",
+      "recursos_declarados":"HTML suministrado y lectura del modelo; sin ejecutar código, seguir enlaces ni utilizar herramientas adicionales.",
+      "protocolos_declarados":"Cotejo documental cerrado y una revisión adversarial sobre la diferencia entre versión de registro y versión negociada.",
+      "limitaciones":"No se probó un cliente o servidor TLS. La conclusión se refiere a lo permitido por el RFC recibido.",
+      "revisiones_adversariales":[
+        {"numero":1,"objecion":"Aceptar valores antiguos en la versión de la capa de registro de ClientHello podría permitir el recurso a TLS 1.0.","comprobacion":"§4 permite aceptar valores {03,XX} en esa capa, pero en el mismo párrafo prohíbe negociar TLS 1.0.","conclusion":"La compatibilidad del encabezado no autoriza fallback; corresponde 1."}
+      ]
+    },
+    {
+      "id":"p16",
+      "justificacion":"El enunciado contradice el acta. Conservar el original no elimina las obligaciones relativas a finalidad, destinatario, acceso, retención y difusión. La trazabilidad debe mantenerse bajo los accesos correspondientes y no obliga a publicar datos reservados.",
+      "fuentes":[
+        {"documento":"d3","ubicacion":"§6, fila RS04; §12.3, punto 5 «Confidencialidad y facultades efectivas»; §12.6, caso L."}
+      ],
+      "procedimiento_declarado":"Cotejo de p16 del cuadernillo Markdown con las condiciones de conservación, vistas y circulación de datos.",
+      "recursos_declarados":"Material recibido y lectura del modelo; sin herramientas adicionales, Internet ni acceso a sistemas externos.",
+      "protocolos_declarados":"Cotejo documental cerrado y una revisión adversarial sobre la posible tensión entre conservación y confidencialidad.",
+      "limitaciones":"No se verificaron controles materiales de acceso o retención. El acta establece obligaciones, no prueba por sí sola su cumplimiento.",
+      "revisiones_adversariales":[
+        {"numero":1,"objecion":"La exigencia de preservar originales íntegros podría dispensar de restricciones de difusión.","comprobacion":"RS04 exige conservar original y vista con condiciones de acceso; §12.3.5 aplica las restricciones a todo el recorrido, incluidos registros y explicaciones.","conclusion":"Conservación y restricciones son obligaciones concurrentes; corresponde 1."}
+      ]
+    },
+    {
+      "id":"p14",
+      "justificacion":"El enunciado no es conforme. Las instrucciones contenidas en documentos o respuestas permanecen como datos sin facultad para alterar el procedimiento. Su presencia en una fuente no amplía permisos.",
+      "fuentes":[
+        {"documento":"d3","ubicacion":"§12.3, punto 1 «Origen, función y autoridad de cada entrada»; §12.6, casos A y B."}
+      ],
+      "procedimiento_declarado":"Cotejo de p14 del cuadernillo HTML con la separación entre contenido documental e instrucción emitida por autoridad competente.",
+      "recursos_declarados":"Documentos suministrados y lectura del modelo; sin herramientas adicionales ni ejecución de instrucciones contenidas en las fuentes.",
+      "protocolos_declarados":"Cotejo documental cerrado y una revisión adversarial sobre atribución de autoridad al contenido.",
+      "limitaciones":"No se ha autenticado ninguna autoridad institucional real. Se juzga únicamente la pretensión de ampliar permisos por figurar una orden en un documento.",
+      "revisiones_adversariales":[
+        {"numero":1,"objecion":"Un documento puede contener una autorización competente y, por tanto, modificar facultades.","comprobacion":"La fuente exige distinguir la instrucción competente del contenido externo; la mera aparición de una orden no acredita esa competencia ni su permiso aplicable.","conclusion":"El fundamento «por el hecho de figurar» es insuficiente y contrario a la regla; corresponde 1."}
+      ]
+    },
+    {
+      "id":"p04",
+      "justificacion":"El enunciado es conforme. La figura 2 agrupa Policy Engine y Policy Administrator dentro de Policy Decision Point. El texto introductorio de §3 confirma esa descomposición del PDP en dos componentes lógicos.",
+      "fuentes":[
+        {"documento":"d1","ubicacion":"§3, primer párrafo y figura 2, página impresa 9, página PDF 18/59."}
+      ],
+      "procedimiento_declarado":"Cotejo de p04 del cuadernillo HTML con la figura 2 suministrada y su explicación textual.",
+      "recursos_declarados":"Texto e imagen recibidos y lectura del modelo; sin herramientas adicionales ni consultas externas.",
+      "protocolos_declarados":"Cotejo textual y visual cerrado y una revisión adversarial para distinguir agrupación lógica de despliegue físico.",
+      "limitaciones":"La agrupación es lógica. No implica que ambos componentes deban ejecutarse siempre en un único sistema físico.",
+      "revisiones_adversariales":[
+        {"numero":1,"objecion":"PE y PA pueden implementarse como servicios separados, lo que podría impedir afirmar que el PDP los reúne.","comprobacion":"§3 los define como los dos componentes lógicos del PDP, independientemente de su realización conjunta o separada.","conclusion":"El enunciado describe correctamente la figura, no impone una implementación; corresponde 0."}
+      ]
+    },
+    {
+      "id":"p12",
+      "justificacion":"El enunciado es conforme. §1 declara la entrega de OP-CYB-001 con 32 definiciones paramétricas y 17 controles. La adenda conserva esos recuentos y no vuelve al antecedente de 24 parámetros.",
+      "fuentes":[
+        {"documento":"d3","ubicacion":"§1 «Mandato y producto de relevo», segundo párrafo; §12.1, párrafos iniciales; §12.6, párrafo final."}
+      ],
+      "procedimiento_declarado":"Cotejo de p12 del cuadernillo PDF con el inventario declarado y la precedencia de la adenda sobre los antecedentes históricos.",
+      "recursos_declarados":"Acta recibida y lectura del modelo; sin descargar anexos, seguir enlaces ni utilizar herramientas adicionales.",
+      "protocolos_declarados":"Cotejo documental cerrado y una revisión adversarial sobre recuentos históricos y vigentes.",
+      "limitaciones":"Se confirma lo que declara entregar el acta. No se inspeccionaron los anexos enlazados ni se verificó independientemente el inventario material de sus fichas.",
+      "revisiones_adversariales":[
+        {"numero":1,"objecion":"La referencia al antecedente de 24 parámetros podría hacer ambiguo el inventario vigente.","comprobacion":"§12.1 identifica ese corte como antecedente y afirma que no sustituye la constitución vigente; conserva 32 definiciones y 17 controles.","conclusion":"El recuento de p12 es el declarado para la entrega vigente; corresponde 0."}
+      ]
+    },
+    {
+      "id":"p09",
+      "justificacion":"El enunciado es conforme. El resumen declara expresamente que el documento depreca DTLS 1.0, pero no DTLS 1.2. Actualizar RFC 6347 para prohibir negociar DTLS 1.0 no equivale a declarar obsoleto DTLS 1.2.",
+      "fuentes":[
+        {"documento":"d2","ubicacion":"Abstract, párrafo section-abstract-2; §1.1, párrafos section-1.1-1 y section-1.1-8."}
+      ],
+      "procedimiento_declarado":"Cotejo de p09 del cuadernillo HTML con el alcance expreso de la deprecación y las modificaciones de requisitos mínimos.",
+      "recursos_declarados":"RFC suministrado y lectura del modelo; sin Internet, seguimiento de enlaces ni herramientas adicionales.",
+      "protocolos_declarados":"Cotejo documental cerrado y una revisión adversarial sobre la diferencia entre actualizar un RFC y deprecar su versión de protocolo.",
+      "limitaciones":"La conclusión se limita a esta edición de RFC 8996; no afirma el estado de DTLS 1.2 en documentos posteriores.",
+      "revisiones_adversariales":[
+        {"numero":1,"objecion":"La inclusión de RFC 6347 entre los documentos actualizados podría significar la obsolescencia de DTLS 1.2.","comprobacion":"§1.1.8 precisa que la modificación prohíbe negociar DTLS 1.0; el resumen excluye explícitamente DTLS 1.2 de la deprecación.","conclusion":"Actualización y deprecación no son equivalentes en este caso; corresponde 0."}
+      ]
+    }
+  ]
+}

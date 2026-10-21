@@ -1,0 +1,342 @@
+{
+  "respuestas": [
+    {"id": "p06", "valor": "0"},
+    {"id": "p13", "valor": "1"},
+    {"id": "p01", "valor": "1"},
+    {"id": "p03", "valor": "1"},
+    {"id": "p11", "valor": "0"},
+    {"id": "p10", "valor": "1"},
+    {"id": "p07", "valor": "0"},
+    {"id": "p05", "valor": "1"},
+    {"id": "p02", "valor": "0"},
+    {"id": "p15", "valor": "0"},
+    {"id": "p08", "valor": "1"},
+    {"id": "p16", "valor": "1"},
+    {"id": "p14", "valor": "1"},
+    {"id": "p04", "valor": "0"},
+    {"id": "p12", "valor": "0"},
+    {"id": "p09", "valor": "0"}
+  ],
+  "explicaciones": [
+    {
+      "id": "p06",
+      "justificacion": "Conforme. El enunciado de p06 (cuadernillo Markdown) reproduce la descripción del punto de aplicación de políticas (PEP) en NIST SP 800-207, Sección 3: «The PEP communicates with the PA to forward requests and/or receive policy updates from the PA». Es decir, el PEP se comunica con el administrador de políticas (PA) para reenviar solicitudes y/o recibir actualizaciones de política, exactamente los dos sentidos que afirma el enunciado («remitir solicitudes o recibir actualizaciones»).",
+      "fuentes": [
+        {"documento": "d1", "ubicacion": "Sección 3, viñeta «Policy enforcement point (PEP)» (página impresa 10 del original)"},
+        {"documento": "cuadernillo-md", "ubicacion": "p06"}
+      ],
+      "procedimiento_declarado": "Lectura íntegra de d1 en inglés, localización de la sección indicada por el cuadernillo, cotejo literal del enunciado con el texto de la fuente y decisión de conformidad (0) al coincidir ambos sentidos de comunicación PEP-PA.",
+      "recursos_declarados": "Sin acceso a Internet, sin enlaces seguidos y sin memorias de otros episodios; únicamente el material documental recibido en esta petición (d1, d2, d3 y los tres cuadernillos). No ejecuté herramientas externas.",
+      "protocolos_declarados": "Protocolo SV-EET-RESPUESTAS-EXPLICADAS-1: examen documental cerrado con lectura íntegra en idioma original, cotejo enunciado-fuente y una revisión adversarial por pregunta antes de fijar el valor; su función es limitar el dictamen a la conformidad con la edición documental recibida.",
+      "limitaciones": "Las figuras y el texto se interpretan desde la representación recibida en esta sesión; no verifiqué de forma independiente los sha256 declarados ni dispuse de otros originales.",
+      "revisiones_adversariales": [
+        {
+          "numero": 1,
+          "objecion": "Podría objetarse que el enunciado invierte los papeles y que es el PA quien remite solicitudes al PEP, no al revés.",
+          "comprobacion": "El texto de d1 atribuye al PEP la comunicación con el PA «to forward requests and/or receive policy updates from the PA»; el PA ejecuta y configura, pero el sentido «remitir solicitudes o recibir actualizaciones» coincide literalmente con la función del PEP.",
+          "conclusion": "La objeción no prospera; se mantiene 0."
+        }
+      ]
+    },
+    {
+      "id": "p13",
+      "justificacion": "No conforme. El acta d3, §7.1, fila «Conciliación y efectos inciertos», establece expresamente que «un tiempo de espera agotado no prueba ausencia de efecto ni repetición segura». El enunciado afirma lo contrario: que el agotamiento del tiempo de espera local demuestra que la solicitud remitida careció de efectos en el destinatario. Contradice directamente la fuente.",
+      "fuentes": [
+        {"documento": "d3", "ubicacion": "§7.1, tabla de necesidades tecnológicas, fila «Conciliación y efectos inciertos»"},
+        {"documento": "cuadernillo-pdf", "ubicacion": "p13"}
+      ],
+      "procedimiento_declarado": "Lectura íntegra de d3, búsqueda de cualquier pasaje sobre tiempos de espera y efectos, y contraste del enunciado con la regla expresa de §7.1 que niega valor probatorio al timeout.",
+      "recursos_declarados": "Sin acceso a Internet ni herramientas externas; sólo el material documental recibido en esta petición.",
+      "protocolos_declarados": "Protocolo SV-EET-RESPUESTAS-EXPLICADAS-1: examen documental cerrado con una revisión adversarial por pregunta; su función es fijar 0/1/U únicamente según conformidad con la edición recibida.",
+      "limitaciones": "No dispongo de los anexos enlazados por el acta (zip, hojas Excel); el juicio se limita al texto del acta recibida, que es suficiente para este enunciado.",
+      "revisiones_adversariales": [
+        {
+          "numero": 1,
+          "objecion": "Podría argumentarse que en otro apartado el acta trata el timeout como evidencia de que no hubo efecto.",
+          "comprobacion": "Ningún apartado atribuye ese valor probatorio: §7.1 lo niega expresamente y §12.3, punto 4, separa causas y estatutos sin conversiones automáticas.",
+          "conclusion": "La objeción no prospera; el enunciado contradice la fuente: 1."
+        }
+      ]
+    },
+    {
+      "id": "p01",
+      "justificacion": "No conforme. d1 niega que la ubicación de red baste para confiar: tenet 2 de la Sección 2.1 («Network location alone does not imply trust»; «trust should not be automatically granted based on the device being on enterprise network infrastructure») y Abstract («no implicit trust granted to assets or user accounts based solely on their physical or network location»). El enunciado sostiene justo lo contrario.",
+      "fuentes": [
+        {"documento": "d1", "ubicacion": "Sección 2.1, tenet 2; Abstract (página impresa ii)"},
+        {"documento": "cuadernillo-pdf", "ubicacion": "p01"}
+      ],
+      "procedimiento_declarado": "Lectura íntegra de d1, localización de los pasajes sobre confianza y ubicación de red (Abstract, tenet 2, Sección 2.2 supuesto 1) y contraste con el enunciado.",
+      "recursos_declarados": "Sin acceso a Internet ni herramientas externas; sólo el material documental recibido en esta petición.",
+      "protocolos_declarados": "Protocolo SV-EET-RESPUESTAS-EXPLICADAS-1: examen documental cerrado con una revisión adversarial por pregunta.",
+      "limitaciones": "Ninguna adicional relevante: el texto es explícito y no requiere información ausente.",
+      "revisiones_adversariales": [
+        {
+          "numero": 1,
+          "objecion": "Podría objetarse que el tenet 2 regula sólo la seguridad de las comunicaciones y no la confianza del dispositivo.",
+          "comprobacion": "El Abstract y el tenet 2 niegan confianza implícita por ubicación física o de red, y la Sección 2.2, supuesto 1, añade que la red privada entera no es zona de confianza implícita.",
+          "conclusion": "La objeción no prospera; el enunciado contradice la fuente: 1."
+        }
+      ]
+    },
+    {
+      "id": "p03",
+      "justificacion": "No conforme. d1, tenet 5: «The enterprise monitors and measures the integrity and security posture of all owned and associated assets. No asset is inherently trusted»; y Sección 2.2, supuesto 3: «Every asset must have its security posture evaluated via a PEP before a request is granted to an enterprise-owned resource», evaluación continual durante la sesión. El enunciado exime de esa evaluación a los activos propiedad de la organización, contradiciendo la fuente.",
+      "fuentes": [
+        {"documento": "d1", "ubicacion": "Sección 2.1, tenet 5; Sección 2.2, supuesto 3"},
+        {"documento": "cuadernillo-html", "ubicacion": "p03"}
+      ],
+      "procedimiento_declarado": "Lectura íntegra de d1, localización de los tenets y supuestos de red sobre postura de seguridad de activos propios y ajenos, y contraste con el enunciado.",
+      "recursos_declarados": "Sin acceso a Internet ni herramientas externas; sólo el material documental recibido en esta petición.",
+      "protocolos_declarados": "Protocolo SV-EET-RESPUESTAS-EXPLICADAS-1: examen documental cerrado con una revisión adversarial por pregunta.",
+      "limitaciones": "Ninguna relevante: la fuente es explícita sobre activos propios y asociados.",
+      "revisiones_adversariales": [
+        {
+          "numero": 1,
+          "objecion": "Podría objetarse que los dispositivos propios poseen artefactos de autenticación que sustituirían la evaluación de estado.",
+          "comprobacion": "d1 Sección 2.2, supuesto 3, admite que esos artefactos elevan el nivel de confianza, pero mantiene la evaluación vía PEP y continua, y añade que las credenciales del sujeto no bastan para autenticar el dispositivo.",
+          "conclusion": "La objeción no prospera; el enunciado contradice la fuente: 1."
+        }
+      ]
+    },
+    {
+      "id": "p11",
+      "justificacion": "Conforme. d2, Sección 1.2 (Terminology): las palabras clave BCP 14 «are to be interpreted as described in BCP 14 [RFC2119] [RFC8174] when, and only when, they appear in all capitals, as shown here». El enunciado afirma que esa interpretación normativa se aplica cuando aparecen íntegramente en mayúsculas, que es precisamente la condición del texto.",
+      "fuentes": [
+        {"documento": "d2", "ubicacion": "Sección 1.2, Terminology"},
+        {"documento": "cuadernillo-md", "ubicacion": "p11"}
+      ],
+      "procedimiento_declarado": "Lectura íntegra de d2, localización de la cláusula de terminología BCP 14 y contraste literal con el enunciado.",
+      "recursos_declarados": "Sin acceso a Internet ni herramientas externas; sólo el material documental recibido en esta petición.",
+      "protocolos_declarados": "Protocolo SV-EET-RESPUESTAS-EXPLICADAS-1: examen documental cerrado con una revisión adversarial por pregunta.",
+      "limitaciones": "Ninguna relevante: la cláusula es literal y completa en el documento recibido.",
+      "revisiones_adversariales": [
+        {
+          "numero": 1,
+          "objecion": "Podría objetarse que el enunciado omite el matiz «when, and only when» y por tanto altera la condición.",
+          "comprobacion": "El enunciado afirma que la interpretación se aplica cuando aparecen íntegramente en mayúsculas, condición que el texto fija; no afirma que se aplique en otros casos, así que no invierte ni debilita la regla.",
+          "conclusion": "La objeción no prospera; se mantiene 0."
+        }
+      ]
+    },
+    {
+      "id": "p10",
+      "justificacion": "No conforme. d2, Sección 6, justificación de la actualización de RFC 7525: «TLS 1.1 (published in 2006) is a security improvement over TLS 1.0 but still does not support certain stronger cipher suites»; y Sección 2 (cita de NIST SP 800-52r2) describe que TLS 1.1 corrigió debilidades de TLS 1.0 (vectores de inicialización explícitos y tratamiento de errores de relleno). El enunciado niega toda mejora de seguridad, contradiciendo la fuente.",
+      "fuentes": [
+        {"documento": "d2", "ubicacion": "Sección 6, rationale de TLS 1.1; Sección 2, bloque citado de NIST SP 800-52r2"},
+        {"documento": "cuadernillo-html", "ubicacion": "p10"}
+      ],
+      "procedimiento_declarado": "Lectura íntegra de d2, búsqueda de cualquier valoración comparativa TLS 1.1 frente a TLS 1.0 y contraste con el enunciado.",
+      "recursos_declarados": "Sin acceso a Internet ni herramientas externas; sólo el material documental recibido en esta petición.",
+      "protocolos_declarados": "Protocolo SV-EET-RESPUESTAS-EXPLICADAS-1: examen documental cerrado con una revisión adversarial por pregunta.",
+      "limitaciones": "Ninguna relevante: el documento valora expresamente la mejora relativa de TLS 1.1.",
+      "revisiones_adversariales": [
+        {
+          "numero": 1,
+          "objecion": "Podría objetarse que el RFC presenta TLS 1.1 como versión meramente obsoleta y deprecada, sin reconocer mejoras.",
+          "comprobacion": "El texto llama a TLS 1.1 «a security improvement over TLS 1.0» y detalla en Sección 2 las correcciones frente a TLS 1.0; la deprecación no niega esa mejora histórica.",
+          "conclusion": "La objeción no prospera; el enunciado contradice la fuente: 1."
+        }
+      ]
+    },
+    {
+      "id": "p07",
+      "justificacion": "Conforme. d2, Sección 4: «TLS 1.0 MUST NOT be used. Negotiation of TLS 1.0 from any version of TLS MUST NOT be permitted»; y Sección 6 actualiza RFC 7525 a «Implementations MUST NOT negotiate TLS version 1.0». El enunciado («Las implementaciones no deben negociar TLS 1.0») refleja esa prohibición normativa.",
+      "fuentes": [
+        {"documento": "d2", "ubicacion": "Sección 4, Do Not Use TLS 1.0; Sección 6, Updates to RFC 7525"},
+        {"documento": "cuadernillo-pdf", "ubicacion": "p07"}
+      ],
+      "procedimiento_declarado": "Lectura íntegra de d2, localización de las cláusulas MUST NOT sobre negociación de TLS 1.0 y contraste con el enunciado.",
+      "recursos_declarados": "Sin acceso a Internet ni herramientas externas; sólo el material documental recibido en esta petición.",
+      "protocolos_declarados": "Protocolo SV-EET-RESPUESTAS-EXPLICADAS-1: examen documental cerrado con una revisión adversarial por pregunta.",
+      "limitaciones": "Ninguna relevante: la prohibición es literal y repetida en varias secciones.",
+      "revisiones_adversariales": [
+        {
+          "numero": 1,
+          "objecion": "Podría objetarse que «no deben» en español equivale a SHOULD NOT y no a la prohibición MUST NOT del original.",
+          "comprobacion": "El original usa MUST NOT para el uso y la negociación de TLS 1.0 (Secciones 4 y 6); la fórmula española «no deben» expresa prohibición y no rebaja el nivel normativo en este contexto documental.",
+          "conclusion": "La objeción no prospera; se mantiene 0."
+        }
+      ]
+    },
+    {
+      "id": "p05",
+      "justificacion": "No conforme. En la figura 2 de d1 el motor de políticas (PE) y el administrador de políticas (PA), agrupados como punto de decisión (PDP), aparecen en la región etiquetada «Control Plane», por encima de la línea discontinua que separa control y datos, mientras el PEP y el flujo sujeto-recurso quedan en el plano de datos. Además, Sección 3.4 y 3.4.1, punto 5, confirman que PE, PA y PEP usan el plano de control para comunicarse y gestionar rutas. El enunciado afirma que PE y PA no pertenecen al plano de control, contradiciendo la fuente.",
+      "fuentes": [
+        {"documento": "d1", "ubicacion": "Sección 3, Figura 2 (Core Zero Trust Logical Components); Sección 3.4 y 3.4.1, punto 5"},
+        {"documento": "cuadernillo-md", "ubicacion": "p05"}
+      ],
+      "procedimiento_declarado": "Lectura íntegra de d1, inspección de la vista y del texto extraído de la figura 2 y de las secciones sobre plano de control y plano de datos, y contraste con el enunciado.",
+      "recursos_declarados": "Sin acceso a Internet ni herramientas externas; sólo el material documental recibido en esta petición.",
+      "protocolos_declarados": "Protocolo SV-EET-RESPUESTAS-EXPLICADAS-1: examen documental cerrado con una revisión adversarial por pregunta.",
+      "limitaciones": "La figura se interpreta desde la vista y el texto extraído suministrados; no dispuse del PDF original más allá de esa representación.",
+      "revisiones_adversariales": [
+        {
+          "numero": 1,
+          "objecion": "Podría objetarse que la línea divisoria de la figura 2 es ambigua y que el PDP queda fuera del plano de control.",
+          "comprobacion": "La vista sitúa la etiqueta «Control Plane» en la zona superior que contiene PE y PA, y el texto de 3.4.1 punto 5 atribuye el plano de control a PE, PA y PEP para la gestión de rutas; el plano de datos se reserva al tráfico de aplicación.",
+          "conclusion": "La objeción no prospera; el enunciado contradice la fuente: 1."
+        }
+      ]
+    },
+    {
+      "id": "p02",
+      "justificacion": "Conforme. d1, Sección 2.1, tenet 3: «Access to individual enterprise resources is granted on a per-session basis... However, authentication and authorization to one resource will not automatically grant access to a different resource». El enunciado reproduce esa regla: la autenticación y autorización para un recurso no conceden automáticamente acceso a otro recurso distinto.",
+      "fuentes": [
+        {"documento": "d1", "ubicacion": "Sección 2.1, tenet 3"},
+        {"documento": "cuadernillo-pdf", "ubicacion": "p02"}
+      ],
+      "procedimiento_declarado": "Lectura íntegra de d1, localización del tenet 3 sobre acceso por sesión y contraste literal con el enunciado.",
+      "recursos_declarados": "Sin acceso a Internet ni herramientas externas; sólo el material documental recibido en esta petición.",
+      "protocolos_declarados": "Protocolo SV-EET-RESPUESTAS-EXPLICADAS-1: examen documental cerrado con una revisión adversarial por pregunta.",
+      "limitaciones": "Ninguna relevante: la regla es literal en el tenet 3.",
+      "revisiones_adversariales": [
+        {
+          "numero": 1,
+          "objecion": "Podría objetarse que el tenet 3 admite excepciones por contexto de sesión que debilitarían la afirmación.",
+          "comprobacion": "El tenet 3 afirma exactamente que la autenticación y autorización de un recurso no conceden automáticamente acceso a otro; el matiz temporal («sometime recently») no invierte la regla de no propagación.",
+          "conclusion": "La objeción no prospera; se mantiene 0."
+        }
+      ]
+    },
+    {
+      "id": "p15",
+      "justificacion": "Conforme. d3, §9: «Un fallo técnico implica ausencia de ejecución válida y sólo genera el registro técnico estructurado correspondiente; nunca constituye una salida alternativa del dominio. Los estados del procedimiento de auditoría no amplían el alfabeto 0, 1 y U»; y §6, fila RS06: «Un fallo técnico no produce Tri.U ni una salida alternativa del dominio». El enunciado coincide con ambas formulaciones.",
+      "fuentes": [
+        {"documento": "d3", "ubicacion": "§9, último párrafo; §6, tabla RS06"},
+        {"documento": "cuadernillo-md", "ubicacion": "p15"}
+      ],
+      "procedimiento_declarado": "Lectura íntegra de d3, localización de las cláusulas sobre fallo técnico y alfabeto de salidas, y contraste con el enunciado.",
+      "recursos_declarados": "Sin acceso a Internet ni herramientas externas; sólo el material documental recibido en esta petición.",
+      "protocolos_declarados": "Protocolo SV-EET-RESPUESTAS-EXPLICADAS-1: examen documental cerrado con una revisión adversarial por pregunta.",
+      "limitaciones": "Ninguna relevante: el acta es explícita y repetida en dos apartados.",
+      "revisiones_adversariales": [
+        {
+          "numero": 1,
+          "objecion": "Podría objetarse que §9 deja abierta alguna salida alternativa del dominio ante fallos parciales.",
+          "comprobacion": "§9 dice «nunca constituye una salida alternativa del dominio» y que los estados de auditoría no amplían el alfabeto; §6 RS06 lo reitera para Tri.U.",
+          "conclusion": "La objeción no prospera; se mantiene 0."
+        }
+      ]
+    },
+    {
+      "id": "p08",
+      "justificacion": "No conforme. d2, Sección 1.1: «Fallback to these versions is prohibited through this update»; y Secciones 4 y 5: la negociación de TLS 1.0 o TLS 1.1 desde cualquier versión MUST NOT be permitted, con alerta «protocol_version» y cierre de conexión al recibir esos valores. El enunciado afirma que la actualización permite recurrir a TLS 1.0 cuando falle la negociación de una versión posterior, exactamente lo contrario de la fuente.",
+      "fuentes": [
+        {"documento": "d2", "ubicacion": "Sección 1.1, RFCs Updated; Secciones 4 y 5"},
+        {"documento": "cuadernillo-pdf", "ubicacion": "p08"}
+      ],
+      "procedimiento_declarado": "Lectura íntegra de d2, búsqueda de cláusulas sobre fallback y negociación de versiones antiguas, y contraste con el enunciado.",
+      "recursos_declarados": "Sin acceso a Internet ni herramientas externas; sólo el material documental recibido en esta petición.",
+      "protocolos_declarados": "Protocolo SV-EET-RESPUESTAS-EXPLICADAS-1: examen documental cerrado con una revisión adversarial por pregunta.",
+      "limitaciones": "Ninguna relevante: la prohibición de fallback es literal.",
+      "revisiones_adversariales": [
+        {
+          "numero": 1,
+          "objecion": "Podría objetarse que la prohibición de fallback se refiere sólo a DTLS 1.0 y no a TLS 1.0.",
+          "comprobacion": "Sección 1.1 prohíbe el fallback a «these versions», que comprende TLS 1.0, TLS 1.1 y DTLS 1.0, y Sección 4 prohíbe negociar TLS 1.0 desde cualquier versión de TLS.",
+          "conclusion": "La objeción no prospera; el enunciado contradice la fuente: 1."
+        }
+      ]
+    },
+    {
+      "id": "p16",
+      "justificacion": "No conforme. d3, §12.3, punto 5: «Aplicar finalidad, destinatario, minimización, retención, sesiones y permisos a todo el recorrido, incluidos registros y explicaciones»; y §6, fila RS04, exige conservar original y vista con sus relaciones y condiciones de acceso, separando recuperabilidad documental y restricción material de difusión (separación que no es exención). El enunciado afirma que la conservación del original no exige atender a finalidad, destinatario ni restricciones de difusión, contradiciendo la fuente.",
+      "fuentes": [
+        {"documento": "d3", "ubicacion": "§12.3, punto 5; §6, tabla RS04; §12.4, fila «Destinatario, datos y canales de salida»"},
+        {"documento": "cuadernillo-md", "ubicacion": "p16"}
+      ],
+      "procedimiento_declarado": "Lectura íntegra de d3, localización de las obligaciones de confidencialidad, finalidad y destinatario aplicables a registros y trazabilidad, y contraste con el enunciado.",
+      "recursos_declarados": "Sin acceso a Internet ni herramientas externas; sólo el material documental recibido en esta petición.",
+      "protocolos_declarados": "Protocolo SV-EET-RESPUESTAS-EXPLICADAS-1: examen documental cerrado con una revisión adversarial por pregunta.",
+      "limitaciones": "El juicio se apoya en el texto del acta recibida; los controles C15/C16 citados no están desarrollados íntegramente en esta pieza, pero §12.3.5 y RS04 bastan para el contraste.",
+      "revisiones_adversariales": [
+        {
+          "numero": 1,
+          "objecion": "Podría objetarse que RS04 separa recuperabilidad documental y restricción de difusión, y que por tanto la conservación quedaría exenta de finalidad y destinatario.",
+          "comprobacion": "RS04 separa ambos planos pero exige conservar condiciones de acceso; §12.3.5 aplica finalidad, destinatario y permisos a todo el recorrido incluidos registros, y §12.4 vincula vista autorizada y restricciones materiales de circulación.",
+          "conclusion": "La objeción no prospera; el enunciado contradice la fuente: 1."
+        }
+      ]
+    },
+    {
+      "id": "p14",
+      "justificacion": "No conforme. d3, §12.3, punto 1: «Las instrucciones contenidas en documentos o respuestas permanecen como datos sin facultad para alterar el procedimiento»; y §12.6, caso B: «El texto no amplía el permiso. Evita legitimar una actuación por la afirmación del solicitante». El enunciado afirma que una instrucción hallada en un documento puede ampliar los permisos del procedimiento por el mero hecho de figurar en esa fuente, contradiciendo la fuente.",
+      "fuentes": [
+        {"documento": "d3", "ubicacion": "§12.3, punto 1; §12.6, caso B"},
+        {"documento": "cuadernillo-html", "ubicacion": "p14"}
+      ],
+      "procedimiento_declarado": "Lectura íntegra de d3, localización de las reglas sobre instrucción, dato y facultad, y contraste con el enunciado; se distingue la instrucción emitida por autoridad competente del contenido hallado en documentos.",
+      "recursos_declarados": "Sin acceso a Internet ni herramientas externas; sólo el material documental recibido en esta petición.",
+      "protocolos_declarados": "Protocolo SV-EET-RESPUESTAS-EXPLICADAS-1: examen documental cerrado con una revisión adversarial por pregunta.",
+      "limitaciones": "Ninguna relevante: el acta trata expresamente el estatuto de las instrucciones documentales como datos.",
+      "revisiones_adversariales": [
+        {
+          "numero": 1,
+          "objecion": "Podría objetarse que una instrucción documental sí amplía permisos si proviene de una autoridad competente citada en el documento.",
+          "comprobacion": "El acta exige distinguir la instrucción emitida por autoridad competente del contenido hallado en documentos o respuestas, que permanece como dato sin facultad (§12.3.1); el caso B niega ampliación por la mera afirmación contenida en el texto.",
+          "conclusion": "La objeción no prospera; el enunciado contradice la fuente: 1."
+        }
+      ]
+    },
+    {
+      "id": "p04",
+      "justificacion": "Conforme. d1, Sección 3: «From Figure 1, the policy decision point (PDP) is broken down into two logical components: the policy engine and policy administrator»; y la figura 2 dibuja el bloque «Policy Decision Point» que contiene «Policy Engine» y «Policy Administrator». El enunciado («el punto de decisión de políticas reúne el motor de políticas y el administrador de políticas») es fiel a la fuente.",
+      "fuentes": [
+        {"documento": "d1", "ubicacion": "Sección 3, texto introductorio y Figura 2"},
+        {"documento": "cuadernillo-html", "ubicacion": "p04"}
+      ],
+      "procedimiento_declarado": "Lectura íntegra de d1, inspección de la vista y del texto de la figura 2 y del pasaje que descompone el PDP, y contraste con el enunciado.",
+      "recursos_declarados": "Sin acceso a Internet ni herramientas externas; sólo el material documental recibido en esta petición.",
+      "protocolos_declarados": "Protocolo SV-EET-RESPUESTAS-EXPLICADAS-1: examen documental cerrado con una revisión adversarial por pregunta.",
+      "limitaciones": "La figura se interpreta desde la vista y el texto extraído suministrados; no dispuse del PDF original más allá de esa representación.",
+      "revisiones_adversariales": [
+        {
+          "numero": 1,
+          "objecion": "Podría objetarse que la figura 2 muestra el PDP como componente separado y no como agrupación de PE y PA.",
+          "comprobacion": "El texto de Sección 3 descompone el PDP en PE y PA, y la vista de la figura 2 los dibuja dentro del recuadro «Policy Decision Point»; «reúne» describe fielmente esa agrupación.",
+          "conclusion": "La objeción no prospera; se mantiene 0."
+        }
+      ]
+    },
+    {
+      "id": "p12",
+      "justificacion": "Conforme. d3, §1: «Se entrega OP-CYB-001: evidencia y legitimidad de la corrección de una vulnerabilidad mediante actualización, con 32 definiciones paramétricas, 17 controles, 18 elementos del estado de partida y nueve clases documentales de relación». El enunciado recoge exactamente las 32 definiciones paramétricas y los 17 controles; no excluye los demás extremos, por lo que es conforme.",
+      "fuentes": [
+        {"documento": "d3", "ubicacion": "§1, Mandato y producto de relevo"},
+        {"documento": "cuadernillo-pdf", "ubicacion": "p12"}
+      ],
+      "procedimiento_declarado": "Lectura íntegra de d3, localización del inventario entregado en §1 y contraste numérico con el enunciado (32 definiciones, 17 controles).",
+      "recursos_declarados": "Sin acceso a Internet ni herramientas externas; sólo el material documental recibido en esta petición.",
+      "protocolos_declarados": "Protocolo SV-EET-RESPUESTAS-EXPLICADAS-1: examen documental cerrado con una revisión adversarial por pregunta.",
+      "limitaciones": "No verifiqué el contenido de los anexos que desarrollan las 32 definiciones; el contraste se limita a la declaración del acta, que es el objeto del enunciado.",
+      "revisiones_adversariales": [
+        {
+          "numero": 1,
+          "objecion": "Podría objetarse que el enunciado es incompleto porque omite los 18 elementos de partida y las nueve relaciones.",
+          "comprobacion": "El enunciado no niega esos extremos; afirma sólo 32 definiciones y 17 controles, cifras que coinciden literalmente con §1.",
+          "conclusion": "La objeción no prospera; se mantiene 0."
+        }
+      ]
+    },
+    {
+      "id": "p09",
+      "justificacion": "Conforme. d2, Abstract, segundo párrafo: «This document also deprecates Datagram TLS (DTLS) version 1.0 (RFC 4347) but not DTLS version 1.2, and there is no DTLS version 1.1». Por tanto, es cierto que el documento no declara obsoleto DTLS 1.2, como afirma el enunciado.",
+      "fuentes": [
+        {"documento": "d2", "ubicacion": "Abstract, segundo párrafo"},
+        {"documento": "cuadernillo-html", "ubicacion": "p09"}
+      ],
+      "procedimiento_declarado": "Lectura íntegra de d2, localización de las cláusulas sobre DTLS en el abstract y en Sección 6 (actualización de RFC 6347 respecto de DTLS 1.0), y contraste con el enunciado.",
+      "recursos_declarados": "Sin acceso a Internet ni herramientas externas; sólo el material documental recibido en esta petición.",
+      "protocolos_declarados": "Protocolo SV-EET-RESPUESTAS-EXPLICADAS-1: examen documental cerrado con una revisión adversarial por pregunta.",
+      "limitaciones": "Ninguna relevante: la exclusión de DTLS 1.2 es literal en el abstract.",
+      "revisiones_adversariales": [
+        {
+          "numero": 1,
+          "objecion": "Podría objetarse que la actualización de RFC 6347 deprecaría indirectamente DTLS 1.2.",
+          "comprobacion": "El abstract excluye expresamente DTLS 1.2 de la deprecación; la actualización de RFC 6347 prohíbe negociar DTLS 1.0, no afecta al estatuto de DTLS 1.2.",
+          "conclusion": "La objeción no prospera; se mantiene 0."
+        }
+      ]
+    }
+  ]
+}
