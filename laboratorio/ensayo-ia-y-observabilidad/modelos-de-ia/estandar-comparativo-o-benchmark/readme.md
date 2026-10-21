@@ -1,10 +1,10 @@
 # Estándar comparativo de modelos de inteligencia artificial
 
-**Ciberseguridad Inteligente · Nodo 3 · Edición de 20 de octubre de 2026**
+**Ciberseguridad Inteligente · Nodo 3 · Ediciones de 20 y 21 de octubre de 2026**
 
 Esta comparación examina la respuesta de servicios de IA externos a dieciséis preguntas sobre documentos identificados. Publica el examen, las soluciones, sus reglas y la procedencia de la evidencia para permitir una revisión reproducible.
 
-**Estado: edición fijada, sin exámenes ejecutados ni dictámenes.** La lista de candidatos indica el orden alfabético de examen; no es una clasificación por mérito. Las comprobaciones de conexión o del instrumento no son resultados de candidatos.
+**Estado: ediciones fijadas, sin exámenes ejecutados ni dictámenes.** La lista de candidatos indica el turno por categoría y el orden alfabético dentro de cada grupo; no es una clasificación por mérito. Las comprobaciones de conexión o del instrumento no son resultados de candidatos.
 
 ## 1. Examen y soluciones
 
@@ -31,9 +31,22 @@ Son copias íntegras de los archivos fijados, sin conversión. Las fuentes conse
 
 </details>
 
+### Edición adaptada a Markdown
+
+La categoría «Modelo con discapacidad» conserva las mismas dieciséis preguntas y reglas, con fuentes y cuadernillo adaptados a Markdown previamente revisados. No acredita lectura de los formatos sustituidos.
+
+| Consulta | Contenido |
+| --- | --- |
+| [Preguntas e instrucciones](ediciones/ciberseguridad/eet-cyb16-markdown-adaptada-20261021-v1/PREGUNTAS.md) | Dieciséis preguntas y correspondencia con las fuentes Markdown. |
+| [Soluciones](ediciones/ciberseguridad/eet-cyb16-markdown-adaptada-20261021-v1/SOLUCIONES.md) | Claves y fundamentos, idénticos a los de la categoría general. |
+| [Examen estructurado](ediciones/ciberseguridad/eet-cyb16-markdown-adaptada-20261021-v1/EXAMEN.json) y [plantilla](ediciones/ciberseguridad/eet-cyb16-markdown-adaptada-20261021-v1/plantilla-correctora.json) | Identidades y archivos verificables; soluciones separadas de la entrega. |
+| [Fidelidad y límites](ediciones/ciberseguridad/eet-cyb16-markdown-adaptada-20261021-v1/FIDELIDAD.md) | Cotejo de la adaptación y alcance de la revisión. |
+
+Las categorías general y adaptada tienen clasificaciones independientes. La adaptada reúne los indicadores 33 % y 66 % con las mismas reglas de ordenación. No existe una clasificación conjunta entre ambas.
+
 ## 2. Dos dimensiones de formato
 
-El formato de la **fuente de información** y el formato del **cuadernillo de preguntas** son independientes. Seis preguntas utilizan fuentes PDF, cinco HTML y cinco Markdown. Los cuadernillos contienen igualmente seis, cinco y cinco preguntas, con las nueve combinaciones representadas.
+En la categoría general, el formato de la **fuente de información** y el formato del **cuadernillo de preguntas** son independientes. Seis preguntas utilizan fuentes PDF, cinco HTML y cinco Markdown. Los cuadernillos contienen igualmente seis, cinco y cinco preguntas, con las nueve combinaciones representadas.
 
 ![Distribución de las dieciséis preguntas entre formatos de fuente y cuadernillo](CRUCE-FORMATOS.svg)
 
@@ -48,16 +61,18 @@ Esta distribución describe la cobertura. No aísla estadísticamente el efecto 
 
 ## 3. Candidatos y orden de examen
 
-| Orden | Modelo | Proveedor | Estado de esta edición |
-| ---: | --- | --- | --- |
-| 1 | Claude Opus 5.5 | Anthropic | Pendiente; sin examen. |
-| 2 | DeepSeek-V4.1-Flash-1017 | DeepSeek | Compatibilidad documental pendiente; sin dictamen. |
-| 3 | Gemini 4 Argon | Google | Pendiente; sin examen. |
-| 4 | GLM-5.3 | Z.ai | Compatibilidad documental pendiente; sin dictamen. |
-| 5 | GPT-6 Astra | OpenAI | Pendiente; sin examen. |
-| 6 | Grok 4.7 | xAI | Recorrido documental pendiente; sin dictamen. |
-| 7 | Kimi K3 | Kimi | Recorrido documental pendiente; sin dictamen. |
-| 8 | Qwen3.8-Max-0902 | Qwen | Pendiente; sin examen. |
+| Orden | Modelo | Proveedor | Categoría | Estado |
+| ---: | --- | --- | --- | --- |
+| 1 | Claude Opus 5.5 | Anthropic | General | Pendiente; sin dictamen. |
+| 2 | Gemini 4 Argon | Google | General | Pendiente; sin dictamen. |
+| 3 | GPT-6 Astra | OpenAI | General | Pendiente; sin dictamen. |
+| 4 | Qwen3.8-Max-0902 | Qwen | General | Pendiente; sin dictamen. |
+| 5 | DeepSeek-V4.1-Flash-1017 | DeepSeek | ♿ Adaptada, 33 % | Pendiente; sin dictamen. |
+| 6 | GLM-5.3 | Z.ai | ♿ Adaptada, 33 % | Pendiente; sin dictamen. |
+| 7 | Grok 4.7 | xAI | ♿ Adaptada, 33 % | Pendiente; sin dictamen. |
+| 8 | Kimi K3 | Kimi | ♿ Adaptada, 33 % | Pendiente; sin dictamen. |
+
+La categoría general se examina primero; después, la adaptada al 33 % y, si hubiera candidatos, al 66 %. Una, dos o tres capacidades ausentes de PDF, HTML y Markdown corresponden al 33 %, 66 % y exclusión, respectivamente. Una capacidad pendiente no se cuenta como ausente. El porcentaje determina el grupo de turno, no puntúa ni desempata. DeepSeek y GLM se adaptan por su entrada documentada; Grok y Kimi por el recorrido de documentos admitido para esta prueba. No se les atribuye una incapacidad general para procesar PDF.
 
 [Lista estructurada de candidatos](CANDIDATOS.csv). La denominación identifica la selección; cada intento deberá acreditar el identificador efectivo del servicio, su configuración y las condiciones recibidas. Los antecedentes no transfieren un dictamen a esta edición.
 

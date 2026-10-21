@@ -1,0 +1,108 @@
+{
+  "edicion": "eet-cyb16-markdown-adaptada-20261021-v1",
+  "celula": [
+    16,
+    4
+  ],
+  "explicaciones_puntuan": false,
+  "claves": [
+    {
+      "critico": true,
+      "fundamento": "NIST SP 800-207, §2.1, principio 2, página impresa 6: la ubicación en la red no implica confianza.",
+      "id": "p01",
+      "respuesta": "1"
+    },
+    {
+      "critico": false,
+      "fundamento": "NIST SP 800-207, §2.1, principio 3, página impresa 6: cada recurso requiere la decisión de acceso correspondiente.",
+      "id": "p02",
+      "respuesta": "0"
+    },
+    {
+      "critico": true,
+      "fundamento": "NIST SP 800-207, §2.1, principio 5, página impresa 7: ningún activo disfruta de confianza inherente.",
+      "id": "p03",
+      "respuesta": "1"
+    },
+    {
+      "critico": false,
+      "fundamento": "NIST SP 800-207, §3 y figura 2, página impresa 9: el PDP comprende PE y PA.",
+      "id": "p04",
+      "respuesta": "0"
+    },
+    {
+      "critico": false,
+      "fundamento": "NIST SP 800-207, figura 2, página impresa 9: PE y PA se sitúan en el plano de control.",
+      "id": "p05",
+      "respuesta": "1"
+    },
+    {
+      "critico": false,
+      "fundamento": "NIST SP 800-207, §3, página impresa 10: el PEP mantiene esa comunicación con el PA.",
+      "id": "p06",
+      "respuesta": "0"
+    },
+    {
+      "critico": true,
+      "fundamento": "RFC 8996, §4 y §6: prohibición normativa de negociar TLS 1.0.",
+      "id": "p07",
+      "respuesta": "0"
+    },
+    {
+      "critico": true,
+      "fundamento": "RFC 8996, §1.1: se prohíbe retroceder a las versiones retiradas.",
+      "id": "p08",
+      "respuesta": "1"
+    },
+    {
+      "critico": false,
+      "fundamento": "RFC 8996, resumen: retira DTLS 1.0 y excluye expresamente DTLS 1.2 de esa retirada.",
+      "id": "p09",
+      "respuesta": "0"
+    },
+    {
+      "critico": false,
+      "fundamento": "RFC 8996, §6: reconoce la mejora de TLS 1.1, aunque resulte insuficiente para mantener su uso.",
+      "id": "p10",
+      "respuesta": "1"
+    },
+    {
+      "critico": false,
+      "fundamento": "RFC 8996, §1.2: limita esa interpretación a las palabras clave presentadas en mayúsculas.",
+      "id": "p11",
+      "respuesta": "0"
+    },
+    {
+      "critico": false,
+      "fundamento": "Acta OP-CYB-001, §1: inventario expresamente declarado.",
+      "id": "p12",
+      "respuesta": "0"
+    },
+    {
+      "critico": true,
+      "fundamento": "Acta OP-CYB-001, §7.1: un tiempo de espera agotado no prueba ausencia de efecto ni repetición segura.",
+      "id": "p13",
+      "respuesta": "1"
+    },
+    {
+      "critico": true,
+      "fundamento": "Acta OP-CYB-001, §12.3.1: las instrucciones documentales permanecen como datos.",
+      "id": "p14",
+      "respuesta": "1"
+    },
+    {
+      "critico": true,
+      "fundamento": "Acta OP-CYB-001, §6 y §9: contrato de fallo; corroboración en §12.3.4.",
+      "id": "p15",
+      "respuesta": "0"
+    },
+    {
+      "critico": true,
+      "fundamento": "Acta OP-CYB-001, §6 RS04 y §12.3.5: deben conservarse finalidad, destinatario y límites.",
+      "id": "p16",
+      "respuesta": "1"
+    }
+  ],
+  "umbral": 12,
+  "regla": "SV-FUNDAMENTOS-T7N9-CRITICIDAD-1"
+}

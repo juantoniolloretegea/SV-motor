@@ -1,10 +1,10 @@
 # Método de comparación
 
-Edición `eet-cyb16-multiformato-20261020-v1`, fijada el 20 de octubre de 2026. Dominio: Ciberseguridad Inteligente. Servicios externos de proveedores, Nodo 3.
+Edición general `eet-cyb16-multiformato-20261020-v1` y edición adaptada `eet-cyb16-markdown-adaptada-20261021-v1`. Dominio: Ciberseguridad Inteligente. Servicios externos de proveedores, Nodo 3.
 
 ## 1. Condiciones comunes
 
-Los ocho candidatos reciben las mismas dieciséis preguntas, fuentes completas, cuadernillos, instrucciones y regla de corrección. Los formatos de fuente y cuadernillo se cruzan conforme a [EDICION.json](EDICION.json). El orden de entrega común se registra antes del examen; el corrector recupera el orden de identificadores para comparar y representar los resultados.
+Los ocho candidatos reciben las mismas dieciséis preguntas, instrucciones y regla de corrección. Dentro de cada categoría se conservan las mismas fuentes completas y cuadernillos: multiformato en la general y adaptación Markdown revisada en la adaptada. En la general, los formatos de fuente y cuadernillo se cruzan conforme a [EDICION.json](EDICION.json). El orden de entrega común se registra antes del examen; el corrector recupera el orden de identificadores para comparar y representar los resultados.
 
 Se conservan las adaptaciones técnicas necesarias para cada API, con reconstrucción y cotejo de los bytes originales. Una comprobación local de esa reconstrucción no acredita recepción efectiva del servicio. Contexto, compatibilidad documental, identidad y configuración requieren comprobación antes del lanzamiento.
 
@@ -40,7 +40,7 @@ La observación OpenTelemetry del supervisor conserva inicio, muestras y cierre 
 
 ## 4. Ordenación y costes
 
-El criterio **SV-CLASIFICACION-EET-CYB16-2** admite a recomendación sólo Aptos (0) y compara, sucesivamente:
+El criterio **SV-CLASIFICACION-EET-CYB16-3** mantiene clasificaciones independientes por categoría, admite a recomendación sólo Aptos (0) y compara, sucesivamente:
 
 1. Más aciertos.
 2. Menos errores.
@@ -51,13 +51,13 @@ Una ventaja posterior no compensa una desventaja anterior. Tokens y área del po
 
 El coste general abarca el examen completo, antes de impuestos, con tarifa general, moneda, fecha común, fuente y cálculo identificados. Descuentos, créditos particulares y recursos aportados no mejoran posiciones. Importe comunicado, coste general calculado y gasto facturado y conciliado se distinguen. Un saldo agregado no se imputa automáticamente al examen; la falta de dato no equivale a cero.
 
-La comparación permanece provisional mientras existan candidatos pendientes, incidencias o varios intentos sin resolución trazable. No se elige automáticamente el mejor intento. Sólo se recomienda un primer Apto inequívoco cuando la comparación está completa.
+La comparación permanece provisional mientras existan candidatos pendientes, incidencias o varios intentos sin resolución trazable. No se elige automáticamente el mejor intento. Sólo se recomienda un primer Apto inequívoco por categoría cuando su comparación está completa. Los porcentajes 33 % y 66 % comparten la clasificación adaptada; no puntúan ni desempatan.
 
 ## 5. Representación y límites
 
 El vector y el polígono representan la misma instancia, contrato y posiciones: **Frame_C=(frmat, frvis)**. Se conserva la convención 0 rojo/radio 1; 1 verde/radio 2; U azul/radio 3, primer vértice arriba, recorrido horario y cierre 16→1. Los radios codifican símbolos, no porcentajes de calidad. Los gráficos se derivan de resultados efectivos y remiten a sus datos.
 
-El cruce 6/5/5 cubre nueve combinaciones, pero no separa causalmente formato, materia e idioma. Una única ejecución no acredita superioridad universal ni significación estadística. Si un problema se presenta en todos los candidatos, se revisan fuentes, preparación, transporte y posibles límites compartidos antes de atribuirlo al proveedor.
+En la categoría general, el cruce 6/5/5 cubre nueve combinaciones, pero no separa causalmente formato, materia e idioma. Una única ejecución no acredita superioridad universal ni significación estadística. Si un problema se presenta en todos los candidatos, se revisan fuentes, preparación, transporte y posibles límites compartidos antes de atribuirlo al proveedor.
 
 Preguntas y soluciones públicas facilitan la revisión, pero no demuestran ausencia de exposición previa del modelo. Los resultados históricos conservan su edición y no se incorporan como resultados de ésta.
 

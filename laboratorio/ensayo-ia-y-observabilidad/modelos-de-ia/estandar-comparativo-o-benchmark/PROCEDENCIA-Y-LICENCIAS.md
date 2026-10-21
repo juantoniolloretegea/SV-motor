@@ -14,6 +14,8 @@ Los cuadernillos PDF, HTML y Markdown y las preguntas y soluciones pertenecen a 
 
 La publicación permite consultar y cotejar los documentos de este examen. No concede acceso al depósito operativo, a credenciales o a registros de usuarios. Tampoco equivale a autorizar el suministro de contenido a proveedores de IA.
 
+La edición adaptada conserva los avisos y condiciones de las fuentes. Sus transformaciones y límites están descritos en [Fidelidad de la adaptación](ediciones/ciberseguridad/eet-cyb16-markdown-adaptada-20261021-v1/FIDELIDAD.md). Los originales de la edición general permanecen intactos.
+
 ---
 
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).

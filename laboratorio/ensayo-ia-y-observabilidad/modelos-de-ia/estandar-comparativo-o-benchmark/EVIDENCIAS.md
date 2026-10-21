@@ -2,7 +2,7 @@
 
 ## 1. Estado de la edición
 
-No existen todavía intentos ni resultados de `eet-cyb16-multiformato-20261020-v1`. La publicación contiene el examen fijado y su plantilla. La tabla comparativa carece de filas de resultados; no se publican respuestas prefijadas como respuestas de candidatos.
+No existen todavía intentos ni resultados de las ediciones general `eet-cyb16-multiformato-20261020-v1` y adaptada `eet-cyb16-markdown-adaptada-20261021-v1`. La publicación contiene el examen fijado y su plantilla. La tabla comparativa carece de filas de resultados; no se publican respuestas prefijadas como respuestas de candidatos.
 
 ## 2. Conjunto de un intento
 
@@ -10,7 +10,7 @@ Cada resultado recibido deberá reunir los elementos siguientes bajo un identifi
 
 | Elemento | Relación exigida |
 | --- | --- |
-| Identidad | Edición, candidato, modelo efectivo comunicado, modalidad y configuración pertinente. |
+| Identidad | Edición, categoría, porcentaje y limitación declarada, candidato, modelo efectivo comunicado, modalidad y configuración pertinente. |
 | Entrega | Huellas de fuentes, cuadernillos, paquete común y adaptación efectivamente utilizada; orden de preguntas. |
 | Respuesta | Respuesta original publicable, hash, formato y relación con la entrega. |
 | Corrección | Respuestas por identificador, claves, calificaciones, criticidades, recuentos, κ y dictamen. |
@@ -44,7 +44,7 @@ El resultado completo puede ser reproducible aunque no exista una medición opci
 
 ## 5. Gráficos y rectificaciones
 
-Las tablas, gráficos y polígonos se construyen desde el mismo conjunto de resultados recibidos. Cada figura debe declarar edición, candidatos, unidades, ausencias y fuente de datos. No se dibujan datos desconocidos en cero, ni un vector incompleto como resultado completo.
+Las tablas, gráficos y polígonos se construyen desde el mismo conjunto de resultados recibidos. Cada figura debe declarar edición, categoría, candidatos, unidades, ausencias y fuente de datos. No se dibujan datos desconocidos en cero, ni un vector incompleto como resultado completo.
 
 Una rectificación conserva la versión anterior y el motivo de la nueva. Cualquier defecto común del examen debe tratarse de forma uniforme para los resultados afectados. La publicación no recalifica silenciosamente los antecedentes ni concede autorización de producción.
 
