@@ -1,6 +1,6 @@
 # Ensayo de inteligencia artificial y observabilidad
 
-**Edición documental 2.34 · 20 de octubre de 2026.**
+**Edición documental 2.35 · 21 de octubre de 2026.**
 
 <a id="objeto-y-criterio-experimental"></a>
 
@@ -72,14 +72,16 @@ En estos expedientes, R0, R1 y R2 designan etapas de respuesta del candidato. No
 <a id="estado-vigente--27092026"></a>
 <a id="estado-experimental-al-corte-conservado"></a>
 
+El [estándar comparativo](modelos-de-ia/estandar-comparativo-o-benchmark/readme.md) fija las reglas vigentes y el turno de examen: primero Claude, Gemini, GPT-6 Astra y Qwen; después DeepSeek, GLM, Grok y Kimi en la categoría adaptada al 33 %. Dentro de cada grupo el orden es alfabético. Las tablas del catálogo son índices de consulta, no clasificaciones por resultados.
+
 ## Estado actual
 
-La próxima comparación comprende **ocho candidatos**, ordenados alfabéticamente, no por preferencia. Todos están pendientes de examen en la nueva edición EET-CYB16. La tabla resume los antecedentes; cada ficha del catálogo distingue el resultado histórico de la preparación actual. Las [preguntas, soluciones y evidencias comparativas](modelos-de-ia/estandar-comparativo-o-benchmark/readme.md) corresponden a la edición fijada de 20 de octubre de 2026.
+La próxima comparación comprende **ocho candidatos**, ordenados alfabéticamente, no por preferencia. Todos están pendientes de examen en la nueva edición EET-CYB16. La tabla resume los antecedentes; cada ficha del catálogo distingue el resultado histórico de la preparación actual. Las [preguntas, soluciones y evidencias comparativas](modelos-de-ia/estandar-comparativo-o-benchmark/readme.md) corresponden a las ediciones general y adaptada con reglas revisadas de 21 de octubre de 2026.
 
 | Candidato | Antecedentes y alcance |
 |---|---|
 | [Claude Opus 5.5](modelos-de-ia/README.md#claude-opus-55) | Kaggle, nodo 02: MD09 favorable; CYB09 No apto asistido por un error crítico. |
-| [DeepSeek-V4.1-Flash-1017](modelos-de-ia/README.md#deepseek-v41-flash-1017) | Candidato incorporado; compatibilidad documental pendiente, sin examen ni dictamen. |
+| [DeepSeek-V4.1-Flash-1017](modelos-de-ia/README.md#deepseek-v41-flash-1017) | Categoría adaptada a Markdown para esta prueba; sin examen ni dictamen. |
 | [Gemini 4 Argon](modelos-de-ia/README.md#gemini-4-argon) | Conexión y preparación de condiciones; sin resultado de examen en este catálogo. |
 | [GLM-5.3](modelos-de-ia/README.md#glm-53) | CYB16: Apto documental, 16/16 finales y 14 críticas correctas. MD07 conserva su reserva. |
 | [GPT-6 Astra](modelos-de-ia/README.md#gpt-6-astra) | PDQ25: 25/25 finales. CYB16: 16/16 en las tres etapas; Apto documental en cada contrato. |
@@ -950,7 +952,7 @@ Los enlaces de las tablas permiten lectura pública de las fichas y los resultad
 
 | Etapa | Trabajo y condición de cierre |
 |---|---|
-| Antes de los exámenes | Completar la documentación y la recepción técnica de los siete candidatos: identidad, edición común íntegra, capacidad, adaptación, permisos de entrega, límites, cuotas y recursos disponibles. Comprobar el recorrido y recibir autorización de lanzamiento. |
+| Antes de los exámenes | Completar la documentación y la recepción técnica de los ocho candidatos: identidad, edición común íntegra, capacidad, adaptación, permisos de entrega, límites, cuotas y recursos disponibles. Comprobar el recorrido y recibir autorización de lanzamiento. |
 | Durante una ejecución autorizada | Aplicar el contrato común y conservar originales, etapas, tiempos, consumo y procedencia de cada medida. Separar fallos instrumentales de las respuestas y mantener la clave de corrección fuera del alcance del candidato. |
 | Después de los exámenes | Revisar resultados y evidencias, establecer la comparación admisible, documentar reservas y publicar la clasificación fundamentada. Los resultados no cierran por sí solos capacidades del Núcleo ni autorizan producción. |
 | Retorno al desarrollo | Tras la revisión de conjunto de los repositorios del Lenguaje de Computación y del Motor de IA, retomar la [Acta 008](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/ed93885589015d567905d1c880d8097869310085/docs/calidad/tuberias-ia/continuacion-15-09-2026/ACTA_008_ADMISION_FIRMADA_Y_COMPOSICION_INTRAPROCESO_2026_10_19.md), R2.0 y sus dependencias, incluidos los retornos de dominio y las obligaciones de la adenda que permanezcan abiertas. |

@@ -1,12 +1,14 @@
 # Modelos de IA
 
-**Edición documental 21 · 20 de octubre de 2026.**
+**Edición documental 22 · 21 de octubre de 2026.**
 
 Este catálogo identifica los modelos estudiados, las configuraciones efectivamente ensayadas y los candidatos de la próxima comparación. Cada resultado conserva su banco documental, modalidad de inferencia, fecha, condiciones y reservas. Una familia comercial no recibe por extensión el resultado de una versión concreta.
 
 El [ensayo de inteligencia artificial y observabilidad](../README.md) presenta el método, la arquitectura y sus límites. Este catálogo desarrolla las fichas de los modelos; las herramientas auxiliares y las pruebas instrumentales se reúnen en un apartado propio.
 
 **Consulta:** [organización](#organización-de-los-expedientes-y-modalidades-de-acoplamiento) · [ocho candidatos](#ocho-candidatos-de-la-proxima-comparacion) · [configuraciones anteriores](#configuraciones-anteriores) · [criterio](#puntuación-terna-y-acceso-al-examen) · [herramientas y pruebas instrumentales](#herramientas-auxiliares-y-ensayos-instrumentales) · [antecedentes fechados](#antecedentes-fechados).
+
+El [estándar comparativo](estandar-comparativo-o-benchmark/readme.md) fija las reglas vigentes y el turno de examen: primero Claude, Gemini, GPT-6 Astra y Qwen; después DeepSeek, GLM, Grok y Kimi en la categoría adaptada al 33 %. Dentro de cada grupo el orden es alfabético. Las tablas del catálogo son índices de consulta, no clasificaciones por resultados.
 
 ## Organización de los expedientes y modalidades de acoplamiento
 
@@ -26,7 +28,7 @@ Selección ordenada alfabéticamente, sin preferencia ni clasificación implíci
 | Candidato | Identidad de la nueva conexión | Preparación pendiente |
 |---|---|---|
 | [Claude Opus 5.5](#claude-opus-55) | `claude-opus-5-5` | Recibir las condiciones propias de Opus para la API; las de Sonnet no son transferibles. |
-| [DeepSeek-V4.1-Flash-1017](#deepseek-v41-flash-1017) | `deepseek-flash`; revisión declarada `DeepSeek-V4.1-Flash-1017` | Compatibilidad documental pendiente; examen bloqueado, sin dictamen. |
+| [DeepSeek-V4.1-Flash-1017](#deepseek-v41-flash-1017) | `deepseek-flash`; revisión declarada `DeepSeek-V4.1-Flash-1017` | Categoría adaptada a Markdown; recepción específica pendiente, sin examen ni dictamen. |
 | [Gemini 4 Argon](#gemini-4-argon) | `gemini-4-argon` | Renovar la recepción y comprobar capacidad, configuración y correspondencia de moneda y cota. |
 | [GLM-5.3](#glm-53) | `glm-5.3` | Recibir capacidad, adaptación, permiso y cota de la edición común. |
 | [GPT-6 Astra](#gpt-6-astra) | `gpt-6-astra` | Comprobar la conexión exacta y recibir condiciones propias; las de Sol no son transferibles. |
@@ -58,7 +60,7 @@ La siguiente comparación prepara **Opus por API directa, nodo 03**. El cambio d
 
 La conexión utiliza `deepseek-flash`, correspondiente por declaración del proveedor a `DeepSeek-V4.1-Flash-1017`. La correspondencia identifica la preparación; no demuestra ejecución interna ni conserva automáticamente esa identidad ante futuras revisiones del alias.
 
-Participa como octavo candidato, situado segundo por orden alfabético. La recepción directa de PDF no está acreditada para esta configuración: el examen permanece bloqueado por compatibilidad documental pendiente, sin dictamen. La ausencia de examen no equivale a U ni a No apto.
+Participa en la categoría adaptada a Markdown, después de los cuatro candidatos de la categoría general. Su limitación documental se declara para esta prueba y configuración; la recepción específica se comprueba antes del lanzamiento. No hay examen ni dictamen. La ausencia de examen no equivale a U ni a No apto.
 
 La [edición común](estandar-comparativo-o-benchmark/readme.md) conserva las dieciséis preguntas, sus soluciones y los originales. La inclusión no autoriza contenido, exámenes ni decisiones económicas.
 
