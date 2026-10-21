@@ -2,7 +2,7 @@
 
 ## 1. Estado de la edición
 
-No existen todavía intentos ni resultados de las ediciones general `eet-cyb16-multiformato-20261020-v1` y adaptada `eet-cyb16-markdown-adaptada-20261021-v1`. La publicación contiene el examen fijado y su plantilla. La tabla comparativa carece de filas de resultados; no se publican respuestas prefijadas como respuestas de candidatos.
+No existen todavía intentos ni resultados de las ediciones general `eet-cyb16-multiformato-20261021-v2` y adaptada `eet-cyb16-markdown-adaptada-20261021-v2`. La publicación contiene el examen fijado y su plantilla. La tabla comparativa carece de filas de resultados; no se publican respuestas prefijadas como respuestas de candidatos.
 
 ## 2. Conjunto de un intento
 

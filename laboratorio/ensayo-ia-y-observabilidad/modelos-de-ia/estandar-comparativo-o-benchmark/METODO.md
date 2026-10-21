@@ -1,6 +1,8 @@
 # Método de comparación
 
-Edición general `eet-cyb16-multiformato-20261020-v1` y edición adaptada `eet-cyb16-markdown-adaptada-20261021-v1`. Dominio: Ciberseguridad Inteligente. Servicios externos de proveedores, Nodo 3.
+Edición general `eet-cyb16-multiformato-20261021-v2` y edición adaptada `eet-cyb16-markdown-adaptada-20261021-v2`. Dominio: Ciberseguridad Inteligente. Servicios externos de proveedores, Nodo 3.
+
+Las reglas actuales permiten recursos internos declarados del proveedor sin Internet ni acceso o ejecución en el SV. Las explicaciones de cada U identifican carencias o limitaciones; las declaraciones y las mediciones se presentan por separado. Véanse las [reglas comunes](readme.md#reglas-comunes-de-las-ediciones-vigentes).
 
 ## 1. Condiciones comunes
 
@@ -8,7 +10,7 @@ Los ocho candidatos reciben las mismas dieciséis preguntas, instrucciones y reg
 
 Se conservan las adaptaciones técnicas necesarias para cada API, con reconstrucción y cotejo de los bytes originales. Una comprobación local de esa reconstrucción no acredita recepción efectiva del servicio. Contexto, compatibilidad documental, identidad y configuración requieren comprobación antes del lanzamiento.
 
-La entrega al candidato excluye las soluciones. Las reglas prohíben Internet, enlaces, herramientas y memoria de otros episodios. El SV puede controlar las herramientas que habilita y los datos que transporta; en Nodo 3 no observa de extremo a extremo el funcionamiento interno del proveedor. La prohibición formulada al modelo no acredita por sí sola ausencia de acceso interno.
+La entrega al candidato excluye las soluciones. Las reglas prohíben Internet, seguimiento de enlaces y memoria de otros episodios; admiten recursos internos del proveedor compatibles con esas restricciones y exigen declarar los que puedan identificarse. No se permite ejecutar herramientas ni acceder a recursos del SV. El SV puede controlar las herramientas que habilita y los datos que transporta; en Nodo 3 no observa de extremo a extremo el funcionamiento interno del proveedor. La prohibición formulada al modelo no acredita por sí sola ausencia de acceso interno.
 
 ## 2. Respuesta y corrección
 
@@ -16,7 +18,7 @@ La respuesta 0 indica conformidad con la fuente, 1 indica disconformidad y U dec
 
 Se solicitan explicaciones por pregunta y una revisión adversarial identificada por pregunta como valor inicial, ampliable antes del intento. Se entregan en la misma respuesta conjunta y se conservan sin puntuación. No se solicitan nuevas llamadas automáticas para completarlas. Lo declarado por el modelo no equivale a una medición independiente de sus procesos.
 
-La regla **SV-FUNDAMENTOS-T7N9-CRITICIDAD-1** utiliza T(n)=⌊7n/9⌋. Para n=16, T=12: doce errores determinan κ=1; doce aciertos, κ=0; el resto, κ=U. El contrato añade un veto por error crítico y una reserva por U crítica. Se conservan clasificación matemática κ y dictamen contractual por separado. Las [soluciones](ediciones/ciberseguridad/eet-cyb16-multiformato-20261020-v1/SOLUCIONES.md) identifican las ocho preguntas críticas.
+La regla **SV-FUNDAMENTOS-T7N9-CRITICIDAD-1** utiliza T(n)=⌊7n/9⌋. Para n=16, T=12: doce errores determinan κ=1; doce aciertos, κ=0; el resto, κ=U. El contrato añade un veto por error crítico y una reserva por U crítica. Se conservan clasificación matemática κ y dictamen contractual por separado. Las [soluciones](ediciones/ciberseguridad/eet-cyb16-multiformato-20261021-v2/SOLUCIONES.md) identifican las ocho preguntas críticas.
 
 Una respuesta íntegra, correctamente asociada y formalmente inadmisible recibe 1 por incumplimiento formal, sin inventar dieciséis errores ni un polígono. Un fallo del transporte, la preparación o la observación obligatoria conserva lo recuperado y deja el intento sin dictamen ni clasificación. Una causa desconocida no se atribuye al candidato.
 

@@ -1,6 +1,6 @@
 # Estándar comparativo de modelos de inteligencia artificial
 
-**Ciberseguridad Inteligente · Nodo 3 · Ediciones de 20 y 21 de octubre de 2026**
+**Ciberseguridad Inteligente · Nodo 3 · Ediciones de 21 de octubre de 2026 · reglas revisadas**
 
 Esta comparación examina la respuesta de servicios de IA externos a dieciséis preguntas sobre documentos identificados. Publica el examen, las soluciones, sus reglas y la procedencia de la evidencia para permitir una revisión reproducible.
 
@@ -10,10 +10,10 @@ Esta comparación examina la respuesta de servicios de IA externos a dieciséis 
 
 | Consulta | Contenido |
 | --- | --- |
-| [Preguntas e instrucciones](ediciones/ciberseguridad/eet-cyb16-multiformato-20261020-v1/PREGUNTAS.md) | Dieciséis enunciados, reglas de respuesta y correspondencia documental. |
-| [Soluciones y criticidad](ediciones/ciberseguridad/eet-cyb16-multiformato-20261020-v1/SOLUCIONES.md) | Clave y fundamento de cada pregunta; regla de corrección. |
-| [Definición pública del examen](ediciones/ciberseguridad/eet-cyb16-multiformato-20261020-v1/EXAMEN.json) | Preguntas, instrucciones, fuentes, formatos y huellas en JSON. |
-| [Plantilla correctora](ediciones/ciberseguridad/eet-cyb16-multiformato-20261020-v1/plantilla-correctora.json) | Claves del corrector, separadas de la entrega al candidato. |
+| [Preguntas e instrucciones](ediciones/ciberseguridad/eet-cyb16-multiformato-20261021-v2/PREGUNTAS.md) | Dieciséis enunciados, reglas de respuesta y correspondencia documental. |
+| [Soluciones y criticidad](ediciones/ciberseguridad/eet-cyb16-multiformato-20261021-v2/SOLUCIONES.md) | Clave y fundamento de cada pregunta; regla de corrección. |
+| [Definición pública del examen](ediciones/ciberseguridad/eet-cyb16-multiformato-20261021-v2/EXAMEN.json) | Preguntas, instrucciones, fuentes, formatos y huellas en JSON. |
+| [Plantilla correctora](ediciones/ciberseguridad/eet-cyb16-multiformato-20261021-v2/plantilla-correctora.json) | Claves del corrector, separadas de la entrega al candidato. |
 | [Identidad de la edición](EDICION.json) | Edición fijada, tiempos, regla, cruce de formatos y referencias. |
 | [Manifiesto de publicación](MANIFIESTO.json) | Tamaño y SHA-256 de los archivos publicados. |
 
@@ -24,8 +24,8 @@ Las soluciones son públicas para la revisión del examen. El Árbitro–Directo
 
 | Función | PDF | HTML | Markdown |
 | --- | --- | --- | --- |
-| Fuente de información | [NIST SP 800-207](ediciones/ciberseguridad/eet-cyb16-multiformato-20261020-v1/fuentes/d1.pdf) | [RFC 8996](ediciones/ciberseguridad/eet-cyb16-multiformato-20261020-v1/fuentes/d2.html) | [Acta OP-CYB-001](ediciones/ciberseguridad/eet-cyb16-multiformato-20261020-v1/fuentes/d3.md) |
-| Cuadernillo de preguntas | [Seis preguntas](ediciones/ciberseguridad/eet-cyb16-multiformato-20261020-v1/cuadernillos/cuadernillo-pdf.pdf) | [Cinco preguntas](ediciones/ciberseguridad/eet-cyb16-multiformato-20261020-v1/cuadernillos/cuadernillo-html.html) | [Cinco preguntas](ediciones/ciberseguridad/eet-cyb16-multiformato-20261020-v1/cuadernillos/cuadernillo-md.md) |
+| Fuente de información | [NIST SP 800-207](ediciones/ciberseguridad/eet-cyb16-multiformato-20261021-v2/fuentes/d1.pdf) | [RFC 8996](ediciones/ciberseguridad/eet-cyb16-multiformato-20261021-v2/fuentes/d2.html) | [Acta OP-CYB-001](ediciones/ciberseguridad/eet-cyb16-multiformato-20261021-v2/fuentes/d3.md) |
+| Cuadernillo de preguntas | [Seis preguntas](ediciones/ciberseguridad/eet-cyb16-multiformato-20261021-v2/cuadernillos/cuadernillo-pdf.pdf) | [Cinco preguntas](ediciones/ciberseguridad/eet-cyb16-multiformato-20261021-v2/cuadernillos/cuadernillo-html.html) | [Cinco preguntas](ediciones/ciberseguridad/eet-cyb16-multiformato-20261021-v2/cuadernillos/cuadernillo-md.md) |
 
 Son copias íntegras de los archivos fijados, sin conversión. Las fuentes conservan sus condiciones de uso, identificadas en [Procedencia y licencias](PROCEDENCIA-Y-LICENCIAS.md). La vista previa de GitHub no sustituye la descarga del archivo original.
 
@@ -37,12 +37,20 @@ La categoría «Modelo con discapacidad» conserva las mismas dieciséis pregunt
 
 | Consulta | Contenido |
 | --- | --- |
-| [Preguntas e instrucciones](ediciones/ciberseguridad/eet-cyb16-markdown-adaptada-20261021-v1/PREGUNTAS.md) | Dieciséis preguntas y correspondencia con las fuentes Markdown. |
-| [Soluciones](ediciones/ciberseguridad/eet-cyb16-markdown-adaptada-20261021-v1/SOLUCIONES.md) | Claves y fundamentos, idénticos a los de la categoría general. |
-| [Examen estructurado](ediciones/ciberseguridad/eet-cyb16-markdown-adaptada-20261021-v1/EXAMEN.json) y [plantilla](ediciones/ciberseguridad/eet-cyb16-markdown-adaptada-20261021-v1/plantilla-correctora.json) | Identidades y archivos verificables; soluciones separadas de la entrega. |
-| [Fidelidad y límites](ediciones/ciberseguridad/eet-cyb16-markdown-adaptada-20261021-v1/FIDELIDAD.md) | Cotejo de la adaptación y alcance de la revisión. |
+| [Preguntas e instrucciones](ediciones/ciberseguridad/eet-cyb16-markdown-adaptada-20261021-v2/PREGUNTAS.md) | Dieciséis preguntas y correspondencia con las fuentes Markdown. |
+| [Soluciones](ediciones/ciberseguridad/eet-cyb16-markdown-adaptada-20261021-v2/SOLUCIONES.md) | Claves y fundamentos, idénticos a los de la categoría general. |
+| [Examen estructurado](ediciones/ciberseguridad/eet-cyb16-markdown-adaptada-20261021-v2/EXAMEN.json) y [plantilla](ediciones/ciberseguridad/eet-cyb16-markdown-adaptada-20261021-v2/plantilla-correctora.json) | Identidades y archivos verificables; soluciones separadas de la entrega. |
+| [Fidelidad y límites](ediciones/ciberseguridad/eet-cyb16-markdown-adaptada-20261021-v2/FIDELIDAD.md) | Cotejo de la adaptación y alcance de la revisión. |
 
 Las categorías general y adaptada tienen clasificaciones independientes. La adaptada reúne los indicadores 33 % y 66 % con las mismas reglas de ordenación. No existe una clasificación conjunta entre ambas.
+
+## Reglas comunes de las ediciones vigentes
+
+Las ediciones general y adaptada admiten recursos internos del proveedor compatibles con el examen cerrado, con declaración de su uso cuando pueda identificarse. No permiten Internet, seguimiento de enlaces ni ejecución o acceso en el SV. El proveedor entrega su trabajo; no transmite órdenes al sistema. Sus declaraciones se conservan separadas de los contadores de la API y las mediciones locales.
+
+Cada respuesta U debe explicar la información insuficiente o la limitación encontrada después de analizar las fuentes. Las explicaciones y la revisión adversarial por pregunta se conservan sin puntuación. Preguntas, soluciones, originales, cruce de formatos y tiempos permanecen iguales. Las instrucciones vigentes acompañan la entrega y se identifican en cada manifiesto; los cuadernillos conservan sus bytes originales.
+
+Los antecedentes [general](ediciones/ciberseguridad/eet-cyb16-multiformato-20261020-v1/EXAMEN.json) y [adaptado](ediciones/ciberseguridad/eet-cyb16-markdown-adaptada-20261021-v1/EXAMEN.json) permanecen conservados. No se combinan reglas de versiones diferentes en una misma comparación.
 
 ## 2. Dos dimensiones de formato
 

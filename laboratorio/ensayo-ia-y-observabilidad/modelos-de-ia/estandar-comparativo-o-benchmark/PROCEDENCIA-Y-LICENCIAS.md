@@ -1,6 +1,6 @@
 # Procedencia y licencias
 
-Los seis archivos documentales publicados coinciden con los originales de la edición fijada. Las huellas y tamaños constan en [EXAMEN.json](ediciones/ciberseguridad/eet-cyb16-multiformato-20261020-v1/EXAMEN.json) y en el [manifiesto](MANIFIESTO.json). Ningún archivo se ha convertido, traducido o corregido para esta publicación.
+Los seis archivos documentales publicados coinciden con los originales de la edición fijada. Las huellas y tamaños constan en [EXAMEN.json](ediciones/ciberseguridad/eet-cyb16-multiformato-20261021-v2/EXAMEN.json) y en el [manifiesto](MANIFIESTO.json). Ningún archivo se ha convertido, traducido o corregido para esta publicación.
 
 ## Fuentes
 
@@ -14,7 +14,7 @@ Los cuadernillos PDF, HTML y Markdown y las preguntas y soluciones pertenecen a 
 
 La publicación permite consultar y cotejar los documentos de este examen. No concede acceso al depósito operativo, a credenciales o a registros de usuarios. Tampoco equivale a autorizar el suministro de contenido a proveedores de IA.
 
-La edición adaptada conserva los avisos y condiciones de las fuentes. Sus transformaciones y límites están descritos en [Fidelidad de la adaptación](ediciones/ciberseguridad/eet-cyb16-markdown-adaptada-20261021-v1/FIDELIDAD.md). Los originales de la edición general permanecen intactos.
+La edición adaptada conserva los avisos y condiciones de las fuentes. Sus transformaciones y límites están descritos en [Fidelidad de la adaptación](ediciones/ciberseguridad/eet-cyb16-markdown-adaptada-20261021-v2/FIDELIDAD.md). Los originales de la edición general permanecen intactos.
 
 ---
 
