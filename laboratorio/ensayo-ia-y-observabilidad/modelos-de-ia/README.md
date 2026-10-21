@@ -1,8 +1,8 @@
 # Modelos de IA
 
-**Edición documental 22 · 21 de octubre de 2026.**
+**Edición documental 23 · 21 de octubre de 2026.**
 
-Este catálogo identifica los modelos estudiados, las configuraciones efectivamente ensayadas y los candidatos de la próxima comparación. Cada resultado conserva su banco documental, modalidad de inferencia, fecha, condiciones y reservas. Una familia comercial no recibe por extensión el resultado de una versión concreta.
+Este catálogo identifica los modelos estudiados, las configuraciones efectivamente ensayadas y los candidatos de la convocatoria actual. Cada resultado conserva su banco documental, modalidad de inferencia, fecha, condiciones y reservas. Una familia comercial no recibe por extensión el resultado de una versión concreta.
 
 El [ensayo de inteligencia artificial y observabilidad](../README.md) presenta el método, la arquitectura y sus límites. Este catálogo desarrolla las fichas de los modelos; las herramientas auxiliares y las pruebas instrumentales se reúnen en un apartado propio.
 
@@ -14,29 +14,29 @@ El [estándar comparativo](estandar-comparativo-o-benchmark/readme.md) fija las 
 
 El [nodo 01](acoplamientos-con-el-sv/01-inferencia-bajo-control-propio/readme.md) exige inferencia dentro del entorno del SV y auditabilidad de extremo a extremo; el [nodo 02](acoplamientos-con-el-sv/02-plataforma-gestionada/readme.md) corresponde al acceso organizado por una plataforma gestionada; el [nodo 03](acoplamientos-con-el-sv/03-api-directa/readme.md), al servicio externo del proveedor. La ubicación física de un servidor o la presencia de una API no bastan para acreditar las condiciones del nodo 01. El [diagrama y las definiciones del ensayo](../README.md#tres-nodos-de-acoplamiento) precisan el control y la observabilidad de cada modalidad.
 
-La modalidad de ejecución se consulta en las [rutas y el diagrama del ensayo](../README.md#vías-de-ejecución-y-diagramas): **A**, inferencia en navegador probada con interrupción antes del primer token; **B**, inferencia nativa en el servidor; **servicio externo**, inferencia gobernada por la plataforma o el proveedor. El visor Rust/egui en WebAssembly presenta resultados y no ejecuta el modelo evaluado. La selección de ocho candidatos corresponde a la preparación por API del nodo 03; conserva por separado el antecedente de Opus en el nodo 02.
+La modalidad de ejecución se consulta en las [rutas y el diagrama del ensayo](../README.md#vías-de-ejecución-y-diagramas): **A**, inferencia en navegador probada con interrupción antes del primer token; **B**, inferencia nativa en el servidor; **servicio externo**, inferencia gobernada por la plataforma o el proveedor. El visor Rust/egui en WebAssembly presenta resultados y no ejecuta el modelo evaluado. La convocatoria de ocho candidatos corresponde a la evaluación por API del nodo 03; conserva por separado el antecedente de Opus en el nodo 02.
 
 Los expedientes conservan sus carpetas y referencias. Un estudio de viabilidad, una ejecución técnica y un examen de respuestas son objetos distintos. Un resultado previo no habilita una nueva entrega de documentos ni el uso en producción.
 
 <a id="siete-candidatos-de-la-proxima-comparacion"></a>
 <a id="ocho-candidatos-de-la-proxima-comparacion"></a>
 
-## Ocho candidatos de la próxima comparación
+## Ocho candidatos de la convocatoria actual
 
-Selección ordenada alfabéticamente, sin preferencia ni clasificación implícitas. **La nueva ronda EET-CYB16 no se ha iniciado.** Todos requieren condiciones propias vigentes, un paquete común identificado y permiso de entrega y lanzamiento. La tabla expresa requisitos de preparación, no resultados de esa ronda ni una autorización para ejecutarla.
+La selección se presenta alfabéticamente como índice de consulta. Cuatro candidatos han completado la edición general y cuatro permanecen pendientes en la categoría adaptada. La clasificación por resultados y las evidencias se consultan en el estándar comparativo. Cada nueva ejecución exige condiciones propias vigentes y autorización de entrega y lanzamiento; un resultado anterior no las sustituye.
 
-| Candidato | Identidad de la nueva conexión | Preparación pendiente |
+| Candidato | Identidad del servicio | Estado de esta convocatoria |
 |---|---|---|
-| [Claude Opus 5.5](#claude-opus-55) | `claude-opus-5-5` | Recibir las condiciones propias de Opus para la API; las de Sonnet no son transferibles. |
-| [DeepSeek-V4.1-Flash-1017](#deepseek-v41-flash-1017) | `deepseek-flash`; revisión declarada `DeepSeek-V4.1-Flash-1017` | Categoría adaptada a Markdown; recepción específica pendiente, sin examen ni dictamen. |
-| [Gemini 4 Argon](#gemini-4-argon) | `gemini-4-argon` | Renovar la recepción y comprobar capacidad, configuración y correspondencia de moneda y cota. |
-| [GLM-5.3](#glm-53) | `glm-5.3` | Recibir capacidad, adaptación, permiso y cota de la edición común. |
-| [GPT-6 Astra](#gpt-6-astra) | `gpt-6-astra` | Comprobar la conexión exacta y recibir condiciones propias; las de Sol no son transferibles. |
-| [Grok 4.7](#grok-47) | `grok-4.7` | Recibir capacidad, tratamiento del razonamiento, adaptación, permiso y cota. |
-| [Kimi K3](#kimi-k3) | `kimi-k3` | Renovar la recepción y comprobar capacidad, recursos, permiso y cota vigentes. |
-| [Qwen3.8-Max-0902](#qwen38-max-0902) | `qwen3.8-max`; revisión declarada `qwen3.8-max-0902` | Correspondencia declarada del alias conservada; recibir capacidad documental efectiva, contexto, configuración, permiso y cota. |
+| [Claude Opus 5.5](#claude-opus-55) | `claude-opus-5-5` | General: [examen corregido](estandar-comparativo-o-benchmark/resultados/claude-opus-5.5/cyb16-085bea8caae0/resultado.json), 16/16, dictamen 0. |
+| [DeepSeek-V4.1-Flash-1017](#deepseek-v41-flash-1017) | `deepseek-flash`; revisión declarada `DeepSeek-V4.1-Flash-1017` | Adaptada al 33 %: pendiente, sin dictamen. |
+| [Gemini 4 Argon](#gemini-4-argon) | `gemini-4-argon` | General: [examen corregido](estandar-comparativo-o-benchmark/resultados/gemini-4-argon/cyb16-67947a76804a/resultado.json), 16/16, dictamen 0. |
+| [GLM-5.3](#glm-53) | `glm-5.3` | Adaptada al 33 %: pendiente, sin dictamen. |
+| [GPT-6 Astra](#gpt-6-astra) | `gpt-6-astra` | General: [examen corregido](estandar-comparativo-o-benchmark/resultados/gpt-6-astra/cyb16-42214abb1502/resultado.json), 16/16, dictamen 0. |
+| [Grok 4.7](#grok-47) | `grok-4.7` | Adaptada al 33 %: pendiente, sin dictamen. |
+| [Kimi K3](#kimi-k3) | `kimi-k3` | Adaptada al 33 %: pendiente, sin dictamen. |
+| [Qwen3.8-Max-0902](#qwen38-max-0902) | `qwen3.8-max-0902` | General: [examen corregido](estandar-comparativo-o-benchmark/resultados/qwen3.8-max-0902/cyb16-c845bb554c19/resultado.json), 16/16, dictamen 0. |
 
-La capacidad y la configuración deben corresponder a la edición exacta: longitud de entrada, salida y razonamiento, tiempos, adaptación del protocolo y cotas. Cuota gratuita, saldo monetario y límite administrativo son conceptos distintos. Las fichas siguientes conservan los antecedentes y sus diferencias respecto de esta preparación.
+La capacidad y la configuración deben corresponder a la edición exacta: longitud de entrada, salida y razonamiento, tiempos, adaptación del protocolo y cotas. Cuota gratuita, saldo monetario y límite administrativo son conceptos distintos. Las fichas siguientes distinguen los antecedentes y el estado de la convocatoria actual.
 
 <a id="claude-opus-55"></a>
 
@@ -47,7 +47,7 @@ La capacidad y la configuración deben corresponder a la edición exacta: longit
 
 El antecedente se ejecutó mediante **Kaggle Benchmarks Model Proxy**, nodo 02, con el identificador `anthropic/claude-opus-5-5@default`. El sufijo del servicio no identifica por sí solo unos pesos inmutables. El manual MD09 obtuvo nueve respuestas finales correctas, incluidas las seis críticas, según adjudicación asistida. El contraste CYB09 terminó con **8/9 en R2, 88,89/100 y No apto asistido por C02 crítico**; R1 9/9 permanece como etapa previa y no reemplaza la final. La recepción científica independiente sigue pendiente.
 
-La siguiente comparación prepara **Opus por API directa, nodo 03**. El cambio de servicio y condiciones queda identificado; ni el resultado de Kaggle ni las condiciones de Claude Sonnet acreditan la recepción de esta nueva configuración.
+En la convocatoria EET-CYB16, **Opus por API directa, nodo 03**, ha completado la edición general con dieciséis aciertos y dictamen 0. Su [resultado y evidencias](estandar-comparativo-o-benchmark/resultados/claude-opus-5.5/cyb16-085bea8caae0/) conservan las condiciones propias de esta ejecución. El antecedente de Kaggle y las condiciones de Claude Sonnet permanecen separados.
 
 [Informe CYB09](acoplamientos-con-el-sv/02-plataforma-gestionada/antrophic/claude-opus-5-5/ensayo-cyb09-20261010/entrega/INFORME.md) · [Polígono Rust/egui](acoplamientos-con-el-sv/02-plataforma-gestionada/antrophic/claude-opus-5-5/ensayo-cyb09-20261010/entrega/poligono-egui/POLIGONO-EGUI.html) · [Recepción del nodo 02](acoplamientos-con-el-sv/02-plataforma-gestionada/antrophic/claude-opus-5-5/ensayo-cyb09-20261010/entrega/MATRIZ-RECEPCION-NODO02.md).
 
@@ -71,9 +71,9 @@ La [edición común](estandar-comparativo-o-benchmark/readme.md) conserva las di
 <details>
 <summary><strong>Gemini 4 Argon · Google</strong></summary>
 
-Se incorpora a la selección por su conexión y preparación de condiciones, **sin atribuirle un examen ya realizado ni un dictamen de aptitud**. Su configuración pertenece al nodo 03. La preparación no equivale a recepción vigente: deben comprobarse la edición exacta, la capacidad para el paquete íntegro, el tratamiento conjunto de salida y razonamiento, las cotas y el permiso de entrega.
+Gemini 4 Argon ha completado la edición general EET-CYB16 por API del nodo 03, con dieciséis aciertos y dictamen 0. El [resultado y sus evidencias](estandar-comparativo-o-benchmark/resultados/gemini-4-argon/cyb16-67947a76804a/) identifican las condiciones y la entrega conservada.
 
-El expediente de resultados se incorporará cuando exista una ejecución autorizada y una entrega verificable. Hasta entonces, esta ficha identifica al candidato y sus requisitos de preparación; no remite a un informe experimental inexistente.
+El dictamen corresponde a esta edición y configuración; no constituye recomendación oficial, habilitación productiva ni acreditación clínica.
 
 </details>
 
@@ -102,7 +102,7 @@ El manual MD07 conserva **No apto contractual bajo reserva metodológica**, sin 
 
 El expediente comprende distintos bancos, conservados por separado. **PDQ25, 07/10/2026:** 25 respuestas finales R2 correctas, incluidas las veinte críticas, y Apto para su contrato documental. **CYB16, 08/10/2026:** 16/16 correctas en R0, R1 y R2, catorce críticas correctas y Apto para el contrato documental de ciberseguridad. El CYB16 conserva una interrupción instrumental y su resolución; no se convierte en error del candidato. El manual MD09, su reserva temporal MD01 y la réplica diagnóstica tienen identidades propias; la ficha enlaza también el contraste posterior CYB09.
 
-El antecedente CYB16 usó Responses mediante autorización ChatGPT. La nueva conexión API de Astra requiere recepción propia: conservar el modelo no hace idénticos el servicio, la instrumentación o las condiciones. **GPT-6.1 Sol es un modelo distinto, ajeno a esta selección** y sus condiciones no sustituyen a las de Astra. El proveedor conserva la ejecución interna; los canales y contadores recibidos no acreditan observación de su razonamiento interno.
+El antecedente CYB16 usó Responses mediante autorización ChatGPT. La convocatoria actual conserva una recepción propia de la API de Astra: su [edición general EET-CYB16](estandar-comparativo-o-benchmark/resultados/gpt-6-astra/cyb16-42214abb1502/) obtuvo dieciséis aciertos y dictamen 0. Conservar el modelo no hace idénticos el servicio, la instrumentación o las condiciones de sus antecedentes. **GPT-6.1 Sol es un modelo distinto, ajeno a esta selección** y sus condiciones no sustituyen a las de Astra. El proveedor conserva la ejecución interna; los canales y contadores recibidos no acreditan observación de su razonamiento interno.
 
 [Informe PDQ25](acoplamientos-con-el-sv/03-api-directa/openai/gpt-6-astra/examen25-20261007/resultado/INFORME.md) · [Informe CYB16](acoplamientos-con-el-sv/03-api-directa/openai/gpt-6-astra/cyb16-20261008/INFORME.md) · [TT-0021](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0021.md).
 
@@ -148,6 +148,8 @@ El catálogo **MD09 del 08/10/2026**, ejecutado por API en el nodo 03, terminó 
 La recepción del **08/10/2026** establece **Apto documental con reservas en un alcance de dieciséis preguntas** del banco de inmunología. Conserva el **No apto contractual original bajo reserva metodológica**, el vector histórico y la réplica separada de P13. La recepción posterior no sustituye respuestas ni crea una puntuación nueva. Las reservas P02, P11 y P16 siguen documentadas. Este alcance no es el nuevo EET-CYB16 ni equivale al examen completo de veinticinco preguntas.
 
 La conexión abreviada `qwen3.8-max` y la revisión `qwen3.8-max-0902` deben conservar su correspondencia fechada. La diferencia de nombre no prueba por sí sola que sean modelos distintos; tampoco permite aceptar futuras revisiones del alias como si fueran la misma. La admisión debe fijar la revisión efectiva y sus condiciones, incluidas las cuotas aplicables, antes de cualquier entrega.
+
+La convocatoria actual utilizó la identidad efectiva `qwen3.8-max-0902` y conserva un [resultado propio de la edición general EET-CYB16](estandar-comparativo-o-benchmark/resultados/qwen3.8-max-0902/cyb16-c845bb554c19/): dieciséis aciertos y dictamen 0. Este resultado es independiente del antecedente de inmunología y no lo modifica.
 
 [Recepción y reservas](acoplamientos-con-el-sv/03-api-directa/qwen/qwen3.8-max-0902/RECEPCION-DOCUMENTAL-20261008.md) · [TT-0023](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0023.md).
 

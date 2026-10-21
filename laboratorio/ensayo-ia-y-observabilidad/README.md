@@ -1,6 +1,6 @@
 # Ensayo de inteligencia artificial y observabilidad
 
-**Edición documental 2.35 · 21 de octubre de 2026.**
+**Edición documental 2.36 · 21 de octubre de 2026.**
 
 <a id="objeto-y-criterio-experimental"></a>
 
@@ -76,20 +76,20 @@ El [estándar comparativo](modelos-de-ia/estandar-comparativo-o-benchmark/readme
 
 ## Estado actual
 
-La próxima comparación comprende **ocho candidatos**, ordenados alfabéticamente, no por preferencia. Todos están pendientes de examen en la nueva edición EET-CYB16. La tabla resume los antecedentes; cada ficha del catálogo distingue el resultado histórico de la preparación actual. Las [preguntas, soluciones y evidencias comparativas](modelos-de-ia/estandar-comparativo-o-benchmark/readme.md) corresponden a las ediciones general y adaptada con reglas revisadas de 21 de octubre de 2026.
+La convocatoria EET-CYB16 comprende **ocho candidatos**. Claude Opus 5.5, Gemini 4 Argon, GPT-6 Astra y Qwen3.8-Max-0902 han completado la edición general: cada uno conserva dieciséis aciertos y dictamen 0. DeepSeek, GLM, Grok y Kimi permanecen pendientes en la categoría adaptada al 33 %, sin dictamen. Los [resultados, polígonos y evidencias](modelos-de-ia/estandar-comparativo-o-benchmark/readme.md#4-resultados-y-evidencias) identifican cada ejecución. La tabla siguiente conserva los antecedentes; no sustituye la clasificación de esta convocatoria. Las [preguntas, soluciones y fuentes](modelos-de-ia/estandar-comparativo-o-benchmark/readme.md) corresponden a las ediciones general y adaptada con reglas revisadas del 21 de octubre de 2026.
 
 | Candidato | Antecedentes y alcance |
 |---|---|
 | [Claude Opus 5.5](modelos-de-ia/README.md#claude-opus-55) | Kaggle, nodo 02: MD09 favorable; CYB09 No apto asistido por un error crítico. |
 | [DeepSeek-V4.1-Flash-1017](modelos-de-ia/README.md#deepseek-v41-flash-1017) | Categoría adaptada a Markdown para esta prueba; sin examen ni dictamen. |
-| [Gemini 4 Argon](modelos-de-ia/README.md#gemini-4-argon) | Conexión y preparación de condiciones; sin resultado de examen en este catálogo. |
+| [Gemini 4 Argon](modelos-de-ia/README.md#gemini-4-argon) | Sin examen anterior en este catálogo; resultado de la convocatoria actual disponible en el estándar comparativo. |
 | [GLM-5.3](modelos-de-ia/README.md#glm-53) | CYB16: Apto documental, 16/16 finales y 14 críticas correctas. MD07 conserva su reserva. |
 | [GPT-6 Astra](modelos-de-ia/README.md#gpt-6-astra) | PDQ25: 25/25 finales. CYB16: 16/16 en las tres etapas; Apto documental en cada contrato. |
 | [Grok 4.7](modelos-de-ia/README.md#grok-47) | PDQ25: Apto documental en R2, 25/25 y 20 críticas correctas. MD01 parcial, sin R2. |
 | [Kimi K3](modelos-de-ia/README.md#kimi-k3) | MD09: Apto documental, 8/9; MD04 no crítico incorrecto, seis críticas correctas. CYB16 sin iniciar. |
 | [Qwen3.8-Max-0902](modelos-de-ia/README.md#qwen38-max-0902) | Recepción Apto documental con reservas en 16 preguntas; dictamen original y réplica P13 separados. |
 
-La [preparación de la nueva ronda](modelos-de-ia/README.md#ocho-candidatos-de-la-proxima-comparacion) requiere condiciones propias y vigentes. Una conexión registrada, un resultado anterior o la inclusión en el catálogo no autorizan el envío de documentos ni el lanzamiento. Las conexiones de otros modelos no amplían esta selección.
+La [continuación de la convocatoria](modelos-de-ia/README.md#ocho-candidatos-de-la-proxima-comparacion) requiere condiciones propias y vigentes. Una conexión registrada, un resultado anterior o la inclusión en el catálogo no autorizan el envío de documentos ni el lanzamiento. Las conexiones de otros modelos no amplían esta selección.
 
 <details>
 <summary>Resultados y cierres de las configuraciones anteriores</summary>
