@@ -94,10 +94,10 @@ La [tabla comparativa CSV](COMPARACION.csv) y su [representación JSON](COMPARAC
 
 | Posición | Modelo | Aciertos | Errores | U | Dictamen | Tiempo efectivo (ms) | Explicaciones vinculadas | Polígono y evidencias |
 | ---: | --- | ---: | ---: | ---: | --- | ---: | ---: | --- |
-| 1 | Gemini 4 Argon | 16 | 0 | 0 | 0 | 90008 | 15/16 | [Polígono](https://administracion.itvia.online/benchmark/poligono/gemini-4-argon) · [Respuesta](resultados/gemini-4-argon/cyb16-67947a76804a/respuesta.txt) · [Datos](resultados/gemini-4-argon/cyb16-67947a76804a/resultado.json) |
-| 2 | GPT-6 Astra | 16 | 0 | 0 | 0 | 91906 | 16/16 | [Polígono](https://administracion.itvia.online/benchmark/poligono/gpt-6-astra) · [Respuesta](resultados/gpt-6-astra/cyb16-42214abb1502/respuesta.txt) · [Datos](resultados/gpt-6-astra/cyb16-42214abb1502/resultado.json) |
-| 3 | Claude Opus 5.5 | 16 | 0 | 0 | 0 | 159459 | 16/16 | [Polígono](https://administracion.itvia.online/benchmark/poligono/claude-opus-5.5) · [Respuesta](resultados/claude-opus-5.5/cyb16-085bea8caae0/respuesta.txt) · [Datos](resultados/claude-opus-5.5/cyb16-085bea8caae0/resultado.json) |
-| 4 | Qwen3.8-Max-0902 | 16 | 0 | 0 | 0 | 287367 | 16/16 | [Polígono](https://administracion.itvia.online/benchmark/poligono/qwen3.8-max-0902) · [Respuesta](resultados/qwen3.8-max-0902/cyb16-c845bb554c19/respuesta.txt) · [Datos](resultados/qwen3.8-max-0902/cyb16-c845bb554c19/resultado.json) |
+| 1 | Gemini 4 Argon | 16 | 0 | 0 | 0 | 90008 | 15/16 | [Polígono](https://administracion.itvia.online/benchmark?poligono=gemini-4-argon) · [Respuesta](resultados/gemini-4-argon/cyb16-67947a76804a/respuesta.txt) · [Datos](resultados/gemini-4-argon/cyb16-67947a76804a/resultado.json) |
+| 2 | GPT-6 Astra | 16 | 0 | 0 | 0 | 91906 | 16/16 | [Polígono](https://administracion.itvia.online/benchmark?poligono=gpt-6-astra) · [Respuesta](resultados/gpt-6-astra/cyb16-42214abb1502/respuesta.txt) · [Datos](resultados/gpt-6-astra/cyb16-42214abb1502/resultado.json) |
+| 3 | Claude Opus 5.5 | 16 | 0 | 0 | 0 | 159459 | 16/16 | [Polígono](https://administracion.itvia.online/benchmark?poligono=claude-opus-5.5) · [Respuesta](resultados/claude-opus-5.5/cyb16-085bea8caae0/respuesta.txt) · [Datos](resultados/claude-opus-5.5/cyb16-085bea8caae0/resultado.json) |
+| 4 | Qwen3.8-Max-0902 | 16 | 0 | 0 | 0 | 287367 | 16/16 | [Polígono](https://administracion.itvia.online/benchmark?poligono=qwen3.8-max-0902) · [Respuesta](resultados/qwen3.8-max-0902/cyb16-c845bb554c19/respuesta.txt) · [Datos](resultados/qwen3.8-max-0902/cyb16-c845bb554c19/resultado.json) |
 
 
 La ordenación aplica aciertos, errores, tiempo efectivo y coste general comparable, en ese orden. En estos cuatro resultados coinciden los aciertos y errores; el tiempo efectivo determina sus posiciones. Los tokens son informativos y no desempatan. No hay recomendación oficial ni selección de producción. Una sola ejecución por candidato no mide la variabilidad de ejecuciones sucesivas.
