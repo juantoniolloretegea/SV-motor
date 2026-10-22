@@ -12,16 +12,22 @@ Un enlace permanente a una convocatoria conserva su identidad y su nodo, incluid
 
 La pantalla identifica la convocatoria visible y diferencia el total publicado, las coincidencias con la selección y la entrada presentada. Si no hay coincidencias, muestra un aviso, retira los filtros y presenta la última publicación disponible. Un filtro modifica la consulta; no demuestra que las pruebas ocultas no existan. El catálogo reúne las publicaciones incorporadas y revisadas, no todos los trabajos en preparación ni los expedientes sujetos a acceso restringido.
 
+## Nombres y ayuda contextual
+
+Los selectores presentan nombres comprensibles: tema y número de preguntas en Prueba, y fechas y candidatos en Convocatoria. Los códigos se conservan en los detalles de identificación. Las ayudas junto a cada campo se abren a petición y se cierran con Cerrar o Escape; no alteran la selección. R0 es la respuesta inicial; R1, la revisión autocrítica; R2, la verificación final, sólo en los contratos históricos que utilizan esas etapas. Una etapa intermedia mejor no sustituye la entrega final.
+
+Los filtros y la elección de idioma conservan información de privacidad accesible mediante una ayuda breve. Esta presentación no sustituye los avisos de los formularios que recogen datos o registran actuaciones. El consentimiento de cookies opcionales mantiene su mecanismo propio, sin aceptaciones genéricas añadidas.
+
 ## Publicaciones incorporadas
 
 | Nodo | Prueba y candidatos | Fechas del examen | Célula o alcance |
 | --- | --- | --- | --- |
-| 3 | [EET-CYB16, ocho candidatos](https://administracion.itvia.online/benchmark?convocatoria=eet-cyb16-20261021) | 21–22/10/2026 | (16,4), categorías general y adaptada separadas. |
-| 3 | [PDQ-HCL25, Astra y Grok](https://administracion.itvia.online/benchmark?convocatoria=pdq25-api-20261007) | 07–08/10/2026 | (25,5), contratos y etapas originales. |
-| 3 | [PDQ-HCL16, Qwen](https://administracion.itvia.online/benchmark?convocatoria=pdq16-qwen-20261008) | 08/10/2026 | (16,4), vector original y recepción posterior diferenciados. |
-| 3 | [CYB16 histórico, Astra y GLM](https://administracion.itvia.online/benchmark?convocatoria=cyb16-api-20261008) | 08/10/2026 | (16,4), R0/R1/R2 del contrato histórico. |
-| 2 | [CYB09, Claude mediante Kaggle](https://administracion.itvia.online/benchmark?convocatoria=cyb09-kaggle-20261010) | 10/10/2026 | (9,3), entrega final R2 y reserva de recepción independiente. |
-| 1 | [PDQ-HCL25, Qwen Instruct](https://administracion.itvia.online/benchmark?convocatoria=pdq25-nodo1-20260929) | 29–30/09/2026 | (25,5) prevista; incidencias técnicas y cierre administrativo conservados. |
+| 3 | [Ciberseguridad, dieciséis preguntas y ocho candidatos](https://administracion.itvia.online/benchmark?convocatoria=eet-cyb16-20261021) | 21–22/10/2026 | (16,4), categorías general y adaptada separadas. |
+| 3 | [Leucemia de células pilosas, veinticinco preguntas: Astra y Grok](https://administracion.itvia.online/benchmark?convocatoria=pdq25-api-20261007) | 07–08/10/2026 | (25,5), contratos y etapas originales. |
+| 3 | [Leucemia de células pilosas, dieciséis preguntas: Qwen](https://administracion.itvia.online/benchmark?convocatoria=pdq16-qwen-20261008) | 08/10/2026 | (16,4), vector original y recepción posterior diferenciados. |
+| 3 | [Ciberseguridad, dieciséis preguntas: Astra y GLM](https://administracion.itvia.online/benchmark?convocatoria=cyb16-api-20261008) | 08/10/2026 | (16,4), R0/R1/R2 del contrato histórico. |
+| 2 | [Ciberseguridad, nueve preguntas: Claude mediante Kaggle](https://administracion.itvia.online/benchmark?convocatoria=cyb09-kaggle-20261010) | 10/10/2026 | (9,3), entrega final R2 y reserva de recepción independiente. |
+| 1 | [Leucemia de células pilosas, veinticinco preguntas: Qwen Instruct](https://administracion.itvia.online/benchmark?convocatoria=pdq25-nodo1-20260929) | 29–30/09/2026 | (25,5) prevista; incidencias técnicas y cierre administrativo conservados. |
 
 Las fechas describen la ejecución original, no la fecha de incorporación al catálogo. Las modalidades de nodo corresponden al acoplamiento: inferencia propia, plataforma gestionada y API directa del proveedor, respectivamente.
 
