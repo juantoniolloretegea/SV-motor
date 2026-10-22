@@ -1,0 +1,44 @@
+# Consulta de convocatorias, nodos y antecedentes
+
+Fecha de revisión: 22 de octubre de 2026.
+
+La [clasificación pública del SV](https://administracion.itvia.online/benchmark) permite consultar publicaciones revisadas mediante cuatro selectores comunes: **Nodo, Dominio, Prueba y Convocatoria**. Las tres pestañas —**Resultados y polígonos**, **Preguntas, fuentes y reglas**, **Métricas y evidencias**— conservan la misma convocatoria.
+
+## Selección inicial y ausencia de coincidencias
+
+La entrada general selecciona **Nodo 3**, por decisión vigente, y su última convocatoria por fecha de inicio del examen. Para fechas iguales se utiliza la finalización y después el identificador estable. Una revisión documental no modifica las fechas del examen ni desplaza artificialmente un antecedente a la primera posición.
+
+Un enlace permanente a una convocatoria conserva su identidad y su nodo, incluidos los nodos 1 y 2. Si sólo hay una publicación, siempre se muestra. **Ver todas las convocatorias** elimina las restricciones de nodo, dominio y prueba. El catálogo completo permanece accesible en un desplegable, aunque haya filtros activos.
+
+La pantalla identifica la convocatoria visible y diferencia el total publicado, las coincidencias con la selección y la entrada presentada. Si no hay coincidencias, muestra un aviso, retira los filtros y presenta la última publicación disponible. Un filtro modifica la consulta; no demuestra que las pruebas ocultas no existan. El catálogo reúne las publicaciones incorporadas y revisadas, no todos los trabajos en preparación ni los expedientes sujetos a acceso restringido.
+
+## Publicaciones incorporadas
+
+| Nodo | Prueba y candidatos | Fechas del examen | Célula o alcance |
+| --- | --- | --- | --- |
+| 3 | [EET-CYB16, ocho candidatos](https://administracion.itvia.online/benchmark?convocatoria=eet-cyb16-20261021) | 21–22/10/2026 | (16,4), categorías general y adaptada separadas. |
+| 3 | [PDQ-HCL25, Astra y Grok](https://administracion.itvia.online/benchmark?convocatoria=pdq25-api-20261007) | 07–08/10/2026 | (25,5), contratos y etapas originales. |
+| 3 | [PDQ-HCL16, Qwen](https://administracion.itvia.online/benchmark?convocatoria=pdq16-qwen-20261008) | 08/10/2026 | (16,4), vector original y recepción posterior diferenciados. |
+| 3 | [CYB16 histórico, Astra y GLM](https://administracion.itvia.online/benchmark?convocatoria=cyb16-api-20261008) | 08/10/2026 | (16,4), R0/R1/R2 del contrato histórico. |
+| 2 | [CYB09, Claude mediante Kaggle](https://administracion.itvia.online/benchmark?convocatoria=cyb09-kaggle-20261010) | 10/10/2026 | (9,3), entrega final R2 y reserva de recepción independiente. |
+| 1 | [PDQ-HCL25, Qwen Instruct](https://administracion.itvia.online/benchmark?convocatoria=pdq25-nodo1-20260929) | 29–30/09/2026 | (25,5) prevista; incidencias técnicas y cierre administrativo conservados. |
+
+Las fechas describen la ejecución original, no la fecha de incorporación al catálogo. Las modalidades de nodo corresponden al acoplamiento: inferencia propia, plataforma gestionada y API directa del proveedor, respectivamente.
+
+## Lectura y límites
+
+Cada antecedente conserva preguntas, fuentes, etapas, resultados, reservas y métricas de sus documentos originales. No se recalcula con la plantilla actual ni se incorpora a una clasificación común de contratos diferentes. Una recepción documental posterior no sustituye el vector recibido. Un impedimento técnico no se convierte en U. Una etapa intermedia mejor no sustituye la entrega final.
+
+Los polígonos históricos enlazan los archivos conservados; cuando GitHub presenta un HTML como archivo, la ficha indica que debe descargarse y abrirse para visualizarlo. No se genera un polígono nuevo a partir de un resumen incompleto. La célula pertenece a la prueba: (16,4) no constituye un límite del SV.
+
+El resultado completo EET-CYB16, revisión 197, permanece intacto. Las categorías general y adaptada mantienen sus clasificaciones. Publicar resultados no equivale a recomendar un modelo ni autorizar su uso en producción.
+
+Las soluciones públicas de esta edición conservan la limitación ya declarada. En nuevas convocatorias, las soluciones y elementos que permitan deducirlas permanecen reservados hasta que terminen todos los candidatos.
+
+## Custodia y consulta técnica
+
+[CONVOCATORIAS.json](CONVOCATORIAS.json) identifica las seis entradas. Las fichas de [antecedentes](antecedentes/) remiten a fuentes públicas por revisión y huella. Los enlaces anteriores a resultados, polígonos y datos de EET-CYB16 siguen asociados a esa convocatoria; una convocatoria futura no los reasigna. Una identidad desconocida solicitada como datos o polígono no devuelve los datos de otro examen.
+
+Rust selecciona y presenta las publicaciones revisadas. El navegador permite consultar formularios, pestañas y fragmentos de navegación; no obtiene credenciales, no consulta proveedores y no inicia exámenes. La custodia privada conserva sus permisos.
+
+© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).

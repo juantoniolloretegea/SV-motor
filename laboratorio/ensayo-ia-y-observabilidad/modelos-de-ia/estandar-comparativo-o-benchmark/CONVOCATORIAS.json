@@ -1,0 +1,84 @@
+{
+  "convocatorias": [
+    {
+      "antecedente": false,
+      "consulta": "https://administracion.itvia.online/benchmark?convocatoria=eet-cyb16-20261021",
+      "datos": "https://administracion.itvia.online/benchmark/datos.json?convocatoria=eet-cyb16-20261021",
+      "dominio": "ciberseguridad",
+      "fin_examen": "2026-10-22",
+      "id": "eet-cyb16-20261021",
+      "inicio_examen": "2026-10-21",
+      "nodo": "03",
+      "nombre": "EET-CYB16",
+      "prueba": "eet-cyb16"
+    },
+    {
+      "antecedente": true,
+      "consulta": "https://administracion.itvia.online/benchmark?convocatoria=pdq25-api-20261007",
+      "datos": "https://administracion.itvia.online/benchmark/datos.json?convocatoria=pdq25-api-20261007",
+      "dominio": "inmunologia",
+      "fin_examen": "2026-10-08",
+      "id": "pdq25-api-20261007",
+      "inicio_examen": "2026-10-07",
+      "nodo": "03",
+      "nombre": "PDQ-HCL25 · Astra / Grok",
+      "prueba": "pdq25"
+    },
+    {
+      "antecedente": true,
+      "consulta": "https://administracion.itvia.online/benchmark?convocatoria=pdq16-qwen-20261008",
+      "datos": "https://administracion.itvia.online/benchmark/datos.json?convocatoria=pdq16-qwen-20261008",
+      "dominio": "inmunologia",
+      "fin_examen": "2026-10-08",
+      "id": "pdq16-qwen-20261008",
+      "inicio_examen": "2026-10-08",
+      "nodo": "03",
+      "nombre": "PDQ-HCL16 · Qwen",
+      "prueba": "pdq16"
+    },
+    {
+      "antecedente": true,
+      "consulta": "https://administracion.itvia.online/benchmark?convocatoria=cyb16-api-20261008",
+      "datos": "https://administracion.itvia.online/benchmark/datos.json?convocatoria=cyb16-api-20261008",
+      "dominio": "ciberseguridad",
+      "fin_examen": "2026-10-08",
+      "id": "cyb16-api-20261008",
+      "inicio_examen": "2026-10-08",
+      "nodo": "03",
+      "nombre": "CYB16 histórico · Astra / GLM",
+      "prueba": "cyb16-historico"
+    },
+    {
+      "antecedente": true,
+      "consulta": "https://administracion.itvia.online/benchmark?convocatoria=cyb09-kaggle-20261010",
+      "datos": "https://administracion.itvia.online/benchmark/datos.json?convocatoria=cyb09-kaggle-20261010",
+      "dominio": "ciberseguridad",
+      "fin_examen": "2026-10-10",
+      "id": "cyb09-kaggle-20261010",
+      "inicio_examen": "2026-10-10",
+      "nodo": "02",
+      "nombre": "CYB09 · Claude / Kaggle",
+      "prueba": "cyb09"
+    },
+    {
+      "antecedente": true,
+      "consulta": "https://administracion.itvia.online/benchmark?convocatoria=pdq25-nodo1-20260929",
+      "datos": "https://administracion.itvia.online/benchmark/datos.json?convocatoria=pdq25-nodo1-20260929",
+      "dominio": "inmunologia",
+      "fin_examen": "2026-09-30",
+      "id": "pdq25-nodo1-20260929",
+      "inicio_examen": "2026-09-29",
+      "nodo": "01",
+      "nombre": "PDQ-HCL25 · Qwen Instruct",
+      "prueba": "pdq25"
+    }
+  ],
+  "esquema": "SV-CATALOGO-CONVOCATORIAS-1",
+  "limite": "Catálogo de publicaciones incorporadas, no inventario de todas las pruebas del SV. No mezcla contratos ni recalifica antecedentes.",
+  "nodo_inicial": "03",
+  "orden_inicial": [
+    "inicio_examen_descendente",
+    "fin_examen_descendente",
+    "identificador_descendente"
+  ]
+}
