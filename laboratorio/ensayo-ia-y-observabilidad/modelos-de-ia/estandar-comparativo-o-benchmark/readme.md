@@ -4,7 +4,7 @@
 
 Esta comparación examina la respuesta de servicios de IA externos a dieciséis preguntas sobre documentos identificados. Publica el examen, las soluciones, sus reglas y la procedencia de la evidencia para permitir una revisión reproducible.
 
-**Publicación revisada: 22 de octubre de 2026.** Cuatro resultados de la categoría general y dos de la adaptada, todos con 16 aciertos y dictamen **0**. Grok y Kimi siguen pendientes, sin dictamen. Las categorías conservan clasificaciones independientes.
+**Publicación revisada: 22 de octubre de 2026.** Cuatro resultados de la categoría general y tres de la adaptada, todos con 16 aciertos y dictamen **0**. Kimi permanece pendiente, sin dictamen. Las categorías conservan clasificaciones independientes.
 
 [**Resultados y polígonos del SV**](https://administracion.itvia.online/benchmark#resultados) · [**Tabla y evidencias**](#4-resultados-y-evidencias) · [**Seguimiento de la convocatoria**](https://administracion.itvia.online/eet-ia/) — requiere sesión.
 
@@ -81,7 +81,7 @@ Esta distribución describe la cobertura. No aísla estadísticamente el efecto 
 | 4 | Qwen3.8-Max-0902 | Qwen | General | Examen corregido; dictamen 0. |
 | 5 | DeepSeek-V4.1-Flash-1017 | DeepSeek | ♿ Adaptada, 33 % | Examen corregido; dictamen 0. |
 | 6 | GLM-5.3 | Z.ai | ♿ Adaptada, 33 % | Examen corregido; dictamen 0. |
-| 7 | Grok 4.7 | xAI | ♿ Adaptada, 33 % | Pendiente; sin dictamen. |
+| 7 | Grok 4.7 | xAI | ♿ Adaptada, 33 % | Examen corregido; dictamen 0. |
 | 8 | Kimi K3 | Kimi | ♿ Adaptada, 33 % | Pendiente; sin dictamen. |
 
 La categoría general se examina primero; después, la adaptada al 33 % y, si hubiera candidatos, al 66 %. Una, dos o tres capacidades ausentes de PDF, HTML y Markdown corresponden al 33 %, 66 % y exclusión, respectivamente. Una capacidad pendiente no se cuenta como ausente. El porcentaje determina el grupo de turno, no puntúa ni desempata. DeepSeek y GLM se adaptan por su entrada documentada; Grok y Kimi por el recorrido de documentos admitido para esta prueba. No se les atribuye una incapacidad general para procesar PDF.
@@ -90,7 +90,7 @@ La categoría general se examina primero; después, la adaptada al 33 % y, si hu
 
 ## 4. Resultados y evidencias
 
-La [tabla comparativa CSV](COMPARACION.csv) y su [representación JSON](COMPARACION.json) contienen seis resultados recibidos y dos candidatos pendientes. Los valores proceden de la misma clasificación comprobada que alimenta el Gestor.
+La [tabla comparativa CSV](COMPARACION.csv) y su [representación JSON](COMPARACION.json) contienen siete resultados recibidos y un candidato pendiente. Los valores proceden de la misma clasificación comprobada que alimenta el Gestor.
 
 ### Categoría general
 
@@ -107,9 +107,10 @@ La [tabla comparativa CSV](COMPARACION.csv) y su [representación JSON](COMPARAC
 | Posición | Modelo | Aciertos | Errores | U | Dictamen | Tiempo efectivo (ms) | Explicaciones vinculadas | Polígono y evidencias |
 | ---: | --- | ---: | ---: | ---: | --- | ---: | ---: | --- |
 | 1 | DeepSeek-V4.1-Flash-1017 | 16 | 0 | 0 | 0 | 60116 | 16/16 | [Polígono](https://administracion.itvia.online/benchmark?poligono=deepseek-v4.1-flash-1017) · [Respuesta](resultados/deepseek-v4.1-flash-1017/cyb16-1512ff18a4f2/respuesta.txt) · [Datos](resultados/deepseek-v4.1-flash-1017/cyb16-1512ff18a4f2/resultado.json) |
-| 2 | GLM-5.3 | 16 | 0 | 0 | 0 | 798071 | 16/16 | [Polígono](https://administracion.itvia.online/benchmark?poligono=glm-5.3) · [Respuesta](resultados/glm-5.3/cyb16-93abf5360f9e/respuesta.txt) · [Datos](resultados/glm-5.3/cyb16-93abf5360f9e/resultado.json) |
+| 2 | Grok 4.7 | 16 | 0 | 0 | 0 | 215951 | 16/16 | [Polígono](https://administracion.itvia.online/benchmark?poligono=grok-4.7) · [Respuesta](resultados/grok-4.7/cyb16-8466519c3c7d/respuesta.txt) · [Datos](resultados/grok-4.7/cyb16-8466519c3c7d/resultado.json) |
+| 3 | GLM-5.3 | 16 | 0 | 0 | 0 | 798071 | 16/16 | [Polígono](https://administracion.itvia.online/benchmark?poligono=glm-5.3) · [Respuesta](resultados/glm-5.3/cyb16-93abf5360f9e/respuesta.txt) · [Datos](resultados/glm-5.3/cyb16-93abf5360f9e/resultado.json) |
 
-GLM conserva una explicación con un defecto de formato. Las dieciséis respuestas se separan sin ambigüedad y mantienen sus identificadores, orden y valores; las explicaciones no puntúan. La [revisión común de correcciones](REVISION-CORRECCIONES-20261022.md) conserva la corrección anterior y el motivo de su rectificación, sin repetir el examen.
+GLM y Grok conservan un defecto de formato en una explicación, que no puntúa. Sus dieciséis respuestas se separan sin ambigüedad y mantienen identificadores, orden y valores. Las revisiones comunes [primera](REVISION-CORRECCIONES-20261022.md) y [segunda](REVISION-CIERRE-AUXILIAR-20261022.md) conservan los dictámenes anteriores y sus rectificaciones, sin repetir exámenes.
 
 La ordenación aplica aciertos, errores, tiempo efectivo y coste general comparable, en ese orden y dentro de cada categoría. Coinciden los aciertos y errores de los resultados recibidos; el tiempo efectivo determina sus posiciones. Los tokens son informativos y no desempatan. No hay recomendación oficial ni selección de producción. Una sola ejecución por candidato no mide la variabilidad de ejecuciones sucesivas.
 
@@ -131,7 +132,7 @@ Los contadores de entrada, salida, razonamiento y caché mantienen su disponibil
 
 Los datos del polígono pueden descargarse desde la carpeta de cada intento. El visor interactivo de la página de clasificación utiliza Rust/egui y presenta esos mismos datos.
 
-La disponibilidad de explicaciones se registra por pregunta en `resultado.json`. Gemini comunica quince explicaciones vinculadas a dieciséis respuestas; los demás candidatos conservan dieciséis explicaciones vinculadas, con el defecto de formato de GLM señalado expresamente. Esta disponibilidad no modifica la puntuación. La presencia de una explicación o de una revisión declarada no acredita la veracidad del procedimiento descrito.
+La disponibilidad de explicaciones se registra por pregunta en `resultado.json`. Gemini comunica quince explicaciones vinculadas a dieciséis respuestas; los demás candidatos conservan dieciséis explicaciones vinculadas, con los defectos de formato de GLM y Grok señalados expresamente. Esta disponibilidad no modifica la puntuación. La presencia de una explicación o de una revisión declarada no acredita la veracidad del procedimiento descrito.
 
 </details>
 

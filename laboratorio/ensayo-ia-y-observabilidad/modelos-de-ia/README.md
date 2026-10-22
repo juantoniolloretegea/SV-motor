@@ -1,6 +1,6 @@
 # Modelos de IA
 
-**Edición documental 24 · 22 de octubre de 2026.**
+**Edición documental 25 · 22 de octubre de 2026.**
 
 Este catálogo identifica los modelos estudiados, las configuraciones efectivamente ensayadas y los candidatos de la convocatoria actual. Cada resultado conserva su banco documental, modalidad de inferencia, fecha, condiciones y reservas. Una familia comercial no recibe por extensión el resultado de una versión concreta.
 
@@ -23,7 +23,7 @@ Los expedientes conservan sus carpetas y referencias. Un estudio de viabilidad, 
 
 ## Ocho candidatos de la convocatoria actual
 
-La selección se presenta alfabéticamente como índice de consulta. Cuatro candidatos han completado la edición general y dos la adaptada: DeepSeek y GLM. Grok y Kimi permanecen pendientes. La clasificación por resultados y las evidencias se consultan en el estándar comparativo. Cada nueva ejecución exige condiciones propias vigentes y autorización de entrega y lanzamiento; un resultado anterior no las sustituye.
+La selección se presenta alfabéticamente como índice de consulta. Cuatro candidatos han completado la edición general y tres la adaptada: DeepSeek, GLM y Grok. Kimi permanece pendiente. La clasificación por resultados y las evidencias se consultan en el estándar comparativo. Cada nueva ejecución exige condiciones propias vigentes y autorización de entrega y lanzamiento; un resultado anterior no las sustituye.
 
 | Candidato | Identidad del servicio | Estado de esta convocatoria |
 |---|---|---|
@@ -32,7 +32,7 @@ La selección se presenta alfabéticamente como índice de consulta. Cuatro cand
 | [Gemini 4 Argon](#gemini-4-argon) | `gemini-4-argon` | General: [examen corregido](estandar-comparativo-o-benchmark/resultados/gemini-4-argon/cyb16-67947a76804a/resultado.json), 16/16, dictamen 0. |
 | [GLM-5.3](#glm-53) | `glm-5.3` | Adaptada al 33 %: [examen corregido](estandar-comparativo-o-benchmark/resultados/glm-5.3/cyb16-93abf5360f9e/resultado.json), 16/16, dictamen 0. |
 | [GPT-6 Astra](#gpt-6-astra) | `gpt-6-astra` | General: [examen corregido](estandar-comparativo-o-benchmark/resultados/gpt-6-astra/cyb16-42214abb1502/resultado.json), 16/16, dictamen 0. |
-| [Grok 4.7](#grok-47) | `grok-4.7` | Adaptada al 33 %: pendiente, sin dictamen. |
+| [Grok 4.7](#grok-47) | `grok-4.7` | Adaptada al 33 %: [examen corregido](estandar-comparativo-o-benchmark/resultados/grok-4.7/cyb16-8466519c3c7d/resultado.json), 16/16, dictamen 0. |
 | [Kimi K3](#kimi-k3) | `kimi-k3` | Adaptada al 33 %: pendiente, sin dictamen. |
 | [Qwen3.8-Max-0902](#qwen38-max-0902) | `qwen3.8-max-0902` | General: [examen corregido](estandar-comparativo-o-benchmark/resultados/qwen3.8-max-0902/cyb16-c845bb554c19/resultado.json), 16/16, dictamen 0. |
 
@@ -114,6 +114,8 @@ El antecedente CYB16 usó Responses mediante autorización ChatGPT. La convocato
 
 <details>
 <summary><strong>Grok 4.7 · xAI</strong></summary>
+
+La convocatoria EET-CYB16 conserva dieciséis aciertos y dictamen 0 en la edición adaptada. La [segunda revisión común](estandar-comparativo-o-benchmark/REVISION-CIERRE-AUXILIAR-20261022.md) documenta la rectificación del rechazo formal por una llave ausente en una explicación; el original y el antecedente se conservan, sin repetir el examen.
 
 [Expediente y fuentes](acoplamientos-con-el-sv/03-api-directa/xai/grok-4.7/readme.md).
 
