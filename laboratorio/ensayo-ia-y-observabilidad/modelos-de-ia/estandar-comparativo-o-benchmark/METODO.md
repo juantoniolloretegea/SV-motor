@@ -69,6 +69,14 @@ El [libro de evaluación](https://documentos-sv.itvia.online/evaluacion/validaci
 
 Los proveedores pueden [solicitar una evaluación](https://administracion.itvia.online/benchmark/proveedores). Presentar una solicitud o aportar recursos no compra posiciones ni garantiza aceptación o un resultado favorable. La recepción de la solicitud no contrata servicios ni inicia pruebas.
 
+## 7. Reserva de salida, previsión económica y cuotas
+
+El Evaluador puede configurar y aceptar la reserva de salida y la previsión económica por modelo y examen antes de iniciar el intento. Debe conservar el cálculo, las tarifas y sus fuentes. Un cambio exige renovar la habilitación y comprobar de nuevo el saldo; no modifica preguntas, fuentes, resultados anteriores ni límites externos del proveedor.
+
+La reserva es una cota teórica, no una predicción de uso. Cuando depende del contexto, se obtiene restando la entrada medida al contexto documentado. Reducirla puede cortar la respuesta. La previsión económica distingue el escenario elegido del máximo teórico; no garantiza un corte de facturación ni añade crédito. Se recomienda consultar el saldo y las cuotas vigentes inmediatamente antes del lanzamiento. Los niveles de cuenta y sus límites por minuto, día o concurrencia se registran con fecha; la cuota restante desconocida no se sustituye por cero.
+
+Las particularidades de cada API se declaran: Qwen conserva su componente de razonamiento; en la modalidad actual de Grok no está acreditado un parámetro de corte de salida y se mantiene su reserva de planificación completa. La previsión económica puede configurarse en ambos casos. Los [valores de uso de Kimi K3](condiciones/kimi-k3/VALORES-USO.md) documentan Tier0, Tier1, el cálculo de capacidad y el escenario autorizado a 22 de octubre de 2026. Son condiciones de la prueba, no una calificación.
+
 ---
 
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
