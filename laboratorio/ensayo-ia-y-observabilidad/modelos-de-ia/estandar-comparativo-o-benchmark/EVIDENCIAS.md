@@ -2,7 +2,7 @@
 
 ## 1. Estado de la edición
 
-La publicación revisada del 22 de octubre de 2026 contiene cuatro resultados de la edición general `eet-cyb16-multiformato-20261021-v2` y tres de la adaptada `eet-cyb16-markdown-adaptada-20261021-v2`: DeepSeek, GLM y Grok. Kimi permanece pendiente, sin dictamen. La relación completa figura en [COMPARACION.json](COMPARACION.json).
+La publicación revisada del 22 de octubre de 2026 contiene cuatro resultados de la edición general `eet-cyb16-multiformato-20261021-v2` y cuatro de la adaptada `eet-cyb16-markdown-adaptada-20261021-v2`: DeepSeek, GLM, Grok y Kimi. Los ocho exámenes están corregidos. La relación completa figura en [COMPARACION.json](COMPARACION.json).
 
 Cada carpeta publicada reúne `respuesta.txt`, `resultado.json` y `poligono.json`. `respuesta.txt` conserva, sin reescritura, el texto recibido del modelo que se entregó al corrector; puede contener JSON. No es el contenedor íntegro de eventos de la API. `respuesta_textual_sha256` identifica ese archivo; `respuesta_original_sha256` identifica la respuesta de transporte conservada con acceso restringido. Son objetos diferentes y sus huellas no son intercambiables.
 

@@ -1,6 +1,6 @@
 # Modelos de IA
 
-**Edición documental 25 · 22 de octubre de 2026.**
+**Edición documental 26 · 22 de octubre de 2026.**
 
 Este catálogo identifica los modelos estudiados, las configuraciones efectivamente ensayadas y los candidatos de la convocatoria actual. Cada resultado conserva su banco documental, modalidad de inferencia, fecha, condiciones y reservas. Una familia comercial no recibe por extensión el resultado de una versión concreta.
 
@@ -23,7 +23,7 @@ Los expedientes conservan sus carpetas y referencias. Un estudio de viabilidad, 
 
 ## Ocho candidatos de la convocatoria actual
 
-La selección se presenta alfabéticamente como índice de consulta. Cuatro candidatos han completado la edición general y tres la adaptada: DeepSeek, GLM y Grok. Kimi permanece pendiente. La clasificación por resultados y las evidencias se consultan en el estándar comparativo. Cada nueva ejecución exige condiciones propias vigentes y autorización de entrega y lanzamiento; un resultado anterior no las sustituye.
+La selección se presenta alfabéticamente como índice de consulta. Cuatro candidatos han completado la edición general y cuatro la adaptada: DeepSeek, GLM, Grok y Kimi. Los ocho conservan dieciséis aciertos y dictamen 0. La clasificación por resultados y las evidencias se consultan en el estándar comparativo. Cada nueva ejecución exige condiciones propias vigentes y autorización de entrega y lanzamiento; un resultado anterior no las sustituye.
 
 | Candidato | Identidad del servicio | Estado de esta convocatoria |
 |---|---|---|
@@ -33,7 +33,7 @@ La selección se presenta alfabéticamente como índice de consulta. Cuatro cand
 | [GLM-5.3](#glm-53) | `glm-5.3` | Adaptada al 33 %: [examen corregido](estandar-comparativo-o-benchmark/resultados/glm-5.3/cyb16-93abf5360f9e/resultado.json), 16/16, dictamen 0. |
 | [GPT-6 Astra](#gpt-6-astra) | `gpt-6-astra` | General: [examen corregido](estandar-comparativo-o-benchmark/resultados/gpt-6-astra/cyb16-42214abb1502/resultado.json), 16/16, dictamen 0. |
 | [Grok 4.7](#grok-47) | `grok-4.7` | Adaptada al 33 %: [examen corregido](estandar-comparativo-o-benchmark/resultados/grok-4.7/cyb16-8466519c3c7d/resultado.json), 16/16, dictamen 0. |
-| [Kimi K3](#kimi-k3) | `kimi-k3` | Adaptada al 33 %: pendiente, sin dictamen. |
+| [Kimi K3](#kimi-k3) | `kimi-k3` | Adaptada al 33 %: [examen corregido](estandar-comparativo-o-benchmark/resultados/kimi-k3/cyb16-56831d2845b3/resultado.json), 16/16, dictamen 0. |
 | [Qwen3.8-Max-0902](#qwen38-max-0902) | `qwen3.8-max-0902` | General: [examen corregido](estandar-comparativo-o-benchmark/resultados/qwen3.8-max-0902/cyb16-c845bb554c19/resultado.json), 16/16, dictamen 0. |
 
 La capacidad y la configuración deben corresponder a la edición exacta: longitud de entrada, salida y razonamiento, tiempos, adaptación del protocolo y cotas. Cuota gratuita, saldo monetario y límite administrativo son conceptos distintos. Las fichas siguientes distinguen los antecedentes y el estado de la convocatoria actual.

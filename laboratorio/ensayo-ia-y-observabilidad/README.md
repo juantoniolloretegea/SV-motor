@@ -1,6 +1,6 @@
 # Ensayo de inteligencia artificial y observabilidad
 
-**Edición documental 2.38 · 22 de octubre de 2026.**
+**Edición documental 2.39 · 22 de octubre de 2026.**
 
 <a id="objeto-y-criterio-experimental"></a>
 
@@ -76,7 +76,7 @@ El [estándar comparativo](modelos-de-ia/estandar-comparativo-o-benchmark/readme
 
 ## Estado actual
 
-La convocatoria EET-CYB16 comprende **ocho candidatos**. Claude Opus 5.5, Gemini 4 Argon, GPT-6 Astra y Qwen3.8-Max-0902 han completado la edición general: cada uno conserva dieciséis aciertos y dictamen 0. DeepSeek, GLM y Grok han completado la edición adaptada al 33 %, también con dieciséis aciertos y dictamen 0; Kimi permanece pendiente, sin dictamen. Las rectificaciones formales de GLM y Grok están identificadas en las evidencias y conservan sus antecedentes. Los [resultados, polígonos y evidencias](modelos-de-ia/estandar-comparativo-o-benchmark/readme.md#4-resultados-y-evidencias) identifican cada ejecución. La tabla siguiente conserva los antecedentes; no sustituye la clasificación de esta convocatoria. Las [preguntas, soluciones y fuentes](modelos-de-ia/estandar-comparativo-o-benchmark/readme.md) corresponden a las ediciones general y adaptada con reglas revisadas del 21 de octubre de 2026.
+La convocatoria EET-CYB16 comprende **ocho candidatos**. Claude Opus 5.5, Gemini 4 Argon, GPT-6 Astra y Qwen3.8-Max-0902 han completado la edición general: cada uno conserva dieciséis aciertos y dictamen 0. DeepSeek, GLM, Grok y Kimi han completado la edición adaptada al 33 %, también con dieciséis aciertos y dictamen 0. Quedan publicados los ocho resultados de la convocatoria. Las rectificaciones formales de GLM y Grok están identificadas en las evidencias y conservan sus antecedentes. Los [resultados, polígonos y evidencias](modelos-de-ia/estandar-comparativo-o-benchmark/readme.md#4-resultados-y-evidencias) identifican cada ejecución. La tabla siguiente conserva los antecedentes; no sustituye la clasificación de esta convocatoria. Las [preguntas, soluciones y fuentes](modelos-de-ia/estandar-comparativo-o-benchmark/readme.md) corresponden a las ediciones general y adaptada con reglas revisadas del 21 de octubre de 2026.
 
 | Candidato | Antecedentes y alcance |
 |---|---|
