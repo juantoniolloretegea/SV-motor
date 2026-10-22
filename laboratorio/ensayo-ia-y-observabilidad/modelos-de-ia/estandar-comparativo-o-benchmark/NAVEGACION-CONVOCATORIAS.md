@@ -10,7 +10,9 @@ La entrada general selecciona **Nodo 3**, por decisión vigente, y su última co
 
 Un enlace permanente a una convocatoria conserva su identidad y su nodo, incluidos los nodos 1 y 2. Si sólo hay una publicación, siempre se muestra. **Ver todas las convocatorias** elimina las restricciones de nodo, dominio y prueba. El catálogo completo permanece accesible en un desplegable, aunque haya filtros activos.
 
-La pantalla identifica la convocatoria visible y diferencia el total publicado, las coincidencias con la selección y la entrada presentada. Si no hay coincidencias, muestra un aviso, retira los filtros y presenta la última publicación disponible. Un filtro modifica la consulta; no demuestra que las pruebas ocultas no existan. El catálogo reúne las publicaciones incorporadas y revisadas, no todos los trabajos en preparación ni los expedientes sujetos a acceso restringido.
+La pantalla identifica la convocatoria visible y diferencia el total publicado, las coincidencias con la selección y la entrada presentada. La dependencia es **Nodo → Dominio → Prueba → Convocatoria**. Cambiar un selector envía una consulta y retira las elecciones dependientes anteriores. Un enlace con filtros incompatibles conserva el nodo válido elegido, retira sólo los filtros incompatibles y presenta la última convocatoria compatible, explicando el ajuste. Las opciones ofrecidas corresponden a ese ámbito. **Consultar** también permite enviar el formulario sin JavaScript. La consulta se sitúa en el selector; el cambio de pestaña, en su contenido.
+
+Un filtro modifica la consulta; no demuestra que las pruebas ocultas no existan. El catálogo reúne las publicaciones incorporadas y revisadas, no todos los trabajos en preparación ni los expedientes sujetos a acceso restringido.
 
 ## Nombres y ayuda contextual
 
@@ -35,7 +37,7 @@ Las fechas describen la ejecución original, no la fecha de incorporación al ca
 
 Cada antecedente conserva preguntas, fuentes, etapas, resultados, reservas y métricas de sus documentos originales. No se recalcula con la plantilla actual ni se incorpora a una clasificación común de contratos diferentes. Una recepción documental posterior no sustituye el vector recibido. Un impedimento técnico no se convierte en U. Una etapa intermedia mejor no sustituye la entrega final.
 
-Los polígonos históricos enlazan los archivos conservados; cuando GitHub presenta un HTML como archivo, la ficha indica que debe descargarse y abrirse para visualizarlo. No se genera un polígono nuevo a partir de un resumen incompleto. La célula pertenece a la prueba: (16,4) no constituye un límite del SV.
+**Abrir polígono SV** abre en otra pestaña el visor histórico original, servido íntegro y comprobado por SHA-256. Las seis entregas publicadas de Kaggle, Astra, GLM, Qwen y Grok mantienen sus datos y etapas originales, sin recalificación. El visor queda aislado del origen y sin conexiones de red. Los enlaces a los archivos de GitHub permanecen disponibles como fuentes. Si una prueba no dispone de polígono publicado, no se fabrica uno a partir de un resumen incompleto. La célula pertenece a la prueba: (16,4) no constituye un límite del SV.
 
 El resultado completo EET-CYB16, revisión 197, permanece intacto. Las categorías general y adaptada mantienen sus clasificaciones. Publicar resultados no equivale a recomendar un modelo ni autorizar su uso en producción.
 
