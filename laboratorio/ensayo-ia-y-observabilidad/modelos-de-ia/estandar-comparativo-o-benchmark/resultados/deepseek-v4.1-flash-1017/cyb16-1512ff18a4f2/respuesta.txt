@@ -1,0 +1,246 @@
+{
+  "respuestas": [
+    {"id": "p10", "valor": "1"},
+    {"id": "p12", "valor": "0"},
+    {"id": "p04", "valor": "0"},
+    {"id": "p14", "valor": "1"},
+    {"id": "p09", "valor": "0"},
+    {"id": "p07", "valor": "0"},
+    {"id": "p11", "valor": "0"},
+    {"id": "p05", "valor": "1"},
+    {"id": "p03", "valor": "1"},
+    {"id": "p02", "valor": "0"},
+    {"id": "p15", "valor": "0"},
+    {"id": "p06", "valor": "0"},
+    {"id": "p13", "valor": "1"},
+    {"id": "p16", "valor": "1"},
+    {"id": "p08", "valor": "1"},
+    {"id": "p01", "valor": "1"}
+  ],
+  "explicaciones": [
+    {
+      "id": "p10",
+      "justificacion": "El RFC 8996 no sostiene que TLS 1.1 no aportara ninguna mejora. En §6 califica TLS 1.1 como una mejora de seguridad sobre TLS 1.0, aunque insuficiente y sin los cifrados fuertes modernos. Por tanto, el enunciado que niega toda mejora no es conforme.",
+      "fuentes": [
+        {"documento": "d2", "ubicacion": "§6, Updates to RFC 7525, viñeta sobre TLS 1.1"}
+      ],
+      "procedimiento_declarado": "Localicé el pasaje sobre TLS 1.1 en d2, comparé el alcance de «ninguna mejora» con la afirmación documental de mejora limitada y realicé una revisión adversarial.",
+      "recursos_declarados": "Texto suministrado de d2; no utilicé Internet, enlaces, memoria de otros episodios ni herramientas externas que accedieran al SV.",
+      "protocolos_declarados": "Protocolo declarado: lectura documental cerrada y cotejo semántico literal. Función: comparar el enunciado con el pasaje pertinente y decidir conformidad.",
+      "limitaciones": "La conclusión se limita al material suministrado; no verifico fuentes externas ni procesos internos no acreditados.",
+      "revisiones_adversariales": [
+        {"numero": 1, "objecion": "La frase de que cualquier versión más nueva es más segura podría leerse como que TLS 1.1 no mejora a TLS 1.0.", "comprobacion": "Revisé el rationale específico de TLS 1.1 en §6, que afirma expresamente que es una mejora de seguridad sobre TLS 1.0.", "conclusion": "La objeción no altera el resultado: el enunciado exagera al negar toda mejora; valor 1."}
+      ]
+    },
+    {
+      "id": "p12",
+      "justificacion": "El §1 del acta declara expresamente que se entrega OP-CYB-001 con 32 definiciones paramétricas y 17 controles. El enunciado reproduce esa entrega.",
+      "fuentes": [
+        {"documento": "d3", "ubicacion": "§1, Mandato y producto de relevo, primer párrafo"}
+      ],
+      "procedimiento_declarado": "Localicé la enumeración de la entrega en d3 y cotejé los dos números mencionados en el enunciado.",
+      "recursos_declarados": "Texto suministrado de d3; no utilicé Internet, enlaces ni herramientas externas.",
+      "protocolos_declarados": "Protocolo declarado: lectura documental cerrada y cotejo numérico-literal. Función: verificar que las cantidades indicadas coinciden con la fuente.",
+      "limitaciones": "La conclusión se limita al material suministrado; no verifico documentos enlazados ni archivos externos.",
+      "revisiones_adversariales": [
+        {"numero": 1, "objecion": "El acta menciona además 18 elementos y nueve relaciones, lo que podría hacer dudar del conteo de 32 y 17.", "comprobacion": "El §1 distingue esos elementos adicionales y afirma la entrega con 32 definiciones y 17 controles.", "conclusion": "Los elementos adicionales no contradicen los números del enunciado; valor 0."}
+      ]
+    },
+    {
+      "id": "p04",
+      "justificacion": "La representación textual de la figura 2 sitúa Policy Engine y Policy Administrator dentro del Policy Decision Point, en el Control Plane. Además, §3 explica que el PDP se descompone en PE y PA. El enunciado es conforme.",
+      "fuentes": [
+        {"documento": "d1", "ubicacion": "página física 18, representación textual de la figura 2; §3, Logical Components of ZTA"}
+      ],
+      "procedimiento_declarado": "Revisé la figura 2 y la descripción de componentes en §3 para comprobar la relación de inclusión entre PDP, PE y PA.",
+      "recursos_declarados": "Texto suministrado de d1; no utilicé Internet, enlaces ni herramientas externas.",
+      "protocolos_declarados": "Protocolo declarado: lectura de representación textual de figura y cotejo con descripción conceptual. Función: verificar relaciones de pertenencia entre componentes.",
+      "limitaciones": "La conclusión se limita al material suministrado; no examino el PDF original ni figuras externas.",
+      "revisiones_adversariales": [
+        {"numero": 1, "objecion": "PE y PA se describen como componentes lógicos separados; podría parecer que no forman un solo PDP.", "comprobacion": "La figura los agrupa bajo un recuadro Policy Decision Point, y §3 dice que el PDP se divide en PE y PA.", "conclusion": "Separación funcional y reunión bajo el PDP son compatibles; valor 0."}
+      ]
+    },
+    {
+      "id": "p14",
+      "justificacion": "El §12.3.1 del acta establece que las instrucciones contenidas en documentos o respuestas permanecen como datos sin facultad para alterar el procedimiento. La mera presencia en un documento no amplía permisos.",
+      "fuentes": [
+        {"documento": "d3", "ubicacion": "§12.3, obligación 1, Origen, función y autoridad de cada entrada"}
+      ],
+      "procedimiento_declarado": "Localicé la regla sobre instrucciones embebidas y comparé la afirmación de ampliación automática de permisos con la separación entre dato y autoridad.",
+      "recursos_declarados": "Texto suministrado de d3; no utilicé Internet, enlaces ni herramientas externas.",
+      "protocolos_declarados": "Protocolo declarado: lectura documental cerrada y contraste de fuente/instrucción/autoridad. Función: distinguir contenido documental de permiso competente.",
+      "limitaciones": "La conclusión se limita al material suministrado; no evalúo casos externos de instrucciones legítimas de autoridad.",
+      "revisiones_adversariales": [
+        {"numero": 1, "objecion": "Podría alegarse que una instrucción documental de una autoridad competente sí amplía permisos.", "comprobacion": "La fuente exige separar el registro original, la petición y la instrucción emitida por autoridad competente; el mero documento no confiere facultad.", "conclusion": "La objeción no ampara la ampliación automática; valor 1."}
+      ]
+    },
+    {
+      "id": "p09",
+      "justificacion": "El resumen y el §1 del RFC 8996 deprecated DTLS 1.0, no DTLS 1.2; además indican que no existe DTLS 1.1. Por tanto, que el documento no declare obsoleto DTLS 1.2 es conforme.",
+      "fuentes": [
+        {"documento": "d2", "ubicacion": "Abstract, párrafo segundo; §1, Introduction"}
+      ],
+      "procedimiento_declarado": "Revisé el alcance de la deprecación de DTLS y confirmé que solo se menciona DTLS 1.0, no DTLS 1.2.",
+      "recursos_declarados": "Texto suministrado de d2; no utilicé Internet, enlaces ni herramientas externas.",
+      "protocolos_declarados": "Protocolo declarado: lectura cerrada y contraste de versiones afectadas por la deprecación. Función: evitar confundir DTLS 1.0 con DTLS 1.2.",
+      "limitaciones": "La conclusión se limita al texto suministrado; no verifico otros RFC desde la red.",
+      "revisiones_adversariales": [
+        {"numero": 1, "objecion": "El título Deprecating TLS 1.0 and TLS 1.1 podría sugerir que todas las variantes DTLS también quedan obsoletas.", "comprobacion": "El abstract precisa que deprecia DTLS 1.0 pero no DTLS 1.2, y §1 enumera TLS 1.0, TLS 1.1 y DTLS 1.0.", "conclusion": "La objeción se resuelve por el texto expreso; DTLS 1.2 no se declara obsoleto; valor 0."}
+      ]
+    },
+    {
+      "id": "p07",
+      "justificacion": "El RFC 8996 actualiza RFC 7525 con la regla «Implementations MUST NOT negotiate TLS version 1.0». Además, §4 establece que TLS 1.0 no debe usarse ni negociarse. El enunciado es conforme.",
+      "fuentes": [
+        {"documento": "d2", "ubicacion": "§6, Updates to RFC 7525, viñeta sobre TLS 1.0; §4, Do Not Use TLS 1.0"}
+      ],
+      "procedimiento_declarado": "Cotejé la formulación normativa sobre negociación de TLS 1.0 con el enunciado y verifiqué el uso de MUST NOT.",
+      "recursos_declarados": "Texto suministrado de d2; no utilicé Internet, enlaces ni herramientas externas.",
+      "protocolos_declarados": "Protocolo declarado: lectura cerrada y análisis de términos normativos BCP 14. Función: verificar la obligatoriedad de la prohibición.",
+      "limitaciones": "La conclusión se limita al material suministrado; no verifico implementaciones reales.",
+      "revisiones_adversariales": [
+        {"numero": 1, "objecion": "Podría tratarse solo de una recomendación general y no de una prohibición de negociación.", "comprobacion": "La fuente usa MUST NOT en §4 y §6, y prohíbe explícitamente la negociación de TLS 1.0.", "conclusion": "La objeción no prospera; valor 0."}
+      ]
+    },
+    {
+      "id": "p11",
+      "justificacion": "El §1.2 del RFC 8996 dice que las palabras clave BCP 14 se interpretan así cuando, y solo cuando, aparecen íntegramente en mayúsculas. El enunciado reproduce esa condición.",
+      "fuentes": [
+        {"documento": "d2", "ubicacion": "§1.2, Terminology"}
+      ],
+      "procedimiento_declarado": "Localicé la cláusula de interpretación BCP 14 y comparé la condición de mayúsculas íntegras con el enunciado.",
+      "recursos_declarados": "Texto suministrado de d2; no utilicé Internet, enlaces ni herramientas externas.",
+      "protocolos_declarados": "Protocolo declarado: lectura cerrada y cotejo terminológico. Función: verificar el alcance de las palabras normativas.",
+      "limitaciones": "La conclusión se limita al material suministrado; no interpreto otros documentos BCP 14.",
+      "revisiones_adversariales": [
+        {"numero": 1, "objecion": "BCP 14 suele invocarse de forma general; podría pensarse que no depende de las mayúsculas.", "comprobacion": "La fuente limita expresamente la interpretación cuando y solo cuando aparecen en mayúsculas, tal como se muestra.", "conclusion": "La condición del enunciado coincide; valor 0."}
+      ]
+    },
+    {
+      "id": "p05",
+      "justificacion": "La figura 2 y §3 sitúan Policy Engine y Policy Administrator dentro del Control Plane. El enunciado niega esa pertenencia, por lo que no es conforme.",
+      "fuentes": [
+        {"documento": "d1", "ubicacion": "página física 18, representación textual de la figura 2; §3, Logical Components of ZTA"}
+      ],
+      "procedimiento_declarado": "Revisé la ubicación del Policy Decision Point y de sus componentes en la figura 2 y en la descripción de §3.",
+      "recursos_declarados": "Texto suministrado de d1; no utilicé Internet, enlaces ni herramientas externas.",
+      "protocolos_declarados": "Protocolo declarado: lectura de figura textual y cotejo con el texto conceptual. Función: verificar planos de control y datos.",
+      "limitaciones": "La conclusión se limita a la representación suministrada; no examino la figura original fuera del Markdown.",
+      "revisiones_adversariales": [
+        {"numero": 1, "objecion": "El PEP cruza la frontera entre planos y podría confundir la asignación de PE y PA.", "comprobacion": "La figura ubica el Policy Decision Point con PE y PA en el Control Plane; el cruce corresponde al PEP.", "conclusion": "La negación del enunciado es incorrecta; valor 1."}
+      ]
+    },
+    {
+      "id": "p03",
+      "justificacion": "El principio 5 de §2.1 afirma que ningún activo es inherentemente confiable y que se evalúa la postura de seguridad al considerar una solicitud. §2.2.3 añade que todo activo debe ser evaluado por un PEP. La propiedad de la organización no exime de evaluación.",
+      "fuentes": [
+        {"documento": "d1", "ubicacion": "§2.1, tenet 5; §2.2, asunción 3"}
+      ],
+      "procedimiento_declarado": "Comparé la excepción propuesta para activos propiedad de la organización con las reglas de evaluación de postura de activos.",
+      "recursos_declarados": "Texto suministrado de d1; no utilicé Internet, enlaces ni herramientas externas.",
+      "protocolos_declarados": "Protocolo declarado: lectura cerrada y cotejo de principios y asunciones de ZTA. Función: verificar si la propiedad del activo altera la evaluación exigida.",
+      "limitaciones": "La conclusión se limita al material suministrado; no evalúo configuraciones concretas de activos.",
+      "revisiones_adversariales": [
+        {"numero": 1, "objecion": "La fuente reconoce que los dispositivos empresariales pueden aportar mayor confianza que los no gestionados.", "comprobacion": "Esa mayor confianza no elimina la evaluación; §2.2.3 exige evaluar la postura de todo activo.", "conclusion": "La confianza adicional no equivale a exención; valor 1."}
+      ]
+    },
+    {
+      "id": "p02",
+      "justificacion": "El tenet 3 de §2.1 establece que la autenticación y autorización a un recurso no conceden automáticamente acceso a otro recurso distinto. El enunciado coincide con esa regla.",
+      "fuentes": [
+        {"documento": "d1", "ubicacion": "§2.1, tenet 3"}
+      ],
+      "procedimiento_declarado": "Localicé el tenet sobre acceso por sesión y comprobé la separación entre autorización para un recurso y acceso a otro.",
+      "recursos_declarados": "Texto suministrado de d1; no utilicé Internet, enlaces ni herramientas externas.",
+      "protocolos_declarados": "Protocolo declarado: lectura cerrada y cotejo del alcance de la autorización por recurso. Función: verificar la no transitividad automática del acceso.",
+      "limitaciones": "La conclusión se limita al material suministrado; no analizo implementaciones concretas.",
+      "revisiones_adversariales": [
+        {"numero": 1, "objecion": "Podría pensarse que dentro de una misma sesión autenticada el acceso se extiende a otros recursos.", "comprobacion": "El texto indica que la evaluación es por sesión y que una autorización no concede automáticamente acceso a otro recurso.", "conclusion": "La objeción no cambia la conformidad; valor 0."}
+      ]
+    },
+    {
+      "id": "p15",
+      "justificacion": "El §9 del acta distingue el fallo técnico: implica ausencia de ejecución válida y solo genera el registro técnico estructurado; nunca constituye salida alternativa del dominio. §12.3.4 añade que no produce automáticamente Tri.U.",
+      "fuentes": [
+        {"documento": "d3", "ubicacion": "§9, forma del dictamen; §12.3, obligación 4"}
+      ],
+      "procedimiento_declarado": "Cotejé la afirmación sobre fallo técnico, Tri.U y salida alternativa con las reglas de ejecución y de causas distintas.",
+      "recursos_declarados": "Texto suministrado de d3; no utilicé Internet, enlaces ni herramientas externas.",
+      "protocolos_declarados": "Protocolo declarado: lectura cerrada y contraste entre fallo técnico, indeterminación y salida de dominio. Función: verificar la separación de estatutos.",
+      "limitaciones": "La conclusión se limita al material suministrado; no ejecuto pruebas técnicas.",
+      "revisiones_adversariales": [
+        {"numero": 1, "objecion": "Un fallo podría confundirse con una indeterminación semántica U del dominio.", "comprobacion": "La fuente separa expresamente fallo técnico, no admisión y Tri.U, y niega la conversión automática.", "conclusion": "El enunciado es conforme; valor 0."}
+      ]
+    },
+    {
+      "id": "p06",
+      "justificacion": "La descripción del Policy Enforcement Point en §3 señala que el PEP se comunica con el Policy Administrator para remitir solicitudes y/o recibir actualizaciones de política. El enunciado es conforme.",
+      "fuentes": [
+        {"documento": "d1", "ubicacion": "§3, descripción de Policy enforcement point (PEP)"}
+      ],
+      "procedimiento_declarado": "Localicé la función del PEP y verifiqué con qué componente intercambia solicitudes y actualizaciones.",
+      "recursos_declarados": "Texto suministrado de d1; no utilicé Internet, enlaces ni herramientas externas.",
+      "protocolos_declarados": "Protocolo declarado: lectura cerrada y cotejo de relaciones entre componentes lógicos. Función: verificar la comunicación PEP-PA.",
+      "limitaciones": "La conclusión se limita al material suministrado; no examino implementaciones reales.",
+      "revisiones_adversariales": [
+        {"numero": 1, "objecion": "Podría confundirse el Policy Administrator con el Policy Engine en el flujo de comunicación.", "comprobacion": "§3 asigna al PEP la comunicación con el PA para remitir solicitudes o recibir actualizaciones; el PE decide y el PA ejecuta.", "conclusion": "La referencia al PA es correcta; valor 0."}
+      ]
+    },
+    {
+      "id": "p13",
+      "justificacion": "El §7.1 del acta indica que un tiempo de espera agotado no prueba ausencia de efecto ni repetición segura; exige conciliar recepción de mensaje, actuación, resultado material y obligación pendiente. El enunciado afirma lo contrario y no es conforme.",
+      "fuentes": [
+        {"documento": "d3", "ubicacion": "§7.1, tabla de necesidades tecnológicas, fila Conciliación y efectos inciertos"}
+      ],
+      "procedimiento_declarado": "Comparé la afirmación sobre el timeout local con la regla documental que separa recepción, actuación y resultado material.",
+      "recursos_declarados": "Texto suministrado de d3; no utilicé Internet, enlaces ni herramientas externas.",
+      "protocolos_declarados": "Protocolo declarado: lectura cerrada y contraste de efectos inciertos. Función: verificar si el timeout acredita ausencia de efecto.",
+      "limitaciones": "La conclusión se limita al material suministrado; no ejecuto ni observo solicitudes reales.",
+      "revisiones_adversariales": [
+        {"numero": 1, "objecion": "El timeout local podría considerarse indicio de no entrega.", "comprobacion": "La fuente dice expresamente que no prueba ausencia de efecto ni repetición segura.", "conclusion": "La afirmación del enunciado es incorrecta; valor 1."}
+      ]
+    },
+    {
+      "id": "p16",
+      "justificacion": "El §12.3.5 exige aplicar finalidad, destinatario, minimización, retención, sesiones y permisos a todo el recorrido, incluidos registros y explicaciones. §12.4 vincula destinatario y restricciones de difusión a la trazabilidad. Conservar el original no elimina esas obligaciones.",
+      "fuentes": [
+        {"documento": "d3", "ubicacion": "§12.3, obligación 5, Confidencialidad y facultades efectivas; §12.4, tabla de correspondencia"}
+      ],
+      "procedimiento_declarado": "Cotejé la afirmación de que la conservación del original exime de finalidad, destinatario y difusión con las reglas de confidencialidad y vistas autorizadas.",
+      "recursos_declarados": "Texto suministrado de d3; no utilicé Internet, enlaces ni herramientas externas.",
+      "protocolos_declarados": "Protocolo declarado: lectura cerrada y contraste entre conservación documental y protección de datos. Función: verificar si la conservación del original exime de controles de difusión.",
+      "limitaciones": "La conclusión se limita al material suministrado; no evalúo políticas de acceso concretas.",
+      "revisiones_adversariales": [
+        {"numero": 1, "objecion": "Podría pensarse que conservar el original ya asegura la trazabilidad y que las restricciones afectan solo a copias.", "comprobacion": "La fuente aplica finalidad, destinatario y permisos a todo el recorrido, incluidos registros y explicaciones.", "conclusion": "La conservación del original no exonera; valor 1."}
+      ]
+    },
+    {
+      "id": "p08",
+      "justificacion": "El RFC 8996 prohíbe el fallback a TLS 1.0 y TLS 1.1. §1.1 dice que el fallback a esas versiones queda prohibido, y §4 prohíbe usar y negociar TLS 1.0. La actualización no permite recurrir a TLS 1.0 si falla una versión posterior.",
+      "fuentes": [
+        {"documento": "d2", "ubicacion": "§1.1, RFCs Updated; §4, Do Not Use TLS 1.0"}
+      ],
+      "procedimiento_declarado": "Localicé las reglas sobre fallback y negociación y las comparé con la supuesta autorización de recurrir a TLS 1.0.",
+      "recursos_declarados": "Texto suministrado de d2; no utilicé Internet, enlaces ni herramientas externas.",
+      "protocolos_declarados": "Protocolo declarado: lectura cerrada y contraste de prohibiciones normativas. Función: verificar si se autoriza o se prohíbe el fallback.",
+      "limitaciones": "La conclusión se limita al material suministrado; no evalúo sistemas legacy concretos.",
+      "revisiones_adversariales": [
+        {"numero": 1, "objecion": "§7 reconoce que algunos sistemas antiguos pueden no soportar TLS 1.2 o superior, lo que podría interpretarse como permiso para usar TLS 1.0.", "comprobacion": "§7 describe el riesgo de desobedecer las recomendaciones, no autoriza el fallback; §1.1 y §4 lo prohíben.", "conclusion": "La objeción no convierte la excepción operativa en permiso normativo; valor 1."}
+      ]
+    },
+    {
+      "id": "p01",
+      "justificacion": "El resumen de NIST SP 800-207 dice que zero trust no concede confianza implícita por la ubicación física o de red. El tenet 2 establece que la ubicación de red por sí sola no implica confianza. La ubicación interna no basta.",
+      "fuentes": [
+        {"documento": "d1", "ubicacion": "página física 4, Abstract; §2.1, tenet 2"}
+      ],
+      "procedimiento_declarado": "Comparé la afirmación de confianza automática por ubicación con la definición de zero trust y el tenet sobre ubicación de red.",
+      "recursos_declarados": "Texto suministrado de d1; no utilicé Internet, enlaces ni herramientas externas.",
+      "protocolos_declarados": "Protocolo declarado: lectura cerrada y cotejo del principio de no confianza implícita. Función: verificar si la ubicación interna concede confianza.",
+      "limitaciones": "La conclusión se limita al material suministrado; no evalúo redes concretas.",
+      "revisiones_adversariales": [
+        {"numero": 1, "objecion": "Estar dentro de la red de la organización podría entenderse como una zona de confianza tradicional.", "comprobacion": "La fuente indica que la red empresarial no es una zona de confianza implícita y que la ubicación por sí sola no implica confianza.", "conclusion": "La objeción se opone al texto; valor 1."}
+      ]
+    }
+  ]
+}

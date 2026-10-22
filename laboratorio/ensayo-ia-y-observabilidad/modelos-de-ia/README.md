@@ -1,6 +1,6 @@
 # Modelos de IA
 
-**Edición documental 23 · 21 de octubre de 2026.**
+**Edición documental 24 · 22 de octubre de 2026.**
 
 Este catálogo identifica los modelos estudiados, las configuraciones efectivamente ensayadas y los candidatos de la convocatoria actual. Cada resultado conserva su banco documental, modalidad de inferencia, fecha, condiciones y reservas. Una familia comercial no recibe por extensión el resultado de una versión concreta.
 
@@ -23,14 +23,14 @@ Los expedientes conservan sus carpetas y referencias. Un estudio de viabilidad, 
 
 ## Ocho candidatos de la convocatoria actual
 
-La selección se presenta alfabéticamente como índice de consulta. Cuatro candidatos han completado la edición general y cuatro permanecen pendientes en la categoría adaptada. La clasificación por resultados y las evidencias se consultan en el estándar comparativo. Cada nueva ejecución exige condiciones propias vigentes y autorización de entrega y lanzamiento; un resultado anterior no las sustituye.
+La selección se presenta alfabéticamente como índice de consulta. Cuatro candidatos han completado la edición general y dos la adaptada: DeepSeek y GLM. Grok y Kimi permanecen pendientes. La clasificación por resultados y las evidencias se consultan en el estándar comparativo. Cada nueva ejecución exige condiciones propias vigentes y autorización de entrega y lanzamiento; un resultado anterior no las sustituye.
 
 | Candidato | Identidad del servicio | Estado de esta convocatoria |
 |---|---|---|
 | [Claude Opus 5.5](#claude-opus-55) | `claude-opus-5-5` | General: [examen corregido](estandar-comparativo-o-benchmark/resultados/claude-opus-5.5/cyb16-085bea8caae0/resultado.json), 16/16, dictamen 0. |
-| [DeepSeek-V4.1-Flash-1017](#deepseek-v41-flash-1017) | `deepseek-flash`; revisión declarada `DeepSeek-V4.1-Flash-1017` | Adaptada al 33 %: pendiente, sin dictamen. |
+| [DeepSeek-V4.1-Flash-1017](#deepseek-v41-flash-1017) | `deepseek-flash`; revisión declarada `DeepSeek-V4.1-Flash-1017` | Adaptada al 33 %: [examen corregido](estandar-comparativo-o-benchmark/resultados/deepseek-v4.1-flash-1017/cyb16-1512ff18a4f2/resultado.json), 16/16, dictamen 0. |
 | [Gemini 4 Argon](#gemini-4-argon) | `gemini-4-argon` | General: [examen corregido](estandar-comparativo-o-benchmark/resultados/gemini-4-argon/cyb16-67947a76804a/resultado.json), 16/16, dictamen 0. |
-| [GLM-5.3](#glm-53) | `glm-5.3` | Adaptada al 33 %: pendiente, sin dictamen. |
+| [GLM-5.3](#glm-53) | `glm-5.3` | Adaptada al 33 %: [examen corregido](estandar-comparativo-o-benchmark/resultados/glm-5.3/cyb16-93abf5360f9e/resultado.json), 16/16, dictamen 0. |
 | [GPT-6 Astra](#gpt-6-astra) | `gpt-6-astra` | General: [examen corregido](estandar-comparativo-o-benchmark/resultados/gpt-6-astra/cyb16-42214abb1502/resultado.json), 16/16, dictamen 0. |
 | [Grok 4.7](#grok-47) | `grok-4.7` | Adaptada al 33 %: pendiente, sin dictamen. |
 | [Kimi K3](#kimi-k3) | `kimi-k3` | Adaptada al 33 %: pendiente, sin dictamen. |
@@ -60,7 +60,7 @@ En la convocatoria EET-CYB16, **Opus por API directa, nodo 03**, ha completado l
 
 La conexión utiliza `deepseek-flash`, correspondiente por declaración del proveedor a `DeepSeek-V4.1-Flash-1017`. La correspondencia identifica la preparación; no demuestra ejecución interna ni conserva automáticamente esa identidad ante futuras revisiones del alias.
 
-Participa en la categoría adaptada a Markdown, después de los cuatro candidatos de la categoría general. Su limitación documental se declara para esta prueba y configuración; la recepción específica se comprueba antes del lanzamiento. No hay examen ni dictamen. La ausencia de examen no equivale a U ni a No apto.
+Participa en la categoría adaptada a Markdown, después de los cuatro candidatos de la categoría general. Su limitación documental se declara para esta prueba y configuración. El examen de esta edición obtuvo dieciséis aciertos y dictamen 0; conserva su identidad, respuesta y mediciones en el estándar comparativo. No acredita lectura de los formatos sustituidos.
 
 La [edición común](estandar-comparativo-o-benchmark/readme.md) conserva las dieciséis preguntas, sus soluciones y los originales. La inclusión no autoriza contenido, exámenes ni decisiones económicas.
 
@@ -85,6 +85,8 @@ El dictamen corresponde a esta edición y configuración; no constituye recomend
 [Expediente y fuentes](acoplamientos-con-el-sv/03-api-directa/zai/glm-5.3/readme.md).
 
 La realización por API pertenece al nodo 03. El **CYB16 del 08/10/2026** obtuvo 16/16 respuestas finales R2 correctas, incluidas las catorce críticas, y **Apto para el contrato documental**. La recepción científica independiente permanece pendiente; el resultado no acredita un agente operativo.
+
+La convocatoria actual EET-CYB16 tiene un resultado propio de la edición adaptada: dieciséis aciertos y dictamen 0. La [revisión común de correcciones](estandar-comparativo-o-benchmark/REVISION-CORRECCIONES-20261022.md) identifica el defecto de una explicación, la rectificación formal y el antecedente conservado; no hubo otra entrega al proveedor.
 
 El manual MD07 conserva **No apto contractual bajo reserva metodológica**, sin recalificación silenciosa. Los estudios de GLM-5.3 y GLM-5.3-Flash para infraestructura propia tienen otro alcance: no son ejecuciones de esta API ni reciben sus resultados.
 

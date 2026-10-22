@@ -1,6 +1,6 @@
 # Ensayo de inteligencia artificial y observabilidad
 
-**Edición documental 2.36 · 21 de octubre de 2026.**
+**Edición documental 2.37 · 22 de octubre de 2026.**
 
 <a id="objeto-y-criterio-experimental"></a>
 
@@ -76,12 +76,12 @@ El [estándar comparativo](modelos-de-ia/estandar-comparativo-o-benchmark/readme
 
 ## Estado actual
 
-La convocatoria EET-CYB16 comprende **ocho candidatos**. Claude Opus 5.5, Gemini 4 Argon, GPT-6 Astra y Qwen3.8-Max-0902 han completado la edición general: cada uno conserva dieciséis aciertos y dictamen 0. DeepSeek, GLM, Grok y Kimi permanecen pendientes en la categoría adaptada al 33 %, sin dictamen. Los [resultados, polígonos y evidencias](modelos-de-ia/estandar-comparativo-o-benchmark/readme.md#4-resultados-y-evidencias) identifican cada ejecución. La tabla siguiente conserva los antecedentes; no sustituye la clasificación de esta convocatoria. Las [preguntas, soluciones y fuentes](modelos-de-ia/estandar-comparativo-o-benchmark/readme.md) corresponden a las ediciones general y adaptada con reglas revisadas del 21 de octubre de 2026.
+La convocatoria EET-CYB16 comprende **ocho candidatos**. Claude Opus 5.5, Gemini 4 Argon, GPT-6 Astra y Qwen3.8-Max-0902 han completado la edición general: cada uno conserva dieciséis aciertos y dictamen 0. DeepSeek y GLM han completado la edición adaptada al 33 %, también con dieciséis aciertos y dictamen 0; Grok y Kimi permanecen pendientes, sin dictamen. La rectificación formal de GLM está identificada en las evidencias y conserva su antecedente. Los [resultados, polígonos y evidencias](modelos-de-ia/estandar-comparativo-o-benchmark/readme.md#4-resultados-y-evidencias) identifican cada ejecución. La tabla siguiente conserva los antecedentes; no sustituye la clasificación de esta convocatoria. Las [preguntas, soluciones y fuentes](modelos-de-ia/estandar-comparativo-o-benchmark/readme.md) corresponden a las ediciones general y adaptada con reglas revisadas del 21 de octubre de 2026.
 
 | Candidato | Antecedentes y alcance |
 |---|---|
 | [Claude Opus 5.5](modelos-de-ia/README.md#claude-opus-55) | Kaggle, nodo 02: MD09 favorable; CYB09 No apto asistido por un error crítico. |
-| [DeepSeek-V4.1-Flash-1017](modelos-de-ia/README.md#deepseek-v41-flash-1017) | Categoría adaptada a Markdown para esta prueba; sin examen ni dictamen. |
+| [DeepSeek-V4.1-Flash-1017](modelos-de-ia/README.md#deepseek-v41-flash-1017) | Categoría adaptada a Markdown: dieciséis aciertos y dictamen 0 en EET-CYB16; no acredita los formatos sustituidos. |
 | [Gemini 4 Argon](modelos-de-ia/README.md#gemini-4-argon) | Sin examen anterior en este catálogo; resultado de la convocatoria actual disponible en el estándar comparativo. |
 | [GLM-5.3](modelos-de-ia/README.md#glm-53) | CYB16: Apto documental, 16/16 finales y 14 críticas correctas. MD07 conserva su reserva. |
 | [GPT-6 Astra](modelos-de-ia/README.md#gpt-6-astra) | PDQ25: 25/25 finales. CYB16: 16/16 en las tres etapas; Apto documental en cada contrato. |

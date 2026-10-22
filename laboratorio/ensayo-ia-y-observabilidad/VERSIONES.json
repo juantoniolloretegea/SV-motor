@@ -1,19 +1,21 @@
 {
   "esquema": "sv.eio.registro-versiones/1",
-  "edicion_documental": "2.36",
-  "fecha_corte": "2026-10-21",
-  "commit_base_consultado": "55199c4c39594dd177b6480e548a424a096a833b",
+  "edicion_documental": "2.37",
+  "fecha_corte": "2026-10-22",
+  "commit_base_consultado": "a8ff049fd87dd94a578cbb0b6cb37378fe4ea9cf",
   "criterio": "Identidad separada para modelo, aplicacion, componente MCP, archivo de conservacion y edicion documental",
   "revision_actual": {
+    "version": "2.37",
     "commit": "El que contiene este archivo; sin autorreferencia circular",
-    "version": "2.36",
-    "inferencias_nuevas": 0,
-    "resultados_modificados": false,
-    "naturaleza": "concordancia_indices_resultados_recibidos",
+    "naturaleza": "publicacion_deepseek_glm_y_revision_uniforme",
+    "inferencias_nuevas_por_publicacion": 0,
+    "resultados_rectificados": [
+      "glm-5.3"
+    ],
     "cambios": [
-      "Índices actualizados con cuatro exámenes generales corregidos y cuatro candidatos adaptados pendientes",
-      "Resultados y condiciones actuales separados de los antecedentes conservados",
-      "Catálogo documental en edición 23; reglas, fuentes y plantillas de examen sin cambios"
+      "Seis resultados publicados y dos candidatos pendientes",
+      "DeepSeek y GLM incorporados a la clasificación adaptada; revisión formal de GLM documentada sin reenvío",
+      "Catálogo documental 24; preguntas, soluciones, formatos y antecedentes conservados"
     ]
   },
   "componentes": [
@@ -1767,6 +1769,32 @@
     "candidatos_adaptados_pendientes": 4,
     "fuente": "modelos-de-ia/estandar-comparativo-o-benchmark/COMPARACION.json",
     "entrega_autorizada_por_este_registro": false,
+    "lanzamiento_autorizado_por_este_registro": false
+  },
+  "revision_2_36_conservada": {
+    "commit": "El que contiene este archivo; sin autorreferencia circular",
+    "version": "2.36",
+    "inferencias_nuevas": 0,
+    "resultados_modificados": false,
+    "naturaleza": "concordancia_indices_resultados_recibidos",
+    "cambios": [
+      "Índices actualizados con cuatro exámenes generales corregidos y cuatro candidatos adaptados pendientes",
+      "Resultados y condiciones actuales separados de los antecedentes conservados",
+      "Catálogo documental en edición 23; reglas, fuentes y plantillas de examen sin cambios"
+    ]
+  },
+  "estado_comparacion_20261022": {
+    "estado": "seis_corregidos_dos_pendientes",
+    "catalogo_edicion": 24,
+    "edicion_general": "eet-cyb16-multiformato-20261021-v2",
+    "edicion_adaptada": "eet-cyb16-markdown-adaptada-20261021-v2",
+    "resultados_generales": 4,
+    "resultados_adaptados": 2,
+    "pendientes": [
+      "grok-4.7",
+      "kimi-k3"
+    ],
+    "fuente": "modelos-de-ia/estandar-comparativo-o-benchmark/COMPARACION.json",
     "lanzamiento_autorizado_por_este_registro": false
   }
 }

@@ -2,13 +2,15 @@
 
 ## 1. Estado de la edición
 
-La publicación revisada del 21 de octubre de 2026 contiene cuatro resultados de la edición general `eet-cyb16-multiformato-20261021-v2`. Los cuatro candidatos de la edición adaptada `eet-cyb16-markdown-adaptada-20261021-v2` permanecen pendientes, sin dictamen. La relación completa figura en [COMPARACION.json](COMPARACION.json).
+La publicación revisada del 22 de octubre de 2026 contiene cuatro resultados de la edición general `eet-cyb16-multiformato-20261021-v2` y dos de la adaptada `eet-cyb16-markdown-adaptada-20261021-v2`: DeepSeek y GLM. Grok y Kimi permanecen pendientes, sin dictamen. La relación completa figura en [COMPARACION.json](COMPARACION.json).
 
 Cada carpeta publicada reúne `respuesta.txt`, `resultado.json` y `poligono.json`. `respuesta.txt` conserva, sin reescritura, el texto recibido del modelo que se entregó al corrector; puede contener JSON. No es el contenedor íntegro de eventos de la API. `respuesta_textual_sha256` identifica ese archivo; `respuesta_original_sha256` identifica la respuesta de transporte conservada con acceso restringido. Son objetos diferentes y sus huellas no son intercambiables.
 
 `resultado.json` recoge el identificador público del intento, la edición, el modelo comunicado, las huellas de paquete y petición, las calificaciones, la evaluación del SV y las mediciones seleccionadas. `poligono.json` conserva el contrato visual, las dieciséis posiciones ordenadas, sus enunciados y criticidades, κ y el dictamen. La tabla CSV, el JSON comparativo y la figura de tiempos proceden de la misma clasificación recibida.
 
 Esta publicación selecciona los resultados científicos y los contadores comunicados. Excluye datos de cuenta, identidades de acceso, credenciales, registros administrativos, contenedores nativos de transporte y registros JSONL del proceso compartido. Estos últimos permanecen bajo custodia restringida; no se afirma que su contenido íntegro sea público. El coste comparable todavía no está acreditado. Una ausencia de contador no se convierte en cero. Las declaraciones de recursos, procedimientos y revisiones se consultan en el texto del modelo y se distinguen de las mediciones observadas.
+
+La [revisión común del 22 de octubre](REVISION-CORRECCIONES-20261022.md) conserva la rectificación formal de GLM y el cotejo de todos los originales recibidos. Su explicación defectuosa permanece literal en la respuesta y señalada en los datos. No se reparan respuestas, no se repiten exámenes y no se ocultan antecedentes.
 
 ## 2. Conjunto de un intento
 
