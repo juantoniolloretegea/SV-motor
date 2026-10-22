@@ -105,7 +105,7 @@ sequenceDiagram
     D->>E: Original íntegro y fuente conservada
     E-->>D: Terna, criticidad y fundamento
     D->>P: Conservar respuesta y relaciones con antecedentes
-    Note over D,P: Tres revisiones; A4 adicional condicionada, sin borrar antecedentes
+    Note over D,P: Tres revisiones#59; A4 adicional condicionada, sin borrar antecedentes
 ```
 
 ## Terna, regla primitiva y puntuación
