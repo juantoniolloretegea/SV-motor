@@ -1,6 +1,6 @@
 # Consecuencias de la omisión: fuentes y delimitación
 
-Revisión documental: 23 de octubre de 2026. Alcance: contraste dirigido de fuentes primarias para preparar la definición futura de consecuencias en rutas críticas. No es una revisión sistemática exhaustiva, una escala clínica recibida ni una declaración de conformidad jurídica.
+Revisión documental: 23 de octubre de 2026. Alcance: análisis obligatorio de las consecuencias de la omisión en el trabajo del SV y contraste dirigido de fuentes primarias para preparar la definición futura de consecuencias en rutas críticas. No es una revisión sistemática exhaustiva, una escala clínica recibida ni una declaración de conformidad jurídica.
 
 ## Distinciones necesarias
 
@@ -22,8 +22,34 @@ Las fuentes rectoras se conservan en ITVIA: [Fundamentos algebraico-semánticos,
 
 El [regulador de incorporación extrínseca, §IX.6](https://www.itvia.online/pub/fundamentos-exigencias-y-arquitectura-general-de-los-agentes-especializados-en-el-sistema-vectorial-sv-formulacion-transversal-desde-el-caso-director-del-agente-especializado-en-inmunologia/release/1) ya tiene un cometido y una escala propios, fijados de antemano por dominio. No se identifica con los nuevos niveles de consecuencias ni se altera mediante esta propuesta. Tampoco cambian el alfabeto ternario, los radios del polígono o los contratos de los exámenes concluidos.
 
-## Condición de continuación
+## Aplicación obligatoria al trabajo del SV
+
+**Vigencia: 23 de octubre de 2026.** El análisis de las consecuencias de la omisión es vinculante en el ámbito del trabajo del SV: diseño y codificación, documentación, comprobaciones, auditorías y revisiones adversariales, y preparación de las evaluaciones de modelos. Su aplicación se exige desde esta revisión; no acredita retrospectivamente el cumplimiento de trabajos anteriores ni altera los contratos de los exámenes concluidos.
+
+El objeto del análisis es la ausencia de un conocimiento, requisito, control o evidencia necesarios para una actuación autorizada. Se examina qué efecto concreto podría producir esa ausencia y bajo qué condiciones, sin deducirlo del nombre de una operación ni de una etiqueta genérica. Se aplica durante la preparación, en la revisión del cambio y antes de su recepción. La profundidad del registro se ajusta al alcance de la actuación; no se multiplican documentos que repitan la misma evidencia.
+
+Cada análisis debe permitir reconstruir esta relación:
+
+| Elemento | Contenido exigido |
+| --- | --- |
+| Ámbito y referencia | Operación, versión, requisito y fuente competentes. |
+| Omisión examinada | Conocimiento, condición, control o evidencia que podría faltar. |
+| Consecuencia | Efecto observado o potencial justificado, sujetos o recursos afectados y condiciones necesarias. |
+| Prevención y detección | Control responsable, punto donde se aplica y forma de comprobar su funcionamiento y sus límites. |
+| Evidencia | Prueba positiva, prueba de ausencia o retirada cuando corresponda, resultado y referencia recuperable. |
+| Incertidumbre y recepción | Información no disponible, comprobación pendiente, autoridad necesaria y decisión que puede o no sostenerse. |
+
+En la codificación se revisan especialmente los controles posteriores a esperas, los accesos alternativos, las transiciones de estado y la separación entre autorización y efecto. En la documentación se examinan requisitos omitidos, excepciones no explicadas, referencias desactualizadas y afirmaciones sin evidencia. En una auditoría se declaran la cobertura y las comprobaciones no realizadas; una parte no examinada no se presenta como conforme. En las evaluaciones futuras, las exigencias al modelo deberán quedar fijadas y autorizadas antes de la prueba.
+
+La consecuencia se fundamenta y se distingue de la severidad atribuida por una herramienta externa. Los niveles **bajo, medio, alto, grave y muy grave** sólo podrán asignarse cuando existan criterios recibidos para el ámbito correspondiente. Si falta fundamento, se conserva la consecuencia descrita y la clasificación pendiente; no se elige el nivel menor por ausencia de información. Una clasificación externa se identifica con su fuente, versión y alcance y no se convierte automáticamente en una escala del SV.
+
+La probabilidad no es primitiva ni método de decisión del SV. El tiempo puede utilizarse como medida instrumental, condición temporal documentada o metadato, pero no como primitiva. El estudio de información externa no modifica estas invariantes ni autoriza inferencias carentes de argumentos. La aplicación del presente documento no añade facultades de ejecución y mantiene la subordinación a la autoridad humana competente.
+
+La recepción debe expresar qué está comprobado, qué falta y qué consecuencia impide afirmar un cierre. Este requisito no paraliza trabajos independientes autorizados ni permite ampliar el encargo para resolver asuntos ajenos. Tampoco obliga a ejecutar una prueba peligrosa: cuando una comprobación no pueda realizarse dentro de un entorno autorizado, se conserva la limitación y se somete la decisión a la autoridad competente.
+
+## Condición de continuación de las rutas críticas
 
 El estudio posterior debe precisar la correspondencia que resulte necesaria, con fuentes vigentes y experto competente, y rechazar toda equivalencia no justificada. Una escala presentada en pantalla no constituye una validación del dominio. El panel descriptivo de Rutas críticas mantiene el estado **En preparación**; no configura ni ejecuta métodos de rutas.
 
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
+
