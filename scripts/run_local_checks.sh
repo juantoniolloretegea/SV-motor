@@ -11,3 +11,8 @@ python laboratorio/etapa_2_dominio_dev/ejecutar_laboratorio_dev_etapa_1.py
 python laboratorio/etapa_3_custodia_estructural/ejecutar_laboratorio_custodia_motor_etapa_1.py
 
 python laboratorio/etapa_5_verificacion_python/ejecutar_laboratorio_verificacion.py
+
+
+# SPDX-License-Identifier: CC-BY-NC-ND-4.0
+# © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
+# https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode.es
