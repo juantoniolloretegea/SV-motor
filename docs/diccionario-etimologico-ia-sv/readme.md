@@ -26,11 +26,15 @@ Construcción definida íntegramente mediante la DSL del Lenguaje de Computació
 
 **Distinción:** no es sinónimo del modelo de IA empleado. La selección del modelo no modifica la semántica ni concede facultades sobre el núcleo. Una consulta no debe recorrer todo el dominio si su objeto no lo requiere, pero tampoco puede omitir dependencias obligatorias. Véase [Alcance de un Agente Especializado](https://documentos-sv.itvia.online/dominios/universos/conceptos.html#alcance-de-un-agente-especializado).
 
+**Para continuar la lectura:** [Dominio](https://documentos-sv.itvia.online/enciclopedia/ia.html#dominio) · [DSL · Lenguaje específico de dominio](https://documentos-sv.itvia.online/enciclopedia/lenguaje.html#dsl). Relacionar el alcance del agente con su construcción formal. [Explorar otros recorridos](https://documentos-sv.itvia.online/enciclopedia/recorridos.html).
+
 ### Aislamiento de la IA {#aislamiento}
 
 Separación material de las facultades del modelo respecto de los recursos y operaciones que no le están autorizados. En el SV impide que la IA alcance directamente el núcleo, modifique el sistema, conceda permisos o acceda a credenciales.
 
 **Límite:** una instrucción dirigida al modelo no basta para demostrar ese aislamiento. Deben existir controles externos y evidencia de su resistencia a entradas maliciosas y accesos alternativos. La exigencia permanece en seudo-producción y en los tres nodos. Véase [Consulta sin autoridad sobre el sistema](https://documentos-sv.itvia.online/evaluacion/validacion-autorizacion-modelos/autoridad.html#consulta-sin-autoridad-sobre-el-sistema).
+
+**Para continuar la lectura:** [Tubería de IA](https://documentos-sv.itvia.online/enciclopedia/lenguaje.html#tuberia) · [Núcleo del Lenguaje SV](https://documentos-sv.itvia.online/enciclopedia/lenguaje.html#nucleo). Examinar el recorrido controlado y la protección que debe mantener. [Explorar otros recorridos](https://documentos-sv.itvia.online/enciclopedia/recorridos.html).
 
 ### Autorización de uso {#autorizacion}
 
@@ -38,11 +42,15 @@ Decisión de una función competente que permite un uso delimitado bajo condicio
 
 **Distinción:** autenticación, evaluación favorable, recomendación y autorización son actos diferentes. Una cuenta admitida no adquiere automáticamente todos los usos. Véase [Facultades, autorización y producción](https://documentos-sv.itvia.online/evaluacion/validacion-autorizacion-modelos/autoridad.html).
 
+**Para continuar la lectura:** [Evaluación de un modelo de IA](https://documentos-sv.itvia.online/enciclopedia/ia.html#evaluacion) · [Sesión de uso](https://documentos-sv.itvia.online/enciclopedia/ia.html#sesion). Distinguir la evidencia disponible de las condiciones concedidas para utilizarla. [Explorar otros recorridos](https://documentos-sv.itvia.online/enciclopedia/recorridos.html).
+
 ### Biblioteca documental de dominio {#biblioteca}
 
 Conjunto de fuentes identificadas y organizado para los fines y condiciones del dominio. Su uso exige comprobar las versiones, la pertinencia, los derechos y la disponibilidad efectiva del contenido requerido.
 
 **Distinción:** un catálogo, una referencia bibliográfica o un DOI no acreditan por sí solos que el modelo haya recibido el documento completo. Véase [Documentos y condiciones de entrega](https://documentos-sv.itvia.online/evaluacion/validacion-autorizacion-modelos/documentos.html).
+
+**Para continuar la lectura:** [Dominio](https://documentos-sv.itvia.online/enciclopedia/ia.html#dominio) · [Universo del SV](https://documentos-sv.itvia.online/enciclopedia/ia.html#universo). Situar las fuentes dentro del ámbito y las operaciones que sustentan. [Explorar otros recorridos](https://documentos-sv.itvia.online/enciclopedia/recorridos.html).
 
 ### Clasificación comparativa de modelos {#clasificacion}
 
@@ -50,11 +58,15 @@ Ordenación de resultados conforme a un criterio fijado para una edición y unas
 
 **En el SV:** elegir un modelo como referencia visual no lo convierte en ganador. La predominancia de uso tampoco añade puntos ni modifica el orden recibido. Los criterios particulares de una convocatoria no se presentan como una regla universal. Véase [Comparación y lectura de resultados](https://documentos-sv.itvia.online/evaluacion/validacion-autorizacion-modelos/comparacion.html).
 
+**Para continuar la lectura:** [Evaluación de un modelo de IA](https://documentos-sv.itvia.online/enciclopedia/ia.html#evaluacion) · [Predominancia en un dominio](https://documentos-sv.itvia.online/enciclopedia/ia.html#predominancia). Separar el puesto obtenido en una evaluación de la función asignada en un dominio. [Explorar otros recorridos](https://documentos-sv.itvia.online/enciclopedia/recorridos.html).
+
 ### Conexión con un proveedor o modelo {#conexion}
 
 Recorrido técnico identificado para acceder a las funciones permitidas de un proveedor o a una instancia de modelo. Debe distinguir el mecanismo de autenticación, el catálogo disponible y las operaciones realmente habilitadas.
 
 **Distinción:** comprobar autenticación o consultar un catálogo no acredita una inferencia ni autoriza enviar contenido. Una suscripción y una API son mecanismos diferentes; ninguna elimina por sí misma la transmisión de la consulta a un modelo remoto. Véase [Preparación del acceso y límites individuales](https://documentos-sv.itvia.online/evaluacion/validacion-autorizacion-modelos/autoridad.html#preparación-del-acceso-y-límites-individuales).
+
+**Para continuar la lectura:** [Modelo de inteligencia artificial](https://documentos-sv.itvia.online/enciclopedia/ia.html#modelo) · [Nodo de uso del modelo](https://documentos-sv.itvia.online/enciclopedia/ia.html#nodo). Identificar el modelo concreto y el recorrido de acceso utilizado. [Explorar otros recorridos](https://documentos-sv.itvia.online/enciclopedia/recorridos.html).
 
 ### Consulta al modelo {#consulta}
 
@@ -62,11 +74,15 @@ Solicitud delimitada que se presenta a un modelo para obtener una respuesta bajo
 
 **Distinción:** abrir una página o cargar un visor no equivale a iniciar una consulta. Una respuesta tampoco constituye por sí sola una decisión determinista del SV ni una autorización profesional. Véase [Estado de seudo-producción](https://documentos-sv.itvia.online/evaluacion/validacion-autorizacion-modelos/autoridad.html#estado-de-seudo-producción).
 
+**Para continuar la lectura:** [Sesión de uso](https://documentos-sv.itvia.online/enciclopedia/ia.html#sesion) · [Inferencia del modelo](https://documentos-sv.itvia.online/enciclopedia/ia.html#inferencia). Distinguir el contexto de uso de la operación realizada por el modelo. [Explorar otros recorridos](https://documentos-sv.itvia.online/enciclopedia/recorridos.html).
+
 ### Dictamen de evaluación {#dictamen}
 
 Resultado interpretado conforme a la cuestión, al contrato y a la regla de evaluación aplicables. En los exámenes descritos del SV se distingue 0 — Apto, 1 — No apto y U — Indeterminado.
 
 **Límite:** las incidencias técnicas conservan causa propia y no se convierten automáticamente en dictamen. La aptitud acreditada para un examen no demuestra competencia universal ni autoriza producción. Véase [Corrección y criterio de aptitud](https://documentos-sv.itvia.online/evaluacion/validacion-autorizacion-modelos/correccion.html).
+
+**Para continuar la lectura:** [Evaluación de un modelo de IA](https://documentos-sv.itvia.online/enciclopedia/ia.html#evaluacion) · [Diagnóstico técnico](https://documentos-sv.itvia.online/enciclopedia/lenguaje.html#diagnostico). Precisar el alcance de la conclusión y diferenciarla de una incidencia técnica. [Explorar otros recorridos](https://documentos-sv.itvia.online/enciclopedia/recorridos.html).
 
 ### Dominio {#dominio}
 
@@ -74,11 +90,15 @@ Resultado interpretado conforme a la cuestión, al contrato y a la regla de eval
 
 **Distinción:** la denominación de una especialidad no acredita que exista un agente activo ni que todo su conocimiento esté formalizado. Un dominio clínico y otro de ciberseguridad conservan sus propias reglas, aunque se utilicen en la misma institución. Véase [Definiciones y relaciones](https://documentos-sv.itvia.online/dominios/universos/conceptos.html).
 
+**Para continuar la lectura:** [Universo del SV](https://documentos-sv.itvia.online/enciclopedia/ia.html#universo) · [Agente Especializado del SV](https://documentos-sv.itvia.online/enciclopedia/ia.html#agente). Examinar las operaciones constituidas y el alcance que puede reunir un agente. [Explorar otros recorridos](https://documentos-sv.itvia.online/enciclopedia/recorridos.html).
+
 ### Evaluación de un modelo de IA {#evaluacion}
 
 Examen de capacidades o resultados mediante una edición, un protocolo, fuentes, criterios y condiciones identificados. Permite emitir conclusiones dentro del alcance de la evidencia obtenida.
 
 **Distinción:** una prueba de comprensión documental no acredita por sí sola competencia clínica, control de un servidor o funcionamiento íntegro del SV. Los antecedentes conservan las condiciones con las que se evaluaron. Véase [Finalidad y alcance de la evaluación](https://documentos-sv.itvia.online/evaluacion/validacion-autorizacion-modelos/finalidad.html).
+
+**Para continuar la lectura:** [Evidencia de evaluación](https://documentos-sv.itvia.online/enciclopedia/ia.html#evidencia) · [Autorización de uso](https://documentos-sv.itvia.online/enciclopedia/ia.html#autorizacion). Seguir el fundamento del examen y distinguirlo de la decisión de uso. [Explorar otros recorridos](https://documentos-sv.itvia.online/enciclopedia/recorridos.html).
 
 ### Evidencia de evaluación {#evidencia}
 
@@ -86,11 +106,15 @@ Contenido o registro identificable que permite examinar una afirmación dentro d
 
 **Límite:** una afirmación sin comprobación no se convierte en evidencia por registrarla. La integridad de un archivo y la validez científica de su contenido son cuestiones distintas. Véase [Comparación y lectura de resultados](https://documentos-sv.itvia.online/evaluacion/validacion-autorizacion-modelos/comparacion.html).
 
+**Para continuar la lectura:** [Comprobación](https://documentos-sv.itvia.online/enciclopedia/lenguaje.html#comprobacion) · [Huella de contenido · SHA-256](https://documentos-sv.itvia.online/enciclopedia/lenguaje.html#huella). Separar comprobación pertinente e identidad de los documentos. [Explorar otros recorridos](https://documentos-sv.itvia.online/enciclopedia/recorridos.html).
+
 ### Grados de libertad del modelo {#grados}
 
 Denominación organizativa del SV que relaciona el modo predominante de un uso con la asignación del modelo a dominios y funciones. Permite describir predominancias y relaciones secundarias sin reducir un modelo a una única especialidad.
 
 **Distinción:** aquí no designa grados de libertad estadísticos ni físicos. Un modelo puede ser predominante en varios dominios; varios modelos pueden coexistir como predominantes si sus funciones están delimitadas. La declaración no concede autonomía adicional. Véase [Modos y grados de libertad](https://documentos-sv.itvia.online/evaluacion/validacion-autorizacion-modelos/autoridad.html).
+
+**Para continuar la lectura:** [Modo predominante del modelo](https://documentos-sv.itvia.online/enciclopedia/ia.html#modo) · [Predominancia en un dominio](https://documentos-sv.itvia.online/enciclopedia/ia.html#predominancia). Comprender las dos relaciones organizativas que describe esta denominación. [Explorar otros recorridos](https://documentos-sv.itvia.online/enciclopedia/recorridos.html).
 
 ### IA gobernada {#gobernada}
 
@@ -98,17 +122,23 @@ Expresión que identifica un uso de IA sometido a reglas externas, responsabilid
 
 **Distinción:** gobernar el uso de un modelo no vuelve determinista su generación de texto. Las propiedades del recorrido del SV y las de la inferencia deben acreditarse separadamente. Véase [Agentes Especializados y frontera](https://documentos-sv.itvia.online/evaluacion/validacion-autorizacion-modelos/autoridad.html#agentes-especializados-y-frontera).
 
+**Para continuar la lectura:** [Árbitro–Director](https://documentos-sv.itvia.online/enciclopedia/lenguaje.html#director) · [Aislamiento de la IA](https://documentos-sv.itvia.online/enciclopedia/ia.html#aislamiento). Relacionar responsabilidades externas y separación de facultades. [Explorar otros recorridos](https://documentos-sv.itvia.online/enciclopedia/recorridos.html).
+
 ### Inferencia del modelo {#inferencia}
 
 Operación mediante la cual un modelo obtiene una salida a partir de una entrada y de su configuración. En este diccionario se distingue de la evaluación científica de esa salida y de la decisión institucional sobre su uso.
 
 **Límite:** una respuesta generada no acredita por sí misma corrección, exhaustividad o determinismo. Debe conservarse la identidad del modelo y la configuración relevante. Véase [Finalidad y alcance](https://documentos-sv.itvia.online/evaluacion/validacion-autorizacion-modelos/finalidad.html).
 
+**Para continuar la lectura:** [Modelo de inteligencia artificial](https://documentos-sv.itvia.online/enciclopedia/ia.html#modelo) · [Evidencia de evaluación](https://documentos-sv.itvia.online/enciclopedia/ia.html#evidencia). Identificar la operación generativa y la comprobación posterior de su salida. [Explorar otros recorridos](https://documentos-sv.itvia.online/enciclopedia/recorridos.html).
+
 ### Modelo de inteligencia artificial {#modelo}
 
 Sistema computacional identificado por su versión y configuración, utilizado para producir salidas a partir de entradas. Sus capacidades se examinan mediante evidencia pertinente al uso previsto.
 
 **Distinción:** el nombre comercial no sustituye la versión ni la conexión utilizada. Modelo, proveedor, Agente Especializado y autorización institucional son identidades diferentes. Véase [Validación, autorización y puesta en Producción](https://documentos-sv.itvia.online/evaluacion/validacion-autorizacion-modelos/index.html).
+
+**Para continuar la lectura:** [Agente Especializado del SV](https://documentos-sv.itvia.online/enciclopedia/ia.html#agente) · [Conexión con un proveedor o modelo](https://documentos-sv.itvia.online/enciclopedia/ia.html#conexion). Distinguir la identidad del modelo, la construcción del agente y su acceso. [Explorar otros recorridos](https://documentos-sv.itvia.online/enciclopedia/recorridos.html).
 
 ### Modo predominante del modelo {#modo}
 
@@ -118,11 +148,15 @@ El modo neutral orienta al experto mediante consejo, evaluación o revisión, su
 
 **Distinción:** no es una propiedad inmutable del modelo ni una licencia para actuar. El examen conserva la declaración con la que se preparó. Véase [Facultades, autorización y producción](https://documentos-sv.itvia.online/evaluacion/validacion-autorizacion-modelos/autoridad.html).
 
+**Para continuar la lectura:** [Grados de libertad del modelo](https://documentos-sv.itvia.online/enciclopedia/ia.html#grados) · [Seudo-producción](https://documentos-sv.itvia.online/enciclopedia/ia.html#seudoproduccion). Relacionar el objetivo del uso con su asignación y distinguirlo del estado de funcionamiento. [Explorar otros recorridos](https://documentos-sv.itvia.online/enciclopedia/recorridos.html).
+
 ### Nodo de uso del modelo {#nodo}
 
 Categoría que identifica el recorrido de acceso y ejecución considerado por el SV: **nodo 1**, modelo bajo control propio; **nodo 2**, acceso mediante plataforma intermedia; **nodo 3**, acceso a un proveedor externo. La configuración concreta debe identificar recursos, conexión y responsabilidades.
 
 **Límite:** describir un nodo no autoriza su utilización. Ninguno permite acceso directo de la IA al núcleo. El control propio puede evitar un coste de proveedor, pero no elimina el consumo de capacidad ni la necesidad de cuotas. Véase [Presupuesto y capacidad por nodo](https://documentos-sv.itvia.online/evaluacion/validacion-autorizacion-modelos/autoridad.html).
+
+**Para continuar la lectura:** [Conexión con un proveedor o modelo](https://documentos-sv.itvia.online/enciclopedia/ia.html#conexion) · [Aislamiento de la IA](https://documentos-sv.itvia.online/enciclopedia/ia.html#aislamiento). Identificar el recorrido de acceso sin suponer una excepción a la protección del núcleo. [Explorar otros recorridos](https://documentos-sv.itvia.online/enciclopedia/recorridos.html).
 
 ### Predominancia en un dominio {#predominancia}
 
@@ -130,17 +164,23 @@ Relación de asignación por la que un modelo desempeña una función principal 
 
 **Distinción:** no equivale a superioridad universal ni a un puesto de clasificación. Su fundamento debe relacionar función, capacidades evaluadas, límites y evidencia. La mera proximidad temática no justifica otra asignación. Véase [Comparación por modos y predominancias](https://documentos-sv.itvia.online/evaluacion/validacion-autorizacion-modelos/comparacion.html#comparación-por-modos-y-predominancias).
 
+**Para continuar la lectura:** [Grados de libertad del modelo](https://documentos-sv.itvia.online/enciclopedia/ia.html#grados) · [Clasificación comparativa de modelos](https://documentos-sv.itvia.online/enciclopedia/ia.html#clasificacion). Relacionar la función asignada con la evidencia, sin confundirla con el orden de clasificación. [Explorar otros recorridos](https://documentos-sv.itvia.online/enciclopedia/recorridos.html).
+
 ### Producción {#produccion}
 
 Estado de uso que requiere recibir las condiciones técnicas, científicas, organizativas y de autorización aplicables a la instalación y a la operación. No se obtiene cambiando una etiqueta de presentación.
 
 **En el SV:** la protección del núcleo, la biblioteca y las relaciones constituidas, la trazabilidad y el recorrido determinista exigible conservan sus contratos. Una prueba parcial o una figura visible no acreditan el conjunto. Véase [Facultades, autorización y producción](https://documentos-sv.itvia.online/evaluacion/validacion-autorizacion-modelos/autoridad.html).
 
+**Para continuar la lectura:** [Autorización de uso](https://documentos-sv.itvia.online/enciclopedia/ia.html#autorizacion) · [Seudo-producción](https://documentos-sv.itvia.online/enciclopedia/ia.html#seudoproduccion). Comparar las condiciones de uso exigidas con las excepciones declaradas del ensayo. [Explorar otros recorridos](https://documentos-sv.itvia.online/enciclopedia/recorridos.html).
+
 ### Recomendación de un modelo {#recomendacion}
 
 Conclusión fundada en resultados comparables y en un criterio declarado, limitada a su finalidad y condiciones. Debe explicar las reservas y, cuando corresponda, la imposibilidad de identificar una recomendación inequívoca.
 
 **Distinción:** no sustituye la selección responsable de una institución ni la autorización de una operación. Las mediciones ausentes no se reemplazan por cero. Véase [Selección, clasificación e independencia](https://documentos-sv.itvia.online/evaluacion/validacion-autorizacion-modelos/comparacion.html).
+
+**Para continuar la lectura:** [Clasificación comparativa de modelos](https://documentos-sv.itvia.online/enciclopedia/ia.html#clasificacion) · [Autorización de uso](https://documentos-sv.itvia.online/enciclopedia/ia.html#autorizacion). Examinar la conclusión comparativa y la decisión institucional que sigue siendo necesaria. [Explorar otros recorridos](https://documentos-sv.itvia.online/enciclopedia/recorridos.html).
 
 ### Seudo-producción {#seudoproduccion}
 
@@ -150,11 +190,15 @@ El protocolo puede permitir Internet, prescindir de una biblioteca cerrada const
 
 **Distinción:** es un estado de funcionamiento, no uno de los tres modos del modelo ni una autorización abreviada. Véase [Estado de seudo-producción](https://documentos-sv.itvia.online/evaluacion/validacion-autorizacion-modelos/autoridad.html).
 
+**Para continuar la lectura:** [Producción](https://documentos-sv.itvia.online/enciclopedia/ia.html#produccion) · [Aislamiento de la IA](https://documentos-sv.itvia.online/enciclopedia/ia.html#aislamiento). Distinguir los requisitos no acreditados de las protecciones que permanecen obligatorias. [Explorar otros recorridos](https://documentos-sv.itvia.online/enciclopedia/recorridos.html).
+
 ### Sesión de uso {#sesion}
 
 Contexto identificado de acceso y actividad bajo una autorización. Debe relacionar persona, modalidad, dominio, nodo, modelo, periodo y límites pertinentes.
 
 **Distinción:** la sesión de identificación no prueba una consulta al modelo. Enviar una invitación tampoco demuestra uso efectivo. Los accesos ordinario e invitado mantienen autorizaciones separadas, sin cambio automático al agotar una cuota. Véase [Acceso ordinario y acceso invitado](https://documentos-sv.itvia.online/evaluacion/validacion-autorizacion-modelos/autoridad.html).
+
+**Para continuar la lectura:** [Autorización de uso](https://documentos-sv.itvia.online/enciclopedia/ia.html#autorizacion) · [Consulta al modelo](https://documentos-sv.itvia.online/enciclopedia/ia.html#consulta). Relacionar las condiciones concedidas con la actividad efectivamente realizada. [Explorar otros recorridos](https://documentos-sv.itvia.online/enciclopedia/recorridos.html).
 
 ### Token · Unidad de procesamiento del modelo {#token}
 
@@ -162,11 +206,15 @@ Unidad empleada por un modelo o servicio para representar o contabilizar parte d
 
 **Límite:** los tokens de proveedores diferentes no son unidades lingüísticas idénticas. Tampoco se convierten automáticamente en tiempo, consultas, créditos o moneda. La contabilidad exige fuente, tarifa, categorías y periodo identificados. Véase [Comparación y lectura de resultados](https://documentos-sv.itvia.online/evaluacion/validacion-autorizacion-modelos/comparacion.html).
 
+**Para continuar la lectura:** [Consulta al modelo](https://documentos-sv.itvia.online/enciclopedia/ia.html#consulta) · [Evidencia de evaluación](https://documentos-sv.itvia.online/enciclopedia/ia.html#evidencia). Situar el recuento dentro de una actividad y una fuente identificadas. [Explorar otros recorridos](https://documentos-sv.itvia.online/enciclopedia/recorridos.html).
+
 ### Universo del SV {#universo}
 
 Unidad constituida para una operación delimitada dentro de un dominio, con finalidad, fuentes, relaciones, exclusiones y resultado previsto según su marco específico. En el marco de Inmunología es unidad de evaluación y autorización de la operación clínica definida.
 
 **Distinción:** no es una carpeta temática ni se define trasladando automáticamente condiciones de otro dominio. La entrada remite a la definición documental recibida y no introduce una formulación matemática nueva. Véase [Dominio y Universo](https://documentos-sv.itvia.online/dominios/universos/conceptos.html#dominio-y-universo).
+
+**Para continuar la lectura:** [Dominio](https://documentos-sv.itvia.online/enciclopedia/ia.html#dominio) · [Agente Especializado del SV](https://documentos-sv.itvia.online/enciclopedia/ia.html#agente). Relacionar una operación delimitada con el dominio y el alcance del agente. [Explorar otros recorridos](https://documentos-sv.itvia.online/enciclopedia/recorridos.html).
 
 ## Publicaciones
 
