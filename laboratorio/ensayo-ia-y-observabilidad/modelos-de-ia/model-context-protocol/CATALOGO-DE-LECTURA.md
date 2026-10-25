@@ -6,10 +6,10 @@ La elección de una capacidad de lectura debe conservar la identidad de la fuent
 
 | Capacidad | Aplicación | Estado y referencia |
 |---|---|---|
-| Fuente estructurada de la figura | Texto, etiquetas y relaciones conservados durante su elaboración | Opción preferente cuando existe una fuente fiel; no exige reconocimiento óptico |
+| Fuente estructurada de la figura | Texto, etiquetas y relaciones conservados durante su elaboración | [Fuente común Rust 0.1.0](lectura-figuras/fuente-comun-0.1.0/CONTRATO.md): seis figuras comprobadas, con generación SVG, HTML y Markdown; sin reconocimiento óptico |
 | Texto documental PDF | Recuperación de texto ya contenido en el documento | [Preparación Rust y límites de lectura PDF](LECTURA-PDF.md); conserva su recepción específica |
 | Texto nativo SVG | Recuperación de etiquetas y descripciones del archivo vectorial | [Extractor Rust 0.1.0](lectura-figuras/0.1.0/CONTRATO.md), compilado y comprobado localmente; no añade una herramienta al servidor MCP instalado |
-| Reconocimiento óptico local | Imagen sin texto nativo suficiente ni fuente estructurada disponible | [Estudio de candidatos](lectura-figuras/ESTUDIO-OCR-LOCAL.md); ningún motor OCR queda instalado o admitido por este estudio |
+| Reconocimiento óptico local | Imagen sin texto nativo suficiente ni fuente estructurada disponible | [Estudio de candidatos](lectura-figuras/ESTUDIO-OCR-LOCAL.md); [prueba local auxiliar](lectura-figuras/evaluacion-ocr-local-20261025/RESULTADO.md) realizada; configuración no admitida por errores de fidelidad, sin habilitación en el servicio |
 | Presentación interactiva | Exploración de una figura y sus datos de procedencia | Requiere datos explícitos y relaciones conocidas; un visor no acredita reconocimiento ni interpretación científica |
 
 ## Lectura sin reconocimiento óptico
@@ -28,7 +28,7 @@ El procedimiento comprueba primero la disponibilidad de una fuente estructurada 
 
 El OCR permanece contemplado. Su uso no debe convertirse en una obligación para toda imagen ni descartarse sólo por consumir más recursos. Si no existe una vía recibida, se declara la lectura no disponible o parcial y se explica qué comprobación falta. No se completa el contenido mediante inferencias silenciosas.
 
-El reconocimiento y sus decisiones de selección deberán realizarse en Rust. Una interfaz Rust que delega la inferencia a ONNX Runtime no satisface esta condición. `oar-ocr 0.10.1`, en su configuración examinada con `ort`, queda excluido de incorporación. La participación de JavaScript en la presentación web no autoriza introducir otro motor de cálculo ni trasladar a la interfaz las decisiones del SV. El formato de datos ONNX y el programa ONNX Runtime son objetos distintos; esta distinción no incorpora ni autoriza por sí misma ninguno de ellos. El [estudio de candidatos](lectura-figuras/ESTUDIO-OCR-LOCAL.md) delimita la alternativa Rust pendiente de comprobación.
+El reconocimiento y sus decisiones de selección deberán realizarse en Rust. Una interfaz Rust que delega la inferencia a ONNX Runtime no satisface esta condición. `oar-ocr 0.10.1`, en su configuración examinada con `ort`, queda excluido de incorporación. La participación de JavaScript en la presentación web no autoriza introducir otro motor de cálculo ni trasladar a la interfaz las decisiones del SV. El formato de datos ONNX y el programa ONNX Runtime son objetos distintos; esta distinción no incorpora ni autoriza por sí misma ninguno de ellos. El [estudio de candidatos](lectura-figuras/ESTUDIO-OCR-LOCAL.md) distingue los motores de cálculo de los modelos de reconocimiento. RTen dispone de una comprobación numérica local, sin carga de modelos; no se incorpora al servicio para esta lectura nativa.
 
 ## Aislamiento y custodia
 
