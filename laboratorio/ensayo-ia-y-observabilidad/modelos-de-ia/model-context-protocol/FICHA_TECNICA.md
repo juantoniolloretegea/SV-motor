@@ -6,6 +6,10 @@ La nueva revisión retira el límite de ocho palabras no anunciado, permite reco
 
 Las realizaciones anteriores conservan sus resultados y limitaciones. No se sustituye el componente de campañas Qwen en curso. A continuación se conserva el corte documental anterior.
 
+## Capacidades complementarias de lectura · 25/10/2026
+
+El [catálogo de lectura de documentos y figuras](CATALOGO-DE-LECTURA.md) distingue fuente estructurada, texto nativo PDF y SVG, reconocimiento óptico local y presentación interactiva. Incorpora el extractor SVG comprobado y el estudio de oar-ocr y ocrs. La ampliación documental no modifica las herramientas del servicio instalado ni acredita integración de un motor OCR. No se admite OCR externo.
+
 ## Antecedente · 27/09/2026
 
 **Revisión documental:** 2 · 27 de septiembre de 2026.  
@@ -23,3 +27,5 @@ La realización no utilizó Internet durante la consulta, búsqueda web incorpor
 La [ficha inicial](https://github.com/juantoniolloretegea/SV-motor/blob/cb395dfe39f7827e7b1440d534ed65989a2deac6/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/model-context-protocol/FICHA_TECNICA.md), MCP 0.1.0 y sus revisiones permanecen como antecedentes. La entrega operativa completa se conserva en el expediente restringido MCP-DOCUMENTAL-PREPARACION-20260926, entrega-05.
 
 El resultado pertenece al Ensayo de inteligencia artificial y observabilidad. No acredita aptitud clínica, cumplimiento regulatorio, admisión de conocimiento, integración con el núcleo ni cierre de S39. No autoriza otra campaña.
+
+© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).

@@ -6,4 +6,6 @@ Treinta y seis comprobaciones conformes: siete del extractor y veintinueve del M
 
 La [colección de tricoleucemia](https://github.com/juantoniolloretegea/SVperitus-dataset/tree/dominio-inmunologia/dominios/inmunologia/literatura-tricoleucemia) conserva las fuentes originales y sus vistas HTML; su referencia al MCP permite relacionar el material con esta capacidad. Las versiones anteriores y sus recepciones mantienen su estado histórico.
 
+La elección entre texto nativo e imagen reconocida se rige por el [catálogo de lectura y aislamiento](CATALOGO-DE-LECTURA.md). La disponibilidad de OCR no altera la recepción específica del lector PDF.
+
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
