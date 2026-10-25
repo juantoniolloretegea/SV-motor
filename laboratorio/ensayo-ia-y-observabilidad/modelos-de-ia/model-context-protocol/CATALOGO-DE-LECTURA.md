@@ -12,11 +12,23 @@ La elección de una capacidad de lectura debe conservar la identidad de la fuent
 | Reconocimiento óptico local | Imagen sin texto nativo suficiente ni fuente estructurada disponible | [Estudio de candidatos](lectura-figuras/ESTUDIO-OCR-LOCAL.md); ningún motor OCR queda instalado o admitido por este estudio |
 | Presentación interactiva | Exploración de una figura y sus datos de procedencia | Requiere datos explícitos y relaciones conocidas; un visor no acredita reconocimiento ni interpretación científica |
 
+## Lectura sin reconocimiento óptico
+
+La extracción nativa recupera caracteres o datos que ya están contenidos en una fuente. No necesita deducir letras a partir de los píxeles ni ejecutar un modelo de reconocimiento. Su suficiencia depende de que la fuente conserve el contenido requerido y de que se compruebe su correspondencia con la representación visible.
+
+En una figura propia, la opción preferente es conservar conjuntamente el original gráfico, sus etiquetas, leyendas y relaciones explícitas. Una fuente estructurada, por ejemplo en JSON, puede alimentar la figura y su explicación textual; Markdown puede acompañarla como exposición legible. Esta organización permite presentar y traducir las etiquetas por separado, sin reconocer repetidamente la imagen. No se declara que todas las figuras anteriores dispongan ya de esa estructura.
+
+El extractor SVG Rust 0.1.0 recupera los elementos textuales admitidos del archivo y genera un derivado identificado. Se ha comprobado en seis figuras distintas, incorporadas a dieciocho apariciones de la edición pública. Mantiene los originales y declara que el orden documental de las etiquetas no acredita relaciones espaciales. Las letras convertidas en contornos vectoriales ya no constituyen texto nativo extraíble mediante este procedimiento.
+
+El lector PDF Rust existente recupera texto documental cuando el archivo lo contiene y conserva sus comprobaciones particulares de cobertura y fidelidad. Una página escaneada puede carecer de esa información. Asimismo, un PNG o JPEG sin fuente textual asociada contiene píxeles: no existe una extracción directa equivalente. En estos casos se declara la insuficiencia y se considera OCR local, si hay una capacidad recibida para ese uso.
+
 ## Selección regulada por Rust
 
 El procedimiento comprueba primero la disponibilidad de una fuente estructurada fiel, después la extracción nativa aplicable y, cuando éstas resultan insuficientes, la disponibilidad de OCR local recibido para el uso requerido. La realización de esta prioridad se conserva en `politica.rs`. Las condiciones de disponibilidad proceden de comprobaciones competentes del sistema; no puede establecerlas libremente un modelo de IA.
 
 El OCR permanece contemplado. Su uso no debe convertirse en una obligación para toda imagen ni descartarse sólo por consumir más recursos. Si no existe una vía recibida, se declara la lectura no disponible o parcial y se explica qué comprobación falta. No se completa el contenido mediante inferencias silenciosas.
+
+El reconocimiento y sus decisiones de selección deberán realizarse en Rust. Una interfaz Rust que delega la inferencia a ONNX Runtime no satisface esta condición. `oar-ocr 0.10.1`, en su configuración examinada con `ort`, queda excluido de incorporación. La participación de JavaScript en la presentación web no autoriza introducir otro motor de cálculo ni trasladar a la interfaz las decisiones del SV. El formato de datos ONNX y el programa ONNX Runtime son objetos distintos; esta distinción no incorpora ni autoriza por sí misma ninguno de ellos. El [estudio de candidatos](lectura-figuras/ESTUDIO-OCR-LOCAL.md) delimita la alternativa Rust pendiente de comprobación.
 
 ## Aislamiento y custodia
 
