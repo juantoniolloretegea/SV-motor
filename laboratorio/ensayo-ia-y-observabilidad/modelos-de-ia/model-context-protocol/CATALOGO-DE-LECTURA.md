@@ -9,7 +9,7 @@ La elección de una capacidad de lectura debe conservar la identidad de la fuent
 | Fuente estructurada de la figura | Texto, etiquetas y relaciones conservados durante su elaboración | [Fuente común Rust 0.1.0](lectura-figuras/fuente-comun-0.1.0/CONTRATO.md): seis figuras comprobadas, con generación SVG, HTML y Markdown; sin reconocimiento óptico |
 | Texto documental PDF | Recuperación de texto ya contenido en el documento | [Preparación Rust y límites de lectura PDF](LECTURA-PDF.md); conserva su recepción específica |
 | Texto nativo SVG | Recuperación de etiquetas y descripciones del archivo vectorial | [Extractor Rust 0.1.0](lectura-figuras/0.1.0/CONTRATO.md), compilado y comprobado localmente; no añade una herramienta al servidor MCP instalado |
-| Reconocimiento óptico local | Imagen sin texto nativo suficiente ni fuente estructurada disponible | [Estudio de candidatos](lectura-figuras/ESTUDIO-OCR-LOCAL.md); [prueba local auxiliar](lectura-figuras/evaluacion-ocr-local-20261025/RESULTADO.md) realizada; configuración no admitida por errores de fidelidad, sin habilitación en el servicio |
+| Reconocimiento óptico local | Imagen sin texto nativo suficiente ni fuente estructurada disponible | [Estudio de candidatos](lectura-figuras/ESTUDIO-OCR-LOCAL.md) y [evaluación específica de PP-OCRv6](lectura-figuras/PP-OCRV6-RUST-ES-EN.md); [prueba local auxiliar](lectura-figuras/evaluacion-ocr-local-20261025/RESULTADO.md) realizada; configuración no admitida por errores de fidelidad, sin habilitación en el servicio |
 | Presentación interactiva | Exploración de una figura y sus datos de procedencia | Requiere datos explícitos y relaciones conocidas; un visor no acredita reconocimiento ni interpretación científica |
 
 ## Lectura sin reconocimiento óptico

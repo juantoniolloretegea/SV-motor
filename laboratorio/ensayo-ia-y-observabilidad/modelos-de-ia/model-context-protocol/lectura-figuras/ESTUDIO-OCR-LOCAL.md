@@ -37,6 +37,10 @@ Esta alternativa sigue siendo OCR. No debe confundirse con la extracción de tex
 5. Comprobar el proceso sin red, con permisos mínimos y límites de entrada y recursos. Incluir imágenes dañadas, dimensiones excesivas, contenido engañoso y texto que pretenda impartir instrucciones.
 6. Declarar por separado cada capacidad recibida. Una lectura OCR no constituye admisión de conocimiento ni habilita acceso al núcleo, consultas a proveedores o rutas críticas.
 
+## Ampliación sobre PP-OCRv6
+
+La [evaluación específica de PP-OCRv6 en Rust para español e inglés](PP-OCRV6-RUST-ES-EN.md) identifica mantenimiento, variantes, diccionario y alternativas de ejecución. RustO 0.3.2 utiliza RTen y clipper2-rust en la revisión examinada; se distingue de las dependencias de revisiones anteriores. Es una candidatura documental, sin ejecución de PP-OCRv6 ni incorporación al servicio.
+
 ## Conclusión de esta revisión
 
 La vía disponible sin OCR es la recuperación de contenido nativo mediante Rust, con el alcance recibido para cada formato. `oar-ocr 0.10.1` no se incorporará con su dependencia de ONNX Runtime. `ocrs` con RTen se conserva como alternativa estudiada. Su configuración local examinada no alcanza la fidelidad exigida y no se integra en el Gestor. RTen es un motor de cálculo, no un modelo de IA: puede ejecutar operaciones matemáticas sin cargar un modelo, como se ha comprobado localmente. Para reconocer texto mediante ocrs sí necesitaría modelos entrenados. El objetivo actual de lectura de figuras se resuelve sin OCR y no justifica incorporar RTen al servicio. Su posible utilización como motor, sin modelos de IA, exige una necesidad concreta y una recepción específica. La evaluación auxiliar ha recibido dos archivos locales de modelos, con licencia e identidad verificadas. Ninguna imagen se ha enviado a un servicio externo de OCR. El tratamiento exclusivamente local y la comprobación del cálculo en Rust son obligatorios.
