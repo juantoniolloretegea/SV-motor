@@ -58,3 +58,8 @@ def test_protocolo_indeterminado_es_irreducible():
 def test_obligaciones_presentes_en_no_apto():
     result = run_custodia_motor(_base_obs(frontera_ml_algebra="delegada"))
     assert any(item["posicion"] == "P3" for item in result["obligaciones"])
+
+
+# SPDX-License-Identifier: CC-BY-NC-ND-4.0
+# © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
+# https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode.es
