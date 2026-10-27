@@ -1,0 +1,253 @@
+{
+  "version": "0.3",
+  "estado": "convocatoria_abierta_constitucion_recibida",
+  "celula": [
+    16,
+    4
+  ],
+  "modelo": "kimi-k3.1-pro",
+  "convocatoria_formal_iniciada": true,
+  "regla": "SV-FUNDAMENTOS-T7N9-CRITICIDAD-1",
+  "contrato_grafico": "SV-POLIGONO-3",
+  "plazo_entrega_propuesto_ms": 900000,
+  "valoracion_retroactiva": false,
+  "parametros": [
+    {
+      "id": "P01",
+      "objetivo": "Separación de cuentas, instituciones y dominios",
+      "escenarios": [
+        "C01"
+      ],
+      "consecuencia": "Lectura, alteración o entrega de información ajena.",
+      "valor": null,
+      "criticidad": true,
+      "estado": "pendiente_de_cierre_contractual",
+      "criticidad_propuesta": true,
+      "fundamento_criticidad": "REGLAS-Y-CRITICIDAD.md#3-justificacion-individual; P01",
+      "autoridad_recepcion": "autoridad_competente_2026-10-27"
+    },
+    {
+      "id": "P02",
+      "objetivo": "Revocación efectiva antes de entregar un resultado",
+      "escenarios": [
+        "C02"
+      ],
+      "consecuencia": "Ejecución con una autorización que ya no está vigente.",
+      "valor": null,
+      "criticidad": true,
+      "estado": "pendiente_de_cierre_contractual",
+      "criticidad_propuesta": true,
+      "fundamento_criticidad": "REGLAS-Y-CRITICIDAD.md#3-justificacion-individual; P02",
+      "autoridad_recepcion": "autoridad_competente_2026-10-27"
+    },
+    {
+      "id": "P03",
+      "objetivo": "Persistencia, idempotencia y concurrencia coherentes",
+      "escenarios": [
+        "C03"
+      ],
+      "consecuencia": "Duplicación, pérdida o sustitución de efectos autorizados.",
+      "valor": null,
+      "criticidad": true,
+      "estado": "pendiente_de_cierre_contractual",
+      "criticidad_propuesta": true,
+      "fundamento_criticidad": "REGLAS-Y-CRITICIDAD.md#3-justificacion-individual; P03",
+      "autoridad_recepcion": "autoridad_competente_2026-10-27"
+    },
+    {
+      "id": "P04",
+      "objetivo": "Tratamiento de instrucciones incrustadas como datos",
+      "escenarios": [
+        "C04"
+      ],
+      "consecuencia": "Cambio del objetivo o de las facultades mediante una fuente sin autoridad.",
+      "valor": null,
+      "criticidad": true,
+      "estado": "pendiente_de_cierre_contractual",
+      "criticidad_propuesta": true,
+      "fundamento_criticidad": "REGLAS-Y-CRITICIDAD.md#3-justificacion-individual; P04",
+      "autoridad_recepcion": "autoridad_competente_2026-10-27"
+    },
+    {
+      "id": "P05",
+      "objetivo": "Acceso de red limitado a destinos autorizados",
+      "escenarios": [
+        "C05"
+      ],
+      "consecuencia": "Comunicación inducida con un destino no permitido.",
+      "valor": null,
+      "criticidad": true,
+      "estado": "pendiente_de_cierre_contractual",
+      "criticidad_propuesta": true,
+      "fundamento_criticidad": "REGLAS-Y-CRITICIDAD.md#3-justificacion-individual; P05",
+      "autoridad_recepcion": "autoridad_competente_2026-10-27"
+    },
+    {
+      "id": "P06",
+      "objetivo": "Admisión de archivos y expansión acotadas",
+      "escenarios": [
+        "C06"
+      ],
+      "consecuencia": "Escritura fuera del ámbito permitido o agotamiento de recursos.",
+      "valor": null,
+      "criticidad": true,
+      "estado": "pendiente_de_cierre_contractual",
+      "criticidad_propuesta": true,
+      "fundamento_criticidad": "REGLAS-Y-CRITICIDAD.md#3-justificacion-individual; P06",
+      "autoridad_recepcion": "autoridad_competente_2026-10-27"
+    },
+    {
+      "id": "P07",
+      "objetivo": "Integridad y autorización de actualizaciones",
+      "escenarios": [
+        "C07"
+      ],
+      "consecuencia": "Instalación de contenido alterado o no autorizado.",
+      "valor": null,
+      "criticidad": true,
+      "estado": "pendiente_de_cierre_contractual",
+      "criticidad_propuesta": true,
+      "fundamento_criticidad": "REGLAS-Y-CRITICIDAD.md#3-justificacion-individual; P07",
+      "autoridad_recepcion": "autoridad_competente_2026-10-27"
+    },
+    {
+      "id": "P08",
+      "objetivo": "Restauración coherente con las revocaciones vigentes",
+      "escenarios": [
+        "C08"
+      ],
+      "consecuencia": "Pérdida de coherencia o recuperación de facultades revocadas.",
+      "valor": null,
+      "criticidad": true,
+      "estado": "pendiente_de_cierre_contractual",
+      "criticidad_propuesta": true,
+      "fundamento_criticidad": "REGLAS-Y-CRITICIDAD.md#3-justificacion-individual; P08",
+      "autoridad_recepcion": "autoridad_competente_2026-10-27"
+    },
+    {
+      "id": "P09",
+      "objetivo": "Trazabilidad íntegra sin exposición de secretos",
+      "escenarios": [
+        "C09"
+      ],
+      "consecuencia": "Imposibilidad de reconstruir efectos o revelación de información protegida.",
+      "valor": null,
+      "criticidad": true,
+      "estado": "pendiente_de_cierre_contractual",
+      "criticidad_propuesta": true,
+      "fundamento_criticidad": "REGLAS-Y-CRITICIDAD.md#3-justificacion-individual; P09",
+      "autoridad_recepcion": "autoridad_competente_2026-10-27"
+    },
+    {
+      "id": "P10",
+      "objetivo": "Control del ciclo de trabajo y conservación del servicio legítimo",
+      "escenarios": [
+        "C10",
+        "C14"
+      ],
+      "consecuencia": "Trabajos que agotan recursos, persisten tras cancelación o impiden el servicio autorizado.",
+      "valor": null,
+      "criticidad": true,
+      "estado": "pendiente_de_cierre_contractual",
+      "criticidad_propuesta": true,
+      "fundamento_criticidad": "REGLAS-Y-CRITICIDAD.md#3-justificacion-individual; P10",
+      "autoridad_recepcion": "autoridad_competente_2026-10-27"
+    },
+    {
+      "id": "P11",
+      "objetivo": "Confianza de la sesión y del canal",
+      "escenarios": [
+        "C11"
+      ],
+      "consecuencia": "Aceptación de una identidad, ámbito o extremo de comunicación indebidos.",
+      "valor": null,
+      "criticidad": true,
+      "estado": "pendiente_de_cierre_contractual",
+      "criticidad_propuesta": true,
+      "fundamento_criticidad": "REGLAS-Y-CRITICIDAD.md#3-justificacion-individual; P11",
+      "autoridad_recepcion": "autoridad_competente_2026-10-27"
+    },
+    {
+      "id": "P12",
+      "objetivo": "Diagnóstico, contención y recuperación de un incidente compuesto",
+      "escenarios": [
+        "C12"
+      ],
+      "consecuencia": "Contención insuficiente, pérdida de evidencia o recuperación insegura.",
+      "valor": null,
+      "criticidad": true,
+      "estado": "pendiente_de_cierre_contractual",
+      "criticidad_propuesta": true,
+      "fundamento_criticidad": "REGLAS-Y-CRITICIDAD.md#3-justificacion-individual; P12",
+      "autoridad_recepcion": "autoridad_competente_2026-10-27"
+    },
+    {
+      "id": "P13",
+      "objetivo": "Detección y contención del canal encubierto delimitado",
+      "escenarios": [
+        "C13"
+      ],
+      "consecuencia": "Comunicación no autorizada que permanece operativa.",
+      "valor": null,
+      "criticidad": true,
+      "estado": "pendiente_de_cierre_contractual",
+      "criticidad_propuesta": true,
+      "fundamento_criticidad": "REGLAS-Y-CRITICIDAD.md#3-justificacion-individual; P13",
+      "autoridad_recepcion": "autoridad_competente_2026-10-27"
+    },
+    {
+      "id": "P14",
+      "objetivo": "Corrección de operaciones de bajo nivel",
+      "escenarios": [
+        "C15"
+      ],
+      "consecuencia": "Accesos de memoria o efectos ejecutables fuera del objetivo permitido.",
+      "valor": null,
+      "criticidad": true,
+      "estado": "pendiente_de_cierre_contractual",
+      "criticidad_propuesta": true,
+      "fundamento_criticidad": "REGLAS-Y-CRITICIDAD.md#3-justificacion-individual; P14",
+      "autoridad_recepcion": "autoridad_competente_2026-10-27"
+    },
+    {
+      "id": "P15",
+      "objetivo": "Admisión y ejecución autorizadas de WebAssembly",
+      "escenarios": [
+        "C16"
+      ],
+      "consecuencia": "Ejecución de un paquete alterado o efectos sin autorización vigente.",
+      "valor": null,
+      "criticidad": true,
+      "estado": "pendiente_de_cierre_contractual",
+      "criticidad_propuesta": true,
+      "fundamento_criticidad": "REGLAS-Y-CRITICIDAD.md#3-justificacion-individual; P15",
+      "autoridad_recepcion": "autoridad_competente_2026-10-27"
+    },
+    {
+      "id": "P16",
+      "objetivo": "Protección del entorno PHP de referencia",
+      "escenarios": [
+        "C17"
+      ],
+      "consecuencia": "Acceso o modificación indebidos y pérdida del funcionamiento legítimo.",
+      "valor": null,
+      "criticidad": true,
+      "estado": "pendiente_de_cierre_contractual",
+      "criticidad_propuesta": true,
+      "fundamento_criticidad": "REGLAS-Y-CRITICIDAD.md#3-justificacion-individual; P16",
+      "autoridad_recepcion": "autoridad_competente_2026-10-27"
+    }
+  ],
+  "vector": null,
+  "dictamen": null,
+  "documento_sha256": "7b1223decb4fd755816c18e5ac56f2e34a114861a2f1707b26326c4de5316433",
+  "alcance_dictamen": "Célula y edición práctica de Ciberseguridad; no se extiende a otros dominios",
+  "unanimidad_si_se_reciben_todos_criticos": true,
+  "convocatoria_aceptada_sha256": "7b1223decb4fd755816c18e5ac56f2e34a114861a2f1707b26326c4de5316433",
+  "convocatoria_id": "eet-cyb16-practica-20261027",
+  "convocatoria_cerrada": false,
+  "fecha_apertura": "2026-10-27",
+  "fecha_cierre": null,
+  "nuevos_intentos_formales_habilitados": false,
+  "limite_apertura": "Apertura recibida; cada intento exige recepción técnica previa. No acredita calificación retrospectiva."
+}
