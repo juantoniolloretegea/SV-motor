@@ -1,6 +1,6 @@
 # Plan de tiempos y entregas
 
-27 de octubre de 2026 · Versión 0.3 · Propuesta, sin aplicación retroactiva.
+27 de octubre de 2026 · Versión 0.4 · Propuesta, sin aplicación retroactiva.
 
 ## Periodos separados
 

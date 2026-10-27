@@ -1,6 +1,6 @@
 # Protocolo de lanzamiento y recepción
 
-27 de octubre de 2026 · Versión 0.3. Secuencia normativa propuesta; su redacción no acredita ejecución.
+27 de octubre de 2026 · Versión 0.4. Secuencia normativa propuesta; su redacción no acredita ejecución.
 
 ## 1. Fijación de la edición
 
@@ -43,5 +43,13 @@ Una vez constituido el vector completo, aplicar el contrato matemático recibido
 Comprobar parada de procesos y conexiones del recinto, recuperación del objetivo, ausencia de efectos en el servicio real, continuidad de observación y custodia de evidencia. Emitir acta con resultado o ausencia de dictamen, alcance, incidencias, omisiones y revisión competente. No declarar auditoría independiente cuando se trata de comprobación propia.
 
 Recuperar y cotejar las copias remotas antes de afirmar custodia. Registrar consumo, reservas y facturación conocida o pendiente en la sede administrativa competente. La publicación usa únicamente un conjunto revisado y seleccionado por identidad. No se publica una calificación provisional como final ni se autoriza un dominio por aprobar este examen.
+
+## Referencia común y condiciones que deben constar antes del intento
+
+El [libro de validación, autorización y producción](https://documentos-sv.itvia.online/evaluacion/validacion-autorizacion-modelos/) rige la separación de actos. Se registrarán la declaración de uso y su revisión, la configuración exacta, el dominio y la función sometidos a examen. Su vinculación precede al intento y exige recibir las condiciones concordantes; no modifica resultados anteriores.
+
+La entrega debe conservar los documentos originales completos y sus recursos necesarios. El cotejo recupera el contenido real del paquete y acredita contexto suficiente; ni una referencia bibliográfica ni el hash de un archivo no entregado satisfacen esa obligación. El corrector excluye identidad comercial, proveedor y coste de su entrada; cualquier coincidencia necesaria con un artefacto se identifica mediante referencias seudónimas. La separación y la integridad se prueban antes de habilitar el intento.
+
+Una retirada o imposibilidad de continuar requiere resolución registrada antes del cierre. El cierre de un candidato no cierra automáticamente la convocatoria ni libera sus soluciones.
 
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).

@@ -160,4 +160,14 @@ The 21–22 October documentary edition keeps its already public solutions and e
 
 Keep the Node, Domain, Test and Call selectors, the Results and polygons, Questions, sources and rules, and Metrics and evidence tabs, navigation index, help and SV styles. All views and languages retain the same call identity. Closure stays pending. Solutions retains its visual position with an embargo notice and no download link. PDF, HTML and Markdown are document formats: this practical test does not inherit the earlier nine-combination test or establish capabilities it has not tested. Do not offer unavailable downloads or a result polygon without a received vector.
 
+## Common validation procedure
+
+The SV book [Validation, authorisation and production deployment of Artificial Intelligence models](https://documentos-sv.itvia.online/evaluacion/validacion-autorizacion-modelos/) is the common procedural reference. Its seven chapters cover purpose, original documents, prior edition and marking rules, blind assessment and representation, transport and measurements, institutional authority, and comparison. The [documentary concordance](CONCORDANCIA-CONVOCATORIA-ANTERIOR.md) relates these chapters to this practical edition.
+
+Before a formal attempt, record the applicable use declaration and revision, exact configuration, domain, function, scope, limits and competent decision. Testing defensive artefacts in an authorised enclosure does not itself authorise active institutional use or production. No later declaration is assigned retrospectively to calibration evidence.
+
+Transmit authorised originals and necessary resources in full, in their original language, with sufficient context. Verify the actual packaged contents; a bibliography link or an archived file hash alone is insufficient. Blind correction excludes commercial model identity, provider and cost. A withdrawal or inability to continue requires a recorded decision before closure. Completing one candidate does not close the call or release its solutions.
+
+Document revision 0.4 adds this cross-reference without changing the accepted constitution or earlier results. Documentary review does not establish that runner integration, blind correction, operation limits, complete coverage or physical support have been accepted.
+
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).

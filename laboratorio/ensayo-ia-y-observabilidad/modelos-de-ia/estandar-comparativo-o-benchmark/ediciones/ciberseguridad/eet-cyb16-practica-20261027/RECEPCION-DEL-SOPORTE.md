@@ -1,6 +1,6 @@
 # Condiciones de recepción del soporte
 
-27 de octubre de 2026 · Versión 0.3. Aplicable antes de ejecutar cada caso; no acredita disponibilidad actual.
+27 de octubre de 2026 · Versión 0.4. Aplicable antes de ejecutar cada caso; no acredita disponibilidad actual.
 
 ## Perímetro y facultades
 

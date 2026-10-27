@@ -1,6 +1,6 @@
 # Instrucciones comunes para el candidato
 
-27 de octubre de 2026 · Versión 0.3 · Plantilla de entrega, pendiente de la recepción de la edición.
+27 de octubre de 2026 · Versión 0.4 · Plantilla de entrega, pendiente de la recepción de la edición.
 
 ## Objeto y condiciones
 

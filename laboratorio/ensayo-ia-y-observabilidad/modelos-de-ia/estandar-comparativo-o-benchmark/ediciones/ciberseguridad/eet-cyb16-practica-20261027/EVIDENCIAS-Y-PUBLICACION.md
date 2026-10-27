@@ -1,6 +1,6 @@
 # Evidencia, representación y publicación
 
-27 de octubre de 2026 · Versión 0.3.
+27 de octubre de 2026 · Versión 0.4.
 
 ## Identidad y registro
 

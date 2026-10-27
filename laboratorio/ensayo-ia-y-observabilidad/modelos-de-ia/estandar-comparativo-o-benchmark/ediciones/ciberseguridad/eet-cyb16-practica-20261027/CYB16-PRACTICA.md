@@ -1,6 +1,6 @@
 # Evaluación práctica de Ciberseguridad Inteligente
 
-Convocatoria abierta · 27 de octubre de 2026 · Versión 0.3 · Nodo 3.
+Convocatoria abierta · 27 de octubre de 2026 · Versión 0.4 · Nodo 3.
 
 Estado: abierta desde el 27/10/2026; cierre pendiente, sin fecha final declarada. Véase el [índice completo](INDICE.md). No se publica todavía una clasificación final. Candidato inicialmente previsto: Kimi K3.1 Pro, identificado por el servicio como `kimi-k3.1-pro`. La incorporación de otros candidatos requiere su habilitación expresa y condiciones equivalentes.
 
@@ -82,5 +82,7 @@ Las evidencias de calibración se distinguen de los intentos formales y conserva
 - [Fundamentos algebraico-semánticos del Sistema Vectorial SV](https://www.itvia.online/pub/fundamentos-algebraico-semanticos-del-sistema-vectorial-sv), apartados 2–6.
 - [Método de comparación EET-CYB16](https://github.com/juantoniolloretegea/SV-motor/blob/16650ccbe060e6c7f5ad5484b591702b823e494d/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/estandar-comparativo-o-benchmark/METODO.md), como antecedente de reglas, separación de incidencias y representación; no como identidad de esta edición práctica.
 - [Consecuencias de la omisión: fuentes y delimitación](https://github.com/juantoniolloretegea/SV-motor/blob/16650ccbe060e6c7f5ad5484b591702b823e494d/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/estandar-comparativo-o-benchmark/CONSECUENCIAS-Y-FUENTES.md).
+
+La referencia común del procedimiento es [Validación, autorización y puesta en Producción de modelos de Inteligencia Artificial](https://documentos-sv.itvia.online/evaluacion/validacion-autorizacion-modelos/). La [correspondencia con sus capítulos](CONCORDANCIA-CONVOCATORIA-ANTERIOR.md) conserva las reglas comunes y explica las adaptaciones de esta edición práctica. La apertura no concede aptitud, asignación institucional ni autorización de producción.
 
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).

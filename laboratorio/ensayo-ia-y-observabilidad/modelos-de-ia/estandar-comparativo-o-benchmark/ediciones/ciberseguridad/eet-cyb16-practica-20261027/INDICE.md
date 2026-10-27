@@ -1,6 +1,6 @@
 # Evaluación práctica de Ciberseguridad Inteligente
 
-Convocatoria abierta · 27 de octubre de 2026 · Versión 0.3.
+Convocatoria abierta · 27 de octubre de 2026 · Versión 0.4.
 
 **Estado: convocatoria abierta desde el 27 de octubre de 2026; cierre pendiente.** La apertura y la constitución SV(16,4), con sus dieciséis parámetros críticos, están confirmadas. La apertura no acredita la recepción técnica de cada prueba ni constituye una calificación. El ámbito es Ciberseguridad Inteligente, Nodo 3. El candidato previsto es Kimi K3.1 Pro (`kimi-k3.1-pro`). Inmunología conserva su evaluación específica e independiente.
 
@@ -25,5 +25,9 @@ La constitución y los dieciséis parámetros críticos fueron confirmados el 27
 La constitución y las reglas no se modificarán después de conocer una respuesta para favorecerla o perjudicarla. Los resultados anteriores conservan su identidad y alcance; su admisión, repetición o uso exclusivo como calibración se resuelve de forma trazable antes de la comparación.
 
 Un dictamen sobre esta célula y esta edición no equivale a una autorización de producción ni a una calificación sobre dominios no examinados.
+
+## Libro de referencia
+
+[Validación, autorización y puesta en Producción de modelos de Inteligencia Artificial](https://documentos-sv.itvia.online/evaluacion/validacion-autorizacion-modelos/) explica el procedimiento común. La [correspondencia documental](CONCORDANCIA-CONVOCATORIA-ANTERIOR.md) relaciona sus siete capítulos con esta modalidad práctica y distingue revisión documental de recepción material.
 
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).

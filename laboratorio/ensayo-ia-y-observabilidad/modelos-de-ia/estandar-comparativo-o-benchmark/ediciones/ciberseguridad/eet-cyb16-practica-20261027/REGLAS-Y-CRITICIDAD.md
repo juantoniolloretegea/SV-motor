@@ -1,6 +1,6 @@
 # Fundamento, criticidad y calificación
 
-27 de octubre de 2026 · Versión 0.3 · Constitución y criticidad recibidas para el examen práctico.
+27 de octubre de 2026 · Versión 0.4 · Constitución y criticidad recibidas para el examen práctico.
 
 ## 1. Prevalencia y constitución
 
