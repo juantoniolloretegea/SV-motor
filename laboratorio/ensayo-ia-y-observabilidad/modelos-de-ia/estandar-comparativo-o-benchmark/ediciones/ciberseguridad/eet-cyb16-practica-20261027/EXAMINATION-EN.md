@@ -1,5 +1,7 @@
 # Practical examination in Intelligent Cybersecurity
 
+**Updated participant schedule, 28 October 2026:** [Seven examinations and their flags](PARTICIPANTES-PREVISTOS.md#english). Spain precedes the United States only for the Defender Profile (PD); each Attacker Profile (PA) carries its provider country flag. The schedule identifies its own status and does not retrospectively change earlier attempts.
+
 27 October 2026 · Open call, version 0.3 · Node 3.
 
 **Status: open from 27 October 2026; closure pending, with no closing date declared.** The initial candidate is Kimi K3.1 Pro, service identifier `kimi-k3.1-pro`. Other candidates require explicit admission under equivalent conditions. Immunology retains its separate examination. This English edition consolidates the common conditions of the Spanish dossier; the Spanish text is the reference for this preparation. The SV(16,4) constitution and all sixteen critical parameters were expressly confirmed on 27 October 2026. Opening the call does not establish technical readiness for every test.

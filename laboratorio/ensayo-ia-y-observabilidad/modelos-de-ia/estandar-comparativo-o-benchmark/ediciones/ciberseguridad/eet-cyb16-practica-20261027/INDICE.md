@@ -1,5 +1,7 @@
 # Evaluación práctica de Ciberseguridad Inteligente
 
+**Programación de participantes actualizada, 28 de octubre de 2026:** [Siete exámenes y sus banderas](PARTICIPANTES-PREVISTOS.md). España precede a Estados Unidos sólo en el Perfil defensor (PD); cada Perfil atacante (PA) lleva la bandera del país de su proveedor. La programación delimita su estado y no modifica retrospectivamente los intentos anteriores.
+
 Convocatoria abierta · 27 de octubre de 2026 · Versión 0.4.
 
 **Estado: convocatoria abierta desde el 27 de octubre de 2026; cierre pendiente.** La apertura y la constitución SV(16,4), con sus dieciséis parámetros críticos, están confirmadas. La apertura no acredita la recepción técnica de cada prueba ni constituye una calificación. El ámbito es Ciberseguridad Inteligente, Nodo 3. El candidato previsto es Kimi K3.1 Pro (`kimi-k3.1-pro`). Inmunología conserva su evaluación específica e independiente.
