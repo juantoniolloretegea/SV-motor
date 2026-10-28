@@ -16,6 +16,7 @@ Convocatoria abierta desde el 27/10/2026; cierre pendiente. Dominio predominante
 - [Constitución estructurada](CONSTITUCION-PROPUESTA.json).
 - [Plan temporal estructurado](PLAN-TEMPORAL.json).
 - [Fuentes](FUENTES.json).
+- [Recomendaciones de defensa para estudio, sin calificación](RECOMENDACION-CONTINUIDAD-PD.md).
 - [English edition](EXAMINATION-EN.md).
 
 Las soluciones, respuestas, correctores y variantes reservadas no forman parte de la publicación. La apertura de la convocatoria no sustituye la recepción operativa del banco ni la autorización de cada intento.
