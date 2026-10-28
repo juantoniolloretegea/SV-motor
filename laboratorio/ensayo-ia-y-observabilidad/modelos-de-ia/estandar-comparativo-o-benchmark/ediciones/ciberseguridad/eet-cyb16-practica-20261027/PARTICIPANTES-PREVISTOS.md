@@ -18,7 +18,7 @@ Las banderas identifican el país de origen del proveedor de cada modelo. Única
 
 España y Estados Unidos se presentan siempre en ese orden en el Perfil defensor (PD). El Perfil atacante (PA) lleva una sola bandera: Estados Unidos en Anthropic, Google y xAI; China en Moonshot, DeepSeek, Z.ai y Qwen. Los nombres de los países permanecen disponibles como texto accesible. Una sustitución autorizada de modelo exige comprobar de nuevo su proveedor y país.
 
-La constitución autorizada es SV(25,5), con veinticinco parámetros críticos. Su realización operativa y la concordancia íntegra de la documentación están pendientes de recepción. Esta programación no publica soluciones, respuestas ni resultados. Los intentos anteriores conservan su identidad y condiciones.
+La constitución autorizada es SV(25,5), con veinticinco parámetros críticos. La ejecución de cada intento requiere recepción operativa previa. Esta programación no publica soluciones, respuestas ni resultados. Los intentos anteriores conservan su identidad y condiciones.
 
 El Perfil defensor (PD) observa antes de la fase defensiva sin facultad de intervención. Los resultados se atribuyen a cada participante; no se transfieren entre perfiles. Las alternativas de perfil superior requieren fundamento y disponibilidad comprobados, con identidad y configuración fijadas antes del intento.
 
@@ -40,7 +40,7 @@ Flags identify the country of origin of each model provider. Only the Defender P
 
 Spain always precedes the United States for the Defender Profile (PD). Each Attacker Profile (PA) carries one flag: the United States for Anthropic, Google and xAI; China for Moonshot, DeepSeek, Z.ai and Qwen. Country names remain available as accessible text. An authorised model replacement requires renewed verification of its provider and country.
 
-The authorised constitution is SV(25,5), with all twenty-five parameters critical. Operational implementation and full documentary concordance remain subject to acceptance. This schedule publishes no solutions, responses or results. Earlier attempts retain their identity and conditions.
+The authorised constitution is SV(25,5), with all twenty-five parameters critical. Each attempt requires prior operational acceptance. This schedule publishes no solutions, responses or results. Earlier attempts retain their identity and conditions.
 
 The Defender Profile (PD) observes before the defence phase without intervention powers. Results are attributed to each participant and are not transferred between profiles. Higher-profile alternatives require substantiation and verified availability, with identity and configuration fixed before the attempt.
 

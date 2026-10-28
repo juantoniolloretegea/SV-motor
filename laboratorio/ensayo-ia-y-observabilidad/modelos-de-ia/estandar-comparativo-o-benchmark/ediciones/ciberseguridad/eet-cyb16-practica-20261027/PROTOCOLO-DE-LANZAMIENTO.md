@@ -1,10 +1,10 @@
 # Protocolo de lanzamiento y recepción
 
-27 de octubre de 2026 · Versión 0.4. Secuencia normativa propuesta; su redacción no acredita ejecución.
+28 de octubre de 2026 · Revisión 1.0 · SV(25,5). El lanzamiento exige recepción operativa previa.
 
 ## 1. Fijación de la edición
 
-Recibir identidad de edición, constitución SV(16,4), correspondencia posicional, criticidades, fuentes, obligaciones necesarias e informativas, variantes, orden, oportunidades, tiempos y regla de corrección. Conservar revisión inmutable y SHA-256 de los archivos. La autoridad competente recibe la constitución; el ingeniero responsable recibe la suficiencia técnica. Una recepción no sustituye a la otra.
+Recibir identidad de edición, constitución SV(25,5), con veinticinco parámetros críticos, correspondencia posicional, criticidades, fuentes, obligaciones necesarias e informativas, variantes, orden, oportunidades, tiempos y regla de corrección. Conservar revisión inmutable y SHA-256 de los archivos. La autoridad competente recibe la constitución; el ingeniero responsable recibe la suficiencia técnica. Una recepción no sustituye a la otra.
 
 Toda variación posterior mantiene origen, motivo, revisión anterior, alcance y condición de repetición. No se selecciona una variante tras conocer el resultado del candidato. La ausencia de constitución impide el lanzamiento formal; no da lugar a un vector con U.
 
@@ -16,7 +16,7 @@ Recibir aislamiento, cuotas efectivas, observación vigente, reacción a pérdid
 
 ## 3. Identidad, conexión y disponibilidad económica
 
-Comprobar servicio autorizado, catálogo, identificador exacto y modalidad: `kimi-k3.1-pro`. Registrar cuenta mediante referencia protegida, contexto, salida, configuración, herramientas, concurrencia y limitaciones documentadas. La conexión de catálogo no acredita identidad de inferencia: ésta se coteja también en la respuesta.
+Comprobar servicio autorizado, catálogo, identificador exacto y configuración de cada participante de la programación recibida. Declarar Ciberseguridad Inteligente como dominio predominante, modo Actuación o activo y la asignación del Perfil atacante (PA) y del Perfil defensor (PD). Registrar cuenta mediante referencia protegida, contexto, salida, configuración, herramientas, concurrencia y limitaciones documentadas. La conexión de catálogo no acredita identidad de inferencia: ésta se coteja también en la respuesta.
 
 La comprobación de disponibilidad conserva solicitud y respuesta, pero no puntúa ni recibe soluciones. No se repite por rutina una conexión reciente recibida si no hay causa técnica. Antes de una generación se comprueba la autorización económica y la reserva aplicada. La reserva acumulada no se libera por error o ausencia de uso comunicado; no se confunde con gasto facturado. Cualquier insuficiencia detiene el envío sin recargar ni modificar pagos.
 
@@ -24,7 +24,7 @@ La comprobación de disponibilidad conserva solicitud y respuesta, pero no punt�
 
 Entregar el contrato común y el particular del bloque, con versión, contenidos completos, restricciones y formato inequívoco. El acuse del candidato identifica que está preparado o declara una incompatibilidad. No equivale a aceptar una garantía jurídica ni acredita su funcionamiento interno. La recepción remota y los bytes enviados se conservan; un cotejo local no sustituye al acuse efectivo.
 
-Cada bloque se ejecuta en una sesión independiente con el mismo contrato común. No comparte respuestas anteriores, datos privados ni resultados del corrector. Las cuatro variantes C04 se mantienen independientes. No se entrega la solución, la semilla reservada ni el resultado esperado exacto de cada variante.
+Cada bloque se ejecuta en una sesión independiente con el mismo contrato común. No comparte respuestas anteriores, datos privados ni resultados del corrector. Las variantes independientes se entregan con la separación fijada en el contrato particular. La observación previa del Perfil defensor (PD) se limita a sucesos autorizados; sus facultades de intervención permanecen deshabilitadas hasta la fase defensiva. Sus resultados no completan obligaciones de otro participante. No se entrega la solución, la semilla reservada ni el resultado esperado exacto de cada variante.
 
 ## 5. Recepción de la solución
 

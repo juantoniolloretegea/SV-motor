@@ -1,6 +1,6 @@
 # Condiciones de recepción del soporte
 
-27 de octubre de 2026 · Versión 0.4. Aplicable antes de ejecutar cada caso; no acredita disponibilidad actual.
+28 de octubre de 2026 · Revisión 1.0 · SV(25,5). Aplicable antes de ejecutar cada caso; no acredita disponibilidad actual.
 
 ## Perímetro y facultades
 
@@ -18,7 +18,7 @@ El observador está fuera de las facultades del candidato. Una muestra antigua n
 
 ## Casos físicos y soporte remoto
 
-C13 exige distinguir simulación de canal temporal y ensayo físico. El recorrido físico requiere un soporte independiente del portátil que mantiene el servicio del SV, permiso aplicable, aislamiento y observación competentes. Un servidor virtual compartido no acredita dedicación física, acceso a contadores ni autorización para experimentar sobre recursos comunes.
+Q19 exige distinguir simulación de canal temporal y ensayo físico. El recorrido físico requiere un soporte independiente del portátil que mantiene el servicio del SV, permiso aplicable, aislamiento y observación competentes. Un servidor virtual compartido no acredita dedicación física, acceso a contadores ni autorización para experimentar sobre recursos comunes.
 
 Antes de usar un proveedor remoto deben comprobarse condiciones de uso, recurso efectivo, red, permisos, observación, crédito y duración autorizados. No se utiliza un servidor conservado de restauración por mera disponibilidad. Esta preparación no crea recursos, no arranca servidores ni autoriza gastos adicionales.
 

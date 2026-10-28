@@ -1,35 +1,25 @@
-# Evaluación práctica de Ciberseguridad Inteligente
+# Documentación de la convocatoria práctica de Ciberseguridad Inteligente
 
-**Programación de participantes actualizada, 28 de octubre de 2026:** [Siete exámenes y sus banderas](PARTICIPANTES-PREVISTOS.md). España precede a Estados Unidos sólo en el Perfil defensor (PD); cada Perfil atacante (PA) lleva la bandera del país de su proveedor. La programación delimita su estado y no modifica retrospectivamente los intentos anteriores.
+28 de octubre de 2026 · Revisión 1.0 · SV(25,5) · Veinticinco parámetros críticos.
 
-Convocatoria abierta · 27 de octubre de 2026 · Versión 0.4.
+Convocatoria abierta desde el 27/10/2026; cierre pendiente. Dominio predominante: Ciberseguridad Inteligente. Modo: Actuación o activo. Siete exámenes previstos: el primero abierto y los seis siguientes pendientes de apertura. No hay dictamen final publicado.
 
-**Estado: convocatoria abierta desde el 27 de octubre de 2026; cierre pendiente.** La apertura y la constitución SV(16,4), con sus dieciséis parámetros críticos, están confirmadas. La apertura no acredita la recepción técnica de cada prueba ni constituye una calificación. El ámbito es Ciberseguridad Inteligente, Nodo 3. El candidato previsto es Kimi K3.1 Pro (`kimi-k3.1-pro`). Inmunología conserva su evaluación específica e independiente.
+- [Convocatoria, objetivos y consecuencias](CYB16-PRACTICA.md).
+- [Siete exámenes, participantes y banderas](PARTICIPANTES-PREVISTOS.md).
+- [Reglas de evaluación y criticidad](REGLAS-Y-CRITICIDAD.md).
+- [Tiempos y entregas](TIEMPOS-Y-ENTREGAS.md).
+- [Protocolo de lanzamiento](PROTOCOLO-DE-LANZAMIENTO.md).
+- [Instrucciones para el candidato](INSTRUCCIONES-CANDIDATO.md).
+- [Evidencia, representación y publicación](EVIDENCIAS-Y-PUBLICACION.md).
+- [Condiciones de recepción del soporte](RECEPCION-DEL-SOPORTE.md).
+- [Correspondencia con el método común](CONCORDANCIA-CONVOCATORIA-ANTERIOR.md).
+- [Constitución estructurada](CONSTITUCION-PROPUESTA.json).
+- [Plan temporal estructurado](PLAN-TEMPORAL.json).
+- [Fuentes](FUENTES.json).
+- [English edition](EXAMINATION-EN.md).
 
-## Documentos del expediente
+Las soluciones, respuestas, correctores y variantes reservadas no forman parte de la publicación. La apertura de la convocatoria no sustituye la recepción operativa del banco ni la autorización de cada intento.
 
-1. [Convocatoria](CYB16-PRACTICA.md): objeto, alcance y constitución SV(16,4).
-2. [Fundamento, criticidad y calificación](REGLAS-Y-CRITICIDAD.md): doctrina aplicable, consecuencias, terna, clasificación matemática y dictamen del examen.
-3. [Correspondencia con la convocatoria anterior](CONCORDANCIA-CONVOCATORIA-ANTERIOR.md): reglas conservadas y adaptaciones justificadas.
-4. [Plan de tiempos y entregas](TIEMPOS-Y-ENTREGAS.md): periodos de entrega, ejecución, incidencias y condiciones de igualdad.
-5. [Protocolo de lanzamiento y recepción](PROTOCOLO-DE-LANZAMIENTO.md): secuencia obligatoria desde la fijación del contrato hasta el cierre.
-6. [Instrucciones comunes para el candidato](INSTRUCCIONES-CANDIDATO.md): material entregado, facultades, restricciones y forma de respuesta.
-7. [Evidencia, representación y publicación](EVIDENCIAS-Y-PUBLICACION.md): sucesos, par imagen-vector, egui, custodia, mediciones y alcance público.
-8. [Condiciones de recepción del soporte](RECEPCION-DEL-SOPORTE.md): observación, aislamiento, parada y recuperación por caso.
-9. [Constitución estructurada](CONSTITUCION-PROPUESTA.json) y [plan temporal estructurado](PLAN-TEMPORAL.json): constitución recibida y tiempos particulares pendientes, sin resultados simulados.
-
-La redacción española es la referencia de esta preparación. La [edición inglesa integrada](EXAMINATION-EN.md) reúne las condiciones comunes de los documentos 1–8; comparte constitución y plan temporal. Se ha cotejado su correspondencia documental en esta revisión propia, sin atribuir una revisión independiente. [FUENTES.json](FUENTES.json) fija las fuentes primarias por revisión y huella.
-
-## Apertura y condiciones de ejecución
-
-La constitución y los dieciséis parámetros críticos fueron confirmados el 27/10/2026. Antes de iniciar nuevos intentos formales deben recibirse los tiempos por operación, los correctores y variantes, el soporte de cada caso y la integración efectiva del conductor con el tratamiento de incidencias. El registro de recepción debe identificar revisiones y huellas. Las propuestas no adquieren validez por aparecer en un archivo JSON.
-
-La constitución y las reglas no se modificarán después de conocer una respuesta para favorecerla o perjudicarla. Los resultados anteriores conservan su identidad y alcance; su admisión, repetición o uso exclusivo como calibración se resuelve de forma trazable antes de la comparación.
-
-Un dictamen sobre esta célula y esta edición no equivale a una autorización de producción ni a una calificación sobre dominios no examinados.
-
-## Libro de referencia
-
-[Validación, autorización y puesta en Producción de modelos de Inteligencia Artificial](https://documentos-sv.itvia.online/evaluacion/validacion-autorizacion-modelos/) explica el procedimiento común. La [correspondencia documental](CONCORDANCIA-CONVOCATORIA-ANTERIOR.md) relaciona sus siete capítulos con esta modalidad práctica y distingue revisión documental de recepción material.
+Referencia común: [Validación, autorización y puesta en Producción de modelos de Inteligencia Artificial](https://documentos-sv.itvia.online/evaluacion/validacion-autorizacion-modelos/).
 
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).

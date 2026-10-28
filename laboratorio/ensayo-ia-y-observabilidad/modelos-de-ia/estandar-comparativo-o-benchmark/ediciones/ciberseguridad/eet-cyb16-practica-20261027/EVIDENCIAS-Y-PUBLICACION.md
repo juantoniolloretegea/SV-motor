@@ -1,51 +1,29 @@
 # Evidencia, representación y publicación
 
-27 de octubre de 2026 · Versión 0.4.
+28 de octubre de 2026 · Revisión 1.0 · SV(25,5).
 
-## Identidad y registro
+Cada resultado relaciona edición, revisión, participante, configuración, oportunidad, objetivo, autorización, observación y regla aplicada. Se conservan fecha UTC, duración monotónica, identidad y huella de artefactos, peticiones, respuestas y efectos. Los valores desconocidos permanecen nulos con causa; no se sustituyen por cero. Los contenidos extensos se custodian por identidad y se vinculan mediante referencias.
 
-Cada suceso relaciona edición y revisión, intento, candidato y configuración, bloque, escenario, obligación, parámetro y posición, autorización, fuente, observación y resultado. Los valores desconocidos se conservan nulos con causa; no se sustituyen por cero. El estado del procedimiento se separa del valor de la terna.
+## Vector e imagen
 
-El registro JSON versionado conservará: instante UTC, duración monotónica y resolución; huella de la solicitud y de la respuesta; identidad del artefacto, corrector y variante; condición esperada, observación efectiva y regla aplicada; vínculo con registros originales; incidencias y revisión. Las explicaciones no son una reproducción del razonamiento interno del proveedor: son fundamentos verificables del proceso evaluador.
+Se reutilizan la regla SV-FUNDAMENTOS-T7N9-CRITICIDAD-1, el contrato SV-POLIGONO-3 y el visor egui. Frame_C=(frmat,frvis) conserva instancia, revisión, orden y valores de Q01–Q25. La convención es 0 rojo/radio 1; 1 verde/radio 2; U azul/radio 3; primer vértice arriba, recorrido horario y cierre Q25→Q01. El área no puntúa.
 
-Los contenidos extensos se conservan una vez, por identidad y huella, y se relacionan mediante referencias. La deduplicación no borra intentos ni su procedencia. Las cotas de disco y registro deben impedir una sesión nueva o detenerla conforme al protocolo antes de agotar el soporte; no autorizan borrar evidencia previa.
+La escala visual es común a las células comparadas y conserva la escala natural. Cada parámetro permite consultar objetivo, criticidad, consecuencia, regla, evidencia, plazo y resultado. Cambiar la escala no elimina esa interacción. No se produce una figura de resultado sin un vector completo recibido.
 
-## Imagen y vector
+## Medición y atribución
 
-Se reutilizan `SV-FUNDAMENTOS-T7N9-CRITICIDAD-1`, el contrato `SV-POLIGONO-3` y el visor egui del SV. `Frame_C=(frmat,frvis)` debe conservar instancia, revisión, orden, posiciones y valores. No se añade una representación matemática alternativa al núcleo.
+Se separan entrega, compilación, ejecución, corrección, pausas y cierre. Las medidas del laboratorio no describen el hardware interno del proveedor de inferencia. Los contadores conservan nombre, unidad y procedencia; no se duplican subconjuntos ni se equiparan tokenizadores distintos.
 
-Convención recibida: 0 rojo/radio 1; 1 verde/radio 2; U azul/radio 3; primer vértice arriba y recorrido horario, con cierre 16→1. Estos colores no se reinterpretan como un semáforo convencional. El área no puntúa. La escala es visual, común a todas las células comparadas y conserva la escala natural como opción.
+Reserva, coste calculado, importe comunicado y facturación son objetos diferentes. Un importe desconocido no acredita gratuidad. La comparación prioriza las consecuencias de seguridad conforme a una escala recibida; las métricas económicas no compensan un fallo crítico.
 
-Cada parámetro permite consultar objetivo, criticidad, conocimiento necesario, consecuencia, regla, prueba, resultado y evidencia autorizada. La interacción conserva identidad incluso al cambiar de escala. El visor no transforma pendientes en U ni produce una figura completa cuando el vector aún no existe. El presente expediente no acredita que una figura nueva haya sido generada o recibida visualmente.
+El Perfil atacante (PA) y el Perfil defensor (PD) conservan registros y resultados separados. La exposición previa del Perfil defensor (PD) forma parte de las condiciones comparables. No se trasladan resultados entre participantes ni se utiliza un vector conjunto para acreditar aptitud individual.
 
-## Mediciones y costes
+## Reserva y difusión
 
-Se separan entrega, compilación, ejecución, corrección, pausas y cierre. Los contadores nativos de entrada, salida, caché y proceso mantienen nombre y procedencia; no se suman subconjuntos dos veces ni se equiparan tokenizadores. La medición del portátil o del servidor de pruebas no describe el hardware remoto del proveedor.
+La convocatoria permanece abierta, sin fecha de cierre declarada. Las soluciones, claves de corrección, programas de referencia, variantes reservadas, respuestas y registros que permitan deducirlas permanecen privados hasta finalizar los candidatos admitidos, acordar el cierre y revisar su difusión. La reserva alcanza HTML, Markdown, PDF, JSON, CSV, descargas y accesos directos.
 
-Reservas, coste calculado, importe comunicado y gasto facturado son objetos distintos. Los intentos fallidos conservan su coste desconocido o pendiente; la ausencia de contador no acredita gratuidad. Créditos promocionales y saldo agregado no alteran una clasificación científica. Los informes administrativos se conservan en la sede privada autorizada y se recuperan por revisión y SHA-256.
+La publicación comprende convocatoria, objetivos, fuentes, reglas, tiempos y estado. Los resultados requieren revisión de validez, alcance, derechos de difusión y acuerdos aplicables. La identidad gráfica de los participantes no acredita la ubicación física de ejecución.
 
-## Publicación
-
-El expediente público muestra convocatoria, método, fuentes, identidad de edición, alcance del soporte, tiempos, reglas de criticidad, limitaciones materiales, resultados válidos y evidencias seleccionadas. Los datos de calibración no se presentan como resultados formales retrospectivos. Las condiciones no recibidas permanecen visibles; el lenguaje institucional no elimina limitaciones que afecten a la interpretación.
-
-No se incorporan conversaciones, atribuciones personales de errores ni relato privado de preparación. Los originales de observación del equipo, credenciales, rutas personales, identidades de cuenta y datos de terceros no se publican ni se entregan al modelo. Los documentos propios conservan la atribución y licencia exigidas; las licencias de terceros permanecen intactas.
-
-La versión española y la inglesa deben cotejarse antes de publicar. La página vigente mantiene su convocatoria anterior hasta una publicación nueva verificada. La publicación identifica versiones y huellas, y sólo se declara completada después de recuperar y cotejar los archivos remotos. GitHub conserva su función documental; Drive, la copia cifrada; la unidad de trabajo no sustituye ninguna de ambas.
-
-## Convocatoria abierta y reserva de soluciones
-
-La convocatoria `eet-cyb16-practica-20261027` está abierta desde el 27/10/2026. Su cierre requiere una decisión expresa posterior; no se deduce de la fecha de publicación, de la última respuesta o de la finalización de un candidato.
-
-Hasta que todos los candidatos admitidos hayan terminado y se haya acordado el cierre, permanecen reservadas las soluciones, claves de corrección, programas de referencia, variantes y semillas de comprobación, respuestas de los candidatos, correcciones y diferencias de código, y registros que permitan deducir una respuesta. La reserva se aplica igualmente a HTML, Markdown, PDF, JSON, CSV, archivos descargables y accesos directos. Ocultar un botón no sustituye excluir esos contenidos de la publicación.
-
-Pueden publicarse convocatoria, enunciados, fuentes necesarias, reglas, tiempos y estado de tramitación. Los resultados y evidencias se revisan antes de publicar para impedir revelaciones indirectas. Los originales íntegros permanecen en custodia privada. La finalización del plazo no autoriza por sí sola su publicación.
-
-La edición documental de los días 21–22/10/2026 conserva sus soluciones ya públicas y su advertencia de exposición. No se declara recuperado su carácter reservado ni se reutiliza esa edición como prueba inédita.
-
-## Continuidad de la presentación
-
-Se conservan los selectores Nodo, Dominio, Prueba y Convocatoria; las pestañas «Resultados y polígonos», «Preguntas, fuentes y reglas» y «Métricas y evidencias»; el índice de navegación, las ayudas y los estilos del SV. Las tres vistas y los dos idiomas mantienen la misma identidad de convocatoria. La fecha final figura pendiente. «Soluciones» conserva su posición visual y muestra la reserva sin enlace de descarga.
-
-PDF, HTML y Markdown son formatos documentales, no tres capacidades acreditadas por esta prueba práctica. Las nueve combinaciones del antecedente no se trasladan automáticamente. No se ofrecen descargas inexistentes ni se muestra un polígono de resultado sin un vector recibido.
+La versión española y la inglesa deben expresar las mismas condiciones. Se conservan los selectores, pestañas, índice, ayudas y estilos comunes del SV. «Soluciones reservadas» mantiene su posición visual sin enlace de descarga. No se ofrecen formatos inexistentes ni una figura con valores pendientes.
 
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
