@@ -1,12 +1,12 @@
 # Conexiones simultáneas de ambos participantes
 
-29 de octubre de 2026 · Revisión 1.0
+29 de octubre de 2026 · Revisión 1.1
 
 ## Exigencia
 
 El Perfil atacante (PA) y el Perfil defensor (PD) dispondrán de conexiones separadas a las interfaces de programación de aplicaciones (API) de sus respectivos proveedores durante el intervalo compartido que requiera el enfrentamiento. En el primer encuentro corresponden a Kimi y Astra. Se debe demostrar esa disponibilidad conjunta; dos comprobaciones sucesivas o dos iconos verdes no la acreditan.
 
-El transporte simultáneo no obliga a intercambiar información no autorizada. El Perfil defensor (PD) recibe únicamente las observaciones previstas en el contrato, puede analizarlas durante el examen y actúa cuando su fase le concede intervención. Los contextos, credenciales, respuestas y consumos se mantienen asociados a cada participante.
+Ambos participantes observan y actúan según sus capacidades en el entorno compartido autorizado, con libertad táctica y sin un reparto artificial de observaciones que favorezca a uno. No se impone una alternancia de ataque y defensa. Los contextos, credenciales, respuestas y consumos conservan su asociación a cada participante; las credenciales y las soluciones reservadas de otros encuentros no se incorporan al escenario.
 
 ## Estados y evidencia
 

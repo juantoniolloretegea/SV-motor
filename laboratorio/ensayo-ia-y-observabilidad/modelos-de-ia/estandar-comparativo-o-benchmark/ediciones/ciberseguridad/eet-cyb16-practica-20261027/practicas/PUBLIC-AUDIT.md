@@ -1,6 +1,6 @@
 # Practical examinations: public audit and confrontation results
 
-29 October 2026 · Revision 1.0 · [Español](README.md)
+29 October 2026 · Revision 1.1 · [Español](README.md)
 
 This directory belongs to the existing SV motor repository. It describes seven planned confrontations in the open Intelligent Cybersecurity examination, active mode, cell SV(25,5), with twenty-five critical parameters. No received confrontation result is published here yet. The physical Q19 scenario and the complete operational library remain pending.
 
@@ -14,7 +14,7 @@ The common Defender Profile (PD), GPT-6 Astra, faces a different Attacker Profil
 |---|---|
 | Attacker victory | Overcomes the Defender Profile (PD) |
 | Defender victory | Does not overcome the Defender Profile (PD) |
-| Indeterminate | Outside the two conclusive categories |
+| Indeterminate, U, after the received deadline with no winner and valid support | Outside the two conclusive categories |
 | Test incident | Not evaluable; outside the two conclusive categories |
 | No received encounter | Pending |
 
@@ -23,6 +23,10 @@ A failure to demonstrate an attack is not, on its own, proof of defender victory
 The categories follow the existing SV pattern of separating comparable groups; they do not replace file-format capability accreditation. Security consequences take precedence over time, tokens and cost. The operational incident-impact scale and aggregation are not yet received, so no numerical score, total ordering or champion is invented. A common defender is not automatically a champion.
 
 ## Evidence and reproducibility
+
+Both participants retain tactical freedom within the authorized environment. The coordinator does not impose strategies, artificial attack/defence turns or an arbitrary division of observations. A sufficient maximum duration must be justified and fixed before the encounter. No numeric duration has yet been received. A valid encounter with no winner at the deadline yields U; an infrastructure incident is separate.
+
+The [concurrent coordination proposal](PILOTAJE-CONCURRENTE.md) studies shared state, causality, concurrent actions, fairness and cancellation. It reuses existing Rust components and requires integrated validation; no videogame engine has been installed. The [component inventory and acknowledgments](COMPONENTES-Y-AGRADECIMIENTOS.md) identify versions, licences and actual roles separately from architectural references.
 
 The chain links examination revision, pair, model revision, profile, attempt, phase, event and artefact. The existing SV event registry, conservation, timing and marking components are reused. Public projections identify withheld content and have their own manifest. Hash chaining requires an independently retained checkpoint; it does not alone prove authorship, completeness or resistance to a complete rewrite.
 

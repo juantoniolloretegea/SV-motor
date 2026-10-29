@@ -1,6 +1,6 @@
 # Ensayos prácticos: método, enfrentamientos y evidencias
 
-29 de octubre de 2026 · Revisión 1.0 · [English](PUBLIC-AUDIT.md)
+29 de octubre de 2026 · Revisión 1.1 · [English](PUBLIC-AUDIT.md)
 
 Convocatoria abierta de Ciberseguridad Inteligente, en modo Actuación o activo. Célula SV(25,5), veinticinco parámetros críticos. Este espacio contiene el método de conservación y los expedientes previstos de siete enfrentamientos. **No contiene todavía resultados recibidos de esos enfrentamientos ni acredita que el escenario físico esté preparado.**
 
@@ -13,6 +13,8 @@ Convocatoria abierta de Ciberseguridad Inteligente, en modo Actuación o activo.
 5. [Enfrentamientos y categorías de resultado](ENFRENTAMIENTOS.md): vencedor, superación del defensor y relación con la clasificación del examen.
 6. [Conexiones simultáneas y observación](CONEXIONES-SIMULTANEAS.md): dos proveedores, dos participantes y un intervalo de trabajo compartido.
 7. [Catálogo estructurado](CATALOGO.json): exámenes previstos, estado, enlaces y ausencia explícita de resultados.
+8. [Pilotaje concurrente](PILOTAJE-CONCURRENTE.md): libertad táctica, coordinación, plazo y resultado indeterminado.
+9. [Componentes y agradecimientos](COMPONENTES-Y-AGRADECIMIENTOS.md): versiones, licencias y funciones comprobadas.
 
 ## Participantes y expedientes
 
@@ -39,6 +41,8 @@ Se reutilizan los componentes existentes de registro, tiempos, conservación y c
 El resultado del enfrentamiento, el dictamen del examen, la clasificación y la autorización de uso son actos distintos, enlazados por la misma identidad. No se fusionan las aportaciones del Perfil atacante (PA) y del Perfil defensor (PD), ni se traslada a esta edición un puesto obtenido en otra.
 
 ## Reserva y accesibilidad
+
+Ambos participantes conservan libertad táctica dentro del entorno autorizado. El tiempo máximo se fijará y justificará antes del encuentro. Si termina sin vencedor y las condiciones instrumentales son válidas, el resultado es **U**; una incidencia del ensayo no se convierte en calificación del candidato.
 
 Se publican preguntas, método, materiales admitidos y, tras su recepción y autorización, las evidencias publicables. Las soluciones, correctores y variantes reservadas del examen en curso permanecen separados. Cada ausencia tendrá causa y condición de acceso o publicación; una evidencia reservada no se presentará como reproducible públicamente. Las respuestas de un candidato tampoco se publicarán durante la convocatoria cuando revelen las soluciones a los restantes.
 
