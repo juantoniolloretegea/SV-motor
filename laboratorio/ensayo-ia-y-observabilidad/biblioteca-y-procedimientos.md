@@ -63,6 +63,14 @@ Las pantallas existentes de evaluación, modos y grados de libertad, perfil y gu
 El [libro de Validación, autorización y puesta en Producción](https://documentos-sv.itvia.online/evaluacion/validacion-autorizacion-modelos/) conserva el contrato de evaluación; el [libro de Dominios y Universos](https://documentos-sv.itvia.online/dominios/universos/) conserva la constitución científica. Los términos se relacionan mediante la [Enciclopedia temática](https://documentos-sv.itvia.online/enciclopedia/). Esta explicación no abre tablas de usuarios duplicadas ni modifica facultades.
 
 
+## Recomendaciones de defensa para estudio posterior
+
+La [nota sobre continuidad y señuelos del Perfil defensor (PD)](modelos-de-ia/estandar-comparativo-o-benchmark/ediciones/ciberseguridad/eet-cyb16-practica-20261027/RECOMENDACION-CONTINUIDAD-PD.md) reúne siete propuestas: intervención autorizada de bajo nivel; movilidad geográfica; replicación simultánea; ejecución distribuida; actividad observable intermitente no periódica; señuelo de apariencia ordinaria; y señuelo de apariencia adversaria con función defensiva.
+
+Constituye la exposición común de sus condiciones, límites, fuentes y equivalente inglés. No se dispone en esta convocatoria de los recursos y facultades necesarios para ensayarlas. No acreditan capacidades del Sistema Vectorial (SV), no añaden parámetros ni requisitos de cierre y no participan en la calificación. La programación de bajo nivel no concede facultades sobre infraestructura ajena; la apariencia de un señuelo debe conservar la identidad auténtica ante la administración y la auditoría autorizadas.
+
+La nota tampoco forma parte automáticamente de la biblioteca entregable al candidato. Su incorporación a un examen exigiría revisión previa común del material, autorización y recepción propias. Se mantiene separada de las evidencias y de los criterios reservados.
+
 ## Recepción y continuidad
 
 Biblioteca preparada, paquete entregado, capacidad de lectura comprobada, actuación ejecutada y resultado recibido son hechos diferentes. Antes del lanzamiento se cotejan material íntegro, permisos, contexto, tiempos, fuentes efectivas y exclusión de soluciones. Las incidencias del instrumento no se imputan al candidato.

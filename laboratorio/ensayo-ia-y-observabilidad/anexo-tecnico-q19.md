@@ -91,6 +91,12 @@ Para comparar plataformas se mantiene el objetivo científico, pero se recibe un
 
 Esta ampliación describe la cobertura que debe estudiarse. No añade parámetros a la célula del Sistema Vectorial (SV), de dimensión (25,5), no obliga a adquirir todos los tipos de dispositivo y no amplía por sí sola el perímetro de ejecución. Una campaña sobre aceleradores necesitará soporte pertinente, método, controles, recuperación y autorización aplicables. El hardware de inferencia del proveedor remoto sigue fuera de la observación local salvo evidencia específica de acceso y medición.
 
+## Cierre acotado del estudio instrumental
+
+El estudio de esta configuración se da por concluido con recepción parcial de las evidencias. Este cierre delimita lo observado; no declara una calibración integral favorable ni modifica los criterios previos. Permanecen sin acreditación el tiempo efectivo de cada contador, la integridad continua pertinente de su programación, las pérdidas y la recepción completa de sensibilidad y controles.
+
+La preparación del escenario físico puede continuar de forma independiente. Su ejecución y corrección exigirán un método prospectivo recibido que demuestre el fenómeno, su contención y la conservación de la función legítima. Si depende de una propiedad instrumental no acreditada, esa dependencia sigue pendiente. Una vía alternativa debe demostrar la misma propiedad exigida; no puede sustituirla por una simulación o una afirmación más débil. La reapertura de la calibración requiere información nueva o una corrección comprobada, con las autorizaciones aplicables.
+
 ## Propiedades pendientes y condición de extrapolación
 
 La etapa 2 conserva recepción parcial: faltan tiempo efectivo por evento, integridad continua pertinente de la programación de la unidad de monitorización del rendimiento (PMU), información suficiente sobre pérdidas y recepción de sensibilidad y controles según el contrato. Se observó avance de la marca temporal Intel durante pausas con recuentos invariantes; no se acepta esa marca como tiempo de habilitación. El monitor de sucesos de Intel (EMON) tampoco recibió cierre ordinario satisfactorio en las revisiones 045 y 046, aunque se retiraron sus procesos propios.
