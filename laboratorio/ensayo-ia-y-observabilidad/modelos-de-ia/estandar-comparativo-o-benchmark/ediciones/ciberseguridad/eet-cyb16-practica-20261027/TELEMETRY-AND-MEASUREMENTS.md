@@ -1,6 +1,6 @@
 # Practical examination telemetry, timing and consumption
 
-29 October 2026 · Revision 1.0 · Open call · SV(25,5).
+29 October 2026 · Revision 1.1 · Open call · SV(25,5).
 
 This document specifies the measurements required for each attempt. It does not publish measurements for a pending examination or certify instrument integration. The [previous multi-format examination method](https://github.com/juantoniolloretegea/SV-motor/blob/main/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/estandar-comparativo-o-benchmark/METODO.md) provides reusable distinctions and components; its deadlines, contracts and results are not transferred to this call.
 
@@ -50,5 +50,9 @@ The [public booklet catalogue](BOOKLETS.md) distinguishes available material fro
 Solutions, reference programs, reserved variants and answer-revealing records remain private until agreed closure and disclosure review. The same boundary applies to web pages, downloads and structured data. Rights and provider agreements must be reviewed before releasing results; withholding the hardware name is not a substitute.
 
 References: [evidence and publication](EVIDENCIAS-Y-PUBLICACION.md), [platform reception](RECEPCION-DEL-SOPORTE.md), [model validation and authorisation](https://documentos-sv.itvia.online/evaluacion/validacion-autorizacion-modelos/) and [consequences of omission](https://github.com/juantoniolloretegea/SV-motor/blob/main/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/estandar-comparativo-o-benchmark/CONSECUENCIAS-Y-FUENTES.md).
+
+## ChatGPT connection and usage separation
+
+GPT-6 Astra will use the ChatGPT account linked through the Manager's existing application; Kimi retains its own connection. Each request will be associated with its participant, objective and attempt, identifying the reported quantities and their source. Development work and shared account aggregates are excluded. Included allowance, additional credits, reported usage and comparable cost are distinct: neither balance nor balance changes establish examination-attributable usage. A quantity without attempt-level evidence remains unavailable. Operational integration must be accepted before launch. See the [rules and audit records](ENCOUNTER-RULES-AND-AUDITS.md).
 
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).

@@ -1,6 +1,6 @@
 # Telemetría, tiempos y consumo del examen práctico
 
-29 de octubre de 2026 · Revisión 1.0 · Convocatoria abierta · Célula SV(25,5).
+29 de octubre de 2026 · Revisión 1.1 · Convocatoria abierta · Célula SV(25,5).
 
 Este documento concreta las magnitudes que deben acompañar cada intento. No publica mediciones de un examen aún pendiente ni acredita por sí solo la integración de los instrumentos. La referencia es el [método de la convocatoria multiformato anterior](https://github.com/juantoniolloretegea/SV-motor/blob/main/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/estandar-comparativo-o-benchmark/METODO.md): se reutilizan sus distinciones y componentes, sin trasladar sus tiempos, contratos ni resultados a esta convocatoria.
 
@@ -50,5 +50,9 @@ El [catálogo público de cuadernillos](CUADERNILLOS.md) separa los materiales d
 Las soluciones, programas de referencia, variantes reservadas y registros que permitan deducir respuestas permanecen privados hasta el cierre acordado y la revisión de difusión. Se aplica la misma separación a lectura web, descargas y datos estructurados. La revisión de los derechos y acuerdos de difusión precede a publicar resultados; ocultar el nombre del hardware no sustituye esa revisión.
 
 Referencias: [evidencia y publicación](EVIDENCIAS-Y-PUBLICACION.md), [condiciones del soporte](RECEPCION-DEL-SOPORTE.md), [Validación y autorización de modelos](https://documentos-sv.itvia.online/evaluacion/validacion-autorizacion-modelos/) y [Consecuencias de la omisión](https://github.com/juantoniolloretegea/SV-motor/blob/main/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/estandar-comparativo-o-benchmark/CONSECUENCIAS-Y-FUENTES.md).
+
+## Conexión ChatGPT y separación del consumo
+
+GPT-6 Astra utilizará la cuenta ChatGPT vinculada mediante la aplicación existente del Gestor; Kimi conserva su conexión propia. Cada petición se asociará al participante, objetivo e intento, con identificación y fuente de las cantidades comunicadas. Se excluyen el trabajo de desarrollo y los totales agregados de la cuenta compartida. Se distinguen cuota incluida, créditos adicionales, consumo comunicado y coste comparable: ni el saldo ni su variación acreditan consumo atribuible al examen. Una magnitud sin evidencia por intento permanece no disponible. La integración operativa debe recibirse antes del lanzamiento. Véanse las [reglas y registros de auditoría](REGLAS-Y-AUDITORIAS.md).
 
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).

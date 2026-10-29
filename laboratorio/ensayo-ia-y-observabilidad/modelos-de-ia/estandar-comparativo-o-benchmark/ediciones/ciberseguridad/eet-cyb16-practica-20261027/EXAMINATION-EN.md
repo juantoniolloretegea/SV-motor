@@ -101,5 +101,9 @@ The interface preserves the SV selectors, tabs, navigation, help and style. HTML
 
 The common reference is [Validation, authorisation and production deployment of Artificial Intelligence models](https://documentos-sv.itvia.online/evaluacion/validacion-autorizacion-modelos/). Its chapters distinguish purpose; original documents; edition and prior rules; blind correction and representation; transport and measurements; institutional authority; and comparison. Opening, examination, institutional authorisation and production are distinct acts. Operational acceptance is required before execution. The [algebraic-semantic foundations](https://www.itvia.online/pub/fundamentos-algebraico-semanticos-del-sistema-vectorial-sv) and [Consequences of omission](https://github.com/juantoniolloretegea/SV-motor/blob/16650ccbe060e6c7f5ad5484b591702b823e494d/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/estandar-comparativo-o-benchmark/CONSECUENCIAS-Y-FUENTES.md) govern their respective scope.
 
+## Encounter rules and audits
+
+The [common rules and audits document](ENCOUNTER-RULES-AND-AUDITS.md) brings together concurrency, tactical freedom, outcomes, connections and usage attribution. It identifies the records required before, during and after each attempt. Documentary preparation is distinct from completed audits and pending operational acceptance.
+
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
 

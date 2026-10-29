@@ -71,5 +71,9 @@ Consulte las [reglas y criticidad](REGLAS-Y-CRITICIDAD.md), el [protocolo](PROTO
 
 La referencia común es el libro [Validación, autorización y puesta en Producción de modelos de Inteligencia Artificial](https://documentos-sv.itvia.online/evaluacion/validacion-autorizacion-modelos/). Rigen asimismo los [Fundamentos algebraico-semánticos](https://www.itvia.online/pub/fundamentos-algebraico-semanticos-del-sistema-vectorial-sv) y [Consecuencias de la omisión: fuentes y delimitación](https://github.com/juantoniolloretegea/SV-motor/blob/16650ccbe060e6c7f5ad5484b591702b823e494d/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/estandar-comparativo-o-benchmark/CONSECUENCIAS-Y-FUENTES.md). La apertura, el examen, la autorización institucional y la producción son actos distintos.
 
+## Reglas y auditorías de los enfrentamientos
+
+El [documento común de reglas y auditorías](REGLAS-Y-AUDITORIAS.md) reúne las condiciones de concurrencia, libertad táctica, desenlace, conexiones y atribución del consumo. Identifica los registros exigidos antes, durante y después de cada intento. Se distingue la preparación documental de las auditorías efectivamente realizadas y de la recepción operativa pendiente.
+
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
 
