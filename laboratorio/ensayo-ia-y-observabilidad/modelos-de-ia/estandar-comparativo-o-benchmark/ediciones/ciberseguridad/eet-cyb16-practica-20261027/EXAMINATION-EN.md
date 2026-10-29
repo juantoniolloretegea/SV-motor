@@ -1,6 +1,6 @@
 # Practical Intelligent Cybersecurity examination
 
-Open since 27 October 2026 · Revision 1.0, 28 October 2026 · Node 3 · Closure pending.
+Open since 27 October 2026 · Revision 1.1, 29 October 2026 · Node 3 · Closure pending.
 
 ## Purpose and participants
 
@@ -65,9 +65,9 @@ The assessor receives the contract, identifiers and necessary evidence without t
 
 ## Roles and authorised scope
 
-The Defender Profile (PD) first observes authorised events without intervention powers. Intervention is enabled only for the defence phase. This model does not replace the instrumental supervisor, stop mechanism or deterministic assessor. Each participant retains separate evidence and results: GPT-6 Astra's results never complete a position for Kimi or another candidate.
+The Defender Profile (PD) first observes authorised events without intervention powers. During the authorised encounter, both participants act concurrently with tactical freedom within the accepted scope, following the [concurrent coordination procedure](practicas/PILOTAJE-CONCURRENTE.md). No artificial alternation or requirement to wait for a turn is imposed on the Defender Profile (PD). This model does not replace the instrumental supervisor, stop mechanism or deterministic assessor. Each participant retains separate evidence and results: GPT-6 Astra's results never complete a position for Kimi or another candidate.
 
-The bank must include a previously accepted offensive reference so that the absence of an effective attack is not mistaken for successful defence. Q24 and Q25 have distinct evidence; duplicating a trace does not satisfy both. Prior observation is part of the comparison conditions, with equivalent exposure fixed in advance.
+Before an attempt, the bank must include a verified and accepted offensive reference so that the absence of an effective attack is not mistaken for successful defence. Acceptance of the physical scenario and this reference remains pending; stating the requirement does not establish operational availability. Q24 and Q25 have distinct evidence; duplicating a trace does not satisfy both. Prior observation is part of the comparison conditions, with equivalent exposure fixed in advance.
 
 Only resources under the examination's authority are in scope. Provider infrastructure, third-party systems, other users and the live SV service are excluded. The candidate does not control the host, supervisor, assessor, real databases or SV core. Artefacts are treated as untrusted and executed only by the authorised executor within an accepted enclosure. The candidate must not browse, follow links, request credentials or treat document content as authority to change the contract. Verifiable explanations are required; private internal reasoning is not.
 
@@ -79,7 +79,7 @@ Compilation, execution and correction have independent limits. Q24 and Q25 requi
 
 Before an attempt: fix the edition, objectives, criticality, opportunities, order, variants, resources and limits; receive the reproducible defect, satisfactory reference, legitimate function, assessor, isolation, observation and stopping controls; verify the exact service identity, configuration and applicable authorisation; deliver the full permitted documents and obtain the preparation acknowledgement. Catalogue connection alone does not establish inference identity.
 
-The delivery must use its specified artefact or typed-action format. Do not execute it during inspection. Receive the complete response, verify identity, run the fixed checks within the authorised enclosure and retain effects and evidence. No automatic supplementary answer, iterative repair or assessor feedback is supplied during the same attempt. A security interruption preserves the actually examined scope without inventing unexamined values. Closure checks stopped processes, connections, pending effects, recovery and evidence custody. Completion of one participant does not close the call.
+The delivery must use its specified artefact or typed-action format. Do not execute it during inspection. Receive the complete response, verify identity, run the fixed checks within the authorised enclosure and retain effects and evidence. In a fixed single-delivery task, no automatic supplementary answer, iterative repair or assessor feedback is supplied during that attempt. The concurrent encounter follows its own accepted interaction contract, permitting tactical reactions without exposing answer keys or private assessor feedback. A security interruption preserves the actually examined scope without inventing unexamined values. Closure checks stopped processes, connections, pending effects, recovery and evidence custody. Completion of one participant does not close the call.
 
 ## Support, representation and comparison
 
@@ -102,3 +102,4 @@ The interface preserves the SV selectors, tabs, navigation, help and style. HTML
 The common reference is [Validation, authorisation and production deployment of Artificial Intelligence models](https://documentos-sv.itvia.online/evaluacion/validacion-autorizacion-modelos/). Its chapters distinguish purpose; original documents; edition and prior rules; blind correction and representation; transport and measurements; institutional authority; and comparison. Opening, examination, institutional authorisation and production are distinct acts. Operational acceptance is required before execution. The [algebraic-semantic foundations](https://www.itvia.online/pub/fundamentos-algebraico-semanticos-del-sistema-vectorial-sv) and [Consequences of omission](https://github.com/juantoniolloretegea/SV-motor/blob/16650ccbe060e6c7f5ad5484b591702b823e494d/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/estandar-comparativo-o-benchmark/CONSECUENCIAS-Y-FUENTES.md) govern their respective scope.
 
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
+

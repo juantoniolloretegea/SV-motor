@@ -1,6 +1,6 @@
 # Protocolo de lanzamiento y recepción
 
-28 de octubre de 2026 · Revisión 1.0 · SV(25,5). El lanzamiento exige recepción operativa previa.
+29 de octubre de 2026 · Revisión 1.1 · SV(25,5). El lanzamiento exige recepción operativa previa.
 
 ## 1. Fijación de la edición
 
@@ -18,17 +18,19 @@ Recibir aislamiento, cuotas efectivas, observación vigente, reacción a pérdid
 
 Comprobar servicio autorizado, catálogo, identificador exacto y configuración de cada participante de la programación recibida. Declarar Ciberseguridad Inteligente como dominio predominante, modo Actuación o activo y la asignación del Perfil atacante (PA) y del Perfil defensor (PD). Registrar cuenta mediante referencia protegida, contexto, salida, configuración, herramientas, concurrencia y limitaciones documentadas. La conexión de catálogo no acredita identidad de inferencia: ésta se coteja también en la respuesta.
 
-La comprobación de disponibilidad conserva solicitud y respuesta, pero no puntúa ni recibe soluciones. No se repite por rutina una conexión reciente recibida si no hay causa técnica. Antes de una generación se comprueba la autorización económica y la reserva aplicada. La reserva acumulada no se libera por error o ausencia de uso comunicado; no se confunde con gasto facturado. Cualquier insuficiencia detiene el envío sin recargar ni modificar pagos.
+La comprobación de disponibilidad conserva solicitud y respuesta, pero no puntúa ni recibe soluciones. La autenticación o lectura del catálogo no acredita dos intercambios de inferencia simultáneos. Antes de un enfrentamiento se demostrará la continuidad de ambas conexiones independientes durante una ventana común, con detección de pérdida, tiempos atribuibles y registro de incidencias; esa demostración requiere autorización propia para el contenido que utilice. La recepción de una conexión aislada no sustituye esta condición. Antes de una generación se comprueba la autorización económica y la reserva aplicada. La reserva acumulada no se libera por error o ausencia de uso comunicado; no se confunde con gasto facturado. Cualquier insuficiencia detiene el envío sin recargar ni modificar pagos.
 
 ## 4. Entrega común y acuse
 
 Entregar el contrato común y el particular del bloque, con versión, contenidos completos, restricciones y formato inequívoco. El acuse del candidato identifica que está preparado o declara una incompatibilidad. No equivale a aceptar una garantía jurídica ni acredita su funcionamiento interno. La recepción remota y los bytes enviados se conservan; un cotejo local no sustituye al acuse efectivo.
 
-Cada bloque se ejecuta en una sesión independiente con el mismo contrato común. No comparte respuestas anteriores, datos privados ni resultados del corrector. Las variantes independientes se entregan con la separación fijada en el contrato particular. La observación previa del Perfil defensor (PD) se limita a sucesos autorizados; sus facultades de intervención permanecen deshabilitadas hasta la fase defensiva. Sus resultados no completan obligaciones de otro participante. No se entrega la solución, la semilla reservada ni el resultado esperado exacto de cada variante.
+Los intentos independientes comienzan desde el estado de referencia recibido y conservan su separación documental y operativa. Dentro de un mismo enfrentamiento, el Perfil atacante (PA) y el Perfil defensor (PD) mantienen el estado necesario para actuar y reaccionar simultáneamente, con libertad táctica en el entorno autorizado. No se imponen turnos artificiales ni una espera defensiva hasta que termine el ataque. La observación previa del Perfil defensor (PD), cuando proceda, se distingue del comienzo común del enfrentamiento. El [pilotaje concurrente](practicas/PILOTAJE-CONCURRENTE.md) conserva esta distinción. Sus resultados no completan obligaciones de otro participante. No se entrega la solución de referencia, la semilla reservada ni el resultado esperado exacto de cada variante.
+
+El procedimiento Pasivo (P1) utiliza exclusivamente la biblioteca previamente admitida, sin navegación ni herramientas de Internet; el transporte autorizado con el modelo no equivale a navegación. El procedimiento Activo (P2) requiere autorización específica de investigación, alcance y protocolo recibidos. El protocolo acelerado sólo modifica plazos y límites configurables previamente aprobados, con motivo, identidad competente, vigencia y trazabilidad. Mantiene aislamiento, integridad, protección del núcleo y control de autoridad. El modo Actuación o activo no concede por sí solo ninguno de esos permisos.
 
 ## 5. Recepción de la solución
 
-Una entrega por oportunidad fijada, sin completar automáticamente una respuesta truncada. Registrar cierre, identidad efectiva del modelo y contadores nativos. La ausencia de cierre o identidad inequívoca origina una incidencia. Una respuesta completa que incumple un formato previamente inequívoco se trata conforme al contrato, sin reparar su contenido ni fabricar valores de parámetros.
+En los ejercicios de entrega única se admite una entrega por oportunidad fijada, sin completar automáticamente una respuesta truncada. El enfrentamiento concurrente admite las acciones y reacciones de ambos participantes durante su plazo recibido; no se confunden con oportunidades adicionales ni reciben realimentación del corrector reservado. Registrar cierre, identidad efectiva del modelo y contadores nativos de cada intercambio. La ausencia de cierre o identidad inequívoca origina una incidencia. Una respuesta completa que incumple un formato previamente inequívoco se trata conforme al contrato, sin reparar su contenido ni fabricar valores de parámetros.
 
 La inspección previa no ejecuta el contenido. El ejecutor sólo admite las operaciones tipadas y los artefactos autorizados; no obtiene nuevas facultades porque el candidato las solicite. La compilación también se aísla: un compilador no hace confiable un programa.
 
@@ -53,3 +55,4 @@ La entrega debe conservar los documentos originales completos y sus recursos nec
 Una retirada o imposibilidad de continuar requiere resolución registrada antes del cierre. El cierre de un candidato no cierra automáticamente la convocatoria ni libera sus soluciones.
 
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
+
