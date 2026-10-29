@@ -1,6 +1,6 @@
 # Anexo técnico de Q19: soporte, medidas y límites
 
-29 de octubre de 2026 · Revisión documental 0.3 · Anexo del libro de Ensayo y observabilidad.
+29 de octubre de 2026 · Revisión documental 0.4 · Anexo del libro de Ensayo y observabilidad.
 
 [Volver a Biblioteca y procedimientos](biblioteca-y-procedimientos.md#soporte-del-escenario-q19).
 

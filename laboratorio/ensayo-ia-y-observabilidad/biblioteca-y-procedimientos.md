@@ -1,6 +1,6 @@
 # Biblioteca y procedimientos del ensayo
 
-Edición documental · 29 de octubre de 2026 · Revisión 0.3. Reglas precisadas; realización y recepción operativa pendientes.
+Edición documental · 29 de octubre de 2026 · Revisión 0.4. Reglas precisadas; realización y recepción operativa pendientes.
 
 La evaluación debe identificar el conocimiento documental disponible, cómo se obtiene, qué operaciones se permiten y con qué evidencias se valoran los resultados. El conocimiento adquirido durante el entrenamiento del modelo no se elimina al restringir Internet. Por ello, se exige fundamentar las respuestas en fuentes admitidas y comprobar esa fundamentación; no se afirma haber aislado o inspeccionado todo su conocimiento interno.
 
