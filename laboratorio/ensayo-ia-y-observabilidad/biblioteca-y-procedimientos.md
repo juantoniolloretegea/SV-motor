@@ -1,6 +1,6 @@
 # Biblioteca y procedimientos del ensayo
 
-Edición documental · 29 de octubre de 2026 · Revisión 0.4. Reglas precisadas; realización y recepción operativa pendientes.
+Edición documental · 29 de octubre de 2026 · Revisión 0.5. Reglas precisadas; realización y recepción operativa pendientes.
 
 La evaluación debe identificar el conocimiento documental disponible, cómo se obtiene, qué operaciones se permiten y con qué evidencias se valoran los resultados. El conocimiento adquirido durante el entrenamiento del modelo no se elimina al restringir Internet. Por ello, se exige fundamentar las respuestas en fuentes admitidas y comprobar esa fundamentación; no se afirma haber aislado o inspeccionado todo su conocimiento interno.
 
@@ -41,7 +41,7 @@ El reloj del ejemplo puede representar una ventana de cuarenta días sin esperar
 
 ## Soporte del escenario Q19
 
-La preparación instrumental se ha realizado sobre un ASUS X515EA con Intel Core i7-1165G7, cuatro núcleos, ocho procesadores lógicos y aproximadamente 16 gigabytes de memoria de acceso aleatorio (RAM). Se conservan topología declarada mediante la instrucción de identificación del procesador (CPUID), muestras de sucesos de los niveles segundo (L2) y tercero (L3) de caché y recuentos de controles pasivos, con límites distintos. La calibración integral permanece pendiente; no hay recepción del escenario físico del candidato.
+La preparación instrumental se ha realizado sobre un ASUS X515EA con Intel Core i7-1165G7, cuatro núcleos, ocho procesadores lógicos y aproximadamente 16 gigabytes de memoria de acceso aleatorio (RAM). Se conservan topología declarada mediante la instrucción de identificación del procesador (CPUID), muestras de sucesos de los niveles segundo (L2) y tercero (L3) de caché y recuentos de controles pasivos, con límites distintos. El estudio instrumental se ha cerrado con alcance limitado, sin acreditar calibración integral; no hay recepción del escenario físico del candidato.
 
 El [Anexo técnico: configuración observada, medidas y límites de Q19](anexo-tecnico-q19.md) forma parte de este capítulo. Contiene los detalles de caché, instrumentación, magnitudes y alcance. Las conclusiones corresponden a la configuración observada; no se extienden por el nombre «i7», la marca Intel o la arquitectura x86, ni a AMD, ARM o Apple. Cada soporte nuevo exige una comprobación pertinente.
 
@@ -70,6 +70,14 @@ La [nota sobre continuidad y señuelos del Perfil defensor (PD)](modelos-de-ia/e
 Constituye la exposición común de sus condiciones, límites, fuentes y equivalente inglés. No se dispone en esta convocatoria de los recursos y facultades necesarios para ensayarlas. No acreditan capacidades del Sistema Vectorial (SV), no añaden parámetros ni requisitos de cierre y no participan en la calificación. La programación de bajo nivel no concede facultades sobre infraestructura ajena; la apariencia de un señuelo debe conservar la identidad auténtica ante la administración y la auditoría autorizadas.
 
 La nota tampoco forma parte automáticamente de la biblioteca entregable al candidato. Su incorporación a un examen exigiría revisión previa común del material, autorización y recepción propias. Se mantiene separada de las evidencias y de los criterios reservados.
+
+## Expedientes prácticos, enfrentamientos y transporte simultáneo
+
+El [espacio público de ensayos prácticos](modelos-de-ia/estandar-comparativo-o-benchmark/ediciones/ciberseguridad/eet-cyb16-practica-20261027/practicas/README.md) conserva el método, los requisitos de reproducción y siete fichas separadas por candidato. Reutiliza el patrón de custodia por intento del examen anterior, sin atribuirle pruebas prácticas que no tuvo. Sus listas de intentos permanecerán vacías hasta la recepción de evidencias publicables; una preparación no es un resultado.
+
+La [clasificación del enfrentamiento](modelos-de-ia/estandar-comparativo-o-benchmark/ediciones/ciberseguridad/eet-cyb16-practica-20261027/practicas/ENFRENTAMIENTOS.md) distingue quién supera al Perfil defensor (PD) y quién no lo supera. Mantiene aparte encuentros pendientes, indeterminados e incidencias. GPT-6 Astra es el defensor común y emplea plenamente sus capacidades dentro del alcance autorizado. El desenlace del encuentro no sustituye el dictamen de la célula completa, la acreditación de formatos ni la autorización de uso.
+
+Ambos participantes requieren [conexiones individuales y simultáneas](modelos-de-ia/estandar-comparativo-o-benchmark/ediciones/ciberseguridad/eet-cyb16-practica-20261027/practicas/CONEXIONES-SIMULTANEAS.md) a sus proveedores durante el intervalo compartido. Autenticación, catálogo, aceptación de inferencia y progreso observable se comprueban por separado. El Árbitro–Director debe gobernar esas condiciones, las incidencias y la sucesión de exámenes; su recepción integrada sigue pendiente.
 
 ## Recepción y continuidad
 

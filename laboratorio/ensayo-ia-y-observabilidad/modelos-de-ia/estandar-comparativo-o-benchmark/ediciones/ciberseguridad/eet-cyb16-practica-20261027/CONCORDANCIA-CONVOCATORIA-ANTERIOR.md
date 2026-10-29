@@ -1,6 +1,6 @@
 # Correspondencia con el método común del SV
 
-28 de octubre de 2026 · Revisión 1.0 · SV(25,5).
+29 de octubre de 2026 · Revisión 1.1 · SV(25,5).
 
 La convocatoria práctica conserva la presentación y las reglas comunes del SV. Su constitución consta de veinticinco parámetros críticos y sus condiciones se aplican exclusivamente a esta edición. Los exámenes documentales anteriores conservan sus propios contratos y resultados.
 
@@ -10,14 +10,16 @@ La convocatoria práctica conserva la presentación y las reglas comunes del SV.
 | Conocimiento y actuación | Decisiones y efectos verificables; la explicación no sustituye la ejecución. |
 | Terna y matemática | 0, 1 y U conforme al contrato; T(25)=19; κ y dictamen separados. |
 | Criticidad | Veinticinco posiciones críticas; Apto requiere veinticinco ceros. |
-| Participantes | Siete exámenes previstos; Perfil defensor (PD) común y Perfil atacante (PA) identificado en cada uno; resultados individuales. |
+| Participantes | Siete enfrentamientos previstos; Perfil defensor (PD) común y Perfil atacante (PA) identificado en cada uno; resultados atribuibles por perfil, con vencedor y categorías de superación del defensor. |
 | Fuentes y soluciones | Material necesario íntegro; correctores y soluciones reservados. |
-| Formatos | Lectura HTML y descarga Markdown; no se atribuyen combinaciones de formatos que no se hayan ensayado. |
+| Formatos | Cuadernillo del candidato en Markdown; otros formatos según acreditación previa trasladable de la misma versión, configuración y vía de entrega. La presentación web no acredita capacidad del modelo. |
 | Tiempos | Límites por entrega, compilación, ejecución y corrección; recepción antes del intento. |
-| Observación | Vigencia, identidad y suficiencia demostradas; los fallos instrumentales quedan fuera de la terna. |
+| Observación | Vigencia, identidad y suficiencia demostradas, incluidas las dos conexiones simultáneas; los fallos instrumentales quedan fuera de la terna. |
 | Representación | Visor egui y contrato SV-POLIGONO-3; paridad de vector y figura. |
 | Comparación | Consecuencias de seguridad prioritarias; escala recibida antes de su aplicación. Costes y tokens no compensan fallos críticos. |
 | Alcance | Ciberseguridad Inteligente, modo Actuación o activo; el examen no concede autorización institucional ni aptitud en otros dominios. |
+
+El [método y los expedientes prácticos](practicas/README.md) describen la secuencia auditable. Las [categorías del enfrentamiento](practicas/ENFRENTAMIENTOS.md) conservan separados el vencedor, el dictamen global y la clasificación comparativa.
 
 ## Correspondencia con el libro de validación
 
