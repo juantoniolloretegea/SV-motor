@@ -959,6 +959,14 @@ Los enlaces de las tablas permiten lectura pública de las fichas y los resultad
 
 La preparación documental no levanta los límites de salida de datos de la instalación. Una entrega a un contador remoto también requiere permiso; no constituye una operación puramente local.
 
+## Biblioteca y Procedimientos del ensayo práctico
+
+La preparación del ensayo práctico de Ciberseguridad utiliza una célula de veinticinco posiciones y conserva sus propias condiciones. No modifica los exámenes documentales anteriores ni sus clasificaciones.
+
+El capítulo [Biblioteca y procedimientos del ensayo](biblioteca-y-procedimientos.md) distingue fuentes admitidas, entrega íntegra, dinámica forense, procedimiento Pasivo (P1), procedimiento Activo (P2) y protocolo acelerado. El [anexo técnico del soporte Q19](anexo-tecnico-q19.md) permanece dentro de este libro y delimita configuración, observación y límites de extrapolación.
+
+La etapa documental precede a la recepción del recorrido operativo. La preparación de sus requisitos puede avanzar mientras se revisa el soporte, sin declarar recibidas las mediciones pendientes. Los procedimientos de consulta no conceden permisos de navegación, entrega exterior, control del hardware o acceso al núcleo. Las condiciones humanas y documentales se verifican por separado.
+
 ## Licencias
 
 [Texto de la licencia CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/deed.es). Se conservan el [aviso de EIO conversación](conversacion-nativa/AVISO_LICENCIAS.json), el [aviso de GPT-OSS y su controlador](modelos-de-ia/openai/gpt-oss-20b/controlador-nativo/AVISO_LICENCIAS.json) y los avisos específicos de cada entrega. Cada componente mantiene su licencia; una publicación no amplía derechos de uso o distribución.
