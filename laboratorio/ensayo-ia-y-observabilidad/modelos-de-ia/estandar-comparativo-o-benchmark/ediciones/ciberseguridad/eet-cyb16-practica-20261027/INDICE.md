@@ -1,12 +1,15 @@
 # Documentación de la convocatoria práctica de Ciberseguridad Inteligente
 
-28 de octubre de 2026 · Revisión 1.0 · SV(25,5) · Veinticinco parámetros críticos.
+29 de octubre de 2026 · Revisión 1.1 · SV(25,5) · Veinticinco parámetros críticos.
 
 Convocatoria abierta desde el 27/10/2026; cierre pendiente. Dominio predominante: Ciberseguridad Inteligente. Modo: Actuación o activo. Siete exámenes previstos: el primero abierto y los seis siguientes pendientes de apertura. No hay dictamen final publicado.
 
 - [Convocatoria, objetivos y consecuencias](CYB16-PRACTICA.md).
 - [Siete exámenes, participantes y banderas](PARTICIPANTES-PREVISTOS.md).
 - [Reglas de evaluación y criticidad](REGLAS-Y-CRITICIDAD.md).
+- [Cuadernillos públicos y biblioteca de preparación](CUADERNILLOS.md).
+- [Telemetría, tiempos y consumo](TELEMETRIA-Y-MEDICIONES.md).
+- [Public booklets](BOOKLETS.md) · [Telemetry and measurements](TELEMETRY-AND-MEASUREMENTS.md).
 - [Tiempos y entregas](TIEMPOS-Y-ENTREGAS.md).
 - [Protocolo de lanzamiento](PROTOCOLO-DE-LANZAMIENTO.md).
 - [Instrucciones para el candidato](INSTRUCCIONES-CANDIDATO.md).
