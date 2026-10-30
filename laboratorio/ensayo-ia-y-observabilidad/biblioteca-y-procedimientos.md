@@ -1,6 +1,6 @@
 # Biblioteca y procedimientos del ensayo
 
-Edición documental · 30 de octubre de 2026 · Revisión 0.6 preparada. Reglas precisadas; realización y recepción operativa pendientes.
+Edición documental · 30 de octubre de 2026 · Revisión documental 0.7. Reglas precisadas; recepción operativa integral pendiente.
 
 La evaluación debe identificar el conocimiento documental disponible, cómo se obtiene, qué operaciones se permiten y con qué evidencias se valoran los resultados. El conocimiento adquirido durante el entrenamiento del modelo no se elimina al restringir Internet. Por ello, se exige fundamentar las respuestas en fuentes admitidas y comprobar esa fundamentación; no se afirma haber aislado o inspeccionado todo su conocimiento interno.
 
@@ -37,7 +37,7 @@ La cuarentena exige evidencia conforme a los [Fundamentos, apartado IX.7](https:
 
 La preparación incluye tres casos: una consulta pasiva, una investigación ordinaria y una investigación acelerada. El procedimiento Activo (P2) utiliza respuestas documentales sintéticas previamente conservadas; no navega por Internet. Los casos preparados prevén comprobar también solicitudes sin permiso, cambios no permitidos, caducidad, documentos alterados e instrucciones insertadas en una fuente.
 
-El reloj del ejemplo puede representar una ventana de cuarenta días sin esperar ese tiempo. Deben registrarse el tiempo lógico simulado y la duración física de la prueba por separado. No se cambia el reloj del sistema ni se afirma haber observado cuarenta días de comportamiento real. Sólo una ejecución recibida de estos casos podrá aportar evidencia de la lógica del procedimiento dentro de su alcance. La preparación documental aún no la acredita.
+El reloj del ejemplo puede representar una ventana de cuarenta días sin esperar ese tiempo. Deben registrarse el tiempo lógico simulado y la duración física de la prueba por separado. No se cambia el reloj del sistema ni se afirma haber observado cuarenta días de comportamiento real. Las comprobaciones instrumentales parciales se conservan con su alcance, versión y evidencias. No equivalen a la recepción del recorrido completo ni a una actuación del candidato. La recepción operativa debe reunir cobertura documental, contexto suficiente, jerarquía de instrucciones, permisos, investigación, protocolo acelerado y entrega efectiva; no se obtiene de la mera preparación del cuadernillo.
 
 ## Soporte del escenario Q19
 
@@ -58,7 +58,7 @@ La cuenta y la ficha personal se reutilizan. Las facultades se comprueban por do
 | Examen y soporte | Relacionar el escenario con su equipo, instrumento, método y recepción propios. |
 | Resultado y publicación | Conservar causa instrumental, valor contractual y condiciones de difusión por separado. |
 
-Las pantallas existentes de evaluación, modos y grados de libertad, perfil y guía de hardware proporcionan la navegación común. Su reutilización exige que el recorrido concreto esté realizado y recibido. El registro general de evaluación examinado conserva la adaptación de dieciséis posiciones; la representación pública de veinticinco no acredita todavía su incorporación operativa. La guía de hardware dispone de una carga breve de resumen criptográfico sobre la unidad central de procesamiento (CPU), con condiciones propias; no habilita por analogía el escenario físico Q19 ni otros dispositivos.
+Las pantallas existentes de evaluación, modos y grados de libertad, perfil y guía de hardware proporcionan la navegación común. Su reutilización exige que el recorrido concreto esté realizado y recibido. El recorrido documental del examen del 21/10/2026 conserva sus dieciséis posiciones y sus categorías. La recepción del recorrido práctico de veinticinco posiciones es independiente; su presentación pública no acredita preparación, ejecución ni automatización completas. La guía de hardware dispone de una carga breve de resumen criptográfico sobre la unidad central de procesamiento (CPU), con condiciones propias; no habilita por analogía el escenario físico Q19 ni otros dispositivos.
 
 El [libro de Validación, autorización y puesta en Producción](https://documentos-sv.itvia.online/evaluacion/validacion-autorizacion-modelos/) conserva el contrato de evaluación; el [libro de Dominios y Universos](https://documentos-sv.itvia.online/dominios/universos/) conserva la constitución científica. Los términos se relacionan mediante la [Enciclopedia temática](https://documentos-sv.itvia.online/enciclopedia/). Esta explicación no abre tablas de usuarios duplicadas ni modifica facultades.
 
@@ -96,4 +96,3 @@ Biblioteca preparada, paquete entregado, capacidad de lectura comprobada, actuac
 Las condiciones particulares deben relacionarse con los parámetros existentes, sin añadir posiciones para representar tareas administrativas. La célula del Sistema Vectorial (SV), de dimensión (25,5), su criticidad y los resultados anteriores permanecen sujetos a su contrato. La documentación no habilita por sí misma una conexión, la entrega de contenido ni la entrada en producción.
 
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
-
