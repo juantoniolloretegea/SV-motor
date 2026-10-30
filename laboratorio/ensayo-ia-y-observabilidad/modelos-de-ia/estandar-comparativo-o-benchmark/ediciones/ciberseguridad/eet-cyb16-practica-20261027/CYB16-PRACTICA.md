@@ -1,6 +1,8 @@
 # Evaluación práctica de Ciberseguridad Inteligente
 
-Convocatoria abierta desde el 27 de octubre de 2026 · Revisión 1.1 de 29 de octubre de 2026 · Nodo 3 · Cierre pendiente.
+27/10/2026 . Hackathon Combinado de Ciberseguridad · 1.ª edición. España (HCC1, España)
+
+Convocatoria abierta desde el 27 de octubre de 2026 · Revisión 2.0 preparada el 30 de octubre de 2026 · Nodo 3 · Cierre pendiente.
 
 ## Objeto y participantes
 

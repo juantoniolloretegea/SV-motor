@@ -1,6 +1,8 @@
 # Documentación de la convocatoria práctica de Ciberseguridad Inteligente
 
-29 de octubre de 2026 · Revisión 1.2 · SV(25,5) · Veinticinco parámetros críticos.
+27/10/2026 . Hackathon Combinado de Ciberseguridad · 1.ª edición. España (HCC1, España)
+
+30 de octubre de 2026 · Revisión 2.0 preparada · SV(25,5) · Veinticinco parámetros críticos.
 
 Convocatoria abierta desde el 27/10/2026; cierre pendiente. Dominio predominante: Ciberseguridad Inteligente. Modo: Actuación o activo. Siete exámenes previstos: el primero abierto y los seis siguientes pendientes de apertura. No hay dictamen final publicado.
 
@@ -8,7 +10,6 @@ Convocatoria abierta desde el 27/10/2026; cierre pendiente. Dominio predominante
 - [Siete exámenes, participantes y banderas](PARTICIPANTES-PREVISTOS.md).
 - [Reglas de evaluación y criticidad](REGLAS-Y-CRITICIDAD.md).
 - [Cuadernillos públicos y biblioteca de preparación](CUADERNILLOS.md).
-- [Ensayos prácticos: método, enfrentamientos y expedientes por candidato](practicas/README.md).
 - [Telemetría, tiempos y consumo](TELEMETRIA-Y-MEDICIONES.md).
 - [Public booklets](BOOKLETS.md) · [Telemetry and measurements](TELEMETRY-AND-MEASUREMENTS.md).
 - [Tiempos y entregas](TIEMPOS-Y-ENTREGAS.md).

@@ -1,6 +1,8 @@
 # Practical Intelligent Cybersecurity examination
 
-Open since 27 October 2026 · Revision 1.1, 29 October 2026 · Node 3 · Closure pending.
+27/10/2026 . Combined Cybersecurity Hackathon · 1st edition. Spain (HCC1, Spain)
+
+Open since 27 October 2026 · Revision 2.0 prepared on 30 October 2026 · Node 3 · Closure pending.
 
 ## Purpose and participants
 

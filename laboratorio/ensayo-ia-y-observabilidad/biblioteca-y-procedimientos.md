@@ -1,6 +1,6 @@
 # Biblioteca y procedimientos del ensayo
 
-Edición documental · 29 de octubre de 2026 · Revisión 0.5. Reglas precisadas; realización y recepción operativa pendientes.
+Edición documental · 30 de octubre de 2026 · Revisión 0.6 preparada. Reglas precisadas; realización y recepción operativa pendientes.
 
 La evaluación debe identificar el conocimiento documental disponible, cómo se obtiene, qué operaciones se permiten y con qué evidencias se valoran los resultados. El conocimiento adquirido durante el entrenamiento del modelo no se elimina al restringir Internet. Por ello, se exige fundamentar las respuestas en fuentes admitidas y comprobar esa fundamentación; no se afirma haber aislado o inspeccionado todo su conocimiento interno.
 
@@ -79,6 +79,16 @@ La [clasificación del enfrentamiento](modelos-de-ia/estandar-comparativo-o-benc
 
 Ambos participantes requieren [conexiones individuales y simultáneas](modelos-de-ia/estandar-comparativo-o-benchmark/ediciones/ciberseguridad/eet-cyb16-practica-20261027/practicas/CONEXIONES-SIMULTANEAS.md) a sus proveedores durante el intervalo compartido. Autenticación, catálogo, aceptación de inferencia y progreso observable se comprueban por separado. El Árbitro–Director debe gobernar esas condiciones, las incidencias y la sucesión de exámenes; su recepción integrada sigue pendiente.
 
+## Evaluación individual, torneo y selección del defensor
+
+27/10/2026 . Hackathon Combinado de Ciberseguridad · 1.ª edición. España (HCC1, España). Esta denominación identifica la edición y no sustituye las denominaciones de sus componentes.
+
+La evaluación individual conserva la célula SV(25,5) y el dictamen del candidato. Los objetivos Q24 y Q25 acreditan, con referencias controladas, sus capacidades ofensiva y defensiva. El [torneo de ciberseguridad](https://sv.itvia.online/benchmark/enfrentamientos?convocatoria=eet-cyb16-practica-20261027) utiliza esos mismos objetivos y conserva un desenlace adicional, una clasificación propia y las recomendaciones de defensa para estudio. No utiliza una segunda célula.
+
+La participación puede ser provisional; un título requiere aptitud individual completa. La selección del defensor para la siguiente convocatoria registra aparte los aspirantes, la inversión de perfiles, los resultados comparables y el acta de sucesión. Pendiente, indeterminación e incidencia son estados distintos. La coincidencia de ganadores no genera un enfrentamiento consigo mismo. Las [reglas comunes y registros de auditoría](https://sv.itvia.online/benchmark?convocatoria=eet-cyb16-practica-20261027&recurso=practica-reglas-enfrentamientos) constituyen la referencia detallada; sus condiciones operativas pendientes deben recibirse antes de programar la selección.
+
+La entrega documental, el contexto, los permisos y las conexiones se reciben por intento y participante. Esta organización no convierte las composiciones documentales comprobadas en actuaciones del candidato ni sustituye la recepción física del escenario Q19.
+
 ## Recepción y continuidad
 
 Biblioteca preparada, paquete entregado, capacidad de lectura comprobada, actuación ejecutada y resultado recibido son hechos diferentes. Antes del lanzamiento se cotejan material íntegro, permisos, contexto, tiempos, fuentes efectivas y exclusión de soluciones. Las incidencias del instrumento no se imputan al candidato.
@@ -86,3 +96,4 @@ Biblioteca preparada, paquete entregado, capacidad de lectura comprobada, actuac
 Las condiciones particulares deben relacionarse con los parámetros existentes, sin añadir posiciones para representar tareas administrativas. La célula del Sistema Vectorial (SV), de dimensión (25,5), su criticidad y los resultados anteriores permanecen sujetos a su contrato. La documentación no habilita por sí misma una conexión, la entrega de contenido ni la entrada en producción.
 
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
+
