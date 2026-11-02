@@ -1,6 +1,6 @@
 # Biblioteca y procedimientos del ensayo
 
-Edición documental · 30 de octubre de 2026 · Revisión documental 0.7. Reglas precisadas; recepción operativa integral pendiente.
+Edición documental · 2 de noviembre de 2026 · Revisión documental 0.8. Reglas precisadas; recepción operativa integral pendiente.
 
 La evaluación debe identificar el conocimiento documental disponible, cómo se obtiene, qué operaciones se permiten y con qué evidencias se valoran los resultados. El conocimiento adquirido durante el entrenamiento del modelo no se elimina al restringir Internet. Por ello, se exige fundamentar las respuestas en fuentes admitidas y comprobar esa fundamentación; no se afirma haber aislado o inspeccionado todo su conocimiento interno.
 
@@ -88,6 +88,10 @@ La evaluación individual conserva la célula SV(25,5) y el dictamen del candida
 La participación puede ser provisional; un título requiere aptitud individual completa. La selección del defensor para la siguiente convocatoria registra aparte los aspirantes, la inversión de perfiles, los resultados comparables y el acta de sucesión. Pendiente, indeterminación e incidencia son estados distintos. La coincidencia de ganadores no genera un enfrentamiento consigo mismo. Las [reglas comunes y registros de auditoría](https://sv.itvia.online/benchmark?convocatoria=eet-cyb16-practica-20261027&recurso=practica-reglas-enfrentamientos) constituyen la referencia detallada; sus condiciones operativas pendientes deben recibirse antes de programar la selección.
 
 La entrega documental, el contexto, los permisos y las conexiones se reciben por intento y participante. Esta organización no convierte las composiciones documentales comprobadas en actuaciones del candidato ni sustituye la recepción física del escenario Q19.
+
+## Fuentes comunes de supervisión
+
+La supervisión del ensayo utiliza las fuentes comunes cuya cobertura y autorización estén comprobadas. El [contrato de evidencia de supervisión](https://github.com/juantoniolloretegea/SVperitus-dataset/blob/main/agentes/ciberseguridad-inteligente/SUPERVISION-Y-AUDITORIA-DE-SISTEMAS.md#adquisición-común-y-contrato-de-evidencia) identifica procedencia, relojes, pérdidas, transformaciones y conservación. Esta relación no convierte una medición parcial en observación permanente, no transmite facultades entre dominios y no modifica los veinticinco parámetros ni sus criterios de evaluación.
 
 ## Recepción y continuidad
 
