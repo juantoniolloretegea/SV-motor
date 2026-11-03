@@ -15,6 +15,7 @@ Las definiciones propias del SV se identifican como tales. Las siglas y equivale
 | Examen y decisión | [Evaluación](#evaluacion), [clasificación](#clasificacion), [dictamen](#dictamen), [autorización](#autorizacion), [recomendación](#recomendacion). |
 | Funcionamiento y protección | [Aislamiento](#aislamiento), [IA gobernada](#gobernada), [inferencia](#inferencia), [producción](#produccion), [seudo-producción](#seudoproduccion). |
 | Uso y evidencia | [Conexión](#conexion), [consulta](#consulta), [evidencia](#evidencia), [sesión](#sesion), [token](#token). |
+| Propuestas y desarrollo | [Anteproyecto](#anteproyecto), [memoria descriptiva](#memoria-descriptiva). |
 
 ## Términos
 
@@ -35,6 +36,14 @@ Separación material de las facultades del modelo respecto de los recursos y ope
 **Límite:** una instrucción dirigida al modelo no basta para demostrar ese aislamiento. Deben existir controles externos y evidencia de su resistencia a entradas maliciosas y accesos alternativos. La exigencia permanece en seudo-producción y en los tres nodos. Véase [Consulta sin autoridad sobre el sistema](https://documentos-sv.itvia.online/evaluacion/validacion-autorizacion-modelos/autoridad.html#consulta-sin-autoridad-sobre-el-sistema).
 
 **Para continuar la lectura:** [Tubería de IA](https://documentos-sv.itvia.online/enciclopedia/lenguaje.html#tuberia) · [Núcleo del Lenguaje SV](https://documentos-sv.itvia.online/enciclopedia/lenguaje.html#nucleo). Examinar el recorrido controlado y la protección que debe mantener. [Explorar otros recorridos](https://documentos-sv.itvia.online/enciclopedia/recorridos.html).
+
+### Anteproyecto {#anteproyecto}
+
+Propuesta documentada que identifica una necesidad, delimita el objeto de estudio y compara alternativas, dependencias y condiciones de comprobación.
+
+**Distinción:** su publicación no constituye un dominio, ni acredita una capacidad ni autoriza una operación. En el SV remite a los pilares y a las definiciones competentes, sin introducir nuevas reglas del núcleo.
+
+**Para continuar la lectura:** [Memoria descriptiva](#memoria-descriptiva) · [Objeto y método de las memorias descriptivas](https://documentos-sv.itvia.online/anteproyectos-memorias-descriptivas/metodo.html). Relacionar la propuesta con la explicación de su alcance y con sus condiciones de desarrollo.
 
 ### Autorización de uso {#autorizacion}
 
@@ -132,6 +141,14 @@ Operación mediante la cual un modelo obtiene una salida a partir de una entrada
 
 **Para continuar la lectura:** [Modelo de inteligencia artificial](https://documentos-sv.itvia.online/enciclopedia/ia.html#modelo) · [Evidencia de evaluación](https://documentos-sv.itvia.online/enciclopedia/ia.html#evidencia). Identificar la operación generativa y la comprobación posterior de su salida. [Explorar otros recorridos](https://documentos-sv.itvia.online/enciclopedia/recorridos.html).
 
+### Memoria descriptiva {#memoria-descriptiva}
+
+Documento que expone qué se propone o realiza, por qué, con qué elementos se relaciona y qué condiciones permiten desarrollarlo y comprobarlo. Cuando describe una realización, identifica las evidencias que sustentan ese estado.
+
+**En el SV:** el libro [Anteproyectos y memorias descriptivas del Sistema Vectorial SV](https://documentos-sv.itvia.online/anteproyectos-memorias-descriptivas/index.html) reúne propuestas transversales. Su primera memoria estudia la supervisión y una célula de intrusión, el equilibrio entre observación y recursos y la posible aportación de herramientas auxiliares de imágenes. La dimensión de la célula y la selección de herramientas permanecen abiertas.
+
+**Para continuar la lectura:** [Anteproyecto](#anteproyecto) · [Cobertura de observación](https://documentos-sv.itvia.online/enciclopedia/ia.html#cobertura-observacion). Distinguir una solución propuesta del alcance efectivamente comprobado.
+
 ### Modelo de inteligencia artificial {#modelo}
 
 Sistema computacional identificado por su versión y configuración, utilizado para producir salidas a partir de entradas. Sus capacidades se examinan mediante evidencia pertinente al uso previsto.
@@ -226,6 +243,7 @@ Los enlaces se abren en una pestaña nueva. Las referencias externas aportan con
 | IA-02 | [Dominios y universos del Sistema Vectorial SV - Definiciones y parámetros · V.03](https://documentos-sv.itvia.online/dominios/universos/index.html) | Sin DOI identificado. Constitución de dominios, Universos y alcance de agentes. |
 | IA-03 | [Reglas, usos y descripciones documentales de documentos para el conocimiento de la IA · V.08](https://documentos-sv.itvia.online/documentacion/reglas-usos-descripciones-documentales/index.html) | Sin DOI identificado. Fuentes, representaciones, permisos y entrega documental. |
 | IA-04 | [Artificial Intelligence Risk Management Framework (AI RMF 1.0)](https://doi.org/10.6028/NIST.AI.100-1) | NIST AI 100-1, 2023. DOI: 10.6028/NIST.AI.100-1. Marco voluntario de gestión de riesgos; referencia contextual para responsabilidades y evaluación, sin equivalencia con una certificación. |
+| IA-05 | [Anteproyectos y memorias descriptivas del Sistema Vectorial SV](https://documentos-sv.itvia.online/anteproyectos-memorias-descriptivas/index.html) | Primera edición, 03/11/2026. Sin DOI asignado. Necesidades, alternativas y condiciones de desarrollo; no acredita capacidades por su publicación. |
 
 ## Casos de uso o ejemplos específicos
 
