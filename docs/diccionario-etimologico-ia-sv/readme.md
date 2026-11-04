@@ -15,7 +15,7 @@ Las definiciones propias del SV se identifican como tales. Las siglas y equivale
 | Examen y decisión | [Evaluación](#evaluacion), [clasificación](#clasificacion), [dictamen](#dictamen), [autorización](#autorizacion), [recomendación](#recomendacion). |
 | Funcionamiento y protección | [Aislamiento](#aislamiento), [IA gobernada](#gobernada), [inferencia](#inferencia), [producción](#produccion), [seudo-producción](#seudoproduccion). |
 | Uso y evidencia | [Conexión](#conexion), [consulta](#consulta), [evidencia](#evidencia), [sesión](#sesion), [token](#token). |
-| Propuestas y desarrollo | [Anteproyecto](#anteproyecto), [memoria descriptiva](#memoria-descriptiva). |
+| Propuestas y desarrollo | [Anteproyecto](#anteproyecto), [memoria descriptiva](#memoria-descriptiva), [memoria de actividades](#memoria-actividades). |
 
 ## Términos
 
@@ -140,6 +140,14 @@ Operación mediante la cual un modelo obtiene una salida a partir de una entrada
 **Límite:** una respuesta generada no acredita por sí misma corrección, exhaustividad o determinismo. Debe conservarse la identidad del modelo y la configuración relevante. Véase [Finalidad y alcance](https://documentos-sv.itvia.online/evaluacion/validacion-autorizacion-modelos/finalidad.html).
 
 **Para continuar la lectura:** [Modelo de inteligencia artificial](https://documentos-sv.itvia.online/enciclopedia/ia.html#modelo) · [Evidencia de evaluación](https://documentos-sv.itvia.online/enciclopedia/ia.html#evidencia). Identificar la operación generativa y la comprobación posterior de su salida. [Explorar otros recorridos](https://documentos-sv.itvia.online/enciclopedia/recorridos.html).
+
+### Memoria de actividades {#memoria-actividades}
+
+Relación de actuaciones concretas, su estado, sus condiciones de realización y las evidencias que sustentan sus resultados. Complementa al anteproyecto y a la memoria descriptiva sin convertir cada tarea parcial en una propuesta independiente.
+
+**Distinción:** «Por hacer», «Haciendo» y «Hecho» son estados de seguimiento documental; no corresponden a los valores de la terna (0, 1, U), ni acreditan por sí solos una capacidad operativa. La memoria puede enlazar sucesos y Tiques Técnicos existentes, conservando su autoridad y sus permisos, sin duplicar ni modificar sus registros.
+
+**Para continuar la lectura:** [Memoria de actividades y seguimiento](https://documentos-sv.itvia.online/anteproyectos-memorias-descriptivas/memoria-actividades.html) · [Anteproyecto](#anteproyecto) · [Memoria descriptiva](#memoria-descriptiva).
 
 ### Memoria descriptiva {#memoria-descriptiva}
 
