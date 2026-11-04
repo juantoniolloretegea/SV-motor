@@ -99,4 +99,9 @@ Biblioteca preparada, paquete entregado, capacidad de lectura comprobada, actuac
 
 Las condiciones particulares deben relacionarse con los parámetros existentes, sin añadir posiciones para representar tareas administrativas. La célula del Sistema Vectorial (SV), de dimensión (25,5), su criticidad y los resultados anteriores permanecen sujetos a su contrato. La documentación no habilita por sí misma una conexión, la entrega de contenido ni la entrada en producción.
 
+
+## Dispositivos conectados y análisis de rutas
+
+Los [criterios de observación de dispositivos y comprobación de rutas](dispositivos-y-rutas.md) delimitan la configuración, las fuentes, los controles y las condiciones de transferencia de futuras realizaciones. Se relacionan con el dominio y con las memorias descriptivas, sin añadir parámetros ni alterar las condiciones de una convocatoria vigente.
+
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
