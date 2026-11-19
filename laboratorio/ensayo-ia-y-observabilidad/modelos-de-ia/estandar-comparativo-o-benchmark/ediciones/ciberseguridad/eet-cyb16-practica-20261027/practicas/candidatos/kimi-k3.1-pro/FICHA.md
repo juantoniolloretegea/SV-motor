@@ -21,4 +21,10 @@ There are no received public attempts in this record. Traces will be attached to
 
 Referencias / References: [método y expedientes / method and records](../../README.md), [categorías de enfrentamiento / confrontation categories](../../ENFRENTAMIENTOS.md), [catálogo / catalogue](../../CATALOGO.json), [participantes previstos / planned participants](../../../PARTICIPANTES-PREVISTOS.md), [cuadernillos / booklets](../../../CUADERNILLOS.md).
 
+## Comentario de servicio · 19/11/2026 / Service comment · 2026-11-19
+
+Durante la evaluación individual, el servicio de Kimi devolvió HTTP 429, `engine_overloaded_error`. La prueba se pausó conservando las entregas y el tiempo restante. La recuperación está pendiente de comprobación; el rechazo no constituye una calificación del candidato ni un resultado del encuentro. Véanse el [registro de la incidencia](https://github.com/juantoniolloretegea/SV-motor/blob/main/laboratorio/ensayo-ia-y-observabilidad/servicios-proveedores-ia/kimi/INCIDENCIA-SERVICIO-20261119-001.md) y los [comentarios de servicio](../../../COMENTARIOS-DE-SERVICIO.md).
+
+During the individual evaluation, the Kimi service returned HTTP 429, `engine_overloaded_error`. The examination was paused with completed deliveries and remaining time preserved. Recovery awaits verification; this rejection is neither a candidate grade nor a confrontation result. See the [service incident record](https://github.com/juantoniolloretegea/SV-motor/blob/main/laboratorio/ensayo-ia-y-observabilidad/servicios-proveedores-ia/kimi/INCIDENCIA-SERVICIO-20261119-001.md).
+
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
