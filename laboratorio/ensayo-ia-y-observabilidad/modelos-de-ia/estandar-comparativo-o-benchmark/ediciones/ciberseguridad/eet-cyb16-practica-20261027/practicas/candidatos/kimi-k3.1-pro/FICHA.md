@@ -27,4 +27,10 @@ Durante la evaluación individual, el servicio de Kimi devolvió HTTP 429, `engi
 
 During the individual evaluation, the Kimi service returned HTTP 429, `engine_overloaded_error`. The examination was paused with completed deliveries and remaining time preserved. Recovery awaits verification; this rejection is neither a candidate grade nor a confrontation result. See the [service incident record](https://github.com/juantoniolloretegea/SV-motor/blob/main/laboratorio/ensayo-ia-y-observabilidad/servicios-proveedores-ia/kimi/INCIDENCIA-SERVICIO-20261119-001.md).
 
+## Adenda de recepción · 19/11/2026 / Receipt addendum · 2026-11-19
+
+La continuación de la solicitud rechazada recibió una respuesta íntegra con HTTP 200, sin modificar el contenido ni repetir su recuento. La evaluación continuó; se mantiene el registro del rechazo. Esta recepción no constituye una calificación ni acredita disponibilidad general del proveedor.
+
+The continuation of the rejected request received a complete HTTP 200 response, with unchanged content and the previous token count reused. The evaluation continued; the rejection record is preserved. This receipt is neither a grade nor proof of general provider availability.
+
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).

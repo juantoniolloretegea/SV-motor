@@ -45,4 +45,10 @@ Esta comunicación informa de la prestación del servicio. No publica preguntas,
 
 **Evaluación de la calidad del proveedor: pendiente de los criterios y de la revisión competente.** Una incidencia aislada no constituye una puntuación global ni una certificación.
 
+## Adenda de recepción · 19/11/2026
+
+La continuación de la solicitud rechazada recibió HTTP 200 y una respuesta íntegra del modelo `kimi-k3.1-pro`. La marca del registro de transporte es 2026-11-19 20:06:45 UTC; la duración del transporte fue de 63.460 ms. El cuerpo de la solicitud permaneció idéntico y se reutilizó el recuento previamente acreditado. El rechazo original se conserva por separado.
+
+Esta recepción acredita la disponibilidad del servicio para esa solicitud, no una recuperación general ni la duración de la indisponibilidad. El consumo y el coste de la solicitud rechazada siguen sin estar comunicados. La evaluación continuó en el mismo expediente, sin repetir respuestas completas ni modificar sus criterios. No se publican resultados provisionales.
+
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
