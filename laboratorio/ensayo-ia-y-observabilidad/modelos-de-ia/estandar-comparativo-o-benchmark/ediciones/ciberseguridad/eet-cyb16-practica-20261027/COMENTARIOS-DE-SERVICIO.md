@@ -16,4 +16,10 @@ La continuación de la solicitud rechazada recibió HTTP 200 y una respuesta ín
 
 Esta recepción acredita la disponibilidad del servicio para esa solicitud, no una recuperación general ni la duración de la indisponibilidad. El consumo y el coste de la solicitud rechazada siguen sin estar comunicados. La evaluación continuó en el mismo expediente, sin repetir respuestas completas ni modificar sus criterios. No se publican resultados provisionales.
 
+## 20 de noviembre de 2026 · Astra, servicio de OpenAI
+
+Durante el encuentro entre perfiles, OpenAI devolvió **HTTP 503**, **service_unavailable_error** y **server_is_overloaded**. El encuentro se detuvo conservando intentos, evidencias y tiempo restante. No se recibió una respuesta evaluable ni consumo o coste comunicado de la generación rechazada.
+
+La sobrecarga es la causa declarada por el proveedor; no acredita una caída general ni su duración. Esta incidencia no constituye una calificación de Astra o de Kimi. La recuperación permanece pendiente de comprobación. Véase el [registro de calidad del servicio](https://github.com/juantoniolloretegea/SV-motor/blob/main/laboratorio/ensayo-ia-y-observabilidad/servicios-proveedores-ia/openai/INCIDENCIA-SERVICIO-20261120-001.md). Se mantiene la reserva de los contenidos y resultados hasta el cierre correspondiente.
+
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
