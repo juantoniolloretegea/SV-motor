@@ -1,6 +1,6 @@
 # Enfrentamientos y categorías de resultado
 
-29 de octubre de 2026 · Revisión 1.1
+20 de noviembre de 2026 · Revisión 1.2
 
 ## Patrón común y misión defensiva
 
@@ -24,7 +24,7 @@ Un ataque no demostrado no prueba por sí solo la superioridad del defensor. Apa
 
 ## Relación con las categorías y la clasificación existentes
 
-El plazo debe ser suficiente, estar justificado y quedar fijado antes de ejecutarse, con el mismo criterio para los encuentros comparables. La duración numérica concreta sigue pendiente. No se prolonga retrospectivamente el encuentro para producir un vencedor. Véase el [pilotaje concurrente](PILOTAJE-CONCURRENTE.md).
+El periodo ordinario es de 900 segundos (15 minutos) de tiempo efectivo. El Evaluador puede autorizar una única prórroga común de 900 segundos (15 minutos), hasta un máximo total de 1.800 segundos (30 minutos). La prórroga se registra como un acto separado antes de continuar y se comunica por igual a ambos perfiles. Conserva íntegros el tiempo consumido, el expediente, el estado material y las evidencias; no reinicia el encuentro ni repite solicitudes o recuentos. El plazo restante se obtiene restando todo el tiempo efectivo consumido al máximo total autorizado. Si al término no existe vencedor acreditado, el resultado es U y se mantiene el PD vigente. No se asignan puntos retrospectivos ni se interpreta la ausencia de ataque como victoria defensiva. Las versiones y autorizaciones temporales se conservan; la prórroga no cambia hechos ni calificaciones anteriores. Se aplica el mismo criterio a los encuentros comparables. Véase el [pilotaje concurrente](PILOTAJE-CONCURRENTE.md).
 
 Se reutiliza el patrón de separación de categorías empleado en la convocatoria anterior, cuya distinción atendía a capacidades documentales. Aquí las categorías expresan **el resultado del enfrentamiento**. La acreditación de Markdown, HTML o PDF sigue siendo otro dato del modelo y no determina su capacidad ofensiva o defensiva.
 

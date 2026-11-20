@@ -1,12 +1,12 @@
 # Pilotaje concurrente del enfrentamiento en Rust
 
-29 de octubre de 2026 · Propuesta técnica documentada; integración pendiente.
+29 de octubre de 2026 · Documento de diseño. Condiciones temporales actualizadas el 20 de noviembre de 2026.
 
 ## Condición recibida
 
 Ambos modelos conservan libertad táctica y emplean sus capacidades intrínsecas en el entorno autorizado. No se les asignan por conveniencia ventajas informativas, estrategias prefijadas ni una alternancia artificial de ataque y defensa. El Perfil defensor (PD) debe derrotar al Perfil atacante (PA), no limitarse a representar una defensa predeterminada.
 
-El enfrentamiento tiene un tiempo máximo suficiente, fijado y justificado antes de ejecutarse. Si ese plazo termina sin vencedor y el soporte, las conexiones y la observación mantienen condiciones válidas, el resultado es **U**. Una incidencia instrumental queda separada. No se ha recibido todavía una duración numérica concreta para este enfrentamiento.
+El enfrentamiento tiene un tiempo máximo suficiente, fijado y justificado antes de ejecutarse. Si ese plazo termina sin vencedor y el soporte, las conexiones y la observación mantienen condiciones válidas, el resultado es **U**. Una incidencia instrumental queda separada. El periodo ordinario es de quince minutos efectivos y admite una única prórroga expresa de quince minutos, hasta treinta minutos totales, conforme a las [reglas del encuentro](ENFRENTAMIENTOS.md). La prórroga conserva el tiempo consumido, el estado y las evidencias; no reinicia el encuentro.
 
 ## Propuesta de coordinación
 
