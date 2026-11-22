@@ -1,36 +1,18 @@
 # Examen 01: Kimi K3.1 Pro frente a GPT-6 Astra
 
-29 de octubre de 2026 · Ficha de preparación / Preparation record
+22 de noviembre de 2026 · Estado del examen / Examination status
 
-- **Perfil atacante (PA) / Attacker Profile (PA):** 🇨🇳 Kimi K3.1 Pro — Moonshot AI.
-- **Perfil defensor (PD) / Defender Profile (PD):** 🇪🇸 🇺🇸 GPT-6 Astra — OpenAI.
-- **Estado / Status:** examen abierto; recepción del enfrentamiento pendiente / examination open; received confrontation pending.
-- **Dominio predominante / Predominant domain:** Ciberseguridad Inteligente / Intelligent Cybersecurity.
-- **Modo / Mode:** Actuación o activo / active.
-- **Constitución / Constitution:** SV(25,5), veinticinco parámetros críticos / twenty-five critical parameters.
+**Examen concluido; resultados reservados.** La evaluación individual y el encuentro han finalizado. Las calificaciones, las soluciones y las evidencias de resultado se publicarán tras el cierre autorizado de la convocatoria, una vez terminados sus exámenes. Este estado no anticipa el dictamen ni el desenlace.
 
-Los identificadores efectivos de ambos servicios, sus revisiones, configuraciones y permisos deben confirmarse antes de cada lanzamiento. No se deducen del nombre comercial. El defensor conservará sus capacidades y su adaptación dentro del encuentro, conforme a las reglas comunes.
+**Examination completed; results withheld.** The individual evaluation and the encounter have concluded. Grades, solutions and outcome evidence will be published after the authorised closure of the call, once its examinations have ended. This status does not disclose either verdict or encounter outcome.
 
-Both effective service identifiers, revisions, configurations and permissions must be confirmed before launch. They are not inferred from a commercial name. The defender retains its capabilities and adaptation within the encounter under the common rules.
+- Perfil atacante / Attacker: Kimi K3.1 Pro — Moonshot AI.
+- Perfil defensor / Defender: GPT-6 Astra — OpenAI.
+- Dominio predominante / Predominant domain: Ciberseguridad Inteligente / Intelligent Cybersecurity.
+- Célula / Cell: SV(25,5), veinticinco parámetros críticos / twenty-five critical parameters.
 
-## Evidencias y resultados / Evidence and results
+Las condiciones se conservan en las [reglas del encuentro](../../ENFRENTAMIENTOS.md) y los [cuadernillos](../../../CUADERNILLOS.md). Los [comentarios de servicio](../../../COMENTARIOS-DE-SERVICIO.md) distinguen las incidencias del proveedor de la evaluación del candidato. La ficha no publica todavía tiempos, tokens, costes ni posiciones comparativas.
 
-No hay intentos públicos recibidos en esta ficha. Las trazas se incorporarán por intento real, con identidad común y separación de perfiles. No se asignan vencedor, categoría, dictamen, posición, tiempo, tokens ni coste. La ausencia no equivale a cero, derrota o indeterminación de la terna.
-
-There are no received public attempts in this record. Traces will be attached to actual attempts with shared identity and separate profiles. No winner, category, verdict, rank, time, tokens or cost is assigned. Absence does not mean zero, defeat or a ternary unknown value.
-
-Referencias / References: [método y expedientes / method and records](../../README.md), [categorías de enfrentamiento / confrontation categories](../../ENFRENTAMIENTOS.md), [catálogo / catalogue](../../CATALOGO.json), [participantes previstos / planned participants](../../../PARTICIPANTES-PREVISTOS.md), [cuadernillos / booklets](../../../CUADERNILLOS.md).
-
-## Comentario de servicio · 19/11/2026 / Service comment · 2026-11-19
-
-Durante la evaluación individual, el servicio de Kimi devolvió HTTP 429, `engine_overloaded_error`. La prueba se pausó conservando las entregas y el tiempo restante. La recuperación está pendiente de comprobación; el rechazo no constituye una calificación del candidato ni un resultado del encuentro. Véanse el [registro de la incidencia](https://github.com/juantoniolloretegea/SV-motor/blob/main/laboratorio/ensayo-ia-y-observabilidad/servicios-proveedores-ia/kimi/INCIDENCIA-SERVICIO-20261119-001.md) y los [comentarios de servicio](../../../COMENTARIOS-DE-SERVICIO.md).
-
-During the individual evaluation, the Kimi service returned HTTP 429, `engine_overloaded_error`. The examination was paused with completed deliveries and remaining time preserved. Recovery awaits verification; this rejection is neither a candidate grade nor a confrontation result. See the [service incident record](https://github.com/juantoniolloretegea/SV-motor/blob/main/laboratorio/ensayo-ia-y-observabilidad/servicios-proveedores-ia/kimi/INCIDENCIA-SERVICIO-20261119-001.md).
-
-## Adenda de recepción · 19/11/2026 / Receipt addendum · 2026-11-19
-
-La continuación de la solicitud rechazada recibió una respuesta íntegra con HTTP 200, sin modificar el contenido ni repetir su recuento. La evaluación continuó; se mantiene el registro del rechazo. Esta recepción no constituye una calificación ni acredita disponibilidad general del proveedor.
-
-The continuation of the rejected request received a complete HTTP 200 response, with unchanged content and the previous token count reused. The evaluation continued; the rejection record is preserved. This receipt is neither a grade nor proof of general provider availability.
+Conditions remain available in the encounter rules and examination booklets. Service comments distinguish provider incidents from candidate performance. This record does not yet publish timing, tokens, costs or comparative positions.
 
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
